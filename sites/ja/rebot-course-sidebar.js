@@ -176,6 +176,7 @@ const sidebars = {
           collapsible: false,
           items: [
             { type: 'doc', id: `${P}/ja_Paper_Reading_ACT`, label: 'ACT — 低コスト両腕マニピュレーション' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_MULTI_TASK_DIT`, label: 'LBM / MultiTask DiT — マルチタスク事前学習' },
           ],
         },
         {

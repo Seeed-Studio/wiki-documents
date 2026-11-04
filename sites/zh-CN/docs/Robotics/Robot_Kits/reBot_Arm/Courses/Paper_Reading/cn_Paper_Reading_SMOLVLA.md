@@ -54,7 +54,7 @@ import '/src/css/paper-reading-style.css';
   </a>
 </section>
 
-## 先验知识
+## 预备知识
 ### VLM 和 VLA 有什么区别
 ![SmolVLA：VLM 和 VLA 有什么区别（配图 09）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-09.png)
 

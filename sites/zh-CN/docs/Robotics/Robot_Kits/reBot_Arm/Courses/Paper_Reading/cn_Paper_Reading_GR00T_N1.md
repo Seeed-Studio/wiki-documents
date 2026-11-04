@@ -54,7 +54,7 @@ import '/src/css/paper-reading-style.css';
   </a>
 </section>
 
-## 先验知识
+## 预备知识
 
 ### 从 ACT 到 GR00T N1：机器人学习的闭环没有变
 

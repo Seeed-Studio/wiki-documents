@@ -54,7 +54,7 @@ import '/src/css/paper-reading-style.css';
   </a>
 </section>
 
-## 先验知识：从理解指令到输出动作
+## 预备知识：从理解指令到输出动作
 ### VLA 学的是什么
 **解释：** 模仿学习（Imitation Learning）是让机器人学习示范中的“遇到这个场景时，应该怎样运动”。视觉\-语言\-动作模型（Vision\-Language\-Action Model，VLA）把任务文字也加入输入，从而学习根据画面和指令生成控制动作。
 

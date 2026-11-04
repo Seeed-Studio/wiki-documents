@@ -176,6 +176,7 @@ const sidebars = {
           collapsible: false,
           items: [
             { type: 'doc', id: `${P}/es_Paper_Reading_ACT`, label: 'ACT — Manipulación Bimanual de Bajo Costo' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_MULTI_TASK_DIT`, label: 'LBM / MultiTask DiT — Preentrenamiento Multitarea' },
           ],
         },
         {
