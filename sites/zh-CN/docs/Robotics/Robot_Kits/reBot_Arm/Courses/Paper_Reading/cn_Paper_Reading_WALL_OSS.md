@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 WALL-OSS：论文精读动作语义预训练、连续动作流匹配、Uni-CoT 与具身问答和控制实验。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 WALL-OSS
+description: "精读 论文精读动作语义预训练、连续动作流匹配、Uni-CoT 与具身问答和控制实验。"
+title: "WALL-OSS：如何将视觉语言理解连接到具身动作"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_wall_oss/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-wall_oss-title">如何在 reBot Arm 与 SO-ARM101 上运行 WALL-OSS</h1>
+  <h1 id="paper-reading-wall_oss-title">WALL-OSS：如何将视觉语言理解连接到具身动作</h1>
   <p className="paper-reading-lead">Igniting VLMs toward the Embodied Space</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>动作语义</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/walloss" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot WALL-OSS 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=wall_x`：LeRobot 中 WALL-OSS 对应的策略类型名为 wall_x。
+- `--policy.pretrained_name_or_path=x-square-robot/wall-oss-flow`：加载 WALL-OSS 连续动作检查点。
+- `--policy.prediction_mode=diffusion --policy.attn_implementation=eager`：采用官方训练示例的连续动作预测模式与注意力后端；diffusion 是该实现的配置名。
+
+</aside>
 
 ## 预备知识：理解目标与执行动作之间隔着什么
 ### 从 VLM 到 VLA

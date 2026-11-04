@@ -1,0 +1,104 @@
+.vla-jepa-reading-page {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.vla-jepa-reading-page .vla-jepa-hf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  margin-block: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.vla-jepa-reading-page .vla-jepa-hf-link img {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.vla-jepa-reading-page .vla-jepa-key-commands {
+  margin-block: 1rem 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #edd49a;
+  border-left: 4px solid #dfaa28;
+  border-radius: 0.5rem;
+  background: #fff8e5;
+  color: #3b3523;
+}
+
+.vla-jepa-reading-page .vla-jepa-key-commands > p:first-child {
+  margin-top: 0;
+  color: #795600;
+}
+
+.vla-jepa-reading-page .vla-jepa-key-commands ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.vla-jepa-reading-page .vla-jepa-key-commands code {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+  background: #fff0bd;
+  color: #684900;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+[data-theme='dark'] .vla-jepa-reading-page .vla-jepa-key-commands {
+  border-color: #66532a;
+  border-left-color: #dfaa28;
+  background: #30291b;
+  color: #f3e8cd;
+}
+
+[data-theme='dark'] .vla-jepa-reading-page .vla-jepa-key-commands > p:first-child {
+  color: #f5ce70;
+}
+
+[data-theme='dark'] .vla-jepa-reading-page .vla-jepa-key-commands code {
+  background: #4a3c1c;
+  color: #ffe1a0;
+}
+
+@media (max-width: 480px) {
+  .vla-jepa-reading-page .vla-jepa-key-commands code {
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
+}
+
+.vla-jepa-reading-page .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25rem;
+}
+
+.vla-jepa-reading-page .katex-display > .katex {
+  width: max-content;
+  min-width: 100%;
+}
+
+.vla-jepa-reading-page .vla-jepa-paper-table {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: 1.5rem;
+}
+
+.vla-jepa-reading-page .vla-jepa-paper-table img {
+  width: 100%;
+  min-width: 700px;
+  max-width: none;
+}
