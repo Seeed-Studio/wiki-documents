@@ -229,6 +229,14 @@ const sidebars = {
               'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_J2032/es_reServer_J2032_Getting_Started',
             ],
           },
+          {
+            type: 'category',
+            label: 'reServer J501 Carrier Board',
+            items: [
+              'Edge/NVIDIA_Jetson/Carrier_Boards/J501/es_reServer_Industrial_J501_Getting_Started',
+              'Edge/NVIDIA_Jetson/Carrier_Boards/J501/es_Hardware_Interfaces_Usage',
+            ],
+          },
         ],
       },
 {
