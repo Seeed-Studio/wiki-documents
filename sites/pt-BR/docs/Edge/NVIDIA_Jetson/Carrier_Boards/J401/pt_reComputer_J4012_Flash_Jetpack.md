@@ -248,6 +248,16 @@ Consulte a tabela abaixo para preparar a máquina host.
 
 :::
 
+:::tip Gravando a partir do Windows? Use o Seeed Jetson DevelopTool
+
+O fluxo de gravação manual requer um PC host com **Ubuntu**. Se você estiver gravando a partir de um computador **Windows**, use o [**Seeed Jetson DevelopTool**](/jetson_developtool_overview/) — nossa GUI tudo-em-um compatível com **hosts Windows** que permite gravar com um clique, sem precisar de comandos.
+
+- [Visão geral do Seeed Jetson DevelopTool](/jetson_developtool_overview/)
+- [Instalação (Ubuntu / Windows)](/jetson_developtool_installation/)
+- [Gravar firmware com o Flash Center](/jetson_developtool_flash_firmware/)
+
+:::
+
 ### Entrar no modo Force Recovery
 
 :::note
