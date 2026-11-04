@@ -148,6 +148,10 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
 |**Fully-charged cut-off voltage**|4.2V|
 |**Charging Temperature Limit**|0 to +45℃|
 
+**Power Consumption**
+
+For detailed power consumption data and estimated battery life under different configurations (screen mode, LoRa frequency band and modem preset, GPS usage, etc.), please refer to the [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
+
 ## Pin List
 
 <table>

@@ -110,3 +110,4 @@ The output image is not a pixel-perfect copy of the original image. The decoder 
 
 - [MeshCore Open Documentation](https://meshcoreopen.org/docs/getting-started/)
 - [AEIC-SE Ultra-Low Bitrate Image Codec](https://huggingface.co/zjs81/aeic-se-onnx)
+- [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
