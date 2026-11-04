@@ -9,39 +9,39 @@ slug: /meshtastic_wio_tracker_l2_intro
 sku: 100029766
 sidebar_position: 0
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/ja/meshtastic_wio_tracker_l2_intro/
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="pir" width={900} height="auto" /></p>
 
-Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードであり、LoRa（862–930 MHz）、効率的な処理を行う ESP32S3、そして高精度な位置情報を提供する L76K GPS モジュールを搭載しています。柔軟性を重視した設計により、QSPI タッチスクリーン、E-Ink ディスプレイ、TF カードに加え、ソーラーパネルおよびバッテリー電源にも対応しており、幅広い IoT およびオフグリッド用途に最適です。
+Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードで、LoRa（862–930 MHz）、高効率な処理を行う ESP32S3、そして高精度な位置追跡を実現する L76K GPS モジュールを搭載しています。柔軟性を重視した設計により、QSPI タッチスクリーン、E-Ink ディスプレイ、TF カードに加え、ソーラーパネルおよびバッテリー電源をサポートし、幅広い IoT およびオフグリッド用途に最適です。
 
 ## 特長
 
-- **3.2'' 高品質タッチスクリーン**：320×240 の高精細ディスプレイを採用し、MUI と Base UI を切り替え可能で、メッセージング、マッピング、制御をモバイルフォンなしでスムーズに操作できます。
+- **3.2インチ高品質タッチスクリーン**：320×240 の高精細ディスプレイを備え、MUI と Base UI を切り替え可能で、メッセージング、マッピング、制御をモバイルフォンなしでスムーズに操作できます。
 
-- **ESP32S3 搭載で拡張に最適**：デュアルコア ESP32-S3（Wi-Fi および Bluetooth LE 搭載）を採用した L2 Pro は、UI カスタマイズ、機能拡張、オープンソースアプリケーション開発のための柔軟なプラットフォームを提供します。
+- **ESP32S3 搭載で拡張に最適**：デュアルコア ESP32-S3（Wi-Fi および Bluetooth LE 搭載）により駆動される L2 Pro は、UI カスタマイズ、機能拡張、オープンソースアプリケーション開発のための柔軟なプラットフォームを提供します。
 
-- **GNSS 位置情報対応オフラインマップ**：オフラインマップを事前に MicroSD カードへダウンロードしておけば、携帯電話回線やインターネット接続がなくても、デバイス上でリアルタイムの GNSS 位置を確認できます。
+- **GNSS 位置情報対応オフラインマップ**：オフラインマップをあらかじめ MicroSD カードにダウンロードしておくことで、携帯電話回線やインターネット接続がなくても、デバイス上でリアルタイムの GNSS 位置を直接確認できます。
 
-- **3000mAh の長時間駆動バッテリー**：充電頻度を抑えつつ、日常的な長時間使用をサポートし、-10°C ～ 55°C の環境で動作します。
+- **3000mAh の長時間駆動バッテリー**：充電頻度を抑えつつ、長時間のデイリーユースをサポートし、-10°C ～ 55°C の環境で動作します。
 
-- **携帯しやすく、柔軟な設置が可能**：折りたたみ式アンテナにより携帯性が向上し、1/4 インチマウントインターフェースにより、対応アクセサリを用いた柔軟な設置が可能です。
+- **携帯しやすく、柔軟な設置が可能**：折りたたみ式アンテナにより携帯性が向上し、1/4インチマウントインターフェースにより、対応アクセサリを用いた柔軟な設置が可能です。
 
 ## 仕様
 
 <table>
   <tr>
-    <th colspan="1">**項目**</th>
-    <th colspan="1">**パラメータ**</th>
+    <th colspan="1">**Item**</th>
+    <th colspan="1">**Parameter**</th>
   </tr>
   <tr>
-    <td colspan="1">**プロセッサ**</td>
+    <td colspan="1">**Processor**</td>
     <td colspan="1">Wio-S3 (ESP32S3 + SX1262 Module)</td>
   </tr>
     <tr>
@@ -74,7 +74,7 @@ Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](http
     <td colspan="1">MicroSD カードスロット</td>
   </tr>
   <tr>
-    <td colspan="1">1/4 インチねじ穴</td>
+    <td colspan="1">1/4インチねじ穴</td>
   </tr>
    <tr>
     <td colspan="1">**QSPI インターフェース**</td>
@@ -107,7 +107,7 @@ Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](http
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**オーディオ**</td>
-    <td colspan="1">I2S コーデック: ES8311</td>
+    <td colspan="1">I2S コーデック</td>
   </tr>
   <tr>
     <td colspan="1">マイク</td>
@@ -121,7 +121,7 @@ Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](http
   </tr>
     <tr>
     <td colspan="1">**寸法**</td>
-    <td colspan="1">(アンテナ折りたたみ時) 長さ: 87.5 cm, 幅: 69 cm, 高さ: 26.6 cm</td>
+    <td colspan="1">(アンテナ折りたたみ時) 長さ: 87.5 mm, 幅: 69 mm, 高さ: 26.6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**デバイス重量**</td>

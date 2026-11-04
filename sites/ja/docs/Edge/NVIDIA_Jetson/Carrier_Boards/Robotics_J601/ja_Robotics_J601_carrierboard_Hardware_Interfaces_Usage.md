@@ -1,6 +1,6 @@
 ---
 description: このWikiでは、reComputer Jetson Robotics J601キャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、M.2、Ethernet、USB、CAN、RS485/RS232、UART、I2C、I2S、GPIO、GMSL2カメラ拡張、5G、GPS など各種インターフェースの実用的な使用ガイドを網羅しており、ユーザーがJ601プラットフォーム上でのロボット開発を素早く開始できるよう支援します。
-title: インターフェースの使用方法
+title: reComputer Robotics J601 ハードウェアと I/O
 tags:
   - J601-Robotics キャリアボード
   - Jetson
@@ -10,29 +10,53 @@ tags:
   - インターフェース
   - ハードウェア
 image: https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg
-slug: /recomputer_jetson_robotics_j601_interfaces_usage
+slug: /jetson/recomputer_robotics_j601/hardware_and_interface_usage
+aliases:
+  - /recomputer_jetson_robotics_j601_interfaces_usage
 sku: 100060965
 last_update:
-  date: 10/13/2026
+  date: 10/19/2026
   author: Zibo
 createdAt: '2026-06-18'
-updatedAt: '2026-07-01'
-url: https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j601_interfaces_usage/
+updatedAt: '2026-10-19'
+url: https://wiki.seeedstudio.com/ja/jetson/recomputer_robotics_j601/hardware_and_interface_usage/
 ---
 
-import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
+import {roboticsJ601DocNav} from '@site/src/data/jetson/productDocNavigation';
 
-# Robotics J601 キャリアボード ハードウェアインターフェースの使用方法
+# reComputer Robotics J601 ハードウェアと I/O
 
-reComputer Robotics J601 は、NVIDIA Jetson AGX Thor モジュール向けに設計された高性能ロボティクスキャリアボードで、高度なエンボディドAIおよびロボット制御アプリケーションをターゲットとしています。4x 10GbE Ethernet、5G および Wi-Fi/BT モジュール用の M.2 スロット、USB 3.2 ポート、4x CAN（CAN FD 対応）、RS-232/422/485、I2C、I2S、UART、GPIO（GPI/GPO）、GMSL2 拡張（最大 8 台のカメラ）、ワイドレンジ DC 入力など、豊富な接続オプションを備えており、各種センサーからの複雑なデータを処理できる強力なロボットブレインとして機能します。
+<JetsonProductDocNav {...roboticsJ601DocNav} />
 
-NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートする reComputer Robotics J601 は、大規模言語モデルによる意思決定と、モーションプランニングやセンサーフュージョンといった物理ロボット制御との橋渡しを行います。自律ロボットの迅速な開発に最適で、すぐに使えるインターフェースと最適化されたAIフレームワークにより、製品化までの時間を短縮します。
+<div className="jetson-product-page">
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg"/>
+このガイドでは、J601 キャリアボードのコネクタ配線、ピン定義、Linux デバイス対応、インターフェース確認を説明します。モジュール選択、仕様、電源要件、JetPack のフラッシュ手順は[入門ガイド](/jetson/recomputer_robotics_j601/getting_started/)から始めてください。
+
+装着されている Jetson モジュールによって、使える Ethernet と CAN が決まります。**T5000 は 10GbE が 4 ポート、CAN が 4 系統です。T4000 は 10GbE が 3 ポート、CAN が 2 系統です。**Wi-Fi/Bluetooth とセルラー機能には、対応する拡張モジュールが必要です。
+
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg" alt="reComputer Robotics J601 キャリアボードのハードウェア概要" />
+    <figcaption>J601 キャリアボード · ロボティクスインターフェースと拡張</figcaption>
+  </figure>
 </div>
 
-## ヒートシンクの取り付け
+## インターフェースガイド
+
+| 作業 | インターフェースと手順 |
+| --- | --- |
+| 冷却部品を取り付ける | [ヒートシンクの取り付け](#heatsink-installation) |
+| 周辺機器またはデバッグコンソールを接続する | [USB](#usb) と [UART](#uart) |
+| カメラ入力を起動する | [GMSL](#gmsl) |
+| オーディオとセンサーを接続する | [I2S](#i2s)、[I2C](#i2c)、[GPIO](#gpio-gpigpo) |
+| コントローラを接続する | [CAN](#can)、[RS485](#rs485)、[DB9](#db9) |
+| ステータス表示を確認する | [RGB LED](#rgb) |
+| ネットワークに接続する | [Ethernet](#ethernet)、[Wi-Fi/Bluetooth](#m2-key-e)、[5G/GPS](#5g-module-m2-key-b) |
+
+モジュールの取り付けや取り外し、ヘッダの配線を行う前に、キャリアボードの電源を切ってください。コネクタのピン番号と信号電圧は、使用する基板リビジョンの回路図と一致させてください。
+
+## ヒートシンクの取り付け {#heatsink-installation}
 
 長時間動作時の安定した放熱を確保するため、reComputer J601 キャリアボードにヒートシンクを取り付けることができます。
 
@@ -41,61 +65,58 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 - ファン付きヒートシンク
 - reComputer J601 キャリアボード
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png" alt="取り付け用のヒートシンク、ファン、サーマルパッド、J601 キャリアボード" loading="lazy" />
+    <figcaption>取り付け用のヒートシンク、ファン、サーマルパッド、J601 キャリアボード</figcaption>
+  </figure>
 </div>
 
 **ステップ 1.** ヒートシンクとキャリアボードの接触部分に熱伝導シリコンパッドを貼り付けます。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png" alt="ヒートシンクの接触部に配置した熱伝導シリコンパッド" loading="lazy" />
+    <figcaption>ヒートシンクの接触部に配置した熱伝導シリコンパッド</figcaption>
+  </figure>
 </div>
 
 **ステップ 2.** ヒートシンクとキャリアボードを取り付けます。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png" alt="J601 キャリアボードに取り付けたヒートシンクとファン" loading="lazy" />
+    <figcaption>J601 キャリアボードに取り付けたヒートシンクとファン</figcaption>
+  </figure>
 </div>
 
-## USB
+## USB {#usb}
 
-Robotics J601 キャリアボードには複数の USB ポートが搭載されており、高速な周辺機器接続用に 4x USB 3.2 Type-A ポート（ホスト、10Gbps）、リカバリ/フラッシュ用の USB 3.2 Type-C ポート（J4）、デバイスモード/デバッグ用の USB 2.0 Type-C ポート（J3）を備えています。
+Robotics J601 キャリアボードには複数の USB ポートが搭載されており、高速な周辺機器接続用に 4x USB 3.2 Type-A ポート（ホスト、10Gbps）、リカバリ/フラッシュ用の USB 3.0 Type-C ポート（J4）、シリアルデバッグ用の USB 2.0 Type-C ポート（J3）を備えています。
 
 ### USB 3.2 スピードテスト
 
-USB 3.0 フラッシュドライブを挿入し、その読み書き速度をテストします。実際の速度は USB ドライブ自体の性能に依存する点に注意してください。
+USB 3.x ストレージデバイスを接続し、`lsblk -f` でマウントポイントを確認します。ネゴシエートされた USB 速度は `lsusb -t` で確認できます。測定スループットはストレージデバイスとファイルシステムにも依存します。
 
-テスト用スクリプトを作成します：
-
-```bash
-vim test_usb_speed.sh
-```
-
-次の内容を貼り付けます：
+次の例は、マウント済み USB ファイルシステムに **1 GiB の一時ファイル**を書き込み、読み戻してから削除します。`<usb-volume>` を実際のボリューム名に置き換え、空き容量が 1 GiB 以上あることを確認してください。
 
 ```bash
-#!/bin/bash
-
-echo "seeed" | sudo -S dd if=/dev/zero of=/dev/sda bs=1000M count=2 conv=fdatasync
-sleep 1
-sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
-sleep 1
-echo "seeed" | sudo -S dd if=/dev/sda of=/dev/null bs=1000M count=2
+lsblk -f
+lsusb -t
+USB_MOUNT="/media/$USER/<usb-volume>"
+USB_TEST_FILE=$(mktemp "$USB_MOUNT/j601-usb-speed.XXXXXX")
+dd if=/dev/zero of="$USB_TEST_FILE" bs=1M count=1024 conv=fdatasync status=progress
+dd if="$USB_TEST_FILE" of=/dev/null bs=1M iflag=direct status=progress
+rm -- "$USB_TEST_FILE"
 ```
 
-:::info
-`/dev/sda` を実際の USB ドライブのデバイス名に置き換えてください。`lsblk` を使用して確認できます。
-:::
+テストが完了するまでデバイスをマウントしたままにしてください。ファイルシステムがダイレクト I/O に対応していない場合は `iflag=direct` を外し、読み取り結果がキャッシュの影響を受ける可能性があるものとして解釈してください。
 
-スクリプトに実行権限を付与し、実行します：
-
-```bash
-chmod +x test_usb_speed.sh
-./test_usb_speed.sh
-```
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb_speed.PNG"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb_speed.PNG" alt="J601 の USB ストレージスループット結果の例" loading="lazy" />
+    <figcaption>J601 の USB ストレージスループット結果の例</figcaption>
+  </figure>
 </div>
 
 ### USB 2.0 Type-C デバッグポート
@@ -106,51 +127,75 @@ chmod +x test_usb_speed.sh
 
 **ステップ 1.** USB-C データケーブルで J601 を PC に接続します。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb2.0_debug.PNG"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb2.0_debug.PNG" alt="J601 の USB 2.0 Type-C デバッグポート接続" loading="lazy" />
+    <figcaption>J601 の USB 2.0 Type-C デバッグポート接続</figcaption>
+  </figure>
 </div>
 
 
 **ステップ 2.** PC に [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) をダウンロードします。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png" alt="Silicon Labs CP210x USB-UART ドライバーのダウンロードページ" loading="lazy" />
+    <figcaption>Silicon Labs CP210x USB-UART ドライバーのダウンロードページ</figcaption>
+  </figure>
 </div>
 
 **ステップ 3.** PC を USB データケーブルで接続し、ダウンロードしたファイルを解凍して PC にドライバをインストールします。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png" alt="Windows への CP210x ドライバーのインストール" loading="lazy" />
+    <figcaption>Windows への CP210x ドライバーのインストール</figcaption>
+  </figure>
 </div>
 
 **ステップ 4.** Windows PC でデバイスマネージャーを開き、reComputer J601 に割り当てられた COM ポート番号を確認します。"Ports (COM & LPT)" の下に "Silicon Labs CP210x USB to UART Bridge (COMX)" と表示され、X が COM ポート番号になります。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png" alt="USB-UART の COM ポートを表示する Windows デバイスマネージャー" loading="lazy" />
+    <figcaption>USB-UART の COM ポートを表示する Windows デバイスマネージャー</figcaption>
+  </figure>
 </div>
 
 **ステップ 5.** シリアルポートツールを開きます（ここでは例として MobaXterm ツールを使用）、新しいセッションを作成します。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png" alt="MobaXterm の新規セッションダイアログ" loading="lazy" />
+    <figcaption>MobaXterm の新規セッションダイアログ</figcaption>
+  </figure>
 </div>
 
 **ステップ 6.** Serial ツールを選択します。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png" alt="MobaXterm のシリアルセッション設定" loading="lazy" />
+    <figcaption>MobaXterm のシリアルセッション設定</figcaption>
+  </figure>
 </div>
 
 **ステップ 7.** 対応するシリアルポートを選択し、ボーレートを 115200 に設定して "OK" をクリックします。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png" alt="115200 ボーに設定したシリアルコンソール" loading="lazy" />
+    <figcaption>115200 ボーに設定したシリアルコンソール</figcaption>
+  </figure>
 </div>
 
 **ステップ 8.** ユーザー名とパスワードを使用して reComputer J601 にログインします。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png" alt="Jetson シリアルコンソールのログインプロンプト" loading="lazy" />
+    <figcaption>Jetson シリアルコンソールのログインプロンプト</figcaption>
+  </figure>
 </div>
 
 #### Linux
@@ -163,19 +208,22 @@ chmod +x test_usb_speed.sh
 ls /dev/ttyUSB*
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb_debug2.PNG"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/usb_debug2.PNG" alt="J601 のデバッグ接続に使う Linux の USB シリアルデバイス" loading="lazy" />
+    <figcaption>J601 のデバッグ接続に使う Linux の USB シリアルデバイス</figcaption>
+  </figure>
 </div>
 
 **ステップ 3.** シリアルコンソールに接続します：
 
 ```bash
-screen /dev/ttyUSB0 -b 115200
+screen /dev/ttyUSB0 115200
 ```
 
 これで J601 のシリアルコンソール出力が表示され、ユーザー名とパスワードでログインできるようになります。
 
-## GMSL
+## GMSL {#gmsl}
 
 Robotics J601 には GMSL カメラ拡張ヘッダが搭載されており、**最大 8 台の GMSL カメラ** を同時にサポートし、マルチカメラによるロボットビジョンアプリケーションを実現できます。
 
@@ -191,8 +239,11 @@ Robotics J601 には GMSL カメラ拡張ヘッダが搭載されており、**�
 
 GMSL 拡張ボードを J601 キャリアボード上のカメラ拡張ヘッダに接続し、その後 GMSL カメラを拡張ボードに接続します。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png" alt="J601 上の GMSL 拡張ボードとカメラ配線" loading="lazy" />
+    <figcaption>J601 上の GMSL 拡張ボードとカメラ配線</figcaption>
+  </figure>
 </div>
 
 ### 使用手順
@@ -220,14 +271,20 @@ gst-launch-1.0 -q filesrc location=/tmp/gmsl0.yuyv do-timestamp=true blocksize=4
 
 
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_camera.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_camera.png" alt="J601 の GMSL カメラストリーム出力" loading="lazy" />
+    <figcaption>J601 の GMSL カメラストリーム出力</figcaption>
+  </figure>
 </div>
 
 
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl.png" alt="J601 の GMSL カメラ表示" loading="lazy" />
+    <figcaption>J601 の GMSL カメラ表示</figcaption>
+  </figure>
 </div>
 
 ### Gemini 335Lg カメラの使用
@@ -243,7 +300,7 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 
 初回起動時には、ファームウェアの更新が必要になる場合があります。データストリームを開くと、カメラからの映像を確認できます。
 
-## UART
+## UART {#uart}
 
 Robotics J601 は、外部デバイスとのシリアル通信のために標準 JST ヘッダ経由の UART インターフェースを提供します。UART ポートは Jetson システム上の `/dev/ttyTHS1` に接続されており、デフォルトのボーレートは 115200 です。
 
@@ -255,8 +312,11 @@ UART 通信を行うには、以下の配線に従って USB-to-TTL ツールを
 - RX → TX
 - GND → GND
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png" alt="J601 の UART ヘッダと USB-TTL の配線" loading="lazy" />
+    <figcaption>J601 の UART ヘッダと USB-TTL の配線</figcaption>
+  </figure>
 </div>
 
 ### 使用手順
@@ -286,11 +346,14 @@ Jetson デバイス上でスクリプトを実行します：
 python3 uart_test.py
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png" alt="J601 の UART ヘッダと USB-TTL の配線" loading="lazy" />
+    <figcaption>J601 の UART ヘッダと USB-TTL の配線</figcaption>
+  </figure>
 </div>
 
-## I2S
+## I2S {#i2s}
 
 Robotics J601 は、オーディオ再生および録音用にアンプ出力とマイク入力を備えた I2S オーディオインターフェースを提供します。I2S インターフェースは J14 JST GH-1.25 コネクタから引き出されています。
 
@@ -307,8 +370,11 @@ Robotics J601 は、オーディオ再生および録音用にアンプ出力と
 
 ### ハードウェア接続
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2s_connect.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2s_connect.png" alt="J601 の I2S ヘッダ接続" loading="lazy" />
+    <figcaption>J601 の I2S ヘッダ接続</figcaption>
+  </figure>
 </div>
 
 ### 使用手順
@@ -338,7 +404,7 @@ aplay -D hw:2,0 -c 2 -r 48000 your_audio_file.wav
 :::
 
 
-## I2C
+## I2C {#i2c}
 
 Robotics J601 は J12 JST GH-1.25 コネクタ経由で I2C インターフェースを提供し、センサーや周辺機器を簡単に接続してシステムを拡張できます。
 
@@ -364,8 +430,11 @@ I2C デバイスをキャリアボード上の I2C インターフェースに�
 - SCL → SCL (Pin 3)
 - Power → 3V3 (Pin 4)
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_connect.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_connect.png" alt="J601 の I2C センサー配線" loading="lazy" />
+    <figcaption>J601 の I2C センサー配線</figcaption>
+  </figure>
 </div>
 
 ### 使用手順
@@ -383,8 +452,11 @@ sudo apt-get install i2c-tools
 i2cdetect -l
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c1.PNG"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c1.PNG" alt="J601 上の Linux I2C バス列挙" loading="lazy" />
+    <figcaption>J601 上の Linux I2C バス列挙</figcaption>
+  </figure>
 </div>
 
 **Step 3.** I2C バス上のデバイスをスキャンします：
@@ -393,8 +465,11 @@ i2cdetect -l
 sudo i2cdetect -y -r 1
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c2.png" alt="J601 上の I2C デバイスアドレススキャン" loading="lazy" />
+    <figcaption>J601 上の I2C デバイスアドレススキャン</figcaption>
+  </figure>
 </div>
 
 **Step 4.** I2C デバイスからレジスタを読み取ります。例えば、バス `i2c-1` 上のアドレス `0x58` のデバイスからレジスタ `0x00` を読み取るには：
@@ -403,13 +478,18 @@ sudo i2cdetect -y -r 1
 sudo i2cget -y 1 0x58 0x00
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c3.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/i2c_c3.png" alt="I2C レジスタの読み取り結果" loading="lazy" />
+    <figcaption>I2C レジスタの読み取り結果</figcaption>
+  </figure>
 </div>
 
-## GPIO (GPI/GPO)
+## GPIO (GPI/GPO) {#gpio-gpigpo}
 
-Robotics J601 は 2 つの JST GH-1.25 コネクタを介してデジタル GPIO インターフェースを提供します：4 チャンネル入力を持つ **GPI (General Purpose Input)** コネクタ J20 と、4 チャンネル出力を持つ **GPO (General Purpose Output)** コネクタ J14 です。すべての GPIO 信号は 1.8V（SoC ドメイン）から 3.3V にレベルシフトされており、標準的な 3.3V センサーや周辺機器と直接互換性があります。
+Robotics J601 は 2 つの JST GH-1.25 コネクタを介してデジタル GPIO インターフェースを提供します：4 チャンネル入力を持つ **GPI (General Purpose Input)** コネクタ J20 と、4 チャンネル出力を持つ **GPO (General Purpose Output)** コネクタ J17 です。すべての GPIO 信号は 1.8V（SoC ドメイン）から 3.3V にレベルシフトされており、標準的な 3.3V センサーや周辺機器と直接互換性があります。
+
+[J601 V1.0 回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf)では、**GPO は J17**、**I2S は J14** です。配線前に、使用する基板リビジョンの表記と照合してください。
 
 ### ピン定義
 
@@ -424,7 +504,7 @@ Robotics J601 は 2 つの JST GH-1.25 コネクタを介してデジタル GPIO
 | 5 | GPIO49 | G6 | GPI_4_3V3 (1.8V から 3.3V へのレベルシフト) | 入力, 3.3V |
 | 6 | - | - | グラウンド | Ground |
 
-#### GPO コネクタ - J14（出力）
+#### GPO コネクタ - J17（出力）
 
 | Pin # | モジュールピン名 | モジュール Pin # | 用途/説明 | 種別/方向 |
 | --- | --- | --- | --- | --- |
@@ -443,7 +523,6 @@ GH-1.25 ケーブルを使用して、GPIO デバイスをキャリアボード�
 - Signal → GPI/GPO ピン (Pin 2–5)
 - GND → Ground (Pin 6)
 
-<!-- PLACEHOLDER_GPIO_IMAGE: ボード上の GPI (J20) および GPO (J14) コネクタを示す写真を追加 -->
 
 ### 使用手順
 
@@ -471,7 +550,7 @@ gpioinfo
 gpioget <chip> <line>
 ```
 
-**Step 4.** GPO ピンに書き込みます。例えば、GPO_1（GPIO13、J14 の Pin 2）を High に設定するには：
+**Step 4.** GPO ピンに書き込みます。例えば、GPO_1（GPIO13、J17 の Pin 2）を High に設定するには：
 
 ```bash
 # Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
@@ -497,11 +576,10 @@ gpo_line.request(consumer="gpo_test", type=gpiod.LINE_REQ_DIR_OUT)
 gpo_line.set_value(1)  # Set high
 ```
 
-<!-- PLACEHOLDER_GPIO_USAGE_IMAGE: GPIO の読み取り/書き込み結果を示す写真/スクリーンショットを追加 -->
 
-## CAN
+## CAN {#can}
 
-CAN（Controller Area Network）は、ホストコンピュータなしでマイコンやデバイス同士が通信できる、堅牢な車載バス規格です。Robotics J601 は JST GH-1.25 コネクタ経由で **4 つの CAN インターフェース**（CAN0、CAN1、CAN2、CAN3）を提供し、すべて CAN FD モードをサポートします。
+CAN（Controller Area Network）は、ホストコンピュータなしでマイコンやデバイス同士が通信できる、堅牢な車載バス規格です。**T5000** モジュールでは、Robotics J601 は JST GH-1.25 コネクタ経由で **4 つの CAN FD インターフェース**（CAN0～CAN3）を提供します。**T4000** モジュールは **2 つの CAN インターフェース**に対応します。テスト用ポートを選ぶ前に、`ip -details link show type can` で BSP が公開しているインターフェースを確認してください。
 
 ### CAN コネクタのピンマッピング
 
@@ -513,7 +591,7 @@ CAN（Controller Area Network）は、ホストコンピュータなしでマイ
 | CAN3 | J25 | Ground | CAN3_L_ISO | CAN3_H_ISO | 5V 電源 |
 
 :::info
-4 つの CAN インターフェースはすべてアイソレートされています。各コネクタは Pin 4 に 5V 電源を提供します。
+CAN インターフェースはアイソレートされています。各コネクタは Pin 4 に 5V 電源を提供します。コネクタ表はキャリアボードの配線を示します。どのインターフェースが使えるかは、装着されているモジュールによって決まります。
 :::
 
 ### 120Ω 終端抵抗の制御
@@ -534,8 +612,11 @@ CAN（Controller Area Network）は、ホストコンピュータなしでマイ
 gpioinfo
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gpioinfo.PNG"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gpioinfo.PNG" alt="終端制御に使う J601 の GPIO ライン" loading="lazy" />
+    <figcaption>終端制御に使う J601 の GPIO ライン</figcaption>
+  </figure>
 </div>
 
 ### CAN クラシック通信
@@ -572,8 +653,11 @@ candump can1
 cansend can0 123#DEADBEEF
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c1.png" alt="J601 の Classic CAN 通信結果" loading="lazy" />
+    <figcaption>J601 の Classic CAN 通信結果</figcaption>
+  </figure>
 </div>
 
 ### CAN FD モード
@@ -616,8 +700,11 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 - その後に続くのがデータペイロードです（64 バイトの場合は最大 128 文字の 16 進数）
 :::
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c2.png" alt="J601 の CAN FD 通信結果" loading="lazy" />
+    <figcaption>J601 の CAN FD 通信結果</figcaption>
+  </figure>
 </div>
 
 ### CAN 包括テストスクリプト
@@ -747,24 +834,33 @@ chmod +x can_test.sh
 ./can_test.sh can0 can1
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c3.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c3.png" alt="J601 の CAN テストスクリプト出力" loading="lazy" />
+    <figcaption>J601 の CAN テストスクリプト出力</figcaption>
+  </figure>
 </div>
 
 
 
-## RS485
+## RS485 {#rs485}
 
 reComputer J601 キャリアボードには、J24 JST GH-1.25 4ピンコネクタから引き出された専用のアイソレートRS-485ポートが搭載されています。ピン定義は次のとおりです：
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png" alt="J601 J24 RS-485 コネクタのピン配置" loading="lazy" />
+    <figcaption>J601 J24 RS-485 コネクタのピン配置</figcaption>
+  </figure>
 </div>
 
 ### ハードウェア接続
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png" alt="J601 専用 RS-485 ヘッダの配線" loading="lazy" />
+    <figcaption>J601 専用 RS-485 ヘッダの配線</figcaption>
+  </figure>
 </div>
 
 ここでは、テスト用に `usb-to-rs485` を使用します：
@@ -789,17 +885,23 @@ sudo cat /dev/ttyUSB0
 echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-1.png" alt="J601 の 485-1 インターフェース接続" loading="lazy" />
+    <figcaption>J601 の 485-1 インターフェース接続</figcaption>
+  </figure>
 </div>
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-2.png" alt="J601 の 485-2 インターフェース接続" loading="lazy" />
+    <figcaption>J601 の 485-2 インターフェース接続</figcaption>
+  </figure>
 </div>
 
 
 
-## DB9 (RS232 / RS422 / RS485)
+## DB9 (RS232 / RS422 / RS485) {#db9}
 
 Robotics J601 はソフトウェアで切り替え可能な1つのDB9シリアルインターフェースを提供します。DB9ポートはJetsonシステム上の `/dev/ttyAMA9` に接続されており、SW3 DIPスイッチを設定することで RS232、RS422、RS485 のいずれかに構成できます。
 
@@ -807,8 +909,11 @@ Robotics J601 はソフトウェアで切り替え可能な1つのDB9シリア�
 
 各DB9ピンの機能は、選択した通信モードによって異なります。アダプタを配線する前に、以下の表とコネクタ図を参照してください。
 
-<div align="center">
-  <img width="400" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png" alt="J601 の DB9 設定インターフェース接続" loading="lazy" />
+    <figcaption>J601 の DB9 設定インターフェース接続</figcaption>
+  </figure>
 </div>
 
 ### RS485モード
@@ -816,14 +921,20 @@ Robotics J601 はソフトウェアで切り替え可能な1つのDB9シリア�
 
 ボード底面のスイッチを、下図のようにRS485モードに切り替えます。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png" alt="J601 の RS-485 モードインターフェース接続" loading="lazy" />
+    <figcaption>J601 の RS-485 モードインターフェース接続</figcaption>
+  </figure>
 </div>
 
 ### ハードウェア接続
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png" alt="J601 の 485-c インターフェース接続" loading="lazy" />
+    <figcaption>J601 の 485-c インターフェース接続</figcaption>
+  </figure>
 </div>
 
 :::tip
@@ -855,8 +966,11 @@ minicomで入力したテキストを表示するには、Local Echo 機能を�
 PCからJetsonへメッセージを送信するテストを行います。 
 
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png" alt="J601 の DB9 RS-485 ハードウェア接続" loading="lazy" />
+    <figcaption>J601 の DB9 RS-485 ハードウェア接続</figcaption>
+  </figure>
 </div>
 
 RS485は半二重プロトコルであるため、JetsonがRS485経由でPCに情報を送信できることをテストするには、RS485モードを有効にする必要があります。
@@ -864,18 +978,27 @@ RS485は半二重プロトコルであるため、JetsonがRS485経由でPCに�
 - step 2. 次に `O` を押して設定オプションを開きます。
 
 
-<div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c2.png" alt="RS-485 用シリアルツールの設定メニュー" loading="lazy" />
+    <figcaption>RS-485 用シリアルツールの設定メニュー</figcaption>
+  </figure>
 </div>
 
-<div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c3.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c3.png" alt="シリアルツールの RS-485 設定" loading="lazy" />
+    <figcaption>シリアルツールの RS-485 設定</figcaption>
+  </figure>
 </div>
 
 最後に、JetsonからPCへメッセージを送信できるようになります。
 
-<div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c4.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c4.png" alt="ホストのシリアルコンソールで受信した RS-485 データ" loading="lazy" />
+    <figcaption>ホストのシリアルコンソールで受信した RS-485 データ</figcaption>
+  </figure>
 </div>
 
 ### RS232モード 
@@ -884,14 +1007,20 @@ RS485は半二重プロトコルであるため、JetsonがRS485経由でPCに�
 
 ボード底面のスイッチを、下図のようにRS232モードに切り替えます。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png" alt="J601 の RS-232 モードインターフェース接続" loading="lazy" />
+    <figcaption>J601 の RS-232 モードインターフェース接続</figcaption>
+  </figure>
 </div>
 
 ### ハードウェア接続
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png" alt="J601 の 232-c インターフェース接続" loading="lazy" />
+    <figcaption>J601 の 232-c インターフェース接続</figcaption>
+  </figure>
 </div>
 
 :::tip
@@ -924,20 +1053,29 @@ minicomで入力したテキストを表示するには、Local Echo 機能を�
 PCからJetsonへメッセージを送信するテストを行います。 
 
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png" alt="J601 の DB9 RS-232 モードスイッチ位置" loading="lazy" />
+    <figcaption>J601 の DB9 RS-232 モードスイッチ位置</figcaption>
+  </figure>
 </div>
 
 
 同様にテストモードもオンにします。
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png" alt="J601 の RS-232 ホスト接続" loading="lazy" />
+    <figcaption>J601 の RS-232 ホスト接続</figcaption>
+  </figure>
 </div>
 
 JetsonからPCへメッセージを送信します。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c3.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c3.png" alt="ホストのシリアルコンソールで受信した RS-232 データ" loading="lazy" />
+    <figcaption>ホストのシリアルコンソールで受信した RS-232 データ</figcaption>
+  </figure>
 </div>
 
 ### RS422モード
@@ -946,14 +1084,20 @@ JetsonからPCへメッセージを送信します。
 
 ボード底面のスイッチを、下図のようにRS422モードに切り替えます。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png" alt="J601 の RS-422 モードインターフェース接続" loading="lazy" />
+    <figcaption>J601 の RS-422 モードインターフェース接続</figcaption>
+  </figure>
 </div>
 
 ### ハードウェア接続
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png" alt="J601 の 422-c インターフェース接続" loading="lazy" />
+    <figcaption>J601 の 422-c インターフェース接続</figcaption>
+  </figure>
 </div>
 
 :::tip
@@ -988,18 +1132,24 @@ minicomで入力したテキストを表示するには、Local Echo 機能を�
 PCからJetsonへメッセージを送信するテストを行います。 
 
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png" alt="J601 の 422-c1 インターフェース接続" loading="lazy" />
+    <figcaption>J601 の 422-c1 インターフェース接続</figcaption>
+  </figure>
 </div>
 
 
 同様にテストモードもオンにします。
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png" alt="J601 の 422-c2 インターフェース接続" loading="lazy" />
+    <figcaption>J601 の 422-c2 インターフェース接続</figcaption>
+  </figure>
 </div>
 
 
-## RGB
+## RGB {#rgb}
 
 <details>
 <summary>test_rgb.sh</summary>
@@ -1086,23 +1236,36 @@ echo "========================================"
 sudo chmod +x test_rgb.sh
 sudo ./test_rgb.sh
 ```
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif" alt="J601 のユーザー RGB LED カラーテスト" loading="lazy" />
+    <figcaption>J601 のユーザー RGB LED カラーテスト</figcaption>
+  </figure>
 </div>
 
-## Ethernet
+## Ethernet {#ethernet}
 
-Robotics J601 キャリアボードには、有線ネットワーク接続用として **4x 10GbE RJ45 Ethernet** ポートが搭載されており、PTP および EtherCAT プロトコルのサポートが予定されています。（注：T4000モジュールは 3x 10GbE をサポートします。）
+Robotics J601 キャリアボードは、**T5000 で 4 系統の 10GbE RJ45**、**T4000 で 3 系統の 10GbE** に対応します。ポートをテストするには、別の対向システムと適切なケーブルを使用してください。
 
 ### ハードウェア接続
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/ethnet.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/ethnet.png" alt="J601 の RJ45 Ethernet ポート位置" loading="lazy" />
+    <figcaption>J601 の RJ45 Ethernet ポート位置</figcaption>
+  </figure>
 </div>
 
 ### 使用手順
 
-Ethernet ポートの速度をテストするには、次のように `iperf3` を使用します：
+両方のシステムに `iperf3` をインストールします。対向システムでサーバーを起動します：
+
+```bash
+sudo apt install iperf3
+iperf3 -s
+```
+
+J601 では `ip -br address` を使い、テスト対象ポートに割り当てられたアドレスを確認してから実行します：
 
 **アップロード速度テスト：**
 
@@ -1110,8 +1273,11 @@ Ethernet ポートの速度をテストするには、次のように `iperf3` �
 iperf3 -c <server_ip> -B <bind_ip>
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed1.png" alt="J601 の Ethernet アップロードスループット測定" loading="lazy" />
+    <figcaption>J601 の Ethernet アップロードスループット測定</figcaption>
+  </figure>
 </div>
 
 **ダウンロード速度テスト：**
@@ -1120,8 +1286,11 @@ iperf3 -c <server_ip> -B <bind_ip>
 iperf3 -c <server_ip> -B <bind_ip> -R
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed2.png" alt="J601 の Ethernet ダウンロードスループット測定" loading="lazy" />
+    <figcaption>J601 の Ethernet ダウンロードスループット測定</figcaption>
+  </figure>
 </div>
 
 :::info
@@ -1130,13 +1299,13 @@ iperf3 -c <server_ip> -B <bind_ip> -R
 - `-R` フラグはテスト方向を反転し、ダウンロード速度テストを行います。
 :::
 
-## M.2 Key E
+## M.2 Key E {#m2-key-e}
 
 M.2 Key E インターフェースは標準的な M.2 コネクタで、主に Wi-Fi や Bluetooth などの無線モジュールを接続し、無線通信機能を拡張するために使用されます。
 
 ### ハードウェア接続
 
-<!-- PLACEHOLDER_M2E_IMAGE: Add a photo showing the M.2 Key E slot on the bottom of the board with WiFi module installed -->
+電源を切った状態で、対応する M.2 2230 Wi-Fi/Bluetooth モジュールを Key E スロットに取り付け、アンテナを接続します。以下のファームウェア例は **RTL8822CE** モジュール向けです。他のモジュールには、それぞれのドライバーとファームウェアが必要です。
 
 ### 使用手順
 
@@ -1173,8 +1342,11 @@ sudo ip link set wlP1p1s0 up
 sudo nmcli device wifi list ifname wlP1p1s0
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_1.png" alt="J601 上の Wi-Fi ネットワークスキャン" loading="lazy" />
+    <figcaption>J601 上の Wi-Fi ネットワークスキャン</figcaption>
+  </figure>
 </div>
 
 **ステップ 5.** Wi-Fi ネットワークに接続します：
@@ -1183,8 +1355,11 @@ sudo nmcli device wifi list ifname wlP1p1s0
 sudo nmcli device wifi connect "your WiFi name" password "WiFi password" ifname wlP1p1s0
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_2.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_2.png" alt="J601 の Wi-Fi 接続結果" loading="lazy" />
+    <figcaption>J601 の Wi-Fi 接続結果</figcaption>
+  </figure>
 </div>
 
 ### Bluetooth
@@ -1204,11 +1379,14 @@ power on
 scan on
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/blue_tooth.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/blue_tooth.png" alt="J601 上の Bluetooth デバイススキャン" loading="lazy" />
+    <figcaption>J601 上の Bluetooth デバイススキャン</figcaption>
+  </figure>
 </div>
 
-## 5G モジュール（M.2 Key B）
+## 5G モジュール（M.2 Key B） {#5g-module-m2-key-b}
 
 M.2 Key B スロットは 5G モジュール拡張をサポートしており、ロボティクスやエッジ AI シナリオ向けに高速セルラー接続を実現します。
 
@@ -1216,8 +1394,11 @@ M.2 Key B スロットは 5G モジュール拡張をサポートしており、
 
 5G モジュールを M.2 Key B スロットに装着し、アンテナを接続します。
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/5g_c1.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/5g_c1.png" alt="J601 の M.2 Key B スロットに取り付けたセルラーモジュール" loading="lazy" />
+    <figcaption>J601 の M.2 Key B スロットに取り付けたセルラーモジュール</figcaption>
+  </figure>
 </div>
 
 ### 使用手順
@@ -1249,19 +1430,25 @@ AT+CSQ
 AT+COPS?
 ```
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png" alt="セルラーモジュールの識別と AT コマンド出力" loading="lazy" />
+    <figcaption>セルラーモジュールの識別と AT コマンド出力</figcaption>
+  </figure>
 </div>
 
 ### Nano SIM
 
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png"/>
+<div className="jetson-product-hardware-gallery">
+  <figure>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png" alt="J601 の Nano SIM スロット位置" loading="lazy" />
+    <figcaption>J601 の Nano SIM スロット位置</figcaption>
+  </figure>
 </div>
 
 ### GPS
 
-M.2 Key B スロット上の 5G モジュールは、位置情報トラッキング用の GPS 機能も提供します。
+GPS の利用可否と AT コマンドは、装着したセルラーモジュールによって異なります。以下の例は Quectel 形式の `AT+QGPS` コマンドを使用します。対応状況とシリアルポートの割り当ては、モジュールのドキュメントで確認してください。
 
 ### 使用手順
 
@@ -1304,19 +1491,20 @@ GPS 信号を取得するために、空が開けた場所にいることを確�
 
 ## リソース
 
-- [reComputer J601 データシート](https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/reComputer_J601_Datasheet.pdf)
-- [reComputer Robotics J601 入門ガイド](/ja/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started)
+[J601 のリソース集](/jetson/recomputer_robotics_j601/getting_started/#resources)には、キャリアボードのデータシート、V1.0 回路図、STEP 機構モデル、Linux_for_Tegra BSP ソースがあります。信号配線とコネクタのリファレンス指示子は回路図を参照してください。
 
 ## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div className="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" className="button_forum" aria-label="Seeed コミュニティフォーラム"></a>
+<a href="https://www.seeedstudio.com/contacts" className="button_email" aria-label="Seeed サポートに連絡"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div className="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord" aria-label="Seeed Discord コミュニティ"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion" aria-label="Wiki 製品ディスカッション"></a>
+</div>
+
 </div>

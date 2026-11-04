@@ -1,5 +1,6 @@
 ---
 description: 演示Reachy Mini在带有重力补偿的顺从模式下的演示，允许机器人跟随轻推并在释放时保持在原位。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 顺从模式演示
 slug: /reachymini_examples_reachy_compliant_demo
 keywords:

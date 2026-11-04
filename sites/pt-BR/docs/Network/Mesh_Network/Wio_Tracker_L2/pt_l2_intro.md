@@ -1,5 +1,5 @@
 ---
-description: Introdução à Série Wio Tracker L2. Inclui recursos, funções, parâmetros e comparação entre modelos da série.
+description: Introdução à Série Wio Tracker L2. Inclui recursos, funções, parâmetros e comparação da série.
 title: Introdução ao Wio Tracker L2
 keywords:
   - Meshtastic
@@ -9,23 +9,23 @@ slug: /meshtastic_wio_tracker_l2_intro
 sku: 100029766
 sidebar_position: 0
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_wio_tracker_l2_intro/
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="pir" width={900} height="auto" /></p>
 
-A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e módulo GPS L76K para rastreamento de localização preciso. Projetado para flexibilidade, ele suporta tela sensível ao toque QSPI, telas E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
+A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetado para flexibilidade, ele suporta tela sensível ao toque QSPI, telas E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
 
 ## Recursos
 
 - **Tela sensível ao toque de 3,2'' de alta qualidade**: Com um display de 320×240 de alta nitidez e interfaces MUI e Base UI comutáveis, oferece interação fluida diretamente no dispositivo para mensagens, mapas e controle — sem precisar de um celular.
 
-- **Baseado em ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro oferece uma plataforma flexível para personalização de interface, desenvolvimento de recursos e aplicações de código aberto.
+- **Alimentado por ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro fornece uma plataforma flexível para personalização de interface, desenvolvimento de recursos e aplicações de código aberto.
 
 - **Mapas offline com posicionamento GNSS**: Faça o pré-download de mapas offline para um cartão MicroSD e visualize sua localização GNSS em tempo real diretamente no dispositivo, mesmo sem cobertura celular ou acesso à internet.
 
@@ -42,7 +42,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
   </tr>
   <tr>
     <td colspan="1">**Processador**</td>
-    <td colspan="1">Wio-S3 (Módulo ESP32S3 + SX1262)</td>
+    <td colspan="1">Wio-S3 (ESP32S3 + Módulo SX1262)</td>
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
@@ -61,7 +61,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td colspan="1">LoRa: </td>
   </tr>
    <tr>
-    <td colspan="1">Wi-Fi/BLE 5.0: antena FPC</td>
+    <td colspan="1">Wifi/BLE 5.0: antena FPC</td>
   </tr>
   <tr>
     <td colspan="1">GPS: antena cerâmica</td>
@@ -107,7 +107,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**Áudio**</td>
-    <td colspan="1">Codec I2S: ES8311</td>
+    <td colspan="1">Codec I2S</td>
   </tr>
   <tr>
     <td colspan="1">MIC</td>
@@ -121,7 +121,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
   </tr>
     <tr>
     <td colspan="1">**Dimensão**</td>
-    <td colspan="1">(Antena dobrada) C: 87,5 cm, L: 69 cm, A: 26,6 cm</td>
+    <td colspan="1">(Antena dobrada) C: 87,5 mm, L: 69 mm, A: 26,6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**Peso do dispositivo**</td>
@@ -142,7 +142,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
 |Item|Parâmetro|
 | :- | :- |
 |**Capacidade da bateria**|Bateria recarregável de íons de lítio, 3000mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
+|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente|
 |**Protocolo de carregamento**|USB Type-C|
 |**Entrada de energia do dispositivo**|5V, 1A|
 |**Tensão de corte totalmente carregada**|4,2V|
@@ -356,7 +356,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td>EXP_P12</td>
   </tr>
   <tr>
-    <td>Botão</td>
+    <td>Button</td>
     <td>WAKEUP_BUTTON</td>
     <td>EXP_P00</td>
     <td>GPIO</td>

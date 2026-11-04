@@ -1,5 +1,5 @@
 ---
-description: 本维基提供了 Myactuator 系列电机的教程。
+description: "MyActuator R 系列关节执行器完整指南：型号概览、CAN 接线、控制模式，以及机械臂调参。"
 title: 脉塔X系列电机
 keywords:
   - 执行器

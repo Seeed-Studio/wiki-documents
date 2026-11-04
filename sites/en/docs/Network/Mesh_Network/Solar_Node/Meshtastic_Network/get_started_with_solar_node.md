@@ -9,10 +9,10 @@ slug: /get_started_with_meshtastic_solar_node
 sku: 114993633,114993643
 sidebar_position: 2
 last_update:
-  date: 3/10/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-05-13'
-updatedAt: '2026-09-24'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/
 ---
 
@@ -576,6 +576,17 @@ This message confirms that the bootloader transfer completed successfully. Keep 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
 Flashing the bootloader does not reinstall the Meshtastic application firmware. After the successful transfer, follow [Flash Firmware](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to install it before using the device.
+
+### Device not responding or detected via USB
+
+If your Solar Node P1-Pro suddenly becomes unresponsive, with only the green LED lighting up and the device not being recognized via USB, try the following:
+
+1. Disconnect the USB cable and keep the solar panel away from sunlight.
+2. Carefully remove the back cover and batteries, avoiding short circuits.
+3. Leave the batteries removed for some time.
+4. Reinstall the batteries and check whether the device starts and can be recognized via USB.
+
+If the issue persists, please contact technical support.
 
 ### Unable to Communicate on the Primary Channel
 

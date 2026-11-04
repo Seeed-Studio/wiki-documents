@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini核心概念和架构文档，涵盖坐标系统、安全限制、电机模式和软件架构。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 核心概念和架构
 slug: /reachymini_sdk_core-concept
 keywords:

@@ -1,13 +1,7 @@
 const OpenAI = require('openai');
 const fs = require('fs').promises;
 const path = require('path');
-const { execSync, execFileSync } = require('child_process');
-const {
-  normalizeLf,
-  analyzeFrontMatterOnlyChange,
-  canReplaceFrontMatter,
-  replaceFrontMatter,
-} = require('./frontmatter-incremental');
+const { execSync } = require('child_process');
 
 // 使用 js-yaml 解析 Front Matter（若不可用，则回退正则）
 let yaml;
@@ -18,7 +12,8 @@ try {
 }
 
 const openai = new OpenAI({
-  apiKey: process.env.TRANSLATION_API_KEY
+  apiKey: process.env.TRANSLATION_API_KEY,
+  baseURL: 'https://openrouter.ai/api/v1'
 });
 
 // 语言配置
@@ -188,7 +183,7 @@ function postprocessDocument(translatedContent, lineMetadata, totalLines) {
     let translatedLine = translatedLines[i];
 
     // 移除行号标记
-    translatedLine = translatedLine.replace(/^\[LINE_\d+\]/, '');
+    translatedLine = translatedLine.replace(/^\[LINE_\d+(?:\]|>)/, '');
 
     // 处理空行
     if (translatedLine.includes('[EMPTY_LINE]')) {
@@ -806,7 +801,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
         const response = await openai.chat.completions.create({
-          model: 'gpt-5.1',
+          model: 'deepseek/deepseek-v3.2',
           max_completion_tokens: 20000,
           temperature: 0,
           messages: [
@@ -831,10 +826,10 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      console.log(`📡 调用ChatGPT API (尝试 ${attempt}/${maxRetries})...`);
+      console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
 
       const response = await openai.chat.completions.create({
-        model: 'gpt-5.1',
+        model: 'deepseek/deepseek-v3.2',
         max_completion_tokens: 20000,
         temperature: 0,
         messages: [
@@ -908,6 +903,7 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
+  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
 
   const langFilePrefix =
     targetLang === 'zh-CN' ? 'cn_' :
@@ -938,8 +934,9 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
      - 目标语言的 id 按下面的公式改写：
        1. 保留中间目录 A/B/C 不变
        2. 把最后一段 F 改成 "${langFilePrefix}F"
-       3. 也就是：英文 id = "A/B/C/F"
-          目标语言 id = "A/B/C/${langFilePrefix}F"
+       3. 最前面再加上语言前缀 "${localeFolder}/"
+       4. 也就是：英文 id = "A/B/C/F"
+          目标语言 id = "${localeFolder}/A/B/C/${langFilePrefix}F"
 5. **术语保护**：
 ${termsList}
 
@@ -1401,118 +1398,6 @@ async function translateFile(filePath, targetLang) {
   }
 }
 
-
-// Front Matter-only 修改走轻量路径：
-// - 正文变化 -> 完全沿用原 translateFile()
-// - 仅 Front Matter 变化 -> 只翻译 Front Matter，并保留目标语言正文
-async function translateModifiedFile(filePath, targetLang, baseSha) {
-  if (isProtectedPath(filePath) || filePath.endsWith('_category_.yml')) {
-    return translateFile(filePath, targetLang);
-  }
-
-  let currentContent;
-  try {
-    currentContent = normalizeLf(await fs.readFile(filePath, 'utf8'));
-  } catch (error) {
-    console.warn(`⚠️ 无法读取当前文件，回退全文翻译: ${filePath}: ${error.message}`);
-    return translateFile(filePath, targetLang);
-  }
-
-  const fmText = extractFrontMatter(currentContent);
-  const fmObj = parseFrontMatterObj(fmText);
-  if (shouldSkipLangByFrontMatter(fmObj, targetLang)) {
-    return translateFile(filePath, targetLang);
-  }
-
-  let baseContent;
-  try {
-    baseContent = execFileSync('git', ['show', `${baseSha}:${filePath}`], {
-      encoding: 'utf8',
-      maxBuffer: 20 * 1024 * 1024,
-    });
-  } catch (error) {
-    console.log(`ℹ️ 无法读取 base 版本，回退全文翻译: ${filePath}`);
-    return translateFile(filePath, targetLang);
-  }
-
-  const analysis = analyzeFrontMatterOnlyChange(baseContent, currentContent);
-  if (!analysis) {
-    return translateFile(filePath, targetLang);
-  }
-
-  const targetPath = generateTargetPath(filePath, targetLang);
-
-  let targetContent;
-  try {
-    // Front Matter-only 更新时，优先使用 source PR 的 base SHA 上的目标语言文档。
-    // 这样即使 contributor 的 fork 很久没有同步，也不会把旧版译文正文带回翻译 PR。
-    targetContent = normalizeLf(
-      execFileSync('git', ['show', `${baseSha}:${targetPath}`], {
-        encoding: 'utf8',
-        maxBuffer: 20 * 1024 * 1024,
-      })
-    );
-  } catch (error) {
-    // 理论上已有文档的修改应该能从 base SHA 取到目标译文。
-    // 如果 base SHA 上确实不存在（例如历史缺失译文），再兼容读取当前工作区。
-    try {
-      targetContent = normalizeLf(await fs.readFile(targetPath, 'utf8'));
-      console.log(`ℹ️ base SHA 上未找到目标语言文件，回退读取当前工作区: ${targetPath}`);
-    } catch (readError) {
-      console.log(`ℹ️ 目标语言文件不存在，回退全文翻译: ${targetPath}`);
-      return translateFile(filePath, targetLang);
-    }
-  }
-
-  if (!canReplaceFrontMatter(targetContent)) {
-    console.log(`ℹ️ 目标语言 Front Matter 无法安全识别，回退全文翻译: ${targetPath}`);
-    return translateFile(filePath, targetLang);
-  }
-
-  console.log(`⚡ 仅 Front Matter 发生变化: ${filePath} -> ${targetLang}`);
-  console.log(`   正文保持现有译文，不重新发送给模型`);
-  translationStatus.total++;
-
-  try {
-    const translatedResult = await translateWithClaude(
-      analysis.frontMatter,
-      targetLang,
-      3,
-      false,
-      null,
-      false,
-      false
-    );
-
-    const updatedContent = replaceFrontMatter(targetContent, translatedResult.text);
-    if (!updatedContent) {
-      throw new Error('无法安全替换目标语言 Front Matter');
-    }
-
-    await fs.writeFile(targetPath, updatedContent, 'utf8');
-
-    console.log(`✅ Front Matter 增量翻译完成: ${targetPath}`);
-    translationStatus.completed++;
-
-    return {
-      success: true,
-      path: targetPath,
-      action: 'translated',
-      translationMode: 'frontmatter_only',
-    };
-  } catch (error) {
-    console.error(`❌ Front Matter 增量翻译失败 ${filePath}: ${error.message}`);
-    translationStatus.failed++;
-
-    return {
-      success: false,
-      error: error.message,
-      path: filePath,
-      action: 'frontmatter_update_failed',
-    };
-  }
-}
-
 // 检测文件操作
 async function detectFileOperations(baseSha) {
   try {
@@ -1760,16 +1645,10 @@ async function main() {
     const langConfig = LANGUAGE_CONFIG[lang];
     console.log(`\n📄 开始处理 ${langConfig.name}...`);
     
-    // 新增文件完全沿用原来的全文翻译逻辑
-    for (const file of operations.added) {
+    // 处理新增和修改的文件
+    const filesToTranslate = [...operations.added, ...operations.modified];
+    for (const file of filesToTranslate) {
       const result = await translateFile(file, lang);
-      allResults.push(result);
-    }
-
-    // 修改文件先判断是否仅 Front Matter 变化。
-    // 正文有任何变化时仍然调用原来的 translateFile。
-    for (const file of operations.modified) {
-      const result = await translateModifiedFile(file, lang, baseSha);
       allResults.push(result);
     }
     

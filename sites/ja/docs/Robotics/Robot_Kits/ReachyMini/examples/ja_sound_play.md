@@ -1,5 +1,6 @@
 ---
 description: WAV ファイル、または push_audio_sample API を用いた連続ライブオーディオにより、Reachy Mini のスピーカーから音声を再生する例です。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: サウンド再生
 slug: /reachymini_examples_sound_play
 keywords:

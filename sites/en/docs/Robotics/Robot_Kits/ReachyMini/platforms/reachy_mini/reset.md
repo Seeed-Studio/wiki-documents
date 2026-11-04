@@ -1,5 +1,6 @@
 ---
 description: Guide for resetting Reachy Mini wireless using Reachy Mini Control app, Web Bluetooth, or nRF Connect to reset Wi-Fi hotspot or daemon.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reset Reachy Mini via Bluetooth
 slug: /reachymini_platforms_reachy_mini_reset
 keywords:

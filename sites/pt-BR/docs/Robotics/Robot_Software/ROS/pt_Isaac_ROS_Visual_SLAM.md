@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um guia passo a passo para usar o Isaac ROS Visual SLAM.
+description: "Como executar SLAM visual com o NVIDIA Isaac ROS no Jetson: configuração, ajuste da câmera, reconstrução 3D e rastreamento ao vivo."
 title: Isaac ROS Visual SLAM
 keywords:
   - NVIDIA

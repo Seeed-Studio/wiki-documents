@@ -1,5 +1,6 @@
 ---
 description: Referência completa da API para ferramentas do Reachy Mini, incluindo ferramentas de configuração de motor, de varredura e de regravação.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Referência da API de Ferramentas
 slug: /reachymini_api_tools
 keywords:

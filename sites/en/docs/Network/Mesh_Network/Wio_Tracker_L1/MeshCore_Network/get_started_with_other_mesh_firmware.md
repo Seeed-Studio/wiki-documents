@@ -8,10 +8,10 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 10/16/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-10-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/
 ---
 
@@ -244,6 +244,16 @@ After you configure the LoRa, you can send messages in the primary channel. All 
 The two devices only establish a connection when they have both received each other's advert.
 
 ## FAQ
+
+### Firmware Update Failed / OTA Recovery
+
+If your Wio Tracker L1 becomes unresponsive after a firmware update, try the following:
+
+1. Connect the device to your computer using a USB data cable and double-press the Reset button to [enter DFU mode manually](#unable-to-enter-dfu--entering-dfu-mode-manually).
+2. If the UF2 drive appears, follow the [Firmware Flashing](#firmware-flashing) guide to reinstall the appropriate application firmware.
+3. If the device still cannot be recovered and a DFU serial port is available, follow [Device Bricked & Bootloader Recovery](#device-bricked--bootloader-installation), then reinstall the application firmware.
+
+If the device cannot enter DFU mode or be detected by your computer, please contact technical support.
 
 ### Device Bricked & Bootloader Recovery {#device-bricked--bootloader-installation}
 

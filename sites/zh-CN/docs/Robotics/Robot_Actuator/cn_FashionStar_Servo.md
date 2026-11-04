@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for FashionStar Servo motors.
+description: "FashionStar 串行总线舵机完整指南：型号与规格、接线、ID 配置、位置/速度/力矩控制，以及机械臂 Python 示例。"
 title: 华馨京舵机
 keywords:
   - actuator

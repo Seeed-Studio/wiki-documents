@@ -250,15 +250,38 @@ function getCardLayout(card, isActive) {
   return {summary, summaryChildren, leftContent, rightContent};
 }
 
+function getCoursePanel(section, kitId) {
+  const kitLabel = {'rebot-rs': 'reBot-rs', 'rebot-dm': 'reBot-dm', soarm: 'SO101'}[kitId];
+  if (!section || !kitLabel) return null;
+
+  const sectionChildren = Children.toArray(section.props.children);
+  const list = sectionChildren.find((child) => hasPanelClass(child, 'learning-steps'));
+  const courses = Children.toArray(list?.props.children).filter((course) => {
+    if (!isValidElement(course)) return false;
+    const compatibility = Children.toArray(course.props.children)
+      .find((child) => hasPanelClass(child, 'course-compatibility'));
+    return Children.toArray(compatibility?.props.children)
+      .some((badge) => getTextContent(badge).trim() === kitLabel);
+  });
+  if (!courses.length) return null;
+
+  return cloneElement(section, {
+    id: `${kitId}-courses`,
+    className: `${section.props.className || ''} robotics-courses`,
+  }, sectionChildren.map((child) => child === list ? cloneElement(list, {}, courses) : child));
+}
+
 export default function RotatingProductShowcase({children}) {
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
   const copy = COPY[locale] || COPY.en;
 
-  const cards = useMemo(
+  const content = useMemo(
     () => Children.toArray(children).filter((child) => isValidElement(child)),
     [children],
   );
+  const courseSection = content.find((child) => child.props.id === 'courses');
+  const cards = useMemo(() => content.filter((child) => child !== courseSection), [content, courseSection]);
   const count = cards.length;
   const rootRef = useRef(null);
   const stageRef = useRef(null);
@@ -874,6 +897,8 @@ export default function RotatingProductShowcase({children}) {
                 >
                   {summaryChildren}
                 </button>
+
+                {getCoursePanel(courseSection, card.props.id)}
 
                 <aside
                   className="rotating-product-side rotating-product-side--left"

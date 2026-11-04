@@ -1,5 +1,6 @@
 ---
 description: Guía de uso de Reachy Mini que cubre la interfaz web del panel, la gestión de aplicaciones y el inicio rápido del SDK de Python.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Uso de Reachy Mini
 slug: /reachymini_platforms_reachy_mini_usage
 keywords:

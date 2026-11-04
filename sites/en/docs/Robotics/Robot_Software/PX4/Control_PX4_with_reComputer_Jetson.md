@@ -1,5 +1,5 @@
 ---
-description: Control PX4 with reComputer Jetson
+description: "How to control a PX4 flight controller with reComputer Jetson: wiring, MAVLink setup, offboard control examples for drones and robots."
 title: Control PX4 with reComputer Jetson
 keywords:
   - NVIDIA

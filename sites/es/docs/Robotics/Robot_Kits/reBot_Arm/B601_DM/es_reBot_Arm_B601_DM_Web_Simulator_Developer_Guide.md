@@ -1,6 +1,6 @@
 ---
 description: Esta guía para desarrolladores presenta la arquitectura, el runtime, el puente ROS2, la integración LLM/MCP y el flujo de trabajo de desarrollo secundario de la consola web reBotArm_simulator-DM y del stack ROS2/MuJoCo en el ReBot Arm Digital Twin & Control Stack para B601-DM.
-title: B601-DM con controlador web
+title: "Sistema de control web de reBot-DM: robot real y MuJoCo"
 keywords:
   - reBot Arm
   - B601-DM
@@ -105,7 +105,7 @@ ls /dev/ttyACM*
 /dev/ttyACM0
 ```
 
-[LINE_110>Listar `/dev/ttyACM0` (o `ttyACM1`, etc.) significa que se reconoce el puerto serie.
+Listar `/dev/ttyACM0` (o `ttyACM1`, etc.) significa que se reconoce el puerto serie.
 
 </details>
 

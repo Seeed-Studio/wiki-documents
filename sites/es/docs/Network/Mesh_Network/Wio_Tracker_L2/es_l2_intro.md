@@ -9,10 +9,10 @@ slug: /meshtastic_wio_tracker_l2_intro
 sku: 100029766
 sidebar_position: 0
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/es/meshtastic_wio_tracker_l2_intro/
 ---
 
@@ -23,11 +23,11 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
 
 ## Características
 
-- **Pantalla táctil de alta calidad de 3,2''**: Con una pantalla de 320×240 de alta claridad con MUI y Base UI conmutables, ofrece una interacción fluida en el dispositivo para mensajería, mapas y control, sin necesidad de un teléfono móvil.
+- **Pantalla táctil de alta calidad de 3,2''**: Con una pantalla de 320×240 de alta claridad y conmutación entre MUI y Base UI, ofrece una interacción fluida en el dispositivo para mensajería, mapas y control, sin necesidad de un teléfono móvil.
 
 - **Impulsado por ESP32S3, listo para desarrollar**: Impulsado por el ESP32-S3 de doble núcleo con Wi-Fi y Bluetooth LE, L2 Pro proporciona una plataforma flexible para la personalización de la interfaz, el desarrollo de funciones y aplicaciones de código abierto.
 
-- **Mapas sin conexión con posicionamiento GNSS**: Descarga previamente mapas sin conexión en una tarjeta MicroSD y visualiza tu ubicación GNSS en tiempo real directamente en el dispositivo, incluso sin cobertura celular ni acceso a internet.
+- **Mapas sin conexión con posicionamiento GNSS**: Descarga previamente mapas sin conexión en una tarjeta MicroSD y visualiza tu ubicación GNSS en tiempo real directamente en el dispositivo, incluso sin cobertura celular ni acceso a Internet.
 
 - **Batería de larga duración de 3000mAh**: Admite un uso diario prolongado con menor frecuencia de carga; funciona en condiciones de -10°C a 55°C.
 
@@ -82,7 +82,7 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
   </tr>
   <tr>
     <td colspan="1" rowspan="3">**Entrada de alimentación**</td>
-    <td colspan="1">USB Tipo-C: 5V — 1A</td>
+    <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
     <td colspan="1">Solar:JST-PH 2P-2.0mm, 5V ~ 13V</td>
@@ -92,7 +92,7 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
   </tr>
   <tr>
     <td colspan="1" rowspan="2">**Pantalla táctil IPS**</td>
-    <td colspan="1">Tamaño: 3,2 pulgadas</td>
+    <td colspan="1">Tamaño: 3.2 pulgadas</td>
   </tr>
   <tr>
     <td colspan="1">Resolución: 240 × 320 píxeles</td>
@@ -107,7 +107,7 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**Audio**</td>
-    <td colspan="1">Códec I2S: ES8311</td>
+    <td colspan="1">Códec I2S</td>
   </tr>
   <tr>
     <td colspan="1">MIC</td>
@@ -117,11 +117,11 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
   </tr>
     <tr>
     <td colspan="1">**Distancia de comunicación**</td>
-    <td colspan="1">Hasta 5,8 km</td>
+    <td colspan="1">Hasta 5.8 km</td>
   </tr>
     <tr>
     <td colspan="1">**Dimensiones**</td>
-    <td colspan="1">(Antena plegada) L: 87.5 cm, W: 69 cm, H: 26.6 cm</td>
+    <td colspan="1">(Antena plegada) L: 87.5 mm, W: 69 mm, H: 26.6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**Peso del dispositivo**</td>
@@ -143,7 +143,7 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
 | :- | :- |
 |**Capacidad de la batería**|Batería recargable de iones de litio, 3000mAh|
 |**Supervisión de la vida de la batería**|Nivel de batería en enlace ascendente periódico|
-|**Protocolo de carga**|USB Tipo-C|
+|**Protocolo de carga**|USB Type-C|
 |**Entrada de alimentación del dispositivo**|5V, 1A|
 |**Voltaje de corte completamente cargado**|4.2V|
 |**Límite de temperatura de carga**|0 a +45℃|

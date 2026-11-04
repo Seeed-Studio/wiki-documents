@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-19 11:16:14 (北京时间)
-// 多语言页面: 2574 个
+// 生成时间: 2026-11-03 17:28:55 (北京时间)
+// 多语言页面: 2635 个
 
 (function() {
   'use strict';
@@ -437,7 +437,49 @@
     "ja",
     "pt"
   ],
+  "/service_for_fusion_light_customization": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_manufacturing_documents": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_one_stop": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Service_for_Fusion_PCB": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_pcba_functional_test": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_pcba_testing_solutions": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_sample_validation": [
     "cn",
     "en",
     "es",
@@ -933,6 +975,13 @@
     "ja",
     "pt"
   ],
+  "/jetson/accelerate_llm_inference_mtp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/control_motor_by_voice_llm_on_jetson": [
     "cn",
     "en",
@@ -1360,14 +1409,14 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started": [
+  "/jetson/recomputer_robotics_j601/getting_started": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recomputer_jetson_robotics_j601_interfaces_usage": [
+  "/jetson/recomputer_robotics_j601/hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
@@ -1704,6 +1753,13 @@
     "pt"
   ],
   "/jetpack_7_2_unified_platform_iso_sbsa": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/accessories-selection-guide": [
     "cn",
     "en",
     "es",
@@ -2173,6 +2229,41 @@
     "pt"
   ],
   "/reServer_J2032_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_jetpack_l4t_ubuntu_kernel_uefi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_boot_log_analysis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_camera_data_chain": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_device_tree": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_usb": [
     "cn",
     "en",
     "es",
@@ -3887,6 +3978,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_firgate": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_2002_series_hardware_and_specs": [
     "cn",
     "en",
@@ -4322,6 +4420,13 @@
     "pt"
   ],
   "/recamera_pro_wifi_access": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_frigate": [
     "cn",
     "en",
     "es",
@@ -6869,6 +6974,139 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_hardware_and_teleoperation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_task_design": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_camera_recording": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_dataset_quality": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_act_training": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_act_deployment": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_algorithm_switching": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_act": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_eo1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_evo1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_gr00t_n1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_multi_task_dit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_pi0": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_pi05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_pi0_fast": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_smolvla": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_so101_algorithm_switching": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_wall_oss": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/rebot_physical_ai_course_chapter_1": [
     "cn",
     "en",
@@ -7143,6 +7381,167 @@
     "pt"
   ],
   "/robotics/rebot_physical_ai_course_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_4": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_5": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_6": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_7": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_8": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_9": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_10": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_11": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_12": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_13": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_14": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_15": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_16": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_17": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_18": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_19": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_20": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_21": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_22": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_introduction": [
     "cn",
     "en",
     "es",
@@ -9396,6 +9795,20 @@
     "pt"
   ],
   "/epaper_en05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_426_mono_kit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_73_color_kit": [
     "cn",
     "en",
     "es",
@@ -16498,6 +16911,13 @@
     "ja",
     "pt"
   ],
+  "/solutions/crayfish-behavior-recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/crowd-flow-monitoring": [
     "cn",
     "en",
@@ -16576,6 +16996,13 @@
     "pt"
   ],
   "/solutions/jetson-crowd-tracking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/rehab-posture-analysis": [
     "cn",
     "en",
     "es",

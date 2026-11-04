@@ -1,5 +1,6 @@
 ---
 description: Este tutorial muestra cómo construir una demo completa de agarre visual para el reBot Arm B601 utilizando el flujo de trabajo de agarre YOLO/OBB.
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 title: B601-DM Agarre Visual
 keywords:
   - reBot Arm

@@ -52,7 +52,7 @@ Instale as dependências necessárias:
 python3 -m pip install pyyaml motorbridge
 ```
 
-[LINE_55>Puxe o código de exemplo:
+Puxe o código de exemplo:
 
 ```bash
 git clone https://github.com/hopcan/rebotArm_ctrl.git

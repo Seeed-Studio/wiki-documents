@@ -167,8 +167,8 @@ const cmpVersions = (a, b) => {
       Boolean(obj.mirrorlink) && stableFilename && stableFilename !== obj.filename;
     const stableSha256 = obj.stableSha256 || (showStableMetadata ? 'TBD' : obj.sha256);
     const downloadRowStyle = { marginBottom: 12 };
-    const metadataStackStyle = { display: 'flex', flexDirection: 'column', gap: 8 };
-    const metadataLineStyle = { display: 'flex', alignItems: 'flex-start', gap: 4, lineHeight: 1.6 };
+    const metadataStackStyle = { display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 };
+    const metadataLineStyle = { display: 'flex', alignItems: 'flex-start', gap: 4, lineHeight: 1.6, overflowWrap: 'anywhere' };
 
     const warnProducts = ['j4012classic', 'j4011classic', 'j4012industrial', 'j4011industrial'];
     // 如需阈值为 36.4.3 请改成 '36.4.3'
@@ -184,20 +184,20 @@ const cmpVersions = (a, b) => {
         )}
 
         <Row align="middle" style={downloadRowStyle}>
-          <Col span={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.link}</p></Col>
-          <Col span={5}>
+          <Col xs={24} sm={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.link}</p></Col>
+          <Col xs={12} sm={5}>
             <a href={obj.mainlink}>OneDrive1</a> <Tag color="blue">{texts.latest}</Tag>
           </Col>
           {obj.mirrorlink && (
-            <Col span={5}>
+            <Col xs={12} sm={5}>
               <a href={obj.mirrorlink}>OneDrive2</a> <Tag color="green">{texts.stable}</Tag>
             </Col>
           )}
         </Row>
 
         <Row align="top" style={downloadRowStyle}>
-          <Col span={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.file}</p></Col>
-          <Col style={metadataStackStyle}>
+          <Col xs={24} sm={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.file}</p></Col>
+          <Col xs={24} sm={21} style={metadataStackStyle}>
             <div style={metadataLineStyle}><Tag color="blue">{texts.latest}</Tag><span>{obj.filename}</span></div>
             {showStableMetadata && (
               <div style={metadataLineStyle}><Tag color="green">{texts.stable}</Tag><span>{stableFilename}</span></div>
@@ -206,8 +206,8 @@ const cmpVersions = (a, b) => {
         </Row>
 
         <Row align="top">
-          <Col span={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.sha256}</p></Col>
-          <Col style={metadataStackStyle}>
+          <Col xs={24} sm={3}><p style={{ fontWeight: 'bold', margin: 0 }}>{texts.sha256}</p></Col>
+          <Col xs={24} sm={21} style={metadataStackStyle}>
             <div style={metadataLineStyle}><Tag color="blue">{texts.latest}</Tag><span style={{ whiteSpace: 'pre-line' }}>{obj.sha256}</span></div>
             {showStableMetadata && (
               <div style={metadataLineStyle}><Tag color="green">{texts.stable}</Tag><span style={{ whiteSpace: 'pre-line' }}>{stableSha256}</span></div>

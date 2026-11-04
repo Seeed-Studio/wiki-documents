@@ -1,9 +1,9 @@
 ---
 title: reSpeaker XVF3000 FAQ
-description: Frequently asked questions about DSP tuning and parameter control for the reSpeaker Mic Array v2.0 with XVF3000.
+description: Frequently asked questions about DSP tuning, parameter control, and device identification for the reSpeaker Mic Array v2.0 with XVF3000.
 slug: /respeaker_xvf3000_faq
 last_update:
-  date: 9/2/2026
+  date: 11/02/2026
   author: ray
 keywords:
   - reSpeaker XVF3000 FAQ
@@ -12,7 +12,7 @@ keywords:
   - tuning.py
 createdAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/respeaker_xvf3000_faq/
-updatedAt: '2026-09-03'
+updatedAt: '2026-11-02'
 ---
 
 <div class="respeaker-faq-page">
@@ -25,9 +25,47 @@ This page contains verified answers for the reSpeaker XVF3000. Each answer state
 
 - Confirm the exact product variant and the firmware mode (USB or I2S) the device is running.
 - Check the current firmware version before applying version-specific steps.
-- Answers on this page were last verified on 2026-09-01; re-check the linked official sources if you are reading this later.
+- Answers on this page were last verified on 2026-11-02; re-check the linked official sources if you are reading this later.
 
 <!-- RESPEAKER_FAQ_AUTO_START -->
+## Connectivity & Detection {#connectivity-and-detection}
+
+### Does the XVF3000 provide a unique serial number for device identification? {#unique-serial-identification}
+
+**Applies to:** reSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2 and ReSpeaker Mic Array v2.0 running the official USB audio firmware on Linux, Windows, or macOS hosts
+
+**Last verified:** 2026-11-02
+
+No. The official XVF3000 USB firmware does not expose a unique serial number: `iSerialNumber` is empty, DFU reports `serial="UNKNOWN"`, and `tuning.py` exposes only the firmware version and DSP parameters. For fixed installations, identify the device by its host USB port path. If the identifier must stay with the device, use a product with a factory-programmed serial number such as the XVF3800, or custom firmware with a production-written serial.
+
+**Prerequisites:**
+
+- Access to the host USB descriptors and the physical USB port used by the device
+- A host application or inventory record that can store the device's port or instance identifier
+
+1. Confirm that the device has no stock serial: `lsusb -v -d 2886:0018 | grep iSerial` should return `iSerial 0`, and `dfu-util -l` should report `serial="UNKNOWN"`.
+2. On Linux, read the stable port path with `udevadm info -q property -n /dev/bus/usb/001/002 | grep ID_PATH`. The device node number can change, but `ID_PATH` stays the same while the device remains on that port. For ALSA, use `/dev/snd/by-path/`, not `by-id` or the card index.
+3. On Windows use the device instance ID, and on macOS use the USB Location ID. Record that value with the unit's asset label.
+4. For a fixed installation, bind the recorded port path to the asset ID in the host application or inventory database. If the identifier must be read from the device itself, use a product with a factory serial number such as the XVF3800, or plan custom firmware and a production step that writes the serial.
+
+**Success criteria:**
+
+- The device reports no stock serial number (`iSerial 0` and DFU `serial="UNKNOWN"`).
+- The host resolves the same port path after reconnecting the device to the same port.
+- The application maps that port path to the intended physical unit or asset record.
+
+**Notes:**
+
+- The port path identifies the USB port, not the device; moving the device to another port or host requires re-binding.
+- Do not use `version`, `bcdDevice`, DOA angle, RT60, or noise floor as a unique identifier; these values are shared across units or change with the environment.
+- ALSA `by-id` names and card indexes are not stable when multiple identical devices are connected.
+
+**References:**
+
+- [ReSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2 Wiki](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/)
+- [Official XVF3000 tuning tool (tuning.py)](https://github.com/respeaker/usb_4_mic_array/blob/master/tuning.py)
+- [reSpeaker XVF3800 FAQ: unique device serial number](https://wiki.seeedstudio.com/respeaker_xvf3800_faq/#unique-device-serial)
+
 ## Algorithm Tuning {#algorithm-tuning}
 
 ### How can I inspect the built-in DSP tuning controls on ReSpeaker Mic Array v2.0? {#dsp-tuning-controls}

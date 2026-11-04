@@ -12,10 +12,10 @@ aliases:
   - /ai_robotics_recomputer_rugged_j40_getting_started
 sku: 100046979,100002634
 last_update:
-  date: 09/30/2026
+  date: 10/22/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-09-30'
+updatedAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/
 ---
 
@@ -266,14 +266,47 @@ Follow the workflow in order. The numbered layout keeps the host preparation, re
     <h3>Choose and Download the BSP</h3>
     <p className="jetson-product-step-label">Step 1 · Match the image to the exact Jetson configuration</p>
 
-Open the Jetson flashing resource page and check for the latest image for your exact reComputer Rugged model and Jetson module.
+Download the **JetPack 5.1.3 (L4T 35.5.0)** BSP for your installed Jetson module. The archive filenames retain the release label `5.1`.
 
-<div className="jetson-product-actions">
-  <a className="jetson-product-button" href="/flash/jetpack_to_selected_product" target="_blank">Open JetPack Image Selector ↗</a>
+<div className="jetson-product-table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Product / Jetson Module</th>
+      <th>JetPack / L4T</th>
+      <th>Download / Archive</th>
+      <th>SHA-256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reComputer Rugged J4012<br />Orin NX 16GB</td>
+      <td>5.1.3 / 35.5.0</td>
+      <td style={{overflowWrap: 'anywhere'}}><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCTCt8CNcDhSYb9sVlDWdTLAQWV47b54hu7OGhE-iy0J70?e=ujtu74" target="_blank" rel="noopener noreferrer">Download NX 16GB BSP ↗</a><br />mfi_recomputer-rugged-orin-nx-16g-j401-5.1-35.5.0-2026-04-01.tar.gz</td>
+      <td style={{overflowWrap: 'anywhere'}}>78c6ad751ce9bd838fbb69d06e46f3c06f27c5d7ccde0530e0a186291880150a</td>
+    </tr>
+    <tr>
+      <td>reComputer Rugged J3011<br />Orin Nano 8GB</td>
+      <td>5.1.3 / 35.5.0</td>
+      <td style={{overflowWrap: 'anywhere'}}><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA4j5l0BMl2RbhGbHYtgPQIAc0Pm3deaM3xaxi8eIRE8mw?e=d29vR4" target="_blank" rel="noopener noreferrer">Download Nano 8GB BSP ↗</a><br />mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz</td>
+      <td style={{overflowWrap: 'anywhere'}}>ca65466ccaf38e205fdf931a98ce7bb97b1b65a91f38cc69b284beafce099f33</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
+On the Ubuntu host, verify the downloaded file with `sha256sum` and compare the complete output with the matching value above:
+
+```bash
+# Orin NX 16GB (J4012)
+sha256sum mfi_recomputer-rugged-orin-nx-16g-j401-5.1-35.5.0-2026-04-01.tar.gz
+
+# Orin Nano 8GB (J3011)
+sha256sum mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz
+```
+
 :::warning
-Do not flash an image for a different carrier board or Jetson module. If your exact reComputer Rugged J4012 or J3011 configuration is not listed, contact Seeed Studio support before proceeding.
+Use the image that matches both the Rugged carrier board and the installed Jetson module. Wait for the download to finish and confirm its SHA-256 before extracting the archive.
 :::
 
   </div>
@@ -289,7 +322,7 @@ Prepare the following items before disconnecting or powering the device:
 
 - reComputer Rugged J4012 or J3011
 - 19–48 V DC power supply
-- Physical Ubuntu 20.04 or 22.04 host PC
+- Physical Ubuntu 20.04 host PC for these JetPack 5.1.3 packages
 - USB Type-C data cable for flashing
 - External monitor and HDMI cable
 - Keyboard and mouse
@@ -337,17 +370,21 @@ If the expected ID is missing, reconnect the USB cable, try another host USB por
     <h3>Extract and Flash the Image</h3>
     <p className="jetson-product-step-label">Step 4 · Run the mass-flash package from the Ubuntu host</p>
 
-Change to the directory containing the downloaded image and extract it:
+Change to the directory containing the downloaded image and extract the archive for your module:
 
 ```bash
 cd <path-to-image>
-sudo tar xpf mfi_xxxx.tar.gz
+# Orin NX 16GB (J4012)
+sudo tar xpf mfi_recomputer-rugged-orin-nx-16g-j401-5.1-35.5.0-2026-04-01.tar.gz
+
+# Orin Nano 8GB (J3011): use this archive instead
+# sudo tar xpf mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz
 ```
 
-Enter the extracted directory and start flashing:
+Enter the extracted BSP directory that contains `tools/kernel_flash/l4t_initrd_flash.sh` and start flashing. Replace `<extracted-bsp-directory>` with that directory's actual name:
 
 ```bash
-cd mfi_xxxx
+cd <extracted-bsp-directory>
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
   --flash-only --massflash 1 --network usb0 --showlogs
 ```
@@ -357,6 +394,15 @@ Wait until the terminal reports that flashing completed successfully. Then disco
   </div>
 </section>
 </div>
+
+:::tip Optional: Explore Other Jetson Carrier Boards
+After completing setup, you can explore firmware downloads and flashing instructions for other Seeed Jetson carrier boards.
+
+<div className="jetson-product-actions">
+  <a className="jetson-product-button jetson-product-button--secondary" href="/flash/jetpack_to_selected_product/" target="_blank" rel="noopener noreferrer">Browse Other Jetson Flashing Guides ↗</a>
+</div>
+
+:::
 
 ## Applications {#applications}
 

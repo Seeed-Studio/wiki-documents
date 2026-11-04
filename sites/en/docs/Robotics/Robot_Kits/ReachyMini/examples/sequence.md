@@ -1,5 +1,6 @@
 ---
 description: Example showcasing different movements on Reachy Mini demonstrating various motion patterns and sequences.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Sequence Demo
 slug: /reachymini_examples_sequence
 keywords:

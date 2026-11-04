@@ -1,5 +1,5 @@
 ---
-description: Mostrar às pessoas como usar a Orbbec Gemini 336.
+description: "Como começar com a câmera 3D Orbbec Gemini 336: configuração, instalação do SDK e streaming de profundidade e cor para aplicações de visão robótica."
 title: Câmera 3D Orbbec Gemini336
 keywords:
   - Jetson

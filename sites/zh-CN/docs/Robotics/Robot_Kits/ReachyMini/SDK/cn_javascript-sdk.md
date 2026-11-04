@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini JavaScript SDK和Web应用完整指南，通过WebRTC和Hugging Face Spaces实现零安装基于浏览器的机器人控制。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: JavaScript SDK和Web应用
 slug: /reachymini_sdk_javascript-sdk
 keywords:

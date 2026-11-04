@@ -46,17 +46,17 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概述
 
-迎接首款由 STM32 驱动的 XIAO。XIAO STM32C5 基于搭载 144MHz Arm Cortex-M33 内核的 STM32C5A3CG， 在紧凑的 XIAO 外形规格中带来了 CAN FD 连接、16MB 外部 Flash，以及带可编程加热功能的六轴 IMU。IMU 周围的专用加热电阻可实现由固件控制的预热，适用于机器人和运动感知项目。两个原生 CAN FD 控制器（其中一路配备板载 TCAN3403-Q1 收发器）为 USB-CAN 适配器、联网传感器和机器人控制项目提供了起点。USB-C 和板载电池充电功能同时支持桌面开发和便携式应用。
+迎接首款由 STM32 驱动的 XIAO。XIAO STM32C5 基于 STM32C5A3CG，搭载 144MHz Arm Cortex-M33 内核，将 CAN FD 连接、16MB 外部 Flash，以及带可编程加热功能的六轴 IMU 集成到紧凑的 XIAO 外形中。IMU 周围的专用加热电阻支持通过固件控制预热，适用于机器人和运动感知项目。两个原生 CAN FD 控制器（其中一路配备板载 TCAN3403-Q1 收发器）为 USB-CAN 适配器、联网传感器和机器人控制项目提供了起点。USB-C 和板载电池充电功能同时支持桌面开发和便携式应用。
 
 ## 特性
 
 - **首款 STM32 驱动的 XIAO**：基于 STM32C5A3CG，配备 144MHz Arm Cortex-M33 处理器，支持浮点运算和 DSP 指令，用于嵌入式控制和传感器处理。
 - **内置 CAN FD 连接**：两个原生 CAN FD 控制器，其中一路连接到板载 TCAN3403-Q1 收发器，并通过 CANH/CANL 焊盘引出。添加外部收发器即可使用第二路通道。
-- **带可编程加热的 6 轴 IMU**：板载 LSM6DS3TR-C 加速度计和陀螺仪，周围配有专用加热电阻。通过 GPIO 控制加热，可实现可编程预热，并在配合温度反馈固件时，实现闭环温度调节，有助于降低机器人和运动感知应用中的温度相关漂移。
+- **带可编程加热的六轴 IMU**：板载 LSM6DS3TR-C 加速度计和陀螺仪，周围配有专用加热电阻。通过 GPIO 控制加热，实现可编程预热，并可结合带温度反馈的固件实现闭环温度调节，有助于降低机器人和运动感知应用中的温度相关漂移。
 - **16MB 外部 Flash**：可通过应用固件存储应用数据、传感器日志、配置文件和 CAN 报文记录。
-- **用于通信定时的外部晶振**：板载高速外部晶振为 CAN FD 和其他对定时敏感的应用提供时钟参考。
+- **用于通信定时的外部晶振**：板载高速外部晶振为 CAN FD 和其他对时序敏感的应用提供时钟参考。
 - **USB-C 与电池充电**：可通过 USB-C 进行开发，或利用板载锂电池充电电路和电池连接焊盘构建电池供电设备。
-- **紧凑且易于集成的设计**：XIAO 外形规格和半孔边缘焊盘既支持通过排针在面包板上原型开发，也便于集成到自定义载板中。
+- **紧凑且易于集成的设计**：XIAO 外形和半孔边缘焊盘既支持通过排针在面包板上原型开发，也便于集成到自定义载板中。
 
 ## 规格参数
 
@@ -73,20 +73,20 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 | 板载 CAN 收发器            | 1 x TI TCAN3403-Q1                                                                                                    |
 | 板载 CAN 总线连接          | CANH/CANL 焊盘；使用板载 GND 作为信号参考                                                                            |
 | 第二路 CAN 通道            | 数字 TX/RX 信号；需要外部 CAN 收发器                                                                                 |
-| CAN 终端电阻               | 120 欧姆，默认启用；可通过可切断焊盘断开                                                                             |
+| CAN 终端电阻               | 120 欧姆，默认启用；可通过可切割焊盘断开                                                                             |
 | CAN 隔离                   | 无板载电气隔离                                                                                                       |
 | IMU                        | STMicroelectronics LSM6DS3TR-C，三轴加速度计和三轴陀螺仪                                                             |
 | IMU 加热                   | IMU 周围的专用加热电阻，采用 GPIO 控制驱动                                                                           |
 | 温度调节                   | 可编程预热；闭环设定点调节需要温度反馈和合适的应用固件                                                               |
 | 外部时钟                   | 板载高速外部晶振                                                                                                     |
-| USB                        | USB-C；USB 2.0 全速，12Mbps 信号速率                                                                                 |
+| USB                        | USB-C；USB 2.0 Full Speed，12Mbps 信号速率                                                                           |
 | 逻辑电平                   | 3.3V                                                                                                                  |
 | 供电                       | USB-C 5V 输入或通过 BAT 焊盘连接兼容锂电池                                                                           |
 | 电池充电                   | 板载充电电路                                                                                                         |
 | 用户控制                   | 复位按钮和启动按钮                                                                                                   |
 | 指示灯                     | 用户 LED 和充电指示灯                                                                                                 |
 | 调试接口                   | SWD                                                                                                                   |
-| 外形规格                   | 带半孔边缘焊盘的紧凑 XIAO 模块                                                                                       |
+| 外形尺寸                   | 紧凑的 XIAO 模块，带半孔边缘焊盘                                                                                     |
 
 ## 硬件概览
 
@@ -106,7 +106,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## **引脚映射**
 
-| XIAO 引脚 / 信号 | 功能            | 芯片引脚 | 复用功能             | 描述                                                          |
+| XIAO 引脚 / 信号 | 功能            | 芯片引脚 | 复用功能              | 描述                                                          |
 | :---------------: | :-------------: | :-------: | :-----------------: | :----------------------------------------------------------- |
 | VBUS              | 电源            |           | USB 5V              | 5V 电源输入/输出                                             |
 | GND               | 地              |           |                     | 电源地                                                       |
@@ -149,13 +149,13 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Bootloader 使用方法
 
-XIAO STM32C5 出厂时预装了支持 UF2 的 bootloader，主要用于固件更新。在烧录 `.uf2` 文件之前，快速双击板载 Reset 按钮。此时一块名为 **XIAOC5BOOT** 的大容量存储磁盘会挂载到你的电脑上。然后将固件文件复制到该磁盘中即可完成烧录。
+XIAO STM32C5 出厂预装了支持 UF2 的 bootloader，主要用于固件更新。在烧录 `.uf2` 文件之前，快速双击板载 Reset 按钮。此时一块名为 **XIAOC5BOOT** 的大容量存储磁盘会在你的电脑上挂载。然后将固件文件复制到该磁盘中即可完成烧录。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_disk_1.png" style={{width:400, height:'auto'}}/></div>
 
 ## 使用 PlatformIO 入门
 
-本节将通过点亮板载用户 LED，演示如何在 PlatformIO 开发平台上结合 Zephyr RTOS 框架来开发和使用 XIAO STM32C5。
+本节将演示如何使用 PlatformIO 开发平台与 Zephyr RTOS 框架，通过点亮板载用户 LED 来进行 XIAO STM32C5 的开发与使用。
 
 ### 硬件准备
 
@@ -235,7 +235,7 @@ pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 
 # for macOS/Linux
 pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
-``` 
+```
 
 :::tip
 
@@ -252,7 +252,51 @@ board = seeed-xiao-stm32c5
 
 **步骤 4.** 创建新项目
 
-- 在 PlatformIO 插件界面中，选择创建一个新项目。
+<details>
+
+<summary>首次创建新项目的加速步骤（可选）</summary>
+
+在此步骤中，你可以预先下载 XIAO STM32C5 开发所需的资源包，以加快首次创建新项目的速度。
+
+**1. 安装 Zephyr 框架包。**
+
+```bash
+pio pkg install --global --tool "framework-zephyr-nrf54lm20=https://dl.registry.platformio.org/download/platformio/tool/framework-zephyr/3.40400.260428/framework-zephyr-3.40400.260428.tar.gz"
+```
+
+**2. 安装 Zephyr 模块和 STM32 HAL。**
+
+将适用于你操作系统的命令块复制到 VS Code 终端中。如果出现多行粘贴警告，请点击 **Paste** 以保留换行。不要点击 **Paste as one line**。
+
+Windows（PowerShell）：
+
+```powershell
+$env:PATH = "$HOME/.platformio/penv/Scripts;$env:PATH"
+
+python "$HOME/.platformio/packages/framework-zephyr-nrf54lm20/scripts/platformio/install-deps.py" `
+  --platform ststm32 `
+  --secondary-installation
+```
+
+macOS/Linux（Bash 或 Zsh）：
+
+```bash
+export PATH="$HOME/.platformio/penv/bin:$PATH"
+
+python "$HOME/.platformio/packages/framework-zephyr-nrf54lm20/scripts/platformio/install-deps.py" \
+  --platform ststm32 \
+  --secondary-installation
+```
+
+:::tip
+
+下载体积较大，请耐心等待并保持网络稳定。
+
+:::
+
+</details>
+
+- 在 PlatformIO 插件界面中，选择创建新项目。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -270,7 +314,7 @@ board = seeed-xiao-stm32c5
 
 **步骤 1.** 编写 LED 闪烁程序
 
-XIAO STM32C5 具有一个用户 LED，对应 GPIO PB12。该 LED 在低电平时点亮；本示例将其配置为每 500 ms 闪烁一次。
+XIAO STM32C5 具有一个用户 LED，映射到 GPIO PB12。该 LED 在低电平时点亮；本示例将其配置为每 500 ms 闪烁一次。
 
 该项目由三个核心文件组成：
 
@@ -293,7 +337,7 @@ XIAO STM32C5 具有一个用户 LED，对应 GPIO PB12。该 LED 在低电平时
 CONFIG_GPIO=y
 ```
 
-- 将下面给出的参考代码复制到 `main.c` 中。
+- 将下面展示的参考代码复制到 `main.c` 中。
 
 ```c
 /*
@@ -387,7 +431,7 @@ XIAO STM32C5 背面预留了一个 **BAT** 电池接口，可使用 3.7 V‑4.
 
 XIAO STM32C5 集成了电池电压检测电路和电池充电电路。
 
-在检测电路中，**BAT_EN / PA15** 用于使能 TPS22916CNYFPR 芯片，而 **BAT_Reading / PA4** 用于读取电池电压。电路中使用了两个 10 kΩ 分压电阻，因此测得的数值等于锂离子电池实际电压的一半。
+在检测电路中，**BAT_EN / PA15** 用于使能 TPS22916CNYFPR 芯片，而 **BAT_Reading / PA4** 用于读取电池电压。电路中使用了两个 10 kΩ 分压电阻，因此测得的数值为实际锂离子电池电压的一半。
 
 在电池充电过程中，Charge_LED 会闪烁，充电完成后则熄灭。
 
@@ -550,21 +594,21 @@ int main(void)
 
 ## IMU
 
-XIAO STM32C5 搭载了板载 **[LSM6DS3TR‑C](https://www.st.com.cn/resource/en/datasheet/lsm6ds3tr-c.pdf) 六轴惯性传感器**，集成了三轴加速度计和三轴陀螺仪。它可用于姿态检测、运动识别、振动监测等应用场景。
+XIAO STM32C5 搭载了板载 **[LSM6DS3TR‑C](https://www.st.com.cn/resource/en/datasheet/lsm6ds3tr-c.pdf) 六轴惯性传感器**，集成了三轴加速度计和三轴陀螺仪。可用于姿态检测、运动识别、振动监测等应用场景。
 
-为减小环境温度变化对传感器偏置和测量稳定性的影响，板载实现了主动温度补偿加热电路。布置在 IMU 周围的加热电阻为传感器提供均匀加热，并可通过 PWM 信号调节加热功率。结合 IMU 内部的温度读数，通过软件控制使传感器在相对稳定的温度下工作，从而降低由温度漂移引起的测量漂移，并在长期运行和温度变化条件下提高数据一致性。
+为减轻环境温度变化对传感器零偏和测量稳定性的影响，开发板实现了主动温度补偿加热电路。布置在 IMU 周围的加热电阻为传感器提供均匀加热，并可通过 PWM 信号调节加热功率。结合 IMU 内部的温度读数，通过软件控制使传感器在相对稳定的温度下工作，从而降低由温度漂移引起的测量漂移，并在长期运行和变温条件下提升数据一致性。
 
-- 参考用法：[XIAO STM32C5 IMU 使用方法](https://wiki.seeedstudio.com/cn/xiao_stm32c5_application/#imu-usage)
+- 参考用法：[XIAO STM32C5 IMU Usage](https://wiki.seeedstudio.com/cn/xiao_stm32c5_application/#imu-usage)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_7.png" style={{width:550, height:'auto'}}/></div>
 
 ## CAN FD
 
-XIAO STM32C5 具有两个 CAN FD 控制器。FDCAN1 提供逻辑电平的 TX 和 RX 引脚，需要外接 CAN 收发器才能连接到 CAN 总线。FDCAN2 连接到板载的 [TCAN3403-Q1](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/tcan3403-q1.pdf) 收发器，并通过 CAN_H 和 CAN_L 焊盘连接到总线。该板还可以收发经典 CAN 帧。但仅支持经典 CAN 的节点无法解码 CAN FD 帧，因此在发送 FD 流量前，请确认总线上活动节点支持 CAN FD。CAN FD 支持最长 64 字节的有效载荷，并且在启用比特率切换时，可以在数据阶段使用更高的比特率。
+XIAO STM32C5 具有两个 CAN FD 控制器。FDCAN1 提供逻辑电平的 TX 和 RX 引脚，需要外接 CAN 收发器才能连接到 CAN 总线。FDCAN2 则连接到板载的 [TCAN3403-Q1](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/tcan3403-q1.pdf) 收发器，并通过 CAN_H 和 CAN_L 焊盘连接到总线。该开发板也可以收发经典 CAN 帧。但仅支持经典 CAN 的节点无法解码 CAN FD 帧，因此在发送 FD 流量前，请确认总线上活动节点均支持 CAN FD。CAN FD 支持最长 64 字节的有效载荷，并且在启用比特率切换时，可以在数据阶段使用更高的比特率。
 
-该板载有一个可断开的 120 Ω 终端电阻，默认启用。当 XIAO 位于 CAN 总线的物理端点且该端点没有其他终端电阻时，请保持其启用；当 XIAO 作为中间节点或该端点已安装其他终端电阻时，请将其禁用。请确保总线另一端也正确终端。收发器支持待机模式，在不需要 CAN 通信时可降低功耗。
+开发板上带有一个可断开的 120 Ω 终端电阻，默认启用。当 XIAO 位于 CAN 总线的物理端点且该端点没有其他终端电阻时，请保持其启用；当 XIAO 作为中间节点或该端点已安装其他终端电阻时，请将其禁用。同时确保总线另一端也已正确终端。收发器支持待机模式，在不需要 CAN 通信时可降低功耗。
 
-- 参考用法：[XIAO STM32C5 CANFD 使用方法](https://wiki.seeedstudio.com/cn/xiao_stm32c5_canfd_usage/)
+- 参考用法：[XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/cn/xiao_stm32c5_canfd_usage/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/canfd_2.png" style={{width:550, height:'auto'}}/></div>
 
@@ -585,7 +629,7 @@ XIAO STM32C5 具有两个 CAN FD 控制器。FDCAN1 提供逻辑电平的 TX 和
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

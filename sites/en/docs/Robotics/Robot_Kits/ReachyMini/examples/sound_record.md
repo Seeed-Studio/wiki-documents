@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating audio recording from Reachy Mini's microphone array and saving to WAV file with configurable duration.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Sound Recording
 slug: /reachymini_examples_sound_record
 keywords:

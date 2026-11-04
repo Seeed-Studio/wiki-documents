@@ -1,5 +1,6 @@
 ---
 description: Spherical joints maintenance guide for Reachy Mini covering cleaning and re-greasing the ball joints on the Stewart platform to restore smooth, quiet operation.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Spherical Joints Maintenance
 slug: /reachymini_troubleshooting_spherical_joints_maintenance
 keywords:

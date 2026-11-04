@@ -38,7 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO nRF52840** Plus 提供动力，显示板 EN04 支持 **24-pin** 和 **50-pin** 两种 ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池连接器、内置充电 IC，并带有一个复位按键和三个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息板。
+由 **XIAO nRF52840** Plus 提供算力，显示板 EN04 同时支持 **24-pin** 和 **50-pin** ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池接口、内置充电 IC，并带有一个复位按键和三个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息看板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -46,7 +46,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 - **由 XIAO nRF52840 Plus 驱动：** 连接兼容的 ePaper 显示屏后即可立即工作。
 - **多样化显示支持：** 兼容多种 ePaper 屏幕，支持 24-Pin 和 50-Pin 接口，并可通过跳线帽轻松切换。
-- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
+- **带开关的电池接口：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
 - **用户友好按键：** 包含 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
 
 ### 规格参数
@@ -64,11 +64,11 @@ import Steppers from '@site/src/components/utils/Stepper';
       <td>XIAO nRF52840 Plus</td>
     </tr>
     <tr>
-      <th>ePaper 连接器</th>
+      <th>ePaper 接口</th>
       <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
     </tr>
     <tr>
-      <th>电池连接器</th>
+      <th>电池接口</th>
       <td>JST 2.0mm</td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ import Steppers from '@site/src/components/utils/Stepper';
       <td>电池电源 ON/OFF</td>
     </tr>
     <tr>
-      <th>电源</th>
+      <th>电源供给</th>
       <td>- 3.7V 锂电池<br />- USB Type-C</td>
     </tr>
     <tr>
@@ -111,13 +111,13 @@ import Steppers from '@site/src/components/utils/Stepper';
             <td>24 Pin ePaper</td>
         </tr>
         <tr>
-            <th>ePaper 连接器</th>
+            <th>ePaper 接口</th>
             <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
         </tr>
         <tr>
-            <th>电池连接器</th>
+            <th>电池接口</th>
             <td>JST 2.0mm</td>
             <td>/</td>
             <td>JST 2.0mm</td>
@@ -148,9 +148,9 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 - **智能家居仪表盘**：显示天气更新、日历事件以及来自各类智能家居设备的通知等实时信息。
 - **能耗监测**：显示来自智能电表的能耗数据，帮助用户更高效地跟踪和管理能源使用。
-- **安防告警**：显示安防事件的告警和通知，例如运动检测或门/窗传感器触发。
+- **安防告警**：显示安防事件的告警和通知，例如移动侦测或门窗传感器触发。
 - **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
-- **数字相框**：创建一个支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
+- **数字相框**：打造一款支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
 
 ## 硬件概览
 
@@ -158,18 +158,18 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 支持的 ePaper 显示屏
 
-#### 24-Pin 连接器
+#### 24-Pin 接口
 
-- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch ePaper - Monochrome 122x250](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
-- [2.13-inch ePaper - Quadruple Color 122x250](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9-inch ePaper - Quadruple Color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+- [1.54 英寸 ePaper - 单色 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13 英寸 ePaper - 单色 122x250](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
+- [2.13 英寸 ePaper - 四色 122x250](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9 英寸 ePaper - 单色 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9 英寸 ePaper - 四色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2 英寸 ePaper - 单色 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26 英寸 ePaper - 单色 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83 英寸 ePaper - 单色 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5 英寸 ePaper - 单色 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.5 英寸 ePaper - 三色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.png" style={{width:800, height:'auto'}}/></div>
 
@@ -182,9 +182,9 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 :::
 
-#### 50-Pin 连接器
+#### 50-Pin 接口
 
-- [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [7.3 英寸 Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.png" style={{width:800, height:'auto'}}/></div>
 
@@ -224,19 +224,19 @@ EN04 提供三个用户可编程按键，可用于多种控制用途。所有按
 用户按键是可编程的，可配置为多种功能，例如页面切换、模式选择，或在 ePaper 项目中触发特定操作。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:700, height:'auto'}}/></div>
 
-### 电池连接器
+### 电池接口
 
-EN04 配备 JST 2.0 mm 电池连接器和内置充电 IC，非常适合用于电池供电的低功耗 ePaper 项目。
+EN04 配备 JST 2.0 mm 电池接口和内置充电 IC，非常适合用于电池供电的低功耗 ePaper 项目。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:700, height:'auto'}}/></div>
 
 ## 使用 Arduino 入门
 
 ### 安装 Seeed GFX2 库
 
-EN04 的所有 ePaper 示例都基于 **Seeed_GFX2** Arduino 库构建，该库支持在[支持的 ePaper 显示屏](#支持的-epaper-显示屏)章节中列出的所有 ePaper 显示屏。下面的示例以 **7.5-inch Monochrome ePaper (800 x 480)** 为例。
+EN04 的所有 ePaper 示例都基于 **Seeed_GFX2** Arduino 库构建，该库支持在[支持的 ePaper 显示屏](#支持的-epaper-显示屏)章节中列出的所有 ePaper 显示屏。下面的示例以 **7.5 英寸单色 ePaper（800 x 480）** 为例。
 
 **步骤 1. 下载 Seeed_GFX2 库**
 
@@ -246,33 +246,33 @@ EN04 的所有 ePaper 示例都基于 **Seeed_GFX2** Arduino 库构建，该库�
 
 **步骤 2. 将库添加到 Arduino IDE**
 
-打开 Arduino IDE，依次点击 **Sketch → Include Library → Add .ZIP Library...**，然后选择刚刚下载的 ZIP 文件。
+打开 Arduino IDE，依次进入 **Sketch → Include Library → Add .ZIP Library...**，然后选择刚刚下载的 ZIP 文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/15.png" style={{width:800, height:'auto'}}/></div>
 
 ### 配置并烧录程序
 
-1. 依次点击 **File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → nRF52840 Series → XIAO ePaper Display Board - EN04 → 7.5-inch ePaper - Monochrome 800x480 → HelloWorld**。
+1. 依次进入 **File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → nRF52840 Series → XIAO ePaper Display Board - EN04 → 7.5-inch ePaper - Monochrome 800x480 → HelloWorld**。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:800, height:'auto'}}/></div>
 
 2. 在 **Tools → Board** 中选择 **Seeed XIAO nRF52840 Plus**。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:400, height:'auto'}}/></div>
 
 3. 通过 USB Type-C 连接开发板，选择对应的串口，然后点击 **Upload**。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:300, height:'auto'}}/></div>
 
 :::note
-上面的示例路径以 7.5 英寸黑白屏为例。对于其他受支持的屏幕，只需在 **XIAO ePaper Display Board - EN04** 下选择与你的屏幕型号匹配的文件夹即可——每块屏幕都附带 **HelloWorld**、**Bitmap** 和 **Custom_Demo** 示例（7.5 英寸三色屏除外，它仅附带 **HelloWorld** 和 **Custom_Demo**）。
+上面的示例路径以 7.5 英寸黑白屏为例。对于其他支持的屏幕，只需在 **XIAO ePaper Display Board - EN04** 下选择与你的屏幕型号匹配的文件夹即可——每块屏幕都附带 **HelloWorld**、**Bitmap** 和 **Custom_Demo** 示例（7.5 英寸三色屏除外，它仅附带 **HelloWorld** 和 **Custom_Demo**）。
 :::
 
 ## 软件概览
 
-#### 基础按键读取示例
+#### 按键基础读取示例
 
-此示例演示如何检测三个按键的按下，并将消息打印到串口监视器。
+本示例演示如何检测三个按键的按下，并将消息打印到串口监视器。
 
 ```cpp
 #include <Adafruit_TinyUSB.h> // Required for Serial on the Seeed nRF52 Boards core
@@ -332,7 +332,7 @@ void loop() {
 
 #### 电池电压读取示例
 
-此示例演示如何读取电池电压并将其打印到串口监视器。
+本示例演示如何读取电池电压并将其打印到串口监视器。
 
 :::tip
 如果你想自己编写代码来读取电池电压，在调用 analogRead() 函数前增加 10ms 延时会更精确。
@@ -372,19 +372,19 @@ void loop() {
 **Q1：上电后 ePaper 屏幕没有任何显示。**
 
 - **DIY 套件未预装固件。** XIAO EN04 DIY 套件出厂时不预装 ePaper 固件——首次上电出现空白或黑屏是正常现象。
-- **检查 FPC 线缆方向。** 确保 ePaper 的 FPC 线缆以正确方向插入。反向插入可能导致空白屏幕，并有可能损坏屏幕。
+- **检查 FPC 线缆方向。** 确保 ePaper 的 FPC 线缆以正确方向插入。反向插入可能导致屏幕无显示，甚至损坏屏幕。
 - **按下 RESET 按钮。** 在烧录固件或接通电源后，按一次复位按钮以触发屏幕刷新。
 
-**Q2：屏幕显示内容乱码或只部分刷新。**
+**Q2：屏幕显示乱码或只部分刷新。**
 
 - **确认跳帽设置。** EN04 支持 24-Pin 和 50-Pin 两种 ePaper 屏幕——跳帽必须与屏幕类型匹配。24-pin 屏幕将跳帽设置为 24 Pin，50-pin 屏幕设置为 50 Pin。
 - **确认屏幕型号选择。** 在 Arduino 示例中，确保选择了与你的屏幕完全一致的型号（尺寸和颜色类型）。选择错误的型号会导致显示异常。
-- **等待完整刷新。** ePaper 屏幕采用完整刷新周期——在刷新过程中出现的局部刷新或残影是正常现象，刷新完成后会消失。
+- **等待完整刷新。** ePaper 屏幕采用完整刷新周期——刷新过程中出现的局部刷新或残影是正常现象，刷新完成后会消失。
 
-**Q3：使用电池供电时，开发板无法上电。**
+**Q3：使用电池供电时开发板无法上电。**
 
 - **检查电源开关。** 将电池电源开关拨到 ON 位置——当开关关闭时，开发板不会从电池取电。
-- **确认 JST 接插件极性。** 确保 JST 2.0 mm 电池接插件的极性连接正确。电池极性反接可能损坏硬件。连接电池前请核对接插件上的 +/− 标记。
+- **确认 JST 接插件极性。** 确保 JST 2.0 mm 电池接插件以正确极性插入。电池极性反接可能损坏硬件。连接电池前请核对接插件上的 +/− 标记。
 - **给电池充电。** 如果电池已完全放电，开发板可能无法启动。请连接 USB Type-C 给电池充电后再尝试。
 
 **Q4：Seeedash Firmware Flasher 无法检测到开发板。**
@@ -395,7 +395,7 @@ void loop() {
 
 **Q5：Arduino IDE 上传失败。**
 
-- **选择正确的开发板。** 进入 **Tools** → **Board**，确保选择的是 **Seeed XIAO nRF52840 Plus**。不要选择其他 XIAO 板卡型号。
+- **选择正确的开发板。** 进入 **Tools** → **Board**，确保选择的是 **Seeed XIAO nRF52840 Plus**，不要选择其他 XIAO 型号。
 - **选择正确的端口。** 进入 **Tools** → **Port**，选择与你的开发板对应的串口。如果没有端口出现，请检查 USB 线和连接情况。
 - **必要时进入 bootloader 模式。** 如果上传持续失败，双击 RESET 按钮进入 bootloader 模式，然后重新选择端口并再次上传。
 

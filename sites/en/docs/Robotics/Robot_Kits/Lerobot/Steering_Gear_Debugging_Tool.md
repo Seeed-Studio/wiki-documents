@@ -1,5 +1,5 @@
 ---
-description: Steering Gear Debugging Tool for SO-ARM in Lerobot.
+description: "How to debug SO-ARM servos with the Seeed_RoboController tool: detect servos, fix IDs, write neutral values and read status on Windows, Ubuntu and Mac."
 title: SO-Arm Debugging Tool
 keywords:
   - Lerobot

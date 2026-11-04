@@ -1,5 +1,6 @@
 ---
 description: Hardware datasheet for Reachy Mini Lite including dimensions, degrees of freedom, motor specifications, camera, microphone array, and electronic components.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Lite Hardware Datasheet
 slug: /reachymini_platforms_reachy_mini_lite_hardware
 keywords:

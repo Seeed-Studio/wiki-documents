@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um guia passo a passo para instalar o Isaac ROS.
+description: "Guia passo a passo para instalar o NVIDIA Isaac ROS no Jetson: pré-requisitos, configuração do Docker, instalação e execução do primeiro nó de inferência."
 title: Instalar o Isaac ROS
 keywords:
   - NVIDIA

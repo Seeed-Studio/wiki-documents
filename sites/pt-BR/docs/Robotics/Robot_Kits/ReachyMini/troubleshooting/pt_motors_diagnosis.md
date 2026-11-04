@@ -1,5 +1,6 @@
 ---
 description: Guia abrangente de diagnóstico e solução de problemas dos motores do Reachy Mini usando o aplicativo Testbench para detectar e corrigir falhas nos motores.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Diagnóstico e solução de problemas dos motores
 slug: /reachymini_troubleshooting_motors_diagnosis
 keywords:

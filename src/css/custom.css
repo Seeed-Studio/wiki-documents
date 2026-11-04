@@ -2405,3 +2405,72 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
   .jetson-applications-title > .menu__list {
     margin-top: 0.35rem;
   }
+
+/* Both course sections share navigation states; only their palettes differ. */
+.robotics-course-sidebar {
+  --ifm-menu-color: var(--course-nav-muted);
+  --ifm-menu-color-active: var(--course-nav-accent);
+  --ifm-menu-color-background-hover: var(--course-nav-hover);
+  --ifm-menu-color-background-active: var(--course-nav-active);
+}
+
+.hands-on-reproduction-sidebar {
+  --course-nav-accent: #24668e;
+  --course-nav-muted: #4c6579;
+  --course-nav-border: #8fc9ef;
+  --course-nav-header: linear-gradient(135deg, #e3f3ff, #f2f9ff);
+  --course-nav-hover: #edf7ff;
+  --course-nav-active: #dcefff;
+}
+
+.paper-reading-sidebar {
+  --course-nav-accent: #24613d;
+  --course-nav-muted: #52645b;
+  --course-nav-border: #9dc9a6;
+  --course-nav-header: linear-gradient(135deg, #edf5e4, #f3f8f6);
+  --course-nav-hover: #f0f7ee;
+  --course-nav-active: #e0efdc;
+}
+
+.robotics-section-title.robotics-course-sidebar > .menu__list-item-collapsible > .menu__link,
+.robotics-section-title.robotics-course-sidebar > .menu__link,
+.robotics-course-sidebar .robotics-section-title > .menu__list-item-collapsible > .menu__link,
+.robotics-course-sidebar .robotics-section-title > .menu__link {
+  color: var(--course-nav-accent);
+  border-left-color: var(--course-nav-border);
+  background: var(--course-nav-header);
+}
+
+.robotics-course-sidebar > .menu__list .menu__link:hover {
+  color: var(--course-nav-accent);
+}
+
+.robotics-course-sidebar .theme-doc-sidebar-item-link > .menu__link--active {
+  color: var(--course-nav-accent);
+  background-color: var(--course-nav-active);
+  font-weight: 600;
+  box-shadow: inset 3px 0 var(--course-nav-border);
+}
+
+.robotics-course-sidebar .menu__link:focus-visible {
+  outline: 2px solid var(--course-nav-accent);
+  outline-offset: 2px;
+}
+
+html[data-theme='dark'] .hands-on-reproduction-sidebar {
+  --course-nav-accent: #9bd4fa;
+  --course-nav-muted: #b1cbdc;
+  --course-nav-border: #609fc9;
+  --course-nav-header: linear-gradient(135deg, #203e55, #1c3246);
+  --course-nav-hover: #20394e;
+  --course-nav-active: #294c67;
+}
+
+html[data-theme='dark'] .paper-reading-sidebar {
+  --course-nav-accent: #a4d4a7;
+  --course-nav-muted: #b2c6b8;
+  --course-nav-border: #6da579;
+  --course-nav-header: linear-gradient(135deg, #243923, #1e302b);
+  --course-nav-hover: #253f30;
+  --course-nav-active: #2c4d39;
+}

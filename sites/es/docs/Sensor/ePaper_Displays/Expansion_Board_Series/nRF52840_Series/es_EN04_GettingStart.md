@@ -38,14 +38,14 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compatible con pantallas ePaper de **24 pines** y **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de alimentación, CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
+Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compatible tanto con pantallas ePaper de **24 pines** como de **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de alimentación, CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es ideal para proyectos ePaper de bajo consumo, como señalización digital, etiquetas electrónicas y paneles de información portátiles.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Características
 
-- **Impulsada por XIAO nRF52840 Plus:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible.
-- **Compatibilidad versátil de pantallas:** Compatible con una amplia gama de pantallas ePaper, admitiendo interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
+- **Impulsada por XIAO nRF52840 Plus:** Funciona inmediatamente al conectarla a una pantalla ePaper compatible.
+- **Compatibilidad de visualización versátil:** Compatible con una amplia gama de pantallas ePaper, admitiendo interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
 - **Conector BAT con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
 - **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para acelerar proyectos y funciones personalizables.
 
@@ -73,11 +73,11 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
     </tr>
     <tr>
       <th>Interruptor</th>
-      <td>Encendido/Apagado de alimentación de la batería</td>
+      <td>Encendido/Apagado de alimentación por batería</td>
     </tr>
     <tr>
-      <th>Alimentación</th>
-      <td>- Batería de litio de 3,7 V<br />- USB Type-C</td>
+      <th>Fuente de alimentación</th>
+      <td>- Batería de litio de 3,7 V<br />- USB Tipo-C</td>
     </tr>
     <tr>
       <th>Botón</th>
@@ -124,9 +124,15 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
         </tr>
         <tr>
             <th>Interruptor</th>
-            <td>Encendido/Apagado de alimentación de la batería</td>
+            <td>Encendido/Apagado de alimentación por batería</td>
             <td>/</td>
-            <td>Encendido/Apagado de alimentación de la batería</td>
+            <td>Encendido/Apagado de alimentación por batería</td>
+        </tr>
+        <tr>
+            <th>Botón</th>
+            <td>1x Botón de reinicio<br />3x Botón de usuario</td>
+            <td>/</td>
+            <td>/</td>
         </tr>
         <tr>
             <th>Puerto de extensión IO</th>
@@ -134,20 +140,14 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
             <td>conexión de otros controladores</td>
             <td>conexión de sensores adicionales</td>
         </tr>
-        <tr>
-            <th>Puerto de extensión IO</th>
-            <td>/</td>
-            <td>connection of others controller</td>
-            <td>connection of additional sensors</td>
-        </tr>
     </tbody>
 </table>
 
 
-### Aplicaciones
+### Aplicación
 
 - **Panel de control para hogar inteligente**: Muestra información en tiempo real como actualizaciones meteorológicas, eventos del calendario y notificaciones de varios dispositivos del hogar inteligente.
-- **Monitorización de energía**: Muestra datos de consumo energético de contadores inteligentes, ayudando a los propietarios a seguir y gestionar su uso de energía de forma más eficiente.
+- **Supervisión de energía**: Muestra datos de consumo energético de contadores inteligentes, ayudando a los propietarios a seguir y gestionar su uso de energía de forma más eficiente.
 - **Alertas de seguridad**: Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
 - **Pantalla de termostato inteligente**: Muestra niveles de temperatura y humedad, así como los ajustes de control de tu termostato inteligente.
 - **Marco de fotos digital**: Crea un marco de fotos digital con WiFi que pueda mostrar imágenes desde tu red de hogar inteligente.
@@ -174,11 +174,11 @@ Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compati
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
+Cuando utilices la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
 
 - Para pantallas ePaper de 24 pines → ajusta el jumper a 24 pines
 
-⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Verifica siempre la posición del jumper antes de encender.
+⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
 
 :::
 
@@ -189,17 +189,17 @@ Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Al usar la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
+Cuando utilices la XIAO ePaper Display Board, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
 
 - Para pantallas ePaper de 50 pines → ajusta el jumper a 50 pines
 
-⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Verifica siempre la posición del jumper antes de encender.
+⚠️ Usar una configuración de jumper incorrecta puede hacer que la pantalla ePaper no muestre nada o muestre contenido anómalo. Comprueba siempre la posición del jumper antes de encender.
 
 :::
 
 ### Botones de usuario
 
-La EN04 incorpora tres botones programables por el usuario que pueden utilizarse para diversas funciones de control. Todos los botones son activos en bajo: leen LOW cuando se presionan y HIGH cuando se sueltan.
+La EN04 incorpora tres botones programables por el usuario que pueden utilizarse para diversas funciones de control. Todos los botones son activos en bajo: leen LOW cuando se pulsan y HIGH cuando se sueltan.
 
 En la EN04, los tres botones están conectados al XIAO nRF52840 Plus de la siguiente manera:
 
@@ -224,13 +224,13 @@ En la EN04, los tres botones están conectados al XIAO nRF52840 Plus de la sigui
 Los botones de usuario son programables y pueden configurarse para diversas funciones, como cambio de página, selección de modo o activación de acciones específicas en tu proyecto ePaper.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:700, height:'auto'}}/></div>
 
 ### Conector de batería
 
 La EN04 está equipada con un conector de batería JST de 2,0 mm y un CI de carga integrado, lo que la hace adecuada para proyectos ePaper de bajo consumo alimentados por batería.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:700, height:'auto'}}/></div>
 
 ## Introducción con Arduino
 
@@ -238,13 +238,13 @@ La EN04 está equipada con un conector de batería JST de 2,0 mm y un CI de carg
 
 Todos los ejemplos de ePaper para la EN04 se basan en la librería de Arduino **Seeed_GFX2**, que es compatible con todas las pantallas ePaper enumeradas en la sección [Supported ePaper Displays](#Pantallas-ePaper-compatibles). Los ejemplos siguientes utilizan la **pantalla ePaper monocroma de 7,5 pulgadas (800 x 480)** como ejemplo.
 
-**Paso 1. Descargar la librería Seeed_GFX2**
+**Paso 1. Descarga la librería Seeed_GFX2**
 
 Visita el [repositorio de Seeed_GFX2 en GitHub](https://github.com/Seeed-Studio/Seeed_GFX2), haz clic en el botón verde **Code** y selecciona **Download ZIP** para guardar la librería en tu ordenador.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
 
-**Paso 2. Añadir la librería al IDE de Arduino**
+**Paso 2. Añade la librería al IDE de Arduino**
 
 Abre el IDE de Arduino, navega a **Sketch → Include Library → Add .ZIP Library...** y selecciona el archivo ZIP que acabas de descargar.
 
@@ -254,18 +254,18 @@ Abre el IDE de Arduino, navega a **Sketch → Include Library → Add .ZIP Libra
 
 1. Navega a **File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → nRF52840 Series → XIAO ePaper Display Board - EN04 → 7.5-inch ePaper - Monochrome 800x480 → HelloWorld**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:800, height:'auto'}}/></div>
 
 2. En **Tools → Board**, selecciona **Seeed XIAO nRF52840 Plus**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:400, height:'auto'}}/></div>
 
 3. Conecta la placa mediante USB Type-C, selecciona el puerto serie correspondiente y haz clic en **Upload**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:300, height:'auto'}}/></div>
 
 :::note
-Las rutas de ejemplo anteriores usan la pantalla monocroma de 7,5 pulgadas como ejemplo. Para otras pantallas compatibles, simplemente elige la carpeta que coincida con el modelo de tu pantalla en **XIAO ePaper Display Board - EN04**: cada pantalla se entrega con ejemplos de **HelloWorld**, **Bitmap** y **Custom_Demo** (excepto la Tri-Color de 7,5 pulgadas, que se entrega con **HelloWorld** y **Custom_Demo**).
+Las rutas de ejemplo anteriores usan la pantalla monocroma de 7,5 pulgadas como ejemplo. Para otras pantallas compatibles, simplemente elige la carpeta que coincida con el modelo de tu pantalla en **XIAO ePaper Display Board - EN04**: cada pantalla se envía con ejemplos de **HelloWorld**, **Bitmap** y **Custom_Demo** (excepto la Tri-Color de 7,5 pulgadas, que se envía con **HelloWorld** y **Custom_Demo**).
 :::
 
 ## Descripción general del software
@@ -371,14 +371,14 @@ void loop() {
 
 **P1: La pantalla ePaper no muestra nada después de encenderla.**
 
-- **El kit DIY no tiene firmware preinstalado.** El XIAO EN04 DIY Kit no se entrega con firmware de ePaper; una pantalla en blanco o negra al primer encendido es normal.
-- **Comprueba la orientación del cable FPC.** Asegúrate de que el cable FPC de la ePaper esté insertado en la dirección correcta. Invertir el conector puede causar una pantalla en blanco y puede dañar la pantalla.
+- **El kit DIY no tiene firmware preinstalado.** El XIAO EN04 DIY Kit no se envía con firmware de ePaper; una pantalla en blanco o negra al primer encendido es normal.
+- **Comprueba la orientación del cable FPC.** Asegúrate de que el cable FPC de la pantalla ePaper esté insertado en la dirección correcta. Invertir el conector puede provocar una pantalla en blanco y puede dañar la pantalla.
 - **Pulsa el botón RESET.** Después de cargar el firmware o conectar la alimentación, pulsa una vez el botón de reset para forzar una actualización de la pantalla.
 
 **P2: La pantalla muestra contenido ilegible o una actualización parcial.**
 
-- **Verifica la configuración del jumper.** La EN04 es compatible tanto con pantallas ePaper de 24 pines como de 50 pines; el jumper debe coincidir con el tipo de pantalla. Ajústalo a 24 Pin para pantallas de 24 pines y a 50 Pin para pantallas de 50 pines.
-- **Confirma la selección del modelo de pantalla.** En tu ejemplo de Arduino, asegúrate de haber seleccionado exactamente el modelo de pantalla (tamaño y tipo de color). Elegir el modelo incorrecto provocará un renderizado incorrecto.
+- **Verifica la configuración del jumper.** El EN04 es compatible tanto con pantallas ePaper de 24 pines como de 50 pines; el jumper debe coincidir con el tipo de tu pantalla. Ajústalo a 24 Pin para pantallas de 24 pines y a 50 Pin para pantallas de 50 pines.
+- **Confirma la selección del modelo de pantalla.** En tu ejemplo de Arduino, asegúrate de haber seleccionado exactamente el modelo de pantalla (tamaño y tipo de color). Elegir el modelo incorrecto provocará un renderizado erróneo.
 - **Espera a una actualización completa.** Las pantallas ePaper utilizan un ciclo de actualización completo; los efectos parciales o de ghosting durante la actualización son normales y desaparecerán una vez que el ciclo se complete.
 
 **P3: La placa no se enciende cuando se usa la batería.**
@@ -405,7 +405,7 @@ void loop() {
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

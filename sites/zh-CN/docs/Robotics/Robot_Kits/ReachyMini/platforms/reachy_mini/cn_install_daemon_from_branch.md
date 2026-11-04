@@ -1,5 +1,6 @@
 ---
 description: 面向开发者的指南，介绍如何从特定GitHub分支安装Reachy Mini守护进程以测试新功能和错误修复。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 从特定分支安装守护进程
 slug: /reachymini_platforms_reachy_mini_install_daemon_from_branch
 keywords:

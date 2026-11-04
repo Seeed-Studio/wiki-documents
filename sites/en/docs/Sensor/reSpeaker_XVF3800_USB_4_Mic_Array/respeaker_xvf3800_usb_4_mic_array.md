@@ -57,6 +57,7 @@ The ReSpeaker XVF3800 USB 4-Mic Array is a professional 4-mic circular array wit
 | **Main Audio Processor**      | **XMOS XVF3800**, handles audio processing including AEC, beamforming, noise suppression, etc.       |
 | **Microphone Array**          | **Quad PDM MEMS microphones** in circular pattern, supporting **360° far-field voice capture (5m)**. |
 | **Audio Codec**               | **TLV320AIC3104**, handles audio conversion and output.                                              |
+| **Amplifier**               | **LM48511**, Class D amplifier                                              |
 | **RGB LEDs**                  | **12x WS2812** individually-addressable RGB LEDs for visual feedback (e.g., status, voice activity). |
 | **Mute Button**               | Press to **mute/unmute** the microphone input.                                                       |
 | **Mute Indicator LED**        | Lights up (typically red) to show that audio is muted.                                               |
