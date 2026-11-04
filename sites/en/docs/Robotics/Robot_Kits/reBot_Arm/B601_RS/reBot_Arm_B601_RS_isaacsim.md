@@ -66,7 +66,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaa
 
 #### Download and unzip
 
-Download `isaac-sim-standalone-6.0.0-linux-x86_64.zip` from the [NVIDIA official website](https://developer.nvidia.com/isaac-sim).
+On the [NVIDIA Isaac Sim 6.0.0 download page](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaac-sim-latest-release), select **Linux (x86_64)** in the Isaac Sim row and download the precompiled package `isaac-sim-standalone-6.0.0-linux-x86_64.zip` to `~/Downloads`. The following commands are for Linux x86_64.
 
 ```Bash
 mkdir -p ~/isaacsim
@@ -96,7 +96,7 @@ ${ISAACSIM_PATH}/isaac-sim.sh
 
 The first launch will cache shaders, which may take 5-10 minutes, so please be patient while the GUI appears.
 
-### ⚙️ Method 2: Build from source (recommended)
+### ⚙️ Method 2: Build from source
 
 > 💡 Good for developers who need to tweak the underlying code or debug core features.
 
@@ -104,17 +104,21 @@ The first launch will cache shaders, which may take 5-10 minutes, so please be p
 
 ```Bash
 sudo apt update
-sudo apt install cmake build-essential git python3-pip
+sudo apt install build-essential git git-lfs gcc-11 g++-11
 ```
 
-Make sure CUDA and cuDNN are properly installed and match your GPU driver.
+Confirm that the default `gcc --version` and `g++ --version` both report version 11. See the [Isaac Sim 6.0.0 source build instructions](https://github.com/isaac-sim/IsaacSim/blob/v6.0.0/README.md#prerequisites-and-environment-setup) for compiler configuration and other prerequisites. An internet connection is required to download build dependencies.
 
 #### Cloning and Building
 
+The Isaac Sim source is in [isaac-sim/IsaacSim](https://github.com/isaac-sim/IsaacSim); the old NVIDIA-Omniverse address now redirects to a deprecated Dockerfile repository. The following commands use version 6.0.0, matching the binary installation in this tutorial:
+
 ```Bash
-git clone https://github.com/NVIDIA-Omniverse/IsaacSim.git
+git clone --branch v6.0.0 https://github.com/isaac-sim/IsaacSim.git
 cd IsaacSim
-./build.sh release
+git lfs install
+git lfs pull
+./build.sh --release
 ```
 
 The build process might take 30-60 minutes, depending on your hardware.
