@@ -242,7 +242,17 @@ Before connecting the FPC cable, identify the contact side and stiffener side. W
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/fpc-cable-connection.png" alt="pir" width={600} height="auto" /></p>
 
-Open the locking tab on the MIC Connector, insert the FPC cable with the correct orientation, and close the tab to secure the connection.
+To connect the FPC cable, first disconnect the power supply. Gently lift the locking tab on the MIC Connector, insert the cable in the correct orientation, and make sure it is fully seated before closing the tab.
+
+To disconnect the FPC cable, first disconnect the power supply. Gently lift the locking tab on the MIC Connector. Once the tab is fully open, carefully pull the cable straight out without applying excessive force.
+
+:::note
+
+To prevent damage to the FPC cable or connector, please observe the following precautions:
+- **Avoid Excessive Bending**: Avoid sharp bends, repeated folding, or excessive pulling on the FPC cable, especially near the connector.
+- **Handle the Locking Tab Carefully**: Always open the locking tab before inserting or removing the cable. Do not force the cable in or out while the tab is closed.
+
+:::
 
 #### Safe Mode
 
