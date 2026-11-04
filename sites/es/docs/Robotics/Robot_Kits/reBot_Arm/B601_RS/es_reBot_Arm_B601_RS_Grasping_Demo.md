@@ -359,6 +359,13 @@ pip install -e .
 cd ../..
 ```
 
+Si `pip install -e .` informa `Multiple top-level packages discovered in a flat-layout`, añade la detección explícita de paquetes al `pyproject.toml` de `reBotArm_control_py` y, a continuación, vuelve a ejecutar `pip install -e .`:
+
+```toml
+[tool.setuptools.packages.find]
+include = ["reBotArm_control_py*"]
+```
+
 Las configuraciones B601 DM y RS se seleccionan mediante los archivos de configuración del SDK. Para B601-RS, confirma lo siguiente en `sdk/reBotArm_control_py/config/rebotarm.yaml`:
 
 ```yaml

@@ -359,6 +359,13 @@ pip install -e .
 cd ../..
 ```
 
+`pip install -e .` が `Multiple top-level packages discovered in a flat-layout` と表示された場合は、`reBotArm_control_py` の `pyproject.toml` に明示的なパッケージ検出設定を追加し、その後もう一度 `pip install -e .` を実行してください：
+
+```toml
+[tool.setuptools.packages.find]
+include = ["reBotArm_control_py*"]
+```
+
 B601 DM と RS の構成は SDK の設定ファイルで選択します。B601-RS の場合は、`sdk/reBotArm_control_py/config/rebotarm.yaml` で次の内容を確認してください：
 
 ```yaml
