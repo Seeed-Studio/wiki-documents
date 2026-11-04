@@ -10,7 +10,7 @@ last_update:
   author: Lakshantha
 sku: 114110247
 createdAt: '2023-06-08'
-updatedAt: '2026-03-16'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/pt-br/reserver_industrial_hardware_interface_usage/
 ---
 

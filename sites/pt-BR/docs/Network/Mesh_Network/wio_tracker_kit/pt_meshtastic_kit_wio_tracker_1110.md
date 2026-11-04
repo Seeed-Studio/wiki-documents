@@ -11,7 +11,7 @@ last_update:
   date: 6/17/2024
   author: Jessie
 createdAt: '2024-06-21'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_kit_wio_tracker_1110/
 ---
 
@@ -91,7 +91,7 @@ Conecte o `Grove-GPS module` à porta `UART`, e o `Grove-OLED Display` à porta 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-grove.png" alt="pir" width={800} height="auto" /></p>
 
-[LINE_93>Ligue a placa.
+Ligue a placa.
 
 ### Configuração
 

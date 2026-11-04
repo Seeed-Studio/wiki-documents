@@ -15,7 +15,7 @@ last_update:
   date: 08/31/2026
   author: FaiyuetCik
 createdAt: '2026-08-31'
-updatedAt: '2026-08-31'
+updatedAt: '2026-09-15'
 url: https://wiki.seeedstudio.com/display_gadgets/
 ---
 

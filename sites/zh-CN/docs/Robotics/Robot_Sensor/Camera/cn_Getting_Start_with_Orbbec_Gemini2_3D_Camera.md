@@ -1,5 +1,5 @@
 ---
-description: 展示如何在 reComputer Jetson 平台上使用 Orbbec Gemini 335Lg。
+description: "如何在 reComputer Jetson 上使用 Orbbec Gemini 2 3D 相机：驱动配置、SDK 安装，以及面向机器人感知的深度与 RGB 数据流。"
 title: Orbbec Gemini2 3D 相机入门指南
 keywords:
   - Jetson
@@ -19,7 +19,7 @@ last_update:
   date: 2025-08-22
   author: Zibo
 createdAt: '2025-08-22'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/orbbec_gemini2/
 ---
 
@@ -33,7 +33,7 @@ url: https://wiki.seeedstudio.com/cn/orbbec_gemini2/
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=4&id=877820346195&mi_id=0000QdaT5iMFgRPNvhyKJJ0PvqVWRaarkpY3Th3dZgtkXbY&ns=1&priceTId=2150402b17901434016097518e0f44&skuId=6069820106496&spm=a21n57.1.hoverItem.1&utparam=%7B%22aplus_abtest%22%3A%228214a6de04f478a078ee8f6dbf0abb9a%22%7D&xxc=taobaoSearch" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 </a></div>
 

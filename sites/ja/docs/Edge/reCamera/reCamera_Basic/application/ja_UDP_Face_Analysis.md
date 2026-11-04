@@ -1,5 +1,5 @@
 ---
-description: このデモでは、reCamera 上でリアルタイム顔検出、属性解析（年齢/性別/人種）、および感情認識を実行し、その結果を UDP 経由で PC にストリーミングして表示する方法を示します。
+description: このデモでは、reCamera 上でリアルタイムの顔検出、属性解析（年齢/性別/人種）、および感情認識を実行し、その結果を UDP 経由で PC にストリーミングして表示する方法を示します。
 title: reCamera を用いた UDP 顔解析
 keywords:
   - reCamera
@@ -14,10 +14,10 @@ slug: /recamera_udp_face_analysis
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899,108990119,108990120,E20245041001,100018917, 100041077, 100029708, 100074316
 sidebar_position: 12
 last_update:
-  date: 04/30/2026
+  date: 10/08/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/recamera_udp_face_analysis/
 ---
 
@@ -25,20 +25,20 @@ url: https://wiki.seeedstudio.com/ja/recamera_udp_face_analysis/
 
 ## はじめに
 
-このデモでは、reCamera を使用してリアルタイム顔解析システムを構築する方法を説明します。このシステムは次の処理を行います：
+このデモでは、reCamera を使用してリアルタイムの顔解析システムを構築する方法を説明します。このシステムは次の処理を行います：
 
 - **顔検出**：YOLO 顔検出モデルを使用
 - **属性解析**：FairFace モデルを用いた年齢・性別・人種の推定
 - **感情認識**：7 クラスの感情検出
 - **UDP ストリーミング**：検出メタデータ付き JPEG フレームを UDP 経由で PC に送信
 
-C++ アプリケーションは reCamera 上で動作し、検出結果（バウンディングボックス、属性）とともにビデオフレームを UDP 経由で送信します。PC 上で動作する Python 受信スクリプトが、注釈付きビデオストリームをリアルタイムに表示します。
+C++ アプリケーションは reCamera 上で動作し、ビデオフレームと検出結果（バウンディングボックス、属性）を UDP を通じて送信します。PC 上で動作する Python 受信スクリプトが、注釈付きビデオストリームをリアルタイムに表示します。
 
 **主な特長**:
 - 信頼度しきい値を制御可能なリアルタイム顔検出
 - 顔ごとの複数属性解析（性別、年齢、人種、感情）
 - JPEG 圧縮を用いた効率的な UDP ストリーミング
-- CPU/TPU 負荷を軽減するためのフレームスキップ推論
+- CPU/TPU 負荷を下げるためのフレームスキップ推論
 - 詳細なパフォーマンス統計
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif" /></div>
@@ -48,7 +48,7 @@ C++ アプリケーションは reCamera 上で動作し、検出結果（バウ
 このデモをセットアップするには、次の作業が必要です：
 
 1. PC 上で C++ プログラムをクロスコンパイルする
-2. コンパイルした実行ファイルを ReCamera 上で実行する
+2. コンパイル済み実行ファイルを ReCamera 上で実行する
 3. PC 上で Python 受信スクリプトを実行する
 
 ### 1. C++ プログラムをコンパイルする
@@ -63,7 +63,7 @@ C++ アプリケーションは reCamera 上で動作し、検出結果（バウ
 export PATH='current compile chain path'/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
 ```
 
-まず、必要なモデルがそろっていることを確認します：
+まず、必要なモデルを用意します：
 - `yolo_face.cvimodel` - YOLO 顔検出モデル
 - `age_gender_race.cvimodel` - 年齢/性別/人種向け FairFace モデル
 - `emotion.cvimodel` - 感情認識モデル
@@ -93,18 +93,18 @@ make -j$(nproc)
 ### 2. ReCamera を設定する
 
 :::warning
-C++ プログラムを実行する前に、カメラリソースを占有しているデフォルトの Node-RED サービスを停止する必要があります。SSH 経由で次のコマンドを実行してください：
+C++ プログラムを実行する前に、デフォルトの Node-RED サービスを停止する必要があります。これらはカメラリソースを占有しているためです。SSH 経由で次のコマンドを実行してください：
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. ReCamera 上で実行ファイルを動かす
 
-コンパイルした実行ファイルとモデルを ReCamera 上の `/home/recamera/` にアップロードし、次を実行します：
+コンパイル済み実行ファイルとモデルを ReCamera 上の `/home/recamera/` にアップロードし、次を実行します：
 
 ```bash
 chmod +x face_udp
@@ -213,7 +213,7 @@ PC がデータを受信しない場合：
 - PC と ReCamera が同じネットワーク上にあることを確認する
 - PC のファイアウォール設定を確認する
 - UDP ポート 5001 がブロックされていないことを確認する
-- デバイス間で `ping` を実行してテストする
+- デバイス間で `ping` を使ってテストする
 
 ### モデル読み込みエラー
 
@@ -222,7 +222,7 @@ PC がデータを受信しない場合：
 - `ls -la` でファイルパーミッションを確認する
 - 十分なストレージ容量があることを確認する
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 

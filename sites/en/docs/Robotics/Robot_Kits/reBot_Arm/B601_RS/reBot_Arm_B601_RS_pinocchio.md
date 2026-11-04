@@ -9,7 +9,7 @@ keywords:
   - LeRobot
   - Kinematics
   - Robostride
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_arm_b601_rs_pinocchio_meshcat
 sku: 100019336
 last_update:
@@ -18,21 +18,18 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-11'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Pinocchio & MeshCat
 
-<RebotRsDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -279,7 +276,7 @@ sudo ip link set can0 up    # Bring up can0
 
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>Debugging Tools (use only when an exception occurs)</summary>
 
 **Single Motor Console — Robostride RS06 (`0x01rs06_test.py`)**
@@ -889,25 +886,39 @@ uv run python example/sim/traj_sim.py
 <span className="rebot-step-number">S4</span>
 <div className="rebot-step-content">
 <h4>Visualization Tool</h4>
-<p className="rebot-step-label">Simulation Demo 4 · sim/visualizer.py</p>
+<p className="rebot-step-label">Simulation Demo 4 · viz_test.py</p>
 
-MeshCat visualizer wrapper, providing a unified robot display interface.
+Based on MeshCat visualization and inverse kinematics, the simulated robotic arm gradually draws a heart and writes "LOVE" above it.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_MeshCat_LOVE.png" alt="Heart and LOVE drawing result of viz_test.py" />
+</div>
 
 **Main Functions**:
 
-- Load URDF model and display robot
-- Draw 3D polyline paths (reference/actual)
-- Display IK target pose (three-color axes + sphere)
-- Support joint trajectory animation playback
+- Load the URDF model and display the robotic arm's motion
+- Solve inverse kinematics point by point, moving along the heart and letter paths
+- The gray line shows the ideal path, while the red line progressively shows the simulated end-effector trajectory
+- Pen-up moves between letter strokes, so no connecting lines are drawn
+- Output the maximum position error after drawing is complete
 
-**Usage Example**:
+**Run Command**:
 
-```python
-from example.sim.visualizer import Visualizer
-viz = Visualizer()
-viz.update(q)  # Update robot pose
-viz.draw_path(points, "path_name", color)  # Draw path
+Run from the project root directory:
+
+```bash
+uv run python viz_test.py
 ```
+
+**Steps**:
+
+1. Open the MeshCat URL printed in the terminal in a browser.
+2. Return to the terminal and press Enter to start drawing the heart and LOVE.
+3. After drawing is complete, drag in the browser to view the result from different angles.
+4. Press Enter again to exit the program.
+
+The red trajectory is computed by the forward kinematics of the simulation model and does not represent real-machine measurements.
 
 </div>
 </section>

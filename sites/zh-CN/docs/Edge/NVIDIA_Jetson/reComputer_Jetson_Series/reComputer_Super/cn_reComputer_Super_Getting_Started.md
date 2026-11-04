@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_super_getting_started/
 ---
 
@@ -25,8 +25,8 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 </div>
 
 reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性能上带来高达 1.7 倍的提升，达到 157 TOPS。该系列包含搭载 Jetson Orin Nano（11410311, 11410312）和 Jetson Orin NX（11410313, 11410314）的型号。
-它面向开发与量产双重场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 和 Linux OS BSP，可实现开箱即用、快速推向市场。
-它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力丰富的 Physical AI 开发。
+它面向开发与量产双重场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 与 Linux OS BSP，可实现开箱即用、快速推向市场。
+它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力 Physical AI 开发。
 
 :::note
 可定制选项：Logo 品牌定制、包装和固件烧录。
@@ -47,19 +47,19 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 ### 🔌 ​**丰富的连接与接口**  
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe**，便于扩展  
-- ​**双 RJ45 以太网** 接口，支持高速网络  
+- ​**双 RJ45 以太网** 接口，支持高速网络连接  
 - ​**4x USB 3.2**、​**HDMI 2.1**、​**4x CSI**（摄像头串行接口）  
 - 支持 ​**CAN 总线**，适用于工业/机器人应用  
 
 ### 🛠️ ​**面向开发与量产**  
 
-- 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，开箱即可部署  
-- 与以下框架实现无缝边缘 AI 集成：  
+- 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，支持开箱部署  
+- 与以下框架无缝集成边缘 AI：  
   - ​**NVIDIA**、​**Hugging Face**、​**ONNX**、​**PyTorch**  
   - 面向机器人应用的 ​**ROS2/1**  
 - 支持 ​**多模态 AI** 和 ​**Physical AI** 开发  
 
-### 🤖 ​**针对边缘 AI 与机器人优化**  
+### 🤖 ​**面向边缘 AI 与机器人优化**  
 
 - 在边缘侧融合 ​**LLM（大语言模型）** 能力与 ​**Physical AI**  
 - 非常适合机器人、工业自动化和实时 AI 推理  
@@ -73,7 +73,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 - ​**Jetson Orin Nano**：12V 5A（5525 圆孔电源接口）  
 - ​**Jetson Orin NX**：19V 4.74A（5525 圆孔电源接口）  
-- 始终使用 ​**官方适配器**，并满足电源需求。  
+- 始终使用 ​**官方适配器** 并满足电源要求。  
 
 #### 2. ​**交流电源线**  
 
@@ -81,7 +81,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 #### 3. ​**配件**  
 
-- 仅使用 ​**官方推荐** 的配件（如摄像头、无线模块），以获得最佳性能和兼容性。
+- 仅使用 ​**官方推荐** 的配件（如摄像头、无线模块），以获得最佳性能与兼容性。
 
 :::
 
@@ -145,7 +145,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>视频编码器</td>
-      <td colSpan={2}>由 1-2 个 CPU 核心支持 1080p30</td>
+      <td colSpan={2}>1080p30，由 1–2 个 CPU 核心支持</td>
       <td colSpan={2}>1x 4K60（H.265）| 3x 4K30（H.265）<br />6x 1080p60（H.265）| 12x 1080p30（H.265）</td>
     </tr>
     <tr>
@@ -166,7 +166,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>存储</td>
-      <td colSpan={4}>1x M.2 KEY M PCIe（包含 128G M.2 NVMe 2280 SSD）</td>
+      <td colSpan={4}>1x M.2 KEY M PCIe（含 1 块 M.2 NVMe 2280 SSD 128G）</td>
     </tr>
     <tr>
       <td rowSpan={3}>网络</td>
@@ -188,7 +188,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>摄像头</td>
-      <td colSpan={3}>4x mipi CSI（2 通道 15-Pin）</td>
+      <td colSpan={3}>4x mipi CSI（2 通道 15 针）</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -228,7 +228,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>电源</td>
-      <td colSpan={4}>12-19V 5525 圆孔直流电源接口 </td>
+      <td colSpan={4}>12–19V 5525 圆孔直流电源接口</td>
     </tr>
     <tr>
       <td>Jetpack 版本</td>
@@ -252,13 +252,60 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     </tr>
     <tr>
       <td>认证</td>
-      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, 振动测试（GB/T 2423）</td>
+      <td colSpan={4}>CE、FCC、RoHS、REACH、Telec、KC、振动测试（GB/T 2423）</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## 刷写 JetPack 操作系统
+## 交互式 3D 浏览器
+
+在交互式 3D 查看器中探索 reComputer Super 系列。你可以旋转设备、查看硬件接口、浏览爆炸装配视图，并了解更多支持的模块信息。
+
+<div
+  style={{
+    width: '100%',
+    height: 'clamp(620px, 70vw, 760px)',
+    overflow: 'hidden',
+    border: '1px solid #4a525b',
+    borderRadius: '12px',
+    margin: '24px 0',
+    background: '#0b1015'
+  }}
+>
+  <iframe
+    src="https://youjiang.cloud/?embed=1#viewer"
+    title="reComputer Super Series Interactive 3D Explorer"
+    loading="lazy"
+    allow="fullscreen"
+    allowFullScreen
+    scrolling="no"
+    style={{
+      width: '100%',
+      height: '100%',
+      border: 0,
+      display: 'block'
+    }}
+  />
+</div>
+
+<div align="center">
+  <a
+    href="https://youjiang.cloud/#viewer"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    在新窗口中打开 3D 浏览器 ↗
+  </a>
+</div>
+
+## 硬件接口使用
+
+:::info
+关于每个硬件接口的详细规格和使用说明，请参考[硬件接口使用指南](https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/)。
+:::
+
+## 刷写 JetPack OS
 
 ### 支持的模块
 
@@ -275,8 +322,8 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 
 :::info
 
-我们建议使用物理 Ubuntu 主机设备，而不是虚拟机。
-请参考下表准备主机环境。
+我们建议您使用物理 Ubuntu 主机设备，而不是虚拟机。
+请参考下表准备主机设备。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -307,13 +354,13 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
   </tbody>
 </table>
 
-<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持刷机和目标端组件安装。如果需要主机端开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
+<p><strong>Note:</strong> 对于 JetPack 7.2，Ubuntu 24.04 仅支持用于烧录和目标端组件安装。如果您需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。</p>
 
 :::
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要在 Ubuntu 主机上下载与所使用 Jetson 模块对应的系统镜像：
+在这里，我们需要根据所使用的 Jetson 模组，将对应的系统镜像下载到 Ubuntu 电脑上：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -329,43 +376,43 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     <tr>
       <td rowSpan={4}>7.2</td>
       <td> Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">下载</a></td>
-      <td>0978be490c5ff7c1648317240e8f00d7<br />6b2d025ed30a945249eaa69112a047c8</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBbvOytYiQ5TpwiSraaD3npAZpCvsperY8OedbHtL4aoXs?e=qNrb0P">Download</a></td>
+      <td>b3acb95bf1064067029ce8159d48f8a<br />e5633a5ca4d9bb34fa955a39c5f2838ed</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ">下载</a></td>
-      <td>22a21d0ee9abdceb812e06ac399d8ca<br />5f14a3880fdf989c876223e72b21f4de6</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCumgxDQ7-SQ4c-zNL1Lv6fAazr7M2ao0XhSVLQskdbPF4?e=9MeULa">Download</a></td>
+      <td>2b851a7a19105e1e2dd6903881e9e682<br />7b45c85151ce6a2dabda9928b97ae9e7</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1">下载</a></td>
-      <td>7613332f8eeb315a0d9d51744a8f0a9<br />e8e11e92e091d2a06ad609235a54f7c72</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcA60i9AaiS7uPpL0EDCEYAcxlBthGLIC28GjY_DmdG7I?e=1Zklz1">Download</a></td>
+      <td>290ebf050e74dd30a3f17ab690772a21<br />a421abf0e8efcf89ff6c4fc2fe8e1ab7</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">下载</a></td>
-      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB-xhKB8WtjT7NNVuoLnQAGAcW7ZxofeJjIa8Z9-ULwux0?e=8GNboV">Download</a></td>
+      <td>ca333821c991da20db5cf9737e6439dc<br />ecf4d5e295ed33a981d4eea856cb3220</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">Download</a></td>
       <td>7a1f2085f50d77e5d86d3f01ccdc1255<br />c90a7c7d22a6ab7e4c4e3263e3148670</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">Download</a></td>
       <td>d26cbf4e16b9d5879e4b737754f65bb0<br />ea485b98760a1aa0657e07054efd8877</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">Download</a></td>
       <td>55a559dc6736650d45c2d787265c7e2c<br />36cd2d7f233ae58b00364aec7d82455c</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">Download</a></td>
       <td>51f816d57dedd6e2305acd0ae8e0ffdc<br />19aec7319e351b7a70489f7eab8d69c6</td>
     </tr>
   </tbody>
@@ -373,13 +420,13 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
 </div>
 
 :::danger
-JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等待下载完成。
+JetPack 镜像文件体积较大，下载可能需要大约 60 分钟。请耐心等待下载完成。
 :::
 
 :::info
-为了验证已下载固件的完整性，您可以对比 SHA256 哈希值。
+为了验证下载固件的完整性，您可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取已下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
 :::
 
 ### 进入强制恢复模式
@@ -402,7 +449,7 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 
 **步骤 3.** 使用 USB Type-C 数据传输线将 Super 连接到 Ubuntu 主机电脑。
 
-**步骤 4.** 在 Linux 主机电脑上，打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据您使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
+**步骤 4.** 在 Linux 主机电脑上打开终端窗口，输入命令 `lsusb`。如果返回的内容中根据您使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -417,9 +464,9 @@ JetPack 镜像文件较大，下载可能需要大约 60 分钟。请耐心等�
 
 </details>
 
-### 刷写到 Jetson
+### 烧录到 Jetson
 
-**步骤 1：** 解压已下载的镜像文件：
+**步骤 1：** 解压下载的镜像文件：
 
 ```bash
 cd <path-to-image>
@@ -428,7 +475,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For JetPack 7.2 example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-7.2.0-39.2.0-2026-06-19.tar.gz
 ```
 
-**步骤 2：** 执行以下命令，将 JetPack 系统刷写到 NVMe SSD：
+**步骤 2：** 执行以下命令，将 Jetpack 系统烧录到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -436,12 +483,12 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-如果刷写过程成功，您将看到如下输出
+如果烧录过程成功，您将看到如下输出
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-刷写命令可能需要运行 2-10 分钟。
+烧录命令可能会运行 2-10 分钟。
 :::
 
 **步骤 3：** 使用 HDMI 线连接显示器，并完成 reComputer Super 系统的初始化配置：
@@ -451,13 +498,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-请根据您的需求完成 **系统配置（System Configuration）**。
+请根据您的需求完成 **System Configuration**（系统配置）。
 :::
 
 ## 硬件接口使用
 
 :::info
-如果您想进一步了解硬件接口的详细规格和使用方法，请参考[本 wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/)。
+如果您想了解更多关于硬件接口的详细规格和使用方法，请参考[本 wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_super_hardware_interfaces_usage/)。
 :::
 
 ## 资源
@@ -479,7 +526,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

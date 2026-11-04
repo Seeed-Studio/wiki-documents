@@ -1,6 +1,7 @@
 ---
-description: このチュートリアルでは、reBot Arm B601-DM 向けに ROS2 control ワークスペースをセットアップする方法を説明します。アーム制御、RViz 可視化、MoveIt2 連携を含みます。
-title: reBot Arm B601-DM ROS2 連携
+description: このチュートリアルでは、アーム制御、RViz による可視化、MoveIt2 との統合を含む、reBot Arm B601-DM 用の ROS2 制御ワークスペースのセットアップ方法を説明します。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
+title: B601-DM と ROS2
 keywords:
   - reBot Arm
   - B601-DM
@@ -8,8 +9,8 @@ keywords:
   - Humble
   - Jazzy
   - RViz
-  - Robot Arm
-  - Robotics
+  - ロボットアーム
+  - ロボティクス
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
@@ -18,20 +19,17 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # reBot Arm B601-DM ROS2 連携
 
-<RebotDmDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

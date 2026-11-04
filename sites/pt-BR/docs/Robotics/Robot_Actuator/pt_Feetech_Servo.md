@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece tutoriais para servomotores Feetech.
-title: Servomotor Feetech
+description: "Guia completo dos servos de barramento serial Feetech STS/SM: fiação, baud rate e ID, calibração, feedback de posição e controle em Python para projetos SO-ARM e LeRobot."
+title: Feetech
 keywords:
   - atuador
   - motor
@@ -12,7 +12,7 @@ last_update:
   date: 11/24/2025
   author: Li Shanghang
 createdAt: '2025-06-23'
-updatedAt: '2026-03-16'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/pt-br/feetech_servo/
 ---
 

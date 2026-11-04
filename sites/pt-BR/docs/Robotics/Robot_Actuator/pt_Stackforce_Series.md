@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece tutoriais para motores da série Stackforce.
-title: Motores Stackforce Série
+description: "Guia completo dos atuadores robóticos StackForce: visão geral da série, fiação, comunicação CAN e exemplos de controle para robôs com rodas e com pernas."
+title: Stackforce
 keywords:
   - actuator
   - motor
@@ -13,7 +13,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-26'
-updatedAt: '2026-03-19'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/pt-br/stackforce_series/
 ---
 

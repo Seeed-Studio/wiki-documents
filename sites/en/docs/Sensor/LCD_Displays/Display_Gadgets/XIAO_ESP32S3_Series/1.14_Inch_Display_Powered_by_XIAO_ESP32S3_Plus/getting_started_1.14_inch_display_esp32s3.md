@@ -17,7 +17,7 @@ last_update:
   date: 09/07/2026
   author: FaiyuetCik
 createdAt: '2026-08-11'
-updatedAt: '2026-09-07'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/getting_started_1.14_inch_display_esp32s3/
 ---
 

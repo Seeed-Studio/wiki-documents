@@ -1,9 +1,9 @@
 ---
-description: Primeros pasos con Atom-S.
-title: Primeros pasos con Atom-S
+description: "Cómo empezar con el robot humanoide Atom-S: desembalaje, encendido, primer arranque, movimientos básicos y configuración del software."
+title: Guía rápida de Atom-S
 keywords:
-  - Humanoide
-  - Robótica
+  - Humanoid
+  - Robotics
   - Atom S
   - XIAO ESP32-S3
   - Servo
@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/es/atom_s/
 createdAt: '2026-05-25'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-22'
 ---
 
 # Primeros pasos con Atom-S

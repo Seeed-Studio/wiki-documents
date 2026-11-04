@@ -1,5 +1,5 @@
 ---
-description: HighTorque Motors Getting Started
+description: "How to get started with HighTorque robotic actuators: hardware setup, wiring, CAN connection and your first motion commands."
 title: HighTorque Software
 keywords:
   - actuator
@@ -12,7 +12,7 @@ last_update:
   date: 12/04/2025
   author: Tienjuiwong
 createdAt: '2025-12-04'
-updatedAt: '2025-12-04'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/hightorque_getting_started/
 ---
 

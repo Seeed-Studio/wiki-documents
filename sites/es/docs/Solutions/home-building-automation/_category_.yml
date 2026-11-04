@@ -1,0 +1,10 @@
+position: 3
+label: 'Automatización de hogares y edificios'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: es/home-building-automation
+#   title: Automatización de hogares y edificios
+#   description: Automatización de hogares y edificios, energía e integración de protocolos.

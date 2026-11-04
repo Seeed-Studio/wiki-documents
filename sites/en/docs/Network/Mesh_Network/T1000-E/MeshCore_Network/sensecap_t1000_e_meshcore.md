@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-07-31'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/
 ---
   
@@ -25,7 +25,7 @@ Connect your device with a USB cable to the computer.
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Go to the [MeshCore Web Flasher](https://meshcore.io/flasher). 
 
 Choose `Seeed Studio SenseCAP T1000-E` in the `Community Firmware` group.
 
@@ -45,7 +45,7 @@ If you have clicked `Erase Flash` but there is no response, click `Enter DFU` ag
 
 If you see "Flashing erase firmware:100%", the device has been successfully erased.
 
-<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
 #### Flash Firmware
 
@@ -67,9 +67,9 @@ Connect your device with a USB cable to the computer.
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
+Go to the [MeshCore Web Flasher](https://meshcore.io/flasher). 
 
-Choose `Seeed Studio Wio Tracker T1000-E` in the `Community Firmware` group.
+Choose `Seeed Studio SenseCAP T1000-E` in the `Community Firmware` group.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -127,17 +127,17 @@ Drag the downloaded UF2 file to the pop-out disk.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-The disk will disappear after the firmware is successfully flashed. At this point there is no firmware in the device, so the device will automatically reboot.
+The disk will disappear after the firmware is successfully flashed. The device will automatically reboot.
 
 ## Configuration
 
 ### Power on the device
 
-Press the button to turn it on. The LED will be on and there is a descending melody melody.
+Press the button to turn it on. The LED will be on and there is an ascending melody.
 
 ### Power off the device
 
-Press the button for 3s to turn it off. The LED will be off and there is a dec melody.
+Press the button for 3s to turn it off. The LED will be off and there is a descending melody.
 
 :::tip
 If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
@@ -145,7 +145,7 @@ If the device doesn't respond when you press the button, please charge it first.
 
 ### Get APP
 
-Download from the Google Store or Apple Store. Or [click here](https://meshcore.io/#download) to get the Meshcore APP.
+Download from the Google Store or Apple Store. Or [click here](https://meshcore.io/#download) to get the MeshCore APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -256,6 +256,16 @@ import TabItem from '@theme/TabItem';
 
 ## Troubleshooting
 
+### Firmware Update Failed / OTA Recovery
+
+If your SenseCAP Card Tracker T1000-E becomes unresponsive after a firmware update and the green LED stays solid on, the device is stuck in DFU mode. Try the following:
+
+1. Force a reboot to exit DFU mode: press and hold the button, then connect the charging cable.
+2. After the reboot, check whether the device starts normally. If not, enter DFU mode manually — press and hold the device button, then **quickly** connect the charging cable twice; this may need several attempts. When a disk named `T1000-E` appears, follow the [Firmware Flashing](#firmware-flashing) guide to reinstall the appropriate application firmware.
+3. If the device still cannot be recovered and a DFU serial port is available, follow [Device bricked](#device-bricked) to re-flash the bootloader, then reinstall the application firmware.
+
+If the device cannot enter DFU mode or be detected by your computer, please contact technical support.
+
 ### Device never turns on
 
 - Charge the device for 1~2 hours
@@ -330,13 +340,17 @@ Then "Python xxx" and "pip xxx" should appear. If it does not, please try instal
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
 
-This is recommended method, to install latest version:
+This is the recommended method.
+
+<Tabs>
+<TabItem value="windows" label="Windows">
 
 ```
-pip3 install --user adafruit-nrfutil
+python -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
 ```
 
-Check the installation path:
+If `adafruit-nrfutil` is not recognized, check the installation path:
 
 ```
 python -m pip show adafruit-nrfutil
@@ -346,10 +360,41 @@ This is the installation location:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-For window user, you may need to add the  path manually. Copy the installation location showed in the last step. Then add it as followed:
+You may need to add the path manually. Copy the installation location showed in the last step. Then add it as followed:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```
+python3 -m pip install --user adafruit-nrfutil
+adafruit-nrfutil version
+```
+
+If `adafruit-nrfutil` is not recognized, add the Python user scripts directory (`bin` under your home directory) to your PATH.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+Install `adafruit-nrfutil` with pipx:
+
+```
+sudo apt install pipx
+pipx install adafruit-nrfutil
+pipx ensurepath
+```
+
+On Fedora, use `sudo dnf install pipx` instead of apt. Reopen your terminal, then verify:
+
+```
+adafruit-nrfutil version
+```
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 
@@ -374,7 +419,7 @@ python3 setup.py install
 If you get permission errors when running `pip3 install`, your `pip3` is older or is set to try to install in the system directories. In that case use the `--user` flag:
 
 ```
-pip3 install -r --user requirements.txt
+pip3 install --user -r requirements.txt
 python3 setup.py install
 ```
 
@@ -429,7 +474,7 @@ Please change COMXX to your com number. For example, if your device is on com6, 
 - **For others**:
 
 ```
-adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/cu.usbmodemXXXX -b 115200 --singlebank --touch 1200
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>

@@ -10,7 +10,7 @@ last_update:
   date: 9/16/2026
   author: Clara
 createdAt: '2023-01-16'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/XIAO_BLE/
 ---
 import Tabs from '@theme/Tabs';
@@ -639,7 +639,7 @@ void loop() {
 Here , We would like to express our special thanks to the author for providing the code → ***daCoder*** ←
 :::
 
-**If you want to know about this example more detail inforation , Click [Here](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**
+**If you want to know about this example more detail information , Click [Here](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**
 
 ## Battery Charging current
 

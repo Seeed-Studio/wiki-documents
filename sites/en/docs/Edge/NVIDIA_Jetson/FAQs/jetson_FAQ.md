@@ -7,7 +7,7 @@ last_update:
   date: 07/15/2026
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-07-15'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/Jetson_FAQ/
 ---
 
@@ -131,6 +131,10 @@ For details, please click [here](/jetpack72_deep_dive)
 #### Q23: How to restore Wi-Fi modules such as Intel AX210/AX200 or Realtek RTL8852BE after upgrading to JetPack 7.2?
 
 For details, please click [here](/jetpack72_ax210_ax200_wifi_setup_guide)
+
+#### Q24: What AI models can I deploy on my Jetson device and how?
+
+For details, please click [here](/ai_robotics_deploy_ai_models_on_jetson)
 
 ## Tech support
 

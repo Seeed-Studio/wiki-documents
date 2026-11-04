@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating how to display video stream from Reachy Mini and make the robot look where you click on the frame.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Look at Image
 slug: /reachymini_examples_look_at
 keywords:

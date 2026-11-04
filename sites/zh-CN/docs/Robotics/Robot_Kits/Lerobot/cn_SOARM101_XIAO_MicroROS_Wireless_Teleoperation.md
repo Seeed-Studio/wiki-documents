@@ -15,11 +15,20 @@ last_update:
   date: 09/20/2026
   author: linao681
 createdAt: '2026-07-24'
-updatedAt: '2026-09-20'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/soarm101_xiao_microros_wireless_teleoperation/
 ---
 
 # 使用 XIAO ESP32-C3 和 micro-ROS 实现 SO-ARM101 有线与无线遥操作
+
+<div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap'}}>
+  <a className="get-one-now-button" style={{paddingLeft: '20px', paddingRight: '20px'}} href="https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84" target="_blank" rel="noopener noreferrer">
+    立即购买 SO-ARM101 套件 / Get One Now 🖱️
+  </a>
+  <a className="get-one-now-button" style={{paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Bus-Servo-Driver-Board-for-XIAO-p-6413.html" target="_blank" rel="noopener noreferrer">
+    立即购买 XIAO 舵机驱动板 / Get One Now 🖱️
+  </a>
+</div>
 
 :::note 社区贡献
 本教程由社区成员 [@linao681](https://github.com/linao681) 贡献。感谢你与 Seeed Studio 社区分享这个项目！
@@ -110,7 +119,7 @@ PC 和 XIAO 必须连接到同一个本地网络。演示时可以使用手机�
 - ROS 2 Humble
 - 支持 Feetech 的 LeRobot
 - micro-ROS Agent
-- Python 3.10
+- Python 3.12
 - PlatformIO
 
 如果尚未安装 micro-ROS Agent 和 PlatformIO，请先安装：

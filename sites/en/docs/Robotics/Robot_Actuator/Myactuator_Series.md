@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for Myactuator series motors.
+description: "Complete guide to MyActuator R series joint actuators: model overview, CAN wiring, control modes and tuning for robotic arms."
 title: MyActuator
 keywords:
   - actuator
@@ -13,7 +13,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaoHui
 createdAt: '2023-08-20'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/myactuator_series/
 ---
 

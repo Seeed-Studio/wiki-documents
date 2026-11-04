@@ -1,5 +1,6 @@
 ---
 description: Roteiro do Reachy Mini mostrando atualizações recentes, recursos futuros e áreas de foco de desenvolvimento, incluindo app móvel e espaço de programação vibe.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Roteiro do Reachy Mini
 slug: /reachymini_troubleshooting_roadmap
 keywords:

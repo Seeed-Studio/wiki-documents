@@ -1,6 +1,6 @@
 ---
-description: このwikiはStackforceシリーズモーターのチュートリアルを提供します。
-title: Stackforce シリーズモーター
+description: "StackForce ロボットアクチュエータの完全ガイド：シリーズ概要、配線、CAN 通信、車輪型・脚式ロボットの制御例。"
+title: Stackforce
 keywords:
   - actuator
   - motor
@@ -12,8 +12,8 @@ last_update:
   author: Li Shanghang
 translation:
   skip: [zh-CN]
-createdAt: '2025-11-27'
-updatedAt: '2026-03-03'
+createdAt: '2025-11-26'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/stackforce_series/
 ---
 

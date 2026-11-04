@@ -1,6 +1,6 @@
 ---
-description: Introducción al Adaptador Ethernet XIAO W5500
-title: Introducción al Adaptador Ethernet XIAO W5500
+description: Primeros pasos con el Adaptador Ethernet XIAO W5500
+title: Primeros pasos con el Adaptador Ethernet XIAO W5500
 keywords:
   - ethernet
   - w5500
@@ -9,35 +9,35 @@ sidebar_position: 9
 slug: /xiao_w5500_ethernet_adapter
 sku: 113100042
 last_update:
-  date: 06/04/2025
+  date: 10/13/2026
   author: Citric
 createdAt: '2025-06-10'
-updatedAt: '2026-01-07'
+updatedAt: '2026-08-03'
 url: https://wiki.seeedstudio.com/es/xiao_w5500_ethernet_adapter/
 ---
 
 ## Introducción
 
-Una placa de desarrollo PoE compacta que incluye el XIAO ESP32S3 Plus, con un módulo PoE integrado y aislado y conversión de energía basada en TPS563201 que proporciona una alimentación limpia de 5V para alimentar el microcontrolador. Ideal para proyectos IoT, dispositivos domóticos inteligentes y automatización industrial, donde una combinación versátil de conectividad Ethernet confiable y procesamiento inalámbrico de bajo consumo simplifica la instalación y mejora el rendimiento del sistema.
+Una compacta placa de desarrollo PoE que incorpora el XIAO ESP32S3 Plus, con un módulo PoE integrado y aislado y una conversión de potencia basada en TPS563201 que proporciona una alimentación limpia de 5V para alimentar el microcontrolador. Ideal para proyectos de IoT, dispositivos de hogar inteligente y automatización industrial, donde una combinación versátil de conectividad Ethernet fiable y procesamiento inalámbrico de bajo consumo simplifica la instalación y mejora el rendimiento del sistema.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/0.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-W5500-Ethernet-Adapter-p-6472.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 </a></div>
 
 ### Características
 
-- **Microcontrolador de Alto Rendimiento**: Construido sobre la plataforma XIAO ESP32S3 Plus, nuestra placa ofrece potencia de procesamiento robusta y conectividad inalámbrica eficiente, haciéndola ideal para aplicaciones IoT y embebidas complejas.
+- **Microcontrolador de alto rendimiento**: Basada en la plataforma XIAO ESP32S3 Plus, nuestra placa ofrece una potente capacidad de procesamiento y conectividad inalámbrica eficiente, lo que la hace ideal para aplicaciones IoT y embebidas complejas.
 
-- **PoE Integrado con Aislamiento y Conversión de Energía**: Con un módulo PoE robusto con aislamiento incorporado, la placa acepta de forma segura una entrada de energía Ethernet de 12V. Un convertidor buck TPS563201 de alta eficiencia luego reduce los 12V a un riel estable de 5V, proporcionando energía óptima al XIAO ESP32S3 Plus.
+- **PoE integrado con aislamiento y conversión de potencia**: Con un robusto módulo PoE con aislamiento integrado, la placa acepta de forma segura una entrada de alimentación Ethernet de 12V. Un convertidor reductor de alta eficiencia TPS563201 reduce después los 12V a un carril estable de 5V, proporcionando una alimentación óptima al XIAO ESP32S3 Plus.
 
-- **Conectividad Ethernet Confiable**: Equipada con un chip Ethernet W5500 integrado y un conector RJ45 estándar, la placa asegura acceso estable a la red cableada para transmisión de datos sin interrupciones y gestión remota.
+- **Conectividad Ethernet fiable**: Equipada con un chip Ethernet W5500 integrado y un conector RJ45 estándar, la placa garantiza un acceso de red por cable estable para una transmisión de datos fluida y gestión remota.
 
-- **Opciones de E/S Versátiles**: Con salidas de E/S de doble cara, puedes expandir fácilmente la funcionalidad e interfaz con una gama de sensores y periféricos para personalizar tu aplicación según especificaciones exactas.
+- **Opciones de E/S versátiles**: Con salidas de E/S a doble cara, puedes ampliar fácilmente la funcionalidad e interconectar una variedad de sensores y periféricos para personalizar tu aplicación según especificaciones exactas.
 
-- **Diseño Compacto y Listo para Implementar**: Combinando PoE integrado, circuitos de aislamiento y conectividad Ethernet en un factor de forma pequeño, esta placa simplifica la creación de prototipos y permite un despliegue eficiente en proyectos de hogar inteligente, automatización industrial o dispositivos de red.
+- **Diseño compacto y listo para desplegar**: Al combinar PoE integrado, circuitería de aislamiento y conectividad Ethernet en un factor de forma reducido, esta placa simplifica la creación de prototipos y permite un despliegue eficiente en proyectos de hogar inteligente, automatización industrial o dispositivos de red.
 
 ### Especificaciones
 
@@ -53,19 +53,19 @@ Una placa de desarrollo PoE compacta que incluye el XIAO ESP32S3 Plus, con un m�
   </tr>
   <tr>
    <td>Antena</td>
-   <td>Antena de Varilla 2.4GHz (2.81dBi)</td>
+   <td>Antena de varilla de 2,4GHz (2,81dBi)</td>
   </tr>
   <tr>
    <td>USB Type-C</td>
-   <td>Voltaje de entrada (Type-C): 5V</td>
+   <td>Tensión de entrada (Type-C): 5V</td>
   </tr>
   <tr>
    <td>Chip PoE</td>
    <td>MQ7813T120</td>
   </tr>
   <tr>
-   <td>Fuente de Alimentación PoE</td>
-   <td>PoE IEEE802.3af<br />Corriente de Salida: 12V/1.1A<br />Alta Eficiencia 86% (Entrada 48V, Carga 12V@1.1A)</td>
+   <td>Fuente de alimentación PoE</td>
+   <td>PoE IEEE802.3af<br />Corriente de salida: 12V/1,1A<br />Alta eficiencia 86% (Entrada 48V, Carga 12V@1,1A)</td>
   </tr>
   <tr>
    <td>Chip Ethernet</td>
@@ -88,33 +88,33 @@ Una placa de desarrollo PoE compacta que incluye el XIAO ESP32S3 Plus, con un m�
    <td>Reset</td>
   </tr>
   <tr>
-   <td>Interfaz E/S</td>
+   <td>Interfaz de E/S</td>
    <td></td>
   </tr>
   <tr>
-   <td>Tamaño del Producto</td>
+   <td>Tamaño del producto</td>
    <td>83 x 118 x 26 mm</td>
   </tr>
   <tr>
-   <td>Peso del Producto</td>
+   <td>Peso del producto</td>
    <td>75g</td>
   </tr>
   <tr>
    <td>Carcasa</td>
-   <td>Impresión 3D en Blanco</td>
+   <td>Impresión 3D en blanco</td>
   </tr>
  </table>
 </div>
 
-## Descripción General del Hardware
+## Descripción general del hardware
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Product Appearance" label="Apariencia del Producto">
+<TabItem value="Product Appearance" label="Apariencia del producto">
 
-Las imágenes a continuación muestran el diseño externo del Adaptador Ethernet XIAO W5500. Puedes ver el factor de forma compacto, el puerto Ethernet y la interfaz para conectar al microcontrolador de la serie XIAO. Este diseño permite una fácil integración en varios proyectos donde el espacio y la confiabilidad son importantes.
+Las siguientes imágenes muestran el diseño externo del Adaptador Ethernet XIAO W5500. Puedes ver el factor de forma compacto, el puerto Ethernet y la interfaz para conectar a la serie de microcontroladores XIAO. Este diseño permite una integración sencilla en diversos proyectos donde el espacio y la fiabilidad son importantes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -122,62 +122,62 @@ Las imágenes a continuación muestran el diseño externo del Adaptador Ethernet
 
 </TabItem>
 
-<TabItem value="Inside the Product" label="Interior del Producto">
+<TabItem value="Inside the Product" label="Interior del producto">
 
-La siguiente imagen proporciona una vista del interior del Adaptador Ethernet XIAO W5500. Aquí puedes observar el diseño interno de la PCB, el chip controlador Ethernet W5500 y los circuitos de soporte que permiten la comunicación Ethernet estable y la funcionalidad opcional de Power over Ethernet (PoE).
+La siguiente imagen ofrece una vista del interior del Adaptador Ethernet XIAO W5500. Aquí puedes observar el diseño interno de la PCB, el chip controlador Ethernet W5500 y la circuitería de soporte que permite una comunicación Ethernet estable y la funcionalidad opcional de Power over Ethernet (PoE).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-## Introducción
+## Primeros pasos
 
-### Instrucciones de Cableado
+### Instrucciones de cableado
 
 Hay dos formas recomendadas de conectar tu Adaptador Ethernet XIAO W5500 a tu red:
 
-1. **Usando un Switch o Router con PoE habilitado:**
-   - Conecta el dispositivo directamente a un switch o router con capacidad PoE usando un cable Ethernet RJ45 estándar. Esta configuración permite que tanto los datos como la energía se entreguen por el mismo cable, por lo que no necesitas proporcionar energía separada a la placa XIAO.
+1. **Usar un switch o router con PoE:**
+   - Conecta el dispositivo directamente a un switch o router compatible con PoE utilizando un cable Ethernet RJ45 estándar. Esta configuración permite que tanto los datos como la alimentación se suministren a través del mismo cable, por lo que no necesitas proporcionar alimentación separada a la placa XIAO.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/4.jpg" style={{width:600, height:'auto'}}/></div>
 
-2. **Usando un Cable Ethernet Estándar:**
-   - Si estás usando un cable Ethernet regular (sin PoE), conecta un extremo a tu red y el otro al Adaptador Ethernet XIAO W5500. En este caso, también debes alimentar la placa XIAO a través de su puerto USB-C con una fuente estable de 5V, ya que el cable Ethernet solo proporcionará conectividad de datos.
+2. **Usar un cable Ethernet estándar:**
+   - Si utilizas un cable Ethernet normal (sin PoE), conecta un extremo a tu red y el otro al Adaptador Ethernet XIAO W5500. En este caso, también debes alimentar la placa XIAO a través de su puerto USB-C con una fuente estable de 5V, ya que el cable Ethernet solo proporcionará conectividad de datos.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/6.jpg" style={{width:600, height:'auto'}}/></div>
 
-> **Consejo:** Asegúrate de que tu cable Ethernet sea lo suficientemente largo para tu configuración y esté en buenas condiciones para garantizar una comunicación confiable.
+> **Consejo:** Asegúrate de que tu cable Ethernet sea lo suficientemente largo para tu configuración y esté en buen estado para garantizar una comunicación fiable.
 
-### Botón de Reset
+### Botón de reinicio
 
-El Adaptador Ethernet XIAO W5500 está equipado con un botón de Reset. Si el programa de tu dispositivo no se está ejecutando como se esperaba o necesitas reiniciar el sistema, simplemente presiona el botón de Reset una vez. Esto reiniciará el dispositivo y reinicializará el programa, ayudando a recuperarse de estados inesperados o errores.
+El Adaptador Ethernet XIAO W5500 está equipado con un botón de Reset. Si el programa de tu dispositivo no se ejecuta como se espera o necesitas reiniciar el sistema, simplemente pulsa una vez el botón Reset. Esto reiniciará el dispositivo y volverá a inicializar el programa, ayudando a recuperarse de estados o errores inesperados.
 
-## Biblioteca Ethernet Arduino ESP32
+## Biblioteca Ethernet de ESP32 para Arduino
 
-El Adaptador Ethernet XIAO W5500 utiliza la biblioteca Ethernet Arduino ESP32 para la conectividad de red. Esta biblioteca proporciona un conjunto de APIs y ejemplos para gestionar conexiones Ethernet, manejar eventos y construir aplicaciones en red en placas basadas en ESP32.
+El Adaptador Ethernet XIAO W5500 utiliza la biblioteca Ethernet de ESP32 para Arduino para la conectividad de red. Esta biblioteca proporciona un conjunto de APIs y ejemplos para gestionar conexiones Ethernet, manejar eventos y crear aplicaciones en red en placas basadas en ESP32.
 
-Para más detalles, uso avanzado y las últimas actualizaciones, consulta la documentación oficial de Espressif: [Documentación de la Biblioteca Ethernet Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/ethernet.html)
+Para más detalles, uso avanzado y las últimas actualizaciones, consulta la documentación oficial de Espressif: [Documentación de la biblioteca Ethernet de ESP32 para Arduino](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/ethernet.html)
 
-## Ejemplo XIAO
+## Ejemplo con XIAO
 
-Ahora que has instalado las bibliotecas requeridas y entiendes las funciones básicas, exploremos algunos ejemplos prácticos para el Adaptador Ethernet XIAO W5500. Estas demostraciones te ayudarán a comenzar y mostrarán cómo adaptar el código para tus propios proyectos.
+Ahora que has instalado las bibliotecas necesarias y entiendes las funciones básicas, exploremos algunos ejemplos prácticos para el Adaptador Ethernet XIAO W5500. Estas demostraciones te ayudarán a comenzar y mostrarán cómo adaptar el código a tus propios proyectos.
 
 **Paso 1.** Inicia la aplicación Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div><br />
 
-**Paso 2.** Selecciona tu modelo de placa de desarrollo y agrégalo al Arduino IDE.
+**Paso 2.** Selecciona el modelo de tu placa de desarrollo y añádelo al Arduino IDE.
 
-- Para usar **Seeed Studio XIAO ESP32-S3 Plus** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started#software-preparation)** para completar la adición.
+- Para usar **Seeed Studio XIAO ESP32-S3 Plus** en las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started#software-preparation)** para completar la adición.
 
-**Paso 3.** Materiales Requeridos
+**Paso 3.** Materiales necesarios
 
-Para completar los siguientes ejemplos, necesitarás el hardware listado a continuación. Además del Adaptador Ethernet XIAO W5500, asegúrate de tener un cable Ethernet de longitud suficiente para tu configuración. Puedes usar un cable con capacidad Power over Ethernet (PoE), o un cable Ethernet estándar. Si usas un cable Ethernet estándar (sin PoE), asegúrate de que tu placa XIAO esté alimentada por separado con una fuente estable de 5V.
+Para completar los siguientes ejemplos, necesitarás el hardware que se indica a continuación. Además del Adaptador Ethernet XIAO W5500, asegúrate de disponer de un cable Ethernet de longitud suficiente para tu configuración. Puedes utilizar un cable con capacidad de Power over Ethernet (PoE) o un cable Ethernet estándar. Si utilizas un cable Ethernet estándar (sin PoE), asegúrate de que tu placa XIAO esté alimentada por separado con una fuente estable de 5V.
 
 <div class="table-center">
  <table align="center">
@@ -190,20 +190,20 @@ Para completar los siguientes ejemplos, necesitarás el hardware listado a conti
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/es/xiao_w5500_ethernet_adapter" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-### Demo 1: Registrador de Eventos Ethernet
+### Demo 1: Registrador de eventos Ethernet
 
 **Propósito:**
-Esta demo registra eventos Ethernet en la consola serie, incluyendo la dirección MAC y la dirección IP actual (asignada por DHCP). Demuestra cómo inicializar la interfaz Ethernet W5500 y monitorear su estado.
+Esta demostración registra eventos de Ethernet en la consola serie, incluida la dirección MAC y la dirección IP actual (asignada por DHCP). Muestra cómo inicializar la interfaz Ethernet W5500 y supervisar su estado.
 
-**Caso de Uso Típico:**
-Usa esto como punto de partida para verificar tu configuración de hardware y conectividad de red. Es útil para depuración y para proyectos donde necesitas monitorear el estado Ethernet o registrar eventos de red.
+**Caso de uso típico:**
+Úsalo como punto de partida para verificar tu configuración de hardware y la conectividad de red. Es útil para depuración y para proyectos en los que necesitas supervisar el estado de Ethernet o registrar eventos de red.
 
 ```cpp
 #include <SPI.h>
@@ -336,20 +336,20 @@ void loop()
 }
 ```
 
-Abre el Monitor Serie a 115200 baudios para ver los eventos de Ethernet e información de IP. El código intentará conectarse a "baidu.com" cada 20 segundos como prueba de conectividad.
+Abre el Monitor Serie a 115200 baudios para ver los eventos de Ethernet y la información de IP. El código intentará conectarse a "baidu.com" cada 20 segundos como prueba de conectividad.
 
 **Personalización:**
 
 - Cambia el servidor de prueba en `testClient("baidu.com", 80);` por tu propio servidor o dispositivo de red local.
 - Usa el manejador de eventos para activar acciones personalizadas en eventos de red.
 
-### Demo 2: Servidor Web Ethernet Simple
+### Demo 2: Servidor Web Ethernet Sencillo
 
 **Propósito:**
-Esta demo configura un servidor web HTTP básico en el XIAO ESP32-S3 usando el Adaptador Ethernet W5500. Responde a solicitudes en la URL raíz y proporciona un manejador 404 simple para rutas desconocidas.
+Esta demo configura un servidor web HTTP básico en el XIAO ESP32-S3 usando el Adaptador Ethernet W5500. Responde a las solicitudes en la URL raíz y proporciona un manejador 404 sencillo para rutas desconocidas.
 
-**Caso de Uso Típico:**
-Ideal para proyectos IoT donde quieres servir páginas web o APIs REST directamente desde tu dispositivo a través de una conexión Ethernet cableada.
+**Caso de uso típico:**
+Ideal para proyectos de IoT donde quieras servir páginas web o APIs REST directamente desde tu dispositivo a través de una conexión Ethernet por cable.
 
 ```cpp
 #include <ETH.h>
@@ -375,7 +375,7 @@ WebServer server(80);
 
 // ESP32-POE doesn't have an onboard LED so if you want to use a LED you have to attach one to the extended pins on either UEXT or one of the 10 pin extentions.
 // in this example the default value is 13 which is UEXT pin 6, or Extention 2 pin 1. If you want to attach the LED to another pin you need to change this value accordingly.
-const int led_pin = 21;
+const int led_pin = D0;
 
 // Web Server: handle a request to / (root of the server)
 void handleRoot() {
@@ -529,30 +529,30 @@ void loop ()
 }
 ```
 
-Una vez que el dispositivo obtenga una dirección IP (mostrada en el Monitor Serie), abre un navegador y navega a `http://<tu_ip_del_dispositivo>/`. El endpoint raíz responderá con "hello from esp32!" y hará parpadear un LED. Intenta acceder a `/inline` o cualquier otra ruta para ver diferentes respuestas.
+Una vez que el dispositivo obtenga una dirección IP (mostrada en el Monitor Serie), abre un navegador y navega a `http://<your_device_ip>/`. El endpoint raíz responderá con "hello from esp32!" y hará parpadear un LED. Prueba a acceder a `/inline` o cualquier otra ruta para ver diferentes respuestas.
 
 **Personalización:**
 
-- Agrega más endpoints usando `server.on("/yourpath", handlerFunction);`.
-- Integra lecturas de sensores o controles de dispositivos en las respuestas de tu servidor web.
+- Añade más endpoints usando `server.on("/yourpath", handlerFunction);`.
+- Integra lecturas de sensores o controles del dispositivo en las respuestas de tu servidor web.
 
-### Demo 3: Servidor de Streaming de Cámara Ethernet
+### Demo 3: Servidor de Streaming de Cámara por Ethernet
 
 > **Recordatorio:**
-> Esta demo requiere el módulo de cámara de la placa [XIAO ESP32-S3 Sense](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Sense-Pre-Soldered-p-6335.html). El Adaptador Ethernet XIAO W5500 en sí mismo no incluye una cámara, y el socket de la cámara no se vende por separado actualmente. Si has comprado previamente la placa XIAO ESP32-S3 Sense, puedes usar su cámara con esta demo. Para una instalación ordenada, consulta la sección [Recursos](#recursos) para una carcasa imprimible en 3D con un agujero para cámara que es compatible con esta configuración.
+> Esta demo requiere el módulo de cámara de la placa [XIAO ESP32-S3 Sense](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Sense-Pre-Soldered-p-6335.html). El propio Adaptador Ethernet XIAO W5500 no incluye una cámara, y el zócalo de la cámara no se vende actualmente por separado. Si has comprado previamente la placa XIAO ESP32-S3 Sense, puedes usar su cámara con esta demo. Para una instalación ordenada, consulta la sección [Resources](#resources) para obtener una carcasa imprimible en 3D con un orificio para cámara que sea compatible con esta configuración.
 
 **Propósito:**
-Esta demo avanzada combina el módulo de cámara XIAO ESP32-S3 con el Adaptador Ethernet W5500 para transmitir imágenes de cámara a través de Ethernet. Demuestra cómo inicializar la cámara, configurar la interfaz Ethernet e iniciar un servidor web para streaming de video.
+Esta demo avanzada combina el módulo de cámara XIAO ESP32-S3 con el Adaptador Ethernet W5500 para transmitir imágenes de la cámara a través de Ethernet. Demuestra cómo inicializar la cámara, configurar la interfaz Ethernet y arrancar un servidor web para streaming de vídeo.
 
-**Caso de Uso Típico:**
-Perfecto para vigilancia, monitoreo remoto o cualquier proyecto que requiera streaming de imágenes en tiempo real a través de una conexión cableada confiable.
+**Caso de uso típico:**
+Perfecto para vigilancia, monitorización remota o cualquier proyecto que requiera transmisión de imágenes en tiempo real a través de una conexión por cable fiable.
 
 :::tip
-El siguiente programa es solo para archivos .ino, se necesitan algunos archivos de cabecera para compilar este programa. Puedes obtener el código fuente completo del proyecto en el enlace de abajo.
+El siguiente programa es solo para archivos .ino, se necesitan algunos archivos de cabecera para compilar este programa. Puedes obtener el código fuente completo del proyecto en el siguiente enlace.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_W5500_Ehernet_Adapter_Example/tree/main/XIAO_PoE_CameraWebServer" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Descargar el Código</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 :::
@@ -745,21 +745,21 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info) {
 }
 ```
 
-Abre el Monitor Serie para encontrar la dirección IP del dispositivo después de que se conecte a la red. Ingresa la dirección IP en tu navegador para acceder al stream de la cámara.
+Abre el Monitor Serie para encontrar la dirección IP del dispositivo después de que se conecte a la red. Introduce la dirección IP en tu navegador para acceder al flujo de la cámara.
 
 **Personalización:**
 
-- Ajusta la configuración de la cámara (resolución, calidad, tamaño de frame) en la estructura `camera_config_t`.
-- Modifica el código del servidor web para agregar autenticación o endpoints adicionales.
+- Ajusta la configuración de la cámara (resolución, calidad, tamaño de fotograma) en la estructura `camera_config_t`.
+- Modifica el código del servidor web para añadir autenticación o endpoints adicionales.
 - Adapta las definiciones de pines Ethernet para que coincidan con tu hardware personalizado.
 
-## FAQ
+## Preguntas frecuentes (FAQ)
 
 ### P1: ¿Por qué el Adaptador W5500 tiene una señal de red deficiente? ¿Hay alguna solución?
 
-Es posible agregar un segmento de código para ajustar la potencia dentro de todos los códigos que usan WiFi, y al ajustar la potencia de transmisión, la intensidad de la señal puede mejorarse significativamente.
+Es posible añadir un segmento de código para ajustar la potencia dentro de todos los códigos que usan WiFi y, ajustando la potencia de transmisión, la intensidad de la señal puede mejorar significativamente.
 
-Como el siguiente fragmento de código, se agrega para ajustar la potencia de la función dentro del `Setup()`.
+Por ejemplo, el siguiente fragmento de código se añade para ajustar la potencia de la función dentro de `Setup()`.
 
 ```cpp
     // 1. Set WiFi to Station mode
@@ -785,21 +785,21 @@ Como el siguiente fragmento de código, se agrega para ajustar la potencia de la
     Serial.println(ssid);
 ```
 
-Se ha verificado que configurar la potencia con el código anterior da los mejores resultados.
+Se ha verificado que establecer la potencia según el código anterior ofrece los mejores resultados.
 
 ## Recursos
 
-- **[PDF]** [Hoja de Datos W5500](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/W5500_ds_datasheet.pdf)
-- **[PDF]** [Esquemático del Adaptador Ethernet XIAO W5500](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20_SCH_20250422B.pdf)
-- **[STEP]** [STEP 3D del Adaptador Ethernet XIAO W5500](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.step)
-- **[STEP]** [STEP 3D de la Carcasa del Adaptador Ethernet XIAO W5500 (Sin agujeros preperforados para cámara)](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_shell.stp)
-- **[STEP]** [STEP 3D de las Cubiertas del Adaptador Ethernet XIAO W5500](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_covers.stp)
+- **[PDF]** [Hoja de datos W5500](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/W5500_ds_datasheet.pdf)
+- **[PDF]** [XIAO W5500 Ethernet Adapter SCH V30](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V30_20260803.pdf)
+- **[STEP]** [XIAO W5500 Ethernet Adapter 3D STEP](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.step)
+- **[STEP]** [XIAO W5500 Ethernet Adapter Shell 3D STEP (No pre-drilled camera holes)](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_shell.stp)
+- **[STEP]** [XIAO W5500 Ethernet Adapter Covers 3D STEP](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_covers.stp)
 - **[KICAD]** [PCB del Adaptador Ethernet XIAO W5500](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.kicad_pcb)
 - **[GITHUB]** [Repositorio del Adaptador Ethernet XIAO W5500](https://github.com/Seeed-Projects/XIAO_W5500_Ehernet_Adapter_Example)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

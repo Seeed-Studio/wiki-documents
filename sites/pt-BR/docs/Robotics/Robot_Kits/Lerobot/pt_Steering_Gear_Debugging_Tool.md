@@ -1,20 +1,20 @@
 ---
-description: Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot.
-title: Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot
+description: "Como depurar os servos do SO-ARM com a ferramenta Seeed_RoboController: detectar servos, corrigir IDs, gravar valores neutros e ler o status no Windows, Ubuntu e Mac."
+title: Ferramenta de Depuração do SO-Arm
 keywords:
   - Lerobot
   - SO-ARM
-  - Robótica
+  - Robotics
   - Servo
-  - Calibração
+  - Calibration
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_steering_gear_debugging_tool
 last_update:
   date: 6/29/2026
   author: ZhangJiaQuan
 url: https://wiki.seeedstudio.com/pt-br/lerobot_steering_gear_debugging_tool/
-createdAt: '2026-06-30'
-updatedAt: '2026-07-20'
+createdAt: '2026-06-29'
+updatedAt: '2026-09-22'
 ---
 
 # Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot

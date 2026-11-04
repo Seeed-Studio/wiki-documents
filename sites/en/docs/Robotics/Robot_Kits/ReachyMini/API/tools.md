@@ -1,5 +1,6 @@
 ---
 description: Complete API reference for Reachy Mini tools including motor setup tools, scanning tools, and reflashing tools.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Tools API Reference
 slug: /reachymini_api_tools
 keywords:

@@ -1,18 +1,18 @@
 ---
-description: Este wiki proporciona un tutorial para motores servo Feetech.
-title: Motor Servo Feetech
+description: "Guía completa de servos de bus serie Feetech STS/SM: cableado, baud rate e ID, calibración, realimentación de posición y control en Python para proyectos SO-ARM y LeRobot."
+title: Feetech
 keywords:
-  - actuator
+  - actuador
   - motor
-  - arm
-  - robotics
+  - brazo
+  - robótica
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp
 slug: /feetech_servo
 last_update:
   date: 11/24/2025
   author: Li Shanghang
 createdAt: '2025-06-23'
-updatedAt: '2025-11-25'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/feetech_servo/
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: '了解 JetPack 7.2 中与 Jetson 内存密切相关的软件变更：CUDA 和 TensorRT 软件栈、官方 Yocto 支持、优化技能，以及面向 Orin 的可量化 LLM 部署内存预算。'
-title: 'JetPack 7.2 内存优化：软件进展与 LLM 部署预算'
+description: 了解 JetPack 7.2 中与 Jetson 内存密切相关的软件变更：CUDA 和 TensorRT 软件栈、官方 Yocto 支持、优化技能，以及面向 Orin 的可量化 LLM 部署内存预算。
+title: JetPack 7.2 内存优化：软件进展与 LLM 部署预算
 keywords:
   - JetPack 7.2
   - 内存优化
@@ -15,7 +15,7 @@ last_update:
   date: 08/27/2026
   author: zibo
 createdAt: '2026-08-27'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/cn/jetpack_7_2_memory_optimization_deep_dive/
 ---
 

@@ -19,7 +19,7 @@ last_update:
   date: 04/28/2026
   author: Jason
 createdAt: '2023-08-20'
-updatedAt: '2026-04-28'
+updatedAt: '2026-08-26'
 url: https://wiki.seeedstudio.com/pt-br/EE04_with_esphome_advanced/
 ---
 

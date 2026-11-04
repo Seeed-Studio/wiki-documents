@@ -1,0 +1,10 @@
+position: 2
+label: 'Acoustic & Audio AI'
+collapsible: true
+collapsed: true
+className: _ai-sound
+link:
+  type: generated-index
+  slug: acoustic-audio-ai
+  title: Acoustic & Audio AI
+  description: Audio capture, speech and voice-interaction solutions.

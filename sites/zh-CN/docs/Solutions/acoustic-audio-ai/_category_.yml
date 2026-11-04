@@ -1,0 +1,10 @@
+position: 2
+label: '音频与声音智能'
+collapsible: true
+collapsed: true
+className: _ai-sound
+link:
+  type: generated-index
+  slug: acoustic-audio-ai
+  title: 音频与声音智能
+  description: 音频采集、语音转写与语音交互方案。

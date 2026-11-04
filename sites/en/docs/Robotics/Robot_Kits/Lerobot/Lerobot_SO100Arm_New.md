@@ -9,13 +9,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 aliases:
-  - /so-arm101
+  - /lerobot_so100m
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-06-05'
-updatedAt: '2026-08-18'
+updatedAt: '2026-09-23'
 translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
@@ -27,6 +27,24 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Getting Started with SO-ARM100 and SO-ARM101 Robotic Arms in LeRobot
+
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ No-code · No environment setup</span>
+    <p className="sensecraft-banner__title">Skip the setup — run the reBot Arm and LeRobot from one app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics is Seeed's no-code platform for the SO-ARM101, reBot Arm 102 + B601-RS and B601-DM. Connect the arms, calibrate, collect demonstrations, train and run inference from a guided interface — no Python environment, no terminal.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6-step guided workflow</li>
+      <li>✅ Cloud training — no local GPU</li>
+      <li>✅ Windows / macOS client</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Go to SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/sensecraft_robotics/">Software guide</a>
+  </div>
+</div>
 
 <div className="rebot-page">
 
@@ -117,26 +135,8 @@ import TabItem from '@theme/TabItem';
   </div>
 
 :::tip
-This tutorial has been updated for the latest [LeRobot](https://huggingface.co/docs/lerobot/index). To view the previous version, click [here](https://wiki.seeedstudio.com/lerobot_so100m/).
+This tutorial has been updated for the latest [LeRobot](https://huggingface.co/docs/lerobot/index).
 :::
-
-[SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100) is a fully open-source robotic arm project launched by [TheRobotStudio](https://www.therobotstudio.com/). It includes both a follower arm and a leader arm, with detailed 3D printing files and operation guides. [LeRobot](https://github.com/huggingface/lerobot/tree/main) provides PyTorch models, datasets, and tools for real-world robotics, lowering the entry barrier for imitation learning and policy deployment.
-
-<div className="video-container">
-  <iframe
-    loading="lazy"
-    width="900"
-    height="600"
-    src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd&autoplay=0&mute=1"
-    title="SO-ARM10x LeRobot overview video"
-    frameBorder="0"
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
-SO-ARM10x and the reComputer Jetson AI robotics kit combine high-precision robotic arm control with an AI computing platform. Together with Jetson Orin or AGX Orin and the LeRobot framework, this setup can be used for education, research, and industrial automation experiments.
 
 <div className="image-frame">
   <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM10x kit" />
@@ -152,161 +152,6 @@ SO-ARM10x and the reComputer Jetson AI robotics kit combine high-precision robot
 Seeed Studio is responsible for the hardware quality of the kit. The software tutorial follows the official LeRobot documentation as closely as possible. If you encounter unresolved software or dependency issues, check the FAQ at the end of this page and report issues to the [LeRobot GitHub repository](https://github.com/huggingface/lerobot) or the [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU).
 :::
 
-<div className="video-container">
-  <iframe
-    loading="lazy"
-    width="900"
-    height="600"
-    src="https://www.youtube.com/embed/JrF_ymUvrqc?si=vslu5NNI-ZIzVXLc&autoplay=0&mute=1"
-    title="SO-ARM10x project video"
-    frameBorder="0"
-    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
-</section>
-
-## Main Features
-
-<section id="features" className="section-card">
-  <div className="section-title">
-    <span>Features</span>
-    <h2>Main Features</h2>
-    <p>SO-ARM10x focuses on open-source learning, low-cost robotics, LeRobot integration, and NVIDIA deployment.</p>
-  </div>
-
-  <div className="feature-grid">
-    <div><strong>Open-source and low-cost</strong><span>An open-source robotic arm solution based on TheRobotStudio’s SO-ARM project.</span></div>
-    <div><strong>LeRobot integration</strong><span>Designed for teleoperation, dataset recording, training, and real-robot evaluation in LeRobot.</span></div>
-    <div><strong>Rich learning resources</strong><span>Includes assembly, calibration, testing, dataset, training, and deployment guidance.</span></div>
-    <div><strong>NVIDIA compatible</strong><span>Can be deployed with platforms such as reComputer Mini J4012 Orin NX 16GB.</span></div>
-    <div><strong>Multi-scenario applications</strong><span>Suitable for education, research, automation demos, and robotics learning.</span></div>
-  </div>
-</section>
-
-## What's New
-
-<section id="updates" className="section-card">
-  <div className="section-title">
-    <span>Updates</span>
-    <h2>What's New in SO-ARM101</h2>
-    <p>SO-ARM101 improves wiring, leader-arm gear ratios, and real-time following behavior.</p>
-  </div>
-
-  <div className="notice-grid">
-    <div className="notice-card"><strong>Wiring optimization</strong><span>Compared with SO-ARM100, SO-ARM101 improves wiring and avoids the joint-3 disconnection issue. The new routing no longer limits joint motion range.</span></div>
-    <div className="notice-card"><strong>Leader gear-ratio update</strong><span>The leader arm uses optimized gear-ratio motors, improving performance and removing the need for external gearboxes.</span></div>
-    <div className="notice-card"><strong>Real-time following</strong><span>The leader arm can follow the follower arm in real time, which helps future policy workflows where a human can intervene and correct robot actions.</span></div>
-  </div>
-</section>
-
-
-## Specification
-
-<section id="specifications" className="section-card">
-  <div className="section-title">
-    <span>Specifications</span>
-    <h2>Specification</h2>
-    <p>View motor, power, communication, and control specifications for SO-ARM100 and SO-ARM101.</p>
-  </div>
-
-<details className="content-details">
-<summary>View SO-ARM10x specifications</summary>
-
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th colSpan="2">SO-ARM100</th>
-      <th colSpan="2">SO-ARM101</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank" rel="noopener noreferrer">Arm Kit Pro</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Leader Arm</td>
-      <td rowSpan="2">12x ST-3215- C001 (7.4V) motors with 1:345 gear ratio for all joints</td>
-      <td rowSpan="2">12x ST-3215-C018/ST-3215-C047 (12V) motors with 1:345 gear ratio for all joints</td>
-      <td colSpan="2">
-        1x ST-3215- C001 (7.4V) motor with 1:345 gear ratio for joint 2 only<br />
-        2x ST-3215-C044 (7.4V) motors with 1:191 gear ratio for joints 1 and 3<br />
-        3x ST-3215-C046 (7.4V) motors with 1:147 gear ratio for joints 4, 5, and gripper (joint 6)
-      </td>
-    </tr>
-    <tr>
-      <td>Follower Arm</td>
-      <td colSpan="2">Same as SO-ARM100</td>
-    </tr>
-    <tr>
-      <td>Power Supply</td>
-      <td>5.5 mm × 2.1 mm DC 5 V 4 A</td>
-      <td>5.5 mm × 2.1 mm DC 12 V 2 A</td>
-      <td>5.5 mm × 2.1 mm DC 5 V 4 A</td>
-      <td>
-        5.5 mm × 2.1 mm DC 12 V 2 A (Follower Arm)<br />
-        5.5 mm × 2.1 mm DC 5 V 4 A (Leader Arm)
-      </td>
-    </tr>
-    <tr>
-      <td>Angle Sensor</td>
-      <td colSpan="4">12-bit magnetic encoder</td>
-    </tr>
-    <tr>
-      <td>Recommended Operating Temperature</td>
-      <td colSpan="4">0 °C to 40 °C</td>
-    </tr>
-    <tr>
-      <td>Communication</td>
-      <td colSpan="4">UART</td>
-    </tr>
-    <tr>
-      <td>Control Method</td>
-      <td colSpan="4">PC</td>
-    </tr>
-  </tbody>
-</table>
-
-:::danger
-
-If you purchase the Arm Kit version, both power supplies are 5V. If you purchase the Arm Kit Pro version, please use the 5V power supply for the calibration and every step of the Leader robotic arm, and the 12V power supply for the calibration and every step of the Follower robotic arm.
-
-:::
-
-</details>
-
-</section>
-
-## Bill of Materials (BOM)
-
-<section id="bom" className="section-card">
-  <div className="section-title">
-    <span>BOM</span>
-    <h2>Bill of Materials (BOM)</h2>
-    <p>Check the servos, motor control boards, cables, power supplies, clamps, and optional 3D-printed parts included in the kit.</p>
-  </div>
-
-<details className="content-details">
-<summary>View bill of materials</summary>
-
-| Part | Amount | Included|
-|--|--|--|
-|  Servo Motos | 12 | ✅ |
-| Motor Control Board | 2 | ✅ |
-| USB-C Cable 2 pcs | 1 | ✅ |
-| Power Supply2 | 2 | ✅ |
-| Table Clamp| 4 | ✅ |
-| 3D printed parts of the arm | 1 | Option |
-
-</details>
-
 </section>
 
 ## 3D Printing Guide
@@ -315,54 +160,26 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
   <div className="section-title">
     <span>3D Printing</span>
     <h2>3D Printing Guide</h2>
-    <p>Choose the right STL files and print settings before assembling a kit version of the arm.</p>
+    <p>Print settings and the STL download for the kit version of the arm.</p>
   </div>
 
 <details className="content-details">
-<summary>View 3D printing parameters</summary>
+<summary>View print settings and download</summary>
 
-:::caution
-Following the official update of SO101, SO100 will no longer support it and the source files will be deleted as per the official, but the source files can still be found in our [Makerworld](https://makerworld.com/zh/models/908660). However, for users who have previously purchased SO100, the tutorials and installation methods remain compatible. The print of SO101 is fully compatible with the motor kit installation of SO100.
-:::
-
-**Step 1: Choose a printer**
-
-The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
+**Recommended print settings** (tested on common FDM printers):
 
 - Material: PLA+
-- Nozzle Diameter and Precision: 0.4mm nozzle diameter at 0.2mm layer height or 0.6mm nozzle at 0.4mm layer height.
-- Infill Density: 15%  
+- Nozzle / layer height: 0.4mm nozzle at 0.2mm layer height, or 0.6mm nozzle at 0.4mm layer height
+- Infill: 15%
+- Supports: everywhere, ignoring slopes steeper than 45°; no supports in horizontal screw holes
 
-**Step 2: Set up the printer**
+**Download and print:**
 
-- Ensure that the printer is calibrated and the bed level is correctly set using the printer specific instructions.
-- Clean the print bed, making sure it is free from dust, or grease. If cleaning the bed using water, or other liquid, dry the bed.
-- If your printer recommends it, use a standard glue stick and apply a thin, even layer of glue across the print area of the bed. Avoid clumping or uneven application.
-- Load the printer filament using printer specific instructions.
-- Ensure the printer settings match the ones suggested above (most printers have multiple settings so choose the ones that most closely match).
-- Set for supports everywhere but ignore slopes greater than 45 degrees to the horizontal.
-- There should be no supports in the screw holes with horizontal axes.
+All Leader and Follower parts are packed in a single STL file, already oriented to minimize supports — just download and print:
 
-**Step 3: Print the parts**
+[Download the SO-ARM101 print file (soarm101.stl)](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
 
-All the parts for the leader or follower are for easy 3D printing already contained in a single file, correctly orientated for z upwards to minimize supports.
-
-- For printer bed sizes of 220mmx220mm (such as the Ender), print these files:
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-
-- For printer bed sizes of 205mm x 250mm (such as the Prusa/Up):
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
-**Step 4: Print the Soft Gripper and Camera Mount Bracket Insert (Optional)**
-
-If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. You can also print the camera mount bracket insert if you need to mount a camera. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
-
-Printing material instructions:
-
-- Two gripper fingers: print with **TPU** material
-- Other parts: print with **PLA** material
+**Optional:** print a soft gripper (TPU fingers) or the camera mount insert — files in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
 
 </details>
 
@@ -379,15 +196,15 @@ Printing material instructions:
 
 **For Ubuntu x86:**
 
-- Ubuntu 22.04  
-- CUDA 12+  
-- Python 3.10  
-- Torch 2.6+  
+- Ubuntu 22.04
+- CUDA 12+
+- Python 3.12
+- Torch 2.6+
 
 **For Jetson Orin:**
 
 - Jetson JetPack 6.0 and 6.1, JetPack 6.2 is not supported yet
-- Python 3.10  
+- Python 3.12
 - Torch 2.3+
 
 </section>
@@ -420,7 +237,7 @@ source ~/.bashrc`}
 2. Create and activate a fresh conda environment for lerobot
 
 <CodeBlock language="bash">
-{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+{`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
 3. Clone Lerobot:
@@ -465,7 +282,7 @@ If you encounter an error like this, you can use this command too.
 
 <CodeBlock language="bash">
 {`conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
-conda remove opencv   # Uninstall OpenCV 
+conda remove opencv   # Uninstall OpenCV
 pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
@@ -504,7 +321,7 @@ conda init --all`}
 2. Create and activate a fresh conda environment for lerobot
 
 <CodeBlock language="bash">
-{`conda create -y -n lerobot python=3.10 && conda activate lerobot`}
+{`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
 3. Clone Lerobot:
@@ -1320,7 +1137,7 @@ Single Orbbec Camera Test + Standard Camera Test:
       width: 640,
       height: 480,
       fps: 30,
-      fourcc: "MJPG"} 
+      fourcc: "MJPG"}
     }' \\
     --teleop.type=so101_leader \\
     --teleop.port=/dev/ttyACM1 \\
@@ -1347,7 +1164,6 @@ For camera-related errors, see the FAQ section at the end of this page.
 <details className="content-details">
 
 <summary> If using a regular camera </summary>
-
 
 
 :::tip
@@ -1447,6 +1263,26 @@ You can downgrade the rerun version to resolve the issue.
 
 </details>
 
+<details className="content-details">
+
+<summary>Camera Mount Installation and Usage</summary>
+
+**Camera Mount Installation**
+
+Fix the camera position for clean data collection. It supports free multi-angle adjustment, including top-down + wrist and top-down + side views. It works with regular USB cameras and depth cameras such as D435i, D405, and Gemini 2. Compatible with SO-ARM101 and reBot robotic arms. It can be used with the data collection experiment box, and you can reuse downloaded datasets and models out of the box.
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Buy Now 🖱️</font></span></strong>
+</a></div>
+
+</details>
+
 </section>
 
 ## Record Dataset
@@ -1532,20 +1368,20 @@ You will see a lot of lines appearing like this one:
 
 **Record function**
 
-The **record** function provides a suite of tools for capturing and managing data during robot operation.  
+The **record** function provides a suite of tools for capturing and managing data during robot operation.
 
 **1. Data Storage**
 
 - Data is stored using the `LeRobotDataset` format and is stored on disk during recording.
-- By default, the dataset is pushed to your Hugging Face page after recording.  
+- By default, the dataset is pushed to your Hugging Face page after recording.
 - To disable uploading, use: `--dataset.push_to_hub=False`
 
 **2. Checkpointing and Resuming**
 
-- Checkpoints are automatically created during recording.  
+- Checkpoints are automatically created during recording.
 - To resume after an interruption, re-run the same command with: `--resume=true`
 
-⚠️ Critical Note: When resuming, set `--dataset.num_episodes` to the number of additional episodes to record (not the targeted total number of episodes in the dataset).  
+⚠️ Critical Note: When resuming, set `--dataset.num_episodes` to the number of additional episodes to record (not the targeted total number of episodes in the dataset).
 
 - To start recording from scratch, **manually delete** the dataset directory.
 
@@ -1553,21 +1389,21 @@ The **record** function provides a suite of tools for capturing and managing dat
 
 Set the flow of data recording using command-line arguments:
 
-| Parameter | Description | Default |  
-|-----------|-------------|---------|  
-| --dataset.episode_time_s | Duration per data episode (seconds) | 60 |  
-| --dataset.reset_time_s | Environment reset time after each episode (seconds) | 60 |  
-| --dataset.num_episodes | Total episodes to record | 50 |  
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| --dataset.episode_time_s | Duration per data episode (seconds) | 60 |
+| --dataset.reset_time_s | Environment reset time after each episode (seconds) | 60 |
+| --dataset.num_episodes | Total episodes to record | 50 |
 
 **4. Keyboard Controls During Recording**
 
 Control the data recording flow using keyboard shortcuts:
 
-| Key | Action |  
-|-----|--------|  
-| → (Right Arrow) | Early-stop current episode/reset; move to next. |  
-| ← (Left Arrow) | Cancel current episode; re-record it. |  
-| ESC | Stop session immediately, encode videos, and upload dataset. |  
+| Key | Action |
+|-----|--------|
+| → (Right Arrow) | Early-stop current episode/reset; move to next. |
+| ← (Left Arrow) | Cancel current episode; re-record it. |
+| ESC | Stop session immediately, encode videos, and upload dataset. |
 
 :::tip
 
@@ -1581,17 +1417,17 @@ If keyboard not work, you may need install other version of pynput.
 
 **Tips for Gathering Data**
 
-- Task Suggestion: Grasp objects at different locations and place them in a bin.  
-- Scale: Record ≥50 episodes (10 episodes per location).  
-- Consistency:  
-  - Keep cameras fixed.  
-  - Maintain identical grasping behavior.  
-  - Ensure manipulated objects are visible in camera feeds.  
-- Progression:  
-  - Start with reliable grasping before adding variations (new locations, techniques, camera adjustments).  
-  - Avoid rapid complexity increases to prevent failures.  
+- Task Suggestion: Grasp objects at different locations and place them in a bin.
+- Scale: Record ≥50 episodes (10 episodes per location).
+- Consistency:
+  - Keep cameras fixed.
+  - Maintain identical grasping behavior.
+  - Ensure manipulated objects are visible in camera feeds.
+- Progression:
+  - Start with reliable grasping before adding variations (new locations, techniques, camera adjustments).
+  - Avoid rapid complexity increases to prevent failures.
 
-💡 Rule of Thumb: You should be able to do the task yourself by only looking at the camera images.  
+💡 Rule of Thumb: You should be able to do the task yourself by only looking at the camera images.
 
 If you want to dive deeper into this important topic, you can check out the [blog post](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) we wrote on what makes a good dataset.
 

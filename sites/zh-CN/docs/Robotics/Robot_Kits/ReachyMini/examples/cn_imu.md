@@ -1,5 +1,6 @@
 ---
 description: 示例演示如何访问无线Reachy Mini的IMU传感器数据，包括加速度计、陀螺仪、四元数方向和温度。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: IMU示例
 slug: /reachymini_examples_imu
 keywords:

@@ -1,5 +1,5 @@
 ---
-description: Mostrar a las personas cómo usar Orbbec Gemini 336.
+description: "Cómo empezar con la cámara 3D Orbbec Gemini 336: configuración, instalación del SDK y streaming de profundidad y color para aplicaciones de visión robótica."
 title: Cámara 3D Orbbec Gemini336
 keywords:
   - Jetson
@@ -18,7 +18,7 @@ last_update:
   date: 2025-08-22
   author: Zibo
 createdAt: '2025-12-02'
-updatedAt: '2025-12-02'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/es/orbbec_gemini336/
 ---
 
@@ -32,7 +32,7 @@ La Gemini 336 es una nueva incorporación a la serie Gemini 330. Basándose en e
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-336-3D-Camera-3D-p-6662.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
 </a></div>
 

@@ -10,7 +10,7 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 DOF
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_b601_rs_getting_started
 translation:
   skip: [zh-CN]
@@ -18,7 +18,7 @@ last_update:
   date: 2026-08-17
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 
@@ -26,16 +26,13 @@ import '/src/css/rebot-wiki-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-RS Quick Start
 
-<RebotRsDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -153,7 +150,7 @@ Connect Motor 1 and Motor 2 as shown below.
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_m1m2_c.jpg" alt="Connect Motor 1 and Motor 2 on the reBot Arm B601-RS" />
 </div>
 
-Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cable, and XT30 2+2 cable as shown below. Connect the other end of the XT30 2+2 cable to Motor 1 and connect the power cable to the 48 V power supply.
+Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cable, and XT30 2+2 cable as shown below, and set the PCAN DIP switch to **120R**. Connect the other end of the XT30 2+2 cable to Motor 1 and connect the power cable to the 48 V power supply.
 
 <div align="center">
   <img width={400} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rs_connecting_cable.jpg" alt="Connect the USB-to-CAN module and power cables to the reBot Arm B601-RS" />
@@ -166,12 +163,119 @@ Then connect the USB-to-CAN module, power-signal splitter board, XT30 power cabl
 </section>
 </div>
 
+### Flexible Gripper Installation
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/y6GfyjJf9cA?si=fbkTdCW3nsamFYbE" title="Flexible gripper installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## Connect the Arms
+
+:::warning
+**Safety notice:**
+Disconnect the power before connecting or disconnecting JST, XT30, or other cables. Turn the power on only after confirming that all cables are connected correctly.
+B601 RS and B601 DM look similar. Make sure you distinguish between them.
+:::
+
+
+### Mount and Connect the reBot Arm 102 (Leader Arm)
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Mount the reBot Arm 102</h4>
+      <p className="rebot-step-label">Step 1</p>
+
+Use woodworking clamps to secure the reBot Arm 102 to a flat tabletop. Gently push the base to confirm that it does not move.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 2</p>
+
+The connections consist of two paths:
+
+* **Signal path (arm -> USB-C cable -> computer)**
+  1. Prepare a USB-C cable to connect the arm to the computer (**do not plug it into the computer yet; connect it when you reach serial-port binding and scan for devices**).
+
+* **Power path (arm -> 12 V 2 A power supply -> power strip)**
+  1. Connect the **12 V 2 A power adapter** to the arm's power connector.
+  2. Connect the adapter to the power strip to power on the arm.
+
+
+
+---
+
+</div>
+</section>
+
+</div>
+
+### Mount and Connect the B601 RS (Follower Arm)
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Mount the B601 RS</h4>
+      <p className="rebot-step-label">Step 4</p>
+
+Use G-clamps to secure the B601 RS to a flat tabletop. Gently rotate the arm left and right to confirm that the base does not move.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>Connect the Cables</h4>
+      <p className="rebot-step-label">Step 5</p>
+
+Make sure the power is disconnected before starting. The connections consist of two paths:
+
+* **Signal path (arm -> signal separation board -> USB-CAN -> computer)**
+  1. Use an XT30 2+2 cable to connect the arm base to the signal separation module.
+  2. Cut the 2-pin cable. Connect one end to the signal separation module; connect the red wire on the other end to H on the USB-CAN and the black wire to L.
+  3. Connect one end of the USB-CAN to the computer through the USB extension cable (**do not plug it into the computer yet; connect it when serial-port binding is ready and scan for devices**).
+
+* **Power path (arm -> signal separation board -> 48 V 12.5 A power supply -> outlet)**
+  1. Use an XT30 2+2 cable to connect the arm base to the signal separation module.
+  2. Use the power XT30 cable to connect the signal separation module to the 48 V 12.5 A power supply.
+  3. Connect the power supply to the outlet. After confirming that the arm is secured, the cables are correct, and the surrounding area is clear, turn on the power.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
+
+
+---
+
 You should have completed the preliminary preparation for the robotic arm assembly by following the video. Next, we will introduce the steps for writing motor IDs and calibrating the robotic arm.
 
 Please refer to the video and text tutorial. Before controlling the robotic arm, you need to reset the zero point again.
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/llSa6qn3yrY?si=hMuZKVDY9yqx3qHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
 </div>
 
 ## Use MotorBridge to Calibrate the Arm and Complete the First Run
@@ -208,6 +312,7 @@ If you purchased a pre-assembled kit, tell the agent during the motor ID step: "
 
 Follow these steps in order to install Miniforge and create an isolated Python environment for reBot development.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
     <span className="rebot-step-number">1</span>
@@ -386,7 +491,7 @@ sudo ip link set can0 up
 If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN Firmware Download &amp; Driver Repair Steps - Ubuntu</summary>
 
 Ubuntu users please refer to this guide
@@ -445,8 +550,7 @@ sudo apt install -y \
     make \
     libpopt-dev \
     can-utils \
-    ethtool \
-    nvidia-l4t-kernel-headers
+    ethtool
 ```
 
 Verify that the current kernel headers directory exists:
@@ -626,7 +730,7 @@ motorbridge-cli scan --vendor robstride --channel can0 --start-id 1 --end-id 7 -
 If the PCAN device has incorrect firmware after driver installation, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary>PCAN Firmware Download &amp; Driver Repair Steps - macOS</summary>
 
 MAC users please refer to this guide
@@ -672,7 +776,7 @@ Download [PEAK-System_Driver-Setup.zip](https://files.seeedstudio.com/wiki/robot
 If **PCAN-USB** is not detected in Device Manager after installing the driver, expand the section below, download the PCAN firmware, and follow the recovery steps.
 :::
 
-<details>
+<details className="rebot-demo-details">
 
 <summary>PCAN Firmware Download &amp; Driver Repair Steps - Windows</summary>
 
@@ -832,4 +936,6 @@ First select `rebot-arm-robstride` under **Robot Model** in [MotorBridge Studio]
 
 </div>
 </section>
+</div>
+
 </div>

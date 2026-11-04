@@ -1,5 +1,6 @@
 ---
 description: 使用AI编码代理构建Reachy Mini应用的指南，指向AGENTS.md文档以帮助AI代理理解SDK模式和最佳实践。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini_vibe/reachymini_1.webp
 title: 使用代理进行Vibe编码
 slug: /reachymini_vibe-code-with-your-agent
 keywords:

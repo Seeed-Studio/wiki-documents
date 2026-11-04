@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece o Guia Completo de Controle de Motor RobStride
-title: Guia Completo de Controle de Motor RobStride
+description: "Guia completo de controle dos atuadores de acionamento quase direto RobStride: modo MIT, protocolo CAN, ajuste de parâmetros e exemplos do SDK Python para juntas robóticas."
+title: RobStride
 keywords:
   - atuador
   - motor
@@ -14,7 +14,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-19'
-updatedAt: '2026-06-12'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/pt-br/robstride_control/
 ---
 

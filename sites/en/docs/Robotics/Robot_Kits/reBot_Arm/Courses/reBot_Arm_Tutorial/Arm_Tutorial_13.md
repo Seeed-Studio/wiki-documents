@@ -1,6 +1,7 @@
 ---
-description: "Chapter 13 of the Seeed Embodied Intelligence Beginner's Course — camera configuration and LeRobot data collection: single vs dual camera setup, finding camera device names, image/action synchronization, creating a dataset, recording and re-recording, visualization, and supplementing or deleting data."
+description: 'Chapter 13 of the Seeed Physical AI Beginner''s Course — camera configuration and LeRobot data collection: single vs dual camera setup, finding camera device names, image/action synchronization, creating a dataset, recording and re-recording, visualization, and supplementing or deleting data.'
 title: Chapter 13 - Camera Configuration and LeRobot Data Collection
+hide_title: true
 keywords:
   - reBot
   - LeRobot
@@ -9,22 +10,19 @@ keywords:
   - Dataset
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_13
+slug: /robotics/rebot_physical_ai_course_chapter_13
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_13/
+updatedAt: '2026-09-25'
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_13/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
-
-# 
 
 <div className="rebot-page">
 
@@ -33,7 +31,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 13 · Practice</span>
     <h2>13. Camera Configuration and LeRobot Data Collection</h2>
     <p>
-      Chapter 13 of the Seeed Embodied Intelligence Beginner's Course — single vs dual camera setup,
+      Chapter 13 of the Seeed Physical AI Beginner's Course — single vs dual camera setup,
       finding camera device names, image/action synchronization, creating a dataset, recording and
       re-recording, visualization, and supplementing or deleting data.
     </p>
@@ -43,20 +41,25 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#create-dataset">Dataset</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>13.1 Single-Camera vs. Dual-Camera Setup</span>
-    <span>13.2 Overhead and Wrist Cameras</span>
-    <span>13.3 Finding Camera Device Names</span>
-    <span>13.4 Image and Action Synchronization</span>
-    <span>13.5 Create LeRobot Dataset</span>
-    <span>13.6 Recording, Pausing, and Re-recording Episodes</span>
-    <span>13.7 Visualizing and Playing Back a Dataset</span>
-    <span>13.8 Supplementing and Deleting Data</span>
-  </div>
 </section>
 
-<RebotCourseNav />
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ No-code · No environment setup</span>
+    <p className="sensecraft-banner__title">Skip the setup — run the reBot Arm and LeRobot from one app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics is Seeed's no-code platform for the SO-ARM101, reBot Arm 102 + B601-RS and B601-DM. Connect the arms, calibrate, collect demonstrations, train and run inference from a guided interface — no Python environment, no terminal.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6-step guided workflow</li>
+      <li>✅ Cloud training — no local GPU</li>
+      <li>✅ Windows / macOS client</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Go to SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/sensecraft_robotics/">Software guide</a>
+  </div>
+</div>
 
 ## 13.1 Single-Camera vs. Dual-Camera Setup
 

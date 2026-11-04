@@ -17,6 +17,9 @@ sku: 100003716,100006184
 last_update:
   date: 09/20/2026
   author: Dayu
+createdAt: '2026-09-20'
+url: https://wiki.seeedstudio.com/cn/ai_robotics_deploy_tensorrt_model_connect_on_jetson/
+updatedAt: '2026-09-21'
 ---
 
 # 在 Jetson AGX Orin 上部署 TensorRT-Model-Connect

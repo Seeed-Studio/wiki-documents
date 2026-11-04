@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini媒体架构详细指南，解释使用GStreamer和WebRTC在不同机器人型号上的音频和视频流功能。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 媒体架构
 slug: /reachymini_sdk_media-architecture
 keywords:

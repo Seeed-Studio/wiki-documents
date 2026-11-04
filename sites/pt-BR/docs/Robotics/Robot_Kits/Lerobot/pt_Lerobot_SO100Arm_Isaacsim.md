@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece instruções sobre como importar o braço robótico SO100 Arm Kit para a plataforma de simulação Isaac Sim da NVIDIA e controlá‑lo usando ROS2 e scripts em Python.
+description: Este wiki fornece instruções sobre como importar o braço robótico SO100 Arm Kit para a plataforma de simulação Isaac Sim da NVIDIA e controlá-lo usando ROS2 e scripts em Python.
 title: SO100Arm Kit no Isaac Sim
 keywords:
   - Lerobot
@@ -12,25 +12,25 @@ last_update:
   date: 01/16/2025
   author: ZhuYaoHui
 createdAt: '2025-01-16'
-updatedAt: '2026-03-20'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/pt-br/lerobot_so100m_isaacsim/
 ---
 
-# Como Importar e Controlar o SO100Arm Kit no Isaac Sim 4.2(Somente)
+# Como importar e controlar o SO100Arm Kit no Isaac Sim 4.2 (apenas)
 
 ## Introdução
 
-O [SO-100ARM](https://github.com/TheRobotStudio/SO-ARM100) é um projeto de braço robótico totalmente open-source lançado pela [TheRobotStudio](https://www.therobotstudio.com/). Ele inclui o braço seguidor e o braço robótico líder, e também fornece arquivos detalhados de impressão 3D e guias de operação. O [LeRobot](https://github.com/huggingface/lerobot/tree/main) se dedica a fornecer modelos, conjuntos de dados e ferramentas para robótica no mundo real em PyTorch. Seu objetivo é reduzir a barreira de entrada da robótica, permitindo que todos contribuam e se beneficiem do compartilhamento de conjuntos de dados e modelos pré‑treinados.
+O [SO-100ARM](https://github.com/TheRobotStudio/SO-ARM100) é um projeto de braço robótico totalmente open source lançado pela [TheRobotStudio](https://www.therobotstudio.com/). Ele inclui o braço seguidor e o braço robótico líder, e também fornece arquivos detalhados de impressão 3D e guias de operação. O [LeRobot](https://github.com/huggingface/lerobot/tree/main) se dedica a fornecer modelos, conjuntos de dados e ferramentas para robótica no mundo real em PyTorch. Seu objetivo é reduzir a barreira de entrada da robótica, permitindo que todos contribuam e se beneficiem do compartilhamento de conjuntos de dados e modelos pré-treinados.
 
-Este wiki fornece instruções sobre como importar o braço robótico SO100 Arm Kit para a plataforma de simulação Isaac Sim da NVIDIA e controlá‑lo usando ROS2 e scripts em Python.
+Este wiki fornece instruções sobre como importar o braço robótico SO100 Arm Kit para a plataforma de simulação Isaac Sim da NVIDIA e controlá-lo usando ROS2 e scripts em Python.
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=CvovjaHNQy2nZsR2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Introdução aos Projetos
+## Introdução aos projetos
 
-O kit de robô inteligente SO-ARM100 e reComputer Jetson AI combina perfeitamente o controle de braço robótico de alta precisão com uma poderosa plataforma de computação de IA, fornecendo uma solução abrangente de desenvolvimento de robôs. Este kit é baseado na plataforma Jetson Orin ou AGX Orin, combinada com o braço robótico SO-ARM100 e o framework de IA LeRobot, oferecendo aos usuários um sistema robótico inteligente aplicável a vários cenários, como educação, pesquisa e automação industrial.
+O kit de robô inteligente SO-ARM100 e reComputer Jetson AI combina perfeitamente o controle de braço robótico de alta precisão com uma poderosa plataforma de computação de IA, fornecendo uma solução completa de desenvolvimento de robôs. Este kit é baseado na plataforma Jetson Orin ou AGX Orin, combinada com o braço robótico SO-ARM100 e o framework de IA LeRobot, oferecendo aos usuários um sistema de robô inteligente aplicável a múltiplos cenários, como educação, pesquisa e automação industrial.
 Este wiki fornece o tutorial de montagem e depuração do SO ARM100 e realiza a coleta de dados e o treinamento dentro do framework Lerobot.
 
   <div align="center">
@@ -49,32 +49,32 @@ Este wiki fornece o tutorial de montagem e depuração do SO ARM100 e realiza a 
 |--|--|--|
 | Tipo | Arm Kit | Arm Kit Pro |
 | Grau de liberdade | 6 | 6 |
-| Torque máximo | 19,5kg.cm 7,4V | 30kg.cm 12V |
+| Torque máximo | 19.5kg.cm 7.4V | 30kg.cm 12V |
 | Servo | STS3215 Bus Servo | STS3215 Bus Servo |
-| Fonte de alimentação | 5,5mm*2,1mm DC 5V4A | 5,5mm*2,1mm DC 12V1A |
+| Fonte de alimentação | 5.5mm*2.1mm DC 5V4A | 5.5mm*2.1mm DC 12V1A |
 | Sensor de ângulo | Codificador magnético de 12 bits | Codificador magnético de 12 bits |
-| Faixa recomendada de temperatura de operação | 0℃～40℃ | 0℃～40℃ |
+| Faixa de temperatura de operação recomendada | 0℃～40℃ | 0℃～40℃ |
 | Método de comunicação | UART | UART |
 | Método de controle | PC | PC |
 
-## Lista de Materiais (BOM)
+## Lista de materiais (BOM)
 
 | Peça | Quantidade | Incluído|
 |--|--|--|
 | STS3215 Servo1 | 12 | ✅ |
-| Placa de Controle do Motor | 2 | ✅ |
+| Placa de controle do motor | 2 | ✅ |
 | Cabo USB-C 2 pcs | 1 | ✅ |
-| Fonte de Alimentação2 | 2 | ✅ |
-| Grampo de mesa| 1 | ❌ |
+| Fonte de alimentação2 | 2 | ✅ |
+| Presilha de mesa| 1 | ❌ |
 | Peças impressas em 3D do braço | 1 | ❌ |
 
 :::caution
-As peças impressas em 3D e os grampos de mesa não estão incluídos no produto. No entanto, o SO-100ARM fornece [arquivos STL de impressão 3D](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting) e parâmetros de impressão detalhados. Além disso, também oferecemos as [peças impressas em 3D do Grampo de Mesa](https://makerworld.com/zh/models/908660).
+As peças impressas em 3D e as presilhas de mesa não estão incluídas no produto. No entanto, o SO-100ARM fornece [arquivos STL de impressão 3D](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting) e parâmetros de impressão detalhados. Além disso, também oferecemos as [peças impressas em 3D da presilha de mesa](https://makerworld.com/zh/models/908660).
 :::
 
 ## Pré-requisitos
 
-  1. [Estar familiarizado com nosso tutorial básico de uso do Lerobot SO100Arm](/pt-br/lerobot_so100m).
+  1. [Estar familiarizado com o nosso tutorial básico de uso do Lerobot SO100Arm](/pt-br/lerobot_so100m_new).
   2. [Instalar o Isaac Sim de acordo com o tutorial](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_workstation.html)
   3. [Concluir a instalação e configuração do ROS2 de acordo com o tutorial](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_ros.html)
 
@@ -88,13 +88,13 @@ As peças impressas em 3D e os grampos de mesa não estão incluídos no produto
     cd lerobot
   ```
 
-  Certifique-se de que você instalou o [ambiente Lerobot de acordo com o tutorial](/pt-br/lerobot_so100m)
+  Certifique-se de que você instalou o [ambiente Lerobot de acordo com o tutorial](/pt-br/lerobot_so100m_new)
 
 ## Importar o URDF para o Isaac Sim
 
   **Passo 1. Abrir o Isaac Sim**
 
-  **Certifique‑se de que o Isaac Sim foi instalado de acordo com o [tutorial oficial](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_workstation.html) da NVIDIA, que o ROS2 foi instalado e que a configuração básica do ambiente foi concluída](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_ros.html). Abra a interface do Isaac Sim com os parâmetros mostrados na figura abaixo.**
+  **Certifique-se de que o Isaac Sim foi instalado de acordo com o [tutorial oficial](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_workstation.html) da NVIDIA, que o ROS2 foi instalado e que a configuração básica do ambiente foi concluída](https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_ros.html). Abra a interface do Isaac Sim com os parâmetros conforme mostrado na figura abaixo.**
   <div align="center">
       <img width={600}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/open_isaac_sim.png" />
@@ -123,16 +123,16 @@ As peças impressas em 3D e os grampos de mesa não estão incluídos no produto
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/urdf_file.png" />
   </div>
 
-  **Agora você pode ver que nosso braço robótico SO100 foi importado para o Isaac Sim.**
+  **Agora você pode ver que o nosso braço robótico SO100 foi importado para o Isaac Sim.**
 
   <div align="center">
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Isaac_sim_import_success.png" />
   </div>
 
-  **Passo 4. Adicionar elementos de Física**
+  **Passo 4. Adicionar elementos de física**
 
-  **Na barra de ferramentas do Isaac Sim, navegue até Create → Physics e adicione tanto `Physics Scene` quanto `Ground Plane` para configurar o ambiente físico e o solo.**
+  **Na barra de ferramentas do Isaac Sim, navegue até Create → Physics e adicione `Physics Scene` e `Ground Plane` para configurar o ambiente físico e o chão.**
 
   <div align="center">
       <img width={800}
@@ -141,7 +141,7 @@ As peças impressas em 3D e os grampos de mesa não estão incluídos no produto
 
  **Passo 5. Excluir o `Articulation Root` de `root_joint`**
 
-  **No painel Stage à direita, localize `root_joint`. Clique nele e, em seguida, nas Propriedades abaixo, encontre `Articulation Root` em Physics e clique no × à direita para excluir esta raiz.**
+  **No painel Stage à direita, localize `root_joint`. Clique nele e, em seguida, nas Propriedades abaixo, encontre `Articulation Root` em Physics e clique no × à direita para excluir essa raiz.**
   <div align="center">
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/delete_root.png" />
@@ -178,15 +178,15 @@ As peças impressas em 3D e os grampos de mesa não estão incluídos no produto
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=sHjysqfqxPVz-r3T&amp;start=92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-  **Passo 3. Executar**
+  **Passo 3. Executar (Play)**
 
-  **Clique no botão Play à direita para iniciar a ação normalmente. Neste momento, use o comando `ros2 topic list` para visualizar as informações dos tópicos.**
+  **Clique no botão Play à direita para iniciar a ação normalmente. Neste ponto, use o comando `ros2 topic list` para visualizar as informações dos tópicos.**
   <div align="center">
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/ros2topic.png" />
   </div>
 
-## **Controle do Movimento do Braço Robótico em Python via ROS2**
+## **Controle do movimento do braço robótico com ROS2 Python**
 
 **Agora, você pode executar os seguintes scripts em Python no ambiente ROS2 para controlar o braço robótico. Os arquivos de script estão localizados em `lerobot/lerobot/scripts/` como `control_motor.py` e `lerobot_publisher.py`.**
 
@@ -331,7 +331,7 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 
 [VQ-BeT](https://sjlee.cc/vq-bet/)
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

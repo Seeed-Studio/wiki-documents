@@ -10,10 +10,10 @@ slug: /sensecap_meshtracker_x1_meshcore
 sku: 100087698
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
+  date: 10/30/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-08-18'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 ---
 
@@ -282,11 +282,21 @@ MAC 地址的 `最后四位数字` 就是设备 ID
 
 ## 故障排查
 
+### 固件更新失败 / OTA 恢复
+
+如果 SenseCAP MeshTracker X1 在固件更新后无法启动、没有响应，或白色 ⚪️ LED 保持常亮，设备可能卡在 DFU 模式。请尝试以下操作：
+
+1. 强制重启以退出 DFU 模式：断开 USB 充电线，按住设备按钮，连接 USB 充电线，然后立即松开按钮。不要持续按住按钮——连接充电线后按住超过 3 秒会强制设备重新进入 DFU 模式。
+2. 检查设备是否正常启动。如果没有，请使用 USB 数据线将设备连接到电脑，并按照[固件烧录](#固件烧录)指南进入 DFU 模式、擦除 flash，然后重新安装 MeshCore 固件。
+3. 如果设备仍然无法恢复，请按照 [Bootloader 安装](#bootloader-安装)重新烧录 bootloader，然后再安装应用固件。
+
+在固件擦除或烧录过程中，不要强制重启或拔出 USB 线。如果设备无法进入 DFU 模式或无法被电脑识别，请联系技术支持。
+
 ### 设备无法开机
 
 - 使用一根已知正常的 USB 线连续 `为设备充电` 1–2 小时，以确保电池有足够电量唤醒系统。
 
-- 如果设备在充电后仍然没有响应，请按如下方式 `执行硬重置`：拔下 USB 线。按住按钮不放，然后在保持按住按钮的同时插入 USB 线。大约按住 3 秒后松开。这会强制系统重置。
+- 如果设备在充电后仍然没有响应，请按如下方式 `执行硬重置`：拔下 USB 线。按住按钮不放，然后插入 USB 线并立即松开按钮。这会强制系统重置。
 
  - 如果仍然无效，将 USB 线连接到电脑。按住设备按钮，然后将设备连接到电脑，查看电脑中是否弹出一个磁盘。如果有，请重新安装 bootloader。
 
@@ -298,7 +308,7 @@ MAC 地址的 `最后四位数字` 就是设备 ID
 
 **解决方案：**
 
-- 步骤 1：尝试手动进入 DFU 模式：按住设备按钮不放，然后**快速**连接充电线两次
+- 步骤 1：尝试手动进入 DFU 模式：按住设备按钮不放，然后**快速**通过 USB 线将设备连接到电脑，持续按住按钮直到白色 ⚪️ LED 亮起。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
@@ -410,7 +420,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 - 将波特率设置为 `1200`。
 
 - 连接设备。
-   连接时指示灯会短暂闪烁。重复尝试，直到指示灯保持常亮，这表示设备可以回到 DFU 模式，然后[烧录 bootloader](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#bootloader-安装) -> [擦除 flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#固件-烧录) -> [烧录固件](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录)。
+   连接时指示灯会短暂闪烁。重复尝试，直到指示灯保持常亮，这表示设备可以回到 DFU 模式，然后[烧录 bootloader](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#bootloader-安装) -> [擦除 flash](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录) -> [烧录固件](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录)。
 
 **3) 设备无法进入 DFU 模式，且没有串口显示**
 

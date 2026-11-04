@@ -14,10 +14,10 @@ slug: /recamera_udp_face_analysis
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899,108990119,108990120,E20245041001,100018917, 100041077, 100029708, 100074316
 sidebar_position: 12
 last_update:
-  date: 04/30/2026
+  date: 10/08/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/es/recamera_udp_face_analysis/
 ---
 
@@ -27,9 +27,9 @@ url: https://wiki.seeedstudio.com/es/recamera_udp_face_analysis/
 
 Esta demo muestra cómo construir un sistema de análisis de rostros en tiempo real usando reCamera. El sistema realiza:
 
-- **Detección de Rostros**: Usando el modelo de detección de rostros YOLO
-- **Análisis de Atributos**: Estimación de edad, género y raza usando el modelo FairFace
-- **Reconocimiento de Emociones**: Detección de emociones en 7 clases
+- **Detección de rostros**: Usando el modelo de detección de rostros YOLO
+- **Análisis de atributos**: Estimación de edad, género y raza usando el modelo FairFace
+- **Reconocimiento de emociones**: Detección de emociones en 7 clases
 - **Transmisión UDP**: Envía fotogramas JPEG con metadatos de detección al PC vía UDP
 
 La aplicación en C++ se ejecuta en reCamera y envía fotogramas de vídeo junto con los resultados de detección (cajas delimitadoras, atributos) a través de UDP. Un script receptor en Python ejecutándose en tu PC muestra el flujo de vídeo anotado en tiempo real.
@@ -48,13 +48,13 @@ La aplicación en C++ se ejecuta en reCamera y envía fotogramas de vídeo junto
 Para configurar esta demo, necesitas:
 
 1. Compilar de forma cruzada el programa en C++ en tu PC
-2. Ejecutar el ejecutable compilado en reCamera
+2. Ejecutar el ejecutable compilado en ReCamera
 3. Ejecutar el script receptor en Python en tu PC
 
-### 1. Compilar el Programa en C++
+### 1. Compilar el programa en C++
 
 :::note
-Antes de compilar esta solución, asegúrate de haber configurado el entorno de **ReCamera-OS** según la documentación del proyecto principal.
+Antes de compilar esta solución, asegúrate de haber configurado el entorno de **ReCamera-OS** según la documentación principal del proyecto.
 :::
 
 Configura las siguientes variables de entorno para el entorno de compilación de **ReCamera-OS** antes de ejecutar `cmake`:
@@ -70,7 +70,7 @@ Primero, asegúrate de tener los modelos requeridos:
 
 Puedes descargar estos tres archivos de modelo desde la [versión sscma-example-sg200x v1.0.1](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1), o entrenar tus propios modelos y luego cuantizarlos/convertirlos al formato `.cvimodel`.
 
-Navega al directorio de la solución y compila:
+Ve al directorio de la solución y compila:
 
 ```bash
 git clone https://github.com/RobotXTeam/sscma-example-sg200x.git
@@ -90,21 +90,21 @@ El repositorio incluye modelos precompilados en la carpeta de la solución:
 - `emotion_bf16.cvimodel`
 :::
 
-### 2. Configurar reCamera
+### 2. Configurar ReCamera
 
 :::warning
 Antes de ejecutar el programa en C++, debes detener los servicios predeterminados de Node-RED ya que ocupan los recursos de la cámara. Ejecuta los siguientes comandos vía SSH:
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
-### 3. Ejecutar el Ejecutable en reCamera
+### 3. Ejecutar el ejecutable en ReCamera
 
-Sube el ejecutable compilado y los modelos a `/home/recamera/` en reCamera, luego ejecuta:
+Sube el ejecutable compilado y los modelos a `/home/recamera/` en ReCamera, luego ejecuta:
 
 ```bash
 chmod +x face_udp
@@ -120,12 +120,12 @@ chmod +x face_udp
 | `emotion.cvimodel` | Modelo de emociones (requerido) | - |
 | `single\|multi` | Tipo de cabeza YOLO | multi |
 | `threshold` | Umbral de detección | 0.5 (multi) / 0.7 (single) |
-| `skip` | Inferir cada N fotogramas | 3 (multi) / 1 (single) |
+| `skip` | Inferencia cada N fotogramas | 3 (multi) / 1 (single) |
 | `udp_ip` | Dirección IP del PC para UDP | - |
 | `udp_port` | Número de puerto UDP | - |
 | `log_every_n_infer` | Imprimir log cada N inferencias | 20 |
 
-#### Comandos de Ejemplo
+#### Comandos de ejemplo
 
 **Uso básico (sin transmisión UDP)**:
 ```bash
@@ -138,10 +138,10 @@ chmod +x face_udp
 ```
 
 :::note
-Recuerda reemplazar `192.168.31.100` con la dirección IP real de tu PC en la misma red que reCamera.
+Recuerda reemplazar `192.168.31.100` con la dirección IP real de tu PC en la misma red que ReCamera.
 :::
 
-### 4. Ejecutar el Receptor en Python en el PC
+### 4. Ejecutar el receptor en Python en el PC
 
 En tu PC, asegúrate de tener instalado Python con las librerías requeridas:
 
@@ -149,7 +149,7 @@ En tu PC, asegúrate de tener instalado Python con las librerías requeridas:
 pip install opencv-python numpy
 ```
 
-Navega al directorio de la solución y ejecuta:
+Ve al directorio de la solución y ejecuta:
 
 ```bash
 cd sscma-example-sg200x/solutions/sesg-project/face_udp
@@ -159,9 +159,9 @@ python3 udp_receiver.py
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/udp_receiver_demo.gif" /></div>
 
-## Salida Esperada
+## Salida esperada
 
-### En la Terminal de reCamera
+### En la terminal de ReCamera
 
 El programa mostrará estadísticas de rendimiento en tiempo real cada 2 segundos:
 
@@ -186,7 +186,7 @@ UDP Send:
 ======================================
 ```
 
-### En la Ventana del Receptor en Python
+### En la ventana del receptor en Python
 
 El PC mostrará una ventana que contiene:
 - Flujo de vídeo en vivo con fotogramas JPEG
@@ -199,30 +199,30 @@ El PC mostrará una ventana que contiene:
 
 
 
-## Solución de Problemas
+## Resolución de problemas
 
-### Error de Acceso a la Cámara
+### Error de acceso a la cámara
 
 Si ves el error "No camera":
 - Asegúrate de que los servicios de Node-RED estén detenidos (ver Paso 2 arriba)
 - Comprueba la conexión de la cámara
 
-### Fallo en la Conexión UDP
+### Error de conexión UDP
 
 Si el PC no recibe datos:
-- Verifica que el PC y reCamera estén en la misma red
+- Verifica que el PC y ReCamera estén en la misma red
 - Revisa la configuración del firewall en el PC
 - Confirma que el puerto UDP 5001 no esté bloqueado
-- Prueba con `ping` entre los dispositivos
+- Haz una prueba con `ping` entre los dispositivos
 
-### Error al Cargar el Modelo
+### Error al cargar el modelo
 
 Si el modelo no se carga:
 - Verifica que los archivos de modelo estén subidos a `/home/recamera/`
 - Comprueba los permisos de archivo con `ls -la`
-- Asegúrate de tener espacio de almacenamiento suficiente
+- Asegúrate de tener suficiente espacio de almacenamiento
 
-## Soporte Técnico y Debate sobre el Producto
+## Soporte técnico y debate sobre el producto
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

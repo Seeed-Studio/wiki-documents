@@ -1,6 +1,6 @@
 ---
-description: Esta wiki proporciona una Guía Completa de Control de Motores de Alto Torque
-title: Guía Completa de Control de Motores de Alto Torque
+description: "Guía completa de control de actuadores HighTorque: modo MIT, modos de posición/velocidad, comandos CAN y ejemplos del SDK de Python para articulaciones de brazos robóticos."
+title: SDK de motor HighTorque
 keywords:
   - actuator
   - motor
@@ -12,7 +12,7 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 createdAt: '2025-11-19'
-updatedAt: '2026-08-03'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/hightorque_control/
 ---
 

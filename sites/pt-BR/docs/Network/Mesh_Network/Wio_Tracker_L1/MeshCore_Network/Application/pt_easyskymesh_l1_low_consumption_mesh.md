@@ -1,25 +1,23 @@
 ---
-
 description: Este guia explica como usar o EasySkyMesh com o Wio Tracker L1 para construir redes de sensores IoT de baixo consumo de energia baseadas em MeshCore.
 title: Economia de energia
 keywords:
-   - EasySkyMesh
-   - MeshCore
-   - Wio Tracker L1
-   - LoRa Mesh
-   - MeshCore Sensor
-   - PowerSaving
+  - EasySkyMesh
+  - MeshCore
+  - Wio Tracker L1
+  - LoRa Mesh
+  - MeshCore Sensor
+  - PowerSaving
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_L1-pHONE.png
 slug: /easyskymesh_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 1
 last_update:
-   date: 9/17/2026
-   author: Michelle Huang
-createdAt: 2026-09-17
-updatedAt: '2026-09-17'
+  date: 9/17/2026
+  author: Michelle Huang
+createdAt: 2026-09-17T00:00:00.000Z
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/pt-br/easyskymesh_wio_tracker_l1/
-
 ---
 
 import Tabs from '@theme/Tabs';

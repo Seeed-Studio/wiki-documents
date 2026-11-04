@@ -15,7 +15,7 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-17'
-updatedAt: '2026-04-28'
+updatedAt: '2026-08-26'
 url: https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome/
 ---
 

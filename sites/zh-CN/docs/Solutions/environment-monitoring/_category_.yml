@@ -1,0 +1,10 @@
+position: 4
+label: '环境监测与感知'
+collapsible: true
+collapsed: true
+className: _environmental-monitoring
+# link:
+#   type: generated-index
+#   slug: cn/environment-monitoring
+#   title: 环境监测与感知
+#   description: 用于空气、水质、土壤和环境条件的传感和分析。

@@ -1,6 +1,7 @@
 ---
-description: 'wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルダウンロード、LLM 切り替え、ハンドアイキャリブレーション、デモ実行、トラブルシューティング。'
-title: reBot Arm B601-RS エンボディドエージェント設計フレームワーク
+description: wrc_demo 操作ガイド：reBot Arm B601-RS のビジュアル把持デモのための完全な手順 — 環境構築、モデルのダウンロード、LLM の切り替え、ハンドアイキャリブレーション、デモの実行、トラブルシューティング。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+title: B601-RS と Agent Claw
 keywords:
   - wrc_demo
   - reBot Arm B601-RS
@@ -18,9 +19,10 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/wrc_demo_tutorial/
 ---
+
 
 # reBot Arm B601-RS エンボディドエージェント設計フレームワーク
 
@@ -33,6 +35,22 @@ url: https://wiki.seeedstudio.com/ja/wrc_demo_tutorial/
   <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Camera" />
   <img src="https://img.shields.io/badge/Brain-VLM-purple.svg" alt="VLM Brain" />
 </p>
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>今すぐ購入</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
   <strong>環境構築 → モデルダウンロード → LLM 切り替え → ハンドアイキャリブレーション → デモ実行 → トラブルシューティング</strong>

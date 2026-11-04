@@ -11,7 +11,7 @@ last_update:
   date: 09/16/2026
   author: Nemo
 createdAt: '2025-09-25'
-updatedAt: '2026-09-16'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/epaper_ee04/
 ---
 
@@ -40,6 +40,8 @@ import Steppers from '@site/src/components/utils/Stepper';
 ## Introduction
 
 Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Featrue
 
@@ -289,7 +291,7 @@ Note that PSRAM must be enabled.
 Then click **Upload** to upload the code.
 Now you will see the feedback in your epaper screen! Following is the result of the HelloWorld example.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/GFX2_EE04_demo.png" style={{width:300, height:'auto'}}/></div>
 
 ## Software Overview
 

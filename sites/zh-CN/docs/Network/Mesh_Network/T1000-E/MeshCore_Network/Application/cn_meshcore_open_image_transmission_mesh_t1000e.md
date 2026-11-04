@@ -1,12 +1,12 @@
 ---
-description: 本指南介绍如何基于 Card Tracker T1000-E，使用基于 AI 重建的超低码率图像压缩，在 MeshCore 网络上传输图像。
+description: 本指南介绍如何基于 Card Tracker T1000-E，使用基于 AI 重建的超低码率图像压缩，在 MeshCore 网络中发送图像。
 title: 图像传输
 keywords:
   - MeshCore
   - MeshCore Open
   - Card Tracker T1000-E
-  - Image Transmission
-  - AI Image Compression
+  - 图像传输
+  - AI 图像压缩
   - LoRa Mesh
   - AEIC-SE
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_t1000e.png
@@ -16,8 +16,8 @@ sidebar_position: 1
 last_update:
   date: 9/19/2026
   author: Michelle Huang
-createdAt: 2026-09-19
-updatedAt: '2026-09-19'
+createdAt: 2026-09-19T00:00:00.000Z
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/cn/meshcore_ai_image_transmission_t1000e/
 ---
 
@@ -42,11 +42,11 @@ import TabItem from '@theme/TabItem';
 此图像传输功能适用于需要在没有可靠互联网或蜂窝网络的地方共享视觉信息的用户。
 
 - **户外探索者**：徒步者、攀登者和探险队可以共享道路状况、发送远程景观图像，并在文字不足以表达时提供视觉信息。
-- **应急和灾害响应团队**：团队可以共享现场情况，提供快速的视觉更新，并通过图像提升团队态势感知。
+- **应急与灾害响应团队**：团队可以共享现场情况，通过图像提供快速的视觉更新并提升团队态势感知。
 - **离网通信爱好者**：适合希望探索 AI 驱动边缘通信的 MeshCore 和业余无线电用户。
 
 
-## 图像传输在 MeshCore 中如何工作
+## MeshCore 中的图像传输原理
 
 图像**不会被直接传输**。发送端使用本地 AI 编码器将图像转换为一个非常小的二进制文件。接收端不会还原原始像素，而是由本地 AI 解码器使用压缩数据生成一张在视觉上相似的图像。
 
@@ -68,16 +68,16 @@ AI Decoder
 Reconstructed Image
 ```
 
-## MeshCore Open 入门
+## 开始使用 MeshCore Open
 
 ### 初始设置
 
-1. 安装 MeshCore Open App。[点击此处](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) 安装支持图像传输的 APP 版本。
-2. 将你的 MeshCore 节点连接到 APP。[点击此处](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/) 阅读 T1000-E 连接指南。
+1. 安装 MeshCore Open App。[点击这里](https://meshcoreopen.org/install/) 安装支持图像传输的应用版本。
+2. 将你的 MeshCore 节点连接到 APP。[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/) 阅读 T1000-E 连接指南。
 3. 配置你的 LoRa 区域和网络设置。
 4. 确保有另一台 MeshCore 节点可作为接收端。
 
-有关 MeshCore 的通用设置说明，请参考 [MeshCore Open 入门指南](https://meshcoreopen.org/docs/getting-started/)：
+有关 MeshCore 通用设置说明，请参考 [MeshCore Open 入门指南](https://meshcoreopen.org/docs/getting-started/)：
 
 ### 安装模型
 
@@ -95,7 +95,7 @@ Reconstructed Image
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
 </div>
 
-APP 会在传输前自动处理图像。压缩后的图像数据将通过 MeshCore 网络进行传输。传输时间取决于 Mesh 跳数、无线电配置、网络流量和信号质量。传输的数据仅包含压缩表示，而不包含原始图像。
+APP 会在传输前自动处理图像。压缩后的图像数据将通过 MeshCore 网络进行传输。传输时间取决于 Mesh 跳数、射频配置、网络流量和信号质量。传输的数据仅包含压缩表示，而不包含原始图像。
 
 当接收节点收到压缩数据后，解码器会执行图像重建。重建后的图像将显示在聊天界面中。
 <div style={{textAlign:'center'}}>

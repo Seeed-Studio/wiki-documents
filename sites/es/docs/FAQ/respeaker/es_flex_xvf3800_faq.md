@@ -9,6 +9,9 @@ keywords:
   - reSpeaker Flex FAQ
   - reSpeaker Flex troubleshooting
   - reSpeaker Flex USB
+createdAt: '2026-09-03'
+url: https://wiki.seeedstudio.com/es/respeaker_flex_faq/
+updatedAt: '2026-09-03'
 ---
 
 <div class="respeaker-faq-page">

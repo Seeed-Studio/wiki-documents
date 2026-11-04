@@ -19,7 +19,7 @@ aliases:
   - /xiao_7_5_inch_epaper_panel_with_trmnl
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl/
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-11'
 ---
 
 import Tabs from '@theme/Tabs';

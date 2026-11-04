@@ -15,7 +15,7 @@ last_update:
   date: 09/20/2026
   author: linao681
 createdAt: '2026-07-24'
-updatedAt: '2026-09-20'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/soarm101_xiao_microros_wireless_teleoperation/
 ---
 
@@ -110,7 +110,7 @@ The tested host configuration is:
 - ROS 2 Humble
 - LeRobot with Feetech support
 - micro-ROS Agent
-- Python 3.10
+- Python 3.12
 - PlatformIO
 
 Install the micro-ROS Agent and PlatformIO if they are not already available:

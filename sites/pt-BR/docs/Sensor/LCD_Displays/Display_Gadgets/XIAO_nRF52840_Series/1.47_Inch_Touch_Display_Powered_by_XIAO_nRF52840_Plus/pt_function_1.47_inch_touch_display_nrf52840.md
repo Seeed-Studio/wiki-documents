@@ -16,7 +16,7 @@ last_update:
   date: 08/20/2026
   author: FaiyuetCik
 createdAt: '2026-08-11'
-updatedAt: '2026-08-24'
+updatedAt: '2026-09-09'
 url: https://wiki.seeedstudio.com/pt-br/function_1.47_inch_touch_display_nrf52840/
 ---
 

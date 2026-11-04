@@ -1,0 +1,10 @@
+position: 3
+label: 'ホーム・ビルオートメーション'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: ja/home-building-automation
+#   title: ホーム・ビルオートメーション
+#   description: 住宅・ビルの自動化、エネルギー管理とプロトコル連携。

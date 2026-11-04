@@ -10,7 +10,7 @@ last_update:
   date: 9/1/2026
   author: Advent Jiang
 createdAt: '2025-03-24'
-updatedAt: '2026-03-16'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/pt-br/t1000_e_arduino_examples/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 09/20/2026
   author: Twelve
 createdAt: '2023-05-17'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-20'
 url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/
 ---
 

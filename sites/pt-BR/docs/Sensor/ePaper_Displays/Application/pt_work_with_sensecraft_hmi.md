@@ -15,7 +15,7 @@ last_update:
   author: Luki
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/pt-br/EE04_with_hmi/
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-11'
 ---
 
 import Tabs from '@theme/Tabs';

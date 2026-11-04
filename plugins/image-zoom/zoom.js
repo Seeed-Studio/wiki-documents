@@ -1,5 +1,6 @@
 import siteConfig from '@generated/docusaurus.config';
 import mediumZoom from 'medium-zoom';
+import './zoom.css';
 
 const {themeConfig} = siteConfig;
 

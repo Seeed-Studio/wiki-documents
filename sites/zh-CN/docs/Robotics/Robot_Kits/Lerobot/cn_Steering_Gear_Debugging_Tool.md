@@ -1,5 +1,5 @@
 ---
-description: Lerobot 中 SO-ARM 的舵机调试工具。
+description: "如何用 Seeed_RoboController 工具调试 SO-ARM 舵机：检测舵机、修正 ID、写入中位值，并在 Windows、Ubuntu 和 Mac 上读取状态。"
 title: SO-Arm 舵机调试工具
 keywords:
   - Lerobot
@@ -14,11 +14,17 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/cn/lerobot_steering_gear_debugging_tool/
 createdAt: '2026-06-30'
-updatedAt: '2026-07-20'
+updatedAt: '2026-09-16'
 ---
 # Lerobot 中 SO-ARM 的舵机调试工具
 
 Lerobot 中 SO-ARM 的舵机调试工具
+
+<div className="get-one-now-panel">
+  <a className="get-one-now-button" href="https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84" target="_blank" rel="noopener noreferrer">
+    立即购买 SO-ARM101 套件 / Get One Now 🖱️
+  </a>
+</div>
 
 ## 简介
 

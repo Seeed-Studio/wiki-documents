@@ -328,9 +328,9 @@ pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 
 ```SHELL
 # for Windows
-pio pkg update -g -p "GitHub - Seeed-Studio/platform-seeedboards: Seeed Boards: development platform for PlatformIO"
+pio pkg update -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git"
 # for macOS/Linux
-pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=GitHub - Seeed-Studio/platform-seeedboards: Seeed Boards: development platform for PlatformIO" --force
+pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
 ```
 
 

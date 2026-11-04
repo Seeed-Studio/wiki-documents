@@ -8,7 +8,7 @@ last_update:
   date: 09/10/2026
   author: Luki
 createdAt: '2026-04-28'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/seeed_epaper_displays/
 ---
 

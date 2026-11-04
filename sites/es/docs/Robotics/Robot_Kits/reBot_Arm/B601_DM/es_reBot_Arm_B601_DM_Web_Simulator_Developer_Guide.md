@@ -1,17 +1,17 @@
 ---
-description: Esta guía para desarrolladores presenta la arquitectura, el runtime, el puente ROS2, la integración LLM/MCP y el flujo de trabajo de desarrollo secundario de la consola web reBotArm_simulator-DM y la pila ROS2/MuJoCo en el reBot Arm B601-DM Digital Twin & Control Stack.
-title: reBot Arm B601-DM Digital Twin & Control Stack
+description: Esta guía para desarrolladores presenta la arquitectura, el runtime, el puente ROS2, la integración LLM/MCP y el flujo de trabajo de desarrollo secundario de la consola web reBotArm_simulator-DM y del stack ROS2/MuJoCo en el ReBot Arm Digital Twin & Control Stack para B601-DM.
+title: "Sistema de control web de reBot-DM: robot real y MuJoCo"
 keywords:
   - reBot Arm
   - B601-DM
-  - Web Simulator
+  - Simulador web
   - Three.js
   - URDF
   - rosbridge
   - LLM
   - MCP
-  - Robot Arm
-  - Robotics
+  - Brazo robótico
+  - Robótica
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_web/rebot_web_simulator.png
 slug: /rebot_arm_b601_dm_web_simulator_developer_guide
 sku: 100065783, 100095532
@@ -21,23 +21,20 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-30'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_web_simulator_developer_guide/
 ---
 import '/src/css/rebot-wiki-style.css';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Digital Twin & Control Stack
 
-<RebotDmDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -101,14 +98,14 @@ El simulador web en sí no se conecta directamente al hardware. Todos los comand
 ls /dev/ttyACM*
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada</summary>
 
 ```text
 /dev/ttyACM0
 ```
 
-[LINE_110>Listar `/dev/ttyACM0` (o `ttyACM1`, etc.) significa que se reconoce el puerto serie.
+Listar `/dev/ttyACM0` (o `ttyACM1`, etc.) significa que se reconoce el puerto serie.
 
 </details>
 
@@ -226,7 +223,7 @@ Después de la instalación, ejecuta diagnósticos para confirmar que el entorno
 ./rebotarm doctor
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada (resumen)</summary>
 
 ```text
@@ -384,7 +381,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM
 ./rebotarm start sim
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada</summary>
 
 ```text
@@ -483,7 +480,7 @@ source scripts/source_rebotarm_env.sh
 Este script carga, en orden, ROS2 (`/opt/ros/jazzy/setup.bash`), el entorno virtual de Python (`.venv/bin/activate`), las rutas de cmeel (extensiones C de Pinocchio) y el workspace (`install/setup.bash`).
 :::
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Notas del módulo principal</b> (haz clic para expandir)</summary>
 
 **server.js — servidor estático Node.js**
@@ -584,7 +581,7 @@ Al iniciar, primero llama a `/api/llm/health` para comprobar el estado del text-
 
 </details>
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Resumen de la interfaz ROS2</b> (haz clic para expandir)</summary>
 
 Las interfaces clave de ROS2 a las que el simulador web se suscribe y publica se enumeran a continuación. El espacio de nombres predeterminado es `rebotarm`.
@@ -684,7 +681,7 @@ cd ~/ReBot_Arm_DigitalTwin_DM/reBotArm_ros2_DM
 ./scripts/start_rebotarm_text_agent_http.sh
 ```
 
-<details>
+<details className="rebot-demo-details">
 <summary>Salida esperada</summary>
 
 ```text
@@ -802,7 +799,7 @@ La dirección WebSocket de rosbridge la introduce manualmente el usuario en el p
 
 La página intenta cargar la última dirección guardada cuando el cuadro de entrada está vacío. Modifica el valor por defecto o introduce directamente la dirección real en el panel de conexión web.
 
-<details>
+<details className="rebot-demo-details">
 <summary><b>Referencia rápida de archivos clave</b> (haz clic para expandir)</summary>
 
 | Archivo | Propósito |

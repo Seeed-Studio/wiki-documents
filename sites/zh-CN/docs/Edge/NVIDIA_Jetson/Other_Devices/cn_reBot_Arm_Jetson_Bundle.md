@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-07-27'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 ---
 
@@ -313,7 +313,7 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
     >
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
             <img
-                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png"
+                src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp"
                 alt="reBot Arm B601-RS ROS2 集成"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
             />

@@ -1,12 +1,12 @@
 ---
-description: Atom-S の使用を開始する。
-title: Atom-S 入門ガイド
+description: "ヒューマノイドロボット Atom-S を始める方法：開梱、電源投入、初回起動、基本動作、ソフトウェアのセットアップ。"
+title: Atom-S クイックスタート
 keywords:
-  - ヒューマノイド
-  - ロボティクス
+  - Humanoid
+  - Robotics
   - Atom S
   - XIAO ESP32-S3
-  - サーボ
+  - Servo
 image: https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-s/product_photo.webp
 slug: /atom_s
 last_update:
@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/ja/atom_s/
 createdAt: '2026-05-25'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-22'
 ---
 
 # Atom-S 入門ガイド

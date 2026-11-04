@@ -1,11 +1,11 @@
 ---
-description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグ用にシミュレーション環境へ reBot Arm B601-RS ロボットを展開する方法を説明します。
-title: reBot Arm B601-RS Isaac Sim
+description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグ用にシミュレーション環境へ reBotArm ロボットを展開する方法を説明します。
+title: B601-RS と Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - マニピュレータ
   - ロボット
-  - リモート制御操作
+  - 遠隔操作
   - 運動学
   - Robostride
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/reBot_Arm_RS_isaacsim.jpg
@@ -14,14 +14,11 @@ last_update:
   date: 8/14/2026
   author: LiuJunjie
 createdAt: '2026-07-07'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
-
-<RebotRsDocNav />
 
 <div align="center">
     <img width={800}
@@ -41,20 +38,20 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 ## はじめに
 
-reBot-Isaacsim は、reBotArm 専用に設計された NVIDIA Isaac Sim シミュレーションプロジェクトです。Isaac Sim の高精度な物理エンジンを活用して、仮想環境内でロボットアームの運動学的特性とグリッパ協調ロジックを正確に再現し、制御アルゴリズム開発、軌道計画検証、通信プロトコルテストのための、シミュレーション専用の独立した環境を提供します。
+reBot-Isaacsim は、reBotArm 専用に設計された NVIDIA Isaac Sim シミュレーションプロジェクトです。Isaac Sim の高精度な物理エンジンを活用して、仮想環境内でロボットアームの運動学的特性とグリッパー協調ロジックを正確に再現し、制御アルゴリズム開発、軌道計画の検証、通信プロトコルのテストのための、シミュレーション専用の独立した環境を提供します。
 
 ## 動作環境要件
 - オペレーティングシステム: Ubuntu 22.04 LTS / 24.04 LTS（推奨）または Windows 11（WSL2 が必要）  
 - GPU: NVIDIA RTX シリーズグラフィックスカード（RTX 3070 以上を推奨）、VRAM ≥ 8GB  
 - ドライバ: NVIDIA 公式ドライバ ≥ 535.x、CUDA 12.x をサポート  
-- メモリ: RAM 32GB 以上（Isaac Sim のシーンおよび物理シミュレーションは多くのメモリを使用します）  
-- ストレージ: 100GB 以上の空き SSD 容量（Isaac Sim のインストール、キャッシュ、USD アセット用）
+- メモリ: ≥ 32GB RAM（Isaac Sim のシーンおよび物理シミュレーションは多くのメモリを使用）  
+- ストレージ: ≥ 100GB の空き SSD 容量（Isaac Sim のインストール、キャッシュ、USD アセット用）
 
 :::info
 この wiki で使用しているコンピュータは、NVIDIA RTX 4080 GPU を搭載し、Ubuntu 22.04 LTS オペレーティングシステムを実行しています。
 :::
 
-## Isaacsim のインストール
+## Isaac Sim のインストール
 
 公式リンクとリソース:
 
@@ -69,7 +66,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaa
 
 #### ダウンロードと解凍
 
-[NVIDIA 公式サイト](https://developer.nvidia.com/isaac-sim) から `isaac-sim-standalone-6.0.0-linux-x86_64.zip` をダウンロードします。
+[NVIDIA Isaac Sim 6.0.0 ダウンロードページ](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaac-sim-latest-release)で Isaac Sim の行から **Linux (x86_64)** を選択し、事前コンパイル済みパッケージ `isaac-sim-standalone-6.0.0-linux-x86_64.zip` を `~/Downloads` にダウンロードします。以下のコマンドは Linux x86_64 向けです。
 
 ```Bash
 mkdir -p ~/isaacsim
@@ -99,28 +96,32 @@ ${ISAACSIM_PATH}/isaac-sim.sh
 
 初回起動時にはシェーダのキャッシュが行われるため、5〜10 分ほどかかる場合があります。GUI が表示されるまでしばらくお待ちください。
 
-### ⚙️ 方法 2: ソースからビルド（推奨）
+### ⚙️ 方法 2: ソースコードからビルド
 
-> 💡 基盤コードの調整やコア機能のデバッグが必要な開発者に適しています。
+> 💡 基盤コードの調整やコア機能のデバッグが必要な開発者向けです。
 
 #### 依存関係のインストール
 
 ```Bash
 sudo apt update
-sudo apt install cmake build-essential git python3-pip
+sudo apt install build-essential git git-lfs gcc-11 g++-11
 ```
 
-CUDA と cuDNN が正しくインストールされており、GPU ドライバとバージョンが一致していることを確認してください。
+デフォルトの `gcc --version` と `g++ --version` の両方がバージョン 11 を報告することを確認してください。コンパイラ設定やその他の前提条件については、[Isaac Sim 6.0.0 ソースビルド手順](https://github.com/isaac-sim/IsaacSim/blob/v6.0.0/README.md#prerequisites-and-environment-setup)を参照してください。ビルドに必要な依存関係をダウンロードするため、インターネット接続が必要です。
 
 #### クローンとビルド
 
+Isaac Sim のソースコードは [isaac-sim/IsaacSim](https://github.com/isaac-sim/IsaacSim) にあります。古い NVIDIA-Omniverse のアドレスは、現在は非推奨の Dockerfile リポジトリへリダイレクトされます。以下のコマンドでは、このチュートリアルのバイナリインストールと一致するバージョン 6.0.0 を使用します:
+
 ```Bash
-git clone https://github.com/NVIDIA-Omniverse/IsaacSim.git
+git clone --branch v6.0.0 https://github.com/isaac-sim/IsaacSim.git
 cd IsaacSim
-./build.sh release
+git lfs install
+git lfs pull
+./build.sh --release
 ```
 
-ビルドプロセスには、ハードウェア構成にもよりますが 30〜60 分かかる場合があります。
+ビルドプロセスには、ハードウェア構成にもよりますが 30〜60 分ほどかかる場合があります。
 
 #### テスト実行
 
@@ -128,7 +129,7 @@ cd IsaacSim
 _build/linux-x86_64/release/isaac-sim.sh
 ```
 
-ソースビルド後は、そのランタイムディレクトリを `ISAACSIM_ROOT` に設定して、`run_isaacsim_receiver.sh` が Isaac Sim を見つけられるようにします:
+ソースビルド後は、`run_isaacsim_receiver.sh` が Isaac Sim を見つけられるように、そのランタイムディレクトリを `ISAACSIM_ROOT` に設定します:
 
 ```bash
 export ISAACSIM_ROOT="$PWD/_build/linux-x86_64/release"
@@ -168,12 +169,12 @@ python set_hw_rs.py
 
 ### 機能コンポーネントの概要
 
-このプロジェクトは、さまざまな利用シーンに対応する複数の sender を提供します:
+本プロジェクトは、さまざまな利用シーンに対応する複数の sender を提供します:
 
 | コンポーネント | 説明 |
 |-----------|------------|
-| `gravity_joint_sender` | **重力補償 + ハンドルモード**: 改造済みロボットアーム（グリッパを取り外し、ハンドルを装着）向けで、手で案内して操作します。補償は上流の `GravityCompensation` から行われ、このリポジトリは関節角度を Isaac Sim にミラーリングするだけです |
-| `isaacsim_ik_sender` | **逆運動学 (IK) モード**: エンドエフェクタの姿勢（位置/姿勢）を入力し、IK ソルバで関節角度を算出して Isaac Sim 上のロボットアームを駆動します |
+| `gravity_joint_sender` | **重力補償 + ハンドルモード**: 改造済みロボットアーム（グリッパーを取り外し、ハンドルを装着）向けで、手でガイドします。補償は上流の `GravityCompensation` から行われ、本リポジトリは関節角度を Isaac Sim にミラーリングするだけです |
+| `isaacsim_ik_sender` | **逆運動学 (IK) モード**: エンドエフェクタの姿勢を入力し、IK ソルバで関節角度を算出して Isaac Sim 上のロボットアームを駆動します |
 | `isaacsim_traj_sender` | **軌道計画 (Traj) モード**: IK の上に関節空間の軌道計画（MIN_JERK 時間プロファイル）を追加し、スムーズなモーション制御を実現します |
 | `isaacsim_joint_test_sender` | **ジョイントテストモード**: 実機ロボットなしで、あらかじめ設定された関節角度軌道を送信し、Isaac Sim の receiver と通信が正しく動作しているかを検証します |
 | `joint_reader_sender` | **実機からシミュレーションへのマッピングモード**: 関節角度を読み取り専用で取得し、それを Isaac Sim にマッピングします。他の制御プロジェクトと併用するのに最適です（例: 別のタスクを実行している実機ロボットを Isaac Sim と同期させて可視化するなど） |
@@ -207,7 +208,7 @@ reBot-Isaacsim/
 
 ## 起動方法（デュアルターミナルモード）
 
-2 つの別々のターミナルが必要です。**ターミナル 1 では Isaac Sim receiver を実行し**、**ターミナル 2 では目的の機能に応じた sender を実行します**。
+2 つの別々のターミナルが必要です。**ターミナル 1 では Isaac Sim receiver を実行**し、**ターミナル 2 では目的の機能に応じた sender を実行**します。
 
 ### ターミナル 1 — Isaac Sim Receiver の起動（全モード共通）
 
@@ -218,17 +219,17 @@ cd reBotArm_Isaacsim
 
 **期待される動作:**
 - Isaac Sim の GUI を起動する
-- グラウンドプレーンとロボットアームの USD アセットを読み込む
+- 地面プレーンとロボットアームの USD アセットを読み込む
 - `127.0.0.1:5005` で UDP パケットを待ち受ける
 - sender からの接続を待機する
 
 ### ターミナル 2 — 適切な Sender の起動
 
-**必ず先に receiver を起動し、その後で sender を起動してください。**
+**必ず先に receiver を起動し、その後に sender を起動してください。**
 
 :::tip
 
-一部のモードでは実機のロボットアームが必要です。以下のように USB-to-CAN アダプタを設定してください。
+一部のモードでは実機のロボットアームが必要です。以下のように USB-CAN アダプタを設定してください。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_usb2can.png"/>
@@ -244,7 +245,7 @@ sudo ip link set can0 up type can bitrate 1000000 restart-ms 100
 
 :::
 
-#### ① ジョイントテストモード（`isaacsim_joint_test_sender`）
+#### ① ジョイントテストモード (`isaacsim_joint_test_sender`)
 
 実機ハードウェアは不要です。あらかじめ定義された関節軌道を連続的に送信し、Isaac Sim receiver との通信を検証します。
 
@@ -253,9 +254,9 @@ cd reBotArm_Isaacsim
 uv run python isaacsim_joint_test_sender.py
 ```
 
-sender は、いくつかの事前定義された関節構成間を連続的に補間し、それらを Isaac Sim に送信します。ハードウェア YAML は読み込まないため、`set_hw_rs.py` も CAN も不要です。
+sender は複数の事前定義された関節構成間を連続的に補間し、それらを Isaac Sim に送信します。ハードウェア YAML は読み込まないため、`set_hw_rs.py` も CAN も不要です。
 
-#### ② 逆運動学モード（`isaacsim_ik_sender`）
+#### ② 逆運動学モード (`isaacsim_ik_sender`)
 
 エンドエフェクタの姿勢（位置/姿勢）を入力します。IK ソルバが関節構成を計算し、Isaac Sim 上のロボットアームを駆動します。`load_robot_model()` はサブモジュールの `rebotarm.yaml` を読み込むため、まず RS に切り替えてください:
 
@@ -265,7 +266,7 @@ python set_hw_rs.py
 uv run python isaacsim_ik_sender.py
 ```
 
-**入力形式（1 行につき 1 コマンド）:**
+**入力フォーマット（1 行につき 1 コマンド）：**
 
 ```text
 x y z                       # Position (meters), keep current orientation
@@ -276,7 +277,7 @@ gripper <0~1>               # Update gripper only
 
 #### ③ 軌道計画モード（`isaacsim_traj_sender`）
 
-IK の上に関節空間の軌道計画（MIN_JERK）を追加し、ロボットのスムーズな動作を実現します。これも `load_robot_model()` でその YAML を使用するため、まず RS に切り替えてください。
+IK の上に関節空間軌道計画（MIN_JERK）を追加し、ロボットの動きを滑らかにします。また、その YAML に対して `load_robot_model()` も使用するため、まず RS に切り替えます：
 
 ```bash
 cd reBotArm_Isaacsim
@@ -297,7 +298,7 @@ resync                      # Re-read the current joint state from Isaac Sim
 
 #### ④ 重力補償ハンドルモード（`gravity_joint_sender`）
 
-改造済みロボットアーム（グリッパーを取り外し、ハンドルを取り付けたもの）向けに設計されています。ロボットは手で直接案内でき、Isaac Sim がその動きを追従します。
+改造されたロボットアーム（グリッパーを取り外し、ハンドルを取り付けたもの）向けに設計されています。Isaac Sim が動きを追従する一方で、ロボットを手で直接案内できます。
 
 ```bash
 cd reBotArm_Isaacsim
@@ -305,16 +306,16 @@ python set_hw_rs.py
 ./run_sender.sh
 ```
 
-**期待される動作：**
-- `set_hw_rs.py` がサブモジュール `rebotarm.yaml` を `rebotarm_rs.yaml` に向けることで、モーターと重力モデルが 1 つの YAML を共有します（ローカル変更；コミットしないでください）
-- 物理アームが接続され、上流の `GravityCompensation` が起動します（MIT + `g(q)` フィードフォワードは `example/9` と同じ）
-- アームを手で自由に動かすことができます
-- このスクリプトは関節角度を UDP で 60 Hz で Isaac Sim に転送するだけです
-- 同時に上流の `example/9` を実行しないでください。2 つのプロセスが CAN を取り合うことになります
+**想定される動作：**
+- `set_hw_rs.py` はサブモジュール `rebotarm.yaml` を `rebotarm_rs.yaml` に向け、モーターと重力モデルが 1 つの YAML を共有するようにします（ローカル変更；コミットしないでください）
+- 物理アームが接続され、上流の `GravityCompensation` が起動します（MIT と同じ + `example/9` と同じ `g(q)` フィードフォワード）
+- アームは手で自由に動かすことができます
+- このスクリプトは、関節角度を 60 Hz で UDP 経由で Isaac Sim に転送するだけです
+- 同時に上流の `example/9` も実行しないでください。2 つのプロセスが CAN を取り合うことになります
 
 #### ⑤ 実機からシミュレータへのマッピングモード（`joint_reader_sender`）
 
-関節角度のみを読み取り、物理ロボットの状態を Isaac Sim にミラーリングします。このモードは、実機ロボットが別のアプリケーションによって制御されている間の可視化を目的としています。`RebotArm()` はサブモジュール `rebotarm.yaml` を読み込むため、まず RS に切り替えてください：
+関節角度のみを読み取り、物理ロボットの状態を Isaac Sim にミラーリングします。このモードは、実機ロボットが別のアプリケーションによって制御されている間の可視化を目的としています。`RebotArm()` はサブモジュール `rebotarm.yaml` を読み込むため、まず RS に切り替えます：
 
 ```bash
 cd reBotArm_Isaacsim
@@ -322,10 +323,10 @@ python set_hw_rs.py
 uv run python joint_reader_sender.py
 ```
 
-**期待される動作：**
+**想定される動作：**
 - `set_hw_rs.py` がモーター設定を RS に切り替えます（ローカル変更；コミットしないでください）
 - 制御コマンドを一切送信せず、関節角度のみを読み取ります（パッシブフィードバックモード）
-- 関節角度を UDP で 60 Hz で継続的に送信します
+- 関節角度を 60 Hz で UDP 経由で継続的に送信します
 - 別のプロジェクトによって制御されている間、Isaac Sim 上で物理ロボットを可視化します
 
 ## 通信プロトコル
@@ -348,11 +349,11 @@ UDP JSON（ポート `127.0.0.1:5005`）を使用します。
 | `sequence` | int | 増加していくフレームシーケンス番号 |
 | `timestamp` | float | Unix タイムスタンプ（秒） |
 | `joint_positions` | float[6] | 最初の 6 関節の位置（rad） |
-| `gripper_position` | float | グリッパーフィンガーの位置目標（m）。各送信側は独自のマッピングでこれを計算します（後述） |
+| `gripper_position` | float | グリッパーフィンガーの位置目標（m）。各送信側は独自のマッピングでこれを計算します（下記参照） |
 
 **グリッパー制御パイプライン：**
 
-受信側は、受信した `gripper_position` を 2 つのプリズマティックフィンガージョイントの位置目標としてそのまま適用し、各フィンガーごとに `[0, 上限]` にクリップします（USD 上限：両フィンガーとも 0.05 m。フィンガーは 1 つのモーターから 1:1 で 1 つのピニオンを介して駆動されます）。受信側での追加スケーリングはありません。送信側は入力を次のように `gripper_position` にマッピングします：
+受信側は、受信した `gripper_position` を両方のプリズム型フィンガージョイントの位置目標として直接適用し、各フィンガーごとに `[0, 上限]` にクリップします（USD 上限：両フィンガーとも 0.05 m。フィンガーは 1 つのモーターから 1:1 で 1 つのピニオンを介して駆動されます）。受信側での追加スケーリングはありません。送信側は入力を次のように `gripper_position` にマッピングします：
 
 | 送信側 | `gripper_position`（m）へのマッピング |
 |------|------|
@@ -381,14 +382,14 @@ UDP JSON（ポート `127.0.0.1:5005`）を使用します。
 | `ARM_JOINT_COUNT` | 6 | アーム関節数 |
 | `DEFAULT_PORT` | 5005 | UDP ポート |
 | `DEFAULT_RENDER_HZ` | 120.0 | シミュレーション描画周波数（Hz） |
-| `ROBOT_PRIM_PATH` | `/World/reBotArm` | Isaac Sim における Robot Prim パス |
+| `ROBOT_PRIM_PATH` | `/World/reBotArm` | Isaac Sim 内の Robot Prim パス |
 | `ASSET_RELATIVE_PATH` | `usd/RS-rebot-dev-arm/RS-rebot-dev-arm.usda` | USD アセットへの相対パス |
 
 ## トラブルシューティング
 
 ### `OSError: [Errno 98] Address already in use`
 
-ポート `5005` がすでに使用されています。そのポートを使用しているプロセスを特定して終了させてください：
+ポート `5005` がすでに使用されています。そのポートを使用しているプロセスを特定して終了します：
 
 ```bash
 # Find the process using port 5005
@@ -400,7 +401,7 @@ kill <PID>
 
 ### Isaac Sim アセットが見つからない
 
-USD アセットが存在し、`REPO_ROOT` が正しく設定されていることを確認してください：
+USD アセットが存在し、`REPO_ROOT` が正しく設定されていることを確認します：
 
 ```bash
 ls usd/RS-rebot-dev-arm/RS-rebot-dev-arm.usda
@@ -408,7 +409,7 @@ ls usd/RS-rebot-dev-arm/RS-rebot-dev-arm.usda
 
 ### CAN バスが準備できていない
 
-CAN インターフェースが起動しており、正しいビットレートで設定されていることを確認してください：
+CAN インターフェースが起動しており、正しいビットレートで設定されていることを確認します：
 
 ```bash
 can_restart can0
@@ -419,9 +420,9 @@ ip -details link show can0 | grep bitrate
 
 ### 関節角度が同期しない
 
-- 送信側と受信側の両方がポート `5005` を使用していることを確認してください。
-- 送信側ログが継続的に `[send]` を出力していることを確認してください。
-- 受信側ログが継続的に `[recv]` を出力していることを確認してください。
+- 送信側と受信側の両方がポート `5005` を使用していることを確認します。
+- 送信側ログが継続的に `[send]` を出力していることを確認します。
+- 受信側ログが継続的に `[recv]` を出力していることを確認します。
 - ハードウェア関連の問題を切り分けるために、`isaacsim_joint_test_sender.py` を試してください。
 
 ### コンポーネントと Python 環境
@@ -435,7 +436,7 @@ ip -details link show can0 | grep bitrate
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -446,6 +447,5 @@ ip -details link show can0 | grep bitrate
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
 

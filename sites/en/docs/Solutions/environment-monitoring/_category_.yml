@@ -1,0 +1,10 @@
+position: 4
+label: 'Environmental Sensing'
+collapsible: true
+collapsed: true
+className: _environmental-monitoring
+# link:
+#   type: generated-index
+#   slug: environment-monitoring
+#   title: Environmental Sensing
+#   description: Sensing and analytics for air, water, soil and ambient conditions.

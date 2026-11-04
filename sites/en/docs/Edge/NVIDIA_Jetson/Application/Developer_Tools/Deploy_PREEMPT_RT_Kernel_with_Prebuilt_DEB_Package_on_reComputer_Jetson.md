@@ -16,7 +16,7 @@ last_update:
   date: 09/18/2026
   author: Zhida Zhang
 createdAt: '2026-09-18'
-updatedAt: '2026-09-18'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/deploy_preempt_rt_kernel_with_prebuilt_deb_package_on_recomputer_jetson/
 ---
 

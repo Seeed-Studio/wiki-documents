@@ -1,6 +1,7 @@
 ---
-description: このチュートリアルでは、SocketCAN 接続、アーム制御、RViz 可視化、MoveIt 2 連携を含む reBot Arm B601-RS 用 ROS2 control ワークスペースのセットアップ方法を説明します。
-title: reBot Arm B601-RS ROS2 連携
+description: このチュートリアルでは、SocketCAN 接続、アーム制御、RViz による可視化、MoveIt 2 との統合を含む、reBot Arm B601-RS 用の ROS2 control ワークスペースのセットアップ方法を説明します。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
+title: B601-RS と ROS2
 keywords:
   - reBot Arm
   - B601-RS
@@ -10,8 +11,8 @@ keywords:
   - SocketCAN
   - RViz
   - MoveIt 2
-  - Robot Arm
-  - Robotics
+  - ロボットアーム
+  - ロボティクス
 slug: /rebot_arm_b601_rs_ros2_integration
 last_update:
   date: 2026-06-10
@@ -19,20 +20,17 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-10'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_ros2_integration/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 # reBot Arm B601-RS ROS2 連携
 
-<RebotRsDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">

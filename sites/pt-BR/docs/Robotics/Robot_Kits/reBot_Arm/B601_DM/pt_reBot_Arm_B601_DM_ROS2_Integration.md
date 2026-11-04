@@ -1,6 +1,7 @@
 ---
 description: Este tutorial mostra como configurar o workspace de controle ROS2 para o reBot Arm B601-DM, incluindo controle do braço, visualização no RViz e integração com o MoveIt2.
-title: Integração do reBot Arm B601-DM com ROS2
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
+title: B601-DM com ROS2
 keywords:
   - reBot Arm
   - B601-DM
@@ -18,20 +19,17 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_ros2_integration/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # Integração do reBot Arm B601-DM com ROS2
 
-<RebotDmDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

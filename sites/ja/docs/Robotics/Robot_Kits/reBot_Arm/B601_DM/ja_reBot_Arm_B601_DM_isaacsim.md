@@ -1,14 +1,14 @@
 ---
-description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグ用にシミュレーション環境へ reBot Arm B601-DM ロボットを展開する方法を説明します。
-title: reBot Arm B601-DM Isaac Sim
+description: このチュートリアルでは、Isaac Sim をダウンロードし、開発およびデバッグのためにシミュレーション環境で reBot-B601-DM ロボットを展開する方法を説明します。
+title: B601-DM と Isaac Sim
 keywords:
-  - Isaacsim
+  - Isaac Sim
   - ロボットアーム
   - ロボット
   - 遠隔操作
   - 運動学
   - Damiao
-image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 slug: /rebot_arm_b601_dm_isaacsim
 last_update:
   date: 2026-08-17
@@ -16,18 +16,15 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-77'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-29'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
-
-<RebotDmDocNav />
 
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

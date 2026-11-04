@@ -8,7 +8,7 @@ last_update:
   date: 09/10/2026
   author: Luki
 createdAt: '2025-07-25'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002/
 ---
 import Tabs from '@theme/Tabs';

@@ -344,6 +344,45 @@ Select the XVF3800 sound card in `alsamixer`, raise its `PCM-1` control to 100%,
 
 - [XVF3800 Linux speaker-volume troubleshooting](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#does-playback-sound-from-speaker-output-not-enough-)
 
+### Why is reSpeaker XVF3800 USB 4-Mic Array speech recognition accuracy low, and how can I improve it? {#improve-recognition-accuracy}
+
+**Applies to:** reSpeaker XVF3800 USB 4-Mic Array running the official 16 kHz six-channel USB firmware, capturing through the two processed output channels (Ch0 Conference and Ch1 ASR) on the host
+
+**Last verified:** 2026-10-13
+
+Recognition accuracy on the XVF3800 depends mainly on the acoustic conditions the array is used in, not on a single fixed setting: in Seeed's benchmark the same device and firmware produced English word error rates from about 6% to about 35% depending on how much noise reached the array. Improve the capture conditions first, and do not assume that one of the two processed output channels is always better — choose the channel by measuring in your own environment.
+
+![reSpeaker XVF3800 speech recognition benchmark: error rate and 95% confidence intervals by condition](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3800_asr_accuracy_overview.png)
+
+In that benchmark, raising the signal-to-noise ratio from 0 dB to +10 dB lowered the error rate in both processed output channels and for both languages, while the difference between the two channels changed direction depending on the condition and was mostly not resolvable at 95% confidence. The benchmark is exploratory and its absolute figures apply only to the tested setup.
+
+**Prerequisites:**
+
+- Confirm the firmware image in use and which host capture index maps to Ch0 and Ch1
+- Keep one fixed reference recording and one fixed transcription setup so that before and after results stay comparable
+
+1. Record the same reference audio through both processed output channels (Ch0 and Ch1) in the conditions where accuracy is poor, and transcribe both with the same model and settings.
+2. Score both channels against the same reference transcript — word error rate for English, character error rate for Chinese — so that the two channels are compared on identical material.
+3. Reduce the noise reaching the array or increase the speech level so that the speech-to-noise ratio at the device improves, then repeat the same recording and scoring. In Seeed's benchmark this step produced the largest and most consistent error-rate reduction.
+4. Adopt the channel that measures better in your own environment, and re-check that choice whenever the acoustic conditions or the firmware change.
+
+**Success criteria:**
+
+- Both channels are scored against the same reference transcript, and the error-rate change after each adjustment is measurable
+- The channel used in the application is the one that measured better in your own environment, not an assumed default
+
+**Notes:**
+
+- In Seeed's benchmark the direction of the Ch1 − Ch0 difference changed with the acoustic condition, and only a minority of the pairwise comparisons had 95% confidence intervals that excluded zero; a channel preference cannot be generalised from that data.
+- The benchmark is exploratory: it covers two capture sessions with 6–10 repeats per condition, it did not apply multiple-comparison correction, and the planned wider matrix is not complete.
+- The benchmark excluded every capture in which any language or channel scored 80% or higher, so its published figures do not describe the worst cases.
+- The 0 dB and +10 dB points in the benchmark come from different samples, and no paired interval was computed for that change; the channel comparison reflects the whole processed output plus the recognition pipeline, not a single DSP module.
+
+**References:**
+
+- [reSpeaker XVF3800 USB 4-Mic Array official firmware and USB profiles](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
+- [reSpeaker XVF3800 USB 4-Mic Array product documentation](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/)
+
 ## Hardware Issues {#hardware-issues}
 
 ### Does the XVF3800 have a built-in speaker? {#external-speaker-required}

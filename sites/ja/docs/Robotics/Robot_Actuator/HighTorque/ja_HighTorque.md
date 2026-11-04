@@ -1,11 +1,11 @@
 ---
-description: この文書では、HighTorqueシリーズモーターの素早い開始方法を紹介します。
-title: HighTorqueシリーズモーター
+description: "ロボットアーム向け HighTorque アクチュエータ入門：開梱、配線、電源要件、初回電源投入と簡単な動作確認。"
+title: HighTorque SDK
 keywords:
-  - Joint Module
-  - Motor
-  - Robotics
-  - Robotic Arm
+  - ジョイントモジュール
+  - モーター
+  - ロボティクス
+  - ロボットアーム
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /hightorque_series
 sku: 114090071,114090072
@@ -13,7 +13,7 @@ last_update:
   date: 06/24/2025
   author: ZhuYaoHui
 createdAt: '2025-06-24'
-updatedAt: '2026-01-07'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/hightorque_series/
 ---
 

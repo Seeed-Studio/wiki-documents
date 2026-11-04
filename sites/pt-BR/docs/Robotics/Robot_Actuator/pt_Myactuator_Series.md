@@ -1,6 +1,6 @@
 ---
-description: Este wiki fornece tutoriais para motores da série Myactuator.
-title: MyActuator Series Motors
+description: "Guia completo dos atuadores de junta MyActuator série R: visão geral dos modelos, fiação CAN, modos de controle e ajuste para braços robóticos."
+title: MyActuator
 keywords:
   - atuador
   - motor
@@ -13,7 +13,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaoHui
 createdAt: '2023-08-20'
-updatedAt: '2026-03-16'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/pt-br/myactuator_series/
 ---
 

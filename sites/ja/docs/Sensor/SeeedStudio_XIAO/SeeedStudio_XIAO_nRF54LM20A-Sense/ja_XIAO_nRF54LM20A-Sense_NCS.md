@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 07/22/2026
+  date: 08/06/2026
   author: Brandy
 createdAt: '2025-05-13'
 updatedAt: '2026-08-07'
@@ -46,11 +46,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## はじめに
 
-nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティングシステムの上に構築された、Nordic Semiconductor 公式のソフトウェア開発キットです。nRF シリーズチップ向けに、完全かつネイティブで高度に最適化された開発フレームワークを提供します。PlatformIO と比較して、NCS は Bluetooth Low Energy (BLE)、Thread、Matter などの無線プロトコルスタックのネイティブサポートに加え、よりきめ細かな電源管理やペリフェラル制御など、nRF54 シリーズのハードウェア機能全体へより広範なアクセスを開発者に提供します。Nordic が公式にこの SDK を継続的に保守・更新しており、チップファームウェアとの最適な互換性と、最新機能へのいち早いアクセスが保証されています。
+nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティングシステムの上に構築された、Nordic Semiconductor 公式のソフトウェア開発キットです。nRF シリーズチップ向けに、完全でネイティブかつ高度に最適化された開発フレームワークを提供します。PlatformIO と比較して、NCS は Bluetooth Low Energy (BLE)、Thread、Matter などの無線プロトコルスタックのネイティブサポートに加え、よりきめ細かな電源管理やペリフェラル制御など、nRF54 シリーズのハードウェア機能全体へより広範なアクセスを開発者に提供します。Nordic が公式にこの SDK を継続的に保守・更新しており、チップファームウェアとの最適な互換性と、最新機能へのいち早いアクセスが保証されています。
 
 このチュートリアルでは、nRF Connect SDK 開発環境のセットアップとツールチェーンのインストールから、最初のプロジェクトの作成と設定、そして最初のサンプルプログラムを XIAO nRF54LM20A Sense に書き込んで実行を確認するまで、全体のプロセスをステップバイステップで案内します。
 
-## NCS を使い始める
+## NCS の使用を開始する
 
 ### ハードウェアの準備
 
@@ -94,11 +94,11 @@ nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティン�
 
 ### VS Code をダウンロード
 
-使用しているシステムに応じて [VS Code](https://code.visualstudio.com/download) をダウンロードします
+使用しているシステムに応じて [VS Code](https://code.visualstudio.com/download) をダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-### nRF Connect for VS Code Extension Pack 拡張機能をインストール
+### nRF Connect for VS Code Extension Pack のインストール
 
 1. VS Code を開き、**nRF Connect for VS Code Extension Pack** を検索してインストールします。この拡張機能は、nRF Connect、Kconfig、DeviceTree など、完全なツールチェーンに必要なすべてのサブ拡張機能を自動的にインストールします。
 
@@ -109,7 +109,7 @@ nRF Connect SDK (NCS) は、Zephyr RTOS リアルタイムオペレーティン�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_2.png" style={{width:800, height:'auto'}}/></div>
 
 
-### nRF Connect SDK とツールチェーンをインストール
+### nRF Connect SDK とツールチェーンのインストール
 
 1. nRF Connect 拡張機能を開き、**Install SDK** を選択してから **nRF Connect SDK** を選びます。
 
@@ -131,7 +131,7 @@ nRF Connect SDK はかなり大きいため、初回インストールには時�
 
 ### 環境の検証
 
-インストールが完了すると、nRF Connect SDK 用の統合環境が自動的にセットアップされます。以降の開発をスムーズに進めるため、この段階で環境を検証することをお勧めします。
+インストールが完了すると、nRF Connect SDK の統合環境が自動的にセットアップされます。以降の開発をスムーズに進めるため、この段階で環境を検証することをお勧めします。
 
 1. nRF Connect SDK に内蔵されているターミナルである **nRF Terminal** を起動します。
 
@@ -142,7 +142,7 @@ nRF Connect SDK はかなり大きいため、初回インストールには時�
 nRF Connect SDK (NCS) のバージョンとツールチェーンのバージョンがどちらも 3.3.0 であることを必ず確認してください。異なるバージョンを混在させると、ビルドや互換性の問題が発生する可能性があります。
 :::
 
-2. 必要なツールのバージョン情報を確認するためのコマンドを入力します。以下のコマンドを 1 行ずつコピーして実行し、検証できます。
+2. 必要なツールのバージョン情報を確認するためのコマンドを入力します。以下のコマンドを 1 行ずつコピーして実行し、検証してください。
 
 ```bash
 # Check west (project manager & build entry) version
@@ -182,7 +182,7 @@ openocd --version
 
 
 
-### カスタムボードパスを追加
+### カスタムボードパスの追加
 
 XIAO nRF54LM20A シリーズのボード定義は、まだ公式の NCS リポジトリにマージされていないため、ボードパスを手動で追加する必要があります。
 
@@ -198,11 +198,11 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. **nRF Connect** を検索し、**Board Roots** を編集して、パス `~\your_path\platform-seeedboards\zephyr` を追加します。XIAO nRF54LM20A シリーズのボード定義はここに保存されています。
+3. **nRF Connect** を検索し、**Board Roots** を編集して、パス `~\your_path\platform-seeedboards\zephyr\nrf` を追加します。XIAO nRF54LM20A シリーズのボード定義はここに保存されています。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/ncs-fix.jpeg" style={{width:800, height:'auto'}}/></div>
 
-### 新しいアプリケーションを作成
+### 新しいアプリケーションを作成する
 
 このセクションでは、空のサンプルプロジェクトを変更していきます。
 
@@ -345,12 +345,12 @@ int main(void)
 
 2. **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay** を追加します
 
-- blinky プロジェクトのルートディレクトリに **board** フォルダを作成します。`src` などのフォルダと同じ階層に配置します。
+- blinky プロジェクトのルートディレクトリに **board** フォルダを作成します。src などのフォルダと同じ階層に配置します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_17.png" style={{width:600, height:'auto'}}/></div>
 <br/>
 
-- board フォルダ内にデバイスツリー・ファイル **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay** を作成します。
+- board フォルダ内に devicetree ファイル **xiao_nrf54lm20a_nrf54lm20a_cpuapp.overlay** を作成します。
 
 <details>
 
@@ -402,7 +402,7 @@ int main(void)
 
 </details>
 
-3. prj.conf ファイルを修正して、対応する設定を有効にします。
+3. prj.conf ファイルを変更して、対応する設定を有効にします。
 
 ```conf
 CONFIG_GPIO=y
@@ -410,7 +410,7 @@ CONFIG_PWM=y
 CONFIG_SERIAL=n
 ```
 
-1. 拡張機能の APPLICATIONS セクションに移動し、Add build configuration を選択します。SDK とツールチェーンのバージョンを確認します。Board Target を xiao_nrf54lm20a/nrf54lm20a/cpuapp に設定し、ベース設定ファイルを prj.conf に設定します。ページを下までスクロールし、Generate and Build をクリックして対応する設定ファイルを生成します。
+1. 拡張機能の APPLICATIONS セクションに移動し、Add build configuration を選択します。SDK とツールチェーンのバージョンを確認します。Board Target を xiao_nrf54lm20a/nrf54lm20a/cpuapp に設定し、ベース設定ファイルを prj.conf に設定します。ページを下にスクロールし、Generate and Build をクリックして対応する設定ファイルを生成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/4_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>

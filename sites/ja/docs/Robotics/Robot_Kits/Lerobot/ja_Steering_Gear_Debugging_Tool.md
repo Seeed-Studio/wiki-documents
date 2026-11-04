@@ -1,6 +1,6 @@
 ---
-description: Lerobot の SO-ARM 用ステアリングギアデバッグツール。
-title: Steering Gear Debugging Tool for SO-ARM in Lerobot
+description: "Seeed_RoboController ツールで SO-ARM サーボをデバッグする方法：サーボの検出、ID の修正、中立値の書き込み、Windows・Ubuntu・Mac でのステータス読み取り。"
+title: SO-Arm デバッグツール
 keywords:
   - Lerobot
   - SO-ARM
@@ -13,8 +13,8 @@ last_update:
   date: 6/29/2026
   author: ZhangJiaQuan
 url: https://wiki.seeedstudio.com/ja/lerobot_steering_gear_debugging_tool/
-createdAt: '2026-06-30'
-updatedAt: '2026-07-20'
+createdAt: '2026-06-29'
+updatedAt: '2026-09-22'
 ---
 
 # Lerobot の SO-ARM 用ステアリングギアデバッグツール

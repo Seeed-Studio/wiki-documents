@@ -1,6 +1,6 @@
 ---
-description: Introdução ao uso do Atom-X.
-title: Introdução ao uso do Atom-X
+description: "Como começar com o robô humanoide Atom-X: desembalagem, ligação, primeira inicialização, movimentos básicos e configuração do software."
+title: Início Rápido do Atom-X
 keywords:
   - Humanoid
   - Robotics
@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/pt-br/atom_x/
 createdAt: '2026-05-25'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-22'
 ---
 
 import Link from '@docusaurus/Link';

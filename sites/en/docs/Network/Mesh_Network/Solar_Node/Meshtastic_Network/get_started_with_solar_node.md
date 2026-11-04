@@ -9,10 +9,10 @@ slug: /get_started_with_meshtastic_solar_node
 sku: 114993633,114993643
 sidebar_position: 2
 last_update:
-  date: 3/10/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-05-13'
-updatedAt: '2026-08-06'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/
 ---
 
@@ -577,6 +577,17 @@ This message confirms that the bootloader transfer completed successfully. Keep 
 
 Flashing the bootloader does not reinstall the Meshtastic application firmware. After the successful transfer, follow [Flash Firmware](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to install it before using the device.
 
+### Device not responding or detected via USB
+
+If your Solar Node P1-Pro suddenly becomes unresponsive, with only the green LED lighting up and the device not being recognized via USB, try the following:
+
+1. Disconnect the USB cable and keep the solar panel away from sunlight.
+2. Carefully remove the back cover and batteries, avoiding short circuits.
+3. Leave the batteries removed for some time.
+4. Reinstall the batteries and check whether the device starts and can be recognized via USB.
+
+If the issue persists, please contact technical support.
+
 ### Unable to Communicate on the Primary Channel
 
 If the device cannot communicate with nearby nodes or send messages, first check that the LoRa region and modem preset match the surrounding nodes. You should also check whether the default **PSK** has been changed. A different PSK on the primary channel will prevent the device from communicating with other nodes on that channel.
@@ -650,7 +661,7 @@ Each node will periodically send its own node information, enabling other nodes 
 
 #### Regenerate Private Key
 
-Two nodes need to know their private key with each other in order to be able to communicate with each oher. If one node keeps failing in private message transmission, try regenerate the private key for it.
+Each node owns a public/private key pair. To exchange an encrypted private message, the sender encrypts it with the recipient's public key, and only that recipient's private key can decrypt it. Two nodes can therefore communicate privately once they know each other's public key. If one node keeps failing in private-message transmission, try regenerating its private key. After regeneration, delete that node from the other devices' node lists so they can reconnect and obtain its new public key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 

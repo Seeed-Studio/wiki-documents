@@ -93,13 +93,17 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 - **Dual USB connectivity**: USB-C port and PH2.0 locking port both support UAC 2.0 audio and DFU firmware upgrade
 
-- **On-board speaker amplifier**: Supports driving 10W 4 Ohms speakers via JST connector, with 3.5mm AUX headphone output
-
 - **XIAO ESP32S3 support (optional)**: Solder-on module adds Wi-Fi/Bluetooth, with I2S and I2C buses wired directly to XVF3800 for wireless control and audio forwarding
 
 - **Firmware flexibility**: Dual USB firmware variants (2-channel and 6-channel), I2S firmware, DFU upgrade via dfu-util, and configuration persistence across power cycles
 
 - **Python SDK**: Adjustable recording format, volume, algorithm parameters, and channel routing via Python
+
+- **On-board speaker amplifier**: Supports driving 10W 4 Ohms speakers via JST connector, with 3.5mm AUX headphone output
+
+:::note
+When both the 3.5mm audio jack and the speaker are connected at the same time, it play only through the 3.5mm audio jack
+:::
 
 ## Main Components
 
@@ -111,6 +115,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 |--------------------|------------|
 | **Main Audio Processor** | XMOS XVF3800 (firmware v3.2.1), handles all audio DSP including AEC, beamforming, DoA, and noise suppression |
 | **Audio Codec** | TLV320AIC3104, handles audio conversion and DAC output |
+| **Amplifier** |TPA3139D2  , Class D amplifer |
 | **FPC Mic Array Interface** | 24-pin FPC connector with locking latch, supports up to 8-mic arrays with 2 GPIO lines |
 | **USB-C Port** | UAC 2.0 audio, DFU firmware upgrade, and power |
 | **PH2.0 Port** | Locking latch connector; provides the same UAC 2.0 audio and DFU support as the USB-C port |
@@ -144,7 +149,6 @@ The system supports two interchangeable microphone array configurations: a **cir
 | Component / Feature | Description |
 |--------------------|------------|
 | **Microphones** | 4× PDM MEMS microphones with 33 mm spacing arranged in a linear layout |
-| **Pickup Pattern** | Front-facing pickup pattern of approximately 180°, with rear sound suppressed |
 | **Interface** | FPC connector; cable can be routed from the side or rear |
 | **Mounting** | 2 × M3 mounting holes |
 
@@ -238,7 +242,17 @@ Before connecting the FPC cable, identify the contact side and stiffener side. W
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/fpc-cable-connection.png" alt="pir" width={600} height="auto" /></p>
 
-Open the locking tab on the MIC Connector, insert the FPC cable with the correct orientation, and close the tab to secure the connection.
+To connect the FPC cable, first disconnect the power supply. Gently lift the locking tab on the MIC Connector, insert the cable in the correct orientation, and make sure it is fully seated before closing the tab.
+
+To disconnect the FPC cable, first disconnect the power supply. Gently lift the locking tab on the MIC Connector. Once the tab is fully open, carefully pull the cable straight out without applying excessive force.
+
+:::note
+
+To prevent damage to the FPC cable or connector, please observe the following precautions:
+- **Avoid Excessive Bending**: Avoid sharp bends, repeated folding, or excessive pulling on the FPC cable, especially near the connector.
+- **Handle the Locking Tab Carefully**: Always open the locking tab before inserting or removing the cable. Do not force the cable in or out while the tab is closed.
+
+:::
 
 #### Safe Mode
 
@@ -720,6 +734,15 @@ Open the start menu and type Device manager. Find  related reSpeaker Flex device
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
+### Can reSpeaker Flex be powered by 12V while connected to a PC via USB?
+
+Yes. reSpeaker Flex supports simultaneous 12V DC power input and USB-C connection to a PC. The 12V input powers the device, while USB-C provides the USB audio (UAC) and control interface.
+
+We have tested this configuration using a 12V/2A power supply connected to the 12V input terminal and a USB-C cable connected to a PC. We successfully played music through a Mono Enclosed Speaker (4Ω, 5W) connected to reSpeaker Flex.
+
+### If I supply 12V through the terminal and use USB for data only (UAC + control), does USB still need VBUS (5V) to enumerate?
+
+ No. When reSpeaker Flex is powered through the 12V input terminal, USB VBUS (5V) is not required for enumeration. You can connect USB to a PC for UAC audio and control while powering the device with 12V.
 
 ## Resources
 

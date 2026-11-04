@@ -8,10 +8,10 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 09/03/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-03'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
@@ -377,6 +377,16 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ## FAQ
 
+### Firmware Update Failed / OTA Recovery
+
+If your Wio Tracker L1 becomes unresponsive after an NRF-OTA firmware update, try the following:
+
+1. Connect the device to your computer using a USB data cable and double-press the Reset button to [enter DFU mode manually](#unable-to-enter-dfu--entering-dfu-mode-manually).
+2. If the UF2 drive appears, follow the [Flash Firmware](#flash-firmware) guide to reinstall the appropriate application firmware.
+3. If the device still cannot be recovered and a DFU serial port is available, follow [Device Bricked & Bootloader Recovery](#device-bricked--bootloader-installation), then reinstall the application firmware.
+
+If the device cannot enter DFU mode or be detected by your computer, please contact technical support.
+
 ### Device Bricked & Bootloader Recovery {#device-bricked--bootloader-installation}
 
 **Description:**
@@ -690,7 +700,7 @@ Each node will periodically send its own node information, enabling other nodes 
 
 #### Regenerate Private Key
 
-Two nodes need to know their private key with each other in order to be able to communicate with each oher. If one node keeps failing in private message transmission, try regenerate the private key for it.
+Each node owns a public/private key pair. To exchange an encrypted private message, the sender encrypts it with the recipient's public key, and only that recipient's private key can decrypt it. Two nodes can therefore communicate privately once they know each other's public key. If one node keeps failing in private-message transmission, try regenerating its private key. After regeneration, delete that node from the other devices' node lists so they can reconnect and obtain its new public key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 

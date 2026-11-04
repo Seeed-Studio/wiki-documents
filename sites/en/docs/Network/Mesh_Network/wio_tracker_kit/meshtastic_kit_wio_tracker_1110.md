@@ -11,7 +11,7 @@ last_update:
   date: 6/17/2024
   author: Jessie
 createdAt: '2024-06-21'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/meshtastic_kit_wio_tracker_1110/
 ---
 

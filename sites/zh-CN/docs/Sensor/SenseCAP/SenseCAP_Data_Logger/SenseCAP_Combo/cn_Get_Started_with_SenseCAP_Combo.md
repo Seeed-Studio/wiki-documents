@@ -11,7 +11,7 @@ last_update:
   date: 8/23/2026
   author: Janet
 createdAt: '2026-08-23'
-updatedAt: '2026-08-23'
+updatedAt: '2026-08-24'
 url: https://wiki.seeedstudio.com/cn/get_started_with_sensecap_combo/
 ---
 

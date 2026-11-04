@@ -9,11 +9,11 @@ slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
 sidebar_position: 1
 last_update:
-  date: 8/17/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/
-updatedAt: '2026-08-17'
+updatedAt: '2026-10-26'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -57,7 +57,7 @@ updatedAt: '2026-08-17'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseSelect.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Erase Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已经成功进入 DFU 模式。
+如果你已经点击了 `Erase Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已经成功进入 DFU 模式。
 
 如果你看到 "Flashing erase firmware:100%"，说明设备已经成功完成擦除。
 
@@ -84,7 +84,7 @@ updatedAt: '2026-08-17'
 - **13 号 - 蓝色 LED**：LoRa TX 指示灯。
 - **14 号 - 白色 LED**：LoRa TX 指示灯。
 
-不同版本的 MeshCore 固件在 LoRa TX 时点亮的物理 LED 不同：
+不同版本的 MeshCore 固件会为 LoRa TX 点亮不同的物理 LED：
 
 - v1.12.0 ~ v1.14.0：LoRa TX 期间蓝色 LED（13 号）闪烁。
 - v1.14.1 ~ v1.15.x：LoRa TX 期间白色 LED（14 号）闪烁。
@@ -102,7 +102,7 @@ updatedAt: '2026-08-17'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已经成功进入 DFU 模式。
+如果你已经点击了 `Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已经成功进入 DFU 模式。
 
 当进度条完全填满时，表示 Flash 已完成。随后设备会自动重启。
 
@@ -140,7 +140,7 @@ updatedAt: '2026-08-17'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
-固件烧录成功后，该磁盘会自动消失。此时设备中还没有固件，所以设备`不会`自动重启。
+固件成功烧录后，该磁盘会自动消失。此时设备中还没有固件，因此设备`不会`自动重启。
 
 #### 烧录固件
 
@@ -160,7 +160,7 @@ updatedAt: '2026-08-17'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-固件烧录成功后，该磁盘会自动消失。此时设备中还没有固件，所以设备不会自动重启。
+固件成功烧录后，该磁盘会自动消失。此时设备中还没有固件，因此设备不会自动重启。
 
 ## 入门指南
 
@@ -171,7 +171,7 @@ updatedAt: '2026-08-17'
 #### 组装设备
 
 :::danger note
-由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝都已拧紧且上盖安装到位。为了进一步提升防水性能，你也可以考虑增加额外的密封措施。
+由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。同时，请确保所有螺丝已牢固拧紧且上盖安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
 :::
 
 - **部件清单**
@@ -179,7 +179,7 @@ updatedAt: '2026-08-17'
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 
-- 步骤 1：使用垫圈和螺丝将部件 1 固定在设备底部。
+- 步骤 1：使用垫片和螺丝将部件 1 固定在设备底部。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -191,7 +191,7 @@ updatedAt: '2026-08-17'
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 3：连接射频线（部件 4）和天线（部件 5）。
+- 步骤 3：连接射频线缆（部件 4）和天线（部件 5）。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -209,7 +209,7 @@ updatedAt: '2026-08-17'
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 6：松开螺丝，调整万向节到合适位置，然后拧紧螺丝。
+- 步骤 6：松开螺丝，调整万向节到合适的位置，然后拧紧螺丝。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -228,7 +228,7 @@ updatedAt: '2026-08-17'
 :::tip
 当你需要安装或更换电池时，请使用 `Button-top` 18650（3.6V）电池。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如有需要，用户需要手动安装电池和 GPS 模块。
+P1-Pro 版本内置电池和 GPS 模块，而 P1 版本如果需要，则需要用户手动安装电池和 GPS 模块。
 :::
 
 
@@ -248,7 +248,7 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如有需要，用�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-请确保外壳正确安装且螺丝拧紧，以保持设备的防水性能。
+请确保外壳正确安装，且螺丝拧紧，以保持设备的防水性能。
 :::
 
 #### （可选）升级天线
@@ -259,15 +259,26 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如有需要，用�
 
 ### 启动设备
 
-设备需要通过连接 USB 线来激活。启动时，蓝色 LED 会亮起约 3 秒，这表示设备已成功开机。
+设备在接通电源后会立即启动：连接 USB、电池或太阳能电源中的任意一种，都会使 MCU 在上电复位后开始运行（所有固件版本都支持上电启动）。对于 v1.14.1 及之后的固件，如果设备处于关闭状态，你也可以短按一下电源键来唤醒它。
 
-TX LED 仅在 Solar Node 自身发送 LoRa 数据时闪烁（例如发送 advert 时）。接收数据不会点亮 TX LED。在 LoRa 发送（TX）期间，LED 颜色取决于固件版本——请参见上文固件版本差异说明。
+要确认设备是否已成功上电，可以使用以下两种可靠方法之一：
+
+1. 上电约 16 秒后，TX 指示灯闪烁一次——启动完成后，设备会自动发送一次 advert，TX 指示灯会在发送瞬间闪烁，表示设备已开启。
+2. 或者打开 `https://meshcore.io/flasher`，点击 Console，通过串口连接到设备并发送 `ver` 命令。如果返回了有效的版本字符串，则说明设备已成功上电且固件运行正常。
+
+TX 指示灯只会在 Solar Node 自身发送 LoRa 数据时闪烁（例如发送 advert 时）。接收数据不会点亮 TX 指示灯。TX 指示灯的颜色取决于固件版本（参见上文“Firmware Version Differences”）：v1.12.0–v1.14.0 = 蓝色，v1.14.1–v1.15.0 = 白色，v1.16.0 及之后版本 = 蓝色。
 
 :::tip
-**电源按钮（开/关机）**
+**电源键（开/关机）**
 
-- MeshCore v1.14.0 及更早版本：不支持长按电源键开/关机。如果长按电源键没有反应，这是该固件版本的正常行为，而不是按键故障。
-- MeshCore v1.14.1 及之后版本：长按电源键约 `3s` 可开/关机。你会看到白灯短暂闪烁，表示设备正在成功开/关机。
+MeshCore v1.14.0 及更早版本不支持通过长按电源键来开关机。要开机，请接入电源（USB / 电池 / 太阳能——任意一种电源即可让其运行）。这些固件版本下，无法通过电源键关机——这属于正常行为，而不是按键故障。
+
+MeshCore v1.14.1 及之后版本支持电源键，具体如下：
+
+- 开机：接入电源，或者在设备关闭时，短按电源键唤醒；
+- 关机：长按电源键约 1.5 秒后松开，即可进入关闭状态。
+
+注意：开关机动作本身不会点亮任何指示灯——固件只会在发送 LoRa 数据时闪烁 TX 指示灯，其颜色会根据版本为蓝色或白色。
 
 **按键说明**
 
@@ -285,9 +296,9 @@ TX LED 仅在 Solar Node 自身发送 LoRa 数据时闪烁（例如发送 advert
 
 - **步骤 1 初始配置**
 
-当 MeshCore 第一次被烧录到 LoRa 设备上时，需要设置服务器设备的频率，使其使用在你所在国家或地区合法的频段。
+当 MeshCore 第一次被烧录到 LoRa 设备上时，需要设置服务器设备的频率，使其使用在你所在国家或地区合法的频率。
 
-[Click here](https://config.meshcore.io/) 来配置中继器。
+[点击这里](https://config.meshcore.io/) 来配置中继器。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -305,140 +316,140 @@ import TabItem from '@theme/TabItem';
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、按每分钟计算。如果达到该限制，你的设备将停止发送，直到再次被允许发送。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、按每分钟计算。如果达到该限制，你的设备将停止发射，直到再次被允许发射为止。
 :::
 
 
 - **步骤 2 发送 Advert**
 
-点击 "send advert" 以使其他 Meshcore 设备能够看到此中继器。然后该中继器就可以在设备列表中被看到。
+点击 "send advert" 以便让其他 Meshcore 设备看到此中继器。然后该中继器就可以在设备列表中被看到。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
 
-点击 **Send Advert** 会让 Solar Node 主动执行一次 LoRa 发送（TX），因此对应固件版本的 TX LED 会短暂闪烁：
+点击 **Send Advert** 会让 Solar Node 主动执行一次 LoRa 发送（TX），因此对应固件版本的 TX 指示灯会短暂闪烁：
 
-- v1.12.0 ~ v1.14.0：蓝色 LED 闪烁
-- v1.14.1 ~ v1.15.x：白色 LED 闪烁
-- v1.16.0 及之后版本：蓝色 LED 闪烁
+- v1.12.0 ~ v1.14.0：蓝色指示灯闪烁
+- v1.14.1 ~ v1.15.x：白色指示灯闪烁
+- v1.16.0 及之后版本：蓝色指示灯闪烁
 
-TX LED 表示 Solar Node 自身正在发送 LoRa 数据（TX）。它不是接收（RX）指示灯。
+TX 指示灯表示 Solar Node 自身正在发送 LoRa 数据（TX）。它不是接收（RX）指示灯。
 
 - **步骤 3（可选）管理员登录**
 
-中继器的默认管理员密码为 `password`。 
+中继器的默认管理员密码是 `password`。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={600} height="auto" /></p>
 
-登录后，你可以看到配置页面。现在你可以调整中继器的配置。
+登录后，你可以看到配置页面。现在你可以为中继器调整配置。
 
-如果你想显示中继器的位置，可以启用 GPS。
+如果你希望显示中继器的位置，可以启用 GPS。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-此外，你可以调整 advert 广播间隔：
+此外，你还可以调整 advert 广播间隔：
 
-- **Advert interval**：本地 / 零跳 Advert 的发送间隔。间隔范围为 60-240 分钟。
-- **Flood advert interval**：Flood Advert 的发送间隔。间隔范围为 3-168 小时。
+- **Advert interval**：本地 / 零跳 Advert 的发送间隔。间隔范围为 60–240 分钟。
+- **Flood advert interval**：Flood Advert 的发送间隔。间隔范围为 3–168 小时。
 
-实际的 advert 周期取决于当前固件版本以及保存在设备上的配置，因此请始终以配置页面上 `Advert interval` 和 `Flood advert interval` 的实际数值为准。如果某个间隔被设置为 `0`，则对应的自动 advert 将被禁用。
+实际的 advert 周期取决于当前固件版本以及设备上保存的配置，因此请始终以配置页面上 `Advert interval` 和 `Flood advert interval` 的实际数值为准。如果某个间隔被设置为 `0`，则对应的自动 advert 会被禁用。
 
-**注意：** 自 MeshCore v1.16.0 起，默认的 Flood advert 间隔已从 12 小时更改为 47 小时。因此，我们不建议通过等待自动 advert 来验证设备。要验证 TX 和 LED，请点击 **Send Advert** 主动触发一次 LoRa 发送（TX）。
+**注意：** 从 MeshCore v1.16.0 开始，默认的 Flood advert 间隔已从 12 小时更改为 47 小时。因此我们不建议通过等待自动 advert 来验证设备。要验证 TX 和指示灯，请点击 **Send Advert** 主动触发一次 LoRa 发送。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### 设置路径
 
-在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会根据保存在设备上的 `Advert interval` 和 `Flood advert interval`，以固定间隔自动发送 advert。该间隔取决于固件版本和当前设备配置，可能长达数小时。我们建议点击 **Send Advert** 立即触发，而不是等待自动 advert。
+在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会根据设备上保存的 `Advert interval` 和 `Flood advert interval` 以固定间隔自动发送 advert。该间隔取决于固件版本和当前设备配置，可能会长达数小时。我们建议点击 **Send Advert** 立即触发，而不是等待自动 advert。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
-你可以手动设置消息发送路径。将你的蓝牙 Companion 设备连接到手机 APP，打开一个私信窗口，然后你可以选择已发现的中继器来组成你的路径。
+你可以手动设置消息发送路径。将你的蓝牙伴侣设备连接到手机 APP，打开一个私信窗口，然后你就可以选择已发现的中继器来组成你的路径。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-设置路径后，传输方式会变为 “n hop”。例如，如果你在路由中添加 1 个中继器，它将变为 1 hop。
+设置路径后，传输方式会变为 “n hop”。例如，如果你在路由中添加了 1 个中继器，它就会变为 1 hop。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
 :::note
-MeshCore 中继器不会转发它接收到的每一个 LoRa 数据包。
+MeshCore 中继器不会重新发送它接收到的每一个 LoRa 数据包。
 
-- **情况 1**：Companion 发送数据 → Solar Node 接收到数据（RX）→ 不需要回复或转发 → Solar Node 不执行 TX → TX LED 不闪烁。这是正常现象。
-- **情况 2**：Solar Node 接收到数据 → 需要回复或转发 → Solar Node 执行一次 LoRa 发送（TX）→ TX LED 以对应固件版本的颜色闪烁。
+- **情况 1**：Companion 发送数据 → Solar Node 接收数据（RX）→ 不需要回复或转发 → Solar Node 不执行 TX → TX 指示灯不闪烁。这是正常现象。
+- **情况 2**：Solar Node 接收数据 → 需要回复或转发 → Solar Node 执行 LoRa TX → TX 指示灯以对应固件版本的颜色闪烁。
 
-Solar Node 成功接收 LoRa 数据并不意味着 TX LED 会闪烁。TX LED 只表示 Solar Node 自身正在发送 LoRa 数据。
+Solar Node 成功接收到 LoRa 数据并不意味着 TX 指示灯一定会闪烁。TX 指示灯只表示 Solar Node 自身正在发送 LoRa 数据。
 
-例如，当网络中只有一个 Companion 和一个 Solar Node 中继器时，在 Companion 发送数据后，Solar Node 可能成功接收到数据包而无需再次发送。在这种情况下，看不到 TX LED 闪烁，不能直接据此判断中继器异常。
+例如，当网络中只有一个 Companion 和一个 Solar Node 中继时，在 Companion 发送数据后，Solar Node 可能在不需要重新发送的情况下成功接收该数据包。在这种情况下，看不到 TX 指示灯闪烁，不能直接据此判断中继异常。
 :::
 
-## 验证设备是否正常工作
+## 确认设备工作正常
 
 在验证之前，请先确认你是只使用一个 Solar Node 设备，还是还在系统中使用了其他 MeshCore Companion 设备。
 
-对于中继器模式，预期行为如下：
+对于中继模式，预期行为如下：
 
-- 当设备通过 USB 连接时，可以显示为在线并进行配置。
-- 拔掉 USB 供电后，设备会切换到电池模式，并继续作为中继器工作。
-- 当 Solar Node 自身发送 LoRa 数据时，TX LED 会以对应固件版本的颜色短暂闪烁。这是正常现象，表示存在 LoRa 活动。
-- 除非与 Companion 设备一起使用，否则不应期望 Solar Node 中继器表现得像一个可单独连接手机的设备。
+- 当设备通过 USB 连接时，可以显示在线并进行配置。
+- 拔掉 USB 供电后，设备切换到电池模式，并继续作为中继工作。
+- 当 Solar Node 自身发送 LoRa 数据时，TX 指示灯会以对应固件版本的颜色短暂闪烁。这是正常现象，表示存在 LoRa 活动。
+- 除非与 Companion 设备配合使用，否则不应期望 Solar Node 中继像独立的手机连接设备那样工作。
 
-要正确验证中继器是否工作，请按照下面两个主动验证步骤进行。不要依赖等待自动广播作为主要验证方法。
+要正确验证中继是否工作，请按照下面两个主动验证步骤进行。不要依赖等待自动 advert 作为主要验证方式。
 
-### 步骤 1：验证 Solar Node 发送（TX）
+### 步骤 1：验证 Solar Node TX
 
 1. 通过 USB 连接 Solar Node。
 2. 打开 MeshCore 配置页面：[https://config.meshcore.io/](https://config.meshcore.io/)。
 3. 点击 **Send Advert**。
 4. 观察 Solar Node 上的 TX 指示灯。
 
-当 Solar Node 发送广播时，TX 指示灯会短暂闪烁，对应固件版本的颜色如下：
+当 Solar Node 发送 advert 时，TX 指示灯应以对应固件版本的颜色短暂闪烁：
 
 - v1.12.0 ~ v1.14.0：蓝色指示灯
 - v1.14.1 ~ v1.15.x：白色指示灯
 - v1.16.0 及之后版本：蓝色指示灯
 
-Companion 应该能够接收到 Solar Node 的广播。这可以主动验证 Solar Node → Companion 方向上的 LoRa 发送（TX）。
+Companion 应该能够接收到 Solar Node 的 advert。这样即可主动验证 Solar Node → Companion 方向的 LoRa TX。
 
 ### 步骤 2：使用 Ping 验证双向通信
 
-1. 在 Companion 设备上，打开 Solar Node Repeater 联系人，并使用 **Ping** 功能。
+1. 在 Companion 设备上，打开 Solar Node 中继的联系人，并使用 **Ping** 功能。
 
-如果 Ping 成功，则同时验证了通信的两个方向：
+如果 ping 成功，则同时验证了通信的两个方向：
 
-- Companion → Solar Node：接收（RX）
-- Solar Node → Companion：发送（TX）回复
+- Companion → Solar Node：RX
+- Solar Node → Companion：TX 回复
 
-当 Solar Node 发送 Ping 回复时，TX 指示灯会短暂闪烁，对应固件版本的颜色。
+当 Solar Node 发送 ping 回复时，TX 指示灯应以对应固件版本的颜色短暂闪烁。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="Verify Solar Node repeater with Ping from another MeshCore device" width={700} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/710-6.png" alt="通过另一台 MeshCore 设备的 Ping 验证 Solar Node 中继" width={700} height="auto" /></p>
 
 :::note
-TX 指示灯不是接收（RX）指示灯。如果 Solar Node 只接收数据包而不需要回复或转发，指示灯可能完全不会闪烁。
+TX 指示灯不是 RX 指示灯。如果 Solar Node 只接收数据包而不需要回复或转发，指示灯可能完全不会闪烁。
 :::
 
 :::tip
-我们不建议通过等待自动广播来验证设备是否工作，因为广播间隔可能非常长。请使用 **Send Advert** 主动立即触发一次发送（TX）。
+我们不建议通过等待自动 advert 来验证设备是否工作，因为 advert 间隔可能非常长。请使用 **Send Advert** 立即主动触发一次 TX。
 :::
 
 :::note
-移动应用主要是配合 Companion 设备使用，而不是直接配合 Repeater 使用。中继器本身不会像普通蓝牙手机配件那样工作。
+手机应用主要是与 Companion 设备配合使用，而不是直接与中继配合使用。中继本身不会像普通的蓝牙手机配件那样表现。
 :::
 
-如果指示灯行为和 USB 连接状态与上述描述一致，通常表示中继器工作正常。
+如果指示灯行为和 USB 连接状态与上述描述一致，通常表示中继工作正常。
 
-## 常见问题（FAQ）
+## 常见问题 FAQ
 
 ### 启动循环（Boot Loop）
 
 - 原因
 
-这通常是由固件烧录失败引起的。烧录固件时，请保持连接稳定。
+这通常是由固件烧录失败引起的。在烧录固件时，请保持连接稳定。
 
 - 故障排查
 
 [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase) 重新烧录固件。
 
-### 设备变砖
+### 设备变砖（Device bricked）
 
 #### 描述
 
@@ -456,9 +467,9 @@ TX 指示灯不是接收（RX）指示灯。如果 Solar Node 只接收数据包
 
 **步骤 1：安装 Adafruit-nrfutil**
 
-对于 Windows 用户，同时按下 "Win" 键和 "R" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这可以打开命令行。
+对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
 
-对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，以打开 Spotlight。然后输入 "termial"，按下 "Return"。这可以打开命令行。
+对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，即可打开 Spotlight。然后输入 "termial"，按下 "Return"。这样可以打开命令行。
 
 **前置条件**
 
@@ -475,7 +486,7 @@ python --version
 python -m pip --version
 ```
 
-然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 Python。
+然后应出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 python。
 
 <Tabs>
 <TabItem value="pypi" label="通过 PyPI 安装">
@@ -496,22 +507,22 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-对于 Windows 用户，可能需要手动添加该路径。复制上一步显示的安装位置，然后按如下方式添加：
+对于 Windows 用户，你可能需要手动添加该路径。复制上一步显示的安装位置，然后按如下方式添加：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="sou" label="通过源码安装">
+<TabItem value="sou" label="从源码安装">
 
-如果你在使用 PyPI 安装时遇到问题，或者想要修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
+如果你在使用 PyPi 安装时遇到问题，或者想修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 python.exe 这个名称。
+注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上安装的 python 3.x 仍然使用 python.exe 这个名称。
 
 要在用户空间（你的 home 目录）中安装：
 
@@ -520,7 +531,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。这种情况下请使用 `--user` 参数：
+如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。在这种情况下，请使用 `--user` 参数：
 
 ```
 pip3 install -r --user requirements.txt
@@ -544,13 +555,13 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-你会在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe 文件（如果你在 Windows 上，则带有 `.exe`）。
-为了方便使用，你可以将其复制或移动到其他位置，例如在你的 %PATH% 中的某个目录。
+你将在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe（如果你在 Windows 上，则带有 `.exe`）。
+为了方便使用，可以将其复制或移动到其他位置，例如你的 %PATH% 中的某个目录。
 
 </TabItem>
 </Tabs>
 
-**步骤 2：检查你的端口号**
+**步骤 2：检查端口号**
 
 将设备连接到电脑，并检查端口号。
 
@@ -569,7 +580,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
-请将 COMXX 改为你的端口号。例如，如果你的设备在 com6 上，请将命令改为：
+请将 COMXX 改为你的 COM 号。例如，如果你的设备在 com6 上，将命令改为：
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
@@ -586,39 +597,50 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 完成上述步骤后，你就可以[烧录应用固件](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase)。
 
+### 设备通过 USB 无响应或无法被识别
+
+如果你的 Solar Node P1-Pro 突然变得无响应，只亮绿色指示灯，且设备无法通过 USB 被识别，请尝试以下操作：
+
+1. 断开 USB 线缆，并让太阳能板远离阳光。
+2. 小心取下后盖和电池，避免短路。
+3. 将电池取下并保持一段时间。
+4. 重新装上电池，并检查设备是否启动以及能否通过 USB 被识别。
+
+如果问题仍然存在，请联系技术支持。
+
 ### 信号质量
 
 - **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的环境中使用设备。
+      为了获得最佳信号效果，请在开阔、无遮挡且干扰最小的环境中使用本设备。
 
 ### 充电电流
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-Xiao nRF-52840 Plus 的最大充电电流为 200 mA。充电管理芯片 CN3165 的电流为 0.99A。因此最大充电电流为 1A。
+Xiao nRF-52840 Plus 的最大充电电流为 200 mA。充电管理芯片 CN3165 为 0.99A。因此最大充电电流为 1A。
 
-### 为什么我的 Solar Node 在发送数据时是白灯闪烁而不是蓝灯？
+### 为什么我的 Solar Node 在发送数据时闪烁白灯而不是蓝灯？
 
 这是 MeshCore 固件版本差异，而不是硬件故障：
 
-- v1.12.0 ~ v1.14.0：蓝色指示灯 TX
-- v1.14.1 ~ v1.15.x：白色指示灯 TX
-- v1.16.0 及之后版本：蓝色指示灯 TX
+- v1.12.0 ~ v1.14.0：蓝色 LED 发送（TX）
+- v1.14.1 ~ v1.15.x：白色 LED 发送（TX）
+- v1.16.0 及之后：蓝色 LED 发送（TX）
 
 在 v1.14.1 ~ v1.15.x 上出现白色闪烁并不表示硬件故障。
 
-### 为什么长按电源键无法关闭设备？
+### 为什么我长按电源键无法关闭设备？
 
-从 MeshCore v1.14.1 开始支持通过长按电源键开关机。在 v1.14.0 及更早版本中，长按电源键没有响应，这是该固件版本的正常行为。
+从 MeshCore v1.14.1 开始支持长按电源键开/关机。在 v1.14.0 及更早版本中，长按电源键没有响应，这是该固件版本的正常行为。
 
-### 为什么我的 Solar Node 很久都没有闪烁？
+### 为什么我的 Solar Node 很长时间都没有闪烁？
 
-- TX 指示灯只会在 Solar Node 自身执行 LoRa 发送（TX）时闪烁。
-- 接收（RX）不一定会触发 TX 指示灯。
-- Repeater 不会转发它接收到的每一个数据包。
+- 只有当 Solar Node 自身执行 LoRa 发送（TX）时，TX LED 才会闪烁。
+- 接收（RX）不一定会触发 TX LED。
+- 中继器不会转发它接收到的每一个数据包。
 - 自动广播间隔可能非常长。
 - 从 v1.16.0 起，默认 Flood 广播间隔为 47 小时。
 - 如果你需要立即验证，请使用 **Send Advert**。

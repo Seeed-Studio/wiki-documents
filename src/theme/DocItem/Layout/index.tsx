@@ -18,15 +18,27 @@ import { judgeHomePath } from '../../../utils/jsUtils';
 import TopNav from '../../../components/topNav';
 import Head from '@docusaurus/Head';
 import CopyPageButton from 'docusaurus-plugin-copy-page-button/react';
+import prepareTablesForCopyPage from '../../../utils/prepareTablesForCopyPage';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 
 const CopyPageButtonAny = CopyPageButton as React.ComponentType<any>;
 
 function StableCopyPageButton() {
   const [options, setOptions] = React.useState<Record<string, any> | null>(null);
+  const isBrowser = useIsBrowser();
 
   useEffect(() => {
+    // Tabs remount after hydration. Prepare their final DOM before mounting the
+    // plugin, which captures page content only once in its own mount effect.
+    if (!isBrowser) {
+      return;
+    }
+    const article = document.querySelector<HTMLElement>('main article');
+    if (article) {
+      prepareTablesForCopyPage(article);
+    }
     setOptions((window as any).__COPY_PAGE_BUTTON_OPTIONS__ || {});
-  }, []);
+  }, [isBrowser]);
 
   if (!options) {
     return null;
@@ -58,7 +70,7 @@ function useDocTOC() {
 
 export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
-  const { frontMatter } = useDoc();
+  const { frontMatter, metadata } = useDoc();
 
   // 使用类型断言解决 TypeScript 错误
   const {
@@ -68,6 +80,9 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
   } = frontMatter as any;
 
   const location = useLocation();
+  const isRoboticsDoc = Boolean(
+    (metadata as { source?: string }).source?.startsWith('@site/docs/Robotics/'),
+  );
 
   useEffect(() => {
     judgeHomePath();
@@ -83,13 +98,16 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
 
       {/* 添加数据属性到静态 HTML 元素 */}
       <div
-        className={clsx('col', !docTOC.hidden && styles.docItemCol)}
+        className={clsx(
+          'col',
+          !docTOC.hidden && styles.docItemCol,
+        )}
         data-sku={sku || ''}
         data-doc-type={docType || ''}
       >
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
-          <article>
+          <article className={clsx(isRoboticsDoc && 'robotics-doc')}>
             <DocBreadcrumbs />
             <DocVersionBadge />
 
@@ -98,7 +116,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
                 {docTOC.mobile}
 
                 <div className={styles.mobileCopyPageButton}>
-                  <StableCopyPageButton />
+                  <StableCopyPageButton key={location.pathname} />
                 </div>
               </>
             )}
@@ -114,7 +132,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
       {docTOC.desktop && (
         <div className="col col--3">
           <div className={styles.copyPageButtonWrapper}>
-            <StableCopyPageButton />
+            <StableCopyPageButton key={location.pathname} />
           </div>
 
           {docTOC.desktop}

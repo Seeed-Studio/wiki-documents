@@ -11,7 +11,7 @@ keywords:
   - 机械臂
   - 夹爪
   - 温度保护
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_arm_b601_rs_mit_control
 sku: 100019336
 last_update:
@@ -20,20 +20,17 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-08-04'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_mit_control/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 # reBot Arm B601-RS MIT 位置控制
 
-<RebotRsDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2026
   author: Kasun Thushara
 createdAt: '2026-05-19'
-updatedAt: '2026-06-15'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/respeaker_flex_soarm/
 ---
 
@@ -170,7 +170,7 @@ conda init --all
 ### 创建 Conda 环境
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 ```
 

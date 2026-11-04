@@ -11,7 +11,7 @@ last_update:
   date: 08/19/2024
   author: Youjiang
 createdAt: '2024-08-19'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/cn/reserver_j501_getting_started/
 ---
 
@@ -223,7 +223,7 @@ J501 载板是一款功能强大的扩展板，支持 NVIDIA Jetson AGX Orin 模
       <td>AGX Orin 64GB</td>
       <td>❌</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQClLB_mdGMPQpqEw1jxTRuFAYqxZRQJZIAtiYt7-clcocI" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>F95E91C3BFB00D50EB999383F85949B4</td>
+      <td>-</td>
       <td>76abdd6de0a49bd95d57b361bebea59<br />a6a05e56779c7ceb863ad178f3ed98aaf</td>
     </tr>
     <tr>

@@ -1,5 +1,6 @@
 ---
 description: 本教程介绍如何基于 reBot Arm B601-DM 搭建 ROS2 控制工作空间，完成机械臂控制、RViz 可视化和 MoveIt 2 集成。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 title: B601-DM ROS2 集成
 keywords:
   - reBot Arm
@@ -19,20 +20,17 @@ last_update:
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-04-29'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 
 # reBot Arm B601-DM ROS2 集成
 
-<RebotDmDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">

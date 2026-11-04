@@ -11,10 +11,10 @@ slug: /recamera_qrcode_udp
 sku: 102991897, 100029708, 108990120
 sidebar_position: 17
 last_update:
-  date: 07/08/2026
+  date: 10/08/2026
   author: QiYao Lin
 createdAt: '2026-06-15'
-updatedAt: '2026-07-22'
+updatedAt: '2026-07-08'
 url: https://wiki.seeedstudio.com/cn/recamera_qrcode_udp/
 ---
 
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_qrcode_udp/
 - 实时摄像头采集与二维码识别
 - 支持视频流模式和单张图片模式
 - 通过 RTSP 将 JPEG 帧 + 识别结果推送到 PC
-- PC 端 Python 脚本实现实时视频与结果显示
+- PC 端 Python 脚本用于实时视频与结果显示
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Qrcode_rec/1.gif" /></div>
 
@@ -44,7 +44,7 @@ url: https://wiki.seeedstudio.com/cn/recamera_qrcode_udp/
 - RTSP 视频推流：一个视频通道编码为 H.264，通过 RTSP 实时推流到同一网段的设备。PC 可以直接通过 RTSP 地址拉取并显示实时视频流。
 - 二维码检测帧获取：另一个视频通道输出低分辨率 NV21 图像帧用于二维码检测。程序仅使用 NV21 的 Y 平面作为二维码检测器的灰度图输入，避免额外的 RGB 转换开销。
 - 最新帧队列缓存：二维码检测线程与视频采集回调解耦。采集回调不直接进行二维码检测，而是将最新的灰度帧放入长度为 1 的队列中。当检测线程处理速度较慢时，新帧会覆盖旧帧，确保队列中始终只保留最新帧，避免因检测任务堆积导致的延迟增加。
-- 异步二维码检测：二维码检测线程从最新帧队列中取出图像，使用 quirc 二维码识别库进行检测和解码。由于检测过程在独立线程中运行，不会阻塞 RTSP 视频推流。
+- 异步二维码检测：二维码检测线程从最新帧队列中取出图像，使用 quirc 二维码识别库进行检测和解码。由于检测过程在独立线程中运行，因此不会阻塞 RTSP 视频推流。
 - 结果缓存：每次检测完成后，程序会更新最新的二维码检测结果，包括是否检测到二维码、二维码内容、检测耗时、frame_id、PTS、采集时间、检测完成时间以及二维码边界框坐标。
 - HTTP 结果查询：同一网段的设备可以通过 GET `/api/qr/latest` 获取最新的二维码检测结果。该接口仅返回最近一次检测的状态，不会阻塞视频流，也不会主动传输历史检测队列。
 - PC 端显示：Windows 客户端通过 RTSP 在左侧显示实时视频流，并在右侧通过 HTTP 周期性轮询 `/api/qr/latest`，显示最新的二维码检测结果和检测时间。如果返回结果中包含二维码边界框坐标，客户端会将检测框按比例缩放并叠加到 RTSP 视频流上。
@@ -62,7 +62,7 @@ reCamera
         http://<device-ip>:8080/api/qr/latest
 ```
 
-这种设计将高实时性的视频传输与相对耗时的二维码检测解耦。RTSP 视频流可以保持连续输出，而二维码检测线程只处理最新帧，即使二维码检测耗时较长，也不会导致视频卡顿或检测队列堆积。
+这种设计将高实时性的视频传输与相对耗时的二维码检测解耦。RTSP 视频流可以保持连续输出，而二维码检测线程只处理最新帧。即使二维码检测耗时较长，也不会导致视频卡顿或检测队列堆积。
 
 ## 演示搭建
 
@@ -74,7 +74,7 @@ reCamera
 
 ### 1. 编译 C++ 程序
 
-在构建该方案之前，你需要配置 recamera 环境。你可以直接从以下位置下载对应的预编译库：
+在构建此方案之前，你需要配置 recamera 环境。你可以直接从以下位置下载对应的预编译库：
 
 ```text
 https://codeload.github.com/Seeed-Studio/sscma-example-sg200x/tar.gz/refs/tags/0.2.4
@@ -85,14 +85,14 @@ export SG200X_SDK_PATH=<PATH_TO_RECAMERA-OS>/output/sg2002_recamera_emmc/
 export PATH=<PATH_TO_RECAMERA-OS>/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
 ```
 
-克隆二维码识别仓库并进入对应的解决方案目录进行编译。在 PC 的终端中依次执行以下命令。
+克隆二维码识别仓库并进入对应的方案目录进行编译。在 PC 的终端中依次执行以下命令。
 
 ```bash
 git clone https://github.com/yyling0101-a11y/qrcode_rec.git
 cd /qrcode_rec/
 ```
 
-克隆完成后的仓库目录结构如下所示：
+克隆完成后的仓库目录结构如下：
 ```text
 (base) yylin@LAPTOP-TI348HL9:~/qrcode_rec$ tree -L 2 -I "build"
 .
@@ -123,7 +123,7 @@ cd /qrcode_rec/
     └── requirements.txt
 ```
 
-`main` 目录中包含要在 recamera 上运行的源代码，`recamera_qr_win_client` 中包含在 x86 设备上运行的可视化结果源代码。编译前，你需要修改 main 目录下 `CMakeLists.txt` 文件中指定的目录，将其指向上一步中解压预编译包所在的目录。
+`main` 目录中包含在 recamera 上运行的源代码，而 `recamera_qr_win_client` 中包含在 x86 设备上运行的可视化结果源代码。编译前，你需要修改 main 目录下 `CMakeLists.txt` 文件中指定的目录，使其指向上一步中解压预编译包所在的目录。
 
 开始编译：
 ```bash
@@ -132,7 +132,7 @@ cmake ..
 make
 ```
 
-编译成功后，可执行文件位于 `build/qrcode_rec`。使用 `scp` 命令将其上传到 ReCamera 上的 `/home/recamera/` 目录：
+编译成功后，可执行文件将位于 `build/qrcode_rec`。使用 `scp` 命令将其上传到 ReCamera 上的 `/home/recamera/` 目录：
 
 ```bash
 sudo scp qrcode_rec recamera@192.168.42.1:/home/recamera/  # Replace 192.168.4.53 with your reCamera's IP address
@@ -148,9 +148,9 @@ sudo scp qrcode_rec recamera@192.168.42.1:/home/recamera/  # Replace 192.168.4.5
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. 在 ReCamera 上运行可执行文件
@@ -240,7 +240,7 @@ python3 recamera_qr_pyqt_viewer.py --rtsp rtsp://192.168.4.5:8554/live0 --qr-url
 
 #### Python 接收端参数
 
-| 参数 | 描述 | 默认值 |
+| Parameter | Description | Default |
 |-----------|-------------|---------|
 | `--rtsp` | RTSP 地址 | `192.168.4.5` |
 | `--qr-url` | 获取识别结果的 URL | `http://192.168.4.5:8080/api/qr/latest` |

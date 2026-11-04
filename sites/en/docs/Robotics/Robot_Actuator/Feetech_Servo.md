@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for Feetech Servo motors.
+description: "Complete guide to Feetech STS/SM serial bus servos: wiring, baud rate and ID setup, calibration, position feedback and Python control for SO-ARM and LeRobot projects."
 title: Feetech
 keywords:
   - actuator
@@ -12,7 +12,7 @@ last_update:
   date: 11/24/2025
   author: Li Shanghang
 createdAt: '2025-06-23'
-updatedAt: '2025-11-24'
+updatedAt: '2026-09-16'
 url: https://wiki.seeedstudio.com/feetech_servo/
 ---
 

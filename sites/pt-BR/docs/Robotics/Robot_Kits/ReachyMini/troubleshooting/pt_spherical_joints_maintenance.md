@@ -1,5 +1,6 @@
 ---
 description: Guia de manutenção das juntas esféricas do Reachy Mini, cobrindo a limpeza e a reaplicação de graxa nas juntas esféricas da plataforma Stewart para restaurar um funcionamento suave e silencioso.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Manutenção das Juntas Esféricas
 slug: /reachymini_troubleshooting_spherical_joints_maintenance
 keywords:

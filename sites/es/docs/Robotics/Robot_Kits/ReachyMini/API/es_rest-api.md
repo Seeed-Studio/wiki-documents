@@ -1,5 +1,6 @@
 ---
 description: Referencia completa de la API REST para el daemon de Reachy Mini que cubre endpoints HTTP y WebSocket para apps, daemon, estado, movimiento, motores, cinemática, volumen y autenticación de Hugging Face.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Referencia de la API REST
 slug: /reachymini_api_rest-api
 keywords:

@@ -3,7 +3,7 @@ description: Introdução ao reComputer Super
 title: Introdução ao reComputer Super
 keywords:
   - reComputer Super
-  - reComputer Super Introdução
+  - reComputer Super Getting Started
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_getting_started
@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-07-23'
+updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_getting_started/
 ---
 
@@ -48,8 +48,8 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe** para expansibilidade  
 - ​**Ethernet RJ45 dupla** para rede de alta velocidade  
-- ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Interface Serial de Câmera)  
-- Suporte a ​**barramento CAN** para aplicações industriais/robóticas  
+- ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Camera Serial Interface)  
+- Suporte a ​**barramento CAN** para aplicações industriais/robótica  
 
 ### 🛠️ ​**Pronto para desenvolvimento e produção**  
 
@@ -138,7 +138,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
       <td>16GB 128-bit LPDDR5 102,4GB/s</td>
     </tr>
     <tr>
-      <td>Acelerador DL</td>
+      <td>Acelerador de DL</td>
       <td colSpan={2}>/</td>
       <td>1x NVDLA v2</td>
       <td>2x NVDLA v2</td>
@@ -179,20 +179,20 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Ethernet</td>
-      <td colSpan={3}>2x RJ45 Gigabit Ethernet</td>
+      <td colSpan={3}>2x Ethernet Gigabit RJ45</td>
     </tr>
     <tr>
       <td rowSpan={11}>E/S</td>
       <td >USB</td>
-      <td colSpan={3}>4x USB 3.2 Type-A (5Gbps); <br />1x USB 2.0 Type-C (Modo Dispositivo/Depuração);</td>
+      <td colSpan={3}>4x USB 3.2 Type-A (5Gbps); <br />1x USB 2.0 Type-C (Modo Device/Depuração);</td>
     </tr>
     <tr>
       <td>Câmera</td>
-      <td colSpan={3}>4x mipi CSI (2 pistas, 15 pinos)</td>
+      <td colSpan={3}>4x mipi CSI(2-lane 15-Pin)</td>
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={3}>1 x CAN (conector de 4 pinos)</td>
+      <td colSpan={3}>1 x CAN(Conector de 4 pinos)</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -200,11 +200,11 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Ventoinha</td>
-      <td colSpan={3}>1x conector de ventoinha de 4 pinos (5V PWM); <br />1x conector de ventoinha de 4 pinos (12V PWM);</td>
+      <td colSpan={3}>1x conector de ventoinha de 4 pinos (PWM 5V); <br />1x conector de ventoinha de 4 pinos (PWM 12V);</td>
     </tr>
     <tr>
-      <td>Porta de expansão</td>
-      <td colSpan={3}>1x cabeçalho de expansão de 40 pinos;<br />1x cabeçalho de controle e UART de 12 pinos;</td>
+      <td>Porta de extensão</td>
+      <td colSpan={3}>1x cabeçalho de extensão de 40 pinos;<br />1x cabeçalho de controle e UART de 12 pinos;</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -212,10 +212,10 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>LED</td>
-      <td colSpan={3}>2x LED (PWR e ACT)</td>
+      <td colSpan={3}>2x LED(PWR e ACT)</td>
     </tr>
     <tr>
-      <td>Botão de pino</td>
+      <td>Botão pinhole</td>
       <td colSpan={3}>1x PWR;<br />1x RESET;</td>
     </tr>
     <tr>
@@ -224,11 +224,11 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Furo para antena</td>
-      <td colSpan={3}>4x furos para antena</td>
+      <td colSpan={3}>4x furo para antena</td>
     </tr>
     <tr>
       <td>Alimentação</td>
-      <td colSpan={4}>Conector DC tipo barril 5525 12–19V </td>
+      <td colSpan={4}>Jack DC barril 5525 12–19V </td>
     </tr>
     <tr>
       <td>Versão do Jetpack</td>
@@ -252,11 +252,58 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     </tr>
     <tr>
       <td>Certificação</td>
-      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, Teste de vibração (GB/T 2423)</td>
+      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, Teste de vibração(GB/T 2423)</td>
     </tr>
   </tbody>
 </table>
 </div>
+
+## Explorador 3D interativo
+
+Explore a linha reComputer Super em um visualizador 3D interativo. Gire o dispositivo, inspecione as interfaces de hardware, veja a montagem explodida e saiba mais sobre os módulos compatíveis.
+
+<div
+  style={{
+    width: '100%',
+    height: 'clamp(620px, 70vw, 760px)',
+    overflow: 'hidden',
+    border: '1px solid #4a525b',
+    borderRadius: '12px',
+    margin: '24px 0',
+    background: '#0b1015'
+  }}
+>
+  <iframe
+    src="https://youjiang.cloud/?embed=1#viewer"
+    title="reComputer Super Series Interactive 3D Explorer"
+    loading="lazy"
+    allow="fullscreen"
+    allowFullScreen
+    scrolling="no"
+    style={{
+      width: '100%',
+      height: '100%',
+      border: 0,
+      display: 'block'
+    }}
+  />
+</div>
+
+<div align="center">
+  <a
+    href="https://youjiang.cloud/#viewer"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Abrir o Explorador 3D em uma nova janela ↗
+  </a>
+</div>
+
+## Uso das interfaces de hardware
+
+:::info
+Para especificações detalhadas e instruções de cada interface de hardware, consulte [o guia de uso das interfaces de hardware](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_hardware_interfaces_usage/).
+:::
 
 ## Gravar o sistema JetPack
 
@@ -282,7 +329,7 @@ Consulte a tabela abaixo para preparar a máquina host.
   <tbody>
     <tr>
         <td  rowspan="2"> Versão do JetPack </td>
-        <td class="dbon" colspan="4"> Versão do Ubuntu (Computador host) </td>
+        <td class="dbon" colspan="4"> Versão do Ubuntu (Computador Host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -329,23 +376,23 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <td rowSpan={4}>7.2</td>
       <td> Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCV69WYpn_UQJdspFy9nF_RAasSxjXtRsD-9tSaG0JmlOM?e=9F5lLm">Download</a></td>
-      <td>0978be490c5ff7c1648317240e8f00d7<br />6b2d025ed30a945249eaa69112a047c8</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBbvOytYiQ5TpwiSraaD3npAZpCvsperY8OedbHtL4aoXs?e=qNrb0P">Download</a></td>
+      <td>b3acb95bf1064067029ce8159d48f8a<br />e5633a5ca4d9bb34fa955a39c5f2838ed</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFEKDfgr0CS7jHtF-JwR0KAZC0l4XMAUKFW4Tsq2960iU?e=PI5PkJ">Download</a></td>
-      <td>22a21d0ee9abdceb812e06ac399d8ca<br />5f14a3880fdf989c876223e72b21f4de6</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCumgxDQ7-SQ4c-zNL1Lv6fAazr7M2ao0XhSVLQskdbPF4?e=9MeULa">Download</a></td>
+      <td>2b851a7a19105e1e2dd6903881e9e682<br />7b45c85151ce6a2dabda9928b97ae9e7</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCGFV45fF3ZQY8l084qj5JHAaRDJdUOkgfpCodzXowNI5c?e=KkELx1">Download</a></td>
-      <td>7613332f8eeb315a0d9d51744a8f0a9<br />e8e11e92e091d2a06ad609235a54f7c72</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcA60i9AaiS7uPpL0EDCEYAcxlBthGLIC28GjY_DmdG7I?e=1Zklz1">Download</a></td>
+      <td>290ebf050e74dd30a3f17ab690772a21<br />a421abf0e8efcf89ff6c4fc2fe8e1ab7</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDt08wmY21ATJaU8NZ0vAzUAYi1CjW17NXVMd0NdC5qRAk?e=CSOkBf">Download</a></td>
-      <td>5c66fcbf8f4bcb21477ada08c78796f<br />69524ccc6eccf929fdd9f026e948482f1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB-xhKB8WtjT7NNVuoLnQAGAcW7ZxofeJjIa8Z9-ULwux0?e=8GNboV">Download</a></td>
+      <td>ca333821c991da20db5cf9737e6439dc<br />ecf4d5e295ed33a981d4eea856cb3220</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.2</td>
@@ -373,19 +420,19 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
 </div>
 
 :::danger
-Os arquivos de imagem do JetPack são grandes e podem levar cerca de 60 minutos para serem baixados. Por favor, aguarde até que o download seja concluído.
+Os arquivos de imagem do JetPack são grandes e podem levar cerca de 60 minutos para serem baixados. Aguarde até que o download seja concluído.
 :::
 
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 ### Entrar no modo Force Recovery
 
 :::info
-Antes de podermos prosseguir para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
+Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
 :::
 
 <details>
@@ -400,9 +447,9 @@ Antes de podermos prosseguir para as etapas de instalação, precisamos garantir
 
 **Passo 2.** Ligue o reComputer Super conectando o cabo de alimentação.
 
-**Passo 3.** Conecte o Super ao PC host Ubuntu com um cabo de transmissão de dados USB Type-C.
+**Passo 3.** Conecte o Super ao PC host com Ubuntu com um cabo de transmissão de dados USB Type-C.
 
-**Passo 4.** No PC host Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
+**Passo 4.** No PC host com Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -441,7 +488,7 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-O comando de gravação pode levar de 2 a 10 minutos.
+O comando de gravação pode ser executado por 2 a 10 minutos.
 :::
 
 **Passo 3:** Conecte o monitor usando um cabo HDMI e conclua a configuração de inicialização do sistema do reComputer Super:
@@ -462,12 +509,12 @@ Se você quiser saber mais sobre as especificações detalhadas e o uso das inte
 
 ## Recursos
 
-- [Folha de dados do reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [reComputer Super Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [Esquemático](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [Arquivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
-- [Documento mecânico - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
-- [Documento mecânico - reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
-- [Casos de sucesso Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Documento Mecânico - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
+- [Documento Mecânico - reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
+- [Casos de Sucesso Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson One Pager](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
@@ -477,9 +524,9 @@ Se você quiser saber mais sobre as especificações detalhadas e o uso das inte
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico & Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

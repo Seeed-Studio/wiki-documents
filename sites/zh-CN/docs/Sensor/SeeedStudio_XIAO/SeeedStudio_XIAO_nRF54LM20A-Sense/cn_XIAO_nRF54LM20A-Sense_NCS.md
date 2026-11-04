@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 07/22/2026
+  date: 08/06/2026
   author: Brandy
 createdAt: '2025-05-13'
 updatedAt: '2026-08-07'
@@ -48,7 +48,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 nRF Connect SDK（NCS）是 Nordic Semiconductor 官方的软件开发套件，构建在 Zephyr RTOS 实时操作系统之上。它为 nRF 系列芯片提供了完整、原生且高度优化的开发框架。与 PlatformIO 相比，NCS 为开发者提供了对 nRF54 系列全部硬件能力的更全面访问，包括对 Bluetooth Low Energy（BLE）、Thread、Matter 等无线协议栈的原生支持，以及更精细的电源管理和外设控制。Nordic 官方持续维护并更新该 SDK，确保与芯片固件的最佳兼容性，并能更早使用最新特性。
 
-本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行。
+本教程将一步步引导你完成整个流程——从搭建 nRF Connect SDK 开发环境和安装工具链，到创建和配置你的第一个项目，最后将第一个示例程序烧录到 XIAO nRF54LM20A Sense 上并运行起来。
 
 ## NCS 入门
 
@@ -139,7 +139,7 @@ nRF Connect SDK 体积较大，首次安装会花费一定时间。请在安装�
 <br/>
 
 :::tip
-请确保 nRF Connect SDK（NCS）版本和 Toolchain 版本均为 3.3.0。混用不同版本可能会导致构建或兼容性问题。
+请确保 nRF Connect SDK（NCS）版本和 Toolchain 版本均为 3.3.0。混用不同版本可能导致构建或兼容性问题。
 :::
 
 2. 输入命令检查所需工具的版本信息。你可以逐条复制并运行这些命令进行验证。
@@ -186,7 +186,7 @@ openocd --version
 
 XIAO nRF54LM20A 系列的板卡定义尚未合入官方 NCS 仓库，因此你需要手动添加板卡路径。
 
-1. 将 **platform-seeedboards** 仓库克隆到你希望的目录中。
+1. 将 **platform-seeedboards** 仓库克隆到你偏好的目录。
 
 ```bash
 git clone https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -194,13 +194,13 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_9.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. 在 VS Code 左下角打开 **Settings**。
+2. 打开 VS Code 左下角的 **Settings**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. 搜索 **nRF Connect**，修改 **Board Roots**，并添加路径 `~\your_path\platform-seeedboards\zephyr`。XIAO nRF54LM20A 系列的板卡定义就存放在这里。
+3. 搜索 **nRF Connect**，修改 **Board Roots**，并添加路径 `~\your_path\platform-seeedboards\zephyr\nrf`。XIAO nRF54LM20A 系列的板卡定义就存放在这里。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/ncs-fix.jpeg" style={{width:800, height:'auto'}}/></div>
 
 ### 创建新应用
 
@@ -219,7 +219,7 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_14.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-4. 移除原有配置。此步骤可以消除干扰，便于在下一阶段配置与 XIAO nRF54LM20A 相关的设置。（如果你的项目还没有构建，可以直接跳过此步骤）
+4. 移除原有配置。此步骤可以消除干扰，便于在下一阶段配置与 XIAO nRF54LM20A 相关的设置。（如果你的项目还没有构建记录，可以直接跳过此步骤）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_15.png" style={{width:800, height:'auto'}}/></div>
 
@@ -417,7 +417,7 @@ CONFIG_SERIAL=n
 
 :::tip
 
-如果在此处找不到 `xiao_nrf54lm20a/nrf54lm20a/cpuapp`，请检查在 [Add Custom Board Path](#Add-Custom-Board-Path) 部分中路径是否已正确添加。
+如果在此处找不到 `xiao_nrf54lm20a/nrf54lm20a/cpuapp`，请检查在 [Add Custom Board Path](#add-custom-board-path) 部分中路径是否已正确添加。
 
 :::
 
@@ -430,7 +430,7 @@ CONFIG_SERIAL=n
 
 本节中，我们使用 nRF Connect SDK 中的 west 工具来烧录程序。
 
-1. 使用 USB-C 线连接 XIAO nRF54LM20A Sense。打开 nRF Terminal，输入 west 命令来烧录程序。
+1. 使用 USB-C 线连接 XIAO nRF54LM20A Sense。打开 nRF Terminal 并输入 west 命令来烧录程序。
 
 ```bash
 west flash
@@ -441,7 +441,7 @@ west flash
 
 :::tip
 
-如果要烧录的固件是由 **Add build configuration** 中创建的第一个配置文件生成的，当存在 `build` 和 `build_1` 等多个配置文件夹时，需要指定配置路径。
+如果要烧录的固件是由 **Add build configuration** 中创建的第一个配置文件生成的，当存在 `build` 和 `build_1` 等多个配置文件夹时，你需要指定配置路径。
 
 ```bash
 # examples: west flash configgration build_1
@@ -454,7 +454,7 @@ west flash --build-dir build_1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
 
-## 常见问题
+## 常见问题解答
 
  **Q1：下载 nRF Connect SDK 非常慢或卡住**
 
@@ -508,7 +508,7 @@ nrfutil sdk-manager install v3.3.0 \
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

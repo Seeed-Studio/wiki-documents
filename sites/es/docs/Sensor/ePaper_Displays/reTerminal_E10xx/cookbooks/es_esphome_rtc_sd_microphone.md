@@ -9,7 +9,7 @@ last_update:
   date: 08/05/2026
   author: Citric
 createdAt: '2026-06-12'
-updatedAt: '2026-08-05'
+updatedAt: '2026-08-26'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_rtc_sd_microphone/
 ---
 

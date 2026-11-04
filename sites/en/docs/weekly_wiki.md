@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/21/2026
+  date: 11/02/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-09-21'
+updatedAt: '2026-11-02'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,79 +18,77 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 21st, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Control reBot Arm using voice with reSpeaker Clip](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_clip/)
+### [Aquaculture Crayfish Behavior Recognition: 4-Stage Pipeline and Edge Benchmarks](https://wiki.seeedstudio.com/solutions/crayfish-behavior-recognition/)
 
-<div class="video-container">
-  <iframe width="800" height="400" src="https://www.youtube.com/embed/OdBwXYKzoio" title="ReSpeaker Lite with XIAO ESP32S3 Home Assistant" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/crayfish_behavior_recognition/cover-10d95d7f.png" alt="Edge AI aquaculture crayfish behavior recognition reference design" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to control the reBot Arm B601-DM using natural voice commands with reSpeaker Clip. It covers real-time audio streaming, voice activity detection, speech-to-text, and LLM-based intent recognition. You will also learn how to set up the project and run voice-controlled actions on either a simulated or real robotic arm.
+This edge AI aquaculture reference design introduces a four-stage pipeline for monitoring crayfish behavior and detecting potential fighting events. The guide covers camera placement, deployment with `solution-cli`, MQTT and WebSocket telemetry, and reported on-device benchmarks.
 
 </div>
 
-### [reComputer Rugged J401 for Industrial Vision](http://localhost:3000/ai_robotics_recomputer_rugged_j401_cv_demo)
+### [Edge AI Rehabilitation Posture Analysis: 33-Keypoint Pose and Clinical Kinematics](https://wiki.seeedstudio.com/solutions/rehab-posture-analysis/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/rehab_posture_analysis/cover-93765b27.png" alt="33-keypoint edge AI rehabilitation posture analysis reference design" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki introduces several ways computer vision can be used on industrial forklifts. The example uses reComputer Rugged J401 as the edge controller. Its IP66 enclosure, M12 connectors, vibration resistance, four PoE ports, and Jetson Orin NX allow it to sit close to the cameras and run the vision workloads locally.
+This assistive rehabilitation reference design uses a 33-keypoint pose model to measure joint range of motion and flag movement compensation patterns. It covers edge deployment, model extensions, WebSocket and MQTT integration, and evaluation benchmarks; it is not a certified medical diagnostic tool.
 
 </div>
 
-### [Deploy TensorRT-Model-Connect on Jetson AGX Orin](https://wiki.seeedstudio.com/ai_robotics_deploy_tensorrt_model_connect_on_jetson/)
+## Existing Wiki Updated
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/TRTMC/trtmc_wiki_cover.png" alt="pir" width={800} height="auto" /></p>
+### [reBot Arm B601 Setup and LeRobot Guides](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki shows how to run [NVIDIA TensorRT-Model-Connect](https://github.com/NVIDIA/TensorRT-Model-Connect) (TRTMC) on a Seeed reComputer powered by **Jetson AGX Orin**. After the native runtime is built, the path is short: start from a Hugging Face checkpoint, produce a TensorRT `.bundle` on the device, and run text generation. There is no separate x86 host and no ONNX export step.
+The B601-RS and B601-DM Quick Start and LeRobot guides now include illustrated leader-and-follower arm mounting, wiring steps, and safety checks. The Chinese SO-ARM100/101 guide also gains 44 community Q&As covering hardware, software setup, calibration, data collection, and training.
+
+**Updated English guides:** [B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) · [B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) · [B601-RS with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/) · [B601-DM with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/).
+
+**Chinese Guide:** [SO-ARM100/101 with LeRobot — Expanded FAQ](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/).
 
 </div>
 
-### [Deploy ONVIF on reCamera](https://wiki.seeedstudio.com/recamera_onvif/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/guides/image-13.png" alt="pir" width={600} height="auto" /></p>
+### [Industrial Edge Solution Deployment Guides](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/)
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to deploy ONVIF on reCamera for local network discovery and video streaming. It covers deploying the ONVIF service with SenseCraft Solution and verifying the RTSP video stream. You will also learn how to connect reCamera to ONVIF-compatible clients such as Home Assistant, Frigate, NVRs, and VMS platforms.
+Three existing engineering references have been substantially expanded with clearer hardware deployment guidance, interfaces, and operating boundaries. The updates explain multi-protocol data collection over MQTT, HVAC setpoint write-and-readback verification, and face-access library deployment with security and licensing considerations.
+
+**Updated guides:** [Industrial Multi-Protocol Data Hub](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/) · [HVAC Setpoint Control](https://wiki.seeedstudio.com/solutions/hvac-setpoint-control/) · [Unmanned Store Face Access](https://wiki.seeedstudio.com/solutions/unmanned-store-face-access/).
 
 </div>
 
-### [AI Image Transmission over MeshCore with MeshTracker X1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_x1/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png" alt="MeshCore Open Image Transmission" width={600} height="auto" /></p>
+### [Mesh Device Firmware and Recovery Guides](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/)
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to transmit images over a MeshCore network using MeshTracker X1 and MeshCore Open. It uses AI-based ultra-low bitrate image compression to reduce images to compact data that can be transmitted over low-bandwidth LoRa mesh networks and reconstructed on the receiving device. This makes visual information sharing possible for outdoor exploration, emergency response, remote monitoring, and other off-grid scenarios.
+New recovery and troubleshooting sections cover failed firmware updates, DFU/UF2 recovery, and unresponsive devices across four Mesh hardware families. The instructions are integrated into the relevant MeshCore and Meshtastic getting-started guides.
 
-The same Image Transmission feature is also available for [SenseCAP Card Tracker T1000-E](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_t1000e/), [Wio Tracker L1](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l1/), and [Wio Tracker L2](https://wiki.seeedstudio.com/meshcore_ai_image_transmission_l2/).
+**MeshTracker X1:** [MeshCore](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/).
+
+**SenseCAP T1000-E:** [MeshCore](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/sensecap_t1000_e/).
+
+**Wio Tracker L1:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/).
+
+**SenseCAP Solar Node P1-Pro:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/).
 
 </div>
 
-### [EasySkyMesh IoT Firmware for Wio Tracker L1](https://wiki.seeedstudio.com/easyskymesh_wio_tracker_l1/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EasySkyMesh/EasySkyMesh_MeshCore_Device_Low_Power_Consumption_L1_Pro.png" alt="pir" width={600} height="auto" /></p>
+### [reSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/)
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to install and use EasySkyMesh IoT firmware on the Wio Tracker L1. It covers firmware flashing, power-saving features, and configuration for different MeshCore roles. You will also learn how to connect supported I2C sensors for low-power monitoring and IoT applications.
+The microphone-array guide now covers both XVF3000 v3.0 and v3.2. It clarifies the additional speaker noise-floor filtering in v3.2 and updates the shared hardware, setup, and ROS-related guidance.
 
 </div>
-
-<!-- ## Existing Wiki Updated
-
-### [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/)
-
-We have updated the [NFC Usage on Seeed Studio XIAO nRF52840 (Sense)](https://wiki.seeedstudio.com/XIAO-BLE-Sense-NFC-Usage/) guide with the new XIAO_nRF52840_NFC library, expanded antenna tuning instructions, setup verification, and practical NFC tag examples. -->
 
 ## The Efforts of Contributor
 
@@ -241,5 +239,10 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.8.31st](/Seeed_Elderly/weekly_wiki/2026/wiki260831)
 - [weekly wiki on 2026.9.07th](/Seeed_Elderly/weekly_wiki/2026/wiki260907)
 - [weekly wiki on 2026.9.14th](/Seeed_Elderly/weekly_wiki/2026/wiki260914)
+- [weekly wiki on 2026.9.21st](/Seeed_Elderly/weekly_wiki/2026/wiki260921)
+- [weekly wiki on 2026.9.28th](/Seeed_Elderly/weekly_wiki/2026/wiki260928)
+- [weekly wiki on 2026.10.12th](/Seeed_Elderly/weekly_wiki/2026/wiki261012)
+- [weekly wiki on 2026.10.19th](/Seeed_Elderly/weekly_wiki/2026/wiki261019)
+- [weekly wiki on 2026.10.26th](/Seeed_Elderly/weekly_wiki/2026/wiki261026)
 
 </details>

@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-45font_1.w
 slug: /XIAO-RP2040
 sku: 102010428, 100045204
 last_update:
-  date: 1/11/2023
+  date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
 updatedAt: '2026-08-25'
@@ -160,7 +160,7 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
       <td><strong>Power</strong></td>
       <td colspan="2">
         Input Voltage (Type-C): 5V<br/>
-        Input Voltage (BAT): 5V
+        Input Voltage (BAT): 3.7V ~ 4.2 V
       </td>
     </tr>
     <tr>

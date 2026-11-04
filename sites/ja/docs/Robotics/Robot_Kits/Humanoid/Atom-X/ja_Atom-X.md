@@ -1,6 +1,6 @@
 ---
-description: Atom-X の使用を開始する。
-title: Atom-X 入門ガイド
+description: "ヒューマノイドロボット Atom-X を始める方法：開梱、電源投入、初回起動、基本動作、ソフトウェアのセットアップ。"
+title: Atom-X クイックスタート
 keywords:
   - ヒューマノイド
   - ロボティクス
@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/ja/atom_x/
 createdAt: '2026-05-25'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-22'
 ---
 
 import Link from '@docusaurus/Link';

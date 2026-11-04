@@ -14,10 +14,10 @@ slug: /recamera_udp_face_analysis
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899,108990119,108990120,E20245041001,100018917, 100041077, 100029708, 100074316
 sidebar_position: 12
 last_update:
-  date: 04/30/2026
+  date: 10/08/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-07-22'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/pt-br/recamera_udp_face_analysis/
 ---
 
@@ -63,12 +63,12 @@ Defina as seguintes variáveis de ambiente para o ambiente de compilação do **
 export PATH='current compile chain path'/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
 ```
 
-Primeiro, certifique-se de ter os modelos necessários:
+Primeiro, certifique-se de que você tem os modelos necessários:
 - `yolo_face.cvimodel` - modelo de detecção de rosto YOLO
 - `age_gender_race.cvimodel` - modelo FairFace para idade/gênero/raça
 - `emotion.cvimodel` - modelo de reconhecimento de emoções
 
-Você pode baixar esses três arquivos de modelo a partir do [lançamento sscma-example-sg200x v1.0.1](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1), ou treinar seus próprios modelos e então quantizá-los/convertê-los para o formato `.cvimodel`.
+Você pode baixar estes três arquivos de modelo a partir do [lançamento sscma-example-sg200x v1.0.1](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1), ou treinar seus próprios modelos e então quantizá-los/convertê-los para o formato `.cvimodel`.
 
 Navegue até o diretório da solução e compile:
 
@@ -97,9 +97,9 @@ Antes de executar o programa em C++, você deve parar os serviços padrão do No
 :::
 
 ```bash
-sudo /etc/init.d/S03node-red stop
-sudo /etc/init.d/S91sscma-node stop
-sudo /etc/init.d/S93sscma-supervisor stop
+sudo mv /etc/init.d/S03node-red /etc/init.d/disable/
+sudo mv /etc/init.d/S91sscma-node /etc/init.d/disable/
+sudo mv /etc/init.d/S93sscma-supervisor /etc/init.d/disable/
 ```
 
 ### 3. Executar o Executável na reCamera
@@ -143,7 +143,7 @@ Lembre-se de substituir `192.168.31.100` pelo endereço IP real do seu PC na mes
 
 ### 4. Executar o Receptor em Python no PC
 
-No seu PC, certifique-se de que o Python com as bibliotecas necessárias esteja instalado:
+No seu PC, certifique-se de que o Python com as bibliotecas necessárias está instalado:
 
 ```bash
 pip install opencv-python numpy
@@ -204,7 +204,7 @@ O PC exibirá uma janela mostrando:
 ### Erro de Acesso à Câmera
 
 Se você vir o erro "No camera":
-- Certifique-se de que os serviços do Node-RED estejam parados (veja a Etapa 2 acima)
+- Certifique-se de que os serviços do Node-RED estão parados (veja a Etapa 2 acima)
 - Verifique a conexão da câmera
 
 ### Falha na Conexão UDP
@@ -224,7 +224,7 @@ Se o modelo não carregar:
 
 ## Suporte Técnico & Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-29'
-updatedAt: '2026-07-30'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/reachymini_development_cases_gripper_voice_control/
 ---
 # Reachy Mini Voice Control for SO-ARM
@@ -53,7 +53,7 @@ Files added by this fork:
 3. A `lerobot` conda environment with feetech support has been created:
 
    ```bash
-   conda create -n lerobot python=3.10
+   conda create -n lerobot python=3.12
    conda activate lerobot
    pip install lerobot[feetech]
    ```

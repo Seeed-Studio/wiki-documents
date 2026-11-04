@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-07-29'
-updatedAt: '2026-07-30'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/reachymini_development_cases_gripper_voice_control/
 ---
 # Reachy Mini 语音控制 SO-ARM
@@ -53,7 +53,7 @@ url: https://wiki.seeedstudio.com/cn/reachymini_development_cases_gripper_voice_
 3. 已创建带 feetech 支持的 `lerobot` conda 环境：
 
    ```bash
-   conda create -n lerobot python=3.10
+   conda create -n lerobot python=3.12
    conda activate lerobot
    pip install lerobot[feetech]
    ```

@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona un tutorial para los motores de la serie Damiao.
-title: Motores de la Serie Damiao
+description: "Guía completa de actuadores de articulación DM (Damiao) para brazos robóticos: descripción de la serie de motores, modos de control, comunicación CAN y uso del SDK de Python con los kits de robótica de Seeed."
+title: Damiao
 keywords:
   - actuador
   - motor
@@ -13,7 +13,7 @@ last_update:
   date: 06/1/2025
   author: ZhuYaoHui
 createdAt: '2025-06-01'
-updatedAt: '2026-06-02'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/es/damiao_series/
 ---
 
@@ -57,7 +57,7 @@ J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 |
 
 **Sistema Windows en PC**
 
-- Descarga las [herramientas de depuración Damiao](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe).
+- Descarga las [herramientas de depuración Damiao](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool-v2.1.9.4.exe).
 - Descarga las [herramientas USB2CAN](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe)
 
 ### Conectar el circuito al PC

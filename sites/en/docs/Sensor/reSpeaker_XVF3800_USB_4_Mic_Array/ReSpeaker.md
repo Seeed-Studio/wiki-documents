@@ -11,7 +11,7 @@ last_update:
   date: 2/26/2026
   author: Kasun Thushara
 createdAt: '2025-08-12'
-updatedAt: '2026-04-16'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/respeaker/
 ---
 

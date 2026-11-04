@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con Atom-X.
-title: Primeros pasos con Atom-X
+description: "Cómo empezar con el robot humanoide Atom-X: desembalaje, encendido, primer arranque, movimientos básicos y configuración del software."
+title: Guía rápida de Atom-X
 keywords:
   - Humanoid
   - Robotics
@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/es/atom_x/
 createdAt: '2026-05-25'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-22'
 ---
 
 import Link from '@docusaurus/Link';

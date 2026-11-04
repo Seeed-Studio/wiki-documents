@@ -1,5 +1,6 @@
 ---
 description: Ficha técnica completa de hardware do Reachy Mini, incluindo dimensões, graus de liberdade, especificações dos motores, câmera, matriz de microfones e componentes eletrônicos.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Ficha Técnica de Hardware do Reachy Mini
 slug: /reachymini_platforms_reachy_mini_hardware
 keywords:

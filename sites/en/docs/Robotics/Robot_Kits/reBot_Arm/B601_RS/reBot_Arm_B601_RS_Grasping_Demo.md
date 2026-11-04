@@ -12,25 +12,28 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
-  date: 2026-09-10
+  date: 2026-11-04
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-10'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
+import GraspingTabs from '@site/src/components/robotics/RebotGraspingTabs';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css';
 
 # reBot Arm B601-RS Visual Grasping Demo
 
-<RebotRsDocNav />
+<div className={styles.page}>
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -58,16 +61,47 @@ import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
   <strong>Depth Perception · Object Detection · Hand-Eye Calibration · Autonomous Grasping · Fully Open Source</strong>
 </p>
 
-This page covers two visual grasping demos with different implementations:
-
-- **Visual Grasping Method 1**: A YOLO + RGB-D + Python SDK pipeline covering environment setup, camera integration, hand-eye calibration, and grasp debugging.
-- **Visual Grasping Method 2**: A ROS2 + YOLOE workflow that starts the arm, Gemini 2 / D405 camera, and grasp nodes in multiple terminals to pick and place objects.
-
 <p align="center">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
 </p>
 
+## How do the two grasping methods differ?
+
+This page covers two visual grasping demos with different implementations. Compare their frameworks, calibration requirements, and startup flows, then choose a tutorial below.
+
+<div className={styles.comparison}>
+  <section className={styles.methodCard} aria-label="Method 1: Python SDK">
+    <span className={styles.methodNumber}>Method 01</span>
+    <h3>Python SDK + YOLO / OBB</h3>
+    <p>Use YOLO, an RGB-D depth camera, and the Python SDK for the complete workflow from environment setup and camera integration to hand-eye calibration and grasp debugging.</p>
+    <dl>
+      <div><dt>Grasping logic</dt><dd>Estimate grasp poses from detection boxes or OBB minimum-area rectangles; optionally use GraspNet for 6D pose estimation.</dd></div>
+      <div><dt>Hand-eye calibration</dt><dd>Complete Eye-in-Hand calibration with an ArUco marker before the first full grasping run.</dd></div>
+      <div><dt>Startup</dt><dd>Run Python scripts to verify detection, pose estimation, and robotic grasping step by step.</dd></div>
+    </dl>
+  </section>
+  <section className={styles.methodCard} aria-label="Method 2: ROS 2">
+    <span className={styles.methodNumber}>Method 02</span>
+    <h3>ROS 2 + YOLOE</h3>
+    <p>Use ROS 2 and YOLOE to start the arm, Gemini 2 / D405 / D435i camera, and grasping nodes in separate terminals for picking and placing.</p>
+    <dl>
+      <div><dt>Grasping logic</dt><dd>The visual grasping node detects, grasps, and places objects. Text class names specify the grasp and place targets.</dd></div>
+      <div><dt>Hand-eye calibration</dt><dd>No calibration board is required; adjust offset parameters to compensate for small mounting and printed-part tolerances.</dd></div>
+      <div><dt>Startup</dt><dd>Start the arm, camera, and grasping node in separate terminals, then trigger picking and placing.</dd></div>
+    </dl>
+  </section>
+</div>
+
+## Choose a grasping method
+
+<p className={styles.selectionHint}>Switch tabs to view the tutorial for your chosen method and follow its installation and running steps.</p>
+
+<GraspingTabs>
+<TabItem value="python-sdk" label="Method 1 · Python SDK / OBB">
+
 ## Visual Grasping Method 1
+
+This route uses **Python SDK + RGB-D camera + YOLO / OBB** without a ROS 2 workspace. The default route suits ordinary tabletop objects; enable the optional GraspNet module below when you need more complex 6D grasping.
 
 ### 1. Project Features
 
@@ -144,7 +178,7 @@ The hardware for this tutorial is provided by [Seeed Studio](https://www.seeedst
 1. Connect the depth camera to the host via USB 3.0.
 2. Connect the USB2CAN adapter to the arm CAN bus.
 3. Make sure the 48V power supply, camera, and robotic arm are all connected securely.
-4. Set permissions:
+4. If you encounter permission issues, run:
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
@@ -158,11 +192,24 @@ sudo chmod 666 /dev/ttyUSB0
 | Operating System | Ubuntu 22.04+ |
 | Python | 3.10 |
 
-### 5. Installation Steps
+### 5. Install the Basic Environment
+
+Follow these steps in order. Steps 0–3 are required for the default route; choose the camera SDK in step 4 to match your hardware. GraspNet installation and running instructions are in the separate advanced module below.
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">0</span>
+<div className="rebot-step-content">
 
 #### Step 0. Complete the basic robotic arm preparation first
 
 Before starting this tutorial, please finish the content in [reBot Arm B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/), including robotic arm assembly, zero-point initialization, motor ID configuration, and basic connectivity checks.
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
 #### Step 1. Clone the repository
 
@@ -173,14 +220,135 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-#### Step 2. Create and configure the conda environment
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+#### Step 2. Create the environment and choose PyTorch for your hardware
+
+Complete these three phases in order: create the base environment, install PyTorch for your hardware, and install the project dependencies.
+
+<div className="rebot-step-flow rebot-step-flow--substeps">
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.1</span>
+<div className="rebot-step-content">
+
+##### Create the base environment
 
 ```bash
 conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
-If you want to use a different environment name, replace `rebotarm` in the command with your own name.
+:::note Expected result
+The terminal prompt shows `rebotarm`, indicating that the environment is active. PyTorch is not installed yet; continue with the next two phases.
+:::
+
+To use a different environment name, replace `rebotarm` in both commands above. For an existing environment, activate it and run `conda env update -n rebotarm -f environment.yml` to update the base dependencies. This command does not remove existing pip packages.
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.2</span>
+<div className="rebot-step-content">
+
+##### Install PyTorch for your hardware
+
+Both tabs use the same compatible package versions; only the download index differs. The current version file specifies PyTorch 2.9.1, torchvision 0.24.1, and torchaudio 2.9.1 for the Python 3.10, Ubuntu x86_64 environment used in this tutorial.
+
+<Tabs groupId="rebot-pytorch-backend" defaultValue="cpu">
+<TabItem value="cpu" label="CPU (no NVIDIA GPU)">
+
+Use this option for computers with Intel / AMD integrated graphics, or to verify the basic workflow on CPU first.
+
+```bash
+python -m pip install -r requirements-pytorch.txt --index-url https://download.pytorch.org/whl/cpu
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA available:', torch.cuda.is_available())"
+```
+
+:::note Expected result
+The PyTorch path points inside the active Conda environment. `CUDA available: False` is expected.
+:::
+
+Keep the following setting in `config/default.yaml`:
+
+```yaml
+yolo:
+  device: "cpu"
+```
+
+:::tip Supported workflow
+The basic YOLO / OBB workflow can run on CPU. Inference speed depends on the model and your computer. This project's GraspNet CUDA operators require an NVIDIA GPU, so skip the GraspNet advanced module below.
+:::
+
+</TabItem>
+<TabItem value="nvidia" label="NVIDIA GPU (CUDA)">
+
+Confirm that the driver recognizes your GPU before installing CUDA-enabled PyTorch. The example below uses the CUDA 12.8 build, which requires support from both your GPU architecture and driver:
+
+```bash
+nvidia-smi
+python -m pip install -r requirements-pytorch.txt --index-url https://download.pytorch.org/whl/cu128
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA build:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available())"
+```
+
+:::note Expected result
+`nvidia-smi` lists your GPU, the PyTorch path points inside the active Conda environment, and `CUDA available: True` is printed. After verifying this, select GPU 0 in `config/default.yaml`:
+
+```yaml
+yolo:
+  device: "0"
+```
+:::
+
+:::tip Choose a CUDA build
+Use the [official PyTorch version list](https://pytorch.org/get-started/previous-versions/) to choose a build that supports your GPU, driver, and Python version. Do not choose solely by GPU series or the CUDA number displayed by `nvidia-smi`.
+
+If you need a different PyTorch version, update all three compatible versions in `requirements-pytorch.txt` and the download index together. Standard YOLO inference uses prebuilt wheels and does not require a separate CUDA Toolkit installation. A matching CUDA compiler is needed when building the GraspNet extensions.
+:::
+
+If CUDA is unavailable, check your driver, GPU architecture, and selected wheel, or follow the CPU tab to verify the basic workflow.
+
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.3</span>
+<div className="rebot-step-content">
+
+##### Install and verify the project dependencies
+
+After completing either hardware option, run the following from the project root:
+
+```bash
+python -m pip install -r requirements.txt -c requirements-pytorch.txt
+python -m pip check
+python -c "import torch, torchvision, torchaudio, cv2; from ultralytics import YOLO; from calibration.aruco_pose import ArUcoDetector; ArUcoDetector(); print('Vision dependencies OK:', cv2.__version__)"
+```
+
+:::note Expected result
+`pip check` prints `No broken requirements found.`, and the verification command prints `Vision dependencies OK` without import errors. Complete these checks before installing the robotic arm and camera SDKs.
+:::
+
+:::tip Installation failures
+`-c requirements-pytorch.txt` constrains the compatible PyTorch package versions. Keep this argument and do not add `--upgrade`. If pip fails, review the final error and retry the corresponding phase. Activating a Conda environment does not mean that all dependencies were installed successfully.
+
+Install only the standard OpenCV package specified in `requirements.txt`. The project's ArUco APIs are available in version 4.7; do not install additional OpenCV wheels alongside it. CLIP is installed from the Ultralytics Git repository, so Git must be available on your system. Loading YOLOE for the first time may also download model weights.
+:::
+
+</div>
+</section>
+</div>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
 
 #### Step 3. Install the robotic arm SDK
 
@@ -191,9 +359,9 @@ pip install -e .
 cd ../..
 ```
 
-If `pip install -e .` reports `Multiple top-level packages discovered in a flat-layout`, add explicit package discovery to `pyproject.toml` in `reBotArm_control_py`, then run `pip install -e .` again:
+If running pip install -e . gives 'Multiple top-level packages discovered in a flat-layout', please add an explicit package discovery configuration in reBotArm_control_py's pyproject.toml, and then run pip install -e . again:
 
-```toml
+```bash
 [tool.setuptools.packages.find]
 include = ["reBotArm_control_py*"]
 ```
@@ -206,41 +374,101 @@ hardware_yaml: rebotarm_rs.yaml
 
 The visual grasping programs read this SDK configuration and automatically select the matching arm control mode and gripper parameters.
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
 #### Step 4. Install the depth camera SDK
 
 This project supports RGB-D depth cameras such as Orbbec Gemini 2 and RealSense D435i / D405. Install the SDK that matches your camera; if your environment can already import the camera driver, you can skip this step.
 
-**Orbbec Gemini 2**
+<Tabs groupId="rebot-depth-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2">
 
-The Orbbec Gemini 2 depth camera depends on `pyorbbecsdk`, the Python wrapper for Orbbec SDK v2. Prefer installing the prebuilt Python package first:
+The Orbbec Gemini 2 depth camera depends on `pyorbbecsdk`, the Python wrapper for Orbbec SDK v2. Prefer installing the prebuilt Python package first.
 
-**Option 1: Install from pip (recommended)**
+On Linux / Ubuntu, configure udev rules before using the camera for the first time, whichever installation method you choose. The rules allow ordinary users to access the USB device and are installed system-wide, so each machine only needs this setup once. Skip the corresponding commands if the rules are already configured.
+
+<Tabs defaultValue="pip">
+<TabItem value="pip" label="Option 1: Install from pip (recommended)">
 
 ```bash
 pip install pyorbbecsdk2
 ```
 
-**Option 2: Get it from GitHub**
+**Configure udev rules (Linux / Ubuntu)**
+
+`pyorbbecsdk2` 2.1.0 and later include an environment setup script. Keep your conda environment active and run the script from the installed package. It requests sudo permission and installs and reloads the udev rules automatically.
+
+```bash
+orbbec_sdk_dir="$(python -c 'import os, pyorbbecsdk; print(os.path.dirname(pyorbbecsdk.__file__))')"
+python "$orbbec_sdk_dir/shared/setup_env.py"
+```
+
+If `shared/setup_env.py` cannot be found, run `pip install --upgrade "pyorbbecsdk2>=2.1.0"`, then repeat the commands above. See the [official Orbbec installation guide](https://orbbec.github.io/pyorbbecsdk/source/2_installation/install_the_package.html) for details.
+
+</TabItem>
+<TabItem value="github" label="Option 2: Get it from GitHub">
+
+Keep the `rebotarm` environment active. Install the build dependencies, then compile the Python extension:
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y cmake build-essential libusb-1.0-0-dev
+sudo apt-get install -y cmake build-essential libusb-1.0-0-dev python3-dev
 
 cd sdk
 git clone https://github.com/orbbec/pyorbbecsdk.git
 cd pyorbbecsdk
-pip install -e .
+git checkout v2-main
+python -m pip install pybind11
+mkdir -p build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release \
+  -DPython3_EXECUTABLE="$(python -c 'import sys; print(sys.executable)')" \
+  -Dpybind11_DIR="$(python -m pybind11 --cmakedir)"
+cmake --build . --parallel "$(nproc)"
+cmake --install .
+cd ..
 ```
 
-Mainland China users can use:
+Mainland China users can replace the GitHub clone command above with:
 
 ```bash
 git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 ```
 
-When installing from source, make sure the native extension has been built with CMake first so `install/lib` contains `pyorbbecsdk*.so` and the Orbbec shared libraries before running `pip install -e .`.
+After building, confirm that `install/lib` contains `pyorbbecsdk*.so` and the Orbbec shared libraries (under `install/lib/pyorbbecsdk/` in newer versions), then install the Python package. See the [official Orbbec source build guide](https://orbbec.github.io/pyorbbecsdk/source/2_installation/build_the_package.html) for CMake and conda configuration.
 
-If all installation methods above fail, please refer to the official Orbbec documentation below.
+```bash
+pip install -e .
+```
+
+**Configure udev rules (Linux / Ubuntu)**
+
+Run the following from the root of the cloned `pyorbbecsdk` repository. Newer versions use the environment setup script; older versions use `install_udev_rules.sh`:
+
+```bash
+if [ -f scripts/env_setup/setup_env.py ]; then
+  python scripts/env_setup/setup_env.py
+else
+  sudo bash scripts/install_udev_rules.sh
+  sudo udevadm control --reload-rules
+  sudo udevadm trigger
+fi
+```
+
+Return to the project root before continuing with verification and running steps:
+
+```bash
+cd ../..
+```
+
+</TabItem>
+</Tabs>
+
+If both installation methods fail, refer to the official Orbbec documentation below.
 
 **Verify installation**
 
@@ -248,15 +476,8 @@ If all installation methods above fail, please refer to the official Orbbec docu
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
 ```
 
-For first-time use, it is recommended to install the udev rules:
-
-```bash
-sudo bash scripts/install_udev_rules.sh
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-```
-
-**RealSense D435i / D405**
+</TabItem>
+<TabItem value="realsense" label="RealSense D435i / D405">
 
 RealSense cameras depend on `pyrealsense2`. Usually you can install it directly with pip:
 
@@ -265,7 +486,22 @@ pip install pyrealsense2
 python -c "import pyrealsense2; print('pyrealsense2 OK')"
 ```
 
-If your system needs the full RealSense toolchain or udev rules, install `librealsense2` by following the official RealSense SDK documentation.
+If your system needs the full RealSense toolchain or udev rules, follow the [official librealsense documentation](https://github.com/realsenseai/librealsense).
+
+:::warning Use a USB 3.x port
+The D405 / D435i must be plugged into a USB 3.0/3.2 port (usually blue). If plugged into a USB 2.0 port, the typical symptom is: **the system recognizes the device and `pipeline.start()` succeeds, but frames never arrive** (`Frame didn't arrive within ...`). Check the negotiated speed with:
+
+```bash
+lsusb -t   # the camera line should show 5000M; 480M means it fell back to a USB 2.0 port — switch ports
+```
+:::
+
+</TabItem>
+</Tabs>
+
+:::note Expected result
+The matching verification command prints `pyorbbecsdk OK` or `pyrealsense2 OK` without a `ModuleNotFoundError`.
+:::
 
 **SDK Resource Summary**
 
@@ -280,83 +516,9 @@ If your system needs the full RealSense toolchain or udev rules, install `librea
 | ROS2 Wrapper | https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main |
 | RealSense SDK | https://github.com/realsenseai/librealsense |
 
-#### Step 5. Configure GraspNet (optional)
-
-You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
-
-The GraspNet `pointnet2` / `knn` extensions require a CUDA compiler. Before starting, make sure the active environment can find `nvcc`, and check that the CUDA version reported by `nvcc` matches the CUDA version used to build PyTorch:
-
-```bash
-nvcc --version
-python -c "import torch; print(torch.__version__, torch.version.cuda)"
-```
-
-If `nvcc` is missing, or if the CUDA version reported by `nvcc` does not match `torch.version.cuda`, install a CUDA compiler that matches your current PyTorch CUDA version. For example, if PyTorch reports `13.0`:
-
-```bash
-conda install -c nvidia cuda-nvcc=13.0
-```
-
-You can also install a PyTorch build that matches your current `nvcc` version instead. The two versions must match, otherwise building `pointnet2` / `knn` will fail with `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`.
-
-```bash
-cd sdk
-git clone https://github.com/graspnet/graspnet-baseline.git
-cd graspnet-baseline
-
-# Install PyTorch for your CUDA version first, then install GraspNet runtime dependencies
-pip install open3d tensorboard Pillow tqdm
-
-# Configure CUDA build paths before building the local operators.
-export CUDA_HOME=$CONDA_PREFIX
-export TORCH_CUDA_ARCH_LIST="12.0"
-export CPATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPATH
-export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPLUS_INCLUDE_PATH
-export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
-
-# Build CUDA operators
-cd pointnet2
-pip install . --no-build-isolation
-cd ../knn
-pip install . --no-build-isolation
-cd ..
-
-# Install GraspNet API
-git clone https://github.com/graspnet/graspnetAPI.git
-cd graspnetAPI
-sed -i "s/'sklearn'/'scikit-learn'/" setup.py
-pip install .
-cd ../../..
-```
-
-:::tip
-Note: If you follow the official graspnet-baseline repository documentation and use `python setup.py install`, CUDA / PyTorch related errors may occur. We recommend using `pip install . --no-build-isolation` so the extension is built against the PyTorch and CUDA configuration already installed in the active conda environment.
-:::
-
-:::tip
-If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and make sure the directory that contains `cusparse.h` is included in `CPATH` / `CPLUS_INCLUDE_PATH`. If you installed CUDA headers from conda `cuda-toolkit`, the include path is usually `$CONDA_PREFIX/targets/x86_64-linux/include` instead of the pip `nvidia/cu13/include` path shown above.
-:::
-
-:::tip
-In addition, older GraspNet API dependencies may still use the deprecated `sklearn` package name. The `sed` command replaces it with the currently recommended `scikit-learn` package name to avoid `The 'sklearn' PyPI package is deprecated` during installation. Unless you also upgrade the older GraspNet API dependencies, keep its `numpy==1.23.4` constraint because `transforms3d==0.3.1` still uses old NumPy aliases such as `np.float`.
-:::
-
-**Configure Pretrained Model**
-
-Download the official GraspNet pretrained weights from the graspnet-baseline official repository [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A), then place `checkpoint-rs.tar` at:
-
-```bash
-sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
-```
-
-Then verify in `config/default.yaml`:
-
-```yaml
-graspnet:
-  checkpoint: "checkpoint-rs.tar"
-```
-
-The `checkpoint` field supports three forms: a file name is resolved under `sdk/graspnet-baseline/checkpoints/`; a relative path is resolved from the project root; an absolute path is used directly.
+</div>
+</section>
+</div>
 
 ### 6. Directory Structure
 
@@ -388,9 +550,11 @@ rebot_grasp/
 │   ├── object_detection.py
 │   └── collect_handeye_eih.py
 ├── sdk/
-│   ├── pyorbbecsdk/              # Orbbec SDK Python wrapper
+│   ├── pyorbbecsdk/              # Orbbec SDK Python wrapper (source installation)
 │   └── reBotArm_control_py/      # reBot Arm SDK
-└── environment.yml               # Recommended conda environment file
+├── requirements-pytorch.txt      # Compatible versions installed from the CPU / CUDA index
+├── requirements.txt              # Project dependencies installed after PyTorch
+└── environment.yml               # Base Conda environment
 ```
 
 ### 7. Hand-Eye Calibration
@@ -406,16 +570,18 @@ sudo ip link set can0 up
 ip -details link show can0
 ```
 
-```bash
-python scripts/collect_handeye_eih.py
-```
-
 Before running it, make sure the following ArUco size parameter in `config/default.yaml` matches the actual printed marker:
 
 ```yaml
 calibration:
   aruco:
     marker_length_m: 0.1
+```
+
+After confirming the configuration, run automatic calibration:
+
+```bash
+python scripts/collect_handeye_eih.py
 ```
 
 In automatic mode, the arm traverses 50 preset poses and records a sample whenever the ArUco marker is detected stably. Even if you interrupt the process with `c` or `q`, the script still tries to compute the calibration result from the collected samples.
@@ -442,6 +608,13 @@ Recommended sample count is at least 5 samples, with 15 or more recommended.
 
 ### 8. Running and Debugging
 
+Verify the scenarios in this order: the first two do not connect to the robotic arm and help check the camera, detection, and grasp estimation. The next two connect to and control the robotic arm.
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
 #### 1. Verify object detection only
 
 ```bash
@@ -466,6 +639,12 @@ This step is useful to confirm:
 - The camera opens correctly
 - The YOLO model loads correctly
 - YOLO object detection works as expected
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
 
 #### 2. Verify grasp estimation only
 
@@ -497,19 +676,25 @@ Key controls:
 - `G`: print the current best grasp pose
 - `Q` / `Esc`: exit
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
 #### 3. Run the main grasping program
 
 ```bash
 python scripts/main.py
 ```
 
-If you only want to validate the target pose without moving the robotic arm:
+To validate the target pose while skipping the grasp motion:
 
 ```bash
 python scripts/main.py --dry-run
 ```
 
-It is recommended to verify the pose and reachable workspace with `--dry-run` first before executing a real grasp.
+Verify the pose and workspace with `--dry-run` before executing a real grasp. In this mode, the current script still initializes the arm, moves to the ready pose, and performs cleanup and homing on exit. For vision-only verification, use the first two scripts, which do not connect to the arm.
 
 Main program flow:
 
@@ -538,9 +723,19 @@ Runtime keys:
 - `R`: resume live preview
 - `Q` / `Esc`: exit
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
 #### 4. `scripts/set.py` — Grasp and Place Program
 
 Function: Grasp the banana and place it in the box.
+
+```bash
+python scripts/set.py
+```
 
 Completed flow:
 
@@ -551,7 +746,152 @@ Completed flow:
 5. Arm places banana in the box and returns to initial pose
 6. Press `Q` to exit system, arm returns to zero position
 
-#### 5. GraspNet camera estimation demo (optional)
+</div>
+</section>
+</div>
+
+### 9. GraspNet Advanced Module (Optional)
+
+The default Python SDK / OBB route does not require GraspNet. Follow these steps only when you need 6D grasp pose estimation from RGB-D point clouds.
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+#### Step 1. Install GraspNet and CUDA operators
+
+You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
+
+The GraspNet `pointnet2` / `knn` extensions require a CUDA compiler. Before starting, confirm that `nvcc` is available in the current environment and compare its CUDA version with the version used to build PyTorch:
+
+```bash
+nvcc --version
+python -c "import torch; print(torch.__version__, torch.version.cuda)"
+```
+
+PyTorch is installed separately in Step 2 of the basic installation. GraspNet requires an NVIDIA GPU and working CUDA support; skip this section if you followed the CPU option. Complete the checks below before configuring the compiler.
+
+**Step 1: Confirm your GPU**
+
+```bash
+nvidia-smi
+```
+
+The driver must recognize your NVIDIA GPU. Installing the CUDA Toolkit alone does not enable Intel / AMD integrated graphics to run this project's CUDA operators.
+
+**Step 2: Confirm PyTorch CUDA support**
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+```
+
+If `torch.cuda.is_available()` prints `True`, continue to the next step. If PyTorch is missing, `torch.version.cuda` is `None`, or CUDA is unavailable, return to Step 2 of the basic installation and complete the NVIDIA installation and verification. When switching between CPU and CUDA builds, remove the old build before reinstalling.
+
+**Step 3: Install the CUDA compiler matching your PyTorch**
+
+`pointnet2` / `knn` are local CUDA extensions: the CUDA version reported by `nvcc --version` must match `torch.version.cuda` when building, otherwise the build fails with `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)`. Check both versions first:
+
+```bash
+nvcc --version
+python -c "import torch; print(torch.version.cuda)"
+```
+
+Take `torch.version.cuda` showing `12.8` as an example, and install the matching compiler inside the conda environment:
+
+```bash
+conda install -c nvidia cuda-nvcc=12.8 cuda-cudart-dev=12.8
+
+which nvcc       # should point to $CONDA_PREFIX/bin/nvcc, not /usr/bin/nvcc
+nvcc --version   # should match torch.version.cuda
+```
+
+`cuda-nvcc` provides the compiler and `cuda-cudart-dev` provides the CUDA headers under `targets/x86_64-linux/include`; both are required. Once the conda environment is activated, `$CONDA_PREFIX/bin` precedes the system paths, so the conda `nvcc` automatically shadows the old system one (for example CUDA 11.5 from the Ubuntu repositories) — there is no need to uninstall the system CUDA.
+
+:::warning
+Do not downgrade PyTorch to match an old system `nvcc`: old CUDA releases may not support your GPU architecture (CUDA 11.5 supports at most sm_86; RTX 40 series requires CUDA 11.8+ and RTX 50 series requires CUDA 12.8+), and old PyTorch builds may be incompatible with other project dependencies such as recent ultralytics releases.
+:::
+
+**Step 4: Verify**
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+nvcc --version
+```
+
+When both CUDA versions match and `torch.cuda.is_available()` prints `True`, the PyTorch setup is complete and you can continue building the CUDA operators.
+
+```bash
+cd sdk
+git clone https://github.com/graspnet/graspnet-baseline.git
+cd graspnet-baseline
+
+# Install PyTorch for your CUDA version first, then install GraspNet runtime dependencies
+pip install open3d tensorboard Pillow tqdm
+
+# Configure CUDA build paths before building the local operators.
+# Note: use the conda cuda-toolkit targets directory for headers/libraries;
+# do not mix in the pip nvidia/cu13 directory (a version mismatch with conda nvcc causes build errors).
+export CUDA_HOME=$CONDA_PREFIX
+export TORCH_CUDA_ARCH_LIST="$(python -c 'import torch; major, minor = torch.cuda.get_device_capability(); print(f"{major}.{minor}")')"
+export CPATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPATH
+export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+
+# Build CUDA operators
+cd pointnet2
+pip install . --no-build-isolation
+cd ../knn
+pip install . --no-build-isolation
+cd ..
+
+# Install GraspNet API
+git clone https://github.com/graspnet/graspnetAPI.git
+cd graspnetAPI
+sed -i "s/'sklearn'/'scikit-learn'/" setup.py
+pip install .
+cd ../../..
+```
+
+:::tip
+Note: If you follow the official graspnet-baseline repository documentation and use `python setup.py install`, CUDA / PyTorch related errors may occur. We recommend using `pip install . --no-build-isolation` so the extension is built against the PyTorch and CUDA configuration already installed in the active conda environment.
+:::
+
+:::tip
+If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and add the directory containing `cusparse.h` to `CPATH` / `CPLUS_INCLUDE_PATH` (with conda `cuda-toolkit` this is usually `$CONDA_PREFIX/targets/x86_64-linux/include`). If you get header-related errors such as `'__NV_IS_DEVICE' was not declared in this scope`, they are usually caused by mixing the pip `nvidia/cu13` headers with the conda `nvcc` version — switch to the conda `targets` paths above and rebuild.
+:::
+
+:::tip
+In addition, older GraspNet API dependencies may still use the deprecated `sklearn` package name. The `sed` command replaces it with the currently recommended `scikit-learn` package name to avoid `The 'sklearn' PyPI package is deprecated` during installation. Unless you also upgrade the older GraspNet API dependencies, keep its `numpy==1.23.4` constraint because `transforms3d==0.3.1` still uses old NumPy aliases such as `np.float`.
+:::
+
+**Configure Pretrained Model**
+
+Download the official GraspNet pretrained weights from the graspnet-baseline official repository [Google](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view), [Baidu](https://pan.baidu.com/s/1Eme60l39tTZrilF0I86R5A), then place `checkpoint-rs.tar` at:
+
+```bash
+mkdir -p ~/rebot_grasp/sdk/graspnet-baseline/checkpoints
+
+sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
+```
+
+Then verify in `config/default.yaml`:
+
+```yaml
+graspnet:
+  checkpoint: "checkpoint-rs.tar"
+```
+
+The `checkpoint` field supports three forms: a file name is resolved under `sdk/graspnet-baseline/checkpoints/`; a relative path is resolved from the project root; an absolute path is used directly.
+
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+#### Step 2. Run the GraspNet camera estimation demo
 
 ```bash
 python scripts/graspnet_camera_demo.py
@@ -567,7 +907,13 @@ Key controls:
 
 After inference, Open3D can visualize the point cloud and grasp candidates.
 
-#### 6. GraspNet robotic grasping program (optional)
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+#### Step 3. Run the GraspNet robotic grasping program
 
 ```bash
 python scripts/grasp.py
@@ -577,18 +923,24 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 
 This script connects the GraspNet estimate to the robotic arm execution flow. YOLO selects the target, GraspNet outputs a 6D grasp pose, hand-eye calibration transforms it into the robot base frame, and the script checks IK reachability before running the pre-grasp, grasp, and retreat motion sequence.
 
-Running `python scripts/grasp.py` starts the full GraspNet robotic grasping flow and actually controls the robotic arm. `--dry-run` only prints the target pose and candidate filtering result without executing the grasp motion. `--target-class "light blue coffee cup"` specifies the YOLO target class and only filters and grasps GraspNet candidates for that class.
+Running `python scripts/grasp.py` starts the full GraspNet robotic grasping flow and controls the robotic arm. `--dry-run` prints the target pose and candidate filtering result and skips the grasp motion; the current script still initializes the arm, moves to the ready pose, and performs cleanup and homing on exit. `--target-class "light blue coffee cup"` specifies the YOLO target class and only filters and grasps GraspNet candidates for that class.
 
-### 9. FAQ
+</div>
+</section>
+</div>
+
+### 10. FAQ
 
 <h4>1. <code>ModuleNotFoundError: No module named 'motorbridge'</code></h4>
 
-This usually means the robotic arm SDK dependencies are not installed in the current Python environment. Please check:
+This means the robotic arm SDK dependencies are not installed in the current Python environment. `conda env update` updates only the base environment; install the project dependencies separately. Run the following from the project root:
 
 ```bash
 conda activate rebotarm
 conda env update -n rebotarm -f environment.yml
-cd sdk/reBotArm_control_py && pip install -e .
+# Complete the PyTorch installation in basic installation Step 2 first.
+python -m pip install -r requirements.txt -c requirements-pytorch.txt
+cd sdk/reBotArm_control_py && python -m pip install -e .
 ```
 
 <h4>2. Pressing <code>G</code> does not execute grasping</h4>
@@ -626,10 +978,11 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-Verify:
+Verify (`pointnet2_utils` / `knn_modules` are imported as top-level modules from the source directories, which is also how `models/` imports them; the grasping scripts add the source directories to `sys.path` automatically):
 
 ```bash
-python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
+cd sdk/graspnet-baseline
+python -c "import sys; sys.path[:0]=['pointnet2','knn']; import pointnet2_utils, knn_modules; print('import works')"
 ```
 
 <h4>5. CUDA architecture compatibility issues on newer GPUs when running GraspNet</h4>
@@ -658,19 +1011,33 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 If the output is `False`, fix the CUDA / PyTorch installation first. If it is `True` but the error remains, rebuild `pointnet2` and `knn`.
 
+</TabItem>
+<TabItem value="ros2-yoloe" label="Method 2 · ROS 2 / YOLOE">
+
 ## Visual Grasping Method 2
 
 ### 1. Project Overview
 
 This solution uses **ROS2** and **YOLO** on the reBot Arm B601-RS for object detection, grasping, and placing. The system starts the arm, depth camera, and grasp nodes in separate terminals.
 
-The depth camera currently supports **Orbbec Gemini 2** and **RealSense D405**. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
+The depth camera currently supports **Orbbec Gemini 2** and **RealSense D405 / D435i**. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
 
 ### 2. Environment Setup
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
 #### Step 1. Install the robotic arm ROS2 workspace
 
 First complete the installation and build of the `rebotarm_ros2` workspace by following [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/).
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
 
 #### Step 2. Install the camera
 
@@ -706,7 +1073,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 </details>
 
 <details className="content-details">
-<summary>Click to expand D405 setup</summary>
+<summary>Click to expand D405 / D435i setup steps</summary>
 
 1. Clone the RealSense SDK and switch to `v2.58.1`:
 
@@ -755,6 +1122,12 @@ colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
 
 </details>
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
 #### Step 3. Import the visual grasping package
 
 ```bash
@@ -763,6 +1136,12 @@ git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
 cd ~/rebotarm_ros2
 colcon build --symlink-install
 ```
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
 
 #### Step 4. Install the YOLO / YOLOE environment
 
@@ -805,6 +1184,12 @@ wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobilecli
 wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
 ```
 
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
 #### Step 5. Build the workspace
 
 ```bash
@@ -821,9 +1206,13 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ```
 
+</div>
+</section>
+</div>
+
 ### 3. Run the Project
 
-Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and Gemini 2 or D405 is connected over USB. Then bring up CAN:
+Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and Gemini 2, D405, or D435i is connected over USB. Then bring up CAN:
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -831,7 +1220,12 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-Start the stack in separate terminals so the grasping logic is easier to follow. Gemini 2 and D405 use different launch commands; pick the ones for your camera. If you want a one-click launch, you can write your own startup script.
+Start the stack in separate terminals so the grasping logic is easier to follow. Gemini 2, D405, and D435i use different launch commands; pick the ones for your camera. If you want a one-click launch, you can write your own startup script.
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">A</span>
+<div className="rebot-step-content">
 
 #### Terminal A — Start the arm + RViz
 
@@ -858,6 +1252,24 @@ ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=ca
 ```
 
 </details>
+
+<details className="content-details">
+<summary>Click to expand D435i</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=can0 use_rviz:=true
+```
+
+</details>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">B</span>
+<div className="rebot-step-content">
 
 #### Terminal B — Start the camera
 
@@ -887,6 +1299,27 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
+<details className="content-details">
+<summary>Click to expand D435i</summary>
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+ros2 launch realsense2_camera rs_launch.py \
+  align_depth.enable:=true \
+  depth_module.depth_profile:=640x360x30 \
+  depth_module.color_profile:=640x360x30
+```
+
+</details>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">C</span>
+<div className="rebot-step-content">
+
 #### Terminal C — Move to the observation pose + YOLO detection
 
 Activate your conda environment first with `conda activate yolo`. If the environment name is not `yolo`, replace it with your actual conda environment name.
@@ -904,10 +1337,11 @@ source ~/rebotarm_ros2/install/setup.bash
   -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=0 \
-  -p grasp_z_offset_m:=0.02 \
+  -p yolo_device:=gpu \
+  -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
-  -p grasp_x_offset_m:=-0.04 \
+  -p grasp_x_offset_m:=-0.02 \
+  -p grasp_y_offset_m:=0.002 \
   -p move_to_observation_on_start:=true \
   -p auto_publish_on_detect:=true
 ```
@@ -923,20 +1357,49 @@ Change the Python path to the YOLO environment you created.
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args 
--p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt 
--p color_topic:=/camera/camera/color/image_raw 
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw 
--p color_info_topic:=/camera/camera/color/camera_info 
--p optical_frame:=camera_color_optical_frame 
--p target_class:="cube" 
--p place_class:="box" 
--p yolo_device:=gpu 
--p grasp_z_offset_m:=0.01 
--p place_z_offset_m:=0.1 
--p grasp_x_offset_m:=-0.04 
--p move_to_observation_on_start:=true 
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+-p yolo_model:=/home/ubuntu/rebot_visual_model/yoloe-26s-seg.pt \
+-p color_topic:=/camera/camera/color/image_raw \
+-p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+-p color_info_topic:=/camera/camera/color/camera_info \
+-p optical_frame:=camera_color_optical_frame \
+-p target_class:=cube \
+-p place_class:=box \
+-p yolo_device:=gpu \
+-p grasp_z_offset_m:=0.01 \
+-p grasp_y_offset_m:=-0.005 \
+-p place_z_offset_m:=0.1 \
+-p grasp_x_offset_m:=-0.01 \
+-p move_to_observation_on_start:=true \
 -p auto_publish_on_detect:=true
+```
+
+</details>
+
+<details className="content-details">
+<summary>Click to expand D435i</summary>
+
+Change the Python path to the YOLO environment you created.
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+
+~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+  -p color_topic:=/camera/camera/color/image_raw \
+  -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+  -p color_info_topic:=/camera/camera/color/camera_info \
+  -p optical_frame:=camera_color_optical_frame \
+  -p target_class:="cube" \
+  -p place_class:="box" \
+  -p yolo_device:=gpu \
+  -p grasp_z_offset_m:=0.01 \
+  -p place_z_offset_m:=0.1 \
+  -p grasp_y_offset_m:=0.01 \
+  -p grasp_x_offset_m:=-0.04 \
+  -p move_to_observation_on_start:=true \
+  -p auto_publish_on_detect:=true
 ```
 
 </details>
@@ -947,8 +1410,15 @@ source ~/rebotarm_ros2/install/setup.bash
 | `target_class` | YOLOE text class name of the object to grasp; change it to match the real object. Supports the default YOLO classes |
 | `place_class` | YOLOE text class name of the place target; change it to match the real object. Supports the default YOLO classes |
 | `grasp_x_offset_m` | Forward/back offset in `base_link`; a negative value pulls the pose backward |
+| `grasp_y_offset_m` | Left/right grasp offset. `0.01` shifts 1 cm to the left; a negative value shifts to the right |
 | `grasp_z_offset_m` | Grasp height fine-tune. The default is for the flexible gripper, which is longer than the standard gripper |
 | `place_z_offset_m` | Extra lift used when placing, to control how high the object is released above the place point |
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">D</span>
+<div className="rebot-step-content">
 
 #### Terminal D — One-click grasp and place
 
@@ -967,6 +1437,12 @@ To change the delay, append a parameter. For example, trigger after 5 seconds:
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 ```
 
+</div>
+</section>
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">E</span>
+<div className="rebot-step-content">
+
 #### Terminal E — Return to home (optional)
 
 On the newer `rebotarm` build, pressing `Ctrl + C` in the terminal returns the arm to home automatically. To home it manually:
@@ -976,6 +1452,13 @@ source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 ```
+
+</div>
+</section>
+</div>
+
+</TabItem>
+</GraspingTabs>
 
 ## Contact
 
@@ -1000,3 +1483,5 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 - [RealSense SDK](https://github.com/realsenseai/librealsense)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
 - [Graspnet(Anygrasp) Docs](https://graspnet.net/)
+
+</div>

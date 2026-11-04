@@ -36,7 +36,7 @@ ONVIF 是安防设备常用的互联标准。部署本方案后，局域网内�
 | 设备 | 用途 |
 | --- | --- |
 | 一台 reCamera | 运行 ONVIF 和 RTSP 服务；支持 reCamera 2002 系列、云台版和 HQ PoE 版 |
-| 一台 Linux 电脑 | 安装并运行 SenseCraft Solution，用于部署方案；以下示例使用 Ubuntu 24.04 x86_64 |
+| 一台电脑 | 安装并运行 SenseCraft Solution，用于部署方案；以下示例使用 Ubuntu 24.04 x86_64 |
 | Home Assistant、NVR 或 VMS（可选） | 用于发现 reCamera、查看或录制视频 |
 
 > **网络提示：** HQ PoE 版没有 Wi-Fi 功能，请使用支持 PoE 的交换机供电并接入网络。无论使用哪种型号，都请确保 reCamera 与用于发现它的客户端处于同一局域网；跨网段发现通常需要额外配置网络设备。

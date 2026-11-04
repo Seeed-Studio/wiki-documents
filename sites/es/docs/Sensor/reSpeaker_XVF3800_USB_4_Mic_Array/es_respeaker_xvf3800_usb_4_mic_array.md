@@ -10,7 +10,7 @@ last_update:
   date: 11/10/2025
   author: Kasun Thushara
 createdAt: '2025-08-20'
-updatedAt: '2026-08-24'
+updatedAt: '2026-09-04'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/
 ---
 
@@ -57,6 +57,7 @@ El ReSpeaker XVF3800 USB 4-Mic Array es una matriz circular profesional de 4 mic
 | **Procesador de audio principal** | **XMOS XVF3800**, gestiona el procesamiento de audio incluyendo AEC, conformación de haz, supresión de ruido, etc. |
 | **Matriz de micrófonos**      | **Micrófonos MEMS PDM cuádruples** en patrón circular, que admiten **captura de voz de campo lejano de 360° (5 m)**. |
 | **Códec de audio**            | **TLV320AIC3104**, gestiona la conversión y salida de audio.                                         |
+| **Amplificador**              | **LM48511**, amplificador de clase D.                                                                |
 | **LED RGB**                   | **12x WS2812** LED RGB direccionables individualmente para retroalimentación visual (por ejemplo, estado, actividad de voz). |
 | **Botón de silencio (Mute)**  | Presiona para **silenciar/activar** la entrada del micrófono.                                       |
 | **LED indicador de silencio** | Se enciende (normalmente en rojo) para indicar que el audio está silenciado.                        |

@@ -1,5 +1,5 @@
 ---
-description: Getting started with Atom-X.
+description: "How to get started with the Atom-X humanoid robot: unboxing, power-on, first boot, basic motions and software setup."
 title: Atom-X Quick Start
 keywords:
   - Humanoid
@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/atom_x/
 createdAt: '2026-05-25'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-16'
 ---
 
 import Link from '@docusaurus/Link';

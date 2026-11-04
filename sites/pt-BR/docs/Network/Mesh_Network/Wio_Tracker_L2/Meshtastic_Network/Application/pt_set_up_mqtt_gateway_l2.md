@@ -9,7 +9,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-03-19'
+updatedAt: '2026-09-07'
 url: https://wiki.seeedstudio.com/pt-br/set_up_mqtt_gateway_l2/
 ---
 
@@ -42,7 +42,7 @@ Selecione o dispositivo de destino como `Seeed Wio Tracker L2` e escolha o firmw
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
-[LINE_44>Ligue o dispositivo, clique em `Enter DFU Mode`, haverá uma porta serial chamada `Tracker L2`, clique nela e conecte.
+Ligue o dispositivo, clique em `Enter DFU Mode`, haverá uma porta serial chamada `Tracker L2`, clique nela e conecte.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 

@@ -1,5 +1,6 @@
 ---
 description: 使用Tkinter的交互式GUI示例，通过roll、pitch、yaw、X、Y、Z和身体偏航的滑块控制Reachy Mini的头部位置和方向。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 头部位置GUI
 slug: /reachymini_examples_mini_head_position_gui
 keywords:

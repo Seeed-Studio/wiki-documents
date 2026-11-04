@@ -1,0 +1,10 @@
+position: 4
+label: 'Monitorización ambiental'
+collapsible: true
+collapsed: true
+className: _environmental-monitoring
+# link:
+#   type: generated-index
+#   slug: es/environment-monitoring
+#   title: Monitorización ambiental
+#   description: Detección y análisis de aire, agua, suelo y condiciones ambientales.

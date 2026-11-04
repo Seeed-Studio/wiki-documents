@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、rebot_control を MotorBridge と CAN バスと組み合わせて使用し、reBot Arm B601-RS 上で MIT 位置制御を行う方法を説明します。グリッパ制御、温度保護、安全な原点復帰も含まれます。
-title: reBot Arm B601-RS MIT 位置制御
+description: このチュートリアルでは、reBot Arm B601-RS 上で MIT 位置制御を行うために、rebot_control を MotorBridge と CAN バスと組み合わせて使用する方法を説明します。グリッパ制御、温度保護、安全なゼロ位置復帰も含まれます。
+title: B601-RS モーター SDK
 keywords:
   - reBot
   - B601-RS
@@ -8,30 +8,27 @@ keywords:
   - MotorBridge
   - RobStride
   - CAN
-  - robot arm
-  - gripper
-  - temperature protection
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+  - ロボットアーム
+  - グリッパ
+  - 温度保護
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_arm_b601_rs_mit_control
 sku: 100019336
 last_update:
   date: 2026-08-10
   author: LiJie
 createdAt: '2026-08-04'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_mit_control/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 # reBot Arm B601-RS MIT 位置制御
 
-<RebotRsDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">

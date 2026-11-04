@@ -1,6 +1,7 @@
 ---
-description: "Chapter 16 of the Seeed Embodied Intelligence Beginner's Course — train your first ACT policy: batch size, learning rate and steps, checkpoint management, starting training, monitoring loss and GPU status, and resuming interrupted training."
+description: 'Chapter 16 of the Seeed Physical AI Beginner''s Course — train your first ACT policy: batch size, learning rate and steps, checkpoint management, starting training, monitoring loss and GPU status, and resuming interrupted training.'
 title: Chapter 16 - Training Your First ACT Policy
+hide_title: true
 keywords:
   - reBot
   - ACT
@@ -9,22 +10,19 @@ keywords:
   - Policy
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_embodied_ai_course_chapter_16
+slug: /robotics/rebot_physical_ai_course_chapter_16
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
 last_update:
   date: 2026-09-19
-  author: LiuJunjie
+  author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-19'
-url: https://wiki.seeedstudio.com/rebot_embodied_ai_course_chapter_16/
+updatedAt: '2026-09-25'
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_16/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
-
-# 
 
 <div className="rebot-page">
 
@@ -33,7 +31,7 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
     <span className="eyebrow">Stage 3 · Chapter 16 · Practice</span>
     <h2>16. Training Your First ACT Policy</h2>
     <p>
-      Chapter 16 of the Seeed Embodied Intelligence Beginner's Course — batch size, learning rate and
+      Chapter 16 of the Seeed Physical AI Beginner's Course — batch size, learning rate and
       steps, checkpoint management, starting training, monitoring loss and GPU status, and resuming
       interrupted training.
     </p>
@@ -43,17 +41,25 @@ import RebotCourseNav from '@site/src/components/robotics/RebotCourseNav';
       <a href="#monitoring">Monitoring</a>
     </div>
   </div>
-  <div className="hero-card">
-    <strong>In this chapter</strong>
-    <span>16.1 Three Key Configs: Batch Size, Learning Rate, Steps</span>
-    <span>16.2 Saving and Managing Checkpoints</span>
-    <span>16.3 Starting Training</span>
-    <span>16.4 Monitoring Loss and GPU Status</span>
-    <span>16.5 Resuming Interrupted Training</span>
-  </div>
 </section>
 
-<RebotCourseNav />
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ No-code · No environment setup</span>
+    <p className="sensecraft-banner__title">Skip the setup — run the reBot Arm and LeRobot from one app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics is Seeed's no-code platform for the SO-ARM101, reBot Arm 102 + B601-RS and B601-DM. Connect the arms, calibrate, collect demonstrations, train and run inference from a guided interface — no Python environment, no terminal.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6-step guided workflow</li>
+      <li>✅ Cloud training — no local GPU</li>
+      <li>✅ Windows / macOS client</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Go to SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/sensecraft_robotics/">Software guide</a>
+  </div>
+</div>
 
 ## 16.1 Three Key Configs: Batch Size, Learning Rate, Steps
 

@@ -1,11 +1,11 @@
 ---
-description: このWikiでは、Damiaoシリーズモーターのチュートリアルを提供します。
-title: Damiao シリーズモーター
+description: "ロボットアーム向け DM（Damiao）関節アクチュエータの完全ガイド：モーターシリーズの概要、制御モード、CAN 通信、Seeed ロボットキットでの Python SDK の使い方。"
+title: Damiao
 keywords:
   - アクチュエータ
   - モーター
   - アーム
-  - ロボティクス
+  - ロボット工学
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /damiao_series
 sku: 100094243,100007512
@@ -13,7 +13,7 @@ last_update:
   date: 06/1/2025
   author: ZhuYaoHui
 createdAt: '2025-06-01'
-updatedAt: '2026-06-02'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/damiao_series/
 ---
 
@@ -57,7 +57,7 @@ J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 |
 
 **PC の Windows システム**
 
-- [Damiao Debugging Tools のダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe) を行います。
+- [Damiao Debugging Tools のダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DMTool-v2.1.9.4.exe) を行います。
 - [USB2CAN Tools](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe) をダウンロードします。
 
 ### 回路を PC に接続する

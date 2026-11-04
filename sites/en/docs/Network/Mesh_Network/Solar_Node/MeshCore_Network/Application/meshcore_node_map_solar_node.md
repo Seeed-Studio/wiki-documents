@@ -14,7 +14,7 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: 2026-04-3
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-18'
 url: https://wiki.seeedstudio.com/meshcore_node_map_solar_node/
 ---
 import Tabs from '@theme/Tabs';

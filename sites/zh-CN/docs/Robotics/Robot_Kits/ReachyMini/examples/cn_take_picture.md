@@ -1,5 +1,6 @@
 ---
 description: 示例演示如何从Reachy Mini的摄像头捕获单帧并将其保存为图像文件。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 拍照
 slug: /reachymini_examples_take_picture
 keywords:

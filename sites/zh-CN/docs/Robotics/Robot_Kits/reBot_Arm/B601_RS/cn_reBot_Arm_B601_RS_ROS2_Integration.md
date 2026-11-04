@@ -1,5 +1,6 @@
 ---
 description: 本教程介绍如何基于 reBot Arm B601-RS 搭建 ROS2 控制工作空间，完成 SocketCAN 连接、机械臂控制、RViz 可视化和 MoveIt 2 集成。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 title: B601-RS ROS2 集成
 keywords:
   - reBot Arm
@@ -19,20 +20,17 @@ last_update:
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-06-10'
-updatedAt: '2026-08-11'
+updatedAt: '2026-09-17'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 # reBot Arm B601-RS ROS2 集成
 
-<RebotRsDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">

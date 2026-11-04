@@ -9,7 +9,7 @@ last_update:
   date: 09/10/2026
   author: Luki
 createdAt: '2025-08-21'
-updatedAt: '2026-09-10'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';

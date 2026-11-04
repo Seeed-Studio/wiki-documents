@@ -1,5 +1,5 @@
 ---
-description: Getting started with Atom-S.
+description: "How to get started with the Atom-S humanoid robot: unboxing, power-on, first boot, basic motions and software setup."
 title: Atom-S Quick Start
 keywords:
   - Humanoid
@@ -14,7 +14,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/atom_s/
 createdAt: '2026-05-25'
-updatedAt: '2026-08-13'
+updatedAt: '2026-09-16'
 ---
 
 # Getting started with Atom-S

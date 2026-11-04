@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/Seeed-St
 slug: /xiao_nrf54lm20a_ncs
 sku: 100018440
 last_update:
-  date: 07/22/2026
+  date: 08/06/2026
   author: Brandy
 createdAt: '2025-05-13'
 updatedAt: '2026-08-07'
@@ -46,7 +46,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Introducción
 
-nRF Connect SDK (NCS) es el kit de desarrollo de software oficial de Nordic Semiconductor, construido sobre el sistema operativo en tiempo real Zephyr RTOS. Proporciona un marco de desarrollo completo, nativo y altamente optimizado para los chips de la serie nRF. En comparación con PlatformIO, NCS ofrece a los desarrolladores un acceso más completo a todas las capacidades de hardware de la serie nRF54, incluyendo compatibilidad nativa con Bluetooth Low Energy (BLE), Thread, Matter y otras pilas de protocolos inalámbricos, así como una gestión de energía y control de periféricos más detallados. Nordic mantiene y actualiza oficialmente este SDK de forma continua, garantizando una compatibilidad óptima con el firmware del chip y acceso temprano a las funciones más recientes.
+nRF Connect SDK (NCS) es el kit de desarrollo de software oficial de Nordic Semiconductor, construido sobre el sistema operativo en tiempo real Zephyr RTOS. Proporciona un marco de desarrollo completo, nativo y altamente optimizado para los chips de la serie nRF. En comparación con PlatformIO, NCS ofrece a los desarrolladores un acceso más completo a todas las capacidades de hardware de la serie nRF54, incluyendo compatibilidad nativa con Bluetooth Low Energy (BLE), Thread, Matter y otros stacks de protocolos inalámbricos, así como una gestión de energía y control de periféricos más detallados. Nordic mantiene y actualiza oficialmente este SDK de forma continua, garantizando una compatibilidad óptima con el firmware del chip y acceso temprano a las funciones más recientes.
 
 Este tutorial te guiará paso a paso por todo el proceso: desde la configuración del entorno de desarrollo de nRF Connect SDK y la instalación de la toolchain, hasta la creación y configuración de tu primer proyecto, y finalmente la grabación de tu primer programa de ejemplo en la XIAO nRF54LM20A Sense para verlo en funcionamiento.
 
@@ -125,7 +125,7 @@ Descarga según el sistema que estés utilizando [VS Code](https://code.visualst
 
 Para nRF Connect SDK v3.3.0, la instalación preempaquetada incluye tanto el código del SDK como la toolchain correspondiente. No necesitas instalar la toolchain por separado.
 
-El nRF Connect SDK es bastante grande y la instalación inicial tomará algo de tiempo. Asegúrate de tener una conexión de red estable durante la instalación para evitar fallos.
+El nRF Connect SDK es bastante grande y la instalación inicial llevará algo de tiempo. Asegúrate de tener una conexión de red estable durante la instalación para evitar fallos.
 
 :::
 
@@ -198,9 +198,9 @@ git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-3. Busca **nRF Connect**, modifica **Board Roots** y añade la ruta `~\your_path\platform-seeedboards\zephyr`. Aquí se almacenan las definiciones de placa para la serie XIAO nRF54LM20A.
+3. Busca **nRF Connect**, modifica **Board Roots** y añade la ruta `~\your_path\platform-seeedboards\zephyr\nrf`. Aquí se almacenan las definiciones de placa para la serie XIAO nRF54LM20A.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/ncs-fix.jpeg" style={{width:800, height:'auto'}}/></div>
 
 ### Crear una nueva aplicación
 
@@ -225,7 +225,7 @@ En esta sección, modificaremos un proyecto de ejemplo en blanco.
 
 ### Escribir el programa Blinky
 
-Dado que la serie XIAO nRF54LM20A cuenta con devicetree y asignaciones de pines de hardware personalizadas, es necesario modificar varios archivos. Los archivos que se deben editar se enumeran a continuación.
+Dado que la serie XIAO nRF54LM20A cuenta con un devicetree y asignaciones de pines de hardware personalizados, es necesario modificar varios archivos. Los archivos que se deben editar se enumeran a continuación.
 
 - `main.c`: Programa principal que contiene la lógica de la aplicación.
 - `app.overlay`: Archivo overlay de devicetree para la configuración de periféricos de hardware.
@@ -410,14 +410,14 @@ CONFIG_PWM=y
 CONFIG_SERIAL=n
 ```
 
-1. Ve a la sección APPLICATIONS de la extensión y selecciona Add build configuration. Verifica las versiones del SDK y del toolchain. Establece el Board Target en xiao_nrf54lm20a/nrf54lm20a/cpuapp y los archivos de configuración base en prj.conf. Desplázate hacia abajo en la página y haz clic en Generate and Build para generar los archivos de configuración correspondientes.
+1. Navega a la sección APPLICATIONS de la extensión y selecciona Add build configuration. Verifica las versiones del SDK y del toolchain. Establece Board Target en xiao_nrf54lm20a/nrf54lm20a/cpuapp y los archivos de configuración base en prj.conf. Desplázate hacia abajo en la página y haz clic en Generate and Build para generar los archivos de configuración correspondientes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/NCS/4_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 :::tip
 
-Si `xiao_nrf54lm20a/nrf54lm20a/cpuapp` no se puede encontrar aquí, comprueba si la ruta se añadió correctamente en la sección [Add Custom Board Path](#add-custom-board-path).
+Si `xiao_nrf54lm20a/nrf54lm20a/cpuapp` no se puede encontrar aquí, comprueba si la ruta se añadió correctamente en la sección [Add Custom Board Path](#Add-Custom-Board-Path).
 
 :::
 
@@ -441,7 +441,7 @@ west flash
 
 :::tip
 
-Si el firmware que se va a flashear se genera a partir del primer archivo de configuración creado en **Add build configuration**, debes especificar la ruta de configuración cuando existan múltiples carpetas de configuración como `build` y `build_1`.
+Si el firmware que se va a flashear se genera a partir del primer archivo de configuración creado en **Add build configuration**, debes especificar la ruta de configuración cuando existan varias carpetas de configuración como `build` y `build_1`.
 
 ```bash
 # examples: west flash configgration build_1
@@ -450,13 +450,13 @@ west flash --build-dir build_1
 
 :::
 
-### Observa el resultado
+### Observar el resultado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:600, height:'auto'}}/></div>
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
- **P1: Descargar el nRF Connect SDK es muy lento o se queda atascado**
+ **P1: La descarga del nRF Connect SDK es muy lenta o se queda atascada**
 
 Si la descarga del SDK es muy lenta o se queda atascada, puedes usar **aria2** para descargar los paquetes necesarios con múltiples conexiones y luego instalar el SDK usando **nrfutil**.
 

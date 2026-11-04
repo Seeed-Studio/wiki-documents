@@ -1,13 +1,14 @@
 ---
-description: このチュートリアルでは、reBot Arm B601-DM ロボットアームでの運動学解析と可視化に Pinocchio と MeshCat を使用する方法を紹介します。
-title: reBot Arm B601-DM Pinocchio & MeshCat
+description: このチュートリアルでは、ロボットアーム reBot Arm B601-DM 上で、運動学解析と可視化のために Pinocchio と MeshCat を使用する方法を紹介します。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
+title: B601-DM と Pinocchio
 keywords:
   - Pinocchio
   - MeshCat
-  - Robotic Arm
-  - Robot
+  - ロボットアーム
+  - ロボット
   - LeRobot
-  - Kinematics
+  - 運動学
 slug: /rebot_arm_b601_dm_pinocchio_meshcat
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
@@ -16,21 +17,18 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
 import '/src/css/rebot-wiki-style.css';
-import RebotDmDocNav from '@site/src/components/robotics/RebotDmDocNav';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm B601-DM Pinocchio & MeshCat
 
-<RebotDmDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -329,7 +327,7 @@ sudo chmod 666 /dev/can0
 ```
 
 :::
-<details>
+<details className="rebot-demo-details">
 <summary>デバッグツール（例外発生時のみ使用）</summary>
 
 **単一モーター制御コンソール（`0x01damiao_test.py`）**
@@ -886,26 +884,40 @@ uv run python example/sim/traj_sim.py
 <section className="rebot-step-item rebot-step-item--simulation">
 <span className="rebot-step-number">S4</span>
 <div className="rebot-step-content">
-<h4>ビジュアライザツール</h4>
-<p className="rebot-step-label">シミュレーションデモ 4 · sim/visualizer.py</p>
+<h4>可視化ツール</h4>
+<p className="rebot-step-label">シミュレーションデモ 4 · viz_test.py</p>
 
-MeshCat ビジュアライザのラッパーで、統一されたロボット表示インターフェースを提供します。
+MeshCat の可視化と逆運動学に基づき、シミュレーション上のロボットアームがハートを徐々に描き、その上に「LOVE」と書きます。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_MeshCat_LOVE.png" alt="viz_test.py によるハートと LOVE の描画結果" />
+</div>
 
 **主な機能**:
 
-- URDF モデルを読み込みロボットを表示
-- 3D ポリライン経路（参照/実際）を描画
-- IK 目標姿勢を表示（3 色座標軸 + 球）
-- 関節軌道アニメーションの再生をサポート
+- URDF モデルを読み込み、ロボットアームの動作を表示
+- 逆運動学を点ごとに解き、ハートと文字の経路に沿って移動
+- 灰色の線は理想経路を示し、赤い線はシミュレーション上のエンドエフェクタ軌跡を段階的に表示
+- 文字の画と画の間はペンを上げて移動し、接続線は描画しない
+- 描画完了後に最大位置誤差を出力
 
-**使用例**:
+**実行方法**:
 
-```python
-from example.sim.visualizer import Visualizer
-viz = Visualizer()
-viz.update(q)  # Update robot pose
-viz.draw_path(points, "path_name", color)  # Draw path
+プロジェクトのルートディレクトリで実行します。
+
+```bash
+uv run python viz_test.py
 ```
+
+**操作手順**:
+
+1. ブラウザで、ターミナルに表示された MeshCat の URL を開きます。
+2. ターミナルに戻り、Enter キーを押してハートと LOVE の描画を開始します。
+3. 描画完了後、ブラウザ上でドラッグし、さまざまな角度から結果を確認します。
+4. もう一度 Enter キーを押してプログラムを終了します。
+
+赤い軌跡はシミュレーションモデルの順運動学で計算されたものであり、実機の測定結果を表すものではありません。
 
 </div>
 </section>

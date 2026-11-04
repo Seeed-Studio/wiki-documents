@@ -11,27 +11,24 @@ keywords:
   - robot arm
   - gripper
   - temperature protection
-image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 slug: /rebot_arm_b601_rs_mit_control
 sku: 100019336
 last_update:
   date: 2026-08-10
   author: LiJie
 createdAt: '2026-08-04'
-updatedAt: '2026-08-27'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_mit_control/
 ---
 import '/src/css/rebot-wiki-style.css';
 
-import RebotRsDocNav from '@site/src/components/robotics/RebotRsDocNav';
 
 # reBot Arm B601-RS MIT Position Control
 
-<RebotRsDocNav />
-
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">

@@ -1,31 +1,31 @@
 ---
-description: Este wiki fornece uma introdução abrangente aos recursos de hardware e ao uso das interfaces da placa carrier reComputer Jetson Robotics J401. Ele abrange especificações detalhadas, módulos compatíveis, instruções de configuração e guias práticos para usar várias interfaces, como expansão de câmera M.2, Ethernet, USB, CAN, UART, I2C e GMSL2, ajudando os usuários a iniciar rapidamente o desenvolvimento de robótica na plataforma J401.
-title: Uso das Interfaces
+description: Este wiki fornece uma introdução abrangente aos recursos de hardware e ao uso das interfaces da placa carrier reComputer Jetson Robotics J401. Ele abrange especificações detalhadas, módulos compatíveis, instruções de configuração e guias práticos para usar várias interfaces, como M.2, Ethernet, USB, CAN, UART, I2C e expansão de câmera GMSL2, ajudando os usuários a iniciar rapidamente o desenvolvimento de robótica na plataforma J401.
+title: Uso das interfaces
 tags:
-  - Placa carrier J401-Robotics
+  - J401-Robotics carrier board
   - Jetson
-  - Robótica
-  - Uso das Interfaces
+  - Robotics
+  - Interfaces Usage
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer_robotics1.webp
 slug: /recomputer_jetson_robotics_j401_getting_started
 sku: 100071398, 100001302, 100010971
 last_update:
-  date: 06/10/2025
+  date: 10/19/2026
   author: Zibo
 createdAt: '2025-04-29'
-updatedAt: '2026-06-24'
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j401_getting_started/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Hardware da placa carrier Robotics J401 e Introdução
+# Placa carrier Robotics J401 Hardware e Introdução
 
 A reComputer Robotics J401 é uma placa carrier de borda de IA compacta e de alto desempenho, projetada para robótica avançada. Compatível com módulos NVIDIA Jetson Orin Nano/Orin NX nos modos Super/MAXN, ela oferece até 157 TOPS de desempenho de IA. Equipada com amplas opções de conectividade — incluindo duas portas Gigabit Ethernet, slots M.2 para módulos 5G e Wi‑Fi/BT, 6 portas USB 3.2, CAN, GMSL2 (via expansão opcional), I2C e UART — ela atua como um poderoso cérebro robótico capaz de processar dados complexos de vários sensores. Pré-instalada com JetPack 6 e Linux BSP, garante uma implantação perfeita.​
 
-Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1, a reComputer Robotics J401 conecta a tomada de decisão orientada por grandes modelos de linguagem ao controle físico de robôs, como planejamento de movimento e fusão de sensores. Ideal para o desenvolvimento rápido de robôs autônomos, ela acelera o tempo de lançamento no mercado com interfaces prontas para uso e frameworks de IA otimizados.
+Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1, a reComputer Robotics J401 conecta a tomada de decisão orientada por modelos de linguagem de grande porte ao controle físico de robôs, como planejamento de movimento e fusão de sensores. Ideal para o desenvolvimento rápido de robôs autônomos, ela acelera o tempo de lançamento no mercado com interfaces prontas para uso e frameworks de IA otimizados.
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics-carrier-board.png"/>
@@ -63,16 +63,16 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
 - Manual do usuário x 1
 
 :::note
-1.Por favor, projete uma solução robusta de dissipação de calor de acordo com o Guia de Projeto Térmico, quando em alimentação de alta tensão e temperatura de operação.
-2.Por favor, instale o dissipador de calor no módulo para obter melhor desempenho.
-3.Durante a operação com entrada de alta tensão e alta carga, não toque no dissipador de calor para evitar queimaduras.
-4.Recomendação de adaptador de energia para validação: use o adaptador de energia recomendado no site oficial da Seeed.
+1. Ao utilizar fonte de alimentação de alta tensão e em temperatura de operação elevada, projete uma solução robusta de dissipação de calor de acordo com o Guia de Projeto Térmico.
+2. Fixe o dissipador de calor no módulo para obter melhor desempenho.
+3. Durante a operação com entrada de alta tensão e alta carga, não toque no dissipador de calor para evitar queimaduras.
+4. Recomendação de adaptador de energia para validação: use o adaptador de energia recomendado no site oficial da Seeed.
 
-- Adaptador de energia 19V/4.74A com conector barril 5525
+- Adaptador de energia 19V/4.74A conector barril 5525
 - Certifique-se de que os requisitos máximos de consumo de energia sejam atendidos.
-2.Compatibilidade do cabo de alimentação AC
+2. Compatibilidade do cabo de alimentação AC
 - Compre cabos de alimentação AC tipo trevo específicos para a região, de acordo com sua localização.
-3.Compatibilidade de acessórios
+3. Compatibilidade de acessórios
 - Use apenas acessórios oficialmente recomendados (por exemplo, módulos sem fio, câmeras, periféricos) para desempenho e compatibilidade ideais.
 
 :::
@@ -93,7 +93,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     <tr>
       <th rowSpan="1">Armazenamento</th>
       <td>M.2 KEY M PCIe</td>
-      <td>1x M.2 KEY M PCIe (M.2 NVMe 2280 SSD 128G incluído)</td>
+      <td>1x M.2 KEY M PCIe (inclui SSD M.2 NVMe 2280 de 128G)</td>
     </tr>
     <tr>
       <th rowSpan="3">Rede</th>
@@ -119,7 +119,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x CAN0 (XT30(2+2));<br />3x CAN1 (conector GH 4 pinos 1.25)</td>
+      <td>2x CAN0 (XT30(2+2));<br />3x CAN1 (conector GH 1.25 de 4 pinos)</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -127,18 +127,18 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART conector GH 4 pinos 1.25</td>
+      <td>1x UART conector GH 1.25 de 4 pinos</td>
     </tr>
     <tr>
       <td>I2C</td>
-      <td>2x I2C conector GH 4 pinos 1.25</td>
+      <td>2x I2C conector GH 1.25 de 4 pinos</td>
     </tr>
     <tr>
       <td>Ventoinha</td>
-      <td>1x conector de ventoinha 4 pinos (PWM 5V);<br />1x conector de ventoinha 4 pinos (PWM 12V)</td>
+      <td>1x conector de ventoinha de 4 pinos (PWM 5V);<br />1x conector de ventoinha de 4 pinos (PWM 12V)</td>
     </tr>
     <tr>
-      <td>Porta de expansão</td>
+      <td>Porta de extensão</td>
       <td>1x conector de expansão de câmera (para placa GMSL2)</td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <th rowSpan="1">Alimentação</th>
-      <td colSpan="2">19-54V XT30(2+2) (cabo XT30 para conector DC 5525 incluído)</td>
+      <td colSpan="2">19-54V XT30(2+2) (inclui cabo XT30 para conector DC 5525)</td>
     </tr>
     <tr>
       <th rowSpan="1">Versão do Jetpack</th>
@@ -184,7 +184,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     </tr>
     <tr>
       <th rowSpan="1">Temperatura de operação</th>
-      <td colSpan="2">-20℃~60℃ (modo de 25W);<br />-20℃~55℃ (modo de 40W);<br />-20℃~50℃ (modo MAXN);<br />(com dissipador de calor reComputer Robotics com ventoinha)</td>
+      <td colSpan="2">-20℃~60℃ (Modo 25W);<br />-20℃~55℃ (Modo 40W);<br />-20℃~50℃ (Modo MAXN);<br />(com dissipador de calor reComputer Robotics com ventoinha)</td>
     </tr>
     <tr>
       <th rowSpan="1">Garantia</th>
@@ -273,26 +273,26 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eaq3jfzUJiVJpBSdd0UqtKIB8cRP--j90it2K1Vk7Neo3g?e=sYD5S2">Download</a></td>
-      <td>c63d1219531245abecc7bbdcafc73d3<br />4f75547454c7af85de40f08396a87e5ee  </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBwi3AQXJiaTZiPQaKocDSkAciLsok9znKGnAPczuZ_IfY?e=S2v5QV">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>c63d1219531245abecc7bbdcafc73d34<br />f75547454c7af85de40f08396a87e5ee</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWIfNPP5Te5CqqiIBwXxilwBeTYuJiXPlO4OVFZxf54-gw?e=fGjs5R">Download</a></td>
-      <td>5d1f3cd28eb44ca60132c87ccce5aca<br />f806ee945b486df9061a34de73fbb582b </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB8NF028_DESZJ9WwSg2Q34AVCNXeZFkwJi8pbvCOcX4cI?e=Zahpfm">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>5d1f3cd28eb44ca60132c87ccce5acaf<br />806ee945b486df9061a34de73fbb582b</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERskD6LNzTRFkvDuLiSubTsBH8_eEFinmE-mPDvUhYZREg?e=deeaoO">Download</a></td>
-      <td>e7f0c8e6b578d411f81122879f92c76<br />66adfada5ed493a4cc458dc169ca8c1b7  </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAakIBc6l2wS7qKAy-1ZeHPAbTtT8XLYaIgITvBGy8vezo?e=mPygXS">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>e7f0c8e6b578d411f81122879f92c766<br />6adfada5ed493a4cc458dc169ca8c1b7</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETx2PP9D85dHgzljJ_pJH-0Bsss82nPxMbOkJ-JvPA1hrQ?e=cReLPU">Download</a></td>
-      <td> b08cbdad8ab6e50222146d3175a9d2<br />627d499bf1d67cfaf69cc737b5bfa9e33a </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBnWlTaU6nIQLDOcM2KRQM6AQ6A-ODC8DnWFKRSfW8vRmc?e=1AAVH8">Download</a></td>
+      <td style={{overflowWrap: 'anywhere'}}>b08cbdad8ab6e50222146d3175a9d262<br />7d499bf1d67cfaf69cc737b5bfa9e33a</td>
     </tr>
     <tr>
       <td rowSpan={4}>7.2</td>
@@ -316,7 +316,7 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDqVVHOlgc7T6b5LbNYFImdAaUr2OlKT1IkQKk2P89lCW8">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA9PyE77GhDQLTpgDmAZ8kzAdqGsOC33XuaA6i60KX2k6s">Download</a></td>
       <td>6d9086d692a0f40fad02c75df1ff56ae<br />d9b368320bb2bfe3a777692513529697</td>
     </tr>
   </tbody>
@@ -330,7 +330,7 @@ O arquivo de imagem do JetPack é grande e pode levar cerca de 60 minutos para s
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 ### Entrar no modo Force Recovery
@@ -349,9 +349,9 @@ Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
 </div>
 
-**Passo 2.** Ligue a placa carrier conectando o cabo de alimentação.
+**Passo 2.** Ligue a carrier board conectando o cabo de alimentação.
 
-**Passo 3.** Conecte a placa ao PC host Ubuntu com um cabo USB Type-C de transmissão de dados.
+**Passo 3.** Conecte a placa ao PC host Ubuntu com um cabo de transmissão de dados USB Type-C.
 
 **Passo 4.** No PC host Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
@@ -446,7 +446,7 @@ Execute o comando `sudo rm /home/seeed/ssd/test` para excluir os arquivos de cac
 
 ## M.2 Key B
 
-O slot M.2 Key B é para expansão com módulo 5G, permitindo conectividade celular de alta velocidade para cenários de robótica e IA de borda.
+Slot M.2 Key B para expansão de módulo 5G, permitindo conectividade celular de alta velocidade para cenários de robótica e edge AI.
 
 ### Conexão de hardware
 
@@ -524,15 +524,15 @@ sudo nmcli con up "gsm"
 
 Este comando ativa a conexão GSM e, se for bem-sucedido, uma mensagem de confirmação será exibida.
 
-**Passo 7.** Reverificar identificação do módulo
-Execute novamente o comando mmcli -L para garantir que o módulo continue sendo reconhecido após configurar o APN.
+**Passo 7.** Verificar novamente a identificação do módulo
+Execute o comando mmcli -L novamente para garantir que o módulo continue sendo reconhecido após a configuração do APN.
 
 ```bash
 mmcli -L 
 ```
 
-**Passo 8.** Verificar status do módulo
-Por fim, podemos usar o comando mmcli -m 0 para ver informações detalhadas sobre o módulo, como alocação de IP, operadora e status da conexão de rede.
+**Passo 8.** Verificar o status do módulo
+Por fim, podemos usar o comando mmcli -m 0 para visualizar informações detalhadas sobre o módulo, como alocação de IP, operadora e status da conexão de rede.
 
 ```bash
 mmcli -m 0 
@@ -684,7 +684,7 @@ Usando esta porta serial, por meio do cabo de dados USB C, você pode monitorar 
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug.jpg"/>
 </div>
 
-**Passo 2.** Conecte o PC por meio de um cabo de dados USB e baixe o [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) no seu PC.
+**Passo 2.** Conecte o PC por meio de um cabo de dados USB e faça o download do [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) no seu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
@@ -754,7 +754,7 @@ O reComputer Jetson Robotics J401 está equipado com dois tipos de conectores de
 </div>
 
 :::note
-Para mais informações, verifique [aqui](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control).
+Para mais informações, consulte [aqui](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control).
 :::
 
 **Crie um script para definir a velocidade da ventoinha:**
@@ -788,7 +788,7 @@ A placa carrier Robotics J401 possui um Botão de Orifício para interação do 
 ## CAN
 
 CAN (Controller Area Network) é um padrão robusto de barramento veicular que permite que microcontroladores e dispositivos se comuniquem entre si sem um computador host.
-O Robotics J401 fornece uma interface CAN0 integrada ao conector de energia XT30 (2+2) para transmissão conveniente de energia e dados. Além disso, oferece 3 interfaces CAN1 por meio de dois conectores padrão JST de 4 pinos para conectividade flexível de barramento CAN.
+O Robotics J401 fornece uma interface CAN0 integrada ao conector de alimentação XT30 (2+2) para transmissão conveniente de energia e dados. Além disso, oferece 3 interfaces CAN1 por meio de dois conectores JST padrão de 4 pinos para conectividade flexível de barramento CAN.
 
 ### Comunicação CAN
 
@@ -806,13 +806,13 @@ Aqui demonstraremos como realizar comunicação de dados usando a interface CAN1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c.png"/>
 </div>
 
-De acordo com o método de conexão mostrado na figura abaixo, conecte o CANL, CANH e GND do CAN1 às portas CANL, CANH e GND correspondentes da ferramenta USB to CAN, respectivamente.
+De acordo com o método de conexão mostrado na figura abaixo, conecte o CANL, CANH e GND do CAN1 às portas CANL, CANH e GND correspondentes da ferramenta USB para CAN, respectivamente.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c1.png"/>
 </div>
 
-No nosso caso, de acordo com o adaptador que usamos, baixamos e instalamos o software que pode ser encontrado [aqui](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
+No nosso caso, de acordo com o adaptador que usamos, fizemos o download e instalamos o software que pode ser encontrado [aqui](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
 
 **Passo 1.** Configure a interface CAN1:
 
@@ -823,7 +823,7 @@ sudo ip link set can1 type can bitrate 500000
 sudo ip link set can1 up
 ```
 
-**Passo 2.** Configure o software de recebimento de dados no PC.
+**Passo 2.** Configure o software de recepção de dados no PC.
 Configure as definições de comunicação conforme mostrado na figura a seguir.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_software.png"/>
@@ -880,13 +880,13 @@ Pode-se ver que o terminal Jetson recebeu os dados enviados pelo PC.
 
 Aqui, uso o CAN0 para conectar ao CAN1 para demonstrar como vários dispositivos Jetson podem se comunicar via interface CAN.
 
-### Conexão de Hardware
+### Conexão de hardware
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can0_can1_c.jpg"/>
 </div>
 
-**Passo 1.** Remova a tampa inferior e coloque ambos os resistores de terminação de 120Ω na posição ​ON.
+**Passo 1.** Remova a tampa inferior e coloque ambos os resistores de terminação de 120Ω na posição ON.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/on.jpg"/>
@@ -914,7 +914,7 @@ sudo gpioset --mode=wait 2 4=0 &
 
 ```
 
-**Passo 3.** Abra um novo terminal para escutar o CAN1 e, via CAN0, enviar dados para o CAN1:
+**Passo 3.** Abra um novo terminal para escutar o CAN1 e, via CAN0, envie dados para o CAN1:
 
 ```bash
 #open a new terminal and run
@@ -928,7 +928,7 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 
 - `123` é o ID
 - `##` indica quadro CAN FD
-- O seguinte são 64 bytes de dados (um total de 128 caracteres hexadecimais)
+- A seguir estão 64 bytes de dados (um total de 128 caracteres hexadecimais)
 
 :::
 
@@ -940,7 +940,7 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 
 O Robotics J401 fornece um conector JST padrão de 4 pinos para comunicação serial UART.
 
-### Conexão de Hardware
+### Conexão de hardware
 
 Para comunicação UART, siga a fiação a seguir. Aqui, usamos a ferramenta USB para TTL como exemplo.
 
@@ -948,7 +948,7 @@ Para comunicação UART, siga a fiação a seguir. Aqui, usamos a ferramenta USB
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_c.jpg"/>
 </div>
 
-### Instruções de Uso
+### Instruções de uso
 
 **Passo 1.** Abra o terminal no dispositivo Jetson e execute o seguinte comando para habilitar a interface UART:
 
@@ -1000,7 +1000,7 @@ python3 uart_test.py
 O Robotics J401 fornece duas interfaces I2C (IIC0 e IIC1) por meio de conectores JST padrão de 4 pinos.
 Permite a conexão fácil de sensores e periféricos para expansão do sistema.
 
-### Conexão de Hardware
+### Conexão de hardware
 
 O Robotics J401 possui duas interfaces IIC GH-1.25 de 4 pinos, IIC0 e IIC1.
 <div align="center">
@@ -1031,11 +1031,11 @@ Conecte os dispositivos (IIC0/IIC1 ↔ Dispositivo) de acordo com as seguintes c
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_connect.jpg"/>
 </div>
 
-### Instruções de Uso
+### Instruções de uso
 
 **Passo 1.** Baixe a [Arduino IDE](https://www.arduino.cc/en/software/) para fazer o upload do código.
 
-**Passo 2.** Selecione o tipo da placa de desenvolvimento.
+**Passo 2.** Selecione o tipo de placa de desenvolvimento.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/slect_board.png"/>
@@ -1100,11 +1100,11 @@ sudo i2cdetect -y -r 1
 
 Podemos ver que o dispositivo conectado ao IIC0 está definido para o endereço 0x08.
 
-## Porta de Extensão
+## Porta de expansão
 
-A placa carrier Robotics j401 possui um conector de Expansão de Câmera para placa de extensão GMSL. Ela pode conectar e operar simultaneamente quatro câmeras GMSL ao mesmo tempo.
+A placa carrier Robotics j401 possui um conector de expansão de câmera para placa de extensão GMSL. Ela pode conectar e operar simultaneamente quatro câmeras GMSL ao mesmo tempo.
 
-### Conexão de Hardware
+### Conexão de hardware
 
 A seguir estão os slots de conexão da placa de expansão de câmera GMSL da placa carrier Robotics j401 (é necessário preparar uma placa de extensão com antecedência):
 
@@ -1120,7 +1120,7 @@ A seguir estão os modelos de câmeras GMSL que já suportamos:
 - SG8S-AR0820C-5300-G2A
 - [Orbbec Gemini 335Lg](https://www.seeedstudio.com/Orbbec-Gemini-335LG-3D-Camera-p-6541.html)
 
-### Instruções de Uso
+### Instruções de uso
 
 :::note
 Antes de habilitar a funcionalidade GMSL, certifique-se de que você instalou uma versão do JetPack com o driver da placa de expansão GMSL.
@@ -1141,7 +1141,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 :::note
-Existem três arquivos de overlay no total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 e Orbbec Gemini 335Lg. Estes correspondem, respectivamente, à câmera 3G do SG3S, à câmera 6G do SG2 e SG8S e à câmera da Orbbec. Como mostrado na Figura 3, configure o arquivo io de acordo com o modelo da sua câmera.
+Existem três arquivos de overlay no total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4 e Orbbec Gemini 335Lg. Eles correspondem, respectivamente, à câmera 3G do SG3S, à câmera 6G do SG2 e SG8S e à câmera da Orbbec. Como mostrado na Figura 3, configure o arquivo io de acordo com o modelo da sua câmera.
 :::
 
 **Passo 2.** Instale as ferramentas de configuração da interface de vídeo.
@@ -1172,9 +1172,9 @@ Ao abrir o fluxo de dados, você pode visualizar o vídeo da câmera.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div>
 
-### Usar as câmeras da linha SGxxx
+### Usar as câmeras da série SGxxx
 
-**Passo 1.** Defina o modo de sincronização de quadros (não é habilitado por padrão!). 
+**Passo 1.** Defina o modo de sincronização de quadros (não é habilitado por padrão!).
 
 :::info
 Aqui demonstramos como configurar câmeras de diferentes modelos e resoluções.
@@ -1235,12 +1235,12 @@ gst-launch-1.0 \
 
 ## Tela
 
-O reComputer Jetson Robotics J401 está equipado com uma DP1.4 (incluída na porta Type-C Host) para saída de vídeo em alta resolução.
+O reComputer Jetson Robotics J401 está equipado com um DP1.4 (incluído no Type-C Host) para saída de vídeo em alta resolução.
 
 ## Recursos
 
 - [Esquemático da Placa Carrier reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
-- [Folha de Dados da Placa Carrier reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
+- [Datasheet da Placa Carrier reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
 - [Arquivo 3D do reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
 - [Documento Mecânico - reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
 - [Catálogo de Produtos Seeed NVIDIA Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
@@ -1257,7 +1257,7 @@ O reComputer Jetson Robotics J401 está equipado com uma DP1.4 (incluída na por
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

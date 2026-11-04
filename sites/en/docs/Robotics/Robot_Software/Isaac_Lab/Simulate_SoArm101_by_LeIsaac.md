@@ -10,7 +10,7 @@ last_update:
   date: 8/1/2025
   author: Youjiang
 createdAt: '2025-08-01'
-updatedAt: '2025-09-12'
+updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/simulate_soarm101_by_leisaac/
 ---
 
@@ -174,7 +174,7 @@ This script must be executed within the LeRobot virtual environment. Please crea
 cd ..
 git clone https://github.com/huggingface/lerobot.git
 cd lerobot
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.12
 conda activate lerobot
 pip install -e .
 ```

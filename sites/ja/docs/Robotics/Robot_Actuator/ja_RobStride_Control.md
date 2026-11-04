@@ -1,6 +1,6 @@
 ---
-description: この Wiki は RobStride モーター制御コンプリートガイドを提供します
-title: RobStride モーター制御コンプリートガイド
+description: "RobStride 準ダイレクトドライブアクチュエータ制御の完全ガイド：MIT モード、CAN プロトコル、パラメータ調整、ロボット関節向け Python SDK の例。"
+title: RobStride
 keywords:
   - アクチュエータ
   - モーター
@@ -14,7 +14,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-19'
-updatedAt: '2026-06-12'
+updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/robstride_control/
 ---
 

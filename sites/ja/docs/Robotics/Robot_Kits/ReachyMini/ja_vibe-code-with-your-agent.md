@@ -1,5 +1,6 @@
 ---
 description: AI コーディングエージェントを使って Reachy Mini アプリを構築するためのガイド。AI エージェントが SDK パターンとベストプラクティスを理解できるように、AGENTS.md ドキュメントを参照します。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini_vibe/reachymini_1.webp
 title: お気に入りのエージェントで Vibe コーディング
 slug: /reachymini_vibe-code-with-your-agent
 keywords:

@@ -13,7 +13,7 @@ last_update:
   date: 4/27/2026
   author: Citric
 createdAt: '2022-11-15'
-updatedAt: '2026-05-27'
+updatedAt: '2026-09-11'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/
 ---
 

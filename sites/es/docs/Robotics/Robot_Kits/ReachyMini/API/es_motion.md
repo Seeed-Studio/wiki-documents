@@ -1,5 +1,6 @@
 ---
 description: Referencia de la API de movimiento para Reachy Mini que cubre las clases base de movimiento, movimientos goto y movimientos grabados.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: API de movimiento
 slug: /reachymini_api_motion
 keywords:
