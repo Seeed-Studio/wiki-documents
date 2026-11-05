@@ -19,15 +19,15 @@ url: https://wiki.seeedstudio.com/ja/meshtastic_wio_tracker_l2_intro/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="pir" width={900} height="auto" /></p>
 
-Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードで、LoRa（862–930 MHz）、高効率な処理を行う ESP32S3、そして高精度な位置追跡を実現する L76K GPS モジュールを搭載しています。柔軟性を重視した設計により、QSPI タッチスクリーン、E-Ink ディスプレイ、TF カードに加え、ソーラーパネルおよびバッテリー電源をサポートし、幅広い IoT およびオフグリッド用途に最適です。
+Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードであり、LoRa（862–930 MHz）、高効率な処理を行う ESP32S3、そして高精度な位置追跡を実現する L76K GPS モジュールを搭載しています。柔軟性を重視した設計により、QSPI タッチスクリーン、E-Ink ディスプレイ、TF カードに加え、ソーラーパネルおよびバッテリー電源をサポートしており、幅広い IoT およびオフグリッド用途に最適です。
 
 ## 特長
 
-- **3.2インチ高品質タッチスクリーン**：320×240 の高精細ディスプレイを備え、MUI と Base UI を切り替え可能で、メッセージング、マッピング、制御をモバイルフォンなしでスムーズに操作できます。
+- **3.2インチ高品質タッチスクリーン**：320×240 の高精細ディスプレイを搭載し、MUI と Base UI を切り替え可能で、メッセージング、マッピング、制御をモバイルフォンなしでスムーズに操作できます。
 
-- **ESP32S3 搭載で拡張に最適**：デュアルコア ESP32-S3（Wi-Fi および Bluetooth LE 搭載）により駆動される L2 Pro は、UI カスタマイズ、機能拡張、オープンソースアプリケーション開発のための柔軟なプラットフォームを提供します。
+- **ESP32S3 搭載で拡張に最適**：デュアルコア ESP32-S3（Wi-Fi および Bluetooth LE 搭載）を採用した L2 Pro は、UI カスタマイズ、機能拡張、オープンソースアプリケーション開発のための柔軟なプラットフォームを提供します。
 
-- **GNSS 位置情報対応オフラインマップ**：オフラインマップをあらかじめ MicroSD カードにダウンロードしておくことで、携帯電話回線やインターネット接続がなくても、デバイス上でリアルタイムの GNSS 位置を直接確認できます。
+- **GNSS 位置情報対応オフラインマップ**：オフラインマップをあらかじめ MicroSD カードにダウンロードしておくことで、携帯電話回線やインターネット接続がなくても、デバイス上でリアルタイムの GNSS 位置情報を確認できます。
 
 - **3000mAh の長時間駆動バッテリー**：充電頻度を抑えつつ、長時間のデイリーユースをサポートし、-10°C ～ 55°C の環境で動作します。
 
@@ -37,11 +37,11 @@ Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](http
 
 <table>
   <tr>
-    <th colspan="1">**Item**</th>
-    <th colspan="1">**Parameter**</th>
+    <th colspan="1">**項目**</th>
+    <th colspan="1">**パラメータ**</th>
   </tr>
   <tr>
-    <td colspan="1">**Processor**</td>
+    <td colspan="1">**プロセッサ**</td>
     <td colspan="1">Wio-S3 (ESP32S3 + SX1262 Module)</td>
   </tr>
     <tr>
@@ -147,6 +147,10 @@ Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](http
 |**デバイス電源入力**|5V, 1A|
 |**満充電カットオフ電圧**|4.2V|
 |**充電温度範囲**|0 ～ +45℃|
+
+**消費電力**
+
+画面モード、LoRa 周波数帯およびモデムプリセット、GPS 使用状況など、さまざまな構成における詳細な消費電力データと推定バッテリー寿命については、[Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx) を参照してください。
 
 ## ピン一覧
 
