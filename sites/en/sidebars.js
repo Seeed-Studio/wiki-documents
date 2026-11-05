@@ -2082,6 +2082,54 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker 44mm',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_44mm/respeaker_44mm_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker 44mm with XIAO',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_44mm/respeaker_44mm_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: 'Playback & Recording',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_i2s_test',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_record_playback',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Audio Streaming',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_udp_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Device Control',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_doa_vad',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_led_effects',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
