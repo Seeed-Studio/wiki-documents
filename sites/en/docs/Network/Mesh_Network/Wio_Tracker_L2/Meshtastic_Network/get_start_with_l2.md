@@ -213,7 +213,7 @@ Also, you can configure it on your phone APP.
 
 **Step2. SD Card Preparation**
 
-You need to format and install map in your SD card. For detailedd SD card usage tutorial, please click here to view.
+You need to format and install map in your SD card. For detailed SD card usage tutorial, please [click here](./Application/l2_sd_card.md) to view.
 
 **Step3. Install SD Card**
 
