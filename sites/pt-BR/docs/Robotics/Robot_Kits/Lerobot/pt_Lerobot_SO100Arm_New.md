@@ -276,7 +276,7 @@ Se você encontrar um erro como este, também pode usar este comando.
 
 <CodeBlock language="bash">
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
-</CodeBlock]
+</CodeBlock>
 
 6. Para dispositivos Jetson JetPack 6.0 e 6.1 (certifique-se de instalar [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) a partir do passo 5 antes de executar este passo):
 
