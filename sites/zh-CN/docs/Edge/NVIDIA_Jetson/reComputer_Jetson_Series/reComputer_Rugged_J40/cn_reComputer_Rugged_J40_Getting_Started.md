@@ -156,7 +156,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
     <tr>
       <td>CAN</td>
       <td colSpan={2}>2× CAN-FD（隔离，120 Ω），通过 M12 A-code 8 针</td>
-    </tr]
+    </tr>
     <tr>
       <td>串口</td>
       <td colSpan={2}>1× RS-232/422/485，通过 M12 A-code 8 针</td>
