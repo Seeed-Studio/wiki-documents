@@ -22,10 +22,10 @@ import TabItem from '@theme/TabItem';
 
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+当设备处于以下状态时，请不要手动重启或关闭电源。否则设备可能会损坏。
 
 1. 尚未完成消息传输过程
-2. 正在配置中
+2. 正在被配置
 :::
 
 ## 烧录固件
@@ -37,11 +37,11 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
-打开设备电源，点击 `Enter DFU Mode`，会出现名为 `Tracker L2` 的串口，点击并连接它。
+打开设备电源，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L2` 的串口，点击并连接它。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 
-然后点击 "Flash"。如果你想覆盖之前的固件，请不要忘记勾选 "Full Erase and Install"。
+然后点击 “Flash”。如果你想覆盖之前的固件，请不要忘记勾选 “Full Erase and Install”。
 
 ## 入门指南
 
@@ -84,7 +84,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="3" label="MUI">
 
-进入 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth` 图标。
+进入 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth icon`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -151,10 +151,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更多区域信息请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
+更完整的列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
 :::
 
 <Tabs>
@@ -195,7 +195,7 @@ import TabItem from '@theme/TabItem';
 
 </Tabs>
 
-现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足你的需求。
+现在你已经在设备上设置了 LoRa 区域，可以继续配置任意 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足你的需求。
 
 ### 地图使用
 
@@ -205,7 +205,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接进行配置。 
+你需要启用 GPS 才能获取位置信息。这可以通过 `long pressing the position icon` 在设备上直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -213,7 +213,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. SD 卡准备**
 
-你需要在 SD 卡中进行格式化并安装地图。关于 SD 卡使用的详细教程，请点击此处查看。
+你需要在 SD 卡中进行格式化并安装地图。有关 SD 卡使用的详细教程，请[点击此处](/cn/l2_sd_card)查看。
 
 **步骤 3. 安装 SD 卡**
 
@@ -231,7 +231,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接进行配置。 
+你需要启用 GPS 才能获取位置信息。这可以通过 `long pressing the position icon` 在设备上直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -239,17 +239,17 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. 设置并启用 Wifi**
 
-设置 Wifi 名称和密码。可以在设备上直接操作。 
+设置 Wifi 名称和密码。这可以在设备上直接操作。 
 
 :::tip
 
-连接的 Wifi 必须为 2.4G。设备无法使用 5G Wifi。
+连接的 Wifi 应为 2.4G。设备无法使用 5G Wifi。
 
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSetting.png" alt="pir" width={450} height="auto" /></p>
 
-当 wifi IP 为空且 wifi 图标为灰色时，表示 Wifi 已禁用；当显示 wifi IP 且 wifi 图标为白色时，表示 Wifi 已启用。 
+当 wifi ip 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。当显示 wifi ip 且 wifi 图标为白色时，表示 Wifi 已启用。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -271,20 +271,20 @@ import TabItem from '@theme/TabItem';
 
 ## 高级用法
 
-### 通过网页连接
+### 通过网站连接
 
-如果你想在网页上发送消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+如果你想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   **步骤 1**：切换到 BaseUI
 
-  **步骤 2**：打开网页
+  **步骤 2**：打开网站
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) 进入网页。
+[Click here](https://client.meshtastic.org/messages/broadcast/0) 进入网站。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   **步骤 3**：添加新设备
 
-    点击 "+ New Connection"。 
+    点击 “+ New Connection”。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -310,7 +310,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SensorConnection.png" alt="pir" width={500} height="auto" /></p>
 
-你可以通过 Grove 接口为设备添加传感器。以下传感器已经验证与设备上的 Grove 接口兼容。
+你可以通过 Grove 接口为设备添加传感器。以下传感器已验证与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -336,7 +336,7 @@ import TabItem from '@theme/TabItem';
   </tr>
   <tr>
     <td rowspan="2">其他</td>
-    <td>心率和血氧饱和度 SpO₂</td>
+    <td>心率和血氧饱和度（SpO₂）</td>
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
@@ -372,7 +372,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="13" label="菜单栏">
+<TabItem value="13" label="Menu Bar">
 | 交互方式 | 效果 |
 |---|---|
 | 长按主页图标 | 重新同步 |
@@ -382,50 +382,50 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 
-<TabItem value="15" label="主页">
+<TabItem value="15" label="Home Page">
 
 | 交互方式 | 效果 |
 |---|---|
 | 点击消息图标| 跳转到消息页面 |
 | 点击节点图标 | 跳转到节点页面 |
 | 点击时钟图标| 实时时间/运行时间切换 |
-| 长按 LoRa 图标| LoRa 发射 关闭/开启|
-| 长按通知图标| 通知 启用/禁用|
-| 点击通知图标| 声音/横幅/声音与横幅 切换|
-| Llong press GPS icon| GPS 开/关|
-| 长按 WiFi 图标| WiFi 开/关|
-| 长按 MQTT 图标| MQTT 开/关|
+| 长按 LoRa 图标| LoRa 发射关闭/开启|
+| 长按通知图标| 通知启用/禁用|
+| 点击通知图标| 声音/横幅/声音与横幅切换|
+| Llong press GPS icon| GPS 开启/关闭|
+| 长按 WiFi 图标| WiFi 开启/关闭|
+| 长按 MQTT 图标| MQTT 开启/关闭|
 | 点击二维码图标| 显示设备二维码 |
 
 </TabItem>
 
-<TabItem value="16" label="节点页面">
+<TabItem value="16" label="Node Page">
 | 交互方式 | 效果 |
 |---|---|
-| 点击一个节点| 显示详细信息|
-| 长按一个节点| 进入私聊|
-| 查看一个节点位置| 在地图中显示该节点位置|
+| 点击某个节点| 显示详细信息|
+| 长按某个节点| 进入私聊|
+| 查看某个节点位置| 在地图中显示该节点位置|
 
 </TabItem>
 
-<TabItem value="17" label="频道页面">
-长按某个频道以禁用/启用通知。选择并点击一个频道进入聊天窗口。
+<TabItem value="17" label="Channel Page">
+长按某个频道以禁用/启用通知。选择并点击某个频道进入聊天窗口。
 
 </TabItem>
 
-<TabItem value="18" label="消息页面">
-长按某个聊天以删除它。选择并点击一个聊天进入聊天窗口。
+<TabItem value="18" label="Message Page">
+长按某个聊天以删除它。选择并点击某个聊天进入聊天窗口。
 
 </TabItem>
 
-<TabItem value="19" label="设置页面">
+<TabItem value="19" label="Setting Page">
 
 | 交互方式 | 效果 |
 |---|---|
 | 用户短名称 | 修改设备短名称|
 | 用户长名称 | 修改设备长名称|
-| 屏幕密码 | 为设备启动设置密码 |
-| 配置密码 | 为配置更改设置密码 |
+| 屏幕 PIN | 为设备启动设置密码 |
+| 配置 PIN | 为配置更改设置密码 |
 | 区域 | 配置 LoRa 区域|
 | 调制解调器预设| 配置 LoRa 预设 |
 | 频道 | 编辑频道|
@@ -440,18 +440,18 @@ import TabItem from '@theme/TabItem';
 | NodeDB 重置 | 清除节点数据 |
 | 清除聊天记录 | 清除聊天记录 |
 | 重启（绿色图标） | 设备重启 |
-| 关机（红色图标） | 设备关机 |
+| 关机（红色图标） | 设备断电关机 |
 
 </TabItem>
 
-<TabItem value="20" label="工具">
+<TabItem value="20" label="Tool">
 | 交互方式 | 效果 |
 |---|---|
-| Mesh 探测器| 显示检测到的活动节点 |
-| 信号扫描器| 显示所选节点的 RSSI 和 SNR |
-| 路由跟踪| 显示所选节点的路由路径 |
-| 统计 | 显示数据包解码信息 |
-| 数据包日志 | 显示设备日志|
+| Mesh Detector| 显示检测到的活动节点 |
+| Signal Scanner| 显示所选节点的 RSSI 和 SNR |
+| Trace Route| 显示所选节点的路由路径 |
+| Statistic | 显示数据包解码信息 |
+| Packet Log | 显示设备日志|
 
 </TabItem>
 </Tabs>
@@ -462,7 +462,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="21" label="主页">
+<TabItem value="21" label="Home">
 | 交互方式 | 效果 |
 |---|---|
 | 选择 "Sleep Screen" | 临时关闭显示；按用户按键唤醒 |
@@ -470,7 +470,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="23" label="节点">
+<TabItem value="23" label="Node">
 
 导航到 "Node Action"
 
@@ -481,12 +481,12 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="24" label="位置">
+<TabItem value="24" label="Position">
 | 交互方式 | 效果 |
 |---|---|
-| 选择 "GPS Toggle" | GPS 开/关|
+| 选择 "GPS Toggle" | GPS 开启/关闭|
 | 选择 "GPS Format" | 切换 GPS 格式|
-| 选择 "Compass Headings" | 在动态、固定和冻结 “N” 指向之间切换 |
+| 选择 "Compass Headings" | 在动态、固定和冻结指向 “N” 之间切换 |
 | 选择 "Compass Calibrate" | 启动 30 秒的指南针校准流程 |
 </TabItem>
 
@@ -499,7 +499,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="26" label="系统">
+<TabItem value="26" label="System">
 | 交互方式 | 效果 |
 |---|---|
 | 选择 "Notifications" | 启用/禁用蜂鸣声|
@@ -517,7 +517,7 @@ import TabItem from '@theme/TabItem';
 
 ### 设备无法通过 BLE 与手机配对
 
-- 使用 MUI 时，请先切换到 Bluetooth Pairing 模式，再与手机配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
+- 使用 MUI 时，请先切换到 Bluetooth Pairing 模式，再与手机配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth icon`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -531,7 +531,7 @@ import TabItem from '@theme/TabItem';
 
 - 在设置好 Wifi 名称和 Wifi 密码后，请启用 Wifi。
 
-当 wifi ip 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。显示 wifi ip 且 wifi 图标为白色时，表示 Wifi 已启用。 
+当 Wifi IP 为空且 Wifi 图标为灰色时，表示 Wifi 已禁用。显示 Wifi IP 且 Wifi 图标为白色时，表示 Wifi 已启用。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -539,14 +539,14 @@ import TabItem from '@theme/TabItem';
 
 **现象描述**
 
-- 设备开机后，过一段时间会自动关机或重启。
+- 设备开机后，过一会儿会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
  这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中等……
 
 **排查步骤**
 
-你需要执行 flash 擦除，然后重新烧录最新固件。
+你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
 
@@ -554,7 +554,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="7" label="在 MUI 中配置">
+<TabItem value="7" label="Configure on MUI">
 
 前往 `Setting` 页面，点击 `Configure Reset`，选择 `Factory Reset`，然后点击 `OK`。
 
@@ -566,7 +566,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="9" label="在手机上配置">
 
-在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
+在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 </TabItem>
@@ -593,7 +593,7 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 <TabItem value="9" label="在手机上配置">
 
-打开 App 并连接到目标设备。进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
+打开 app 并连接到目标设备。进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
@@ -605,20 +605,20 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 #### 交换用户信息
 
-每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的某个节点发送或接收私信，可以在 App 中手动提示它们交换信息。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的某个节点发送或接收私信，可以在 app 中手动提示它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-每个节点都拥有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，而只有该接收方的私钥才能对其解密。因此，一旦两个节点互相知道对方的公钥，就可以进行私密通信。如果某个节点在私信传输中总是失败，请尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取该节点的新公钥。
+每个节点都拥有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，而只有该接收方的私钥才能对其解密。因此，一旦两个节点都知道对方的公钥，就可以进行私密通信。如果某个节点在私信传输中持续失败，请尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取该节点的新公钥。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
 重启故障设备以使配置生效。
 
 :::note
-密钥重新生成后，其他设备需要重新与该节点连接。因此，最好在其他设备的节点列表中删除该节点。
+在重新生成密钥后，其他设备需要重新与该节点连接。因此，最好在其他设备的节点列表中删除该节点。
 :::
 
 ### 信号质量
