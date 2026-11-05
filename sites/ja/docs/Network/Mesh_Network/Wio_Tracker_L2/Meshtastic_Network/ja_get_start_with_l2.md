@@ -136,7 +136,7 @@ MUI を使用する場合は、スマートフォンとペアリングする前�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
 
 
-</TabItem]
+</TabItem>
 </Tabs>
 
 ### LoRa の設定
