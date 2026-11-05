@@ -23,7 +23,7 @@ updatedAt: '2026-10-09'
 
 # ソースパッケージのダウンロードと展開
 
-アーカイブをこちらからダウンロードします: [recamera-pro-sdk-v1.0.10.tar.gz](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2FreCamera%2Frecamera%2Dpro%2Dsdk%2Dv1%2E0%2E10%2Etar%2Egz&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2FreCamera&ga=1)。これは本ガイドで説明している完全な BSP ソースパッケージです。
+アーカイブをこちらからダウンロードします: [recamera-pro-sdk-v1.0.10.tar.gz](https://drive.google.com/file/d/13TfS72WkcuzpD9O-xJ8fz1KkqyDzXvG9/view?usp=sharing)。これは本ガイドで説明している完全な BSP ソースパッケージです。
 
 ## パッケージ情報
 
