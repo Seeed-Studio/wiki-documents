@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-02 11:12:10 (北京时间)
-// 多语言页面: 2627 个
+// 生成时间: 2026-11-03 17:28:55 (北京时间)
+// 多语言页面: 2635 个
 
 (function() {
   'use strict';
@@ -2229,6 +2229,41 @@
     "pt"
   ],
   "/reServer_J2032_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_jetpack_l4t_ubuntu_kernel_uefi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_boot_log_analysis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_camera_data_chain": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_device_tree": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_usb": [
     "cn",
     "en",
     "es",
@@ -7023,6 +7058,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_multi_task_dit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_pi0": [
     "cn",
     "en",
@@ -9753,6 +9795,20 @@
     "pt"
   ],
   "/epaper_en05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_426_mono_kit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_73_color_kit": [
     "cn",
     "en",
     "es",

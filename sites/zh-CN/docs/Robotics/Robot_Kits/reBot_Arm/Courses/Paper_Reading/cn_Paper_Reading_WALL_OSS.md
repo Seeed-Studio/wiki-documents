@@ -54,7 +54,7 @@ import '/src/css/paper-reading-style.css';
   </a>
 </section>
 
-## 先验知识：理解目标与执行动作之间隔着什么
+## 预备知识：理解目标与执行动作之间隔着什么
 ### 从 VLM 到 VLA
 **解释：** 视觉语言模型（Vision\-Language Model，VLM）根据图片和文字理解场景；视觉语言动作模型（Vision\-Language\-Action Model，VLA）进一步输出机器人可以执行的数值动作。本文用机器人示范、图文问答及过程标注训练这条映射，而不是把一句文字回答直接发给电机。
 

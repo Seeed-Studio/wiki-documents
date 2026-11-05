@@ -11,12 +11,12 @@ keywords:
   - 机器人
 slug: /rebot_arm_b601_rs_grasping_demo
 last_update:
-  date: 2026-06-17
+  date: 2026-11-03
   author: YinHaizhou
 translation:
   skip: [[zh-CN]]
 createdAt: '2026-06-15'
-updatedAt: '2026-09-30'
+updatedAt: '2026-11-03'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/
 ---
 import '/src/css/rebot-wiki-style.css';
@@ -226,7 +226,16 @@ cd rebot_grasp
   <span className="rebot-step-number">2</span>
 <div className="rebot-step-content">
 
-#### 步骤 2. 创建并配置 conda 环境
+#### 步骤 2. 创建环境并按硬件选择 PyTorch
+
+本步骤分为三个阶段：创建基础环境、按硬件安装 PyTorch、安装项目依赖。请按顺序完成。
+
+<div className="rebot-step-flow rebot-step-flow--substeps">
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.1</span>
+<div className="rebot-step-content">
+
+##### 创建基础环境
 
 ```bash
 conda env create -f environment.yml -n rebotarm
@@ -234,30 +243,107 @@ conda activate rebotarm
 ```
 
 :::note 预期结果
-终端提示符前出现 `rebotarm`，表示当前已激活该环境，后续依赖将安装到该环境中。
+终端提示符前出现 `rebotarm`，表示当前已激活该环境。此时还没有安装 PyTorch，请继续完成下面两个阶段。
 :::
 
-如果你想使用其他环境名，可以将命令中的 `rebotarm` 替换为自定义名称。
+如果使用其他环境名，请同时修改上面两条命令中的 `rebotarm`。已有环境可在激活后执行 `conda env update -n rebotarm -f environment.yml` 更新基础依赖；该命令不会移除已有的 pip 包。
 
-:::warning 立即验证 PyTorch
-`environment.yml` 通过 `ultralytics` / `torchaudio` 的依赖自动安装 PyTorch。如果安装时网络中断，PyTorch 可能**静默缺失**，要等到运行 `main.py` 时才报错。创建环境后请立刻验证：
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.2</span>
+<div className="rebot-step-content">
+
+##### 按硬件安装 PyTorch
+
+下面两个标签使用相同的配套版本，仅下载源不同。当前版本文件使用 PyTorch 2.9.1、torchvision 0.24.1 和 torchaudio 2.9.1，适用于本教程的 Python 3.10、Ubuntu x86_64 环境。
+
+<Tabs groupId="rebot-pytorch-backend" defaultValue="cpu">
+<TabItem value="cpu" label="CPU（无 NVIDIA 显卡）">
+
+适用于 Intel / AMD 核显电脑，或希望先使用 CPU 验证的用户。
 
 ```bash
-python -c "import torch; print(torch.__version__, torch.__file__)"
+python -m pip install -r requirements-pytorch.txt --index-url https://download.pytorch.org/whl/cpu
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA available:', torch.cuda.is_available())"
 ```
 
-- 路径应显示为 `.../miniforge3/envs/rebotarm/...`（conda 环境内）。如果报 `ModuleNotFoundError`、或路径在 `~/.local/...`（用户目录）中，说明安装不完整/错位，请执行：
+:::note 预期结果
+PyTorch 路径位于当前 Conda 环境中，`CUDA available: False` 属于正常结果。
+:::
 
-```bash
-pip install --force-reinstall torch torchvision
+在 `config/default.yaml` 中保持以下设置：
+
+```yaml
+yolo:
+  device: "cpu"
 ```
 
-- 有 NVIDIA 显卡时，再确认 CUDA 可用：
+:::tip 适用范围
+CPU 可以运行基础 YOLO / OBB 流程，推理速度取决于模型和电脑性能。本项目 GraspNet 的 CUDA 算子需要 NVIDIA 显卡，请跳过后面的 GraspNet 进阶模块。
+:::
+
+</TabItem>
+<TabItem value="nvidia" label="NVIDIA 显卡（CUDA）">
+
+先确认驱动能够识别显卡，再安装 CUDA 版 PyTorch。以下以 CUDA 12.8 构建为例，需要显卡架构和驱动同时支持：
 
 ```bash
-python -c "import torch; print(torch.cuda.is_available())"
+nvidia-smi
+python -m pip install -r requirements-pytorch.txt --index-url https://download.pytorch.org/whl/cu128
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA build:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available())"
+```
+
+:::note 预期结果
+`nvidia-smi` 能列出显卡，PyTorch 路径位于当前 Conda 环境中，`CUDA available: True`。确认后，在 `config/default.yaml` 中使用第 0 块 GPU：
+
+```yaml
+yolo:
+  device: "0"
 ```
 :::
+
+:::tip 选择 CUDA 构建
+请对照 [PyTorch 官方版本列表](https://pytorch.org/get-started/previous-versions/)，选择支持当前 GPU、驱动和 Python 版本的构建，不要仅根据显卡系列或 `nvidia-smi` 显示的 CUDA 数字选择。
+
+如果需要更换 PyTorch 版本，请同步修改 `requirements-pytorch.txt` 中三个配套版本及下载源。普通 YOLO 推理使用预编译 wheel，无需单独安装 CUDA Toolkit；只有编译 GraspNet 扩展时才需要匹配的 CUDA 编译器。
+:::
+
+如果 CUDA 不可用，请先检查驱动、显卡架构和所选 wheel，或使用 CPU 标签中的安装方式完成基础验证。
+
+</TabItem>
+</Tabs>
+
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2.3</span>
+<div className="rebot-step-content">
+
+##### 安装项目依赖并验证
+
+完成任一硬件路线后，在项目根目录执行：
+
+```bash
+python -m pip install -r requirements.txt -c requirements-pytorch.txt
+python -m pip check
+python -c "import torch, torchvision, torchaudio, cv2; from ultralytics import YOLO; from calibration.aruco_pose import ArUcoDetector; ArUcoDetector(); print('Vision dependencies OK:', cv2.__version__)"
+```
+
+:::note 预期结果
+`pip check` 输出 `No broken requirements found.`，验证命令输出 `Vision dependencies OK`，且没有导入错误。全部通过后，再继续安装机械臂和相机 SDK。
+:::
+
+:::tip 安装失败时
+`-c requirements-pytorch.txt` 用于约束 PyTorch 配套版本。请保留该参数，不要添加 `--upgrade`。如果 pip 失败，请检查末尾错误并重试对应阶段；能够激活 Conda 环境并不代表所有依赖都安装完成。
+
+OpenCV 只安装 `requirements.txt` 中指定的标准包，项目使用的 ArUco 接口在 4.7 中可用，请勿同时安装其他 OpenCV wheel。CLIP 从 Ultralytics 的 Git 仓库安装，需要系统中有 Git；首次加载 YOLOE 时还可能下载模型权重。
+:::
+
+</div>
+</section>
+</div>
 
 </div>
 </section>
@@ -274,9 +360,9 @@ pip install -e .
 cd ../..
 ```
 
-如果 `pip install -e .` 报 `Multiple top-level packages discovered in a flat-layout`，请在 `reBotArm_control_py` 的 `pyproject.toml` 中加入显式包发现配置，然后重新执行 `pip install -e .`：
+如果 pip install -e . 报 Multiple top-level packages discovered in a flat-layout，请在 reBotArm_control_py 的 pyproject.toml 中加入显式包发现配置，然后重新执行 pip install -e .：
 
-```toml
+```bash
 [tool.setuptools.packages.find]
 include = ["reBotArm_control_py*"]
 ```
@@ -299,7 +385,8 @@ hardware_yaml: rebotarm_rs.yaml
 
 本项目支持 Orbbec Gemini 2 与 RealSense D435i / D405 等 RGB-D 深度相机。请根据实际使用的相机安装对应 SDK；如果当前环境已经能正常导入相机驱动，可跳过本步骤。
 
-**Orbbec Gemini 2**
+<Tabs groupId="rebot-depth-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2">
 
 Orbbec Gemini 2 深度相机依赖 `pyorbbecsdk`（Orbbec SDK v2 的 Python 版本）。优先推荐直接安装预编译 Python 包：
 
@@ -390,7 +477,8 @@ cd ../..
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
 ```
 
-**RealSense D435i / D405**
+</TabItem>
+<TabItem value="realsense" label="RealSense D435i / D405">
 
 RealSense 相机依赖 `pyrealsense2`。通常可以直接通过 pip 安装：
 
@@ -408,6 +496,9 @@ D405 / D435i 必须插在 USB 3.0/3.2 口（通常为蓝色）。如果插在 US
 lsusb -t   # 相机一行应显示 5000M；若显示 480M 说明落在了 USB 2.0 口，请换口
 ```
 :::
+
+</TabItem>
+</Tabs>
 
 :::note 预期结果
 对应验证命令输出 `pyorbbecsdk OK` 或 `pyrealsense2 OK`，且没有 `ModuleNotFoundError`。
@@ -463,7 +554,9 @@ rebot_grasp/
 ├── sdk/
 │   ├── pyorbbecsdk/              # Orbbec SDK Python 封装（源码安装时）
 │   └── reBotArm_control_py/      # reBot Arm SDK
-└── environment.yml               # 推荐的 conda 环境文件
+├── requirements-pytorch.txt      # 按 CPU / CUDA 下载源安装的配套版本
+├── requirements.txt              # PyTorch 安装后的项目依赖
+└── environment.yml               # 基础 Conda 环境
 ```
 
 ### 7. 手眼标定
@@ -679,7 +772,7 @@ nvcc --version
 python -c "import torch; print(torch.__version__, torch.version.cuda)"
 ```
 
-第一次配置本环境时，`environment.yml` 中的 `torchaudio` 通常已经把 PyTorch 一起装好了；如果没有装好（或装成了 CPU 版），请按下面步骤显式安装并验证 CUDA 版 PyTorch。GraspNet 的 `pointnet2` / `knn` 扩展依赖 PyTorch 和与之版本一致的 CUDA 编译器，全部完成后再开始编译。
+基础安装的步骤 2 已将 PyTorch 独立安装。GraspNet 需要 NVIDIA 显卡和可用的 CUDA；采用 CPU 路线时请跳过本节。先完成以下检查，再配置编译器。
 
 **第 1 步：确认显卡**
 
@@ -687,30 +780,15 @@ python -c "import torch; print(torch.__version__, torch.version.cuda)"
 nvidia-smi
 ```
 
-能列出 NVIDIA 显卡再继续；没有 NVIDIA 显卡只能使用 CPU 版 PyTorch，无法编译和运行 GraspNet 的 CUDA 算子。
+需要驱动能够识别 NVIDIA 显卡；仅安装 CUDA Toolkit 不能让 Intel / AMD 核显运行本项目的 CUDA 算子。
 
-**第 2 步：检查 / 安装 PyTorch**
-
-先检查当前环境中是否已有 PyTorch：
+**第 2 步：确认 PyTorch CUDA 可用**
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
 ```
 
-- 已安装且 `torch.cuda.is_available()` 输出 `True`：跳过安装，直接到第 3 步。
-- 报 `ModuleNotFoundError`（未安装），或 `torch.version.cuda` 为 `None`（装成了 CPU 版）：按下面的命令安装 CUDA 版。以 CUDA 13.0 为例：
-
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
-```
-
-`--index-url` 中的 CUDA 版本按显卡选择：
-
-| 显卡 | 推荐的 PyTorch CUDA 构建 |
-| --- | --- |
-| RTX 50 系（Blackwell，如 RTX 5070 / 5090） | `cu128` 或更新（如 `cu130`） |
-| RTX 40 / 30 系（Ada / Ampere） | `cu121` 或 `cu118` |
-| 无 NVIDIA 显卡 | `cpu`（仅 CPU，不能跑 GraspNet） |
+如果 `torch.cuda.is_available()` 输出 `True`，继续下一步。如果 PyTorch 未安装、`torch.version.cuda` 为 `None`，或 CUDA 不可用，请回到基础安装步骤 2，按 NVIDIA 路线完成安装和验证。切换 CPU / CUDA 构建时，也请按该步骤先移除旧构建，再重新安装。
 
 **第 3 步：安装与 PyTorch 匹配的 CUDA 编译器**
 
@@ -721,10 +799,10 @@ nvcc --version
 python -c "import torch; print(torch.version.cuda)"
 ```
 
-以 `torch.version.cuda` 显示 `13.0` 为例，在 conda 环境中安装匹配的编译器：
+以 `torch.version.cuda` 显示 `12.8` 为例，在 conda 环境中安装匹配的编译器：
 
 ```bash
-conda install -c nvidia cuda-nvcc=13.0 cuda-cudart-dev=13.0
+conda install -c nvidia cuda-nvcc=12.8 cuda-cudart-dev=12.8
 
 which nvcc       # 应指向 $CONDA_PREFIX/bin/nvcc，而不是 /usr/bin/nvcc
 nvcc --version   # 应与 torch.version.cuda 一致
@@ -757,7 +835,7 @@ pip install open3d tensorboard Pillow tqdm
 # 注意：头文件/库路径请用 conda cuda-toolkit 的 targets 目录，
 # 不要混用 pip 版 nvidia/cu13 目录（版本与 conda nvcc 不一致会导致编译报错）。
 export CUDA_HOME=$CONDA_PREFIX
-export TORCH_CUDA_ARCH_LIST="12.0"
+export TORCH_CUDA_ARCH_LIST="$(python -c 'import torch; major, minor = torch.cuda.get_device_capability(); print(f"{major}.{minor}")')"
 export CPATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPATH
 export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/targets/x86_64-linux/include:$CPLUS_INCLUDE_PATH
 export LIBRARY_PATH=$CONDA_PREFIX/targets/x86_64-linux/lib:$CONDA_PREFIX/lib:$LIBRARY_PATH
@@ -857,12 +935,14 @@ python scripts/grasp.py --target-class "light blue coffee cup"
 
 <h4>1. <code>ModuleNotFoundError: No module named 'motorbridge'</code></h4>
 
-表示当前 Python 环境还没有安装机械臂 SDK 依赖。请确认：
+表示当前 Python 环境还没有安装机械臂 SDK 依赖。`conda env update` 只更新基础环境，项目依赖需要单独安装。请在项目根目录执行：
 
 ```bash
 conda activate rebotarm
 conda env update -n rebotarm -f environment.yml
-cd sdk/reBotArm_control_py && pip install -e .
+# 先按基础安装步骤 2 完成 PyTorch 安装，再补齐项目依赖。
+python -m pip install -r requirements.txt -c requirements-pytorch.txt
+cd sdk/reBotArm_control_py && python -m pip install -e .
 ```
 
 <h4>2. 按 <code>G</code> 后不执行抓取</h4>

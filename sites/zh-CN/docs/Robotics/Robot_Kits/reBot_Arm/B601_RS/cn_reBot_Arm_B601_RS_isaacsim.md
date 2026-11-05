@@ -66,7 +66,7 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaa
 
 #### 下载与解压
 
-从 [NVIDIA 官网](https://developer.nvidia.com/isaac-sim) 下载 `isaac-sim-standalone-6.0.0-linux-x86\_64.zip`。
+在 [NVIDIA Isaac Sim 6.0.0 下载页面](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaac-sim-latest-release)的 Isaac Sim 一行选择 **Linux (x86_64)**，将二进制安装包 `isaac-sim-standalone-6.0.0-linux-x86_64.zip` 下载到 `~/Downloads`。以下命令适用于 Linux x86_64。
 
 ```Bash
 mkdir -p ~/isaacsim
@@ -96,7 +96,7 @@ ${ISAACSIM_PATH}/isaac-sim.sh
 
 首次启动会缓存着色器，可能需要 5-10 分钟，请耐心等待 GUI 出现。
 
-### ⚙️ 方式二：从源码构建（推荐）
+### ⚙️ 方式二：从源码构建
 
 > 💡 适合需要修改底层代码或调试核心功能的开发者。
 
@@ -104,17 +104,21 @@ ${ISAACSIM_PATH}/isaac-sim.sh
 
 ```Bash
 sudo apt update
-sudo apt install cmake build-essential git python3-pip
+sudo apt install build-essential git git-lfs gcc-11 g++-11
 ```
 
-确保 CUDA 和 cuDNN 已正确安装并匹配 GPU 驱动。
+确认默认的 `gcc --version` 和 `g++ --version` 均为 11。有关编译器配置和其他前置要求，请参阅 [Isaac Sim 6.0.0 源码构建说明](https://github.com/isaac-sim/IsaacSim/blob/v6.0.0/README.md#prerequisites-and-environment-setup)。构建过程需要联网下载依赖。
 
 #### 克隆与构建
 
+Isaac Sim 源码位于 [isaac-sim/IsaacSim](https://github.com/isaac-sim/IsaacSim)；旧的 NVIDIA-Omniverse 地址已转到弃用的 Dockerfile 仓库。以下命令使用与本教程二进制安装相同的 6.0.0 版本：
+
 ```Bash
-git clone https://github.com/NVIDIA-Omniverse/IsaacSim.git
+git clone --branch v6.0.0 https://github.com/isaac-sim/IsaacSim.git
 cd IsaacSim
-./build.sh release
+git lfs install
+git lfs pull
+./build.sh --release
 ```
 
 构建过程可能需要 30-60 分钟，取决于硬件性能。

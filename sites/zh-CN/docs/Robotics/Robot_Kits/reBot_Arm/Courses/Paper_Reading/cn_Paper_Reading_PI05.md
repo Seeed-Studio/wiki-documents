@@ -54,7 +54,7 @@ import '/src/css/paper-reading-style.css';
   </a>
 </section>
 
-## 先验知识
+## 预备知识
 
 ### 机器人如何从示范中学习
 
