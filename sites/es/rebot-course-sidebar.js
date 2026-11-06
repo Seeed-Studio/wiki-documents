@@ -215,9 +215,18 @@ const sidebars = {
           ],
         },
         {
-          type: 'html',
+          type: 'category',
+          label: 'Parte 5 · Modelos de mundo y aprendizaje de video-acción',
           className: 'robotics-section-title',
-          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">Parte 5 · Modelos de mundo y aprendizaje de video-acción</span>',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            {
+              type: 'doc',
+              id: `${P}/es_Paper_Reading_VLA_JEPA`,
+              label: 'VLA-JEPA — Supervisión por video y modelos de mundo latentes',
+            },
+          ],
         },
         {
           type: 'html',
