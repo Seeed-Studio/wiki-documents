@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 Evo-1：论文精读轻量级 Evo-1 VLA 骨干网络、交叉注意力、流匹配动作专家与两阶段训练。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 Evo-1
+description: "精读 论文精读轻量级 Evo-1 VLA 骨干网络、交叉注意力、流匹配动作专家与两阶段训练。"
+title: "Evo-1：如何在轻量化中保留视觉语言语义对齐"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_evo1/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-evo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-evo1-title">如何在 reBot Arm 与 SO-ARM101 上运行 Evo-1</h1>
+  <h1 id="paper-reading-evo1-title">Evo-1：如何在轻量化中保留视觉语言语义对齐</h1>
   <p className="paper-reading-lead">Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>轻量 VLA</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/evo1" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot EVO1 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=evo1 --policy.training_stage=stage1`：第一阶段冻结 VLM，训练动作头。
+- `--policy.path=your_stage1_checkpoint --policy.training_stage=stage2`：替换为第一阶段检查点路径，进入第二阶段并按阶段默认值微调 VLM 分支；重新建立优化器和调度器。
+- `--policy.vlm_model_name=OpenGVLab/InternVL3-1B-hf`：指定原生 Transformers 格式的 InternVL3 权重，注意 -hf 后缀。
+
+</aside>
 
 ## 预备知识：从理解指令到输出动作
 ### VLA 学的是什么
