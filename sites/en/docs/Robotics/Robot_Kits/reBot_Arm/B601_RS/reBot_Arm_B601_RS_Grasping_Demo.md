@@ -1018,20 +1018,33 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 
 ### 1. Project Overview
 
-This solution uses **ROS2** and **YOLO** on the reBot Arm B601-RS for object detection, grasping, and placing. The system starts the arm, depth camera, and grasp nodes in separate terminals.
+This workflow uses **ROS 2** and **YOLOE** for object detection, grasping, and placement on the reBot Arm B601-RS. Start the arm, depth camera, and grasping nodes in separate terminals.
 
-The depth camera currently supports **Orbbec Gemini 2** and **RealSense D405 / D435i**. This workflow does not require a calibration board for hand-eye calibration. Because of mounting and printed-part tolerances, each arm may show a small grasping offset.
+Supported depth cameras are the **Orbbec Gemini 2** and **RealSense D405 / D435i**. The robot model supplies preset camera mounting extrinsics, so you can skip collecting hand-eye calibration data with a calibration board. Use the specified bracket and mounting position for your camera. Mounting and printed-part tolerances can introduce errors. Check TF and the target pose before fine-tuning the offsets.
 
 ### 2. Environment Setup
+
+This workflow uses Ubuntu 22.04, ROS 2 Humble, system Python 3.10, and a dedicated Conda environment named `yolo`. Set up and build the arm, camera driver, and visual grasping packages together in the system environment before creating the Conda environment for YOLOE inference.
+
+Run steps 1–4 in a fresh terminal with Conda inactive. Source only the system ROS setup and leave any older workspace unsourced. Terminals A, B, D, and E also use the system environment. Use the `yolo` environment only in terminal C. The environment files and installation commands from the Python SDK / OBB workflow apply to that workflow only.
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
 <div className="rebot-step-content">
 
-#### Step 1. Install the robotic arm ROS2 workspace
+#### Step 1. Install the robotic arm ROS 2 workspace
 
-First complete the installation and build of the `rebotarm_ros2` workspace by following [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/).
+Follow the [reBot Arm B601-RS ROS 2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/) guide to prepare the arm and install ROS 2 Humble, the build tools, the arm workspace, and the low-level SDK. Confirm that the arm workspace builds successfully. Continue using the same `~/rebotarm_ros2` workspace for this guide.
+
+```bash
+source /opt/ros/humble/setup.bash
+echo "$ROS_DISTRO"
+sudo apt update
+sudo apt install -y python3-rosdep python3-colcon-common-extensions git wget cmake build-essential
+```
+
+Expect `ROS_DISTRO` to report `humble`. If the workspace already contains any of the repositories below, check its branch and contents before proceeding. Clone each repository only once per path.
 
 </div>
 </section>
@@ -1041,12 +1054,12 @@ First complete the installation and build of the `rebotarm_ros2` workspace by fo
 
 #### Step 2. Install the camera
 
-Choose one of the camera setups below and expand the matching section.
+Expand the setup instructions for your camera.
 
 <details className="content-details">
 <summary>Click to expand Gemini 2 setup</summary>
 
-Clone the Orbbec ROS2 SDK into the workspace and switch to the `v2-main` branch:
+Clone the Orbbec ROS 2 SDK into the workspace and switch to the `v2-main` branch.
 
 ```bash
 cd ~/rebotarm_ros2/src
@@ -1055,14 +1068,14 @@ cd OrbbecSDK_ROS2
 git checkout v2-main
 ```
 
-Build the workspace:
+Install the native dependencies listed in the driver repository. Step 3 installs the ROS dependencies together.
 
 ```bash
-cd ~/rebotarm_ros2
-colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
+sudo apt install -y libgflags-dev nlohmann-json3-dev libgoogle-glog-dev libdw-dev libssl-dev mesa-utils libgl1 \
+  ros-humble-image-transport-plugins ros-humble-compressed-image-transport
 ```
 
-Install udev rules:
+Install the udev rules.
 
 ```bash
 cd ~/rebotarm_ros2/src/OrbbecSDK_ROS2/orbbec_camera/scripts
@@ -1073,9 +1086,14 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 </details>
 
 <details className="content-details">
-<summary>Click to expand D405 / D435i setup steps</summary>
+<summary>Click to expand D405 / D435i setup</summary>
 
-1. Clone the RealSense SDK and switch to `v2.58.1`:
+1. Install the build dependencies, then clone the RealSense SDK and switch to `v2.58.1`.
+
+```bash
+sudo apt update
+sudo apt install -y cmake build-essential git pkg-config libusb-1.0-0-dev libudev-dev libssl-dev v4l-utils
+```
 
 ```bash
 cd ~
@@ -1084,41 +1102,43 @@ cd librealsense
 git checkout v2.58.1
 ```
 
-2. Install udev rules:
+2. Install the udev rules.
 
 ```bash
-sudo apt install -y v4l-utils
 cd ~/librealsense
 ./scripts/setup_udev_rules.sh
 ```
 
-3. Build and install the SDK:
+3. Build and install the SDK.
 
-:::tip
-If a proxy is enabled, disable it before configuring again:
-
-```bash
-unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
-```
-:::
+This build uses the RSUSB backend to avoid patching the kernel UVC module. It disables examples and GLSL extensions. `BUILD_TOOLS=ON` keeps command-line tools such as `rs-enumerate-devices` available. `realsense-viewer` is a graphical example.
 
 ```bash
-cd ~/librealsense
-mkdir -p build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)
-sudo make install
+cd ~/librealsense &&
+mkdir -p build && cd build &&
+cmake .. -DCMAKE_BUILD_TYPE=Release \
+  -DFORCE_RSUSB_BACKEND=ON \
+  -DBUILD_EXAMPLES=OFF \
+  -DBUILD_TOOLS=ON \
+  -DBUILD_GRAPHICAL_EXAMPLES=OFF \
+  -DBUILD_GLSL_EXTENSIONS=OFF &&
+cmake --build . --parallel 2 &&
+sudo cmake --install . &&
 sudo ldconfig
 ```
 
-4. Build the RealSense ROS2 package:
+:::tip CMake cannot find `OpenGL::GL`
+In librealsense `v2.58.1`, disabling only `BUILD_GRAPHICAL_EXAMPLES` still leaves the standard examples linked against `OpenGL::GL`, which can prevent CMake from generating the build files. If you encountered this error with `BUILD_EXAMPLES=ON`, rerun the commands above to update the options in the existing `build` directory.
+:::
+
+4. Clone the RealSense ROS 2 driver.
 
 ```bash
 cd ~/rebotarm_ros2/src
 git clone https://github.com/xiehuangbao888/realsense-ros.git
-cd ~/rebotarm_ros2
-colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
 ```
+
+Install the camera driver's ROS dependencies in step 3 and build the workspace in step 4. Reconnect the camera and run `lsusb -t` to verify that it is connected over USB 3.x. The speed should typically be `5000M` or higher.
 
 </details>
 
@@ -1128,14 +1148,28 @@ colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
   <span className="rebot-step-number">3</span>
 <div className="rebot-step-content">
 
-#### Step 3. Import the visual grasping package
+#### Step 3. Add the visual grasping package and install ROS dependencies
 
 ```bash
 cd ~/rebotarm_ros2/src/
 git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
-cd ~/rebotarm_ros2
-colcon build --symlink-install
 ```
+
+Initialize `rosdep` on first use. If it reports `default sources list file already exists`, proceed directly to updating the index.
+
+```bash
+sudo rosdep init
+```
+
+```bash
+rosdep update
+cd ~/rebotarm_ros2
+rosdep install --from-paths src --ignore-src -r -y --rosdistro humble --skip-keys="librealsense2 orbbec_description realsense2_description"
+```
+
+This command installs the system dependencies declared by the cloned ROS packages, including `diagnostic_updater`, `cv_bridge`, and `xacro`. The RealSense setup already installs `librealsense2` from source. The other two keys are camera description packages. The source cloned in step 2 provides the description package for your camera, and the other camera's package is optional for this setup. Skipping these keys avoids reinstalling the SDK or getting blocked by dependencies for the other camera.
+
+Expect `All required rosdeps installed successfully`. Resolve any remaining dependency errors before building. Check the full output to confirm that installation completed successfully.
 
 </div>
 </section>
@@ -1143,45 +1177,78 @@ colcon build --symlink-install
   <span className="rebot-step-number">4</span>
 <div className="rebot-step-content">
 
-#### Step 4. Install the YOLO / YOLOE environment
+#### Step 4. Build the workspace
 
-`grasp_yolo` calls Ultralytics YOLOE from Python. Use a dedicated conda environment and do not use system `/usr/bin/python3`.
+Use `--symlink-install` consistently when building this workspace, including after adding the camera driver and visual grasping package.
 
-**Create the environment**
+:::tip Conflicts with previous build directories
+If you previously built without `--symlink-install`, switching to it can produce `failed to create symbolic link` and `existing path cannot be removed: Is a directory`. Directories from the previous build conflict with the new symbolic links. Clear the build outputs and rebuild.
+
+Open a fresh terminal with Conda inactive and the workspace's `install/setup.bash` unsourced. Run the following commands.
 
 ```bash
-conda create -n yolo python=3.10
-conda activate yolo
-
-pip install -U ultralytics
-pip install "numpy==1.26.4" transforms3d
-
-# YOLOE open-vocabulary classes require the Ultralytics CLIP package, not the PyPI clip package
-pip install git+https://github.com/ultralytics/CLIP.git
+cd ~/rebotarm_ros2
+rm -rf build install log
 ```
 
-If you have an NVIDIA GPU, first confirm that CUDA is available. If the output is `False`, install a matching CUDA / PyTorch build. You can also continue on CPU, but the detection frame rate will be lower:
+This removes the workspace's build, install, and log directories and preserves `src` and other source files. Then rebuild the entire workspace using the commands for your camera.
+:::
 
 ```bash
-python -c "import torch; print(torch.cuda.is_available())"
+cd ~/rebotarm_ros2
+source /opt/ros/humble/setup.bash
 ```
 
-Verify YOLOE:
+<Tabs groupId="rebot-ros2-camera-build" defaultValue="realsense">
+<TabItem value="realsense" label="RealSense D405 / D435i">
 
 ```bash
-python -c "from ultralytics import YOLOE; print('YOLOE OK')"
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DUSE_LIFECYCLE_NODE=OFF
 ```
 
-**Download weights to `~/rebot_visual_model`**
+</TabItem>
+<TabItem value="orbbec" label="Orbbec Gemini 2">
 
 ```bash
-mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
 
-# MobileCLIP (required by YOLOE set_classes, about 242MB)
-wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobileclip2_b.ts
+</TabItem>
+</Tabs>
 
-# YOLOE segmentation weights can also download on first run; placing them here is recommended
-wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
+After the build succeeds, source the workspace and check the visual grasping package.
+
+```bash
+source ~/rebotarm_ros2/install/setup.bash
+ros2 pkg prefix rebot_visual_grasp
+```
+
+For RealSense, also run `ros2 pkg prefix realsense2_camera`. For Gemini 2, run `ros2 pkg prefix orbbec_camera`. Expect the installation path for the selected package in the current workspace.
+
+**Check the build result**
+
+Check the final `Summary`. The build succeeded if all packages show `Finished` and none show `Failed` or `Aborted`. For example, a workspace with the RealSense driver and visual grasping package may report the following output.
+
+```text
+Summary: 11 packages finished [33.8s]
+  4 packages had stderr output: realsense2_camera_msgs realsense2_description rebotarm_moveit_config rebotarm_msgs
+```
+
+Package counts and build times vary with the workspace and computer. `packages had stderr output` means those packages wrote to standard error. Check their logs to see what happened. If the output consists only of the CMake warnings described below, the build can still succeed.
+
+:::tip Stale paths after cleanup and CMake warnings
+If you sourced the workspace's `install/setup.bash`, removed `install`, and rebuilt in the same terminal, you may see warnings about nonexistent paths in `AMENT_PREFIX_PATH` or `CMAKE_PREFIX_PATH`. The terminal still holds the previous install paths. If all packages build successfully, source the new `install/setup.bash` as shown above and continue.
+
+For subsequent builds, use a fresh terminal and source only `/opt/ros/humble/setup.bash` before building. If `~/.bashrc` automatically sources the workspace, temporarily disable that line before rebuilding after a cleanup.
+
+With `--cmake-args -DUSE_LIFECYCLE_NODE=OFF`, some packages may report `Manually-specified variables were not used by the project: USE_LIFECYCLE_NODE`. This CMake warning is expected for packages outside the driver that uses the option.
+:::
+
+After building the ROS workspace, create the Conda inference environment in step 5. In every new terminal, source both setup files before running ROS commands.
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
 ```
 
 </div>
@@ -1190,29 +1257,179 @@ wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s
   <span className="rebot-step-number">5</span>
 <div className="rebot-step-content">
 
-#### Step 5. Build the workspace
+#### Step 5. Set up the YOLOE environment
+
+`grasp_yolo` calls Ultralytics YOLOE from Python. Use the Python interpreter in a dedicated Conda environment for this node.
+
+This step applies to x86_64 hosts running Ubuntu 22.04, ROS 2 Humble, and Python 3.10. Create the environment, choose a PyTorch backend, then install the vision and ROS Python runtime dependencies. Check the dependencies inside Conda separately because Python packages installed through apt may be unavailable there.
+
+<div className="rebot-step-flow rebot-step-flow--substeps">
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5.1</span>
+<div className="rebot-step-content">
+
+##### 5.1 Create the base environment
 
 ```bash
-cd ~/rebotarm_ros2
-source /opt/ros/humble/setup.bash
-colcon build --symlink-install
-source ~/rebotarm_ros2/install/setup.bash
+conda create -n yolo python=3.10
+conda activate yolo
+python -c "import sys; print(sys.executable)"
 ```
 
-The visual grasping environment is now ready. In every new terminal, source the following before running visual grasping commands:
+:::note Expected result
+The Python path ends in `envs/yolo/bin/python` inside your Conda installation. If you already have a `yolo` environment, activate it and continue with PyTorch and the project dependencies below.
+:::
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5.2</span>
+<div className="rebot-step-content">
+
+##### 5.2 Install PyTorch for your hardware
+
+Both tabs install PyTorch `2.9.1`, torchvision `0.24.1`, and torchaudio `2.9.1` from their respective package indexes. Select one backend in the active `yolo` environment.
+
+<Tabs groupId="rebot-ros2-pytorch-backend" defaultValue="cpu">
+<TabItem value="cpu" label="CPU (no NVIDIA GPU)">
+
+Use this option on computers with Intel or AMD integrated graphics, or to verify the setup on the CPU first.
+
+```bash
+python -m pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA available:', torch.cuda.is_available()); print(torch.rand(2, 3))"
+```
+
+:::note Expected result
+The PyTorch path is inside the active Conda environment and the command prints a random tensor. `CUDA available: False` is expected for this backend. Set `-p yolo_device:=cpu` when starting `grasp_yolo`. The CPU inference frame rate depends on the model and computer.
+:::
+
+</TabItem>
+<TabItem value="nvidia" label="NVIDIA GPU (CUDA)">
+
+Verify that the driver detects the NVIDIA GPU before installing a CUDA build of PyTorch. The example uses CUDA 12.8, which requires support from both the GPU architecture and the driver.
+
+```bash
+nvidia-smi
+python -m pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cu128
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA build:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available()); print(torch.rand(2, 3, device='cuda'))"
+```
+
+:::note Expected result
+`nvidia-smi` lists the GPU, the PyTorch path is inside the active Conda environment, and the command prints `CUDA available: True` and a CUDA tensor. Use `-p yolo_device:=0` when starting `grasp_yolo` to select GPU 0.
+:::
+
+:::tip Choose a CUDA build
+Use the [official PyTorch version list](https://pytorch.org/get-started/previous-versions/) to choose a build that supports your GPU, driver, and Python version. Consider all three when selecting a build, since the CUDA version shown by `nvidia-smi` alone is insufficient. The prebuilt wheel provides the CUDA runtime for standard YOLOE inference.
+
+If CUDA is unavailable, check the driver, GPU architecture, and selected wheel, or switch to the CPU tab to verify the basic setup. If you change the PyTorch version, update the matching torchvision and torchaudio versions and the pins in the next phase.
+:::
+
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5.3</span>
+<div className="rebot-step-content">
+
+##### 5.3 Install and verify project dependencies
+
+After installing one backend, keep `yolo` active and install the vision and Python runtime dependencies. The command preserves the matching PyTorch versions and resolves the NumPy and OpenCV constraints together.
+
+```bash
+python -m pip install "ultralytics==8.4.202" "torch==2.9.1" "torchvision==0.24.1" "torchaudio==2.9.1" "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d pyyaml lark typeguard
+
+# YOLOE open-vocabulary classes require the Ultralytics CLIP package.
+python -m pip install git+https://github.com/ultralytics/CLIP.git
+```
+
+:::tip ROS dependency messages during PyTorch installation
+If you have already sourced ROS 2, pip may report that `generate-parameter-library-py` requires `pyyaml` and `typeguard`. Check that the final `Successfully installed` line lists `torch`, `torchvision`, and `torchaudio`. Install both missing dependencies with the command in this phase, then run `pip check` and the import tests below.
+:::
+
+If you built `rebotarm_agent` with the default arm workspace configuration, install its declared dependency so that `pip check` can pass after you source the full workspace.
+
+```bash
+python -m pip install fastmcp
+```
+
+`fastmcp` supports the Agent feature. Install it only if your workspace contains `rebotarm_agent`.
+
+This workflow pins NumPy to `1.26.4` and OpenCV to `4.11.0.86`. Keep these pins and the matching PyTorch versions when installing or upgrading Ultralytics.
+
+:::tip OpenCV and NumPy dependency conflicts
+If you ran `pip install -U ultralytics` before separately installing NumPy `1.26.4`, pip may report `opencv-python ... requires numpy>=2`. For example, OpenCV `5.0.0.93` requires NumPy 2, while this workflow uses NumPy `1.26.4`. A final `Successfully installed` message can still leave conflicting dependencies.
+
+Keep the `yolo` environment active, install the compatible versions, then run the dependency and import checks below.
+
+```bash
+conda activate yolo
+python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
+```
+
+Keep only one OpenCV package that provides `cv2` in the environment. If you installed multiple variants such as `opencv-python`, `opencv-contrib-python`, or the corresponding headless packages, uninstall them and reinstall the pinned package.
+
+```bash
+python -m pip uninstall -y opencv-python opencv-contrib-python opencv-python-headless opencv-contrib-python-headless
+python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
+```
+:::
+
+**Check dependencies and verify YOLOE**
+
+Source the system ROS setup and the built workspace, then use the active Conda Python to check dependencies.
 
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
+python -m pip check
+python -c "import sys, torch, torchvision, torchaudio, cv2, numpy, yaml, lark, transforms3d, clip; from ultralytics import YOLOE; print('Python:', sys.executable); print('PyTorch:', torch.__version__); print('OpenCV:', cv2.__version__); print('NumPy:', numpy.__version__); print('CUDA available:', torch.cuda.is_available()); print('YOLOE OK')"
+python -c "import rclpy, cv_bridge, launch_ros; import rebot_visual_grasp.grasp_yolo; print('ROS grasp imports OK')"
 ```
+
+:::note Expected result
+`pip check` reports `No broken requirements found.` The Python path is inside the active Conda environment. The vision check prints `OpenCV: 4.11.0`, `NumPy: 1.26.4`, and `YOLOE OK`. The ROS import check prints `ROS grasp imports OK`. Expect `CUDA available: False` for the CPU backend and `True` for the GPU backend. These checks only import modules and leave the arm idle.
+:::
+
+If `pip check` reports `launch-ros ... requires pyyaml`, verify that you installed the dependencies above in `yolo`. If it reports `rebotarm-agent ... requires fastmcp`, install the Agent dependency as described above. If imports of `rclpy`, `cv_bridge`, or workspace modules fail, check the system ROS dependencies, workspace build results, and both `source` commands. Use those ROS packages from the system and workspace.
+
+Wait until the dependency and import checks pass before downloading the weights and starting the grasping nodes.
 
 </div>
 </section>
 </div>
 
+**Download the weights to `~/rebot_visual_model`**
+
+```bash
+mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
+
+# MobileCLIP is required by YOLOE set_classes and is about 242 MB.
+wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobileclip2_b.ts
+
+# The segmentation weights can download on first use. Download them here to verify the setup before launch.
+wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
+```
+
+Verify that YOLOE can load the weights and set text classes from the model directory. This catches missing model files or CLIP dependencies before you start the arm.
+
+```bash
+cd ~/rebot_visual_model
+python -c "from ultralytics import YOLOE; model = YOLOE('yoloe-26s-seg.pt'); model.set_classes(['cube', 'box']); print('YOLOE weights and text encoder OK')"
+```
+
+Expect `YOLOE weights and text encoder OK`. The first load may take longer. This command loads only the vision model and leaves the arm disconnected. Resolve any missing weights or dependencies before running the project.
+
+</div>
+</section>
+
+</div>
+
 ### 3. Run the Project
 
-Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and Gemini 2, D405, or D435i is connected over USB. Then bring up CAN:
+Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and the Gemini 2, D405, or D435i is connected over USB. Then bring up CAN.
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -1220,14 +1437,18 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-Start the stack in separate terminals so the grasping logic is easier to follow. Gemini 2, D405, and D435i use different launch commands; pick the ones for your camera. If you want a one-click launch, you can write your own startup script.
+:::warning The robotic arm will move
+In terminal C, `move_to_observation_on_start:=true` moves the arm to the observation pose. Terminal D triggers grasping and placement. Before starting, check the zero position, mounting bracket, workspace, and offsets. Keep people and obstacles clear of the motion path and be ready to stop the arm.
+:::
+
+Start terminals A, B, C, and D in that order, leaving the earlier terminals running. Select the launch commands for your camera. You can also write a startup script to launch the stack together.
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">A</span>
 <div className="rebot-step-content">
 
-#### Terminal A — Start the arm + RViz
+#### Terminal A — Start the arm and RViz
 
 <details className="content-details">
 <summary>Click to expand Gemini 2</summary>
@@ -1278,6 +1499,7 @@ ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=c
 
 ```bash
 source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
 
 ros2 launch orbbec_camera gemini2.launch.py
 ```
@@ -1308,8 +1530,8 @@ source ~/rebotarm_ros2/install/setup.bash
 
 ros2 launch realsense2_camera rs_launch.py \
   align_depth.enable:=true \
-  depth_module.depth_profile:=640x360x30 \
-  depth_module.color_profile:=640x360x30
+  depth_module.depth_profile:=640x480x30 \
+  rgb_camera.color_profile:=640x480x30
 ```
 
 </details>
@@ -1320,24 +1542,23 @@ ros2 launch realsense2_camera rs_launch.py \
   <span className="rebot-step-number">C</span>
 <div className="rebot-step-content">
 
-#### Terminal C — Move to the observation pose + YOLO detection
+#### Terminal C — Move to the observation pose and start YOLOE detection
 
-Activate your conda environment first with `conda activate yolo`. If the environment name is not `yolo`, replace it with your actual conda environment name.
+Run `conda activate yolo` first, or activate the environment by its actual name. The `python` command uses the active environment and works with either Miniconda or Miniforge. The examples use `yolo_device:=cpu` by default. For GPU inference, pass the CUDA check in step 5, then set `yolo_device:=0`.
 
 <details className="content-details">
 <summary>Click to expand Gemini 2</summary>
 
-Change the Python path to the YOLO environment you created.
-
 ```bash
+conda activate yolo
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:="$HOME/rebot_visual_model/yoloe-26s-seg.pt" \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=gpu \
+  -p yolo_device:=cpu \
   -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
   -p grasp_x_offset_m:=-0.02 \
@@ -1351,27 +1572,26 @@ source ~/rebotarm_ros2/install/setup.bash
 <details className="content-details">
 <summary>Click to expand D405</summary>
 
-Change the Python path to the YOLO environment you created.
-
 ```bash
+conda activate yolo
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
--p yolo_model:=/home/ubuntu/rebot_visual_model/yoloe-26s-seg.pt \
--p color_topic:=/camera/camera/color/image_raw \
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
--p color_info_topic:=/camera/camera/color/camera_info \
--p optical_frame:=camera_color_optical_frame \
--p target_class:=cube \
--p place_class:=box \
--p yolo_device:=gpu \
--p grasp_z_offset_m:=0.01 \
--p grasp_y_offset_m:=-0.005 \
--p place_z_offset_m:=0.1 \
--p grasp_x_offset_m:=-0.01 \
--p move_to_observation_on_start:=true \
--p auto_publish_on_detect:=true
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:="$HOME/rebot_visual_model/yoloe-26s-seg.pt" \
+  -p color_topic:=/camera/camera/color/image_raw \
+  -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+  -p color_info_topic:=/camera/camera/color/camera_info \
+  -p optical_frame:=camera_color_optical_frame \
+  -p target_class:=cube \
+  -p place_class:=box \
+  -p yolo_device:=cpu \
+  -p grasp_z_offset_m:=0.01 \
+  -p grasp_y_offset_m:=-0.005 \
+  -p place_z_offset_m:=0.1 \
+  -p grasp_x_offset_m:=-0.01 \
+  -p move_to_observation_on_start:=true \
+  -p auto_publish_on_detect:=true
 ```
 
 </details>
@@ -1379,21 +1599,20 @@ source ~/rebotarm_ros2/install/setup.bash
 <details className="content-details">
 <summary>Click to expand D435i</summary>
 
-Change the Python path to the YOLO environment you created.
-
 ```bash
+conda activate yolo
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:="$HOME/rebot_visual_model/yoloe-26s-seg.pt" \
   -p color_topic:=/camera/camera/color/image_raw \
   -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
   -p color_info_topic:=/camera/camera/color/camera_info \
   -p optical_frame:=camera_color_optical_frame \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=gpu \
+  -p yolo_device:=cpu \
   -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
   -p grasp_y_offset_m:=0.01 \
@@ -1405,14 +1624,14 @@ source ~/rebotarm_ros2/install/setup.bash
 </details>
 
 | Parameter | Description |
-|-----------|-------------|
-| `yolo_device:=gpu` | Use the GPU; set `cpu` if you do not have a discrete GPU. You can also use `yolo_device:=0` for GPU 0 |
-| `target_class` | YOLOE text class name of the object to grasp; change it to match the real object. Supports the default YOLO classes |
-| `place_class` | YOLOE text class name of the place target; change it to match the real object. Supports the default YOLO classes |
-| `grasp_x_offset_m` | Forward/back offset in `base_link`; a negative value pulls the pose backward |
-| `grasp_y_offset_m` | Left/right grasp offset. `0.01` shifts 1 cm to the left; a negative value shifts to the right |
-| `grasp_z_offset_m` | Grasp height fine-tune. The default is for the flexible gripper, which is longer than the standard gripper |
-| `place_z_offset_m` | Extra lift used when placing, to control how high the object is released above the place point |
+| ------------------ | ---------------------------------------------------------------------------- |
+| `yolo_device:=cpu` | Use the CPU by default. After verifying CUDA, set `yolo_device:=0` to use GPU 0. |
+| `target_class` | YOLOE text class for the object to grasp. Set it to match the object. The default YOLO classes are supported. |
+| `place_class` | YOLOE text class for the placement target. Set it to match the target. The default YOLO classes are supported. |
+| `grasp_x_offset_m` | Forward or backward offset in `base_link`. A negative value moves the grasp backward. |
+| `grasp_y_offset_m` | Lateral grasp offset. `0.01` moves the grasp 1 cm left. A negative value moves it right. |
+| `grasp_z_offset_m` | Grasp height adjustment. The default is for the flexible gripper, which is longer than the standard gripper. Adjust this value for your gripper's height. |
+| `place_z_offset_m` | Extra height above the placement point at which the arm releases the object. |
 
 </div>
 </section>
@@ -1420,9 +1639,7 @@ source ~/rebotarm_ros2/install/setup.bash
   <span className="rebot-step-number">D</span>
 <div className="rebot-step-content">
 
-#### Terminal D — One-click grasp and place
-
-The default trigger delay is 3 seconds.
+#### Terminal D — Trigger grasp and placement
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -1431,7 +1648,7 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py
 ```
 
-To change the delay, append a parameter. For example, trigger after 5 seconds:
+To change the delay, append the launch parameter. This example triggers after 5 seconds.
 
 ```bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
@@ -1445,7 +1662,7 @@ ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 
 #### Terminal E — Return to home (optional)
 
-On the newer `rebotarm` build, pressing `Ctrl + C` in the terminal returns the arm to home automatically. To home it manually:
+On normal shutdown, the arm controller attempts to return the arm to its home position and disable the motors. After an abnormal interruption or communication failure, automatic homing is unreliable. To return home manually, keep the controller in terminal A running and make sure the motion path is clear.
 
 ```bash
 source /opt/ros/humble/setup.bash
