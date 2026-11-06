@@ -13,7 +13,7 @@ sidebar_label: Getting Started
 sidebar_position: 1
 type: gettingstarted
 last_update:
-  date: 09/07/2026
+  date: 11/04/2026
   author: FaiyuetCik
 createdAt: '2026-08-11'
 updatedAt: '2026-09-08'
@@ -58,7 +58,7 @@ This combination makes it an ideal platform for portable HMI applications, IoT d
     <tr><td>MicroSD Card Slot</td><td>Yes</td></tr>
     <tr><td>Grove I2C Connector</td><td>No</td></tr>
     <tr><td>User Buttons</td><td>2</td></tr>
-    <tr><td>Battery Connector</td><td>2-pin JST, 3.7 V LiPo</td></tr>
+    <tr><td>Battery Connector</td><td>2-pin JST (2.0 mm pitch), 3.7 V LiPo</td></tr>
     <tr><td>Battery Monitoring</td><td>Battery voltage monitoring via D16 ADC; battery level can be estimated from the measured voltage. Battery status detection is not supported.</td></tr>
     <tr><td>Expansion Interfaces</td><td>1x I2C Interface, 1x I2S Interface, 1x JTAG Interface, 2x User Button Interface</td></tr>
     <tr><td>Board Size</td><td>26.4 × 51.4 × 12.6 mm</td></tr>

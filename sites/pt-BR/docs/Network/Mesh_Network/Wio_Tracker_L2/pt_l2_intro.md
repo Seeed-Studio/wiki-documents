@@ -19,13 +19,13 @@ url: https://wiki.seeedstudio.com/pt-br/meshtastic_wio_tracker_l2_intro/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="pir" width={900} height="auto" /></p>
 
-A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetado para flexibilidade, ele suporta tela sensível ao toque QSPI, telas E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
+A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e um módulo GPS L76K para rastreamento preciso de localização. Projetado para flexibilidade, ele suporta tela sensível ao toque QSPI, telas E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
 
 ## Recursos
 
-- **Tela sensível ao toque de 3,2'' de alta qualidade**: Com um display de 320×240 de alta nitidez e interfaces MUI e Base UI comutáveis, oferece interação fluida diretamente no dispositivo para mensagens, mapas e controle — sem precisar de um celular.
+- **Tela sensível ao toque de 3,2'' de alta qualidade**: Com uma tela de 320×240 de alta nitidez com MUI e Base UI comutáveis, oferece interação fluida diretamente no dispositivo para mensagens, mapeamento e controle — sem precisar de um celular.
 
-- **Alimentado por ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro fornece uma plataforma flexível para personalização de interface, desenvolvimento de recursos e aplicações de código aberto.
+- **Alimentado por ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro oferece uma plataforma flexível para personalização de UI, desenvolvimento de recursos e aplicações de código aberto.
 
 - **Mapas offline com posicionamento GNSS**: Faça o pré-download de mapas offline para um cartão MicroSD e visualize sua localização GNSS em tempo real diretamente no dispositivo, mesmo sem cobertura celular ou acesso à internet.
 
@@ -88,7 +88,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td colspan="1">Solar:JST-PH 2P-2.0mm, 5V ~ 13V</td>
   </tr>
   <tr>
-    <td colspan="1">Bateria de íons de lítio (2P-1.25mm): 3,7V</td>
+    <td colspan="1">Bateria de íon de lítio (2P-1.25mm): 3.7V</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="2">**Tela sensível ao toque IPS**</td>
@@ -113,7 +113,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td colspan="1">MIC</td>
   </tr>
     <tr>
-    <td colspan="1">Alto-falante: 6Ω 0,8W</td>
+    <td colspan="1">Alto-falante: 6Ω 0.8W</td>
   </tr>
     <tr>
     <td colspan="1">**Distância de comunicação**</td>
@@ -141,12 +141,16 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
 
 |Item|Parâmetro|
 | :- | :- |
-|**Capacidade da bateria**|Bateria recarregável de íons de lítio, 3000mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente|
+|**Capacidade da bateria**|Bateria recarregável de íon de lítio, 3000mAh|
+|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
 |**Protocolo de carregamento**|USB Type-C|
 |**Entrada de energia do dispositivo**|5V, 1A|
-|**Tensão de corte totalmente carregada**|4,2V|
+|**Tensão de corte totalmente carregada**|4.2V|
 |**Limite de temperatura de carregamento**|0 a +45℃|
+
+**Consumo de energia**
+
+Para dados detalhados de consumo de energia e estimativa de vida útil da bateria sob diferentes configurações (modo de tela, faixa de frequência LoRa e modem preset, uso de GPS, etc.), consulte a [Tabela de Consumo de Energia do Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
 
 ## Lista de pinos
 
