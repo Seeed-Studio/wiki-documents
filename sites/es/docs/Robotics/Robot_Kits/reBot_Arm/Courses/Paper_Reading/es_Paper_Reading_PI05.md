@@ -1,11 +1,11 @@
 ---
-description: "Cómo ejecutar Pi0.5 en reBot Arm y SO-ARM101: análisis del entrenamiento conjunto multi-fuente de pi0.5, la generación jerárquica de acciones, la generalización en mundo abierto y las diferencias con pi0."
-title: "Cómo ejecutar Pi0.5 en reBot Arm y SO-ARM101"
+description: "Un análisis detallado del artículo sobre el entrenamiento conjunto multi-fuente de pi0.5, la generación jerárquica de acciones, la generalización en mundos abiertos y las diferencias con pi0."
+title: "π0.5: Cómo el entrenamiento conjunto favorece la generalización en mundos abiertos"
 hide_title: true
 keywords:
-  - Análisis en profundidad del artículo
+  - Análisis detallado de artículo
   - pi05
-  - Aprendizaje de robots
+  - Aprendizaje robótico
   - reBot
   - B601-DM
   - B601-RS
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/es/robotics/paper_reading_pi05/
 ---
 
@@ -38,21 +38,35 @@ import '/src/css/paper-reading-style.css';
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS EN PROFUNDIDAD DEL ARTÍCULO</span>
-  <h1 id="paper-reading-pi05-title">Cómo ejecutar Pi0.5 en reBot Arm y SO-ARM101</h1>
-  <p className="paper-reading-lead">π0.5: un modelo Visión-Lenguaje-Acción con generalización en mundo abierto</p>
-  <ul className="paper-reading-badges" aria-label="En esta guía">
-    <li>Generalización en mundo abierto</li>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · ANÁLISIS DETALLADO DE ARTÍCULO</span>
+  <h1 id="paper-reading-pi05-title">π0.5: Cómo el entrenamiento conjunto favorece la generalización en mundos abiertos</h1>
+  <p className="paper-reading-lead">π0.5: un modelo Visión-Lenguaje-Acción con generalización en mundos abiertos</p>
+  <ul className="paper-reading-badges" aria-label="In this guide">
+    <li>Generalización en mundos abiertos</li>
     <li>Datos heterogéneos</li>
     <li>Control jerárquico</li>
     <li>Entrenamiento conjunto</li>
   </ul>
-  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener noreferrer" aria-label="Leer el artículo de π0.5 en arXiv">
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener noreferrer" aria-label="Read the pi0.5 paper on arXiv">
     <span className="paper-reading-source-tag">arXiv</span>
     <span>Leer el artículo</span>
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/pi05" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · Documentación de LeRobot π0.5 ↗</a>
+
+**Comandos clave de LeRobot**
+
+Estos son los fragmentos principales de argumentos de LeRobot para `lerobot-train`, usados junto con el dataset, el directorio de salida y otros ajustes. Consulta la documentación anterior para los requisitos de instalación.
+
+- `--policy.type=pi05 --policy.pretrained_path=lerobot/pi05_base`: Selecciona π0.5 y carga los pesos base; `pretrained_path` carga los pesos sin restaurar todos los ajustes del checkpoint.
+- `--policy.train_expert_only=true`: Opcionalmente congela el VLM y ajusta solo el experto de acción y las capas de proyección.
+- `--policy.gradient_checkpointing=true --policy.dtype=bfloat16`: Reduce la memoria de entrenamiento; la normalización por cuantiles predeterminada también requiere las estadísticas q01 y q99 del dataset.
+
+</aside>
 
 ## Requisitos previos
 
@@ -60,15 +74,15 @@ import '/src/css/paper-reading-style.css';
 
 **Explicación:** El aprendizaje por imitación utiliza operaciones humanas grabadas para aprender cómo moverse en una escena concreta bajo una instrucción.
 
-Un VLA recibe imágenes, texto de la tarea y el estado del robot, y produce acciones de control. Para “poner el plato en el fregadero”, las imágenes localizan el plato, el estado describe el brazo, la instrucción define el objetivo y las acciones controlan el agarre y la colocación.
+Un VLA recibe imágenes, texto de la tarea y el estado del robot, y produce acciones de control. Para “pon el plato en el fregadero”, las imágenes localizan el plato, el estado describe el brazo, la instrucción define el objetivo y las acciones controlan el agarre y la colocación.
 
 π0.5 también predice una subtarea corta, como “recoger el plato”, que luego condiciona la generación de acciones.
 
 ### De acciones directas a selección de subtareas
 
-![π0.5 Análisis en profundidad: 1.2 De acciones directas a selección de subtareas (imagen 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-08-en.png)
+![π0.5 Paper Deep-Dive: 1.2 From Direct Actions to Subtask Selection (image-08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-08-en.png)
 
-Mapear “limpiar la cocina” directamente a movimientos articulares combina decidir qué hacer con decidir cómo moverse. Las tareas más largas dificultan las transiciones.
+Mapear “limpia la cocina” directamente a movimientos articulares combina decidir qué hacer con decidir cómo moverse. Las tareas más largas hacen que las transiciones sean más difíciles.
 
 π0.5 separa estas decisiones dentro del mismo modelo: seleccionar la subtarea actual y luego generar acciones continuas. Por ejemplo:
 
@@ -77,9 +91,9 @@ Clean the kitchen → Pick up the plate → Grasping action chunk
 Observe again → Put the plate in the sink → Transport action chunk
 ```
 
-**Artículo:** Cada predicción cubre 50 puntos de control futuros, un bloque de acción. Las subtareas de alto nivel se actualizan más lentamente; el nivel bajo genera bloques condicionados por ellas, y el controlador ejecuta los puntos secuencialmente.
+**Artículo:** Cada predicción cubre 50 puntos de control futuros, un bloque de acción. Las subtareas de alto nivel se actualizan más lentamente; el nivel bajo genera bloques condicionados en ellas, y el controlador ejecuta los puntos secuencialmente.
 
-**Ejemplo:** Una articulación podría tener un objetivo de un solo paso `[0.1]` o un bloque de tres pasos `[0.1, 0.12, 0.15]`. Las salidas reales son multidimensionales y de 50 pasos. El robot sigue necesitando nuevas observaciones y predicciones; una tarea doméstica completa no se genera una vez y se ejecuta a ciegas.
+**Ejemplo:** Una articulación podría tener un objetivo de un solo paso `[0.1]` o un bloque de tres pasos `[0.1, 0.12, 0.15]`. Las salidas reales son multidimensionales y de 50 pasos. El robot aún necesita nuevas observaciones y predicciones; no se genera toda una tarea doméstica de una vez para ejecutarla a ciegas.
 
 ### Entrenamiento, inferencia y evaluación
 
@@ -101,11 +115,11 @@ Los robots útiles deben realizar tareas reales más allá del laboratorio. Los 
 
 Basándose en π0, π0.5 mejora la capacidad de adaptación mediante entrenamiento conjunto en tareas y fuentes heterogéneas: múltiples robots, predicción semántica de alto nivel y datos web. Las muestras combinan imágenes, instrucciones, detección de objetos, predicción de subtareas y acciones de bajo nivel.
 
-Los experimentos sugieren que la transferencia entre estas fuentes de conocimiento es importante para la generalización. Los autores describen un sistema aprendido de extremo a extremo que realiza tareas largas y hábiles de limpieza de cocina y dormitorio en hogares completamente desconocidos, y lo presentan como el primer sistema con esta combinación de capacidades.
+Los experimentos sugieren que la transferencia entre estas fuentes de conocimiento es importante para la generalización. Los autores describen un sistema aprendido de extremo a extremo que realiza tareas largas y diestras de limpieza de cocina y dormitorio en hogares completamente inéditos, y lo presentan como el primer sistema con esta combinación de capacidades.
 
 ### Comentario
 
-- **La cuestión central es si el robot funciona en otro hogar.** Recoger un plato en una sala de entrenamiento difiere de encontrar uno, elegir el siguiente paso y colocarlo en el fregadero de una cocina desconocida.
+- **La cuestión central es si el robot funciona en otro hogar.** Recoger un plato en una habitación de entrenamiento difiere de encontrar uno, elegir el siguiente paso y colocarlo en el fregadero de una cocina desconocida.
 
 - **Las fuentes cumplen funciones diferentes.** Otros robots aportan experiencia de manipulación, los datos imagen-texto aportan conocimiento de objetos y escenas, y las anotaciones de subtareas enseñan organización de tareas.
 
@@ -117,7 +131,7 @@ Los experimentos sugieren que la transferencia entre estas fuentes de conocimien
 
 ## Introducción
 
-![π0.5 Análisis en profundidad: 3. Introducción (imagen 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-00-en.png)
+![π0.5 Paper Deep-Dive: 3. Introduction (image-00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-00-en.png)
 
 ### Párrafo 1: Los entornos desconocidos son difíciles
 
@@ -127,7 +141,7 @@ Los experimentos sugieren que la transferencia entre estas fuentes de conocimien
 
 - **Planteamiento:** La receta de entrenamiento debe abarcar varios niveles de capacidad.
 
-![π0.5 Análisis en profundidad: Párrafo 1: Los entornos desconocidos son difíciles (imagen 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-10-en.png)
+![π0.5 Paper Deep-Dive: Paragraph 1: Unfamiliar Environments Are Difficult (image-10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-10-en.png)
 
 ### Párrafo 2: ¿Por qué usar experiencias diferentes?
 
@@ -137,17 +151,17 @@ Los experimentos sugieren que la transferencia entre estas fuentes de conocimien
 
 - **Planteamiento:** Los VLA proporcionan una interfaz compartida para imágenes, texto y acciones.
 
-![π0.5 Análisis en profundidad: Párrafo 2: ¿Por qué usar experiencias diferentes? (imagen 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-03-en.png)
+![π0.5 Paper Deep-Dive: Paragraph 2: Why Use Different Experiences? (image-03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-03-en.png)
 
 ### Párrafo 3: Un marco de entrenamiento conjunto
 
-- **Contenido:** Los autores proponen entrenar conjuntamente un VLA en diferentes tipos y fuentes de conocimiento.
+- **Contenido:** Los autores proponen entrenar conjuntamente un VLA con distintos tipos y fuentes de conocimiento.
 
 - **Problema:** Convertir la motivación anterior en un enfoque de investigación concreto.
 
 - **Planteamiento:** Presentar π0.5 y la composición de sus datos.
 
-![π0.5 Análisis en profundidad: Párrafo 3: Un marco de entrenamiento conjunto (imagen 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-12-en.png)
+![π0.5 Paper Deep-Dive: Paragraph 3: A Co-Training Framework (image-12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-12-en.png)
 
 ### Párrafo 4: La receta de datos
 
@@ -155,9 +169,9 @@ Los experimentos sugieren que la transferencia entre estas fuentes de conocimien
 
 - **Problema:** ¿Cómo pueden estas fuentes ayudar conjuntamente al robot objetivo?
 
-- **Planteamiento:** Demostrar comportamientos de 10–15 minutos en hogares desconocidos y luego eliminar fuentes. La cifra del 97,6% es una proporción de muestras, no de duración.
+- **Planteamiento:** Demostrar comportamientos de 10–15 minutos en hogares desconocidos y luego eliminar fuentes. La cifra del 97,6% es una proporción de muestras, no una proporción de duración.
 
-![π0.5 Análisis en profundidad: Párrafo 4: La receta de datos (imagen 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-07-en.png)
+![π0.5 Paper Deep-Dive: Paragraph 4: The Data Recipe (image-07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-07-en.png)
 
 ### Párrafo 5: Ejecución jerárquica
 
@@ -165,13 +179,13 @@ Los experimentos sugieren que la transferencia entre estas fuentes de conocimien
 
 - **Problema:** Las tareas largas requieren tanto elecciones correctas del siguiente paso como una ejecución precisa.
 
-- **Planteamiento:** Explicar cómo diferentes fuentes respaldan el juicio de la escena y el control.
+- **Planteamiento:** Explicar cómo distintas fuentes respaldan el juicio de la escena y el control.
 
-![π0.5 Análisis en profundidad: Párrafo 5: Ejecución jerárquica (imagen 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-11-en.png)
+![π0.5 Paper Deep-Dive: Paragraph 5: Hierarchical Execution (image-11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-11-en.png)
 
 ### Párrafo 6: Contribuciones y validación
 
-- **Contenido:** La contribución es el sistema π0.5 y la receta de entrenamiento, con una prueba de concepto en hogares no vistos.
+- **Contenido:** La contribución es el sistema π0.5 y la receta de entrenamiento, con una prueba de concepto en hogares inéditos.
 
 - **Problema:** Los experimentos deben establecer si el entrenamiento conjunto realmente mejora la capacidad de adaptación.
 
@@ -183,69 +197,69 @@ Los experimentos sugieren que la transferencia entre estas fuentes de conocimien
 
 ---
 
-## Trabajos relacionados
+## Trabajo relacionado
 
-![π0.5 Análisis en profundidad: 4. Trabajos relacionados (imagen 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-01-en.png)
+![π0.5 Paper Deep-Dive: 4. Related Work (image-01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-01-en.png)
 
-- **Políticas robóticas generalistas:** Trabajos anteriores amplían la cobertura de tareas y escenas, pero muchas pruebas siguen estando cerca de las condiciones de entrenamiento. Este artículo enfatiza tareas domésticas de múltiples etapas en hogares desconocidos.
+- **Políticas generalistas de robots:** Trabajos anteriores amplían la cobertura de tareas y escenas, pero muchas pruebas siguen estando cerca de las condiciones de entrenamiento. Este artículo enfatiza tareas domésticas de múltiples etapas en hogares desconocidos.
 
 - **Entrenamiento conjunto con datos no robóticos:** Trabajos previos inicializan o continúan el entrenamiento con datos imagen-texto. Aquí se combinan y evalúan acciones de otros robots, predicción de subtareas y guía mediante lenguaje humano.
 
-- **Organización de tareas basada en lenguaje:** Un diseño común separa los modelos de planificación y ejecución. π0.5 utiliza un solo modelo para ambos niveles, aunque se ejecutan a frecuencias diferentes.
+- **Organización de tareas basada en lenguaje:** Un diseño común separa los modelos de planificación y ejecución. π0.5 usa un solo modelo para ambos niveles, aunque se ejecutan a frecuencias diferentes.
 
-- **Sistemas de mundo abierto:** Robots anteriores realizan tareas básicas como el agarre en entornos nuevos. Este trabajo se amplía a ordenamiento en múltiples pasos; los nuevos hogares significan principalmente nuevas distribuciones, fondos y objetos, no categorías de tareas completamente desconocidas.
+- **Sistemas de mundo abierto:** Robots anteriores realizan tareas básicas como el agarre en entornos nuevos. Este trabajo se extiende al ordenamiento en múltiples pasos; los nuevos hogares significan principalmente nuevas distribuciones, fondos y objetos, no categorías de tareas completamente inéditas.
 
 
 
 ---
 
-## Plataformas de robot y datos
+## Plataformas de Robots y Datos
 
-### Objetivos y componentes
+### Objetivos y Componentes
 
-**Artículo:** Se utilizan dos plataformas móviles bimanuales, con el objetivo de un único modelo que pueda ordenar y limpiar diferentes hogares.
+**Artículo:** Se utilizan dos plataformas móviles bimanuables, con el objetivo de un único modelo que pueda ordenar y limpiar diferentes hogares.
 
-![π0.5 Análisis en profundidad: 5.1 Objetivos y componentes (imagen 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-05.png)
+![π0.5 Paper Deep-Dive: 5.1 Goals and Components (image-05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-05.png)
 
 | Componente | Configuración y función |
 |---|---|
 | Brazos y pinzas | Seis grados de libertad de movimiento más un control de pinza por brazo, 14 dimensiones en total. |
-| Base móvil | Dos velocidades traslacionales y una rotacional, tres dimensiones en total. |
-| Mecanismo de elevación | Una o dos dimensiones para el ajuste de altura o adelante-atrás. |
+| Base móvil | Dos velocidades de traslación y una de rotación, tres dimensiones en total. |
+| Mecanismo de elevación | Una o dos dimensiones para el ajuste de altura o de avance-retroceso. |
 | Estado y acción | 18 o 19 dimensiones, según la plataforma. |
-| Cámaras | Cuatro vistas RGB: frontal, trasera y dos en las muñecas. |
+| Cámaras | Cuatro vistas RGB: frontal, trasera y dos muñecas. |
 
-Las salidas son posiciones objetivo para brazos, pinzas y elevador, más velocidades de la base. Un controlador PD sencillo las sigue; el sistema descrito no tiene ningún módulo adicional de planificación de trayectorias ni de detección de colisiones.
+Las salidas son posiciones objetivo para brazos, pinzas y elevador, más velocidades de la base. Un controlador PD sencillo las sigue; el sistema descrito no tiene un módulo adicional de planificación de trayectorias ni de detección de colisiones.
 
-**Explicación:** Los brazos manipulan, mientras que la movilidad y la elevación amplían el alcance. El hardware por sí solo no establece la capacidad de tarea; lo hacen los experimentos.
+**Explicación:** Los brazos manipulan, mientras que la movilidad y la elevación amplían el alcance. El hardware por sí solo no establece la capacidad de la tarea; lo hacen los experimentos.
 
-### Conectar operación y registro
+### Conectar Operación y Registro
 
-Las demostraciones registran imágenes, estados y acciones. Las tareas de varios pasos también reciben anotaciones humanas de subtareas y ubicación de objetos. El post-entrenamiento añade demostraciones de lenguaje: una persona experta selecciona la siguiente instrucción y una política de bajo nivel ya entrenada la ejecuta.
+Las demostraciones registran imágenes, estados y acciones. Las tareas de varios pasos también reciben anotaciones humanas de subtareas y ubicación de objetos. Tras el entrenamiento se añaden demostraciones en lenguaje: un experto selecciona la siguiente instrucción y una política de bajo nivel ya entrenada la ejecuta.
 
 ```text
 Expert selects “pick up the pillow” → Low-level policy executes → Record the images and chosen instruction
 ```
 
-**Explicación:** Estos registros supervisan directamente qué hacer a continuación, en lugar de solo cómo se mueven las articulaciones. Suponen que la política de bajo nivel ya puede ejecutar la subtarea. En el despliegue, el modelo selecciona los pasos por sí mismo.
+**Explicación:** Estos registros supervisan directamente qué hacer a continuación, en lugar de solo cómo se mueven las articulaciones. Suponen que la política de bajo nivel ya puede ejecutar la subtarea. En despliegue, el modelo selecciona los pasos por sí mismo.
 
-### Sensores, recopilación y capacidades
+### Sensores, Recopilación y Capacidades
 
-Las decisiones de alto nivel usan las cuatro vistas; las acciones de bajo nivel usan la vista frontal y las dos vistas de muñeca. Los objetivos de control se ejecutan a 50 Hz, lo que no significa volver a ejecutar el modelo completo 50 veces por segundo.
+Las decisiones de alto nivel usan las cuatro vistas; las acciones de bajo nivel usan la frontal y las dos de muñeca. Los objetivos de control se ejecutan a 50 Hz, lo que no significa volver a ejecutar el modelo completo 50 veces por segundo.
 
-Unas 400 horas de demostraciones móviles provienen de aproximadamente 100 hogares. Otras fuentes incluyen brazos domésticos estacionarios, robots de laboratorio y OXE. Las resoluciones de imagen, las frecuencias de muestreo por fuente y las duraciones de las demostraciones no se especifican de forma uniforme; la frecuencia de control de 50 Hz no puede llenar esos vacíos.
+Unas 400 horas de demostraciones móviles provienen de aproximadamente 100 hogares. Otras fuentes incluyen brazos domésticos estacionarios, robots de laboratorio y OXE. Las resoluciones de imagen, las frecuencias de muestreo por fuente y las duraciones de las demostraciones no se especifican de forma uniforme; la frecuencia de control de 50 Hz no puede rellenar esas lagunas.
 
 Los comportamientos demostrados incluyen recogida de ropa, colocación de platos, organización de cajones, hacer la cama y colgar toallas. Las pruebas cuantitativas en hogares reales cubren tres hogares no vistos, centrándose en tareas de carga de cajones, ropa a la cesta y platos al fregadero; las comparaciones controladas también incluyen hacer la cama.
 
 ---
 
-## Entrenamiento conjunto heterogéneo y acciones jerárquicas
+## Entrenamiento Conjunto Heterogéneo y Acciones Jerárquicas
 
-### Seleccionar primero la subtarea actual
+### Seleccionar Primero la Subtarea Actual
 
 “Limpia el dormitorio” no especifica qué agarrar ahora. El modelo debe inspeccionar la escena, elegir el siguiente paso y condicionar la generación de acciones en él.
 
-Dos relaciones condicionales resumen esto:
+Dos relaciones condicionales lo resumen:
 
 ```text
 Current images + state + overall task → Subtask s
@@ -254,56 +268,56 @@ Current images + state + subtask s → Action chunk A
 
 Aquí, s es texto como “recoge la almohada”, y A es una secuencia de control. En la factorización del artículo, las acciones de bajo nivel dependen de la subtarea en lugar de depender directamente de la instrucción global.
 
-![π0.5 Análisis en profundidad: 6.1 Seleccionar primero la subtarea actual (imagen 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-06.png)
+![π0.5 Paper Deep-Dive: 6.1 Select the Current Subtask First (image-06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-06.png)
 
-Una almohada en el suelo puede sugerir “recógela”, seguida de “ponla en la cabecera de la cama”. Si la elección de alto nivel es incorrecta, unos movimientos precisos aún pueden ejecutar la tarea equivocada. Abrir y cerrar cajones repetidamente es un fallo observado.
+Una almohada en el suelo puede dar lugar a “recógela”, seguido de “ponla en la cabecera de la cama”. Si la elección de alto nivel es errónea, unos movimientos precisos aún pueden ejecutar la tarea equivocada. Abrir y cerrar cajones repetidamente es un fallo observado.
 
-### Acciones codificadas para el entrenamiento, acciones continuas para la ejecución
+### Acciones Codificadas para Entrenamiento, Acciones Continuas para Ejecución
 
-El modelo necesita aprendizaje eficiente y control oportuno y preciso, por lo que las etapas usan representaciones diferentes.
+El modelo necesita aprendizaje eficiente y control preciso y oportuno, por lo que las etapas usan representaciones diferentes.
 
 - **Preentrenamiento:** FAST comprime acciones continuas en símbolos discretos, aprendidos junto con texto mediante predicción del siguiente token.
 
-- **Postentrenamiento:** Se añade un experto en acciones entrenado con flow matching, manteniendo la predicción de texto y de acciones discretas.
+- **Postentrenamiento:** Se añade un experto en acciones entrenado con flow matching manteniendo la predicción de texto y de acciones discretas.
 
-- **Ejecución:** Generar texto de subtarea de forma autoregresiva y luego usar diez actualizaciones desde una inicialización aleatoria para obtener un bloque continuo.
+- **Ejecución:** Generar texto de subtarea de forma autoregresiva y luego usar diez actualizaciones desde una inicialización aleatoria para obtener un fragmento continuo.
 
 
 
-Para 50 pasos futuros y 18 controles por paso, el controlador finalmente necesita un arreglo numérico de 50 × 18, no texto. El entrenamiento codificado seguido de control continuo es una distinción importante entre etapas.
+Para 50 pasos futuros y 18 controles por paso, el controlador en última instancia necesita un arreglo numérico de 50 × 18, no texto. El entrenamiento codificado seguido de control continuo es una distinción importante entre etapas.
 
-**Explicación:** La longitud del bloque controla el horizonte de predicción; el número de actualizaciones controla el refinamiento interno. La predicción de un solo paso carece de planificación dentro del bloque, mientras que los horizontes largos encuentran más cambios de escena. El artículo usa 50 puntos de control y diez actualizaciones sin establecer sistemáticamente que sean óptimos para cada robot.
+**Explicación:** La longitud del fragmento controla el horizonte de predicción; el número de actualizaciones controla el refinamiento interno. La predicción de un solo paso carece de planificación dentro del fragmento, mientras que los horizontes largos encuentran más cambios de escena. El artículo usa 50 puntos de control y diez actualizaciones sin establecer sistemáticamente que sean óptimos para cada robot.
 
-La generación conjunta de bloques no elimina la necesidad de retroalimentación. El artículo no da una fracción de ejecución universal para todas las plataformas, y el ensamblado temporal al estilo ACT no es su mecanismo central.
+La generación conjunta de fragmentos no elimina la necesidad de retroalimentación. El artículo no da una fracción de ejecución universal para todas las plataformas, y el ensamblado temporal al estilo ACT no es su mecanismo central.
 
-### Qué aporta cada fuente de datos
+### Qué Aporta Cada Fuente de Datos
 
-![π0.5 Análisis en profundidad: 6.3 Qué aporta cada fuente de datos (imagen 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-13.png)
+![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-13.png)
 
 | Datos | Oportunidad de aprendizaje |
 |---|---|
-| Datos de robots móviles domésticos | Combinar movimiento, elevación y manipulación bimanual en hogares reales. |
+| Datos de robots móviles domésticos | Combinar movimiento, elevación y manipulación bimanuable en hogares reales. |
 | Brazos estacionarios en distintos entornos | Más hogares, objetos y escenas de manipulación. |
 | Datos de laboratorio entre robots | Más habilidades y tareas. |
-| Anotaciones de subtareas | Elegir el siguiente paso y localizar objetos relevantes. |
+| Anotaciones de subtareas | Elegir el siguiente paso y localizar los objetos relevantes. |
 | Datos web de imagen-texto | Conservar capacidades de reconocimiento, comprensión de escenas y lenguaje. |
 | Demostraciones de lenguaje de expertos | Dirigir una política de bajo nivel existente a través de tareas de varios pasos. |
 
-Estas fuentes entrenan un solo modelo; la ejecución no recorre los conjuntos de datos en ciclo. Muestras diferentes solicitan salidas diferentes: un par imagen-pregunta-respuesta no necesita acciones de robot inventadas.
+Estas fuentes entrenan un único modelo; la ejecución no recorre los conjuntos de datos en ciclo. Muestras diferentes solicitan salidas diferentes: un par imagen-pregunta-respuesta no necesita acciones de robot inventadas.
 
-**Límite de la evidencia:** Eliminar datos de otros robots reduce el rendimiento en tareas domésticas controladas. Eliminar datos web no causa una caída estadísticamente significativa en ese grupo de prueba, pero empeora el seguimiento de instrucciones con objetos desconocidos y el juicio de alto nivel. Las distintas fuentes no son igual de importantes en cada prueba.
+**Límite de evidencia:** Eliminar datos de otros robots reduce el rendimiento en tareas domésticas controladas. Eliminar datos web no causa una caída estadísticamente significativa en ese grupo de prueba, pero empeora el seguimiento de instrucciones con objetos desconocidos y el juicio de alto nivel. Las distintas fuentes no son igual de importantes en cada prueba.
 
-![π0.5 Análisis en profundidad: 6.3 Qué aporta cada fuente de datos (imagen 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-14.png)
+![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-14.png)
 
-![π0.5 Análisis en profundidad: 6.3 Qué aporta cada fuente de datos (imagen 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-09.png)
+![π0.5 Paper Deep-Dive: 6.3 What Each Data Source Adds (image-09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-09.png)
 
-### Conectar las dos etapas de entrenamiento
+### Conectar las Dos Etapas de Entrenamiento
 
-**Preentrenamiento:** Comenzar desde PaliGemma y mezclar acciones de robot, subtareas, ubicaciones de objetos y tareas de imagen-texto durante 280.000 pasos. No se usa pérdida de entrenamiento del experto continuo en esta etapa.
+**Preentrenamiento:** Partir de PaliGemma y mezclar acciones de robot, subtareas, ubicaciones de objetos y tareas de imagen-texto durante 280.000 pasos. En esta etapa no se usa pérdida de entrenamiento del experto continuo.
 
-Normalizar acciones a [−1, 1] usando los percentiles 1 y 99 de cada dimensión del conjunto de datos, y rellenar con ceros los robots de menor dimensión. Etiquetas de modo de control en las instrucciones distinguen objetivos de articulaciones de objetivos de efector final.
+Normalizar acciones a [−1, 1] usando los percentiles 1 y 99 de cada dimensión del conjunto de datos, y rellenar con ceros los robots de menor dimensionalidad. Etiquetas de modo de control en las instrucciones distinguen objetivos de articulaciones de objetivos de efector final.
 
-**Postentrenamiento:** Añadir un experto en acciones de aproximadamente 300M parámetros, inicializado aleatoriamente, y entrenar durante 80.000 pasos. Conservar demostraciones exitosas y sin tiempo de espera de robots móviles domésticos y brazos estacionarios, y eliminar datos de acciones de laboratorio entre robots. Mantener subtareas y datos web relevantes y añadir demostraciones de lenguaje de expertos.
+**Postentrenamiento:** Añadir un experto en acciones de aproximadamente 300M parámetros, inicializado aleatoriamente, y entrenar durante 80.000 pasos. Mantener demostraciones exitosas y sin timeout de robots móviles domésticos y brazos estacionarios y eliminar datos de acciones de robots de laboratorio cruzados. Conservar subtareas y datos web relevantes y añadir demostraciones de lenguaje de expertos.
 
 El objetivo puede resumirse como:
 
@@ -313,26 +327,26 @@ El primer término es entropía cruzada para texto y tokens FAST; el segundo es 
 
 El entrenamiento con flow matching mezcla acciones reales A con ruido gaussiano estándar ε: `noisy action = τA + (1−τ)ε`, con τ entre cero y uno. La ecuación (1) escribe el objetivo como `ε−A`. Para A=0.6, ε=−0.2 y τ=0.5, la entrada es 0.2 y el objetivo −0.8. Esta es una convención de signo de campo vectorial, no una orden para mover el robot hacia atrás.
 
-τ es el progreso interno de generación; ε y A son arreglos normalizados de 50 × d, donde d es la dimensionalidad de la acción. No son segundos. El ejemplo escalar explica la ecuación; el entrenamiento usa arreglos completos. La inferencia comienza desde ruido y no requiere una A real de referencia.
+τ es el progreso interno de generación; ε y A son arreglos normalizados de 50 × d, donde d es la dimensionalidad de la acción. No son segundos. El ejemplo escalar explica la ecuación; el entrenamiento usa arreglos completos. La inferencia parte de ruido y no requiere una A real de referencia.
 
-### Red completa, experimentos y límites
+### Red Completa, Experimentos y Límites
 
-**Artículo:** Las imágenes se convierten en características visuales, y las instrucciones y el estado entran en el VLM. A diferencia de π0, π0.5 discretiza el estado como tokens de texto. La red troncal predice subtareas y proporciona características de observación al experto más pequeño, que genera acciones continuas a partir de entradas ruidosas.
+**Artículo:** Las imágenes se convierten en características visuales, y las instrucciones y el estado entran en el VLM. A diferencia de π0, π0.5 discretiza el estado como tokens de texto. La columna vertebral predice subtareas y proporciona características de observación al experto más pequeño, que genera acciones continuas a partir de entradas ruidosas.
 
 | Entrada o módulo | Forma o procesamiento |
 |---|---|
 | Imágenes | Cuatro vistas de alto nivel, tres vistas de bajo nivel; codificadas como secuencias de características visuales. |
 | Instrucción global, subtarea y estado | Secuencias de tokens que forman el prefijo de observación junto con las características visuales. |
-| Red troncal VLM | Ancho 2048, 18 capas; predice texto y, durante el preentrenamiento, tokens FAST. |
-| Experto en acciones | Ancho 1024, 18 capas, unos 300M parámetros; incrusta linealmente acciones ruidosas de 50 × d. |
+| VLM backbone | Ancho 2048, 18 capas; predice texto y, durante el preentrenamiento, tokens FAST. |
+| Experto en acciones | Ancho 1024, 18 capas, unos 300M de parámetros; incrusta linealmente acciones ruidosas de 50 × d. |
 | Progreso de generación τ | Codificado por separado e inyectado en las capas del experto; la atención lee el prefijo de observación. |
-| Salida continua | Proyectar de vuelta a actualizaciones de 50 × d; diez actualizaciones generan un bloque. |
+| Salida continua | Proyectar de vuelta a actualizaciones de 50 × d; diez actualizaciones generan un fragmento. |
 
-El experto lee observaciones y sus propias características de acción, pero no tokens FAST. La red troncal no lee características del experto. La atención comparte información de observación sin sumar directamente anchos 2048 y 1024. El artículo no especifica de forma uniforme la longitud de la secuencia visual ni una dimensión máxima de acción en todos los conjuntos de datos.
+El experto lee observaciones y sus propias características de acción, pero no tokens FAST. La columna vertebral no lee características del experto. La atención comparte información de observación sin sumar directamente anchos 2048 y 1024. El artículo no especifica de forma uniforme la longitud de la secuencia visual ni una dimensión máxima de acción en todos los conjuntos de datos.
 
-**Precaución:** La Figura 3 etiqueta Gemma como 2.6B, mientras que el Apéndice E la llama un “VLM de 2B”. Se conservan los recuentos de capas y anchos verificables sin inventar un recuento total exacto de parámetros.
+**Precaución:** La Figura 3 etiqueta Gemma como 2.6B, mientras que el Apéndice E la llama un “VLM de 2B”. Se conservan los recuentos de capas y anchos verificables sin inventar un número total exacto de parámetros.
 
-El apéndice da **50 puntos de control**. La convención de extremo inclusivo escribe H=49; “50 pasos” evita confusión. Las dos plataformas producen arreglos de 50 × 18 o 50 × 19, con relleno para el entrenamiento entre robots.
+El apéndice da **50 puntos de control**. La convención de extremo inclusivo escribe H=49; “50 pasos” evita confusiones. Las dos plataformas generan matrices de 50 × 18 o 50 × 19, con relleno para entrenamiento entre robots.
 
 ```text
 Training: heterogeneous data → backbone predicts text / action tokens
@@ -342,41 +356,41 @@ Inference: observations + overall task → subtask text
            observations + subtask + random actions → ten updates → continuous chunk → execute and observe again
 ```
 
-**Tres puntos a vigilar en los experimentos:**
+**Tres puntos a tener en cuenta en los experimentos:**
 
-1. **Más ubicaciones de entrenamiento generalmente ayudan.** Las comparaciones usan 3, 12, 22, 53, 82 y 104 ubicaciones. El modelo de 104 ubicaciones se aproxima a un modelo que ha visto el entorno de evaluación en estas tareas; esto no es una garantía para cada nuevo hogar.
+1. **Más ubicaciones de entrenamiento generalmente ayudan.** Las comparaciones usan 3, 12, 22, 53, 82 y 104 ubicaciones. El modelo con 104 ubicaciones se aproxima a un modelo que ha visto el entorno de evaluación en estas tareas; esto no es una garantía para cada nuevo hogar.
 
-2. **La receta completa supera cambiar solo el entrenamiento de acciones.** Con el mismo conjunto de datos de robots y pasos similares, π0.5 supera a π0 y π0-FAST+Flow. FAST por sí solo no puede explicar la ganancia; la coformación de subtareas e imagen-texto también difiere.
+2. **La receta completa supera cambiar solo el entrenamiento de acciones.** Con el mismo conjunto de datos de robots y pasos similares, π0.5 supera a π0 y a π0-FAST+Flow. FAST por sí solo no puede explicar la ganancia; también difieren el coentrenamiento de subtareas y de imagen-texto.
 
-3. **El razonamiento de alto nivel ayuda, y los datos de entrenamiento de alto nivel también importan.** Una variante que conserva todos los datos de entrenamiento pero omite la selección explícita de subtareas en la inferencia es la segunda mejor. Eliminar demostraciones de lenguaje o datos web reduce el rendimiento. Decir una subtarea antes de actuar no es toda la explicación.
+3. **El razonamiento de alto nivel ayuda, y los datos de entrenamiento de alto nivel también importan.** Una variante que conserva todos los datos de entrenamiento pero omite la selección explícita de subtareas en el momento de la inferencia es la segunda mejor. Eliminar demostraciones en lenguaje o datos web reduce el rendimiento. Decir una subtarea antes de actuar no es toda la explicación.
 
 
 
-La mayoría de las figuras principales informan **puntuaciones de finalización de tareas**, no tasas de éxito de tareas completas. Normalmente hay unas diez pruebas por política y por tarea, o aproximadamente 40 en las cuatro tareas controladas; se excluyen algunas pruebas canceladas. Dishes-to-sink tiene ocho puntos posibles, otorgados por separado para recoger y colocar. La mitad de la puntuación no significa que la mitad de las pruebas hayan tenido éxito completo.
+La mayoría de las figuras principales informan **puntuaciones de finalización de tareas**, no tasas de éxito de la tarea completa. Normalmente hay alrededor de diez ensayos por política por tarea, o aproximadamente 40 en las cuatro tareas controladas; se excluyen algunos ensayos cancelados. Dishes-to-sink tiene ocho puntos posibles, otorgados por separado para recoger y colocar. La mitad de la puntuación no significa que la mitad de los ensayos hayan tenido éxito completo.
 
-![π0.5 Análisis en profundidad: 6.5 Red completa, experimentos y límites (imagen 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-02.png)
+![Profundización en el artículo de π0.5: 6.5 Red Completa, Experimentos y Límites (imagen-02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-02.png)
 
-El artículo demuestra comportamientos de 10–15 minutos, mientras que muchas tareas en hogares reales evaluadas cuantitativamente duran alrededor de 2–5 minutos. No las confundas. Manijas desconocidas, puertas difíciles, oclusión, decisiones de alto nivel repetidas, preferencias complejas y memoria entre habitaciones siguen siendo desafíos. El trabajo valida comportamientos útiles en nuevos hogares más que la finalización fiable de todas las tareas domésticas.
+El artículo demuestra comportamientos de 10–15 minutos, mientras que muchas tareas evaluadas cuantitativamente en hogares reales duran alrededor de 2–5 minutos. No las confundas. Manijas desconocidas, puertas difíciles, oclusión, decisiones repetidas de alto nivel, preferencias complejas y memoria entre habitaciones siguen siendo desafíos. El trabajo valida comportamientos útiles en nuevos hogares más que la finalización fiable de todas las tareas domésticas.
 
-*Ubicaciones de referencia: resumen e introducción; Secciones II, IV-A–IV-E, V-A–V-E y VI; Figuras 3, 5 y 7–13; Apéndices B y E. Esta guía no añade suposiciones específicas de transferencia de hardware de proyecto.*
+*Ubicaciones de referencia: resumen e introducción; Secciones II, IV-A–IV-E, V-A–V-E y VI; Figuras 3, 5 y 7–13; Apéndices B y E. Esta guía no añade suposiciones específicas de transferencia de hardware del proyecto.*
 
 ---
 
-## Comparación entre π0 y π0.5
+## Comparando π0 y π0.5
 ### Cambios principales
 **Explicación:** π0 estudia el control generalista y diestro entre robots y tareas. π0.5 amplía esto hacia la comprensión de hogares desconocidos y la organización de trabajo doméstico de múltiples etapas.
 
 | Aspecto | π0 | π0.5 |
 |---|---|---|
 | Enfoque | Manipulación general entre robots y tareas. | Manipulación de múltiples etapas en nuevos hogares, con nuevos objetos y distribuciones. |
-| Datos | Inicialización VLM, principalmente demostraciones entre robots y etiquetas de lenguaje para el entrenamiento de la política. | Entrenamiento conjunto continuo en acciones, subtareas, localización y datos web; demostraciones de lenguaje experto en el post-entrenamiento. |
-| Entrenamiento de acciones | Experto continuo tanto en el preentrenamiento como en el post-entrenamiento. | Tokens FAST durante el preentrenamiento; se añade el experto durante el post-entrenamiento manteniendo ambas representaciones. |
+| Datos | Inicialización VLM, principalmente demostraciones entre robots y etiquetas de lenguaje para el entrenamiento de la política. | Coentrenamiento continuo en acciones, subtareas, localización y datos web; demostraciones de lenguaje de expertos en el post-entrenamiento. |
+| Entrenamiento de acciones | Experto continuo tanto en preentrenamiento como en post-entrenamiento. | Tokens FAST durante el preentrenamiento; se añade el experto durante el post-entrenamiento manteniendo ambas representaciones. |
 | Acciones ejecutadas | Fragmentos continuos de flow matching. | También fragmentos continuos de flow matching; FAST mejora principalmente el entrenamiento. |
 | Organización de tareas largas | Seguir instrucciones de una persona o de un VLM externo de alto nivel cuando se necesita planificación semántica explícita. | El mismo modelo selecciona subtareas de la tarea global y genera acciones para ellas. |
-| Entrada de estado | Estado continuo proyectado en el experto de acción. | Estado discretizado como tokens en el VLM. |
+| Entrada de estado | Estado continuo proyectado en el experto de acciones. | Estado discretizado como tokens en el VLM. |
 | Objetivo del post-entrenamiento | Mejorar la competencia en tareas con demostraciones más limpias y consistentes. | Adaptar tanto la ejecución de acciones como la selección de subtareas para la manipulación móvil en el hogar. |
 
-Ambos usan PaliGemma y un experto de acción de aproximadamente 300M parámetros, con 50 puntos de control y diez actualizaciones de flujo. π0.5 cambia principalmente la receta de entrenamiento y la organización de tareas; sus mejoras no se deben simplemente a un modelo más grande o a fragmentos más largos.
+Ambos usan PaliGemma y un experto de acciones de aproximadamente 300M parámetros, con 50 puntos de control y diez actualizaciones de flujo. π0.5 cambia principalmente la receta de entrenamiento y la organización de tareas; sus ganancias no se deben simplemente a un modelo más grande o a fragmentos más largos.
 
 ### Ejemplo: Poner un plato en el fregadero
 ```text
@@ -393,13 +407,13 @@ Then select another subtask, such as “put the plate in the sink,” from the u
 **Precaución:** Esto compara vías de ejecución. El π0 original también demuestra tareas largas; no se limita a operaciones de un solo paso. π0.5 añade selección explícita de subtareas dentro del mismo modelo.
 
 ### ¿Qué respaldan los experimentos?
-![π0.5 Análisis en profundidad: 7.3 ¿Qué respaldan los experimentos? (imagen 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-04.png)
+![Profundización en el artículo de π0.5: 7.3 ¿Qué respaldan los experimentos? (imagen-04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/pi05/image-04.png)
 
-**Artículo:** Bajo el mismo conjunto de datos de robot y pasos similares, la receta completa de π0.5 supera a π0 y a π0-FAST+Flow en los hogares controlados desconocidos probados. Este último ya combina FAST y flow matching, pero usa solo datos de acciones de robot y carece de razonamiento de alto nivel. Cambiar solo el entrenamiento de acciones es insuficiente para igualar al π0.5 completo.
+**Artículo:** Con el mismo conjunto de datos de robots y pasos similares, la receta completa de π0.5 supera a π0 y a π0-FAST+Flow en los hogares controlados desconocidos probados. Este último ya combina FAST y flow matching, pero usa solo datos de acciones de robots y carece de razonamiento de alto nivel. Cambiar solo el entrenamiento de acciones es insuficiente para igualar al π0.5 completo.
 
-**Precaución:** Estas son líneas base reentrenadas dentro del artículo de π0.5, no puntuaciones unidas desde publicaciones separadas. Respaldan mejoras en estas tareas y condiciones, no una ganancia fija en todas partes.
+**Precaución:** Estas son líneas base reentrenadas dentro del artículo de π0.5, no puntuaciones empalmadas de publicaciones separadas. Respaldan mejoras en estas tareas y condiciones, no una ganancia fija en todas partes.
 
-Compara cuidadosamente el alcance de los datos: el “más de 10,000 horas” de π0 se refiere al total de demostraciones de robot, mientras que las “alrededor de 400 horas” de π0.5 se refieren solo a la manipulación móvil en el hogar y excluyen una cantidad sustancial de datos de otros robots e imagen-texto. Los números no muestran que π0.5 gane universalmente con menos datos totales.
+Compara cuidadosamente los alcances de los datos: el “más de 10.000 horas” de π0 se refiere al total de demostraciones de robots, mientras que las “alrededor de 400 horas” de π0.5 se refieren solo a la manipulación móvil en el hogar y excluyen una cantidad sustancial de datos de otros robots e imagen-texto. Los números no muestran que π0.5 gane universalmente con menos datos totales.
 
 *Fuentes de comparación: π0, 2410.24164v4, Secciones III–V y experimentos de instrucciones de alto nivel; π0.5, 2504.16054v1, Secciones IV, V-D, V-E, Figura 12 y Apéndice E.*
 
