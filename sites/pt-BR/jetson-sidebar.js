@@ -229,6 +229,14 @@ const sidebars = {
               'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_J2032/pt_reServer_J2032_Getting_Started',
             ],
           },
+          {
+            type: 'category',
+            label: 'Placa carrier reServer J501',
+            items: [
+              'Edge/NVIDIA_Jetson/Carrier_Boards/J501/pt_reServer_Industrial_J501_Getting_Started',
+              'Edge/NVIDIA_Jetson/Carrier_Boards/J501/pt_Hardware_Interfaces_Usage',
+            ],
+          },
         ],
       },
 {
@@ -424,6 +432,7 @@ const sidebars = {
           customProps: { communityCategory: 'gen' },
           items: [
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Accelerate_LLM_Inference_with_MTP_on_Jetson',
+            'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Build_Local_AI_Agent_on_Jetson_Orin_with_Laya_and_Qwen',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Finetune_LLM_by_Llama_Factory_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Local_RAG_based_on_Jetson_with_LlamaIndex',
