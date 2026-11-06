@@ -35,7 +35,9 @@ MeshCore handles mesh communication. Ripple UI lets you use it directly on the L
 Flash Ripple UI directly; no Companion installation is needed first.
 
 :::note
+
 The updated firmware uses MeshCore profiles and no longer offers Ripple in the New Network screen.
+
 :::
 
 ### Who Is Ripple For?
@@ -51,11 +53,17 @@ The updated firmware uses MeshCore profiles and no longer offers Ripple in the N
 ## Features
 
 - **Standalone messaging:** Send direct and group messages from the touchscreen.
+
 - **Multiple network profiles:** Keep separate radio settings, identities, contacts, and preferences.
+
 - **Customizable home screen:** Add shortcuts to contacts, channels, and settings.
+
 - **Maps:** Load maps from microSD, drag to pan, and tap buttons to zoom.
+
 - **GPS tracks:** Record your position and timestamps, then view your route on the map.
+
 - **Screenshots:** Long-press the top-left corner of the screen to capture the current view.
+
 - **Remote administration:** Unlock node management features with the target node's authorization.
 
 ## Flash Firmware
@@ -65,6 +73,7 @@ If your device already has the Ripple UI version described here, skip to **First
 Two firmware variants are available:
 
 - **Ripple GUI: data on SD card (-SD):** Stores configuration and data on a microSD card. Insert a FAT32-formatted card of 32 GB or less before use.
+
 - **Ripple GUI (Internal):** Stores configuration and data in the device's internal flash.
 
 **Step 1: Open the web flasher**
@@ -86,7 +95,9 @@ Hold the `U/B` button while plugging in the USB data cable, then press `RST` to 
 Click `Flash!`, select your device in the serial port dialog, and connect. Follow the on-screen instructions to complete flashing.
 
 :::warning
+
 The `Erase device` option shown above clears data and settings in internal flash, including the unlock state. Back up important data and keep your Unlock Code before erasing.
+
 :::
 
 **Step 4: Restart**
@@ -117,25 +128,13 @@ Follow the touchscreen and button tutorials at first startup.
 
 For a two-device test, use matching radio settings on both devices. Selecting the same preset is the simplest option. With custom settings, also check bandwidth, coding rate, and other parameters, rather than matching only frequency and SF.
 
-### Set Your Name, Timezone, and Display
+### Set Your Name
 
 1. Tap `L` on the left, open the current network profile, and select `Identity`.
 
 2. Change the default name to something recognizable, such as `micha` or `michb`. Names can contain up to 12 characters.
 
-3. Press the on-screen `ENTER` key to save.
-
-4. Open the home screen system menu and select `Timezone`. Set your local UTC offset; for example, China Standard Time is `+8`.
-
-5. Open `Display` to adjust font size, light/dark theme, animations, and accent color.
-
-The device can synchronize its clock automatically using GPS. You still need to set the timezone for your location.
-
-:::tip
-
-Tap the keyboard icon beside a text field to open the on-screen keyboard. Most changes require `ENTER` to save. Tapping Back may discard your changes.
-
-:::
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ChangeDeviceName.png" alt="Open the network profile, select Identity, and change the device name" width={1000} height="auto" /></p>
 
 ## Explore the Interface
 
@@ -184,10 +183,15 @@ The screenshot shows names used during testing. Your list will depend on your pr
 Open the bottom-left home screen menu to access `Extra`, which contains device settings and tools.
 
 - **Display:** Adjust font size, theme, animations, and accent color.
+
 - **Wi-Fi:** Configure your connection and map downloads. Map downloading requires an unlock code.
+
 - **Networks:** Create and manage network profiles.
+
 - **GPS Config:** Configure GPS communication settings; defaults normally work for the L2 Pro.
+
 - **Timezone:** Set the local UTC offset.
+
 - **SX1262:** Check LoRa radio initialization status. `code=0` means success.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_Extra.jpg" alt="Ripple UI Extra system settings" width={500} height="auto" /></p>
@@ -221,14 +225,14 @@ Captured screenshots are BMP files with date-and-time filenames, as shown below.
 ### Make Your Devices Discoverable
 
 1. Configure both devices with matching MeshCore radio settings.
-
 2. Give each device a different `Identity` name.
-
 3. Set `Advert` to `On` to allow identity advertisements.
-
 4. Open `Discover` from the `L` page and wait for nearby nodes to appear.
 
 To send an identity advertisement immediately, open the `Discover` menu:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="Discover menu with Scan Local, Send ID Local, and Send ID Broadcast" width={400} height="auto" /></p>
+
 
 | Option | Function |
 | --- | --- |
@@ -247,6 +251,8 @@ To send an identity advertisement immediately, open the `Discover` menu:
 3. Return to `L` and confirm that the contact is listed.
 
 4. Repeat on the other device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_contact.png" alt="Discover nearby nodes, add a node to contacts, and view it in the contact list" width={1100} height="auto" /></p>
 
 ### Send a Direct Message
 
@@ -332,11 +338,17 @@ Keep the code together with its device serial number. In our test, erasing flash
 ### Premium Features
 
 - **Automatic Telemetry:** Requests telemetry when you open a conversation with a direct path. Shows location, direction, and distance if the other node allows GPS telemetry.
+
 - **Room Admin CLI:** Access the Room Server command line with its administrator password.
+
 - **Repeater Admin:** Check repeater status and manage the node remotely.
+
 - **Sensor Admin:** Access sensor commands, telemetry, and permission management.
+
 - **More detailed map zoom:** Display map tiles above zoom level 9.
+
 - **Wi-Fi Download:** Download map tiles on demand and cache them on the SD card.
+
 - **Longer GPS tracks:** Record more than the 64 GPS points allowed on locked devices.
 
 ## Advanced Usage
