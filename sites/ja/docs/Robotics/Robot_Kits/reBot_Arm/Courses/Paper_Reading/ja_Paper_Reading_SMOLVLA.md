@@ -1,6 +1,6 @@
 ---
-description: "reBot Arm と SO-ARM101 で SmolVLA を動かす方法：軽量な SmolVLA アーキテクチャ、コミュニティデータの事前学習、非同期推論、アブレーションを論文精読します。"
-title: "reBot Arm と SO-ARM101 で SmolVLA を動かす方法"
+description: "軽量なSmolVLAアーキテクチャ、コミュニティデータによる事前学習、非同期推論、およびアブレーションを深掘りする論文解説。"
+title: "SmolVLA: 軽量モデルはどのようにロボット動作を効率的に学習するのか"
 hide_title: true
 keywords:
   - 論文ディープダイブ
@@ -10,7 +10,7 @@ keywords:
   - B601-DM
   - B601-RS
   - ロボットアーム
-  - フィジカル AI
+  - フィジカルAI
   - コース
   - チュートリアル
   - SO101
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/ja/robotics/paper_reading_smolvla/
 ---
 
@@ -39,53 +39,67 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-smolvla-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 論文ディープダイブ</span>
-  <h1 id="paper-reading-smolvla-title">reBot Arm と SO-ARM101 で SmolVLA を動かす方法</h1>
-  <p className="paper-reading-lead">SmolVLA: 手頃で効率的なロボットのための vision-language-action モデル</p>
+  <h1 id="paper-reading-smolvla-title">SmolVLA: 軽量モデルはどのようにロボット動作を効率的に学習するのか</h1>
+  <p className="paper-reading-lead">SmolVLA: 手頃で効率的なロボティクスのためのビジョン・言語・アクションモデル</p>
   <ul className="paper-reading-badges" aria-label="このガイドで扱う内容">
-    <li>軽量 VLA</li>
+    <li>軽量VLA</li>
     <li>コミュニティデータ</li>
     <li>フローマッチング</li>
     <li>非同期推論</li>
   </ul>
-  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2506.01844" target="_blank" rel="noopener noreferrer" aria-label="arXiv で SmolVLA の論文を読む">
+  <a className="paper-reading-source-link" href="https://arxiv.org/abs/2506.01844" target="_blank" rel="noopener noreferrer" aria-label="arXivでSmolVLAの論文を読む">
     <span className="paper-reading-source-tag">arXiv</span>
     <span>論文を読む</span>
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
 
+<aside className="paper-reading-key-commands" aria-label="主要なLeRobotコマンド">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/smolvla" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot SmolVLA ドキュメント ↗</a>
+
+**主要なLeRobotコマンド**
+
+これらは `lerobot-train` 用のLeRobotの主な引数フラグメントであり、データセット、出力ディレクトリ、その他の設定と組み合わせて使用します。インストール要件については上記のドキュメントを参照してください。
+
+- `--policy.path=lerobot/smolvla_base`: タスクデータでのファインチューニング前に、事前学習済みSmolVLAを読み込みます。
+- `--dataset.repo_id=your_org/your_dataset`: LeRobotデータセットを設定します。例のリポジトリIDを自分のものに置き換えてください。
+- `--rename_map`: チェックポイントが想定するcamera1, camera2, camera3という名前に合わせるため、データセットのカメラ名マッピングを指定します。
+
+</aside>
+
 ## 前提知識
-### VLM と VLA
-![SmolVLA: VLM と VLA (図 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-09-en.png)
+### VLMとVLA
+![SmolVLA: VLMs and VLAs (Figure 09)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-09-en.png)
 
-### 単一ステップアクションとアクションチャンク
-![SmolVLA: 単一ステップアクションとアクションチャンク (図 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-02-en.png)
+### 単一ステップ動作とアクションチャンク
+![SmolVLA: Single-Step Actions and Action Chunks (Figure 02)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-02-en.png)
 
-### Flow Matching とは？
-![SmolVLA: Flow Matching とは？ (図 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-11-en.png)
+### フローマッチングとは？
+![SmolVLA: What Is Flow Matching? (Figure 11)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-11-en.png)
 
 ### 同期推論と非同期推論
-![SmolVLA: 同期推論と非同期推論 (図 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-03-en.png)
+![SmolVLA: Synchronous and Asynchronous Inference (Figure 03)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-03-en.png)
 
 ---
 
 ## 要約
-事前学習された vision-language モデルは、大規模なマルチモーダルデータセットから豊富な視覚的および言語的知識を獲得しており、ロボットポリシーの有用な基盤となります。近年の研究では、ポリシーをゼロから学習する代わりに、自然言語の指示からロボットを認識・制御できるよう VLM を VLA へと適応させています。
+事前学習済みビジョン・言語モデルは、大規模なマルチモーダルデータセットから豊富な視覚と言語の知識を獲得しており、ロボットポリシーの有用な基盤となります。最近の研究では、ポリシーをゼロから学習する代わりに、自然言語の指示からロボットを認識・制御できるようVLMをVLAへと適応させています。
 
-しかし、多くの VLA は数十億パラメータを含み、学習コストが高く、実ロボットへのデプロイが難しいという問題があります。また、主に学術・産業データセットに依存しており、低コストなロボットコミュニティから生まれる公開データが十分に活用されていません。
+しかし、多くのVLAはパラメータ数が数十億規模で、学習コストが高く、実機ロボットへのデプロイも困難です。また、主に学術・産業のデータセットに依存しており、低コストなロボットコミュニティからの増え続ける公開データは十分に活用されていません。
 
-SmolVLA は、小型で効率的、かつコミュニティデータ駆動の VLA です。競合する性能を維持しつつ、学習と推論のコストを削減します。1 枚の GPU で学習でき、コンシューマー向け GPU やさらには CPU 上でも動作させることができます。
+SmolVLAは、小型で効率的な、コミュニティデータ駆動のVLAです。競争力のある性能を維持しつつ、学習と推論のコストを削減します。1枚のGPUで学習でき、コンシューマー向けGPUや、さらにはCPU上にもデプロイ可能です。
 
-この論文では、知覚と行動予測を実行から分離する非同期推論スタックも導入しています。ロボットは現在のチャンクを実行しながら、次のチャンクを予測します。その小さなサイズにもかかわらず、SmolVLA はおよそ 10 倍大きい VLA と競合します。著者らはシミュレーションおよび実ロボットタスクで評価を行い、コード、事前学習モデル、学習データを公開しています。
+この論文では、知覚と動作予測を実行から分離する非同期推論スタックも導入しています。ロボットは現在のチャンクを実行しながら、次のチャンクを予測します。その小ささにもかかわらず、SmolVLAはおよそ10倍大きいVLAと競合します。著者らはシミュレーションおよび実機ロボットタスクで評価を行い、コード、事前学習済みモデル、学習データを公開しています。
 
-![SmolVLA: 2. 要約 (図 21)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-21.png)
+![SmolVLA: 2. Abstract (Figure 21)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-21.png)
 
 ---
 
-## SmolVLA の軽量アーキテクチャとネットワーク全体像
+## SmolVLAの軽量アーキテクチャとネットワーク全体像
 **全体的なデータフロー**
 
-- SmolVLA は VLM とアクションエキスパートから構成されます。
+- SmolVLAはVLMとアクションエキスパートから構成されます。
 
 ```text
 Multi-view RGB images
@@ -103,25 +117,25 @@ Flow Matching
 Action Chunk
 ```
 
-- VLM は環境を解釈し、アクションエキスパートはその表現を連続値のアクションへと変換します。言語モデルは関節角度を直接指定するのではなく、条件付けの特徴量を提供します。
+- VLMは環境を解釈し、アクションエキスパートはその表現を連続値のアクションへと変換します。言語モデルは、関節角度を直接指定するのではなく、条件付けの特徴量を提供します。
 
-**画像・言語・状態が VLM に入るまで**
+**画像・言語・状態がVLMに入る仕組み**
 
-![SmolVLA: 3. SmolVLA の軽量アーキテクチャとネットワーク全体像 (図 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-13-en.png)
+![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 13)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-13-en.png)
 
-**なぜフレームごとに 64 個のビジュアルトークンだけを保持するのか？**
+**なぜフレームごとに64個のビジュアルトークンだけを保持するのか？**
 
 - 高解像度画像は多数のビジュアルトークンを生成します。トークン数が増えるとアテンション計算が増大し、推論が遅くなります。
 
-- SmolVLM-2 は画像タイル分割をサポートしており、複数の局所画像領域をエンコードできます。SmolVLA では速度を優先してタイル分割を無効にし、グローバル画像のみを保持しつつ、pixel shuffle を用いて各フレームを 64 個のビジュアルトークンに制限します。
+- SmolVLM-2は画像タイル分割をサポートしており、複数の局所画像領域をエンコードできます。SmolVLAは速度を優先してタイル分割を無効にし、グローバル画像を保持しつつ、ピクセルシャッフルを用いて各フレームを64個のビジュアルトークンに制限します。
 
 - これにより小さな物体のディテールや細かなテクスチャは犠牲になる可能性がありますが、計算量は大幅に削減されます。
 
-**なぜ VLM の前半だけを使うのか？**
+**なぜVLMの前半だけを使うのか？**
 
-- 層数 L の VLM に対して、SmolVLA は層 N で特徴量を抽出し、残りの L−N 層は破棄します。
+- 層数LのVLMに対して、SmolVLAは層Nで特徴量を抽出し、残りのL−N層を破棄します。
 
-- 著者らは、`N = L/2` が速度と性能のバランスを取ると見出しました。メインモデルでは最初の 16 層の言語モデルを使用します。
+- 著者らは、`N = L/2` が速度と性能のバランスを取ると見出しました。メインモデルでは最初の16層の言語モデル層を使用します。
 
 ```text
 Full VLM: Layer 1 → 2 → ... → L
@@ -130,21 +144,21 @@ SmolVLA：Layer 1 → 2 → ... → N → Action Expert
                                × Remaining layers are not computed
 ```
 
-- これは交互の層をスキップするのではなく、前半をそのまま保持する方式です。アブレーションの結果から、バックボーンをより小さな VLM に置き換えるよりも有利であることが多いと示唆されています。保持された層が大きなモデルの幅と表現能力を維持するためです。
+- これは交互の層をスキップするのではなく、前半をそのまま保持する形です。アブレーションの結果から、バックボーンをより小さなVLMに置き換えるよりも有利であることが多いと示唆されています。保持された層が、大きなモデルの幅と表現能力を維持するためです。
 
 **アクションエキスパートがアクションを生成する仕組み**
 
 - アクションエキスパートは次の入力を受け取ります：
 
-    - VLM からの条件付け特徴量。
+    - VLMからの条件付け特徴量。
 
-    - ノイズ付きアクションチャンク。
+    - ノイズを加えたアクションチャンク。
 
-- これに対してクロスアテンションと因果的セルフアテンションを交互に適用します。
+- これがクロスアテンションと因果的自己注意を交互に適用します。
 
 **クロスアテンションは現在のタスクを読み取る**
 
-- アクショントークンは query として機能し、VLM 特徴量から key と value を読み取って次の問いに答えます：
+- アクショントークンはクエリとして機能し、VLM特徴量からキーとバリューを読み取って、次の問いに答えます：
 
 ```text
 What is visible now?
@@ -152,13 +166,13 @@ What does the instruction request?
 What is the robot's current configuration?
 ```
 
-**セルフアテンションはアクション同士を関連付ける**
+**自己注意はアクション同士を関連付ける**
 
-- アクショントークン間のセルフアテンションにより、将来のシーケンスが一貫したものになります。例えば「接近 → グリッパーを閉じる → 持ち上げる → 運ぶ → 置く」といった流れです。
+- アクショントークン間の自己注意により、将来のシーケンスが一貫したものになります。例えば「接近 → グリッパーを閉じる → 持ち上げる → 運ぶ → 置く」といった流れです。
 
 **なぜ因果マスクを使うのか？**
 
-- マスクにより、アクション i はそれ以前のアクショントークンには注意を向けられますが、それ以降のトークンには向けられません。
+- マスクにより、アクションiはそれ以前のアクショントークンには注意を向けられますが、それ以降のトークンには向けられません。
 
 - 論文のアブレーションでは、双方向アテンションは性能が劣ることが示されています。著者らは、将来のアクションの情報漏れを防ぐことで、より適切な時間構造の学習に役立つと示唆しています。
 
@@ -178,15 +192,15 @@ Noisy Actions → Cross-Attention
                Action Chunk
 ```
 
-**SmolVLA におけるフローマッチング**
+**SmolVLAにおけるフローマッチング**
 
-![SmolVLA: 3. SmolVLA の軽量アーキテクチャとネットワーク全体像 (図 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-15-en.png)
+![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 15)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-15-en.png)
 
 **学習と推論のワークフロー全体**
 
-![SmolVLA: 3. SmolVLA の軽量アーキテクチャとネットワーク全体像 (図 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-12-en.png)
+![SmolVLA: 3. SmolVLA's Lightweight Architecture and Complete Network (Figure 12)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-12-en.png)
 
-- メインモデルは約 4 億 5,000 万パラメータを持ち、そのうちおよそ 1 億パラメータがアクションエキスパートです。学習時には VLM を凍結し、アクションエキスパートのみを学習します。
+- メインモデルは約4億5千万パラメータを持ち、そのうちおよそ1億がアクションエキスパートです。学習時にはVLMを凍結し、アクションエキスパートのみを学習します。
 
 ---
 
@@ -208,14 +222,14 @@ Noisy Actions → Cross-Attention
 
 - こうした分断されたコレクションは「データアイランド」です。ファイルを単に連結しただけでは、事前学習に有用な形にはなりません。
 
-### どれくらいのコミュニティデータを使用しているか
-![SmolVLA: どれくらいのコミュニティデータを使用しているか (図 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-08.png)
+### どれくらいのコミュニティデータが使われているか
+![SmolVLA: How Much Community Data Is Used? (Figure 08)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-08.png)
 
-- 選定では、ロボットの種類、エピソード数、全体的な品質、フレームのカバレッジを考慮しています。
+- 選定では、ロボットの種類、エピソード数、全体的な品質、フレームのカバレッジを考慮します。
 
-- これは、多くの大規模 VLA が使用するデータ量よりもおよそ 1 桁少ない規模です。慎重にクリーンアップされたコミュニティデータであっても、小規模なスケールで有意義な事前学習効果をもたらせることを示すのが狙いです。
+- これは、多くの大規模VLAが使用するデータ量のおよそ1桁少ない規模です。慎重にクリーンアップされたコミュニティデータであっても、小規模スケールで意味のある事前学習効果をもたらせることを示すのが狙いです。
 
-### VLM を用いたタスク言語のクリーンアップ
+### VLMでタスク言語をクリーンアップする
 コミュニティのタスクラベルはしばしば曖昧で、例えば次のようなものです：
 
 ```text
@@ -224,11 +238,11 @@ Hold
 Up
 ```
 
-人間であれば動画からタスクを推測できますが、そのようなラベルでは VLA に目標の安定した記述を与えることができません。
+人間であれば動画からタスクを推測できるかもしれませんが、そのようなラベルではVLAに目標の安定した記述を与えられません。
 
-著者らは Qwen2.5-VL-3B-Instruct を用いて、より良い記述を生成します：
+著者らはQwen2.5-VL-3B-Instructを用いて、より良い記述を生成します：
 
-1. 代表的なデータセット画像をサンプリングする。
+1. データセットから代表的な画像をサンプリングする。
 
 2. 元のタスクラベルを与える。
 
@@ -242,10 +256,10 @@ Vague original label + representative images
 Clear action-oriented instruction
 ```
 
-### カメラ視点の標準化
-- カメラ名はコミュニティデータセットごとに異なります。`images.laptop` は、あるデータセットでは俯瞰カメラを指し、別のデータセットでは手首カメラを指すかもしれません。
+### カメラ視点を標準化する
+- コミュニティデータセット間ではカメラ名がさまざまです。`images.laptop` は、あるデータセットでは俯瞰カメラを指し、別のデータセットでは手首カメラを指すかもしれません。
 
-- 名前を固定の意味として扱うと、同じ入力スロットに対して毎回異なる視点が割り当てられることになり、学習を混乱させます。
+- 名前を固定的な意味として扱うと、同じ入力スロットに対して異なる視点を繰り返し割り当てることになり、学習を混乱させます。
 
 - 著者らは、次の優先順位でカメラを標準的な順序に手動でマッピングします：
 
@@ -261,37 +275,37 @@ OBS_IMAGE_2
 OBS_IMAGE_3
 ```
 
-- 必要数を超える余分な視点は破棄されます。
+- 要求されるものを超える余分なビューは破棄されます。
 
 ---
 
 ## 非同期推論
 ### 同期チャンクの問題点
-- モデルに観測 `o_t` からアクションチャンクを予測させるとします：
+- モデルに観測 `o_t` からアクションチャンクを予測させます：
 
 ```text
 A_t = [a_t, a_t+1, ... , a_t+n]
 ```
 
-- 計算効率を重視した同期システムでは、再度観測と予測を行う前に `A_t` 全体を実行します。これにより次の 2 つの問題が生じます：
+- 計算効率の良い同期システムでは、再度観測と予測を行う前に `A_t` をすべて実行します。これにより 2 つの問題が生じます：
 
-    1. チャンクの実行中に新しい画像を一切使わないため、その区間がオープンループになる。
+    1. チャンクの実行中に新しい画像を一切使わないため、オープンループの区間が生じる。
 
-    2. チャンクを使い切ったあと、ロボットが推論を待つ時間が発生する。
+    2. チャンクを使い切ると、ロボットは推論を待つことになる。
 
 ### RobotClient と PolicyServer
-- SmolVLA では 2 つの役割を分離します：
+- SmolVLA は 2 つの役割を分離しています：
 
-| コンポーネント | 役割 |
+| Component | Responsibility |
 |---|---|
-| RobotClient | 画像の取得、状態の読み取り、アクションキューの管理、およびアクションの実行。 |
+| RobotClient | 画像の取得、状態の読み取り、アクションキューの維持、およびアクションの実行。 |
 | PolicyServer | 観測を受け取り、SmolVLA を実行し、新しいアクションチャンクを返す。 |
 
-- RobotClient は現在のキューが空になる前に新しいアクションを要求し、非同期に推論をトリガーします。
+- RobotClient は現在のキューが空になる前に新しいアクションを要求し、推論を非同期にトリガーします。
 
-![SmolVLA: RobotClient と PolicyServer (図 20)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-20.png)
+![SmolVLA: RobotClient and PolicyServer (Figure 20)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-20.png)
 
-- シーケンスは次のようになります：
+- シーケンスは次のとおりです：
 
 ```text
 Robot executes the old chunk
@@ -307,10 +321,10 @@ New chunk arrives
 Merge or update the action queue
 ```
 
-![SmolVLA: RobotClient と PolicyServer (図 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-17.png)
+![SmolVLA: RobotClient and PolicyServer (Figure 17)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-17.png)
 
-### しきい値 g はいつ予測するかを制御する
-- 論文では `g ∈ [0,1]` を使用しています。RobotClient は、残りのアクションの割合が `g` を下回ったときに、次のチャンクを要求します：
+### 予測タイミングを制御するしきい値 g
+- 論文では `g ∈ [0,1]` を使用しています。残りのアクションの割合が `g` を下回ると、RobotClient は別のチャンクを要求します：
 
 ```text
 |A_t| / n < g
@@ -318,81 +332,81 @@ Merge or update the action queue
 
 **g = 0**
 
-- キューが空になるまで待つため、同期推論に近づき、一時停止が発生するリスクが高くなります。
+- キューが空になるまで待つため、同期推論に近くなり、一時停止が発生するリスクが高まります。
 
 **g = 1**
 
-- ほぼ毎制御サイクルで新しいアクションを要求し、応答性を最大化しますが、計算コストも増加します。
+- ほぼ毎制御サイクルで新しいアクションを要求し、応答性を最大化しますが、計算コストも最大になります。
 
 **0 < g < 1**
 
-- 論文では `g = 0.7` を用いてトレードオフを示しています：古いキューの一部を消費した後、次のチャンクを早めに要求します。これにより、毎ステップでモデルを実行することなくギャップを減らせます。
+- 論文では `g = 0.7` によるトレードオフを示しています：古いキューの一部を消費したら、次のチャンクを早めに要求します。これにより、モデルを毎ステップ実行することなくギャップを減らせます。
 
-![SmolVLA: しきい値 g はいつ予測するかを制御する (図 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-05.png)
+![SmolVLA: Threshold g Controls When to Predict (Figure 05)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-05.png)
 
-- 実質的に、`g` は推論時間を確保する役割を果たします。モデルが遅い場合やネットワーク遅延が大きい場合は、より早いタイミングで要求する必要があります。
+- 実質的に、`g` は推論時間を予約する役割を果たします。モデルが遅い場合やネットワーク遅延が大きい場合は、より早いタイミングで要求する必要があります。
 
-### なぜ観測の重複をフィルタリングするのか？
-- アームがほとんど動かない場合、連続する観測はほぼ同一になることがあります。それらをすべて送信すると計算資源を浪費し、ほぼ同一のチャンクを何度もマージしてしまう可能性があります。
+### なぜ繰り返し観測をフィルタするのか？
+- アームがほとんど動かない場合、連続する観測はほぼ同一になることがあります。それらをすべて送ると計算資源を浪費し、ほぼ同一のチャンクを繰り返しマージしてしまう可能性があります。
 
-- 著者らは関節空間距離を用いて観測を比較し、その距離が `ε` 未満のときは、ほぼ重複するものとしてスキップします。
+- 著者らはジョイント空間距離を用いて観測を比較し、その距離が `ε` 未満のときは近い重複としてスキップします。
 
-- しかし、キューが空の場合は、たとえ類似していても最新の観測を処理しなければなりません。そうしないと、ロボットが無期限に停止したままになる可能性があります。
+- しかしキューが空の場合は、たとえ類似していても最新の観測を必ず処理しなければなりません。そうしないと、ロボットが無期限に停止したままになる可能性があります。
 
 ---
 
 ## 実験設定
-![SmolVLA: 6. 実験設定 (図 22)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-22-en.png)
+![SmolVLA: 6. Experimental Setup (Figure 22)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-22-en.png)
 
-![SmolVLA: 6. 実験設定 (図 19)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-19.png)
+![SmolVLA: 6. Experimental Setup (Figure 19)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-19.png)
 
 学習設定
 
-| 項目 | 設定 |
+| Item | Setting |
 |---|---|
-| 画像解像度 | 512 × 512 |
-| 事前学習ステップ数 | 200K |
-|グローバルバッチサイズ|256|
-|オプティマイザ|AdamW|
-| 学習率 | 1e-4 から 2.5e-6 まで減衰 |
-|アクションチャンクサイズ|50|
-|Flow Matching ステップ数|10|
-| メインモデルのパラメータ数 | 450M |
-| アクションエキスパートのパラメータ数 | 約 100M |
-| プロジェクト全体の計算量 | 約 30K GPU 時間 |
+| Image resolution | 512 × 512 |
+| Pre-training steps | 200K |
+|Global Batch Size|256|
+|Optimizer|AdamW|
+| Learning rate | 1e-4 から 2.5e-6 まで減衰 |
+|Action Chunk Size|50|
+|Flow Matching Steps|10|
+| Main-model parameters | 450M |
+| Action-expert parameters | 約 100M |
+| Total project compute | 約 30K GPU 時間 |
 
-- 事前学習では、より大きなバッチサイズを得るために 4 枚の GPU を使用していますが、モデル自体は 1 枚の GPU で学習可能であると述べられています。
+- 事前学習では、より大きなバッチサイズを得るために 4 枚の GPU を使用していますが、モデル自体は 1 枚の GPU でも学習可能であると述べられています。
 
 ---
 
 ## 結果
 **シミュレーション**
 
-![SmolVLA: 7. Results (図 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-10.png)
+![SmolVLA: 7. Results (Figure 10)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-10.png)
 
 LIBERO において：
 
-- 0.45B の SmolVLA は、3.3B の π0 や 7B の OpenVLA よりも平均成功率が高くなっています。2.25B へスケールアップすると性能はさらに向上しますが、0.45B からの改善幅は小さくなります。
+- 0.45B の SmolVLA は、3.3B の π0 や 7B の OpenVLA よりも平均成功率が高くなっています。2.25B へのスケーリングにより性能はさらに向上しますが、0.45B からの上昇幅は小さくなります。
 
 - Meta-World では、0.45B モデルの平均成功率は 57.3、2.25B では 68.24 です。性能はモデルサイズだけで決まるわけではなく、アーキテクチャ、データ、学習目的も重要です。
 
 **SO100 実機ロボットでの結果**
 
-- π0 は最も簡単なピック＆プレースタスクで 100 に到達しますが、SmolVLA は積み上げや仕分けで大幅に優れた性能を示し、全体平均でも最良の結果を達成します。
+- π0 は最も簡単なピックアンドプレースタスクで 100 に到達しますが、SmolVLA は積み上げや仕分けで大幅に優れており、全体平均でも最良の結果を達成しています。
 
 - SmolVLA のパラメータ数は π0 のおよそ 7 分の 1 です。
 
 **SO101 への転移結果**
 
-![SmolVLA: 7. Results (図 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-00.png)
+![SmolVLA: 7. Results (Figure 00)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-00.png)
 
-- コミュニティ事前学習では主に SO100 のデータを使用し、SO101 のデータは含まれていません。SO101 のタスクでファインチューニングした後も、SmolVLA は ACT を上回り、別のプラットフォームへの適応能力を示しています。
+- コミュニティ事前学習では主に SO100 データを使用し、SO101 データは用いていません。SO101 タスクでファインチューニングした後も、SmolVLA は ACT を上回り、別プラットフォームへの適応を示しています。
 
 **コミュニティ事前学習の貢献**
 
-![SmolVLA: 7. Results (図 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-04.png)
+![SmolVLA: 7. Results (Figure 04)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-04.png)
 
-- シングルタスク学習からマルチタスク学習へ移行すると、平均成功率は 40.0 から 51.7 に上昇します。
+- シングルタスク学習からマルチタスク学習に移行すると、平均成功率は 40.0 から 51.7 に上昇します。
 
 - コミュニティ事前学習を追加すると、78.3 まで上昇します。
 
@@ -400,12 +414,12 @@ LIBERO において：
 
 **同期推論と非同期推論**
 
-| 推論方式 | ピック＆プレース | 積み上げ | 仕分け | 平均 |
+| Inference | Pick-Place | Stacking | Sorting | Average |
 |---|---|---|---|---|
-|同期|75|90|70|78\.3|
-|非同期|80|90|50|73\.3|
+|Sync|75|90|70|78\.3|
+|Async|80|90|50|73\.3|
 
-- 非同期化はすべてのタスクを改善するわけではありません：仕分けでは 70 から 50 に低下しています。非同期が常により高精度だと表現すべきではありません。
+- 非同期化はすべてのタスクを改善するわけではありません。仕分けでは 70 から 50 に低下しています。非同期推論を普遍的により高精度だと表現すべきではありません。
 
 - 主な利点は速度とスループットです：
 
@@ -414,82 +428,82 @@ Average completion time: 13.75 seconds → 9.70 seconds
 Tasks completed in a fixed time: 9 → 19
 ```
 
-![SmolVLA: 7. Results (図 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-18.png)
+![SmolVLA: 7. Results (Figure 18)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-18.png)
 
-- 平均成功率が同程度であっても、非同期推論はピック＆プレースを約 30% 高速に完了し、一定時間内に完了するタスク数を 2 倍以上に増やします。
+- 平均成功率が同程度であっても、非同期推論はピックアンドプレースを約 30% 高速に完了し、一定時間内に完了するタスク数を 2 倍以上にします。
 
 ---
 
 ## アブレーション
 ### クロスアテンションとセルフアテンション
-| アテンション | LIBERO 平均成功率 |
+| Attention | LIBERO average success |
 |---|---|
-|クロスアテンション|79\.0|
-|セルフアテンション|74\.5|
-| **CA と SA の交互適用** | **85.5** |
+|Cross\-Attention|79\.0|
+|Self\-Attention|74\.5|
+| **Alternating CA + SA** | **85.5** |
 
-- VLM 特徴だけを読む、あるいはアクション間の関係だけをモデル化するのでは不十分です。両者を交互に用いるのが最も良く機能し、タスク条件付けと時間的一貫性という補完的な役割を裏付けています。
+- VLM 特徴だけを読む、あるいはアクション間の関係だけをモデル化するのでは不十分です。両者を交互に用いるのが最も良く、タスク条件付けと時間的一貫性という補完的な役割を裏付けています。
 
 ### 因果アテンションと双方向アテンション
-| マスク | LIBERO 平均成功率 |
+| Mask | LIBERO average success |
 |---|---|
-|双方向|67\.5|
-|**因果**|**74\.5**|
+|Bidirectional|67\.5|
+|**Causal**|**74\.5**|
 
 - アクショントークンが将来のアクションを見ることを防ぐと、この実験では性能が向上し、明示的な時間方向が有用であることが示唆されます。
 
 ### Flow Matching と直接回帰
-![SmolVLA: Flow Matching と直接回帰 (図 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-06.png)
+![SmolVLA: Flow Matching and Direct Regression (Figure 06)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-06.png)
 
-- Flow Matching の主な利点は長いホライズンタスクで現れ、成功率は 38 から 53 に増加します。
+- Flow matching の主な利点は長期タスクで現れ、成功率は 38 から 53 に増加します。
 
-- これは、生成的な目的関数の方が、複雑で多峰性なアクション分布をより良くモデル化できるという著者らの見解を支持しています。
+- これは、生成的目的の方が複雑で多峰性なアクション分布をより良くモデル化できるという著者らの見解を支持しています。
 
 ### 状態はどこに入力すべきか？
 著者らは次を比較しています：
 
-- サフィックス：状態を直接アクションエキスパートに入力する。
+- サフィックス：状態を直接 Action Expert に入力する。
 
 - プレフィックス：状態をまず VLM に入力する。
 
-クロスアテンションありの場合、プレフィックスは平均成功率 80.3 に達し、サフィックスは 73.3 にとどまります。そのため最終モデルでは、画像と言語と並んで状態も VLM に入力します。
+クロスアテンションありの場合、プレフィックスは平均成功率 80.3 に達し、サフィックスは 73.3 です。そのため最終モデルでは、画像と言語と並んで状態を VLM に供給します。
 
-![SmolVLA: 状態はどこに入力すべきか？ (図 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-16.png)
+![SmolVLA: Where Should State Enter? (Figure 16)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-16.png)
 
-純粋なセルフアテンション変種では同じ傾向は見られません。ここから支持される結論は、プレフィックス状態が、選択された VLM 条件付き設計においてより良く機能するということであり、あらゆるアテンションアーキテクチャに対して普遍的に優れているという意味ではありません。
+純粋なセルフアテンション変種では同じ傾向は見られません。支持される結論は、プレフィックス状態が、選択された VLM 条件付き設計においてより良く機能するというものであり、あらゆるアテンションアーキテクチャに対して普遍的に優れているという意味ではありません。
 
-### アクションチャンクはどれくらいの長さにすべきか？
-![SmolVLA: アクションチャンクはどれくらいの長さにすべきか？ (図 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-14.png)
+### アクションチャンクはどれくらい長くすべきか？
+![SmolVLA: How Long Should an Action Chunk Be? (Figure 14)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-14.png)
 
 - 非常に短いチャンクではシーケンス構造を十分に活用できません。非常に長いチャンクは予測が難しくなり、過度に長いオープンループ実行を助長する可能性があります。
 
 - 論文では、長ければ長いほど常に良いとみなすのではなく、10〜50 が有用なバランスであるとしています。
 
 ### 50 ステップを予測しても 50 ステップ実行するとは限らない
-![SmolVLA: 50 ステップを予測しても 50 ステップ実行するとは限らない (図 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-01.png)
+![SmolVLA: Predicting 50 Steps Does Not Mean Executing 50 (Figure 01)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-01.png)
 
-- モデルは 50 ステップを予測しつつ、そのうち 10 ステップだけを実行して再度観測することができ、シーケンスの一貫性と環境からのフィードバックを両立させます。
+- モデルは 50 ステップを予測しても、そのうち 10 ステップだけを実行して再度観測することができ、シーケンスの一貫性と環境からのフィードバックを両立させます。
 
 - 観測する前に 50 ステップすべてを実行すると、平均成功率は 51.8 にとどまります。
 
-- これは非同期推論を動機付けるものです：ロボットをモデル待ちさせることなく頻繁に観測します。
+- これは非同期推論の動機付けとなります：ロボットにモデルの待ち時間を強いずに頻繁に観測することです。
 
 ---
 
 ## 制約事項
 - **具現化の多様性が限られている。** コミュニティ事前学習は主に SO100 に基づいています。SO101 への転移はファインチューニングによって示されていますが、広範なクロスエンボディメント事前学習ではありません。
 
-- **データ規模が限られている。** SmolVLA は約 23,000 軌道を使用していますが、OpenVLA などのモデルは最大で 100 万近くを利用できます。より大規模なコミュニティデータスケールでの効率性は、今後の検証が必要です。
+- **データ規模が限られている。** SmolVLA は約 23,000 軌跡を使用しているのに対し、OpenVLA などのモデルは最大で 100 万近くを使用できます。より大規模なコミュニティデータスケールでの効率性は、今後の検証が必要です。
 
-- **バックボーンの適合性は未解決。** SmolVLM-2 の事前学習の多くは文書や OCR に関するものです。空間的関係、アフォーダンス、物理的インタラクションに対して最適かどうかは、まだ明らかではありません。
+- **バックボーンの適合性は未解決。** SmolVLM-2 の事前学習の多くは文書や OCR に関するものです。空間的関係、アフォーダンス、物理的インタラクションに対して理想的かどうかは、まだ明らかではありません。
 
-- **実タスクは比較的短い。** ピック、プレース、スタック、ソートは、本当に長いホライズンの振る舞いを十分にカバーしておらず、階層型ポリシーや多段階プランニングが必要になる可能性があります。
+- **実タスクは比較的短いまま。** ピック、プレース、スタック、ソートは真に長期の行動を網羅しておらず、階層型ポリシーや多段階プランニングが必要になる可能性があります。
 
-- **主に模倣学習。** 性能は依然としてデモンストレーションのカバレッジに制約されます。著者らは、長いホライズンタスクや巧みなマニピュレーションを改善するために、強化学習との併用を提案しています。
+- **主に模倣学習。** 性能は依然としてデモのカバレッジに制約されます。著者らは、長期タスクや巧緻なマニピュレーションを改善するために、強化学習との併用を提案しています。
 
 ---
 
 ## まとめ
-![SmolVLA: 10. Summary (図 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-07-en.png)
+![SmolVLA: 10. Summary (Figure 07)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/smolvla/image-07-en.png)
 
 </div>
