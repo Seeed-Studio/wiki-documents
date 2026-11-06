@@ -324,21 +324,22 @@ remote_receiver:
   dump: raw # Keep for learning or debugging other infrared codes
   rmt_symbols: 96
 
-# Gree Climate Control
+# Climate control for a Gree AC. Swap `platform: gree` for another ESPHome
+# climate IR platform (for example daikin, midea, toshiba) and update `id` / `model`.
 climate:
   - platform: gree
     name: "Gree Air Conditioner" # The name displayed in Home Assistant
     id: gree_ac    # Internal ID used by ESPHome, for touch button control
+    transmitter_id: default_ir_transmitter
+    receiver_id: default_ir_receiver
     # --- Required configuration for the gree platform ---
-    model: "yan"   # [IMPORTANT] This is a required parameter. Gree has multiple infrared protocols.
-                   # You may need to try the following values to find the one that suits your air conditioner:
+    model: "yan"   # Required. Gree has multiple infrared protocols.
+                   # Try these values to match your air conditioner:
                    # "generic", "yan", "yaa", "yac", "yac1fb9", "yx1ff", "yag"
                    # "yan" is a common starting point.
-    # Optional configuration:
-    # sensor: my_temperature_sensor_id # If you have an external temperature sensor
     supports_cool: true
-    supports_heat: true # If your Gree AC does not support heating, set to false
-    # Note: According to the documentation, the gree platform does not seem to support receiver_id to sync the state from the original remote
+    supports_heat: true # Set to false if this AC has no heating mode
+    icon: "mdi:air-conditioner"
 
 binary_sensor:
   - platform: gpio
@@ -533,9 +534,9 @@ interval:
 </Details>
 
 3. **設定をカスタマイズする**
-      - **Wi-Fi**: `!secret` ファイルを使用しない場合は、`wifi:` セクションのコメントを解除し、`Your_WiFi_SSID` と `Your_WiFi_Password` をご自分の Wi-Fi 情報に置き換えてください。
-      - **正しい AC プロトコルを選択する**: これは最も重要なステップです\! サンプルでは `platform: gree` を使用しています。お使いのエアコンが Gree でない場合は、ご使用のブランドのプラットフォームに置き換えてください。対応しているブランドを見つけるには？[ESPHome Climate Components](https://esphome.io/components/climate/index.html) ページをご覧ください。ここに、すべての対応ブランドとそのプラットフォーム名（例：`daikin`、`midea`、`panasonic_ac` など）が一覧表示されています。
-          - 対応するプラットフォームを選択した後、そのプラットフォームのドキュメントに従って、`model` や対応モードなどのパラメータを微調整する必要がある場合があります。
+      - **Wi-Fi**: この例は `secrets.yaml` の `wifi_ssid` / `wifi_password` を読みます。YAML に直接書く場合は、`!secret` 行を SSID とパスワードに置き換えてください。
+      - **正しい AC プロトコルを選択する**: サンプルにはすでに `platform: gree` の `climate:` ブロックがあり、`transmitter_id` で `remote_transmitter` に接続されています。別ブランドの場合は、プラットフォーム名（例: `daikin`、`midea`、`toshiba`）と `id` / `model` を合わせて変更します。対応ブランドは [ESPHome Climate Components](https://esphome.io/components/climate/index.html) に掲載されています。
+      - **IR 送信と RGB LED**: どちらも ESP32-C3 の RMT を使います。送信機が起動しない場合は、エアコン制御の経路として `climate` と `remote_transmitter` を残し、`light:` ブロックは任意の状態表示として扱ってください。
 4. **コンパイルと書き込み**
       - YAML 設定を保存します。
       - XIAO IR Mate を USB ケーブルで HA を実行しているコンピュータに接続します。
