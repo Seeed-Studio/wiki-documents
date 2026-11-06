@@ -400,35 +400,21 @@ Check the SD card format, tile paths, and whether tiles exist for the displayed 
 ## Tech Support & Product Discussion
 
 <p style={{textAlign: 'center'}}>
-
   <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
-
     <img 
-
       src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
-
       border="0" 
-
       style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
-
     />
-
   </a>
-
 </p>
 
 <div className="button_tech_support_container">
-
-<a href="https://forum.seeedstudio.com/" className="button_forum"></a>
-
-<a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
-
+  <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+  <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
 <div className="button_tech_support_container">
-
-<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
-
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
-
+  <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>
