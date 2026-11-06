@@ -498,3 +498,33 @@ html[data-theme='dark'] .paper-reading-page.hands-on-reproduction-page {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* VLA-JEPA page-specific styles */
+.vla-jepa-reading-page {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.vla-jepa-reading-page .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25rem;
+}
+
+.vla-jepa-reading-page .katex-display > .katex {
+  width: max-content;
+  min-width: 100%;
+}
+
+.vla-jepa-reading-page .vla-jepa-paper-table {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: 1.5rem;
+}
+
+.vla-jepa-reading-page .vla-jepa-paper-table img {
+  width: 100%;
+  min-width: 700px;
+  max-width: none;
+}

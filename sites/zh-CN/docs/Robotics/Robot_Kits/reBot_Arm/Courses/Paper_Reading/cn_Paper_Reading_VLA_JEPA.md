@@ -23,7 +23,6 @@ url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_vla_jepa/
 ---
 
 import '/src/css/paper-reading-style.css';
-import '/src/css/vla-jepa-reading-style.css';
 
 export const toc = [
   {

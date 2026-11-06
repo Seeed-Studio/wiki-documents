@@ -23,7 +23,6 @@ url: https://wiki.seeedstudio.com/robotics/paper_reading_vla_jepa/
 ---
 
 import '/src/css/paper-reading-style.css';
-import '/src/css/vla-jepa-reading-style.css';
 
 <div className="paper-reading-page vla-jepa-reading-page">
 
