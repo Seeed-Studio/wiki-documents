@@ -215,9 +215,18 @@ const sidebars = {
           ],
         },
         {
-          type: 'html',
+          type: 'category',
+          label: 'パート 5 · ワールドモデル & ビデオ・アクション学習',
           className: 'robotics-section-title',
-          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">パート 5 · ワールドモデル &amp; ビデオ・アクション学習</span>',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            {
+              type: 'doc',
+              id: `${P}/ja_Paper_Reading_VLA_JEPA`,
+              label: 'VLA-JEPA — 動画による教師信号と潜在世界モデル',
+            },
+          ],
         },
         {
           type: 'html',

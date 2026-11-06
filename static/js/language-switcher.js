@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-06 15:34:39 (北京时间)
-// 多语言页面: 2636 个
+// 生成时间: 2026-11-06 17:33:22 (北京时间)
+// 多语言页面: 2637 个
 
 (function() {
   'use strict';
@@ -976,6 +976,13 @@
     "pt"
   ],
   "/jetson/accelerate_llm_inference_mtp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/local_decision_model_laya": [
     "cn",
     "en",
     "es",
@@ -7102,7 +7109,10 @@
   ],
   "/robotics/paper_reading_vla_jepa": [
     "cn",
-    "en"
+    "en",
+    "es",
+    "ja",
+    "pt"
   ],
   "/robotics/paper_reading_wall_oss": [
     "cn",
