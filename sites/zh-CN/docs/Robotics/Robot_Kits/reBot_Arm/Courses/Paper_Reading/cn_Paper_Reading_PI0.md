@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 Pi0：论文精读 pi0 视觉-语言骨干网络、动作专家、条件流匹配与跨本体预训练。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 Pi0
+description: "精读 pi0 视觉-语言骨干网络、动作专家、条件流匹配与跨本体预训练。"
+title: "π0：流匹配如何连接视觉语言与机器人动作"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_pi0/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-pi0-title">如何在 reBot Arm 与 SO-ARM101 上运行 Pi0</h1>
+  <h1 id="paper-reading-pi0-title">π0：流匹配如何连接视觉语言与机器人动作</h1>
   <p className="paper-reading-lead">π0: A Vision-Language-Action Flow Model for General Robot Control</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>机器人基础模型</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/pi0" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot π0 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=pi0 --policy.pretrained_path=lerobot/pi0_base`：选择 π0，并加载基础预训练权重用于微调。
+- `--policy.gradient_checkpointing=true`：通过重算中间激活降低训练显存需求。
+- `--policy.train_expert_only=true`：冻结 VLM，只训练动作专家及投影层；这是可选微调方式。
+
+</aside>
 
 π0 以预训练视觉语言模型 PaliGemma 为语义骨干，增加一个约 3 亿参数的动作专家，用条件流匹配一次生成连续动作块，再通过大规模跨机器人预训练和高质量任务后训练，让同一个模型适配多种单臂、双臂及移动机器人。
 

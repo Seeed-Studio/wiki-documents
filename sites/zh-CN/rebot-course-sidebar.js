@@ -216,9 +216,14 @@ const sidebars = {
           ],
         },
         {
-          type: 'html',
+          type: 'category',
+          label: '第五部分：世界模型与 Video-Action',
           className: 'robotics-section-title',
-          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">第五部分：世界模型与 Video-Action</span>',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_VLA_JEPA', label: 'VLA-JEPA 论文精读' },
+          ],
         },
         {
           type: 'html',

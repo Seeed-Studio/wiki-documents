@@ -291,9 +291,18 @@ const sidebars = {
           ]
         },
         {
-          "type": "html",
+          "type": "category",
+          "label": "Part 5 · World Models & Video-Action Learning",
           "className": "robotics-section-title",
-          "value": "<span class=\"menu__link\" role=\"heading\" aria-level=\"3\" style=\"cursor: default\">Part 5 · World Models &amp; Video-Action Learning</span>"
+          "collapsed": false,
+          "collapsible": false,
+          "items": [
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_VLA_JEPA",
+              "label": "VLA-JEPA — Video Supervision & Latent World Models"
+            }
+          ]
         },
         {
           "type": "html",

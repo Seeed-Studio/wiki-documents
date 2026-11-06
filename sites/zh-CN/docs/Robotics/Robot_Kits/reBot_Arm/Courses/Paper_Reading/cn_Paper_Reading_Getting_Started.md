@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 Physical AI 论文：Seeed 论文精读系列逐篇拆解 Pi0、Pi0.5、GR00T、ACT、SmolVLA 等模型，并配合 LeRobot 带你动手复现。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 Physical AI 论文
+description: "Seeed Physical AI 论文精读与动手复现系列：理解 ACT、π 系列及通用 VLA 的核心方法，并通过 LeRobot 学习示教、训练与部署。"
+title: "Physical AI 论文精读与动手复现"
 hide_title: true
 keywords:
   - reBot
@@ -46,7 +46,7 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">如何在 reBot Arm 与 SO-ARM101 上运行 Physical AI 论文</h1>
+    <h1 id="paper-reading-title">Physical AI 论文精读与动手复现</h1>
     <p className="paper-reading-lead">跨专业学习机器人，刚读研想做技术储备，准备找工作增加知识面，想要做自己的项目加速落地，不用到处收集资料啦！</p>
     <p>SeeedStudio AI Robotics团队精心打磨的<strong>永远免费课程</strong>，配合<strong>100%完全开源可商用、可复现的reBot机械臂</strong>。学完这个，你就是下一个大佬！</p>
     <ul className="paper-reading-badges" aria-label="课程特点">
@@ -115,6 +115,9 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/cn/robotics/paper_reading_wall_oss/">WALL-OSS 论文精读</a></li>
       </ul>
       <h3>第五部分：世界模型与 Video-Action</h3>
+      <ul className="paper-reading-directory-list">
+        <li><a href="/cn/robotics/paper_reading_vla_jepa/">VLA-JEPA 论文精读</a></li>
+      </ul>
       <span className="paper-reading-update-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
           <path d="M3 12a9 9 0 0 1 15.36-6.36L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.36 6.36L3 16M8 16H3v5" />

@@ -17,10 +17,10 @@ displayed_sidebar: PaperReadingSidebar
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-11-03
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-11-03'
-updatedAt: '2026-11-03'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_multi_task_dit/
 ---
 
@@ -44,6 +44,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/multi_task_dit" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot MultiTask DiT Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+- `--policy.type=multi_task_dit`: Select LeRobot MultiTask DiT, an implementation inspired by LBM rather than an exact reproduction of the paper’s system.
+- `--policy.horizon=32 --policy.n_action_steps=24`: Set a 32-step prediction window including history-aligned positions, and execute a 24-step slice; see the article for their distinction.
+- `--policy.objective=diffusion`: Use the diffusion objective; flow_matching is an alternative requiring its own integration settings.
+
+</aside>
 
 Can demonstrations from multiple tasks help robots learn new tasks with less data and handle environmental changes? This paper holds the policy architecture fixed and uses controlled experiments to measure the benefits of pretraining.
 

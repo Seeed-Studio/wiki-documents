@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 ACT：论文精读 ACT 模仿学习、ALOHA 双臂遥操作系统、动作分块、时间集成与 CVAE 网络。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 ACT
+description: "精读 ACT 模仿学习、ALOHA 双臂遥操作系统、动作分块、时间集成与 CVAE 网络。"
+title: "ACT：动作分块如何实现低成本双臂精细操作"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_act/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-act-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-act-title">如何在 reBot Arm 与 SO-ARM101 上运行 ACT</h1>
+  <h1 id="paper-reading-act-title">ACT：动作分块如何实现低成本双臂精细操作</h1>
   <p className="paper-reading-lead">Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>模仿学习</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/act" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot ACT 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=act`：选择 ACT 策略，从示范数据训练。
+- `--policy.chunk_size=100`：每次预测 100 步动作；执行长度由 n_action_steps 单独控制。
+- `--policy.temporal_ensemble_coeff=0.01 --policy.n_action_steps=1`：启用时间集成，并在每个控制步重新预测；开启集成时 n_action_steps 必须为 1。
+
+</aside>
 
 ## 预备知识
 

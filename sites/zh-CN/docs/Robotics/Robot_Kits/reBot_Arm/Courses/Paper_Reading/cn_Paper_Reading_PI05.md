@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 Pi0.5：论文精读 pi0.5 多源联合训练、分层动作生成、开放世界泛化与 pi0 的差异。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 Pi0.5
+description: "精读 pi0.5 多源联合训练、分层动作生成、开放世界泛化与 pi0 的差异。"
+title: "π0.5：多源联合训练如何支持开放世界泛化"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_pi05/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-pi05-title">如何在 reBot Arm 与 SO-ARM101 上运行 Pi0.5</h1>
+  <h1 id="paper-reading-pi05-title">π0.5：多源联合训练如何支持开放世界泛化</h1>
   <p className="paper-reading-lead">π0.5: a Vision-Language-Action Model with Open-World Generalization</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>开放世界泛化</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/pi05" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot π0.5 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=pi05 --policy.pretrained_path=lerobot/pi05_base`：选择 π0.5 并加载基础权重；pretrained_path 加载权重，不自动恢复检查点全部配置。
+- `--policy.train_expert_only=true`：可选：冻结 VLM，仅微调动作专家及投影层。
+- `--policy.gradient_checkpointing=true --policy.dtype=bfloat16`：降低训练显存需求；默认分位数归一化还要求数据集包含 q01、q99 统计量。
+
+</aside>
 
 ## 预备知识
 

@@ -1,6 +1,6 @@
 ---
 description: "精读 TRI LBM 论文：理解条件 Diffusion Transformer、多任务预训练与数据效率，对照 LeRobot MultiTask DiT 的实现与应用。"
-title: LBM 与 MultiTask DiT 论文精读：多任务预训练如何帮助机器人学习
+title: "LBM 与 MultiTask DiT：多任务预训练如何帮助机器人学习"
 hide_title: true
 keywords:
   - 论文精读
@@ -17,10 +17,10 @@ displayed_sidebar: PaperReadingSidebar
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-11-03
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-11-03'
-updatedAt: '2026-11-03'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_multi_task_dit/
 ---
 
@@ -44,6 +44,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/multi_task_dit" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot MultiTask DiT 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=multi_task_dit`：选择 LeRobot MultiTask DiT；它受 LBM 路线启发，不能直接等同于论文原始系统。
+- `--policy.horizon=32 --policy.n_action_steps=24`：设置包含历史对齐位置的 32 步预测窗口，并取其中 24 步执行；窗口与执行段的区别见正文。
+- `--policy.objective=diffusion`：使用扩散目标；flow_matching 是另一种目标，需要搭配其积分配置。
+
+</aside>
 
 多任务示范能否让机器人用更少数据学会新任务，并更好地应对环境变化？这篇论文固定策略架构，通过受控实验检验预训练的收益。
 
