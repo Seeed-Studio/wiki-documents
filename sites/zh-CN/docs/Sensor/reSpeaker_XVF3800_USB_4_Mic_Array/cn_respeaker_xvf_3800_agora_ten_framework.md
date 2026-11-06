@@ -285,6 +285,8 @@ Workflow:
 
 #### 可选：切换到 FlowSpeech TTS
 
+请使用[提供者 PR #1](https://github.com/Seeed-Projects/seeed-respeaker-agora-tenframework/pull/1) 中支持公共 API v1 的扩展；该更新仍待上游合并。生成需要开发者 API 密钥、有效的 Basic、Pro 或 Scale 付费订阅以及可用积分。扩展向 `/api/v1/tts/jobs` 提交任务，以至少五秒的间隔查询状态，不携带 API 凭据下载 WAV，再解析并提取 PCM 采样。音频在完整下载后才开始输出，并非边生成边播放。请预留足够超时时间；取消本地播放不会取消服务器任务。详见[公共 API 指南](https://flowspeech.io/docs/public-api)。
+
 FlowSpeech 扩展输出 24 kHz、单声道、16 位 PCM 音频，可以直接接入本示例的 `tts` 节点。打开 `agents/examples/voice-assistant/tenapp/property.json`，将名为 `tts` 的节点替换为：
 
 ```json
@@ -294,6 +296,8 @@ FlowSpeech 扩展输出 24 kHz、单声道、16 位 PCM 音频，可以直接接
   "addon": "flowspeech_tts_python",
   "extension_group": "tts",
   "property": {
+    "total_timeout": 600.0,
+    "max_retries": 2,
     "dump": false,
     "dump_path": "./",
     "params": {
