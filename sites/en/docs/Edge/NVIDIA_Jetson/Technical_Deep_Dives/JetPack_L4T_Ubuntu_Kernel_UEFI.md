@@ -8,7 +8,7 @@ keywords:
   - ubuntu
   - kernel
   - uefi
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/technical_deep_dives/jetpack_l4t_ubuntu_kernel_uefi/jetpack_architecture.png
 slug: /jetson_jetpack_l4t_ubuntu_kernel_uefi
 last_update:
   date: 11/02/2026
