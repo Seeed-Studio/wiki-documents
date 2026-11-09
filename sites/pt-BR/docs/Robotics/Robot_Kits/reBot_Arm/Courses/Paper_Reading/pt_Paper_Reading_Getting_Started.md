@@ -1,23 +1,23 @@
 ---
-description: "Como executar papers de Physical AI no reBot Arm e no SO-ARM101: a série de leitura de papers da Seeed destrincha Pi0, Pi0.5, GR00T, ACT, SmolVLA e outros, e guia você na reprodução prática com LeRobot."
-title: "Como executar papers de Physical AI no reBot Arm e no SO-ARM101"
+description: "Explore os métodos centrais por trás do ACT, da série π e dos modelos VLA generalistas, com tutoriais LeRobot sobre demonstrações, treinamento e implantação."
+title: "Mergulhos Profundos em Artigos de IA Física e Reprodução Prática"
 hide_title: true
 keywords:
   - reBot
   - B601-DM
   - B601-RS
   - SO101
-  - Braço Robótico
-  - IA Física
-  - Curso
+  - Robotic Arm
+  - Physical AI
+  - Course
   - Tutorial
   - SO-ARM101
   - LeRobot
   - Hugging Face
-  - Braço
-  - Robótica
-  - Análise Detalhada de Artigo
-  - Implantação prática
+  - Arm
+  - Robotics
+  - Paper Deep-Dive
+  - Hands-on Deployment
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /robotics/paper_reading_getting_started
 displayed_sidebar: PaperReadingSidebar
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-16'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/pt-br/robotics/paper_reading_getting_started/
 ---
 
@@ -36,30 +36,30 @@ import '/src/css/paper-reading-style.css';
 
 <div className="paper-reading-page">
 
-  <aside className="paper-reading-support" aria-label="Apoiar o projeto de código aberto">
+  <aside className="paper-reading-support" aria-label="Support the open-source project">
     <div>
       <strong>Cursos gratuitos, juntos em código aberto</strong>
-      <p>Este curso é totalmente gratuito. Para apoiar nosso trabalho, dê uma estrela para o nosso braço robótico open source!</p>
+      <p>Este curso é totalmente gratuito. Para incentivar nosso trabalho, dê uma estrela ao nosso braço robótico open source!</p>
     </div>
-    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Dar estrela no GitHub</a>
+    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Star on GitHub</a>
   </aside>
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">Como executar papers de Physical AI no reBot Arm e no SO-ARM101</h1>
-    <p className="paper-reading-lead">Explore pesquisas de ponta em Physical AI, destrinche modelos e algoritmos-chave com braços robóticos da Seeed</p>
-    <p>Um <strong>curso que será sempre gratuito</strong>, cuidadosamente desenvolvido pela equipe de AI Robotics da SeeedStudio, combinado com o <strong>braço robótico reBot 100% open source, disponível para uso comercial e reprodução</strong>. Conclua o curso e torne-se o próximo especialista em robótica!</p>
-    <ul className="paper-reading-badges" aria-label="Recursos do curso">
+    <h1 id="paper-reading-title">Mergulhos Profundos em Artigos de IA Física e Reprodução Prática</h1>
+    <p className="paper-reading-lead">Explore pesquisas de ponta em IA Física, destrinche modelos e algoritmos-chave com braços robóticos da Seeed</p>
+    <p>Um <strong>curso que será sempre gratuito</strong>, cuidadosamente desenvolvido pela equipe de IA Robotics da SeeedStudio, combinado com o <strong>braço robótico reBot 100% open source, disponível para uso comercial e reprodução</strong>. Conclua-o e torne-se o próximo especialista em robótica!</p>
+    <ul className="paper-reading-badges" aria-label="Course features">
       <li>Sempre gratuito</li>
       <li>100% open source · Uso comercial</li>
-      <li>Mão na massa · Reproduzível</li>
+      <li>Prático · Reproduzível</li>
     </ul>
   </section>
 
 <div className="sensecraft-banner">
   <div className="sensecraft-banner__copy">
     <span className="sensecraft-banner__badge">⚡ No-code · Sem configuração de ambiente</span>
-    <p className="sensecraft-banner__title">Pule a configuração — execute o reBot Arm e o LeRobot a partir de um único aplicativo</p>
+    <p className="sensecraft-banner__title">Pule a configuração — execute o reBot Arm e o LeRobot a partir de um único app</p>
     <p className="sensecraft-banner__lead">SenseCraft Robotics é a plataforma no-code da Seeed para o SO-ARM101, reBot Arm 102 + B601-RS e B601-DM. Conecte os braços, calibre, colete demonstrações, treine e execute inferência a partir de uma interface guiada — sem ambiente Python, sem terminal.</p>
     <ul className="sensecraft-banner__points">
       <li>✅ Fluxo de trabalho guiado em 6 etapas</li>
@@ -69,57 +69,55 @@ import '/src/css/paper-reading-style.css';
     </ul>
   </div>
   <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en/download?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir para SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en/download?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir para o SenseCraft Robotics ↗</a>
     <a className="sensecraft-banner__link" href="/pt-br/sensecraft_robotics/">Guia de software</a>
   </div>
 </div>
 
   <div className="paper-reading-directory">
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">
-      <h2 id="paper-reading-hands-on-title">Implantação prática</h2>
+      <h2 id="paper-reading-hands-on-title">Implantação Prática</h2>
       <p>Comece com a preparação da plataforma e a coleta de dados, siga os passos para treinar e implantar o ACT, depois aprenda a alternar do ACT para outras políticas e domine gradualmente o fluxo de reprodução para diferentes algoritmos.</p>
       <ol className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_hardware_and_teleoperation/">Configuração de Hardware &amp; Software</a></li>
         <li><a href="/pt-br/robotics/hands_on_task_design/">Design de Tarefas &amp; Planejamento de Demonstrações</a></li>
-        <li><a href="/pt-br/robotics/hands_on_camera_recording/">Coleta de Dados Multi-View</a></li>
+        <li><a href="/pt-br/robotics/hands_on_camera_recording/">Coleta de Dados Multivisualização</a></li>
         <li><a href="/pt-br/robotics/hands_on_dataset_quality/">Qualidade dos Dados: Estrutura, Sincronização &amp; Validação</a></li>
         <li><a href="/pt-br/robotics/hands_on_act_training/">Treinamento do Modelo ACT</a></li>
         <li><a href="/pt-br/robotics/hands_on_act_deployment/">Implantação no Robô &amp; Avaliação de Desempenho</a></li>
-        <li><a href="/pt-br/robotics/hands_on_algorithm_switching/">Troca de Políticas &amp; Execução de Tarefas</a></li>
+        <li><a href="/pt-br/robotics/hands_on_algorithm_switching/">Alternância de Políticas &amp; Execução de Tarefas</a></li>
       </ol>
     </section>
 
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-papers-title">
-      <h2 id="paper-reading-papers-title">Análises detalhadas de artigos</h2>
+      <h2 id="paper-reading-papers-title">Mergulhos Profundos em Artigos</h2>
       <p>Leia artigos por tópico, desde políticas básicas de aprendizado por imitação até modelos de visão-linguagem-ação.</p>
-      <h3>Parte 1 · Action Chunking &amp; Políticas Multi-Tarefa</h3>
+      <h3>Parte 1 · Action Chunking &amp; Políticas Multitarefa</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_act/">ACT — Manipulação Bimanual de Baixo Custo</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_multi_task_dit/">LBM / MultiTask DiT — Pré-treinamento Multitarefa</a></li>
       </ul>
       <h3>Parte 2 · Modelos VLA Leves &amp; Implantação Eficiente</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_smolvla/">SmolVLA — Modelos de Visão-Linguagem-Ação Acessíveis</a></li>
         <li><a href="/pt-br/robotics/paper_reading_evo1/">Evo-1 — VLA Leve</a></li>
       </ul>
-      <h3>Parte 3 · Modelos Fundamentais de Robótica π</h3>
+      <h3>Parte 3 · Modelos Fundamentais de Robôs π</h3>
       <ul className="paper-reading-directory-list">
-        <li><a href="/pt-br/robotics/paper_reading_pi0/">π₀ — Controle Robótico de Uso Geral</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_pi0/">π₀ — Controle de Robôs de Uso Geral</a></li>
         <li><a href="/pt-br/robotics/paper_reading_pi0_fast/">π₀-FAST — Tokenização de Ações Eficiente</a></li>
         <li><a href="/pt-br/robotics/paper_reading_pi05/">π₀.₅ — Generalização em Mundo Aberto</a></li>
       </ul>
       <h3>Parte 4 · VLA Generalista &amp; Adaptação Entre Corpos</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_gr00t_n1/">NVIDIA GR00T — Adaptação &amp; Fine-Tuning</a></li>
-        <li><a href="/pt-br/robotics/paper_reading_eo1/">EO-1 — Pré-Treinamento Multimodal Intercalado</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_eo1/">EO-1 — Pré-treinamento Multimodal Intercalado</a></li>
         <li><a href="/pt-br/robotics/paper_reading_wall_oss/">WALL-OSS — Raciocínio Incorporado &amp; Controle de Robôs</a></li>
       </ul>
       <h3>Parte 5 · Modelos de Mundo &amp; Aprendizado Vídeo-Ação</h3>
-      <span className="paper-reading-update-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-          <path d="M3 12a9 9 0 0 1 15.36-6.36L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.36 6.36L3 16M8 16H3v5" />
-        </svg>
-        Atualizações em andamento
-      </span>
+      <ul className="paper-reading-directory-list">
+        <li><a href="/pt-br/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisão por Vídeo &amp; Modelos de Mundo Latentes</a></li>
+      </ul>
       <h3>Parte 6 · Avaliação Unificada &amp; Resumo da Pesquisa</h3>
       <span className="paper-reading-update-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">

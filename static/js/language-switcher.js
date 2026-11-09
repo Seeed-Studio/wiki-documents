@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-26 11:06:10 (北京时间)
-// 多语言页面: 2625 个
+// 生成时间: 2026-11-09 11:39:25 (北京时间)
+// 多语言页面: 2638 个
 
 (function() {
   'use strict';
@@ -24,6 +24,8 @@
 
   // 内嵌的语言映射数据
   const languageMapping = {
+    "/robotics/paper_reading_lingbot_va": ["cn", "en"],
+    "/robotics/paper_reading_lingbot_vla2": ["cn", "en"],
   "/Cloud": [
     "cn",
     "en",
@@ -976,6 +978,13 @@
     "pt"
   ],
   "/jetson/accelerate_llm_inference_mtp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/local_decision_model_laya": [
     "cn",
     "en",
     "es",
@@ -2229,6 +2238,41 @@
     "pt"
   ],
   "/reServer_J2032_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_jetpack_l4t_ubuntu_kernel_uefi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_boot_log_analysis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_camera_data_chain": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_device_tree": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_usb": [
     "cn",
     "en",
     "es",
@@ -5532,6 +5576,13 @@
     "ja",
     "pt"
   ],
+  "/get_started_with_ripple_l2_pro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/l2_mui": [
     "cn",
     "en",
@@ -7023,6 +7074,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_multi_task_dit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_pi0": [
     "cn",
     "en",
@@ -7052,6 +7110,13 @@
     "pt"
   ],
   "/robotics/hands_on_so101_algorithm_switching": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_vla_jepa": [
     "cn",
     "en",
     "es",
@@ -9753,6 +9818,20 @@
     "pt"
   ],
   "/epaper_en05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_426_mono_kit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_73_color_kit": [
     "cn",
     "en",
     "es",
@@ -16855,6 +16934,13 @@
     "ja",
     "pt"
   ],
+  "/solutions/crayfish-behavior-recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/crowd-flow-monitoring": [
     "cn",
     "en",
@@ -16933,6 +17019,13 @@
     "pt"
   ],
   "/solutions/jetson-crowd-tracking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/rehab-posture-analysis": [
     "cn",
     "en",
     "es",

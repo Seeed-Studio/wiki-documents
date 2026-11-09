@@ -1,6 +1,7 @@
 ---
 description: エッジ映像による立入・越線・滞留アラート：必要な機器、構築手順、利用できるインターフェース、3台のホストでの判定時間とスループットの実測データ
 title: 'エッジセキュリティアラート：立入、越線、滞留検知'
+sidebar_label: 'エッジセキュリティアラート'
 keywords:
   - エッジセキュリティ
   - 侵入検知
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-security/
 generated_from: sensecraft-solutions@edge_security
 ---
@@ -153,7 +154,7 @@ generated_from: sensecraft-solutions@edge_security
 
 | | ホスト | アクセラレータ | 映像デコード | 使用ポート | 空き容量 |
 |---|---|---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin モジュール | Jetson GPU (TensorRT) | NVDEC ハードウェアデコード | 8090 / 1883 / 8099 | 約10 GB、エンジン構築を含む |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 / Super J4012](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin モジュール | Jetson GPU (TensorRT) | NVDEC ハードウェアデコード | 8090 / 1883 / 8099 | 約10 GB、エンジン構築を含む |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 シリーズ](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Rockchip NPU | Rockchip NPU (RKNN) | オンボード MPP ハードウェアデコード | 8090 / 1883 / 8099 | 約6 GB |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>ファンレス産業用筐体 | Hailo-8 (HailoRT) | CPU ソフトウェアデコード | 8090 / 1883 / 8099 | 約6 GB |
 

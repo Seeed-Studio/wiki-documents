@@ -1,6 +1,6 @@
 ---
-description: "How to run Physical AI papers on reBot Arm & SO-ARM101: a Seeed paper deep-dive series that breaks down Pi0, Pi0.5, GR00T, ACT, SmolVLA and more, then walks you through hands-on reproduction with LeRobot."
-title: "How to Run Physical AI Papers on reBot Arm & SO-ARM101"
+description: "Explore the core methods behind ACT, the π series and generalist VLA models, with LeRobot tutorials on demonstrations, training and deployment."
+title: "Physical AI Paper Deep-Dives and Hands-on Reproduction"
 hide_title: true
 keywords:
   - reBot
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-16'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_getting_started/
 ---
 
@@ -46,7 +46,7 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">How to Run Physical AI Papers on reBot Arm & SO-ARM101</h1>
+    <h1 id="paper-reading-title">Physical AI Paper Deep-Dives and Hands-on Reproduction</h1>
     <p className="paper-reading-lead">Explore cutting-edge Physical AI research, break down key models and algorithms with Seeed robotic arms</p>
     <p>A <strong>course that will always be free</strong>, carefully developed by the SeeedStudio AI Robotics team, paired with the <strong>100% open-source reBot robotic arm, available for commercial use and reproduction</strong>. Complete it and become the next robotics expert!</p>
     <ul className="paper-reading-badges" aria-label="Course features">
@@ -95,6 +95,7 @@ import '/src/css/paper-reading-style.css';
       <h3>Part 1 · Action Chunking &amp; Multi-Task Policies</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/robotics/paper_reading_act/">ACT — Low-Cost Bimanual Manipulation</a></li>
+        <li><a href="/robotics/paper_reading_multi_task_dit/">LBM / MultiTask DiT — Multitask Pretraining</a></li>
       </ul>
       <h3>Part 2 · Lightweight VLA Models &amp; Efficient Deployment</h3>
       <ul className="paper-reading-directory-list">
@@ -112,14 +113,13 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/robotics/paper_reading_gr00t_n1/">NVIDIA GR00T — Adaptation &amp; Fine-Tuning</a></li>
         <li><a href="/robotics/paper_reading_eo1/">EO-1 — Interleaved Multimodal Pre-Training</a></li>
         <li><a href="/robotics/paper_reading_wall_oss/">WALL-OSS — Embodied Reasoning &amp; Robot Control</a></li>
+        <li><a href="/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Cross-Embodiment Actions &amp; Future Perception</a></li>
       </ul>
       <h3>Part 5 · World Models &amp; Video-Action Learning</h3>
-      <span className="paper-reading-update-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-          <path d="M3 12a9 9 0 0 1 15.36-6.36L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.36 6.36L3 16M8 16H3v5" />
-        </svg>
-        Ongoing Updates
-      </span>
+      <ul className="paper-reading-directory-list">
+        <li><a href="/robotics/paper_reading_vla_jepa/">VLA-JEPA — Video Supervision &amp; Latent World Models</a></li>
+        <li><a href="/robotics/paper_reading_lingbot_va/">LingBot-VA — Causal World Modeling &amp; Robot Control</a></li>
+      </ul>
       <h3>Part 6 · Unified Evaluation &amp; Research Summary</h3>
       <span className="paper-reading-update-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">

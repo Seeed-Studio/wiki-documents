@@ -1,6 +1,7 @@
 ---
 description: On-device assembly inspection — missing-part comparison against a template expected-item list, ArUco-calibrated dimension measurement, and one OK/NG verdict delivered to the PLC over Modbus TCP and to the MES over MQTT. Hardware, deployment outline, output contracts and measured data.
 title: 'Edge Assembly Inspection: Missing Parts, Dimensions, Modbus and MQTT'
+sidebar_label: 'Edge Assembly Inspection'
 keywords:
   - assembly inspection
   - missing part detection
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/edge-assembly-inspection/
 generated_from: sensecraft-solutions@edge_inspection_assembly
 ---
@@ -132,8 +133,8 @@ Three things per station: a camera, an inspection host, and a system that receiv
 
 | | Inspection host | Accelerator | Detector as deployed | Measured streams | When to choose it |
 |---|---|---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Single-station host | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 1 stream, 67 h soak | A single station |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Multi-station aggregation host | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 8 stable / 12 degrading / 24 failing | Several stations on one host; the accuracy and speed data were measured on this module |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Single-station host | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 1 stream, 67 h soak | A single station |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Multi-station aggregation host | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 8 stable / 12 degrading / 24 failing | Several stations on one host; the accuracy and speed data were measured on this module |
 
 Stream capacity: 640² at 10 fps per stream, five minutes per level, the whole sweep run twice, with MQTT and Modbus disabled. With both outputs enabled the reachable count is below 8.
 

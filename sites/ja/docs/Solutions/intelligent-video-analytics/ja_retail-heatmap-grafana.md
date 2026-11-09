@@ -1,6 +1,7 @@
 ---
 description: 店舗や展示スペースにローカル完結の人流ヒートマップを構築する方法——必要な機器、構築手順、利用できるインターフェース、3機種での実測フレームレート
 title: '小売向け人流ヒートマップ：構築・デプロイ・実測データ'
+sidebar_label: '小売向け人流ヒートマップ'
 keywords:
   - 人流ヒートマップ
   - 来店客分析
@@ -24,7 +25,7 @@ last_update:
   date: 09/17/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/retail-heatmap-grafana/
 generated_from: sensecraft-solutions@recamera_heatmap_grafana
 ---
@@ -114,7 +115,7 @@ IP カメラが既にある現場では、カメラをそのまま使い、検�
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>カメラ一体型、4K | 検出 + 追跡 + カウント | 対象が遠く範囲も広い。遠方の人物も検出できる大きさを保ちたいとき |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 シリーズ](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>同じ構成で reComputer RK3576 シリーズにも対応 | 検出ホスト | 既に Rockchip ボードを運用している。映像デコードはハードウェアで動作 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrial-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer R2000 シリーズ（R2035-12、Hailo-8）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | 検出ホスト | 制御盤や弱電盤に収めるファンレス産業機が必要なとき |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 シリーズ（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>および reComputer J50 シリーズ | 検出ホスト | 1 台のホストで複数カメラを扱うとき |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>および reComputer J50 シリーズ | 検出ホスト | 1 台のホストで複数カメラを扱うとき |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-113991334--recomputer-r1125-10-45font.jpg" alt="reComputer R1100" width="110" /> | [reComputer R1100 シリーズ（R1124-10）](https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html) | ダッシュボードバックエンド | 現場にダッシュボード用の常時起動 PC がないとき |
 
 その他の前提条件：バックエンド機に Docker を導入し、空き容量を 2 GB 以上確保し、1883・3000・8080・8086 の各ポートを空けておくこと。ONVIF によるカメラ自動検出を効かせるため、カメラとバックエンドは同一セグメントに置きます。

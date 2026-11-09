@@ -1,6 +1,7 @@
 ---
 description: 在边缘硬件上用语音操作仓库管理系统——需要哪些设备、MCP 怎么把语音接到库存、五个套餐分别怎么部署，以及在 reComputer R2000 系列上的设备实测压测数据
 title: 边缘硬件上的语音仓库管理方案：搭建、部署与实测数据
+sidebar_label: '边缘语音仓库管理'
 keywords:
   - 语音仓库管理系统
   - 边缘 WMS
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/voice-warehouse-management/
 generated_from: sensecraft-solutions@smart_warehouse
 ---
@@ -121,7 +122,7 @@ generated_from: sensecraft-solutions@smart_warehouse
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991275-sensecap-watcher-w1-b_1.jpg" alt="SenseCAP Watcher" width="110" /> | [SenseCAP Watcher](https://www.seeedstudio.com/SenseCAP-Watcher-W1-B-p-5980.html) | 语音终端、MCP 客户端、端侧人脸识别 | 必选，一个工位一台 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html) | 跑仓管系统的边缘网关 | 库存数据留在本地、20 人以内、人脸识别由 Watcher 端侧完成 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width="110" /> | [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) | 带 Hailo-8 加速卡的边缘网关 | 超过 20 人，或者需要活体检测 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | 一台机器同时跑仓管系统、人脸识别和自建语音服务 | 2–3 个点位共用一台主机 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | 一台机器同时跑仓管系统、人脸识别和自建语音服务 | 2–3 个点位共用一台主机 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100032662--recomputer-robotics-j5012-with-gmsl_1__1.jpg" alt="reComputer Robotics J5011" width="110" /> | [reComputer Robotics J5011](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html) | 本地大模型与语音，不调用任何外部服务 | 厂区必须离线 |
 
 Watcher 端侧最多存 **20** 张人脸模板。超过 20 人，识别要放到网关侧，所以 20 人以内选 R1125，超过 20 人选带 Hailo-8 的 R2135。

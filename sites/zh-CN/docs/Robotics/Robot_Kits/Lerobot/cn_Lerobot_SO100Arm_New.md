@@ -127,16 +127,16 @@ import TabItem from '@theme/TabItem';
   </div>
 
 :::tip
-本教程已更新至最新版 [lerobot](https://huggingface.co/docs/lerobot/index)。
+本指南基于 Seeed 验证过的 LeRobot 配置。若要使用更新版本，请先查看[依赖要求](https://github.com/Seeed-Projects/lerobot/blob/main/pyproject.toml)。
 :::
 
 <div className="image-frame">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="" />
+    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM100 和 SO-ARM101 开源机械臂套件" />
 </div>
 
 <div className="get-one-now-panel">
   <a className="get-one-now-button" href="https://detail.tmall.com/item.htm?abbucket=14&id=877820346195&pisk=hoQ-FWMreBT8ReF0HdH1ZYYHAS2GAwABO65EOLTWE23dIOgo-Q2UJ9pA13VPK9jvpt6vFaqyK2Hdh6ckAwvhJU8eR8FyykDrGCdQ-D9SRouyJzygIP4LVjTLe6buKyCqcCJXN49WAS3XOBLBOQTQMKOp_pg5deNAGKRENQgWVrgXsQMWR2gShjOpO4gBO3ajlKRBRQTCdsNvtK9BRe6CGZcWV7kbvDgZBdki4_9xWs7AmAv9dKgQCNR87dtC1DpNPtfCra-qflLFiGBdA9ri0UCCVUOGaz3v5_sDYLQ3GDZFbG1GjVZCyR_RWMIqF27Uxib5ohk7zw_RPZjNnmras795iEsjFu7GWwLGban3Akq9eGIPGxeVP5p2zGjqnmjAouOV48UTCjvJ6ERvI7EnYD-0fIpgMSnEY3O2MdV86Doeml1..&rn=c965f4e20da915a38da869c35239c54a&spm=a1z10.5-b.w4011-22390330418.114.75ed1734VACGVS" target="_blank" rel="noopener noreferrer">
-    立即购买 / Get One Now 🖱️
+    <span>立即购买 / Get One Now 🖱️</span>
   </a>
 </div>
 
@@ -285,10 +285,10 @@ ffmpeg 相关异常说明已统一整理到文末 FAQ。
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
 </CodeBlock>
 
-6. 对于 Jetson JetPack 6.0+ 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-PyTorch)的第 5 步安装了 PyTorch-gpu 和 Torchvision）：
+6. 对于 Jetson JetPack 6.0 和 6.1 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-PyTorch)的第 5 步安装了 PyTorch-gpu 和 Torchvision）：
 
 <CodeBlock language="bash">
-{`conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson JetPack 6.0+
+{`conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson JetPack 6.0 和 6.1
 conda remove opencv   # 卸载 OpenCV
 pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
 conda install -y -c conda-forge ffmpeg
@@ -434,7 +434,7 @@ exit()   #  退出python`}
   </div>
 
 :::tip
-如果你购买的是组装版机械臂，请跳到校准机械臂步骤
+如果你购买的是已组装 SO-ARM101，请跳过电机组装，直接进入[机械臂校准部分](#calibration)。
 :::
 
 <details className="content-details">
@@ -511,14 +511,14 @@ sudo chmod 666 /dev/ttyACM1`}
 
 |                              **Leader机械臂6号舵机校准**                              |                              **Leader机械臂5号舵机校准**                              |                              **Leader机械臂4号舵机校准**                              |                              **Leader机械臂3号舵机校准**                              |                              **Leader机械臂2号舵机校准**                              |                              **Leader机械臂1号舵机校准**                              |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
+| ![SO-ARM101 Leader 机械臂 L6 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![SO-ARM101 Leader 机械臂 L5 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![SO-ARM101 Leader 机械臂 L4 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) | ![SO-ARM101 Leader 机械臂 L3 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) | ![SO-ARM101 Leader 机械臂 L2 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) | ![SO-ARM101 Leader 机械臂 L1 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
 
 **Follower 舵机校准参考图**
 
 
 |                             **Follower机械臂6号舵机校准**                             |                             **Follower机械臂5号舵机校准**                             |                             **Follower机械臂4号舵机校准**                             |                             **Follower机械臂3号舵机校准**                             |                             **Follower机械臂2号舵机校准**                             |                             **Follower机械臂1号舵机校准**                             |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
+| ![SO-ARM101 Follower 机械臂 F6 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![SO-ARM101 Follower 机械臂 F5 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![SO-ARM101 Follower 机械臂 F4 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) | ![SO-ARM101 Follower 机械臂 F3 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) | ![SO-ARM101 Follower 机械臂 F2 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) | ![SO-ARM101 Follower 机械臂 F1 舵机连接到电机总线适配器](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
 
 :::tip
 再次提醒，请确保舵机关节 ID 和齿轮比与 **SO-ARM101** 的严格对应。
@@ -602,7 +602,7 @@ sudo chmod 666 /dev/ttyACM1`}
 
 |                                         **步骤 1**                                         |                                         **步骤 2**                                         |                                         **步骤 3**                                         |                                         **步骤 4**                                         |                                         **步骤 5**                                         |                                         **步骤 6**                                         |
 | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L3.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L4.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L5.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L6.jpg) |
+| ![SO-ARM101 Leader 机械臂组装第 1 步，展示舵机安装到 3D 打印支架](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L1.jpg) | ![SO-ARM101 Leader 机械臂组装第 2 步，展示舵机线缆穿过支架](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L3.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L4.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L5.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L6.jpg) |
 |                                         **步骤 7**                                         |                                         **步骤 8**                                         |                                         **步骤 9**                                         |                                         **步骤 10**                                         |                                         **步骤 11**                                         |                                         **步骤 12**                                         |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L7.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L8.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L9.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L10.jpg) | ![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L11.jpg) | ![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L12.jpg) |
 |                                         **步骤 13**                                         |                                         **步骤 14**                                         |                                         **步骤 15**                                         |                                         **步骤 16**                                         |                                         **步骤 17**                                         |                                         **步骤 18**                                         |
@@ -815,7 +815,7 @@ RealSense 深度相机可为 LeRobot 提供 RGB-D 感知能力，适用于目标
 
 <div className="image-frame">
     <img width={420}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" alt="" />
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" alt="Intel RealSense D405 近距离深度相机" />
 </div>
 
 RealSense D405 是一款近距离双目深度相机，适合机械臂桌面操作等高精度近场视觉任务，典型工作范围为 **7 cm 到 50 cm**。
@@ -1429,7 +1429,7 @@ echo $HF_USER`}
 这里，`repo-id`：`seeedstudio123` 是数据收集时自定义的名称，`root` 是数据集在硬盘上的绝对路径，`episode-index` 是想查看的具体轮次。
 
 <div className="image-frame">
-      <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" alt="" />
+      <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" alt="LeRobot 数据集查看器，展示相机录像与机器人关节状态和动作曲线" />
   </div>
 </section>
 

@@ -2140,7 +2140,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000 v3.0/v3.2',
           collapsed: true,
           collapsible: true,
           items: [
