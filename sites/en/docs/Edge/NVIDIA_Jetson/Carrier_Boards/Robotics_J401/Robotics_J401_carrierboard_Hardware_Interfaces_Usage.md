@@ -1,6 +1,7 @@
 ---
-description: This wiki provides a comprehensive introduction to the hardware features and interface usage of the reComputer Jetson Robotics J401 carrier board. It covers detailed specifications, supported modules, setup instructions, and practical guides for using various interfaces such as M.2, Ethernet, USB, CAN, UART, I2C, and GMSL2 camera expansion, helping users quickly get started with robotics development on the J401 platform.
-title: Interfaces Usage
+description: "J401 carrier board interfaces on reComputer Robotics: M.2 Key M/B/E, CAN, GMSL2, USB, Ethernet and 40-pin. Pinouts, commands and JetPack 7.2 notes."
+title: reComputer Robotics J401 Interfaces
+sidebar_label: Interfaces Usage
 tags:
   - J401-Robotics carrier board
   - Jetson
@@ -21,14 +22,14 @@ url: https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_starte
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Robotics J401 carrier board Hardware and Getting Started
+# reComputer Robotics J401 Interfaces
 
 The reComputer Robotics J401 is a compact, high-performance edge AI carrier board designed for advanced robotics. Compatible with NVIDIA Jetson Orin Nano/Orin NX modules in Super/MAXN mode, it delivers up to 157 TOPS of AI performance. Equipped with extensive connectivity options—including dual Gigabit Ethernet ports, M.2 slots for 5G and Wi-Fi/BT modules, 6 USB 3.2 ports, CAN, GMSL2 (via optional expansion), I2C, and UART—it serves as a powerful robotic brain capable of processing complex data from various sensors. Pre-installed with JetPack 6 and Linux BSP, it ensures seamless deployment.​
 
 Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1, the reComputer Robotics J401 bridges large language model-driven decision-making with physical robotics control, such as motion planning and sensor fusion. Ideal for the rapid development of autonomous robots, it accelerates time-to-market with ready-to-use interfaces and optimized AI frameworks.
 
 <div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics-carrier-board.png"/>
+  <img alt="reComputer Robotics J401 carrier board, three-quarter view showing the USB, Ethernet and power connectors" width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics-carrier-board.png"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -41,11 +42,11 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 
 | **Top View** |
 |:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/carrier_board/top.png) |
-| **Top View** |
-| ![fig2](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/carrier_board/fornt.png) |
-| **Top View** |
-| ![fig3](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/carrier_board/bottom.png) |
+| ![Top view of the J401 carrier board with numbered callouts 1 to 7: Orin module, power board, two fan connectors, pinhole buttons, LEDs and SIM slot](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/carrier_board/top.png) |
+| **Front View** |
+| ![Front view of the reComputer Robotics J401 carrier board showing the port layout](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/carrier_board/fornt.png) |
+| **Bottom View** |
+| ![Bottom view of the J401 carrier board with numbered callouts 17 to 22: RTC battery and header, M.2 Key B, Key E and Key M slots and the camera expansion header](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/carrier_board/bottom.png) |
 
 ## Part List
 
@@ -346,7 +347,7 @@ Before we can move on to the installation steps, we need to make sure that the b
 **Step 1.** Switch the switch to the RESET mode.
 
 <div align="center">
-  <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
+  <img alt="J401 carrier board with the switch set to RESET mode and the USB Type-C flash port marked" width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
 </div>
 
 **Step 2.** Power up the carrier board by connecting the power cable.
@@ -363,7 +364,7 @@ Before we can move on to the installation steps, we need to make sure that the b
 The below image is for Orin Nano 8GB
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
+  <img alt="lsusb output with the NVIDIA Corp. APX device highlighted, confirming the board is in recovery mode" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
 </div>
 
 </details>
@@ -388,7 +389,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 You will see the following output if the flashing process is successful
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+<div align="center"><img alt="Terminal log of the flash script ending with the message that flashing completed" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
 The flash command may run for 2-10 minutes.
@@ -397,7 +398,7 @@ The flash command may run for 2-10 minutes.
 **Step 3:** Connect the Robotics J401 to a display use the PD to HDMI adapter to connect to a display that supports HDMI input, or directly connect to a display that supports PD input using the PD cable, and finish the initial configuration setup:
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
+  <img alt="JetPack 6 first-boot configuration wizard on a display connected over HDMI" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
@@ -423,7 +424,7 @@ M.2 Key M is designed for high-speed NVMe SSDs, providing ultra-fast data transf
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/ssd_c.jpg"/>
+  <img alt="NVMe SSD with heatsink installed in the M.2 Key M slot on the carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/ssd_c.jpg"/>
 </div>
 
 ### Usage Instruction
@@ -437,7 +438,7 @@ dd if=/dev/zero of=/home/seeed/ssd/test bs=1024M count=5 conv=fdatasync
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/ssd_w.png"/>
+  <img alt="Terminal output of the dd write test measuring NVMe SSD throughput" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/ssd_w.png"/>
 </div>
 
 :::danger
@@ -451,7 +452,7 @@ M.2 Key B slot for 5G Module expansion, enabling high-speed cellular connectivit
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/5g_c.jpg"/>
+  <img alt="5G module installed in the M.2 Key B slot of the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/5g_c.jpg"/>
 </div>
 
 ### Usage Instruction
@@ -465,7 +466,7 @@ lsusb
 This command displays a list of all USB devices connected to the system, along with their manufacturer (ID), type, and other information. For example, the output might show a device from Quectel Wireless Solutions Co., Ltd. EM12-G, indicating that the 5G module is present.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb.png"/>
+  <img alt="lsusb output showing the Quectel 5G module recognised on the USB bus" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb.png"/>
 </div>
 
 **Step 2.** Confirm Driver Loading
@@ -478,7 +479,7 @@ lsmod | grep option
 If the option driver is loaded successfully, relevant information about the driver will be displayed in the output.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsmod.png"/>
+  <img alt="lsmod output listing the option driver loaded for the 5G module" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsmod.png"/>
 </div>
 
 **Step 3.** Configure ModemManager
@@ -500,7 +501,7 @@ mmcli -L
 
 If the 5G module is recognized, an output similar to /org/freedesktop/ModemManager1/Modem/0 will be displayed, indicating the path to the detected modem device.
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_l.jpg"/>
+  <img alt="mmcli -m 0 output showing the Quectel EM12 modem registered with ModemManager" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_l.jpg"/>
 </div>
 
 **Step 5.** Set the APN
@@ -512,7 +513,7 @@ sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto
 
 This command adds a new GSM (Global System for Mobile Communications) type connection, specifying the APN as "CMNET" and using automatic IPv4 configuration.
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_con.jpg"/>
+  <img alt="nmcli command adding a GSM connection with APN CMNET" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_con.jpg"/>
 </div>
 
 **Step 6.** Activate the Connection
@@ -540,7 +541,7 @@ mmcli -m 0
 
 This command provides comprehensive details about the 5G module, including its manufacturer, model, supported and current network technologies, device status, and connected network operators.
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_m.jpg"/>
+  <img alt="mmcli -m 0 details for the Quectel EM12: IMEI, firmware, supported modes and the CHINA MOBILE operator" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_m.jpg"/>
 </div>
 
 ## M.2 Key E
@@ -550,7 +551,7 @@ The M.2 Key E interface is a standard M.2 connector primarily used for connectin
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/m2_e.jpg"/>
+  <img alt="Wi-Fi module seated in the M.2 Key E slot on the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/m2_e.jpg"/>
 </div>
 
 ### Usage Instruction
@@ -562,13 +563,13 @@ iperf3 -c 192.168.6.191
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/wifi_speed.png"/>
+  <img alt="iperf3 throughput result over the M.2 Key E Wi-Fi link" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/wifi_speed.png"/>
 </div>
 
 Bluetooth functionality is available via the M.2 Key E slot.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/bluetooth.png"/>
+  <img alt="Bluetooth settings listing the paired devices seen through the M.2 Key E module" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/bluetooth.png"/>
 </div>
 
 ## Ethernet
@@ -576,7 +577,7 @@ Bluetooth functionality is available via the M.2 Key E slot.
 The Robotics j401 carrier board features 2 1Gbps RJ45 Ethernet ports for high-speed wired network connectivity.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/eth.jpg"/>
+  <img alt="Two 1 Gbps RJ45 Ethernet ports on the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/eth.jpg"/>
 </div>
 
 To test Ethernet port speed, use `iperf3` as follows :
@@ -591,7 +592,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 :::
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/ethnet_speed.png"/>
+  <img alt="iperf3 output measuring 1 Gbps Ethernet throughput between host and Jetson" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/ethnet_speed.png"/>
 </div>
 
 ## LED
@@ -599,7 +600,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 The reComputer Jetson Robotics J401  features 3 LED indicators (PWR, ACT, and User LED) that provide clear status feedback for power, system activity, and user-defined functions.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
+  <img alt="PWR, ACT and user LED indicators on the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
 </div>
 
 ### Usage Instruction
@@ -640,7 +641,7 @@ gpioset --mode=time --sec=1 2 2=0
 Run the script to test the RGB LED.
 
 <div align="center">
-  <img width="400" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/rgb_led.gif"/>
+  <img alt="J401 board on the bench during the RGB LED test, with the USER indicator lit" width="400" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/rgb_led.gif"/>
 </div>
 
 ## USB
@@ -681,49 +682,49 @@ Using this serial port, via the USB C data cable, you can monitor the debugging 
 **Step1.** Switch the switch to the debug mode.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug.jpg"/>
+  <img alt="Debug and flash mode switch on the J401 carrier board set to debug mode" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug.jpg"/>
 </div>
 
 **Step2.** Connect the PC via a USB data cable, downloaded the [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) on your PC.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
+  <img alt="Silicon Labs CP210x VCP driver download page" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
 </div>
 
 **Step3.** Connect the PC via a USB data cable, extract the downloaded file and install driver on your PC.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
+  <img alt="CP210xVCPInstaller_x64.exe selected in the extracted driver folder" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
 **Step4.** Open Open the Device Manager on your Windows PC and check the COM port number assigned to the reComputer Super. It should appear under "Ports (COM & LPT)" as "Silicon Labs CP210x USB to UART Bridge (COMX)", where X is the COM port number.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
+  <img alt="Windows Device Manager showing the CP210x COM port under Ports" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
 </div>
 
 **Step5.** Open the serial port tool(Here, we use the MobaXterm tool as an example), create a new session.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
+  <img alt="MobaXterm main window with the session list and the COM3 serial session in recent sessions" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
 </div>
 
 **Step6.** Select the Serial tool.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
+  <img alt="MobaXterm session settings page with the Serial option selected" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
 </div>
 
 **Step7.** Select corresponding serial port, set the baud rate to 115200 and click "OK".
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
+  <img alt="MobaXterm serial settings with the COM port and 115200 baud rate chosen" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
 </div>
 
 **Step8.** Login your reComputer Super with the username and password.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
+  <img alt="Serial console logged into the reComputer through the USB Type-C debug port" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
 </div>
 
 ### USB Camera
@@ -736,7 +737,7 @@ guvcview -d /dev/video0
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/usb_camera.png"/>
+  <img alt="guvcview window streaming live video from a USB camera on /dev/video0" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/usb_camera.png"/>
 </div>
 
 ## Fan
@@ -750,7 +751,7 @@ The reComputer Jetson Robotics J401 is equipped with two types of fan connectors
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/fan.png"/>
+  <img alt="J401 carrier board fan header with the 5V PWM and 12V PWM connectors labelled" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/fan.png"/>
 </div>
 
 :::note
@@ -782,7 +783,7 @@ Additionally, we can manually set the fan speed using the jtop tool.
 The Robotics J401 carrier board features a Pinhole Button for user interaction, including a Power (PWR) button and a Reset (RESET) button. These buttons are essential for powering the device on/off and performing system reboots, respectively.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pinhole_button.jpg"/>
+  <img alt="PWR and RESET pinhole buttons on the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pinhole_button.jpg"/>
 </div>
 
 ## CAN
@@ -795,21 +796,21 @@ The Robotics J401 provides one CAN0 interface integrated into the XT30 (2+2) pow
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf), you can find the wiring diagram for the CAN0/CAN1 interface as shown below:
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_datasheet.png"/>
+  <img alt="CAN1 GH-1.25 header pin table from the datasheet: Ground, CAN1_L, CAN1_H and VDD_5V_CAN" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_datasheet.png"/>
 </div>
 
-Here we will demonstrate to you how to conduct data communication using the CAN1 interface, by utilizing the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html).
+CAN1 is exercised here through a [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html): one frame out from the PC, one frame back from the Jetson.
 
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c.png"/>
+  <img alt="CAN1 CANL, CANH and GND pins on the J401 carrier board connector" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c.png"/>
 </div>
 
 According to the connection method shown in the figure below, connect CAN1's CANL, CANH, and GND to the corresponding CANL, CANH, and GND ports of the USB to CAN tool respectively.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c1.png"/>
+  <img alt="CAN1 wired to a USB-to-CAN analyzer using CANL, CANH and GND" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_c1.png"/>
 </div>
 
 In our case, according to the adapter that we used, we have downloaded and installed the software which can be found [here](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
@@ -826,7 +827,7 @@ sudo ip link set can1 up
 **Step 2.** Configure the PC data receiving software.
 Please configure the communication settings as shown in the following picture.
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_software.png"/>
+  <img alt="USB-to-CAN analyzer software configured with the bus and timing settings" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_software.png"/>
 </div>
 
 
@@ -856,7 +857,7 @@ cansend can1 123#abcdabcd
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pc_rcan1.png"/>
+  <img alt="USBCAN tool receiving the frames sent from the Jetson on CAN1" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pc_rcan1.png"/>
 </div>
 
 **Step 5.** PC sends data to the Jetson:
@@ -867,13 +868,13 @@ candump can1
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1.png"/>
+  <img alt="CAN1 GH-1.25 header pin table from the datasheet, repeated here for the CAN1 test wiring" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1.png"/>
 </div>
 
 It can be seen that the Jetson terminal has received the data sent by the PC.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_r.png"/>
+  <img alt="Jetson terminal showing the CAN frame received from the PC on can1" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_r.png"/>
 </div>
 
 ### CAN FD Mode
@@ -883,13 +884,13 @@ Here, I use CAN0 to connect to CAN1 to demonstrate how multiple Jetson devices c
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can0_can1_c.jpg"/>
+  <img alt="CAN0 wired to CAN1 for a CAN FD loopback test" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can0_can1_c.jpg"/>
 </div>
 
 **Step 1.** Remove the bottom cover and set both 120Ω termination resistors to the ​ON position.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/on.jpg"/>
+  <img alt="120 ohm termination resistor switches set to ON inside the bottom cover" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/on.jpg"/>
 </div>
 
 **Step 2.** Configure CAN0 and CAN1 interfaces:
@@ -933,7 +934,7 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 :::
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_fd.png"/>
+  <img alt="CAN FD frames exchanged between can0 and can1 with termination enabled" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_fd.png"/>
 </div>
 
 ## UART
@@ -945,7 +946,7 @@ The Robotics J401 provides a standard 4-pin JST header for UART serial communica
 For UART communication, please follow the following wiring. Here, we use the USB to TTL tool as an example.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_c.jpg"/>
+  <img alt="UART pins wired to a USB-to-TTL adapter on the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_c.jpg"/>
 </div>
 
 ### Usage Instruction
@@ -988,11 +989,11 @@ python3 uart_test.py
 **Step 6.** Now you can see the output on the PC side, and you can also send data from the PC to the Jetson device:
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_s.jpg"/>
+  <img alt="Serial terminal on the PC showing the data received from the Jetson UART" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_s.jpg"/>
 </div>
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_r.png"/>
+  <img alt="Jetson terminal showing the data received from the PC over UART" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_r.png"/>
 </div>
 
 ## I2C
@@ -1004,12 +1005,12 @@ Enables easy connection of sensors and peripherals for system expansion.
 
 The Robotics J401 features two 4-pin GH-1.25 IIC interfaces, IIC0 and IIC1.
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic.jpg"/>
+  <img alt="IIC0 and IIC1 4-pin GH-1.25 connectors on the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic.jpg"/>
 </div>
 
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf), you can find the wiring diagram for the IIC0/IIC1 4-pin GH-1.25 interface as shown below:
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/12c.png"/>
+  <img alt="I2C GH-1.25 header pin table from the datasheet: Ground, I2C1_SDA, I2C1_SCL and VDD_I2C1" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/12c.png"/>
 </div>
 Select an IIC interface device for testing; the choice is up to you. Here, we use a [Arduino-Uno-Rev4-Minima](https://www.seeedstudio.com/Arduino-Uno-Rev4-Minima-p-5716.html)  to test I2C0/I2C1.
 
@@ -1028,7 +1029,7 @@ Please connect the devices(IIC0/IIC1 ↔ Device) according to the following conn
 :::
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_connect.jpg"/>
+  <img alt="Arduino Uno R4 Minima wired to the IIC0 connector for testing" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_connect.jpg"/>
 </div>
 
 ### Usage Instruction
@@ -1038,7 +1039,7 @@ Please connect the devices(IIC0/IIC1 ↔ Device) according to the following conn
 **Step 2.** Select the type of the development board.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/slect_board.png"/>
+  <img alt="Arduino IDE board selection for the Uno R4 Minima" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/slect_board.png"/>
 </div>
 
 **Step 3.** Restart the IDE and upload you code.
@@ -1085,7 +1086,7 @@ i2cdetect -l
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_l.png"/>
+  <img alt="i2cdetect -l output listing the I2C buses on the Jetson module" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_l.png"/>
 </div>
 
 **Step 6.** Run the following commands to scan on IIC0:
@@ -1095,7 +1096,7 @@ sudo i2cdetect -y -r 1
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_detect.png"/>
+  <img alt="i2cdetect scan on IIC0 showing the connected device at address 0x08" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_detect.png"/>
 </div>
 
 We can see that the device connected to IIC0 is set to address 0x08.
@@ -1109,7 +1110,7 @@ The Robotics j401 carrier board features a Camera Expansion Header for GMSL exte
 Here are the Robotics j401 carrier board GMSL camera expansion board connection slot(need to prepare an extension board in advance):
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/exb.png"/>
+  <img alt="GMSL camera expansion board slot on the J401 carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/exb.png"/>
 </div>
 
 The following are the GMSL camera models that we have already supported:
@@ -1133,11 +1134,11 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/io_p1.png"/>
+  <img alt="jetson-io.py main menu listing the 40-pin header configuration options" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/io_p1.png"/>
 </div>
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/io_p2.png"/>
+  <img alt="Jetson Expansion Header Tool camera menu with the Seeed OSS 194 and Orbbec Gemini 335Lg overlays selected" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/io_p2.png"/>
 </div>
 
 :::note
@@ -1164,12 +1165,12 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 
 The first time you turn it on, you might need to update the firmware.
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
+  <img alt="Orbbec viewer prompting a firmware update for the Gemini 335Lg camera" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
 </div>
 
 Opening the data stream, you can view the video from the camera.
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
+  <img alt="Depth stream from the Gemini 335Lg camera shown in the Orbbec viewer" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div>
 
 ### Use the cameras of SGxxx Series
@@ -1230,7 +1231,7 @@ gst-launch-1.0 \
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/camera1.png"/>
+  <img alt="Four GMSL camera streams (/dev/video2 to /dev/video5) open side by side in the Qt viewer" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/camera1.png"/>
 </div>
 
 ## Display
@@ -1254,6 +1255,31 @@ The reComputer Jetson Robotics J401  is equipped with an DP1.4 (included in Type
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
+
+## FAQ
+
+**Does the GMSL2 camera expansion work on a stock JetPack image?**
+No. The expansion header needs a JetPack build with the GMSL expansion board driver, and the JetPack 6.2 image table lists separate GMSL and non-GMSL builds per module. After flashing, pick the matching overlay in `jetson-io.py` — Seeed GMSL 1X4 3G for the SG3S, Seeed GMSL 1X4 6G for the SG2 and SG8S, or Orbbec Gemini 335Lg.
+
+**Which Ubuntu version should the host PC run?**
+For JetPack 6.x, flash from Ubuntu 20.04 or 22.04. JetPack 7.2 also accepts Ubuntu 24.04, but only for flashing and installing target-side components — keep Ubuntu 20.04 or 22.04 if you also need host development components.
+
+**CAN works but CAN FD frames are rejected. What is missing?**
+CAN FD is off by default. Set the interface up with both a nominal and a data bit rate, for example `bitrate 500000 dbitrate 2000000 fd on`, and switch both 120Ω termination resistors to ON when CAN0 and CAN1 sit on the same bus.
+
+**The 5G module shows up in `lsusb` but there is no network interface.**
+The `option` driver has to claim the module before ModemManager can use it — check `lsmod` for `option`, then create the connection with `nmcli` and activate it. On JetPack 6.2 this is the sequence used in the M.2 Key B section above.
+
+**How many GMSL cameras can run at once?**
+Four. The Camera Expansion Header drives one 4-in-1 GMSL2 mini-FAKRA board, so four cameras stream simultaneously once the matching overlay is loaded.
+
+## Related Resources
+
+- [Getting Started with reComputer Robotics J401](/recomputer_robotics_j401_getting_started/)
+- [Run Multiple GMSL Cameras on Jetson with the GMSL Expansion Board](/multiple_cameras_with_jetson/)
+- [Implement EtherCAT Communication on reComputer](/recomputer_ethercat_communication/)
+- [reComputer Robotics J4012 product page](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [wiki-documents repository and discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## Tech Support & Product Discussion
 

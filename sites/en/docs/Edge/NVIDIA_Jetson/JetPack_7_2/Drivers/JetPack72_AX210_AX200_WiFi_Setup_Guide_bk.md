@@ -20,6 +20,13 @@ updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/jetpack72_ax210_ax200_wifi_setup_guide_bk/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # JetPack 7.2 Wireless Module Setup Guide
 
 After upgrading a Seeed Jetson device to JetPack 7.2, some users may find that the M.2 Key E Wi-Fi module is detected on PCIe but no wireless network interface appears.
