@@ -24,6 +24,8 @@
 
   // 内嵌的语言映射数据
   const languageMapping = {
+    "/robotics/paper_reading_lingbot_va": ["cn", "en"],
+    "/robotics/paper_reading_lingbot_vla2": ["cn", "en"],
   "/Cloud": [
     "cn",
     "en",
