@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-09 11:39:25 (北京时间)
-// 多语言页面: 2638 个
+// 生成时间: 2026-11-09 15:43:30 (北京时间)
+// 多语言页面: 2640 个
 
 (function() {
   'use strict';
@@ -24,8 +24,6 @@
 
   // 内嵌的语言映射数据
   const languageMapping = {
-    "/robotics/paper_reading_lingbot_va": ["cn", "en"],
-    "/robotics/paper_reading_lingbot_vla2": ["cn", "en"],
   "/Cloud": [
     "cn",
     "en",
@@ -7068,6 +7066,20 @@
     "pt"
   ],
   "/robotics/paper_reading_gr00t_n1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_va": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_vla2": [
     "cn",
     "en",
     "es",
