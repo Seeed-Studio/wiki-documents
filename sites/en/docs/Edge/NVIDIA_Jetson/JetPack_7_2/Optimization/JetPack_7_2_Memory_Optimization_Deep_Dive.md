@@ -1,5 +1,5 @@
 ---
-description: 'Understand the JetPack 7.2 software changes that matter to Jetson memory: the CUDA and TensorRT stack, official Yocto support, optimization skills, and a measured LLM deployment budget for Orin.'
+description: "Budget LLM memory on JetPack 7.2: lower boot footprint, TensorRT Edge-LLM runtime boundaries, KV cache reuse and measured Orin headroom."
 title: 'JetPack 7.2 Memory Optimization: Software Advances and an LLM Deployment Budget'
 keywords:
   - JetPack 7.2
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/jetpack_7_2_memory_optimization_deep_dive/
 
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/unified_mem.png"/>
+  <img alt="Jetson unified memory diagram: the CPU, GPU, system and camera share one DRAM pool, from which display, weights, runtime and KV cache are also taken" width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/unified_mem.png"/>
 </div>
 
 
@@ -37,7 +37,7 @@ This article focuses on two questions for Jetson Orin developers: which JetPack 
 
 | **reComputer J3011** | **reComputer Classic J5011** |
 | :---: | :---: |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/o/row6-recomputer_j30_.jpg" style={{width:400, height:'auto'}} /> | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100006184-gallery_img_1.jpg" style={{width:400, height:'auto'}} /> |
+| <img alt="reComputer J3011, one of the two units in the comparison table" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/o/row6-recomputer_j30_.jpg" style={{width:400, height:'auto'}} /> | <img alt="reComputer Classic J5011, the other unit in the comparison table" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100006184-gallery_img_1.jpg" style={{width:400, height:'auto'}} /> |
 | Jetson Orin Nano 8GB platform | Jetson AGX Orin 32GB platform |
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -83,7 +83,7 @@ The system footprint at boot is the first part of the LLM budget. The following 
 This is why lower system memory use can be understood as a **software memory upgrade**. The module still has the same 8 GB of physical DRAM, but a smaller platform footprint increases the portion that the application can actually budget. For a memory-constrained LLM deployment, that extra headroom can be the difference between failing during engine load or prefill and having enough room to run a useful, bounded request.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/7.2.png" alt="Historical JetPack 7.2 boot-memory observation on Orin Nano"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/7.2.png" alt="JetPack 6.2 and 7.2 software stack comparison: Ubuntu 22.04 with CUDA 12.6 against Ubuntu 24.04 with CUDA 13.2, and the lighter 7.2 baseline"/>
 </div>
 
 The result is not automatic for every JetPack 7.2 image. Desktop mode, enabled services, containers, display and camera paths, carrier-board BSP settings, and the measurement point all affect the baseline. Measure the settled idle state on the actual device before assigning the recovered headroom to a larger model or longer context.
@@ -95,7 +95,7 @@ For the published AGX Orin 32 GB JetPack 6.2 versus 7.2 model-loading comparison
 JetPack 7.2 gives the platform and tooling; an LLM still has to fit within the memory left after the operating system and product services have started. The usable budget depends on model size, context length, batch size, weight precision, and the runtime that executes the model. Split it into the chunks below before changing settings.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/llm_1.png"/>
+  <img alt="LLM memory split into runtime, weights, workspace and KV cache" width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/llm_1.png"/>
 </div>
 
 
@@ -117,7 +117,7 @@ For a large model, weights are normally the first stable allocation to account f
 
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/llm_parameters.png"/>
+  <img alt="LLM model memory estimate for 4B parameters: 8 GB at FP16/BF16, 4 GB at INT8 and 2 GB at INT4" width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/llm_parameters.png"/>
 </div>
 
 
@@ -139,12 +139,12 @@ TensorRT Edge-LLM is therefore more than an INT4 model reader. It turns a suppor
 ### 2.3 KV Cache: The Budget That JetPack 7.2 Does Not Remove
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/KV-cache-token.jpeg"/>
+  <img alt="KV cache growth per generated token as the context lengthens" width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/KV-cache-token.jpeg"/>
 </div>
 When a Transformer produces the first token, it processes the prompt and stores the attention keys and values it has calculated. On the next token, the runtime can reuse those values instead of calculating the full history again. That reuse is why decoding remains practical, but it comes with a cost: the cache grows as the conversation grows.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/KV—Cache.jpeg"/>
+  <img alt="KV cache memory growth across requests in the chart, with the 30 GB memory limit and OOM line marked" width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/KV—Cache.jpeg"/>
 </div>
 
 An approximate planning formula is:
@@ -181,7 +181,7 @@ With context capacity and reuse accounted for, the remaining question is what ha
 A Transformer layer combines operations such as normalization, quantization or dequantization, matrix multiplication, activation, and attention. If those operations execute as separate kernels, one kernel can write an intermediate tensor to DRAM only for the next kernel to read it back immediately.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/transformer_layer.png" alt="Operations in a Transformer layer"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/jetpack-7.2/transformer_layer.png" alt="Transformer layer execution: each step writes to DRAM and the next reads it back, with the extra kernel launches and temp buffers that follow"/>
 </div>
 
 | Execution path | What crosses DRAM | Why it matters on Jetson |
@@ -261,6 +261,7 @@ The four memory states that matter are settled idle, engine or model loaded, pro
 - [Deploy TensorRT Edge-LLM on JetPack 7.2](/deploy_tensorrt_edge_llm_on_jetpack7.2/) — host export, target engine build, and C++ inference validation.
 - [JetPack 7.2 Deep Dive](/jetpack72_deep_dive_bk/) — what changes for Jetson AGX Orin inference, and the Seeed JetPack 7.2 vs 6.2 comparison.
 - [JetPack 7.2 Resource Hub](/jetpack_7_2_resource_hub/) — the categorized index of all JetPack 7.2 resources for Seeed Studio devices.
+- [reComputer Super product page](https://www.seeedstudio.com/reComputer-Super-p-6617.html) — the unit used for the boot-memory numbers.
 
 ## Tech Support & Product Discussion
 

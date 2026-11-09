@@ -1,5 +1,5 @@
 ---
-description: This wiki provides a comprehensive introduction to the hardware features and interface usage of the reComputer Jetson Robotics J601 carrier board. It covers detailed specifications, supported modules, setup instructions, and practical guides for using various interfaces such as M.2, Ethernet, USB, CAN, RS485/RS232, UART, I2C, I2S, GPIO, GMSL2 camera expansion, 5G, and GPS, helping users quickly get started with robotics development on the J601 platform.
+description: "J601 carrier board interfaces: GMSL, USB, CAN, M.2 and 40-pin pinouts, Linux device names and per-port checks, plus heatsink install."
 title: reComputer Robotics J601 Hardware & I/O
 tags:
   - J601-Robotics carrier board
@@ -77,7 +77,7 @@ To ensure stable heat dissipation during long-term operation, you can install a 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png" alt="Thermal silicone pad positioned at the heatsink contact point" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png" alt="Copper heatsink plate with the blue thermal pads applied, next to the J601 carrier board" loading="lazy" />
     <figcaption>Thermal silicone pad positioned at the heatsink contact point</figcaption>
   </figure>
 </div>
@@ -149,8 +149,8 @@ Using this serial port, via the USB-C data cable, you can monitor the debugging 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png" alt="CP210x driver installation on Windows" loading="lazy" />
-    <figcaption>CP210x driver installation on Windows</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png" alt="CP210xVCPInstaller_x64.exe selected in the extracted driver folder" loading="lazy" />
+    <figcaption>CP210xVCPInstaller_x64.exe in the extracted driver folder</figcaption>
   </figure>
 </div>
 
@@ -167,8 +167,8 @@ Using this serial port, via the USB-C data cable, you can monitor the debugging 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png" alt="MobaXterm new session dialog" loading="lazy" />
-    <figcaption>MobaXterm new session dialog</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png" alt="MobaXterm main window with the recent sessions list, including COM3" loading="lazy" />
+    <figcaption>MobaXterm main window with the recent sessions list</figcaption>
   </figure>
 </div>
 
@@ -176,8 +176,8 @@ Using this serial port, via the USB-C data cable, you can monitor the debugging 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png" alt="MobaXterm serial session settings" loading="lazy" />
-    <figcaption>MobaXterm serial session settings</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png" alt="MobaXterm session type chooser with Serial highlighted" loading="lazy" />
+    <figcaption>MobaXterm session type chooser with Serial selected</figcaption>
   </figure>
 </div>
 
@@ -242,7 +242,7 @@ Connect the GMSL expansion board to the camera expansion header on the J601 carr
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png" alt="GMSL expansion board and camera wiring on J601" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png" alt="J601 board with the heatsink fan and the 40-pin cable fitted, and the two GMSL connectors boxed" loading="lazy" />
     <figcaption>GMSL expansion board and camera wiring on J601</figcaption>
   </figure>
 </div>
@@ -274,7 +274,7 @@ gst-launch-1.0 -q filesrc location=/tmp/gmsl0.yuyv do-timestamp=true blocksize=4
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_camera.png" alt="J601 GMSL camera stream output" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_camera.png" alt="J601 GMSL camera support table: Sensing SG3S 3G and SG2/SG8S 6G models with resolutions, plus Orbbec Gemini 335Lg" loading="lazy" />
     <figcaption>J601 GMSL camera stream output</figcaption>
   </figure>
 </div>
@@ -283,7 +283,7 @@ gst-launch-1.0 -q filesrc location=/tmp/gmsl0.yuyv do-timestamp=true blocksize=4
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl.png" alt="J601 GMSL camera display" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl.png" alt="GMSL camera frame in a video window with the media-ctl output in the terminal" loading="lazy" />
     <figcaption>J601 GMSL camera display</figcaption>
   </figure>
 </div>
@@ -857,7 +857,7 @@ The reComputer J601 Carrier Board features a dedicated isolated RS-485 port expo
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png" alt="J601 dedicated RS-485 header wiring" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png" alt="USB-to-RS485 adapter wired to Data+(A) and Data-(B) on the J601 terminal block" loading="lazy" />
     <figcaption>J601 dedicated RS-485 header wiring</figcaption>
   </figure>
 </div>
@@ -886,14 +886,14 @@ echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-1.png" alt="J601 485 1 interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-1.png" alt="RS-485 port 1 test: received pattern data and &quot;hello from pc&quot; in the serial console" loading="lazy" />
     <figcaption>J601 485 1 interface connection</figcaption>
   </figure>
 </div>
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-2.png" alt="J601 485 2 interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-2.png" alt="RS-485 port 2 test: received pattern data and &quot;hello from pc&quot; in the serial console" loading="lazy" />
     <figcaption>J601 485 2 interface connection</figcaption>
   </figure>
 </div>
@@ -910,7 +910,7 @@ The function of each DB9 pin depends on the selected communication mode. Refer t
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png" alt="J601 db9 config interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png" alt="DB9 pin numbering with the RS-232 / RS-422 / RS-485 pin assignment table for the MODE settings" loading="lazy" />
     <figcaption>J601 db9 config interface connection</figcaption>
   </figure>
 </div>
@@ -922,7 +922,7 @@ Switch the switch at the bottom of the board to the RS485 mode as shown in the f
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png" alt="J601 485 mode interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png" alt="SW2 switch with the RS485 Mode OFF_1 / ON_0 positions boxed" loading="lazy" />
     <figcaption>J601 485 mode interface connection</figcaption>
   </figure>
 </div>
@@ -931,7 +931,7 @@ Switch the switch at the bottom of the board to the RS485 mode as shown in the f
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png" alt="J601 485 c interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png" alt="USB-to-RS485 adapter wired to Data+(A) and Data-(B) on the J601 terminal block" loading="lazy" />
     <figcaption>J601 485 c interface connection</figcaption>
   </figure>
 </div>
@@ -967,7 +967,7 @@ Test the PC to send a message to Jetson.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png" alt="J601 DB9 RS-485 hardware connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png" alt="minicom windows on the PC and the Jetson exchanging &quot;hello jetson&quot; over RS-485" loading="lazy" />
     <figcaption>J601 DB9 RS-485 hardware connection</figcaption>
   </figure>
 </div>
@@ -1008,7 +1008,7 @@ Switch the switch at the bottom of the board to the RS232 mode as shown in the f
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png" alt="J601 232 mode interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png" alt="SW2 mode switch set for RS-232 on the J601 board" loading="lazy" />
     <figcaption>J601 232 mode interface connection</figcaption>
   </figure>
 </div>
@@ -1017,7 +1017,7 @@ Switch the switch at the bottom of the board to the RS232 mode as shown in the f
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png" alt="J601 232 c interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png" alt="TX, RX and GND wired between the J601 RS-232 header and the USB-to-TTL adapter" loading="lazy" />
     <figcaption>J601 232 c interface connection</figcaption>
   </figure>
 </div>
@@ -1054,7 +1054,7 @@ Test the PC to send a message to Jetson.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png" alt="J601 DB9 RS-232 mode switch position" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png" alt="minicom windows on the PC and the Jetson exchanging &quot;Hello Jetson Rs232test&quot;" loading="lazy" />
     <figcaption>J601 DB9 RS-232 mode switch position</figcaption>
   </figure>
 </div>
@@ -1063,7 +1063,7 @@ Test the PC to send a message to Jetson.
 Also turn on the test mode.
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png" alt="J601 RS-232 host connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png" alt="minicom serial port setup with RS485 Enable set to Yes during the RS-232 test" loading="lazy" />
     <figcaption>J601 RS-232 host connection</figcaption>
   </figure>
 </div>
@@ -1085,7 +1085,7 @@ Switch the switch at the bottom of the board to the RS422 mode as shown in the f
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png" alt="J601 422 mode interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png" alt="SW2 mode switch set for RS-422 on the J601 board" loading="lazy" />
     <figcaption>J601 422 mode interface connection</figcaption>
   </figure>
 </div>
@@ -1094,7 +1094,7 @@ Switch the switch at the bottom of the board to the RS422 mode as shown in the f
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png" alt="J601 422 c interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png" alt="RX+, RX-, TX+ and TX- wired between the J601 RS-422 header and the USB adapter, with a common GND" loading="lazy" />
     <figcaption>J601 422 c interface connection</figcaption>
   </figure>
 </div>
@@ -1133,7 +1133,7 @@ Test the PC to send a message to Jetson.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png" alt="J601 422 c1 interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png" alt="minicom on the PC and the Jetson showing the first RS-422 test exchange" loading="lazy" />
     <figcaption>J601 422 c1 interface connection</figcaption>
   </figure>
 </div>
@@ -1142,7 +1142,7 @@ Test the PC to send a message to Jetson.
 Also turn on the test mode.
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png" alt="J601 422 c2 interface connection" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png" alt="both minicom windows after the RS-422 test, each showing &quot;Hello Jetson RS422 Test&quot;" loading="lazy" />
     <figcaption>J601 422 c2 interface connection</figcaption>
   </figure>
 </div>
@@ -1250,7 +1250,7 @@ The Robotics J601 carrier board supports **4× 10GbE RJ45 connections with T5000
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/ethnet.png" alt="J601 RJ45 Ethernet port locations" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/ethnet.png" alt="Four RJ45 Ethernet ports and two M12 connectors on the J601 front panel" loading="lazy" />
     <figcaption>J601 RJ45 Ethernet port locations</figcaption>
   </figure>
 </div>
@@ -1431,7 +1431,7 @@ AT+COPS?
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png" alt="Cellular module identification and AT command output" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png" alt="lsusb output listing the Quectel EM060K-EA modem on the USB bus" loading="lazy" />
     <figcaption>Cellular module identification and AT command output</figcaption>
   </figure>
 </div>
@@ -1440,7 +1440,7 @@ AT+COPS?
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png" alt="J601 Nano SIM slot location" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png" alt="Ubuntu Settings mobile network panel showing the CHN-CT operator and network mode" loading="lazy" />
     <figcaption>J601 Nano SIM slot location</figcaption>
   </figure>
 </div>
@@ -1491,6 +1491,13 @@ Ensure you have a clear view of the sky for GPS signal acquisition. It may take 
 ## Resources
 
 The [J601 resource collection](/jetson/recomputer_robotics_j601/getting_started/#resources) provides the carrier-board datasheet, V1.0 schematic, STEP mechanical model, and Linux_for_Tegra BSP source. Use the schematic for signal routing and connector reference designators.
+
+## Related Resources
+
+- [reComputer Robotics J401 interfaces and pinouts](/recomputer_jetson_robotics_j401_getting_started/)
+- [Implement EtherCAT communication on reComputer](/recomputer_ethercat_communication/)
+- [Fine-tune GR00T N1.7 and deploy on Robotics J601](/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/)
+- [wiki-documents repository and discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## Tech Support & Product Discussion
 

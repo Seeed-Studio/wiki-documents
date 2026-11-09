@@ -21,6 +21,13 @@ updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/build_and_flash_yocto_for_seeed_jetson_carrier_boards/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Build and Flash Yocto for Seeed Jetson Carrier Boards
 
 This guide provides a common workflow for building and flashing an OpenEmbedded/Yocto image on the Seeed Studio Jetson carrier boards defined by the [`seeed-tegra-demo-distro`](https://github.com/jjjadand/seeed-tegra-demo-distro) repository.
