@@ -7,17 +7,17 @@ keywords:
   - B601-DM
   - B601-RS
   - SO101
-  - Robotic Arm
-  - Physical AI
-  - Course
+  - Brazo Robótico
+  - IA Física
+  - Curso
   - Tutorial
   - SO-ARM101
   - LeRobot
   - Hugging Face
-  - Arm
-  - Robotics
-  - Paper Deep-Dive
-  - Hands-on Deployment
+  - Brazo
+  - Robótica
+  - Análisis Profundo de Artículos
+  - Despliegue Práctico
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /robotics/paper_reading_getting_started
 displayed_sidebar: PaperReadingSidebar
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
   <aside className="paper-reading-support" aria-label="Support the open-source project">
     <div>
       <strong>Cursos gratuitos, juntos en código abierto</strong>
-      <p>Este curso es completamente gratuito. Para apoyar nuestro trabajo, ¡dale una estrella a nuestro brazo robótico de código abierto!</p>
+      <p>Este curso es completamente gratuito. Para apoyar nuestro trabajo, ¡por favor dale una estrella a nuestro brazo robótico de código abierto!</p>
     </div>
     <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Star on GitHub</a>
   </aside>
@@ -59,7 +59,7 @@ import '/src/css/paper-reading-style.css';
 <div className="sensecraft-banner">
   <div className="sensecraft-banner__copy">
     <span className="sensecraft-banner__badge">⚡ Sin código · Sin configuración de entorno</span>
-    <p className="sensecraft-banner__title">Sáltate la configuración: ejecuta el brazo reBot y LeRobot desde una sola app</p>
+    <p className="sensecraft-banner__title">Omite la configuración: ejecuta el brazo reBot y LeRobot desde una sola app</p>
     <p className="sensecraft-banner__lead">SenseCraft Robotics es la plataforma sin código de Seeed para el SO-ARM101, reBot Arm 102 + B601-RS y B601-DM. Conecta los brazos, calibra, recopila demostraciones, entrena y ejecuta inferencias desde una interfaz guiada, sin entorno de Python ni terminal.</p>
     <ul className="sensecraft-banner__points">
       <li>✅ Flujo de trabajo guiado en 6 pasos</li>
@@ -113,10 +113,12 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/es/robotics/paper_reading_gr00t_n1/">NVIDIA GR00T — Adaptación y Fine-Tuning</a></li>
         <li><a href="/es/robotics/paper_reading_eo1/">EO-1 — Preentrenamiento Multimodal Intercalado</a></li>
         <li><a href="/es/robotics/paper_reading_wall_oss/">WALL-OSS — Razonamiento Incorporado y Control de Robots</a></li>
+        <li><a href="/es/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Acciones entre Cuerpos y Percepción Futura</a></li>
       </ul>
-      <h3>Parte 5 · Modelos del Mundo y Aprendizaje de Video-Acción</h3>
+      <h3>Parte 5 · Modelos de Mundo y Aprendizaje Video-Acción</h3>
       <ul className="paper-reading-directory-list">
-        <li><a href="/es/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisión por Video y Modelos del Mundo Latentes</a></li>
+        <li><a href="/es/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisión por Video y Modelos de Mundo Latentes</a></li>
+        <li><a href="/es/robotics/paper_reading_lingbot_va/">LingBot-VA — Modelado Causal del Mundo y Control de Robots</a></li>
       </ul>
       <h3>Parte 6 · Evaluación Unificada y Resumen de Investigación</h3>
       <span className="paper-reading-update-badge">
