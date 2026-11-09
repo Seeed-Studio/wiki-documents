@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_6.webp
 slug: /xiao_nrf54l15_sense_arduino
 last_update:
-  date: 4/22/2026
+  date: 10/15/2026
   author: Zeller
 createdAt: '2025-04-22'
 updatedAt: '2026-04-24'
@@ -389,7 +389,7 @@ You need to prepare the XIAO nRF54L15 Sense and devices with I2C interfaces.
 
 ### Software
 
-On the XIAO nRF54L15, D4 and D5 serve as the SCL and SDA pins respectively.
+On the XIAO nRF54L15, D4 and D5 serve as the SDA and SCL pins respectively.
 In the lolren framework, pin D4 is redefined as **PIN_WIRE_SCL**, and pin D5 is redefined as **PIN_WIRE_SDA**.
 
 :::tip

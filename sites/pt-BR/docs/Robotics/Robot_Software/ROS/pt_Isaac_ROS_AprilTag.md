@@ -1,5 +1,5 @@
 ---
-description: Este wiki oferece um guia passo a passo para usar o Isaac ROS AprilTag.
+description: "Como detectar AprilTags com o NVIDIA Isaac ROS no Jetson: configuração, execução do pipeline de detecção e uso de poses para percepção robótica."
 title: Isaac ROS AprilTag
 keywords:
   - NVIDIA

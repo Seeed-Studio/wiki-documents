@@ -1,5 +1,6 @@
 ---
 description: 使用Testbench应用对Reachy Mini进行电机诊断和故障排除的综合指南，以检测和修复电机问题。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 电机诊断和故障排除
 slug: /reachymini_troubleshooting_motors_diagnosis
 keywords:

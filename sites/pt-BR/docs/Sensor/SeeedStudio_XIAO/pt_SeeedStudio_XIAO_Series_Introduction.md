@@ -660,7 +660,7 @@ Como um ecossistema em crescimento do Seeed Studio XIAO, oferecemos uma ampla ga
 
 ### Materiais de código aberto do Seeed Studio XIAO ESP32S3
 
-- **[PDF]** [Esquemático do Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_v1.5_SCH_260226.pdf.pdf)
+- **[PDF]** [Esquemático do Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 
 - **[ZIP]** [Bibliotecas Eagle do Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
 
@@ -676,7 +676,7 @@ Como um ecossistema em crescimento do Seeed Studio XIAO, oferecemos uma ampla ga
 
 ### Materiais de código aberto do Seeed Studio XIAO ESP32S3 Sense
 
-- **[PDF]** [Esquemático do Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_v1.5_SCH_260226.pdf.pdf)
+- **[PDF]** [Esquemático do Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 
 - **[PDF]** [Esquemático da placa de expansão Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
 

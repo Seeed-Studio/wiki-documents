@@ -1,5 +1,6 @@
 ---
 description: StackForce 巨大二足走行ホイールロボットのプロフェッショナル開発ガイド。高度な機能、詳細な開発チュートリアル、API ドキュメント、実践的な応用事例を含みます
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/LargeWheelLeg/en_version/picture/M_01.png
 title: 巨大ホイールロボット クイックスタート
 keywords:
   - StackForce

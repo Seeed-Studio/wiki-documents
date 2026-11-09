@@ -1,5 +1,6 @@
 ---
 description: Advanced settings for fine-tuning Reachy Mini's camera and microphone array including libcamerasrc controls, GStreamer configuration, and XMOS XVF3800 audio parameters.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Advanced Media Controls
 slug: /reachymini_platforms_reachy_mini_media_advanced_controls
 keywords:

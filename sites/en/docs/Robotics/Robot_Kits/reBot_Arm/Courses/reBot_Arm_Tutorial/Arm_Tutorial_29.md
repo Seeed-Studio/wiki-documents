@@ -11,7 +11,7 @@ keywords:
   - GraspNet
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_29
+slug: /robotics/rebot_physical_ai_course_chapter_29
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,7 +20,7 @@ last_update:
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-08'
 updatedAt: '2026-10-08'
-url: https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_29/
+url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_29/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -268,7 +268,7 @@ GraspNet is a point-cloud-based robot grasping method—more precisely, a 6-DoF 
 
 Input: RGB-D data -> point cloud -> GraspNet -> grasp pose
 
-Output: a 6-DoF grasp pose $G=(x,y,z,R)$, including:
+Output: a 6-DoF grasp pose `G=(x,y,z,R)`, including:
 
 - Position, where the arm gripper should go:
 

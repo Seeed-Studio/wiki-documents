@@ -294,7 +294,7 @@ Vuelve a colocar la tapa trasera y aprieta todos los tornillos. El RTC ahora tie
 
 ### Sketch completo: RTC_PCF8563
 
-El sketch completo está disponible en el repositorio: [`examples/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/RTC_PCF8563/RTC_PCF8563.ino).
+El sketch completo está disponible en el repositorio: [`examples/base/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/RTC_PCF8563/RTC_PCF8563.ino).
 
 <details>
 <summary>Haz clic para desplegar el código completo de RTC_PCF8563.ino</summary>
@@ -821,7 +821,7 @@ El ESP32-S3 admite varios estados de energía. Los dos más útiles para aplicac
 
 ### Sketch completo: LowPower_DeepSleep
 
-El sketch completo está disponible en el repositorio: [`examples/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/LowPower_DeepSleep/LowPower_DeepSleep.ino).
+El sketch completo está disponible en el repositorio: [`examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino).
 
 <details>
 <summary>Haz clic para expandir todo el código de LowPower_DeepSleep.ino</summary>
@@ -1018,7 +1018,7 @@ El sketch utiliza la API ESP-IDF 5.x PDM-RX (`driver/i2s_pdm.h`), que solo está
 
 ### Sketch completo: MicRecordToSD
 
-El sketch completo está disponible en el repositorio: [`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino).
+El sketch completo está disponible en el repositorio: [`examples/base/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/MicRecordToSD/MicRecordToSD.ino).
 
 <details>
 <summary>Haz clic para expandir el código completo de MicRecordToSD.ino</summary>
@@ -1540,7 +1540,7 @@ El controlador táctil comparte el mismo bus I2C (GPIO19/GPIO20) con el RTC PCF8
 
 ### Sketch completo: E1003_TouchDraw
 
-El sketch completo está disponible en el repositorio: [`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw).
+El sketch completo está disponible en el repositorio: [`examples/base/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/base/E1003_TouchDraw).
 
 <details>
 <summary>Haz clic para desplegar todo el código de E1003_TouchDraw.ino</summary>

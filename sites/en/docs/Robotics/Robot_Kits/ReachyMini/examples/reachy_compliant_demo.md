@@ -1,5 +1,6 @@
 ---
 description: Demo showing Reachy Mini in compliant mode with gravity compensation, allowing the robot to follow gentle pushes and stay in place when released.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Compliant Mode Demo
 slug: /reachymini_examples_reachy_compliant_demo
 keywords:

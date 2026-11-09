@@ -1,5 +1,6 @@
 ---
 description: Referencia completa de la API para las aplicaciones de Reachy Mini, incluyendo clases principales de aplicaciones, gestión de aplicaciones, información de aplicaciones, asistente de aplicaciones y orígenes de aplicaciones.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Referencia de la API de Apps
 slug: /reachymini_api_apps
 keywords:

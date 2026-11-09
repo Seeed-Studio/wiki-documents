@@ -1,5 +1,5 @@
 ---
-description: 高扭矩电机入门指南
+description: "如何上手高擎机器人执行器：硬件安装、接线、CAN 连接与第一条运动指令。"
 title: 高扭矩电机入门指南
 keywords:
   - actuator

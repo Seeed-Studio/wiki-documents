@@ -27,6 +27,24 @@ import TabItem from '@theme/TabItem';
 
 # reBot Arm B601-DM en LeRobot
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ Sin código · Sin configuración de entorno</span>
+    <p className="sensecraft-banner__title">Omite la configuración: ejecuta reBot Arm y LeRobot desde una sola app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics es la plataforma sin código de Seeed para SO-ARM101, reBot Arm 102 + B601-RS y B601-DM. Conecta los brazos, calibra, recopila demostraciones, entrena y ejecuta inferencias desde una interfaz guiada, sin entorno de Python ni terminal.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ Flujo de trabajo guiado en 6 pasos</li>
+      <li>✅ Entrenamiento en la nube — sin GPU local</li>
+      <li>✅ Cliente para Windows / macOS</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir a SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/es/sensecraft_robotics/">Guía de software</a>
+  </div>
+</div>
+
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" />
@@ -70,24 +88,6 @@ Los tutoriales de Seeed Studio se actualizan estrictamente de acuerdo con la doc
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<div className="sensecraft-banner">
-  <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ Sin código · Sin configuración de entorno</span>
-    <p className="sensecraft-banner__title">Omite la configuración: ejecuta reBot Arm y LeRobot desde una sola app</p>
-    <p className="sensecraft-banner__lead">SenseCraft Robotics es la plataforma sin código de Seeed para SO-ARM101, reBot Arm 102 + B601-RS y B601-DM. Conecta los brazos, calibra, recopila demostraciones, entrena y ejecuta inferencias desde una interfaz guiada, sin entorno de Python ni terminal.</p>
-    <ul className="sensecraft-banner__points">
-      <li>✅ Flujo de trabajo guiado en 6 pasos</li>
-      <li>✅ Entrenamiento en la nube — sin GPU local</li>
-      <li>✅ Cliente para Windows / macOS</li>
-      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
-    </ul>
-  </div>
-  <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir a SenseCraft Robotics ↗</a>
-    <a className="sensecraft-banner__link" href="/es/sensecraft_robotics/">Guía de software</a>
-  </div>
 </div>
 
 ## Entorno inicial del sistema
@@ -273,6 +273,105 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 </section>
 </div>
 
+## Conectar los brazos
+
+:::warning
+**Aviso de seguridad:**
+Desconecta la alimentación antes de conectar o desconectar cables JST, XT30 u otros cables. Enciende la alimentación solo después de confirmar que todos los cables están conectados correctamente.
+El B601 RS y el B601 DM se parecen. Asegúrate de distinguirlos.
+:::
+
+
+### Montar y conectar el reBot Arm 102 (brazo líder)
+
+
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>Montar el reBot Arm 102</h4>
+      <p className="rebot-step-label">Paso 1</p>
+
+Utiliza sargentos para madera para fijar el reBot Arm 102 a una mesa plana. Empuja suavemente la base para confirmar que no se mueve.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>Conectar los cables</h4>
+      <p className="rebot-step-label">Paso 2</p>
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+
+Las conexiones constan de dos rutas:
+
+* **Ruta de señal (brazo -> cable USB-C -> ordenador)**
+  1. Prepara un cable USB-C para conectar el brazo al ordenador (**no lo conectes todavía al ordenador; conéctalo cuando llegues al enlace del puerto serie y al escaneo de dispositivos**).
+
+* **Ruta de alimentación (brazo -> adaptador de alimentación de 12 V 2 A -> regleta -> encendido)**
+  1. Conecta el **adaptador de alimentación de 12 V 2 A** al conector de alimentación del brazo.
+  2. Conecta el adaptador a la regleta para encender el brazo.
+
+</div>
+</section>
+
+</div>
+
+### Montar y conectar el B601 DM (brazo seguidor)
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-follower-wiring-overview-dm-en.png" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+      <h4>Montar el B601 DM</h4>
+      <p className="rebot-step-label">Paso 3</p>
+
+Utiliza sargentos en C para fijar el B601 DM a una mesa estable y plana. Después de fijarlo, gira suavemente el brazo hacia la izquierda y la derecha para confirmar que la base no se mueve.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>Conectar los cables</h4>
+      <p className="rebot-step-label">Paso 4</p>
+
+Asegúrate de que la alimentación esté desconectada antes de empezar. Las conexiones constan de dos rutas:
+
+* **Ruta de señal (brazo -> placa de separación de señal/alimentación -> placa controladora USB-CAN -> ordenador)**
+  1. Utiliza un cable XT30 2+2 para conectar el primer motor de la parte inferior a la placa de separación de señal/alimentación.
+  2. Utiliza el cable JST de 2 pines para conectar la placa de separación de señal/alimentación a la placa controladora USB-CAN.
+  3. Utiliza el cable JST de 3 pines para conectar el primer motor de la parte inferior a la placa controladora USB-CAN (este es un cable de depuración y puede dejarse desconectado).
+  4. Prepara un cable de datos USB-C para conectar la placa controladora USB-CAN al ordenador (**no lo conectes todavía al ordenador; conéctalo cuando llegues al enlace del puerto serie y al escaneo de dispositivos**).
+
+* **Ruta de alimentación (brazo -> placa de separación de señal/alimentación -> adaptador de alimentación de 24 V -> toma de corriente -> encendido)**
+  1. Utiliza un cable XT30 2+2 para conectar el primer motor de la parte inferior a la placa de separación de señal/alimentación.
+  2. Conecta la placa de separación de señal/alimentación al **adaptador de alimentación de 24 V**.
+  3. Conecta el adaptador de alimentación a la toma de corriente. Después de confirmar que el brazo está fijado, que los cables son correctos y que el área circundante está despejada, enciende la alimentación.
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-2-connect-follower-dm-en.webp" />
+</div>
+
+</div>
+</section>
+
+</div>
+
 ## Calibrar el brazo robótico
 
 <div class="video-container">
@@ -416,6 +515,7 @@ La RealSense D405 es una cámara estéreo de profundidad de corto alcance diseñ
 
 La RealSense D435i combina percepción de profundidad, imagen RGB y una IMU, lo que la hace adecuada para aplicaciones de rango medio a corto, como reconstrucción 3D, SLAM y percepción del entorno robótico.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -570,6 +670,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -598,6 +700,7 @@ proporcionando flujos sincronizados de RGB y profundidad con una alineación pre
 
 Gemini 336 es un nuevo miembro de la serie Gemini 330. Hereda el sólido rendimiento de profundidad de Gemini 335 y mejora aún más la calidad de la imagen de profundidad en áreas interiores reflectantes, regiones oscuras en escenas de alto rango dinámico y entornos exteriores brillantes. Para aplicaciones de robótica, puede proporcionar datos de profundidad más estables y de alta calidad para tareas como percepción, localización y manipulación.
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -755,6 +858,8 @@ Luego confirma el `serial` real y actualiza `serial_number_or_name` en tu comand
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="generic-camera" label="Generic Camera">
@@ -835,6 +940,30 @@ lerobot-teleoperate \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true
 ```
+
+</TabItem>
+
+<TabItem value="camera-mount" label="Soporte de cámara">
+
+**Instalación del soporte de cámara**
+
+Fija la posición de la cámara para una recopilación de datos limpia. Admite ajuste libre de múltiples ángulos, incluidas las vistas superior + muñeca y superior + lateral. Compatible con cámaras USB normales y cámaras de profundidad como D435i, D405 y Gemini 2. Admite brazos robóticos SO-ARM101 y reBot. Se puede usar con la caja de experimentos de recopilación de datos y reutilizar conjuntos de datos y modelos descargados listos para usar.
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank" rel="noopener noreferrer">
+    <span>Comprar ahora</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 </TabItem>
 </Tabs>

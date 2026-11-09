@@ -12,15 +12,15 @@ last_update:
   date: 9/17/2025
   author: Kasun Thushara
 createdAt: '2025-07-31'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_home_assistant/
 ---
 
 ## 概要
 
-新しい **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** を使ってスマートスペースと会話し、音声で照明をオン・オフしたり、音楽の音量を上げたり、天気を尋ねたりできます。
+新しい **ReSpeaker XMOS XVF3800 と XIAO ESP32S3** を使ってスマートスペースと会話し、音声で照明をオン・オフしたり、音楽の音量を上げたり、天気を尋ねたりできます。
 
-この章では、ReSpeaker XMOS XVF3800 with XIAO ESP32S3 を HA Voice Assistant と組み合わせて使用し、Sonoff スマートスイッチを接続して、照明スイッチの音声制御を実現します。
+この章では、ReSpeaker XMOS XVF3800 と XIAO ESP32S3 の HA Voice Assistant を使用して Sonoff スマートスイッチを接続し、照明スイッチの音声制御を実現します。
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -68,54 +68,47 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_home_assistant/
 ## ファームウェアの更新
 
 最高の再生体験を得るために、XMOS ファームウェアを更新する必要があります。
-ファームウェアをここからダウンロードしてください。PC に ReSpeaker XMOS XVF3800 with XIAO ESP32S3 を接続し、ガイドに従って実行します。
+ここからファームウェアをダウンロードしてください。PC に ReSpeaker XMOS XVF3800 with XIAO ESP32S3 を接続し、ガイドに従って実行します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
 :::note
-XVF3800 マイクアレイは動作に 12.288 MHz の MCLK を必要としますが、Home Assistant で使用される ESPHome は API の制限によりこれを生成できません。このファームウェアでは XVF3800 を I2S マスターとして動作させることで、ESP32 から MCLK を供給しなくても自前でクロックを生成できるようにしています。
-このファームウェアによってこの制限が解消され、マイクは Home Assistant で正しく動作します。
+XVF3800 マイクアレイは動作に 12.288 MHz の MCLK を必要としますが、ESPHome（Home Assistant で使用）は API の制限によりこれを生成できません。このファームウェアでは XVF3800 を I2S マスターとして動作させることで、ESP32 から MCLK を受け取らなくても自前でクロックを生成できるようにしています。
+このファームウェアによりこの制限が解消され、マイクは Home Assistant で正しく動作します。
 :::
 
-ファームウェアは [こちら](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration) からダウンロードできます。
+ファームウェアは[こちら](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)からダウンロードできます。
 
-インストールガイドは[こちら](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェア更新)です。
+インストールガイドは[こちら](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアの更新)です。
 
-## ReSpeaker XMOS XVF3800 with XIAO ESP32S3 の準備
+## ReSpeaker XMOS XVF3800 と XIAO ESP32S3 の準備
 
-**Home Assistant > Settings > Add-ons** に移動します。
+**Home Assistant > Settings > Apps** に移動します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Add-on Store** をクリックします（通常は右下にあります）。
+**Install app**（通常は右下）をクリックします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Official add-ons** の下で **ESPHome Device Builder** を検索してインストールします。
+**App Store** で **ESPHome Device Builder** を検索してインストールします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-インストール後、**Start** をクリックして ESPHome アドオンを起動します。
+**Install** をクリックして ESPHome アドオンをインストールします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-アクセスしやすくするために、**Start on Boot, Watchdog, Show in Sidebar** を有効にします。
 
 Home Assistant のサイドバーから **ESPHome Builder** に移動します。
 
 **+ NEW DEVICE** をクリックします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_newdevice_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
+新しいデバイスエントリを選択し、**Import from file** をクリックします。
 
-プロンプトが表示されたら **SKIP** をクリックします。設定は手動で作成します。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
-
-新しく作成したデバイスエントリを選択し、**EDIT** をクリックします。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 内容をカスタムの **YAML 設定** に置き換えます。
 
@@ -125,17 +118,17 @@ YAML ファイルは[こちら](https://github.com/formatBCE/Respeaker-XVF3800-E
 
 YAML を保存したら、**INSTALL** をクリックします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Manual Download** を選択します。
+**Advanced opinions** と **Download firmware binary** を選択します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 ファームウェアのコンパイルが完了するまで待ちます。
 
 生成された .bin ファームウェアファイルを PC にダウンロードします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 **ESP32-S3** ボード（XVF3800 接続済み）を **USB Type-C ケーブル** で PC に接続します。
 
@@ -145,7 +138,7 @@ Chrome または Edge で [**Web-ESPHome**](https://web.esphome.io/?dashboard_wi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/connect-port.png" alt="pir" width={800} height="auto" /></p>
 
-接続されたら、**INSTALL** をクリックします。
+接続されたら **INSTALL** をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_install.PNG" alt="pir" width={500} height="auto" /></p>
 
@@ -161,9 +154,9 @@ Chrome または Edge で [**Web-ESPHome**](https://web.esphome.io/?dashboard_wi
 
 **Home Assistant > Settings > Devices & Services** に戻ります。
 
-**ESPHome** が検出されたインテグレーションとして表示されているはずです。
+**ESPHome** が検出された統合として表示されているはずです。
 
-**CONFIGURE** をクリックし、続いて **Submit** をクリックしてセットアップを完了します。
+**CONFIGURE** をクリックし、**Submit** を押してセットアップを完了します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_discover.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -176,11 +169,11 @@ Chrome または Edge で [**Web-ESPHome**](https://web.esphome.io/?dashboard_wi
 まだインストールしていない場合は、公式ガイドに従って [**Home Assistant Community Store**](https://hacs.xyz/docs/use/) をセットアップしてください。
 
 サイドバーから **HACS** を開きます。
-検索欄で **Sonoff LAN** を検索します。
+検索セクションで **Sonoff LAN** を検索します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_HACS.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Install** をクリックしてインテグレーションを追加します。
+**Install** をクリックして統合を追加します。
 変更を反映するために Home Assistant を再起動します。
 
 ### Sonoff
@@ -202,8 +195,8 @@ Chrome または Edge で [**Web-ESPHome**](https://web.esphome.io/?dashboard_wi
 
 ## Nabu Cloud を使った Voice Assistant
 
-このデモでは、音声を使って **Home Assistant Cloud (Nabu Casa)** に接続する方法を紹介します。セットアップはシンプルで、**1 か月間の無料トライアル** を利用して、その機能を存分に試すことができます。
-組み込みの **ウェイクワード**「Okay Nabu」によって、音声コマンドを簡単にトリガーし、複雑な設定なしで、**いつでもどこでも** デバイスやサービスと **シームレスに連携** できます。
+このデモでは、音声を使って **Home Assistant Cloud（Nabu Casa）** に接続する方法を紹介します。セットアップはシンプルで、**1 か月間の無料トライアル** を利用して、その機能を存分に試すことができます。
+組み込みの **ウェイクワード**「Okay Nabu」により、音声コマンドを簡単にトリガーし、複雑な設定なしで、**いつでもどこでも** デバイスやサービスと **シームレスに連携** できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -221,8 +214,8 @@ wifi:
   password: !secret wifi_password
 ```
 
-- **ssid & password**: `secrets.yaml` ファイルから取得されるため、パスワードが平文で表示されません。
-- **Events**: Wi-Fi が接続または切断されたときにアクションを実行します：
+- **ssid & password**: パスワードが平文で表示されないように、secrets.yaml ファイルから取得されます。
+- **イベント**: Wi-Fi が接続または切断されたときにアクションを実行します：
   - on_connect:
     - BLE improv セットアップを停止します。
     - control_leds スクリプトを実行します（Wi-Fi 接続時の LED エフェクト）。
@@ -243,8 +236,8 @@ i2c:
   frequency: 100kHz
 ```
 
-- **id**: このバスを他の場所で参照するための名前。
-- **sda** / scl: データおよびクロックに使用されるピン。
+- **id**: 他の場所でこのバスを参照するための名前。
+- **sda** / scl: データとクロックに使用されるピン。
 - **scan**: 起動時に接続されたデバイスをチェックします。
 - **frequency**: 通信速度（100kHz が標準）。
 
@@ -325,9 +318,9 @@ switch:
 
 </details>
 
-スイッチは、Home Assistant 上のソフトウェア制御の「ボタン」です。サウンド、タイマー、アラームなどの機能を制御します。
+スイッチは、Home Assistant 内のソフトウェア制御の「ボタン」です。サウンド、タイマー、アラームなどの機能を制御します。
 
-**ウェイクワードサウンドスイッチ**: ウェイクワードの音声を制御します。
+**ウェイクワードサウンドスイッチ**: ウェイクワードのオーディオを制御します。
 
 ```yml
 # Wake Word Sound Switch.
@@ -343,7 +336,7 @@ switch:
 **タイマー鳴動内部スイッチ**:
 
 - タイマーがアクティブかどうかを追跡します。
-- on_turn_on: 他の音声を -20dB だけ下げ、タイマー音を開始し、LED を更新し、15 分後に自動停止します。
+- on_turn_on: 他のオーディオを -20dB だけ下げ、タイマー音を開始し、LED を更新し、15 分後に自動停止します。
 - on_turn_off: タイマーを停止し、音量を元に戻し、LED を更新します。
 
 ```yml
@@ -421,7 +414,7 @@ text_sensor:
 
 </details>
 
-この YAML ブロックは、タイマー、アラーム、LED 輝度用のコントロールとセンサーを追加します。LED リングの明るさをスライダーで調整し、次のタイマー（時刻＋名前）を追跡し、Home Assistant 上でアラーム時刻とデバイスの現在時刻を表示できるようにします。
+この YAML ブロックは、タイマー、アラーム、LED 輝度用のコントロールとセンサーを追加します。LED リングの明るさをスライダーで調整し、次のタイマー（時刻＋名前）を追跡し、Home Assistant 内でアラーム時刻とデバイスの現在時刻を表示できるようにします。
 
 **LED リング輝度**:
 
@@ -435,7 +428,7 @@ number:
 ```
 
 - ユーザーがスライダーで明るさを調整できるようにします。
-- min_value / max_value で範囲を定義します。
+- min_value / max_value で上限と下限を定義します。
 - restore_value により、再起動後も以前の設定を保持します。
 
 **次のタイマー**
@@ -450,7 +443,7 @@ sensor:
 ```
 
 - 次のタイマーの残り時間を表示します。
-- タイマーが変化したときのみ更新されます（リソース節約のため）。
+- タイマーが変化したときのみ更新されます（リソースを節約）。
 
 **アラーム時刻 & デバイス時刻**
 
@@ -463,7 +456,7 @@ text_sensor:
     ...
 ```
 
-- 現在のアラーム時刻と ESP32 のシステム時刻を表示します。
+- 現在のアラームと ESP32 のシステム時刻を表示します。
 
 ### 一定間隔での LED エフェクト
 
@@ -1306,42 +1299,42 @@ script:
       ....
 ```
 
-- すべてのLEDエフェクトを一括で管理します。
+- すべてのLEDエフェクトを一元管理します。
 - エフェクトの種類、色（R/G/B）、速度を動的に設定できます。
 - スムーズな動きを実現するために更新スクリプトを使用します。
 - Offエフェクトは即座にLEDを消灯します。
 
 **個別スクリプト**
 
-- 各アニメーション（ブレス、レインボー、コメット、ティンクル、タイマーのチック、音量表示、LEDビーム）はそれぞれ専用のスクリプトを持ちます。
+- 各アニメーション（breathe、rainbow、comet、twinkle、timer tick、volume display、LED beam）は専用のスクリプトを持ちます。
 - システムをモジュール化し、保守しやすくします。
 - led_animation_interval または中央コントローラーによって定期的にトリガーされます。
 
 | デバイス状態           | LEDエフェクト             |
 |------------------------|----------------------|
-| 起動失敗               | 赤のブレス             |
-| Improv BLEモード       | 暖色ティンクル          |
-| 初期化                 | 青のティンクル          |
-| HA接続なし             | 赤のティンクル          |
-| 音声アシスタント待機中             | 紫のビーム           |
-| 音声アシスタント傾聴中             | 明るい紫のビーム    |
-| 音声アシスタント思考中            | 紫のブレス        |
-| 音声アシスタント応答中            | 紫のコメット          |
-| 音声アシスタントエラー               | 赤のブレス           |
-| 音声アシスタントアイドル                | LED消灯              |
-| タイマー鳴動中          | 紫の高速ブレス   |
-| 音量変更                | 一時的な表示     |
+| 起動失敗               | 赤のbreathe           |
+| Improv BLEモード       | 暖色のtwinkle          |
+| 初期化中               | 青のtwinkle          |
+| HA未接続              | 赤のtwinkle           |
+| 音声アシスタント待機中             | 紫のbeam           |
+| 音声アシスタントが聞き取り中       | 明るい紫のbeam    |
+| 音声アシスタントが思考中          | 紫のbreathe        |
+| 音声アシスタントが応答中          | 紫のcomet          |
+| 音声アシスタントエラー           | 赤のbreathe           |
+| 音声アシスタント待機（アイドル）  | LED消灯              |
+| タイマーが鳴っている   | 紫の高速breathe   |
+| 音量変更               | 一時的な表示     |
 
 #### LED制御の仕組み（フロー概要）
 
 1. **エフェクトのトリガー**
 
-   - 何かが発生したとき（例：起動失敗、音声アシスタントが傾聴中、タイマーが鳴っている）、スクリプトが実行されます。
+   - 何かが発生したとき（例：起動失敗、音声アシスタントが聞き取り中、タイマーが鳴っている）、スクリプトが実行されます。
    - そのスクリプトが **中央LEDコントローラー**（`led_set_effect`）を呼び出し、次の情報を渡します：
 
-     - **どのエフェクト** を実行するか（例：ブレス、レインボー、コメット）
+     - **どのエフェクト** を実行するか（例：breathe、rainbow、comet）
      - **どの色** にするか（R、G、Bの値）
-     - **どのくらいの速さ** か（スピード）。
+     - **どのくらいの速さ**（speed）。
 
    起動に失敗した場合 → `led_set_effect` が effect = *breathe*、color = red で呼び出されます。
 
@@ -1350,9 +1343,9 @@ script:
    - **50ms** ごと（1秒間に20回）、`led_animation_interval` ループが **現在のエフェクト** を確認します。
    - そのエフェクト名に基づいて、対応する更新スクリプトに **制御を転送** します。
 
-     - effect = *breathe* の場合 → `update_breathe_effect` を実行します。
-     - effect = *rainbow* の場合 → `update_rainbow_effect` を実行します。
-     - そのほか、ティンクル、コメット、タイマーチック、LEDビームなども同様です。
+     - effect = *breathe* の場合 → `update_breathe_effect` を実行。
+     - effect = *rainbow* の場合 → `update_rainbow_effect` を実行。
+     - そのほか twinkle、comet、timer tick、LED beam なども同様です。
 
 このループは **ディスパッチャ** のように動作し、「次にどのアニメーションスクリプトを実行するか」を決定します。
 
@@ -1391,10 +1384,10 @@ interval:
 3. **エフェクト更新スクリプト**
 
    - 各エフェクトには、LEDの色をフレームごとに計算する専用スクリプトがあります。
-   - 例：**ブレスエフェクト**
+   - 例：**breatheエフェクト**
 
-     - サイン波を使って、明るさを滑らかに上下させます。
-     - 明るさにLEDリングのグローバル設定（速度、明るさスライダー、R/G/Bカラー）を乗算します。
+     - サイン波を使って、明るさを滑らかにフェードイン・フェードアウトさせます。
+     - 明るさにLEDリングのグローバル設定（speed、明るさスライダー、R/G/Bカラー）を掛け合わせます。
      - 12個すべてのLED用のカラー配列を構築します。
      - その色をRespeaker LEDリングに送信します。
 
@@ -1434,7 +1427,7 @@ interval:
 
 **I²S 入力 / 出力**
 
-I²S（Inter-IC Sound）は、ESP32がコーデック、マイク、スピーカーなどのチップと高品質なオーディオを送受信できるデジタル接続です。
+I²S（Inter-IC Sound）は、ESP32がコーデック、マイク、スピーカーなどのチップと高品質なデジタルオーディオを送受信するためのデジタル接続です。
 
 ```yml
 i2s_audio:
@@ -1464,10 +1457,10 @@ i2s_audio:
 
 **マイク**
 
-- I²Sマイクアレイ / コーデックからオーディオを取得します。
-- GPIO43：マイクのオーディオデータが入力されるピン。
+- I²Sマイクアレイ / コーデックから音声を取得します。
+- GPIO43：マイク音声データが入力されるピン。
 - サンプリングレート48 kHz、32ビット：高品質録音（ステレオ、2チャンネル）。
-- adc_type: external：ESP32内蔵ADCではなく外部コーデックを使用します。
+- adc_type: external：外部コーデックを使用します（ESP32内蔵ADCは使用しません）。
 - i2s_mode: secondary：ESP32がコーデックのクロックに追従します（スレーブモード）。
 
 ```yml
@@ -1486,11 +1479,11 @@ microphone:
 
 **スピーカー**
 
-- コーデック（AIC3104 DAC）経由でスピーカーにオーディオを送信します。
+- コーデック（AIC3104 DAC）経由でスピーカーに音声を送信します。
 - GPIO44：デジタルオーディオが出力されるピン。
 - 48 kHz、32ビットステレオ：高品質な再生。
-- buffer_duration 100ms：オーディオを滑らかに保ちます（グリッチを防止）。
-- timeout: never：スピーカーチャンネルを維持します（シャットダウンしません）。
+- buffer_duration 100ms：音声を滑らかに保ちます（ノイズや途切れを防止）。
+- timeout: never：スピーカーチャンネルを維持します（自動で停止しません）。
 
 ```yml
 speaker:
@@ -1511,7 +1504,7 @@ speaker:
 
 **ミキサー**
 
-- 複数のオーディオストリーム（メディア＋アナウンス）を1つの出力にまとめます。
+- 複数のオーディオストリーム（メディア＋アナウンス）を1つの出力にミックスします。
 
 ```yml
   # Virtual speakers to combine the announcement and media streams together into one output
@@ -1528,7 +1521,7 @@ speaker:
 
 **リサンプラー**
 
-- すべてのオーディオソースのサンプリングレートとビット深度を一致させます。
+- すべての音声ソースのサンプリングレートとビット深度を一致させます。
 
 ```yml
   # Vritual speakers to resample each pipelines' audio, if necessary, as the mixer speaker requires the same sample rate
@@ -1566,7 +1559,7 @@ media_player:
 
 - i2cアドレス：0x2C
 - ID：respeaker
-- マイクミュートスイッチ：1秒ごとに更新し、トグル時にサウンドを再生します。
+- マイクミュートスイッチ：1秒ごとに更新し、切り替え時にサウンドを再生します。
 - DFUバージョン報告：120秒ごとにファームウェアを報告します。
 - ビーム方向センサー：ボイスビームを追跡します（内部のみ）。
 - ファームウェア管理：必要に応じてXVF3800ファームウェアを自動フラッシュします。
@@ -1610,7 +1603,7 @@ external_components:
 - formatBCE/Respeaker-XVF3800-ESPHome-integration:
 - XVF3800ドライバー
 - AIC3104オーディオコーデックドライバー
-- refresh: 0s：常にリポジトリから最新のコードを取得します。
+- refresh: 0s：常にリポジトリから最新コードを取得します。
 
 ### Micro Wake Word
 
@@ -1626,12 +1619,12 @@ micro_wake_word:
   ....
 ```
 
-「Okay Nabu」のようなウェイクワードを検出し、音声アシスタントを起動します。
+ウェイクワード（「Okay Nabu」など）を検出し、音声アシスタントを起動します。
 
 - id: mww → 参照名。
 - microphone: i2s_mics、1チャンネル。
-- stop_after_detection: false → 継続的にリスニングを続けます。
-- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop（内部停止コマンド。独自のコマンドを追加可能）。
+- stop_after_detection: false → 継続的に聞き取りを行います。
+- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop（内部停止コマンド。任意のコマンドを追加可能）。
 - vad probability_cutoff: 0.05 → 音声検出感度。
 
 **検出時（マイクがミュートされていない場合）**
@@ -1658,32 +1651,32 @@ voice_assistant:
 
 音声アシスタント（VA）の動作とインタラクションを制御します。
 
-- **マイクとメディア**：i2s_mics と外部メディアプレーヤーを使用します。
-- **ウェイクワード**：mww にリンクされていますが、ウェイクワードは必須ではありません（use_wake_word: false）。
-- **オーディオ設定**：ノイズ抑制オフ、オートゲイン 0 dB、通常の音量。
+- **マイクとメディア**: i2s_mics と外部メディアプレーヤーを使用します。
+- **ウェイクワード**: mww にリンクされていますが、ウェイクワードは不要です（use_wake_word: false）。
+- **オーディオ設定**: ノイズ抑制オフ、オートゲイン 0 dB、通常の音量。
 
 #### イベント / 動作内容
 
-- **on_client_connected**：VA を開始し、LED を更新し、必要に応じてマイクのミュートを解除します。
-- **on_client_disconnected**：VA を停止し、LED をリセットします。
-- **on_error: LED にエラー状態を表示**；クラウド認証に失敗した場合はローカルサウンドを再生します。
-- **on_start**：VA 開始時にメディア音量を下げます（ダッキング）。
-- **on_listening / on_stt_vad_start / on_stt_vad_end**：リスニングおよび思考中に VA フェーズと LED を更新します。
-- **on_intent_progress / on_tts_start / on_tts_end**：発話処理を行い、LED を更新し、ストップワードスクリプトをトリガーできます。
-- **on_stt_end**：認識されたテキストイベントを送信します。
-- **on_end**：VA を停止し、LED をリセットし、ダッキングを終了します。
+- **on_client_connected**: VA を開始し、LED を更新し、必要に応じてマイクのミュートを解除します。
+- **on_client_disconnected**: VA を停止し、LED をリセットします。
+- **on_error: LED にエラー状態を表示**し、クラウド認証に失敗した場合はローカルサウンドを再生します。
+- **on_start**: VA 開始時にメディア音量を下げます（ダッキング）。
+- **on_listening / on_stt_vad_start / on_stt_vad_end**: リスニングおよび思考中に VA のフェーズと LED を更新します。
+- **on_intent_progress / on_tts_start / on_tts_end**: 発話を処理し、LED を更新し、ストップワードスクリプトをトリガーできます。
+- **on_stt_end**: 認識されたテキストイベントを送信します。
+- **on_end**: VA を停止し、LED をリセットし、ダッキングを終了します。
 
 #### タイマーイベント
 
 - on_timer_started / on_timer_updated / on_timer_cancelled / on_timer_finished / on_timer_tick:
   - タイマーの状態と名前を更新します。
   - LED を更新します。
-  - カチカチ進むタイマーについては、LED の更新を 5 秒ごとに減らします。
+  - カウント中のタイマーでは LED の更新を 5 秒ごとに減らします。
 
 ## 謝辞
 
-Seeed Studio ReSpeaker XVF3800 用の素晴らしい YAML ファイルを作成してくれた FormatBCE に感謝いたします。
-彼を [GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration) でサポートしてください。
+Seeed Studio ReSpeaker XVF3800 用にこの素晴らしい YAML ファイルを作成してくれた FormatBCE に感謝いたします。
+彼をサポートするには、[GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration) をご覧ください。
 
 ## 技術サポート & 製品ディスカッション
 

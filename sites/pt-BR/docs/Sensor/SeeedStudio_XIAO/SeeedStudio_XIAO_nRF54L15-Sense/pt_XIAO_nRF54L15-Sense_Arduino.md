@@ -1,5 +1,5 @@
 ---
-description: Este artigo foi desenvolvido com base no core Arduino para nRF54L15 escrito pelo desenvolvedor lolren, com o objetivo de fornecer tutoriais de referência para usuários do XIAO nRF54L15 desenvolverem na Arduino IDE.
+description: Este artigo foi desenvolvido com base no core Arduino para nRF54L15 escrito pelo desenvolvedor lolren, com o objetivo de fornecer tutoriais de referência para que usuários do XIAO nRF54L15 desenvolvam na Arduino IDE.
 title: Arduino para Seeed Studio XIAO nRF54L15
 keywords:
   - nRF54L15
@@ -8,18 +8,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_6.webp
 slug: /xiao_nrf54l15_sense_arduino
 last_update:
-  date: 4/22/2026
+  date: 10/15/2026
   author: Zeller
 createdAt: '2025-04-22'
 updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_arduino/
 ---
 
-Este artigo é desenvolvido com base no XIAO nRF54L15 Sense com a plataforma Arduino.
+Este artigo foi desenvolvido com base no XIAO nRF54L15 Sense com a plataforma Arduino.
 
 ## Agradecimentos
 
-Agradecimentos especiais ao desenvolvedor **[lolren](https://github.com/lolren)** por fornecer suporte de adaptação Arduino para o chip nRF54L15. Isso possibilita o desenvolvimento e a aplicação prática do XIAO nRF54L15 no ecossistema Arduino. Agradecemos também por seus esforços contínuos e contribuições para a construção do ecossistema de código aberto relacionado.
+Agradecimentos especiais ao desenvolvedor **[lolren](https://github.com/lolren)** por fornecer suporte de adaptação Arduino para o chip nRF54L15. Isso possibilita o desenvolvimento e a aplicação prática do XIAO nRF54L15 no ecossistema Arduino. Agradecemos também por seus esforços contínuos e contribuições para a construção do ecossistema open source relacionado.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/lolren/nrf54-arduino-core" target="_blank" rel="noopener noreferrer">
@@ -61,13 +61,13 @@ Antes de começar, prepare o hardware XIAO nRF54L15 ou XIAO nRF54L15 Sense.
 ### Software
 
 :::tip
-Se esta é a sua primeira vez usando Arduino, recomendamos fortemente que você consulte [Introdução ao Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
+Se esta é a sua primeira vez usando Arduino, recomendamos fortemente que você consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
 :::
 
 - **Passo 1.** Baixe e instale a versão estável da Arduino IDE de acordo com o seu sistema operacional.
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Baixar Arduino IDE</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
   </div>
   <br></br>
 
@@ -89,7 +89,7 @@ https://raw.githubusercontent.com/lolren/nrf54-arduino-core/main/package_nrf54l1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/arduino_3.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- **Passo 4.** Envie o programa
+- **Passo 4.** Faça o upload do programa
 
 ```c
 void setup() {
@@ -177,7 +177,7 @@ void loop() {
 
 ### Resultado
 
-Conecte o Grove – Chainable RGB LED ao pino 0 da Seeed Studio Grove Base for XIAO. O Grove – Chainable RGB LED apresentará efeitos de piscagem e escurecimento gradual de luz respiratória.
+Conecte o Grove – Chainable RGB LED ao pino 0 do Seeed Studio Grove Base for XIAO. O Grove – Chainable RGB LED apresentará efeitos de piscada e escurecimento gradual de luz respiratória.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_2.gif" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -192,7 +192,7 @@ Você precisa preparar o XIAO nRF54L15 e o dispositivo CH340.
 <table align="center">
  <tr>
         <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Módulo&Adaptador CH340G USB para Serial (TTL)</th>
+        <th>CH340G USB to Serial (TTL) Module&Adapter</th>
  </tr>
  <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -222,7 +222,7 @@ Se você não estiver familiarizado com a distribuição dos pinos do XIAO nRF54
 
 :::caution
 Não use `PIN_SERIAL1_RX` e `PIN_SERIAL1_TX` para `Serial` (porta serial USB).
-Isso interromperá os canais padrão de download e depuração e pode resultar em falha na gravação do programa (falha de SWD/CDC).
+Isso interromperá os canais padrão de download e depuração e poderá resultar em falha na gravação do programa (falha de SWD/CDC).
 :::
 
 ```c
@@ -356,7 +356,7 @@ Gire o botão e o Monitor Serial do Arduino imprimirá o valor de leitura do ADC
 
 ## I2C
 
-I2C é um protocolo de comunicação serial síncrono que permite a comunicação multi-dispositivo entre dispositivos mestre e escravo por meio da linha de clock SCL e da linha de dados SDA. O XIAO nRF54L15 / Sense fornece dois conjuntos de interfaces I2C. Esta seção demonstra as funções de I2C controlando o display OLED na Expansion Board Base for XIAO.
+I2C é um protocolo de comunicação serial síncrono que permite a comunicação entre vários dispositivos mestre e escravo por meio da linha de clock SCL e da linha de dados SDA. O XIAO nRF54L15 / Sense fornece dois conjuntos de interfaces I2C. Esta seção demonstra as funções de I2C controlando o display OLED na Expansion Board Base for XIAO.
 
 ### Preparação de hardware
 
@@ -389,7 +389,7 @@ Você precisa preparar o XIAO nRF54L15 Sense e dispositivos com interfaces I2C.
 
 ### Software
 
-No XIAO nRF54L15, D4 e D5 servem respectivamente como os pinos SCL e SDA.
+No XIAO nRF54L15, D4 e D5 servem respectivamente como os pinos SDA e SCL.
 No framework lolren, o pino D4 é redefinido como **PIN_WIRE_SCL**, e o pino D5 é redefinido como **PIN_WIRE_SDA**.
 
 :::tip

@@ -1,5 +1,6 @@
 ---
 description: Complete guide to JavaScript SDK and Web Apps for Reachy Mini, enabling zero-install browser-based robot control via WebRTC and Hugging Face Spaces.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: JavaScript SDK & Web Apps
 slug: /reachymini_sdk_javascript-sdk
 keywords:

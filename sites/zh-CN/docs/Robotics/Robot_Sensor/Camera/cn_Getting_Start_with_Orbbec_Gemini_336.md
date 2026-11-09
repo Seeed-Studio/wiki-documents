@@ -1,5 +1,5 @@
 ---
-description: Show people how to use Orbbec Gemini 336.
+description: "如何上手 Orbbec Gemini 336 3D 相机：安装配置、SDK 安装，以及面向机器人视觉的深度与彩色数据流。"
 title: Orbbec Gemini336 深度相机
 keywords:
   - Jetson

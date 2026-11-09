@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini的Home Assistant集成，通过HACS安装官方集成，实现局域网自动发现、传感器监控与自动化蓝图。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-home.webp
 title: Home Assistant 集成
 slug: /reachymini_development_cases_home_assistant
 keywords:

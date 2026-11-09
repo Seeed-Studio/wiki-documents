@@ -4,6 +4,9 @@
 
 const K = 'Robotics/Robot_Kits';
 
+// Grupo de salto al curso para principiantes en la barra lateral del producto SO-ARM101.
+const soArmCourseLink = require('./soarm-course-sidebar').courseLink();
+
 const backToRobotics = () => ({
   type: 'ref',
   id: 'es_Edge_Robotics',
@@ -161,6 +164,18 @@ const sidebars = {
         { type: 'ref', id: `${K}/Humanoid/Atom-S/es_Atom-S`, label: 'Robot humanoide', className: 'sideboard_calss' },
       ]
     },
+    {
+      type: 'category',
+      label: 'Cursos',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/es_Arm_Tutorial_Introduction`, label: 'Curso para principiantes' },
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/es_Paper_Reading_Getting_Started`, label: 'Análisis profundo de artículos' },
+        { type: 'link', label: 'De simulación a realidad con NVIDIA Isaac', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+      ],
+    },
     asReferences(actuatorCategory),
     asReferences(sensorCategory),
     asReferences(softwareCategory),
@@ -200,6 +215,7 @@ const sidebars = {
 
   SoArm101Sidebar: [
     backToRobotics(),
+    soArmCourseLink,
     {
       type: 'category',
       label: 'Inicio rápido y herramientas',
@@ -218,7 +234,7 @@ const sidebars = {
       collapsible: false,
       collapsed: false,
       items: [
-        `${K}/Lerobot/es_Complete_Guide_to_Double-Arm_SO-ARM_Training`,
+        `${K}/Lerobot/es_Complete_Guide_to_Bimanual_SO-ARM_Training`,
         `${K}/Lerobot/es_SOARM101_XIAO_MicroROS_Wireless_Teleoperation`,
         `${K}/Lerobot/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor`,
         `${K}/Lerobot/es_Lerobot_SO_ARM101_DAMO`,

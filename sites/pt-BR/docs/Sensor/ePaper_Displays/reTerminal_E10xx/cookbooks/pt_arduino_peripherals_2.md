@@ -294,7 +294,7 @@ Recoloque a tampa traseira e aperte todos os parafusos. O RTC agora é alimentad
 
 ### Sketch completo: RTC_PCF8563
 
-O sketch completo está disponível no repositório: [`examples/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/RTC_PCF8563/RTC_PCF8563.ino).
+O sketch completo está disponível no repositório: [`examples/base/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/RTC_PCF8563/RTC_PCF8563.ino).
 
 <details>
 <summary>Clique para expandir o código completo de RTC_PCF8563.ino</summary>
@@ -821,7 +821,7 @@ O ESP32-S3 oferece vários estados de energia. Os dois mais úteis para aplicaç
 
 ### Sketch completo: LowPower_DeepSleep
 
-O sketch completo está disponível no repositório: [`examples/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/LowPower_DeepSleep/LowPower_DeepSleep.ino).
+O sketch completo está disponível no repositório: [`examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino).
 
 <details>
 <summary>Clique para expandir todo o código LowPower_DeepSleep.ino</summary>
@@ -1018,7 +1018,7 @@ O sketch usa a API ESP-IDF 5.x PDM-RX (`driver/i2s_pdm.h`), que só está dispon
 
 ### Sketch completo: MicRecordToSD
 
-O sketch completo está disponível no repositório: [`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino).
+O sketch completo está disponível no repositório: [`examples/base/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/MicRecordToSD/MicRecordToSD.ino).
 
 <details>
 <summary>Clique para expandir o código completo de MicRecordToSD.ino</summary>
@@ -1540,7 +1540,7 @@ O controlador de toque compartilha o mesmo barramento I2C (GPIO19/GPIO20) com o 
 
 ### Sketch completo: E1003_TouchDraw
 
-O sketch completo está disponível no repositório: [`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw).
+O sketch completo está disponível no repositório: [`examples/base/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/base/E1003_TouchDraw).
 
 <details>
 <summary>Clique para expandir o código completo de E1003_TouchDraw.ino</summary>

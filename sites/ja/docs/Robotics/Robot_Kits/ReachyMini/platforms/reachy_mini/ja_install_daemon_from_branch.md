@@ -1,5 +1,6 @@
 ---
 description: 新機能やバグ修正をテストするために、特定の GitHub ブランチから Reachy Mini デーモンをインストールする開発者向けガイド。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 特定ブランチから Daemon をインストールする
 slug: /reachymini_platforms_reachy_mini_install_daemon_from_branch
 keywords:

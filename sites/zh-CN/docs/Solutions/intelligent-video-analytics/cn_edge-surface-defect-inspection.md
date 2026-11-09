@@ -1,6 +1,7 @@
 ---
 description: 端侧钢材表面缺陷质检——识别六类缺陷，OK/NG 判定经 Modbus TCP 给 PLC、经 MQTT 给 MES，可跑在 Jetson Orin 或装了 Hailo-8 的 reComputer R2000 系列上。含硬件构成、部署轮廓、输出契约与实测数据。
 title: 端侧表面缺陷质检方案：六类缺陷、Modbus 与 MQTT 输出
+sidebar_label: '端侧表面缺陷质检'
 keywords:
   - 表面缺陷质检
   - 钢带缺陷检测
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-surface-defect-inspection/
 generated_from: sensecraft-solutions@edge_inspection_surface
 ---
@@ -103,9 +104,8 @@ generated_from: sensecraft-solutions@edge_inspection_surface
 
 | | 主机 | 实测路数 | 什么时候选它 |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)（Jetson Orin Nano 8GB）<br/>单路相机的入门主机 | 1~2 路稳定 | 单路、对成本敏感。实测 capture→coil P50 10.56 ms |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)（Jetson Orin NX 16GB）<br/>实测所用的主机 | 8 路稳定 | 接一路以上相机；下文数据都在这款上测得 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110191.jpg" alt="reComputer Industrial J4012" width="110" /> | [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html)（Orin NX 16GB，无风扇） | 同 J4012 | 主机装进控制柜；模组与运行时相同，只换机箱 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)（Jetson Orin Nano 8GB）<br/>单路相机的入门主机 | 1~2 路稳定 | 单路、对成本敏感。实测 capture→coil P50 10.56 ms |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)（Jetson Orin NX 16GB）<br/>实测所用的主机 | 8 路稳定 | 接一路以上相机；下文数据都在这款上测得 |
 
 第三种主机是**装了 Hailo-8 的 reComputer R2000 系列**，有部署步骤，配置器里暂时没有它的报价。
 

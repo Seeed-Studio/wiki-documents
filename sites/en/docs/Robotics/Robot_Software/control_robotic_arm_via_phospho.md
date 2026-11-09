@@ -1,5 +1,5 @@
 ---
-description: '--'
+description: "How to control a robotic arm via Phospho and LeRobot: set up the browser-based platform, connect the arm, teleoperate and run imitation learning workflows."
 title: Getting Started with Phospho
 keywords:
   - NVIDIA Jetson

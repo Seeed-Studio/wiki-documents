@@ -1,5 +1,6 @@
 ---
 description: 示例演示Rerun工具用于在带有重力补偿的顺从模式下实时可视化和记录Reachy Mini状态。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Rerun查看器
 slug: /reachymini_examples_rerun_viewer
 keywords:

@@ -278,7 +278,7 @@ void espnow_deinit(){
 
 #### Resolution Part1 Code
 
-The include librarise
+The include libraries
 
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
@@ -478,7 +478,7 @@ void Association_SenderXIAOS3_peer(){
 
 #### Resolution Part2 Code
 
-The include librarise
+The include libraries
 
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
@@ -675,7 +675,7 @@ void Association_SenderXIAOS3_peer(){
 
 #### Resolution Part3 Code
 
-The include librarise
+The include libraries
 
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`

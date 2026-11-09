@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini完整硬件数据表，包括尺寸自由度、电机规格、摄像头、麦克风阵列和电子组件。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini硬件数据表
 slug: /reachymini_platforms_reachy_mini_hardware
 keywords:

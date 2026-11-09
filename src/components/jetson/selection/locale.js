@@ -45,7 +45,7 @@ export function translatePhrase(phrases, lang, text) {
 const ALL = ["zh", "ja", "es", "pt"];
 const WIKI_EXCEPTIONS = {
   "/ai_roboticsyolov26_dual_camera_system/": ["zh", "ja", "pt"],
-  "/rebot_physical_ai_course_chapter_3/": ["ja", "es", "pt"],
+  "/robotics/rebot_physical_ai_course_chapter_3/": ["ja", "es", "pt"],
 };
 const WIKI_TRANSLATED = new Set([
   "/DashCamNet-with-Jetson-Xavier-NX-Multicamera/",
@@ -102,7 +102,7 @@ const WIKI_TRANSLATED = new Set([
   "/rebot_arm_b601_dm_lerobot/",
   "/rebot_arm_b601_rs_grasping_demo/",
   "/rebot_arm_b601_rs_lerobot/",
-  "/rebot_physical_ai_course_chapter_3/",
+  "/robotics/rebot_physical_ai_course_chapter_3/",
   "/recomputer_j20_with_jetson_getting_start/",
   "/recomputer_j401b_getting_start/",
   "/recomputer_j401b_interfaces_usage/",

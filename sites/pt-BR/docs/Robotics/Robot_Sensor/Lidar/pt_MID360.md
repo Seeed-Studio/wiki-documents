@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um guia passo a passo para instalar e configurar o MID360 LiDAR no reComputer J30/40 usando ROS.
+description: "Como usar o LiDAR Livox MID360 com ROS no Jetson: configuração do driver, visualização de nuvem de pontos e integração para mapeamento e SLAM de robôs."
 title: Mid360 com ROS
 keywords:
   - Jetson Nano

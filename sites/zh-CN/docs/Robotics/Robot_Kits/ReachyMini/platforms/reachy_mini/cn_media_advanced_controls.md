@@ -1,5 +1,6 @@
 ---
 description: 微调Reachy Mini摄像头和麦克风阵列的高级设置，包括libcamerasrc控制、GStreamer配置和XMOS XVF3800音频参数。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 高级媒体控制
 slug: /reachymini_platforms_reachy_mini_media_advanced_controls
 keywords:

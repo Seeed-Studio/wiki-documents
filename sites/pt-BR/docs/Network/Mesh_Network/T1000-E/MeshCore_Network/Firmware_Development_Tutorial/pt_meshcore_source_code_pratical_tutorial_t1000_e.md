@@ -10,11 +10,11 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/Mes
 slug: /meshcore_source_code_pratical_tutorial_t1000_e
 sidebar_position: 5
 last_update:
-  date: 3/27/2026
-  author: Michelle Huang
+  date: 10/16/2026
+  author: Advent Jiang
 url: https://wiki.seeedstudio.com/pt-br/meshcore_source_code_pratical_tutorial_t1000_e/
 createdAt: '2026-03-27'
-updatedAt: '2026-09-28'
+updatedAt: '2026-10-16'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -79,19 +79,14 @@ Pressione e segure o botão do dispositivo e, em seguida, conecte rapidamente o 
 
 #### Controle da luz do usuário
 
-Este exemplo mostra como controlar a luz do usuário para ficar constantemente acesa. Copie o código a seguir para `/examples/companion_radio/ui-new/ui-orig/UITask.cpp`
+Este exemplo mostra como controlar a luz do usuário para ficar constantemente acesa. Em `/examples/companion_radio/ui-orig/UITask.cpp`, adicione as seguintes linhas no início de `userLedHandler()`:
 
 ``` cpp
-void UITask::userLedHandler() {
-#ifdef PIN_STATUS_LED
 #ifdef T1000_E
   // T1000-E: keep status LED continuously on.
   digitalWrite(PIN_STATUS_LED, LED_STATE_ON);
   return;
 #endif
-  static int state = 0;
-  static int next_change = 0;
-  static int last_increment = 0;
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000ELight.jpg" style={{width:900, height:'auto'}}/></div>

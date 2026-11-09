@@ -9,10 +9,10 @@ slug: /x1_get_started_for_meshtastic
 sku: 100087698
 sidebar_position: 1
 last_update:
-  date: 7/13/2026
+  date: 10/30/2026
   author: Michelle Huang
 createdAt: '2026-07-13'
-updatedAt: '2026-09-22'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/pt-br/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -466,7 +466,7 @@ Visite [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 ### Como reiniciar o dispositivo
 
-Pressione e segure o botão e, em seguida, conecte o cabo de carregamento.
+Pressione e segure o botão, conecte o cabo de carregamento e solte o botão imediatamente.
 
 ### Precisão da leitura de temperatura
 
@@ -477,6 +477,16 @@ Os dados de temperatura são lidos do barômetro, em vez de serem lidos de um se
 Você pode calcular o consumo de energia através da [Power Consumption Table](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK). Este dispositivo é equipado com uma bateria de alta voltagem. Quando a carga da bateria está baixa, isso acelera o processo de descarga. Este dispositivo é equipado com uma bateria de alta voltagem. Quando a carga da bateria está baixa, isso acelera o processo de descarga. Portanto, você notará que o dispositivo consome energia muito rapidamente quando está com pouca bateria.
 
 ## Solução de problemas
+
+### Falha na atualização de firmware / Recuperação por OTA
+
+Se o seu SenseCAP MeshTracker X1 não iniciar, não responder ou o LED branco ⚪️ permanecer aceso continuamente após uma atualização de firmware, o dispositivo pode estar preso no modo DFU. Tente o seguinte:
+
+1. Force uma reinicialização para sair do modo DFU: desconecte o cabo de carregamento USB, pressione e segure o botão do dispositivo, conecte o cabo de carregamento USB e solte o botão imediatamente. Não continue segurando o botão — segurá-lo por mais de 3 segundos depois de conectar o cabo forçará o dispositivo a entrar novamente no modo DFU.
+2. Verifique se o dispositivo inicia normalmente. Caso contrário, conecte o dispositivo ao computador com um cabo de dados USB e siga [Etapa 1: Entrar no modo DFU](#etapa-1-entrar-no-modo-dfu); em seguida, execute [Etapa 2: Apagar a Flash](#etapa-2-apagar-a-flash) e [Etapa 3: Gravar Firmware](#etapa-3-gravar-firmware) para reinstalar o firmware Meshtastic.
+3. Se o dispositivo ainda não puder ser recuperado, siga [Instalação do bootloader](#instalação-do-bootloader) para gravar novamente o bootloader e, em seguida, reinstale o firmware do aplicativo.
+
+Não force uma reinicialização nem desconecte o cabo USB enquanto o firmware estiver sendo apagado ou gravado. Se o dispositivo não conseguir entrar no modo DFU ou não for detectado pelo computador, entre em contato com o suporte técnico.
 
 ### Dispositivo nunca liga
 

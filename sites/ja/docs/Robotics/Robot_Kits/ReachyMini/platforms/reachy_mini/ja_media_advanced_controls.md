@@ -1,5 +1,6 @@
 ---
 description: libcamerasrc の制御、GStreamer の設定、XMOS XVF3800 のオーディオパラメータなど、Reachy Mini のカメラとマイクアレイを細かく調整するための高度な設定。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 高度なメディア制御
 slug: /reachymini_platforms_reachy_mini_media_advanced_controls
 keywords:

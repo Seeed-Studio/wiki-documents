@@ -1,5 +1,6 @@
 ---
 description: このチュートリアルでは、SocketCAN 接続、アーム制御、RViz による可視化、MoveIt 2 との統合を含む、reBot Arm B601-RS 用の ROS2 control ワークスペースのセットアップ方法を説明します。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp
 title: B601-RS と ROS2
 keywords:
   - reBot Arm
@@ -29,7 +30,7 @@ import '/src/css/rebot-wiki-style.css';
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" alt="reBot Arm B601-RS" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" alt="reBot Arm B601-RS" />
 </div>
 
 <div className="rebot-buy-button-group">

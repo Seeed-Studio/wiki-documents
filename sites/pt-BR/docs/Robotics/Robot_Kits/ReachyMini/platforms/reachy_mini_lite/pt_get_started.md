@@ -1,5 +1,6 @@
 ---
 description: Guia de configuração do Reachy Mini Lite, incluindo instruções de montagem, conexão USB e download do app para desktop para Windows, macOS e Linux.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Guia de Configuração do Reachy Mini Lite
 slug: /reachymini_platforms_reachy_mini_lite_get_started
 keywords:

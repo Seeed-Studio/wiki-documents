@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for WHEELTEC IMU Sensor.
+description: "如何使用 WHEELTEC IMU 传感器：接线、驱动配置，以及面向机器人导航与 SLAM 项目的数据读取。"
 title: WHEELTEC IMU Sensor
 keywords:
   - IMU

@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for Myactuator series motors.
+description: "Complete guide to MyActuator R series joint actuators: model overview, CAN wiring, control modes and tuning for robotic arms."
 title: MyActuator
 keywords:
   - actuator

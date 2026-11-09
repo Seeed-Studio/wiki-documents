@@ -27,7 +27,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 <JetsonProductDocNav {...ruggedJ401DocNav} />
 
-Este wiki apresenta os diversos hardwares e interfaces do reComputer Rugged J40 e explica como usá-los para expandir suas ideias de projeto. A maioria das interfaces no reComputer Rugged J40 utiliza conectores M12, oferecendo resistência à água e poeira com classificação IP66, bem como excelente resistência a vibrações. Isso o torna adequado para implantação de longo prazo em ambientes externos severos, como embarcações e sistemas de monitoramento em portos.
+Este wiki apresenta os diversos hardwares e interfaces do reComputer Rugged J40 e explica como usá-los para expandir suas ideias de projeto. A maioria das interfaces no reComputer Rugged J40 utiliza conectores M12, oferecendo resistência à água e poeira com classificação IP66, bem como excelente resistência a vibrações. Isso o torna adequado para implantação de longo prazo em ambientes externos severos, como embarcações e sistemas de monitoramento portuário.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
@@ -120,7 +120,7 @@ Este wiki apresenta os diversos hardwares e interfaces do reComputer Rugged J40 
     </tr>
     <tr>
       <td>Botão</td>
-      <td>1× botão de Recovery, 1× botão RST</td>
+      <td>1× botão Recovery, 1× botão RST</td>
     </tr>
     <tr>
       <td>Alimentação</td>
@@ -134,11 +134,11 @@ Este wiki apresenta os diversos hardwares e interfaces do reComputer Rugged J40 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/2.jpg" alt="Image" width={800} height="auto" /></p>
 
-O reComputer Rugged J401 está equipado com uma interface de alimentação M12 A-code DC 19–48 V, compatível com uma ampla faixa de tensão de entrada, tornando-o adequado para diversos ambientes de fornecimento de energia. A definição da interface é mostrada na tabela abaixo.
+O reComputer Rugged J401 está equipado com uma interface de alimentação M12 A-code DC 19-48V, compatível com uma ampla faixa de tensão de entrada, tornando-o adequado para diversos ambientes de fornecimento de energia. A definição da interface é mostrada na tabela abaixo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/3.png" alt="Image" width={400} height="auto" /></p>
 
-|Pin|Uso|Tipo|Cor do fio|
+|Pino|Uso|Tipo|Cor do fio|
 |---|---|---|---|
 |1|Entrada de alimentação DC|Alimentação|Marrom|
 |2|||Branco|
@@ -167,7 +167,7 @@ Se você quiser remover o SSD incluído e instalar um novo, precisa garantir que
 
 - Suportar o **slot M.2 Key M com interface x4 PCIe Gen3**.
 
-- Estar em conformidade com a especificação de tamanho **2242**.
+- Estar em conformidade com a especificação de tamanho **2280**.
 
 
 
@@ -201,7 +201,7 @@ bluetoothctl
 
 ## M.2 Key B para Módulo 4G/5G
 
-O slot M.2 Key B oferece suporte a módulos celulares 4G/5G com suporte a cartão Nano SIM.
+O slot M.2 Key B suporta módulos celulares 4G/5G com suporte a cartão Nano SIM.
 
 ### Conexão de Hardware
 
@@ -256,7 +256,7 @@ Se o módulo 5G for reconhecido, será exibida uma saída semelhante a /org/free
 
 **Passo 5.** Definir o APN
 
-APN (Access Point Name) é fundamental para conectar um dispositivo móvel à rede. Usaremos o comando nmcli para criar um perfil de portadora. Tomando a China Mobile como exemplo, podemos criar um arquivo de configuração com os seguintes comandos:
+APN (Access Point Name) é crucial para conectar um dispositivo móvel à rede. Usaremos o comando nmcli para criar um perfil de portadora. Tomando a China Mobile como exemplo, podemos criar um arquivo de configuração com os seguintes comandos:
 
 ```Bash
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
@@ -276,15 +276,15 @@ Este comando ativa a conexão GSM e, se for bem-sucedido, uma mensagem de confir
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/14.png" alt="Image" width={800} height="auto" /></p>
 
-**Passo 7.** Reverificar a Identificação do Módulo
+**Passo 7.** Reverificar Identificação do Módulo
 
-Execute novamente o comando mmcli -L para garantir que o módulo continue sendo reconhecido após a configuração do APN.
+Execute novamente o comando mmcli -L para garantir que o módulo continua sendo reconhecido após a configuração do APN.
 
 ```Bash
 mmcli -L 
 ```
 
-**Passo 8.** Verificar o Status do Módulo
+**Passo 8.** Verificar Status do Módulo
 
 Por fim, podemos usar o comando mmcli -m 0 para visualizar informações detalhadas sobre o módulo, como alocação de IP, operadora e status da conexão de rede.
 
@@ -298,7 +298,7 @@ Este comando fornece detalhes abrangentes sobre o módulo 5G, incluindo seu fabr
 
 ## Ethernet
 
-O reComputer Rugged J401 fornece 1x porta RJ45 Ethernet Gigabit padrão (10/100/1000M) (J35) e 4x portas RJ45 Gigabit PSE (Power Sourcing Equipment) (J36–J39). A porta Gigabit padrão é usada para conectividade geral de rede. As portas PSE suportam os padrões IEEE 802.3af/at, permitindo fornecimento de energia via Ethernet para dispositivos conectados, como câmeras IP e pontos de acesso sem fio, com saída máxima de 15,4 W por porta (802.3af). Isso o torna ideal para aplicações industriais, AMR e de computação de borda externa, eliminando a necessidade de cabeamento de energia separado. Todas as portas Gigabit são derivadas do controlador PCIe dentro do módulo Jetson Orin e suportam auto-negociação 10/100/1000M.
+O reComputer Rugged J401 oferece 1x porta RJ45 Ethernet Gigabit padrão (10/100/1000M) (J35) e 4x portas RJ45 Gigabit PSE (Power Sourcing Equipment) (J36–J39). A porta Gigabit padrão é usada para conectividade geral de rede. As portas PSE suportam os padrões IEEE 802.3af/at, permitindo fornecimento de energia via Ethernet para dispositivos conectados, como câmeras IP e pontos de acesso sem fio, com uma saída máxima de 15,4 W por porta (802.3af). Isso o torna ideal para aplicações industriais, AMR e de computação de borda externa, eliminando a necessidade de cabeamento de energia separado. Todas as portas Gigabit são derivadas do controlador PCIe dentro do módulo Jetson Orin e suportam auto-negociação 10/100/1000M.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
 
@@ -341,7 +341,7 @@ done
   <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connect.png" alt="" />
 </div>
 
-### Ativando a Saída PoE
+### Habilitando a Saída PoE
 
 As quatro portas PSE (J36–J39) são alimentadas por um controlador PSE on-board que é **desativado por padrão**. Nada em um sistema padrão o liga, portanto uma câmera conectada em J36–J39 permanece sem alimentação até que a linha de habilitação de energia do PSE seja colocada em nível alto **e mantida em nível alto**.
 
@@ -351,7 +351,7 @@ As quatro portas PSE (J36–J39) são alimentadas por um controlador PSE on-boar
 | `PSE_PG` | `gpiochip2` line 0 | input | `1` = energia PSE ok |
 | `PSE_INTB` | `gpiochip2` line 1 | input | `0` = sem falha |
 
-Instale as ferramentas de GPIO se estiverem ausentes, depois ative a saída e mantenha-a sustentada:
+Instale as ferramentas de GPIO se estiverem ausentes, depois habilite a saída e mantenha-a ativa:
 
 ```bash
 sudo apt-get install -y gpiod     # only if gpioset/gpioget are not already present
@@ -368,19 +368,19 @@ ps aux | grep "[g]pioset -m signal 2 15=1"
 sudo gpioget gpiochip2 0 1
 ```
 
-**Saída esperada:**
+**Saída Esperada:**
 
 ```text
 1 0
 ```
 
-`1 0` significa `PSE_PG=1` (energia ok) e `PSE_INTB=0` (sem falha). Se `PSE_PG` permanecer `0`, nenhuma energia está sendo fornecida: verifique o cabo e o próprio requisito de energia da câmera (802.3af permite 15,4 W por porta). Se `PSE_INTB` indicar `1`, o controlador travou uma falha — remova a carga, desligue e ligue novamente a alimentação e verifique de novo.
+`1 0` significa `PSE_PG=1` (energia ok) e `PSE_INTB=0` (sem falha). Se `PSE_PG` permanecer `0`, nenhuma energia está sendo fornecida: verifique o cabo e o próprio requisito de energia da câmera (802.3af permite 15,4 W por porta). Se `PSE_INTB` ler `1`, o controlador travou em falha — remova a carga, desligue e ligue novamente e verifique de novo.
 
-**Importante:** o nível só é mantido enquanto o processo `gpioset` estiver ativo. Uma linha GPIO requisitada através do dispositivo de caractere retorna ao seu estado padrão quando o último processo que a mantém é encerrado — `gpioset --help` declara isso explicitamente — portanto executar o comando e deixá-lo retornar **não** mantém o PSE ligado. Após uma reinicialização, ou se o processo for encerrado, as câmeras perdem energia e o link cai.
+**Importante:** o nível só é mantido enquanto o processo `gpioset` estiver ativo. Uma linha GPIO requisitada através do dispositivo de caractere volta ao seu estado padrão quando o último processo que a mantém é encerrado — `gpioset --help` declara isso explicitamente — portanto executar o comando e deixá-lo retornar **não** mantém o PSE ligado. Após uma reinicialização, ou se o processo for encerrado, as câmeras perdem energia e o link cai.
 
-#### Mantendo o PSE Ligado Após Reinicializações (Opcional)
+#### Mantendo o PSE Ligado Entre Reinicializações (Opcional)
 
-Empacote o mesmo hold em uma unidade systemd para que seja aplicado a cada boot e reiniciado automaticamente se algum dia for encerrado:
+Empacote a mesma manutenção em uma unidade systemd para que seja aplicada a cada boot e reiniciada automaticamente se algum dia for encerrada:
 
 ```bash
 sudo tee /etc/systemd/system/poe-pse-hold.service >/dev/null <<'EOF'
@@ -402,13 +402,13 @@ sudo systemctl enable --now poe-pse-hold
 systemctl status poe-pse-hold --no-pager
 ```
 
-`Type=simple` mais `Restart=on-failure` é o que torna isto um *hold* em vez de um comando one-shot: o systemd mantém o processo — e, portanto, o nível do GPIO — ativo.
+`Type=simple` mais `Restart=on-failure` é o que torna isso uma *manutenção* em vez de um comando de execução única: o systemd mantém o processo — e, portanto, o nível do GPIO — ativo.
 
 ### Colocando Duas Câmeras PoE em Operação
 
-Com a saída PSE ativada, duas câmeras podem ser alimentadas e acessadas sem qualquer injetor PoE externo. Colocá-las em operação manualmente requer três etapas.
+Com a saída PSE habilitada, duas câmeras podem ser alimentadas e acessadas sem qualquer injetor PoE externo. Colocá-las em operação manualmente exige três etapas.
 
-**Etapa 1.** Encontre as portas que realmente possuem uma câmera conectada. As cinco portas Gigabit são enumeradas como `eth0`–`eth4`; leia o sinalizador de portadora (carrier) em vez de presumir qual índice pertence a qual conector:
+**Etapa 1.** Encontre as portas que realmente possuem uma câmera conectada. As cinco portas Gigabit são enumeradas como `eth0`–`eth4`; leia o sinalizador de portadora em vez de presumir qual índice pertence a qual conector:
 
 ```bash
 for i in eth0 eth1 eth2 eth3 eth4; do
@@ -436,7 +436,7 @@ ip -br addr show eth1
 ip -br addr show eth2
 ```
 
-**Saída esperada:** ambos os pings indicam `0% packet loss`, e cada porta mostra `UP` com o endereço que você atribuiu:
+**Saída Esperada:** ambos os pings indicam `0% packet loss`, e cada porta mostra `UP` com o endereço que você atribuiu:
 
 ```text
 eth1             UP             192.168.10.100/24
@@ -445,7 +445,7 @@ eth2             UP             192.168.20.100/24
 
 Observações:
 
-- Cada câmera mantém o endereço com o qual foi configurada. Se você não souber qual é, coloque a porta na sub-rede em que a câmera deveria estar e procure por ela com um ping sweep.
+- Cada câmera mantém o endereço com o qual foi configurada. Se você não souber qual é, coloque a porta na sub-rede em que a câmera deve estar e procure por ela com um ping sweep.
 - Uma porta que permanece em `carrier=0` enquanto `PSE_PG=1` significa que a câmera não está consumindo energia ou que o conector à prova d'água não está totalmente encaixado.
 - Os endereços acima são exemplos retirados de uma configuração com duas câmeras; use as sub-redes das suas próprias câmeras. `ip addr add` não é persistente entre reinicializações — configure a porta com o NetworkManager ou com o `systemd-networkd` se ela precisar sobreviver a um reinício.
 
@@ -454,9 +454,9 @@ Observações:
 for ip in $(seq 2 254); do ping -c1 -W1 192.168.10.$ip >/dev/null 2>&1 && echo "192.168.10.$ip is up"; done
 ```
 
-### Pré-visualização Ao Vivo com Duas Câmeras
+### Pré-visualização ao Vivo com Duas Câmeras
 
-Ambos os streams RTSP podem ser exibidos ao mesmo tempo, cada um em sua própria janela GStreamer. Use o caminho GPU/EGL para a primeira janela e o caminho X11/Xv para a segunda: dois sinks baseados em EGL executando ao mesmo tempo podem travar o display EGL nesta plataforma.
+Ambos os fluxos RTSP podem ser exibidos ao mesmo tempo, cada um em sua própria janela GStreamer. Use o caminho GPU/EGL para a primeira janela e o caminho X11/Xv para a segunda: dois sinks baseados em EGL executando ao mesmo tempo podem travar o display EGL nesta plataforma.
 
 ```bash
 # Window A - GPU/EGL path
@@ -476,12 +476,12 @@ nohup env DISPLAY=:0 XAUTHORITY=/home/seeed/.Xauthority gst-launch-1.0 \
 
 - Substitua `<user>:<password>` pelas credenciais da sua própria câmera e os endereços IP pelos que você verificou acima.
 - `DISPLAY=:0` e `XAUTHORITY=/home/seeed/.Xauthority` são necessários quando os comandos são executados via SSH; ajuste o caminho se o seu usuário de desktop não for `seeed`. Executá-los a partir de um terminal dentro da sessão de desktop do JetPack não precisa de nenhum dos dois.
-- `protocols=tcp` é usado porque RTSP sobre UDP costuma ser bloqueado ou apresentar perdas em redes industriais, e `latency=200` fornece ao stream um buffer de jitter de 200 ms.
-- As câmeras testadas aqui transmitem em **H.265**. Verifique a sua própria câmera e troque o par depayloader/parser se ela usar H.264.
-- Os primeiros frames aparecem após alguns segundos (handshake RTSP, aquecimento do decodificador e intervalo de keyframe da câmera). Se uma janela permanecer preta, leia `/tmp/camA_disp.log` ou `/tmp/camB_disp.log`.
+- `protocols=tcp` é usado porque RTSP sobre UDP costuma ser bloqueado ou apresentar perdas em redes industriais, e `latency=200` fornece ao fluxo um buffer de jitter de 200 ms.
+- As câmeras testadas aqui transmitem **H.265**. Verifique a sua própria câmera e troque o par depayloader/parser se ela usar H.264.
+- Os primeiros quadros aparecem após alguns segundos (handshake RTSP, aquecimento do decodificador e intervalo de keyframe da câmera). Se uma janela permanecer preta, leia `/tmp/camA_disp.log` ou `/tmp/camB_disp.log`.
 - Pare a pré-visualização com `pkill -f "gst-launch-1.0.*rtspsrc"`, ou `kill %1 %2` se ambas tiverem sido iniciadas a partir do mesmo shell.
 
-Para ler o codec de um stream:
+Para ler o codec de um fluxo:
 
 ```bash
 timeout 20 gst-launch-1.0 -v rtspsrc location="rtsp://<user>:<password>@192.168.10.20:554/" \
@@ -496,9 +496,9 @@ Para uma câmera H.264 use `rtph264depay ! h264parse` em vez de `rtph265depay ! 
 
 ## USB
 
-O reComputer Rugged J401 oferece 4 portas USB 3.2 Type-A (por meio de um hub interno USB 3.1 Gen1, suportando taxas de dados de até 5 Gbps para conexão de periféricos de alta velocidade, dispositivos de armazenamento ou câmeras) e 1 porta USB 2.0 Type-C de depuração (que funciona como um console serial para acessar logs do sistema, depurar problemas de boot e realizar atualizações de firmware).
+O reComputer Rugged J401 oferece 4x portas USB 3.2 Tipo A (por meio de um hub interno USB 3.1 Gen1, suportando taxas de dados de até 5 Gbps para conexão de periféricos de alta velocidade, dispositivos de armazenamento ou câmeras) e 1x porta USB 2.0 Tipo C de depuração (que funciona como um console serial para acessar logs do sistema, depurar problemas de boot e realizar atualizações de firmware).
 
-### Teste de Velocidade USB-A
+### Teste de velocidade USB-A
 
 Crie um script para testar a velocidade do dispositivo USB:
 
@@ -561,7 +561,7 @@ sudo chmod +x test_usb.sh
 
 ### Porta USB 2.0 Type-C
 
-Usando esta porta serial, por meio do cabo de dados USB-C, você pode monitorar as informações de depuração de entrada e saída no PC.
+Usando esta porta serial, por meio do cabo de dados USB-C, você pode monitorar as informações de depuração de entrada e saída no lado do PC.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/18.jpg" alt="Image" width={400} height="auto" /></p>
 
@@ -610,7 +610,7 @@ Se você não tiver se conectado à internet via Ethernet, pode definir manualme
 cat /sys/devices/platform/bpmp/bpmp:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
 
-**Passo 5.** Desconecte a conexão de rede e reinicie o dispositivo. Você verá que o sistema perdeu a alimentação, mas o horário ainda funciona normalmente.
+**Passo 5.** Desconecte a conexão de rede e reinicie o dispositivo. Você verá que o horário do sistema perdeu a alimentação, mas ainda funciona normalmente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/23.png" alt="Image" width={800} height="auto" /></p>
 
@@ -624,7 +624,7 @@ O módulo NVIDIA Jetson Orin Nano/NX fornece apenas um controlador CAN nativo ([
 
 #### Teste USB-CAN
 
-Use um adaptador USB-CAN para verificar a comunicação CAN da seguinte forma.
+Use um adaptador USB-CAN para verificar a comunicação CAN conforme descrito a seguir.
 
 :::note
 Adaptadores USB-CAN geralmente incluem um resistor de terminação embutido.
@@ -659,21 +659,21 @@ candump can1 &
 cansend can0 123#abcdabcd
 ```
 
-Recepção e transmissão em CAN0:
+CAN0 Recepção e Transmissão:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-2.png" alt="Image" width={800} height="auto" /></p>
 
-Transmissão em CAN1:
+CAN1 Transmissão:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-3.png" alt="Image" width={800} height="auto" /></p>
 
 #### Teste de loopback CAN
 
-Você também pode conectar CAN0 e CAN1 juntos para um teste de loopback em nível de placa. Curto-circuite fisicamente os dois barramentos CAN (`CAN0_H` com `CAN1_H`, e `CAN0_L` com `CAN1_L`), ative os resistores de terminação de 120 Ω onboard em ambos os lados e, em seguida, verifique a comunicação bidirecional entre as duas interfaces.
+Você também pode conectar o CAN0 e o CAN1 juntos para um teste de loopback em nível de placa. Curto-circuite fisicamente os dois barramentos CAN (`CAN0_H` com `CAN1_H`, e `CAN0_L` com `CAN1_L`), ative os resistores de terminação de 120 Ω onboard em ambos os lados e, em seguida, verifique a comunicação bidirecional entre as duas interfaces.
 
 Abra três terminais e execute os seguintes comandos.
 
-**Janela 1: configurar e testar CAN0**
+**Janela 1: configurar e testar o CAN0**
 
 ```Bash
 sudo modprobe mttcan
@@ -688,7 +688,7 @@ cangen can0
 candump can0
 ```
 
-**Janela 2: configurar e testar CAN1**
+**Janela 2: configurar e testar o CAN1**
 
 ```Bash
 sudo modprobe mttcan
@@ -714,7 +714,7 @@ ip -d -s link show can0
 ip -d -s link show can1
 ```
 
-Se a fiação e a terminação estiverem corretas, quadros gerados em uma interface devem ser recebidos na outra interface, e os contadores de TX/RX devem aumentar de forma correspondente.
+Se a fiação e a terminação estiverem corretas, os quadros gerados em uma interface devem ser recebidos na outra interface, e os contadores de TX/RX devem aumentar de acordo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-4.png" alt="Image" width={800} height="auto" /></p>
 
@@ -748,7 +748,7 @@ sudo gpioset --mode=wait 0 106=1
 sudo gpioset --mode=wait 0 43=1
 ```
 
-Execute o seguinte comando para desabilitar o canal DO (saída de ~0 V):
+Execute o seguinte comando para desabilitar o canal DO (saída ~0 V):
 
 ```PowerShell
 # Disable DO_30V_1 (gpiochip0 106)
@@ -758,11 +758,11 @@ sudo gpioset --mode=wait 0 106=0
 sudo gpioset --mode=wait 0 43=0
 ```
 
-DO antes de puxar para alto:
+DO antes de puxar para nível alto:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/26.png" alt="Image" width={800} height="auto" /></p>
 
-DO depois de puxar para alto:
+DO após puxar para nível alto:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/27.png" alt="Image" width={800} height="auto" /></p>
 
@@ -792,20 +792,20 @@ Canais da interface UART
 
 Alterne entre os modos RS232, RS485 e RS422 alternando a chave SW3.
 
-Observação: Quando a chave é pressionada (ON), o bit é 0; quando não está pressionada, o bit é 1
+Observação: Quando a chave é pressionada para baixo (ON), o bit é 0; quando não está pressionada, o bit é 1
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/29.png" alt="Image" width={500} height="auto" /></p>
 
 |Mode_0|Mode_1|Mode_2|Modo|Status|
 |---|---|---|---|---|
 |0|0|0|RS-422 Full Duplex|1T/1R RS-422|
-|0|0|1|RS-232 Puro|3T/5R RS-232|
-|0|1|0|RS-485 Half Duplex|1T/1R RS-485, TX ENABLE <br />Ativo em nível baixo|
-|0|1|1|RS-485 Half Duplex|1T/1R RS-485, TX ENABLE Ativo em nível alto|
+|0|0|1|Pure RS-232|3T/5R RS-232|
+|0|1|0|RS-485 Half Duplex|1T/1R RS-485, TX ENABLE <br />Low Active|
+|0|1|1|RS-485 Half Duplex|1T/1R RS-485, TX ENABLE High Active|
 |1|0|0|RS-422 Full Duplex|RS-422 com resistor de terminação|
 |1|0|1|RS-232|1T/1R RS-232 coexiste com aplicação RS485 sem necessidade de chave de barramento (para uso especial)|
-|1|1|0|RS-485|1T/1R RS-485 com resistor de terminação, TX ENABLE Ativo em nível baixo|
-|1|1|1|Desligado|Todos os pinos de I/O em alta impedância|
+|1|1|0|RS-485|1T/1R RS-485 com resistor de terminação, TX ENABLE Low Active|
+|1|1|1|Shutdown|Todos os pinos de E/S estão em alta impedância|
 
 
 
@@ -817,13 +817,13 @@ Observação: Quando a chave é pressionada (ON), o bit é 0; quando não está 
 
 ### Instruções de uso
 
-Use fios Dupont para conectar os pinos centrais do canal SPI de destino (tomando /dev/spidev0.0 como exemplo): conecte o pino MOSI ao pino MISO correspondente (realizando transmissão/recepção de dados em loopback).
+Use fios Dupont para conectar os pinos centrais do canal SPI de destino (tomando /dev/spidev0.0 como exemplo): conecte o pino MOSI ao seu pino MISO (realizando transmissão/recepção de dados em loopback).
 
 O diagrama de fiação é o seguinte:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/31.jpg" alt="Image" width={500} height="auto" /></p>
 
-**Etapa 1: Carregar o módulo de kernel SPI (pré-requisito)**
+**Passo 1: Carregar o módulo de kernel SPI (pré-requisito)**
 
 Antes de operar a interface SPI, certifique-se de que o módulo de kernel `spidev` esteja carregado (o sistema padrão pode pré-carregá-lo, mas é recomendável verificar manualmente):
 
@@ -833,9 +833,9 @@ sudo modprobe spidev
 
 Se o comando for executado sem mensagens de erro, significa que o módulo foi carregado com sucesso; se o módulo já estiver carregado, o comando não retornará nenhuma informação, o que é um fenômeno normal.
 
-**Etapa 2: Ver os nós de dispositivo SPI**
+**Passo 2: Ver os nós de dispositivo SPI**
 
-Digite o seguinte comando no terminal para visualizar o nome do dispositivo mapeado pela interface SPI do reComputer Rugged J401:
+Digite o seguinte comando no terminal para ver o nome do dispositivo mapeado pela interface SPI do reComputer Rugged J401:
 
 ```Bash
 ls /dev/spidev*
@@ -843,7 +843,7 @@ ls /dev/spidev*
 
 Se nenhum nó de dispositivo for exibido, significa que o módulo `spidev` não foi carregado com sucesso. Execute novamente `sudo modprobe spidev` e verifique o log do sistema para solução de problemas.
 
-**Etapa 3: Obter e compilar o código de teste SPI**
+**Passo 3: Obter e compilar o código de teste SPI**
 
 Obtenha o código de teste `spidev-test` do GitHub e compile-o:
 
@@ -853,7 +853,7 @@ cd spidev-test
 gcc spidev_test.c -o spidev_test
 ```
 
-**Etapa 4: Executar o programa de teste SPI**
+**Passo 4: Executar o programa de teste SPI**
 
 Digite o seguinte comando no terminal para executar o programa de teste SPI (tomando `/dev/spidev2.0` como exemplo):
 
@@ -861,19 +861,19 @@ Digite o seguinte comando no terminal para executar o programa de teste SPI (tom
 sudo ./spidev_test -v -D /dev/spidev0.0 -s 100000 -p "Hello SPI"
 ```
 
-**Etapa 5: Verificar o resultado do teste**
+**Passo 5: Verificar o resultado do teste**
 
-Após executar o comando de teste, você pode observar no terminal o status de transmissão e recepção de dados da interface SPI0.0. A saída principal é a seguinte:
+Após executar o comando de teste, você pode observar o status de transmissão e recepção de dados da interface SPI0.0 no terminal. A saída principal é a seguinte:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/32.png" alt="Image" width={800} height="auto" /></p>
 
-> Padrão-chave de avaliação: os dados TX (transmitidos) são consistentes com os dados RX (recebidos), indicando que o teste de loopback SPI foi bem-sucedido e que a função da interface SPI está normal.
+> Padrão de julgamento principal: os dados TX (transmitidos) são consistentes com os dados RX (recebidos), indicando que o teste de loopback SPI foi bem-sucedido e que a função da interface SPI está normal.
 > 
 > 
 
 ## **I2C**
 
-O Rugged J401 fornece uma interface I2C por meio do conector J8 de 2x10 pinos, permitindo a fácil conexão de sensores e periféricos para expansão do sistema.
+O Rugged J401 fornece uma interface I2C através do conector J8 2x10 pinos, permitindo a conexão fácil de sensores e periféricos para expansão do sistema.
 
 ### **Conexão de hardware**
 
@@ -893,20 +893,20 @@ Conecte seu dispositivo I2C à interface I2C na placa carrier:
 
 ### **Instruções de uso**
 
-**Etapa 1.** Instale as ferramentas de teste I2C:
+**Passo 1.** Instale as ferramentas de teste I2C:
 
 ```Bash
 sudo apt update
 sudo apt-get install i2c-tools
 ```
 
-**Etapa 2.** Visualize os mapeamentos do barramento I2C:
+**Passo 2.** Veja os mapeamentos do barramento I2C:
 
 ```Bash
 i2cdetect -l
 ```
 
-**Etapa 3.** Faça a varredura de dispositivos no barramento I2C:
+**Passo 3.** Faça a varredura de dispositivos no barramento I2C:
 
 ```Bash
 sudo i2cdetect -y -r 1
@@ -927,7 +927,7 @@ sudo i2cdetect -y -r 1
 
 
 
-## Suporte técnico e discussão sobre o produto
+## Suporte técnico e discussão de produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
 

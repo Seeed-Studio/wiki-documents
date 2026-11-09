@@ -1,5 +1,6 @@
 ---
 description: Guia de uso do Reachy Mini Lite que abrange o painel do aplicativo para desktop, demonstrações de ações rápidas, instalação do app e início rápido do SDK em Python.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Usando o Reachy Mini Lite
 slug: /reachymini_platforms_reachy_mini_lite_usage
 keywords:

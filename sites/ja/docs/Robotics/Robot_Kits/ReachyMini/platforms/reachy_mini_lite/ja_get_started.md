@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini Lite のセットアップガイドです。組み立て手順、USB 接続、Windows / macOS / Linux 向けデスクトップアプリのダウンロードについて説明します。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Lite セットアップガイド
 slug: /reachymini_platforms_reachy_mini_lite_get_started
 keywords:

@@ -1,11 +1,12 @@
 ---
 description: Executando um sistema de gerenciamento de armazém por voz em hardware de borda — quais dispositivos você precisa, como a ponte MCP conecta fala ao estoque, como implantar cada um dos cinco níveis e resultados de teste de carga medidos em um dispositivo da série reComputer R2000
 title: 'Gerenciamento de Armazém por Voz em Hardware de Borda: Construção, Implantação e Resultados Medidos'
+sidebar_label: 'Gerenciamento de Armazém por Voz'
 keywords:
   - sistema de gerenciamento de armazém controlado por voz
   - WMS de borda
-  - inventário de armazém MCP
-  - gerenciamento de inventário mãos livres
+  - estoque de armazém MCP
+  - gerenciamento de estoque mãos livres
   - assistente de voz offline
   - SenseCAP Watcher
   - reComputer
@@ -21,28 +22,28 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/pt-br/solutions/voice-warehouse-management/
 generated_from: sensecraft-solutions@smart_warehouse
 ---
 
-:::caution[Aviso de uso]
-Este é um auxílio ao operador, não um livro de registro de inventário certificado. A REST API não possui fila offline: solicitações enviadas durante uma falha de rede ou serviço são rejeitadas e não são reproduzidas após a recuperação.
+:::caution[Usage notice]
+Este é um auxílio ao operador, não um livro-razão de estoque certificado. A REST API não possui fila offline: solicitações enviadas durante uma falha de rede ou serviço são rejeitadas e não são reproduzidas após a recuperação.
 :::
 
 ## O que esta solução faz
 
-Um operador na doca de recebimento diz "dar entrada em 10 caixas de maçãs". O SenseCAP Watcher no rack ouve, e um registro de entrada de estoque é gravado no banco de dados do armazém em um gateway reComputer no mesmo prédio. Pergunte "quantas maçãs restam" e a resposta é falada de volta. Sem digitação, sem menus, as mãos permanecem nos produtos.
+Um operador na doca de recebimento diz "dar entrada em 10 caixas de maçãs". O SenseCAP Watcher na estante ouve, e um registro de entrada de estoque é gravado no banco de dados do armazém em um gateway reComputer no mesmo prédio. Pergunte "quantas maçãs restam" e a resposta é falada de volta. Sem digitação, sem menus, as mãos permanecem nos produtos.
 
-Feito para locais onde as transações acontecem longe de um teclado: docas de recebimento, corredores de racks, cabines de empilhadeiras e pequenos armazéns que nunca adotaram um WMS porque o treinamento custava mais do que economizava.
+Feito para locais onde as transações acontecem longe de um teclado: docas de recebimento, corredores de estantes, cabines de empilhadeiras e pequenos armazéns que nunca adotaram um WMS porque o treinamento custava mais do que economizava.
 
 - Implementação de código aberto: [github.com/suharvest/warehouse_system](https://github.com/suharvest/warehouse_system)
 - Escolhendo uma configuração e implantando: [página de design de referência](https://www.seeed.cc/solutions/reference-designs/smart_warehouse)
 
-A fala e o banco de dados são conectados por meio do **MCP (Model Context Protocol)**. O sistema de armazém publica cada operação de inventário como uma ferramenta MCP, e o agente de voz no Watcher se conecta a esse endpoint como um cliente MCP. Adicionar uma ação de voz significa adicionar uma ferramenta, sem retreinamento do modelo de fala; integrar um ERP/WMS existente significa mapear sua interface de dados para o mesmo conjunto de ferramentas.
+A fala e o banco de dados são conectados por meio do **MCP (Model Context Protocol)**. O sistema de armazém publica cada operação de estoque como uma ferramenta MCP, e o agente de voz no Watcher se conecta a esse endpoint como um cliente MCP. Adicionar uma ação de voz significa adicionar uma ferramenta, sem retreinamento do modelo de fala; integrar um ERP/WMS existente significa mapear sua interface de dados para o mesmo conjunto de ferramentas.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/Solution/landpage_asset/smart-warehouse-management/hero-banner-v4.png" alt="Um operador registra uma transação de armazém falando com um SenseCAP Watcher montado no rack"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/Solution/landpage_asset/smart-warehouse-management/hero-banner-v4.png" alt="Um operador registra uma transação de armazém falando com um SenseCAP Watcher montado na estante"/>
 </div>
 
 <div class="info-section">
@@ -61,7 +62,7 @@ A fala e o banco de dados são conectados por meio do **MCP (Model Context Proto
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
             </div>
             <div class="info-content">
-                <h3>Os dados permanecem no local</h3>
+                <h3>Dados permanecem no local</h3>
                 <p>O banco de dados do armazém é executado em um gateway reComputer no local. O Nível 3 também mantém o reconhecimento, o LLM e a síntese nas instalações e não chama nenhum serviço externo após a implantação.</p>
             </div>
         </li>
@@ -88,7 +89,7 @@ A fala e o banco de dados são conectados por meio do **MCP (Model Context Proto
 
 ### O que o dashboard mostra
 
-Após uma fala, o resultado aparece no dashboard do gateway. A página de inventário lista a quantidade atual e o último movimento de cada item:
+Após uma fala, o resultado aparece no dashboard do gateway. A página de estoque lista a quantidade atual e o último movimento de cada item:
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/smart_warehouse/dashboard-657fc403.png" alt="Dashboard do armazém: estoque atual por item, último movimento e status"/>
@@ -119,19 +120,19 @@ Três funções de dispositivo. Quais você compra depende de onde os dados e a 
 | | Modelo | Função neste design | Quando escolhê-lo |
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991275-sensecap-watcher-w1-b_1.jpg" alt="SenseCAP Watcher" width="110" /> | [SenseCAP Watcher](https://www.seeedstudio.com/SenseCAP-Watcher-W1-B-p-5980.html) | Terminal de voz, cliente MCP, reconhecimento facial no dispositivo | Sempre, um por estação |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html) | Gateway de borda executando o sistema de armazém | Dados de inventário permanecem no local, até 20 operadores, reconhecimento facial no Watcher |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width="110" /> | [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) | Gateway de borda com um acelerador Hailo-8 | Mais de 20 operadores, ou quando é necessária detecção de vivacidade |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | Um único equipamento executando o sistema de armazém, reconhecimento facial e um serviço de voz auto-hospedado | 2–3 estações compartilham um host |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100032662--recomputer-robotics-j5012-with-gmsl_1__1.jpg" alt="reComputer Robotics J5011" width="110" /> | [reComputer Robotics J5011](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html) | LLM e voz locais, sem chamadas a serviços externos | A instalação precisa permanecer offline |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html) | Gateway de borda executando o sistema de armazém | Dados de estoque permanecem no local, até 20 operadores, reconhecimento facial no Watcher |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width="110" /> | [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) | Gateway de borda com acelerador Hailo-8 | Mais de 20 operadores, ou quando é exigida detecção de vivacidade |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | Uma caixa executando o sistema de armazém, reconhecimento facial e um serviço de fala auto-hospedado | 2–3 estações compartilham um host |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100032662--recomputer-robotics-j5012-with-gmsl_1__1.jpg" alt="reComputer Robotics J5011" width="110" /> | [reComputer Robotics J5011](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html) | LLM e fala locais, sem chamadas a serviços externos | A instalação deve permanecer offline |
 
 O Watcher armazena no máximo **20** modelos faciais no dispositivo. Acima de 20 operadores, o reconhecimento precisa ser movido para o gateway: até 20, escolha o R1125; acima de 20, escolha o R2135 com Hailo-8.
 
-Outros pré-requisitos: o Watcher **conecta-se apenas a Wi-Fi de 2,4 GHz** (um SSID somente 5 GHz não aparece na varredura de provisionamento), e o gateway deve estar na mesma LAN. A pré-verificação de implantação do Nível 3 verifica o runtime de contêiner NVIDIA e cerca de **10 GB** de espaço livre em disco (modelos de fala mais arquivos do mecanismo LLM).
+Outros pré-requisitos: o Watcher **conecta-se apenas a Wi-Fi de 2,4 GHz** (um SSID somente 5 GHz não aparece na varredura de provisionamento), e o gateway deve estar na mesma LAN. A implantação do Nível 3 verifica previamente o runtime de contêiner NVIDIA e cerca de **10 GB** de espaço livre em disco (modelos de fala mais arquivos do mecanismo LLM).
 
 ### Limites de Seleção Negativa
 
-- **Necessidades de LLM totalmente offline**: Se estiver operando em um armazém classificado ou isolado em air gap que exija interação com LLM offline, evite níveis dependentes de nuvem; selecione o Nível 3 com reComputer J4012 (Orin NX 16GB).
-- **Fila em caso de falha de rede**: A REST API do armazém atualmente não possui uma fila offline no servidor; os clientes devem armazenar transações localmente em buffer se operarem sobre conexão sem fio intermitente.
+- **Necessidades de LLM totalmente offline**: Se estiver operando em um armazém classificado ou isolado em air gap que exija interação offline com LLM, evite níveis dependentes de nuvem; selecione o Nível 3 com reComputer J4012 (Orin NX 16GB).
+- **Fila em caso de falha de rede**: A REST API do armazém atualmente não possui fila offline no servidor; os clientes devem armazenar transações localmente em buffer se operarem sobre conexão sem fio intermitente.
 
 ## Como implantar no local
 
@@ -147,7 +148,7 @@ A gravação é feita via USB-C; o dispositivo é enumerado como uma ponte WCH U
 
 ### Etapa 2: iniciar o gateway
 
-O sistema de armazém é um serviço Docker. As etapas de implantação variam por nível; escolha uma configuração na página de design de referência e baixe o pacote de aplicativo correspondente.
+O sistema de armazém é um serviço Docker. As etapas de implantação variam por nível; escolha uma configuração na página de design de referência e baixe o pacote de aplicação correspondente.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/smart_warehouse" target="_blank">
@@ -161,11 +162,11 @@ Após a implantação, o dashboard fica em `http://GATEWAY_IP:2125`, e o health 
 
 ### Etapa 3: conectar o caminho de voz
 
-Trial, Tier 1 e Tier 2A usam uma URL de endpoint MCP emitida pela SenseCraft. Os níveis 2B e 3 fazem o self-host do endpoint MCP na porta `18004` e do servidor de voz na `18000` (console de administração em `18003`). O nível 3 adiciona EdgeLLM em `8000` e OpenVoiceStream em `8621`, e não chama nenhum serviço externo após a implantação.
+Trial, Tier 1 e Tier 2A usam uma URL de endpoint MCP emitida pela SenseCraft. Os níveis 2B e 3 fazem o self-host do endpoint MCP na porta `18004` e do servidor de voz na `18000` (console de administração em `18003`). O nível 3 adiciona EdgeLLM na `8000` e OpenVoiceStream na `8621`, e não chama nenhum serviço externo após a implantação.
 
 ## Interfaces disponíveis
 
-Duas superfícies de integração:
+Dois pontos de integração:
 
 **Endpoint MCP (porta `18004`): para o lado de voz.** Tudo o que o agente pode fazer é uma ferramenta neste endpoint. Estender o conjunto de comandos significa registrar outra ferramenta; o firmware do Watcher permanece inalterado. Integrar um ERP/WMS existente significa implementar a interface de dados do seu sistema contra as mesmas ferramentas, na ordem de algumas dezenas de linhas de código de mapeamento. Variações na formulação são associadas de forma aproximada ao comando registrado mais próximo em vez de serem rejeitadas.
 
@@ -180,9 +181,9 @@ Duas superfícies de integração:
 | Servidor de voz | WebSocket `18000`, console de administração `18003` | Fluxo de áudio do Watcher (níveis 2B e 3) |
 | IA on-premise | `8000` EdgeLLM (compatível com OpenAI), `8621` OpenVoiceStream | Chat completions; reconhecimento, síntese e voiceprint (nível 3) |
 
-O acesso é limitado por função de chave de API e por tenant. Uma chave VIEW em um endpoint de escrita retorna `403`; leituras e escritas entre tenants retornam `403`. Ambos foram medidos; consulte "Performance e dados medidos".
+O acesso é delimitado por função da chave de API e por tenant. Uma chave VIEW em um endpoint de escrita retorna `403`; leituras e escritas entre tenants retornam `403`. Ambos foram medidos; consulte "Desempenho e dados medidos".
 
-## Performance e dados medidos
+## Desempenho e dados medidos
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/suharvest/warehouse_system" target="_blank" rel="noopener noreferrer">
@@ -200,12 +201,12 @@ O acesso é limitado por função de chave de API e por tenant. Uma chave VIEW e
 
 As imagens locais são construídas para JetPack 6.2 / TensorRT 10.3.
 
-- `BUSINESS_RATE_LIMIT`: limite de taxa para endpoints de saída de estoque e outros endpoints de negócio, padrão 600 requisições/minuto, contado por identidade autenticada (chave de API / sessão) e por IP de origem apenas quando nenhuma identidade estiver disponível. Os limites anti-enumeração em registro, recuperação de senha e verificação de dispositivo contam por IP.
-- Número de lote `batch_no`: formato `YYYYMMDD-NNN`, alocado de forma atômica, portanto gravações de entrada de estoque concorrentes são serializadas.
+- `BUSINESS_RATE_LIMIT`: limite de taxa para stock-out e outros endpoints de negócio, padrão 600 requisições/minuto, contado por identidade autenticada (chave de API / sessão) e por IP de origem apenas quando nenhuma identidade estiver disponível. Os limites anti-enumeração em registro, recuperação de senha e verificação de dispositivo contam por IP.
+- Número de lote `batch_no`: formato `YYYYMMDD-NNN`, alocado de forma atômica, portanto gravações de stock-in concorrentes são serializadas.
 
-### Medições da Warehouse REST API
+### Medições da REST API do armazém
 
-Dispositivo: reComputer série R2000 (arm64) executando o container do sistema de armazém. Condições: 60 s por nível, 1 armazém, 50 materiais semeados, backend SQLite; as requisições trafegam por um link WAN Tailscale.
+Dispositivo: reComputer R2000 series (arm64) executando o container do sistema de armazém. Condições: 60 s por nível, 1 armazém, 50 materiais semeados, backend SQLite; as requisições trafegam por um link WAN Tailscale.
 
 | Operação | Nível | Resultado |
 |---|---|---|
@@ -215,7 +216,7 @@ Dispositivo: reComputer série R2000 (arm64) executando o container do sistema d
 | `POST /api/materials/stock-in` | concorrência 5 / 10 / 20 | 0% de erros em todos os três níveis; 1481 lotes criados, 0 números de lote duplicados; p95 634 ms – 4,96 s |
 | `POST /api/materials/stock-out` | concorrência 10 / 20 / 50, duas chaves de API compartilhando um IP de saída | 0 HTTP 429 dentro do padrão de 600 requisições/minuto; cerca de 5–6 requisições/s por identidade |
 | Interrupção de serviço | cerca de 10 req/s de tráfego de consulta, 34 s de interrupção a partir de um restart de container | 100% das requisições falham durante a interrupção, sem enfileiramento ou repetição; recuperação completa em cerca de 1 s, sem backlog, sem dados corrompidos |
-| Isolamento por função e tenant | 4 sondagens pontuais | 4/4 conforme esperado: chave VIEW escrita `403`, leitura `200`; escrita entre tenants `403`, leitura `403` |
+| Isolamento por função e tenant | 4 sondagens pontuais | 4/4 conforme esperado: chave VIEW em escrita `403`, leitura `200`; escrita entre tenants `403`, leitura `403` |
 
 Reproduzir: `runs/2026-09-05-load/`, `evaluation/runs/2026-09-06-a2-retest/results.md`
 
@@ -228,11 +229,11 @@ Reproduzir: `runs/2026-09-05-load/`, `evaluation/runs/2026-09-06-a2-retest/resul
 ### Degradações conhecidas
 
 - **A latência de consulta de inventário se degrada a partir de concorrência 20.** O p95 sobe de 404 ms em concorrência 10 para 824 ms em 20 e 5,5 s em 50, o que é lento demais para uso interativo.
-- **A REST API não possui fila offline.** Requisições enviadas durante uma interrupção de rede ou serviço falham e não são repetidas; reconexão e backoff cobrem apenas o canal WebSocket de voz MCP. Mitigações: manter a rede do gateway disponível (priorizar cabeado, energia com UPS, serviço e clientes na mesma LAN) para que a janela de indisponibilidade se reduza ao tempo de reinicialização do dispositivo; ou adicionar uma fila de escrita no lado do cliente que reproduza em ordem após reconectar e faça deduplicação por número de lote (a fila no lado do cliente não está implementada).
+- **A REST API não possui fila offline.** Requisições enviadas durante uma interrupção de rede ou serviço falham e não são repetidas; reconexão e backoff cobrem apenas o canal WebSocket de voz MCP. Mitigações: mantenha a rede do gateway disponível (priorize cabeado, energia via UPS, serviço e clientes na mesma LAN) para que a janela de indisponibilidade se reduza ao tempo de reinicialização do dispositivo; ou adicione uma fila de escrita no lado do cliente que repita em ordem após reconectar e faça deduplicação por número de lote (a fila no lado do cliente não está implementada).
 
-### Próximos passos
+### Próximas etapas
 
-- Executar os testes de carga da REST do sistema de armazém no gateway reComputer R1125-10.
+- Executar os testes de carga da REST API do armazém no gateway reComputer R1125-10.
 
 ## Fontes de dados e assets
 

@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の移動制御、カメラ、IMU、音声の録音と再生、およびメディアバックエンドオプションを網羅した完全な Python SDK リファレンスです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Python SDK リファレンス
 slug: /reachymini_sdk_python-sdk
 keywords:

@@ -9,7 +9,7 @@ keywords:
   - reBotArm
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_8
+slug: /robotics/rebot_physical_ai_course_chapter_8
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,7 +18,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-28'
-url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_8/
+url: https://wiki.seeedstudio.com/pt-br/robotics/rebot_physical_ai_course_chapter_8/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -52,7 +52,7 @@ Instale as dependências necessárias:
 python3 -m pip install pyyaml motorbridge
 ```
 
-[LINE_55>Puxe o código de exemplo:
+Puxe o código de exemplo:
 
 ```bash
 git clone https://github.com/hopcan/rebotArm_ctrl.git

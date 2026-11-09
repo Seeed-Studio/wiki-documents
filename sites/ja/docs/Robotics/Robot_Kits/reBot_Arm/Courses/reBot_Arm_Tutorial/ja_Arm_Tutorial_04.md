@@ -13,7 +13,7 @@ keywords:
   - 制御モード
   - コース
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_4
+slug: /robotics/rebot_physical_ai_course_chapter_4
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -22,7 +22,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/ja/rebot_physical_ai_course_chapter_4/
+url: https://wiki.seeedstudio.com/ja/robotics/rebot_physical_ai_course_chapter_4/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -48,7 +48,7 @@ import 'katex/dist/katex.min.css';
 
 ### このステージで必要なハードウェア
 
-このステージで準備するものです。各ステージの完全な一覧は[第3章](/ja/rebot_physical_ai_course_chapter_3/)にあります。
+このステージで準備するものです。各ステージの完全な一覧は[第3章](/ja/robotics/rebot_physical_ai_course_chapter_3/)にあります。
 
 **メイン制御ユニット**
 
