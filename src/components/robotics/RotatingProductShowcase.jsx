@@ -250,15 +250,83 @@ function getCardLayout(card, isActive) {
   return {summary, summaryChildren, leftContent, rightContent};
 }
 
+function getCoursePanel(section, kitId) {
+  const kitLabel = {'rebot-rs': 'reBot-rs', 'rebot-dm': 'reBot-dm', soarm: 'SO101'}[kitId];
+  if (!section || !kitLabel) return null;
+
+  const sectionChildren = Children.toArray(section.props.children);
+  const list = sectionChildren.find((child) => hasPanelClass(child, 'learning-steps'));
+  const courses = Children.toArray(list?.props.children).filter((course) => {
+    if (!isValidElement(course)) return false;
+    const compatibility = Children.toArray(course.props.children)
+      .find((child) => hasPanelClass(child, 'course-compatibility'));
+    return Children.toArray(compatibility?.props.children)
+      .some((badge) => getTextContent(badge).trim() === kitLabel);
+  });
+  if (!courses.length) return null;
+
+  return cloneElement(section, {
+    id: `${kitId}-courses`,
+    className: `${section.props.className || ''} robotics-courses`,
+  }, sectionChildren.map((child) => child === list ? cloneElement(list, {}, courses) : child));
+}
+
+// Render native disclosures on the server so the tutorials stay available even
+// if the carousel JavaScript is delayed or fails to load. Once a visitor has
+// opened one, wait until they close it before replacing it with the carousel.
 export default function RotatingProductShowcase({children}) {
+  const fallbackRef = useRef(null);
+  const [enhanced, setEnhanced] = useState(false);
+  const content = Children.toArray(children).filter(isValidElement);
+  const courseSection = content.find((child) => child.props.id === 'courses');
+  const cards = content.filter((child) => child !== courseSection);
+
+  const enhanceWhenClosed = useCallback(() => {
+    if (!fallbackRef.current?.querySelector('details[open]')) setEnhanced(true);
+  }, []);
+
+  useEffect(() => {
+    enhanceWhenClosed();
+  }, [enhanceWhenClosed]);
+
+  if (enhanced) return <EnhancedProductShowcase>{children}</EnhancedProductShowcase>;
+
+  return (
+    <div ref={fallbackRef} className="product-stack robotics-showcase-fallback">
+      {cards.map((card) => {
+        const panel = getCoursePanel(courseSection, card.props.id);
+        const cardChildren = Children.toArray(card.props.children).map((child) => {
+          if (!hasPanelClass(child, 'product-body') || !panel) return child;
+          return cloneElement(child, {}, panel, child.props.children);
+        });
+        return (
+          <details
+            key={card.key || card.props.id}
+            id={card.props.id}
+            className={card.props.className}
+            style={card.props.style}
+            onToggle={enhanceWhenClosed}
+            suppressHydrationWarning
+          >
+            {cardChildren}
+          </details>
+        );
+      })}
+    </div>
+  );
+}
+
+export function EnhancedProductShowcase({children}) {
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
   const copy = COPY[locale] || COPY.en;
 
-  const cards = useMemo(
+  const content = useMemo(
     () => Children.toArray(children).filter((child) => isValidElement(child)),
     [children],
   );
+  const courseSection = content.find((child) => child.props.id === 'courses');
+  const cards = useMemo(() => content.filter((child) => child !== courseSection), [content, courseSection]);
   const count = cards.length;
   const rootRef = useRef(null);
   const stageRef = useRef(null);
@@ -874,6 +942,8 @@ export default function RotatingProductShowcase({children}) {
                 >
                   {summaryChildren}
                 </button>
+
+                {getCoursePanel(courseSection, card.props.id)}
 
                 <aside
                   className="rotating-product-side rotating-product-side--left"

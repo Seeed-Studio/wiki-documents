@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini アプリ向けの完全な API リファレンス。コアアプリクラス、アプリ管理、アプリ情報、アプリアシスタント、およびアプリソースを含みます。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: アプリ API リファレンス
 slug: /reachymini_api_apps
 keywords:

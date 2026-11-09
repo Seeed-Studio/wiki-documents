@@ -1,5 +1,6 @@
 ---
 description: Tutorial passo a passo para substituir um cabo FPC danificado no conjunto do microfone do Reachy Mini.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Trocar o Cabo FPC do Microfone
 slug: /reachymini_troubleshooting_change_mic_fpc_cable
 keywords:

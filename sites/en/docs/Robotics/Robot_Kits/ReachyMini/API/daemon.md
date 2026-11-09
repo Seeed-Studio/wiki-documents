@@ -1,5 +1,6 @@
 ---
 description: Daemon API reference for Reachy Mini covering core daemon classes, robot app lock, backend classes, and all router endpoints.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Daemon API
 slug: /reachymini_api_daemon
 keywords:

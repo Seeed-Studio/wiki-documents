@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini快速入门指南，涵盖先决条件、守护进程设置和您的第一个机器人脚本。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 快速入门指南
 slug: /reachymini_sdk_quickstart
 keywords:

@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating how to capture a single frame from Reachy Mini's camera and save it as an image file.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Take Picture
 slug: /reachymini_examples_take_picture
 keywords:

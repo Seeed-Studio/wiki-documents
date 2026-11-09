@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の頭部とアンテナを単純な振動パターンで動かす方法を示す最小限のサンプルです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 最小限デモ
 slug: /reachymini_examples_minimal_demo
 keywords:

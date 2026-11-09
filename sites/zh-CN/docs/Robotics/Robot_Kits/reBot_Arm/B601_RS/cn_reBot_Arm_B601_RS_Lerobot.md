@@ -26,9 +26,27 @@ import TabItem from '@theme/TabItem';
 
 # reBot Arm B601-RS LeRobot 入门
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ 免代码 · 免配环境</span>
+    <p className="sensecraft-banner__title">不想装环境、不想写代码？一个软件就能跑 reBot Arm 与 LeRobot</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics 是 Seeed 面向 SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 的免代码平台。在引导式界面里完成设备连接、标定、数据采集、模型训练与推理验证 —— 不需要配 Python 环境，也不需要敲命令行。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 步引导式流程</li>
+      <li>✅ 云端训练 · 本地无需 GPU</li>
+      <li>✅ Windows / macOS 客户端</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/zh?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">前往 SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/cn/sensecraft_robotics/">软件使用教程</a>
+  </div>
+</div>
+
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" />
 </div>
 
 <div className="rebot-buy-button-group">
@@ -77,24 +95,6 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 <!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
-
-<div className="sensecraft-banner">
-  <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ 免代码 · 免配环境</span>
-    <p className="sensecraft-banner__title">不想装环境、不想写代码？一个软件就能跑 reBot Arm 与 LeRobot</p>
-    <p className="sensecraft-banner__lead">SenseCraft Robotics 是 Seeed 面向 SO-ARM101、reBot Arm 102 + B601-RS / B601-DM 的免代码平台。在引导式界面里完成设备连接、标定、数据采集、模型训练与推理验证 —— 不需要配 Python 环境，也不需要敲命令行。</p>
-    <ul className="sensecraft-banner__points">
-      <li>✅ 6 步引导式流程</li>
-      <li>✅ 云端训练 · 本地无需 GPU</li>
-      <li>✅ Windows / macOS 客户端</li>
-      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
-    </ul>
-  </div>
-  <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/zh?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">前往 SenseCraft Robotics ↗</a>
-    <a className="sensecraft-banner__link" href="/cn/sensecraft_robotics/">软件使用教程</a>
-  </div>
-</div>
 
 ## 初始系统环境
 
@@ -274,6 +274,107 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 </section>
 </div>
 
+## 连接机械臂
+
+:::warning
+**安全提示：**
+连接或拆卸 JST、XT30 等线束前，必须先断开电源。确认所有线束连接正确后，再接通电源。
+B601RS与B601DM外观相近,请注意区分
+:::
+
+
+### 固定和连接 reBot Arm 102（主臂）
+
+
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>固定 reBot Arm 102</h4>
+      <p className="rebot-step-label">第 1 步</p>
+
+使用木工夹将 reBot Arm 102 固定在平整桌面上，轻轻推动确认底座不移动。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 2 步</p>
+
+接线分为两条链路：
+
+* **信号链路（机械臂 -> USB-C 线 -> 电脑）**
+  1. 准备 USB-C 线连接机械臂与电脑（**先暂不插电脑端，等进入串口绑定环节后再连接扫描**）。
+
+* **供电链路（机械臂 -> 12V 2A 电源 -> 插板 ）**
+  1. 将 **12V 2A 电源适配器**连接到机械臂的电源接口。
+  2. 将适配器接入插板，完成上电。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+---
+
+</div>
+</section>
+
+</div>
+
+### 固定和连接 B601 RS（从臂）
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.webp" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>固定 B601 RS</h4>
+      <p className="rebot-step-label">第 4 步</p>
+
+使用 G 型夹将 B601 RS 固定在平整桌面上，轻轻左右转动确认底座不移动。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>连接线束</h4>
+      <p className="rebot-step-label">第 5 步</p>
+
+开始前确保电源断电。接线分为两条链路：
+
+* **信号链路（机械臂 -> 信号分离板 -> USB-CAN -> 电脑）**
+  1. 用 XT30 2+2 线连接机械臂底座与信号分离模块。
+  2. 剪开 2-pin 线，一端接信号分离模块，另一端红线接 USB-CAN 的 H、黑线接 L。
+  3. 将USB-CAN 的一端通过 usb延长线连接到电脑（**先暂不插电脑端，等串口绑定后再连接扫描**）。
+
+* **供电链路（机械臂 -> 信号分离板 -> 48V 12.5A 电源 -> 插座）**
+  1. 用 XT30 2+2 线连接机械臂底座与信号分离模块。
+  2. 用电源 XT30 线将信号分离模块连接到 48V 12.5A 电源。
+  3. 将电源接入插座。确认机械臂固定、线束正确且周围无障碍后，再打开电源。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
+
+
+---
+
+</div>
+</section>
+
+</div>
+
 ## 校准机械臂
 
 <!-- <div class="video-container">
@@ -351,7 +452,6 @@ sudo dmesg | grep ttyUSB #看到最后一行显示disconnected
 sudo apt remove brltty #移除brltty
 ```
 :::
-
 
 
 <div align="center">
@@ -451,6 +551,7 @@ RealSense D405 是一款短距离双目深度相机，专为高精度近距离�
 
 RealSense D435i 集成了深度感知、RGB 成像以及 IMU，适用于中近距离应用，例如 3D 重建、SLAM 以及机器人环境感知。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -606,6 +707,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -634,6 +737,7 @@ lerobot-teleoperate \
 
 Gemini 336 是 Gemini 330 系列的新成员。它继承了 Gemini 335 强大的深度性能，并在室内反光区域、高动态场景中的暗区以及户外强光环境下进一步提升了深度成像质量。在机器人应用中，可为感知、定位和操作等任务提供更稳定、更高质量的深度数据。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -792,6 +896,8 @@ lerobot-find-cameras orbbec
 </section>
 </div>
 
+</div>
+
 
 </TabItem>
 
@@ -869,6 +975,29 @@ lerobot-teleoperate \
 ```
 
 </TabItem>
+
+<TabItem value="camera-mount" label="摄像头支架">
+
+【摄像头支架安装】
+
+固定摄像头位置，让数据干净采集，支持多角度自由调节，支持俯视 + 腕部、俯视 + 侧视等视角，支持普通 USB 相机，深度相机 D435i、D405、Gemini 2 等深度相机的使用，支持 SO-ARM101 和 reBot 等机械臂，可搭配数采实验盒进行使用，并复用下载数据集和模型，开箱使用。
+
+<div class="video-container">
+<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1HzYs6bEdH&p=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://e.tb.cn/h.jbKAUs3BmOBVLXr?tk=KXmMTHMHwek" target="_blank" rel="noopener noreferrer">
+    <span>立即购买</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+</TabItem>
 </Tabs>
 
 ## 数据集制作采集
@@ -876,7 +1005,6 @@ lerobot-teleoperate \
 <!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
-
 
 
 <Tabs>

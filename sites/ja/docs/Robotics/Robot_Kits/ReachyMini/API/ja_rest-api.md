@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini デーモンが提供する REST API の完全なリファレンス。アプリ、デーモン、状態、動作、モーター、運動学、音量、Hugging Face 認証向けの HTTP および WebSocket エンドポイントを網羅します。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: REST API リファレンス
 slug: /reachymini_api_rest-api
 keywords:

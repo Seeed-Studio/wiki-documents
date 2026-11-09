@@ -48,7 +48,7 @@ Este wiki presenta los distintos componentes de hardware e interfaces de reCompu
   <p>Vista inferior</p>
 </div>
 
-## Especificaciones de la placa portadora
+## Especificaciones de la placa carrier
 
 <table>
   <thead>
@@ -73,15 +73,15 @@ Este wiki presenta los distintos componentes de hardware e interfaces de reCompu
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2× CAN-FD (aislado) mediante M12 código A</td>
+      <td>2× CAN-FD (aislados) mediante M12 A-code</td>
     </tr>
     <tr>
       <td>Serie</td>
-      <td>1× RS-232/422/485 mediante M12 código A</td>
+      <td>1× RS-232/422/485 mediante M12 A-code</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>2× DI + 2× DO mediante M12 código A</td>
+      <td>2× DI + 2× DO mediante M12 A-code</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -125,7 +125,7 @@ Este wiki presenta los distintos componentes de hardware e interfaces de reCompu
     <tr>
       <td>Alimentación</td>
       <td>Entrada</td>
-      <td>M12 código A CC 19–48 V</td>
+      <td>M12 A-code CC 19–48 V</td>
     </tr>
   </tbody>
 </table>
@@ -134,7 +134,7 @@ Este wiki presenta los distintos componentes de hardware e interfaces de reCompu
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/2.jpg" alt="Image" width={800} height="auto" /></p>
 
-reComputer Rugged J401 está equipado con una interfaz de alimentación M12 código A CC 19-48 V, compatible con un amplio rango de tensión de entrada, lo que lo hace adecuado para diversos entornos de suministro de energía. La definición de la interfaz se muestra en la tabla siguiente.
+reComputer Rugged J401 está equipado con una interfaz de alimentación M12 A-code CC 19-48 V, compatible con un amplio rango de tensión de entrada, lo que lo hace adecuado para diversos entornos de suministro de energía. La definición de la interfaz se muestra en la tabla siguiente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/3.png" alt="Image" width={400} height="auto" /></p>
 
@@ -153,7 +153,7 @@ Retira los dos tornillos que fijan la tapa lateral impermeable y ábrela para ac
 
 ## M.2 Key M para SSD y M.2 Key E para Wi-Fi y Bluetooth
 
-El reComputer Rugged J401 incorpora una interfaz M.2 Key E, mediante la cual puedes ampliar las capacidades de Bluetooth y Wi-Fi del dispositivo. Recomendamos utilizar la tarjeta de red inalámbrica Intel Dual Band RTL8822CE.
+El reComputer Rugged J401 incorpora una interfaz M.2 Key E, mediante la cual puedes ampliar las capacidades de Bluetooth y Wi-Fi del dispositivo. Recomendamos utilizar la NIC inalámbrica Intel Dual Band RTL8822CE.
 
 M.2 Key M es una interfaz diseñada para unidades de estado sólido (SSD) de alta velocidad, que proporciona velocidades de transferencia de datos ultrarrápidas, ideal para aplicaciones de alto rendimiento.
 
@@ -167,7 +167,7 @@ Si deseas retirar el SSD incluido e instalar uno nuevo, debes asegurarte de que 
 
 - Soportar la **ranura M.2 Key M con interfaz x4 PCIe Gen3**.
 
-- Cumplir con la especificación de tamaño **2242**.
+- Cumplir con la especificación de tamaño **2280**.
 
 
 
@@ -179,7 +179,7 @@ sudo dd if=/dev/zero of=tempfile bs=1M count=1024 conv=fdatasync
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/6.png" alt="Image" width={800} height="auto" /></p>
 
-Ejecuta el comando `sudo rm tempfile` para eliminar los archivos de caché después de completar la prueba.
+Ejecuta el comando `sudo rm tempfile` para eliminar los archivos de caché una vez finalizada la prueba.
 
 Después de instalar el módulo Wi-Fi y encender el dispositivo, podemos configurar los ajustes de Wi-Fi y Bluetooth del dispositivo.
 
@@ -233,7 +233,7 @@ Si el controlador option se carga correctamente, se mostrará en la salida la in
 
 **Paso 3.** Configurar ModemManager
 
-ModemManager es una herramienta para gestionar dispositivos módem, y es necesario instalarla y reiniciarla.
+ModemManager es una herramienta para gestionar dispositivos módem, y necesita ser instalado y reiniciado.
 
 ```Bash
 sudo apt install modemmanager 
@@ -250,7 +250,7 @@ Podemos usar el comando mmcli -L para comprobar si ModemManager puede identifica
 mmcli -L 
 ```
 
-Si se reconoce el módulo 5G, se mostrará una salida similar a /org/freedesktop/ModemManager1/Modem/0, que indica la ruta al dispositivo módem detectado.
+Si se reconoce el módulo 5G, se mostrará una salida similar a /org/freedesktop/ModemManager1/Modem/0, lo que indica la ruta al dispositivo módem detectado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/13.png" alt="Image" width={800} height="auto" /></p>
 
@@ -262,7 +262,7 @@ El APN (Access Point Name) es crucial para conectar un dispositivo móvil a la r
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
 
-Este comando añade una nueva conexión de tipo GSM (Global System for Mobile Communications), especificando el APN como "CMNET" y utilizando configuración IPv4 automática.
+Este comando añade una nueva conexión de tipo GSM (Global System for Mobile Communications), especificando el APN como "CMNET" y utilizando la configuración IPv4 automática.
 
 **Paso 6.** Activar la conexión
 
@@ -292,17 +292,17 @@ Por último, podemos usar el comando mmcli -m 0 para ver información detallada 
 mmcli -m 0 
 ```
 
-Este comando proporciona detalles completos sobre el módulo 5G, incluido su fabricante, modelo, tecnologías de red admitidas y actuales, estado del dispositivo y operadores de red conectados.
+Este comando proporciona detalles completos sobre el módulo 5G, incluido su fabricante, modelo, tecnologías de red compatibles y actuales, estado del dispositivo y operadores de red conectados.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/15.png" alt="Image" width={800} height="auto" /></p>
 
 ## Ethernet
 
-El reComputer Rugged J401 proporciona 1 puerto RJ45 Ethernet Gigabit estándar (10/100/1000M) (J35) y 4 puertos RJ45 Gigabit PSE (Power Sourcing Equipment) (J36–J39). El puerto Gigabit estándar se utiliza para la conectividad general de red. Los puertos PSE son compatibles con los estándares IEEE 802.3af/at, lo que permite suministrar energía a través de Ethernet a dispositivos conectados como cámaras IP y puntos de acceso inalámbricos, con una potencia máxima de salida de 15,4 W por puerto (802.3af). Esto lo hace ideal para aplicaciones industriales, AMR y de computación perimetral en exteriores, eliminando la necesidad de un cableado de alimentación independiente. Todos los puertos Gigabit se derivan del controlador PCIe dentro del módulo Jetson Orin y admiten autonegociación 10/100/1000M.
+El reComputer Rugged J401 proporciona 1 puerto RJ45 Gigabit Ethernet estándar (10/100/1000M) (J35) y 4 puertos RJ45 Gigabit PSE (Power Sourcing Equipment) (J36–J39). El puerto Gigabit estándar se utiliza para la conectividad de red general. Los puertos PSE son compatibles con los estándares IEEE 802.3af/at, lo que permite la entrega de energía a través de Ethernet a dispositivos conectados como cámaras IP y puntos de acceso inalámbricos, con una salida máxima de 15.4 W por puerto (802.3af). Esto lo hace ideal para aplicaciones industriales, AMR y de computación perimetral en exteriores, eliminando la necesidad de cableado de alimentación separado. Todos los puertos Gigabit se derivan del controlador PCIe dentro del módulo Jetson Orin y admiten autonegociación 10/100/1000M.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
 
-Los nombres de los dispositivos de red de Linux se asignan a los puertos Ethernet físicos como se muestra a continuación. Al ver los conectores Ethernet desde la misma dirección que en la imagen, la asignación de izquierda a derecha es `eth4`, `eth2`, `eth1`, `eth0` y `eth3`.
+Los nombres de los dispositivos de red en Linux se asignan a los puertos Ethernet físicos como se muestra a continuación. Al ver los conectores Ethernet desde la misma dirección que en la imagen, la asignación de izquierda a derecha es `eth4`, `eth2`, `eth1`, `eth0` y `eth3`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/jetson/rugged-ethernet-Interface.png" alt="Mapping between Linux Ethernet device names and physical ports on reComputer Rugged J401" width={900} height="auto" /></p>
 
@@ -321,7 +321,7 @@ sudo apt update
 sudo apt install -y ethtool
 ```
 
-Ejecuta el siguiente comando para mostrar la velocidad, el modo dúplex, el estado de auto-negociación y el estado del enlace para las cinco interfaces Ethernet físicas:
+Ejecuta el siguiente comando para mostrar la velocidad, el modo dúplex, el estado de autonegociación y el estado del enlace para las cinco interfaces Ethernet físicas:
 
 ```bash
 for interface in eth0 eth1 eth2 eth3 eth4; do
@@ -343,7 +343,7 @@ done
 
 ### Activar la salida PoE
 
-Los cuatro puertos PSE (J36–J39) están alimentados por un controlador PSE integrado que está **desactivado por defecto**. En un sistema de fábrica nada lo activa, por lo que una cámara conectada a J36–J39 permanece sin alimentación hasta que la línea de habilitación de alimentación PSE se lleva a nivel alto **y se mantiene en alto**.
+Los cuatro puertos PSE (J36–J39) están alimentados por un controlador PSE integrado que está **desactivado de forma predeterminada**. En un sistema de fábrica nada lo activa, por lo que una cámara conectada a J36–J39 permanece sin alimentación hasta que la línea de habilitación de alimentación PSE se lleve a nivel alto **y se mantenga en alto**.
 
 | Señal | GPIO | Dirección | Significado |
 | --- | --- | --- | --- |
@@ -374,7 +374,7 @@ sudo gpioget gpiochip2 0 1
 1 0
 ```
 
-`1 0` significa `PSE_PG=1` (alimentación correcta) y `PSE_INTB=0` (sin fallo). Si `PSE_PG` permanece en `0`, no se está suministrando energía: comprueba el cable y el propio requisito de alimentación de la cámara (802.3af permite 15,4 W por puerto). Si `PSE_INTB` lee `1`, el controlador ha registrado un fallo: retira la carga, apaga y enciende de nuevo y vuelve a comprobar.
+`1 0` significa `PSE_PG=1` (alimentación correcta) y `PSE_INTB=0` (sin fallo). Si `PSE_PG` permanece en `0`, no se está suministrando energía: comprueba el cable y el propio requisito de alimentación de la cámara (802.3af permite 15.4 W por puerto). Si `PSE_INTB` lee `1`, el controlador ha registrado un fallo: retira la carga, apaga y enciende de nuevo y vuelve a comprobar.
 
 **Importante:** el nivel solo se mantiene mientras el proceso `gpioset` esté vivo. Una línea GPIO solicitada a través del dispositivo de caracteres vuelve a su estado predeterminado cuando sale el último proceso que la mantiene — `gpioset --help` lo indica explícitamente — por lo que ejecutar el comando y dejar que termine **no** mantiene el PSE encendido. Después de un reinicio, o si el proceso se mata, las cámaras pierden alimentación y el enlace cae.
 
@@ -416,7 +416,7 @@ for i in eth0 eth1 eth2 eth3 eth4; do
 done
 ```
 
-**Paso 2.** Deja que las cámaras terminen de arrancar (30–60 s después de que se active la alimentación PSE), luego pon el puerto del Jetson en la misma subred que cada cámara:
+**Paso 2.** Deja que las cámaras terminen de arrancar (30–60 s después de que se active la alimentación PSE), luego coloca el puerto del Jetson en la misma subred que cada cámara:
 
 ```bash
 sleep 45
@@ -445,8 +445,8 @@ eth2             UP             192.168.20.100/24
 
 Notas:
 
-- Cada cámara mantiene la dirección con la que fue configurada. Si no la conoces, pon el puerto en la subred en la que debería estar la cámara y búscala con un barrido de ping.
-- Un puerto que permanece en `carrier=0` mientras `PSE_PG=1` significa que la cámara no está consumiendo energía, o que el conector impermeable no está completamente insertado.
+- Cada cámara mantiene la dirección con la que fue configurada. Si no la conoces, coloca el puerto en la subred en la que debería estar la cámara y búscala con un barrido de ping.
+- Un puerto que permanece en `carrier=0` mientras `PSE_PG=1` significa que la cámara no está consumiendo energía, o que el conector impermeable no está completamente asentado.
 - Las direcciones anteriores son ejemplos tomados de una configuración con dos cámaras; utiliza las subredes de tus propias cámaras. `ip addr add` no es persistente entre reinicios: configura el puerto con NetworkManager o `systemd-networkd` si debe sobrevivir a un reinicio.
 
 ```bash
@@ -474,11 +474,11 @@ nohup env DISPLAY=:0 XAUTHORITY=/home/seeed/.Xauthority gst-launch-1.0 \
   xvimagesink sync=false > /tmp/camB_disp.log 2>&1 &
 ```
 
-- Sustituye `<user>:<password>` por las credenciales de tu propia cámara, y las direcciones IP por las que verificaste arriba.
-- `DISPLAY=:0` y `XAUTHORITY=/home/seeed/.Xauthority` son necesarios cuando los comandos se lanzan por SSH; ajusta la ruta si tu usuario de escritorio no es `seeed`. Ejecutarlos desde una terminal dentro de la sesión de escritorio de JetPack no necesita ninguno de los dos.
-- Se usa `protocols=tcp` porque RTSP sobre UDP a menudo está bloqueado o es poco fiable en redes industriales, y `latency=200` da al flujo un búfer de fluctuación de 200 ms.
+- Sustituye `<user>:<password>` por las credenciales de tu propia cámara, y las direcciones IP por las que verificaste anteriormente.
+- `DISPLAY=:0` y `XAUTHORITY=/home/seeed/.Xauthority` son necesarios cuando los comandos se lanzan por SSH; ajusta la ruta si tu usuario de escritorio no es `seeed`. Ejecutarlos desde una terminal dentro de la sesión de escritorio de JetPack no requiere ninguno de los dos.
+- `protocols=tcp` se utiliza porque RTSP sobre UDP a menudo está bloqueado o es poco fiable en redes industriales, y `latency=200` proporciona al flujo un búfer de fluctuación de 200 ms.
 - Las cámaras probadas aquí transmiten **H.265**. Comprueba tu propia cámara y cambia el par depayloader/parser si es H.264.
-- Los primeros fotogramas aparecen después de unos segundos (handshake RTSP, calentamiento del decodificador y el intervalo de fotogramas clave de la cámara). Si una ventana permanece en negro, lee `/tmp/camA_disp.log` o `/tmp/camB_disp.log`.
+- Los primeros fotogramas aparecen después de unos segundos (handshake RTSP, calentamiento del decodificador y el intervalo de fotograma clave de la cámara). Si una ventana permanece en negro, lee `/tmp/camA_disp.log` o `/tmp/camB_disp.log`.
 - Detén la vista previa con `pkill -f "gst-launch-1.0.*rtspsrc"`, o `kill %1 %2` si ambas se iniciaron desde la misma shell.
 
 Para leer el códec de un flujo:
@@ -492,11 +492,11 @@ timeout 20 gst-launch-1.0 -v rtspsrc location="rtsp://<user>:<password>@192.168.
   <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_poe.png" alt="" />
 </div>
 
-Para una cámara H.264 utiliza `rtph264depay ! h264parse` en lugar de `rtph265depay ! h265parse`; el resto de la tubería permanece sin cambios.
+Para una cámara H.264 utiliza `rtph264depay ! h264parse` en lugar de `rtph265depay ! h265parse`; el resto de la canalización no cambia.
 
 ## USB
 
-El reComputer Rugged J401 proporciona 4 puertos USB 3.2 Tipo A (a través de un hub interno USB 3.1 Gen1, que admite tasas de datos de hasta 5 Gbps para conectar periféricos de alta velocidad, dispositivos de almacenamiento o cámaras) y 1 puerto USB 2.0 Tipo C de depuración (que funciona como una consola serie para acceder a registros del sistema, depurar problemas de arranque y realizar actualizaciones de firmware).
+El reComputer Rugged J401 proporciona 4 puertos USB 3.2 Tipo A (a través de un hub USB 3.1 Gen1 interno, que admite tasas de datos de hasta 5 Gbps para conectar periféricos de alta velocidad, dispositivos de almacenamiento o cámaras) y 1 puerto USB 2.0 Tipo C de depuración (que funciona como una consola serie para acceder a registros del sistema, depurar problemas de arranque y realizar actualizaciones de firmware).
 
 ### Prueba de velocidad USB-A
 
@@ -544,7 +544,7 @@ rm -f "$TEST_FILE"
 EOF
 ```
 
-Pulsa Esc para salir del modo Insert, luego escribe `:w` y pulsa Enter para guardar el script, y después salir del proceso.
+Pulsa Esc para salir del modo Insert, luego escribe `:w` y pulsa Enter para guardar el script y después salir del proceso.
 
 Haz que el script sea ejecutable y pruébalo:
 
@@ -602,7 +602,7 @@ El reComputer Rugged J401 incluye un RTC de hardware con batería de respaldo pa
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/22.png" alt="Image" width={800} height="auto" /></p>
 
-Si no te has conectado a internet mediante Ethernet, puedes configurar manualmente la fecha y hora aquí.
+Si no te has conectado a Internet mediante Ethernet, puedes configurar la fecha y la hora manualmente aquí.
 
 **Paso 4.** Abre una ventana de terminal y ejecuta el siguiente comando para comprobar la hora del reloj de hardware:
 
@@ -610,7 +610,7 @@ Si no te has conectado a internet mediante Ethernet, puedes configurar manualmen
 cat /sys/devices/platform/bpmp/bpmp:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
 
-**Paso 5.** Desconecta la conexión de red y reinicia el dispositivo. Verás que la hora del sistema ha perdido alimentación pero sigue funcionando con normalidad.
+**Paso 5.** Desconecta la conexión de red y reinicia el dispositivo. Verás que el tiempo del sistema ha perdido la alimentación pero sigue funcionando con normalidad.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/23.png" alt="Image" width={800} height="auto" /></p>
 
@@ -669,7 +669,7 @@ Transmisión de CAN1:
 
 #### Prueba de bucle de retorno CAN
 
-También puedes conectar CAN0 y CAN1 juntos para una prueba de bucle de retorno a nivel de placa. Une físicamente los dos buses CAN (`CAN0_H` con `CAN1_H`, y `CAN0_L` con `CAN1_L`), habilita las resistencias de terminación de 120 Ω integradas en ambos lados y luego verifica la comunicación bidireccional entre las dos interfaces.
+También puedes conectar CAN0 y CAN1 juntos para una prueba de bucle de retorno a nivel de placa. Puentea físicamente los dos buses CAN (`CAN0_H` con `CAN1_H`, y `CAN0_L` con `CAN1_L`), habilita las resistencias de terminación de 120 Ω integradas en ambos lados y luego verifica la comunicación bidireccional entre las dos interfaces.
 
 Abre tres terminales y ejecuta los siguientes comandos.
 
@@ -720,7 +720,7 @@ Si el cableado y la terminación son correctos, las tramas generadas en una inte
 
 ## DI/DO
 
-Las interfaces DI/DO del reComputer Rugged J401 están integradas en el conector J47 2x10P, compartiendo la interfaz con las interfaces CAN. Admiten 2 canales de entrada digital y 2 canales de salida digital, con transmisión de señal estable y adaptación de voltaje de grado industrial, adecuadas para conectar sensores digitales, relés y otros dispositivos periféricos.
+Las interfaces DI/DO del reComputer Rugged J401 están integradas en el conector J47 2x10P, compartiendo la interfaz con las interfaces CAN. Admiten 2 canales de entrada digital y 2 canales de salida digital, con transmisión de señal estable y adaptación de voltaje de grado industrial, adecuados para conectar sensores digitales, relés y otros dispositivos periféricos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/24.png" alt="Image" width={500} height="auto" /></p>
 
@@ -792,19 +792,19 @@ Canales de la interfaz UART
 
 Cambia entre los modos RS232, RS485 y RS422 alternando el interruptor SW3.
 
-Nota: Cuando el interruptor está presionado hacia abajo (ON), el bit es 0; cuando no está presionado, el bit es 1
+Nota: Cuando el interruptor está presionado (ON), el bit es 0; cuando no está presionado, el bit es 1
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/29.png" alt="Image" width={500} height="auto" /></p>
 
 |Mode_0|Mode_1|Mode_2|Modo|Estado|
 |---|---|---|---|---|
-|0|0|0|RS-422 Full Duplex|1T/1R RS-422|
-|0|0|1|RS-232 puro|3T/5R RS-232|
-|0|1|0|RS-485 Half Duplex|1T/1R RS-485, TX ENABLE <br />Activo en bajo|
-|0|1|1|RS-485 Half Duplex|1T/1R RS-485, TX ENABLE Activo en alto|
-|1|0|0|RS-422 Full Duplex|RS-422 con resistencia de terminación|
-|1|0|1|RS-232|1T/1R RS-232 coexiste con la aplicación RS485 sin necesidad del bus de conmutación de bus (para uso especial)|
-|1|1|0|RS-485|1T/1R RS-485 con resistencia de terminación, TX ENABLE Activo en bajo|
+|0|0|0|RS-422 Dúplex Completo|1T/1R RS-422|
+|0|0|1|RS-232 Puro|3T/5R RS-232|
+|0|1|0|RS-485 Semidúplex|1T/1R RS-485, TX ENABLE <br />Activo en Low|
+|0|1|1|RS-485 Semidúplex|1T/1R RS-485, TX ENABLE Activo en High|
+|1|0|0|RS-422 Dúplex Completo|RS-422 con resistencia de terminación|
+|1|0|1|RS-232|1T/1R RS-232 coexiste con la aplicación RS485 sin necesidad del bus switch bus (para uso especial)|
+|1|1|0|RS-485|1T/1R RS-485 con resistencia de terminación, TX ENABLE Activo en Low|
 |1|1|1|Apagado|Todos los pines de E/S están en alta impedancia|
 
 
@@ -817,7 +817,7 @@ Nota: Cuando el interruptor está presionado hacia abajo (ON), el bit es 0; cuan
 
 ### Instrucciones de uso
 
-Utiliza cables Dupont para conectar los pines centrales del canal SPI de destino (toma /dev/spidev0.0 como ejemplo): conecta el pin MOSI a su pin MISO (para realizar la transmisión/recepción de datos en bucle).
+Utiliza cables Dupont para conectar los pines principales del canal SPI de destino (toma /dev/spidev0.0 como ejemplo): conecta el pin MOSI a su pin MISO (para realizar la transmisión/recepción de datos en bucle).
 
 El diagrama de cableado es el siguiente:
 
@@ -831,7 +831,7 @@ Antes de operar la interfaz SPI, asegúrate de que el módulo del kernel `spidev
 sudo modprobe spidev
 ```
 
-Si el comando se ejecuta sin mensajes de error, significa que el módulo se ha cargado correctamente; si el módulo ya está cargado, el comando no devolverá ninguna información, lo cual es un fenómeno normal.
+Si el comando se ejecuta sin mensajes de error, significa que el módulo se cargó correctamente; si el módulo ya está cargado, el comando no devolverá ninguna información, lo cual es un fenómeno normal.
 
 **Paso 2: Ver los nodos de dispositivo SPI**
 
@@ -841,7 +841,7 @@ Introduce el siguiente comando en la terminal para ver el nombre del dispositivo
 ls /dev/spidev*
 ```
 
-Si no se muestra ningún nodo de dispositivo, significa que el módulo `spidev` no se ha cargado correctamente. Vuelve a ejecutar `sudo modprobe spidev` y revisa el registro del sistema para la resolución de problemas.
+Si no se muestra ningún nodo de dispositivo, significa que el módulo `spidev` no se cargó correctamente. Ejecuta de nuevo `sudo modprobe spidev` y revisa el registro del sistema para la resolución de problemas.
 
 **Paso 3: Obtener y compilar el código de prueba SPI**
 
@@ -867,13 +867,13 @@ Después de ejecutar el comando de prueba, puedes observar en la terminal el est
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/32.png" alt="Image" width={800} height="auto" /></p>
 
-> Criterio clave de evaluación: si los datos TX (transmitidos) son consistentes con los datos RX (recibidos), indica que la prueba de bucle cerrado SPI se ha realizado correctamente y que la función de la interfaz SPI es normal.
+> Estándar clave de evaluación: los datos TX (transmitidos) son consistentes con los datos RX (recibidos), lo que indica que la prueba de bucle SPI se ha realizado correctamente y que la función de la interfaz SPI es normal.
 > 
 > 
 
 ## **I2C**
 
-El Rugged J401 proporciona una interfaz I2C a través del conector J8 de 2x10 pines, lo que permite una conexión sencilla de sensores y periféricos para la expansión del sistema.
+El Rugged J401 proporciona una interfaz I2C a través del conector J8 de 2x10 pines, lo que permite una fácil conexión de sensores y periféricos para la expansión del sistema.
 
 ### **Conexión de hardware**
 
@@ -883,7 +883,7 @@ El Rugged J401 proporciona una interfaz I2C a través del conector J8 de 2x10 pi
 
 Conecta tu dispositivo I2C a la interfaz I2C en la placa portadora:
 
-- Tierra -> Tierra (Pin 1)
+- Ground -> Ground (Pin 1)
 
 - SDA -> SDA (Pin 16)
 
@@ -929,7 +929,7 @@ sudo i2cdetect -y -r 1
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

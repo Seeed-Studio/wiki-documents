@@ -1,6 +1,6 @@
 ---
-description: Wio Tracker L2 系列介绍。包括特性、功能、参数和系列对比。
-title: Wio Tracker L2 介绍
+description: Wio Tracker L2 系列简介。包括特性、功能、参数以及系列对比。
+title: Wio Tracker L2 简介
 keywords:
   - Meshtastic
   - Wio Tracker L2
@@ -9,29 +9,29 @@ slug: /meshtastic_wio_tracker_l2_intro
 sku: 100029766
 sidebar_position: 0
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/cn/meshtastic_wio_tracker_l2_intro/
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="pir" width={900} height="auto" /></p>
 
-Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 ESP32S3，以及用于精准定位的 L76K GPS 模组。其设计灵活，支持 QSPI 触摸屏、电子墨水屏、TF 卡，以及太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
+Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 ESP32S3，以及用于精准定位的 L76K GPS 模块。其设计注重灵活性，支持 QSPI 触摸屏、电子墨水屏、TF 卡，以及太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
 
 ## 特性
 
-- **3.2 英寸高品质触摸屏**：配备 320×240 高清晰度显示屏，支持可切换的 MUI 和 Base UI，无需手机即可在设备上实现流畅的消息、地图和控制交互。
+- **3.2 英寸高品质触摸屏**：配备 320×240 高清晰度显示屏，支持可切换的 MUI 和 Base UI，在无需手机的情况下，即可在设备上实现流畅的消息、地图和控制交互。
 
-- **ESP32S3 驱动，随时可二次开发**：由集成 Wi-Fi 和 Bluetooth LE 的双核 ESP32-S3 提供算力，L2 Pro 为 UI 自定义、功能开发和开源应用提供了灵活的平台。
+- **ESP32S3 驱动，随时可二次开发**：由双核 ESP32-S3 提供算力，并集成 Wi-Fi 和 Bluetooth LE，L2 Pro 为 UI 定制、功能开发和开源应用提供了灵活的平台。
 
 - **离线地图与 GNSS 定位**：可预先将离线地图下载到 MicroSD 卡，即使在没有蜂窝网络或互联网连接的环境中，也能在设备上查看实时 GNSS 位置。
 
 - **3000mAh 长续航电池**：支持长时间日常使用，减少充电频率；可在 -10°C 至 55°C 环境下工作。
 
-- **便携易携，安装灵活**：可折叠天线提升便携性，1/4 英寸安装接口可搭配兼容配件实现灵活安装。
+- **便于携带，安装灵活**：可折叠天线提升便携性，1/4 英寸安装接口可搭配兼容配件实现灵活固定。
 
 ## 规格
 
@@ -42,7 +42,7 @@ Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtast
   </tr>
   <tr>
     <td colspan="1">**处理器**</td>
-    <td colspan="1">Wio-S3（ESP32S3 + SX1262 模组）</td>
+    <td colspan="1">Wio-S3（ESP32S3 + SX1262 模块）</td>
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
@@ -53,7 +53,7 @@ Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtast
     <td colspan="1">L76K（GPS、北斗、GLONASS、QZSS）</td>
   </tr>
   <tr>
-    <td colspan="1">**片上内存**</td>
+    <td colspan="1">**片上存储**</td>
     <td colspan="1">16MB Flash / 8MB PSRAM</td>
   </tr>
   <tr>
@@ -107,7 +107,7 @@ Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtast
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**音频**</td>
-    <td colspan="1">I2S Codec：ES8311</td>
+    <td colspan="1">I2S Codec</td>
   </tr>
   <tr>
     <td colspan="1">MIC</td>
@@ -121,7 +121,7 @@ Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtast
   </tr>
     <tr>
     <td colspan="1">**尺寸**</td>
-    <td colspan="1">（天线折叠）长：87.5 cm，宽：69 cm，高：26.6 cm</td>
+    <td colspan="1">（天线折叠）长：87.5 mm，宽：69 mm，高：26.6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**设备重量**</td>
@@ -147,6 +147,10 @@ Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtast
 |**设备电源输入**|5V，1A|
 |**满充截止电压**|4.2V|
 |**充电温度范围**|0 至 +45℃|
+
+**功耗**
+
+关于在不同配置（屏幕模式、LoRa 频段和调制预设、GPS 使用情况等）下的详细功耗数据和预估电池续航，请参考 [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)。
 
 ## 引脚列表
 

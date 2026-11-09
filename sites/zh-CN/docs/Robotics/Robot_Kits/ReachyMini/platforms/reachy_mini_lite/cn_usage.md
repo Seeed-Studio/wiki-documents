@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini Lite使用指南，涵盖桌面应用仪表板、快速操作演示、应用安装和Python SDK快速入门。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 使用Reachy Mini Lite
 slug: /reachymini_platforms_reachy_mini_lite_usage
 keywords:

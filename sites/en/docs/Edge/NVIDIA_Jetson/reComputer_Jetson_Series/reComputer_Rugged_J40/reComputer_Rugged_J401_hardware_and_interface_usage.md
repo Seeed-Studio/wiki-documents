@@ -167,7 +167,7 @@ If you want to remove the included SSD and install a new one, you need to ensure
 
 - Support the **M.2 Key M slot with x4 PCIe Gen3** interface.
 
-- Conform to the **2242** size specification.
+- Conform to the **2280** size specification.
 
 
 

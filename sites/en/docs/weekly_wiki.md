@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/12/2026
+  date: 11/02/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-10-12'
+updatedAt: '2026-11-02'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,73 +18,75 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 12th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Jetson Camera Selection Guide](https://wiki.seeedstudio.com/jetson/camera-selection-guide/)
+### [Aquaculture Crayfish Behavior Recognition: 4-Stage Pipeline and Edge Benchmarks](https://wiki.seeedstudio.com/solutions/crayfish-behavior-recognition/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/1/114992260_-preview-19.png" alt="Jetson-compatible CSI camera" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/crayfish_behavior_recognition/cover-10d95d7f.png" alt="Edge AI aquaculture crayfish behavior recognition reference design" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Find and compare cameras for Jetson-based reComputer and reServer devices. Filter by platform, application, camera interface, resolution, and working distance, then compare two models and check their specifications and setup guides.
+This edge AI aquaculture reference design introduces a four-stage pipeline for monitoring crayfish behavior and detecting potential fighting events. The guide covers camera placement, deployment with `solution-cli`, MQTT and WebSocket telemetry, and reported on-device benchmarks.
 
 </div>
 
-### Seeed Physical AI Beginner's Course — Robot Arm Mathematics and Control (Chapters 23–26)
+### [Edge AI Rehabilitation Posture Analysis: 33-Keypoint Pose and Clinical Kinematics](https://wiki.seeedstudio.com/solutions/rehab-posture-analysis/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-24/ch24-01.png" alt="Robot arm kinematics and coordinate systems" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Four new chapters cover coordinate frames and transformations, forward and inverse kinematics, Jacobians, and trajectory planning. The final chapter brings these concepts into practice using Pinocchio and MeshCat with the reBot Arm.
-
-**New chapters:** [23 — Coordinate Systems](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_23/) · [24 — Kinematics and Jacobian](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_24/) · [25 — Trajectory Planning](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_25/) · [26 — Pinocchio and MeshCat](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_26/).
-
-</div>
-
-### Seeed Physical AI Beginner's Course — Robot Vision and Autonomous Grasping (Chapters 27–30)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/tutorial_1/chapter-27/ch27-01.png" alt="Robot vision and 3D perception" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/rehab_posture_analysis/cover-93765b27.png" alt="33-keypoint edge AI rehabilitation posture analysis reference design" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The latest stage introduces RGB-D sensing, 3D perception, object detection, and hand-eye calibration. It then moves into hands-on visual grasping with the reBot Arm and an optional voice and multimodal interaction project using reSpeaker.
-
-**New chapters:** [27 — Robot Vision](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_27/) · [28 — Object Detection and Calibration](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_28/) · [29 — Autonomous Visual Grasping](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_29/) · [30 — Voice and Multimodal Interaction](https://wiki.seeedstudio.com/rebot_physical_ai_course_chapter_30/).
+This assistive rehabilitation reference design uses a 33-keypoint pose model to measure joint range of motion and flag movement compensation patterns. It covers edge deployment, model extensions, WebSocket and MQTT integration, and evaluation benchmarks; it is not a certified medical diagnostic tool.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Interactive Jetson Product Selection Guide](https://wiki.seeedstudio.com/jetson-product-selection-guide/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.webp" alt="Jetson carrier board" width={800} height="auto" /></p>
+### [reBot Arm B601 Setup and LeRobot Guides](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
 
 <div style={{ textAlign: "justify" }}>
 
-The Jetson product selection guide now has a redesigned interactive tool for filtering systems and carrier boards by hardware requirements. Select configurations, inspect specifications, and compare two products side by side.
+The B601-RS and B601-DM Quick Start and LeRobot guides now include illustrated leader-and-follower arm mounting, wiring steps, and safety checks. The Chinese SO-ARM100/101 guide also gains 44 community Q&As covering hardware, software setup, calibration, data collection, and training.
+
+**Updated English guides:** [B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) · [B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) · [B601-RS with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/) · [B601-DM with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/).
+
+**Chinese Guide:** [SO-ARM100/101 with LeRobot — Expanded FAQ](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/).
 
 </div>
 
-### [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/)
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg" alt="reComputer Rugged J40" width={800} height="auto" /></p>
+### [Industrial Edge Solution Deployment Guides](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/)
 
 <div style={{ textAlign: "justify" }}>
 
-The refreshed guide introduces reComputer Rugged J40 configurations, industrial interfaces, and JetPack setup. It highlights the IP66 fanless design, M12 connectivity, and PoE camera support for edge AI applications in demanding environments.
+Three existing engineering references have been substantially expanded with clearer hardware deployment guidance, interfaces, and operating boundaries. The updates explain multi-protocol data collection over MQTT, HVAC setpoint write-and-readback verification, and face-access library deployment with security and licensing considerations.
+
+**Updated guides:** [Industrial Multi-Protocol Data Hub](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/) · [HVAC Setpoint Control](https://wiki.seeedstudio.com/solutions/hvac-setpoint-control/) · [Unmanned Store Face Access](https://wiki.seeedstudio.com/solutions/unmanned-store-face-access/).
 
 </div>
 
-### [reBot Arm B601-RS Visual Grasping Demo](https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping" width={800} height="auto" /></p>
+### [Mesh Device Firmware and Recovery Guides](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/)
 
 <div style={{ textAlign: "justify" }}>
 
-The updated tutorial brings together two visual grasping workflows for the B601-RS robotic arm, including YOLO-based object detection and a ROS 2-based approach. It covers RGB-D camera setup, calibration, and practical grasping workflows.
+New recovery and troubleshooting sections cover failed firmware updates, DFU/UF2 recovery, and unresponsive devices across four Mesh hardware families. The instructions are integrated into the relevant MeshCore and Meshtastic getting-started guides.
+
+**MeshTracker X1:** [MeshCore](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/).
+
+**SenseCAP T1000-E:** [MeshCore](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/sensecap_t1000_e/).
+
+**Wio Tracker L1:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/).
+
+**SenseCAP Solar Node P1-Pro:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/).
+
+</div>
+
+### [reSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/)
+
+<div style={{ textAlign: "justify" }}>
+
+The microphone-array guide now covers both XVF3000 v3.0 and v3.2. It clarifies the additional speaker noise-floor filtering in v3.2 and updates the shared hardware, setup, and ROS-related guidance.
 
 </div>
 
@@ -239,5 +241,8 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.9.14th](/Seeed_Elderly/weekly_wiki/2026/wiki260914)
 - [weekly wiki on 2026.9.21st](/Seeed_Elderly/weekly_wiki/2026/wiki260921)
 - [weekly wiki on 2026.9.28th](/Seeed_Elderly/weekly_wiki/2026/wiki260928)
+- [weekly wiki on 2026.10.12th](/Seeed_Elderly/weekly_wiki/2026/wiki261012)
+- [weekly wiki on 2026.10.19th](/Seeed_Elderly/weekly_wiki/2026/wiki261019)
+- [weekly wiki on 2026.10.26th](/Seeed_Elderly/weekly_wiki/2026/wiki261026)
 
 </details>

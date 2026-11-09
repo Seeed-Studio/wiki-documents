@@ -1,5 +1,6 @@
 ﻿---
 description: Guía completa de resolución de problemas y FAQ para Reachy Mini que cubre problemas frecuentes, montaje, conexión, hardware, SDK y mensajes de error.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Resolución de problemas y FAQ
 slug: /reachymini_troubleshooting
 keywords:
@@ -809,7 +810,7 @@ mini.media.push_audio_sample(numpy_chunk)
 <details>
 <summary><strong>El seguimiento de cara se siente lento.</strong></summary>
 
-[LINE_28>El rendimiento depende en gran medida de las condiciones de iluminación. Asegúrate de que la cara esté bien iluminada. El backend LOCAL (GStreamer IPC) proporciona la latencia más baja para aplicaciones en el dispositivo.
+El rendimiento depende en gran medida de las condiciones de iluminación. Asegúrate de que la cara esté bien iluminada. El backend LOCAL (GStreamer IPC) proporciona la latencia más baja para aplicaciones en el dispositivo.
 
 </details>
 

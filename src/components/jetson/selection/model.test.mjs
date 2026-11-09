@@ -654,7 +654,7 @@ test("wiki links use a language prefix only when that page exists", () => {
   assert.equal(localizeWikiHref(englishOnly, "ja"), englishOnly);
   assert.equal(localizeWikiHref(external, "pt"), external);
   assert.equal(localizeWikiHref("/ai_roboticsyolov26_dual_camera_system/", "es"), "/ai_roboticsyolov26_dual_camera_system/");
-  assert.equal(localizeWikiHref("/rebot_physical_ai_course_chapter_3/", "zh"), "/rebot_physical_ai_course_chapter_3/");
+  assert.equal(localizeWikiHref("/robotics/rebot_physical_ai_course_chapter_3/", "zh"), "/robotics/rebot_physical_ai_course_chapter_3/");
   assert.deepEqual(jetsonDocTarget(guide, "zh"), { kind: "link", href: guide });
   assert.deepEqual(jetsonDocTarget(cameraGuide, "zh"), { kind: "link", href: cameraGuide });
   assert.deepEqual(jetsonDocTarget(englishOnly, "zh"), { kind: "anchor", href: englishOnly });

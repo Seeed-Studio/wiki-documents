@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini路线图，展示最近更新、即将推出的功能以及未来开发重点领域，包括移动应用和vibe coding空间。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini路线图
 slug: /reachymini_troubleshooting_roadmap
 keywords:

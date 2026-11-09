@@ -1,5 +1,19 @@
 [
     {
+        "product": "j4012rugged",
+        "l4t": "35.5.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCTCt8CNcDhSYb9sVlDWdTLAQWV47b54hu7OGhE-iy0J70?e=ujtu74",
+        "filename": "mfi_recomputer-rugged-orin-nx-16g-j401-5.1-35.5.0-2026-04-01.tar.gz",
+        "sha256": "78c6ad751ce9bd838fbb69d06e46f3c06f27c5d7ccde0530e0a186291880150a"
+    },
+    {
+        "product": "j3011rugged",
+        "l4t": "35.5.0",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA4j5l0BMl2RbhGbHYtgPQIAc0Pm3deaM3xaxi8eIRE8mw?e=d29vR4",
+        "filename": "mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz",
+        "sha256": "ca65466ccaf38e205fdf931a98ce7bb97b1b65a91f38cc69b284beafce099f33"
+    },
+    {
         "product": "j4012s",
         "l4t": "39.2.0",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB-xhKB8WtjT7NNVuoLnQAGAcW7ZxofeJjIa8Z9-ULwux0?e=8GNboV",

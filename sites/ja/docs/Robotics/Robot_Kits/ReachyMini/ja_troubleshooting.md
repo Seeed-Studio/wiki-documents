@@ -1,5 +1,6 @@
 ﻿---
 description: Reachy Mini のよくある問題、組み立て、接続、ハードウェア、SDK、エラーメッセージを網羅した包括的なトラブルシューティングガイドおよび FAQ です。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: トラブルシューティング & FAQ
 slug: /reachymini_troubleshooting
 keywords:

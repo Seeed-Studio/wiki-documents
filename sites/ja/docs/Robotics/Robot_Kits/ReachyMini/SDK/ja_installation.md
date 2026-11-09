@@ -1,5 +1,6 @@
 ---
 description: Linux、macOS、Windows における Reachy Mini Python SDK とデーモンの包括的なインストールガイド。前提条件、仮想環境のセットアップ、トラブルシューティングを網羅します。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: インストールガイド
 slug: /reachymini_sdk_installation
 keywords:

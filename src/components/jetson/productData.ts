@@ -415,12 +415,20 @@ export const productOptions: ProductOption[] = [
     flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation/')
   },
   {
-    value: 'j401rugged',
-    label: 'reComputer Rugged J40',
-    l4t: ["39.2.0", "36.4.3"],
+    value: 'j4012rugged',
+    label: 'reComputer Rugged J4012 (Orin NX 16GB)',
+    l4t: ["35.5.0"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg',
-    interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j401_hardware_and_interface_usage/'),
-    flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/ai_robotics_recomputer_rugged_j40_getting_started/')
+    interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/hardware_and_interface_usage/'),
+    flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/#flash-jetpack')
+  },
+  {
+    value: 'j3011rugged',
+    label: 'reComputer Rugged J3011 (Orin Nano 8GB)',
+    l4t: ["35.5.0"],
+    img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg',
+    interfaceUsage: createLocalizedWikiUrl('https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/hardware_and_interface_usage/'),
+    flashUrl: createLocalizedWikiUrl('https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/#flash-jetpack')
   },
   {
     value: 'j501classic',

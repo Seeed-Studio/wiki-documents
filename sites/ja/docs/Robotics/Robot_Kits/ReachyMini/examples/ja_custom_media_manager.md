@@ -1,5 +1,6 @@
 ---
 description: OpenCV と sounddevice を使用してカスタムパイプライン用に内蔵メディアマネージャーを無効化し、カメラとマイクに直接アクセスする方法を示す例です。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: カスタムメディアマネージャー
 slug: /reachymini_examples_custom_media_manager
 keywords:

@@ -127,7 +127,7 @@ YOLO は **ターゲットがどこにあるか** に答えます。VLM は **�
 5. カメラをシャーシの周囲に取り付け、**前・後・左・右** を向くようにします。
 6. ボード上でライブ BEV ウィンドウを見たい場合は、必要に応じて HDMI ディスプレイを接続します。
 
-J601 上での GMSL 立ち上げについては、[Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j601_interfaces_usage/) を参照してください。
+J601 上での GMSL 立ち上げについては、[Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/ja/jetson/recomputer_robotics_j601/hardware_and_interface_usage/) を参照してください。
 
 <div align="center">
   <img width={900}
@@ -314,8 +314,8 @@ http://<board-ip>:8787/
 ## リソース
 
 - [デモ動画](https://www.youtube.com/watch?v=o0NTeeLV4Vk)
-- [reComputer Robotics J601 入門ガイド](https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/)
-- [Robotics J601 ハードウェアインターフェースの使用方法](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j601_interfaces_usage/)
+- [reComputer Robotics J601 入門ガイド](https://wiki.seeedstudio.com/ja/jetson/recomputer_robotics_j601/getting_started/)
+- [Robotics J601 ハードウェアインターフェースの使用方法](https://wiki.seeedstudio.com/ja/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
 - [GitHub](https://github.com/xbs0325/j601-surround-demo)
 
 ## 技術サポートと製品ディスカッション

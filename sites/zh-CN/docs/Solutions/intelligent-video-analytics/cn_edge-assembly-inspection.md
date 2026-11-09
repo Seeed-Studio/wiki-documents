@@ -1,6 +1,7 @@
 ---
 description: 端侧装配质检——按模板期望件清单做缺件比对、用 ArUco 标定物量尺寸，合并成一个 OK/NG 判定，经 Modbus TCP 给 PLC、经 MQTT 给 MES。含硬件构成、部署轮廓、输出契约与实测数据。
 title: 端侧装配质检方案：缺件、尺寸判定与 Modbus / MQTT 输出
+sidebar_label: '端侧装配质检'
 keywords:
   - 装配质检
   - 缺件检测
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-assembly-inspection/
 generated_from: sensecraft-solutions@edge_inspection_assembly
 ---
@@ -132,8 +133,8 @@ generated_from: sensecraft-solutions@edge_inspection_assembly
 
 | | 质检主机 | 加速器 | 当前下发的检测器 | 实测路数 | 什么时候选它 |
 |---|---|---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>单工位质检主机 | Orin GPU | YOLOX-Tiny 640²，TensorRT FP16 | 单路，67 h 长稳 | 单个工位 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>多工位聚合质检主机 | Orin GPU | YOLOX-Tiny 640²，TensorRT FP16 | 8 路稳定 / 12 路下降 / 24 路失败 | 一台主机接多个工位；精度与速度数据都在这个模组上实测 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>单工位质检主机 | Orin GPU | YOLOX-Tiny 640²，TensorRT FP16 | 单路，67 h 长稳 | 单个工位 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>多工位聚合质检主机 | Orin GPU | YOLOX-Tiny 640²，TensorRT FP16 | 8 路稳定 / 12 路下降 / 24 路失败 | 一台主机接多个工位；精度与速度数据都在这个模组上实测 |
 
 多路容量：每路 640² / 10 fps，每级跑 5 分钟，整轮跑两遍，测试期间 MQTT 与 Modbus 关闭。两个出口都开时，可带路数低于 8。
 

@@ -1,5 +1,6 @@
 ---
 description: Documentación de conceptos fundamentales y arquitectura de Reachy Mini que abarca sistemas de coordenadas, límites de seguridad, modos de motor y arquitectura de software.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Conceptos Fundamentales y Arquitectura
 slug: /reachymini_sdk_core-concept
 keywords:

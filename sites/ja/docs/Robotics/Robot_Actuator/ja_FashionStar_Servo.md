@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、FashionStarサーボモーターのチュートリアルを提供します。
+description: "FashionStar シリアルバスサーボの完全ガイド：モデルと仕様、配線、ID 設定、位置・速度・トルク制御、ロボットアーム向け Python サンプル。"
 title: FashionStar
 keywords:
   - アクチュエータ

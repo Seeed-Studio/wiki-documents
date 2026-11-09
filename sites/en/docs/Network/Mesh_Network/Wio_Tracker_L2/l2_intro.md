@@ -9,10 +9,10 @@ slug: /meshtastic_wio_tracker_l2_intro
 sku: 100029766
 sidebar_position: 0
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-11'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/
 ---
 
@@ -107,7 +107,7 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**Audio**</td>
-    <td colspan="1">I2S Codec: ES8311</td>
+    <td colspan="1">I2S Codec</td>
   </tr>
   <tr>
     <td colspan="1">MIC</td>
@@ -121,7 +121,7 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
   </tr>
     <tr>
     <td colspan="1">**Dimension**</td>
-    <td colspan="1">(Antenna folded) L: 87.5 cm, W: 69 cm, H: 26.6 cm</td>
+    <td colspan="1">(Antenna folded) L: 87.5 mm, W: 69 mm, H: 26.6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**Device Weight**</td>
@@ -147,6 +147,10 @@ The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtast
 |**Device Power Input**|5V, 1A|
 |**Fully-charged cut-off voltage**|4.2V|
 |**Charging Temperature Limit**|0 to +45℃|
+
+**Power Consumption**
+
+For detailed power consumption data and estimated battery life under different configurations (screen mode, LoRa frequency band and modem preset, GPS usage, etc.), please refer to the [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
 
 ## Pin List
 

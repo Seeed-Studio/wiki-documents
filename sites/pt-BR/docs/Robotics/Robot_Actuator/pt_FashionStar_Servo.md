@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um tutorial para motores de servo FashionStar.
+description: "Guia completo dos servos de barramento serial FashionStar: modelos e especificações, fiação, configuração de ID, controle de posição/velocidade/torque e exemplos em Python para braços robóticos."
 title: FashionStar
 keywords:
   - atuador

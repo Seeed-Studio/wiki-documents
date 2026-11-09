@@ -1,5 +1,6 @@
 ---
 description: 示例展示Reachy Mini上的不同运动模式和各种运动序列。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 序列演示
 slug: /reachymini_examples_sequence
 keywords:

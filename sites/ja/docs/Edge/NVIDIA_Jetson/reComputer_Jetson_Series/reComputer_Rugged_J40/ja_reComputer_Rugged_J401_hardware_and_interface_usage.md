@@ -6,7 +6,7 @@ keywords:
   - reComputer Rugged J401
   - IP66
   - Jetson
-  - hardware interface
+  - ハードウェアインターフェース
 image: https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png
 slug: /jetson/recomputer_rugged_j401/hardware_and_interface_usage
 aliases:
@@ -27,7 +27,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 <JetsonProductDocNav {...ruggedJ401DocNav} />
 
-この wiki では、reComputer Rugged J40 のさまざまなハードウェアおよびインターフェースを紹介し、それらを使用してプロジェクトのアイデアを拡張する方法を説明します。reComputer Rugged J40 上のほとんどのインターフェースは M12 コネクタを採用しており、IP66 等級の防水・防塵性能と優れた耐振動性を備えています。これにより、船舶への搭載や港湾監視システムなど、過酷な屋外環境での長期運用に適しています。
+この wiki では、reComputer Rugged J40 のさまざまなハードウェアおよびインターフェースを紹介し、それらをどのように活用してプロジェクトのアイデアを拡張できるかを説明します。reComputer Rugged J40 のほとんどのインターフェースは M12 コネクタを採用しており、IP66 等級の防水・防塵性能と優れた耐振動性を備えています。これにより、船舶への搭載や港湾監視システムなど、過酷な屋外環境での長期運用に適しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/1.png" alt="Image" width={800} height="auto" /></p>
 
@@ -77,11 +77,11 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
     </tr>
     <tr>
       <td>Serial</td>
-      <td>1× RS-232/422/485（M12 A コード経由）</td>
+      <td>1× RS-232/422/485 M12 A コード経由</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>2× DI + 2× DO（M12 A コード経由）</td>
+      <td>2× DI + 2× DO M12 A コード経由</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -140,10 +140,10 @@ reComputer Rugged J401 は M12 A コード DC 19–48V 電源インターフェ�
 
 |Pin|用途|タイプ|線色|
 |---|---|---|---|
-|1|DC 電源入力|電源|茶|
-|2|||白|
-|3|グラウンド|グラウンド|青|
-|4|||黒|
+|1|DC 電源入力|電源|Brown|
+|2|||White|
+|3|グラウンド|グラウンド|Blue|
+|4|||Black|
 
 ## ディスプレイ
 
@@ -155,7 +155,7 @@ reComputer Rugged J401 は M12 A コード DC 19–48V 電源インターフェ�
 
 reComputer Rugged J401 には M.2 Key E インターフェースが搭載されており、これを通じてデバイスの Bluetooth および Wi-Fi 機能を拡張できます。Intel Dual Band RTL8822CE Wireless NIC の使用を推奨します。
 
-M.2 Key M は、高速ソリッドステートドライブ（SSD）向けに設計されたインターフェースであり、超高速なデータ転送速度を提供し、高性能アプリケーションに最適です。
+M.2 Key M は、高速ソリッドステートドライブ（SSD）向けに設計されたインターフェースであり、超高速なデータ転送速度を提供し、高い性能を必要とするアプリケーションに最適です。
 
 インターフェースの位置は以下の図のとおりです。
 
@@ -163,11 +163,11 @@ M.2 Key M は、高速ソリッドステートドライブ（SSD）向けに設�
 
 ### **使用手順**
 
-付属の SSD を取り外して新しい SSD を取り付ける場合は、お使いの SSD が次の 2 つの条件を満たしていることを確認する必要があります。
+付属の SSD を取り外して新しい SSD を取り付ける場合は、お使いの SSD が次の 2 つの条件を満たしていることを確認してください。
 
-- **M.2 Key M スロット（x4 PCIe Gen3）** インターフェースをサポートしていること。
+- **M.2 Key M スロット（x4 PCIe Gen3）** インターフェースに対応していること。
 
-- **2242** サイズ仕様に準拠していること。
+- **2280** サイズ仕様に準拠していること。
 
 
 
@@ -215,11 +215,11 @@ M.2 Key B スロットは、Nano SIM カードホルダー付きの 4G/5G セル
 lsusb 
 ```
 
-このコマンドは、システムに接続されているすべての USB デバイスの一覧を、メーカー（ID）、種類、その他の情報とともに表示します。たとえば、出力に Quectel Wireless Solutions Co., Ltd. EM12-G というデバイスが表示されれば、5G モジュールが存在していることを示します。
+このコマンドは、システムに接続されているすべての USB デバイスの一覧を、メーカー（ID）、種類、その他の情報とともに表示します。たとえば、出力に Quectel Wireless Solutions Co., Ltd. EM12-G などと表示されていれば、5G モジュールが存在していることを示します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/11.png" alt="Image" width={800} height="auto" /></p>
 
-**ステップ 2.** ドライバのロードを確認
+**ステップ 2.** ドライバのロード確認
 
 5G モジュールに必要な option ドライバがロードされていることを確認することが重要です。lsmod コマンドを使用して確認できます。
 
@@ -240,7 +240,7 @@ sudo apt install modemmanager
 sudo systemctl restart ModemManager 
 ```
 
-apt install コマンドは ModemManager パッケージのインストールに使用され、systemctl restart は ModemManager サービスを再起動して新しい設定が有効になるようにします。
+apt install コマンドは ModemManager パッケージのインストールに使用され、systemctl restart は ModemManager サービスを再起動して、新しい設定が有効になるようにします。
 
 **ステップ 4.** モジュール認識の確認
 
@@ -256,13 +256,13 @@ mmcli -L
 
 **ステップ 5.** APN の設定
 
-APN（Access Point Name）は、モバイルデバイスをネットワークに接続するために重要です。ここでは nmcli コマンドを使用してベアラープロファイルを作成します。中国移動通信（China Mobile）を例に、次のコマンドで設定ファイルを作成できます。
+APN（Access Point Name）は、モバイルデバイスをネットワークに接続するために重要な設定です。ここでは nmcli コマンドを使用してベアラープロファイルを作成します。中国移動通信（China Mobile）を例に、次のコマンドで設定ファイルを作成できます。
 
 ```Bash
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
 
-このコマンドは、新しい GSM（Global System for Mobile Communications）タイプの接続を追加し、APN を「CMNET」に指定し、IPv4 の自動設定を使用します。
+このコマンドは、新しい GSM（Global System for Mobile Communications）タイプの接続を追加し、APN を「CMNET」と指定し、IPv4 自動設定を使用します。
 
 **ステップ 6.** 接続の有効化
 
@@ -298,11 +298,11 @@ mmcli -m 0
 
 ## Ethernet
 
-reComputer Rugged J401 は、1× 標準ギガビット Ethernet（10/100/1000M）RJ45 ポート（J35）と、4× ギガビット PSE（Power Sourcing Equipment）RJ45 ポート（J36–J39）を提供します。標準ギガビットポートは一般的なネットワーク接続に使用されます。PSE ポートは IEEE 802.3af/at 規格をサポートしており、IP カメラや無線アクセスポイントなど接続されたデバイスに対して、Ethernet 経由で最大 1 ポートあたり 15.4W（802.3af）の電力供給を可能にします。これにより、産業用途、AMR、および屋外エッジコンピューティング用途に最適で、別途電源配線を行う必要がありません。すべてのギガビットポートは Jetson Orin モジュール内の PCIe コントローラから供給されており、10/100/1000M のオートネゴシエーションをサポートします。
+reComputer Rugged J401 は、1x 標準 Gigabit Ethernet (10/100/1000M) RJ45 ポート (J35) と 4x Gigabit PSE (Power Sourcing Equipment) RJ45 ポート (J36–J39) を備えています。標準 Gigabit ポートは一般的なネットワーク接続に使用されます。PSE ポートは IEEE 802.3af/at 規格をサポートしており、IP カメラや無線アクセスポイントなど接続されたデバイスに対して Ethernet 経由で電力を供給でき、ポートあたり最大 15.4W（802.3af）の出力が可能です。これにより、産業用途、AMR、および屋外エッジコンピューティング用途に最適で、別途電源ケーブルを敷設する必要がなくなります。すべての Gigabit ポートは Jetson Orin モジュール内の PCIe コントローラから供給されており、10/100/1000M のオートネゴシエーションをサポートします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/16.jpg" alt="Image" width={800} height="auto" /></p>
 
-Linux のネットワークデバイス名は、以下に示すように物理 Ethernet ポートに対応しています。画像と同じ向きから Ethernet コネクタを見た場合、左から右への対応は `eth4`、`eth2`、`eth1`、`eth0`、`eth3` となります。
+Linux のネットワークデバイス名は、以下に示すように物理 Ethernet ポートに対応しています。Ethernet コネクタを画像と同じ向きから見た場合、左から右への対応は `eth4`、`eth2`、`eth1`、`eth0`、`eth3` となります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/jetson/rugged-ethernet-Interface.png" alt="Mapping between Linux Ethernet device names and physical ports on reComputer Rugged J401" width={900} height="auto" /></p>
 
@@ -314,14 +314,14 @@ Linux のネットワークデバイス名は、以下に示すように物理 E
 | 右から 2 番目 | `eth0` |
 | 右から 1 番目 | `eth3` |
 
-各 Ethernet ポートのネゴシエートされた帯域幅と物理リンク状態を確認するには `ethtool` を使用します。コマンドが利用できない場合は、まずインストールしてください：
+各 Ethernet ポートのネゴシエートされた帯域幅と物理リンク状態を確認するには `ethtool` を使用します。コマンドが利用できない場合は、まずインストールします：
 
 ```bash
 sudo apt update
 sudo apt install -y ethtool
 ```
 
-次のコマンドを実行すると、5 つすべての物理 Ethernet インターフェースについて、速度、デュプレックスモード、自動ネゴシエーション状態、およびリンク状態が表示されます：
+次のコマンドを実行して、5 つすべての物理 Ethernet インターフェースの速度、デュプレックスモード、オートネゴシエーション状態、およびリンク状態を表示します：
 
 ```bash
 for interface in eth0 eth1 eth2 eth3 eth4; do
@@ -331,7 +331,7 @@ done
 ```
 
 :::note
-`Speed` には `1000Mb/s` のようにネゴシエートされたリンク帯域幅が表示されます。`Duplex` は通常 `Full` と表示されるはずで、`Link detected: yes` は対応する物理ポートにアクティブな接続があることを示します。切断されたポートでは `Speed: Unknown!` や `Link detected: no` と表示される場合があります。
+`Speed` は `1000Mb/s` のようなネゴシエートされたリンク帯域幅を示します。`Duplex` は通常 `Full` と表示されるはずで、`Link detected: yes` は対応する物理ポートにアクティブな接続があることを示します。未接続のポートは `Speed: Unknown!` や `Link detected: no` と表示される場合があります。
 :::
 
 ## 使用手順
@@ -341,9 +341,9 @@ done
   <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connect.png" alt="" />
 </div>
 
-### PoE 出力を有効化する
+### PoE 出力の有効化
 
-4 つの PSE ポート（J36–J39）は、オンボードの PSE コントローラによって給電されますが、これは**デフォルトでは無効**になっています。標準システムではこれを有効にするものは何もないため、J36–J39 にカメラを接続しても、PSE 電源イネーブルラインが High に駆動され、**High のまま維持**されるまで電源は供給されません。
+4 つの PSE ポート (J36–J39) は、オンボードの PSE コントローラによって駆動されますが、これは**デフォルトでは無効**になっています。標準状態のシステムではこれを有効化するものは何もないため、J36–J39 にカメラを接続しても、PSE 電源イネーブルラインが High に**駆動され、かつ High のまま維持される**まで電源は供給されません。
 
 | 信号 | GPIO | 方向 | 意味 |
 | --- | --- | --- | --- |
@@ -374,13 +374,13 @@ sudo gpioget gpiochip2 0 1
 1 0
 ```
 
-`1 0` は `PSE_PG=1`（電源正常）かつ `PSE_INTB=0`（フォルトなし）を意味します。`PSE_PG` が `0` のままの場合、電力は供給されていません。ケーブルとカメラ自体の電源要件（802.3af ではポートあたり 15.4 W）を確認してください。`PSE_INTB` が `1` を示す場合、コントローラがフォルトをラッチしています — 負荷を外し、電源を再投入してから再度確認してください。
+`1 0` は `PSE_PG=1`（電源正常）かつ `PSE_INTB=0`（フォルトなし）を意味します。`PSE_PG` が `0` のままの場合は電力が供給されていません。ケーブルとカメラ自体の電源要件（802.3af ではポートあたり 15.4 W まで）を確認してください。`PSE_INTB` が `1` を示す場合、コントローラがフォルトをラッチしています — 負荷を外し、電源を再投入してから再度確認してください。
 
-**重要:** レベルが駆動されるのは `gpioset` プロセスが生存している間だけです。キャラクタデバイス経由で要求された GPIO ラインは、それを保持している最後のプロセスが終了するとデフォルト状態に戻ります。これは `gpioset --help` に明示されています。そのため、コマンドを実行してすぐに戻ってしまうと、PSE は**オンのままにはなりません**。再起動後、またはプロセスが kill された場合、カメラへの電源は失われ、リンクはダウンします。
+**重要：**レベルが駆動されるのは `gpioset` プロセスが生存している間だけです。キャラクタデバイス経由で要求された GPIO ラインは、それを保持している最後のプロセスが終了するとデフォルト状態に戻ります。これは `gpioset --help` に明示されています。そのため、コマンドを実行してすぐに戻ってしまうだけでは、PSE をオンのまま**維持できません**。再起動後、またはプロセスが kill された場合、カメラへの電源は失われ、リンクはダウンします。
 
 #### 再起動後も PSE をオンに保つ（オプション）
 
-同じホールド処理を systemd ユニットにまとめ、毎回のブート時に適用され、終了した場合は自動的に再起動されるようにします：
+同じホールド処理を systemd ユニットにラップし、毎回のブート時に適用され、終了した場合は自動的に再起動されるようにします：
 
 ```bash
 sudo tee /etc/systemd/system/poe-pse-hold.service >/dev/null <<'EOF'
@@ -406,7 +406,7 @@ systemctl status poe-pse-hold --no-pager
 
 ### 2 台の PoE カメラを起動する
 
-PSE 出力が有効になっていれば、外部 PoE インジェクタなしで 2 台のカメラに電源を供給し、アクセスできます。手動で立ち上げるには 3 つのステップが必要です。
+PSE 出力が有効になっていれば、外部 PoE インジェクタなしで 2 台のカメラに電力を供給し、アクセスできます。手動で立ち上げるには 3 つのステップが必要です。
 
 **ステップ 1.** 実際にカメラが接続されているポートを特定します。5 つの Gigabit ポートは `eth0`–`eth4` として列挙されます。どのインデックスがどのコネクタに対応するかを決め打ちするのではなく、carrier フラグを読み取ります：
 
@@ -416,7 +416,7 @@ for i in eth0 eth1 eth2 eth3 eth4; do
 done
 ```
 
-**ステップ 2.** カメラの起動が完了するまで待ちます（PSE 電源が入ってから 30〜60 秒）。その後、Jetson 側のポートを各カメラと同じサブネットに設定します：
+**ステップ 2.** カメラの起動が完了するまで待ちます（PSE 電源が入ってから 30～60 秒）。その後、Jetson 側のポートを各カメラと同じサブネットに設定します：
 
 ```bash
 sleep 45
@@ -436,7 +436,7 @@ ip -br addr show eth1
 ip -br addr show eth2
 ```
 
-**期待される出力：** 両方の ping が `0% packet loss` を報告し、各ポートは割り当てたアドレス付きで `UP` と表示されます：
+**期待される出力：**両方の ping が `0% packet loss` を報告し、各ポートが割り当てたアドレス付きで `UP` と表示されます：
 
 ```text
 eth1             UP             192.168.10.100/24
@@ -445,8 +445,8 @@ eth2             UP             192.168.20.100/24
 
 注意：
 
-- 各カメラは設定されたアドレスを保持します。アドレスが分からない場合は、そのカメラが属するはずのサブネットにポートを設定し、ping スイープで探してください。
-- `PSE_PG=1` の間もポートが `carrier=0` のままの場合、そのカメラは電力を消費していないか、防水コネクタが最後まで差し込まれていません。
+- 各カメラは設定されたアドレスを保持します。アドレスが分からない場合は、そのカメラが属するべきサブネットにポートを設定し、ping スイープで探してください。
+- `PSE_PG=1` の間ずっとポートが `carrier=0` のままの場合、そのカメラは電力を消費していないか、防水コネクタが最後まで差し込まれていません。
 - 上記のアドレスは 2 台のカメラ構成から取った例です。ご自身のカメラのサブネットを使用してください。`ip addr add` は再起動後に保持されません — 再起動後も設定を維持する必要がある場合は、NetworkManager または `systemd-networkd` でポートを設定してください。
 
 ```bash
@@ -456,7 +456,7 @@ for ip in $(seq 2 254); do ping -c1 -W1 192.168.10.$ip >/dev/null 2>&1 && echo "
 
 ### デュアルカメラのライブプレビュー
 
-両方の RTSP ストリームを同時に表示でき、それぞれを別々の GStreamer ウィンドウに表示します。1 つ目のウィンドウには GPU/EGL パスを、2 つ目のウィンドウには X11/Xv パスを使用してください。このプラットフォームでは、2 つの EGL ベースのシンクを同時に動作させると EGL ディスプレイがクラッシュする可能性があります。
+両方の RTSP ストリームを同時に表示でき、それぞれを別々の GStreamer ウィンドウに表示します。1 つ目のウィンドウには GPU/EGL パスを、2 つ目のウィンドウには X11/Xv パスを使用します。このプラットフォームでは、2 つの EGL ベースのシンクを同時に動作させると EGL ディスプレイがクラッシュする可能性があります。
 
 ```bash
 # Window A - GPU/EGL path
@@ -475,11 +475,11 @@ nohup env DISPLAY=:0 XAUTHORITY=/home/seeed/.Xauthority gst-launch-1.0 \
 ```
 
 - `<user>:<password>` をご自身のカメラの認証情報に置き換え、IP アドレスも上で確認したものに置き換えてください。
-- `DISPLAY=:0` と `XAUTHORITY=/home/seeed/.Xauthority` は、SSH 経由でコマンドを起動する場合に必要です。デスクトップユーザーが `seeed` でない場合はパスを調整してください。JetPack デスクトップセッション内のターミナルから実行する場合はどちらも不要です。
-- `protocols=tcp` を使用しているのは、産業用ネットワークでは RTSP over UDP がブロックされたりロスが多かったりすることが多く、`latency=200` によってストリームに 200 ms のジッタバッファを与えるためです。
-- ここでテストしたカメラは **H.265** を配信します。ご自身のカメラを確認し、H.264 の場合は depayloader/パーサのペアを入れ替えてください。
-- 最初のフレームが表示されるまで数秒かかります（RTSP ハンドシェイク、デコーダのウォームアップ、カメラのキーフレーム間隔）。ウィンドウが黒いままの場合は、`/tmp/camA_disp.log` または `/tmp/camB_disp.log` を確認してください。
-- プレビューを停止するには `pkill -f "gst-launch-1.0.*rtspsrc"` を実行するか、両方を同じシェルから起動した場合は `kill %1 %2` を実行します。
+- `DISPLAY=:0` と `XAUTHORITY=/home/seeed/.Xauthority` は、コマンドを SSH 経由で実行する場合に必要です。デスクトップユーザーが `seeed` でない場合はパスを調整してください。JetPack デスクトップセッション内のターミナルから実行する場合はどちらも不要です。
+- `protocols=tcp` は、産業用ネットワークでは RTSP over UDP がブロックされたりロスが多かったりすることがよくあるため使用しており、`latency=200` はストリームに 200 ms のジッタバッファを与えます。
+- ここでテストしたカメラは **H.265** でストリーミングします。ご自身のカメラを確認し、H.264 の場合は depayloader/parser のペアを入れ替えてください。
+- 最初のフレームが表示されるまで数秒かかります（RTSP ハンドシェイク、デコーダのウォームアップ、およびカメラのキーフレーム間隔のため）。ウィンドウが黒いままの場合は、`/tmp/camA_disp.log` または `/tmp/camB_disp.log` を確認してください。
+- プレビューを停止するには `pkill -f "gst-launch-1.0.*rtspsrc"` を実行するか、同じシェルから両方を起動した場合は `kill %1 %2` を実行します。
 
 ストリームのコーデックを確認するには：
 
@@ -492,13 +492,13 @@ timeout 20 gst-launch-1.0 -v rtspsrc location="rtsp://<user>:<password>@192.168.
   <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_poe.png" alt="" />
 </div>
 
-H.264 カメラの場合は、`rtph265depay ! h265parse` の代わりに `rtph264depay ! h264parse` を使用してください。それ以外のパイプラインは変更しません。
+H.264 カメラの場合は、`rtph265depay ! h265parse` の代わりに `rtph264depay ! h264parse` を使用します。それ以外のパイプラインは変更しません。
 
 ## USB
 
-reComputer Rugged J401 は、4 つの USB 3.2 Type-A ポート（内部 USB 3.1 Gen1 ハブ経由で、高速な周辺機器、ストレージデバイス、カメラを接続するために最大 5Gbps のデータレートをサポート）と、1 つの USB 2.0 Type-C デバッグポート（シリアルコンソールとして機能し、システムログへのアクセス、ブート問題のデバッグ、ファームウェア更新の実行に使用）を提供します。
+reComputer Rugged J401 は、4x USB 3.2 Type-A ポート（内部 USB 3.1 Gen1 ハブ経由で、高速な周辺機器、ストレージデバイス、カメラなどを接続するために最大 5Gbps のデータレートをサポート）と、1x USB 2.0 Type-C デバッグポート（シリアルコンソールとして機能し、システムログへのアクセス、ブート問題のデバッグ、ファームウェア更新の実行に使用）を提供します。
 
-### USB-A 速度テスト
+### USB-A スピードテスト
 
 USB デバイスの速度をテストするスクリプトを作成します：
 
@@ -544,7 +544,7 @@ rm -f "$TEST_FILE"
 EOF
 ```
 
-Esc を押して挿入モードを終了し、その後 `:w` と入力して Enter を押してスクリプトを保存し、プロセスを終了します。
+Esc を押して挿入モードを終了し、`:w` と入力して Enter を押してスクリプトを保存し、その後プロセスを終了します。
 
 スクリプトに実行権限を与えてテストします：
 
@@ -567,7 +567,7 @@ sudo chmod +x test_usb.sh
 
 Windows に Silicon Labs CP210x Universal Windows VCP Driver をインストールします。
 
-デバイスマネージャーで、シリアルデバイスに割り当てられた COM ポートを探して確認します
+デバイスマネージャーで、シリアルデバイスに割り当てられた COM ポートを探して確認します。
 
 （スクリーンショットでは COM8）。
 
@@ -586,7 +586,7 @@ python -m serial.tools.miniterm COM8 115200
 
 ## RTC
 
-reComputer Rugged J401 には、バッテリーバックアップ付きのハードウェア RTC が搭載されており、正確な時刻管理が可能です。CR1220 および CR1225 コイン型電池に対応しています。
+reComputer Rugged J401 には、バッテリーバックアップ付きのハードウェア RTC が搭載されており、正確な時刻保持が可能です。CR1220 および CR1225 コイン型電池に対応しています。 
 
 ### ハードウェア接続
 
@@ -594,7 +594,7 @@ reComputer Rugged J401 には、バッテリーバックアップ付きのハー
 
 ### 使用手順
 
-**ステップ 1.** 上述のように RTC バッテリーを接続します。
+**ステップ 1.** 上記のように RTC バッテリーを接続します。
 
 **ステップ 2.** reComputer Rugged J401 の電源を入れます。
 
@@ -616,7 +616,7 @@ cat /sys/devices/platform/bpmp/bpmp:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/tim
 
 ## CAN
 
-NVIDIA Jetson Orin Nano/NX モジュールは、ネイティブ CAN コントローラ（[Controller Area Network (CAN) — NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/HR/ControllerAreaNetworkCan.html)）を 1 つだけ提供します。2 つ目の CAN インターフェースを取得するには、MCP2518FDT-E などの外部 CAN コントローラが必要です。2 つ目の CAN ポートを有効にするには、`sudo modprobe mttcan` でドライバをロードします。
+NVIDIA Jetson Orin Nano/NX モジュールは、ネイティブ CAN コントローラ（[Controller Area Network (CAN) — NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/HR/ControllerAreaNetworkCan.html)）を 1 つだけ提供します。2 つ目の CAN インターフェースを取得するには、MCP2518FDT-E のような外部 CAN コントローラが必要です。2 つ目の CAN ポートを有効にするには、`sudo modprobe mttcan` でドライバをロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-1.jpg" alt="Image" width={800} height="auto" /></p>
 
@@ -669,7 +669,7 @@ CAN1 の送信：
 
 #### CAN ループバックテスト
 
-CAN0 と CAN1 を相互接続して、ボードレベルのループバックテストを行うこともできます。2 つの CAN バス（`CAN0_H` と `CAN1_H`、`CAN0_L` と `CAN1_L`）を物理的に短絡し、両側のオンボード 120 Ω 終端抵抗を有効にしてから、2 つのインターフェース間の双方向通信を検証します。
+ボードレベルのループバックテストとして、CAN0 と CAN1 を相互に接続することもできます。2 つの CAN バス（`CAN0_H` と `CAN1_H`、`CAN0_L` と `CAN1_L`）を物理的に短絡し、両側のオンボード 120 Ω 終端抵抗を有効にしてから、2 つのインターフェース間の双方向通信を検証します。
 
 3 つのターミナルを開き、次のコマンドを実行します。
 
@@ -714,13 +714,13 @@ ip -d -s link show can0
 ip -d -s link show can1
 ```
 
-配線と終端が正しければ、一方のインターフェースで生成されたフレームはもう一方のインターフェースで受信され、TX/RX カウンタがそれに応じて増加します。
+配線と終端が正しければ、一方のインターフェースで生成されたフレームはもう一方のインターフェースで受信され、TX/RX カウンタがそれに応じて増加するはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/can-4.png" alt="Image" width={800} height="auto" /></p>
 
 ## DI/DO
 
-reComputer Rugged J401 の DI/DO インターフェースは、CAN インターフェースと共用で J47 2x10P コネクタに統合されています。2 チャンネルのデジタル入力と 2 チャンネルのデジタル出力をサポートし、安定した信号伝送と産業グレードの電圧適応を備えており、デジタルセンサ、リレー、その他の周辺機器の接続に適しています。
+reComputer Rugged J401 の DI/DO インターフェースは、CAN インターフェースと共用の J47 2x10P コネクタに統合されています。2 チャンネルのデジタル入力と 2 チャンネルのデジタル出力をサポートし、安定した信号伝送と産業グレードの電圧適応を備えており、デジタルセンサ、リレー、その他の周辺機器の接続に適しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/24.png" alt="Image" width={500} height="auto" /></p>
 
@@ -758,17 +758,17 @@ sudo gpioset --mode=wait 0 106=0
 sudo gpioset --mode=wait 0 43=0
 ```
 
-DO を High にする前：
+DO を High に引き上げる前：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/26.png" alt="Image" width={800} height="auto" /></p>
 
-DO を High にした後：
+DO を High に引き上げた後：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/27.png" alt="Image" width={800} height="auto" /></p>
 
 #### **デジタル入力（DI）の操作**
 
-`gpioget` コマンドを使用して DI チャンネルの入力レベルを読み取ります（戻り値 `1` = High レベル、`0` = Low レベル）ことで、周辺機器の状態を取得します。
+`gpioget` コマンドを使用して DI チャンネルの入力レベル（戻り値 `1` = High レベル、`0` = Low レベル）を読み取り、周辺機器の状態を取得します。
 
 ```PowerShell
 # Read DI_12V_1 (gpiochip0 105) status
@@ -792,7 +792,7 @@ UART インターフェースチャンネル
 
 SW3 スイッチを切り替えることで、RS232、RS485、RS422 モードを切り替えます。
 
-注意：スイッチを押し下げた状態（ON）のときビットは 0、押されていないときビットは 1 です
+注意：スイッチを押し下げた状態（ON）のときビットは 0、押されていないときビットは 1 です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/rugged_J401/interface/29.png" alt="Image" width={500} height="auto" /></p>
 
@@ -800,11 +800,11 @@ SW3 スイッチを切り替えることで、RS232、RS485、RS422 モードを
 |---|---|---|---|---|
 |0|0|0|RS-422 フルデュプレックス|1T/1R RS-422|
 |0|0|1|純粋な RS-232|3T/5R RS-232|
-|0|1|0|RS-485 ハーフデュプレックス|1T/1R RS-485, TX ENABLE <br />Low Active|
-|0|1|1|RS-485 ハーフデュプレックス|1T/1R RS-485, TX ENABLE High Active|
+|0|1|0|RS-485 ハーフデュプレックス|1T/1R RS-485, TX ENABLE <br />Low アクティブ|
+|0|1|1|RS-485 ハーフデュプレックス|1T/1R RS-485, TX ENABLE High アクティブ|
 |1|0|0|RS-422 フルデュプレックス|終端抵抗付き RS-422|
-|1|0|1|RS-232|1T/1R RS-232 はバススイッチなしで RS485 アプリケーションと共存可能（特殊用途向け）|
-|1|1|0|RS-485|終端抵抗付き 1T/1R RS-485, TX ENABLE Low Active|
+|1|0|1|RS-232|1T/1R RS-232、バススイッチバスを必要とせず RS485 アプリケーションと共存（特殊用途向け）|
+|1|1|0|RS-485|終端抵抗付き 1T/1R RS-485、TX ENABLE Low アクティブ|
 |1|1|1|シャットダウン|すべての I/O ピンは高インピーダンス|
 
 
@@ -817,7 +817,7 @@ SW3 スイッチを切り替えることで、RS232、RS485、RS422 モードを
 
 ### 使用手順
 
-Dupont ワイヤーを使用して、対象となる SPI チャンネルのコアピン（ここでは /dev/spidev0.0 を例とします）を接続します：MOSI ピンをその MISO ピンに接続し（データのループバック送受信を実現します）。
+Dupont ワイヤーを使用して、対象 SPI チャンネルのコアピンを接続します（/dev/spidev0.0 を例とします）：MOSI ピンをその MISO ピンに接続します（データのループバック送受信を実現します）。  
 
 配線図は次のとおりです：
 
@@ -825,13 +825,13 @@ Dupont ワイヤーを使用して、対象となる SPI チャンネルのコ�
 
 **ステップ 1: SPI カーネルモジュールをロードする（前提条件）**
 
-SPI インターフェースを操作する前に、`spidev` カーネルモジュールがロードされていることを確認します（デフォルトのシステムでは事前にロードされている場合がありますが、手動で確認することを推奨します）：
+SPI インターフェースを操作する前に、`spidev` カーネルモジュールがロードされていることを確認します（デフォルトのシステムでは事前にロードされている場合がありますが、手動で確認することを推奨します）:
 
 ```Bash
 sudo modprobe spidev
 ```
 
-コマンド実行時にエラーが表示されなければ、モジュールは正常にロードされています。すでにロード済みの場合は、コマンドは何も情報を返しませんが、これは正常な動作です。
+コマンド実行時にエラーメッセージが表示されなければ、モジュールが正常にロードされたことを意味します。すでにロードされている場合、コマンドは何も返しませんが、これは正常な動作です。
 
 **ステップ 2: SPI デバイスノードを確認する**
 
@@ -853,7 +853,7 @@ cd spidev-test
 gcc spidev_test.c -o spidev_test
 ```
 
-**ステップ 4: SPI テストプログラムの実行**
+**ステップ 4: SPI テストプログラムを実行する**
 
 ターミナルで次のコマンドを入力して SPI テストプログラムを実行します（`/dev/spidev2.0` を例とします）：
 
@@ -861,7 +861,7 @@ gcc spidev_test.c -o spidev_test
 sudo ./spidev_test -v -D /dev/spidev0.0 -s 100000 -p "Hello SPI"
 ```
 
-**ステップ 5: テスト結果の確認**
+**ステップ 5: テスト結果を確認する**
 
 テストコマンドを実行した後、ターミナル上で SPI0.0 インターフェースのデータ送受信状況を確認できます。主な出力は次のとおりです：
 
@@ -883,13 +883,13 @@ Rugged J401 は J8 2x10 ピンコネクタを介して I2C インターフェー
 
 I2C デバイスをキャリアボード上の I2C インターフェースに接続します：
 
-- Ground -> Ground（ピン 1）
+- Ground -> Ground (Pin 1)
 
-- SDA -> SDA（ピン 16）
+- SDA -> SDA (Pin 16)
 
-- SCL -> SCL（ピン 14）
+- SCL -> SCL (Pin 14)
 
-- VCC -> 3V3（ピン 20）
+- VCC -> 3V3 (Pin 20)
 
 ### **使用手順**
 
@@ -929,7 +929,7 @@ sudo i2cdetect -y -r 1
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

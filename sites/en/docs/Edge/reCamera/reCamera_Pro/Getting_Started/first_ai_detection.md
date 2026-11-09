@@ -11,7 +11,7 @@ slug: /recamera_pro_getting_started
 sku: 10003420
 sidebar_position: 1
 last_update:
-  date: 09/21/2026
+  date: 10/15/2026
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_getting_started/
 createdAt: '2026-09-21'
@@ -28,6 +28,12 @@ This guide takes you from an unboxed reCamera Pro to a live video preview with A
 4. [Confirm AI detection is working](#4-confirm-ai-detection-is-working)
 
 {/* TODO(verify): add a "detection success" screenshot showing the live preview with a bounding box overlaid on a person, and confirm which model ships preloaded on current firmware and which firmware versions this first-login flow applies to. */}
+
+## Guide video
+
+Watch this quick-start video for an overview of the full setup flow before you begin:
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/cQpdKcCFZys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 1. Connect the hardware
 

@@ -9,10 +9,10 @@ slug: /x1_get_started_for_meshtastic
 sku: 100087698
 sidebar_position: 1
 last_update:
-  date: 7/13/2026
-  author: Michelle Huang
+  date: 10/30/2026
+  author: Advent Jiang
 createdAt: '2026-07-13'
-updatedAt: '2026-09-22'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -466,7 +466,7 @@ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 ### How to reboot the device
 
-Press and hold the button, then connect the charging cable.
+Press and hold the button, then connect the charging cable, and release the button immediately.
 
 ### Temperature Reading Accuracy
 
@@ -477,6 +477,16 @@ The temperature data is read from barometer, rather than reading from an indepen
 You can calculate the power consumption through the [Power Consumption Table](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK). This device is equipped with a high-voltage battery. When the battery power is low, it will accelerate the discharge process. This device is equipped with a high-voltage battery. When the battery power is low, it will accelerate the discharge process. So you will notice that the device consumes power very rapidly when it is on low battery.
 
 ## Troubleshooting
+
+### Firmware Update Failed / OTA Recovery
+
+If your SenseCAP MeshTracker X1 fails to start, becomes unresponsive, or the white ⚪️ LED stays solid on after a firmware update, the device may be stuck in DFU mode. Try the following:
+
+1. Force a reboot to exit DFU mode: disconnect the USB charging cable, press and hold the device button, connect the USB charging cable, and release the button immediately. Do not keep holding the button — holding it for more than 3 seconds after connecting the cable will force the device back into DFU mode.
+2. Check whether the device starts normally. If not, connect the device to your computer with a USB data cable and follow [Step 1: Enter DFU mode](#step-1-enter-dfu-mode), then perform [Step 2: Flash Erase](#step-2-flash-erase) and [Step 3: Flash Firmware](#step-3-flash-firmware) to reinstall the Meshtastic firmware.
+3. If the device still cannot be recovered, follow [Bootloader Installation](#bootloader-installation) to re-flash the bootloader, then reinstall the application firmware.
+
+Do not force a reboot or unplug the USB cable while the firmware is being erased or flashed. If the device cannot enter DFU mode or be detected by your computer, please contact technical support.
 
 ### Device never turns on
 

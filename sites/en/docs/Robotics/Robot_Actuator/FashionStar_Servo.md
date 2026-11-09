@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for FashionStar Servo motors.
+description: "Complete guide to FashionStar serial bus servos: models and specifications, wiring, ID configuration, position/velocity/torque control and Python examples for robotic arms."
 title: FashionStar
 keywords:
   - actuator

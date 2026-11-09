@@ -43,7 +43,7 @@ Este tutorial está organizado en el orden de configuración de hardware y opera
 ## 1. Preparación
 
 ### 1.1 Hardware
-![Lista de hardware](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/01-1-hardware-list-rs-en.webp)
+![Lista de hardware](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/01-1-hardware-list-rs-en.png)
 
 > Los brazos deben estar ensamblados, montados, alimentados y conectados por USB. Si el ensamblaje no está completo, consulta [Paso 1: Ensamblar el brazo](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/).
 
@@ -144,7 +144,7 @@ Las conexiones constan de dos rutas:
 ---
 
 ### 2.2 Montar y conectar el B601 RS (brazo seguidor)
-![Conexión de cables del B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.webp)
+![Conexión de cables del B601 RS](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
 
 #### Paso 4: Montar el B601 RS
 Utiliza sargentos en C para fijar el B601 RS a una mesa plana. Gira suavemente el brazo hacia la izquierda y la derecha para confirmar que la base no se mueve.

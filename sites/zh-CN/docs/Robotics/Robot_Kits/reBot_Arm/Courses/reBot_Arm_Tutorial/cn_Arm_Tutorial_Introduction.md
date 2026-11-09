@@ -11,7 +11,7 @@ keywords:
   - 课程
   - 教程
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_introduction
+slug: /robotics/rebot_physical_ai_course_introduction
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -20,7 +20,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-17'
 updatedAt: '2026-10-09'
-url: https://wiki.seeedstudio.com/cn/rebot_physical_ai_course_introduction/
+url: https://wiki.seeedstudio.com/cn/robotics/rebot_physical_ai_course_introduction/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -102,7 +102,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第一阶段：基本概念与教具准备
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_1">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_1">
     <span className="course-index">1</span>
     <div className="course-path-copy">
       <strong>认识机器人与具身智能</strong>
@@ -110,7 +110,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_2">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_2">
     <span className="course-index">2</span>
     <div className="course-path-copy">
       <strong>认识机械臂硬件与开源项目 reBot Arm</strong>
@@ -118,7 +118,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论与实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_3">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_3">
     <span className="course-index">3</span>
     <div className="course-path-copy">
       <strong>后续课程需要的硬件选择</strong>
@@ -131,7 +131,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第二阶段：机械臂组装与基础控制
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_4">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_4">
     <span className="course-index">4</span>
     <div className="course-path-copy">
       <strong>机械臂与关节执行器的基础</strong>
@@ -139,7 +139,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_5">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_5">
     <span className="course-index">5</span>
     <div className="course-path-copy">
       <strong>CAN 总线与电机通信</strong>
@@ -147,7 +147,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_6">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_6">
     <span className="course-index">6</span>
     <div className="course-path-copy">
       <strong>组装、供电与首次上电</strong>
@@ -155,7 +155,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_7">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_7">
     <span className="course-index">7</span>
     <div className="course-path-copy">
       <strong>MotorBridge 电机控制库</strong>
@@ -163,7 +163,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_8">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_8">
     <span className="course-index">8</span>
     <div className="course-path-copy">
       <strong>使用 Python SDK 控制 reBot Arm</strong>
@@ -176,7 +176,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第三阶段：模仿学习与 LeRobot
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_9">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_9">
     <span className="course-index">9</span>
     <div className="course-path-copy">
       <strong>机器人学习与模仿学习基础</strong>
@@ -184,7 +184,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论与实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_10">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_10">
     <span className="course-index">10</span>
     <div className="course-path-copy">
       <strong>LeRobot 与 reBot Arm 系统架构</strong>
@@ -192,7 +192,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_11">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_11">
     <span className="course-index">11</span>
     <div className="course-path-copy">
       <strong>Leader 与 Follower 校准及遥操作</strong>
@@ -200,7 +200,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_12">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_12">
     <span className="course-index">12</span>
     <div className="course-path-copy">
       <strong>机器人数据集与任务设计</strong>
@@ -208,7 +208,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_13">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_13">
     <span className="course-index">13</span>
     <div className="course-path-copy">
       <strong>相机配置与 LeRobot 数据采集</strong>
@@ -216,7 +216,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_14">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_14">
     <span className="course-index">14</span>
     <div className="course-path-copy">
       <strong>数据集结构与质量检查</strong>
@@ -224,7 +224,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论与实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_15">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_15">
     <span className="course-index">15</span>
     <div className="course-path-copy">
       <strong>ACT 模型与 Action Chunking</strong>
@@ -232,7 +232,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_16">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_16">
     <span className="course-index">16</span>
     <div className="course-path-copy">
       <strong>训练第一个 ACT 策略</strong>
@@ -240,7 +240,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_17">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_17">
     <span className="course-index">17</span>
     <div className="course-path-copy">
       <strong>真机推理、评估与数据迭代</strong>
@@ -253,7 +253,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第四阶段：VLA 与 Isaac GR00T
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_18">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_18">
     <span className="course-index">18</span>
     <div className="course-path-copy">
       <strong>多模态学习与 VLA 基础</strong>
@@ -261,7 +261,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_19">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_19">
     <span className="course-index">19</span>
     <div className="course-path-copy">
       <strong>机器人本体与 GR00T 系统架构</strong>
@@ -269,7 +269,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_20">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_20">
     <span className="course-index">20</span>
     <div className="course-path-copy">
       <strong>准备 reBot VLA 数据集</strong>
@@ -277,7 +277,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_21">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_21">
     <span className="course-index">21</span>
     <div className="course-path-copy">
       <strong>使用 Isaac GR00T 微调 reBot Arm</strong>
@@ -285,7 +285,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_22">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_22">
     <span className="course-index">22</span>
     <div className="course-path-copy">
       <strong>GR00T 推理与真机部署</strong>
@@ -298,7 +298,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第五阶段：机械臂数学与运动控制
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_23">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_23">
     <span className="course-index">23</span>
     <div className="course-path-copy">
       <strong>机械臂数学基础与坐标系</strong>
@@ -306,7 +306,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_24">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_24">
     <span className="course-index">24</span>
     <div className="course-path-copy">
       <strong>正运动学、逆运动学与雅可比矩阵</strong>
@@ -314,7 +314,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_25">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_25">
     <span className="course-index">25</span>
     <div className="course-path-copy">
       <strong>轨迹规划与机械臂控制</strong>
@@ -322,7 +322,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_26">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_26">
     <span className="course-index">26</span>
     <div className="course-path-copy">
       <strong>Pinocchio 与 MeshCat</strong>
@@ -335,7 +335,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第六阶段：机器人视觉与自主抓取
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_27">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_27">
     <span className="course-index">27</span>
     <div className="course-path-copy">
       <strong>机器人视觉与三维感知</strong>
@@ -343,7 +343,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_28">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_28">
     <span className="course-index">28</span>
     <div className="course-path-copy">
       <strong>目标检测与手眼标定</strong>
@@ -351,7 +351,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_29">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_29">
     <span className="course-index">29</span>
     <div className="course-path-copy">
       <strong>reBot Arm 自主视觉抓取</strong>
@@ -359,7 +359,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_30">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_30">
     <span className="course-index">30</span>
     <div className="course-path-copy">
       <strong>语音与多模态交互</strong>
@@ -372,7 +372,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第七阶段：ROS2 与机器人系统集成
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_31">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_31">
     <span className="course-index">31</span>
     <div className="course-path-copy">
       <strong>ROS2 通信与机器人软件架构</strong>
@@ -380,7 +380,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_32">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_32">
     <span className="course-index">32</span>
     <div className="course-path-copy">
       <strong>URDF、TF 与机器人模型</strong>
@@ -388,7 +388,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_33">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_33">
     <span className="course-index">33</span>
     <div className="course-path-copy">
       <strong>reBot Arm ROS2 集成</strong>
@@ -396,7 +396,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_34">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_34">
     <span className="course-index">34</span>
     <div className="course-path-copy">
       <strong>MoveIt2 运动规划</strong>
@@ -409,7 +409,7 @@ import '/src/css/rebot-wiki-style.css';
 ### 第八阶段：MuJoCo 与 Isaac Sim 机械臂仿真
 
 <div className="course-path-grid" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '1.5rem'}}>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_35">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_35">
     <span className="course-index">35</span>
     <div className="course-path-copy">
       <strong>机器人仿真基础与平台介绍</strong>
@@ -417,7 +417,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_36">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_36">
     <span className="course-index">36</span>
     <div className="course-path-copy">
       <strong>在 MuJoCo 中运行 reBot Arm</strong>
@@ -425,7 +425,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_37">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_37">
     <span className="course-index">37</span>
     <div className="course-path-copy">
       <strong>MuJoCo 中的运动学与轨迹控制</strong>
@@ -433,7 +433,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">理论与实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_38">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_38">
     <span className="course-index">38</span>
     <div className="course-path-copy">
       <strong>在 Isaac Sim 中运行 reBot Arm</strong>
@@ -441,7 +441,7 @@ import '/src/css/rebot-wiki-style.css';
     </div>
     <span className="course-tag">实践</span>
   </a>
-  <a className="course-path-item" href="/cn/rebot_physical_ai_course_chapter_39">
+  <a className="course-path-item" href="/cn/robotics/rebot_physical_ai_course_chapter_39">
     <span className="course-index">39</span>
     <div className="course-path-copy">
       <strong>真实机械臂与仿真机械臂同步</strong>

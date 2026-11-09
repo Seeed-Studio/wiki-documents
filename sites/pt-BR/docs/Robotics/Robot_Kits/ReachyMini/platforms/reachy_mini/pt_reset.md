@@ -1,5 +1,6 @@
 ---
 description: Guia para redefinir o Reachy Mini wireless usando o app Reachy Mini Control, Web Bluetooth ou nRF Connect para redefinir o hotspot Wi‑Fi ou o daemon.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Redefinir o Reachy Mini via Bluetooth
 slug: /reachymini_platforms_reachy_mini_reset
 keywords:

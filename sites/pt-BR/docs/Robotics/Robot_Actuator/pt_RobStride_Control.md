@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece o Guia Completo de Controle do Motor RobStride
+description: "Guia completo de controle dos atuadores de acionamento quase direto RobStride: modo MIT, protocolo CAN, ajuste de parâmetros e exemplos do SDK Python para juntas robóticas."
 title: RobStride
 keywords:
   - atuador

@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for Feetech Servo motors.
+description: "Feetech STS/SM 串行总线舵机完整指南：接线、波特率与 ID 设置、校准、位置反馈，以及面向 SO-ARM 与 LeRobot 项目的 Python 控制。"
 title: 飞特舵机
 keywords:
   - actuator

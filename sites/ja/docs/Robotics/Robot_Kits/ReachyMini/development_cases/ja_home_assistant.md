@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の Home Assistant 連携。LAN 自動検出、センサー監視、自動化ブループリントのために、HACS 経由で公式インテグレーションをインストールします。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-home.webp
 title: Home Assistant 連携
 slug: /reachymini_development_cases_home_assistant
 keywords:

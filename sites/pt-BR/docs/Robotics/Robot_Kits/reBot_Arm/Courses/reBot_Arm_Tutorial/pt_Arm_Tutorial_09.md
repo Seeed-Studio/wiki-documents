@@ -9,7 +9,7 @@ keywords:
   - Robot Learning
   - Course
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
-slug: /rebot_physical_ai_course_chapter_9
+slug: /robotics/rebot_physical_ai_course_chapter_9
 displayed_sidebar: RebotCourseSidebar
 translation:
   skip: [zh-CN]
@@ -18,7 +18,7 @@ last_update:
   author: ZhuYaoHui
 createdAt: '2026-09-19'
 updatedAt: '2026-09-25'
-url: https://wiki.seeedstudio.com/pt-br/rebot_physical_ai_course_chapter_9/
+url: https://wiki.seeedstudio.com/pt-br/robotics/rebot_physical_ai_course_chapter_9/
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -44,7 +44,7 @@ import '/src/css/rebot-wiki-style.css';
 
 ### Hardware needed for this stage
 
-What to prepare for this stage. The complete list for every stage is in [Chapter 3](/pt-br/rebot_physical_ai_course_chapter_3/).
+What to prepare for this stage. The complete list for every stage is in [Chapter 3](/pt-br/robotics/rebot_physical_ai_course_chapter_3/).
 
 **Main control unit**
 

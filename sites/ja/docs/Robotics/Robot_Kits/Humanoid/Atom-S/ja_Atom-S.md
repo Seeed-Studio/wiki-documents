@@ -1,5 +1,5 @@
 ---
-description: Atom-S の使用を開始する。
+description: "ヒューマノイドロボット Atom-S を始める方法：開梱、電源投入、初回起動、基本動作、ソフトウェアのセットアップ。"
 title: Atom-S クイックスタート
 keywords:
   - Humanoid
