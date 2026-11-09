@@ -638,6 +638,28 @@ Supported Work Modes: UART
 
 Can easily be changed to use I2C; only one file (RainbowDash.pde) needs to be changed.
 
+## rainbowduino-rs
+
+> **Note:** `rainbowduino-rs` is an independent, community-developed firmware project created by [jecaro](https://github.com/jecaro) for Rainbowduino v2.0. It is not officially maintained or supported by Seeed Studio. Users should verify hardware compatibility before flashing the firmware and use it at their own risk.
+
+![Plasma on a 16x16 square of four boards](https://raw.githubusercontent.com/jecaro/rainbowduino-rs/284b365f7b7f1e9db90c1e7e6695163262a58217/plasma.webp)
+
+Source: [https://github.com/jecaro/rainbowduino-rs](https://github.com/jecaro/rainbowduino-rs)
+
+**Features:**
+
+* Firmware written in Rust
+
+* Receives a full framebuffer over I2C and displays it continuously
+
+* 16 brightness levels (4 bits) per color
+
+* Master library to drive several chained boards as a single display, in any arrangement (e.g. a 32x8 strip or a 16x16 square, with boards upside down)
+
+* Example master firmware for an Arduino Uno
+
+Supported Work Modes: I2C
+
 ## How the Firmware works
 
 <big>Microprocessor - Atmega 168/328</big>
