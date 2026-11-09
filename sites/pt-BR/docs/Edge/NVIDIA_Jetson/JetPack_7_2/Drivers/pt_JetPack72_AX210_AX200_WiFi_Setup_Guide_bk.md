@@ -16,9 +16,16 @@ last_update:
   date: 07/15/2026
   author: Dayu
 createdAt: '2026-07-14'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/pt-br/jetpack72_ax210_ax200_wifi_setup_guide_bk/
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
 
 # Guia de Configuração de Módulo Sem Fio no JetPack 7.2
 
@@ -40,13 +47,13 @@ Este guia se destina a sistemas JetPack 7.2 usando o kernel `6.8.12-1021-tegra`.
 Após atualizar para o JetPack 7.2, você pode ver um ou mais dos seguintes sintomas:
 
 - `lspci` consegue detectar o módulo Wi‑Fi, mas `ip link` não mostra `wlan0`.
-- `dmesg` relata erros de carregamento de firmware de `iwlwifi` ou `rtw89`.
+- `dmesg` relata erros de carregamento de firmware `iwlwifi` ou `rtw89`.
 - `modprobe` relata que o módulo esperado não pode ser encontrado.
 - Carregar o driver manualmente funciona temporariamente, mas o Wi‑Fi desaparece novamente após a reinicialização.
 
 ## Pré-requisitos
 
-- Um dispositivo Seeed Jetson gravado com o JetPack 7.2.
+- Um dispositivo Seeed Jetson gravado com JetPack 7.2.
 - Versão de kernel `6.8.12-1021-tegra`.
 - Um módulo Wi‑Fi M.2 Key E compatível instalado corretamente: Intel AX210, Intel AX200 ou Realtek RTL8852BE.
 - Acesso temporário à Internet por Ethernet, rede USB ou outro adaptador de rede.
@@ -61,7 +68,7 @@ lspci -nnk | grep -A3 -i network
 
 IDs PCI comuns incluem:
 
-| Módulo | Exemplo de ID PCI |
+| Módulo | ID PCI de exemplo |
 | --- | --- |
 | Intel AX210 | `8086:2725` |
 | Intel AX200 | `8086:2723` |
@@ -71,7 +78,7 @@ IDs PCI comuns incluem:
 
 Use esta opção se o Jetson puder acessar a Internet por Ethernet ou outro adaptador de rede.
 
-O script baixa os módulos de driver corrigidos do JetPack 7.2 a partir das pastas públicas do OneDrive, armazena-os em `/tmp/jp72_wifi_fix/driver/`, instala o conjunto de módulos selecionado no diretório de módulos do kernel atual, descompacta os arquivos de firmware necessários e habilita o carregamento automático na inicialização.
+O script baixa os módulos de driver corrigidos do JetPack 7.2 das pastas públicas do OneDrive, armazena-os em `/tmp/jp72_wifi_fix/driver/`, instala o conjunto de módulos selecionado no diretório de módulos do kernel atual, descompacta os arquivos de firmware necessários e habilita o carregamento automático na inicialização.
 
 :::tip
 O link web do OneDrive não é usado diretamente como URL de download do `curl`. O script primeiro abre a página compartilhada do OneDrive para obter um cookie anônimo do SharePoint e, em seguida, baixa cada arquivo por meio do endpoint REST `%24value` do SharePoint.
@@ -490,7 +497,7 @@ Reinicie o Jetson se a interface sem fio não aparecer imediatamente:
 sudo reboot
 ```
 
-## Verificar o Wi-Fi
+## Verificar o Wi‑Fi
 
 Após reiniciar, use os seguintes comandos:
 
@@ -508,9 +515,9 @@ ip link show
 lsmod | grep -E 'iwl|rtw89'
 ```
 
-Uma configuração bem-sucedida deve mostrar o dispositivo Wi-Fi, os módulos de kernel esperados e uma interface sem fio como `wlan0`.
+Uma configuração bem-sucedida deve mostrar o dispositivo Wi‑Fi, os módulos de kernel esperados e uma interface sem fio como `wlan0`.
 
-O seguinte resultado do AX210 mostra o estado final com Wi-Fi habilitado após o reparo:
+O seguinte resultado do AX210 mostra o estado final com Wi‑Fi habilitado após o reparo:
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/AX210Wi-Fi/jp72-ax210.png" />
@@ -520,25 +527,25 @@ O seguinte resultado do AX210 mostra o estado final com Wi-Fi habilitado após o
 
 | Sintoma | Verificação |
 | --- | --- |
-| `lspci` não consegue detectar o módulo Wi-Fi | Verifique a instalação do M.2 Key E e confirme se a faixa PCIe está habilitada pela device tree da placa carrier. |
-| `dmesg` da Intel relata falhas ao carregar o firmware | Confirme se os arquivos correspondentes `.ucode` e, para AX210, `.pnvm` foram descompactados em `/lib/firmware/`. |
+| `lspci` não consegue detectar o módulo Wi‑Fi | Verifique a instalação do M.2 Key E e confirme se a faixa PCIe está habilitada pela device tree da placa carrier. |
+| `dmesg` da Intel relata falhas ao carregar o firmware | Confirme se os arquivos `.ucode` correspondentes e, para AX210, os arquivos `.pnvm` foram descompactados em `/lib/firmware/`. |
 | `dmesg` da Realtek relata falhas ao carregar o firmware | Confirme se os arquivos `rtw885*.zst` foram descompactados em `/lib/firmware/rtw89/`, especialmente os arquivos de firmware `rtw8852b`. |
 | `modprobe iwlwifi` relata `Invalid argument` | Verifique se `rfkill.ko` existe com `find /lib/modules/$(uname -r) -name "rfkill.ko"`. Se estiver ausente, use a imagem BSP correta ou recompile os módulos do kernel. |
 | `modprobe rtw89_8852be` relata módulo não encontrado | Confirme se os quatro arquivos `rtw89*.ko` foram copiados para `/lib/modules/$(uname -r)/kernel/drivers/net/wireless/realtek/rtw89/` e, em seguida, execute `sudo depmod -a`. |
 | `modprobe 8852be` falha | Use `sudo modprobe rtw89_8852be`; `8852be` não é o nome do módulo. |
-| O Wi-Fi desaparece após a reinicialização | Confirme se `/etc/modules-load.d/iwlwifi.conf` ou `/etc/modules-load.d/rtw89_8852be.conf` existe e execute `sudo depmod -a` novamente. |
-| AX210 carrega mas não consegue escanear redes de 6 GHz | Confirme se `iwlwifi-ty-a0-gf-a0.pnvm` existe e verifique se o domínio regulatório configurado suporta 6 GHz com `iw reg get`. |
+| O Wi‑Fi desaparece após a reinicialização | Confirme se `/etc/modules-load.d/iwlwifi.conf` ou `/etc/modules-load.d/rtw89_8852be.conf` existe e execute `sudo depmod -a` novamente. |
+| AX210 carrega, mas não consegue escanear redes de 6 GHz | Confirme se `iwlwifi-ty-a0-gf-a0.pnvm` existe e verifique se o domínio regulatório configurado suporta 6 GHz com `iw reg get`. |
 
 ## Notas
 
 - Os arquivos de firmware AX210 e AX200 não são intercambiáveis. AX210 usa `ty-a0-gf-a0`; AX200 usa `cc-a0`.
-- O Realtek RTL8852BE usa a pilha de driver `rtw89` e firmware em `/lib/firmware/rtw89/`.
+- Realtek RTL8852BE usa a pilha de driver `rtw89` e firmware em `/lib/firmware/rtw89/`.
 - Esses pacotes de reparo são compilados para o kernel `6.8.12-1021-tegra` do JetPack 7.2.
 - Evite usar `apt upgrade` como solução alternativa em placas carrier Jetson personalizadas. Em vez disso, use uma imagem BSP ou pacote de driver validado para o kernel de destino.
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

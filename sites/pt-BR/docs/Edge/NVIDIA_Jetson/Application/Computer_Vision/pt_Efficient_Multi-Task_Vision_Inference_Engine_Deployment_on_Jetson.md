@@ -1,17 +1,17 @@
 ---
-description: Este wiki fornece um guia abrangente, passo a passo, para implantar o Visual Perception Engine (VPEngine) em dispositivos reComputer Jetson Series, especificamente o Jetson Orin NX 16GB. Ele abrange a configuração do ambiente, instalação de dependências principais (PyTorch, TensorRT, CUDA, ROS2), exportação de modelos e solução de problemas de compatibilidade. O guia destaca a capacidade do VPEngine de executar inferência de visão multi-tarefa eficiente e paralela — incluindo detecção de objetos, estimativa de profundidade e segmentação semântica — compartilhando recursos de backbone e otimizando o uso de recursos da GPU. Também inclui scripts de teste de desempenho, exemplos de inferência em tempo real com múltiplas câmeras e dicas práticas para maximizar a eficiência de IA de borda em aplicações de robótica e monitoramento inteligente.
-title: Implantação Eficiente de Motor de Inferência de Visão Multitarefa no Jetson
+description: "Implante o Visual Perception Engine no reComputer Robotics com JetPack 6.2: um backbone compartilhado para detecção, segmentação e profundidade."
+title: Implantação Eficiente de Motor de Inferência Multitarefa de Visão no Jetson
 keywords:
   - Visual Perception Engine
   - VPEngine
   - reComputerEngine
   - Jetson
-  - Percepção Paralela
-  - Visão Computacional
+  - Parallel Perception
+  - Computer Vision
   - TensorRT
   - CUDA
   - ROS2
-  - Robótica
+  - Robotics
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo_preview.gif
 slug: /deploy_visual_perception_engine_recomputer
 sku: 101090101, 114110310, 100071398, 100026552
@@ -19,45 +19,45 @@ last_update:
   date: 2025-10-13
   author: Zibo
 createdAt: '2025-10-16'
-updatedAt: '2026-03-16'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/deploy_visual_perception_engine_recomputer/
 ---
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif"/>
+  <img alt="Quatro janelas de câmera do Visual Perception Engine: profundidade nas câmeras 0 e 1, segmentação nas câmeras 2 e 3, cada uma rotulada com seu FPS" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif"/>
 </div>
 
 ## Introdução
 
 <div style={{ textAlign: "justify" }}>
-[Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine) é um framework de ponta que revoluciona a percepção robótica ao eliminar computações redundantes por meio de redes de backbone compartilhadas. Diferentemente das abordagens tradicionais em que cada tarefa visual é executada de forma independente, o VPEngine usa um backbone de modelo base unificado (por exemplo, DINOv2) para extrair recursos de imagem apenas uma vez, que então são reutilizados por múltiplas cabeças de tarefa. Essa abordagem reduz significativamente a sobrecarga de memória e a transferência de dados CPU-GPU, ao mesmo tempo em que oferece suporte a agendamento dinâmico de tarefas e integração transparente com ROS2. Este wiki mostrará como usar o reComputer Robotics em conjunto com câmeras GMSL para implantar o Visual Perception Engine na borda.
+[Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine) é um framework de ponta que revoluciona a percepção robótica ao eliminar computações redundantes por meio de redes backbone compartilhadas. Diferente das abordagens tradicionais em que cada tarefa visual é executada de forma independente, o VPEngine usa um backbone de modelo base unificado (por exemplo, DINOv2) para extrair os recursos da imagem apenas uma vez, que então são reutilizados por múltiplos cabeçalhos de tarefa. Essa abordagem reduz significativamente a sobrecarga de memória e a transferência de dados CPU-GPU, ao mesmo tempo em que oferece suporte a agendamento dinâmico de tarefas e integração transparente com ROS2. A compilação abaixo executa o Visual Perception Engine no reComputer Robotics com quatro câmeras GMSL: um backbone compartilhado, engines TensorRT exportadas no dispositivo e um custo de quadro medido.
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="Unidade reComputer com o selo NVIDIA Jetson Orin Nano / Orin NX, foto do produto" width={700}
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
 </a></div>
 
 ## Pré-requisitos
 
 - **[reComputer Robotics](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)** (Jetson Orin NX 16GB) com JetPack 6.2
 - [GMSL Boar](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
-- [3MP GMSL2 Camera](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
+- [Câmera GMSL2 3MP](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
 
 ## Destaques Técnicos
 
-- **Eliminação de Computações Redundantes**: As soluções tradicionais executam cada tarefa visual de forma independente, levando a pré-processamento de imagens e extração de recursos de backbone repetitivos. O VPEngine compartilha um backbone de modelo base unificado para extrair recursos de imagem apenas uma vez, que então são reutilizados por múltiplas cabeças de tarefa.
+- **Eliminação de Computações Redundantes**: As soluções tradicionais executam cada tarefa visual de forma independente, levando a pré-processamento de imagem repetitivo e extração de recursos da rede backbone. O VPEngine compartilha um backbone de modelo base unificado para extrair os recursos da imagem apenas uma vez, que então são reutilizados por múltiplos cabeçalhos de tarefa.
 
-- **Redução de Sobrecarga de Memória e Transferência de Dados CPU-GPU**: Todas as tarefas são executadas em paralelo na GPU, com recursos compartilhados diretamente por meio de ponteiros de memória da GPU. Isso evita cópias frequentes de dados GPU ↔ CPU, melhorando significativamente a eficiência.
+- **Redução da Sobrecarga de Memória e da Transferência de Dados CPU-GPU**: Todas as tarefas são executadas em paralelo na GPU, com recursos compartilhados diretamente por meio de ponteiros de memória da GPU. Isso evita cópias frequentes de dados GPU ↔ CPU, melhorando significativamente a eficiência.
 
 - **Suporte a Agendamento Dinâmico de Tarefas**: Diferentes tarefas podem ser configuradas com diferentes frequências de inferência (por exemplo, estimativa de profundidade a 50 Hz, segmentação semântica a 10 Hz) e ajustadas dinamicamente em tempo de execução para se adaptar às necessidades de percepção dos robôs em diferentes estágios.
 
-- **Simplificação da Integração ao Sistema Robótico**: Fornece nós ROS2 (Humble) em C++ para integração fácil em pilhas de software robótico existentes, oferecendo suporte à publicação de resultados via tópicos ROS e ao ajuste dinâmico de parâmetros.
+- **Simplificação da Integração com Sistemas Robóticos**: Fornece nós C++ para ROS2 (Humble) para fácil integração em pilhas de software robótico existentes, com suporte à publicação de resultados via tópicos ROS e ajuste dinâmico de parâmetros.
 
 ## Configuração do Ambiente
 
@@ -71,7 +71,7 @@ chmod +x Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 ```
 
-**Passo 2.** Criar e Ativar Ambiente
+**Passo 2.** Criar e Ativar o Ambiente
 
 ```bash
 # Create v_engine environment
@@ -79,17 +79,17 @@ conda create -n v_engine python=3.10
 conda activate v_engine
 ```
 
-**Passo 3.** Instalar Torch, Torchvision e Verificar Disponibilidade do CUDA
-Baixe o arquivo wheel:
+**Passo 3.** Instalar Torch, Torchvision e Verificar a Disponibilidade do CUDA
+Baixe o wheel:
 
 - [torch](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61%2Ftorch%2D2%2E5%2E0a0%2B872d972e41%2Env24%2E08%2E17622132%2Dcp310%2Dcp310%2Dlinux%5Faarch64%2Ewhl&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61&ga=1)
 - [torchvision](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61%2Ftorchvision%2D0%2E20%2E0a0%2Bafc54f7%2Dcp310%2Dcp310%2Dlinux%5Faarch64%2Ewhl&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61&ga=1)
-- O Jetpack 6.2 requer a instalação de algumas dependências. Primeiro, instale isto e depois use pip para instalar torch e torchvision.
-Siga as instruções na página para instalar:
+- O Jetpack 6.2 requer que algumas dependências sejam instaladas. Primeiro, instale isto e depois use pip para instalar torch e torchvision.
+Siga as instruções internas para instalar:
 [cuSPARSELt 0.8.1 Downloads | NVIDIA Developer](https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/cu12.png"/>
+  <img alt="Página de download do cuSPARSELt com Linux, aarch64 e Ubuntu 22.04 selecionados" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/cu12.png"/>
 </div>
 
 ```bash
@@ -104,7 +104,7 @@ CUDA available: True
 CUDA version: 12.6
 ```
 
-**Passo 4.** Atualizar pip e Instalar Ferramentas Básicas
+**Passo 4.** Atualizar o pip e Instalar Ferramentas Básicas
 
 ```bash
 # Upgrade pip
@@ -132,7 +132,7 @@ pip install cuda-python==12.6.0
 pip install pytest
 ```
 
-**Passo 5.** Configurar TensorRT e Verificar Instalação do TensorRT no Sistema
+**Passo 5.** Configurar o TensorRT e Verificar a Instalação do TensorRT no Sistema
 
 ```bash
 # Check TensorRT installation
@@ -140,12 +140,12 @@ find /usr -name "tensorrt" -type d 2>/dev/null | head -5
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_path.png"/>
+  <img alt="Saída do comando find listando os diretórios do TensorRT instalados" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_path.png"/>
 </div>
 
 **Saída Esperada:** Deve exibir diretórios relacionados ao TensorRT
 
-**Passo 6.** Vincular Módulos TensorRT
+**Passo 6.** Vincular Módulos do TensorRT
 
 ```bash
 # Get Python package path
@@ -183,10 +183,10 @@ PY
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_import.png"/>
+  <img alt="Verificação em Python imprimindo a versão do TensorRT e o caminho do módulo" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_import.png"/>
 </div>
 
-**Passo 7.** Clonar e Instalar torch2trt
+**Passo 7.** Clonar e Instalar o torch2trt
 
 ```bash
 # Clone torch2trt repository
@@ -202,14 +202,14 @@ cd -
 rm -rf /tmp/torch2trt
 ```
 
-**Passo 8.** Corrigir Problemas de Compatibilidade de Biblioteca
+**Passo 8.** Corrigir Problemas de Compatibilidade de Bibliotecas
 
 Se você encontrar erros de símbolo GLIBCXX_3.4.30:
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/erro1.png"/>
+  <img alt="Erro de símbolo GLIBCXX_3.4.30 gerado ao importar torch2trt" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/erro1.png"/>
 </div>
 
-O arquivo libstdc++.so.6 no ambiente conda está desatualizado e não possui o símbolo GLIBCXX_3.4.30. No entanto, a biblioteca dinâmica TensorRT /usr/lib/aarch64-linux-gnu/libnvinfer.so.10 no sistema requer esse símbolo!
+O arquivo libstdc++.so.6 no ambiente conda está desatualizado e não possui o símbolo GLIBCXX_3.4.30. No entanto, a biblioteca dinâmica do TensorRT /usr/lib/aarch64-linux-gnu/libnvinfer.so.10 no sistema requer esse símbolo!
 
 ```bash
 # Check library versions
@@ -236,10 +236,10 @@ python -c "import tensorrt as trt, torch2trt; print('TRT', trt.__version__, 'tor
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/erro2_check.png"/>
+  <img alt="Verificação de importação aprovada após religar a libstdc++ do conda contra a cópia do sistema" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/erro2_check.png"/>
 </div>
 
-**Passo 9.** Configurar CUDA MPS e Definir Variáveis de Ambiente CUDA
+**Passo 9.** Configurar CUDA MPS e Definir Variáveis de Ambiente do CUDA
 
 ```bash
 # Set CUDA environment variables
@@ -266,9 +266,9 @@ nvidia-cuda-mps-control -d
 pgrep -f "nvidia-cuda-mps-control"
 ```
 
-**Saída Esperada:** Deve exibir o ID do processo
+**Saída esperada:** Deve exibir o ID do processo
 
-**Passo 11.** Testar Funcionalidade do CUDA MPS
+**Etapa 11.** Testar a funcionalidade do CUDA MPS
 
 ```bash
 # Test CUDA MPS
@@ -286,11 +286,11 @@ else:
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_cuda.png"/>
+  <img alt="teste de operação de tensor da GPU informando o nome da GPU e um matmul bem-sucedido" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_cuda.png"/>
 </div>
-**Resultado Esperado:** Deve exibir a disponibilidade do CUDA e as operações da GPU funcionando
+**Saída esperada:** Deve exibir a disponibilidade do CUDA e as operações da GPU funcionando
 
-**Passo 12.** Instalar o Visual Perception Engine
+**Etapa 12.** Instalar o Visual Perception Engine
 
 ```bash
 # Enter project directory
@@ -304,11 +304,11 @@ pip show vp_engine
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_vp_engine.png"/>
+  <img alt="pip show vp_engine listando o caminho do pacote instalado e a versão" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_vp_engine.png"/>
 </div>
-**Resultado Esperado:** Deve exibir as informações do pacote vp_engine
+**Saída esperada:** Deve exibir as informações do pacote vp_engine
 
-**Passo 13.** Baixar os Checkpoints do Modelo
+**Etapa 13.** Baixar checkpoints de modelo
 
 ```bash
 # Create model directory
@@ -324,7 +324,7 @@ Você precisa baixar manualmente os arquivos de modelo a partir do seguinte link
 
 :::
 
-**Passo 14.** Exportar Modelos para TensorRT
+**Etapa 14.** Exportar modelos para TensorRT
 
 ```bash
 # Verify model files
@@ -351,10 +351,10 @@ except Exception as e:
 
 O processo de exportação do modelo é bastante demorado. Por favor, seja paciente e aguarde!
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/export_engine.png"/>
+  <img alt="saída do export_default_models à medida que os modelos são gravados" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/export_engine.png"/>
 </div>
 
-**Passo 15.** Executar o Teste de Instalação
+**Etapa 15.** Executar teste de instalação
 
 Crie um script de teste abrangente para verificar a instalação:
 
@@ -622,7 +622,7 @@ if __name__ == "__main__":
 
 </details>
 
-**Resultado Esperado:**
+**Saída esperada:**
 
 ```
 ============================================================
@@ -665,7 +665,7 @@ Test Results: 7/7 tests passed
 🎉 All tests passed! Visual Perception Engine is ready to use.
 ```
 
-**Etapa 16.** Definir variáveis de ambiente persistentes:
+**Passo 16.** Definir variáveis de ambiente persistentes:
 
 ```bash
 # Add environment variables to .bashrc
@@ -677,7 +677,7 @@ echo 'export CUDA_MPS_LOG_DIRECTORY=/tmp/nvidia-mps/log' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## Teste de Desempenho
+## Teste de desempenho
 
 Você pode preparar quatro vídeos e colocá-los no diretório `resources`. Em seguida, execute o seguinte script:
 <details>
@@ -1665,25 +1665,25 @@ python demo.py \
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo.gif"/>
+  <img alt="Demonstração VPE - janela com 4 modelos com dois blocos de segmentação semântica e dois de profundidade, ao lado do jtop" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo.gif"/>
 </div>
 
 :::info
 Durante a execução deste script, ao monitorar o uso de recursos do sistema por meio do `jtop`, pode-se observar que o uso de memória da GPU é relativamente baixo, o que demonstra a eficiência deste framework!
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/gpu_usage.png"/>
+  <img alt="jtop durante a demonstração: GPU em 99% com 1,80 GB de 15,3 GB de memória compartilhada em uso" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/gpu_usage.png"/>
 </div>
 :::
 
 ## Entrada de câmera em tempo real para inferência
 
 :::note
-Antes de executar o script a seguir, configure o formato da sua câmera GMSL conforme descrito [nesta wiki](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j401_getting_started/#use-the-cameras-of-sgxxx-series)!
+Antes de executar o script a seguir, configure o formato da sua câmera GMSL conforme descrito [neste wiki](https://wiki.seeedstudio.com/pt-br/recomputer_jetson_robotics_j401_getting_started/#use-as-cameras-da-sgxxx-series)!
 :::
 
 Modifique o conteúdo do arquivo `./src/vp_engine/engine.py` dentro do projeto. Altere o conteúdo em torno da linha 184 para o conteúdo mostrado na figura a seguir.
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/modify.png"/>
+  <img alt="engine.py em torno da linha 184 editado para entrada de câmera em tempo real" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/modify.png"/>
 </div>
 
 <details>
@@ -2546,24 +2546,24 @@ python realtime_inference.py \
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif"/>
+  <img alt="Quatro blocos de câmera do Visual Perception Engine: profundidade nas câmeras 0 e 1, segmentação nas câmeras 2 e 3, cada uma rotulada com seu FPS" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif"/>
 </div>
 
 :::note
 Este exemplo usa o modelo oficial pré-treinado, sem qualquer treinamento de tarefa específica e ajuste fino. Além disso, nossa câmera é uma câmera GMSL com distorção significativa. Portanto, o resultado da inferência pode não ser muito satisfatório. Este caso tem como principal objetivo demonstrar a você a eficiência de utilização de recursos deste framework e suas vantagens!
 :::
 
-## Outras Aplicações
+## Outras aplicações
 
 :::info
 
-- **Desenvolvimento eficiente de percepção de robôs**
+- **Desenvolvimento eficiente de percepção para robôs**
 
-No desenvolvimento de robôs, a percepção visual eficiente é de grande importância! Com o framework de raciocínio visual eficiente acima, combinado com a aceleração eficiente de GPU da odometria visual, é possível aumentar a eficiência de utilização de recursos no desenvolvimento de robôs de borda!
-Combinando este algoritmo de [SLAM visual](https://wiki.seeedstudio.com/pt-br/pycuvslam_recomputer_robotics/) implantado neste wiki, é possível realizar um desenvolvimento eficiente de robôs no Jetson!
+No desenvolvimento de robôs, a percepção visual eficiente é de grande importância! Com o framework de raciocínio visual eficiente acima, combinado com a aceleração de GPU eficiente da odometria visual, é possível aumentar a eficiência de utilização de recursos no desenvolvimento de robôs de borda!
+Combinando com este [algoritmo de SLAM visual](https://wiki.seeedstudio.com/pt-br/pycuvslam_recomputer_robotics/) implantado neste wiki, é possível realizar um desenvolvimento eficiente de robôs no Jetson!
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/mix.gif"/>
+  <img alt="Duas janelas de percepção executando lado a lado com uma sobreposição Speed X 2, ao lado da leitura de recursos no terminal" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/mix.gif"/>
 </div>
 :::note
 Como habilitar o software de gravação de tela consumirá uma certa quantidade de recursos do sistema, isso resulta em um aumento na latência de inferência!
@@ -2578,9 +2578,17 @@ Como habilitar o software de gravação de tela consumirá uma certa quantidade 
 - [Documentação do TensorRT](https://docs.nvidia.com/deeplearning/tensorrt/)
 - [Guia de Programação CUDA](https://docs.nvidia.com/cuda/)
 
-## Suporte Técnico & Discussão de Produtos
+## Recursos relacionados
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer a você diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+- [PyCuVSLAM no reComputer](/pt-br/pycuvslam_recomputer_robotics/)
+- [Executar várias câmeras GMSL no Jetson](/pt-br/multiple_cameras_with_jetson/)
+- [Interfaces e pinagens do reComputer Robotics J401](/pt-br/recomputer_jetson_robotics_j401_getting_started/)
+- [Página do produto reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [Repositório do Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine)
+
+## Suporte técnico e discussão sobre o produto
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
