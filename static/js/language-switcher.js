@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-02 16:57:52 (北京时间)
-// 多语言页面: 2632 个
+// 生成时间: 2026-11-09 11:39:25 (北京时间)
+// 多语言页面: 2638 个
 
 (function() {
   'use strict';
@@ -24,6 +24,8 @@
 
   // 内嵌的语言映射数据
   const languageMapping = {
+    "/robotics/paper_reading_lingbot_va": ["cn", "en"],
+    "/robotics/paper_reading_lingbot_vla2": ["cn", "en"],
   "/Cloud": [
     "cn",
     "en",
@@ -976,6 +978,13 @@
     "pt"
   ],
   "/jetson/accelerate_llm_inference_mtp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/local_decision_model_laya": [
     "cn",
     "en",
     "es",
@@ -5567,6 +5576,13 @@
     "ja",
     "pt"
   ],
+  "/get_started_with_ripple_l2_pro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/l2_mui": [
     "cn",
     "en",
@@ -7058,6 +7074,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_multi_task_dit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_pi0": [
     "cn",
     "en",
@@ -7087,6 +7110,13 @@
     "pt"
   ],
   "/robotics/hands_on_so101_algorithm_switching": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_vla_jepa": [
     "cn",
     "en",
     "es",
@@ -9788,6 +9818,20 @@
     "pt"
   ],
   "/epaper_en05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_426_mono_kit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_73_color_kit": [
     "cn",
     "en",
     "es",

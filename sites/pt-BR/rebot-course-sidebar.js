@@ -176,6 +176,7 @@ const sidebars = {
           collapsible: false,
           items: [
             { type: 'doc', id: `${P}/pt_Paper_Reading_ACT`, label: 'ACT — Manipulação Bimanual de Baixo Custo' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_MULTI_TASK_DIT`, label: 'LBM / MultiTask DiT — Pré-treinamento Multitarefa' },
           ],
         },
         {
@@ -214,9 +215,18 @@ const sidebars = {
           ],
         },
         {
-          type: 'html',
+          type: 'category',
+          label: 'Parte 5 · Modelos de Mundo & Aprendizado Vídeo-Ação',
           className: 'robotics-section-title',
-          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">Parte 5 · Modelos de Mundo &amp; Aprendizado Vídeo-Ação</span>',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            {
+              type: 'doc',
+              id: `${P}/pt_Paper_Reading_VLA_JEPA`,
+              label: 'VLA-JEPA — Supervisão por vídeo e modelos de mundo latentes',
+            },
+          ],
         },
         {
           type: 'html',
