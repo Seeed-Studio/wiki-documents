@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-06 17:33:22 (北京时间)
-// 多语言页面: 2637 个
+// 生成时间: 2026-11-09 15:43:30 (北京时间)
+// 多语言页面: 2640 个
 
 (function() {
   'use strict';
@@ -5574,6 +5574,13 @@
     "ja",
     "pt"
   ],
+  "/get_started_with_ripple_l2_pro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/l2_mui": [
     "cn",
     "en",
@@ -7059,6 +7066,20 @@
     "pt"
   ],
   "/robotics/paper_reading_gr00t_n1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_va": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_vla2": [
     "cn",
     "en",
     "es",
