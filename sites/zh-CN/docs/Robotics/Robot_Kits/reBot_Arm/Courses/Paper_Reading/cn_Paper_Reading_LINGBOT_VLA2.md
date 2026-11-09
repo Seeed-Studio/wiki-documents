@@ -16,7 +16,6 @@ url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_lingbot_vla2/
 ---
 
 import '/src/css/paper-reading-style.css';
-import '/src/css/lingbot-vla2-reading-style.css';
 
 export const toc = [
   {
@@ -116,7 +115,7 @@ export const toc = [
   }
 ];
 
-<div className="paper-reading-page lingbot-vla2-reading-page">
+<div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-lingbot-vla2-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
