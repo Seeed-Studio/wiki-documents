@@ -1,6 +1,6 @@
 ---
 description: "Explore os métodos centrais por trás do ACT, da série π e dos modelos VLA generalistas, com tutoriais LeRobot sobre demonstrações, treinamento e implantação."
-title: "Mergulhos Profundos em Artigos de IA Física e Reprodução Prática"
+title: "Análises Profundas de Artigos de IA Física e Reprodução Prática"
 hide_title: true
 keywords:
   - reBot
@@ -46,9 +46,9 @@ import '/src/css/paper-reading-style.css';
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">Mergulhos Profundos em Artigos de IA Física e Reprodução Prática</h1>
+    <h1 id="paper-reading-title">Análises Profundas de Artigos de IA Física e Reprodução Prática</h1>
     <p className="paper-reading-lead">Explore pesquisas de ponta em IA Física, destrinche modelos e algoritmos-chave com braços robóticos da Seeed</p>
-    <p>Um <strong>curso que será sempre gratuito</strong>, cuidadosamente desenvolvido pela equipe de IA Robotics da SeeedStudio, combinado com o <strong>braço robótico reBot 100% open source, disponível para uso comercial e reprodução</strong>. Conclua-o e torne-se o próximo especialista em robótica!</p>
+    <p>Um <strong>curso que será sempre gratuito</strong>, cuidadosamente desenvolvido pela equipe de AI Robotics da SeeedStudio, combinado com o <strong>braço robótico reBot 100% open source, disponível para uso comercial e reprodução</strong>. Conclua o curso e torne-se o próximo especialista em robótica!</p>
     <ul className="paper-reading-badges" aria-label="Course features">
       <li>Sempre gratuito</li>
       <li>100% open source · Uso comercial</li>
@@ -69,7 +69,7 @@ import '/src/css/paper-reading-style.css';
     </ul>
   </div>
   <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir para o SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Ir para SenseCraft Robotics ↗</a>
     <a className="sensecraft-banner__link" href="/pt-br/sensecraft_robotics/">Guia de software</a>
   </div>
 </div>
@@ -82,7 +82,7 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/pt-br/robotics/paper_reading_hardware_and_teleoperation/">Configuração de Hardware &amp; Software</a></li>
         <li><a href="/pt-br/robotics/hands_on_task_design/">Design de Tarefas &amp; Planejamento de Demonstrações</a></li>
         <li><a href="/pt-br/robotics/hands_on_camera_recording/">Coleta de Dados Multivisualização</a></li>
-        <li><a href="/pt-br/robotics/hands_on_dataset_quality/">Qualidade dos Dados: Estrutura, Sincronização &amp; Validação</a></li>
+        <li><a href="/pt-br/robotics/hands_on_dataset_quality/">Qualidade de Dados: Estrutura, Sincronização &amp; Validação</a></li>
         <li><a href="/pt-br/robotics/hands_on_act_training/">Treinamento do Modelo ACT</a></li>
         <li><a href="/pt-br/robotics/hands_on_act_deployment/">Implantação no Robô &amp; Avaliação de Desempenho</a></li>
         <li><a href="/pt-br/robotics/hands_on_algorithm_switching/">Alternância de Políticas &amp; Execução de Tarefas</a></li>
@@ -90,7 +90,7 @@ import '/src/css/paper-reading-style.css';
     </section>
 
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-papers-title">
-      <h2 id="paper-reading-papers-title">Mergulhos Profundos em Artigos</h2>
+      <h2 id="paper-reading-papers-title">Análises Profundas de Artigos</h2>
       <p>Leia artigos por tópico, desde políticas básicas de aprendizado por imitação até modelos de visão-linguagem-ação.</p>
       <h3>Parte 1 · Action Chunking &amp; Políticas Multitarefa</h3>
       <ul className="paper-reading-directory-list">
@@ -113,12 +113,14 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/pt-br/robotics/paper_reading_gr00t_n1/">NVIDIA GR00T — Adaptação &amp; Fine-Tuning</a></li>
         <li><a href="/pt-br/robotics/paper_reading_eo1/">EO-1 — Pré-treinamento Multimodal Intercalado</a></li>
         <li><a href="/pt-br/robotics/paper_reading_wall_oss/">WALL-OSS — Raciocínio Incorporado &amp; Controle de Robôs</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Ações Entre Corpos &amp; Percepção Futura</a></li>
       </ul>
       <h3>Parte 5 · Modelos de Mundo &amp; Aprendizado Vídeo-Ação</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisão por Vídeo &amp; Modelos de Mundo Latentes</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_lingbot_va/">LingBot-VA — Modelagem de Mundo Causal &amp; Controle de Robôs</a></li>
       </ul>
-      <h3>Parte 6 · Avaliação Unificada &amp; Resumo da Pesquisa</h3>
+      <h3>Parte 6 · Avaliação Unificada &amp; Resumo de Pesquisa</h3>
       <span className="paper-reading-update-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
           <path d="M3 12a9 9 0 0 1 15.36-6.36L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.36 6.36L3 16M8 16H3v5" />
