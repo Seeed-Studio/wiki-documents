@@ -438,7 +438,7 @@ The 8-pin expansion header (J2) has the following pinout:
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th>Pin (from top to bottom)</th>
+			<th>Pin (from bottom to top)</th>
 			<th>Label</th>
 			<th>ESP32-S3 Pin</th>
 			<th>Function</th>
