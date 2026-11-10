@@ -84,11 +84,6 @@ export const toc = [
     "value": "结论",
     "id": "结论",
     "level": 2
-  },
-  {
-    "value": "参考资料",
-    "id": "参考资料",
-    "level": 2
   }
 ];
 
@@ -284,12 +279,5 @@ VLA-JEPA 在同分布和布局变化下的成功率分别为 **0.70、0.47**，�
 ## 结论
 
 **VLA-JEPA 把视频里的状态变化，变成训练机器人表示的监督信号。** 潜在动作负责解释变化，动作头负责输出控制，机器人示范把两者接起来。值得借鉴的是这种监督设计；它改善了所测扰动下的表现，但尚未解决稳定执行和未见任务泛化的问题。
-
-## 参考资料
-
-1. [VLA-JEPA 论文 v2](https://arxiv.org/abs/2602.10098v2)与[论文 PDF](https://arxiv.org/pdf/2602.10098v2)。引言与相关工作见第 1—2 节，方法见第 3 节，实验见第 4 节，配置与实机协议见附录 A—B。
-2. [作者项目页](https://ginwind.github.io/VLA-JEPA/)与[模型仓库](https://huggingface.co/ginwind/VLA-JEPA)。
-3. 作者代码固定提交 [ec90777](https://github.com/ginwind/VLA-JEPA/tree/ec907778b4af46a45742baf5ebfb2e055560346e)：[模型与损失](https://github.com/ginwind/VLA-JEPA/blob/ec907778b4af46a45742baf5ebfb2e055560346e/starVLA/model/framework/VLA_JEPA.py)、[预训练配置](https://github.com/ginwind/VLA-JEPA/blob/ec907778b4af46a45742baf5ebfb2e055560346e/scripts/configs/vlajepa_pretrain.yaml)。
-4. LeRobot 固定提交 [f5c9bc0](https://github.com/huggingface/lerobot/tree/f5c9bc02137c331b009eccd44ece6f11b62187a8)：[模型](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/vla_jepa/modeling_vla_jepa.py)、[动作头](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/vla_jepa/action_head.py)与[配置](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/vla_jepa/configuration_vla_jepa.py)。实现差异只用于补充数据流和训练细节，不作为论文成绩来源。
 
 </div>

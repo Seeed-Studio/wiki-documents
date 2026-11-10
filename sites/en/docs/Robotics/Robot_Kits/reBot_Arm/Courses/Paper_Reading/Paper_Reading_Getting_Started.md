@@ -114,11 +114,13 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/robotics/paper_reading_eo1/">EO-1 — Interleaved Multimodal Pre-Training</a></li>
         <li><a href="/robotics/paper_reading_wall_oss/">WALL-OSS — Embodied Reasoning &amp; Robot Control</a></li>
         <li><a href="/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Cross-Embodiment Actions &amp; Future Perception</a></li>
+        <li><a href="/robotics/paper_reading_dm05/">DM0.5 — Historical Context &amp; Trajectory Alignment</a></li>
       </ul>
       <h3>Part 5 · World Models &amp; Video-Action Learning</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/robotics/paper_reading_vla_jepa/">VLA-JEPA — Video Supervision &amp; Latent World Models</a></li>
         <li><a href="/robotics/paper_reading_lingbot_va/">LingBot-VA — Causal World Modeling &amp; Robot Control</a></li>
+        <li><a href="/robotics/paper_reading_gr00t_2/">GR00T 2 — Joint World-Action Modeling</a></li>
       </ul>
       <h3>Part 6 · Unified Evaluation &amp; Research Summary</h3>
       <span className="paper-reading-update-badge">
