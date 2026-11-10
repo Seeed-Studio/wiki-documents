@@ -1,5 +1,5 @@
 ---
-description: This guide provides a detailed overview of the reComputer Super's hardware components and interfaces, including how to connect and use devices such as CSI cameras, USB ports, various M.2 interfaces, mini PCIe, RTC, Ethernet, LEDs, fans, CAN, extension ports, and HDMI, with step - by - step instructions and command examples.
+description: "reComputer Super interfaces: CSI, USB, M.2 Key M and E, Mini PCIe, RTC, Ethernet, LED, fan and CAN. Pinouts, wiring and tested commands."
 title: reComputer Super Hardware and Interfaces Usage
 keywords:
   - reComputer Super
@@ -8,18 +8,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_hardware_interfaces_usage
 last_update:
-  date: 05/26/2025
+  date: 11/06/2026
   author: Zibo
 createdAt: '2025-05-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/
 ---
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super.png"/>  
+  <img alt="reComputer Super, bare carrier board beside the assembled unit showing the front ports" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super.png"/>  
 </div>
 
-This wiki introduces the various different hardware and interfaces on the reComputer Super and how to use them to expand your project ideas.
+The reComputer Super brings out four MIPI CSI camera ports, USB 3.2 and USB 2.0 Type-C, M.2 Key M and Key E, Mini PCIe, RTC, CAN, Ethernet and a 40-pin extension header. Each section below wires one interface and gives the command or check that confirms it works.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank">
@@ -33,7 +33,7 @@ The reComputer Super supports standard 4 MIPI CSI cameras for image and video ca
 ### Hardware Connection
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/sci.jpg"/>  
+  <img alt="MIPI CSI camera ribbon connected to the CSI slot inside the reComputer Super enclosure" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/sci.jpg"/>  
 </div>
 
 **Step1.** Open the back cover of the Recomputer Super.
@@ -46,6 +46,10 @@ The reComputer Super supports standard 4 MIPI CSI cameras for image and video ca
 
 :::note
 Before using the CSI camera, please ensure you have installed a JetPack version with the necessary camera drivers.
+:::
+
+:::info
+**Version scope:** the commands below follow the JetPack 6.x layout of the camera and GPIO tools. NVIDIA changed parts of the camera stack in later releases, so on JetPack 7.2 confirm `nvgstcapture-1.0` is installed before running it — if the binary is absent, drive the sensor with `gst-launch-1.0` and `nvarguscamerasrc` instead.
 :::
 
 **Step1.** Check if the camera is recognized by the system:
@@ -71,7 +75,7 @@ Change `--sensor-id` to the appropriate value if you have multiple cameras.
 :::
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/csi.png"/>
+  <img alt="CSI camera preview window on the reComputer Super desktop" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/csi.png"/>
 </div>
 
 ---
@@ -85,7 +89,7 @@ The reComputer Super has a total of 4 USB 3.2 ports and 1 USB 2.0 Type-C port fo
 We can enter `watch -n 1 lsusb -tv` in the Jetson terminal to probe the USB ports. Once a USB device is connected, the detailed information about that port will be displayed here.
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/usb_lsusb.png"/>
+  <img alt="watch lsusb output listing the USB devices attached to the reComputer Super" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/usb_lsusb.png"/>
 </div>
 
 Additionally, you can  test the read and write speed of USB storage devices by using the `dd` command:
@@ -97,7 +101,7 @@ Additionally, you can  test the read and write speed of USB storage devices by u
   ```
 
  <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/usb_read.png"/>
+  <img alt="dd read test output measuring read speed from a USB drive" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/usb_read.png"/>
 </div>
 
 - **Write:**
@@ -107,7 +111,7 @@ Additionally, you can  test the read and write speed of USB storage devices by u
   ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/usb_w.png"/>
+  <img alt="dd write test output measuring write speed to a USB drive" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/usb_w.png"/>
 </div>
 
 ### USB 2.0 Type-C port
@@ -117,49 +121,49 @@ Using this serial port, via the USB C data cable, you can monitor the debugging 
 **Step1.** Switch the switch to the debug mode.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug.jpg"/>
+  <img alt="Debug and flash mode switch on the reComputer Super set to debug mode" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug.jpg"/>
 </div>
 
 **Step2.** Connect the PC via a USB data cable, downloaded the [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) on your PC.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
+  <img alt="Silicon Labs CP210x VCP driver download page" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
 </div>
 
 **Step3.** Connect the PC via a USB data cable, extract the downloaded file and install driver on your PC.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
+  <img alt="CP210xVCPInstaller_x64.exe selected in the extracted driver folder" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
 **Step4.** Open Open the Device Manager on your Windows PC and check the COM port number assigned to the reComputer Super. It should appear under "Ports (COM & LPT)" as "Silicon Labs CP210x USB to UART Bridge (COMX)", where X is the COM port number.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug1.png"/>
+  <img alt="Windows Device Manager showing the CP210x COM port under Ports" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug1.png"/>
 </div>
 
 **Step5.** Open the serial port tool(Here, we use the MobaXterm tool as an example), create a new session.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
+  <img alt="MobaXterm main window with the recent sessions list, including COM3" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
 </div>
 
 **Step6.** Select the Serial tool.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
+  <img alt="MobaXterm session type chooser with Serial highlighted" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
 </div>
 
 **Step7.** Select corresponding serial port, set the baud rate to 115200 and click "OK".
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/3.png"/>
+  <img alt="MobaXterm serial settings with the COM port and 115200 baud rate chosen" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/3.png"/>
 </div>
 
 **Step8.** Login your reComputer Super with the username and password.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/4.png"/>
+  <img alt="Serial console logged into the reComputer Super through the debug port" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/4.png"/>
 </div>
 
 ## M.2 Key M
@@ -177,7 +181,7 @@ M.2 Key M is an interface designed for high-speed solid-state drives (SSDs), pro
 ### Hardware Connection
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/ssd.jpg"/>  
+  <img alt="NVMe SSD seated in the M.2 Key M slot on the reComputer Super" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/ssd.jpg"/>  
 </div>
 
 ### Usage Instruction
@@ -191,7 +195,7 @@ dd if=/dev/zero of=/home/seeed/ssd/test bs=1024M count=5 conv=fdatasync
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/ssd_w.png"/>
+  <img alt="Terminal output of the dd write test measuring NVMe SSD throughput" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/ssd_w.png"/>
 </div>
 
 :::danger
@@ -205,7 +209,7 @@ The M.2 Key E interface is a compact, high-speed data interface designed for wir
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/wifi_c.png"/>
+  <img alt="Wi-Fi module installed in the M.2 Key E slot with the antenna leads attached" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/wifi_c.png"/>
 </div>
 
 ### Usage Instruction
@@ -213,7 +217,7 @@ The M.2 Key E interface is a compact, high-speed data interface designed for wir
 After installing the Wi-Fi module and powering on the device, we can configure the device's Wi-Fi and Bluetooth settings.
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-bluetooth-test.gif"/>
+  <img alt="Ubuntu desktop showing the Wi-Fi and Bluetooth indicators after installing the wireless module" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-bluetooth-test.gif"/>
 </div>
 
 Of course, we can also check the device's operating status using the following commands.
@@ -223,7 +227,7 @@ ifconfig
 ```
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/wifi_ifconfig.png"/>
+  <img alt="ifconfig output listing the wireless interface on the reComputer Super" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/wifi_ifconfig.png"/>
 </div>
 
 **Bluetooth:**
@@ -234,17 +238,17 @@ ifconfig
   ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/bluetooth.png"/>
+  <img alt="bluetoothctl scan on starting discovery on the reComputer Super" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/bluetooth.png"/>
 </div>
 
 ## Mini PCIe
 
 The reComputer super comes with a mini-PCIe for LTE 4G module.
 
-#### Hardware Connection
+### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/mini_p.png"/>
+  <img alt="Quectel EC25 4G module in the Mini PCIe slot with three antenna leads connected" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/mini_p.png"/>
 </div>
 
 :::note
@@ -271,19 +275,19 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 **Step4.** Enter the command "AT" and press enter. If you see the response as "OK", the 4G module is working properly.
 
 <div align="center">
-  <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/>
+  <img alt="Serial terminal returning OK after the AT command is sent to the 4G module" width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/>
 </div>
 
 **Step5.** Enter the command "ATI" to check the module information.
 
 <div align="center">
-  <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/>
+  <img alt="Serial terminal returning the module information after the ATI command" width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/>
 </div>
 
 Using 4G network for internet access
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/4g2.png"/>
+  <img alt="Network settings showing the 4G connection carrying internet traffic" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/4g2.png"/>
 </div>
 
 ## RTC
@@ -295,7 +299,7 @@ The reComputer Super features RTC interfaces, providing accurate timekeeping eve
 Connect a 3V CR1225 coin cell battery to the RTC socket on the board as shown below. Make sure the **positive (+)** end of the battery is facing upwards.
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc.jpg"/>
+  <img alt="CR1225 coin cell installed in the RTC socket on the reComputer Super" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc.jpg"/>
 </div>
 
 ### Usage Instruction
@@ -307,7 +311,7 @@ Connect a 3V CR1225 coin cell battery to the RTC socket on the board as shown be
 **Step3.** On the Ubuntu Desktop, click the drop-down menu at the top right corner, navigate to `Settings > Date & Time`, connect to a network via an Ethernet cable and select **Automatic Date & Time** to obtain the date/ time automatically.
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/>
+  <img alt="Ubuntu Date and Time settings page used to enable automatic time setting" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/>
 </div>
 
 :::note
@@ -321,12 +325,12 @@ cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/ti
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time1(1).png"/>
+  <img alt="Terminal reading the RTC time from the nvvrs-pseq-rtc device" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time1(1).png"/>
 </div>
 
 **Step5.** Disconnect the network connection and reboot the device. You will find that the system time has lost power but still functions normally.
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time2.png"/>
+  <img alt="Terminal showing the system time kept by the RTC after the network is disconnected" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time2.png"/>
 </div>
 
 ## Ethernet
@@ -334,7 +338,7 @@ cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/ti
 There are 2 RJ45 Gigabit Ethernet on reComputer Super supported 10/100/1000M. ETH0 is the native Ethernet port, and the other one ETH1 is converted from PCIe.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth.jpg"/>
+  <img alt="Two RJ45 Gigabit Ethernet ports labelled ETH0 and ETH1 on the reComputer Super" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth.jpg"/>
 </div>
 
 There are 2 LEDs (green and yellow) on each Ethernet port:
@@ -353,7 +357,7 @@ iperf3 -c 192.168.254.100 -R
 :::
 
 <div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth_a.png"/>
+  <img alt="iperf3 reverse-mode client on the reComputer Super, receiving 942 Mbits/sec" width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth_a.png"/>
 </div>
 
 ```bash
@@ -361,7 +365,7 @@ iperf3 -c 192.168.254.100
 ```
 
 <div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth_p.png"/>
+  <img alt="iperf3 client output measuring Gigabit Ethernet throughput on the reComputer Super" width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth_p.png"/>
 </div>
 
 ## LED Indicators
@@ -369,7 +373,7 @@ iperf3 -c 192.168.254.100
 The reComputer Super is equipped with 2 LED indicators (PWR and ACT) to show power status and system activity, allowing users to monitor device operation in real time.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/led.jpg"/>
+  <img alt="PWR and ACT LED indicators on the reComputer Super" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/led.jpg"/>
 </div>
 
 ## Fan
@@ -383,7 +387,7 @@ The reComputer Super is equipped with two types of fan connectors to meet differ
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/fan.jpg"/>
+  <img alt="12V and 5V PWM fan connectors on the reComputer Super board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/fan.jpg"/>
 </div>
 
 :::note
@@ -408,18 +412,18 @@ The reComputer Super series provides a CAN interface where the CAN signal is out
 Please note the sequence of the connected lines (R OUT ↔ RX, D IN ↔ TX), and then convert them to CAN_L and CAN_H through the CAN bus transceiver.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can1.png"/>
+  <img alt="CAN TX and RX pins wired to the CAN bus transceiver on the reComputer Super" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can1.png"/>
 </div>
 
 According to the [Datasheet of reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf), connect the CAN heater to the CAN bus transceiver in the corresponding manner, then connect the CAN bus transceiver to the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html), and finally connect it to the Jetson for loopback communication testing.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_port.png"/>
+  <img alt="Datasheet table for the CAN Bus Header listing the TX, RX, GND and 3V3 pins" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_port.png"/>
 </div>
 
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_connect.png"/>
+  <img alt="USB-to-CAN analyzer wired to the CAN header on the reComputer Super" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_connect.png"/>
 </div>
 
 ### Usage Instruction
@@ -442,7 +446,7 @@ candump can0
 cansend can0 123#abcdabcd
 ```
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_loop.png"/>
+  <img alt="cansend and candump output showing a CAN frame looped back on can0" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_loop.png"/>
 </div>
 
 ## Extension Port
@@ -452,7 +456,7 @@ The Extension Port includes a 40-pin extension header and a 12-pin control and U
 ### 40-Pin Extension Header
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40pin3.jpg"/>
+  <img alt="40-pin extension header on the reComputer Super carrier board" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40pin3.jpg"/>
 </div>
 
 The 40-Pin Extension Header is a versatile expansion interface that provides various functions such as GPIO, I2C, SPI, and UART, making it convenient for connecting sensors, peripherals, or other modules.
@@ -546,16 +550,16 @@ Enable 40-Pin Header:
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_1.png"/>
+  <img alt="jetson-io.py main menu listing the 40-pin header configuration options" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_1.png"/>
 </div>
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_2.png"/>
+  <img alt="Jetson Expansion Header Tool showing the 40-pin header pin map with the configurable options" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_2.png"/>
 
 </div>
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_3.png"/>
+  <img alt="function selection list for the 40-pin header with uarta.cts and uarta.rts toggled" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_3.png"/>
 </div>
 
 Save and reboot.
@@ -593,7 +597,7 @@ sudo gpioset --mode=wait 0 121=1
 ### 12-Pin Control and UART Header
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/12pin2.jpg"/>
+  <img alt="12-pin button and LED header with its pin list: PC_LED, UART2, AC OK, SYS_RESET, FORCE_RECOVERY and PWR_BTN" width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/12pin2.jpg"/>
 </div>
 
 The 12-Pin Control and UART Header provides essential control signals and UART communication interfaces for connecting and managing external devices.
@@ -605,6 +609,31 @@ The pin functions of reComputer Super are similar to those of reComputer Classic
 ## HDMI
 
 reComputer Super is equipped with an HDMI 2.1 Type A port, which supports a resolution of 7680x4320. This allows for ultra-high-definition video output.
+
+## FAQ
+
+**How many cameras can the CSI ports drive at once?**
+Four. The board exposes four MIPI CSI camera ports, and the test in this page previews one of them with `nvgstcapture`, changing `--sensor-id` when more than one camera is connected.
+
+**Why does only ETH0 report a native interface?**
+ETH1 is converted from PCIe, so the two ports do not share the same controller. Both negotiate 10/100/1000 Mbps, but only ETH0 comes straight off the module.
+
+**Do I need a battery for the RTC to keep time?**
+Yes. Fit a 3V CR1225 coin cell in the RTC socket with the positive side up, otherwise the clock loses time once the board is powered off.
+
+**The 4G module answers AT commands but there is no internet.**
+An `OK` reply only proves the module is alive on the serial port. Bring the data connection up from the network settings and confirm traffic leaves through it, as the 4G step in this page shows.
+
+**What is the difference between the 40-pin and 12-pin headers?**
+The 40-pin header carries the standard Jetson GPIO set and is configured through `jetson-io.py`. The 12-pin header is a separate control and UART header for peripherals, not part of the 40-pin map.
+
+## Related Resources
+
+- [Getting Started with reComputer Super](/recomputer_jetson_super_getting_started/)
+- [reComputer Super vs Classic: AI Performance in Edge Inferencing](/recomputer_jetson_super_performance/)
+- [reComputer Antenna Installation](/recomputer_antenna_installation/)
+- [reComputer Super J4012 product page](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)
+- [wiki-documents repository and discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## Resources
 - [User Manual&Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)

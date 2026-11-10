@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_
 
 ## Introduction
 
-This wiki explains how to **fine-tune NVIDIA Isaac GR00T N1.7** for the **reBot Arm B601 DM** and deploy it on **reComputer Robotics J601** using **TensorRT acceleration**.
+**GR00T N1.7** is a vision-language-action model; fine-tuning it on demonstrations from the **reBot Arm B601 DM** adapts it to that arm and those tasks. The tuned checkpoint is exported to **TensorRT** and served on **reComputer Robotics J601** with **Jetson Thor**, so the arm runs inference on the device instead of a workstation.
 
 <p></p>
 
@@ -30,7 +30,7 @@ This wiki explains how to **fine-tune NVIDIA Isaac GR00T N1.7** for the **reBot 
 <p></p>
 
 <div align="center">
-  <img width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
+  <img alt="GR00T N1 architecture: image observation, language instruction and robot state feed the vision-language model (System 2), which drives a diffusion transformer (System 1) that emits motor action tokens" width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
   "/>
 </div>
 
@@ -48,7 +48,7 @@ This wiki explains how to **fine-tune NVIDIA Isaac GR00T N1.7** for the **reBot 
 ### Hardware Connection
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
+  <img alt="reBot Arm B601 DM wired to the J601 carrier board, with the two USB cameras" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
 </div>
 
 
@@ -94,7 +94,7 @@ Please replace the file path with your own dataset path.
 After execution, the previously collected LeRobot dataset will be downgraded from v3.0 to v2.0 format.
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
+  <img alt="LeRobot dataset downgraded from v3.0 to v2.0 format before fine-tuning" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
 </div>
 
 Then copy the following `modality.json` file into the `meta` folder of the converted dataset:
@@ -170,13 +170,13 @@ Since our training dataset is relatively small, you can reduce the number of tra
 :::
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
+  <img alt="Fine-tuning run reporting loss over the training steps" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
 </div>
 
 After training is complete, you can find the fine-tuned GR00T N1.7 model files in the `--output-dir` directory.
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
+  <img alt="Fine-tuned GR00T N1.7 checkpoint files written to the output directory" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
 </div>
 
 ## Deploy on Jetson
@@ -198,7 +198,7 @@ Visit the following link to obtain download permission for the required model:
 🔗 [https://huggingface.co/nvidia/Cosmos-Reason2-2B](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
+  <img alt="Hugging Face page granting access to the model weights" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
 </div>
 
 ### Clone the Repository
@@ -268,7 +268,7 @@ source scripts/activate_thor.sh
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
+  <img alt="Environment setup on Jetson Thor with the virtualenv and activate_thor.sh sourced" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
 </div>
 
 ### Verify Environment
@@ -706,7 +706,7 @@ python3 scripts/deployment/build_trt_pipeline.py \
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
+  <img alt="Engine export and build finishing for the bf16 TensorRT engine" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
 </div>
 
 You will receive an accelerated and optimized model file in the engine format, as well as the intermediate converted ONNX file while waiting.
@@ -969,6 +969,12 @@ mv ~/.cache/huggingface/lerobot/calibration/robots/seeed_b601_dm_follower/follow
 - 🔗 https://developer.nvidia.com/embedded/jetpack
 - 🔗 https://github.com/NVIDIA/Isaac-GR00T/tree/main
 - 🔗 https://huggingface.co/nvidia/GR00T-N1.7-LIBERO
+
+## Related Resources
+
+- [reComputer Robotics J601 hardware and I/O](/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
+- [reComputer Robotics J401 interfaces and pinouts](/recomputer_jetson_robotics_j401_getting_started/)
+- [GR00T N1.7 model on Hugging Face](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
 
 ## Tech Support & Product Discussion
 

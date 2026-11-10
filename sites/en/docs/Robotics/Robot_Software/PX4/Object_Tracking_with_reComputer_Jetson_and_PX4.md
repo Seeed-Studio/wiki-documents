@@ -1,5 +1,5 @@
 ---
-description: The reComputer Mini, powered by NVIDIA Jetson Orin Nano/Orin NX, is a compact AI computer designed for drones to perform real-time target tracking by integrating PX4 flight controller, ROS 2, and the Orbbec Gemini 2 3D camera. This setup involves configuring ROS2 communication for PX4, installing the Gemini 2 Python SDK to capture synchronized RGB-D data, and using a YOLOv11n model exported with TensorRT for optimized detection. The ROS2 package combines YOLO detection with the ByteTrack algorithm for accurate multi-object tracking, while depth data estimates the distance between the drone and the target, enabling precise, real-time drone tracking during flight.
+description: "Track objects on a reComputer Jetson and send position to PX4 over ROS 2: Gemini 2 depth input, YOLO detection and MAVROS output."
 title: Object Tracking with reComputer Jetson and PX4
 keywords:
   - NVIDIA
@@ -24,12 +24,11 @@ url: https://wiki.seeedstudio.com/object_tracking_with_reComputer_jetson_and_pX4
 ## Introduction
 
 <div style={{ textAlign: "justify" }}>
-reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX module,delivering up to 100 TOPS AI performance.
-Thanks to its compact design, it is highly suitable for being installed on drones to handle some AI tasks.This Wiki will show you how to use reComputer and px4 to achieve real-time target tracking on drone.
+reComputer Mini carries a Jetson Orin Nano or Orin NX module and delivers up to 100 TOPS in a case small enough to mount on an airframe. The build connects it to PX4 over ROS 2, runs YOLO detection with ByteTrack on the Gemini 2 colour stream, and uses the depth frame to measure how far the tracked target is from the drone.
 </div>
 
 <div align="center">
-  <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
+  <img alt="Two reComputer Mini units with Wi-Fi antennas, badged NVIDIA Jetson Orin Nano / Orin NX" width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -41,7 +40,7 @@ Thanks to its compact design, it is highly suitable for being installed on drone
 
 - reComputer series of products
 - PX4 flight controller
-- Jetson Pack 6.2 and [ROS 2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/) have been installed
+- JetPack 6.2 and [ROS 2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/) have been installed
 - [Orbbec Gemini 2 3D Camera](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
 
 ## Configure the PX4 communication environment of ROS2
@@ -93,7 +92,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 Connect the PX4 controller to the UART1 serial port of Jetson
 
 <div align="center">
-    <img width={1000}
+    <img alt="PX4 controller wired to the UART1 serial port on the Jetson for the Micro-XRCE-DDS link" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_mini.jpg" />
 </div>
 
@@ -111,7 +110,7 @@ ros2 topic list | grep "/fmu/out/"
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list filtered on /fmu/out/ showing the PX4 status topics" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_topic.png" />
 </div>
 
@@ -199,6 +198,27 @@ ros2 run detect detect
 <div style={{ textAlign: "justify" }}>
 The above video presents an example of achieving target tracking on a drone. It locates the target through target detection and uses the ByteTrack target tracking algorithm to precisely track the specific target. At the same time, depth images are used to estimate the distance between the drone and the target.
 </div>
+
+## FAQ
+
+**What does the Jetson do and what does PX4 do?**
+The Jetson runs YOLO detection with ByteTrack and reads distance from the Gemini 2 depth frame, then sends the target position to PX4 over ROS 2. PX4 keeps flying the airframe; this build does not replace the flight controller.
+
+**Which serial port carries the ROS 2 link to PX4?**
+`/dev/ttyTHS1` at 921600 baud, through the Micro-XRCE-DDS Agent: `./MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600`. Run the agent first, then start the detection node in a second terminal.
+
+**How do I know the link is up?**
+`ros2 topic list | grep "/fmu/out/"` should list `vehicle_status`, `vehicle_local_position`, `vehicle_attitude` and the rest of the PX4 status topics. No topics means the agent or the wiring is wrong, not the detector.
+
+**Which JetPack version does this build use?**
+JetPack 6.2 with ROS 2 Humble, plus the Orbbec Gemini 2 and the udev rules from `./scripts/install_udev_rules.sh`. The detection node is built in a ROS 2 workspace and needs `PYTHONPATH` extended to `install/lib/`.
+
+## Related Resources
+
+- [Orbbec Gemini 2 3D camera on ROS 2](/orbbec_gemini2/)
+- [Pair the Gemini 2 with YOLOv11 for distance measurement](/yolov11_with_depth_camera/)
+- [Install ROS 2 Humble on reComputer](/install_ros2_humble/)
+- [Orbbec Gemini 2 product page](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
 
 ## Tech Support & Product Discussion
 
