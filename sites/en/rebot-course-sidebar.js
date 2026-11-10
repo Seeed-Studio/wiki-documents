@@ -292,6 +292,11 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LINGBOT_VLA2",
               "label": "LingBot-VLA 2.0 — Cross-Embodiment Actions & Future Perception"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_DM05",
+              "label": "DM0.5 — Historical Context & Trajectory Alignment"
             }
           ]
         },
@@ -311,6 +316,11 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LINGBOT_VA",
               "label": "LingBot-VA — Causal World Modeling & Robot Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_GR00T_2",
+              "label": "GR00T 2 — Joint World-Action Modeling"
             }
           ]
         },
