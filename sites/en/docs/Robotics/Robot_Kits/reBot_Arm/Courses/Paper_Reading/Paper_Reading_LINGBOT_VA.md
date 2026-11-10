@@ -132,11 +132,6 @@ export const toc = [
     "value": "Conclusion",
     "id": "conclusion",
     "level": 2
-  },
-  {
-    "value": "References",
-    "id": "references",
-    "level": 2
   }
 ];
 
@@ -422,11 +417,5 @@ Training `forward` encodes camera time windows and computes both video and actio
 LingBot-VA's central insight is that **future representations can condition action generation, but must continually be corrected by the real environment**. The video branch learns changes, the action branch infers control from them, and the history cache preserves interaction context. Partial denoising and asynchronous execution address the time cost of bringing generation into control.
 
 Experiments support this approach in the tested simulation, hardware, and few-shot settings while retaining clear limits: lower clothes-folding progress, substantial degradation with naive asynchrony, and a success-rate cost even with FDM grounding. The released shared backbone and LeRobot interface also differ from the paper's full system. These conditions help determine suitable follow-up experiments more than an average success rate alone does.
-
-## References
-
-1. [Paper](https://arxiv.org/abs/2601.21998v2), [PDF](https://arxiv.org/pdf/2601.21998v2): Section 3, Equations (7)–(13), Algorithms 1–2; Section 4, Tables 1–3 and Figures 5–10; Appendix Tables S1–S7.
-2. [Author implementation, pinned commit 7c6ffa9](https://github.com/Robbyant/lingbot-va/tree/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb): [README and shared-backbone release notes](https://github.com/Robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/README.md), [LIBERO configuration](https://github.com/Robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/wan_va/configs/va_libero_cfg.py).
-3. [LeRobot documentation](https://huggingface.co/docs/lerobot/lingbot_va) and [pinned source d490e472](https://github.com/huggingface/lerobot/tree/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va): [configuration and sampling indices](https://github.com/huggingface/lerobot/blob/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va/configuration_lingbot_va.py), [training and cached execution path](https://github.com/huggingface/lerobot/blob/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va/modeling_lingbot_va.py).
 
 </div>

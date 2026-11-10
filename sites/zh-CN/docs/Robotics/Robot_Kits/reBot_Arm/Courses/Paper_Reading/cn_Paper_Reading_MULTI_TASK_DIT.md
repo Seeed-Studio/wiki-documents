@@ -324,7 +324,7 @@ SR 小提琴图表示基于成功/失败记录估计的真实成功概率的贝�
 
 ## LeRobot 实现与应用
 
-以下对照固定提交 `f5c9bc0`（源码链接见参考资料）。LeRobot MultiTask DiT 参考了 LBM 的条件 DiT 路线，但配置、数据处理与训练结果应按各自来源理解。
+以下对照固定提交 `f5c9bc0`。LeRobot MultiTask DiT 参考了 LBM 的条件 DiT 路线，但配置、数据处理与训练结果应按各自来源理解。
 
 ### 配置对照
 
@@ -370,14 +370,5 @@ LeRobot 可以从 CLIP 预训练权重初始化图像与文本编码器，再用
 这篇论文的重点是用固定策略架构和受控评测，检验多任务预训练是否带来收益。在所测任务上，预训练后微调能提高跨任务汇总表现，并减少达到相近表现所需的目标任务示范；测试条件变化时，部分优势更明显。
 
 这些发现支持多样化示范预训练的价值，也保留了清楚的边界：收益依赖任务与微调条件，完成度提升不一定转化为完整成功；未微调模型没有稳定胜过单任务策略。阅读时，应把网络如何生成动作、实验如何比较策略，以及结果能支持多大范围的结论一起理解。
-
-## 参考资料
-
-1. TRI LBM Team. [A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation](https://arxiv.org/abs/2507.05331v1)，2025。
-2. TRI. [LBM 项目页](https://toyotaresearchinstitute.github.io/lbm1/)。
-3. Hugging Face. [Multitask DiT Policy](https://huggingface.co/docs/lerobot/main/en/multi_task_dit)。
-4. Hugging Face / Bryson Jones. [固定提交的配置](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/configuration_multi_task_dit.py)、[模型](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/modeling_multi_task_dit.py)与[处理器](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/processor_multi_task_dit.py)。
-5. Boston Dynamics. [Large Behavior Models and Atlas Find New Footing](https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/)；Atlas 的 DiT 与流匹配应用。
-6. Bryson Jones. [Dissecting and Open-Sourcing Multitask Diffusion Transformer Policy](https://brysonkjones.substack.com/p/dissecting-and-open-sourcing-multitask-diffusion-transformer-policy)；开源实现作者的结构与实践说明。
 
 </div>
