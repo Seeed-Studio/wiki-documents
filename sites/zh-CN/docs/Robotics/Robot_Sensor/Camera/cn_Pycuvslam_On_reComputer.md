@@ -1,6 +1,6 @@
 ---
-description: 本 wiki 提供了在 reComputer Jetson 系列上设置和运行 PyCuVSLAM 的全面步骤，用于使用 RGB-D 相机进行 GPU 加速的视觉 SLAM 应用。
-title: PyCuVSLAM 与 reComputer
+description: "在预装 JetPack 6.2 的 reComputer 上运行 PyCuVSLAM 视觉里程计：单目与 RGB-D 跟踪、数据集配置以及相机标定。"
+title: 在 reComputer 上使用 PyCuVSLAM
 keywords:
   - PyCuVSLAM
   - cuVSLAM
@@ -16,38 +16,38 @@ sku: 101090144,100071398
 last_update:
   date: 2025-10-10
   author: Zibo
-createdAt: '2025-10-11'
+createdAt: '2025-10-10'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/pycuvslam_recomputer_robotics/
 ---
 
 <div align="center">
-    <img width={800}
-    src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" />
+    <img alt="PyCuVSLAM demo in RViz: the reconstructed point-cloud map and the parking-lot loop trajectory above, with the live camera view and a second map view below" width={800}
+    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/pycuvslam-cover.gif" />
 </div>
 
-## 简介
+## 介绍
 
 <div style={{ textAlign: "justify" }}>
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) 是 NVIDIA GPU 加速视觉里程计和 SLAM 库 cuVSLAM 的 Python 包装器。它支持单目、立体、RGB-D、多相机和视觉惯性（IMU）模式，提供简单的 Python API，可以直接与相机流接口并输出实时相机姿态、地图点和回环检测信息。底层的 CUDA 优化在 PC 和 Jetson 设备上都能实现高精度、低延迟的 SLAM 推理，使其适用于机器人导航、无人机定位和 3D 感知应用。本 wiki 将提供如何在 reComputer 上部署 pycuvslam 的说明。
+[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) 是 NVIDIA 的 GPU 加速视觉里程计与 SLAM 库 cuVSLAM 的 Python 封装。它支持单目、双目、RGB-D、多相机以及视觉惯性（IMU）模式，提供简单的 Python API，可直接对接相机数据流，并输出实时相机位姿、地图点以及回环检测信息。底层的 CUDA 优化使其能够在 PC 和 Jetson 设备上实现高精度、低延迟的 SLAM 推理，非常适合用于机器人导航、无人机定位和 3D 感知等应用。在 reComputer 上部署它意味着要基于 JetPack 的 CUDA 软件栈构建该库，向其输入相机帧，并读取返回的位姿和地图点。
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="reComputer unit badged NVIDIA Jetson Orin Nano / Orin NX, used for the PyCuVSLAM walkthrough" width={700}
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 
-## 先决条件
+## 前置条件
 
-- **reComputer** 预装 Jetpack 6.2
+- **预装 Jetpack 6.2 的 reComputer**
 - **RGB 相机**
-- **RGB-D 相机（推荐 [Orbbec Gemini2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)）**
-- **[ROS2 Humble](https://wiki.seeedstudio.com/cn/install_ros2_humble/)** 环境已安装
+- **RGB-D 相机（推荐使用 [Orbbec Gemini2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)）**
+- 已安装 **[ROS2 Humble](https://wiki.seeedstudio.com/cn/install_ros2_humble/)** 环境
 
 ## 安装
 
@@ -66,21 +66,21 @@ sudo apt-get install git-lfs
 
 **步骤 3.** 安装 PyCuVSLAM 包
 
-对于 Jetson 设备（ARM64 架构）：
+适用于 Jetson 设备（ARM64 架构）：
 
 ```bash
 # For Jetson devices
 pip install -e bin/aarch64
 ```
 
-对于 Ubuntu PC（x86_64 架构）：
+适用于 Ubuntu PC（x86_64 架构）：
 
 ```bash
 # For Ubuntu PC
 pip install -e bin/x86_64
 ```
 
-**步骤 4.** 安装所需依赖项
+**步骤 4.** 安装所需依赖
 
 ```bash
 # Install required packages
@@ -89,7 +89,7 @@ pip install -r examples/requirements.txt
 
 ## 单目视觉里程计
 
-### 数据集设置
+### 数据集配置
 
 **步骤 1.** 下载 EuRoC MH_01_easy 数据集：
 
@@ -100,7 +100,7 @@ unzip examples/euroc/dataset/MH_01_easy.zip -d examples/euroc/dataset
 rm examples/euroc/dataset/MH_01_easy.zip
 ```
 
-**步骤 2.** 复制标定文件：
+**步骤 2.** 拷贝标定文件：
 
 ```bash
 cp examples/euroc/sensor_cam0.yaml examples/euroc/dataset/mav0/cam0/sensor_recalibrated.yaml
@@ -110,7 +110,7 @@ cp examples/euroc/sensor_imu0.yaml examples/euroc/dataset/mav0/imu0/sensor_recal
 
 ### 相机标定
 
-`v4l2_camera` 包充当 Linux Video4Linux2 (V4L2) API 和 ROS 2 话题之间的桥梁，发布可在标定流水线中轻松使用的图像和相机信息消息。
+`v4l2_camera` 包充当 Linux Video4Linux2 (V4L2) API 与 ROS 2 话题之间的桥梁，发布图像和相机信息消息，便于在标定流程中使用。
 
 **步骤 1.** 安装相机标定包：
 
@@ -129,13 +129,13 @@ sudo apt install ros-${ROS_DISTRO}-v4l2-camera
 ros2 run v4l2_camera v4l2_camera_node
 ```
 
-默认发布的话题有：
+默认发布的话题为：
 
 - `/image_raw` - 原始相机图像
 - `/camera` - 相机信息
 
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list showing /camera_info and /image_raw published by the v4l2_camera node" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
 </div>
 
@@ -150,21 +150,21 @@ ros2 run camera_calibration cameracalibrator \
 
 :::note
 
-- `--size 8x6` 指的是内角点数量（8×6 = 48 个角点，对应 9×7 网格）
-- `--square 0.025` 指的是方格大小，单位为米（25mm）
-- 移动相机从不同角度拍摄图像，直到 `CALIBRATE` 按钮亮起
+- `--size 8x6` 指的是棋盘格内角点的数量（8×6 = 48 个内角点，对应 9×7 网格）
+- `--square 0.025` 指的是每个方格的边长（单位：米，25mm）
+- 移动相机，从不同角度采集图像，直到 `CALIBRATE` 按钮高亮
 
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator window with the checkerboard views and the CALIBRATE button" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
 </div>
 
-标定成功后，您将在终端中获得类似的相机参数：
+标定成功后，你将在终端中获得类似如下的相机参数：
 
 <div align="center">
-    <img width={1000}
+    <img alt="Camera intrinsics and distortion coefficients printed in the terminal after calibration" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
 </div>
 
@@ -789,7 +789,7 @@ python mono_slam.py --config /path/to/your/Camera parameters yaml file
 ```
 
 :::note
-您需要将 `/path/to/your/Camera parameters yaml file` 修改为保存相机参数的 yaml 文件路径。yaml 文件的内容如下：
+你需要将 `/path/to/your/Camera parameters yaml file` 修改为保存你相机参数的 yaml 文件路径。yaml 文件的内容如下：
 
 <details>
 <summary> camera.yaml </summary>
@@ -839,16 +839,16 @@ slam_optimization:
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz showing the monocular odometry point cloud beside the camera view, with the Speed x 2.5 overlay" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb.gif" />
 </div>
 
-## 单目深度视觉里程计
+## 单目-深度视觉里程计
 
 ### 相机标定
 
 <div style={{ textAlign: "justify" }}>
-单目深度视觉里程计需要相机和深度图像之间的像素对像素对应关系。[Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) 是一款立体结构光/主动立体红外 3D 相机，可提供深度和 RGB（彩色）输出。其关键特性之一是硬件加速的深度到彩色对齐（D2C，深度 → 彩色），这意味着深度图和 RGB 图像在数据到达主机计算机之前就已在像素级别进行了空间对齐。这减少了主机处理器的计算负载，并简化了深度 + 彩色融合，适用于 3D 重建、SLAM、带深度的目标检测等应用。
+单目-深度视觉里程计需要相机图像和深度图像之间的逐像素对应关系。[Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) 是一款立体结构光 / 主动立体 IR 3D 相机，可同时输出深度和 RGB（彩色）图像。其关键特性之一是硬件加速的深度到彩色对齐（D2C，depth → color），这意味着在数据到达主机电脑之前，深度图和 RGB 图像已经在像素级完成空间对齐。这降低了主机处理器的计算负担，并简化了深度 + 颜色在 3D 重建、SLAM、带深度的目标检测等应用中的融合。
 </div>
 
 **步骤 1.** 安装 Orbbec ROS2 驱动：
@@ -884,9 +884,9 @@ ros2 launch orbbec_camera gemini2.launch.py
 ```
 
 :::note
-您可以通过观察相机数据话题是否正常发布来检查相机节点是否能正常启动。
+你可以通过观察相机数据 topic 是否正常发布，来检查相机节点是否能够正常启动。
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list showing the Orbbec camera colour and depth topics" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
@@ -899,11 +899,11 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator in fisheye mode on the RGB-D camera, with the CALIBRATE button boxed" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal4.png" />
 </div>
 
-对于 RGB-D 相机，您将获得相机的参数：
+对于 RGB-D 相机，你将获得以下相机的参数：
 
 ```yaml
 [image]
@@ -930,14 +930,14 @@ projection:
   0.000000 0.000000 1.000000 0.000000
 ```
 
-**步骤 3.** 获取深度到彩色外参
+**步骤 3.** 获取深度到彩色的外参
 
 ```bash
 ros2 launch orbbec_camera gemini2.launch.py
 ros2 topic echo /camera/depth_to_color
 ```
 
-从 ROS2 话题读取从深度相机坐标系到彩色相机坐标系的旋转矩阵和平移向量：
+从 ROS2 topic 中读取从深度相机坐标系到彩色相机坐标系的旋转矩阵和平移向量：
 
 ```yaml
 # Depth camera to color camera coordinate system transformation
@@ -2170,7 +2170,7 @@ depth_to_color_transform:
 </details>
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz showing the RGB-D odometry point cloud with the colour view and a depth view, under the Speed x 2.5 overlay" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgbd.gif" />
 </div>
 
@@ -2180,9 +2180,17 @@ depth_to_color_transform:
 - [cuVSLAM 文档](https://docs.nvidia.com/cuda/cuvslam/)
 - [ROS2 相机标定](https://navigation.ros.org/tutorials/docs/camera_calibration.html)
 
+## 相关资源
+
+- [使用 Orbbec Gemini2 的 ORB-SLAM3](/cn/orb_slam3_orbbec_gemini2/)
+- [ROS 2 上的 Orbbec Gemini 2 3D 相机](/cn/orbbec_gemini2/)
+- [在 Jetson AGX Orin 上部署 Depth Anything V3](/cn/deploy_depth_anything_v3_jetson_agx_orin/)
+- [reComputer Robotics J4012 产品页面](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [PyCuVSLAM 仓库](https://github.com/NVlabs/PyCuVSLAM)
+
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -16,20 +16,27 @@ last_update:
   date: 07/15/2026
   author: Dayu
 createdAt: '2026-07-14'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/cn/jetpack72_ax210_ax200_wifi_setup_guide_bk/
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
 
 # JetPack 7.2 无线模块设置指南
 
 在将 Seeed Jetson 设备升级到 JetPack 7.2 后，一些用户可能会发现 M.2 Key E Wi-Fi 模块可以在 PCIe 上被检测到，但没有出现任何无线网络接口。
 
-本指南涵盖以下模块在 JetPack 7.2 下的修复流程：
+本指南介绍以下模块在 JetPack 7.2 下的修复流程：
 
 - Intel AX210 / AX200，使用 `iwlwifi` 和 `iwlmvm`。
 - Realtek RTL8852BE / 8852BE，使用 `rtw89` 驱动栈。
 
-修复通常需要两个部分：安装与 JetPack 7.2 内核 `6.8.12-1021-tegra` 匹配的内核模块，以及在 `/lib/firmware` 下解压相应的固件文件。
+修复通常需要两部分：安装与 JetPack 7.2 内核 `6.8.12-1021-tegra` 匹配的内核模块，以及在 `/lib/firmware` 下解压相应的固件文件。
 
 :::note
 本指南适用于使用内核 `6.8.12-1021-tegra` 的 JetPack 7.2 系统。修复用驱动模块是为该内核构建的。如果 `uname -r` 显示的是其他内核，请使用与该内核版本完全匹配的驱动包。
@@ -50,7 +57,7 @@ url: https://wiki.seeedstudio.com/cn/jetpack72_ax210_ax200_wifi_setup_guide_bk/
 - 内核版本为 `6.8.12-1021-tegra`。
 - 正确安装的受支持 M.2 Key E Wi-Fi 模块：Intel AX210、Intel AX200 或 Realtek RTL8852BE。
 - 通过以太网、USB 网络或其他网络适配器提供的临时互联网访问。
-- 在 Jetson 设备上具有 `sudo` 权限。
+- 在 Jetson 设备上拥有 `sudo` 权限。
 
 首先检查内核版本和 PCIe 设备：
 
@@ -379,14 +386,14 @@ bash fix_jp72_wifi.sh --8852be --download-only
 
 从下面的 OneDrive 文件夹下载 JetPack 7.2 Intel 驱动包：
 
-- [JetPack 7.2 AX210/AX200 driver modules](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC5g_yzXQ26Sb-yYWtaWU8qATu9387mvrXAvPLhJNuBtxw?e=PvK037)
+- [JetPack 7.2 AX210/AX200 驱动模块](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC5g_yzXQ26Sb-yYWtaWU8qATu9387mvrXAvPLhJNuBtxw?e=PvK037)
 
 该文件夹包含：
 
 - `iwlwifi.ko`
 - `iwlmvm.ko`
 
-将这两个文件复制到 Jetson 上，例如复制到 `~/Downloads/`，然后替换当前内核模块：
+将这两个文件复制到 Jetson，例如放在 `~/Downloads/` 下，然后替换当前内核模块：
 
 ```bash
 KVER=$(uname -r)
@@ -437,7 +444,7 @@ sudo modprobe iwlwifi
 
 从下面的 OneDrive 文件夹下载 JetPack 7.2 Realtek 8852BE 驱动包：
 
-- [JetPack 7.2 Realtek 8852BE driver modules](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgAxZzXdPP_STosySy14oTGgAZMFt4qQ0IFsKt0oXeAi5KE?e=W84g0E)
+- [JetPack 7.2 Realtek 8852BE 驱动模块](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgAxZzXdPP_STosySy14oTGgAZMFt4qQ0IFsKt0oXeAi5KE?e=W84g0E)
 
 已验证的文件夹路径为 `8852be/jp7.2/8852be-6.8.12-1021-tegra/`，其中包含：
 
@@ -448,7 +455,7 @@ sudo modprobe iwlwifi
 - `SHA256SUMS`
 - `modinfo.txt`
 
-将该文件夹复制到 Jetson 上，例如复制到 `~/Downloads/8852be-6.8.12-1021-tegra/`，然后安装这些模块：
+将该文件夹复制到 Jetson，例如放在 `~/Downloads/8852be-6.8.12-1021-tegra/` 下，然后安装这些模块：
 
 ```bash
 KVER=$(uname -r)
@@ -508,7 +515,7 @@ ip link show
 lsmod | grep -E 'iwl|rtw89'
 ```
 
-成功的设置应能看到 Wi-Fi 设备、预期的内核模块，以及诸如 `wlan0` 之类的无线接口。
+成功的设置应显示 Wi-Fi 设备、预期的内核模块以及诸如 `wlan0` 之类的无线接口。
 
 下面的 AX210 结果展示了修复后最终启用 Wi-Fi 的状态：
 
@@ -521,13 +528,13 @@ lsmod | grep -E 'iwl|rtw89'
 | 现象 | 检查项 |
 | --- | --- |
 | `lspci` 无法检测到 Wi-Fi 模块 | 检查 M.2 Key E 安装情况，并确认载板设备树已启用 PCIe 通道。 |
-| Intel `dmesg` 报告固件加载失败 | 确认匹配的 `.ucode` 文件以及（对于 AX210）`.pnvm` 文件已解压到 `/lib/firmware/` 下。 |
+| Intel `dmesg` 报告固件加载失败 | 确认匹配的 `.ucode` 文件，以及对于 AX210，`.pnvm` 文件已解压到 `/lib/firmware/` 下。 |
 | Realtek `dmesg` 报告固件加载失败 | 确认 `rtw885*.zst` 文件已解压到 `/lib/firmware/rtw89/` 下，尤其是 `rtw8852b` 固件文件。 |
-| `modprobe iwlwifi` 报告 `Invalid argument` | 使用 `find /lib/modules/$(uname -r) -name "rfkill.ko"` 检查 `rfkill.ko` 是否存在。如果缺失，请使用正确的 BSP 镜像或重新编译内核模块。 |
+| `modprobe iwlwifi` 报告 `Invalid argument` | 使用 `find /lib/modules/$(uname -r) -name "rfkill.ko"` 检查是否存在 `rfkill.ko`。如果缺失，请使用正确的 BSP 镜像或重新编译内核模块。 |
 | `modprobe rtw89_8852be` 报告找不到模块 | 确认四个 `rtw89*.ko` 文件已复制到 `/lib/modules/$(uname -r)/kernel/drivers/net/wireless/realtek/rtw89/`，然后运行 `sudo depmod -a`。 |
 | `modprobe 8852be` 失败 | 使用 `sudo modprobe rtw89_8852be`；`8852be` 不是模块名。 |
 | 重启后 Wi-Fi 消失 | 确认 `/etc/modules-load.d/iwlwifi.conf` 或 `/etc/modules-load.d/rtw89_8852be.conf` 存在，并再次运行 `sudo depmod -a`。 |
-| AX210 已加载但无法扫描 6 GHz 网络 | 确认 `iwlwifi-ty-a0-gf-a0.pnvm` 存在，并使用 `iw reg get` 检查当前配置的管制域是否支持 6 GHz。 |
+| AX210 已加载但无法扫描 6 GHz 网络 | 确认 `iwlwifi-ty-a0-gf-a0.pnvm` 存在，并使用 `iw reg get` 检查当前配置的监管域是否支持 6 GHz。 |
 
 ## 说明
 

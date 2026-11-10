@@ -1,50 +1,50 @@
 ---
-description: Este wiki se centra en usar la placa portadora J501 con la placa de expansión GMSL para realizar tareas de análisis de video con IA en un sistema de múltiples cámaras con Jetson AGX Orin. Primero, enumera los prerrequisitos incluyendo los módulos de hardware y el SDK JetPack requerido. Luego, detalla el proceso de configuración de cámaras GMSL, como crear y configurar un script de configuración y un servicio systemd. A continuación, muestra cómo desplegar rápidamente YOLO11 para detección de objetos en tiempo real de ocho cámaras descargando e instalando paquetes necesarios, exportando el modelo TensorRT, y ejecutando un script de Python. Después de eso, explica cómo instalar el entorno VGGT y ejecutar un script para reconstrucción 3D de ocho cámaras, con una nota sobre el impacto de la distorsión de cámaras ojo de pez en el resultado. Finalmente, proporciona recursos útiles y múltiples canales para soporte técnico y discusión de productos.
-title: Múltiples Cámaras GMSL para Detección de Objetos en Tiempo Real y Reconstrucción 3D en Jetson AGX Orin
+description: "Ejecuta 8 cámaras GMSL2 en Jetson AGX Orin con la carrier J501: configuración de cámaras, detección YOLO11 con TensorRT y reconstrucción 3D con VGGT."
+title: Cámaras GMSL múltiples para detección de objetos en tiempo real y reconstrucción 3D en Jetson AGX Orin
 keywords:
-  - j501 carrier board
+  - placa carrier j501
   - j501
-  - multiple cameras
-  - GMSL Camera
-  - Computer Vision
-  - application
+  - múltiples cámaras
+  - Cámara GMSL
+  - Visión por computadora
+  - aplicación
   - Jetson Agx Orin
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo1.webp
 slug: /multiple_cameras_with_jetson
 sku: 101090101, 102991855, 102991854, E24081601, 206001693, 206001694
 last_update:
-  date: 06/30/2025
+  date: 11/06/2026
   author: Zibo
 createdAt: '2025-06-27'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/es/multiple_cameras_with_jetson/
 ---
 
 <div style={{ textAlign: "justify" }}>
-Este wiki utilizará la Placa Portadora reServer Industrial J501 con la placa de extensión GMSL para introducir cómo desplegar detección de objetos en tiempo real y reconstrucción 3D en un sistema de múltiples cámaras.
+Ocho cámaras GMSL2 en un solo Jetson AGX Orin, con detección YOLO11 y reconstrucción 3D con VGGT leyendo de los mismos flujos. La implementación se verificó en JetPack 6.2 con la placa carrier reServer Industrial J501 y su placa de expansión J501-GMSL. Al completar el proceso, obtendrás un script de configuración de cámaras, una compilación YOLO11 con TensorRT que maneja ocho flujos y una canalización de reconstrucción con VGGT.
 </div>
 
 <div class="table-center">
   <table align="center">
     <tr>
         <th>Módulo NVIDIA Jetson AGX Orin</th>
-        <th>Placa Portadora reServer Industrial J501</th>
-        <th>Placa de extensión reServer Industrial J501-GMSL</th>
+        <th>Placa carrier reServer Industrial J501</th>
+        <th>Placa de expansión reServer Industrial J501-GMSL</th>
     </tr>
     <tr>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="Módulo NVIDIA Jetson AGX Orin, vista superior" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="Placa carrier reServer Industrial J501, vista superior en ángulo" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="Placa de expansión reServer Industrial J501-GMSL, vista superior en ángulo" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
     </tr>
@@ -52,21 +52,21 @@ Este wiki utilizará la Placa Portadora reServer Industrial J501 con la placa de
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html" target="_blank">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html" target="_blank">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Industrial-J501-GMSL-extension-board-p-5949.html" target="_blank">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
@@ -74,29 +74,36 @@ Este wiki utilizará la Placa Portadora reServer Industrial J501 con la placa de
   </table>
 </div>
 
+## Requisitos previos
 
-## Prerrequisitos
 - Módulo NVIDIA Jetson AGX Orin 32GB/64GB
-- Flasheado con el último [SDK JetPack 6.2](https://wiki.seeedstudio.com/es/reserver_j501_getting_started/#prepare-the-jetpack-image) (soporta placa de expansión GMSL)
-- Placa Portadora reServer Industrial J501
-- Placa de extensión reServer Industrial J501-GMSL
+- Flasheado con el último [JetPack 6.2 SDK](https://wiki.seeedstudio.com/es/reserver_j501_getting_started/#prepare-the-jetpack-image) (compatible con la placa de expansión GMSL)
+- Placa carrier reServer Industrial J501
+- Placa de expansión reServer Industrial J501-GMSL
 - [Cámara GMSL](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
 
-## Configuración de Cámara GMSL
-## Conexión de Hardware
+:::note
+Este recorrido está orientado a JetPack 6.2 con CUDA 12.6, para el cual están compiladas las ruedas enlazadas más abajo. La [guía de flasheo de la J501](/es/reserver_j501_getting_started/) solo enumera imágenes JetPack 5.x y 6.x, por lo que aún no hay documentada una ruta de imagen JetPack 7.x para esta placa carrier.
+:::
+
+## Configuración de la cámara GMSL
+
+## Conexión de hardware
+
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
+  <img alt="J501 con placa de expansión GMSL y ocho cámaras GMSL conectadas, cables FAKRA etiquetados CAM0 a CAM7" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
-Para obtener la entrada de la cámara GMSL, primero necesitamos configurar los formatos de los serializadores y deserializadores. Añádelos al script de inicio del sistema para que puedan configurarse automáticamente cada vez que el sistema arranque.
+Para poder obtener la entrada de la cámara GMSL, primero debemos configurar los formatos de los serializadores y deserializadores. Añádelos al script de inicio del sistema para que se configuren automáticamente cada vez que el sistema se inicie.
 </div>
 
-**Paso 1.** Crear script de configuración:
+**Paso 1.** Crear el script de configuración:
 
 ```bash
 touch media-setup.sh
 ```
+
 **Paso 2.** Pega el siguiente contenido en media-setup.sh:
 
 ```bash
@@ -121,12 +128,13 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
 media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_3":0[fmt:YUYV8_1X16/1920x1536]'
 ```
 
-**Paso 3.** Añadir permisos de ejecución a media-setup.sh:
+**Paso 3.** Añade permisos de ejecución a media-setup.sh:
 
 ```bash
 chmod +x media-setup.sh
 ```
-**Paso 4.** Crear un servicio systemd:
+
+**Paso 4.** Crea un servicio systemd:
 
 ```bash
 sudo vim /etc/systemd/system/mediactl-init.service 
@@ -153,7 +161,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable mediactl-init.service
 sudo systemctl start mediactl-init.service
 ```
-**Paso 5.** Reinicia el dispositivo y verifica si el servicio está funcionando:
+
+**Paso 6.** Reinicia el dispositivo y comprueba si el servicio se está ejecutando:
 
 ```bash
 sudo systemctl status mediactl-init.service
@@ -168,25 +177,25 @@ gst-launch-1.0 v4l2src device=/dev/video5  ! xvimagesink -ev
 gst-launch-1.0 v4l2src device=/dev/video6  ! xvimagesink -ev 
 gst-launch-1.0 v4l2src device=/dev/video7  ! xvimagesink -ev 
 ```
+
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
+  <img alt="Ocho ventanas de gst-launch-1.0, una por cámara GMSL, cada una mostrando la vista en vivo con su propia superposición de marca de tiempo" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
 </div>
 
 :::info
-Nuestra placa de extensión GMSL soporta hasta 8 entradas de video de cámara y proporciona una precisión de marca de tiempo PTP de menos de 1ms para asegurar la sincronización de los 8 flujos de datos de video.
+Nuestra placa de expansión GMSL admite hasta 8 entradas de vídeo de cámara y proporciona una precisión de marca de tiempo PTP de menos de 1 ms para garantizar la sincronización de los 8 flujos de datos de vídeo.
 :::
 
-
-## Desplegar rápidamente YOLO11 para detección de objetos en tiempo real de ocho cámaras
+## Despliega rápidamente YOLO11 para la detección de objetos en tiempo real con ocho cámaras
 
 <div style={{ textAlign: "justify" }}>
-YOLOv11 es un modelo de detección de objetos en tiempo real lanzado por Ultralytics, que ofrece un equilibrio poderoso entre velocidad, precisión y eficiencia. Diseñado con arquitectura mejorada y estrategias de entrenamiento, YOLOv11 supera a las versiones anteriores tanto en rendimiento como en flexibilidad de despliegue. Es particularmente adecuado para dispositivos edge, sistemas autónomos y aplicaciones de IA industrial, soportando tareas como detección, segmentación y seguimiento con alta confiabilidad.
+YOLOv11 es un modelo de detección de objetos en tiempo real lanzado por Ultralytics, que ofrece un potente equilibrio entre velocidad, precisión y eficiencia. Diseñado con una arquitectura y estrategias de entrenamiento mejoradas, YOLOv11 supera a las versiones anteriores tanto en rendimiento como en flexibilidad de despliegue. Es especialmente adecuado para dispositivos de borde, sistemas autónomos y aplicaciones de IA industrial, y admite tareas como detección, segmentación y seguimiento con alta fiabilidad.
 </div>
 
 ### Instalar YOLO11 y ejecutar detección de objetos con múltiples cámaras
 
-**Paso 1.** Descargar e instalar los paquetes necesarios:
-:::note 
+**Paso 1.** Descarga e instala los paquetes necesarios:
+:::note
 Los siguientes paquetes están construidos para JetPack 6.2 con CUDA 12.6.
 :::
 
@@ -196,11 +205,11 @@ Los siguientes paquetes están construidos para JetPack 6.2 con CUDA 12.6.
 
 [torchvision-0.22.0-cp310-cp310-linux_aarch64.whl](https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/daa/bff3a07259968/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl#sha256=daabff3a0725996886b92e4b5dd143f5750ef4b181b5c7d01371a9185e8f0402)
 
-[yolo11n.pt pesos preentrenados](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt)
+[Pesos preentrenados yolo11n.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt)
 
-[yolo11n-seg.pt pesos preentrenados](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt)
+[Pesos preentrenados yolo11n-seg.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt)
 
-[yolo11n-pose.pt pesos preentrenados](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt)
+[Pesos preentrenados yolo11n-pose.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt)
 
 ```bash
 #Install the packages using pip:
@@ -213,7 +222,7 @@ pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 pip install ultralytics
 ```
 
-Exportar el modelo TensorRT:
+Exporta el modelo TensorRT:
 
 ```bash
 yolo export model=./models/yolo11n.pt format=engine device=0 half=True dynamic=True
@@ -221,8 +230,7 @@ yolo export model=./models/yolo11n-seg.pt format=engine device=0 half=True dynam
 yolo export model=./models/yolo11n-pose.pt format=engine device=0 half=True dynamic=True
 ```
 
-
-Ejecutar el siguiente script de Python puede realizar rápidamente detección de objetos en ocho cámaras:
+Ejecutar el siguiente script de Python puede realizar rápidamente la detección de objetos en ocho cámaras:
 
 <details>
 <summary> detect.py </summary>
@@ -274,7 +282,7 @@ def capture_thread(index):
         p_time = current_time
         cv2.putText(annotated, f"FPS: {fps:.2f}", (10, 25),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1, cv2.LINE_AA)
-        
+
         with locks[index]:
             frames[index] = annotated
 
@@ -313,23 +321,24 @@ if __name__ == "__main__":
     main()
 
 ```
+
 </details>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
+  <img alt="Ventana multicámara ejecutando YOLO11 en ocho flujos con FPS y etiquetas de cuadros, junto a la salida de jetson_release y jtop" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
-El J501 está equipado con el módulo NVIDIA AGX Orin, que cuenta con una potencia de cómputo extremadamente alta. Puede manejar hasta 8 cámaras y cargar modelos para tres tareas de detección diferentes, permitiendo la detección de objetos en tiempo real.
+El J501 está equipado con el módulo NVIDIA AGX Orin, que cuenta con una potencia de cómputo extremadamente alta. Puede manejar hasta 8 cámaras y cargar modelos para tres tareas de detección diferentes, lo que permite la detección de objetos en tiempo real.
 </div>
 
-## Desplegar rápidamente VGGT para reconstrucción 3D
+## Despliega rápidamente VGGT para reconstrucción 3D
 
 <div style={{ textAlign: "justify" }}>
-VGGT es un modelo de visión-lenguaje diseñado para la comprensión y razonamiento 3D en entornos complejos. Combina imágenes de múltiples vistas y entradas de lenguaje para generar representaciones detalladas de escenas 3D y responder preguntas espaciales o semánticas sobre el entorno. Construido sobre arquitecturas basadas en transformadores, VGGT sobresale en tareas como el anclaje visual, la localización de objetos 3D y la navegación guiada por lenguaje, lo que lo hace altamente adecuado para aplicaciones de robótica e IA encarnada.
+VGGT es un modelo de visión y lenguaje diseñado para la comprensión y el razonamiento 3D en entornos complejos. Combina imágenes multivista y entradas de lenguaje para generar representaciones detalladas de escenas 3D y responder preguntas espaciales o semánticas sobre el entorno. Construido sobre arquitecturas basadas en transformers, VGGT sobresale en tareas como la vinculación visual, la localización 3D de objetos y la navegación guiada por lenguaje, lo que lo hace muy adecuado para aplicaciones de robótica e IA encarnada.
 </div>
 
-### Instalar el entorno VGGT y ejecutar reconstrucción 3D con múltiples cámaras
+### Instala el entorno de VGGT y ejecuta la reconstrucción 3D con múltiples cámaras
 
 ```bash
 git clone https://github.com/facebookresearch/vggt.git
@@ -337,6 +346,7 @@ cd vggt
 pip install -r requirements.txt
 pip install -r requirements_demo.txt
 ```
+
 Ejecuta el siguiente script para realizar rápidamente la reconstrucción 3D en ocho cámaras:
 
 <details>
@@ -707,7 +717,7 @@ def main():
 
     images = load_and_preprocess_images(images).to(device)
     print(f"Preprocessed images shape: {images.shape}")
-    
+
     print("Running inference...")
     dtype = torch.bfloat16 if torch.cuda.get_device_capability()[0] >= 8 else torch.float16
 
@@ -754,38 +764,64 @@ if __name__ == "__main__":
 </details>
 
 :::info
-ejecuta este script de python y abre el navegador para visitar el servidor viser. El tiempo de carga del modelo vggt puede ser ligeramente más largo. Por favor, ten paciencia y espera.
+ejecuta este script de Python y abre el navegador para visitar el servidor viser. El tiempo de carga del modelo vggt puede ser ligeramente más largo. Ten paciencia y espera.
 Si estás ejecutando este script en un servidor remoto, reemplaza `localhost` con la dirección IP del servidor.
 http://`localhost`:8080
 :::
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
+  <img alt="Salida en terminal de viser iniciando en el puerto 8080 con sus URLs HTTP y WebSocket" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
+  <img alt="Vista en el navegador de Viser de la nube de puntos reconstruida a partir de ocho cámaras, mostrando un portátil y la superficie de un escritorio" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
 </div>
 
 :::note
-Dado que la cámara que estamos usando es una cámara ojo de pez con distorsión severa, la calidad de imagen después de la corrección de distorsión es pobre, lo que afectará el resultado final del modelado 3D. Si usas una cámara con menos distorsión y mayor calidad de imagen, el efecto mejorará.
+Dado que la cámara que estamos usando es una cámara ojo de pez con una distorsión severa, la calidad de imagen después de la corrección de distorsión es pobre, lo que afectará el resultado final del modelado 3D. Si utilizas una cámara con menos distorsión y mayor calidad de imagen, el efecto mejorará.
 :::
+
+## Preguntas frecuentes (FAQ)
+
+**¿Cuántas cámaras GMSL puede manejar el J501 al mismo tiempo?**
+Ocho. La placa de expansión J501-GMSL acepta ocho entradas de cámara en la placa portadora reServer Industrial J501, que está diseñada para el módulo AGX Orin en 32GB y 64GB. Una vez que `mediactl-init.service` está en ejecución, los flujos se enumeran como `/dev/video0` a `/dev/video7`.
+
+**¿Es necesario reconfigurar las cámaras después de cada reinicio?**
+No. Los formatos del serializador y deserializador se encuentran en `media-setup.sh`, que está registrado como la unidad systemd `mediactl-init.service` y los vuelve a aplicar en el arranque. Si una cámara deja de aparecer, comienza con `systemctl status mediactl-init.service` antes de tocar el script.
+
+**¿Están sincronizados en el tiempo los ocho flujos?**
+Sí. La placa de expansión proporciona una precisión de marca de tiempo PTP por debajo de 1 ms en sus ocho entradas, razón por la cual las ocho ventanas de `gst-launch-1.0` muestran la misma superposición de milisegundos. Eso es importante para la reconstrucción 3D, que necesita que las vistas estén alineadas en el tiempo.
+
+**¿A qué versión de JetPack está dirigida esta compilación?**
+JetPack 6.2 con CUDA 12.6. Las ruedas precompiladas enlazadas en la sección de YOLO11 — `onnxruntime_gpu` 1.22.0, `torch` 2.7.0 y `torchvision` 0.22.0, todas cp310 — están construidas para esa combinación, por lo que una JetPack diferente necesita ruedas correspondientes del índice de Jetson AI Lab en lugar de las de esta página.
+
+**¿Por qué la nube de puntos reconstruida se ve tosca?**
+Las cámaras de demostración son ojo de pez con una fuerte distorsión, y la corrección `defisheye` en el script reduce la calidad de imagen antes de que VGGT vea los fotogramas. Sustituir por una cámara con menos distorsión y mejores ópticas proporciona una nube de puntos más densa y limpia sin cambiar el resto de la canalización.
+
+## Recursos relacionados
+
+- [Flashear JetPack para reServer Industrial J501](/es/reserver_j501_getting_started/)
+- [Interfaces de la placa portadora reServer Industrial J501](/es/j501_carrier_board_interfaces_usage/)
+- [Cámara GMSL de Sensing](/es/sensing_gmsl_cameras)
+- [YOLOv11 con cámara de profundidad en Jetson Orin para medición de distancia](/es/yolov11_with_depth_camera/)
+- [Despliegue eficiente de motor de inferencia de visión multitarea en Jetson](/es/deploy_visual_perception_engine_recomputer/)
+- [Página de producto de reServer Industrial J501](https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html)
+- [Repositorio y debates de wiki-documents](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## Recursos
 
 - [YOLOv11 Github](https://github.com/ultralytics/ultralytics)
 - [VGGT: Visual Geometry Grounded Transformer](https://vgg-t.github.io/)
 
+## Soporte técnico y debate sobre el producto
 
-## Soporte Técnico y Discusión de Productos
-
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

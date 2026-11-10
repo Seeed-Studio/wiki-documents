@@ -1,5 +1,5 @@
 ---
-description: Este FAQ explica as principais mudanças do JetPack 7.2 para o Jetson AGX Orin, resume a comparação de inferência entre JetPack 7.2 e JetPack 6.2 feita pela Seeed e mostra como fazer o upgrade com o Seeed Jetson DevelopTool.
+description: Esta FAQ explica as principais mudanças do JetPack 7.2 para o Jetson AGX Orin, resume a comparação de inferência da Seeed entre JetPack 7.2 e JetPack 6.2 e mostra como fazer o upgrade com o Seeed Jetson DevelopTool.
 title: Análise Detalhada do JetPack 7.2
 keywords:
   - Jetson
@@ -18,9 +18,16 @@ updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/pt-br/jetpack72_deep_dive_bk/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Análise Detalhada do JetPack 7.2: O que muda para a inferência no Jetson AGX Orin?
 
-Este FAQ resume por que o JetPack 7.2 é importante para usuários de Jetson AGX Orin, o que a Seeed mediu ao comparar o JetPack 7.2 com o JetPack 6.2 e como avaliar um caminho de upgrade com o Seeed Jetson DevelopTool.
+Esta FAQ resume por que o JetPack 7.2 é importante para usuários de Jetson AGX Orin, o que a Seeed mediu ao comparar o JetPack 7.2 com o JetPack 6.2 e como avaliar um caminho de upgrade com o Seeed Jetson DevelopTool.
 
 A plataforma de teste usada pela Seeed é o reComputer Jetson AGX Orin Developer Kit GMSL Bundle.
 
@@ -91,10 +98,10 @@ Use a tabela a seguir como ponto de partida:
 | Novo projeto com Jetson AGX Orin | Considere começar com o JetPack 7.2 se o BSP, os drivers e a pilha de aplicações necessários estiverem disponíveis. |
 | Projeto existente em JetPack 6.x | Valide módulos de kernel, dependências de CUDA, engines TensorRT, drivers de câmera e drivers de periféricos antes da migração. |
 | Cargas de trabalho de LLM ou VLM limitadas por memória | Vale a pena avaliar o JetPack 7.2 porque a redução de memória medida pode facilitar a execução de modelos maiores ou pipelines com múltiplos serviços. |
-| Sistema em produção com placa carrier customizada | Não faça upgrade apenas executando `apt upgrade`. Use uma imagem completa validada ou um caminho de OTA oficialmente suportado pela Seeed. |
+| Sistema em produção com placa carrier customizada | Não faça upgrade apenas executando `apt upgrade`. Use uma imagem completa validada ou um caminho OTA oficialmente suportado pela Seeed. |
 
 :::caution
-Modos de desempenho mais altos aumentam os requisitos de energia e térmicos. Antes de habilitar um modo de alta potência, confirme se a placa carrier, o adaptador de energia, o gabinete e o projeto de dissipação de calor conseguem sustentar a carga de trabalho desejada.
+Modos de desempenho mais altos aumentam os requisitos de energia e térmicos. Antes de habilitar um modo de alta potência, confirme que a placa carrier, o adaptador de energia, o gabinete e o projeto de dissipação de calor conseguem sustentar a carga de trabalho desejada.
 :::
 
 #### P6: Como posso atualizar para o JetPack 7.2 com o Seeed Jetson DevelopTool?
@@ -105,9 +112,9 @@ O Seeed Jetson DevelopTool fornece um fluxo de trabalho guiado para download de 
   <img width={800} src="https://files.seeedstudio.com/wiki/flash-page.png" />
 </div>
 
-Para uma migração de versão principal, como de JetPack 6.x para JetPack 7.x, é recomendada uma gravação completa, a menos que a Seeed forneça explicitamente um caminho de OTA validado para o seu produto exato e imagem de origem.
+Para uma migração de versão principal, como de JetPack 6.x para JetPack 7.x, é recomendada uma gravação completa, a menos que a Seeed forneça explicitamente um caminho OTA validado para o seu produto exato e imagem de origem.
 
-Para o fluxo completo de decisão entre gravação e OTA do JetPack 7.2, vídeo do DevelopTool, comandos de verificação e checklist de migração, consulte [Flash and OTA Upgrade to JetPack 7.2](/pt-br/flash_and_ota_jetpack_7.2/).
+Para o fluxo completo de decisão entre gravação e OTA do JetPack 7.2, vídeo do DevelopTool, comandos de verificação e checklist de migração, consulte [Flash e Upgrade OTA para JetPack 7.2](/pt-br/flash_and_ota_jetpack_7.2/).
 
 Fluxo de trabalho geral:
 
