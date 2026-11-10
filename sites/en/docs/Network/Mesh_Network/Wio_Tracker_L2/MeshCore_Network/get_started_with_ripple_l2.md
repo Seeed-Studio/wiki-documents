@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png
 slug: /get_started_with_ripple_l2_pro
 sidebar_position: 2
 last_update:
-  date: 11/06/2026
+  date: 11/10/2026
   author: Michelle Huang
 ---
 
@@ -116,6 +116,15 @@ Follow the touchscreen and button tutorials at first startup.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png" alt="Seeed Studio and MeshCore Ripple UI startup screens" width={700} height="auto" /></p>
 
+### Hardware Buttons
+
+Ripple UI combines touchscreen input with two hardware buttons:
+
+- **Screen on/off (top button):** Press to wake the screen or turn it off. Turning off the screen does not power off the device.
+- **ENTER (side U/B button):** Press to confirm a selection, save changes, or submit input when prompted.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_Button_Indication.webp" alt="L2 Pro hardware buttons: top button for screen on/off and side U/B button for ENTER" width={700} height="auto" /></p>
+
 ### Create a Network Profile
 
 1. Complete the touchscreen and Select button tutorials shown at first startup.
@@ -132,7 +141,7 @@ For a two-device test, use matching radio settings on both devices. Selecting th
 
 1. Tap `L` on the left, open the current network profile, and select `Identity`.
 
-2. Change the default name to something recognizable, such as `micha` or `michb`. Names can contain up to 12 characters.
+2. Change the default name to something recognizable, such as `micha` or `michb`. Names can contain up to 31 characters.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ChangeDeviceName.png" alt="Open the network profile, select Identity, and change the device name" width={1000} height="auto" /></p>
 
@@ -225,14 +234,16 @@ Captured screenshots are BMP files with date-and-time filenames, as shown below.
 ### Make Your Devices Discoverable
 
 1. Configure both devices with matching MeshCore radio settings.
+
 2. Give each device a different `Identity` name.
+
 3. Set `Advert` to `On` to allow identity advertisements.
+
 4. Open `Discover` from the `L` page and wait for nearby nodes to appear.
 
 To send an identity advertisement immediately, open the `Discover` menu:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="Discover menu with Scan Local, Send ID Local, and Send ID Broadcast" width={400} height="auto" /></p>
-
 
 | Option | Function |
 | --- | --- |
@@ -280,7 +291,7 @@ Direct messages wait for an acknowledgment (ACK) from the recipient. If sending 
 
 ```
 
-3. Insert the card, start the device, and open `M`.
+3. Insert the card, start the device, and open `M`. The device will need a reboot if the SD card is mounted or unmounted.
 
 4. Pan to an area covered by your tiles and select an available zoom level.
 
