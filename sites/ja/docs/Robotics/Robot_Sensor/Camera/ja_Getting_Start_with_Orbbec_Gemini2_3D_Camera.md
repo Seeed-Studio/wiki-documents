@@ -82,7 +82,7 @@ url: https://wiki.seeedstudio.com/ja/orbbec_gemini2/
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>通信インターフェース</td>
         <td style={{ height: "46px", width: "491px" }}>USB 3.0 Type-C</td>
-      </tr]
+      </tr>
 
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>カメラドライバ</td>

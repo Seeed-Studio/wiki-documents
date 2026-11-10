@@ -82,7 +82,7 @@ A câmera 3D compacta Gemini 2 é baseada na tecnologia Active Stereo IR e está
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>Interface de comunicação</td>
         <td style={{ height: "46px", width: "491px" }}>USB 3.0 Type-C</td>
-      </tr]
+      </tr>
 
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>Driver da câmera</td>

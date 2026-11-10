@@ -167,7 +167,7 @@ Selecione e baixe o [Orbbec Viewer](https://www.orbbec.com/developers/orbbec-sdk
 <div align="center">
     <img alt="Fluxos IR esquerdo e direito pré-visualizados no Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft4.png" />
-</div]
+</div>
 
 5. Alterne o botão ‘IMU’ na parte superior da ferramenta para iniciar e pré-visualizar o fluxo IMU.
 

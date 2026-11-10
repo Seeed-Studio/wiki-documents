@@ -234,7 +234,7 @@ make -j4
 
 <div align="center">
   <img alt="yolo11_det serializando yolo11n.engine a partir del archivo .wts" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/g_engine.png"/>
-</div]
+</div>
 
 Si todo ha ido bien, encontrarás el archivo `yolo11n.engine` en el directorio build.
 

@@ -82,7 +82,7 @@ url: https://wiki.seeedstudio.com/cn/orbbec_gemini2/
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>通信接口</td>
         <td style={{ height: "46px", width: "491px" }}>USB 3.0 Type-C</td>
-      </tr]
+      </tr>
 
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>相机驱动</td>
