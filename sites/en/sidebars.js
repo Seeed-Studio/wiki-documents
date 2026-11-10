@@ -4188,6 +4188,18 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Applications',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/applications/sensecraft_robotics_so_arm_pi05',
+              label: 'SO-ARM + π0.5',
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'FAQ',
           collapsed: false,
           items: [

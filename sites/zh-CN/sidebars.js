@@ -4185,6 +4185,18 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '应用案例',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/applications/cn_sensecraft_robotics_so_arm_pi05',
+              label: 'SO-ARM + π0.5',
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: '常见问题',
           collapsed: false,
           items: [
