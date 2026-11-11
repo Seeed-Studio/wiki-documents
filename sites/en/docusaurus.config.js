@@ -5,6 +5,58 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const path = require('path');
 
+// MDX v3 has no HTML-comment syntax, but wiki pages use <!-- --> to hide
+// author notes and alternate image blocks. Drop those comments before
+// compilation (they never render anyway) while preserving line breaks, and
+// leave fenced code blocks untouched so samples stay byte-identical.
+function htmlCommentsToMdx({ fileContent }) {
+  const lines = fileContent.split('\n');
+  const output = [];
+  let fence = null;
+  let inComment = false;
+  for (const line of lines) {
+    const fenceMatch = line.match(/^\s*(`{3,}|~{3,})/);
+    if (!inComment && fenceMatch) {
+      if (fence === null) {
+        fence = fenceMatch[1][0];
+      } else if (fenceMatch[1][0] === fence) {
+        fence = null;
+      }
+      output.push(line);
+      continue;
+    }
+    if (fence !== null) {
+      output.push(line);
+      continue;
+    }
+    let result = '';
+    let rest = line;
+    while (rest.length > 0) {
+      if (inComment) {
+        const end = rest.indexOf('-->');
+        if (end === -1) {
+          rest = '';
+        } else {
+          rest = rest.slice(end + 3);
+          inComment = false;
+        }
+      } else {
+        const start = rest.indexOf('<!--');
+        if (start === -1) {
+          result += rest;
+          rest = '';
+        } else {
+          result += rest.slice(0, start);
+          rest = rest.slice(start + 4);
+          inComment = true;
+        }
+      }
+    }
+    output.push(result);
+  }
+  return output.join('\n');
+}
+
 // 从 frontmatter 中提取 aliases
 function getFrontmatterAliases() {
   try {
@@ -203,6 +255,9 @@ module.exports = (async () => {
     onBrokenMarkdownLinks: 'ignore',
     onBrokenAnchors: 'ignore',
     favicon: 'img/S.png',
+    markdown: {
+      preprocessor: htmlCommentsToMdx,
+    },
     themes: ['docusaurus-theme-search-typesense'],
     scripts: [
       // String format.
@@ -225,7 +280,9 @@ module.exports = (async () => {
 
     future: {
       v4: true, // Enable future Docusaurus v4 features
-      experimental_faster: true, // Enable experimental faster features
+      // Disabled locally: the Rspack dev server crashes with an opaque
+      // "Rspack FS Error" on this checkout; webpack is slower but stable.
+      experimental_faster: false,
     },
 
     // GitHub pages deployment config.
