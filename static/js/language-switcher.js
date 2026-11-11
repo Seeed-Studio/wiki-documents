@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-09 15:43:30 (北京时间)
-// 多语言页面: 2640 个
+// 生成时间: 2026-11-11 10:27:50 (北京时间)
+// 多语言页面: 2643 个
 
 (function() {
   'use strict';
@@ -347,6 +347,13 @@
     "pt"
   ],
   "/sensecraft_hmi_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics/applications/so-arm-pi05": [
     "cn",
     "en",
     "es",
@@ -7044,6 +7051,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_dm05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_eo1": [
     "cn",
     "en",
@@ -7059,6 +7073,13 @@
     "pt"
   ],
   "/robotics/paper_reading_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_gr00t_2": [
     "cn",
     "en",
     "es",
