@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /zed_x_gmsl_cameras_on_recomputer_robotics
 last_update:
-  date: 09/27/2026
+  date: 11/06/2026
   author: Dayu
 createdAt: '2026-09-27'
-updatedAt: '2026-09-28'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/es/zed_x_gmsl_cameras_on_recomputer_robotics/
 ---
 
@@ -227,7 +227,7 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
-Esta guía explica cómo usar **cámaras GMSL2 Stereolabs ZED X-series** con el hardware robótico de Seeed Studio. Se han adaptado cuatro plataformas para la familia de cámaras ZED X. El recorrido completo está disponible actualmente para **reComputer Robotics J50 Mini**; los demás recorridos específicos de dispositivo se añadirán pronto.
+Esta guía explica cómo usar **cámaras GMSL2 Stereolabs ZED X-series** con el hardware robótico de Seeed Studio. Incluye instrucciones de configuración y descargas de controladores para **reComputer Robotics J50 Mini** y **reComputer Robotics J50 (J501)**. Las guías de J40 y J601 se añadirán más adelante.
 
 ## Selecciona tu plataforma
 
@@ -259,11 +259,11 @@ Elige una plataforma a continuación. Los dos grupos de pestañas de esta págin
         <img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="reComputer Robotics J50"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status zed-status-soon">● Guía próximamente</span>
+        <span className="zed-status">● Guía disponible</span>
         <h3>reComputer Robotics J50</h3>
         <div className="zed-product-description">Una plataforma AGX Orin con E/S de alto nivel para cargas de trabajo robóticas exigentes, que combina 10GbE, múltiples interfaces CAN, almacenamiento flexible y expansión para hasta ocho cámaras GMSL2.</div>
         <div className="zed-actions">
-          <a className="zed-button" href="#device-specific-setup">Ver estado ↓</a>
+          <a className="zed-button" href="#device-specific-setup">Abrir configuración ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank" rel="noopener noreferrer">Ver producto ↗</a>
         </div>
       </div>
@@ -308,7 +308,7 @@ Elige una plataforma a continuación. Los dos grupos de pestañas de esta págin
   </TabItem>
 </Tabs>
 
-## Configuración específica del dispositivo
+## Configuración específica del dispositivo {#device-specific-setup}
 
 <div className="zed-flow">
   <div className="zed-flow-step"><strong>01 · Conectar</strong>Apaga y conecta la cámara ZED X GMSL.</div>
@@ -484,13 +484,15 @@ cat /etc/nv_tegra_release
 
 Usa solo el paquete que coincida con la versión L4T indicada. No instales ambos paquetes.
 
+El siguiente comando coincide con el nombre del controlador para esta placa y versión de L4T. Si la carpeta de descargas contiene varias versiones coincidentes, sustituye el comodín por el nombre exacto del archivo que descargaste.
+
 <Tabs groupId="j50-mini-zed-jetpack">
-  <TabItem value="jp62" label="JetPack 6.2.x" default>
+  <TabItem value="jp62" label="JetPack 6.2.1" default>
 
 Para **JetPack 6.2.1 / L4T 36.4.4**, descarga el siguiente paquete:
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDirqpSbx-mS5LVEQikAnUFAZzzHlhqz6ugZQFBLAhoT9I?e=lmyCH1" target="_blank" rel="noopener noreferrer">Download JetPack 6.2 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDiTcOof34oQIcDztCDVYWhAQtzFOKxlIbx1s8CvJdVJMQ?e=Q8IpLU" target="_blank" rel="noopener noreferrer">Download JetPack 6.2.1 DEB ↗</a>
 </div>
 
 Instálalo con APT y luego reinicia:
@@ -498,7 +500,7 @@ Instálalo con APT y luego reinicia:
 ```bash
 cd ~/Downloads
 sudo apt update
-sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.6-L4T36.4.4-SDK-VERIFIED_arm64.deb
+sudo apt install ./stereolabs-zedx-j501-mini_*-L4T36.4.4_arm64.deb
 sudo reboot
 ```
 
@@ -508,7 +510,7 @@ sudo reboot
 Para **JetPack 7.2 / L4T 39.2.0**, descarga el siguiente paquete:
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBTbeDwHYOJRpGKDN_UZCByAeEe3sS0MIPTbrSiodHMhlg?e=EE5Uza" target="_blank" rel="noopener noreferrer">Download JetPack 7.2 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAoefQUD__CR7EvXRd2rgUTAexAh6U9-FjEO2xt85bK7HE?e=Ch6rKe" target="_blank" rel="noopener noreferrer">Download JetPack 7.2 DEB ↗</a>
 </div>
 
 Instálalo con APT y luego reinicia:
@@ -516,7 +518,7 @@ Instálalo con APT y luego reinicia:
 ```bash
 cd ~/Downloads
 sudo apt update
-sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.7-L4T39.2.0_arm64.deb
+sudo apt install ./stereolabs-zedx-j501-mini_*-L4T39.2.0_arm64.deb
 sudo reboot
 ```
 
@@ -603,12 +605,115 @@ La cámara aparece en ZED Studio, la imagen en vivo es estable y la vista de pro
   </TabItem>
   <TabItem value="j50" label="J50">
 
-    <div className="zed-coming-soon">
-      <span className="zed-status zed-status-soon">Compatibilidad con ZED X GMSL adaptada</span>
-      <h3>La guía de reComputer Robotics J50 llegará pronto</h3>
-      <p>La integración de la plataforma está disponible. Aquí se publicará una guía paso a paso específica del dispositivo sobre conexión, instalación de controladores y validación.</p>
-      <a className="zed-button zed-button-secondary" href="/es/ai_robotics_recomputer_j501_robotics_getting_started">Explora la plataforma J50</a>
-    </div>
+### reComputer Robotics J50 (J501)
+
+Esta sección corresponde al **reComputer Robotics J501** con la placa de expansión GMSL, una cámara ZED X-series compatible y **JetPack 6.2.1 / L4T 36.4.4** o **JetPack 7.2 / L4T 39.2.0**. Consulta la [guía de hardware y primeros pasos del J501](/es/ai_robotics_recomputer_j501_robotics_getting_started) para localizar los conectores GMSL y conocer la distribución de la placa.
+
+#### 1. Conecta la cámara
+
+Apaga el J501 y desconecta la alimentación de CC. Conecta la cámara a un puerto GMSL2 mediante un cable Fakra/Mini-Fakra compatible, bloquea el conector y vuelve a conectar la alimentación para iniciar el dispositivo.
+
+#### 2. Instala el controlador ZED X GMSL
+
+Comprueba la versión de Jetson Linux instalada:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+Selecciona el paquete **Robotics J501** que corresponda a la versión de L4T indicada. Instala únicamente el paquete para tu placa y versión del sistema; los paquetes Mini y Robotics utilizan distintas superposiciones del árbol de dispositivos.
+
+El siguiente comando coincide con el nombre del controlador para esta placa y versión de L4T. Si la carpeta de descargas contiene varias versiones coincidentes, sustituye el comodín por el nombre exacto del archivo que descargaste.
+
+<Tabs groupId="j501-robo-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2.1" default>
+
+Para **JetPack 6.2.1 / L4T 36.4.4**, descarga el siguiente paquete:
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">Download JetPack 6.2.1 DEB ↗</a>
+</div>
+
+Instálalo con APT y luego reinicia:
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-robo_*-L4T36.4.4_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2">
+
+Para **JetPack 7.2 / L4T 39.2.0**, descarga el siguiente paquete:
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">Download JetPack 7.2 DEB ↗</a>
+</div>
+
+Instálalo con APT y luego reinicia:
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-robo_*-L4T39.2.0_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+Después de reiniciar, confirma que el paquete Robotics J501 está instalado:
+
+```bash
+dpkg -l | grep stereolabs-zedx-j501-robo
+```
+
+#### 3. Instalar el ZED SDK
+
+Ve a la [página de descarga de Stereolabs ZED SDK](https://www.stereolabs.com/developers/release/) y selecciona el instalador de NVIDIA Jetson que coincida con la versión indicada por `cat /etc/nv_tegra_release`:
+
+| Sistema instalado | Seleccionar en la página del ZED SDK |
+| --- | --- |
+| JetPack 6.2.x / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+Instala `zstd`, haz que el instalador descargado sea ejecutable y ejecútalo. Reemplaza el marcador a continuación con el nombre de archivo descargado real.
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+Sigue las indicaciones del instalador y mantén seleccionadas las herramientas ZED. Reinicia después de que finalice la instalación:
+
+```bash
+sudo reboot
+```
+
+:::tip
+La versión de L4T en el nombre del instalador del ZED SDK debe coincidir con la versión L4T del reComputer. Un SDK o DEB de cámara que no coincida puede impedir que la cámara sea detectada.
+:::
+
+#### 4. Validar con ZED Studio
+
+Inicia ZED Studio desde una terminal:
+
+```bash
+ZED_Studio
+```
+
+También puedes iniciarlo directamente desde el directorio de instalación del SDK:
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+ZED Studio debería detectar la cámara conectada. Abre la vista en vivo y habilita **Depth** para confirmar que tanto el flujo de imagen como la canalización de profundidad están funcionando.
 
   </TabItem>
   <TabItem value="j40" label="J40">

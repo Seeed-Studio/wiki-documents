@@ -248,6 +248,16 @@ Consulta la siguiente tabla para preparar la máquina host.
 
 :::
 
+:::tip ¿Vas a flashear desde Windows? Usa Seeed Jetson DevelopTool
+
+El flujo de flasheo manual requiere un ordenador host con **Ubuntu**. Si vas a flashear desde un ordenador **Windows**, usa [**Seeed Jetson DevelopTool**](/jetson_developtool_overview/), nuestra GUI todo-en-uno compatible con **hosts Windows** que te permite flashear con un solo clic, sin necesidad de comandos.
+
+- [Descripción general de Seeed Jetson DevelopTool](/jetson_developtool_overview/)
+- [Instalación (Ubuntu / Windows)](/jetson_developtool_installation/)
+- [Flashear firmware con Flash Center](/jetson_developtool_flash_firmware/)
+
+:::
+
 ### Entrar en modo de recuperación forzada
 
 :::note

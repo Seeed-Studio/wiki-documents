@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/orbbec_gemini2/
 ---
 
 <div align="center">
-    <img width={400}
+    <img alt="Orbbec Gemini 2 3D camera, product photo" width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
@@ -125,17 +125,17 @@ The compact Gemini 2 3D camera is based on Active Stereo IR technology and is eq
 ## Hardware Overview
 
 <div align="center">
-    <img width={700}
+    <img alt="Front view of the Gemini 2 labelled with the two IR cameras, the LDP, the LDM and the RGB camera" width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-1.png" />
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="Side drawing of the Gemini 2 showing the USB Type-C interface" width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-2.png" />
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="Rear drawing of the Gemini 2 showing the 8-pin multi-camera synchronization interface" width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
@@ -149,7 +149,7 @@ The compact Gemini 2 3D camera is based on Active Stereo IR technology and is eq
   ③ Connect the USB-A connector to the host using the same USB-C to USB-A cable, as shown in Step 3 below.
 
 <div align="center">
-    <img width={700}
+    <img alt="Gemini camera mounted on the tripod head with the USB-C to USB-A cable attached" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/step1.png" />
 </div>
 
@@ -163,7 +163,7 @@ Select and download the corresponding [Orbbec Viewer](https://www.orbbec.com/dev
 【Remark】If the camera is not recognized, please check to ensure that the camera and the host are properly connected. You can try disconnecting and then reconnecting the USB cable. If it still isn’t recognized, consider replacing the USB cable or verifying whether the host computer’s power supply meets the required specifications.
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer listing the connected Gemini 2 camera" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft1.png" />
 </div>
 
@@ -171,49 +171,49 @@ Select and download the corresponding [Orbbec Viewer](https://www.orbbec.com/dev
 2. Toggle the ‘Depth’ button at the top of the tool to start and preview the depth stream.
 
 <div align="center">
-    <img width={700}
+    <img alt="Depth stream toggled on in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft2.png" />
 </div>
 
 3. Toggle the ‘Color‘ button at the top of the tool to start and preview the color stream. The color stream and depth stream will be displayed side by side.
 
 <div align="center">
-    <img width={700}
+    <img alt="Colour and depth streams shown side by side in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft3.png" />
 </div>
 
 4. Toggle the ‘IR Left’ and ‘IR Right’ buttons at the top of the tool to strat and preview the IR stream.
 
 <div align="center">
-    <img width={700}
+    <img alt="Left and right IR streams previewed in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft4.png" />
 </div>
 
 5. Toggle the ‘IMU’ button at the top of the tool to start and preview the IMU stream.
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer with the frame metadata panel open beside the depth and colour streams" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft5.png" />
 </div>
 
 6. Toggle the button on the top of each window to show the metadata information.
 
 <div align="center">
-    <img width={700}
+    <img alt="Frame metadata and the IMU acceleration and gyroscope values in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft6.png" />
 </div>
 
 7. Toggle the ‘PointCloud‘ button at the top of the tool to start and preview the 3D point cloud
 
 <div align="center">
-    <img width={700}
+    <img alt="3D point cloud preview in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft7.png" />
 </div>
 
 8. Toggle the ‘Display’ button under the ‘Image View’ menu on the left to start and preview the D2C (depth to color registration) stream. The 3D point cloud and the D2C stream will be displayed side by side.
 
 <div align="center">
-    <img width={700}
+    <img alt="Point cloud and D2C registered stream displayed side by side" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft8.png" />
 </div>
 
@@ -246,7 +246,7 @@ cd ..
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Orbbec SDK examples built and the test window opened on the reComputer" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
@@ -263,14 +263,14 @@ There are some case tutorials developed by us using Gemini2:
 [Distance Measurement](https://wiki.seeedstudio.com/yolov11_with_depth_camera/)
 
 <div align="center">
-    <img width={800}
+    <img alt="Distance measurement demo pairing the Gemini 2 with YOLOv11" width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/distance.png" />
 </div>
 
 [Object Tracking on drone](https://wiki.seeedstudio.com/object_tracking_with_reComputer_jetson_and_pX4/)
 
 <div align="center">
-    <img width={800}
+    <img alt="Object tracking demo on a drone using the Gemini 2 and PX4" width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/px4.png" />
 </div>
 
@@ -282,6 +282,31 @@ There are some case tutorials developed by us using Gemini2:
 - [Datasheet](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
 - [OrbbecViewer](https://github.com/orbbec/OrbbecSDK/blob/main/doc/OrbbecViewer/English/OrbbecViewer.md)
 - [ROS SDK](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
+
+## FAQ
+
+**Which stream types can I preview in Orbbec Viewer?**
+Depth, colour, left IR, right IR, IMU, the 3D point cloud, and the D2C registered stream. Each one has its own toggle at the top of the viewer, and the point cloud plus D2C can be shown side by side.
+
+**The viewer does not list the camera. What should I check first?**
+The USB connection. Re-seat the USB-C to USB-A cable, try another cable, and confirm the host port can supply enough power — the Gemini 2 draws more than a low-power hub port provides.
+
+**What does the Jetson side need beyond the viewer?**
+The Orbbec SDK v2.4.11 aarch64 package. Install the udev rules from `shared/install_udev_rules.sh`, then run `./build_examples.sh` and `./setup.sh` before any application talks to the camera.
+
+**Is this the same camera as the Gemini 336 guide?**
+No. This page covers the Gemini 2; the tripod and viewer screenshots are shared with the Gemini 336 quickstart because both cameras use the same Orbbec Viewer. The SDK package and depth range differ per model.
+
+**Can I use it for distance measurement or tracking?**
+Yes — the two examples linked at the end run on reComputer: distance measurement with YOLOv11 and object tracking on a drone with PX4. Both read the depth stream through the Orbbec SDK.
+
+## Related Resources
+
+- [Pair the Gemini 2 with YOLOv11 for distance measurement](/yolov11_with_depth_camera/)
+- [ORB-SLAM3 with Orbbec Gemini2](/orb_slam3_orbbec_gemini2/)
+- [Deploy Depth Anything V3 on Jetson AGX Orin](/deploy_depth_anything_v3_jetson_agx_orin/)
+- [Orbbec Gemini 2 product page](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- [Orbbec Gemini 2 series datasheet](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
 
 ## Tech Support & Product Discussion
 

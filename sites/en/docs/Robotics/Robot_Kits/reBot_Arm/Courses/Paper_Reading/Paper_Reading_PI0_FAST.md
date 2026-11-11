@@ -1,6 +1,6 @@
 ---
-description: "How to run Pi0-FAST on reBot Arm & SO-ARM101: a paper deep-dive into FAST action tokenization — DCT, coefficient quantization, BPE compression and the autoregressive action policy."
-title: "How to Run Pi0-FAST on reBot Arm & SO-ARM101"
+description: "A paper deep-dive into FAST action tokenization — DCT, coefficient quantization, BPE compression and the autoregressive action policy."
+title: "FAST and π0-FAST: How Efficient Action Tokenization Accelerates Robot Learning"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_pi0_fast/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-pi0_fast-title">How to Run Pi0-FAST on reBot Arm & SO-ARM101</h1>
+  <h1 id="paper-reading-pi0_fast-title">FAST and π0-FAST: How Efficient Action Tokenization Accelerates Robot Learning</h1>
   <p className="paper-reading-lead">FAST: Efficient Action Tokenization for Vision-Language-Action Models</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Action tokenization</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/pi0fast" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot π0-FAST Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+- `--policy.type=pi0_fast --policy.pretrained_path=lerobot/pi0fast-base`: Load the π0-FAST policy that predicts FAST action tokens; tokenizer training is a separate workflow.
+- `--policy.max_action_tokens=256`: Limit FAST tokens per action chunk; this is distinct from the number of action steps.
+- `--policy.gradient_checkpointing=true --policy.dtype=bfloat16`: Configure gradient checkpointing and bfloat16; check memory requirements and device support.
+
+</aside>
 
 **Relationship to π0:** The paper is titled FAST; π0-FAST is the policy trained using it. FAST is a tokenization method, FAST+ a pre-trained universal action tokenizer, and π0-FAST an autoregressive VLA using this representation. It shares the PaliGemma backbone approach with π0 but changes action generation; it is not merely a compression preprocessor added to π0's flow-matching expert.
 

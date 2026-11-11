@@ -149,6 +149,13 @@ A603 Carrier Board は、Jetson Orin™ NX/Nano モジュールをサポート�
       <td>39.2.0</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+
+<tr>
+      <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -684,6 +691,105 @@ sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
   ```
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+ここでは、Jetson Orin NX または Jetson Orin Nano モジュールを搭載した A603 キャリアボードに **JetPack 7.2.1** をインストールします。
+
+### ハードウェア要件
+
+- インターネットに接続された Ubuntu 20.04 または Ubuntu 22.04 ホスト PC
+- Type-C データケーブル（データ転送に対応している必要があります）
+- Jetson Orin NX または Jetson Orin Nano モジュールを搭載した A603 キャリアボード
+- 電源アダプタ
+- フラッシュに使用するホスト PC には `wget`、`tar`、`sudo` がインストールされている必要があります
+
+### フラッシュ用ファイルの準備
+
+**ステップ 1：** Ubuntu ホスト PC に作業ディレクトリを作成します。
+
+```bash
+mkdir -p ~/a603_flash
+cd ~/a603_flash
+```
+
+**ステップ 2：** 次の 2 つのファイルをダウンロードし、同じディレクトリに配置します（例：[このフォルダ](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo) から）：
+
+- `603_jp721.sh`
+- `603_jp721.tbz2`
+
+:::note
+`603_jp721.tbz2` を手動で展開 **しない** でください。スクリプトがドライバパッケージを自動的に展開します。
+:::
+
+**ステップ 3：** スクリプトを実行します：
+
+```bash
+./603_jp721.sh
+```
+
+:::caution
+`sudo ./603_jp721.sh` や `sudo bash 603_jp721.sh` を実行 **しない** でください。管理者権限が必要な場合は、スクリプトが sudo パスワードを要求します。スクリプト全体を `sudo` で実行すると、生成されたディレクトリが `root:root` になり、後続の手順で権限の問題が発生します。
+:::
+
+**ステップ 4：** スクリプトは、公式の JetPack 7.2.1 パッケージを自動的にダウンロードし、rootfs を展開してから、ドライバパッケージを展開して A603 ドライバファイルを上書きします。ダウンロード時間はネットワーク速度によって異なります。処理を中断しないでください。
+
+**ステップ 5：** 次のメッセージが表示されたら、フラッシュディレクトリの準備は完了です：
+
+```
+603_jp721 package applied successfully.
+```
+
+組み立てられたフラッシュディレクトリは次のとおりです：
+
+```
+~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+### デバイスをリカバリーモードにする
+
+1. A603 キャリアボードの電源を切ります。
+2. キャリアボード上の RECOVERY ピンと GND ピンをショートさせます。
+3. キャリアボードを Type-C データケーブルでホスト PC に接続します。
+4. ボードの電源を入れます。
+5. ホスト PC 上で `lsusb` を実行します。ボードがリカバリーモードになっている場合、NVIDIA デバイスが表示されます。
+
+### システムをフラッシュする
+
+1. デバイスがまだリカバリーモードであることを確認します。
+2. フラッシュディレクトリに入ります：
+
+```bash
+cd ~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+3. 次のコマンドでシステムをフラッシュします：
+
+```bash
+sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+4. コマンドが完了するまで待ちます。フラッシュ中に Type-C ケーブルを抜いたり、ホスト PC をシャットダウンしたり、キャリアボードの電源を切ったりしないでください。
+5. フラッシュが成功したら、RECOVERY-GND 間のショート用ジャンパを取り外し、デバイスの電源を再度入れます。
+
+### よくある質問
+
+1. **`Required path is missing: .../603_jp721.tbz2`**
+   - 原因：ドライバパッケージがスクリプトと同じディレクトリにありません。
+   - 修正：`603_jp721.sh` と `603_jp721.tbz2` が同じディレクトリにあることを確認し、スクリプトを再度実行します。
+
+2. **`Required path is missing: .../bootloader` または類似のメッセージ**
+   - 原因：ドライバパッケージが正しく展開されていないか、パッケージファイルが不完全です。
+   - 修正：`603_jp721.tbz2` を使用し、完全なドライバパッケージを再ダウンロードしてから、スクリプトを再度実行します。
+
+3. **ディレクトリが `root:root` またはパーミッション `777` と表示される**
+   - 原因：組み立てスクリプトが `sudo` で実行されました。
+   - 修正：生成された `603_jp721_flash` ディレクトリを削除し、通常ユーザーとして `./603_jp721.sh` を実行して再組み立てします。
+
+4. **`lsusb` に NVIDIA デバイスが表示されない**
+   - 修正：RECOVERY と GND がショートされているか、Type-C ケーブルがデータ転送に対応しているか、ボードの電源が入っているかを確認します。その後、Type-C ケーブルを再接続して `lsusb` を再度実行します。
 
 </TabItem>
 
