@@ -107,11 +107,6 @@ export const toc = [
     "value": "结论",
     "id": "结论",
     "level": 2
-  },
-  {
-    "value": "参考资料",
-    "id": "参考资料",
-    "level": 2
   }
 ];
 
@@ -413,12 +408,5 @@ LeRobot 提供的 `lerobot/lingbot_vla_v2_base` 用于从规范空间开始微�
 LingBot-VLA 2.0 最值得理解的是这条连接：**筛选与重建形成可信轨迹，规范槽位连接异构身体，稀疏专家承载共享与差异，当前／未来查询将感知监督接入动作生成。** 它把基础模型能力向更完整的机器人控制接口推进。
 
 实机结果支持整体方案在所测条件下的平均改善，也保留了低整任务成功率、部分任务退步和明显 OOD 退化。统一表示不等于任意本体即插即用，未来特征相似也不等于获得可靠的通用规划；方法效果仍取决于数据对齐、动作定义与目标任务评估。
-
-## 参考资料
-
-1. [原论文 v1](https://arxiv.org/abs/2607.06403v1)、[论文 PDF](https://arxiv.org/pdf/2607.06403v1)：数据见第 3 节；MoE 与双查询见第 4 节、式 1–10；实机比较见表 5–7；动作消融与感知结果见第 6 节、图 10–13。
-2. [作者实现固定提交 be969b8](https://github.com/Robbyant/lingbot-vla-v2/tree/be969b8fd117fb70550c5d4bf4bc328211b5b1b6)：[动作生成模型](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/lingbotvla/models/vla/lingbot_vla/modeling_lingbot_vla_v2.py)、[实机配置](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/configs/vla/real_robot/real_robot.yaml)、[RoboTwin 配置](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/configs/vla/robotwin/robotwin.yaml)。
-3. [LeRobot 接入文档](https://huggingface.co/docs/lerobot/main/en/lingbot_vla_v2)及[固定源码 9e5ee98](https://github.com/huggingface/lerobot/tree/9e5ee9859480e425a97a6836bb3fee479539beb5/src/lerobot/policies/lingbot_vla_v2)：[配置与未来帧索引](https://github.com/huggingface/lerobot/blob/9e5ee9859480e425a97a6836bb3fee479539beb5/src/lerobot/policies/lingbot_vla_v2/configuration_lingbot_vla_v2.py)、[槽位映射与归一化](https://github.com/huggingface/lerobot/blob/9e5ee9859480e425a97a6836bb3fee479539beb5/src/lerobot/policies/lingbot_vla_v2/processor_lingbot_vla_v2.py)。
-4. 对比来源：[LingBot-VA 论文](https://arxiv.org/abs/2601.21998v2)，第 3—4 节、算法 1—2、表 1；[VA 的 LeRobot 固定实现 d490e472](https://github.com/huggingface/lerobot/tree/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va)。
 
 </div>

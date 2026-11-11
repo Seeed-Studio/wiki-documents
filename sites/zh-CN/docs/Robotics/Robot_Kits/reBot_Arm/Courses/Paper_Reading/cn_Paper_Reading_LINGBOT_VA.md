@@ -132,11 +132,6 @@ export const toc = [
     "value": "结论",
     "id": "结论",
     "level": 2
-  },
-  {
-    "value": "参考资料",
-    "id": "参考资料",
-    "level": 2
   }
 ];
 
@@ -422,11 +417,5 @@ LeRobot 提供基础模型、LIBERO-Long 与 RoboTwin 后训练检查点。检�
 LingBot-VA 的关键认识是：**未来表示可以成为动作的生成条件，但它必须持续接受真实环境的纠正。** 视频分支学习变化，动作分支从变化推断控制，历史缓存保留交互上下文；部分去噪和异步执行则处理生成模型进入控制环后的时间成本。
 
 实验支持这条路线在所测仿真、实机与少样本设置中的价值，也留下明确边界：叠衣服进度分退步、简单异步明显退化、FDM 校正仍有成功率代价，且当前公开共享骨干与 LeRobot 接口不等同于论文完整系统。理解这些条件，比仅记住平均成功率更有助于判断方法适合怎样的后续实验。
-
-## 参考资料
-
-1. [原论文](https://arxiv.org/abs/2601.21998v2)、[论文 PDF](https://arxiv.org/pdf/2601.21998v2)：第 3 节式（7）—（13）、算法 1—2；第 4 节表 1—3、图 5—10；附录表 S1—S7。
-2. [作者实现固定提交 7c6ffa9](https://github.com/Robbyant/lingbot-va/tree/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb)：[README 与共享骨干发布说明](https://github.com/Robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/README.md)、[LIBERO 配置](https://github.com/Robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/wan_va/configs/va_libero_cfg.py)。
-3. [LeRobot 接入文档](https://huggingface.co/docs/lerobot/lingbot_va)与[固定源码 d490e472](https://github.com/huggingface/lerobot/tree/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va)：[配置与采样索引](https://github.com/huggingface/lerobot/blob/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va/configuration_lingbot_va.py)、[训练和缓存执行路径](https://github.com/huggingface/lerobot/blob/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va/modeling_lingbot_va.py)。
 
 </div>
