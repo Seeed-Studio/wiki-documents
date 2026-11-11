@@ -425,6 +425,10 @@ The reTerminal E1001 features an 8-pin expansion header (J2) that provides conne
 
 The 8-pin expansion header (J2) has the following pinout:
 
+:::note
+When viewing the device from the back with the top button facing upward, the expansion header pins are numbered from bottom to top, starting with Pin 1 at the bottom and Pin 8 at the top.
+:::
+
 <div class="table-center">
  <table align="center">
   <tr>
