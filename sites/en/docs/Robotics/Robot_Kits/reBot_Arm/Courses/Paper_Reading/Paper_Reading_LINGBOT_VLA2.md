@@ -107,11 +107,6 @@ export const toc = [
     "value": "Conclusion",
     "id": "conclusion",
     "level": 2
-  },
-  {
-    "value": "References",
-    "id": "references",
-    "level": 2
   }
 ];
 
@@ -413,12 +408,5 @@ Practical use requires distinguishing two settings. The paper describes auxiliar
 LingBot-VLA 2.0's most useful connection is that **filtering and reconstruction produce trustworthy trajectories, canonical slots connect heterogeneous bodies, sparse experts accommodate shared patterns and differences, and current/future queries bring perception supervision into action generation**. It moves foundation-model capabilities toward a more complete robot-control interface.
 
 Hardware results support average improvement of the overall system under tested conditions, while retaining low full-task success, regressions on some tasks, and substantial OOD degradation. Unified representations do not make arbitrary embodiments plug-and-play, and similar future features do not establish reliable general planning. Effectiveness still depends on data alignment, action definitions, and target-task evaluation.
-
-## References
-
-1. [Paper v1](https://arxiv.org/abs/2607.06403v1), [PDF](https://arxiv.org/pdf/2607.06403v1): data in Section 3; MoE and dual queries in Section 4, Equations 1–10; hardware comparisons in Tables 5–7; action ablations and perception results in Section 6, Figures 10–13.
-2. [Author implementation, pinned commit be969b8](https://github.com/Robbyant/lingbot-vla-v2/tree/be969b8fd117fb70550c5d4bf4bc328211b5b1b6): [action-generation model](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/lingbotvla/models/vla/lingbot_vla/modeling_lingbot_vla_v2.py), [hardware configuration](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/configs/vla/real_robot/real_robot.yaml), [RoboTwin configuration](https://github.com/Robbyant/lingbot-vla-v2/blob/be969b8fd117fb70550c5d4bf4bc328211b5b1b6/configs/vla/robotwin/robotwin.yaml).
-3. [LeRobot documentation](https://huggingface.co/docs/lerobot/main/en/lingbot_vla_v2) and [pinned source 9e5ee98](https://github.com/huggingface/lerobot/tree/9e5ee9859480e425a97a6836bb3fee479539beb5/src/lerobot/policies/lingbot_vla_v2): [configuration and future-frame indexing](https://github.com/huggingface/lerobot/blob/9e5ee9859480e425a97a6836bb3fee479539beb5/src/lerobot/policies/lingbot_vla_v2/configuration_lingbot_vla_v2.py), [slot mapping and normalization](https://github.com/huggingface/lerobot/blob/9e5ee9859480e425a97a6836bb3fee479539beb5/src/lerobot/policies/lingbot_vla_v2/processor_lingbot_vla_v2.py).
-4. Comparison sources: [LingBot-VA paper](https://arxiv.org/abs/2601.21998v2), Sections 3–4, Algorithms 1–2, Table 1; [VA LeRobot implementation, pinned d490e472](https://github.com/huggingface/lerobot/tree/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va).
 
 </div>

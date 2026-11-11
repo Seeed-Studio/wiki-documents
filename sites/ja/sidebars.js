@@ -4183,6 +4183,18 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'アプリケーション',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/applications/ja_sensecraft_robotics_so_arm_pi05',
+              label: 'SO-ARM + π0.5',
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'よくある質問',
           collapsed: false,
           items: [
