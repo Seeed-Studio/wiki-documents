@@ -13,10 +13,10 @@ sidebar_label: Introducción
 sidebar_position: 1
 type: gettingstarted
 last_update:
-  date: 09/07/2026
+  date: 11/04/2026
   author: FaiyuetCik
 createdAt: '2026-08-11'
-updatedAt: '2026-09-09'
+updatedAt: '2026-09-08'
 url: https://wiki.seeedstudio.com/es/getting_started_1.47_inch_touch_display_esp32s3/
 ---
 
@@ -36,14 +36,14 @@ url: https://wiki.seeedstudio.com/es/getting_started_1.47_inch_touch_display_esp
 
 ## Introducción
 
-La pantalla IPS de 1,47'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO ESP32-S3 Plus. Incorpora una pantalla LCD en color de 172×320 con panel táctil capacitivo, micrófono PDM integrado, IMU de 6 ejes (LSM6DS3), ranura para tarjeta MicroSD y medición de voltaje de batería, todo integrado en un formato compacto.
+La pantalla IPS de 1,47'' es una placa de expansión diseñada para la serie XIAO, impulsada por el XIAO ESP32-S3 Plus. Incorpora una pantalla LCD en color de 172×320 con panel táctil capacitivo, micrófono PDM integrado, IMU de 6 ejes (LSM6DS3), ranura para tarjeta MicroSD y medición de voltaje de batería, todo integrado en un factor de forma compacto.
 
-Esta combinación la convierte en una plataforma ideal para aplicaciones HMI portátiles, paneles de control IoT, dispositivos wearables y prototipado interactivo. Con el procesador de doble núcleo del ESP32-S3 y sus capacidades Wi‑Fi y Bluetooth, amplía el panel de control hasta convertirlo en un hub con conexión inalámbrica.
+Esta combinación la convierte en una plataforma ideal para aplicaciones HMI portátiles, paneles de IoT, dispositivos wearables y creación rápida de prototipos interactivos. Con el procesador de doble núcleo del ESP32-S3 y sus capacidades Wi‑Fi y Bluetooth, amplía el panel de control hasta convertirlo en un hub con conexión inalámbrica.
 
 <div class="table-center">
   <table align="center">
     <tr><th>Especificación</th><th>Detalle</th></tr>
-    <tr><td>Posicionamiento del producto</td><td>Táctil y totalmente interactivo</td></tr>
+    <tr><td>Posicionamiento del producto</td><td>Táctil e interacción completa</td></tr>
     <tr><td>Controlador principal</td><td>Seeed Studio XIAO ESP32-S3 Plus</td></tr>
     <tr><td>Procesador</td><td>ESP32-S3R8, doble núcleo, hasta 240 MHz</td></tr>
     <tr><td>Memoria</td><td>8 MB PSRAM + 16 MB Flash</td></tr>
@@ -58,8 +58,8 @@ Esta combinación la convierte en una plataforma ideal para aplicaciones HMI por
     <tr><td>Ranura para tarjeta MicroSD</td><td>Sí</td></tr>
     <tr><td>Conector Grove I2C</td><td>No</td></tr>
     <tr><td>Botones de usuario</td><td>2</td></tr>
-    <tr><td>Conector de batería</td><td>JST de 2 pines, LiPo de 3,7 V</td></tr>
-    <tr><td>Supervisión de batería</td><td>Supervisión de voltaje de batería mediante D16 ADC; el nivel de batería puede estimarse a partir del voltaje medido. No se admite la detección del estado de la batería.</td></tr>
+    <tr><td>Conector de batería</td><td>JST de 2 pines (paso de 2,0 mm), LiPo de 3,7 V</td></tr>
+    <tr><td>Supervisión de batería</td><td>Supervisión del voltaje de la batería mediante el ADC D16; el nivel de batería puede estimarse a partir del voltaje medido. No se admite la detección del estado de la batería.</td></tr>
     <tr><td>Interfaces de expansión</td><td>1x interfaz I2C, 1x interfaz I2S, 1x interfaz JTAG, 2x interfaces de botón de usuario</td></tr>
     <tr><td>Tamaño de la placa</td><td>26,4 × 51,4 × 12,6 mm</td></tr>
     <tr><td>Ideal para</td><td>Interfaz táctil, HMI portátil, registro local de medios y datos</td></tr>
@@ -78,7 +78,7 @@ Antes de empezar, consulta la siguiente imagen para comprender la disposición f
 
 ### Mapa de pines
 
-La pantalla IPS de 1,47'' expone todos los pines del XIAO ESP32-S3 Plus. La siguiente tabla enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
+La pantalla IPS de 1,47'' expone todos los pines del XIAO ESP32-S3 Plus. La tabla siguiente enumera cada pin, su nombre de red en la placa de pantalla, su función y cómo está conectado a los periféricos integrados.
 
 <div class="table-center">
   <table align="center">
@@ -145,7 +145,7 @@ Luego ve a **Tools > Board > Boards Manager**, busca **esp32** e instala la vers
 **Paso 3.** Reinicia el Arduino IDE para que se detecte la nueva librería.
 
 :::tip
-- **Seeed_GFX2** es la biblioteca gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada a `display.begin<Board_..., Config_...>()` — la plantilla **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución de 172×320, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
+- **Seeed_GFX2** es la biblioteca gráfica de Seeed Studio construida sobre una arquitectura en capas `Board` + `Panel Config`. Cada demo inicializa la pantalla con una única llamada `display.begin<Board_..., Config_...>()`: la plantilla **Board** contiene el mapa de pines (CS/DC/SCK/MOSI/RST/BL), y la **Panel Config** integra la resolución de 172×320, el orden de color (BGR) y la orientación. No se necesita `driver.h` ni configuración manual de pines.
 - En esta placa, el sketch usa `Board_XIAO_1inch47_Touch_Display<13, 12>` (RST=13, BL=12) con `Config_Seeed_1inch47_Touch_JD9853A`.
 :::
 
@@ -164,7 +164,7 @@ Navega a `code_GFX2/getting_started_code/xiao_esp32s3_147_hello/` y abre `xiao_e
 
 ### Subir el sketch
 
-**Paso 1.** Conecta el XIAO ESP32-S3 Plus a tu ordenador mediante el puerto USB-C.
+**Paso 1.** Conecta la XIAO ESP32-S3 Plus a tu ordenador mediante el puerto USB-C.
 
 **Paso 2.** En el IDE de Arduino, selecciona la placa: **Tools > Board > esp32 > XIAO_ESP32S3_PLUS**.
 
@@ -182,18 +182,18 @@ Si la pantalla no se inicializa, el sketch imprime el mensaje de error de la bib
 
 ## Qué sigue
 
-La placa de pantalla integra varios periféricos a bordo. La página de [Function](/es/function_1.47_inch_touch_display_esp32s3) proporciona una demo independiente para cada uno:
+La placa de pantalla integra varios periféricos a bordo. La página [Function](/es/function_1.47_inch_touch_display_esp32s3) proporciona una demo independiente para cada uno:
 
 <div class="table-center">
   <table align="center">
     <tr><th>Periférico</th><th>Demo</th></tr>
-    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.47_inch_touch_display_esp32s3#screen-display--graphictest) — diez primitivas gráficas con pruebas de rendimiento</td></tr>
-    <tr><td>Táctil</td><td>[Touch Circle](/es/function_1.47_inch_touch_display_esp32s3#touch--touch-circle) — toca para dibujar círculos persistentes; toca CLEAR para borrarlos</td></tr>
-    <tr><td>Tarjeta SD</td><td>[BMP Reader](/es/function_1.47_inch_touch_display_esp32s3#sd-card--bmp-reader) — muestra un BMP desde la tarjeta MicroSD</td></tr>
-    <tr><td>Micrófono y altavoz</td><td>[Volume Bar + SD Recorder](/es/function_1.47_inch_touch_display_esp32s3#microphone--speaker) — medidor de nivel PDM en vivo y grabación en SD</td></tr>
+    <tr><td>Pantalla</td><td>[GraphicTest](/es/function_1.47_inch_touch_display_esp32s3#pantalla--graphictest) — diez primitivas gráficas con pruebas de rendimiento</td></tr>
+    <tr><td>Táctil</td><td>[Touch Circle](/es/function_1.47_inch_touch_display_esp32s3#táctil--touch-circle) — toca para dibujar círculos persistentes; toca CLEAR para borrarlos</td></tr>
+    <tr><td>Tarjeta SD</td><td>[BMP Reader](/es/function_1.47_inch_touch_display_esp32s3#tarjeta-sd--bmp-reader) — muestra un BMP desde la tarjeta MicroSD</td></tr>
+    <tr><td>Micrófono y altavoz</td><td>[Volume Bar + SD Recorder](/es/function_1.47_inch_touch_display_esp32s3#micrófono-y-altavoz) — medidor de nivel PDM en vivo y grabación en SD</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/es/function_1.47_inch_touch_display_esp32s3#imu) — efectos de movimiento de 6 ejes y activación por movimiento</td></tr>
     <tr><td>Botones</td><td>[User Button](/es/function_1.47_inch_touch_display_esp32s3#user-button) — lectura de pulsaciones y eliminación de rebotes con interrupciones</td></tr>
-    <tr><td>Batería</td><td>[Battery Voltage Detection](/es/function_1.47_inch_touch_display_esp32s3#battery-voltage-detection) — mide el voltaje del divisor</td></tr>
+    <tr><td>Batería</td><td>[Battery Voltage Detection](/es/function_1.47_inch_touch_display_esp32s3#battery-voltage-detection) — medición del voltaje del divisor</td></tr>
   </table>
 </div>
 

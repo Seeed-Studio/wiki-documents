@@ -21,11 +21,18 @@ updatedAt: '2026-09-01'
 url: https://wiki.seeedstudio.com/pt-br/build_and_flash_yocto_for_seeed_jetson_carrier_boards/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Compilar e Gravar Yocto para Placas-Carrier Seeed Jetson
 
 Este guia fornece um fluxo de trabalho comum para compilar e gravar uma imagem OpenEmbedded/Yocto nas placas-carrier Jetson da Seeed Studio definidas pelo repositório [`seeed-tegra-demo-distro`](https://github.com/jjjadand/seeed-tegra-demo-distro).
 
-O repositório usa os branches `wrynose` do OE4T e o BSP `meta-tegra` para **Jetson Linux R39.2.0 / JetPack 7.2**. Uma imagem Yocto usa componentes do BSP NVIDIA Jetson Linux, mas não é o sistema de arquivos raiz Ubuntu instalado pelo NVIDIA SDK Manager. O gerenciamento de pacotes, a composição da imagem, o ambiente desktop e o comportamento de atualização são controlados pelos metadados do Yocto.
+O repositório usa os branches `wrynose` do OE4T e o BSP `meta-tegra` para **Jetson Linux R39.2.0 / JetPack 7.2**. Uma imagem Yocto usa os componentes do BSP NVIDIA Jetson Linux, mas não é o sistema de arquivos raiz Ubuntu instalado pelo NVIDIA SDK Manager. O gerenciamento de pacotes, a composição da imagem, o ambiente desktop e o comportamento de atualização são controlados pelos metadados do Yocto.
 
 :::warning Escopo do repositório
 Os comandos e as tabelas de parâmetros neste artigo seguem o estado do repositório revisado em **31 de agosto de 2026**. Antes de compilar, verifique novamente o README do repositório e a matriz de suporte, pois as máquinas disponíveis, SKUs de módulo, branches e o status de validação de hardware podem mudar.
@@ -37,9 +44,9 @@ O diagrama a seguir resume todo o fluxo de trabalho. Primeiro selecione a placa-
   <img width={1200} src="https://files.seeedstudio.com/wiki/jetpack-7.2/jetpack-7-2-yocto-workflow.png" alt="Fluxo de trabalho de compilação e gravação Yocto JetPack 7.2 para placas-carrier Seeed Jetson" />
 </div>
 
-## Antes de Começar
+## Antes de começar
 
-Use um host Linux físico x86_64 com um SSD local rápido, conexão de rede estável e acesso `sudo`. Prepare um cabo USB com suporte a dados para a porta de recuperação/dispositivo da placa-carrier. Uma compilação completa de desenvolvimento Yocto pode consumir várias centenas de gigabytes, portanto reserve aproximadamente **400 GB** de armazenamento livre sempre que possível. Use pelo menos **16 GB de RAM**, com **32 GB ou mais recomendados**.
+Use um host Linux físico x86_64 com SSD local rápido, conexão de rede estável e acesso `sudo`. Prepare um cabo USB com suporte a dados para a porta de recuperação/dispositivo da placa-carrier. Uma compilação completa de desenvolvimento Yocto pode consumir várias centenas de gigabytes, portanto reserve aproximadamente **400 GB** de armazenamento livre sempre que possível. Use pelo menos **16 GB de RAM**, com **32 GB ou mais recomendados**.
 
 Instale os pacotes comuns necessários para compilação e gravação em um host Ubuntu:
 
@@ -53,20 +60,20 @@ sudo apt install -y \
   gdisk parted udev udisks2
 ```
 
-Os nomes dos pacotes podem variar entre distribuições host. Siga o Quick Build do Yocto Project e os requisitos de gravação do OE4T para o branch usado pelo repositório. Se o BitBake relatar uma distribuição host não suportada, use um host suportado em vez de contornar a validação.
+Os nomes dos pacotes podem ser diferentes entre distribuições host. Siga o Quick Build do Yocto Project e os requisitos de gravação do OE4T para o branch usado pelo repositório. Se o BitBake relatar uma distribuição host não suportada, use um host suportado em vez de contornar a validação.
 
 Os scripts auxiliares usam os seguintes parâmetros em todo o fluxo de trabalho:
 
 | Parâmetro | Finalidade | Regra importante |
 | --- | --- | --- |
-| `--machine` | Seleciona a configuração `MACHINE` Yocto da placa-carrier. | Deve corresponder à placa-carrier física. |
+| `--machine` | Seleciona a configuração Yocto `MACHINE` da placa-carrier. | Deve corresponder à placa-carrier física. |
 | `--module-sku` | Seleciona o módulo Jetson instalado em uma carrier Orin configurável. São os quatro dígitos finais do número do módulo NVIDIA. | Obrigatório para máquinas Orin configuráveis; omita para máquinas Thor com módulo fixo. |
 | `--build-dir` | Armazena a configuração selecionada, arquivos de trabalho do BitBake e artefatos de deploy. | Use um diretório separado para cada combinação de carrier e SKU de módulo. |
 | `--cache-dir` | Armazena downloads compartilhados e dados de cache sstate. | Reutilize um cache local do host entre compilações. |
 | `--image` | Seleciona a receita de imagem do BitBake. | Use o mesmo nome de imagem para compilação e preparação da gravação. |
 | `--output-dir` | Seleciona onde o pacote tegraflash verificado é extraído. | Use um diretório local do host novo ou vazio. |
 
-`MACHINE` é o nome do alvo de hardware Yocto, não apenas um rótulo de produto. Ele seleciona uma configuração de máquina em `layers/meta-seeed/conf/machine/`, que determina a família SoC, DTB da carrier, configuração do módulo, dados BPMP, arquivos de pinmux e tensão de pad, overlays e variáveis de gravação usadas pelo BitBake e pelo tegraflash.
+`MACHINE` é o nome do alvo de hardware Yocto, não apenas um rótulo de produto. Ele seleciona uma configuração de máquina em `layers/meta-seeed/conf/machine/`, que determina a família de SoC, DTB da carrier, configuração do módulo, dados BPMP, arquivos de pinmux e tensão de pad, overlays e variáveis de gravação usadas pelo BitBake e pelo tegraflash.
 
 :::tip Selecione a máquina para o seu hardware
 Os comandos `recomputer-orin-super-j401` neste guia são apenas um exemplo concreto. Antes de preparar o workspace, selecione o `MACHINE` e o SKU do módulo que correspondem à sua carrier e ao módulo Jetson na [tabela de placas-carrier](https://wiki.seeedstudio.com/pt-br/build_and_flash_yocto_for_seeed_jetson_carrier_boards/#escolher-a-placa-carrier-e-o-módulo-jetson).
@@ -78,7 +85,7 @@ Escolha uma imagem com base na finalidade do alvo:
 | --- | --- |
 | `demo-image-full` | Imagem de referência/demo OE4T com gráficos, containers, OpenCV e exemplos NVIDIA. Este é o padrão dos scripts auxiliares. |
 | `seeed-image-jetson-runtime` | Perfil de runtime da Seeed alinhado com a pilha de runtime OE4T/NVIDIA. |
-| `seeed-image-jetson-development` | Imagem de runtime mais pacotes de desenvolvimento CUDA no alvo, cabeçalhos, ferramentas de compilação/depuração, exemplos e testes. |
+| `seeed-image-jetson-development` | Imagem de runtime mais pacotes de desenvolvimento CUDA no alvo, headers, ferramentas de compilação/depuração, exemplos e testes. |
 
 Os exemplos abaixo usam `seeed-image-jetson-development`.
 
@@ -122,7 +129,7 @@ O repositório revisado para este guia define 16 configurações de máquina See
 | P3834 | not selectable | `P3834-0008` | Módulo Jetson T5000 / AGX Thor do kit de desenvolvimento, selecionado pelo `MACHINE` Thor |
 
 :::caution Suporte de compilação versus validação de hardware
-O repositório fornece metadados de máquina e validação de compilação para todas as configurações listadas. Isso não significa que toda carrier, SKU de módulo, opção de câmera e periférico tenha concluído a validação física. Na matriz de suporte revisada, `recomputer-orin-super-j401` concluiu a validação de gravação, boot via NVMe, HDMI e USB básico. `reserver-agx-orin-j501x-gmsl` com SKU `0004` concluiu a validação de gravação e boot, enquanto a validação GMSL e de periféricos mais ampla ainda está pendente. Trate as outras máquinas como validadas apenas para compilação até que o status de hardware delas seja atualizado.
+O repositório fornece metadados de máquina e validação de compilação para todas as configurações listadas. Isso não significa que toda carrier, SKU de módulo, opção de câmera e periférico tenha concluído a validação física. Na matriz de suporte revisada, `recomputer-orin-super-j401` concluiu a validação de gravação, boot via NVMe, HDMI e USB básico. `reserver-agx-orin-j501x-gmsl` com SKU `0004` concluiu a validação de gravação e boot, enquanto a validação de GMSL e de periféricos mais amplos ainda está pendente. Trate as outras máquinas como validadas apenas para compilação até que o status de hardware delas seja atualizado.
 :::
 
 A sequência de comandos nas próximas seções usa **reComputer Super J401 com um módulo Orin NX 16GB** como exemplo concreto. Substitua sua máquina, SKU e nomes de diretório pelos valores selecionados nas tabelas acima. O mesmo fluxo de trabalho parametrizado também se aplica a outras máquinas na tabela de suporte, como a reComputer Mini J5011.
@@ -161,7 +168,7 @@ A sequência de comandos nas próximas seções usa **reComputer Super J401 com 
 </div>
 
 :::danger
-Usar o `MACHINE` ou SKU de módulo errado pode selecionar arquivos DTB, BPMP, pinmux, memória ou configuração de flash incompatíveis. Nunca reutilize um diretório de build existente após alterar qualquer um desses valores.
+Usar o `MACHINE` ou SKU de módulo errado pode selecionar arquivos de configuração de DTB, BPMP, pinmux, memória ou flash incompatíveis. Nunca reutilize um diretório de build existente depois de alterar qualquer um desses valores.
 :::
 
 ## Preparar e verificar o workspace
@@ -192,9 +199,9 @@ Prepare um workspace para o carrier e módulo de exemplo:
   --cache-dir "$HOME/.cache/yocto-seeed"
 ```
 
-Para um carrier AGX Orin, substitua os valores pela sua máquina e SKU P3701 suportado. Para um carrier Thor, omita `--module-sku` porque o módulo é fixado pelo arquivo de máquina selecionado. O helper também aceita `--no-activate`, `--no-submodules` e `--full-history` para gerenciamento avançado de workspaces.
+Para um carrier AGX Orin, substitua os valores pela sua máquina e SKU P3701 suportado. Para um carrier Thor, omita `--module-sku` porque o módulo é fixo pelo arquivo de máquina selecionado. O helper também aceita `--no-activate`, `--no-submodules` e `--full-history` para gerenciamento avançado de workspaces.
 
-Verifique o diretório de build selecionado, a máquina e o SKU do módulo antes de compilar:
+Verifique o diretório de build, a máquina e o SKU do módulo selecionados antes de compilar:
 
 ```bash
 ./scripts/seeed/build.sh current \
@@ -203,14 +210,14 @@ Verifique o diretório de build selecionado, a máquina e o SKU do módulo antes
 ```
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/current.png" alt="Yocto helper mostrando o diretório de build, máquina e SKU de módulo selecionados" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/current.png" alt="Yocto helper mostrando o diretório de build, a máquina e o SKU do módulo selecionados" />
 </div>
 
 Não continue se os valores exibidos não corresponderem ao hardware físico.
 
 ## Compilar a imagem e o pacote de flash
 
-O primeiro build recomendado usa o comando `all`. Ele executa validação de metadados, compilação dos DTB/DTBO da Seeed, verificações de instalação de arquivos de boot e o build completo da imagem em sequência:
+O primeiro build recomendado usa o comando `all`. Ele executa validação de metadata, compilação dos DTB/DTBO da Seeed, verificações de instalação dos arquivos de boot e o build completo da imagem em sequência:
 
 ```bash
 ./scripts/seeed/build.sh all \
@@ -222,7 +229,7 @@ O primeiro build recomendado usa o comando `all`. Ele executa validação de met
 O primeiro build faz download e compila muitos componentes e pode levar várias horas. Uma execução bem-sucedida termina depois que todas as quatro etapas forem concluídas:
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/build-full-complete.png" alt="Etapas concluídas de build de metadados, device tree, arquivos de boot e imagem do Yocto" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/build-full-complete.png" alt="Etapas concluídas de build de metadata, device tree, arquivos de boot e imagem do Yocto" />
 </div>
 
 Os arquivos gerados são colocados em `<build-dir>/tmp/deploy/images/<machine>/`. Saídas importantes seguem este padrão de nomenclatura:
@@ -236,7 +243,7 @@ Os arquivos gerados são colocados em `<build-dir>/tmp/deploy/images/<machine>/`
 ```
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/filename.png" alt="Diretório de deploy do Yocto contendo o sistema de arquivos raiz gerado e o arquivo compactado tegraflash" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/yocto/filename.png" alt="Diretório de deploy do Yocto contendo o sistema de arquivos raiz gerado e o arquivo tegraflash" />
 </div>
 
 O arquivo `.tegraflash-tar.zst` contém os arquivos usados pelo helper de preparação de flash.
@@ -250,9 +257,9 @@ Para depuração ou rebuilds parciais, substitua `all` por `metadata`, `dtb`, `b
   --image seeed-image-jetson-development
 ```
 
-O instalador do SDK é gravado em `<build-dir>/tmp/deploy/sdk/`. Ele não é necessário para compilar ou fazer flash da imagem de destino, e é desnecessário ao compilar diretamente no Jetson.
+O instalador do SDK é gravado em `<build-dir>/tmp/deploy/sdk/`. Ele não é necessário para compilar ou fazer flash da imagem de destino e é desnecessário ao compilar diretamente no Jetson.
 
-## Preparar e fazer flash no dispositivo de destino
+## Preparar e fazer flash no alvo
 
 Extraia e verifique o arquivo de flash com o mesmo diretório de build, máquina e valores de imagem usados para o build:
 
@@ -264,15 +271,15 @@ Extraia e verifique o arquivo de flash com o mesmo diretório de build, máquina
   --output-dir "$HOME/seeed-flash-recomputer-orin-super-j401-sku0000"
 ```
 
-O helper verifica o rootfs, `initrd-flash`, variáveis de flash, DTB/BPMP DTB, pinmux, tensão de pad e outros arquivos de boot selecionados. Para carriers configuráveis, ele também verifica se o SKU do módulo no arquivo de flash corresponde ao workspace preparado. O helper não executa `sudo` nem faz flash no dispositivo de destino por conta própria.
+O helper verifica o rootfs, `initrd-flash`, variáveis de flash, DTB/BPMP DTB, pinmux, pad-voltage e outros arquivos de boot selecionados. Para carriers configuráveis, ele também verifica se o SKU do módulo no arquivo de flash corresponde ao workspace preparado. O helper não executa `sudo` nem faz flash no alvo por conta própria.
 
-Coloque o dispositivo de destino em Force Recovery Mode usando a sequência de botão ou chave de recuperação documentada para aquela placa carrier Seeed específica. Conecte a porta USB device/debug do carrier diretamente ao host Linux com um cabo compatível com dados e, em seguida, verifique se um dispositivo NVIDIA APX está visível:
+Coloque o alvo em Force Recovery Mode usando a sequência de botão ou chave de recuperação documentada para aquela placa carrier específica da Seeed. Conecte a porta USB device/debug do carrier diretamente ao host Linux com um cabo compatível com dados e, em seguida, verifique se um dispositivo NVIDIA APX está visível:
 
 ```bash
 lsusb -d 0955:
 ```
 
-O ID de produto USB varia conforme o módulo Jetson. Não inicie o flash até que o dispositivo de recuperação NVIDIA apareça.
+O ID de produto USB varia conforme o módulo Jetson. Não inicie o flash até que o dispositivo de recuperação da NVIDIA apareça.
 
 Execute o flasher gerado a partir do diretório de saída preparado:
 
@@ -281,7 +288,7 @@ cd "$HOME/seeed-flash-recomputer-orin-super-j401-sku0000"
 sudo ./initrd-flash
 ```
 
-O script inicializa um initrd temporário via USB, expõe o dispositivo de armazenamento de destino ao host, grava o layout de partições e o sistema de arquivos raiz e informa o status final. Não desconecte a alimentação ou o USB durante o processo de flash.
+O script inicializa um initrd temporário via USB, expõe o dispositivo de armazenamento de destino para o host, grava o layout de partições e o sistema de arquivos raiz e informa o status final. Não desconecte a alimentação ou o USB durante o processo de flash.
 
 :::warning
 O nome temporário do dispositivo de bloco no host é atribuído dinamicamente. Nunca presuma que ele será sempre `/dev/sdb` ou `/dev/sdc`, e não redirecione manualmente o fluxo de trabalho para uma unidade do host.
@@ -289,7 +296,7 @@ O nome temporário do dispositivo de bloco no host é atribuído dinamicamente. 
 
 ## Primeiro boot e validação
 
-Depois que o flash terminar com sucesso, desconecte o cabo USB de recuperação, retorne os controles de recuperação do carrier ao estado normal, se necessário, desligue e ligue novamente o dispositivo de destino e conecte seu display e periféricos.
+Depois que o flash terminar com sucesso, desconecte o cabo USB de recuperação, retorne os controles de recuperação do carrier ao estado normal, se necessário, desligue e ligue novamente o alvo e conecte seu display e periféricos.
 
 A área de trabalho do Yocto deve inicializar a partir do armazenamento de destino selecionado:
 
@@ -303,7 +310,7 @@ A configuração padrão `tegrademo` habilita uma senha raiz inicial vazia e log
 passwd
 ```
 
-Para a imagem de desenvolvimento, verifique as ferramentas e bibliotecas necessárias no lado do dispositivo de destino e, em seguida, teste as interfaces específicas do carrier usadas pela sua aplicação:
+Para a imagem de desenvolvimento, verifique as ferramentas e bibliotecas necessárias no lado do alvo e, em seguida, teste as interfaces específicas do carrier usadas pela sua aplicação:
 
 ```bash
 nvcc --version
@@ -320,9 +327,9 @@ Compilar ou inicializar a imagem com sucesso não valida todas as câmeras, link
 
 **O arquivo de flash não pode ser encontrado:** Passe o mesmo valor de `--image` para `build.sh` e `prepare-flash.sh`. Ambos os helpers usam `demo-image-full` como padrão, portanto um build de `seeed-image-jetson-development` deve usar explicitamente esse nome durante a preparação do flash.
 
-**Os metadados são analisados, mas o hardware não inicializa:** Verifique a matriz de suporte do repositório. A validação de metadados e build de DTB não comprova a operação física de flash, boot de armazenamento, display, câmera, GMSL ou periféricos para todas as combinações de máquina e módulo.
+**A metadata é analisada, mas o hardware não inicializa:** Verifique a matriz de suporte do repositório. A validação de metadata e build de DTB não comprova a operação física de flash, boot de armazenamento, display, câmera, GMSL ou periféricos para todas as combinações de máquina e módulo.
 
-**O processo de flash para em `Waiting for USB storage device flashpkg`:** Nesta etapa, o host está aguardando o initrd do Jetson enumerar um dispositivo de armazenamento em massa USB temporário; a gravação da partição rootfs ainda não começou. Verifique o cabo de dados, a conexão USB direta ao host, o estado de modo de recuperação e o caminho de modo dispositivo USB na device tree compilada. Não trate os pontos repetidos como gravação lenta normal de armazenamento.
+**O processo de flash para em `Waiting for USB storage device flashpkg`:** Nesta etapa, o host está aguardando o initrd do Jetson enumerar um dispositivo temporário de armazenamento em massa USB; a gravação da partição rootfs ainda não começou. Verifique o cabo de dados, a conexão USB direta ao host, o estado de modo de recuperação e o caminho de modo dispositivo USB na device tree compilada. Não trate os pontos repetidos como gravação lenta normal de armazenamento.
 
 ## Referências
 
@@ -332,7 +339,7 @@ Compilar ou inicializar a imagem com sucesso não valida todas as câmeras, link
 - [Documentação OE4T meta-tegra](https://oe4t.github.io/)
 - [Noções básicas de flash OE4T](https://oe4t.github.io/wrynose/Flashing.html)
 
-Obrigado por escolher produtos Seeed Studio! Para suporte técnico e discussão sobre produtos, use os seguintes canais:
+Obrigado por escolher os produtos da Seeed Studio! Para suporte técnico e discussão de produtos, use os seguintes canais:
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

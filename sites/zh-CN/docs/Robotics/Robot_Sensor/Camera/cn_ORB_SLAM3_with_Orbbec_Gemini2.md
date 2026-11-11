@@ -1,6 +1,6 @@
 ---
-description: 本 wiki 提供了在 reComputer Jetson 上使用 Orbbec Gemini2 RGB-D 相机设置和运行 ORB-SLAM3 算法的详细步骤，用于高级视觉 SLAM 应用。
-title: 在 reComputer 上使用 Orbbec Gemini2 运行 ORB-SLAM3
+description: "在 reComputer J30/J40 上使用 Orbbec Gemini2 运行 ORB-SLAM3：Orbbec SDK 构建、相机标定以及单目 SLAM 启动。"
+title: 使用 Orbbec Gemini2 的 ORB-SLAM3
 keywords:
   - ORB-SLAM3
   - SLAM
@@ -21,12 +21,12 @@ url: https://wiki.seeedstudio.com/cn/orb_slam3_orbbec_gemini2/
 ---
 
 <div align="center">
-    <img width={400}
+    <img alt="Orbbec Gemini 2 RGB-D 相机的斜视图，展示深度和彩色镜头以及安装点" width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-Orbbec Gemini 2 是一款高性能 RGB-D 相机，配备双眼结构光深度传感器和集成的 6 轴 IMU。它提供完全同步的 RGB 和深度数据流，确保精确的实时深度到彩色对齐，这对于准确的 3D 感知至关重要。这些功能的结合使 Gemini 2 非常适合机器人技术、计算机视觉和其他 3D 应用，能够以高可靠性和准确性执行物体检测、建图、导航和空间分析等任务。该相机结构紧凑，易于设置，并完全支持 Orbbec SDK，适用于研究和工业部署。
+Orbbec Gemini 2 是一款高性能 RGB-D 相机，配备双目结构光深度传感器和集成 6 轴 IMU。它提供完全同步的 RGB 和深度数据流，确保精确的实时深度到彩色对齐，这对于准确的 3D 感知至关重要。这些特性的组合使 Gemini 2 非常适合机器人、计算机视觉和其他 3D 应用，可高可靠性、高精度地完成目标检测、建图、导航和空间分析等任务。该相机体积小巧、易于部署，并由 Orbbec SDK 完整支持，适用于科研和工业部署场景。
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -37,17 +37,17 @@ Orbbec Gemini 2 是一款高性能 RGB-D 相机，配备双眼结构光深度传
 ## 介绍
 
 <div style={{ textAlign: "justify" }}>
-[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)是一种先进的视觉 SLAM 算法，适用于单目、立体和 RGB-D 相机。它使用 ORB 特征进行鲁棒的跟踪和建图，支持回环检测和重定位，为机器人技术、AR/VR 和自主导航提供高精度和高效率。本 wiki 提供了在 reComputer Jetson 系列上使用 Orbbec Gemini2 RGB-D 相机设置和运行 ORB-SLAM3 的全面步骤，用于高级视觉 SLAM 应用。
+[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) 是一款面向单目、双目和 RGB-D 相机的高级视觉 SLAM 算法。它使用 ORB 特征实现鲁棒的跟踪与建图，支持回环检测和重定位，并为机器人、AR/VR 和自主导航提供高精度和高效率。下面的步骤将在 reComputer 上基于 Orbbec SDK 和 Pangolin 构建 ORB-SLAM3，修补 C++ 时钟调用，对 Gemini 2 进行标定，并启动 RGB-D 模式。
 </div>
 
-## 先决条件
+## 前置条件
 
 - **[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)** 预装 Jetpack 6.2
 - **Orbbec Gemini2 3D Camera**
-- **[ROS2 Humble](https://wiki.seeedstudio.com/cn/install_ros2_humble/)** 环境已安装
+- 已安装 **[ROS2 Humble](https://wiki.seeedstudio.com/cn/install_ros2_humble/)** 环境
 
 <div align="center">
-    <img width={700}
+    <img alt="reComputer J4012，带有 NVIDIA Jetson Orin NX 16GB 标识，本教程中使用的主机" width={700}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
 </div>
 
@@ -63,7 +63,7 @@ wget https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.11/OrbbecSDK_
 unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
-**步骤 2.** 构建示例并测试：
+**步骤 2.** 构建示例并进行测试：
 
 ```bash
 # Install udev rules
@@ -78,13 +78,13 @@ cd ..
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Orbbec SDK 示例窗口，显示 Gemini 2 的彩色和深度数据流" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
 ## 构建 ORB-SLAM3
 
-**步骤 1.** 安装系统依赖项：
+**步骤 1.** 安装系统依赖：
 
 ```bash
 sudo apt update && sudo apt install -y \
@@ -96,7 +96,7 @@ sudo apt update && sudo apt install -y \
     libepoxy-dev python3-dev libboost-serialization-dev
 ```
 
-**步骤 2.** 安装 ORB-SLAM3 可视化所需的 Pangolin：
+**步骤 2.** 安装 Pangolin（ORB-SLAM3 可视化所必需）：
 
 ```bash
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
@@ -118,9 +118,9 @@ sudo make install
 ```
 
 :::warning
-如果遇到 OpenEXR 相关的编译错误，您可能需要修改源代码：
+如果你遇到与 OpenEXR 相关的编译错误，可能需要修改源代码：
 
-在`./components/pango_image/src/image_io_exr.cpp`中，将：
+在 `./components/pango_image/src/image_io_exr.cpp` 中，将以下内容：
 
 ```cpp
 #include <ImfChannelList.h>
@@ -140,7 +140,7 @@ sudo make install
 
 :::
 
-**步骤 3.** 编译 ORB-SLAM3 的配置
+**步骤 3.** 配置以编译 ORB-SLAM3
 
 ```bash
 cd ~
@@ -148,7 +148,7 @@ git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 cd ORB_SLAM3
 ```
 
-ORB-SLAM3 可能与较新的 C++标准存在兼容性问题。修复`monotonic_clock`问题：
+ORB-SLAM3 可能与较新的 C++ 标准存在兼容性问题。修复 `monotonic_clock` 问题：
 
 ```bash
 # Replace monotonic_clock with steady_clock in all source files
@@ -156,7 +156,7 @@ find Examples -name "*.cc" -exec sed -i 's/monotonic_clock/steady_clock/g' {} \;
 ```
 
 :::info
-例如，在`Examples/Stereo/stereo_euroc.cc`中：
+例如，在 `Examples/Stereo/stereo_euroc.cc` 中：
 
 ```cpp
 // Change from:
@@ -175,17 +175,17 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Pangolin SimpleDisplay 窗口已打开，用于确认查看器库已安装" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/v_tool.png" />
 </div>
 
-如果安装正确，可以正常打开如上图所示的窗口。
+如果安装正确，将能够正常打开如上图所示的窗口。
 
 **步骤 5.** 修改 CMakeLists.txt
 
-修改 CMakeLists.txt 文件以使项目与 Orbbec SDK 兼容。直接复制以下完整的 CMakeList.txt 配置：
+修改 CMakeLists.txt 文件，使项目与 Orbbec SDK 兼容。直接复制以下完整的 CMakeList.txt 配置：
 :::info
-您需要修改：`set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")`为您自己安装 SDK 的路径。
+你需要将 `set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")` 修改为你自己安装 SDK 的路径。
 :::
 <details>
 <summary> CMakeLists.txt </summary>
@@ -206,6 +206,7 @@ set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -march=native")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -march=native")
 
 # Check C++14, C++11 or C++0x support
+
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++14" COMPILER_SUPPORTS_CXX14)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
@@ -324,6 +325,7 @@ ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 )
 
 # If RealSense SDK is found the library is added and its examples compiled
+
 if(realsense2_FOUND)
     include_directories(${PROJECT_NAME}
     ${realsense_INCLUDE_DIR}
@@ -334,7 +336,9 @@ if(realsense2_FOUND)
 endif()
 
 # Check for Orbbec SDK
+
 # Try to find OrbbecSDK in the local directory first
+
 set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")
 if(EXISTS ${ORBBEC_SDK_PATH})
     set(ORBBEC_FOUND TRUE)
@@ -365,10 +369,10 @@ else()
     message(WARNING "Orbbec SDK not found. Orbbec examples will not be compiled.")
 endif()
 
-
 # Build examples
 
 # RGB-D examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/RGB-D)
 
 add_executable(rgbd_tum
@@ -387,8 +391,8 @@ if(ORBBEC_FOUND)
     target_link_libraries(rgbd_orbbec_gemini2 ${PROJECT_NAME})
 endif()
 
-
 # RGB-D inertial examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/RGB-D-Inertial)
 
 if(realsense2_FOUND)
@@ -397,7 +401,8 @@ if(realsense2_FOUND)
     target_link_libraries(rgbd_inertial_realsense_D435i ${PROJECT_NAME})
 endif()
 
-#Stereo examples
+# Stereo examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Stereo)
 
 add_executable(stereo_kitti
@@ -422,9 +427,8 @@ if(realsense2_FOUND)
     target_link_libraries(stereo_realsense_D435i ${PROJECT_NAME})
 endif()
 
+# Monocular examples
 
-
-#Monocular examples
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular)
 
 add_executable(mono_tum
@@ -453,7 +457,8 @@ if(realsense2_FOUND)
     target_link_libraries(mono_realsense_D435i ${PROJECT_NAME})
 endif()
 
-#Monocular inertial examples
+# Monocular inertial examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular-Inertial)
 
 add_executable(mono_inertial_euroc
@@ -474,7 +479,8 @@ if(realsense2_FOUND)
     target_link_libraries(mono_inertial_realsense_D435i ${PROJECT_NAME})
 endif()
 
-#Stereo Inertial examples
+# Stereo Inertial examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Stereo-Inertial)
 
 add_executable(stereo_inertial_euroc
@@ -495,8 +501,6 @@ if(realsense2_FOUND)
     target_link_libraries(stereo_inertial_realsense_D435i ${PROJECT_NAME})
 endif()
 
-
-
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Calibration)
 if(realsense2_FOUND)
     add_executable(recorder_realsense_D435i
@@ -508,136 +512,251 @@ if(realsense2_FOUND)
     target_link_libraries(recorder_realsense_T265 ${PROJECT_NAME})
 endif()
 
+# Old examples - DISABLED to avoid compilation issues
 
-
-#Old examples - DISABLED to avoid compilation issues
 # Uncomment the following lines if you need the old examples
 
 # # RGB-D examples
+
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples_old/RGB-D)
-# 
+
+#
+
 # add_executable(rgbd_tum_old
-#         Examples_old/RGB-D/rgbd_tum.cc)
+
+# Examples_old/RGB-D/rgbd_tum.cc)
+
 # target_link_libraries(rgbd_tum_old ${PROJECT_NAME})
-# 
+
+#
+
 # if(realsense2_FOUND)
-#     add_executable(rgbd_realsense_D435i_old
-#             Examples_old/RGB-D/rgbd_realsense_D435i.cc)
-#     target_link_libraries(rgbd_realsense_D435i_old ${PROJECT_NAME})
+
+# add_executable(rgbd_realsense_D435i_old
+
+# Examples_old/RGB-D/rgbd_realsense_D435i.cc)
+
+# target_link_libraries(rgbd_realsense_D435i_old ${PROJECT_NAME})
+
 # endif()
-# 
+
+#
+
 # # RGB-D inertial examples
+
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples_old/RGB-D-Inertial)
-# 
+
+#
+
 # if(realsense2_FOUND)
-#     add_executable(rgbd_inertial_realsense_D435i_old
-#             Examples_old/RGB-D-Inertial/rgbd_inertial_realsense_D435i.cc)
-#     target_link_libraries(rgbd_inertial_realsense_D435i_old ${PROJECT_NAME})
+
+# add_executable(rgbd_inertial_realsense_D435i_old
+
+# Examples_old/RGB-D-Inertial/rgbd_inertial_realsense_D435i.cc)
+
+# target_link_libraries(rgbd_inertial_realsense_D435i_old ${PROJECT_NAME})
+
 # endif()
-# 
+
+#
+
 # #Stereo examples
+
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples_old/Stereo)
-# 
+
+#
+
 # add_executable(stereo_kitti_old
-#         Examples_old/Stereo/stereo_kitti.cc)
+
+# Examples_old/Stereo/stereo_kitti.cc)
+
 # target_link_libraries(stereo_kitti_old ${PROJECT_NAME})
-# 
+
+#
+
 # add_executable(stereo_euroc_old
-#         Examples_old/Stereo/stereo_euroc.cc)
+
+# Examples_old/Stereo/stereo_euroc.cc)
+
 # target_link_libraries(stereo_euroc_old ${PROJECT_NAME})
-# 
+
+#
+
 # add_executable(stereo_tum_vi_old
-#         Examples_old/Stereo/stereo_tum_vi.cc)
+
+# Examples_old/Stereo/stereo_tum_vi.cc)
+
 # target_link_libraries(stereo_tum_vi_old ${PROJECT_NAME})
-# 
+
+#
+
 # if(realsense2_FOUND)
-#     add_executable(stereo_realsense_t265_old
-#             Examples_old/Stereo/stereo_realsense_t265.cc)
-#     target_link_libraries(stereo_realsense_t265_old ${PROJECT_NAME})
-# 
-#     add_executable(stereo_realsense_D435i_old
-#             Examples_old/Stereo/stereo_realsense_D435i.cc)
-#     target_link_libraries(stereo_realsense_D435i_old ${PROJECT_NAME})
+
+# add_executable(stereo_realsense_t265_old
+
+# Examples_old/Stereo/stereo_realsense_t265.cc)
+
+# target_link_libraries(stereo_realsense_t265_old ${PROJECT_NAME})
+
+#
+
+# add_executable(stereo_realsense_D435i_old
+
+# Examples_old/Stereo/stereo_realsense_D435i.cc)
+
+# target_link_libraries(stereo_realsense_D435i_old ${PROJECT_NAME})
+
 # endif()
-# 
+
+#
+
 # #Monocular examples
+
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples_old/Monocular)
-# 
+
+#
+
 # add_executable(mono_tum_old
-#         Examples_old/Monocular/mono_tum.cc)
+
+# Examples_old/Monocular/mono_tum.cc)
+
 # target_link_libraries(mono_tum_old ${PROJECT_NAME})
-# 
+
+#
+
 # add_executable(mono_kitti_old
-#         Examples_old/Monocular/mono_kitti.cc)
+
+# Examples_old/Monocular/mono_kitti.cc)
+
 # target_link_libraries(mono_tum_old ${PROJECT_NAME})
-# 
+
+#
+
 # add_executable(mono_euroc_old
-#         Examples_old/Monocular/mono_euroc.cc)
+
+# Examples_old/Monocular/mono_euroc.cc)
+
 # target_link_libraries(mono_euroc_old ${PROJECT_NAME})
-# 
+
+#
+
 # add_executable(mono_tum_vi_old
-#         Examples_old/Monocular/mono_tum_vi.cc)
+
+# Examples_old/Monocular/mono_tum_vi.cc)
+
 # target_link_libraries(mono_tum_vi_old ${PROJECT_NAME})
-# 
+
+#
+
 # if(realsense2_FOUND)
-#     add_executable(mono_realsense_t265_old
-#             Examples_old/Monocular/mono_realsense_t265.cc)
-#     target_link_libraries(mono_realsense_t265_old ${PROJECT_NAME})
-# 
-#     add_executable(mono_realsense_D435i_old
-#             Examples_old/Monocular/mono_realsense_D435i.cc)
-#     target_link_libraries(mono_realsense_D435i_old ${PROJECT_NAME})
+
+# add_executable(mono_realsense_t265_old
+
+# Examples_old/Monocular/mono_realsense_t265.cc)
+
+# target_link_libraries(mono_realsense_t265_old ${PROJECT_NAME})
+
+#
+
+# add_executable(mono_realsense_D435i_old
+
+# Examples_old/Monocular/mono_realsense_D435i.cc)
+
+# target_link_libraries(mono_realsense_D435i_old ${PROJECT_NAME})
+
 # endif()
-# 
+
+#
+
 # #Monocular inertial examples
+
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples_old/Monocular-Inertial)
-# 
+
+#
+
 # add_executable(mono_inertial_euroc_old
-#         Examples_old/Monocular-Inertial/mono_inertial_euroc.cc)
+
+# Examples_old/Monocular-Inertial/mono_inertial_euroc.cc)
+
 # target_link_libraries(mono_inertial_euroc_old ${PROJECT_NAME})
-# 
+
+#
+
 # add_executable(mono_inertial_tum_vi_old
-#         Examples_old/Monocular-Inertial/mono_inertial_tum_vi.cc)
+
+# Examples_old/Monocular-Inertial/mono_inertial_tum_vi.cc)
+
 # target_link_libraries(mono_inertial_tum_vi_old ${PROJECT_NAME})
-# 
+
+#
+
 # if(realsense2_FOUND)
-#     add_executable(mono_inertial_realsense_t265_old
-#             Examples_old/Monocular-Inertial/mono_inertial_realsense_t265.cc)
-#     target_link_libraries(mono_inertial_realsense_t265_old ${PROJECT_NAME})
-# 
-#     add_executable(mono_inertial_realsense_D435i_old
-#             Examples_old/Monocular-Inertial/mono_inertial_realsense_D435i.cc)
-#     target_link_libraries(mono_inertial_realsense_D435i_old ${PROJECT_NAME})
+
+# add_executable(mono_inertial_realsense_t265_old
+
+# Examples_old/Monocular-Inertial/mono_inertial_realsense_t265.cc)
+
+# target_link_libraries(mono_inertial_realsense_t265_old ${PROJECT_NAME})
+
+#
+
+# add_executable(mono_inertial_realsense_D435i_old
+
+# Examples_old/Monocular-Inertial/mono_inertial_realsense_D435i.cc)
+
+# target_link_libraries(mono_inertial_realsense_D435i_old ${PROJECT_NAME})
+
 # endif()
-# 
+
+#
+
 # #Stereo Inertial examples
+
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples_old/Stereo-Inertial)
-# 
+
+#
+
 # add_executable(stereo_inertial_euroc_old
-#         Examples_old/Stereo-Inertial/stereo_inertial_realsense_t265.cc)
+
+# Examples_old/Stereo-Inertial/stereo_inertial_realsense_t265.cc)
+
 # target_link_libraries(stereo_inertial_realsense_t265_old ${PROJECT_NAME})
-# 
+
+#
+
 # add_executable(stereo_inertial_tum_vi_old
-#         Examples_old/Stereo-Inertial/stereo_inertial_tum_vi.cc)
+
+# Examples_old/Stereo-Inertial/stereo_inertial_tum_vi.cc)
+
 # target_link_libraries(stereo_inertial_tum_vi_old ${PROJECT_NAME})
-# 
+
+#
+
 # if(realsense2_FOUND)
-#     add_executable(stereo_inertial_realsense_t265_old
-#             Examples_old/Stereo-Inertial/stereo_inertial_realsense_t265.cc)
-#     target_link_libraries(stereo_inertial_realsense_t265_old ${PROJECT_NAME})
-# 
-#     add_executable(stereo_inertial_realsense_D435i_old
-#             Examples_old/Stereo-Inertial/stereo_inertial_realsense_D435i.cc)
-#     target_link_libraries(stereo_inertial_realsense_D435i_old ${PROJECT_NAME})
+
+# add_executable(stereo_inertial_realsense_t265_old
+
+# Examples_old/Stereo-Inertial/stereo_inertial_realsense_t265.cc)
+
+# target_link_libraries(stereo_inertial_realsense_t265_old ${PROJECT_NAME})
+
+#
+
+# add_executable(stereo_inertial_realsense_D435i_old
+
+# Examples_old/Stereo-Inertial/stereo_inertial_realsense_D435i.cc)
+
+# target_link_libraries(stereo_inertial_realsense_D435i_old ${PROJECT_NAME})
+
 # endif()
 
 ```
 
 </details>
 
-**步骤 6.** 创建一个使用 Orbbec Gemini2 适配器的 ORB-SLAM3 RGB-D 模式脚本
+**步骤 6.** 创建一个脚本，使用 Orbbec Gemini2 适配器运行 ORB-SLAM3 的 RGB-D 模式
 
-在 `Examples/RGB-D/` 目录下创建一个名为 `rgbd_orbbec_gemini2_cpp.cc` 的文件，内容如下：
+在 `Examples/RGB-D/` 目录下创建一个名为 `rgbd_orbbec_gemini2_cpp.cc` 的文件，如下所示：
 
 <details>
 <summary> rgbd_orbbec_gemini2_cpp.cc </summary>
@@ -661,25 +780,25 @@ endif()
 * If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <signal.h>
-#include <stdlib.h>
-#include <iostream>
-#include <algorithm>
-#include <fstream>
-#include <chrono>
-#include <ctime>
-#include <sstream>
+# include <signal.h>
+# include <stdlib.h>
+# include <iostream>
+# include <algorithm>
+# include <fstream>
+# include <chrono>
+# include <ctime>
+# include <sstream>
 
-#include <condition_variable>
-#include <mutex>
-#include <thread>
+# include <condition_variable>
+# include <mutex>
+# include <thread>
 
-#include <opencv2/core/core.hpp>
+# include <opencv2/core/core.hpp>
 
-#include <libobsensor/ObSensor.hpp>
-#include <libobsensor/h/ObTypes.h>
+# include <libobsensor/ObSensor.hpp>
+# include <libobsensor/h/ObTypes.h>
 
-#include <System.h>
+# include <System.h>
 
 using namespace std;
 
@@ -894,7 +1013,7 @@ int main(int argc, char **argv)
 
 </details>
 
-**步骤 7.** 构建 ORB-SLAM3
+**步骤 7.** 编译 ORB-SLAM3
 
 ```bash
 chmod +x build.sh
@@ -904,10 +1023,10 @@ chmod +x build.sh
 ## 相机标定
 
 <div style={{ textAlign: "justify" }}>
-在运行 ORB-SLAM3 之前，需要对相机进行标定以获取相机的参数配置。这里我们演示使用 ROS 提供的相机标定工具来标定相机并获取其参数。
+在运行 ORB-SLAM3 之前，需要对相机进行标定以获取相机的参数配置。这里我们演示使用 ROS 提供的相机标定工具对相机进行标定并获取其参数。
 </div>
 
-**步骤 1.** 安装 Orbbec ROS2 驱动
+**步骤 1.** 安装 Orbbec ROS2 Driver
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -937,9 +1056,9 @@ ros2 launch orbbec_camera gemini2.launch.py
 ```
 
 :::note
-您可以通过观察相机数据话题是否正常发布来检查相机节点是否能正常启动。
+你可以通过观察相机数据 topic 是否正常发布，来检查相机节点是否能够正常启动。
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list showing the Orbbec camera colour and depth topics" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
@@ -952,9 +1071,7 @@ sudo apt install ros-humble-camera-calibration
 
 **步骤 3.** 下载标定棋盘格
 
-从以下地址下载标定棋盘格
-
-[棋盘格合集](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) 并打印出来。
+从 [Checkerboard Collection](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) 下载标定棋盘格并打印出来。
 
 **步骤 4.** 运行相机标定
 
@@ -966,26 +1083,26 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 
 :::note
 
-- `--size 8x6` 指的是内角点的数量（8×6 = 48 个角点，对应 9×7 网格）
-- `--square 0.025` 指的是方格大小，单位为米（25mm）
-- 移动相机从不同角度捕获图像
+- `--size 8x6` 指的是内角点的数量（8×6 = 9×7 网格中的 48 个角点）
+- `--square 0.025` 指的是方格的边长（单位为米，对应 25mm）
+- 移动相机，从不同角度采集图像
 
 :::
 
-从不同角度收集图像，自动计算相机参数，并将标定数据保存在工具提示中。
+从不同角度采集图像，自动计算相机参数，并将标定数据保存在一个工具提示中。
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator with the checkerboard corners detected on a fisheye camera and the CALIBRATE, SAVE and COMMIT buttons" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_tool.png" />
 </div>
 
 <div align="center">
-    <img width={1000}  
+    <img alt="Calibration YAML written to ~/.ros/camera_info/camera.yaml, with the camera matrix, distortion and rectification values" width={1000}  
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_save.png" />
 </div>
 
 **步骤 5.** 配置相机 YAML 文件
 
-在您的 ORB-SLAM3 项目的 `Examples/RGB-D/` 文件夹下为 Orbbec Gemini2 相机创建一个名为 `Orbbec_Gemini2.yaml` 的参数配置文件。
+在你的 ORB-SLAM3 项目中的 `Examples/RGB-D/` 文件夹下，为 Orbbec Gemini2 相机创建一个名为 `Orbbec_Gemini2.yaml` 的参数配置 YAML 文件。
 
 <details>
 <summary> Orbbec_Gemini2.yaml </summary>
@@ -993,20 +1110,25 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 ```yaml
 %YAML:1.0
 
-#--------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------
+
 # Camera Parameters
-#--------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------
+
 File.version: "1.0"
 
 Camera.type: "PinHole"
 
-# Camera calibration and distortion parameters 
+# Camera calibration and distortion parameters
+
 Camera1.fx: 375.46889
 Camera1.fy: 372.37399
 Camera1.cx: 300.47217
 Camera1.cy: 170.2732
 
 # distortion parameters
+
 Camera1.k1: 0.003083
 Camera1.k2: 0.015102
 Camera1.p1: -0.005496
@@ -1014,34 +1136,45 @@ Camera1.p2: -0.012839
 Camera1.k3: 0.0
 
 # Camera resolution
+
 Camera.width: 640
 Camera.height: 360
 
-# Camera frames per second 
+# Camera frames per second
+
 Camera.fps: 30
 
 # Color order of the images (0: BGR, 1: RGB)
+
 Camera.RGB: 1
 
 # Stereo/Depth 参数（如果是单目，可以不用）
+
 Stereo.ThDepth: 40.0
 Stereo.b: 0.0745
 
 # Depth map scale
+
 RGBD.DepthMapFactor: 1000.0
 
-#--------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------
+
 # ORB Parameters
-#--------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------
+
 ORBextractor.nFeatures: 800
 ORBextractor.scaleFactor: 1.2
 ORBextractor.nLevels: 6
 ORBextractor.iniThFAST: 20
 ORBextractor.minThFAST: 7
 
-#--------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------
+
 # Viewer Parameters
-#--------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------
+
 Viewer.KeyFrameSize: 0.05
 Viewer.KeyFrameLineWidth: 1.0
 Viewer.GraphLineWidth: 0.9
@@ -1067,7 +1200,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="ORB-SLAM3 running in RGB-D mode: live camera view, tracked features and the reconstructed map" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.gif" />
 </div>
 
@@ -1076,11 +1209,36 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 - [Orbbec SDK v2 API 指南](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [Orbbec ROS2 驱动](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [ORB-SLAM3 仓库](https://github.com/UZ-SLAMLab/ORB_SLAM3)
-- [ROS1使用教程参考Gemini2](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
+- [ROS SDK](https://wiki.seeedstudio.com/cn/orbbec_depth_camera_on_ros/)
+
+## 常见问题
+
+**此构建目标使用哪种主机和 JetPack 版本？**
+一台来自 J30/J40 系列的 reComputer（照片中为 J4012），运行 JetPack 6.2 和 ROS 2 Humble，再加上一台 Orbbec Gemini 2。ORB-SLAM3 本身是在该机器上从源码构建的，因此 JetPack 版本决定了你所使用的 CUDA 和 OpenCV 版本。
+
+**它是以单目模式还是 RGB-D 模式运行？**
+RGB-D。启动命令使用 `Examples/RGB-D/rgbd_orbbec_gemini2` 和 `Orbbec_Gemini2.yaml` 参数文件，因为 Gemini 2 会发布同步的彩色和深度流，而深度流消除了单目 SLAM 的尺度歧义。
+
+**我应该安装哪个版本的 Orbbec SDK？**
+适用于 aarch64 的 SDK v2.4.11（`OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64`）。示例中的 CMakeLists 指向该路径，因此如果你安装了不同版本，请相应更新 `set(ORBBEC_SDK_PATH ...)`。
+
+**构建时出现 `monotonic_clock` 错误，我需要修改什么？**
+本指南在 ORB-SLAM3 源码中将 `std::chrono::monotonic_clock` 替换为 `std::chrono::steady_clock`，并在 CMakeLists 中将目标标准设置为 C++14。这两项修改在 JetPack 6.2 上都是必需的，因为该版本的 C++ 标准库不再提供 `monotonic_clock`。
+
+**在运行 SLAM 之前必须对相机进行标定吗？**
+是的。使用 8×6 / 25 mm 棋盘格运行 `camera_calibration`，保存结果，并将内参复制到 `Examples/RGB-D/Orbbec_Gemini2.yaml` 中。仅使用出厂参数时，跟踪会不稳定。
+
+## 相关资源
+
+- [在 ROS 2 上使用 Orbbec Gemini 2 3D 相机](/cn/orbbec_gemini2/)
+- [在 Jetson AGX Orin 上部署 Depth Anything V3](/cn/deploy_depth_anything_v3_jetson_agx_orin/)
+- [在 reComputer 上使用 PyCuVSLAM](/cn/pycuvslam_recomputer_robotics/)
+- [Orbbec Gemini 2 产品页面](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- [ORB-SLAM3 仓库](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1020,20 +1020,33 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### 1. 项目介绍
 
-本方案基于 **ROS2** 与 **YOLO**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
+本方案基于 **ROS 2** 与 **YOLOE**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
 
-当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405 / D435i**。本方案不需要标定板做手眼标定；受安装和打印件公差影响，每台机械臂抓取时会有微小误差。
+当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405 / D435i**。本方案使用模型中预设的相机安装外参，不要求通过标定板采集手眼标定数据。请使用对应相机的指定支架和安装位置；安装和打印件公差会带来误差，需要先检查 TF 和目标位姿，再微调偏移参数。
 
 ### 2. 环境安装
+
+本方案使用 Ubuntu 22.04、ROS 2 Humble、系统 Python 3.10 和独立的 Conda `yolo` 环境。先用系统环境准备机械臂、相机驱动和视觉抓取包，统一编译后，再创建用于 YOLOE 推理的 Conda 环境。
+
+步骤 1–4 请在未激活 Conda、未加载旧工作空间的新终端中执行；只加载系统 ROS。终端 A、B、D、E 也使用系统环境，只有终端 C 使用 `yolo` 环境。不要将 Python SDK / OBB 路线的环境文件和安装命令混入本路线。
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
 <div className="rebot-step-content">
 
-#### 步骤 1. 安装机械臂 ROS2 工程
+#### 步骤 1. 安装机械臂 ROS 2 工程
 
-请先按 [reBot Arm B601-RS ROS2 集成](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/) 完成 `rebotarm_ros2` 工作空间的安装与编译。
+请先按 [reBot Arm B601-RS ROS2 集成](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_ros2_integration/) 完成机械臂基础准备、ROS 2 Humble、构建工具、机械臂工作空间和底层 SDK 的安装，并确认机械臂工程能编译。本文继续使用同一个 `~/rebotarm_ros2` 工作空间。
+
+```bash
+source /opt/ros/humble/setup.bash
+echo "$ROS_DISTRO"
+sudo apt update
+sudo apt install -y python3-rosdep python3-colcon-common-extensions git wget cmake build-essential
+```
+
+预期 `ROS_DISTRO` 输出 `humble`。如果工作空间已包含下面要克隆的仓库，请检查其分支和内容，不要在同一路径重复执行 `git clone`。
 
 </div>
 </section>
@@ -1048,7 +1061,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 <details className="content-details">
 <summary>点击展开 Gemini 2 安装步骤</summary>
 
-将 Orbbec ROS2 SDK 克隆到工作空间，并切换到 `v2-main` 分支：
+将 Orbbec ROS 2 SDK 克隆到工作空间，并切换到 `v2-main` 分支：
 
 ```bash
 cd ~/rebotarm_ros2/src
@@ -1057,11 +1070,11 @@ cd OrbbecSDK_ROS2
 git checkout v2-main
 ```
 
-编译工作空间：
+按驱动仓库说明安装原生依赖，ROS 依赖在步骤 3 中统一安装：
 
 ```bash
-cd ~/rebotarm_ros2
-colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
+sudo apt install -y libgflags-dev nlohmann-json3-dev libgoogle-glog-dev libdw-dev libssl-dev mesa-utils libgl1 \
+  ros-humble-image-transport-plugins ros-humble-compressed-image-transport
 ```
 
 安装 udev 规则：
@@ -1077,7 +1090,12 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 <details className="content-details">
 <summary>点击展开 D405、D435i 安装步骤</summary>
 
-1. 克隆 RealSense SDK，并切换到 `v2.58.1`：
+1. 安装源码编译依赖，再克隆 RealSense SDK，并切换到 `v2.58.1`：
+
+```bash
+sudo apt update
+sudo apt install -y cmake build-essential git pkg-config libusb-1.0-0-dev libudev-dev libssl-dev v4l-utils
+```
 
 ```bash
 cd ~
@@ -1089,39 +1107,40 @@ git checkout v2.58.1
 2. 安装 udev 规则：
 
 ```bash
-sudo apt install -y v4l-utils
 cd ~/librealsense
 ./scripts/setup_udev_rules.sh
 ```
 
 3. 编译并安装 SDK：
 
-:::tip
-如有代理,先关闭代理再重新配置：
+下面使用 RSUSB 后端，避免额外修补内核 UVC 模块。关闭示例和 GLSL 扩展，通过 `BUILD_TOOLS=ON` 保留 `rs-enumerate-devices` 等命令行工具。`realsense-viewer` 属于图形示例。
 
 ```bash
-unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
-```
-
-:::
-
-```bash
-cd ~/librealsense
-mkdir -p build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)
-sudo make install
+cd ~/librealsense &&
+mkdir -p build && cd build &&
+cmake .. -DCMAKE_BUILD_TYPE=Release \
+  -DFORCE_RSUSB_BACKEND=ON \
+  -DBUILD_EXAMPLES=OFF \
+  -DBUILD_TOOLS=ON \
+  -DBUILD_GRAPHICAL_EXAMPLES=OFF \
+  -DBUILD_GLSL_EXTENSIONS=OFF &&
+cmake --build . --parallel 2 &&
+sudo cmake --install . &&
 sudo ldconfig
 ```
 
-4.
+:::tip CMake 提示找不到 `OpenGL::GL`
+在 librealsense `v2.58.1` 中，仅关闭 `BUILD_GRAPHICAL_EXAMPLES` 时，普通示例仍会链接 `OpenGL::GL`，导致 CMake 生成构建文件失败。如果曾使用 `BUILD_EXAMPLES=ON` 遇到此错误，直接重跑上面的命令。CMake 会更新现有 `build` 目录中的选项。
+:::
+
+4. 克隆 RealSense ROS 2 驱动：
 
 ```bash
 cd ~/rebotarm_ros2/src
 git clone https://github.com/xiehuangbao888/realsense-ros.git
-cd ~/rebotarm_ros2
-colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
 ```
+
+相机驱动的 ROS 依赖和工作空间编译分别在步骤 3、步骤 4 中完成，此处无需提前编译。重新插拔相机后，用 `lsusb -t` 确认它连接到 USB 3.x，通常应显示 `5000M` 或更高速度。
 
 </details>
 
@@ -1131,14 +1150,28 @@ colcon build --cmake-args -DUSE_LIFECYCLE_NODE=OFF
   <span className="rebot-step-number">3</span>
 <div className="rebot-step-content">
 
-#### 步骤 3. 导入视觉抓取包
+#### 步骤 3. 导入视觉抓取包并安装 ROS 依赖
 
 ```bash
 cd ~/rebotarm_ros2/src/
 git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
-cd ~/rebotarm_ros2
-colcon build --symlink-install
 ```
+
+首次使用 `rosdep` 时先初始化；如果提示 `default sources list file already exists`，跳过初始化，继续更新索引：
+
+```bash
+sudo rosdep init
+```
+
+```bash
+rosdep update
+cd ~/rebotarm_ros2
+rosdep install --from-paths src --ignore-src -r -y --rosdistro humble --skip-keys="librealsense2 orbbec_description realsense2_description"
+```
+
+本命令按已克隆的全部 ROS 包声明安装系统依赖，包括 `diagnostic_updater`、`cv_bridge`、`xacro` 等。`librealsense2` 在 RealSense 分支中已从源码安装；另外两个键是相机描述包，所选相机的描述包由步骤 2 的源码提供，另一种相机的描述包无需安装。因此跳过这些键，避免重复安装 SDK 或被未选相机的依赖阻塞。
+
+预期输出 `All required rosdeps installed successfully`。如果仍有依赖错误，请先解决再编译；不要把忽略错误后部分安装完成当作成功。
 
 </div>
 </section>
@@ -1146,34 +1179,230 @@ colcon build --symlink-install
   <span className="rebot-step-number">4</span>
 <div className="rebot-step-content">
 
-#### 步骤 4. 安装 YOLO / YOLOE 环境
+#### 步骤 4. 编译工作空间
+
+本教程统一使用 `--symlink-install`，安装相机驱动和视觉抓取包时也请保持相同的构建方式。
+
+:::tip 旧构建目录冲突
+如果此前使用未带 `--symlink-install` 的命令编译过，切换后可能出现 `failed to create symbolic link`，并提示 `existing path cannot be removed: Is a directory`。这是旧构建生成的普通目录与符号链接冲突，需要清理后重新编译。
+
+打开未激活 conda 环境、未加载当前工作空间 `install/setup.bash` 的新终端，执行：
+
+```bash
+cd ~/rebotarm_ros2
+rm -rf build install log
+```
+
+这只会删除当前工作空间的构建、安装和日志目录，保留 `src` 和其他源码。清理后按所选相机的命令完整重新编译。
+:::
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/humble/setup.bash
+```
+
+<Tabs groupId="rebot-ros2-camera-build" defaultValue="realsense">
+<TabItem value="realsense" label="RealSense D405 / D435i">
+
+```bash
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DUSE_LIFECYCLE_NODE=OFF
+```
+
+</TabItem>
+<TabItem value="orbbec" label="Orbbec Gemini 2">
+
+```bash
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+</TabItem>
+</Tabs>
+
+仅在编译成功后加载工作空间，并检查视觉抓取包：
+
+```bash
+source ~/rebotarm_ros2/install/setup.bash
+ros2 pkg prefix rebot_visual_grasp
+```
+
+RealSense 用户再执行 `ros2 pkg prefix realsense2_camera`；Gemini 2 用户执行 `ros2 pkg prefix orbbec_camera`。预期输出当前工作空间中对应包的安装路径。
+
+**确认编译结果**
+
+编译完成后，查看末尾的 `Summary`。如果所有包均显示 `Finished`，且没有 `Failed` 或 `Aborted`，表示本次编译成功。例如，包含 RealSense 驱动和视觉抓取包的工作空间可能输出：
+
+```text
+Summary: 11 packages finished [33.8s]
+  4 packages had stderr output: realsense2_camera_msgs realsense2_description rebotarm_moveit_config rebotarm_msgs
+```
+
+包的数量和耗时会因工作空间内容及电脑性能而不同。`packages had stderr output` 只表示这些包向标准错误流输出了内容，需要结合具体日志判断；上例中如果内容仅为下面说明的 CMake 警告，则不影响编译成功。
+
+:::tip 清理后的路径警告与 CMake 警告
+如果先前已加载当前工作空间的 `install/setup.bash`，删除 `install` 后继续在同一终端编译，可能出现 `AMENT_PREFIX_PATH` 或 `CMAKE_PREFIX_PATH` 中的路径不存在的警告。这表示终端环境仍保留旧安装路径。如果最终所有包均编译成功，无需再次删除构建目录；编译完成后重新加载上面的 `install/setup.bash`，再继续运行。
+
+后续重新编译时，建议使用未加载当前工作空间的新终端，仅先加载 `/opt/ros/humble/setup.bash`。如果 `~/.bashrc` 中配置了自动加载当前工作空间，请在清理后重新编译前暂时停用该配置。
+
+使用 `--cmake-args -DUSE_LIFECYCLE_NODE=OFF` 时，部分包可能提示 `Manually-specified variables were not used by the project: USE_LIFECYCLE_NODE`。这是因为该参数仅用于相关驱动，其他包未使用它，属于 CMake 警告，不代表编译失败。
+:::
+
+到此，ROS 工作空间编译完成。接下来按步骤 5 创建 Conda 推理环境。之后每个新终端在运行 ROS 命令前，都需要先加载：
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+```
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
+#### 步骤 5. 安装 YOLO / YOLOE 环境
 
 `grasp_yolo` 在 Python 中调用 Ultralytics YOLOE。请使用独立 conda 环境，不要使用系统 `/usr/bin/python3`。
 
-**创建环境**
+本步骤适用于 Ubuntu 22.04、ROS 2 Humble、Python 3.10 和 x86_64 主机。按顺序创建环境、选择 PyTorch 后端，再安装视觉和 ROS Python 运行依赖。系统通过 apt 安装的 Python 依赖不一定在 Conda 环境中可用，需要分别检查。
+
+<div className="rebot-step-flow rebot-step-flow--substeps">
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5.1</span>
+<div className="rebot-step-content">
+
+##### 创建基础环境
 
 ```bash
 conda create -n yolo python=3.10
 conda activate yolo
+python -c "import sys; print(sys.executable)"
+```
 
-pip install -U ultralytics
-pip install "numpy==1.26.4" transforms3d
+:::note 预期结果
+Python 路径位于当前 Conda 的 `envs/yolo/bin/python` 中。已有 `yolo` 环境时，直接激活即可；此时还需完成下面的 PyTorch 和项目依赖安装。
+:::
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5.2</span>
+<div className="rebot-step-content">
+
+##### 按硬件安装 PyTorch
+
+下面两个标签使用 PyTorch `2.9.1`、torchvision `0.24.1` 和 torchaudio `2.9.1`，仅下载源不同。请在当前 `yolo` 环境中选择一种后端安装。
+
+<Tabs groupId="rebot-ros2-pytorch-backend" defaultValue="cpu">
+<TabItem value="cpu" label="CPU（无 NVIDIA 显卡）">
+
+适用于 Intel / AMD 核显电脑，或希望先使用 CPU 验证的用户。
+
+```bash
+python -m pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA available:', torch.cuda.is_available()); print(torch.rand(2, 3))"
+```
+
+:::note 预期结果
+PyTorch 路径位于当前 Conda 环境中，随机张量正常输出。`CUDA available: False` 属于正常结果，无需为此安装 CUDA。后续启动 `grasp_yolo` 时设置 `-p yolo_device:=cpu`；CPU 推理帧率取决于模型和电脑性能。
+:::
+
+</TabItem>
+<TabItem value="nvidia" label="NVIDIA 显卡（CUDA）">
+
+先确认驱动能够识别 NVIDIA 显卡，再安装 CUDA 版 PyTorch。下面以 CUDA 12.8 构建为例，需要显卡架构和驱动同时支持：
+
+```bash
+nvidia-smi
+python -m pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cu128
+python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA build:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available()); print(torch.rand(2, 3, device='cuda'))"
+```
+
+:::note 预期结果
+`nvidia-smi` 能列出显卡，PyTorch 路径位于当前 Conda 环境中，`CUDA available: True`，且 CUDA 张量正常输出。后续启动 `grasp_yolo` 时可使用 `-p yolo_device:=0` 指定第 0 块 GPU。
+:::
+
+:::tip 选择 CUDA 构建
+请对照 [PyTorch 官方版本列表](https://pytorch.org/get-started/previous-versions/)，选择支持当前 GPU、驱动和 Python 版本的构建，不要仅根据 `nvidia-smi` 显示的 CUDA 数字选择。普通 YOLOE 推理使用预编译 wheel，无需另外安装 CUDA Toolkit。
+
+如果 CUDA 不可用，请先检查驱动、显卡架构和所选 wheel，或切换到 CPU 标签完成基础验证。更换 PyTorch 版本时，需要同步调整 torchvision、torchaudio 和下一阶段安装命令中的配套版本。
+:::
+
+</TabItem>
+</Tabs>
+
+
+</div>
+</section>
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5.3</span>
+<div className="rebot-step-content">
+
+##### 安装项目依赖并验证
+
+完成任一后端安装后，保持 `yolo` 环境激活，安装视觉依赖和 Conda 环境中的 Python 运行依赖。命令保留 PyTorch 配套版本，并一起解析 NumPy 与 OpenCV 的版本约束：
+
+```bash
+python -m pip install "ultralytics==8.4.202" "torch==2.9.1" "torchvision==0.24.1" "torchaudio==2.9.1" "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d pyyaml lark typeguard
 
 # YOLOE 开集类别需要 Ultralytics 版 CLIP，不要安装 PyPI 的 clip
-pip install git+https://github.com/ultralytics/CLIP.git
+python -m pip install git+https://github.com/ultralytics/CLIP.git
 ```
 
-如果有 NVIDIA 显卡，先确认 CUDA 可用。若输出为 `False`，需要自行安装匹配的 CUDA / PyTorch。也可以先用 CPU 继续后续步骤，只是识别帧率会较低：
+:::tip PyTorch 安装时的 ROS 依赖提示
+如果终端已加载 ROS 2，pip 在安装 PyTorch 时可能提示 `generate-parameter-library-py` 缺少 `pyyaml` 和 `typeguard`。如果日志末尾的 `Successfully installed` 列出了 `torch`、`torchvision` 和 `torchaudio`，这条提示不影响本次 PyTorch 安装。执行本步骤的安装命令补齐这两个依赖，再运行下方的 `pip check` 和导入验证。
+:::
+
+如果按机械臂工程默认配置编译了 `rebotarm_agent`，还需补齐该包声明的依赖，使加载整个工作空间后执行 `pip check` 不再提示缺少 `fastmcp`：
 
 ```bash
-python -c "import torch; print(torch.cuda.is_available())"
+python -m pip install fastmcp
 ```
 
-验证 YOLOE：
+`fastmcp` 属于 Agent 功能，视觉识别本身不直接使用它。如果工作空间没有该包，可跳过这条命令。
+
+本流程固定使用 NumPy `1.26.4` 与 OpenCV `4.11.0.86`；后续安装或升级 Ultralytics 时，也请保留这些版本约束和 PyTorch 配套版本。
+
+:::tip OpenCV 与 NumPy 依赖冲突
+如果此前先执行 `pip install -U ultralytics`，再单独安装 NumPy `1.26.4`，可能出现 `opencv-python ... requires numpy>=2`。例如，OpenCV `5.0.0.93` 要求 NumPy 2，而当前流程使用 NumPy `1.26.4`。即使最后显示 `Successfully installed`，环境也可能仍存在依赖冲突。
+
+保持 `yolo` 环境激活，安装配套版本后，再执行下面的依赖检查与导入验证：
 
 ```bash
-python -c "from ultralytics import YOLOE; print('YOLOE OK')"
+conda activate yolo
+python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
 ```
+
+不要在同一个环境中同时安装多个提供 `cv2` 的 OpenCV 包。如果已同时安装 `opencv-python`、`opencv-contrib-python` 或对应的 headless 包，请先卸载这些包，再重新执行上面的安装命令：
+
+```bash
+python -m pip uninstall -y opencv-python opencv-contrib-python opencv-python-headless opencv-contrib-python-headless
+python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
+```
+:::
+
+**检查依赖并验证 YOLOE**
+
+先加载系统 ROS 和已编译的工作空间，再用当前 Conda Python 检查依赖：
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
+python -m pip check
+python -c "import sys, torch, torchvision, torchaudio, cv2, numpy, yaml, lark, transforms3d, clip; from ultralytics import YOLOE; print('Python:', sys.executable); print('PyTorch:', torch.__version__); print('OpenCV:', cv2.__version__); print('NumPy:', numpy.__version__); print('CUDA available:', torch.cuda.is_available()); print('YOLOE OK')"
+python -c "import rclpy, cv_bridge, launch_ros; import rebot_visual_grasp.grasp_yolo; print('ROS grasp imports OK')"
+```
+
+:::note 预期结果
+`pip check` 输出 `No broken requirements found.`；Python 路径位于当前 Conda 环境，视觉验证输出 `OpenCV: 4.11.0`、`NumPy: 1.26.4` 和 `YOLOE OK`，ROS 导入验证输出 `ROS grasp imports OK`。CPU 后端的 `CUDA available: False` 正常；GPU 后端应为 `True`。这些导入检查不会启动抓取节点或控制机械臂。
+:::
+
+如果 `pip check` 提示 `launch-ros ... requires pyyaml`，请确认已在 `yolo` 环境中执行上面的依赖安装；如果提示 `rebotarm-agent ... requires fastmcp`，执行对应的 Agent 依赖安装命令。如果缺少 `rclpy`、`cv_bridge` 或工作空间模块，请先检查 ROS 系统依赖、工作空间编译结果及两条 `source` 命令，不要通过 pip 安装同名 ROS 包替代。
+
+依赖检查和导入验证全部通过后，再继续下载权重和启动抓取节点。
+
+</div>
+</section>
+</div>
 
 **下载权重到 `~/rebot_visual_model`**
 
@@ -1187,30 +1416,18 @@ wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobilecli
 wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
 ```
 
-</div>
-</section>
-<section className="rebot-step-item">
-  <span className="rebot-step-number">5</span>
-<div className="rebot-step-content">
-
-#### 步骤 5. 编译工作空间
+在模型目录中验证权重加载和文本类别设置，避免启动机械臂后才发现模型文件或 CLIP 依赖缺失：
 
 ```bash
-cd ~/rebotarm_ros2
-source /opt/ros/humble/setup.bash
-colcon build --symlink-install
-source ~/rebotarm_ros2/install/setup.bash
+cd ~/rebot_visual_model
+python -c "from ultralytics import YOLOE; model = YOLOE('yoloe-26s-seg.pt'); model.set_classes(['cube', 'box']); print('YOLOE weights and text encoder OK')"
 ```
 
-到此，视觉抓取相关环境已经配置完毕。之后每个新终端在运行视觉相关命令前，都需要先 source：
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/rebotarm_ros2/install/setup.bash
-```
+预期输出 `YOLOE weights and text encoder OK`。首次加载可能耗时较长；本命令只加载视觉模型，不连接或控制机械臂。如果缺少权重或依赖，请先解决该错误再运行项目。
 
 </div>
 </section>
+
 </div>
 
 ### 3. 运行项目
@@ -1223,7 +1440,11 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-下面按终端分别启动，方便看清视觉抓取的逻辑。Gemini 2、D405 与 D435i 的启动命令不同，请按实际相机选择。如果希望一键启动，可以自行编写启动脚本。
+:::warning 真实机械臂运动
+终端 C 的 `move_to_observation_on_start:=true` 会使机械臂移动到观察位；终端 D 会执行抓取和放置。启动前确认零点、安装支架、工作空间和偏移参数，确保运动路径内无人和障碍物，并准备随时停止。
+:::
+
+下面按 A → B → C → D 的顺序分别启动，保持前面的终端运行。Gemini 2、D405 与 D435i 的启动命令不同，请按实际相机选择。如果希望一键启动，可以自行编写启动脚本。
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -1281,6 +1502,7 @@ ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=c
 
 ```bash
 source /opt/ros/humble/setup.bash
+source ~/rebotarm_ros2/install/setup.bash
 
 ros2 launch orbbec_camera gemini2.launch.py
 ```
@@ -1311,11 +1533,12 @@ source ~/rebotarm_ros2/install/setup.bash
 
 ros2 launch realsense2_camera rs_launch.py \
   align_depth.enable:=true \
-  depth_module.depth_profile:=640x360x30 \
-  depth_module.color_profile:=640x360x30
+  depth_module.depth_profile:=640x480x30 \
+  rgb_camera.color_profile:=640x480x30
 ```
 
 </details>
+
 
 </div>
 </section>
@@ -1325,22 +1548,21 @@ ros2 launch realsense2_camera rs_launch.py \
 
 #### 终端 C — 机械臂到达观察位 + YOLO 识别
 
-运行前请先 `conda activate yolo`。如果环境名不是 `yolo`，把命令中的环境名换成实际 conda 环境。
+运行前请先 `conda activate yolo`。下面的 `python` 使用当前激活的环境，无需手动填写 Miniconda 或 Miniforge 路径。如果环境名不是 `yolo`，请激活实际使用的环境。下面的启动示例默认使用 `yolo_device:=cpu`；GPU 后端请先通过步骤 5 的 CUDA 验证，再将该参数改为 `yolo_device:=0`。
 
 <details className="content-details">
 <summary>点击展开 Gemini 2</summary>
 
-需改为自己所设定的yolo安装的环境路径
-
 ```bash
+conda activate yolo
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:="$HOME/rebot_visual_model/yoloe-26s-seg.pt" \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=gpu \
+  -p yolo_device:=cpu \
   -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
   -p grasp_x_offset_m:=-0.02 \
@@ -1354,27 +1576,26 @@ source ~/rebotarm_ros2/install/setup.bash
 <details className="content-details">
 <summary>点击展开 D405</summary>
 
-需改为自己所设定的yolo安装的环境路径
-
 ```bash
+conda activate yolo
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
--p yolo_model:=/home/ubuntu/rebot_visual_model/yoloe-26s-seg.pt \
--p color_topic:=/camera/camera/color/image_raw \
--p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
--p color_info_topic:=/camera/camera/color/camera_info \
--p optical_frame:=camera_color_optical_frame \
--p target_class:=cube \
--p place_class:=box \
--p yolo_device:=gpu \
--p grasp_z_offset_m:=0.01 \
--p grasp_y_offset_m:=-0.005 \
--p place_z_offset_m:=0.1 \
--p grasp_x_offset_m:=-0.01 \
--p move_to_observation_on_start:=true \
--p auto_publish_on_detect:=true
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:="$HOME/rebot_visual_model/yoloe-26s-seg.pt" \
+  -p color_topic:=/camera/camera/color/image_raw \
+  -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+  -p color_info_topic:=/camera/camera/color/camera_info \
+  -p optical_frame:=camera_color_optical_frame \
+  -p target_class:=cube \
+  -p place_class:=box \
+  -p yolo_device:=cpu \
+  -p grasp_z_offset_m:=0.01 \
+  -p grasp_y_offset_m:=-0.005 \
+  -p place_z_offset_m:=0.1 \
+  -p grasp_x_offset_m:=-0.01 \
+  -p move_to_observation_on_start:=true \
+  -p auto_publish_on_detect:=true
 ```
 
 </details>
@@ -1382,21 +1603,20 @@ source ~/rebotarm_ros2/install/setup.bash
 <details className="content-details">
 <summary>点击展开 D435i</summary>
 
-需改为自己所设定的 yolo 安装的环境路径
-
 ```bash
+conda activate yolo
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 
-~/miniconda3/envs/yolov8/bin/python -m rebot_visual_grasp.grasp_yolo --ros-args \
-  -p yolo_model:=~/rebot_visual_model/yoloe-26s-seg.pt \
+python -m rebot_visual_grasp.grasp_yolo --ros-args \
+  -p yolo_model:="$HOME/rebot_visual_model/yoloe-26s-seg.pt" \
   -p color_topic:=/camera/camera/color/image_raw \
   -p depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
   -p color_info_topic:=/camera/camera/color/camera_info \
   -p optical_frame:=camera_color_optical_frame \
   -p target_class:="cube" \
   -p place_class:="box" \
-  -p yolo_device:=gpu \
+  -p yolo_device:=cpu \
   -p grasp_z_offset_m:=0.01 \
   -p place_z_offset_m:=0.1 \
   -p grasp_y_offset_m:=0.01 \
@@ -1410,7 +1630,7 @@ source ~/rebotarm_ros2/install/setup.bash
 
 | 参数               | 说明                                                                         |
 | ------------------ | ---------------------------------------------------------------------------- |
-| `yolo_device:=gpu` | 使用 GPU；无独显时改为`cpu`。也可写成 `yolo_device:=0` 指定第 0 块 GPU       |
+| `yolo_device:=cpu` | 默认使用 CPU；通过 CUDA 验证后改为 `yolo_device:=0` 使用第 0 块 GPU       |
 | `target_class`     | 目标抓取物体的 YOLOE 文本类名，可按实际物体修改,支持所有yolo默认能识别的物体 |
 | `place_class`      | 目标放置物体的 YOLOE 文本类名，可按实际物体修改,支持所有yolo默认能识别的物体 |
 | `grasp_x_offset_m` | `base_link` 前后方向，负数表示往后拉，可按需要调整                           |
@@ -1425,8 +1645,6 @@ source ~/rebotarm_ros2/install/setup.bash
 <div className="rebot-step-content">
 
 #### 终端 D — 一键抓取放置
-
-默认 3 秒后触发。
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -1449,7 +1667,7 @@ ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
 
 #### 终端 E — 回零（可选）
 
-新版 `rebotarm` 在终端里按 `Ctrl + C` 退出后会自动回零。如果需要手动回零：
+正常退出机械臂控制节点时会尝试回零并失能；异常中断或通信故障时不能依赖自动回零。需要手动回零时，请保持终端 A 的控制节点运行，并确认路径内无障碍物：
 
 ```bash
 source /opt/ros/humble/setup.bash

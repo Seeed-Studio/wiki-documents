@@ -17,10 +17,10 @@ displayed_sidebar: PaperReadingSidebar
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-11-03
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-11-03'
-updatedAt: '2026-11-03'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_multi_task_dit/
 ---
 
@@ -44,6 +44,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/multi_task_dit" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot MultiTask DiT Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+- `--policy.type=multi_task_dit`: Select LeRobot MultiTask DiT, an implementation inspired by LBM rather than an exact reproduction of the paper’s system.
+- `--policy.horizon=32 --policy.n_action_steps=24`: Set a 32-step prediction window including history-aligned positions, and execute a 24-step slice; see the article for their distinction.
+- `--policy.objective=diffusion`: Use the diffusion objective; flow_matching is an alternative requiring its own integration settings.
+
+</aside>
 
 Can demonstrations from multiple tasks help robots learn new tasks with less data and handle environmental changes? This paper holds the policy architecture fixed and uses controlled experiments to measure the benefits of pretraining.
 
@@ -310,7 +324,7 @@ At the same fine-tuning data fraction, more diverse pretraining data generally y
 
 ## LeRobot Implementation and Application
 
-The following comparison uses commit `f5c9bc0` (source links below). LeRobot MultiTask DiT follows the LBM conditional DiT approach, but its configuration, preprocessing, and training results should be interpreted separately.
+The following comparison uses commit `f5c9bc0`. LeRobot MultiTask DiT follows the LBM conditional DiT approach, but its configuration, preprocessing, and training results should be interpreted separately.
 
 ### Configuration Comparison
 
@@ -356,14 +370,5 @@ For adaptation to reBot or SO-ARM101, first check dataset states, actions, camer
 The paper uses a fixed policy architecture and controlled evaluation to test the benefits of multitask pretraining. On the evaluated tasks, pretraining followed by fine-tuning improves aggregate performance and reduces the target-task demonstrations needed for comparable performance. Some advantages become more pronounced when test conditions change.
 
 The results support pretraining on diverse demonstrations within clear limits: gains depend on the task and fine-tuning conditions; better completion does not necessarily imply full success; and models without fine-tuning do not consistently outperform single-task policies. Understanding the contribution requires connecting action generation, experimental comparisons, and the scope of the evidence.
-
-## References
-
-1. TRI LBM Team. [A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation](https://arxiv.org/abs/2507.05331v1), 2025.
-2. TRI. [LBM project page](https://toyotaresearchinstitute.github.io/lbm1/).
-3. Hugging Face. [Multitask DiT Policy](https://huggingface.co/docs/lerobot/main/en/multi_task_dit).
-4. Hugging Face / Bryson Jones. Pinned [configuration](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/configuration_multi_task_dit.py), [model](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/modeling_multi_task_dit.py), and [processor](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/processor_multi_task_dit.py).
-5. Boston Dynamics. [Large Behavior Models and Atlas Find New Footing](https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/). DiT and flow matching for Atlas.
-6. Bryson Jones. [Dissecting and Open-Sourcing Multitask Diffusion Transformer Policy](https://brysonkjones.substack.com/p/dissecting-and-open-sourcing-multitask-diffusion-transformer-policy). Architecture and implementation notes by the open-source implementation's author.
 
 </div>

@@ -1,11 +1,11 @@
 ---
-description: Introducción a reComputer Rugged J40
-title: Introducción a reComputer Rugged J40
+description: Primeros pasos con reComputer Rugged J40
+title: Primeros pasos con reComputer Rugged Serie 
 keywords:
   - reComputer Rugged
   - IP66
   - Jetson
-  - Introducción
+  - Primeros pasos
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100046979-gallery_img_2.jpg
 slug: /jetson/recomputer_rugged_j401/getting_started
 aliases:
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/es/jetson/recomputer_rugged_j401/getting_start
 import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
 import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
-# Introducción a reComputer Rugged J40
+# Primeros pasos con reComputer Rugged Serie
 
 <JetsonProductDocNav {...ruggedJ401DocNav} />
 
@@ -118,13 +118,13 @@ Ambas configuraciones utilizan la misma carcasa robusta y el mismo conjunto de i
     </tr>
     <tr>
       <td>GPU</td>
-      <td>1024-core NVIDIA Ampere, 32 Tensor Cores</td>
-      <td>1024-core NVIDIA Ampere, 32 Tensor Cores</td>
+      <td>1024 núcleos NVIDIA Ampere, 32 Tensor Cores</td>
+      <td>1024 núcleos NVIDIA Ampere, 32 Tensor Cores</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8-core Arm Cortex-A78AE v8.2 de 64 bits, 2MB L2 + 4MB L3</td>
-      <td>6-core Arm Cortex-A78AE v8.2 de 64 bits, 1.5MB L2 + 4MB L3</td>
+      <td>8 núcleos Arm Cortex-A78AE v8.2 de 64 bits, 2MB L2 + 4MB L3</td>
+      <td>6 núcleos Arm Cortex-A78AE v8.2 de 64 bits, 1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memoria</td>
@@ -147,7 +147,7 @@ Ambas configuraciones utilizan la misma carcasa robusta y el mismo conjunto de i
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={2}>4× USB 3.2 Type-A (M12 a prueba de agua) + 1× USB 2.0/3.0 Type-C (flashing, tapa a prueba de agua) + 1× USB Type-C (debug)</td>
+      <td colSpan={2}>4× USB 3.2 Tipo-A (M12 a prueba de agua) + 1× USB 2.0/3.0 Tipo-C (flasheo, tapa a prueba de agua) + 1× USB Tipo-C (depuración)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -210,7 +210,7 @@ Ambas configuraciones utilizan la misma carcasa robusta y el mismo conjunto de i
     </tr>
     <tr>
       <td>Dimensiones</td>
-      <td colSpan={2}>210 mm × 190 mm × 93 mm</td>
+      <td colSpan={2}>210 mm × 190 mm × 95 mm</td>
     </tr>
     <tr>
       <td>Color</td>
@@ -266,7 +266,7 @@ Sigue el flujo de trabajo en orden. La disposición numerada mantiene la prepara
     <h3>Elige y descarga el BSP</h3>
     <p className="jetson-product-step-label">Paso 1 · Haz coincidir la imagen con la configuración exacta de Jetson</p>
 
-Descarga el BSP de **JetPack 5.1.3 (L4T 35.5.0)** para el módulo Jetson que tengas instalado. Los nombres de archivo del archivo conservan la etiqueta de versión `5.1`.
+Descarga el BSP **JetPack 5.1.3 (L4T 35.5.0)** para tu módulo Jetson instalado. Los nombres de archivo del archivo conservan la etiqueta de versión `5.1`.
 
 <div className="jetson-product-table-wrap">
 <table>
@@ -306,7 +306,7 @@ sha256sum mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz
 ```
 
 :::warning
-Usa la imagen que coincida tanto con la placa carrier Rugged como con el módulo Jetson instalado. Espera a que la descarga termine y confirma su SHA-256 antes de extraer el archivo.
+Utiliza la imagen que coincida tanto con la carrier board Rugged como con el módulo Jetson instalado. Espera a que la descarga termine y confirma su SHA-256 antes de extraer el archivo.
 :::
 
   </div>
@@ -316,19 +316,19 @@ Usa la imagen que coincida tanto con la placa carrier Rugged como con el módulo
   <span className="jetson-product-step-number">2</span>
   <div className="jetson-product-step-content">
     <h3>Preparar el equipo</h3>
-    <p className="jetson-product-step-label">Paso 2 · Configura el host Ubuntu y los cables</p>
+    <p className="jetson-product-step-label">Paso 2 · Configurar el host Ubuntu y los cables</p>
 
 Prepara los siguientes elementos antes de desconectar o encender el dispositivo:
 
 - reComputer Rugged J4012 o J3011
 - Fuente de alimentación de CC de 19–48 V
 - PC host físico con Ubuntu 20.04 para estos paquetes JetPack 5.1.3
-- Cable de datos USB tipo C para flashear
+- Cable de datos USB Type-C para flashear
 - Monitor externo y cable HDMI
 - Teclado y ratón
 
 :::tip
-Siempre que sea posible, usa un host Ubuntu físico. El passthrough USB en una máquina virtual puede interrumpir el proceso de flasheo.
+Siempre que sea posible, utiliza un host Ubuntu físico. El passthrough USB en una máquina virtual puede interrumpir el proceso de flasheo.
 :::
 
   </div>
@@ -338,11 +338,11 @@ Siempre que sea posible, usa un host Ubuntu físico. El passthrough USB en una m
   <span className="jetson-product-step-number">3</span>
   <div className="jetson-product-step-content">
     <h3>Entrar en modo Force Recovery</h3>
-    <p className="jetson-product-step-label">Paso 3 · Conecta el puerto DEVICE y verifica el ID USB</p>
+    <p className="jetson-product-step-label">Paso 3 · Conectar el puerto DEVICE y verificar el ID USB</p>
 
-<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg" alt="Botón de recuperación y puerto DEVICE usados para flashear reComputer Rugged J40" />
+<img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg" alt="Botón de recuperación y puerto DEVICE utilizados para flashear reComputer Rugged J40" />
 
-1. Conecta un cable de datos USB tipo C entre el puerto **DEVICE** y el host Ubuntu.
+1. Conecta un cable de datos USB Type-C entre el puerto **DEVICE** y el host Ubuntu.
 2. Mantén presionado el botón **REC**.
 3. Mientras mantienes presionado **REC**, conecta la fuente de alimentación para encender el dispositivo.
 4. Suelta el botón **REC**.
@@ -368,7 +368,7 @@ Si falta el ID esperado, vuelve a conectar el cable USB, prueba con otro puerto 
   <span className="jetson-product-step-number">4</span>
   <div className="jetson-product-step-content">
     <h3>Extraer y flashear la imagen</h3>
-    <p className="jetson-product-step-label">Paso 4 · Ejecuta el paquete de flasheo masivo desde el host Ubuntu</p>
+    <p className="jetson-product-step-label">Paso 4 · Ejecutar el paquete de flasheo masivo desde el host Ubuntu</p>
 
 Cambia al directorio que contiene la imagen descargada y extrae el archivo correspondiente a tu módulo:
 
@@ -395,8 +395,8 @@ Espera hasta que la terminal indique que el flasheo se completó correctamente. 
 </section>
 </div>
 
-:::tip Opcional: Explora otras placas carrier Jetson
-Después de completar la configuración, puedes explorar descargas de firmware e instrucciones de flasheo para otras placas carrier Jetson de Seeed.
+:::tip Opcional: Explorar otras carrier boards Jetson
+Después de completar la configuración, puedes explorar descargas de firmware e instrucciones de flasheo para otras carrier boards Jetson de Seeed.
 
 <div className="jetson-product-actions">
   <a className="jetson-product-button jetson-product-button--secondary" href="/es/flash/jetpack_to_selected_product/" target="_blank" rel="noopener noreferrer">Explorar otras guías de flasheo Jetson ↗</a>
@@ -410,15 +410,15 @@ Explora ejemplos de aplicaciones que combinan el hardware reComputer Rugged J40 
 
 <div className="jetson-product-application-grid">
   <article className="jetson-product-application-card">
-    <a className="jetson-product-application-cover" href="/es/jetson/recomputer_rugged_j401/industrial_vision/" aria-label="Open the Industrial Forklift Vision application">
+    <a className="jetson-product-application-cover" href="/es/jetson/recomputer_rugged_j401/industrial_vision/" aria-label="Abrir la aplicación Industrial Forklift Vision">
       <img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="Aplicaciones de visión para montacargas industriales impulsadas por reComputer Rugged J401" />
     </a>
     <div className="jetson-product-application-body">
-      <div className="jetson-product-application-labels" aria-label="Application capabilities">
+      <div className="jetson-product-application-labels" aria-label="Capacidades de la aplicación">
         <span>Detección</span>
         <span>Benchmark de inferencia</span>
       </div>
-      <h3><a href="/es/jetson/recomputer_rugged_j401/industrial_vision/">Visión para montacargas industriales</a></h3>
+      <h3><a href="/es/jetson/recomputer_rugged_j401/industrial_vision/">Industrial Forklift Vision</a></h3>
       <p>Despliega detección multicámara, alerta de profundidad, monitorización del conductor, seguimiento de objetivos y cargas de trabajo de inferencia Jetson medidas en reComputer Rugged J401.</p>
     </div>
   </article>
@@ -426,22 +426,22 @@ Explora ejemplos de aplicaciones que combinan el hardware reComputer Rugged J40 
 
 ## Recursos
 
-Utiliza estos archivos para la integración mecánica, la revisión del diseño de la placa carrier, el desarrollo del BSP y la selección de la plataforma Jetson.
+Utiliza estos archivos para la integración mecánica, la revisión del diseño de la carrier board, el desarrollo del BSP y la selección de la plataforma Jetson.
 
 <div className="jetson-product-resource-grid">
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf" target="_blank" rel="noopener noreferrer">
     <span className="jetson-product-resource-icon" aria-hidden="true">PDF</span>
-    <span className="jetson-product-resource-copy"><strong>Hoja de datos del producto</strong><small>Especificaciones eléctricas, mecánicas y ambientales</small></span>
+    <span className="jetson-product-resource-copy"><strong>Ficha técnica del producto</strong><small>Especificaciones eléctricas, mecánicas y ambientales</small></span>
     <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
     <span className="jetson-product-resource-icon" aria-hidden="true">SCH</span>
-    <span className="jetson-product-resource-copy"><strong>Esquemático de la placa carrier</strong><small>Revisa los circuitos y el ruteo de señales de la placa carrier</small></span>
+    <span className="jetson-product-resource-copy"><strong>Esquema de la carrier board</strong><small>Revisa los circuitos y el ruteo de señales de la carrier board</small></span>
     <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
     <span className="jetson-product-resource-icon" aria-hidden="true">PSE</span>
-    <span className="jetson-product-resource-copy"><strong>Esquemático de la placa PSE</strong><small>Referencia de diseño del circuito de alimentación PoE</small></span>
+    <span className="jetson-product-resource-copy"><strong>Esquema de la placa PSE</strong><small>Referencia de diseño del circuito de alimentación PoE</small></span>
     <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp" target="_blank" rel="noopener noreferrer">
@@ -463,7 +463,7 @@ Utiliza estos archivos para la integración mecánica, la revisión del diseño 
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible.
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

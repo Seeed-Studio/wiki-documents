@@ -212,12 +212,27 @@ const sidebars = {
             { type: 'doc', id: `${P}/pt_Paper_Reading_GR00T_N1`, label: 'NVIDIA GR00T — Adaptação e Fine-Tuning' },
             { type: 'doc', id: `${P}/pt_Paper_Reading_EO1`, label: 'EO-1 — Pré-treinamento Multimodal Intercalado' },
             { type: 'doc', id: `${P}/pt_Paper_Reading_WALL_OSS`, label: 'WALL-OSS — Raciocínio Incorporado & Controle de Robôs' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — Ações entre Diferentes Corpos e Percepção do Futuro' },
           ],
         },
         {
-          type: 'html',
+          type: 'category',
+          label: 'Parte 5 · Modelos de Mundo & Aprendizado Vídeo-Ação',
           className: 'robotics-section-title',
-          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">Parte 5 · Modelos de Mundo &amp; Aprendizado Vídeo-Ação</span>',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            {
+              type: 'doc',
+              id: `${P}/pt_Paper_Reading_VLA_JEPA`,
+              label: 'VLA-JEPA — Supervisão por vídeo e modelos de mundo latentes',
+            },
+            {
+              type: 'doc',
+              id: `${P}/pt_Paper_Reading_LINGBOT_VA`,
+              label: 'LingBot-VA — Um Modelo de Mundo Causal de Imagens Futuras para Ações de Robôs',
+            },
+          ],
         },
         {
           type: 'html',

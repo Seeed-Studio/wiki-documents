@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker Lite es una placa de desarrollo de interfaz de voz USB/I2S con alimentación XMOS XU316 y una matriz de micrófonos dual para captura de voz de campo lejano. Incorpora algoritmos de front-end de audio con IA integrados, incluidos cancelación acústica de eco, supresión de ruido, cancelación de interferencias y control automático de ganancia. Comienza con el flasheo de firmware, el cableado y el uso listo para usar.
+description: ReSpeaker Lite es una placa de desarrollo de interfaz de voz USB/I2S impulsada por XMOS XU316 con una matriz de micrófonos dual para captura de voz de campo lejano. Incorpora algoritmos de front-end de audio con IA integrados, incluidos cancelación de eco acústico, supresión de ruido, cancelación de interferencias y control automático de ganancia. Comienza con el flasheo de firmware, el cableado y el uso listo para usar.
 title: Introducción a reSpeaker Lite
 keywords:
   - ReSpeaker
@@ -9,8 +9,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
-  date: 6/28/2024
-  author: Jessie
+  date: 11/09/2026
+  author: Ray
 createdAt: '2024-07-03'
 updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/
@@ -48,18 +48,18 @@ url: https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/
 </table>
 
 
-Impulsada por el chipset de sonido y audio con IA XMOS XU316, esta placa de desarrollo sobresale en el procesamiento de audio con su matriz de micrófonos dual integrada, ideal para reconocimiento de voz y control por voz. Con avanzados algoritmos de front-end de audio integrados, el chip XU316 proporciona cancelación de interferencias, cancelación de eco y supresión de ruido. Es compatible con conexiones I2S y USB y es compatible con Seeed Studio XIAO ESP32S3 (Sense), Adafruit QT Py, Raspberry Pi y PC.
+Impulsada por el chipset de sonido y audio con IA XMOS XU316, esta placa de desarrollo sobresale en el procesamiento de audio con su matriz de micrófonos dual integrada, ideal para reconocimiento de voz y control por voz. Con algoritmos avanzados de front-end de audio integrados, el chip XU316 proporciona cancelación de interferencias, cancelación de eco y supresión de ruido. Es compatible con conexiones I2S y USB y es compatible con Seeed Studio XIAO ESP32S3 (Sense), Adafruit QT Py, Raspberry Pi y PC.
 
 ## Características
 
-- **Matriz de micrófonos dual para captura de voz de campo lejano**: Los 2 micrófonos digitales de alto rendimiento capturan y extraen voz y habla de campo lejano (hasta 3 metros) incluso en entornos ruidosos, ya que cancelan el ruido puntual utilizando dos entradas de micrófono.
-- **Algoritmos de IA ASR integrados**: Impulsado por el chip de sonido y audio con IA XMOS XU-316, el kit incluye algoritmos de comprensión del lenguaje natural para cancelación de interferencias (IC), cancelación acústica de eco, supresión de ruido, relación voz-ruido (VNR) y control automático de ganancia (AGC), lo que permite una captura de voz de alta calidad.
-- **Adopción del código abierto**：Esta placa es compatible con plataformas de hardware populares (XIAO ESP32S3 (Sense), Adafruit QT Py) mediante I2S, y compatible con Raspberry Pi y PC mediante USB (Audio Class 2.0 (UAC2)).
+- **Matriz de micrófonos dual para captura de voz de campo lejano**: Los 2 micrófonos digitales de alto rendimiento capturan y extraen voz y habla de campo lejano (hasta 3 metros) incluso en entornos ruidosos, ya que cancelan el ruido puntual usando dos entradas de micrófono.
+- **Algoritmos de IA ASR integrados**: Impulsado por el chip de sonido y audio con IA XMOS XU-316, el kit incluye algoritmos de comprensión del lenguaje natural para cancelación de interferencias (IC), cancelación de eco acústico, supresión de ruido, relación voz-ruido (VNR) y control automático de ganancia (AGC), lo que permite una captura de voz de alta calidad.
+- **Adopta el código abierto**：Esta placa es compatible con plataformas de hardware populares (XIAO ESP32S3 (Sense), Adafruit QT Py) mediante I2S, y compatible con Raspberry Pi y PC mediante USB (Audio Class 2.0 (UAC2)).
 - **LED RGB integrado**: la placa incorpora un LED RGB WS2812 programable, que admite efectos personalizados y ofrece una interfaz visual para tus aplicaciones.
 - **Compatibilidad con fuente de alimentación externa**: esta placa admite una fuente de alimentación externa de 5 V, que puede aplicarse de forma flexible en diferentes escenarios.
 - **DFU para desarrollo personalizado**: la placa admite actualización de firmware personalizado mediante DFU-Util.
 
-## Especificación
+## Especificaciones
 
 |**Chip principal**|XMOS XU316|
 | :- | :- |
@@ -92,7 +92,7 @@ Impulsada por el chipset de sonido y audio con IA XMOS XU316, esta placa de desa
 |**6**|**Botón de silencio**|Silencia la entrada de audio cuando se pulsa.|
 |**7**|[XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) **(opcional)**|Para mayor desarrollo e integración.|
 |**8**|**Procesador central XU316**|Responsable del procesamiento y la transmisión de audio.|
-|**9**|**Almohadilla de soldadura para fuente de alimentación externa**|Admite fuente de alimentación externa de 5 V.|
+|**9**|**Almohadilla de soldadura para alimentación externa**|Admite fuente de alimentación externa de 5 V.|
 |**10**|**Puerto USB tipo C**|Se utiliza para alimentación y transmisión de datos.|
 |**11**|**Conector para altavoz**|Para salida de audio. Admite altavoces amplificados de 5 W.|
 |**12**|**Jack de auriculares de 3,5 mm**|Salida de audio. Podemos conectar altavoces activos o auriculares a este puerto.|
@@ -143,7 +143,7 @@ import TabItem from '@theme/TabItem';
   por ejemplo, D:\
 
 - Cambia el directorio a `dfu-util.exe`<br/>
-  por ejemplo, D:\dfu-util-0.11-binaries\win64\(si estás usando win32, por favor cambia win64 a win32)
+  por ejemplo, D:\dfu-util-0.11-binaries\win64\(si estás usando win32, por favor cambia win64 por win32)
 
 - Añade la ruta de `dfu-util.exe` a la variable de entorno del sistema Path: `My Computer` > `Properties` > `Advanced` > `Environment Variables` > `Path`.
  Ten en cuenta que las rutas en la variable Path están separadas por punto y coma ;.
@@ -203,7 +203,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-fac.png" alt="pir" width={500} height="auto" /></p>
 
-- Una vez completada la instalación (esto tomará unos minutos), por favor realiza un ciclo de encendido y ejecuta `dfu-util -l` de nuevo, ReSpeaker Lite debería ser detectado ahora mismo
+- Una vez completada la instalación (esto tomará unos minutos), por favor apaga y enciende de nuevo y ejecuta `dfu-util -l` otra vez, ReSpeaker Lite debería ser detectado ahora.
 
 </TabItem>
 
@@ -302,6 +302,19 @@ dfu-util -l
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
 
+### Crea un asistente de voz con Home Assistant
+
+Empareja reSpeaker Lite con un [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) y flashea el firmware de ESPHome para convertirlo en un satélite de asistente de voz para Home Assistant. Una vez configurado, podrás decir "Okay Nabu" para controlar y automatizar tus electrodomésticos con la voz.
+
+El tutorial dedicado te guía a través de toda la configuración:
+
+- Flashear el firmware I2S requerido por la integración ESPHome.
+- Instalar ESPHome Builder y añadir reSpeaker Lite como un nuevo dispositivo en Home Assistant.
+- Subir la configuración YAML y verificar los comandos de voz de extremo a extremo.
+- Soldar los botones USR y mute a D2 y D3 para habilitar el soporte de botones.
+
+[Crea un sistema de asistente de voz para Home Assistant](/es/respeaker_lite_ha)
+
 ## Grabación y reproducción 
 
 ### Configurar Audacity 
@@ -328,7 +341,7 @@ dfu-util -l
 
 - **No se puede encontrar el dispositivo de sonido `ReSpeaker Lite`.**
 
- Comprueba la versión del firmware, asegúrate de que el firmware sea la versión USB y superior a `2.0.5`.
+ Comprueba la versión del firmware, asegúrate de que el firmware es la versión USB y superior a `2.0.5`.
 
  ```
  dfu-util -l
@@ -336,7 +349,7 @@ dfu-util -l
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
- Si no es la versión USB, sigue [este paso](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#flashear-firmware) para flashear el firmware.
+ Si no es la versión USB, sigue [este paso](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#flash-firmware) para flashear el firmware.
 
 - **¿No se puede detectar el dispositivo de sonido USB ReSpeaker Lite en Windows después de flashear el firmware USB?**
 
@@ -346,8 +359,8 @@ dfu-util -l
 
 ### Recursos
 
-[ReSpeaker Lite XMOS Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
+[Firmware XMOS de ReSpeaker Lite](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
-[ReSpeaker Lite Github](https://github.com/respeaker/ReSpeaker_Lite/)
+[Github de ReSpeaker Lite](https://github.com/respeaker/ReSpeaker_Lite/)
 
-[ReSpeaker Lite 3D file](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)
+[Archivo 3D de ReSpeaker Lite](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)

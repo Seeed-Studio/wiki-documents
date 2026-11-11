@@ -20,6 +20,13 @@ updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/rapid_prototyping_on_jetson_with_nvidia_skills_bk/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Rapid Prototyping on Jetson with NVIDIA Skills
 
 :::note JetPack 7.2 collection copy
@@ -27,7 +34,7 @@ This copy is included because agent skills are part of the JetPack 7.2 developer
 :::
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/banner.png" style={{width:1000, height:'auto'}} />
+  <img alt="Claude Code + NVIDIA Skills for Jetson banner with the plan, tools, execute piped into a prototype" src="https://files.seeedstudio.com/wiki/nv_skills/banner.png" style={{width:1000, height:'auto'}} />
 </div>
 
 ## Introduction
@@ -36,7 +43,7 @@ Jetson projects rarely stall because developers cannot write model code. They us
 
 This is where **agent + skill workflows** help. A Jetson-focused skill gives an AI coding agent structured instructions for a narrow class of tasks, such as device diagnosis, memory inspection, environment preparation, or model import. Instead of starting from a blank shell and reconstructing the workflow from scattered docs, you start from a Jetson-aware delivery path.
 
-This method is not tied to a single agent framework. Any agent that can load reusable skills, inspect files, run commands, and interact with remote devices can benefit from the same pattern. In this wiki, we use **Claude Code** for the walkthrough simply because it provides a clear way to demonstrate the workflow end to end.
+This method is not tied to a single agent framework. Any agent that can load reusable skills, inspect files, run commands, and interact with remote devices can benefit from the same pattern. The walkthrough uses **Claude Code** because the workflow needs an agent that can inspect files, run shell commands and reach a remote device; the skills load into other agents the same way.
 
 This article is intentionally written as a **delivery methodology**, not as a one-off demo log. We will use a vehicle speed detection example, but the real goal is to show a repeatable path you can reuse across different Jetson applications and different agent setups.
 
@@ -76,7 +83,7 @@ For Jetson work, skills are strongest when the task is still about reducing unce
 ## The 5-Step Jetson Delivery Workflow
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/jetson_delivery_workflow.png" style={{width:1000, height:'auto'}} />
+  <img alt="Five-step Jetson delivery workflow: diagnose, prepare, generate, validate, package" src="https://files.seeedstudio.com/wiki/nv_skills/jetson_delivery_workflow.png" style={{width:1000, height:'auto'}} />
 </div>
 
 
@@ -94,7 +101,7 @@ Prompt example:
 ```
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/jetson-diagnostic.PNG" style={{width:900, height:'auto'}} />
+  <img alt="Jetson device snapshot from the diagnostic skill: model, L4T, Ubuntu, RAM, power mode and top process" src="https://files.seeedstudio.com/wiki/nv_skills/jetson-diagnostic.PNG" style={{width:900, height:'auto'}} />
 </div>
 
 ### Use `jetson-package` when setup guidance becomes generic or unsafe
@@ -114,7 +121,7 @@ This is useful when the model loads slowly, the process is killed, or the device
 ```
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/memory-opt.PNG" style={{width:900, height:'auto'}} />
+  <img alt="Optimization report listing the headless-mode and unused-service savings with the RAM each would free" src="https://files.seeedstudio.com/wiki/nv_skills/memory-opt.PNG" style={{width:900, height:'auto'}} />
 </div>
 
 ### Use `jetson-headless-mode` when the device is acting as an appliance
@@ -126,7 +133,7 @@ If the Jetson is used as a dedicated edge node rather than a desktop machine, sw
 ```
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/headless-mode.PNG" style={{width:900, height:'auto'}} />
+  <img alt="Memory use compared before and after enabling headless mode" src="https://files.seeedstudio.com/wiki/nv_skills/headless-mode.PNG" style={{width:900, height:'auto'}} />
 </div>
 
 ### Use a task-specific build skill to generate the first runnable version
@@ -171,7 +178,7 @@ claude
 Once the `claude` command launches, you can type `/<skill-name>` to explicitly force the agent to read a specific skill. That is useful when you already know which workflow you want. But once the skills are installed in the workspace, the agent already knows they exist and can choose among them automatically from your request. In practice, it may chain several skills in one pass, for example combining diagnosis, package selection, memory inspection, and prototype generation instead of treating each step as a completely separate session.
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/skills_list.PNG" style={{width:800, height:'auto'}} />
+  <img alt="Claude Code session listing the /jet skill commands, with two SessionStart hook errors" src="https://files.seeedstudio.com/wiki/nv_skills/skills_list.PNG" style={{width:800, height:'auto'}} />
 </div>
 
 ## Case Study: Vehicle Speed Detection Mapped to the Workflow
@@ -192,7 +199,7 @@ The IP address and password above are example values. Replace them with your own
 :::
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/check_device.PNG" style={{width:800, height:'auto'}} />
+  <img alt="Device check output listing the Jetson model and the JetPack version" src="https://files.seeedstudio.com/wiki/nv_skills/check_device.PNG" style={{width:800, height:'auto'}} />
 </div>
 
 ### Step 2. Prepare the environment
@@ -225,7 +232,7 @@ Deploy a vehicle speed detection system under this directory. Use the top_view.m
 This is the sample top-view traffic video used in the walkthrough:
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/top_view.png" style={{width:1000, height:'auto'}} />
+  <img alt="Sample top-view traffic video frame used in the walkthrough" src="https://files.seeedstudio.com/wiki/nv_skills/top_view.png" style={{width:1000, height:'auto'}} />
 </div>
 
 The agent may choose different implementation paths depending on what exists on the device. The important thing at this stage is not whether it picked the final production stack. The important thing is that it produces a runnable first pass with inspectable results.
@@ -233,11 +240,11 @@ The agent may choose different implementation paths depending on what exists on 
 By the end of this step, you want a main inference script or app entrypoint, a clear rerun path, an annotated output video or similar artifact, and generated files placed in a known workspace. If those pieces exist, the baseline is already useful even if the final stack is still open to change.
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/quick_deploy.PNG" style={{width:800, height:'auto'}} />
+  <img alt="Agent session ending with the task loop stopped and the stop-hook errors printed" src="https://files.seeedstudio.com/wiki/nv_skills/quick_deploy.PNG" style={{width:800, height:'auto'}} />
 </div>
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/output_video.png" style={{width:1000, height:'auto'}} />
+  <img alt="Working directory listing detect_speed.py, the input videos, yolov8n.pt and output_annotated.mp4" src="https://files.seeedstudio.com/wiki/nv_skills/output_video.png" style={{width:1000, height:'auto'}} />
 </div>
 
 This is where the workflow starts paying off. Instead of spending the first pass wiring scripts and paths by hand, you get to evaluate a runnable baseline and decide what deserves deeper engineering effort.
@@ -253,11 +260,11 @@ Please explain the generated files, the rerun command, the output locations, the
 At this point, the useful questions are no longer “did anything run?” but “what exactly was created, how do I run it again, where are the outputs, and what did the agent choose architecturally?” A good follow-up explanation should leave you with a clear view of the file layout, the rerun path, the output locations, the detection and speed-estimation approach, and the likely performance bottleneck.
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/explain1.png" style={{width:800, height:'auto'}} />
+  <img alt="Usage sheet listing each file of the speed detection project and what it does" src="https://files.seeedstudio.com/wiki/nv_skills/explain1.png" style={{width:800, height:'auto'}} />
 </div>
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/explain6.png" style={{width:800, height:'auto'}} />
+  <img alt="Technical architecture write-up: the three-stage perception, tracking and measurement pipeline with the YOLOv8n stage detail" src="https://files.seeedstudio.com/wiki/nv_skills/explain6.png" style={{width:800, height:'auto'}} />
 </div>
 
 This saves time because the agent is not only generating code. It is also shortening the time needed to understand and evaluate the baseline it just produced.
@@ -273,7 +280,7 @@ Help me create a web UI that I can access from my local PC to upload videos for 
 The agent can wrap the prototype in a small web service or similar interface so teammates or customers can try it without touching the command line.
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/web_ui_deploy.png" style={{width:1000, height:'auto'}} />
+  <img alt="Agent log verifying the deployment: ping reply, HTTP 200 from the web UI and the nohup process still serving" src="https://files.seeedstudio.com/wiki/nv_skills/web_ui_deploy.png" style={{width:1000, height:'auto'}} />
 </div>
 
 :::note
@@ -281,7 +288,7 @@ To reach the UI from your local PC, make sure the chosen port is accessible on t
 :::
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/nv_skills/out_ui.gif" style={{width:1000, height:'auto'}} />
+  <img alt="Traffic Speed Monitor web UI with the uploaded video, the detected vehicles and the Speed Stats panel" src="https://files.seeedstudio.com/wiki/nv_skills/out_ui.gif" style={{width:1000, height:'auto'}} />
 </div>
 
 This is another reason the workflow is useful in practice: the same process that created the prototype can also bridge the gap from backend proof-of-concept to demo-ready packaging.
@@ -331,6 +338,11 @@ The main takeaway is not that one specific agent can build one vehicle speed det
 - [Traffic Management DeepStream SDK](/Traffic-Management-DeepStream-SDK/) — a more manual DeepStream-oriented path
 - [Deploy YOLOv8 with TensorRT and DeepStream SDK](/YOLOv8-DeepStream-TRT-Jetson/) — a more manual model deployment path
 - [DevelopTool Skills module](/jetson_developtool_skills/) — the Seeed DevelopTool "Skills" automation module
+
+## Related Resources
+
+- [Rapid Prototyping on Jetson with NVIDIA Skills](/rapid_prototyping_on_jetson_with_nvidia_skills/)
+- [NVIDIA skills repository](https://github.com/NVIDIA/skills)
 
 ## Tech Support & Product Discussion
 
