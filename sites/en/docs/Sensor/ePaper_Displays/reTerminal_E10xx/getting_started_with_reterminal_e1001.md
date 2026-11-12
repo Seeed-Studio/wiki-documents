@@ -456,7 +456,7 @@ When viewing the device from the back with the top button facing upward, the exp
    <td>3</td>
    <td>ESP_IO46</td>
    <td>GPIO46</td>
-   <td>GPIO/ADC</td>
+   <td>GPIO</td>
    <td>General purpose I/O with analog input capability</td>
   </tr>
   <tr>
