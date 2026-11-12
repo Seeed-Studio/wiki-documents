@@ -67,8 +67,8 @@ Five stages, each handing media to the next:
 
 ## Set Up the Gateway Side
 
-1. **HaLowLink 2.** Set up the gateway — antenna, power, computer connection — following [Preparation](../HaLowLink2_Getting_Started.md#preparation), then log in via [Access the Web UI](../HaLowLink2_Getting_Started.md#access-the-web-ui). The factory-default Router configuration is sufficient for a standalone demo; use [Access Point Mode](../HaLowLink2_Getting_Started.md#access-point-mode-recommended) to integrate with an existing LAN.
-2. **XIAO node.** Assemble the XIAO ESP32-S3 with the Wio-WM6180 module following the [Wi-Fi HaLow Module for XIAO guide](../../wifi-halow-module-for-xiao.md), attach its antenna, and flash the Media Gateway firmware provided by Seeed Studio.
+1. **HaLowLink 2.** Set up the gateway — antenna, power, computer connection — following [Preparation](/halowlink2_getting_started#preparation), then log in via [Access the Web UI](/halowlink2_getting_started#access-the-web-ui). The factory-default Router configuration is sufficient for a standalone demo; use [Access Point Mode](/halowlink2_getting_started#access-point-mode-recommended) to integrate with an existing LAN.
+2. **XIAO node.** Assemble the XIAO ESP32-S3 with the Wio-WM6180 module following the [Wi-Fi HaLow Module for XIAO guide](/getting_started_with_wifi_halow_module_for_xiao), attach its antenna, and flash the Media Gateway firmware provided by Seeed Studio.
 3. **PC.** Connect the Windows PC to the gateway's **LAN port** by Ethernet (demo network `192.168.12.x`), and start the Media Console server.
 
 <!-- Pending official release (internal): XIAO firmware binary/source, flashing procedure, and the Media Console package. Do NOT fabricate download links, repository URLs, server ports, or flashing steps — insert the official ones here when the release package arrives. -->
@@ -117,13 +117,13 @@ The complete end-to-end transfer was demonstrated by Seeed engineering:
 
 ## Troubleshooting
 
-For gateway and HaLow link issues — web UI access, pairing, IP addressing, throughput — see [Getting Started → Troubleshooting](../HaLowLink2_Getting_Started.md#troubleshooting).
+For gateway and HaLow link issues — web UI access, pairing, IP addressing, throughput — see [Getting Started → Troubleshooting](/halowlink2_getting_started#troubleshooting).
 
 ## Resources
 
-- [Getting Started with Wi-Fi HaLow Module for XIAO](../../wifi-halow-module-for-xiao.md)
-- [Getting Started with Wi-Fi HaLow Mini PCIe Module](../../wifi-halow-mini-pcie-module.md)
-- [HaLowLink 2 Getting Started](../HaLowLink2_Getting_Started.md)
+- [Getting Started with Wi-Fi HaLow Module for XIAO](/getting_started_with_wifi_halow_module_for_xiao)
+- [Getting Started with Wi-Fi HaLow Mini PCIe Module](/getting_started_with_wifi_halow_mini_pcie_module)
+- [HaLowLink 2 Getting Started](/halowlink2_getting_started)
 
 <!-- Pending official release (internal): add source code / firmware links here once released. -->
 

@@ -109,7 +109,7 @@ The product family supports regional markets including **USA, Canada, Australia,
 | SMA Connector | External region-specific Wi-Fi HaLow antenna (connect before powering on) |
 | Mode Button | Enter Extender mode (hold until the Status LED flashes fast aqua, then release); start pairing (short press); perform a factory reset (hold until the Status LED flashes slowly green, then release) |
 
-Three LEDs — **Status**, **Wi-Fi HaLow**, and **Wi-Fi 2.4 GHz** — show the device state. The Status LED is solid green in Router or Access Point configuration (both host the HaLow AP) and solid aqua in Extender mode. On an Extender, a solid purple Wi-Fi HaLow LED means it is associated over HaLow; on the Access Point, solid purple only means HaLow is enabled, so confirm clients under Connected Devices. A labeled close-up is in [Pair the Devices](./HaLowLink2_Getting_Started.md#pair-the-devices); full LED behavior in [Getting Started](./HaLowLink2_Getting_Started.md#network-configuration).
+Three LEDs — **Status**, **Wi-Fi HaLow**, and **Wi-Fi 2.4 GHz** — show the device state. The Status LED is solid green in Router or Access Point configuration (both host the HaLow AP) and solid aqua in Extender mode. On an Extender, a solid purple Wi-Fi HaLow LED means it is associated over HaLow; on the Access Point, solid purple only means HaLow is enabled, so confirm clients under Connected Devices. A labeled close-up is in [Pair the Devices](/halowlink2_getting_started#pair-the-devices); full LED behavior in [Getting Started](/halowlink2_getting_started#network-configuration).
 
 ## Package Contents
 
@@ -141,10 +141,10 @@ Three LEDs — **Status**, **Wi-Fi HaLow**, and **Wi-Fi 2.4 GHz** — show the d
 
 **Related Seeed Studio Wiki tutorials:**
 
-- [Getting Started with Wi-Fi HaLow Module for XIAO](../wifi-halow-module-for-xiao.md) (Wio-WM6180)
-- [Getting Started with Wi-Fi HaLow Mini PCIe Module](../wifi-halow-mini-pcie-module.md) (Wio-WM6108 family)
+- [Getting Started with Wi-Fi HaLow Module for XIAO](/getting_started_with_wifi_halow_module_for_xiao) (Wio-WM6180)
+- [Getting Started with Wi-Fi HaLow Mini PCIe Module](/getting_started_with_wifi_halow_mini_pcie_module) (Wio-WM6108 family)
 
-**Next step:** continue with [Getting Started](./HaLowLink2_Getting_Started.md) to set up your HaLowLink 2 for the first time.
+**Next step:** continue with [Getting Started](/halowlink2_getting_started) to set up your HaLowLink 2 for the first time.
 
 ## Tech Support & Product Discussion
 
