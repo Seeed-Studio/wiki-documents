@@ -453,7 +453,7 @@ The battery may be too low for a panel refresh. Connect USB power, let it charge
 
 ## Special Thanks
 
-Special thanks to the **Seeed Studio** team for their support throughout the reTerminal E Series and Sticky bring-up, and in particular to **Mason Cao** and **Meilily Li**.
+Special thanks to the **Seeed Studio** team for their support throughout the reTerminal E Series and Sticky bring-up, and in particular to **Mason Cao** and **Lily Li**.
 
 Thanks also to the Tesserae contributors who helped make the project possible, in particular **[skynet01](https://github.com/skynet01)**, **[charmmmz](https://github.com/charmmmz)**, **[theiereman](https://github.com/theiereman)**, **[vaibhav8a](https://github.com/vaibhav8a)**, **[partridgeworks](https://github.com/partridgeworks)**, **[bablokb](https://github.com/bablokb)**, **[varanu5](https://github.com/varanu5)** and **[Frankynov](https://github.com/Frankynov)**, and to the wider community for the widgets, firmware testing and hardware reports behind this integration.
 
