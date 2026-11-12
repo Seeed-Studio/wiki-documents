@@ -1,11 +1,13 @@
 ---
-title: Build a Local AI Agent on Jetson Orin with Laya and Qwen
-description: Build a local AI agent on NVIDIA Jetson Orin with Laya and Qwen. Learn decision-model mechanics and run browser automation and whiteboard demos on reComputer.
+title: Local Browser Agent on Jetson Orin
+description: A small local decision model picks each browser action on NVIDIA Jetson Orin; Qwen executes it. Laya + Qwen demo on reComputer, fully on-device, no cloud.
 keywords:
   - NVIDIA Jetson
   - Jetson Orin
   - Jetson Orin NX
   - local AI agent
+  - browser agent
+  - local browser agent
   - Laya decision model
   - Qwen3.5
   - browser automation
@@ -22,7 +24,7 @@ updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/jetson/local_decision_model_laya/
 ---
 
-# Build a Local AI Agent on Jetson Orin with Laya and Qwen
+# Build a Local Browser Agent on Jetson Orin with a Decision Model
 
 <div align="center">
   <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-cover-en-v3-dark.png" alt="Illustration of reComputer Industrial hardware connected to a Laya and Qwen action selector and a flight-search browser, with CLICK selected." />
@@ -36,7 +38,9 @@ url: https://wiki.seeedstudio.com/jetson/local_decision_model_laya/
 
 ## Introduction
 
-This wiki builds a **local AI agent on NVIDIA Jetson Orin**. **Laya local decision model (System One model) chooses the next action; Qwen3.5-4B handles request parsing and text generation.** Measurements come from a **reComputer Industrial J4012 with Jetson Orin NX 16GB**.
+This wiki builds a **local browser agent on NVIDIA Jetson Orin**. **Laya local decision model (System One model) chooses the next action; Qwen3.5-4B handles request parsing and text generation.** Measurements come from a **reComputer Industrial J4012 with Jetson Orin NX 16GB**.
+
+The decision model is swappable: this demo uses Laya, but any model that returns a structured action as JSON can take its place.
 
 Let's take a look at the actual test results. The agent is asked to search for one-way direct flights from Shenzhen to Shanghai, sorted by the lowest price, and the ticket options for the matching flights are displayed. The entire execution process only took 32.8 seconds. Those who have used agents to perform various browser automation operations can appreciate that this time consumption is quite advantageous.
 <div align="center">
