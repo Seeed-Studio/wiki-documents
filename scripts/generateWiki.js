@@ -27,7 +27,6 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'SO_ARM101', 'Courses', 'SO_ARM_Tutorial'), // 10.19 排除 SO_ARM_Tutorial 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Network', 'Mesh_Network', 'MeshPager_X2', 'x2_node.md'), //占位文档，暂时没更新内容
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Boot_Log_Analysis.md'), //11.2
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Camera_Data_Chain.md'), //11.2
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Device_Tree.md'), //11.2

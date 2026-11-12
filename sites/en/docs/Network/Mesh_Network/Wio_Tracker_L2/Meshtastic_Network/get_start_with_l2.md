@@ -78,7 +78,13 @@ If you just click the Bluetooth icon, you will enter Bluetooth mode. If so, long
 
 ### Phone Connection
 
-**Step1. Get in Bluetooth Connection Mode**
+**Step1. Find Node ID**
+
+Find MAC address on device sticker. The Node ID is based on the last four digits of the MAC address. The last digit should `-2`. For example, if the device is 29CA, then the real node if should be 29c8.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
+
+**Step2. Get in Bluetooth Connection Mode**
 
 <Tabs>
 
@@ -89,6 +95,7 @@ Go to `Setting` page, click `Reboot/Shutdown`, then click the `Bluetooth icon`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
+
 While using MUI, please first switch to Bluetooth Pairing mode before pairing with your ohone. Or else your phone can not recognize your device.
 :::
 
