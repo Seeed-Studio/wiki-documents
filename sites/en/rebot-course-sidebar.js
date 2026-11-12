@@ -297,6 +297,11 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_DM05",
               "label": "DM0.5 — Historical Context & Trajectory Alignment"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_G05",
+              "label": "G0.5 — Reasoning and Action in One Sequence"
             }
           ]
         },
