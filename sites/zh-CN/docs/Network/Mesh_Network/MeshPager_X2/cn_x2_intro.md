@@ -185,7 +185,7 @@ SenseCAP MeshPager X2 系列提供独立手持式 [Meshtastic®](https://meshtas
       <th scope="row" style={{textAlign: 'left', verticalAlign: 'middle'}}>设备电源输入</th>
       <td>5 V DC</td>
     </tr>
-  </tbody]
+  </tbody>
   <tbody>
     <tr>
       <th scope="row" style={{textAlign: 'left', verticalAlign: 'middle'}}>工作温度（放电）</th>

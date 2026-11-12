@@ -75,7 +75,7 @@ El alcance real de comunicación y el tiempo de funcionamiento de la batería va
       <th scope="row" style={{textAlign: 'left', verticalAlign: 'middle'}}>Memoria</th>
       <td>32 MB Flash / 8 MB PSRAM</td>
     </tr>
-  </tbody]
+  </tbody>
   <tbody>
     <tr>
       <th scope="rowgroup" rowSpan={5} style={{textAlign: 'left', verticalAlign: 'middle'}}>Antena</th>

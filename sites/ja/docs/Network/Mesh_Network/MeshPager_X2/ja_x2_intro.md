@@ -75,7 +75,7 @@ SenseCAP MeshPager X2 シリーズは、オフグリッドでのメッセージ�
       <th scope="row" style={{textAlign: 'left', verticalAlign: 'middle'}}>メモリ</th>
       <td>32 MB フラッシュ / 8 MB PSRAM</td>
     </tr>
-  </tbody]
+  </tbody>
   <tbody>
     <tr>
       <th scope="rowgroup" rowSpan={5} style={{textAlign: 'left', verticalAlign: 'middle'}}>アンテナ</th>
