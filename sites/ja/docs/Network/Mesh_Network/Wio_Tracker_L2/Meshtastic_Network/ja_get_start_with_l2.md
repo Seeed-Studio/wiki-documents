@@ -1,5 +1,5 @@
 ---
-description: Wio Tracker L2 シリーズの使用を開始します。デバイスの取り付け、ファームウェアの書き込み、デバイス接続について案内します。
+description: Wio Tracker L2 シリーズの使用を開始します。デバイスの設置、ファームウェアの書き込み、デバイス接続について案内します。
 title: Meshtastic を使い始める
 keywords:
   - Meshtastic
@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 :::danger note
 デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
 
-1. メッセージ送信プロセスが完了していない
+1. メッセージ送信処理が完了していない
 2. 設定中である
 :::
 
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
 
-対象デバイスを `Seeed Wio Tracker L2` に設定し、最新のファームウェアを選択してから、`Flash` をクリックします。
+対象デバイスとして `Seeed Wio Tracker L2` を選択し、最新のファームウェアを選んでから `Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 
 <TabItem value="1" label="MUI から BaseUI へ">
-Setting ページに移動 **->** `Reboot/Shutdown` を選択 **->** Bluetooth アイコンを長押し **->** `OK` をクリック
+Setting ページに移動し **->** `Reboot/Shutdown` を選択 **->** Bluetooth アイコンを長押し **->** `OK` をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIToBaseUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -78,7 +78,13 @@ Bluetooth アイコンをクリックするだけの場合は Bluetooth モー�
 
 ### スマートフォンとの接続
 
-**Step1. Bluetooth 接続モードに入る**
+**ステップ1. ノード ID を確認する**
+
+デバイスのラベルに記載されている MAC アドレスを確認します。ノード ID は MAC アドレスの下 4 桁に基づきます。最後の桁は `-2` である必要があります。例えば、デバイスが 29CA の場合、実際のノード ID は 29c8 になります。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
+
+**ステップ2. Bluetooth 接続モードに入る**
 
 <Tabs>
 
@@ -89,6 +95,7 @@ Bluetooth アイコンをクリックするだけの場合は Bluetooth モー�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
+
 MUI を使用する場合は、スマートフォンとペアリングする前に、まず Bluetooth ペアリングモードに切り替えてください。そうしないと、スマートフォンがデバイスを認識できません。
 :::
 
@@ -105,11 +112,11 @@ MUI を使用する場合は、スマートフォンとペアリングする前�
 </TabItem>
 </Tabs>
 
-**Step2. Meshtastic APP をダウンロード**
+**ステップ2. Meshtastic APP をダウンロードする**
 
 [Click here](https://meshtastic.org/downloads/) から Meshtastic APP をダウンロードします。
 
-**Step3. デバイスとペアリング**
+**ステップ3. デバイスとペアリングする**
 
 <Tabs>
 
@@ -141,7 +148,7 @@ MUI を使用する場合は、スマートフォンとペアリングする前�
 
 ### LoRa の設定
 
-メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御するもので、お住まいの地域に合わせて設定してください。
+メッシュ通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
 
 **リージョン一覧**
 
@@ -169,7 +176,7 @@ MUI を使用する場合は、スマートフォンとペアリングする前�
 
 <TabItem value="8" label="BaseUI で設定">
 
-`LoRa Info` ページに移動し、`Region` をクリックしてリージョンを選択し、その後 `OK` をクリックします。
+`LoRa Info` ページに移動し、`Region` をクリックしてリージョンを選択し、`OK` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BaseUILoRa.png" alt="pir" width={900} height="auto" /></p>
 
@@ -203,23 +210,23 @@ MUI を使用する場合は、スマートフォンとペアリングする前�
 
 <TabItem value="10" label="オフラインマップ">
 
-**Step1. GPS を有効化**
+**ステップ1. GPS を有効にする**
 
-位置情報を取得するには GPS を有効にする必要があります。これは `position アイコンを長押し` することでデバイス上から直接設定できます。 
+位置情報を取得するには GPS を有効にする必要があります。これはデバイス上で `long pressing the position icon` によって直接設定できます。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
 また、スマートフォンの APP から設定することもできます。
 
-**Step2. SD カードの準備**
+**ステップ2. SD カードの準備**
 
 SD カードをフォーマットし、マップをインストールする必要があります。SD カードの詳しい使用チュートリアルについては、[click here](/ja/l2_sd_card) をクリックして確認してください。
 
-**Step3. SD カードを挿入**
+**ステップ3. SD カードを挿入する**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SDCardPlugin.gif" alt="pir" width={450} height="auto" /></p>
 
-**Step4. マップを表示**
+**ステップ4. マップを表示する**
 
 マップが読み込まれるまで待ちます。Wi-Fi に正常に接続し、位置情報を取得すると、デバイスにオフラインマップが表示されます。
 
@@ -229,17 +236,17 @@ SD カードをフォーマットし、マップをインストールする必�
 
 <TabItem value="11" label="オンラインマップ">
 
-**Step1. GPS を有効化**
+**ステップ1. GPS を有効にする**
 
-位置情報を取得するには GPS を有効にする必要があります。これは `position アイコンを長押し` することでデバイス上から直接設定できます。 
+位置情報を取得するには GPS を有効にする必要があります。これはデバイス上で `long pressing the position icon` によって直接設定できます。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
 また、スマートフォンの APP から設定することもできます。
 
-**Step2. Wifi を設定して有効化**
+**ステップ2. Wifi を設定して有効にする**
 
-Wifi 名とパスワードを設定します。これはデバイス上から直接操作できます。 
+Wifi 名とパスワードを設定します。これはデバイス上で直接操作できます。 
 
 :::tip
 
@@ -249,7 +256,7 @@ Wifi 名とパスワードを設定します。これはデバイス上から直
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSetting.png" alt="pir" width={450} height="auto" /></p>
 
-Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です。Wifi IP が表示され Wifi アイコンが白い場合は Wifi が有効です。 
+Wifi IP が空で Wifi アイコンがグレーのときは Wifi は無効です。Wifi IP が表示され Wifi アイコンが白いときは Wifi は有効です。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -259,7 +266,7 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です
 
 
 
-**Step3. マップを表示**
+**ステップ3. マップを表示する**
 
 マップが読み込まれるまで待ちます。Wi-Fi に正常に接続し、位置情報を取得すると、デバイスにオンラインマップが表示されます。
 
@@ -271,27 +278,27 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です
 
 ## 応用的な使い方
 
-### Web サイト経由で接続
+### Web サイト経由で接続する
 
 Web サイト上でメッセージを送信し、他のノードと通信したい場合は、デバイスを [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) に接続できます。
 
-  **Step 1**: BaseUI に切り替える
+  **ステップ 1**: BaseUI に切り替える
 
-  **Step 2**: Web サイトを開く
+  **ステップ 2**: Web サイトを開く
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) をクリックして Web サイトにアクセスします。
+[Click here](https://client.meshtastic.org/messages/broadcast/0) をクリックして Web サイトに移動します。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  **Step 3**: 新しいデバイスを追加
+  **ステップ 3**: 新しいデバイスを追加する
 
-    "+ New Connection" をクリックします。 
+    「+ New Connection」をクリックします。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
     シリアル方式を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    デバイスはリストに表示されます。クリックして接続します。接続に成功すると、Webサイト上でデバイスのステータスを直接確認できます。
+    デバイスがリストに表示されます。クリックして接続します。接続に成功すると、ウェブサイト上でデバイスステータスを直接確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -310,7 +317,7 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SensorConnection.png" alt="pir" width={500} height="auto" /></p>
 
-Grove インターフェースを介してセンサーをデバイスに追加できます。以下のセンサーは、本デバイスの Grove インターフェースとの互換性が検証されています。
+Grove インターフェースを介してセンサーをデバイスに追加できます。以下のセンサーは、デバイス上の Grove インターフェースとの互換性が確認されています。
 
 <table>
   <tr>
@@ -349,7 +356,7 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 
 <TabItem value="ios" label="IOS">
 
-- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にしてください。
+- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="pir" width={900} height="auto" /></p>
 
@@ -357,7 +364,7 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 
 <TabItem value="android" label="Android App">
 
-- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にしてください。
+- Telemetry を有効にしてセンサーデータを取得します。OLED 画面にセンサーデータを表示したい場合は、`on screen` を有効にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/TelemetryL2.png" alt="pir" width={900} height="auto" /></p>
 
@@ -389,27 +396,27 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 | メッセージアイコンをクリック | メッセージページへ移動 |
 | ノードアイコンをクリック | ノードページへ移動 |
 | 時計アイコンをクリック | リアルタイム/稼働時間の切り替え |
-| LoRa アイコンを長押し | LoRa 送信のオフ/オン |
-| 通知アイコンを長押し | 通知の有効化/無効化 |
-| 通知アイコンをクリック | サウンド/バナー/サウンド & バナーの切り替え |
-| GPS アイコンを長押し | GPS のオン/オフ |
-| WiFi アイコンを長押し | WiFi のオン/オフ |
-| MQTT アイコンを長押し | MQTT のオン/オフ |
-| QR コードアイコンをクリック | デバイスの QR コードを表示 |
+| LoRa アイコンを長押し| LoRa 送信のオフ/オン|
+| 通知アイコンを長押し| 通知の有効/無効|
+| 通知アイコンをクリック| サウンド/バナー/サウンド & バナーの切り替え|
+| GPS アイコンを長押し| GPS のオン/オフ|
+| WiFi アイコンを長押し| WiFi のオン/オフ|
+| MQTT アイコンを長押し| MQTT のオン/オフ|
+| QR コードアイコンをクリック| デバイスの QR コードを表示 |
 
 </TabItem>
 
 <TabItem value="16" label="ノードページ">
 | 操作方法 | 効果 |
 |---|---|
-| ノードをクリック | 詳細情報を表示 |
-| ノードを長押し | プライベートチャットに入る |
-| ノード位置を表示 | マップ上にノード位置を表示 |
+| ノードをクリック| 詳細情報を表示|
+| ノードを長押し| プライベートチャットに入る|
+| ノードの位置を表示| マップ上にノードの位置を表示|
 
 </TabItem>
 
 <TabItem value="17" label="チャンネルページ">
-チャンネルを長押しして通知を無効化/有効化します。チャンネルを選択してクリックするとチャットウィンドウに入ります。
+チャンネルを長押しして通知を無効/有効にします。チャンネルを選択してクリックするとチャットウィンドウに入ります。
 
 </TabItem>
 
@@ -422,20 +429,20 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 
 | 操作方法 | 効果 |
 |---|---|
-| User Short Name | デバイスのショートネームを変更 |
-| User Long Name | デバイスのロングネームを変更 |
-| Screen Pin | デバイス起動用のパスワードを設定 |
+| User Short Name | デバイスの短い名前を変更 |
+| User Long Name | デバイスの長い名前を変更 |
+| Screen Pin | デバイス起動時のパスワードを設定 |
 | Configuration Pin | 設定変更用のパスワードを設定 |
-| Region | LoRa の地域を設定 |
+| Region | LoRa の地域を設定|
 | Modem Preset| LoRa プリセットを設定 |
-| Channel | チャンネルを編集 |
+| Channel | チャンネルを編集|
 | Device Role | ロールを設定 |
-| WiFi | Wifi の SSID とパスワードを設定 |
-| Screen Timeout| 画面のタイムアウトを設定 |
-| Screen Brightness| 画面の明るさを設定 |
+| WiFi | WiFi SSID とパスワードを設定 |
+| Screen Timeout| 画面のタイムアウトを設定|
+| Screen Brightness| 画面の明るさを設定|
 | Theme| ダーク/ライト背景のテーマを切り替え |
-| Screen Calibration | 画面をキャリブレーション |
-| Language| 表示言語を切り替え |
+| Screen Calibration | 画面をキャリブレーション|
+| Language| 表示言語を切り替え|
 | Factory Reset | 設定をデフォルトに復元 |
 | NodeDB Reset | ノードデータを消去 |
 | Clear Chat History | チャット履歴を消去 |
@@ -449,9 +456,9 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 |---|---|
 | Mesh Detector| 検出されたアクティブノードを表示 |
 | Signal Scanner| 選択したノードの RSSI と SNR を表示 |
-| Trace Route| 選択したノードへのルーティングパスを表示 |
+| Trace Route| 選択したノードのルーティングパスを表示 |
 | Statistic | パケットデコード情報を表示 |
-| Packet Log | デバイスログを表示 |
+| Packet Log | デバイスログを表示|
 
 </TabItem>
 </Tabs>
@@ -465,8 +472,8 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 <TabItem value="21" label="ホーム">
 | 操作方法 | 効果 |
 |---|---|
-| "Sleep Screen" を選択 | 一時的にディスプレイをオフにし、ユーザーボタン押下で復帰 |
-| "Send Position" を選択 | メッシュ上のノードに対してデバイス位置を手動で通知（発見を高速化） |
+| 「Sleep Screen」を選択 | 一時的にディスプレイをオフにし、ユーザーボタン押下で復帰 |
+| 「Send Position」を選択 | メッシュ上のノードに対してデバイス位置を手動で通知（発見を高速化） |
 
 </TabItem>
 
@@ -476,35 +483,35 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 
 | 操作方法 | 効果 |
 |---|---|
-| "Favorite" を選択 | 選択したノードをお気に入りに設定 |
-| "Trace Route" を選択 | 選択したノードへのトレースルートを実行 |
+| 「Favorite」を選択 | 選択したノードをお気に入りに設定|
+| 「Trace Route」を選択 | 選択したノードへのトレースルートを実行 |
 
 </TabItem>
 
 <TabItem value="24" label="位置情報">
 | 操作方法 | 効果 |
 |---|---|
-| "GPS Toggle" を選択 | GPS のオン/オフ |
-| "GPS Format" を選択 | GPS フォーマットを切り替え |
-| "Compass Headings" を選択 | "N" の向きについて Dynamic/Fixed/Freeze を切り替え |
-| "Compass Calibrate" を選択 | 30 秒間のコンパスキャリブレーションを開始 |
+| 「GPS Toggle」を選択 | GPS のオン/オフ|
+| 「GPS Format」を選択 | GPS フォーマットを切り替え|
+| 「Compass Headings」を選択 | 「N」のヘディングを Dynamic、Fixed、Freeze の間で切り替え |
+| 「Compass Calibrate」を選択 | 30 秒間のコンパスキャリブレーションを開始 |
 </TabItem>
 
 <TabItem value="25" label="LoRa">
 | 操作方法 | 効果 |
 |---|---|
-| "LoRa Region" を選択 | LoRa の地域を選択 |
-| "Device Role" を選択 | デバイスロールを切り替え |
-| "Radio Preset" を選択 | 利用可能なプリセットから選択 |
+| 「LoRa Region」を選択 | LoRa の地域を選択 |
+| 「Device Role」を選択 | デバイスロールを切り替え |
+| 「Radio Preset」を選択 | 利用可能なプリセットから選択|
 
 </TabItem>
 
 <TabItem value="26" label="システム">
 | 操作方法 | 効果 |
 |---|---|
-| "Notifications" を選択 | ビープ音を有効/無効化 |
-| "Bluetooth Toggle" を選択 | Bluetooth を有効/無効化 |
-| "Reboot/Shutdown" を選択 | デバイスを手動で再起動または電源オフ |
+| 「Notifications」を選択 | ビープ音を有効/無効にする|
+| 「Bluetooth Toggle」を選択 | Bluetooth を有効/無効にする|
+| 「Reboot/Shutdown」を選択 | デバイスを手動で再起動または電源オフ|
 
 </TabItem>
 
@@ -521,7 +528,7 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-- BaseUI を使用している場合、Wifi を設定して有効にした後は、ネットワーク経由でのみスマートフォンアプリとデバイスを接続できます。
+- BaseUI を使用している場合、Wifi を設定して有効にした後は、スマートフォンのアプリとはネットワーク経由でのみデバイスを接続できます。 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -531,7 +538,7 @@ Grove インターフェースを介してセンサーをデバイスに追加�
 
 - Wifi 名と Wifi パスワードを設定した後に、Wifi を有効にしてください。
 
-Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です。Wifi IP が表示され Wifi アイコンが白い場合は Wifi が有効です。
+Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です。Wifi IP が表示され Wifi アイコンが白い場合は Wifi が有効です。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -539,7 +546,7 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です
 
 **説明**
 
-- デバイスを起動した後、しばらくすると自動的に電源が切れる、または再起動します。
+- デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
 - シリアルポートログがしばらく動作した後に停止します。
 
  これは、メッセージ送信プロセスが完了していない、設定中であるなど、以下の状態のときにデバイスを手動で強制的に再起動または電源オフしたことが原因の可能性があります。
@@ -556,7 +563,7 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です
 
 <TabItem value="7" label="MUI で設定">
 
-`Setting` ページに移動し、`Configure Reset` をクリックして `Factory Reset` を選択し、その後 `OK` をクリックします。
+`Setting` ページに移動し、`Configure Reset` をクリックし、`Factory Reset` を選択してから `OK` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/FactoryResetMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -564,7 +571,7 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi が無効です
 
 </TabItem>
 
-<TabItem value="9" label="スマホで設定">
+<TabItem value="9" label="スマートフォンで設定">
 
 アプリで `Factory Reset` ボタンをクリックします。デバイスは自動的に工場出荷時の設定で再起動します。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
@@ -591,7 +598,7 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 
 </TabItem>
 
-<TabItem value="9" label="スマホで設定">
+<TabItem value="9" label="スマートフォンで設定">
 
 アプリを開いて対象デバイスに接続します。**Settings**->**Device**->**Device Config**->**Reset NodeDB** に進みます。
 
@@ -605,27 +612,27 @@ NodeDB は、現在の Mesh ネットワークで検出されたノードに関�
 
 #### ユーザー情報の交換
 
-各ノードは定期的に自分自身のノード情報を送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、互いのノード情報を交換する必要があります。リスト上の別のノードとプライベートメッセージを送受信できない場合は、アプリで手動で情報交換を促すことができます。
+各ノードは自分自身のノード情報を定期的に送信し、メッシュ内の他のノードがそれを「見て」「認識」できるようにします。2 つのノードが互いに通信できるようにするには、互いのノード情報を交換する必要があります。リスト内の別のノードとプライベートメッセージを送受信できない場合は、アプリで手動で情報交換を促すことができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 秘密鍵の再生成
 
-各ノードは公開鍵/秘密鍵ペアを所有しています。暗号化されたプライベートメッセージを交換するには、送信者は受信者の公開鍵でメッセージを暗号化し、その受信者の秘密鍵だけがそれを復号できます。2 つのノードは、互いの公開鍵を認識していれば、プライベートに通信できます。あるノードがプライベートメッセージの送信に繰り返し失敗する場合は、そのノードの秘密鍵を再生成してみてください。再生成後は、他のデバイスのノードリストからそのノードを削除し、再接続して新しい公開鍵を取得できるようにします。
+各ノードは公開鍵/秘密鍵ペアを所有しています。暗号化されたプライベートメッセージを交換するには、送信者は受信者の公開鍵でメッセージを暗号化し、その受信者の秘密鍵だけがそれを復号できます。したがって、2 つのノードは互いの公開鍵を知っていればプライベートに通信できます。あるノードがプライベートメッセージの送受信に繰り返し失敗する場合は、そのノードの秘密鍵を再生成してみてください。再生成後は、他のデバイスのノードリストからそのノードを削除し、再接続して新しい公開鍵を取得できるようにします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
 不具合のあるデバイスを再起動して、設定を有効にします。
 
 :::note
-鍵を再生成した後は、他のデバイスがそのノードと再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくことをお勧めします。
+鍵を再生成した後は、他のデバイスがそのノードに再接続する必要があります。そのため、他のデバイスのノードリストからそのノードを削除しておくことをお勧めします。
 :::
 
 ### 信号品質
 
-- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
+- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB より高い値で動作します。SNR が -10 dB より低いデバイスは性能が低いことを示します。
 
-- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
+- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm より高い値で動作します。RSSI が -115 dBm より低いデバイスは性能が低いと見なされます。
 
       最良の信号効果を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
