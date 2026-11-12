@@ -115,6 +115,7 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/cn/robotics/paper_reading_wall_oss/">WALL-OSS 论文精读</a></li>
         <li><a href="/cn/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 论文精读</a></li>
         <li><a href="/cn/robotics/paper_reading_dm05/">DM0.5 博客精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_g05/">G0.5 论文精读</a></li>
       </ul>
       <h3>第五部分：世界模型与 Video-Action</h3>
       <ul className="paper-reading-directory-list">
