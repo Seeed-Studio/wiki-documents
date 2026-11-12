@@ -12,10 +12,17 @@ url: https://wiki.seeedstudio.com/cn/control_rebot_arm_with_nemoclaw_on_nvidia_j
 updatedAt: '2026-07-31'
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # 在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm B601
 
 :::note JetPack 7.2 collection copy
-此 Jetson Thor 示例已作为 agentic-AI 工作流收录进 JetPack 7.2 生态系统。在部署前，请确认已安装的 JetPack/L4T 版本，并重新验证 NemoClaw、Ollama、容器和服务的版本。
+此 Jetson Thor 示例已作为 agentic-AI 工作流收录在 JetPack 7.2 生态系统中。部署前请确认已安装的 JetPack/L4T 版本，并重新验证 NemoClaw、Ollama、容器和服务的版本。
 :::
 
 ## 1. 项目概述
@@ -45,7 +52,7 @@ NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenCla
 <table style={{ textAlign: 'center' }}>
     <tr>
         <th> reBot Arm B601 </th>
-        <th> NVIDIA® Jetson AGX Thor™ 开发套件 </th>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
     </tr>
     <tr>
         <td>
@@ -89,7 +96,7 @@ NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenCla
 </div>
 
 :::info
-Jetson 设备可能只提供两个 USB Type-A 接口。如果需要更多接口，请使用 USB 集线器。
+Jetson 设备可能只提供两个 USB Type-A 接口。如果你需要更多接口，请使用 USB 集线器。
 :::
 
 上电后，验证设备：
@@ -99,7 +106,7 @@ ls /dev/ttyACM*
 ls /dev/video*
 ```
 
-如果所有连接正确，你应能看到类似如下的输出：
+如果所有连接都正确，你应该会看到类似如下的输出：
 
 <div align="center">
     <img width={900}
@@ -130,10 +137,10 @@ ollama pull nemotron3:33b
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-然后运行 `nemoclaw onboard` 创建一个新应用。下面展示了一个交互式引导日志示例：
+然后运行 `nemoclaw onboard` 来创建一个新应用。下面展示了一个交互式 onboarding 日志示例：
 
 <details>
-<summary> nemoclaw onboard 日志 </summary>
+<summary> nemoclaw onboard log </summary>
 
 ```bash
 seeed@seeed:~$ nemoclaw onboard --no-gpu
@@ -424,7 +431,7 @@ seeed@seeed:~$
 
 </details>
 
-考虑到我们未来可能需要在 NeMoClaw 容器内访问部署在主机上的服务，请执行以下命令为该应用配置网络访问。
+考虑到未来我们可能需要在 NeMoClaw 容器内部访问部署在主机上的服务，请执行以下命令为该应用配置网络访问。
 
 ```bash
 nemoclaw my-assistant policy-add --from-file ~/rebot_arm_service/host-camera.yaml --yes
@@ -507,7 +514,7 @@ uv run rebot-arm-service
 ### 6.2 启动键盘监听器（可选）
 
 为了快速触发检测/抓取（无需等待较长的智能体推理时间），可以使用 F1 热键监听器。  
-当按下 F1 时，它会自动请求抓取任务端点。
+当按下 F1 时，会自动请求抓取任务的接口。
 
 直接运行：
 
@@ -554,7 +561,7 @@ WantedBy=multi-user.target
 
 </details>
 
-- `rebot-f1-listener.service`：F1 热键触发器
+- `rebot-f1-listener.service`：F1 热键触发
 
 <details>
 <summary> /etc/systemd/system/rebot-f1-listener.service </summary>
@@ -605,7 +612,7 @@ sudo journalctl -u rebot-f1-listener.service -f
 ## 7. 功能演示
 
 <div class="video-container">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/Npw494pmh4A" title="在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm B601" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Npw494pmh4A" title="Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 8. 故障排查
@@ -616,10 +623,10 @@ sudo journalctl -u rebot-f1-listener.service -f
 2. WebUI 场景为空  
 检查 URDF 和 mesh 请求是否返回 `200`，尤其是 `/assets/urdf/...`。
 
-3. 检测没有响应  
-检查 `camera/status` 是否为 `running=true`，然后检查任务状态端点。
+3. 检测无响应  
+检查 `camera/status` 是否为 `running=true`，然后检查任务状态接口。
 
-4. Torch 导入因缺少库而失败  
+4. Torch 导入失败，提示缺少库  
 确保 `LD_LIBRARY_PATH` 同时包含 `nvpl` 和 `cuda_v12` 路径。
 
 5. F1 热键无效果  
@@ -629,7 +636,7 @@ sudo journalctl -u rebot-f1-listener.service -f
 确保脚本未使用 `dev.grab()`（必须移除独占键盘捕获）。
 
 7. 第二个机械臂连接失败  
-确保之前的连接已完全释放；在重新连接前调用断开连接。
+确保之前的连接已完全释放；在重新连接前先调用断开连接。
 
 ## 9. 参考资料
 

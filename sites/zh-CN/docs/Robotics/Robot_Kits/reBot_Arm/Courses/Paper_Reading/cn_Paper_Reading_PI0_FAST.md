@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 Pi0-FAST：论文精读 FAST 动作分词——DCT 变换、系数量化、BPE 压缩与自回归动作策略。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 Pi0-FAST
+description: "精读 FAST 动作分词——DCT 变换、系数量化、BPE 压缩与自回归动作策略。"
+title: "FAST 与 π0-FAST：高效动作分词如何加速机器人学习"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_pi0_fast/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi0_fast-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-pi0_fast-title">如何在 reBot Arm 与 SO-ARM101 上运行 Pi0-FAST</h1>
+  <h1 id="paper-reading-pi0_fast-title">FAST 与 π0-FAST：高效动作分词如何加速机器人学习</h1>
   <p className="paper-reading-lead">FAST: Efficient Action Tokenization for Vision-Language-Action Models</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>动作分词</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/pi0fast" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot π0-FAST 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=pi0_fast --policy.pretrained_path=lerobot/pi0fast-base`：加载使用 FAST 动作 token 的 π0-FAST 策略；FAST 分词器训练是另一条流程。
+- `--policy.max_action_tokens=256`：设置每块动作允许的最大 FAST token 数，不等于动作步数。
+- `--policy.gradient_checkpointing=true --policy.dtype=bfloat16`：使用梯度检查点和 bfloat16 配置，显存与兼容性需按训练设备确认。
+
+</aside>
 
 **与上一篇 π0 的关系：** 本文正式题目是 FAST，π0\-FAST 是其中训练出的策略模型。FAST 是动作分词方法；FAST\+ 是预先训练好的通用动作分词器；π0\-FAST 是使用这类分词器进行自回归动作预测的 VLA。它与原 π0 共享 PaliGemma 视觉语言骨干路线，但动作生成机制发生了变化，不能理解为给原来的流匹配动作专家增加一个压缩前处理。
 

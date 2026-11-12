@@ -1,5 +1,5 @@
 ---
-description: Explore four computer vision applications for industrial forklifts using reComputer Rugged J401, including target tracking, rear-area warning, driver monitoring, and video recording.
+description: "Four forklift vision applications on reComputer Rugged J401: front tracking, rear warning, driver monitoring and multi-camera recording."
 title: reComputer Rugged J401 for Industrial Vision
 keywords:
   - reComputer Rugged J401
@@ -34,12 +34,12 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 Industrial forklifts work in loading bays, warehouses, outdoor yards, cold stores, and wash-down areas. Dust, water, vibration, temperature changes, and unreliable network coverage make these difficult places for a conventional computer. A vehicle-mounted vision system needs sealed hardware, secure connectors, stable camera power, and enough local compute to process video on the vehicle.
 
-This wiki introduces several ways computer vision can be used on industrial forklifts. The example uses reComputer Rugged J401 as the edge controller. Its IP66 enclosure, M12 connectors, vibration resistance, four PoE ports, and Jetson Orin NX allow it to sit close to the cameras and run the vision workloads locally.
+Industrial forklifts work in dust, wash-down and cold-store conditions, so the vision system has to ride on the vehicle instead of sitting in a rack. reComputer Rugged J401 puts an IP66 enclosure, M12 connectors, four PoE ports and a Jetson Orin NX on the forklift. Its IP66 enclosure, M12 connectors, vibration resistance, four PoE ports, and Jetson Orin NX allow it to sit close to the cameras and run the vision workloads locally.
 
 The example covers four practical jobs: tracking a selected object in front of the forklift, watching the rear blind area, checking driver fatigue and helmet use, and recording footage for later review. All four are managed from one web console.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="reComputer Rugged banner: the unit in a warehouse beside a forklift, labelled Driver Monitoring, Collision Warning, Object Perception, IP66 Protection and Real-Time Edge AI" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -66,7 +66,7 @@ This project is an assistance prototype, not a functional-safety system. It has 
 This case uses two 48V POE cameras and one USB camera. Depending on different scenarios, these cameras can be freely replaced.
 ### Hardware Connection
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="Two PoE cameras connected over Ethernet to the Rugged J401, with its M12 connectors and Wi-Fi antennas" />
 </div>
 
 ### Front-view target tracking
@@ -74,7 +74,7 @@ This case uses two 48V POE cameras and one USB camera. Depending on different sc
 During pallet handling, the operator may need to keep a particular load or working area in view while the forklift moves. The front application uses EfficientTAM for click-to-segment tracking. The operator selects a target in the video, and the system follows its outline across later frames.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="Front segmentation tile: the clicked target masked in green, with the Clear target control and the USB camera selector" />
 </div>
 
 
@@ -85,7 +85,7 @@ This is interactive tracking, not automatic object recognition. It is useful whe
 The counterweight and mast leave large blind areas around a forklift. A rear-facing PoE camera uses Depth Anything V2 to estimate scene depth and a person detector to watch the working area behind the vehicle. The interface reports `SAFE`, `WARNING`, or `DANGER` according to the configured distance thresholds.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="Rear warning tile: depth inset, danger frame and the STOP status with NEAREST 0.6 m" />
 </div>
 
 :::note
@@ -97,7 +97,7 @@ Monocular depth estimation has limitations. The actual distance is not reliable.
 A cabin camera can check conditions that are not visible from the outside. MediaPipe face landmarks provide fatigue-related signals, while a separate model checks helmet status. When the model algorithm detects driver fatigue during operation, it activates a warning light to alert the driver and prevent major safety accidents caused by fatigued driving.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="Cabin detection tile: the driver boxed with the label PERSON 1 | HELMET: NOT WORN" />
 </div>
 
 
@@ -106,7 +106,7 @@ A cabin camera can check conditions that are not visible from the outside. Media
 We can display monitoring images from different perspectives on a single dashboard, making it convenient to monitor the situation in real time.
 
 <div align="center">
-  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="Industrial forklift vision dashboard" />
+  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="Forklift Vision Control dashboard with front segmentation, rear warning and cabin detection tiles, the rear distance thresholds and the unified event stream" />
 </div>
 
 
@@ -399,6 +399,13 @@ Add extra RTSP sources to `HUB_EXTRA_CAMERAS` in `/etc/seg-demo/visual-hub.env`,
 - [Depth Anything V2 Metric Indoor Small](https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf)
 - [MediaPipe Face Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker)
 - [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/)
+
+## Related Resources
+
+- [reComputer Robotics J401 interfaces and pinouts](/recomputer_jetson_robotics_j401_getting_started/)
+- [Implement EtherCAT communication on reComputer](/recomputer_ethercat_communication/)
+- [PyCuVSLAM on reComputer](/pycuvslam_recomputer_robotics/)
+- [reComputer Rugged J401 product page](https://www.seeedstudio.com/reComputer-Rugged-J401-p-6509.html)
 
 ## Tech Support & Product Discussion
 

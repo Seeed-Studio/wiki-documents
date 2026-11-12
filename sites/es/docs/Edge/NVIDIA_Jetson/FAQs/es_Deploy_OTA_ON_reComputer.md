@@ -1,5 +1,5 @@
 ---
-description: Esta guía explica cómo crear un paquete OTA completo para actualizar un reComputer mini J4012 de JetPack 5.1.3 a JetPack 6.2, incluyendo la preparación del BSP, generación del paquete y despliegue en el dispositivo.
+description: "Envía una actualización OTA a un Orin reComputer a través de la red: compila el paquete en un host y luego pasa de JetPack 5.1.3 a 6.2 sin USB."
 title: Desplegar OTA en reComputer
 keywords:
   - jetson
@@ -7,13 +7,13 @@ keywords:
   - JetPack
   - reComputer
   - BSP
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
 slug: /deploy_ota_on_recomputer
 last_update:
   date: 12/05/2025
   author: Zibo
-createdAt: '2025-12-08'
-updatedAt: '2025-12-09'
+createdAt: '2025-12-05'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/deploy_ota_on_recomputer/
 ---
 
@@ -21,22 +21,22 @@ url: https://wiki.seeedstudio.com/es/deploy_ota_on_recomputer/
 
 ## Introducción
 
-Las actualizaciones Over-the-Air (OTA) de NVIDIA Jetson permiten a los desarrolladores actualizar dispositivos edge de una versión anterior de JetPack a una versión más reciente de forma remota a través de una conexión de red, eliminando la necesidad de un PC host o re-flasheo físico por USB.
-Esta wiki demostrará cómo realizar actualizaciones OTA (Over-the-Air) en reComputer.
+Las actualizaciones Over-the-Air (OTA) de NVIDIA Jetson permiten a los desarrolladores actualizar dispositivos de borde desde una versión antigua de JetPack a una versión más reciente de forma remota mediante una conexión de red, eliminando la necesidad de un PC host o de volver a flashear físicamente por USB. 
+El flujo siguiente mueve un reComputer mini J4012 de JetPack 5.1.3 a JetPack 6.2 a través de la red: compila el paquete OTA en un host Ubuntu, se lo entrega al dispositivo y luego deja que el actualizador en el dispositivo intercambie el rootfs. Sin cable USB y sin modo de recuperación.
 
 :::note
-Plataforma de demostración: reComputer mini J4012 con JetPack 5.1.3 → JetPack 6.2 OTA. Otros reComputers basados en Orin pueden seguir la misma lógica, pero adaptar el nombre `<target_board>` que coincida con su placa portadora.
+Plataforma de demostración: reComputer mini J4012 con JetPack 5.1.3 → JetPack 6.2 OTA. Otros reComputer basados en Orin pueden seguir la misma lógica, pero adapta el nombre de `<target_board>` que coincida con tu carrier board.
 :::
 
-## Prerrequisitos
+## Requisitos previos
 - PC Ubuntu x86_64
 - [reComputer mini J4012](https://www.seeedstudio.com/reComputer-Mini-J4012-with-Extension-p-6353.html)
 
-## Realizar OTA rápidamente
+## Realizar rápidamente la OTA
 
-Aquí proporcionamos un paquete de actualización precompilado para la placa de desarrollo Seeed,
-que actualiza de Jetpack 5.1.3 a Jetpack 6.2. Si planeas actualizar directamente de Jetpack 5.1.3 a Jetpack 6.2 vía OTA,
-simplemente puedes descargar y proceder con la actualización rápidamente.
+Aquí proporcionamos un paquete de actualización precompilado para la placa de desarrollo de Seeed, 
+que actualiza de Jetpack 5.1.3 a Jetpack 6.2. Si planeas actualizar directamente de Jetpack 5.1.3 a Jetpack 6.2 mediante OTA, 
+puedes simplemente descargarlo y proceder con la actualización rápidamente.
 
 
 import OtaProductSelect from '@site/src/components/jetson/OtaProductSelect';
@@ -46,7 +46,7 @@ export const productOptions = [
     value: 'j4012mini',
     label: 'reComputer mini',
     img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg',
-    otaDescription: 'Payload OTA JP5.1.3 → JP6.2 listo para usar para la serie mini de reComputer mini',
+    otaDescription: 'Carga útil OTA lista para usar JP5.1.3 → JP6.2 para la serie reComputer mini',
     otaPayload: {
       mainlink: 'https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBkQzbsk18YRpFT6j1BK8VnAaH18J6nKGimI0xa4DTLsFg?e=PKhf7u',
       filename: 'ota_payload_package.tar.gz',
@@ -57,7 +57,7 @@ export const productOptions = [
     value: 'j4012classic',
     label: 'reComputer J30/40/401B',
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg',
-    otaDescription: 'Payload OTA JP5.1.3 → JP6.2 listo para usar para reComputer clásico J30/40/401B',
+    otaDescription: 'Carga útil OTA lista para usar JP5.1.3 → JP6.2 para reComputer classic J30/40/401B',
     otaPayload: {
       mainlink: 'https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDRxYlSWuWvRbELB8tyGQ88AUa3cDYrNoj0kAyyzU3YTFA?e=P60b7N',
       filename: 'ota_payload_package.tar.gz',
@@ -66,9 +66,9 @@ export const productOptions = [
   },
   {
     value: 'j4012industrial',
-    label: 'reComputer industrial Serie',
+    label: 'reComputer industrial Serials',
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg',
-    otaDescription: 'Payload OTA JP5.1.3 → JP6.2 listo para usar para la serie reComputer Industrial',
+    otaDescription: 'Carga útil OTA lista para usar JP5.1.3 → JP6.2 para la serie reComputer Industrial',
     otaPayload: {
       mainlink: 'https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC1cwAhknjjRLGyVc_Ze7QOAUAQ7KSi3IkzUSZ3XD45gL4?e=Q68dEF',
       filename: 'ota_payload_package.tar.gz',
@@ -77,9 +77,9 @@ export const productOptions = [
   },
   {
     value: 'j4012reserver',
-    label: 'reServer industrial Serie',
+    label: 'reServer industrial Serials',
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg',
-    otaDescription: 'Payload OTA JP5.1.3 → JP6.2 listo para usar para la serie reServer industrial.',
+    otaDescription: 'Carga útil OTA lista para usar JP5.1.3 → JP6.2 para la serie reServer industrial.',
     otaPayload: {
       mainlink: 'https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBGOUJ8bXdYQbfRVpP9y_QHAdO-UoETL5AlRco6eTWg_Kg?e=loYpgD',
       filename: 'ota_payload_package.tar.gz',
@@ -88,9 +88,9 @@ export const productOptions = [
   },
   {
     value: 'j501-carrier A GX-Orin',
-    label: 'reServer industrial J501 AGX-Orin con GMSL',
+    label: 'reServer industrial J501 AGX-Orin with GMSL',
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_1.jpg',
-    otaDescription: 'Payload OTA JP5.1.3 → JP6.2 listo para usar para reServer industrial J501 con GMSL.',
+    otaDescription: 'Carga útil OTA lista para usar JP5.1.3 → JP6.2 para reServer industrial J501 con GMSL.',
     otaPayload: {
       mainlink: 'https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBhfhZjS7orSLpp2ZS_CmhcAeGMpeh9xFsOJV7op2b0VIY?e=AgpgCt',
       filename: 'ota_payload_package.tar.gz',
@@ -99,9 +99,9 @@ export const productOptions = [
   },
   {
     value: 'j501-carrier AGX-Orin',
-    label: 'reServer industrial J501 AGX-Orin sin GMSL',
+    label: 'reServer industrial J501 AGX-Orin without GMSL',
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_1.jpg',
-    otaDescription: 'Payload OTA JP5.1.3 → JP6.2 listo para usar para reServer industrial J501 sin GMSL.',
+    otaDescription: 'Carga útil OTA lista para usar JP5.1.3 → JP6.2 para reServer industrial J501 sin GMSL.',
     otaPayload: {
       mainlink: 'https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC6wipGORa_SqinT6KB6eEXAZfD80o1uAo2jpZMVo7M5aU?e=eqbjZY',
       filename: 'ota_payload_package.tar.gz',
@@ -110,23 +110,23 @@ export const productOptions = [
   },
 ]
 
-<OtaProductSelect options={productOptions} lang="es" />
+<OtaProductSelect options={productOptions} />
 
 
 
 ### Procedimiento OTA en el dispositivo
 
 :::note
-Las siguientes operaciones se realizan en el Jetson (vía conexión remota)
+Las siguientes operaciones se realizan en el Jetson (mediante conexión remota)
 :::
 
-**Paso 1.** Instalar software dependiente
+**Paso 1.** Instalar el software dependiente
 ```bash
 sudo apt-get update
 sudo apt-get install efibootmgr nvme-cli -y
 ```
 
-**Paso 2.** Descargar la herramienta OTA
+**Paso 2.** Descargar la herramienta OTA 
 ```bash
 #Create a workspace directory
 mkdir ~/ota_ws && cd ota_ws
@@ -137,11 +137,11 @@ tar xvf ota_tools_r36.4.3_aarch64.tbz2
 ```
 Después de descomprimir los archivos anteriores, obtendrás una carpeta llamada "Linux_for_Tegra".
 
-**Paso 3.** Transferir el archivo ota al Jetson (¡Este paso debe realizarse en tu PC!)
+**Paso 3.** Transferir el archivo ota a Jetson (¡Este paso debe realizarse en tu PC!)
 
 :::info
-Reemplaza `<Jetson IP>` con la dirección IP real de tu Jetson. Por ejemplo: 192..168.137.xx
-Reemplaza la ruta del archivo `ota_payload_package.tar.gz` y la ruta `ota_ws` con tu ruta real
+Sustituye `<Jetson IP>` por la dirección IP real de tu Jetson. Por ejemplo: 192..168.137.xx
+Sustituye la ruta del archivo `ota_payload_package.tar.gz` y la ruta de `ota_ws` por tu ruta real
 :::
 
 ```bash
@@ -155,9 +155,9 @@ cd /path/ota_ws/Linux_for_Tegra/tools/ota_tools/version_upgrade/
 vim ota_backup_files_list.txt
 ```
 :::note
-Lista los archivos o carpetas que quieres conservar.
+Enumera los archivos o carpetas que quieres conservar.
 ¡Usa ruta absoluta!
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="Cabecera de nv_ota_preserve_data.sh que muestra el ejemplo de ruta absoluta /home/seed/file_backup que se mantiene durante la OTA" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/backup_list.png"/>
 </div>
 :::
@@ -165,33 +165,33 @@ Lista los archivos o carpetas que quieres conservar.
 ```bash
 ./nv_ota_preserve_data.sh
 ```
-**Paso 5.** Iniciar OTA
+**Paso 5.** Iniciar la OTA
 
 ```bash
 cd Linux_for_Tegra/tools/ota_tools/version_upgrade
 #Specify the directory of the OTA file
 sudo ./nv_ota_start.sh ~/ota_ws/ota_payload_package.tar.gz
 ```
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="ota_update_slot informando de las particiones MTS actualizadas en el kernel de recuperación y los archivos de arranque preparados" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_sh.png"/>
 </div>
 
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="nv_ota_start.sh finalizando e informando de la carga útil aplicada" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_sh_finish.png"/>
 </div>
 
 Después de que se ejecute el script, puedes reiniciar Jetson para iniciar el proceso OTA.
-Si tu dispositivo está conectado a un monitor, cuando reinicies, verás que el monitor mostrará el logo de Nvidia y luego entrará en kernel overlay. La pantalla permanecerá negra (un fenómeno normal) por un tiempo, y luego entrará en el proceso OTA.
-<div align="center"><img width ="1000" 
+Si tu dispositivo está conectado a un monitor, cuando reinicies verás que el monitor mostrará el logotipo de Nvidia y luego entrará en la superposición del kernel. La pantalla permanecerá en negro (un fenómeno normal) durante un rato y luego entrará en el proceso OTA.
+<div align="center"><img alt="Pantalla de arranque durante la OTA con el logotipo de NVIDIA y el progreso de la actualización del paquete superpuesto" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_process.jpg"/>
 </div>
 
-Después de que se complete todo el proceso, necesitas entrar al sistema para configurar el nombre de usuario y contraseña.
+Una vez completado todo el proceso, debes entrar en el sistema para configurar el nombre de usuario y la contraseña.
 
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="Primer arranque después de la OTA en la página de Configuración del sistema, aceptando la licencia de Tegra Linux" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/update_finish.jpg"/>
 </div>
-**Paso 6.** Validación post-actualización
+**Paso 6.** Validación posterior a la actualización
 
 Una vez que el dispositivo arranque en JetPack 6.2:
 
@@ -200,19 +200,19 @@ nvbootctrl -t
 sudo nvme list
 cat /etc/nv_tegra_release
 ```
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="nvbootctrl, lista nvme y /etc/nv_tegra_release confirmando JetPack 6.2 después de la OTA" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_sucess.png"/>
 </div>
-Asegúrate de que la versión reportada coincida con `R36 (release), REVISION: 4.3`, y confirma que tus aplicaciones inicien como se espera.
-¡Felicidades! El proceso OTA fue exitoso. ¡Los archivos del sistema también fueron guardados previamente!
+Asegúrate de que la versión informada coincida con `R36 (release), REVISION: 4.3`, y confirma que tus aplicaciones se inician como se espera.
+¡Enhorabuena! El proceso OTA fue exitoso. ¡Los archivos del sistema también se guardaron previamente!
 ## Otras versiones de OTA (opcional)
-Arriba, solo hemos proporcionado la versión común del paquete OTA. Si necesitas actualizar de la versión actual de OTA a otra versión, por favor consulta los siguientes pasos para generar el paquete OTA correspondiente.
+Arriba, solo hemos proporcionado la versión común del paquete OTA. Si necesitas actualizar desde la versión actual de OTA a otra versión, consulta los siguientes pasos para generar el paquete OTA correspondiente.
 Lo que estamos demostrando ahora es la actualización de Jetpack 5.1.3 a la versión objetivo, Jetpack 6.2.
 
-### Preparar el BSP objetivo (JetPack 6.2)
-Todos los comandos a continuación se ejecutan en el PC Ubuntu.
+### Preparar el BSP de destino (JetPack 6.2)
+Todos los comandos siguientes se ejecutan en el PC con Ubuntu.
 
-**Paso 1. Descargar paquetes NVIDIA JetPack 6.2.**
+**Paso 1. Descargar los paquetes NVIDIA JetPack 6.2.**
 
 ```bash
 wget https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v4.3/release/Jetson_Linux_r36.4.3_aarch64.tbz2
@@ -226,7 +226,7 @@ tar xf Jetson_Linux_r36.4.3_aarch64.tbz2
 sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_r36.4.3_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
 ```
 
-**Paso 3. Sincronizar fuentes NVIDIA para JP6.2.**
+**Paso 3. Sincroniza las fuentes de NVIDIA para JP6.2.**
 
 ```bash
 cd Linux_for_Tegra/source/
@@ -234,7 +234,7 @@ cd Linux_for_Tegra/source/
 cd ../..
 ```
 
-**Paso 4. Superponer personalizaciones de Seeed.**
+**Paso 4. Superponer las personalizaciones de Seeed.**
 
 ```bash
 mkdir -p github/Linux_for_Tegra
@@ -242,7 +242,7 @@ git clone https://github.com/Seeed-Studio/Linux_for_Tegra.git -b r36.4.3 --depth
 cp -r github/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-**Paso 5. Aplicar binarios NVIDIA y dependencias del host.**
+**Paso 5. Aplicar los binarios de NVIDIA y las dependencias del host.**
 
 ```bash
 cd Linux_for_Tegra
@@ -252,7 +252,7 @@ sudo apt-get install -y build-essential flex bison libssl-dev sshpass \
   abootimg nfs-kernel-server libxml2-utils qemu-user-static
 ```
 
-**Paso 6. Instalar la cadena de herramientas de Jetson para la compilación del kernel.**
+**Paso 6. Instalar la toolchain de Jetson para la compilación del kernel.**
 
 ```bash
 wget https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v3.0/toolchain/aarch64--glibc--stable-2022.08-1.tar.bz2
@@ -262,7 +262,7 @@ export ARCH=arm64
 export CROSS_COMPILE=$(realpath .)/l4t-gcc/aarch64--glibc--stable-2022.08-1/bin/aarch64-buildroot-linux-gnu-
 ```
 
-**Paso 7. Compilar el kernel, DTBs y módulos.**
+**Paso 7. Compilar el kernel, los DTB y los módulos.**
 
 ```bash
 cd source
@@ -273,11 +273,11 @@ export INSTALL_MOD_PATH=$(realpath ../rootfs/)
 cd ..
 ```
 
-En este punto, el BSP JP6.2 bajo `~/JP6.2/Linux_for_Tegra` (o la ruta que hayas elegido) está listo para ser usado como el BSP TARGET para el script de generación OTA.
+En este punto, el BSP JP6.2 en `~/JP6.2/Linux_for_Tegra` (o la ruta que hayas elegido) está listo para usarse como el BSP TARGET para el script de generación de OTA.
 
 ### Preparar el BSP Base (JetPack 5.1.3)
 
-Usa un espacio de trabajo limpio (por ejemplo, `~/JP5.1.3/`).
+Utiliza un espacio de trabajo limpio (por ejemplo, `~/JP5.1.3/`).
 
 **Paso 1. Descargar los paquetes de JetPack 5.1.3.**
 
@@ -286,7 +286,7 @@ wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v5.0/releas
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v5.0/release/Tegra_Linux_Sample-Root-Filesystem_r35.5.0_aarch64.tbz2
 ```
 
-**Paso 2. Extraer y copiar las superposiciones BSP de Seeed.**
+**Paso 2. Extraer y copiar las superposiciones del BSP de Seeed.**
 
 ```bash
 tar xf Jetson_Linux_R35.5.0_aarch64.tbz2 -C JP5.1.3
@@ -295,7 +295,7 @@ git clone -b r35.5.0 https://github.com/Seeed-Studio/Linux_for_Tegra.git
 cp -rf Linux_for_Tegra/* ./Linux_for_Tegra/
 ```
 
-**Paso 3. Poblar el sistema de archivos raíz y aplicar binarios.**
+**Paso 3. Rellenar el sistema de archivos raíz y aplicar los binarios.**
 
 ```bash
 cd Linux_for_Tegra
@@ -303,7 +303,7 @@ sudo tar xpf ../Tegra_Linux_Sample-Root-Filesystem_r35.5.0_aarch64.tbz2 -C rootf
 sudo ./apply_binaries.sh
 ```
 
-**Paso 4. Instalar la cadena de herramientas GCC de Bootlin para compilaciones del kernel JP5.**
+**Paso 4. Instalar la toolchain GCC de Bootlin para compilaciones de kernel de JP5.**
 
 ```bash
 wget https://developer.nvidia.com/embedded/jetson-linux/bootlin-toolchain-gcc-93 -O bootlin-toolchain-gcc-93.tar.bz2
@@ -313,7 +313,7 @@ export ARCH=arm64
 export CROSS_COMPILE_AARCH64_PATH=$(realpath .)/l4t-gcc
 ```
 
-**Paso 5. Compilar e instalar módulos, árboles de dispositivos y controladores personalizados.**
+**Paso 5. Compilar e instalar módulos, árboles de dispositivo y controladores personalizados.**
 
 ```bash
 cd source
@@ -322,11 +322,11 @@ export INSTALL_MOD_PATH=$(realpath ../rootfs/)
 ./do_copy.sh
 ```
 
-Tu ruta BSP JP5.1.3 (por ejemplo `/home/seeed/test/5.1.3/Linux_for_Tegra`) actuará como el BSP BASE durante la generación del paquete OTA.
+Tu ruta BSP de JP5.1.3 (por ejemplo `/home/seeed/test/5.1.3/Linux_for_Tegra`) actuará como el BSP BASE durante la generación del paquete OTA.
 
-### Generar el Paquete OTA en el Host
+### Generar el paquete OTA en el host
 
-Navega al espacio de trabajo JP6.2 y ejecuta el script auxiliar OTA de NVIDIA:
+Ve al espacio de trabajo de JP6.2 y ejecuta el script auxiliar de OTA de NVIDIA:
 
 ```bash
 cd ~/JP6.2/Linux_for_Tegra/tools/ota_tools/
@@ -342,23 +342,29 @@ El script solicitará la siguiente información:
 
 Si todo está configurado correctamente, la herramienta termina con:
 
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="OTASet tool finishing with SUCCESS and the generated ota_payload_package.tar.gz path" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_pkg_generate.png"/>
 </div>
 
-### Realizar la OTA en el Dispositivo Jetson
-Consulta de nuevo el [procedimiento OTA en el dispositivo](#procedimiento-ota-en-el-dispositivo) para los pasos detallados.
+### Realizar la OTA en el dispositivo Jetson
+Consulta de nuevo el [procedimiento de OTA en el dispositivo](#procedimiento-de-ota-en-el-dispositivo) para los pasos detallados.
 
 
 ## Recursos
 
-- [Crear Respaldo y Restaurar en reComputer](https://wiki.seeedstudio.com/es/create_backup_and_restore_on_recomputer/)
-- [Catálogo de Series Jetson de Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Crear copia de seguridad y restaurar en reComputer](https://wiki.seeedstudio.com/es/create_backup_and_restore_on_recomputer/)
+- [Catálogo de series Jetson de Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Seeed-Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra/tree/r36.4.3)
 
-## Soporte Técnico y Discusión de Productos
+## Recursos relacionados
 
-¡Gracias por elegir Seeed Studio! Si necesitas más asistencia, comunícate a través de los siguientes canales:
+- [Crear una copia de seguridad y restaurar en reComputer](/es/create_backup_and_restore_on_recomputer/)
+- [Flashear JetPack en reComputer J4012](/es/reComputer_J4012_Flash_Jetpack/)
+- [Página de producto de reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)
+
+## Soporte técnico y debate sobre el producto
+
+Gracias por elegir Seeed Studio. Si necesitas más ayuda, ponte en contacto a través de los siguientes canales:
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

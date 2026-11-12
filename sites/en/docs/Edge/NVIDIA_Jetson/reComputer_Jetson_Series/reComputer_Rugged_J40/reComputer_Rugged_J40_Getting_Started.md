@@ -1,6 +1,6 @@
 ---
 description: Getting Started with reComputer Rugged J40
-title: Getting Started with reComputer Rugged J40
+title: Getting Started with reComputer Rugged Series 
 keywords:
   - reComputer Rugged
   - IP66
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/
 import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
 import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
-# Getting Started with reComputer Rugged J40
+# Getting Started with reComputer Rugged Series
 
 <JetsonProductDocNav {...ruggedJ401DocNav} />
 
@@ -210,7 +210,7 @@ Both configurations use the same rugged enclosure and industrial interface set. 
     </tr>
     <tr>
       <td>Dimensions</td>
-      <td colSpan={2}>210 mm × 190 mm × 93 mm</td>
+      <td colSpan={2}>210 mm × 190 mm × 95 mm</td>
     </tr>
     <tr>
       <td>Color</td>

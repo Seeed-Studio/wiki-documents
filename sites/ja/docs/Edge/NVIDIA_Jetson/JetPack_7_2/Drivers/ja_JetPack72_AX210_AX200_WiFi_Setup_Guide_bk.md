@@ -16,23 +16,30 @@ last_update:
   date: 07/15/2026
   author: Dayu
 createdAt: '2026-07-14'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/ja/jetpack72_ax210_ax200_wifi_setup_guide_bk/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # JetPack 7.2 無線モジュールセットアップガイド
 
-Seeed Jetson デバイスを JetPack 7.2 にアップグレードした後、M.2 Key E Wi-Fi モジュールは PCIe 上では検出されるものの、無線ネットワークインターフェースが表示されない場合があります。
+Seeed Jetson デバイスを JetPack 7.2 にアップグレードした後、M.2 Key E Wi-Fi モジュールが PCIe 上では検出されているにもかかわらず、無線ネットワークインターフェースが表示されない場合があります。
 
 本ガイドでは、以下のモジュールに対する JetPack 7.2 用の修復フローを説明します。
 
-- Intel AX210 / AX200（`iwlwifi` および `iwlmvm` を使用）
-- Realtek RTL8852BE / 8852BE（`rtw89` ドライバスタックを使用）
+- Intel AX210 / AX200（`iwlwifi` と `iwlmvm` を使用）。
+- Realtek RTL8852BE / 8852BE（`rtw89` ドライバスタックを使用）。
 
 修復には通常 2 つの作業が必要です。JetPack 7.2 のカーネル `6.8.12-1021-tegra` に対応したカーネルモジュールをインストールすることと、対応するファームウェアファイルを `/lib/firmware` 配下に解凍することです。
 
 :::note
-本ガイドは、カーネル `6.8.12-1021-tegra` を使用する JetPack 7.2 システムを対象としています。修復用ドライバモジュールはこのカーネル向けにビルドされています。`uname -r` の出力が別のカーネルである場合は、そのカーネルバージョン専用のドライバパッケージを使用してください。
+本ガイドは、カーネル `6.8.12-1021-tegra` を使用する JetPack 7.2 システムを対象としています。修復用ドライバモジュールはこのカーネル向けにビルドされています。`uname -r` の出力が異なるカーネルであれば、そのカーネルバージョン専用のドライバパッケージを使用してください。
 :::
 
 ## 症状
@@ -46,7 +53,7 @@ JetPack 7.2 にアップグレードした後、次のいずれか、または�
 
 ## 前提条件
 
-- JetPack 7.2 がフラッシュされている Seeed Jetson デバイス。
+- JetPack 7.2 がフラッシュされた Seeed Jetson デバイス。
 - カーネルバージョン `6.8.12-1021-tegra`。
 - 正しく取り付けられたサポート対象の M.2 Key E Wi-Fi モジュール：Intel AX210、Intel AX200、または Realtek RTL8852BE。
 - Ethernet、USB ネットワーク、または別のネットワークアダプタによる一時的なインターネット接続。
@@ -61,7 +68,7 @@ lspci -nnk | grep -A3 -i network
 
 一般的な PCI ID は次のとおりです。
 
-| モジュール | 代表的な PCI ID |
+| モジュール | PCI ID の例 |
 | --- | --- |
 | Intel AX210 | `8086:2725` |
 | Intel AX200 | `8086:2723` |
@@ -71,7 +78,7 @@ lspci -nnk | grep -A3 -i network
 
 Jetson が Ethernet または別のネットワークアダプタ経由でインターネットにアクセスできる場合は、このオプションを使用してください。
 
-このスクリプトは、公開 OneDrive フォルダから修正版 JetPack 7.2 ドライバモジュールをダウンロードし、`/tmp/jp72_wifi_fix/driver/` に保存し、選択したモジュールセットを現在のカーネルモジュールディレクトリにインストールし、必要なファームウェアファイルを解凍して、起動時に自動ロードされるように設定します。
+このスクリプトは、公開 OneDrive フォルダから JetPack 7.2 用に修正されたドライバモジュールをダウンロードし、`/tmp/jp72_wifi_fix/driver/` に保存し、選択したモジュールセットを現在のカーネルモジュールディレクトリにインストールし、必要なファームウェアファイルを解凍して、起動時に自動ロードされるように設定します。
 
 :::tip
 OneDrive の Web リンクは `curl` のダウンロード URL として直接は使用しません。スクリプトはまず共有 OneDrive ページを開いて匿名の SharePoint クッキーを取得し、その後 SharePoint REST の `%24value` エンドポイント経由で各ファイルをダウンロードします。
@@ -381,7 +388,7 @@ bash fix_jp72_wifi.sh --8852be --download-only
 
 - [JetPack 7.2 AX210/AX200 driver modules](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC5g_yzXQ26Sb-yYWtaWU8qATu9387mvrXAvPLhJNuBtxw?e=PvK037)
 
-このフォルダには次が含まれます：
+フォルダには次のファイルが含まれています：
 
 - `iwlwifi.ko`
 - `iwlmvm.ko`
@@ -425,7 +432,7 @@ cd /lib/firmware
 sudo unzstd -f -k iwlwifi-cc-a0-*.ucode.zst
 ```
 
-起動時に自動ロードされるように有効化します：
+起動時に自動でロードされるように有効化します：
 
 ```bash
 printf "iwlwifi\ncfg80211\nmac80211\n" | sudo tee /etc/modules-load.d/iwlwifi.conf
@@ -439,7 +446,7 @@ sudo modprobe iwlwifi
 
 - [JetPack 7.2 Realtek 8852BE driver modules](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgAxZzXdPP_STosySy14oTGgAZMFt4qQ0IFsKt0oXeAi5KE?e=W84g0E)
 
-検証済みのフォルダパスは `8852be/jp7.2/8852be-6.8.12-1021-tegra/` で、次が含まれます：
+検証済みのフォルダパスは `8852be/jp7.2/8852be-6.8.12-1021-tegra/` で、次のファイルが含まれています：
 
 - `rtw89_core.ko`
 - `rtw89_pci.ko`
@@ -448,7 +455,7 @@ sudo modprobe iwlwifi
 - `SHA256SUMS`
 - `modinfo.txt`
 
-このフォルダを Jetson にコピーし、例えば `~/Downloads/8852be-6.8.12-1021-tegra/` 配下に置いてから、モジュールをインストールします：
+フォルダを Jetson にコピーし、例えば `~/Downloads/8852be-6.8.12-1021-tegra/` 配下に置いてから、モジュールをインストールします：
 
 ```bash
 KVER=$(uname -r)
@@ -510,7 +517,7 @@ lsmod | grep -E 'iwl|rtw89'
 
 セットアップが成功していれば、Wi-Fi デバイス、想定されるカーネルモジュール、および `wlan0` のようなワイヤレスインターフェースが表示されます。
 
-次の AX210 の結果は、修復後の最終的に Wi-Fi が有効になった状態を示しています：
+次の AX210 の結果は、修復後に Wi-Fi が有効になった最終状態を示しています：
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/AX210Wi-Fi/jp72-ax210.png" />
@@ -533,12 +540,12 @@ lsmod | grep -E 'iwl|rtw89'
 
 - AX210 と AX200 のファームウェアファイルには互換性がありません。AX210 は `ty-a0-gf-a0` を使用し、AX200 は `cc-a0` を使用します。
 - Realtek RTL8852BE は `/lib/firmware/rtw89/` 配下の `rtw89` ドライバスタックとファームウェアを使用します。
-- これらの修復パッケージは、JetPack 7.2 カーネル `6.8.12-1021-tegra` 向けにビルドされています。
+- これらの修復パッケージは、JetPack 7.2 カーネル `6.8.12-1021-tegra` 用にビルドされています。
 - カスタム Jetson キャリアボードでの回避策として `apt upgrade` を使用するのは避けてください。代わりに、対象カーネル用に検証済みの BSP イメージまたはドライバパッケージを使用してください。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

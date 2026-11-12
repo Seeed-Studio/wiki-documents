@@ -12,6 +12,13 @@ url: https://wiki.seeedstudio.com/control_rebot_arm_with_nemoclaw_on_nvidia_jets
 updatedAt: '2026-07-31'
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor
 
 :::note JetPack 7.2 collection copy

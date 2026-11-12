@@ -27,23 +27,11 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'SO_ARM101', 'Courses', 'SO_ARM_Tutorial'), // 10.19 排除 SO_ARM_Tutorial 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Weston_EGL_NOT_INITIALIZED_on_Jetson_Cold_Boot.md'), //8.17
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'faqs', 'FAQs.md'), //8.19
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Data_Logger', 'SenseCAP_Combo', 'Get_Started_with_SenseCAP_Combo.md'), //8.23
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Hardware_Usage', 'GPIO_Usage.md'), //8.25
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro', 'Secondary_Development', 'reCamera_Pro_RKNN_Model_Conversion.md'), //8.28
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Custom_Motion_Training.md'), //9.7
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Jetson_Environment.md'), //9.7
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Physical_AI', 'Microduck_RL_Official_Policies.md'), //9.7
-  path.join(docsDirectory, 'Network', 'Mesh_Network', 'T1000-E', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_t1000e.md'), //9.19
-  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L1', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l1.md'), //9.19
-  path.join(docsDirectory, 'Network', 'Mesh_Network', 'Wio_Tracker_L2', 'MeshCore_Network', 'Application', 'meshcore_open_image_transmission_mesh_l2.md'), //9.19
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Generative_AI', 'Jetson_LLM_Deployment_Guide.md'), //9.25
-  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_common_issues.md'), //9.24
-  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'faq', 'sensecraft_robotics_data_collection_configuration_recommendation.md'), //9.24
-  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_Robotics', 'sensecraft_robotics_overview.md'), //9.24
-
   path.join(docsDirectory, 'Network', 'Mesh_Network', 'MeshPager_X2', 'x2_node.md'), //占位文档，暂时没更新内容
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Boot_Log_Analysis.md'), //11.2
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Camera_Data_Chain.md'), //11.2
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Device_Tree.md'), //11.2
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_USB_Issue.md'), //11.2
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

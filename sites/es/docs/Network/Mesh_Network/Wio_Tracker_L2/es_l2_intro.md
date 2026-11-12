@@ -25,7 +25,7 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
 
 - **Pantalla táctil de alta calidad de 3,2''**: Con una pantalla de 320×240 de alta claridad y conmutación entre MUI y Base UI, ofrece una interacción fluida en el dispositivo para mensajería, mapas y control, sin necesidad de un teléfono móvil.
 
-- **Impulsado por ESP32S3, listo para desarrollar**: Impulsado por el ESP32-S3 de doble núcleo con Wi-Fi y Bluetooth LE, L2 Pro proporciona una plataforma flexible para la personalización de la interfaz, el desarrollo de funciones y aplicaciones de código abierto.
+- **Impulsado por ESP32S3, listo para desarrollar**: Alimentado por el ESP32-S3 de doble núcleo con Wi-Fi y Bluetooth LE, L2 Pro proporciona una plataforma flexible para la personalización de la interfaz, el desarrollo de funciones y aplicaciones de código abierto.
 
 - **Mapas sin conexión con posicionamiento GNSS**: Descarga previamente mapas sin conexión en una tarjeta MicroSD y visualiza tu ubicación GNSS en tiempo real directamente en el dispositivo, incluso sin cobertura celular ni acceso a Internet.
 
@@ -147,6 +147,10 @@ La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altam
 |**Entrada de alimentación del dispositivo**|5V, 1A|
 |**Voltaje de corte completamente cargado**|4.2V|
 |**Límite de temperatura de carga**|0 a +45℃|
+
+**Consumo de energía**
+
+Para obtener datos detallados de consumo de energía y la vida útil estimada de la batería bajo diferentes configuraciones (modo de pantalla, banda de frecuencia LoRa y preset de módem, uso de GPS, etc.), consulta la [Tabla de consumo de energía de Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
 
 ## Lista de pines
 
