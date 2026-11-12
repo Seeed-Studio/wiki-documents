@@ -113,8 +113,15 @@ export const PRODUCTS = {
     file: 'respeaker_clip_faq.md',
     title: 'reSpeaker Clip FAQ',
     description:
-      'Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the reSpeaker Clip.',
-    keywords: ['reSpeaker Clip FAQ', 'reSpeaker Clip documentation', 'live transcription', 'mechanical drawing'],
+      'Frequently asked questions about official documentation, transcription language support, recordings and export, and mechanical resources for the reSpeaker Clip.',
+    keywords: [
+      'reSpeaker Clip FAQ',
+      'reSpeaker Clip documentation',
+      'transcription language support',
+      'recordings export',
+      'mechanical drawing',
+    ],
+    lastUpdateDate: '11/12/2026',
   },
 };
 
