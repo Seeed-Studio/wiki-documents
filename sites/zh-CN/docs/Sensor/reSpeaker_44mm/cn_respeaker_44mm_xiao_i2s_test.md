@@ -19,9 +19,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_i2s_test/
 ---
 # 使用 XIAO ESP32-S3 Plus 对 reSpeaker XVF3800 44mm 进行 I2S 测试
 
-此示例用于验证 XIAO ESP32-S3 Plus 与 44 mm 阵列上的 XVF3800 之间的 I2S 链路。它会生成一个 440 Hz 方波，将其写入 I2S 发送线，同时从麦克风阵列读取返回的立体声帧。接收到的采样值只要不是 `0` 或 `-1` 就会被计为有效，示例会根据返回的有效采样数量报告测试通过（PASS）或失败（FAIL）。
+此示例用于验证 XIAO ESP32-S3 Plus 与 44 mm 阵列上的 XVF3800 之间的 I2S 连接。它会生成一个 440 Hz 方波，将其写入 I2S 发送线，同时从麦克风阵列读取返回的立体声帧。接收到的采样值只要不是 `0` 或 `-1` 就会被计为有效，示例会根据返回的有效采样数量报告测试通过（PASS）或失败（FAIL）。
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -29,23 +33,23 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_i2s_test/
     </a>
 </div>
 
-## 前置条件
+## 前置准备
 
-- 阵列必须运行 **I2S 固件**。如果仍然是 USB 镜像，请参考 [Update Firmware](https://wiki.seeedstudio.com/cn/respeaker_44mm_introduction/#更新固件)。
-- 已安装 ESP32 开发板包和 **Arduino Audio Tools** 库的 Arduino IDE。请参考 [Software Preparation](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#软件准备)。
+- 阵列必须运行 **I2S 固件**。如果仍然是 USB 固件镜像，请参考 [Update Firmware](https://wiki.seeedstudio.com/cn/respeaker_44mm_introduction/#update-firmware)。
+- 已安装 ESP32 开发板包和 **Arduino Audio Tools** 库的 Arduino IDE。请参考 [Software Preparation](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#software-preparation)。
 - 在开发板中选择 **XIAO_ESP32S3_Plus**，并选择正确的端口号。
 - 一根 USB-C 数据线（非仅充电线）。
 
 
 
 :::note
-此测试将 XIAO 配置为 I2S **主机**（`cfg.is_master = true`）。录音和回放示例则将 XIAO 作为 **从机**，因为 XVF3800 提供时钟。如果在不同示例之间切换，请注意这一差异。
+本测试将 XIAO 配置为 I2S **主机**（`cfg.is_master = true`）。录音和回放示例则将 XIAO 作为 **从机**，因为 XVF3800 提供时钟。如果在不同示例之间切换，请注意这一差异。
 :::
 
 ## 工作原理
 
-1. 示例以 48 kHz、立体声、32 位的配置，建立一个全双工 I2S 流（`RXTX_MODE`）。
-2. 在 32,000 帧中，每一帧都通过 32 位相位累加器计算一个 440 Hz 方波，将同一个采样写入两个声道，然后读取一帧返回的立体声数据。
+1. 示例以 48 kHz、立体声、32 位配置一个全双工 I2S 流（`RXTX_MODE`）。
+2. 在 32,000 帧中，每一帧都通过 32 位相位累加器计算一个 440 Hz 方波，将同一个采样写入两个声道，然后读取返回的一帧立体声数据。
 3. 每个接收到的采样值只要不是 `0` 或 `-1`，就会让 `nonZero` 自增；前 100 帧会被打印出来，方便你直观查看数据。
 4. 运行结束后，将 `nonZero` 与 `frameCount`（64,000 个采样中的 32,000 个）进行比较。如果低于阈值，测试会再运行一次，然后才会报告 `I2S RX FAIL!`。
 
@@ -205,7 +209,7 @@ void loop() {
 
 ## 预期输出
 
-将串口监视器打开到 **115200 波特率**。正常的链路输出类似如下：
+将串口监视器波特率设置为 **115200 baud**。正常的连接看起来类似这样：
 
 ```text
 I2S full-duplex test started
@@ -222,27 +226,27 @@ I2S RX PASS!
 Test complete
 ```
 
-前几帧中的具体数值取决于麦克风采集到的内容。最重要的一行是 `I2S RX PASS!`。
+前几帧中的具体数值取决于麦克风拾取到的内容。最重要的一行是 `I2S RX PASS!`。
 
 ## 故障排查
 
 ### `I2S RX FAIL!`
 
-- 确认阵列正在运行 **I2S** 固件——USB 镜像不会产生任何 I2S 数据。
-- 检查开发板包是否为 `XIAO_ESP32S3_Plus`，并确认没有其他示例重新定义 I2S 引脚。
-- 确认示例使用的是 GPIO 8 / 7 / 44 / 43，与上表一致。
+- 确认阵列正在运行 **I2S** 固件——USB 固件镜像不会产生 I2S 数据。
+- 检查开发板包是否为 `XIAO_ESP32S3_Plus`，并确认没有其他示例代码重新定义 I2S 引脚。
+- 确认示例代码使用 GPIO 8 / 7 / 44 / 43，与上表保持一致。
 
 ### 所有接收的采样都是 `0` 或 `-1`
 
-麦克风数据流没有到达 XIAO。请重新烧录 I2S 固件，然后对板卡断电重启。如果阵列被静音，处理后的声道可能是静音的——请按一次静音按键。
+麦克风数据流没有到达 XIAO。请重新烧录 I2S 固件，然后给板子断电重启。如果阵列被静音，处理后的声道可能是静音的——按一次静音按键。
 
 ### 串口监视器没有任何输出
 
-在板卡重新枚举后，在 `Tools > Port` 中选择正确的端口。
+在板子重新枚举后，在 `Tools > Port` 中选择正确的端口。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

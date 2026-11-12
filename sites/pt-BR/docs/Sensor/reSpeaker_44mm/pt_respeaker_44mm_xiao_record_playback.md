@@ -1,5 +1,5 @@
 ---
-description: Grave 5 segundos de áudio estéreo a 48 kHz do reSpeaker XVF3800 44mm em PSRAM no XIAO ESP32-S3 Plus e, em seguida, reproduza-o pelo mesmo link I2S.
+description: Grave 5 segundos de áudio estéreo a 48 kHz do reSpeaker XVF3800 44mm na PSRAM do XIAO ESP32-S3 Plus e, em seguida, reproduza-o pelo mesmo link I2S.
 title: Gravação e Reprodução com reSpeaker XVF3800 44mm e XIAO ESP32-S3 Plus
 keywords:
   - reSpeaker 44mm
@@ -19,9 +19,13 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_record_playback/
 ---
 # Gravação e Reprodução com reSpeaker XVF3800 44mm e XIAO ESP32-S3 Plus
 
-Este exemplo captura cinco segundos de áudio estéreo do XVF3800 via I2S para a PSRAM do XIAO e, em seguida, reproduz o mesmo buffer pelo caminho de transmissão I2S. É a maneira mais rápida de comprovar que o ciclo completo de áudio funciona sem um PC e um bom ponto de partida para aplicações de gravação de voz.
+Este exemplo captura cinco segundos de áudio estéreo do XVF3800 via I2S para a PSRAM do XIAO e, em seguida, reproduz o mesmo buffer pelo caminho de transmissão I2S. É a maneira mais rápida de comprovar que o ciclo completo de áudio funciona sem um PC, e um bom ponto de partida para aplicações de gravação de voz.
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -31,13 +35,13 @@ Este exemplo captura cinco segundos de áudio estéreo do XVF3800 via I2S para a
 
 ## Pré-requisitos
 
-- O array deve estar executando o **firmware I2S**. Consulte [Atualizar firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware).
-- Arduino IDE com o pacote de placas ESP32 e a biblioteca **Arduino Audio Tools**. Consulte [Preparação de software](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_getting_started/#preparação-de-software).
+- O array deve estar executando o **firmware I2S**. Consulte [Update Firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware).
+- Arduino IDE com o pacote de placas ESP32 e a biblioteca **Arduino Audio Tools**. Consulte [Software Preparation](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_getting_started/#preparação-de-software).
 - Placa selecionada como **XIAO_ESP32S3_Plus**, o número da porta precisa ser selecionado.
 - **PSRAM habilitada**: `Tools > PSRAM > OPI PSRAM`. O buffer de gravação não cabe na RAM interna.
 
 :::note
-Cinco segundos a 48 kHz, estéreo, 32 bits precisam de **1.920.000 bytes** (48.000 × 2 canais × 4 bytes × 5 s). Sem PSRAM o sketch é interrompido com `PSRAM allocation failed!`.
+Cinco segundos a 48 kHz, estéreo, 32 bits precisam de **1.920.000 bytes** (48.000 × 2 canais × 4 bytes × 5 s). Sem PSRAM o sketch para com `PSRAM allocation failed!`.
 :::
 
 
@@ -46,9 +50,9 @@ O sketch executa o XIAO como **slave** I2S (`config.is_master = false`) porque o
 ## Como Funciona
 
 1. Na inicialização, o sketch informa a PSRAM total e livre e, em seguida, aloca `RECORD_BYTES` (cinco segundos) com `heap_caps_malloc(..., MALLOC_CAP_SPIRAM)`.
-2. **Gravação**: o I2S é reiniciado em `RX_MODE` e bytes são puxados para o buffer em blocos de 8 KB até que o buffer esteja cheio ou que um tempo limite de leitura de um segundo seja atingido.
+2. **Gravação**: o I2S é reiniciado em `RX_MODE` e os bytes são puxados para o buffer em blocos de 8 KB até que o buffer esteja cheio ou que um tempo limite de leitura de um segundo seja atingido.
 3. A contagem de bytes é ajustada para um número inteiro de quadros estéreo para que a reprodução permaneça alinhada.
-4. **Reprodução**: o I2S é reiniciado em `TX_MODE` e o buffer é escrito em blocos de 8 KB, seguido de `flush()` e um pequeno atraso para que os últimos quadros escoem antes que o stream seja interrompido.
+4. **Reprodução**: o I2S é reiniciado em `TX_MODE` e o buffer é escrito em blocos de 8 KB, seguido de `flush()` e um pequeno atraso para que os últimos quadros escoem antes que o fluxo seja interrompido.
 5. O loop se repete, gravando novamente após uma pausa de um segundo.
 
 ## Sketch Arduino
@@ -337,7 +341,7 @@ Transmitted bytes: 1920000 / 1920000
 ========== TEST COMPLETE ==========
 ```
 
-Os totais de PSRAM dependem do módulo. O que importa é `Recording buffer required` ser menor que `PSRAM free`, uma captura completa `1920000 / 1920000` e uma contagem de transmissão correspondente.
+Os totais de PSRAM dependem do módulo. O que importa é `Recording buffer required` ser menor que `PSRAM free`, uma captura completa de `1920000 / 1920000` e uma contagem de transmissão correspondente.
 
 Conecte um alto-falante ou fones de ouvido ao array para ouvir a gravação durante a fase de reprodução.
 
@@ -345,10 +349,10 @@ Conecte um alto-falante ou fones de ouvido ao array para ouvir a gravação dura
 
 ### `PSRAM allocation failed!`
 
-`Tools > PSRAM > OPI PSRAM` não está habilitado ou a placa selecionada não é `XIAO_ESP32S3_Plus`. Selecione novamente a placa, habilite a PSRAM e envie o sketch outra vez.
+`Tools > PSRAM > OPI PSRAM` não está habilitado ou a placa selecionada não é `XIAO_ESP32S3_Plus`. Selecione novamente a placa, habilite a PSRAM e faça o upload novamente.
 
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
