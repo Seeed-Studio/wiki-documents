@@ -1,5 +1,5 @@
 ---
-description: The reComputer Robotics J401 is a high-performance edge AI carrier board designed for advanced robotics applications. It supports NVIDIA Jetson Orin Nano and Orin NX modules in Super/MAXN mode, delivering up to 157 TOPS of AI computing power. The board offers extensive connectivity options, including dual Gigabit Ethernet, multiple USB 3.2 ports, CAN, M.2 slots for 5G/Wi-Fi/BT modules, and optional GMSL2 camera support. Pre-installed with JetPack 6, it ensures seamless deployment for robotics development. The rugged design supports wide operating temperatures and includes a pre-installed heatsink with fan. The setup involves flashing the JetPack OS onto an NVMe SSD using a compatible Ubuntu host PC, followed by hardware configuration and interface usage. Detailed hardware specifications, mechanical drawings, and technical resources are provided for developers, along with community and technical support channels for troubleshooting and discussion.
+description: "Get started with reComputer Robotics J401: specs, Orin Nano and NX modules, JetPack 7.2 flashing, hardware overview and first boot checks."
 title: Getting Started with reComputer Robotics
 tags:
   - J401-Robotics carrier board
@@ -22,7 +22,7 @@ The reComputer Robotics J401 is a compact, high-performance edge AI carrier boar
 </div>
 
 <div align="center">
-  <img width ="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg"/>  
+  <img alt="reComputer Robotics J401 enclosure with the NVIDIA Jetson Orin Nano / Orin NX badge, front ports visible" width ="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg"/>  
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -163,15 +163,15 @@ The reComputer Robotics J401 is a compact, high-performance edge AI carrier boar
 ## Hardware Overview
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
+  <img alt="Front panel of the reComputer Robotics J401 with CAN0 and CAN1 called out" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-1.jpeg"/>  
+  <img alt="Rear view of the J401 carrier board labelled with the Orin module, 2x XT30, CAN, UART, IIC headers and the 5V/12V PWM fan connectors" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-1.jpeg"/>  
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
+  <img alt="Top view of the J401 carrier board labelled with the USB, RTC, M.2 Key B/E/M slots, RJ45, camera expansion header and DIP switch" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
 </div>
 
 ## Flash JetPack OS
@@ -321,7 +321,7 @@ Before we can move on to the installation steps, we need to make sure that the b
 **Step 1.** Switch the switch to the RESET mode.
 
 <div align="center">
-  <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
+  <img alt="J401 carrier board with the switch set to RESET mode and the USB Type-C flash port marked" width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
 </div>
 
 **Step 2.** Power up the carrier board by connecting the power cable.
@@ -338,7 +338,7 @@ Before we can move on to the installation steps, we need to make sure that the b
 The below image is for Orin Nano 8GB
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
+  <img alt="lsusb output with the NVIDIA Corp. APX device highlighted, confirming the board is in recovery mode" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
 </div>
 
 </details>
@@ -363,7 +363,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 You will see the following output if the flashing process is successful
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+<div align="center"><img alt="Terminal log of the flash script ending with the message that flashing completed" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
 The flash command may run for 2-10 minutes.
@@ -372,7 +372,7 @@ The flash command may run for 2-10 minutes.
 **Step 3:** Connect the Robotics J401 to a display use the PD to HDMI adapter to connect to a display that supports HDMI input, or directly connect to a display that supports PD input using the PD cable, and finish the initial configuration setup:
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
+  <img alt="JetPack 6 first-boot configuration wizard on a display connected over HDMI" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
@@ -384,6 +384,31 @@ Please complete the **System Configuration** according to your needs.
 :::info
 If you want to learn more about the detailed specifications and usage of the hardware interface, please refer to [this wiki](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage).
 :::
+
+## FAQ
+
+**What ships on the device out of the box?**
+JetPack 6.2 with the Seeed Linux BSP is pre-installed, so the unit boots to the Ubuntu desktop without flashing. JetPack 7.2 is supported but has to be flashed from a host PC.
+
+**Which module variants can I order?**
+Orin Nano 4GB, Orin Nano 8GB, Orin NX 8GB and Orin NX 16GB. Units built with a GMSL camera expansion board use a separate JetPack 6.2 image that carries the GMSL driver.
+
+**Which host Ubuntu should I use to flash JetPack 7.2?**
+Ubuntu 20.04, 22.04 and 24.04 all work for flashing and target-side components. Ubuntu 24.04 is limited to those two steps — use 20.04 or 22.04 if the host also needs development components.
+
+**Do I need a separate recovery step before flashing?**
+Yes. Move the switch to RESET mode, connect the USB Type-C data cable to the host, and confirm the module appears in `lsusb` before running the flash script.
+
+**Where are the interface pinouts and test commands?**
+They live on the hardware interfaces page, linked under Related Resources. It covers M.2 Key M/B/E, CAN and CAN FD, UART, I2C, USB, Ethernet and the 40-pin header.
+
+## Related Resources
+
+- [reComputer Robotics J401 Hardware Interfaces Usage](/recomputer_robotics_j401_getting_started/)
+- [Run Multiple GMSL Cameras on Jetson with the GMSL Expansion Board](/multiple_cameras_with_jetson/)
+- [Implement EtherCAT Communication on reComputer](/recomputer_ethercat_communication/)
+- [reComputer Robotics J4012 product page](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [wiki-documents repository and discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## Resources
 

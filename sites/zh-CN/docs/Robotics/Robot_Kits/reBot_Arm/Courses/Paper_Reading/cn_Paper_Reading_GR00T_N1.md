@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 NVIDIA GR00T N1：论文精读 GR00T N1 双系统架构、数据金字塔、流匹配动作分块与机器人适配。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 NVIDIA GR00T N1
+description: "精读 GR00T N1 双系统架构、数据金字塔、流匹配动作分块与机器人适配。"
+title: "GR00T N1：双系统架构如何支持通用人形机器人控制"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_gr00t_n1/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-gr00t_n1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-gr00t_n1-title">如何在 reBot Arm 与 SO-ARM101 上运行 NVIDIA GR00T N1</h1>
+  <h1 id="paper-reading-gr00t_n1-title">GR00T N1：双系统架构如何支持通用人形机器人控制</h1>
   <p className="paper-reading-lead">GR00T N1: An Open Foundation Model for Generalist Humanoid Robots</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>人形机器人</li>
@@ -53,6 +53,22 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/groot" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot GR00T 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+本文精读 N1 论文；下列命令对应 N1.7，不能用于原版 N1 或 N1.5 检查点。
+
+- `--policy.type=groot --policy.base_model_path=nvidia/GR00T-N1.7-3B`：选择当前 LeRobot 支持的 N1.7 基座。
+- `--policy.embodiment_tag=new_embodiment`：官方 SO-101 示例使用的新本体标签；其他平台需按对应配置选择。
+- `--policy.chunk_size=16 --policy.n_action_steps=16`：分别设置预测动作块长度和再次预测前执行的步数。
+
+</aside>
 
 ## 预备知识
 

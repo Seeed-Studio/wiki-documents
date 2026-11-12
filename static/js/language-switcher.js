@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-03 17:28:55 (北京时间)
-// 多语言页面: 2635 个
+// 生成时间: 2026-11-12 11:18:40 (北京时间)
+// 多语言页面: 2652 个
 
 (function() {
   'use strict';
@@ -347,6 +347,13 @@
     "pt"
   ],
   "/sensecraft_hmi_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft_robotics/applications/so-arm-pi05": [
     "cn",
     "en",
     "es",
@@ -976,6 +983,13 @@
     "pt"
   ],
   "/jetson/accelerate_llm_inference_mtp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/local_decision_model_laya": [
     "cn",
     "en",
     "es",
@@ -5567,6 +5581,13 @@
     "ja",
     "pt"
   ],
+  "/get_started_with_ripple_l2_pro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/l2_mui": [
     "cn",
     "en",
@@ -7030,6 +7051,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_dm05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_eo1": [
     "cn",
     "en",
@@ -7051,7 +7079,28 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_gr00t_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_gr00t_n1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_va": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_vla2": [
     "cn",
     "en",
     "es",
@@ -7094,6 +7143,13 @@
     "pt"
   ],
   "/robotics/hands_on_so101_algorithm_switching": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_vla_jepa": [
     "cn",
     "en",
     "es",
@@ -12761,6 +12817,62 @@
     "ja",
     "pt"
   ],
+  "/respeaker_44mm_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_i2s_test": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_led_effects": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_udp_streaming": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_volume_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_clip_basic_sdk_guide": [
     "cn",
     "en",
@@ -13175,6 +13287,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_muse_gadget": [
     "cn",
     "en",
     "es",

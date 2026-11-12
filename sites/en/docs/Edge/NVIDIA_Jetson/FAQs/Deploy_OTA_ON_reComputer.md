@@ -1,5 +1,5 @@
 ---
-description: This guide walks through creating an end-to-end OTA package to upgrade a reComputer mini J4012 from JetPack 5.1.3 to JetPack 6.2, including BSP preparation, package generation, and on-device deployment.
+description: "Push an OTA update to an Orin reComputer over the network: build the package on a host, then move from JetPack 5.1.3 to 6.2 without USB."
 title: Deploy OTA on reComputer
 keywords:
   - jetson
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/deploy_ota_on_recomputer/
 ## Introduction
 
 NVIDIA Jetson Over-the-Air (OTA) updates allow developers to upgrade edge devices from an older JetPack version to a newer release remotely via a network connection, eliminating the need for a host PC or physical USB re-flashing. 
-This wiki will demonstrate how to perform OTA (Over-the-Air) updates on reComputer.
+The flow below moves a reComputer mini J4012 from JetPack 5.1.3 to JetPack 6.2 over the network: build the OTA package on an Ubuntu host, hand it to the device, then let the on-device updater swap the rootfs. No USB cable and no recovery mode.
 
 :::note
 Demonstration platform: reComputer mini J4012 with JetPack 5.1.3 → JetPack 6.2 OTA. Other Orin-based reComputers can follow the same logic, but adapt the `<target_board>` name that matches your carrier board.
@@ -157,7 +157,7 @@ vim ota_backup_files_list.txt
 :::note
 List out the files or folders that you want to keep.
 Use absolute path!
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="Header of nv_ota_preserve_data.sh showing the absolute-path example /home/seed/file_backup that is kept during OTA" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/backup_list.png"/>
 </div>
 :::
@@ -172,23 +172,23 @@ cd Linux_for_Tegra/tools/ota_tools/version_upgrade
 #Specify the directory of the OTA file
 sudo ./nv_ota_start.sh ~/ota_ws/ota_payload_package.tar.gz
 ```
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="ota_update_slot reporting the MTS partitions updated in the recovery kernel and the boot files staged" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_sh.png"/>
 </div>
 
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="nv_ota_start.sh finishing and reporting the payload applied" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_sh_finish.png"/>
 </div>
 
 After the script is executed, you can restart Jetson to initiate the OTA process.
 If your device is connected to a monitor, when you restart, you will see that the monitor will display the Nvidia logo and then enter kernel overlay. The screen will remain black (a normal phenomenon) for a while, and then it will enter the OTA process.
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="Boot screen during the OTA with the NVIDIA logo and the package upgrade progress overlaid" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_process.jpg"/>
 </div>
 
 After the entire process is completed, you need to enter the system to configure the username and password.
 
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="First boot after the OTA at the System Configuration page, accepting the Tegra Linux license" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/update_finish.jpg"/>
 </div>
 **Step 6.** Post-upgrade validation
@@ -200,7 +200,7 @@ nvbootctrl -t
 sudo nvme list
 cat /etc/nv_tegra_release
 ```
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="nvbootctrl, nvme list and /etc/nv_tegra_release confirming JetPack 6.2 after OTA" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_sucess.png"/>
 </div>
 Ensure the reported release matches `R36 (release), REVISION: 4.3`, and confirm that your applications start as expected.
@@ -342,7 +342,7 @@ The script will prompt for the following information:
 
 If everything is configured correctly, the tool ends with:
 
-<div align="center"><img width ="1000" 
+<div align="center"><img alt="OTASet tool finishing with SUCCESS and the generated ota_payload_package.tar.gz path" width ="1000" 
     src="https://files.seeedstudio.com/wiki/reComputer/OTA/ota_pkg_generate.png"/>
 </div>
 
@@ -355,6 +355,12 @@ Refer back to the [on-device OTA procedure](#on-device-ota-procedure) for the de
 - [Create Backup and Restore on reComputer](https://wiki.seeedstudio.com/create_backup_and_restore_on_recomputer/)
 - [Seeed Jetson Serials Catalog](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Seeed-Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra/tree/r36.4.3)
+
+## Related Resources
+
+- [Create a backup and restore on reComputer](/create_backup_and_restore_on_recomputer/)
+- [Flash JetPack onto reComputer J4012](/reComputer_J4012_Flash_Jetpack/)
+- [reComputer J4012 product page](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)
 
 ## Tech Support & Product Discussion
 

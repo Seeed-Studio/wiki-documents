@@ -1,15 +1,15 @@
 ---
-description: 本指南展示了如何将 Orbbec Gemini 2 深度相机与基于 Jetson 的 reComputer（JetPack 5.1.3）配对，以执行实时目标检测和三维距离测量。它详细介绍了安装 Gemini 2 Python SDK、使用 pybind11 构建它，以及通过 OpenCV 测试脚本验证相机输出。接下来，它详细说明了将 YOLOv11n 模型转换为 TensorRT 引擎以在 Jetson 上进行高速推理，然后解释了如何检索相机内参并将深度像素投影到三维坐标中，以便计算检测到的目标之间的欧几里得距离。示例脚本将 YOLOv11 检测与深度数据相结合，显示测量的距离（通常精确到 ±1 cm），文章最后提供了一些技巧——深度图滤波、目标居中和帧平均——以减轻结构光深度在边缘、倾斜或反射表面以及挑战性照明条件下的噪声。
-title: 在 Jetson Orin 上使用 YOLOv11 与深度相机进行距离测量
+description: "在 JetPack 5.1.3 上将 Orbbec Gemini 2 与 reComputer 配对：SDK 构建、TensorRT YOLO11 检测以及像素到距离映射。"
+title: 在 Jetson Orin 上使用深度相机的 YOLOv11 进行距离测量
 keywords:
   - reComputer J4012
   - reComputer
   - Orbbec Gemini 2
-  - Depth Camera
+  - 深度相机
   - YOLOv11
   - YOLO11
-  - Distance Measurement
-  - Computer Vision
+  - 距离测量
+  - 计算机视觉
   - Jetson
 image: https://files.seeedstudio.com/wiki/Yolo11/connection.webp
 slug: /yolov11_with_depth_camera
@@ -23,24 +23,24 @@ url: https://wiki.seeedstudio.com/cn/yolov11_with_depth_camera/
 ---
 
 <div style={{ textAlign: "justify" }}>
-本 wiki 演示了如何将 Orbbec Gemini 2 深度相机与 reComputer J4012（配备 NVIDIA® Jetson™ Orin™ NX 16GB 模块）结合使用，通过 YOLOv11 目标检测进行视觉目标距离测量。
+在一台 reComputer J4012（Jetson Orin NX 16GB）上接入 Orbbec Gemini 2，可以将 YOLOv11 的检测结果转换为以米为单位的距离：深度帧提供距离，检测结果提供像素位置。本教程基于 JetPack 5.1.3，最终实现一个实时窗口，显示每个被检测物体距离相机有多远。
 </div>
 
-## 前提条件
+## 前置准备
 
-- [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) 或 reCompuer 系列的其他产品（预装 JetPack 5.1.3）
+- [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) 或其他 reComputer 系列产品（预装 JetPack 5.1.3）
 - Orbbec Gemini 2 深度相机
 - USB Type-C 数据传输线（连接相机）
 
 ## 硬件连接
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/connection.jpg"/>
+  <img alt="通过 USB Type-C 数据线将 Orbbec Gemini 2 连接到 reComputer" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/connection.jpg"/>
 </div>
 
 ## 安装 Gemini 2 Python SDK
 
-**步骤 1.** 克隆 SDK 并安装依赖项：
+**步骤 1.** 克隆 SDK 并安装依赖：
 
 ```bash
 git clone https://github.com/orbbec/pyorbbecsdk.git
@@ -48,7 +48,7 @@ sudo apt-get install python3-dev python3-venv python3-pip python3-opencv camke g
 pip install pybind11
 ```
 
-**步骤 2.** 安装构建项目所需的必要包：
+**步骤 2.** 安装构建项目所需的软件包：
 
 ```bash
 cd pyorbbecsdk
@@ -72,7 +72,7 @@ make install
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/make_install.png"/>
+  <img alt="Orbbec Gemini 2 Python SDK 构建完成时的 make install 输出" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/make_install.png"/>
 </div>
 
 **步骤 4.** 安装 python wheel：
@@ -84,7 +84,7 @@ python setup.py bdist_wheel
 pip install dist/*.whl
 ```
 
-**步骤 5.** (可选) 为您的IDE生成存根以获得更好的IntelliSense支持：
+**步骤 5.**（可选）为 IDE 生成 stubs，以获得更好的 IntelliSense 支持：
 
 ```bash
 source env.sh
@@ -93,12 +93,12 @@ pybind11-stubgen pyorbbecsdk
 ```
 
 :::info
-更多详细信息，请参考[这里](https://orbbec.github.io/pyorbbecsdk/source/2_installation/build_the_package.html#install-dependencies-ubuntu)
+更多详情请参考[这里](https://orbbec.github.io/pyorbbecsdk/source/2_installation/build_the_package.html#install-dependencies-ubuntu)
 :::
 
 ## 测试深度相机
 
-通过以下示例，我们将向您展示如何结合使用 Orbbec Gemini 2 深度相机的 Python API 和 OpenCV 进行开发。同时，这也可以测试您的相机开发环境是否正常运行。
+下面的示例通过 Python API 和 OpenCV 驱动 Gemini 2：获取对齐的彩色和深度图像，然后将一对像素转换为真实的三维距离。同时，它也可以用来测试你的相机开发环境是否正常工作。
 
 <details>
 <summary> test.py </summary>
@@ -177,17 +177,17 @@ finally:
 </details>
 
 <div style={{ textAlign: "justify" }}>
-如果您看到一个窗口，左侧显示RGB图像，右侧显示深度图像，说明您的相机工作正常。
+如果你看到一个窗口，左侧是 RGB 图像，右侧是深度图像，则说明你的相机工作正常。
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/depth_camera.gif"/>
+  <img alt="Gemini 2 测试窗口，左侧为 RGB 图像，右侧为深度图像" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/depth_camera.gif"/>
 </div>
 
 ## 使用 TensorRT 部署 YOLOv11
 
 <div style={{ textAlign: "justify" }}>
-YOLOv11 提供高性能的实时目标检测。以下步骤展示了如何使用 TensorRT 部署 YOLOv11，以在 Jetson 平台上实现快速推理。
+YOLOv11 提供高性能的实时目标检测。下面的步骤展示如何使用 TensorRT 在 Jetson 平台上部署 YOLOv11，以实现快速推理。
 </div>
 
 **步骤 1.** 克隆 YOLOv11 TensorRT 仓库：
@@ -202,6 +202,7 @@ cd tensorrtx/yolo11
 ```bash
 wget -O yolo11n.pt https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt
 ```
+
 **步骤 3.** 生成 .wts 文件：
 
 ```bash
@@ -209,7 +210,7 @@ python gen_wts.py -w yolo11n.pt -o yolo11n.wts -t detect
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/wts.png"/>
+  <img alt="gen_wts.py 从 yolo11n.pt 检查点生成 yolo11n.wts 的输出" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/wts.png"/>
 </div>
 
 **步骤 4.** 构建项目：
@@ -222,7 +223,7 @@ make -j4
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/yolo_make_install.png"/>
+  <img alt="在 Jetson 上使用 cmake 和 make 构建 TensorRT YOLOv11 项目" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/yolo_make_install.png"/>
 </div>
 
 **步骤 5.** 生成 TensorRT 引擎：
@@ -232,41 +233,41 @@ make -j4
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/g_engine.png"/>
+  <img alt="yolo11_det 从 .wts 文件序列化生成 yolo11n.engine" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/g_engine.png"/>
 </div>
 
-如果成功，您将在构建目录中找到 `yolo11n.engine` 文件。
+如果成功，你会在 build 目录中找到 `yolo11n.engine` 文件。
 
-**步骤 6.** 安装 pycuda 用于 Python API 推理：
+**步骤 6.** 安装 pycuda 以进行 Python API 推理：
 
 ```bash
 pip install pycuda
 ```
 
 :::info
-此仓库中 yolo11 的部署仅支持 TensorRT-8.x（适用于 Jetpack 6 或更高版本的 Jetson 平台，需要大量代码修改！）
+本仓库中 yolo11 的部署仅支持 TensorRT-8.x（对于搭载 Jetpack 6 或更高版本的 Jetson 平台，需要进行大量代码修改！）
 :::
 
 ## 距离计算
 
-### 前置知识
+### 相关基础知识
 
 <div style={{ textAlign: "justify" }}>
-来自相机的深度值表示 Z 轴距离（从相机向前），而不是实际的几何距离。
+相机输出的深度值表示的是 Z 轴距离（从相机向前），而不是实际的几何距离。
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/z.jpg"/>
+  <img alt="相机坐标系中 Z 轴深度与两个像素之间真实三维距离的示意图" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/z.jpg"/>
 </div>
 
-要计算两点之间的真实 3D 欧几里得距离，您需要：
+要计算两个点之间真实的三维欧氏距离，你需要：
 
 - 目标的像素坐标 (u, v)
 
-- (u, v) 处的深度值 d
+- 像素 (u, v) 处的深度值 d
 
-- 深度相机内参：fx, fy, cx, cy
+- 深度相机的内参：fx、fy、cx、cy
 
-相机坐标系中某一点的三维坐标可以使用以下公式计算：
+相机坐标系中某一点的三维坐标可以通过以下公式计算：
 </div>
 
 ```bash
@@ -275,13 +276,13 @@ X = (u - cx) * Z / fx
 Y = (v - cy) * Z / fy
 ```
 
-空间中两点((X1,Y1,Z1) 和 (X2,Y2,Z2))之间的欧几里得距离 `D` 可以使用以下公式计算：
+空间中两点（(X1,Y1,Z1) 和 (X2,Y2,Z2)）之间的欧氏距离 `D` 可以通过以下公式计算：
 
 ```
 D = sqrt((X1-X2)^2 + (Y1-Y2)^2 + (Z1-Z2)^2)
 ```
 
-**Get camera parameters example:**
+**获取相机参数示例：**
 
 <details>
 <summary> get_camera_parameters.py </summary>
@@ -308,7 +309,7 @@ print("color_distortion  {}".format(color_distortion))
 </details>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/in.png"/>
+  <img alt="Gemini 2 SDK 打印出的深度和彩色相机内参，其中 fx=616.707275，畸变系数被高亮显示" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/in.png"/>
 </div>
 
 获取深度相机的内参：
@@ -320,10 +321,10 @@ cx = 648.300171
 cy = 404.478149
 ```
 
-### 实时物体检测和距离测量
+### 实时目标检测与距离测量
 
 <div style={{ textAlign: "justify" }}>
-以下脚本演示了如何使用 YOLOv11 与 Orbbec Gemini 2 深度相机来检测物体（例如，杯子和鼠标）并实时测量它们之间的 3D 距离：
+下面的脚本演示如何将 YOLOv11 与 Orbbec Gemini 2 深度相机结合使用，在实时检测物体（例如杯子和鼠标）的同时，测量它们之间的三维距离：
 </div>
 
 <details>
@@ -596,7 +597,7 @@ class YoLo11TRT(object):
                         cv2.LINE_AA,
                     )
         # print("infer time:", end - start)
-    
+
         return batch_image_raw,depth_img,end - start
 
     def destroy(self):
@@ -906,18 +907,18 @@ if __name__ == "__main__":
             depth_frame = frames.get_depth_frame()
             if color_frame is None or depth_frame is None:
                 continue
-           
+
             color_image = simple_frame_to_bgr(color_frame)
-   
+
 
             start_time = time.time()  # Record the start time of each frame
-            
+
             # Convert depth frame to numpy array
             height = depth_frame.get_height()
             width = depth_frame.get_width()
             depth_data = np.frombuffer(depth_frame.get_data(), dtype=np.uint16).reshape((height, width))
             depth_data = cv2.GaussianBlur(depth_data, (5, 5), 0)
-           
+
             min_depth = 150
             max_depth = 2000
 
@@ -953,7 +954,7 @@ if __name__ == "__main__":
                 fps = frame_count / (curr_time - prev_time)
                 prev_time = curr_time
                 frame_count = 0
-            
+
             # Horizontal concatenation
             concat_image = cv2.hconcat([show_img, depth_img])
             # Display FPS
@@ -981,7 +982,7 @@ if __name__ == "__main__":
 </details>
 
 <div style={{ textAlign: "justify" }}>
-脚本将实时显示检测结果以及两个指定对象（例如杯子和鼠标）之间的测量距离。窗口左侧显示带有检测框的RGB图像。右侧显示深度图和距离。在视频中，您可以看到测量误差通常在一厘米以内：
+该脚本将实时显示检测结果以及两个指定物体（例如杯子和鼠标）之间的测量距离。窗口左侧显示带有检测框的 RGB 图像，右侧显示深度图和距离。在视频中，你可以看到测量误差通常在一厘米以内：
 </div>
 
 <div class="video-container">
@@ -990,26 +991,51 @@ if __name__ == "__main__":
 
 :::note
 <div style={{ textAlign: "justify" }}>
-由于Orbbec Gemini 2基于结构光/双视图方案，在边缘、倾斜表面和反射物体上，深度数据容易波动，通常有几厘米的误差。当您从不同角度拍摄同一物体时，红外投影的纹理变形会导致匹配失败，最终导致更大的深度偏差。同时，环境光的强度也会影响深度图的质量。根据您的环境，我们提供以下调整建议：
+由于 Orbbec Gemini 2 基于结构光/双目方案，在边缘、倾斜表面以及反光物体上，深度数据容易波动，通常会有几厘米的误差。当你从不同角度拍摄同一物体时，红外投影的纹理会发生形变，导致匹配失败，最终产生更大的深度偏差。同时，环境光强度也会影响深度图的质量。根据你的使用环境，我们提供以下调整建议：
 </div>
 
-- 过滤异常深度图并对深度图进行降噪滤波。
-  
-- 尽量将目标定位在图像中心，以减少图像边缘畸变的影响。
+- 过滤异常深度图，并对深度图进行降噪滤波。
 
-- 执行多个深度图像的平均操作，以减少异常光线的影响（这会降低实时性能）。
+- 尽量将目标放在图像中心位置，以减小图像边缘畸变的影响。
+
+- 对多帧深度图像取平均，以减小异常光照的影响（这会降低实时性）。
 
 :::
 
 ## 资源
 
-- [YOLOv11 TensorRT 实现 (tensorrtx)](https://github.com/wang-xinyu/tensorrtx/tree/master/yolo11)
+- [YOLOv11 TensorRT Implementation (tensorrtx)](https://github.com/wang-xinyu/tensorrtx/tree/master/yolo11)
 - [Orbbec pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
 - [Ultralytics YOLOv11](https://github.com/ultralytics/ultralytics)
 
+## 常见问题
+
+**本教程使用的是哪个 JetPack 版本？**
+在 reComputer J4012 上使用 JetPack 5.1.3。Gemini 2 的 Python wheel 和 TensorRT YOLOv11 构建都是在该设备上编译的，因此如果主机是 JetPack 6.x，就需要重新编译它们，而不是复用这些二进制文件。
+
+**我需要的是深度值还是欧氏距离？**
+两者不同。深度流给出的是从相机平面到物体的 Z 轴距离；脚本会利用内参将其转换为 3D 点，然后测量两个像素之间的距离。只有当你只关心正前方距离时，才使用深度值。
+
+**内参是从哪里来的？**
+来自 Gemini 2 的彩色相机配置文件——`get_intrinsics()` 会返回 fx、fy、cx、cy 以及畸变模型，并在测量开始前打印到终端。不同相机的数值不同，因此请复制你自己设备输出的那一组。
+
+**使用的是哪一版 YOLO11 权重？**
+`yolo11n`——脚本会将 `yolo11n.pt` 转换为 `.wts`，然后构建 `yolo11n.engine`。如果你需要更高精度且可以接受更长的帧时间，可以替换为更大的 checkpoint。
+
+**检测框和测得的距离对不上，哪里出问题了？**
+检查是否使用了框中心作为像素坐标，以及彩色图和深度图是否对齐。过期的标定或被 SDK 丢弃的深度帧都会导致读数偏移，因此在相信距离结果之前，请先打印像素和深度值进行核对。
+
+## 相关资源
+
+- [在 ROS 2 上使用 Orbbec Gemini 2 3D 相机](/cn/orbbec_gemini2/)
+- [在 Jetson AGX Orin 上部署 Depth Anything V3](/cn/deploy_depth_anything_v3_jetson_agx_orin/)
+- [为 reComputer Jetson 安装 PyTorch](/cn/install_torch_on_recomputer/)
+- [Orbbec Gemini 2 产品页面](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- [YOLOv11 仓库](https://github.com/ultralytics/ultralytics)
+
 ## 技术支持与产品讨论
 
-感谢您选择Seeed Studio产品！如需技术支持和产品讨论，请使用以下渠道：
+感谢你选择 Seeed Studio 的产品！如需技术支持和产品讨论，请通过以下渠道联系我们：
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

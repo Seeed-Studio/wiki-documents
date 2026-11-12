@@ -2076,6 +2076,54 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker 44mm',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_44mm/pt_respeaker_44mm_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker 44mm com XIAO',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: 'Reprodução e gravação',
+                  items: [
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_i2s_test',
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_record_playback',
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Transmissão de áudio',
+                  items: [
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_udp_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Controle do dispositivo',
+                  items: [
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_doa_vad',
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_led_effects',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
@@ -2305,6 +2353,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_openclaw',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_muse_gadget',
                 'Sensor/reSpeaker_clip/pt_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/pt_respeaker_clip_python_usage_stt_llm_transcribe_memory',
                 'Sensor/reSpeaker_clip/pt_respeaker_clip_chat_architecture',
@@ -4177,6 +4226,18 @@ const sidebars = {
               type: 'doc',
               id: 'Cloud_Chain/SenseCraft_Robotics/guides/pt_sensecraft_robotics_rebot_arm_102_b601_rs',
               label: 'reBot Arm 102 + B601 RS',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Aplicações',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/applications/pt_sensecraft_robotics_so_arm_pi05',
+              label: 'SO-ARM + π0.5',
             },
           ],
         },

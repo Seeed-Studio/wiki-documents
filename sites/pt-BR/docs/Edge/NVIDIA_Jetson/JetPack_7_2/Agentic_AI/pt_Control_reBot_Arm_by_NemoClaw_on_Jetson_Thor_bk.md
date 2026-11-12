@@ -1,6 +1,6 @@
 ---
-description: Este artigo explica como implantar o framework de agente NemoClaw/OpenClaw da NVIDIA no Nvidia Jetson Thor e integrar o braço robótico reBot Arm B601 para construir um sistema local de automação de IA que combina percepção visual, raciocínio com LLM e execução robótica. Ele fornece um guia completo de configuração que abrange conexões de hardware, instalação do NemoClaw e Ollama, configuração do backend do braço robótico, gerenciamento de permissões, serviços de inicialização automática com systemd e solução de problemas.
-title: Controlar o reBot Arm com NemoClaw no Nvidia Jetson Thor
+description: Este artigo explica como implantar o framework de agentes NemoClaw/OpenClaw da NVIDIA no Nvidia Jetson Thor e integrar o braço robótico reBot Arm B601 para construir um sistema local de automação de IA que combina percepção visual, raciocínio com LLM e execução robótica. Ele fornece um guia completo de configuração cobrindo conexões de hardware, instalação do NemoClaw e do Ollama, configuração do backend do braço robótico, gerenciamento de permissões, serviços de inicialização automática com systemd e solução de problemas.
+title: Controlar o Rebot Arm com NemoClaw no Nvidia Jetson Thor
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk
 sku: 100060965 | 100046482
@@ -12,15 +12,22 @@ url: https://wiki.seeedstudio.com/pt-br/control_rebot_arm_with_nemoclaw_on_nvidi
 updatedAt: '2026-07-31'
 ---
 
-# Controlar o reBot Arm B601 com NemoClaw no Nvidia Jetson Thor
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
+# Controlar reBot Arm B601 com NemoClaw no Nvidia Jetson Thor
 
 :::note Cópia da coleção JetPack 7.2
-Este exemplo de Jetson Thor está incluído como um fluxo de trabalho de IA agentic no ecossistema JetPack 7.2. Confirme a versão instalada do JetPack/L4T e revalide as versões do NemoClaw, Ollama, contêiner e serviços antes da implantação.
+Este exemplo do Jetson Thor está incluído como um fluxo de trabalho de IA agentic no ecossistema JetPack 7.2. Confirme a versão instalada do JetPack/L4T e revalide as versões do NemoClaw, Ollama, contêiner e serviços antes da implantação.
 :::
 
 ## 1. Visão geral do projeto
 
-NVIDIA `NemoClaw` é uma pilha de referência open-source que simplifica a execução de assistentes OpenClaw always-on com mais segurança. Este wiki explica como implantar o NemoClaw no Jetson Thor e conectar os recursos do `reBot Arm B601` ao fluxo de trabalho de agente do NemoClaw, formando um ciclo fechado de: compreensão semântica + detecção visual + execução robótica.
+NVIDIA `NemoClaw` é uma pilha de referência open-source que simplifica a execução de assistentes OpenClaw always-on com mais segurança. Este wiki explica como implantar o NemoClaw no Jetson Thor e conectar os recursos do `reBot Arm B601` ao fluxo de trabalho de agentes do NemoClaw, formando um ciclo fechado de: compreensão semântica + detecção visual + execução robótica.
 
 - `NemoClaw`: Framework local de agente/controle para orquestração de tarefas e roteamento de comandos.
 - `Nemotron3`: Capacidade opcional de modelo para compreensão de intenção e tomada de decisão em alto nível.
@@ -108,7 +115,7 @@ Se tudo estiver conectado corretamente, você deverá ver uma saída semelhante 
 
 ## 4. Configuração do sistema e dependências
 
-### 4.1 Instalar o Ollama
+### 4.1 Instalar Ollama
 
 Se for necessária capacidade local de LLM (opcional):
 
@@ -122,7 +129,7 @@ ollama pull nemotron3:33b
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/download_llm.png" />
 </div>
 
-### 4.2 Instalar o NemoClaw
+### 4.2 Instalar NemoClaw
 
 Instale o NemoClaw no Jetson:
 
@@ -130,7 +137,7 @@ Instale o NemoClaw no Jetson:
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-Em seguida, execute `nemoclaw onboard` para criar um novo aplicativo. Um exemplo de log de onboarding interativo é mostrado em:
+Em seguida, execute `nemoclaw onboard` para criar um novo aplicativo. Um exemplo de log interativo de onboarding é mostrado em:
 
 <details>
 <summary> log do nemoclaw onboard </summary>
@@ -436,7 +443,7 @@ Se o onboarding for bem-sucedido, execute:
 nemoclaw my-assistant connect
 ```
 
-Você deve entrar em um ambiente funcional do aplicativo OpenClaw:
+Você deverá entrar em um ambiente funcional do aplicativo OpenClaw:
 
 <div align="center">
     <img width={900}
@@ -444,11 +451,11 @@ Você deve entrar em um ambiente funcional do aplicativo OpenClaw:
 </div>
 
 :::info
-Mais detalhes sobre o NemoClaw CLI:
+Mais detalhes da CLI do NemoClaw:
 https://docs.nvidia.com/nemoclaw/latest/reference/cli-selection-guide.html
 :::
 
-### 4.3 Instalar o Serviço do Braço Robótico
+### 4.3 Instalar o serviço do braço robótico
 
 Execute no Jetson:
 
@@ -466,9 +473,9 @@ python -c "import torch; print(torch.cuda.is_available())"
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/gpu_torch.png" />
 </div>
 
-## 5. Configuração de Permissão do Dispositivo
+## 5. Configuração de permissão do dispositivo
 
-Existem duas maneiras de configurar a permissão do dispositivo.
+Há duas maneiras de configurar a permissão do dispositivo.
 
 1. Permissão temporária (perdida após reinicialização):
 
@@ -484,9 +491,9 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-## 6. Iniciar Serviços
+## 6. Iniciar serviços
 
-### 6.1 Iniciar Backend do Braço Robótico
+### 6.1 Iniciar backend do braço robótico
 
 ```bash
 cd ~/rebot_arm_service
@@ -497,16 +504,16 @@ uv run rebot-arm-service
 Acessar:
 
 - WebUI: `http://127.0.0.1:8000/webui`
-- Verificação de integridade: `http://127.0.0.1:8000/healthz`
+- Verificação de integridade (Health check): `http://127.0.0.1:8000/healthz`
 
 <div align="center">
     <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png" />
 </div>
 
-### 6.2 Iniciar Listener de Teclado (Opcional)
+### 6.2 Iniciar listener de teclado (opcional)
 
-Para acionar rapidamente detecção/agarre (sem esperar por um longo raciocínio do agente), use o listener da tecla de atalho F1.  
+Para acionar rapidamente detecção/agarre (sem esperar pelo longo raciocínio do agente), use o listener da tecla de atalho F1.  
 Quando F1 é pressionada, ele solicita automaticamente o endpoint da missão de agarre.
 
 Executar diretamente:
@@ -523,7 +530,7 @@ cd ~/rebot_arm_service
 ./scripts/start_space_listener_evdev.sh
 ```
 
-### 6.3 Habilitar Inicialização Automática na Partida (Opcional)
+### 6.3 Habilitar inicialização automática na partida (opcional)
 
 Configure dois serviços systemd:
 
@@ -602,19 +609,19 @@ journalctl -u rebot-arm.service -f
 sudo journalctl -u rebot-f1-listener.service -f
 ```
 
-## 7. Demonstração de Recursos
+## 7. Demonstração de recursos
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/Npw494pmh4A" title="Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## 8. Solução de Problemas
+## 8. Solução de problemas
 
 1. Porta serial ocupada (`Device or resource busy`)  
-Interrompa processos obsoletos e reconecte. Certifique-se de que apenas um processo de controle esteja usando o braço.
+Interrompa processos antigos e reconecte. Certifique-se de que apenas um processo de controle esteja usando o braço.
 
-2. Cena vazia no WebUI  
-Verifique se as requisições de URDF e malha retornam `200`, especialmente `/assets/urdf/...`.
+2. Cena vazia na WebUI  
+Verifique se as requisições de URDF e malhas retornam `200`, especialmente `/assets/urdf/...`.
 
 3. A detecção não responde  
 Verifique se `camera/status` está com `running=true`, depois verifique o endpoint de status da missão.
@@ -623,7 +630,7 @@ Verifique se `camera/status` está com `running=true`, depois verifique o endpoi
 Certifique-se de que `LD_LIBRARY_PATH` inclua os caminhos de `nvpl` e `cuda_v12`.
 
 5. A tecla de atalho F1 não tem efeito  
-Verifique os logs de `rebot-f1-listener.service` e confirme se ele está escutando o dispositivo de teclado correto.
+Verifique os logs de `rebot-f1-listener.service` e confirme se ele está ouvindo o dispositivo de teclado correto.
 
 6. Outras teclas do teclado param de funcionar após iniciar o listener  
 Certifique-se de que o script não use `dev.grab()` (a captura exclusiva do teclado deve ser removida).
@@ -639,7 +646,7 @@ Certifique-se de que a conexão anterior foi totalmente liberada; chame disconne
 - https://docs.openclaw.ai/
 - https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/
 
-## 10. Suporte Técnico & Discussão de Produto
+## 10. Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

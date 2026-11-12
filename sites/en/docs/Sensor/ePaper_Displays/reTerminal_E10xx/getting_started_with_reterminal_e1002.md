@@ -435,10 +435,15 @@ The reTerminal E1002 features an 8-pin expansion header (J2) that provides conne
 
 The 8-pin expansion header (J2) has the following pinout:
 
+:::note
+When viewing the device from the back with the top button facing upward, the expansion header pins are numbered from bottom to top, starting with Pin 1 at the bottom and Pin 8 at the top.
+:::
+
+
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th>Pin (from top to bottom)</th>
+			<th>Pin (from bottom to top)</th>
 			<th>Label</th>
 			<th>ESP32-S3 Pin</th>
 			<th>Function</th>
@@ -462,7 +467,7 @@ The 8-pin expansion header (J2) has the following pinout:
 			<td>3</td>
 			<td>ESP_IO46</td>
 			<td>GPIO46</td>
-			<td>GPIO/ADC</td>
+			<td>GPIO</td>
 			<td>General purpose I/O with analog input capability</td>
 		</tr>
 		<tr>
