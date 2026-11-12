@@ -27,7 +27,7 @@ Connect a LoRa antenna matched to the operating band. Use the specified X2 batte
 
 ## Flash Firmware
 
-If firmware is already installed, continue to [Get Started](#get-started).
+If firmware is already installed, continue to [Get Started](/x2_get_started_for_meshtastic/#get-started).
 
 1. Connect X2 to a computer using a USB data cable.
 2. Open the [Meshtastic Web Flasher](https://flasher.meshtastic.org/) in a browser that supports Web Serial, such as desktop Chrome or Edge.
@@ -35,12 +35,12 @@ If firmware is already installed, continue to [Get Started](#get-started).
 4. Click **Flash** and follow the prompts to enter download mode and select X2's current USB port. Keep USB connected until programming completes.
 
 :::info If X2 is not listed
-X2 was not present in the public Web Flasher's device list when this guide was checked. If you cannot find **Seeed MeshPager X2**, use the X2 factory image and [Manual Firmware Installation](#manual-firmware-installation). Do not select another device model for X2.
+X2 was not present in the public Web Flasher's device list when this guide was checked. If you cannot find **Seeed MeshPager X2**, use the X2 factory image and [Manual Firmware Installation](/x2_get_started_for_meshtastic/#manual-firmware-installation). Do not select another device model for X2.
 :::
 
 To force X2 into firmware flashing mode, **press and hold Power and Return at the same time**, then **plug in the USB cable**. Keep both buttons held for **1 second**, then release them.
 
-To flash a downloaded X2 `.factory.bin`, follow [Manual Firmware Installation with esptool](#manual-firmware-installation).
+To flash a downloaded X2 `.factory.bin`, follow [Manual Firmware Installation with esptool](/x2_get_started_for_meshtastic/#manual-firmware-installation).
 
 :::caution Use X2 firmware only
 Use firmware for **Seeed MeshPager X2** (`seeed_meshpager_x2`) and follow the instructions supplied with the image. Enable full erase only when required, and back up your settings first.
@@ -306,7 +306,7 @@ Transmit power and duty-cycle settings must comply with local regulations. See [
 <span id="microsd-and-offline-maps"></span>
 <span id="wi-fi"></span>
 
-Use MUI to view maps. For your current location, enable GPS and wait for a fix outdoors; see [Configure GPS](#configure-gps).
+Use MUI to view maps. For your current location, enable GPS and wait for a fix outdoors; see [Configure GPS](/x2_get_started_for_meshtastic/#configure-gps).
 
 <Tabs groupId="x2-map-mode">
 <TabItem value="offline" label="Offline Map">
@@ -519,7 +519,7 @@ Use the [Meshtastic Web Client](https://client.meshtastic.org/) to read messages
 <Tabs groupId="x2-web-connection">
 <TabItem value="bluetooth" label="Bluetooth">
 
-1. Enable Bluetooth on X2. In MUI, enter the Bluetooth connection mode described in [Phone Connection](#phone-connection).
+1. Enable Bluetooth on X2. In MUI, enter the Bluetooth connection mode described in [Phone Connection](/x2_get_started_for_meshtastic/#phone-connection).
 2. Disconnect the phone app from X2 so the browser can connect.
 3. Select **Bluetooth** in the Web Client and choose X2 in the browser's device picker. Complete pairing if prompted.
 4. Wait for the node configuration to load, then open a channel or conversation.
@@ -639,7 +639,7 @@ X2 has built-in sensors for environmental readings, compass heading, and motion 
 </TabItem>
 </Tabs>
 
-The screenshots use example nodes and readings. X2's environmental telemetry displays readings supported by its detected sensor and installed firmware. It does not enable compass calibration or transmit raw accelerometer and gyroscope readings. For compass operation, use the **Position** tab under [Other Function](#other-function).
+The screenshots use example nodes and readings. X2's environmental telemetry displays readings supported by its detected sensor and installed firmware. It does not enable compass calibration or transmit raw accelerometer and gyroscope readings. For compass operation, use the **Position** tab under [Other Function](/x2_get_started_for_meshtastic/#other-function).
 
 ### Other Function
 
@@ -686,12 +686,12 @@ Configure the MQTT server and relevant channel uplink/downlink settings in the p
 | Highlight a node and hold Confirm | Open its direct-message conversation. |
 | Select a node's position control | Show its reported position on the map, when position data is available. |
 
-Use [Send and Read Messages](#send-and-read-messages) for the illustrated X2 keyboard workflow.
+Use [Send and Read Messages](/x2_get_started_for_meshtastic/#send-and-read-messages) for the illustrated X2 keyboard workflow.
 
 </TabItem>
 <TabItem value="channel" label="Channel Page">
 
-Select a channel and press Confirm to open its conversation. Hold Confirm on the channel to mute or unmute its notifications. The bell changes between a **white bell** and an **orange crossed-out bell**; see [Mute and Unmute a Channel](#mute-and-unmute-a-channel).
+Select a channel and press Confirm to open its conversation. Hold Confirm on the channel to mute or unmute its notifications. The bell changes between a **white bell** and an **orange crossed-out bell**; see [Mute and Unmute a Channel](/x2_get_started_for_meshtastic/#mute-and-unmute-a-channel).
 
 </TabItem>
 <TabItem value="message" label="Message Page">
@@ -722,7 +722,7 @@ Open **Settings** from the navigation bar, highlight the setting, and press Conf
 | Reboot / Shutdown → Green restart icon | Restart X2. |
 | Reboot / Shutdown → Red power icon | Shut down X2. With USB connected, it may return to the charging screen. |
 
-For reset instructions and screenshots, see [Factory Reset](#factory-reset) and [NodeDB Reset](#nodedb-reset).
+For reset instructions and screenshots, see [Factory Reset](/x2_get_started_for_meshtastic/#factory-reset) and [NodeDB Reset](/x2_get_started_for_meshtastic/#nodedb-reset).
 
 </TabItem>
 <TabItem value="tools" label="Tool">
@@ -737,7 +737,7 @@ Open **Settings & Tools**, then switch to **Tools**. Highlight a tool and press 
 | Statistic | View packet and decoding statistics. |
 | Packet Log | Inspect mesh packet activity. |
 
-A route or signal result requires traffic from the relevant node. Allow time for replies and check [Signal Quality](#signal-quality) when assessing the link.
+A route or signal result requires traffic from the relevant node. Allow time for replies and check [Signal Quality](/x2_get_started_for_meshtastic/#signal-quality) when assessing the link.
 
 </TabItem>
 </Tabs>
@@ -826,7 +826,7 @@ The microphone and speaker provide hardware for future voice-messaging updates. 
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="MUI Settings, Reboot / Shutdown menu, and Bluetooth pairing mode" width={800} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
-On X2, use the direction keys to highlight controls and press **Confirm** to select them. For the X2 button illustrations, see [Phone Connection](#phone-connection).
+On X2, use the direction keys to highlight controls and press **Confirm** to select them. For the X2 button illustrations, see [Phone Connection](/x2_get_started_for_meshtastic/#phone-connection).
 
 - **In Base UI**, enabling Wi-Fi disables Bluetooth. To keep using Wi-Fi, connect the phone to the same network and choose **Network** in the Meshtastic app, using X2's IP address. To pair over BLE instead, disable Wi-Fi and enable **System → Bluetooth Toggle** on X2.
 
@@ -842,7 +842,7 @@ On X2, use the direction keys to highlight controls and press **Confirm** to sel
 <span id="wi-fi-does-not-connect-or-turns-off"></span>
 
 1. Use a **2.4 GHz Wi-Fi** network. X2 does not support 5 GHz Wi-Fi. To test the connection, try a phone hotspot configured for 2.4 GHz.
-2. Check the Wi-Fi name and password, including capitalization, then enable Wi-Fi after saving them. Follow the **Online Map** tab in [Map Usage](#map-usage).
+2. Check the Wi-Fi name and password, including capitalization, then enable Wi-Fi after saving them. Follow the **Online Map** tab in [Map Usage](/x2_get_started_for_meshtastic/#map-usage).
 3. Check the Wi-Fi icon and IP address on the MUI Home page. A grey icon and empty IP field indicate that Wi-Fi is disabled or has not connected. A white icon with an IP address indicates a connection.
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
@@ -862,8 +862,8 @@ Entering Bluetooth connection mode disables Wi-Fi. After returning to MUI, enabl
 
 1. Check the battery charge and USB power connection. If only the screen has gone dark, short-press **Power** to check whether X2 is still running. Screen timeout is different from a shutdown.
 2. If X2 shows only the charging screen, release Power, then hold it for approximately **5 seconds** to start Meshtastic. Avoid interrupting power while settings are being saved or firmware is being written.
-3. If the device remains unresponsive, follow [Forced Restart](#forced-restart). If it repeatedly restarts after that, capture the startup serial log to help identify the cause.
-4. If the problem persists with a stable power supply, perform a clean installation of compatible X2 firmware. Follow [Manual Firmware Installation](#manual-firmware-installation) for the full-erase factory-image procedure.
+3. If the device remains unresponsive, follow [Forced Restart](/x2_get_started_for_meshtastic/#forced-restart). If it repeatedly restarts after that, capture the startup serial log to help identify the cause.
+4. If the problem persists with a stable power supply, perform a clean installation of compatible X2 firmware. Follow [Manual Firmware Installation](/x2_get_started_for_meshtastic/#manual-firmware-installation) for the full-erase factory-image procedure.
 
 :::caution Clean installation
 A full erase removes settings, channels, keys, and saved data. Save anything you need before continuing. After reinstalling, configure the LoRa region and channels again.
@@ -965,9 +965,9 @@ Check both values together with actual message delivery. A single SNR or RSSI re
 
 1. Use a USB **data** cable and check the computer's port list before and after connecting X2. A charging screen alone does not confirm a USB data connection.
 2. Recheck the port after reconnecting X2, changing USB sockets, or entering download mode. On macOS, the `/dev/cu.usbmodem...` suffix can change.
-3. Close other flashers, serial monitors, or browser connections using the port. On Linux, also check [USB access permissions](#linux-usb-access).
+3. Close other flashers, serial monitors, or browser connections using the port. On Linux, also check [USB access permissions](/x2_get_started_for_meshtastic/#linux-usb-access).
 4. If the device is absent from the port list, try another data cable or connect directly to the computer to check the USB connection.
-5. For firmware installation, enter flashing mode as described in [Flash Firmware](#flash-firmware). For the Web Client, run Meshtastic normally.
+5. For firmware installation, enter flashing mode as described in [Flash Firmware](/x2_get_started_for_meshtastic/#flash-firmware). For the Web Client, run Meshtastic normally.
 
 If a flasher reports **No serial data received**, it has not established communication with the bootloader. The message alone does not identify a Flash capacity problem or a defective device.
 
@@ -995,7 +995,7 @@ Log out and back in, then retry. Close other applications using the port. Rechec
 
 ### GNSS Does Not Show a Position
 
-- Enable GNSS using [Configure GPS](#configure-gps).
+- Enable GNSS using [Configure GPS](/x2_get_started_for_meshtastic/#configure-gps).
 - Move outdoors with a clear view of the sky and allow time to acquire a fix. A first fix after a long period of inactivity can take longer than a subsequent fix.
 - Check the satellite and location status on X2 before expecting its position to appear on the map.
 - If the position stays fixed while you move, check the phone app's **Fixed Position** setting and the GNSS update interval. See [Meshtastic Position configuration](https://meshtastic.org/docs/configuration/radio/position/).
@@ -1007,7 +1007,7 @@ Log out and back in, then retry. Close other applications using the port. Rechec
 3. Check that the downloaded tiles cover the location and zoom level being viewed. With only the official starter kit installed, zoom out to level **6 or lower**.
 4. For your current location, wait for a GNSS fix. If the card is not detected, shut down X2 and disconnect USB before reseating it.
 
-See [Map Usage](#map-usage) for preparation steps.
+See [Map Usage](/x2_get_started_for_meshtastic/#map-usage) for preparation steps.
 
 ### Manual Firmware Installation
 
@@ -1074,7 +1074,7 @@ Replace `/dev/ttyACM0` below with the port X2 now uses, then flash:
 ./.venv/bin/python -m esptool --chip esp32s3 --port /dev/ttyACM0 --baud 460800 --before usb-reset write-flash --erase-all 0x0 x2.factory.bin
 ```
 
-If Linux reports a permission error, follow [Linux USB Access](#linux-usb-access).
+If Linux reports a permission error, follow [Linux USB Access](/x2_get_started_for_meshtastic/#linux-usb-access).
 
 </TabItem>
 </Tabs>
@@ -1083,7 +1083,7 @@ Keep USB connected until esptool reports **`Hash of data verified`** and finishe
 
 If esptool reports **No serial data received**, check for another application holding the port, repeat the 1200 bps reset, and select the newly enumerated port. Lowering the transfer speed alone does not put X2 into download mode.
 
-If the software reset is unavailable, use the X2 button procedure described in [Flash Firmware](#flash-firmware), then recheck the port. The required reset behavior can depend on the installed firmware and hardware revision.
+If the software reset is unavailable, use the X2 button procedure described in [Flash Firmware](/x2_get_started_for_meshtastic/#flash-firmware), then recheck the port. The required reset behavior can depend on the installed firmware and hardware revision.
 
 If a connection is established but writing repeatedly fails, retry the write command with `--baud 115200`.
 
