@@ -2082,6 +2082,54 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker 44mm',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_44mm/respeaker_44mm_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker 44mm with XIAO',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_44mm/respeaker_44mm_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: 'Playback & Recording',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_i2s_test',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_record_playback',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Audio Streaming',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_udp_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Device Control',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_doa_vad',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_led_effects',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
@@ -2311,6 +2359,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_muse_gadget',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
                 'Sensor/reSpeaker_clip/respeaker_clip_chat_architecture',
