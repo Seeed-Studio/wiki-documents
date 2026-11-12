@@ -1,5 +1,5 @@
 ---
-description: Introdução ao OpenDisplay 7.3" Color Kit — um display de papel eletrônico colorido Spectra 6 pronto para uso, co-desenvolvido pela Seeed Studio e OpenDisplay
+description: Introdução ao OpenDisplay 7.3" Color Kit — um display e-paper colorido Spectra 6 pronto para uso, co-desenvolvido pela Seeed Studio e OpenDisplay
 title: Introdução ao OpenDisplay 7.3" Color Kit
 sidebar_position: 2
 image: https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/7.3.webp
@@ -25,14 +25,14 @@ updatedAt: '2026-10-22'
 
 ## Introdução
 
-O OpenDisplay 7.3" Color Kit é um display de papel eletrônico pronto para uso, co-desenvolvido pela Seeed Studio e OpenDisplay. Ele vem **totalmente montado** com um painel colorido Spectra 6 de 7,3 polegadas e 800×480, uma placa Seeed [XIAO ePaper Display Board EN04](https://wiki.seeedstudio.com/pt-br/epaper_EN04/) (XIAO nRF52840 Plus), uma bateria de 2000 mAh e um gabinete impresso em 3D — firmware já instalado.
+O OpenDisplay 7.3" Color Kit é um display e-paper pronto para uso, co-desenvolvido pela Seeed Studio e OpenDisplay. Ele vem **totalmente montado** com um painel colorido Spectra 6 de 7,3 polegadas e 800×480, uma placa Seeed [XIAO ePaper Display Board EN04](https://wiki.seeedstudio.com/pt-br/epaper_EN04/) (XIAO nRF52840 Plus), uma bateria de 2000 mAh e um case impresso em 3D — firmware já instalado.
 
 Use-o via **Bluetooth Low Energy** a partir do seu navegador ou do Home Assistant. Não é necessário Wi-Fi. O rádio permanece em modo de escuta de baixo consumo, para que você possa enviar uma nova imagem sempre que o display estiver ligado e ao alcance (sem janela de despertar de deep-sleep). Com aproximadamente uma atualização a cada duas horas, estime cerca de **um ano** entre recargas.
 
 ### O que você precisa
 
 - O kit, ligado e dentro do alcance do Bluetooth
-- Um telefone ou computador com Bluetooth
+- Um celular ou computador com Bluetooth
 - Chrome ou Edge (desktop/Android), ou Bluefy em iPhone/iPad
 
 ## Visão geral
@@ -71,7 +71,7 @@ Use-o via **Bluetooth Low Energy** a partir do seu navegador ou do Home Assistan
     </tr>
     <tr>
       <th>Gabinete</th>
-      <td>Gabinete impresso em 3D incluído</td>
+      <td>Case impresso em 3D incluído</td>
     </tr>
   </tbody>
 </table>
@@ -140,7 +140,7 @@ Escaneie o código QR no display. Ele abre uma página personalizada em [opendis
   </tbody>
 </table>
 
-Na página de destino, escolha **Send an image** (ou abra [opendisplay.org](https://opendisplay.org/firmware/display/index.html)). Clique em **Connect**, selecione seu dispositivo na lista do navegador (o nome começa com **OD** — por exemplo, **ODCA6020**), depois escolha uma foto ou desenhe e toque em **Send to device**.
+Na landing page, escolha **Send an image** (ou abra [opendisplay.org](https://opendisplay.org/firmware/display/index.html)). Clique em **Connect**, selecione seu dispositivo na lista do navegador (o nome começa com **OD** — por exemplo, **ODCA6020**), depois escolha uma foto ou desenhe e toque em **Send to device**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/BLE_Tester.png" style={{width:600, height:'auto'}}/></div>
 
@@ -148,13 +148,13 @@ Na página de destino, escolha **Send an image** (ou abra [opendisplay.org](http
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/BLE_Tester_connected.png" style={{width:600, height:'auto'}}/></div>
 
-**Concluído quando: a imagem aparecer no display de papel eletrônico.**
+**Concluído quando: a imagem aparecer no display e-paper.**
 
 ## Home Assistant (opcional)
 
 Este kit usa **apenas BLE**. O Home Assistant precisa de um caminho Bluetooth funcional:
 
-- **Bluetooth no host do Home Assistant** — adaptador integrado ou dongle USB
+- **Bluetooth no host do Home Assistant** — adaptador embutido ou dongle USB
 - **Proxy Bluetooth ESPHome** — se o display estiver longe do host do HA (deve suportar conexões ativas / conectáveis)
 
 :::note
@@ -175,7 +175,7 @@ A página do dispositivo mostra bateria, botões, status do firmware e conteúdo
 
 ### Ativar criptografia
 
-A criptografia vem **desativada**. Em Toolbox → More options, defina Encryption como **Locked**, depois **Configure over Bluetooth**. Após a reinicialização, a chave aparece em **KEY1:** / **KEY2:** e na página de destino do QR. Desligue e ligue o display novamente para mostrar a chave se você a perder.
+A criptografia vem **desativada**. Em Toolbox → More options, defina Encryption como **Locked**, depois **Configure over Bluetooth**. Após a reinicialização, a chave aparece em **KEY1:** / **KEY2:** e na landing page do QR. Desligue e ligue o display novamente para mostrar a chave se você a perder.
 
 ### Regravar ou recuperar
 
@@ -187,9 +187,9 @@ A criptografia vem **desativada**. Em Toolbox → More options, defina Encryptio
 
 Para projetos Python personalizados, instale com pip install py-opendisplay — [py-opendisplay](https://github.com/OpenDisplay/py-opendisplay)
 
-### Duração da bateria
+### Vida útil da bateria
 
-Com a bateria de 2000 mAh incluída e aproximadamente uma atualização a cada duas horas, estime cerca de **um ano** entre recargas em uso típico. O tempo real de funcionamento depende da frequência de atualização, do tamanho da imagem e da temperatura.
+Com a bateria de 2000 mAh incluída e aproximadamente uma atualização a cada duas horas, estime cerca de **um ano** entre recargas em uso típico. O tempo real de operação depende da frequência de atualização, tamanho da imagem e temperatura.
 
 Modele sua programação em [Battery calculator](https://opendisplay.org/firmware/battery/index.html) (selecione 7.3" Color Kit / nRF52840 / 2000 mAh).
 
@@ -204,13 +204,15 @@ Modele sua programação em [Battery calculator](https://opendisplay.org/firmwar
 - **[GitHub]** [Home Assistant Integration](https://github.com/OpenDisplay/Home_Assistant_Integration)
 - **[Discord]** [OpenDisplay Discord](https://discord.gg/XmTHz8RfJE)
 - **[Wiki]** [Guia detalhado do OpenDisplay](https://wiki.seeedstudio.com/pt-br/EN04_opendisplay/)
+- **[ZIP]** [Arquivos do case impresso em 3D](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/Resources/OpenDisplay_7.3_Color_Kit_3D_Files.zip)
+- **[UF2]** [Firmware de fábrica (7.3" Color Kit)](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/Resources/OpenDisplay_7.3_Color_Kit_Factory_Firmware.uf2)
 
 ## Solução de problemas
 
 **P1: Preciso da tela de boot ou do código QR novamente.**
 
 *   **Desligue e ligue o display**: Desligue, espere 10 segundos e ligue novamente. A tela de boot — com o nome do dispositivo, linhas KEY1:/KEY2: e código QR — só aparece após uma atualização completa de energização.
-*   **Espere a atualização terminar**: Uma atualização de boot em cores Spectra 6 leva cerca de 15–20 segundos. Cintilação e padrões de cores intermediários são normais. Não desligue o display durante a atualização.
+*   **Espere a atualização terminar**: Uma atualização de boot colorida Spectra 6 leva cerca de 15–20 segundos. Cintilação e padrões de cores intermediários são normais. Não desligue o display durante a atualização.
 *   **Escaneie o código QR novamente** ou leia KEY1:/KEY2: diretamente da tela se você precisar da chave de criptografia.
 *   **Não é necessário regravar ou reconfigurar** — a tela de boot sempre reaparece após um ciclo de energia.
 *   **Observação**: O display permite apenas uma conexão Bluetooth ativa por vez. Se outro dispositivo ainda estiver conectado, desconecte-o primeiro.
@@ -219,8 +221,8 @@ Modele sua programação em [Battery calculator](https://opendisplay.org/firmwar
 
 *   **Primeiro, carregue via USB**: Uma bateria muito fraca pode fazer parecer que o dispositivo está morto ou travado. Conecte o kit a uma fonte de alimentação USB, carregue por um tempo e tente novamente.
 *   **Após carregar**: Desligue, espere 10 segundos, ligue e aguarde a tela de boot.
-*   **Confirme se o interruptor de energia está ligado**: Deslize o interruptor firmemente para a posição ON.
-*   **Verifique o conector da bateria**: Abra o gabinete e confirme se o conector JST da bateria está totalmente encaixado. O fio vermelho deve ficar voltado para a marcação "+" e o fio preto para a marcação "−". Um conector invertido pode danificar a placa.
+*   **Confirme se a chave de liga/desliga está ligada**: Deslize a chave firmemente para a posição ON.
+*   **Verifique o conector da bateria**: Abra o case e confirme se o conector JST da bateria está totalmente encaixado. O fio vermelho deve ficar voltado para a marcação "+" e o fio preto para a marcação "−". Um conector invertido pode danificar a placa.
 *   **Certifique-se de que nenhum outro dispositivo ainda esteja mantendo uma conexão BLE aberta** — o display só suporta uma conexão ativa por vez.
 
 **P3: O Home Assistant não descobre o display.**
@@ -231,40 +233,40 @@ Modele sua programação em [Battery calculator](https://opendisplay.org/firmwar
 *   **Ainda não apareceu?** Aguarde um minuto, aproxime o display e verifique em Settings → Devices & Services → Discovered por um nome começando com "OD".
 *   **Adicionar manualmente**: Se o display não for descoberto automaticamente, vá em Settings → Devices & Services, clique em Add Integration, pesquise por "OpenDisplay" e siga o fluxo de configuração.
 
-**Q4: Meu navegador não encontra ou não conecta ao display.**
+**P4: Meu navegador não encontra ou não conecta ao display.**
 
 *   **Use um navegador compatível**: Web Bluetooth funciona no Chrome e Edge (desktop e Android). No iPhone ou iPad, use o navegador Bluefy (App Store id 1492822055). Firefox e Safari (desktop) não suportam Web Bluetooth.
-*   **Ative o Bluetooth**: Certifique-se de que o Bluetooth está ativado no seu telefone ou computador. No Android, ative também a Localização — o Chrome precisa disso para a varredura BLE.
+*   **Ative o Bluetooth**: Certifique-se de que o Bluetooth esteja ativado no seu telefone ou computador. No Android, ative também a Localização — o Chrome precisa disso para a varredura BLE.
 *   **Mantenha o dispositivo próximo ao kit**.
-*   **Desconecte primeiro todos os outros clientes**: O display permite apenas uma conexão BLE ativa. Se o Home Assistant ou outro navegador já estiver conectado, desconecte-o antes de tentar novamente.
+*   **Desconecte todos os outros clientes primeiro**: O display permite apenas uma conexão BLE ativa. Se o Home Assistant ou outro navegador já estiver conectado, desconecte-o antes de tentar novamente.
 *   **Escolha o nome de dispositivo que começa com "OD"** (por exemplo, OD592B4A).
-*   **Se ele não estiver aparecendo**: Pressione um botão no display uma vez ou desligue e ligue o dispositivo (desligado por 10 segundos → ligado) e tente novamente após o término da atualização de boot.
+*   **Se ele não estiver aparecendo**: Pressione um botão no display uma vez ou desligue e ligue o dispositivo (desligado por 10 segundos → ligado) e tente novamente depois que a atualização de boot terminar.
 *   **Se nada responder**: Carregue o kit via USB primeiro.
 
-**Q5: O envio de imagem falha ou expira.**
+**P5: O envio de imagem falha ou expira.**
 
-*   **Confirme que o display está ligado e dentro do alcance**: O kit permanece pronto para BLE sem janela de despertar de deep-sleep, mas precisa estar ligado e dentro do alcance do Bluetooth.
+*   **Confirme que o display está ligado e dentro do alcance**: O kit permanece pronto para BLE sem janela de despertar de deep-sleep, mas ele precisa estar ligado e dentro do alcance do Bluetooth.
 *   **Desconecte todos os outros clientes**: Apenas uma conexão BLE ativa por vez. Reconecte somente a partir do BLE Tester e tente novamente.
 *   **Se a criptografia estiver ativada**: Digite a chave da tela de boot ou da página de destino do QR.
 *   **Tente uma imagem menor**, ou espere a atualização completa terminar antes de enviar a próxima.
 *   **O dispositivo parou de responder no meio da sessão**: Carregue via USB e depois desligue e ligue (desligado por 10 segundos → ligado).
 
-**Q6: A chave de criptografia é rejeitada ou mostra "not set".**
+**P6: A chave de criptografia é rejeitada ou mostra "not set".**
 
 *   **Kits de fábrica vêm com a criptografia desativada**: KEY1: e KEY2: mostram "not set" de fábrica — deixe o campo de chave em branco.
 *   **Ativou a criptografia mas perdeu a chave?** Desligue e ligue o display (desligado por 10 segundos → ligado) — a chave aparece na tela de boot após a reinicialização. Você também pode escanear o código QR; a página de destino mostra a mesma chave.
 *   **Perdeu a chave e não consegue ler a tela**: Abra o Toolbox → defina Encryption como Unlocked → Configure over Bluetooth. Isso remove a criptografia para que você possa configurá-la novamente. Se isso não funcionar, regrave o firmware e reconfigure.
 
-**Q7: A tela parece travada, mostra cores erradas ou fica em branco após um envio.**
+**P7: A tela parece travada, mostra cores erradas ou fica em branco após um envio.**
 
 *   **Espere a atualização terminar**: Não desligue o display no meio da atualização. Uma atualização completa Spectra 6 leva cerca de 15–20 segundos.
-*   **Atenção à renderização de cores**: As imagens são convertidas para seis cores (não RGB completo) — textos e gráficos simples ficam melhores; fotos exibem um padrão granulado. Isso é um comportamento esperado, não um defeito.
+*   **Atenção à renderização de cores**: As imagens são convertidas (dithered) para seis cores (não RGB completo) — textos e gráficos simples ficam melhores; fotos exibem um padrão granulado. Isso é um comportamento esperado, não uma falha.
 *   **Desligue por 10 segundos → ligue** para voltar à tela de boot e então confirme se o BLE responde.
 *   **Verifique se há outros dispositivos conectados**: Se outro dispositivo estiver conectado ao mesmo tempo, desconecte-o e tente novamente com um único cliente.
 *   **Ainda não inicia ou conecta?** Carregue via USB primeiro e depois desligue e ligue novamente.
-*   **Regrave o firmware**: Se o display continuar travado ou em branco após tudo isso, regrave via USB usando o Toolbox (veja "Reflash or recover" na seção Going further).
+*   **Regrave o firmware**: Se o display continuar travado ou em branco após todas as etapas acima, regrave via USB usando o Toolbox (veja "Reflash or recover" na seção Going further).
 
-## Suporte Técnico e Discussão sobre o Produto
+## Suporte Técnico e Discussão de Produto
 
 *Co-desenvolvido pela Seeed Studio e OpenDisplay.*
 
