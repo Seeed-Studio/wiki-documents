@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "recomputer_faq_approved_manifest",
+  "lastVerifiedAt": "2026-11-10",
+  "entries": [
+    {
+      "publicFaqId": "reterminal_default_bridge",
+      "productKey": "reterminal",
+      "productVariants": ["reTerminal"],
+      "primaryDomain": "hardware_interfaces",
+      "secondaryDomains": ["os_firmware"],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-10",
+      "qualityScore": 0,
+      "wikiSlug": "/reterminal_faq",
+      "wikiAnchor": "reterminal-bridge-overlay",
+      "questionEn": "Which device tree overlay enables the reTerminal bridge?",
+      "directAnswerEn": "The reTerminal bridge overlay is enabled with dtoverlay=reTerminal-bridge.",
+      "appliesTo": "reTerminal and reTerminal DM running Raspberry Pi OS",
+      "notes": ["Commenting the line out restores the LED and buzzer behaviour."],
+      "officialReferences": [
+        {
+          "title": "reTerminal Hardware and Interfaces Usage",
+          "url": "https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage/"
+        }
+      ],
+      "skus": ["110070048"],
+      "keywords": ["reTerminal", "dtoverlay", "reTerminal-bridge"]
+    },
+    {
+      "publicFaqId": "r1000_default_credentials",
+      "productKey": "recomputer_r1000",
+      "productVariants": ["reComputer R1000"],
+      "primaryDomain": "os_firmware",
+      "secondaryDomains": ["documentation_usage"],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-10",
+      "qualityScore": 0,
+      "wikiSlug": "/recomputer_r1000_r1100_faq",
+      "wikiAnchor": "r1000-default-credentials",
+      "questionEn": "What are the default username and password of the reComputer R1000?",
+      "directAnswerEn": "The shipped image presets the username recomputer and the password 12345678.",
+      "appliesTo": "reComputer R1000 running the factory image",
+      "officialReferences": [
+        {
+          "title": "reComputer R1000 Getting Started",
+          "url": "https://wiki.seeedstudio.com/recomputer_r/"
+        }
+      ],
+      "skus": ["113991274"],
+      "keywords": ["reComputer R1000", "default password"]
+    }
+  ]
+}
