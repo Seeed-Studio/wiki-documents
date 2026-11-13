@@ -1,5 +1,5 @@
 ---
-description: Controle o anel de 24 x LEDs WS2812 no reSpeaker XVF3800 44mm a partir do XIAO ESP32-S3 Plus via I2C, incluindo alimentação, modo de efeito, brilho, velocidade e cor com verificação de leitura de retorno.
+description: Controle o anel de LED 24 x WS2812 no reSpeaker XVF3800 44mm a partir do XIAO ESP32-S3 Plus via I2C, incluindo alimentação, modo de efeito, brilho, velocidade e cor com verificação de leitura de retorno.
 title: Efeitos de LED para reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
 keywords:
   - reSpeaker 44mm
@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_led_effects/
 ---
 # Efeitos de LED para reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
 
-Os 24 LEDs WS2812 da matriz de 44 mm são acionados pelo XVF3800. Um MCU host pode assumi-los via I2C — alimentar o trilho de LED, escolher um efeito, definir brilho e velocidade e enviar uma cor RGB. Este sketch percorre sete cores a cada dois segundos e lê cada cor de volta para confirmar que o comando foi recebido.
+Os 24 LEDs WS2812 na matriz de 44 mm são acionados pelo XVF3800. Um MCU host pode assumi-los via I2C — alimentar o trilho de LED, escolher um efeito, definir brilho e velocidade e enviar uma cor RGB. Este sketch alterna entre sete cores a cada dois segundos e lê cada cor de volta para confirmar que o comando foi recebido.
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -32,7 +36,7 @@ Os 24 LEDs WS2812 da matriz de 44 mm são acionados pelo XVF3800. Um MCU host po
 
 ## Pré-requisitos
 
-- A matriz deve estar executando o **firmware I2S** — o controle por I2C está disponível neste modo.
+- A matriz deve estar executando o **firmware I2S** — o controle I2C está disponível neste modo.
 - Arduino IDE com o pacote de placas ESP32. A biblioteca **Arduino Audio Tools** não é necessária para este sketch. Consulte [Preparação de software](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_getting_started/#preparação-de-software).
 - Placa selecionada como **XIAO_ESP32S3_Plus**, o número da porta precisa ser selecionado.
 
@@ -59,7 +63,7 @@ Todos os comandos vão para o serviço GPO (`RESID 20`). Escritas usam o formato
 | `LED_EFFECT_RING` | `5` | Animação em anel |
 
 :::note
-O valor de cor é armazenado como `0xRRGGBB` no sketch, mas é transmitido em little-endian, então os bytes do payload são **Azul, Verde, Vermelho, 0x00**.
+O valor da cor é armazenado como `0xRRGGBB` no sketch, mas é transmitido em little-endian, então os bytes do payload são **Azul, Verde, Vermelho, 0x00**.
 :::
 
 ## Como funciona

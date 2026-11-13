@@ -1,5 +1,5 @@
 ---
-description: 将来自 reSpeaker XVF3800 44mm 的 48 kHz 立体声音频录制 5 秒到 XIAO ESP32-S3 Plus 的 PSRAM 中，然后通过同一条 I2S 链路回放。
+description: 将来自 reSpeaker XVF3800 44mm 的 48 kHz 立体声音频录制 5 秒到 XIAO ESP32-S3 Plus 的 PSRAM 中，然后通过同一 I2S 链路回放。
 title: 使用 reSpeaker XVF3800 44mm 和 XIAO ESP32-S3 Plus 进行录音与回放
 keywords:
   - reSpeaker 44mm
@@ -19,9 +19,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_record_playback/
 ---
 # 使用 reSpeaker XVF3800 44mm 和 XIAO ESP32-S3 Plus 进行录音与回放
 
-本示例通过 I2S 从 XVF3800 采集 5 秒立体声音频到 XIAO 的 PSRAM 中，然后通过 I2S 发送路径回放同一缓冲区。这是无需 PC 即可验证完整音频往返链路是否工作的最快方式，也是语音录制应用的良好起点。
+本示例通过 I2S 从 XVF3800 采集 5 秒立体声音频到 XIAO 的 PSRAM 中，然后通过 I2S 发送路径回放同一缓冲区。这是在无需 PC 的情况下验证完整音频往返是否工作的最快方式，也是语音录制应用的良好起点。
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -32,7 +36,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_record_playback/
 ## 前置条件
 
 - 阵列必须运行 **I2S 固件**。参见 [Update Firmware](https://wiki.seeedstudio.com/cn/respeaker_44mm_introduction/#update-firmware)。
-- 已安装带有 ESP32 板卡包和 **Arduino Audio Tools** 库的 Arduino IDE。参见 [Software Preparation](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#software-preparation)。
+- 已安装带有 ESP32 开发板包和 **Arduino Audio Tools** 库的 Arduino IDE。参见 [Software Preparation](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#software-preparation)。
 - 已选择开发板为 **XIAO_ESP32S3_Plus**，并选择好端口号。
 - **已启用 PSRAM**：`Tools > PSRAM > OPI PSRAM`。录音缓冲区无法放入内部 RAM。
 
@@ -46,10 +50,10 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_record_playback/
 ## 工作原理
 
 1. 启动时，示例程序会报告 PSRAM 的总量和空闲量，然后使用 `heap_caps_malloc(..., MALLOC_CAP_SPIRAM)` 分配 `RECORD_BYTES`（5 秒）的空间。
-2. **录音**：I2S 以 `RX_MODE` 重新启动，并以 8 KB 为一块将字节拉入缓冲区，直到缓冲区填满或 1 秒读取超时触发。
+2. **录音**：I2S 以 `RX_MODE` 重新启动，以 8 KB 为一块将字节拉入缓冲区，直到缓冲区填满或 1 秒读取超时触发。
 3. 将字节数修整为整数量的立体声帧，以便回放保持对齐。
-4. **回放**：I2S 以 `TX_MODE` 重新启动，并以 8 KB 为一块写出缓冲区，随后调用 `flush()` 并短暂延时，以便在停止流之前让最后几帧发送完成。
-5. 循环重复，在 1 秒暂停后再次录音。
+4. **回放**：I2S 以 `TX_MODE` 重新启动，以 8 KB 为一块写出缓冲区，随后调用 `flush()` 并短暂延时，以便在停止流之前让最后几帧发送完成。
+5. 循环重复，在 1 秒暂停后再次开始录音。
 
 ## Arduino 示例程序
 
@@ -345,12 +349,12 @@ PSRAM 总量取决于模组。关键在于 `Recording buffer required` 小于 `P
 
 ### `PSRAM allocation failed!`
 
-未启用 `Tools > PSRAM > OPI PSRAM`，或者所选开发板不是 `XIAO_ESP32S3_Plus`。请重新选择开发板，启用 PSRAM，然后重新烧录。
+未启用 `Tools > PSRAM > OPI PSRAM`，或者所选开发板不是 `XIAO_ESP32S3_Plus`。请重新选择开发板，启用 PSRAM，然后重新上传程序。
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

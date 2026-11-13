@@ -36,19 +36,19 @@ import TabItem from '@theme/TabItem';
 
 - MeshCore Open App
 - AI ベースの画像圧縮
-- MeshCore の `GRP_DATA` パケット
+- MeshCore `GRP_DATA` パケット
 
 
-この画像伝送機能は、インターネットや携帯電話ネットワークが信頼できない場所で視覚情報を共有する必要があるユーザーに適しています。
+この画像伝送機能は、信頼できるインターネットや携帯電話ネットワークがない場所で視覚情報を共有する必要があるユーザーに適しています。
 
 - **アウトドア探検家**：ハイカー、クライマー、遠征チームが、登山道の状況を共有したり、遠隔地の風景画像を送信したり、テキストだけでは不十分な場合に視覚情報を提供できます。
-- **緊急・災害対応チーム**：現場の状況を共有し、迅速なビジュアルアップデートを提供し、画像を通じてチームの状況認識を向上させることができます。
+- **緊急・災害対応チーム**：チームは現場の状況を共有し、迅速なビジュアルアップデートを提供し、画像を通じてチームの状況認識を向上させることができます。
 - **オフグリッド通信愛好家**：AI を活用したエッジ通信を探求したい MeshCore やアマチュア無線ユーザーに適しています。
 
 
 ## MeshCore における画像伝送の仕組み
 
-画像は**直接送信されるわけではありません**。送信側ではローカルの AI エンコーダーを使用して、画像を非常に小さなバイナリファイルに変換します。受信側は元のピクセルを復元しません。その代わりに、ローカルの AI デコーダーが圧縮データを用いて、見た目が類似した画像を生成します。
+画像は**直接伝送されるわけではありません**。送信側ではローカルの AI エンコーダを使用して、画像を非常に小さなバイナリファイルに変換します。受信側は元のピクセルを復元しません。その代わりに、ローカルの AI デコーダが圧縮データを用いて、見た目が類似した画像を生成します。
 
 
 ワークフローは次のとおりです：
@@ -74,14 +74,14 @@ Reconstructed Image
 
 1. MeshCore Open App をインストールします。[こちらをクリック](https://discord.com/channels/@me/1547501987703037965/1547520066478936134)して、画像伝送をサポートする APP リリースをインストールしてください。
 2. MeshCore ノードを APP に接続します。[こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#connect-via-app)して、L1 接続ガイドを参照してください。
-3. LoRa の地域設定とネットワーク設定を構成します。
-4. 受信側として利用可能な別の MeshCore ノードがあることを確認します。
+3. LoRa のリージョンとネットワーク設定を構成します。
+4. 受信側として利用できる別の MeshCore ノードがあることを確認します。
 
 一般的な MeshCore のセットアップ手順については、[MeshCore Open Getting Start Guide](https://meshcoreopen.org/docs/getting-started/) を参照してください：
 
 ### モデルのインストール
 
-画像伝送を有効にし、APP の設定で ml モデルファイルをダウンロードします。
+画像伝送を有効にし、APP の設定で ML モデルファイルをダウンロードします。
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Setting.png" style={{width:600, height:'auto'}}/>
@@ -97,17 +97,38 @@ Reconstructed Image
 
 APP は送信前に自動的に画像を処理します。圧縮された画像データは MeshCore ネットワークを通じて送信されます。送信時間は、メッシュホップ数、無線設定、ネットワークトラフィック、信号品質によって異なります。送信されるデータには元の画像ではなく、圧縮表現のみが含まれます。
 
-受信ノードが圧縮データを受信すると、デコーダーが画像再構成を実行します。再構成された画像はチャット画面に表示されます。
+受信ノードが圧縮データを受信すると、デコーダが画像再構成を実行します。再構成された画像はチャット画面に表示されます。
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_Image_Transmission_MeshCore.png" style={{width:600, height:'auto'}}/>
 </div>
 
 ## AI により再構成された画像について
 
-出力画像は、元の画像をピクセル単位で完全にコピーしたものではありません。デコーダーは、送信されていない追加のディテールを生成する場合があります。そのため、この機能は、状況把握、屋外での通信、遠隔監視、視覚情報の共有には適していますが、証拠収集、本人確認、科学的画像解析、正確な画像再現を必要とする用途には適していません。
+出力画像は元の画像をピクセル単位で完全にコピーしたものではありません。デコーダは、送信されていない追加のディテールを生成する場合があります。そのため、この機能はシーン認識、アウトドアでの通信、遠隔監視、視覚情報の共有に適しています。一方で、証拠収集、本人確認、科学的な画像解析、正確な画像再現が求められる用途には適していません。
 
 ## リソース
 
 - [MeshCore Open Documentation](https://meshcoreopen.org/docs/getting-started/)
 - [AEIC-SE Ultra-Low Bitrate Image Codec](https://huggingface.co/zjs81/aeic-se-onnx)
-- [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

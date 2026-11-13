@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introdução ao Meshtastic Network Monitor
 
-O [Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor é uma ferramenta que permite visualizar, gerenciar e monitorar nós em uma rede mesh Meshtastic. Ele fornece informações em tempo real sobre o status, roteamento e comunicação entre dispositivos. O monitor é o analisador Meshtastic que coleta dados por meio de um gateway conectado ou servidor MQTT, visualiza a topologia da rede e exibe informações do nó, como status da bateria, intensidade do sinal e localização GPS. Ele também pode funcionar como um mapa de nós Meshtastic.
+[Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor é uma ferramenta que permite visualizar, gerenciar e monitorar nós em uma rede mesh Meshtastic. Ela fornece informações em tempo real sobre o status, roteamento e comunicação entre dispositivos. O monitor é o analisador Meshtastic que coleta dados por meio de um gateway conectado ou servidor MQTT, visualiza a topologia da rede e exibe informações dos nós, como status da bateria, intensidade do sinal e localização GPS. Ele também pode funcionar como um mapa de nós Meshtastic.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MeshsenseScreenshot.png" style={{width:900, height:'auto'}}/></div>
 
@@ -30,7 +30,7 @@ O [Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor é uma
 
 * Mapa de nós Meshtastic. Rastreamento e visualização de nós externos em áreas remotas.
 * Analisador Meshtastic. Monitoramento do desempenho de comunicação e roteamento em redes mesh.
-* Monitor Meshtastic. Depuração e teste da conectividade de rede para dispositivos Meshtastic.
+* Monitor Meshtatsic. Depuração e teste da conectividade de rede para dispositivos Meshtastic.
 
 **Monitores Meshtastic comuns**
 
@@ -39,10 +39,10 @@ O [Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor é uma
 
 **Como conectar a um monitor Meshtastic**
 
-1. Configure seus nós Meshtastic e certifique-se de que formem uma malha funcional.
+1. Configure seus nós Meshtastic e certifique-se de que eles formem uma malha funcional.
 2. Configure pelo menos um nó como gateway (por exemplo, MQTT Gateway).
 3. Conecte o aplicativo de monitoramento ao gateway ou servidor MQTT.
-4. Verifique se os nós estão visíveis e relatando status na interface do monitor.
+4. Verifique se os nós estão visíveis e relatando o status na interface do monitor.
 
 ## Comece a usar o Meshsense
 
@@ -64,7 +64,7 @@ Baixe e instale o aplicativo **Meshsense** para a sua plataforma: [Meshsense App
 
 #### Configuração do gateway MQTT
 
-Siga o tutorial de configuração oficial para configurar o MQTT: [Wio Trcker L2 MQTT Gateway Setup](https://wiki.seeedstudio.com/pt-br/set_up_mqtt_gateway_l2/)
+Siga o tutorial de configuração oficial para configurar o mqtt: [Wio Trcker L2 MQTT Gateway Setup](https://wiki.seeedstudio.com/pt-br/set_up_mqtt_gateway_l2/)
 
 :::tip
 Para exibir a localização GPS em tempo real, certifique-se de que o GPS esteja ativado no seu nó. E, ao configurar o MQTT, garanta que o envio de localização esteja permitido.
@@ -108,3 +108,25 @@ Também no mapa do site Meshsense, você pode ver sua posição em tempo real.
 
 
 Com essa configuração, você pode gerenciar sua rede Meshtastic privada de forma eficiente e visualizar o comportamento dos nós diretamente no Meshsense.
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

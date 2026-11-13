@@ -1,6 +1,6 @@
 ---
 description: Wio Tracker L2 シリーズ向け SD カードチュートリアル。フォーマット、地図生成、地図インストールを含みます
-title: SD カードの使用
+title: 地図用に SD カードを使用する
 keywords:
   - Meshtastic
   - Wio Tracker L2

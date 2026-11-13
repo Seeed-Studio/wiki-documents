@@ -8,7 +8,7 @@ keywords:
   - XIAO
   - nRF54L15
 last_update:
-  date: 10/28/2026
+  date: 11/13/2026
   author: Jason
 sidebar_position: 0
 createdAt: '2025-07-28'
@@ -186,6 +186,14 @@ export const Highlight = ({children, color}) => (
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
+### Revised XIAO nRF54L15 Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="Revised XIAO nRF54L15 back pinout" style={{width:1000, height:'auto'}}/></div>
+
+*Revised XIAO nRF54L15 boards purchased after August 2026.*
+
+Compared with the previous revision, the **3V3** and **GND** pins have swapped positions with the original **SWCLK2** and **SWDIO2** pins.
+
 
 </TabItem>
 <TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
@@ -197,6 +205,14 @@ export const Highlight = ({children, color}) => (
 ### XIAO nRF54L15 Sense Back
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Revised XIAO nRF54L15 Sense Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="Revised XIAO nRF54L15 Sense back pinout" style={{width:1000, height:'auto'}}/></div>
+
+*Revised XIAO nRF54L15 Sense boards purchased after August 2026.*
+
+Compared with the previous revision, the **3V3** and **GND** pins have swapped positions with the original **SWCLK2** and **SWDIO2** pins.
 
 </TabItem>
 </Tabs>

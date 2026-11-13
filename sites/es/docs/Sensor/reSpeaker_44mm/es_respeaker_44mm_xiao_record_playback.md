@@ -23,6 +23,10 @@ Este ejemplo captura cinco segundos de audio estéreo desde el XVF3800 por I2S h
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
@@ -46,10 +50,10 @@ El sketch ejecuta el XIAO como **esclavo** I2S (`config.is_master = false`) porq
 ## Cómo funciona
 
 1. Al arrancar, el sketch informa de la PSRAM total y libre, luego reserva `RECORD_BYTES` (cinco segundos) con `heap_caps_malloc(..., MALLOC_CAP_SPIRAM)`.
-2. **Grabación**: I2S se reinicia en `RX_MODE` y los bytes se leen en el búfer en bloques de 8 KB hasta que el búfer se llena o se dispara un tiempo de espera de lectura de un segundo.
-3. El recuento de bytes se ajusta a un número entero de tramas estéreo para que la reproducción permanezca alineada.
+2. **Grabación**: I2S se reinicia en `RX_MODE` y los bytes se extraen al búfer en bloques de 8 KB hasta que el búfer se llena o se dispara un tiempo de espera de lectura de un segundo.
+3. El recuento de bytes se ajusta a un número entero de tramas estéreo para que la reproducción se mantenga alineada.
 4. **Reproducción**: I2S se reinicia en `TX_MODE` y el búfer se escribe en bloques de 8 KB, seguido de `flush()` y un breve retardo para que los últimos fotogramas se vacíen antes de detener el flujo.
-5. El bucle se repite, grabando de nuevo después de una pausa de un segundo.
+5. El bucle se repite, grabando de nuevo tras una pausa de un segundo.
 
 ## Sketch de Arduino
 
@@ -337,7 +341,7 @@ Transmitted bytes: 1920000 / 1920000
 ========== TEST COMPLETE ==========
 ```
 
-Los totales de PSRAM dependen del módulo. Lo que importa es que `Recording buffer required` sea menor que `PSRAM free`, que haya una captura completa de `1920000 / 1920000` y un recuento de transmisión coincidente.
+Los totales de PSRAM dependen del módulo. Lo que importa es que `Recording buffer required` sea menor que `PSRAM free`, que haya una captura completa `1920000 / 1920000` y un recuento de transmisión coincidente.
 
 Conecta un altavoz o auriculares a la matriz para escuchar la grabación durante la fase de reproducción.
 
@@ -345,12 +349,12 @@ Conecta un altavoz o auriculares a la matriz para escuchar la grabación durante
 
 ### `PSRAM allocation failed!`
 
-`Tools > PSRAM > OPI PSRAM` no está habilitado o la placa seleccionada no es `XIAO_ESP32S3_Plus`. Vuelve a seleccionar la placa, habilita la PSRAM y vuelve a cargar.
+`Tools > PSRAM > OPI PSRAM` no está habilitado o la placa seleccionada no es `XIAO_ESP32S3_Plus`. Vuelve a seleccionar la placa, habilita PSRAM y vuelve a subir el sketch.
 
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
