@@ -1,6 +1,6 @@
 ---
-description: "How to run WALL-OSS on reBot Arm & SO-ARM101: a paper deep-dive into action-semantic pre-training, continuous-action flow matching, Uni-CoT and embodied question answering and control."
-title: "How to Run WALL-OSS on reBot Arm & SO-ARM101"
+description: "A paper deep-dive into action-semantic pre-training, continuous-action flow matching, Uni-CoT and embodied question answering and control."
+title: "WALL-OSS: How Vision-Language Understanding Connects to Embodied Actions"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_wall_oss/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-wall_oss-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-wall_oss-title">How to Run WALL-OSS on reBot Arm & SO-ARM101</h1>
+  <h1 id="paper-reading-wall_oss-title">WALL-OSS: How Vision-Language Understanding Connects to Embodied Actions</h1>
   <p className="paper-reading-lead">Igniting VLMs toward the Embodied Space</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Action semantics</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/walloss" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot WALL-OSS Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+- `--policy.type=wall_x`: Select wall_x, the LeRobot policy type for WALL-OSS.
+- `--policy.pretrained_name_or_path=x-square-robot/wall-oss-flow`: Load the WALL-OSS continuous-action checkpoint.
+- `--policy.prediction_mode=diffusion --policy.attn_implementation=eager`: Use the continuous-action mode and attention backend from the official training example; diffusion is the implementation’s configuration name.
+
+</aside>
 
 ## Prerequisites: Connecting Goals to Execution
 ### From VLM to VLA

@@ -1,5 +1,5 @@
 ---
-description: This wiki provides comprehensive steps to set up and run PyCuVSLAM on reComputer Jetson Series for GPU-accelerated visual SLAM applications with RGB-D cameras.
+description: "Run PyCuVSLAM visual odometry on reComputer with JetPack 6.2: monocular and RGB-D tracking, dataset setup and camera calibration."
 title: PyCuVSLAM with reComputer
 keywords:
   - PyCuVSLAM
@@ -22,18 +22,18 @@ url: https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/
 ---
 
 <div align="center">
-    <img width={800}
-    src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" />
+    <img alt="PyCuVSLAM demo in RViz: the reconstructed point-cloud map and the parking-lot loop trajectory above, with the live camera view and a second map view below" width={800}
+    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/pycuvslam-cover.gif" />
 </div>
 
 ## Introduction
 
 <div style={{ textAlign: "justify" }}>
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) is NVIDIA's GPU-accelerated visual odometry and SLAM library cuVSLAM's Python wrapper. It supports monocular, stereo, RGB-D, multi-camera, and visual-inertial (IMU) modes, providing a simple Python API that can directly interface with camera streams and output real-time camera poses, map points, and loop closure information. The underlying CUDA optimization enables high-precision, low-latency SLAM inference on both PC and Jetson devices, making it suitable for robotic navigation, drone positioning, and 3D perception applications.This wiki will provide instructions on how to deploy pycuvslam on reComputer.
+[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) is NVIDIA's GPU-accelerated visual odometry and SLAM library cuVSLAM's Python wrapper. It supports monocular, stereo, RGB-D, multi-camera, and visual-inertial (IMU) modes, providing a simple Python API that can directly interface with camera streams and output real-time camera poses, map points, and loop closure information. The underlying CUDA optimization enables high-precision, low-latency SLAM inference on both PC and Jetson devices, making it suitable for robotic navigation, drone positioning, and 3D perception applications.Deploying it on a reComputer means building the library against the JetPack CUDA stack, feeding it camera frames, and reading poses and map points back.
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="reComputer unit badged NVIDIA Jetson Orin Nano / Orin NX, used for the PyCuVSLAM walkthrough" width={700}
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" />
 </div>
 
@@ -135,7 +135,7 @@ The default topics published are:
 - `/camera` - Camera info
 
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list showing /camera_info and /image_raw published by the v4l2_camera node" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
 </div>
 
@@ -157,14 +157,14 @@ ros2 run camera_calibration cameracalibrator \
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator window with the checkerboard views and the CALIBRATE button" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
 </div>
 
 After successful calibration, you will obtain camera parameters in the terminal similar to:
 
 <div align="center">
-    <img width={1000}
+    <img alt="Camera intrinsics and distortion coefficients printed in the terminal after calibration" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
 </div>
 
@@ -839,7 +839,7 @@ slam_optimization:
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz showing the monocular odometry point cloud beside the camera view, with the Speed x 2.5 overlay" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb.gif" />
 </div>
 
@@ -886,7 +886,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 :::note
 You can check whether the camera node can start normally by observing whether the camera data topic is published normally.
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list showing the Orbbec camera colour and depth topics" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
@@ -899,7 +899,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator in fisheye mode on the RGB-D camera, with the CALIBRATE button boxed" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal4.png" />
 </div>
 
@@ -2170,7 +2170,7 @@ depth_to_color_transform:
 </details>
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz showing the RGB-D odometry point cloud with the colour view and a depth view, under the Speed x 2.5 overlay" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgbd.gif" />
 </div>
 
@@ -2179,6 +2179,14 @@ depth_to_color_transform:
 - [PyCuVSLAM GitHub Repository](https://github.com/NVlabs/PyCuVSLAM)
 - [cuVSLAM Documentation](https://docs.nvidia.com/cuda/cuvslam/)
 - [ROS2 Camera Calibration](https://navigation.ros.org/tutorials/docs/camera_calibration.html)
+
+## Related Resources
+
+- [ORB-SLAM3 with Orbbec Gemini2](/orb_slam3_orbbec_gemini2/)
+- [Orbbec Gemini 2 3D camera on ROS 2](/orbbec_gemini2/)
+- [Deploy Depth Anything V3 on Jetson AGX Orin](/deploy_depth_anything_v3_jetson_agx_orin/)
+- [reComputer Robotics J4012 product page](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [PyCuVSLAM repository](https://github.com/NVlabs/PyCuVSLAM)
 
 ## Tech Support & Product Discussion
 

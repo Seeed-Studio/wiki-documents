@@ -30,12 +30,12 @@ import TabItem from '@theme/TabItem';
 
 * Meshtastic ノードマップ。遠隔地の屋外ノードを追跡および可視化します。
 * Meshtastic アナライザー。メッシュネットワーク内の通信性能とルーティングを監視します。
-* Meshtatsic モニター。Meshtastic デバイスのネットワーク接続性のデバッグとテストを行います。
+* Meshtatsic モニター。Meshtastic デバイスのネットワーク接続性のデバッグとテストに使用します。
 
 **一般的な Meshtastic モニター**
 
-* Meshsense: 詳しくは [click here](https://affirmatech.com/meshsense)
-* Meshmonitor: 詳しくは [click here](https://meshmonitor.org/)
+* Meshsense: 詳しく見るには [click here](https://affirmatech.com/meshsense)
+* Meshmonitor: 詳しく見るには [click here](https://meshmonitor.org/) をクリックしてください
 
 **Meshtastic モニターへの接続方法**
 
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 
 #### アプリの準備
 
-ご利用のプラットフォーム向けの **Meshsense** アプリをダウンロードしてインストールします: [Meshsense App Download](https://affirmatech.com/meshsense)
+ご使用のプラットフォーム向けの **Meshsense** アプリをダウンロードしてインストールします: [Meshsense App Download](https://affirmatech.com/meshsense)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPDownload.png" style={{width:900, height:'auto'}}/></div>
 
@@ -67,7 +67,7 @@ import TabItem from '@theme/TabItem';
 公式の設定チュートリアルに従って mqtt をセットアップします: [Wio Trcker L2 MQTT Gateway Setup](https://wiki.seeedstudio.com/ja/set_up_mqtt_gateway_l2/)
 
 :::tip
-リアルタイムの GPS 位置を表示するには、ノードで GPS が有効になっていることを確認してください。また、MQTT を構成する際に、位置情報の送信が許可されていることを確認してください。
+リアルタイムの GPS 位置を表示するには、ノードで GPS が有効になっていることを確認してください。また、MQTT を設定する際に、位置情報の送信が許可されていることを確認してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MapDisplay.png" style={{width:500, height:'auto'}}/></div>
 
@@ -85,7 +85,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/IPInput.png" style={{width:500, height:'auto'}}/></div>
 
-接続されると、Meshtastic ノードが Meshsense に表示されます。
+接続されると、Meshtastic ノードが Meshsense に表示されるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/Connected.png" style={{width:500, height:'auto'}}/></div>
 
@@ -95,16 +95,38 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
-また、スマートフォンのアプリでも設定できます。
+また、スマートフォンの APP から設定することもできます。
 
 * Meshsense アプリで、GPS レポートが有効になっていることを確認します。
-* 接続されると、アプリは各ノードのリアルタイム位置を地図上に表示します。アプリ上でノードの位置を直接確認できます。
+* 接続されると、アプリは各ノードのリアルタイム位置を地図上に表示します。APP 上でノードの位置を直接確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPPPosition.png" style={{width:500, height:'auto'}}/></div>
 
-また、Meshsense のウェブサイト上の地図でも、リアルタイムの位置を確認できます。
+また、Meshsense のウェブサイトの地図上でも、リアルタイムの位置を確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MapDisplay.png" style={{width:500, height:'auto'}}/></div>
 
 
 このセットアップにより、プライベートな Meshtastic ネットワークを効率的に管理し、Meshsense 上でノードの動作を直接可視化できます。
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -1,5 +1,5 @@
 ---
-description: Implementa una demostración de monitorización de visión industrial en NVIDIA Jetson con detección de objetos YOLO y análisis de comportamiento mediante VLM
+description: Implementa una demo de monitorización de visión industrial en NVIDIA Jetson con detección de objetos YOLO y análisis de comportamiento mediante VLM
 title: Monitorización de Visión Industrial en Industrial
 tags:
   - Despliegue de modelo de IA
@@ -13,17 +13,24 @@ last_update:
   date: 07/14/2026
   author: HaoChen
 createdAt: '2026-07-13'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/es/industrial_vision_monitoring_on_industrial_bk/
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
 
 # Monitorización de Visión Industrial en Industrial
 
 ## Introducción
 
-La seguridad industrial y en el lugar de trabajo depende de saber qué está ocurriendo en la planta, en tiempo real, no solo después de un incidente. Las cámaras están en todas partes, pero la mayoría de las configuraciones siguen dependiendo de la revisión manual. La **IA de visión industrial** cierra esa brecha: detecta si hay trabajadores presentes, si llevan el EPP requerido y si aparecen comportamientos inseguros en la escena, y luego genera alertas inmediatamente en el borde.
+La seguridad industrial y en el lugar de trabajo depende de saber qué está ocurriendo en la planta, en tiempo real, no solo después de un incidente. Las cámaras están en todas partes, pero la mayoría de las configuraciones siguen dependiendo de la revisión manual. La **IA de visión industrial** cierra esa brecha: detecta si hay trabajadores presentes, si llevan el EPP obligatorio y si aparecen comportamientos inseguros en la escena, para luego generar alertas inmediatamente en el edge.
 
-Este wiki despliega una **demostración de monitorización de seguridad industrial** de referencia en dispositivos Seeed Industrial Jetson. Una cámara USB transmite al navegador; **YOLO** se encarga de la detección de personas y EPP, y un **VLM** analiza los riesgos de comportamiento. Ambas familias de modelos son intercambiables: el repositorio es un punto de partida, no está bloqueado a un único checkpoint.
+Este wiki despliega una **demo de monitorización de seguridad industrial** de referencia en dispositivos Seeed Industrial Jetson. Una cámara USB transmite al navegador; **YOLO** se encarga de la detección de personas y EPP, y un **VLM** analiza los riesgos de comportamiento. Ambas familias de modelos son intercambiables: el repositorio es un punto de partida, no está bloqueado a un único checkpoint.
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -69,7 +76,7 @@ Verificado en **reComputer Industrial J4012** y **reServer Industrial J4011** co
 | Capa | Función |
 | --- | --- |
 | YOLO | Detección de personas (cajas verdes) y violaciones de EPP como ausencia de casco o chaleco (cajas rojas) |
-| VLM | Alertas de comportamiento a nivel de escena: uso del teléfono, fumar, caídas, fuego/humo y más |
+| VLM | Alertas de comportamiento a nivel de escena: uso de teléfono, fumar, caídas, fuego/humo y más |
 
 Abre `http://<jetson-ip>:8080` en un navegador para ver vídeo WebRTC en vivo, superposiciones de detección y un feed de alertas.
 
@@ -84,7 +91,7 @@ Abre `http://<jetson-ip>:8080` en un navegador para ver vídeo WebRTC en vivo, s
 | **Cámara** | USB UVC / V4L2 (`/dev/video*`) |
 
 :::note
-Probado en **reComputer Industrial J4012** y **reServer Industrial J4011** con **JetPack 7.2**. Los mismos pasos se aplican a otros dispositivos Seeed Industrial Jetson con una versión de JetPack coincidente.
+Probado en **reComputer Industrial J4012** y **reServer Industrial J4011** con **JetPack 7.2**. Los mismos pasos se aplican a otros dispositivos Seeed Industrial Jetson con una versión de JetPack correspondiente.
 :::
 
 ## Instalación
@@ -97,7 +104,7 @@ cd industrial-inspection
 ./run.sh
 ```
 
-`./run.sh` copia `.env` si falta, descarga los modelos, construye la imagen de Docker (la primera ejecución tarda **15–30 min**) e inicia los contenedores.
+`./run.sh` copia `.env` si falta, descarga los modelos, construye la imagen de Docker (la primera ejecución tarda **15–30 min**) y arranca los contenedores.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_run.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -116,19 +123,19 @@ La aplicación se ejecuta completamente en Docker; no se requiere configuración
 | JetPack | PyTorch |
 | --- | --- |
 | **7.2** | Se instala automáticamente durante la construcción de Docker (`TORCH_INDEX_URL=cu130`) |
-| **6.2** | Establece `TORCH_INDEX_URL` en tu índice de CUDA 12.x, o coloca ruedas coincidentes en `wheels/` |
-| **Por debajo de 6.2** | Coloca `torch-*.whl` / `torchvision-*.whl` adaptados a Jetson en `wheels/` antes de `./run.sh` |
+| **6.2** | Establece `TORCH_INDEX_URL` en tu índice de CUDA 12.x, o coloca ruedas compatibles en `wheels/` |
+| **Por debajo de 6.2** | Coloca `torch-*.whl` / `torchvision-*.whl` compatibles con Jetson en `wheels/` antes de `./run.sh` |
 
-Después de cambiar archivos relacionados con JetPack, vuelve a construir en el dispositivo de destino:
+Después de cambiar archivos relacionados con JetPack, vuelve a compilar en el dispositivo de destino:
 
 ```bash
 ./clean.sh && ./run.sh
 ```
 
-Consulta [Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/es/install_torch_on_recomputer/) para obtener fuentes de ruedas.
+Consulta [Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/es/install_torch_on_recomputer/) para fuentes de ruedas.
 
 :::caution
-No copies imágenes de Docker entre dispositivos con diferentes versiones de JetPack o CUDA. Siempre vuelve a construir en el Jetson de destino.
+No copies imágenes de Docker entre dispositivos con diferentes versiones de JetPack o CUDA. Siempre vuelve a compilar en el Jetson de destino.
 :::
 
 ### Ajustes opcionales de `.env`
@@ -143,11 +150,11 @@ CAMERA_PIPELINE=sw    # sw (default) or hw
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_ui_en.png" style={{width:900, height:'auto'}}/></div>
 
-Interfaz inactiva antes de que comience la transmisión de la cámara.
+Interfaz inactiva antes de que comience el flujo de la cámara.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_phone.png" style={{width:900, height:'auto'}}/></div>
 
-Alerta de comportamiento del VLM: uso del teléfono en el área de trabajo.
+Alerta de comportamiento del VLM: uso de teléfono en el área de trabajo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_no_helmet.png" style={{width:900, height:'auto'}}/></div>
 
@@ -177,8 +184,8 @@ Los modelos se descargan automáticamente en la primera ejecución de `./run.sh`
 | Problema | Solución |
 | --- | --- |
 | Permiso denegado de Docker | Añade el usuario al grupo `docker`, o usa `sudo docker` |
-| Primera construcción lenta | Normal (15–30 min). En JetPack 6.2 o anterior, coloca las ruedas en `wheels/` |
-| Incompatibilidad entre PyTorch / CUDA | Vuelve a construir en el Jetson de destino; no reutilices imágenes de otro JetPack |
+| Primera compilación lenta | Normal (15–30 min). En JetPack 6.2 o anterior, coloca ruedas en `wheels/` |
+| Incompatibilidad entre PyTorch / CUDA | Vuelve a compilar en el Jetson de destino; no reutilices imágenes de otro JetPack |
 | Cámara no disponible en el contenedor | Confirma `/dev/video*` en el host; `./run.sh` monta automáticamente las cámaras detectadas |
 | Sin vídeo en el navegador | Comprueba `docker ps` para `industrial-go2rtc`; el puerto `1984` debe ser accesible |
 

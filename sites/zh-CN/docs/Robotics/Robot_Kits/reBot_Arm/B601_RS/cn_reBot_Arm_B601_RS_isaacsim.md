@@ -18,6 +18,9 @@ updatedAt: '2026-09-28'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_isaacsim/
 ---
 import '/src/css/rebot-wiki-style.css';
+import InstallTabs from '@site/src/components/robotics/RebotGraspingTabs';
+import TabItem from '@theme/TabItem';
+import graspingStyles from '@site/src/components/robotics/rebot-grasping-demo.module.css';
 
 
 <div align="center">
@@ -60,9 +63,20 @@ https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/quick-install.html
 https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/download.html#isaac-sim-latest-release
 
 
+点击标签选择一种 Isaac Sim 安装方式，完成后继续下载项目。
+
+<div className={graspingStyles.page}>
+<InstallTabs defaultValue="binary" queryString="isaac-install">
+<TabItem value="binary" label="方式一 · 预编译二进制">
+
 ### 🔧 方式一：预编译二进制安装
 
 > 💡 适合大多数用户，无需编译，开箱即用。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
 #### 下载与解压
 
@@ -76,6 +90,13 @@ cd ~/isaacsim
 ./post_install.sh
 ```
 
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
 #### 设置环境变量
 
 将以下内容添加到 `~/.bashrc` 或 `~/.zshrc`：
@@ -88,6 +109,13 @@ export ISAACSIM_ROOT="${HOME}/isaacsim"
 
 然后执行 `source ~/.bashrc` 使其生效。
 
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
 #### 启动验证
 
 ```Bash
@@ -96,9 +124,22 @@ ${ISAACSIM_PATH}/isaac-sim.sh
 
 首次启动会缓存着色器，可能需要 5-10 分钟，请耐心等待 GUI 出现。
 
+</div>
+</section>
+
+</div>
+
+</TabItem>
+<TabItem value="source" label="方式二 · 从源码构建">
+
 ### ⚙️ 方式二：从源码构建
 
 > 💡 适合需要修改底层代码或调试核心功能的开发者。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
 #### 安装依赖
 
@@ -108,6 +149,13 @@ sudo apt install build-essential git git-lfs gcc-11 g++-11
 ```
 
 确认默认的 `gcc --version` 和 `g++ --version` 均为 11。有关编译器配置和其他前置要求，请参阅 [Isaac Sim 6.0.0 源码构建说明](https://github.com/isaac-sim/IsaacSim/blob/v6.0.0/README.md#prerequisites-and-environment-setup)。构建过程需要联网下载依赖。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
 
 #### 克隆与构建
 
@@ -123,6 +171,13 @@ git lfs pull
 
 构建过程可能需要 30-60 分钟，取决于硬件性能。
 
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
 #### 运行测试
 
 ```Bash
@@ -135,37 +190,72 @@ _build/linux-x86_64/release/isaac-sim.sh
 export ISAACSIM_ROOT="$PWD/_build/linux-x86_64/release"
 ```
 
+</div>
+</section>
+
+</div>
+
+</TabItem>
+</InstallTabs>
+</div>
+
 ## 下载项目
 
-本仓通过 git submodule 引用上游控制库 `reBotArm_control_py`。克隆时需一并拉取子模块：
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+### 克隆项目及子模块
+
+本仓通过 Git 子模块引用上游控制库 `reBotArm_control_py`。在希望存放项目的目录中克隆：
 
 ```bash
 git clone --recurse-submodules https://github.com/Seeed-Projects/reBot-Isaacsim.git
+cd reBot-Isaacsim
 ```
 
-若已经 clone 过且 `third_party/reBotArm_control_py` 为空：
+如果之前已克隆项目但 `third_party/reBotArm_control_py` 为空，在项目根目录运行：
 
 ```bash
 git submodule update --init --recursive
 ```
 
-在仓库根目录安装发送端依赖（`run_sender.sh` 与 `uv run` 都使用根目录的 uv 工作空间）：
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+### 安装发送端依赖
+
+在项目根目录运行；`run_sender.sh` 与 `uv run` 都使用根目录的 uv 工作空间：
 
 ```bash
-cd reBot-Isaacsim
 uv sync
 ```
 
+</div>
+</section>
+
+<section className="rebot-step-item rebot-step-item--optional">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
 ### 将硬件配置切到 RS
 
-本仓 Isaac Sim 资产是 RS（`usd/RS-rebot-dev-arm`）。上游 `rebotarm.yaml` 默认是 DM。`RebotArm()` 和 `load_robot_model()` 都读这一份，所以重力补偿、只读映射、IK、Traj 都要先切到 RS；不切的话电机协议会对不上，Pinocchio 也会用 DM URDF。只改 submodule 工作区，不要提交：
+本仓 Isaac Sim 资产是 RS（`usd/RS-rebot-dev-arm`）。上游 `rebotarm.yaml` 默认是 DM。`RebotArm()` 和 `load_robot_model()` 都读这一份，所以重力补偿、只读映射、IK、Traj 都要先切到 RS；不切的话电机协议会对不上，Pinocchio 也会用 DM URDF。关节测试模式不需要此步骤。只改 submodule 工作区，不要提交：
 
 ```bash
-cd reBotArm_Isaacsim
-python set_hw_rs.py
+python reBotArm_Isaacsim/set_hw_rs.py
 ```
 
-成功时会打印 `.../config/rebotarm.yaml -> rebotarm_rs.yaml`。
+成功时会打印 `.../config/rebotarm.yaml -> rebotarm_rs.yaml`。运行后仍位于项目根目录。
+
+</div>
+</section>
+</div>
 
 ### 功能组件概览
 
@@ -174,6 +264,7 @@ python set_hw_rs.py
 | 组件 | 说明 |
 |------|------|
 | `gravity_joint_sender` | **重力补偿手柄模式**：改装机械臂（拆卸夹爪，加装手柄），手动掰动；补偿由上游 `GravityCompensation` 提供，本仓只镜像关节角到 Isaac Sim |
+| `gravity_gripper_assist` | **保留夹爪的重力补偿与手动助力**：实验性示例，支持模型预检查 |
 | `isaacsim_ik_sender` | **逆运动学（IK）模式**：输入末端位姿，通过 IK 求解器得到关节角，发送到 Isaac Sim |
 | `isaacsim_traj_sender` | **轨迹规划（Traj）模式**：在 IK 基础上增加关节空间轨迹规划（MIN_JERK 时间剖面），实现平滑运动控制 |
 | `isaacsim_joint_test_sender` | **关节测试模式**：无需真实机械臂，发送预设关节角轨迹，用于验证 Isaac Sim 接收端和通讯是否正常 |
@@ -189,6 +280,7 @@ reBot-Isaacsim/
 ├── README_ES.md
 ├── reBotArm_Isaacsim/                       # 主示例目录
 │   ├── gravity_joint_sender.py              # 重力补偿手柄模式（调用上游 GravityCompensation + UDP）
+│   ├── gravity_gripper_assist.py             # 保留夹爪的重力补偿与手动助力
 │   ├── isaacsim_ik_sender.py                # 逆运动学模式（IK 控制）
 │   ├── isaacsim_traj_sender.py              # 轨迹规划模式（IK + 关节空间轨迹）
 │   ├── isaacsim_joint_test_sender.py        # 关节测试模式（预设轨迹，无需硬件）
@@ -209,9 +301,16 @@ reBot-Isaacsim/
 
 ## 启动（双终端模式）
 
-需要两个独立终端。**终端 1 是 Isaac Sim 接收端**，**终端 2 根据不同功能选择对应的发送端**。
+需要两个独立终端。**终端 1 是 Isaac Sim 接收端**，**终端 2 根据不同功能选择对应的发送端**。在每个终端中，先进入上一步克隆的 `reBot-Isaacsim` 项目根目录，再执行下面的命令。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
 ### 终端 1 — 启动 Isaac Sim 接收端（所有模式共用）
+
+<p className="rebot-step-label">第 1 步</p>
 
 ```bash
 cd reBotArm_Isaacsim
@@ -224,9 +323,18 @@ cd reBotArm_Isaacsim
 - 监听 UDP `127.0.0.1:5005`
 - 等待发送端连接
 
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
 ### 终端 2 — 根据功能选择对应的发送端
 
-**启动顺序：先接收端，再发送端。**
+<p className="rebot-step-label">第 2 步</p>
+
+**仿真同步时先启动接收端，再启动发送端。** 下方实验性夹爪助力的模型预检查不需要启动接收端。
 
 :::tip
 
@@ -245,7 +353,18 @@ sudo ip link set can0 up type can bitrate 1000000 restart-ms 100
 ```
 :::
 
-#### ① 关节测试模式（`isaacsim_joint_test_sender`）
+</div>
+</section>
+</div>
+
+选择以下一种模式运行；每项都是独立选项，不需要按顺序全部执行。
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+  <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+#### 关节测试模式（`isaacsim_joint_test_sender`） {#-关节测试模式isaacsim_joint_test_sender}
 
 无需真实硬件，预设轨迹循环发送，用于验证通讯和 Isaac Sim 接收端：
 
@@ -256,7 +375,14 @@ uv run python isaacsim_joint_test_sender.py
 
 测试发送端在几个预设关节姿态之间缓慢插值循环发送，不读硬件 YAML，无需 `set_hw_rs.py` 或 CAN。
 
-#### ② 逆运动学模式（`isaacsim_ik_sender`）
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+#### 逆运动学模式（`isaacsim_ik_sender`） {#-逆运动学模式isaacsim_ik_sender}
 
 输入末端位姿（位置/姿态），IK 求解后驱动 Isaac Sim 仿真机械臂。`load_robot_model()` 读 submodule 的 `rebotarm.yaml`，需先切到 RS：
 
@@ -274,7 +400,14 @@ q j1 j2 j3 j4 j5 j6         # 直接发送关节角 (度)
 gripper <0~1>                # 单独更新夹爪
 ```
 
-#### ③ 轨迹规划模式（`isaacsim_traj_sender`）
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+#### 轨迹规划模式（`isaacsim_traj_sender`） {#-轨迹规划模式isaacsim_traj_sender}
 
 在 IK 基础上增加关节空间轨迹规划（MIN_JERK），实现平滑运动。同样通过 `load_robot_model()` 读那份 YAML，需先切到 RS：
 
@@ -294,7 +427,14 @@ speed <scale>                # 调整轨迹时长比例
 resync                       # 重新从仿真端读取当前关节角
 ```
 
-#### ④ 重力补偿手柄模式（`gravity_joint_sender`）
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+#### 重力补偿手柄模式（`gravity_joint_sender`） {#-重力补偿手柄模式gravity_joint_sender}
 
 适用于改装后的机械臂（拆卸夹爪、加装手柄），手动掰动控制 Isaac Sim 仿真：
 
@@ -311,7 +451,43 @@ python set_hw_rs.py
 - 本脚本只把关节角以 60 Hz 通过 UDP 发给 Isaac Sim
 - 不要同时再运行上游 `example/9`，以免抢 CAN
 
-#### ⑤ Real-to-Sim 映射模式（`joint_reader_sender`）
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
+#### 保留夹爪的重力补偿与手动助力（`gravity_gripper_assist`） {#-保留夹爪的重力补偿与手动助力gravity_gripper_assist}
+
+保留夹爪，手动移动机械臂和夹爪，并同步到 Isaac Sim。
+
+在项目根目录运行模型预检查（不连接 CAN）：
+
+```bash
+cd reBotArm_Isaacsim
+python set_hw_rs.py
+uv run python gravity_gripper_assist.py --check
+```
+
+启动 Isaac Sim 接收端，确认 `can0` 可用、机械臂已固定支撑且没有其他程序占用 CAN。夹爪默认闭合为 0 rad、打开为 5 rad，须与本机校零一致。
+
+在同一终端启动真机（此命令会控制电机）：
+
+```bash
+uv run python gravity_gripper_assist.py
+```
+
+端点不同时，可用 `--closed-rad` 和 `--open-rad` 指定本机实测值（弧度）。运行中输入 `assist`、`open`、`close` 或 `hold` 控制夹爪；输入 `quit` 或按 `Ctrl+C` 停止。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+
+#### Real-to-Sim 映射模式（`joint_reader_sender`） {#-real-to-sim-映射模式joint_reader_sender}
 
 只读关节角并映射到 Isaac Sim，适合实际机械臂在运行其他任务时同步映射可视化。`RebotArm()` 读 submodule 的 `rebotarm.yaml`，需先切到 RS：
 
@@ -326,6 +502,11 @@ uv run python joint_reader_sender.py
 - 仅读取关节角（被动反馈模式），不发送任何控制指令
 - 关节角以 60 Hz 持续通过 UDP 发送
 - 实际机械臂由其他项目控制时，可同时在 Isaac Sim 中可视化
+
+</div>
+</section>
+
+</div>
 
 ## 通信协议
 

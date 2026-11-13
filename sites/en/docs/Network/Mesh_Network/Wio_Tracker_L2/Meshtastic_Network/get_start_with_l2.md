@@ -33,7 +33,7 @@ When the device is in the states below, please don't manually reboot or turn off
 
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
-Select the target device to `Seeed Wio Tracker L2` and choose the latest firmware, then click `Flash`.
+For Wio tracker `Wio Tracker L2 Pro` and `Wio Tracker L2` firmware flashing, select the target device to `Seeed Wio Tracker L2` and choose the latest firmware, then click `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -78,7 +78,13 @@ If you just click the Bluetooth icon, you will enter Bluetooth mode. If so, long
 
 ### Phone Connection
 
-**Step1. Get in Bluetooth Connection Mode**
+**Step1. Find Node ID**
+
+Find MAC address on device sticker. The Node ID is based on the last four digits of the MAC address. The last digit should `-2`. For example, if the device is 29CA, then the real node if should be 29c8.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
+
+**Step2. Get in Bluetooth Connection Mode**
 
 <Tabs>
 
@@ -89,6 +95,7 @@ Go to `Setting` page, click `Reboot/Shutdown`, then click the `Bluetooth icon`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
+
 While using MUI, please first switch to Bluetooth Pairing mode before pairing with your ohone. Or else your phone can not recognize your device.
 :::
 
@@ -213,7 +220,7 @@ Also, you can configure it on your phone APP.
 
 **Step2. SD Card Preparation**
 
-You need to format and install map in your SD card. For detailedd SD card usage tutorial, please click here to view.
+You need to format and install map in your SD card. For detailed SD card usage tutorial, please [click here](/l2_sd_card) to view.
 
 **Step3. Install SD Card**
 
@@ -629,10 +636,28 @@ After the key regeneration, other device needs to reconnect with the node. So it
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
+## Source
 
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
+- [Power Consumption Calcultion](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+
+## Tech Support & Product Discussion
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

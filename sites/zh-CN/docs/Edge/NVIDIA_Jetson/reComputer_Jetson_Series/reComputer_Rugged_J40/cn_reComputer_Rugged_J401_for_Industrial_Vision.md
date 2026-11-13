@@ -1,10 +1,10 @@
 ---
-description: 探索在工业叉车上使用 reComputer Rugged J401 的四种计算机视觉应用，包括目标跟踪、后方区域预警、驾驶员监测和视频录制。
-title: 面向工业视觉的 reComputer Rugged J401
+description: "reComputer Rugged J401 上的四个叉车视觉应用：前向跟踪、后向预警、驾驶员监控和多摄像头录像。"
+title: 工业视觉中的 reComputer Rugged J401
 keywords:
   - reComputer Rugged J401
   - Jetson Orin NX
-  - Industrial Vision
+  - 工业视觉
   - EfficientTAM
   - Depth Anything V2
   - TensorRT
@@ -26,20 +26,20 @@ url: https://wiki.seeedstudio.com/cn/jetson/recomputer_rugged_j401/industrial_vi
 import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
 import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
-# 面向工业视觉的 reComputer Rugged J401
+# 工业视觉中的 reComputer Rugged J401
 
 <JetsonProductDocNav {...ruggedJ401DocNav} />
 
 ## 介绍
 
-工业叉车工作在装卸区、仓库、室外堆场、冷库和冲洗区域。粉尘、水、振动、温度变化以及不可靠的网络覆盖，使这些环境对传统计算机来说非常严苛。车载视觉系统需要密封的硬件、安全的连接器、稳定的摄像头供电，以及足够的本地算力在车辆上处理视频。
+工业叉车工作在装货区、仓库、室外堆场、冷库和冲洗区域。粉尘、水、振动、温度变化以及不稳定的网络覆盖，使这些环境对传统计算机来说非常严苛。车载视觉系统需要密封的硬件、安全的连接器、稳定的摄像头供电，以及足够的本地算力在车辆上处理视频。
 
-本 wiki 介绍了在工业叉车上使用计算机视觉的几种方式。示例使用 reComputer Rugged J401 作为边缘控制器。其 IP66 外壳、M12 接头、抗振设计、四个 PoE 端口以及 Jetson Orin NX，使其可以靠近摄像头部署并在本地运行视觉工作负载。
+工业叉车在多尘、冲洗和冷库等环境中工作，因此视觉系统必须安装在车辆上，而不是放在机柜里。reComputer Rugged J401 将 IP66 外壳、M12 接头、四个 PoE 端口和 Jetson Orin NX 带到叉车上。其 IP66 外壳、M12 接头、抗振设计、四个 PoE 端口以及 Jetson Orin NX，使其可以靠近摄像头部署，并在本地运行视觉工作负载。
 
-该示例涵盖四项实用任务：跟踪叉车前方选定目标、监控后方盲区、检查驾驶员疲劳和安全帽佩戴情况，以及录制视频以供事后回放。这四项任务都通过一个 Web 控制台进行管理。
+本示例涵盖四个实际任务：跟踪叉车前方选定目标、监视后方盲区、检查驾驶员疲劳和安全帽佩戴情况，以及录制视频以供事后回放。所有这四项都通过一个 Web 控制台进行管理。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="reComputer Rugged 横幅：设备在仓库中停在叉车旁，标注有 Driver Monitoring、Collision Warning、Object Perception、IP66 Protection 和 Real-Time Edge AI" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -50,7 +50,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 
 :::warning
-本项目是辅助原型，而非功能安全系统。它没有任何安全认证，绝不能替代操作员自身的安全检查。当摄像头或推理流水线发生故障时，后方预警视图会报告 `SYSTEM ERROR`。
+本项目是一个辅助原型，而不是功能安全系统。它没有任何安全认证，绝不能替代操作员自身的检查。如果摄像头或推理流水线发生故障，后向预警视图会报告 `SYSTEM ERROR`。
 :::
 
 ## 前提条件
@@ -66,47 +66,47 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 本案例使用两路 48V POE 摄像头和一路 USB 摄像头。根据不同场景，这些摄像头可以自由替换。
 ### 硬件连接
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="两路 PoE 摄像头通过以太网连接到 Rugged J401，可见其 M12 接头和 Wi-Fi 天线" />
 </div>
 
-### 前视目标跟踪
+### 前向视角目标跟踪
 
-在托盘搬运过程中，操作员可能需要在叉车移动时始终关注特定货物或作业区域。前视应用使用 EfficientTAM 实现点击分割跟踪。操作员在视频中选择一个目标，系统会在后续帧中跟随其轮廓。
+在托盘搬运过程中，操作员可能需要在叉车移动时始终保持某个特定货物或作业区域处于视野中。前向应用使用 EfficientTAM 实现点击分割跟踪。操作员在视频中选择一个目标，系统会在后续帧中跟随其轮廓。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="前向分割窗口：被点击的目标以绿色遮罩显示，带有 Clear target 控件和 USB 摄像头选择器" />
 </div>
 
 
-这是交互式跟踪，而不是自动目标识别。当目标会在不同任务之间变化，并且操作员可以直接选择时，这种方式非常有用。
+这是交互式跟踪，而不是自动目标识别。当目标会在不同任务之间变化，并且操作员可以直接选择它时，这种方式非常有用。
 
 ### 后方区域预警
 
-配重和门架会在叉车周围形成较大的盲区。后向 PoE 摄像头使用 Depth Anything V2 估计场景深度，并结合行人检测模型监控车辆后方的作业区域。界面会根据配置的距离阈值报告 `SAFE`、`WARNING` 或 `DANGER`。
+配重和门架会在叉车周围形成大面积盲区。一个后向 PoE 摄像头使用 Depth Anything V2 估计场景深度，并通过行人检测器监视车辆后方的作业区域。界面会根据配置的距离阈值报告 `SAFE`、`WARNING` 或 `DANGER`。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="后向预警窗口：深度小窗、危险边框以及状态 STOP 和 NEAREST 0.6 m 显示" />
 </div>
 
 :::note
-单目深度估计存在局限性，实际距离并不可靠。必须根据现场条件和需求调整报警阈值！
+单目深度估计存在局限性，实际距离并不可靠。必须根据现场环境和需求调整报警阈值！
 :::
 
-### 驾驶员与 PPE 监测
+### 驾驶员与 PPE 监控
 
-驾驶室摄像头可以检查从外部不可见的状态。MediaPipe 面部关键点提供与疲劳相关的信号，另一个模型用于检查安全帽佩戴状态。当模型算法检测到驾驶员在操作过程中出现疲劳时，会触发警示灯提醒驾驶员，防止疲劳驾驶引发重大安全事故。
+一颗驾驶室摄像头可以检查从外部不可见的状态。MediaPipe 人脸关键点提供与疲劳相关的信号，而另一个模型用于检测安全帽佩戴状态。当算法在作业过程中检测到驾驶员疲劳时，会触发警示灯提醒驾驶员，防止疲劳驾驶引发重大安全事故。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="驾驶室检测窗口：驾驶员被框选并标注 PERSON 1 | HELMET: NOT WORN" />
 </div>
 
 
-### 多摄像头录制
+### 多摄像头录像
 
 我们可以在单一仪表盘上显示来自不同视角的监控画面，方便实时监控现场情况。
 
 <div align="center">
-  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="Industrial forklift vision dashboard" />
+  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="叉车视觉控制仪表盘，包含前向分割、后向预警和驾驶室检测窗口、后向距离阈值设置以及统一事件流" />
 </div>
 
 
@@ -114,10 +114,10 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 | 应用 | 摄像头 | 视觉方法 |
 | --- | --- | --- |
-| 前视 | PoE RTSP | EfficientTAM 点击分割跟踪 |
-| 后视 | PoE RTSP | Depth Anything V2 度量深度预警，状态包括 `SAFE`、`WARNING`、`DANGER` 和 `SYSTEM ERROR` |
+| 前向 | PoE RTSP | EfficientTAM 点击分割跟踪 |
+| 后向 | PoE RTSP | Depth Anything V2 度量深度预警，状态包括 `SAFE`、`WARNING`、`DANGER` 和 `SYSTEM ERROR` |
 | 驾驶室 | USB UVC | MediaPipe 疲劳检测和安全帽状态 |
-| 录制 | 任意已配置摄像头 | 1080p H.264 MP4 录制，无 AI 推理 |
+| 录像 | 任意已配置摄像头 | 1080p H.264 MP4 录像，无 AI 推理 |
 
 FastAPI 服务器负责启动和停止各个应用，防止两个应用同时打开同一摄像头，并将视频流发送到浏览器。模型和摄像头在被请求前保持空闲，因此未使用的应用不会占用 GPU 内存。
 
@@ -132,7 +132,7 @@ sudo apt-get install -y python3.8-venv python3-opencv libopenblas-base logrotate
 python3 -c "import cv2; print([line.strip() for line in cv2.getBuildInformation().splitlines() if 'GStreamer' in line])"
 ```
 
-输出中必须显示 `GStreamer: YES`。不要用 PyPI 的 `opencv-python` wheel 替换系统 OpenCV；该 wheel 不提供本示例用于 RTSP 采集所需的 GStreamer 支持。
+输出中必须显示 `GStreamer: YES`。不要用 PyPI 的 `opencv-python` wheel 替换系统自带的 OpenCV；该 wheel 不提供本方案中用于 RTSP 采集的 GStreamer 支持。
 
 ### 步骤 2. 克隆项目并创建环境
 
@@ -240,7 +240,7 @@ torch.onnx.export(
 print("ONNX written:", output)
 ```
 
-导出深度和行人模型，然后下载实验性的安全帽模型：
+导出深度和人员模型，然后下载实验性的安全帽模型：
 
 ```bash
 .venv/bin/python export_depth_onnx.py
@@ -259,7 +259,7 @@ curl -fL --retry 3 -o models/onnx/ppe_hard_hat.experimental.onnx \
   https://raw.githubusercontent.com/Sanaurrehmanarain/object-detection-yolov8/main/best.onnx
 ```
 
-在 J401 上构建全部三个引擎。TensorRT 引擎与 GPU 架构和 TensorRT 版本绑定，因此不要复制在其他计算机上构建的引擎。
+在 J401 上构建这三个引擎。TensorRT 引擎与 GPU 架构和 TensorRT 版本绑定，因此不要复制在其他计算机上构建的引擎。
 
 ```bash
 TRTEXEC=/usr/src/tensorrt/bin/trtexec
@@ -303,7 +303,7 @@ sudo systemctl start visual-hub
 curl -s http://127.0.0.1:8000/api/health
 ```
 
-## 试用应用
+## 试用应用程序
 
 在同一局域网中的浏览器中打开以下地址：
 
@@ -311,28 +311,28 @@ curl -s http://127.0.0.1:8000/api/health
 http://<Jetson-LAN-IP>:8000/
 ```
 
-使用每个卡片上的相机选择器确认前视、后视和驾驶室视频源。已被某个应用使用的相机在其停止前对其他应用不可用。分别测试每个应用，再使用 **Start All**。
+使用每个卡片上的相机选择器确认前方、后方和驾驶舱的视频源。已被使用的相机在该应用停止前对其他应用不可用。请分别测试每个应用，再使用 **Start All**。
 
 ### 跟踪叉车前方的物体
 
-1. 选择前向 PoE 相机并启动前视应用。
-2. 点击需要被跟踪的物体或货物。
+1. 选择面向前方的 PoE 相机并启动前向应用。
+2. 点击需要被跟踪的物体或载荷。
 3. 如果掩膜包含了部分背景，则添加负样本点。
-4. 在选择另一个目标前清除当前选择。
+4. 在选择另一个目标之前清除当前选择。
 
 第一次加载模型需要几秒钟。一旦选择了目标，掩膜会在后续帧中跟随它，并在其短暂离开视野后尝试再次锁定。
 
 ### 检查后方工作区域
 
-选择后向 PoE 相机并启动后视应用。当估计距离跨越配置的阈值时，状态面板会在 `SAFE`、`WARNING` 和 `DANGER` 之间变化。
+选择面向后方的 PoE 相机并启动后向应用。当估计距离跨越配置的阈值时，状态面板会在 `SAFE`、`WARNING` 和 `DANGER` 之间切换。
 
 在使用显示的距离之前，请在 `configs/warning.yaml` 中设置相机内参、安装高度、俯仰角和距离修正。更换相机或安装位置需要重新标定。
 
-### 启用驾驶室监控
+### 启用驾驶舱监控
 
-选择驾驶室 USB 相机并启动驾驶室应用。疲劳检测和安全帽检测有各自的开关。关闭不需要的路径，其模型将不会被加载。
+选择驾驶舱 USB 相机并启动驾驶舱应用。疲劳检测和安全帽检测有各自的开关。关闭不需要的路径，其模型将不会被加载。
 
-将相机放置在既能看到驾驶员面部又不遮挡操作员视线的位置。在正常班次使用的相同光照条件下进行测试。
+将相机放置在既能看到驾驶员面部又不阻挡操作员视线的位置。在与正常班次相同的光照条件下进行测试。
 
 
 有用的服务命令：
@@ -346,13 +346,13 @@ journalctl -u visual-hub -f
 
 ## 实测性能
 
-这些数据是在 reComputer Rugged J401（搭载 Jetson Orin NX 16GB）上运行四个应用时测得的。在对比结果前运行 `sudo nvpmodel -m 0 && sudo jetson_clocks`。
+这些数据是在 reComputer Rugged J401（搭载 Jetson Orin NX 16GB）上运行四个应用时测得的。在对比结果之前运行 `sudo nvpmodel -m 0 && sudo jetson_clocks`。
 
 | 应用 | 配置 | 实测结果 |
 | --- | --- | --- |
-| 前视分割 | EfficientTAM-Ti, 512, PyTorch bf16 | 约 13.2 FPS；首次加载耗时 7 到 8 秒 |
-| 后方预警 | Depth Anything V2 Metric Small, TensorRT FP16 | 深度处理约 21 FPS |
-| 驾驶室监控 | 1280x720 USB 相机 | 启用疲劳和安全帽检测时约 5.4 FPS |
+| 前向分割 | EfficientTAM-Ti, 512, PyTorch bf16 | 约 13.2 FPS；首次加载耗时 7 到 8 秒 |
+| 后向预警 | Depth Anything V2 Metric Small, TensorRT FP16 | 深度处理约 21 FPS |
+| 驾驶舱监控 | 1280x720 USB 相机 | 启用疲劳和安全帽检测时约 5.4 FPS |
 | 录制 | 三路流，`nvv4l2h264enc` | 3 路 1920x1080、15 FPS、H.264 |
 
 实际吞吐量取决于相机分辨率、电源模式、温度以及活动应用的数量。
@@ -363,9 +363,9 @@ journalctl -u visual-hub -f
 | --- | --- | --- |
 | 端口 8000 不可用 | `systemctl status visual-hub` | 重启服务并检查 `journalctl -u visual-hub` |
 | 某个应用报告 `CAMERA_BUSY` | `curl -s http://127.0.0.1:8000/api/hub/status` | 停止占用该相机的应用或录制任务 |
-| 某个 USB 相机无法打开 | `sudo dmesg \| grep -i "not enough bandwidth"` | 将其移到 USB 3 或停止其他 USB 流 |
-| 某路 RTSP 流冻结 | 在应用状态中检查 `frame_age_s` | 确认相机供电、PoE 预算、网络路径和 RTSP 凭据 |
-| 前视画面需要数秒才出现 | `journalctl -u visual-hub` | 第一次加载 EfficientTAM 模型通常需要 7 到 8 秒 |
+| USB 相机无法打开 | `sudo dmesg \| grep -i "not enough bandwidth"` | 将其移到 USB 3，或停止其他 USB 流 |
+| RTSP 流冻结 | 检查应用状态中的 `frame_age_s` | 确认相机供电、PoE 预算、网络路径和 RTSP 凭据 |
+| 前向视图需要几秒钟才出现 | `journalctl -u visual-hub` | 第一次加载 EfficientTAM 模型通常需要 7 到 8 秒 |
 
 对于在选择器中缺失的相机，请先检查清单：
 
@@ -378,9 +378,9 @@ curl -s http://127.0.0.1:8000/api/hub/cameras
 ## 安全与应用限制
 
 - 后方区域预警使用的是单目深度，而不是物理距离传感器。弱光、反射、透明物体、镜头污渍或剧烈振动都可能导致错误估计。
-- 驾驶室监控使用 RGB 图像和固定的时间规则。它没有针对每位驾驶员的标定，也不支持夜视。
-- 前视跟踪仅跟随一个由用户选择的目标。它不会识别该物体，也不会判断移动它是否安全。
-- 安全帽模型仍处于实验阶段。在投入实际使用前，请审查其准确性、训练数据和许可证。
+- 驾驶舱监控使用 RGB 图像和固定的时间规则。它没有针对每位驾驶员的标定，也不支持夜视。
+- 前向跟踪仅跟随一个由用户选择的目标。它不会识别该物体，也不会判断移动它是否安全。
+- 安全帽模型是实验性的。在投入实际使用前，请审查其准确性、训练数据和许可证。
 ## 演示视频
 
 <div class="video-container">
@@ -398,7 +398,14 @@ curl -s http://127.0.0.1:8000/api/hub/cameras
 - [EfficientTAM](https://github.com/yformer/EfficientTAM)
 - [Depth Anything V2 Metric Indoor Small](https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf)
 - [MediaPipe Face Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker)
-- [Getting Started with reComputer Rugged J40](/jetson/recomputer_rugged_j401/getting_started/)
+- [reComputer Rugged J40 入门指南](https://wiki.seeedstudio.com/cn/jetson/recomputer_rugged_j401/getting_started/)
+
+## 相关资源
+
+- [reComputer Robotics J401 接口和引脚定义](/cn/recomputer_jetson_robotics_j401_getting_started/)
+- [在 reComputer 上实现 EtherCAT 通信](/cn/recomputer_ethercat_communication/)
+- [在 reComputer 上运行 PyCuVSLAM](/cn/pycuvslam_recomputer_robotics/)
+- [reComputer Rugged J401 产品页面](https://www.seeedstudio.com/reComputer-Rugged-J401-p-6509.html)
 
 ## 技术支持与产品讨论
 

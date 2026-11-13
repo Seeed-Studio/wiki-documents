@@ -45,7 +45,7 @@ Los mapas de nodos Meshtastic son ideales para:
 
 | Mapa de nodos | Funciones | Ideal para | Notas |
 |----------|----------|-----------|-------|
-| [MeshMap](https://meshmap.net/) | Seguimiento de nodos en tiempo real, visualización de rutas de la malla, visualización del alcance de la señal | Usuarios ocasionales, principiantes | Interfaz sencilla, servidor Meshtastic predeterminado |
+| [MeshMap](https://meshmap.net/) | Seguimiento de nodos en tiempo real, visualización de rutas Mesh, visualización del alcance de la señal | Usuarios ocasionales, principiantes | Interfaz sencilla, servidor Meshtastic predeterminado |
 | [Mapa Meshtastic de Liam Cottle](https://meshtastic.liamcottle.net/) | Seguimiento en tiempo real, vista de rutas históricas, visualización del alcance de la señal | Usuarios avanzados, análisis de datos | Utiliza un servidor MQTT personalizado |
 
 ## Primeros pasos con MeshMap
@@ -99,3 +99,25 @@ Abre **el mapa Meshtastic de Liam Cottle** en tu navegador web: [Enlace al mapa 
 Haz clic en cualquier nodo para ver: información detallada sobre el dispositivo, alcance de la señal, rutas históricas y actualizaciones de ubicación anteriores
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2ProNodeMapLiam.png" style={{width:600, height:'auto'}}/></div>
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

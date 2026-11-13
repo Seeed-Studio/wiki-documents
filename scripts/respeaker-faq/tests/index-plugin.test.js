@@ -230,7 +230,7 @@ test('UI chrome: FAQ Center MDX declares a data-slot for every UI string with En
 
 test('translation contract: explicit FAQ anchors and UI placeholders are protected', () => {
   for (const script of ['translate.js', 'translate_openrouter.js']) {
-    const source = fs.readFileSync(path.join(REPO_ROOT, '.github', 'scripts', script), 'utf8');
+    const source = fs.readFileSync(path.join(REPO_ROOT, '.github', 'scripts', 'translation', script), 'utf8');
     assert.ok(source.includes('显式自定义锚点'), `${script}: explicit heading anchors must be protected`);
     assert.ok(source.includes('%count%'), `${script}: FAQ UI placeholders must be protected`);
   }

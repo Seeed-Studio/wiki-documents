@@ -34,7 +34,7 @@ url: https://wiki.seeedstudio.com/jetson/accelerate_llm_inference_mtp/
 
 ## Introduction
 
-This wiki explains how Multi-Token Prediction (MTP) works and how to enable it in **llama.cpp on NVIDIA Jetson AGX Orin with Qwen3.5-4B**. Follow the setup and compare MTP ON/OFF performance using a local crowd-monitoring demo.
+Multi-Token Prediction drafts several tokens per step and lets the target model verify them in one pass, which cuts the number of serial decode passes when the drafts are good. On Jetson AGX Orin, llama.cpp can enable MTP for Qwen3.5-4B; the sections below explain why decode is slow, how to turn MTP on, and where it pays off, measured against MTP off on a local crowd-monitoring demo.
 
 First, look at the actual test results. We had the LLM generate a Python script for computing the Fibonacci sequence, and compared the generation speed with and without the MTP model enabled.
 
@@ -202,6 +202,13 @@ For a controlled comparison, use the same frozen event rather than two separate 
 - [llama.cpp SPEED-Bench](https://github.com/ggml-org/llama.cpp/tree/master/tools/server/bench/speed-bench)
 - [Qwen3.5-4B MTP GGUF model](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF)
 - [Better & Faster Large Language Models via Multi-token Prediction](https://arxiv.org/abs/2404.19737)
+
+## Related Resources
+
+- [JetPack 7.2 memory optimization for LLM deployment](/jetpack_7_2_memory_optimization_deep_dive/)
+- [Build a local AI agent on Jetson with Laya and Qwen](/jetson/local_decision_model_laya)
+- [reComputer Super vs Classic AI performance](/recomputer_jetson_super_performance/)
+- [Edge Crowd Agent repository](https://github.com/zibochen6/edge-crowd-agent)
 
 ## Tech Support & Product Discussion
 

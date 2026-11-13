@@ -149,6 +149,13 @@ En primer lugar, debes instalar los controladores de periféricos para esta plac
       <td>39.2.0</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+
+<tr>
+      <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -684,6 +691,105 @@ Consejos: Hacer copia de seguridad y restaurar la imagen del sistema
   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
   ```
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+Aquí instalaremos **JetPack 7.2.1** en la placa carrier A603 con un módulo Jetson Orin NX o Jetson Orin Nano.
+
+### Requisitos de hardware
+
+- PC host con Ubuntu 20.04 o Ubuntu 22.04 con acceso a internet
+- Cable de datos Type-C (debe admitir transferencia de datos)
+- Placa carrier A603 con un módulo Jetson Orin NX o Jetson Orin Nano
+- Adaptador de corriente
+- El host de flasheo debe tener instalados `wget`, `tar` y `sudo`
+
+### Preparar los archivos de flasheo
+
+**Paso 1:** Crea un directorio de trabajo en el PC host con Ubuntu.
+
+```bash
+mkdir -p ~/a603_flash
+cd ~/a603_flash
+```
+
+**Paso 2:** Descarga los siguientes dos archivos y colócalos en el mismo directorio (por ejemplo, desde [esta carpeta](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo)):
+
+- `603_jp721.sh`
+- `603_jp721.tbz2`
+
+:::note
+**No** extraigas `603_jp721.tbz2` manualmente: el script extraerá el paquete de controladores automáticamente.
+:::
+
+**Paso 3:** Ejecuta el script:
+
+```bash
+./603_jp721.sh
+```
+
+:::caution
+**No** ejecutes `sudo ./603_jp721.sh` ni `sudo bash 603_jp721.sh`. El script te pedirá tu contraseña de sudo cuando se necesiten derechos de administrador. Ejecutar todo el script con `sudo` hace que el directorio generado sea `root:root` y causa problemas de permisos en pasos posteriores.
+:::
+
+**Paso 4:** El script descarga automáticamente los paquetes oficiales de JetPack 7.2.1, extrae el rootfs, extrae el paquete de controladores y sobrescribe los archivos de controladores de A603. El tiempo de descarga depende de la velocidad de tu red; no interrumpas el proceso.
+
+**Paso 5:** Cuando veas el siguiente mensaje, el directorio de flasheo estará listo:
+
+```
+603_jp721 package applied successfully.
+```
+
+El directorio de flasheo ensamblado es:
+
+```
+~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+### Poner el dispositivo en modo de recuperación
+
+1. Desconecta la placa carrier A603 de la alimentación.
+2. Haz un cortocircuito entre el pin RECOVERY y el pin GND en la placa carrier.
+3. Conecta la placa carrier al PC host con un cable de datos Type-C.
+4. Enciende la placa.
+5. En el PC host, ejecuta `lsusb`. Aparece un dispositivo NVIDIA cuando la placa está en modo de recuperación.
+
+### Flashear el sistema
+
+1. Asegúrate de que el dispositivo siga en modo de recuperación.
+2. Entra en el directorio de flasheo:
+
+```bash
+cd ~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+3. Flashea el sistema con el siguiente comando:
+
+```bash
+sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+4. Espera hasta que el comando termine. No desconectes el cable Type-C, no apagues el PC host ni cortes la alimentación de la placa carrier durante el flasheo.
+5. Después de que el flasheo se complete correctamente, retira el puente de cortocircuito entre RECOVERY y GND y vuelve a encender el dispositivo.
+
+### Preguntas frecuentes
+
+1. **`Required path is missing: .../603_jp721.tbz2`**
+   - Causa: el paquete de controladores no está en el mismo directorio que el script.
+   - Solución: asegúrate de que `603_jp721.sh` y `603_jp721.tbz2` estén en el mismo directorio y vuelve a ejecutar el script.
+
+2. **`Required path is missing: .../bootloader` o similar**
+   - Causa: el paquete de controladores no se extrajo correctamente o el archivo del paquete está incompleto.
+   - Solución: asegúrate de usar `603_jp721.tbz2` y vuelve a descargar el paquete de controladores completo, luego vuelve a ejecutar el script.
+
+3. **El directorio muestra `root:root` o permisos `777`**
+   - Causa: el script de ensamblaje se ejecutó con `sudo`.
+   - Solución: elimina el directorio `603_jp721_flash` generado y ejecuta `./603_jp721.sh` como usuario normal para volver a ensamblarlo.
+
+4. **`lsusb` no muestra un dispositivo NVIDIA**
+   - Solución: comprueba que RECOVERY y GND estén en cortocircuito, que el cable Type-C admita transferencia de datos y que la placa esté encendida. Luego vuelve a conectar el cable Type-C y ejecuta `lsusb` de nuevo.
 
 </TabItem>
 
