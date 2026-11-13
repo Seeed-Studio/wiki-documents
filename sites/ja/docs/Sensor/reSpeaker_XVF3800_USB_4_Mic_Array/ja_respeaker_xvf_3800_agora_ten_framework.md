@@ -285,6 +285,8 @@ PC に **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** を接続し、ファーム�
 
 #### 任意：FlowSpeech TTS に切り替える
 
+公開 API v1 に対応した [プロバイダー PR #1](https://github.com/Seeed-Projects/seeed-respeaker-agora-tenframework/pull/1) の拡張を使用してください。この更新はまだ上流での取り込み待ちです。開発者用 API キー、有効な有料 Basic・Pro・Scale サブスクリプション、および利用可能なクレジットが必要です。拡張は `/api/v1/tts/jobs` にジョブを送信し、5 秒以上の間隔で状態を確認して、API 認証情報を付けずに WAV をダウンロードし、PCM サンプルを取り出します。音声出力は生成中ではなく、ダウンロード完了後に開始します。十分なタイムアウトを設定してください。ローカル再生の中止はサーバーのジョブを取り消しません。詳細は[公開 API ガイド](https://flowspeech.io/docs/public-api)を参照してください。
+
 FlowSpeech 拡張は 24 kHz、モノラル、16 ビット PCM 音声を出力し、本サンプルの `tts` ノードに直接接続できます。`agents/examples/voice-assistant/tenapp/property.json` を開き、`tts` という名前のノードを次の内容に置き換えます：
 
 ```json
@@ -294,6 +296,8 @@ FlowSpeech 拡張は 24 kHz、モノラル、16 ビット PCM 音声を出力し
   "addon": "flowspeech_tts_python",
   "extension_group": "tts",
   "property": {
+    "total_timeout": 600.0,
+    "max_retries": 2,
     "dump": false,
     "dump_path": "./",
     "params": {
