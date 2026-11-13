@@ -3341,10 +3341,39 @@ const sidebars = {
         'Network/ja_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
-          label: 'Wio-WM6108 WiFi-Halow Devices',
+          label: 'Wio-WM6108 Wi-Fi HaLow デバイス',
           items: [
             'Network/WiFi-Halow/ja_wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/ja_wifi-halow-mini-pcie-module',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Wio-WM8108 Wi-Fi HaLow デバイス',
+          items: [
+            {
+              type: 'category',
+              label: 'HaLowLink 2 Wi-Fi HaLow ゲートウェイ',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/ja_HaLowLink2_Introduction',
+                  label: '紹介',
+                },
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/ja_HaLowLink2_Getting_Started',
+                  label: 'はじめに',
+                },
+                {
+                  type: 'category',
+                  label: 'アプリケーション',
+                  items: [
+                    'Network/WiFi-Halow/HaLowLink2/Applications/ja_Media_Gateway',
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],
