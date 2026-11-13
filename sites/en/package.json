@@ -2,8 +2,6 @@
   "name": "wiki-en",
   "private": true,
   "scripts": {
-    "prestart": "yarn --cwd ../.. setup:links",
-    "prebuild": "yarn --cwd ../.. setup:links",
     "start": "node --max-old-space-size=8192 ../../node_modules/@docusaurus/core/bin/docusaurus.mjs start --host 0.0.0.0",
     "build": "node --max-old-space-size=8192 ../../node_modules/@docusaurus/core/bin/docusaurus.mjs build",
     "serve": "node ../../node_modules/@docusaurus/core/bin/docusaurus.mjs serve",

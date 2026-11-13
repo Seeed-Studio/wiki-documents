@@ -100,11 +100,11 @@ const sim2RealVlaSidebar = () => [
     collapsed: false,
     collapsible: false,
     items: [
-      `${V}/ja_Sim2Real_VLA_01}`,
-      `${V}/ja_Sim2Real_VLA_02}`,
-      `${V}/ja_Sim2Real_VLA_03}`,
-      `${V}/ja_Sim2Real_VLA_04}`,
-      `${V}/ja_Sim2Real_VLA_05}`,
+      `${V}/ja_Sim2Real_VLA_01`,
+      `${V}/ja_Sim2Real_VLA_02`,
+      `${V}/ja_Sim2Real_VLA_03`,
+      `${V}/ja_Sim2Real_VLA_04`,
+      `${V}/ja_Sim2Real_VLA_05`,
     ],
   },
   {
@@ -114,9 +114,9 @@ const sim2RealVlaSidebar = () => [
     collapsed: false,
     collapsible: false,
     items: [
-      `${V}/ja_Sim2Real_VLA_06}`,
-      `${V}/ja_Sim2Real_VLA_07}`,
-      `${V}/ja_Sim2Real_VLA_08}`,
+      `${V}/ja_Sim2Real_VLA_06`,
+      `${V}/ja_Sim2Real_VLA_07`,
+      `${V}/ja_Sim2Real_VLA_08`,
     ],
   },
   {
@@ -126,11 +126,11 @@ const sim2RealVlaSidebar = () => [
     collapsed: false,
     collapsible: false,
     items: [
-      `${V}/ja_Sim2Real_VLA_09}`,
-      `${V}/ja_Sim2Real_VLA_10}`,
-      `${V}/ja_Sim2Real_VLA_11}`,
-      `${V}/ja_Sim2Real_VLA_12}`,
-      `${V}/ja_Sim2Real_VLA_13}`,
+      `${V}/ja_Sim2Real_VLA_09`,
+      `${V}/ja_Sim2Real_VLA_10`,
+      `${V}/ja_Sim2Real_VLA_11`,
+      `${V}/ja_Sim2Real_VLA_12`,
+      `${V}/ja_Sim2Real_VLA_13`,
     ],
   },
   {
@@ -140,11 +140,11 @@ const sim2RealVlaSidebar = () => [
     collapsed: false,
     collapsible: false,
     items: [
-      `${V}/ja_Sim2Real_VLA_14}`,
-      `${V}/ja_Sim2Real_VLA_15}`,
-      `${V}/ja_Sim2Real_VLA_16}`,
-      `${V}/ja_Sim2Real_VLA_17}`,
-      `${V}/ja_Sim2Real_VLA_18}`,
+      `${V}/ja_Sim2Real_VLA_14`,
+      `${V}/ja_Sim2Real_VLA_15`,
+      `${V}/ja_Sim2Real_VLA_16`,
+      `${V}/ja_Sim2Real_VLA_17`,
+      `${V}/ja_Sim2Real_VLA_18`,
     ],
   },
   {
@@ -154,7 +154,7 @@ const sim2RealVlaSidebar = () => [
     collapsed: false,
     collapsible: false,
     items: [
-      `${V}/ja_Sim2Real_VLA_19}`,
+      `${V}/ja_Sim2Real_VLA_19`,
     ],
   },
 ];
