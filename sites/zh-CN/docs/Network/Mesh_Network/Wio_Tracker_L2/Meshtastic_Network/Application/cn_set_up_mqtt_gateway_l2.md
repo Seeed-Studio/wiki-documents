@@ -1,5 +1,5 @@
 ---
-description: 基于 Wio-Trcker L2 的 Meshtastic MQTT 网关设置教程。实现全球消息通信，在网状网络信号较弱时提供备份，并通过互联网确保更快速的消息传递。
+description: 基于 Wio-Trcker L2 的 Meshtastic MQTT 网关设置教程。实现全球消息通信，在 Mesh 信号较弱时提供备份，并通过互联网确保更快速的消息传递。
 title: MQTT 网关
 image: https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/mqttworkflow.png
 slug: /set_up_mqtt_gateway_l2
@@ -18,13 +18,13 @@ import TabItem from '@theme/TabItem';
 
 ## 为什么需要 Meshtastic + mqtt
 
-将 MQTT 与 Meshtastic 集成，可以通过桥接远距离网络来扩展离网通信能力。这可以实现全球消息通信，在网状网络信号较弱时提供备份，并通过互联网确保更快速的消息传递，非常适合偏远地区和紧急情况。
+将 MQTT 与 Meshtastic 集成，可以通过桥接远距离网络来扩展离网通信能力。这不仅实现全球消息通信，还能在 Mesh 信号较弱时提供备份，并通过互联网确保更快速的消息传递，非常适合偏远地区和紧急场景。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/mqttworkflow.png" style={{width:900, height:'auto'}}/></div>
 
 ## 硬件准备
 
-搭建 Meshtastic 网关需要一台既能运行 LoRa 又能运行 Wifi 的设备。另外，如果你希望通过 mqtt 共享网关的位置，可以添加一个 GPS 模块。
+搭建 Meshtastic 网关需要一台既能运行 LoRa 又能运行 Wifi 的设备。此外，如果你希望通过 mqtt 共享网关的位置，可以添加一个 GPS 模块。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
@@ -46,9 +46,9 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 
-然后点击 “Flash”。如果你想覆盖之前的固件，别忘了勾选 “Full Erase and Install”。
+然后点击 "Flash"。如果你想覆盖之前的固件，别忘了勾选 "Full Erase and Install"。
 
-### 步骤 2 检查你的设备 ID
+### 步骤 2 查看你的设备 ID
 
 <Tabs>
 <TabItem value="23" label="查看设备背面">
@@ -63,7 +63,7 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 <TabItem value="22" label="通过串口工具">
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。<br/>
 
- 点击 `Open Serial Monitor`，将设备连接到电脑，查看串口日志，关键字为 `using nodenum`。
+ Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -108,7 +108,7 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- 输入屏幕上显示的代码，然后点击 `Pair` 连接设备。
+- 输入屏幕上显示的配对码，然后点击 `Pair` 连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -120,9 +120,9 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndroidX1Connection.png" alt="pir" width={300} height="auto" /></p>
 
-- 输入屏幕上显示的代码，然后点击 `OK` 连接设备。
+- 输入屏幕上显示的配对码，然后点击 `OK` 连接设备。
 
-<p style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
 
 
 </TabItem>
@@ -134,10 +134,10 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 <TabItem value="pypi" label="Android">
 
 **1. LoRa 配置**
-- 将区域从 UNSET 更改为你的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
+- 将区域从 UNSET 修改为你所在的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
 - 选择 `OK to MQTT`
 - 点击 Send
-- 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
+- 设备会自动重启并重新连接。这可能需要 30 秒到 2 分钟。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTLoRaConfiguration.jpg" style={{width:350, height:'auto'}}/></div>
 
@@ -146,9 +146,9 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 - 你可以使用默认的 `MQTT Address`(mqtt.meshtastic.org)、`User name`(meshdev) 和 `Password`(large4cats)。 
 - 选择 `MQTT Enabled`
 - 选择 `MQTT Client Proxy Enabled`
-- （可选）如果你希望其他 mqtt 用户在地图上看到你，请选择 `Map Reporting` 和 `I agree`。
+- （可选）如果你希望其他 mqtt 用户在地图上看到你，请勾选 `Map Reporting` 和 `I agree`。
 - 点击 Send
-- 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
+- 设备会自动重启并重新连接。这可能需要 30 秒到 2 分钟。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTSetting.jpg" style={{width:350, height:'auto'}}/></div>
 
@@ -163,7 +163,7 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 
 **4. 网络配置**
 
-完成此配置后，你的设备将无法通过蓝牙连接到 APP，但可以通过网络连接到 APP。
+完成此配置后，你的设备将无法再通过蓝牙连接到 APP，但可以通过网络连接到 APP。
 
 - 填写 SSID（Wifi 名称）和 Wifi 密码。你要使用的 wifi 应为 2.4G。
 - 点击 Send
@@ -182,10 +182,10 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 <TabItem value="sou" label="IOS">
 
 **1. LoRa 配置**
-- 将区域从 UNSET 更改为你的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
+- 将区域从 UNSET 修改为你所在的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
 - 选择 `OK to MQTT`
 - 点击 Send
-- 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
+- 设备会自动重启并重新连接。这可能需要 30 秒到 2 分钟。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTLoRa.png" style={{width:350, height:'auto'}}/></div>
 
@@ -194,9 +194,9 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 - 你可以使用默认的 `MQTT Address`(mqtt.meshtastic.org)、`User name`(meshdev) 和 `Password`(large4cats)。 
 - 选择 `MQTT Enabled`
 - 选择 `MQTT Client Proxy Enabled`
-- （可选）如果你希望其他 mqtt 用户在地图上看到你，请选择 `Map Reporting` 和 `I agree`。
+- （可选）如果你希望其他 mqtt 用户在地图上看到你，请勾选 `Map Reporting` 和 `I agree`。
 - 点击 Send
-- 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
+- 设备会自动重启并重新连接。这可能需要 30 秒到 2 分钟。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTSetting.png" style={{width:350, height:'auto'}}/></div>
 
@@ -211,7 +211,7 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 
 **4. 网络配置**
 
-完成此配置后，你的设备将无法通过蓝牙连接到 APP，但可以通过网络连接到 APP。
+完成此配置后，你的设备将无法再通过蓝牙连接到 APP，但可以通过网络连接到 APP。
 
 - 填写 SSID（Wifi 名称）和 Wifi 密码。你要使用的 wifi 应为 2.4G。
 - 点击 Send
@@ -235,4 +235,26 @@ MAC 地址的 `最后四位数字` 即为设备 ID
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTTest.png" style={{width:600, height:'auto'}}/></div> 
 
 如果你有另一台与 MQTT 网关处于同一频段的 Meshtastic 设备，它也可以通过 L2 网关与互联网上的其他人进行消息传输。
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
 

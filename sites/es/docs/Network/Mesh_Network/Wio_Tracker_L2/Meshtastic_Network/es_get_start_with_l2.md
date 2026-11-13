@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::danger note
-Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inutilizable.
+Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo podría quedar inutilizable.
 
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
@@ -33,7 +33,7 @@ Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni
 
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
-Selecciona el dispositivo de destino como `Seeed Wio Tracker L2` y elige el firmware más reciente, luego haz clic en `Flash`.
+Para el flasheo de firmware de Wio tracker `Wio Tracker L2 Pro` y `Wio Tracker L2`, selecciona el dispositivo de destino como `Seeed Wio Tracker L2` y elige el firmware más reciente, luego haz clic en `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -52,16 +52,16 @@ Luego haz clic en "Flash". No olvides marcar "Full Erase and Install" si quieres
 <Tabs>
 
 <TabItem value="1" label="MUI a BaseUI">
-Ve a la página Setting **->** Elige `Reboot/Shutdown` **->** Mantén pulsado el icono de Bluetooth **->** Haz clic en `OK`
+Ve a la página Setting **->** Elige `Reboot/Shutdown` **->** Mantén presionado el icono de Bluetooth **->** Haz clic en `OK`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIToBaseUI.png" alt="pir" width={900} height="auto" /></p>
 
 :::tip
-La ventana emergente de cambio a BaseUI aparece cuando `mantienes pulsado` el icono de Bluetooth.
+La ventana emergente de cambio a BaseUI aparece cuando `mantienes presionado` el icono de Bluetooth.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/LongPress.gif" alt="pir" width={250} height="auto" /></p>
 
-Si solo haces clic en el icono de Bluetooth, entrarás en el modo Bluetooth. Si esto ocurre, mantén pulsado el icono de Bluetooth que se muestra en la pantalla y el dispositivo se reiniciará automáticamente a MUI.
+Si solo haces clic en el icono de Bluetooth, entrarás en el modo Bluetooth. Si esto ocurre, mantén presionado el icono de Bluetooth que se muestra en la pantalla y el dispositivo se reiniciará automáticamente a MUI.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GoBackMUI.gif" alt="pir" width={250} height="auto" /></p>
 
@@ -84,13 +84,13 @@ Busca la dirección MAC en la etiqueta del dispositivo. El ID de nodo se basa en
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
 
-**Paso 2. Entrar en el modo de conexión Bluetooth**
+**Paso 2. Entrar en modo de conexión Bluetooth**
 
 <Tabs>
 
 <TabItem value="3" label="MUI">
 
-Ve a la página `Setting`, haz clic en `Reboot/Shutdown` y luego haz clic en el `icono de Bluetooth`.
+Ve a la página `Setting`, haz clic en `Reboot/Shutdown`, luego haz clic en el `icono de Bluetooth`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -148,7 +148,7 @@ El dispositivo está siempre en modo de emparejamiento Bluetooth, sin necesidad 
 
 ### Configurar LoRa
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse según tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
 
 **Lista de regiones**
 
@@ -185,13 +185,13 @@ Ve a la página `LoRa Info`, haz clic en `Region`, elige la región y luego haz 
 <TabItem value="9" label="Configurar en el teléfono">
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Android App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndridLorasetting.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -212,7 +212,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 
 **Paso 1. Habilitar GPS**
 
-Necesitas habilitar el GPS para obtener la posición. Esto se puede configurar directamente en el dispositivo `manteniendo pulsado el icono de posición`. 
+Necesitas habilitar el GPS para obtener la posición. Esto se puede configurar directamente en el dispositivo `manteniendo presionado el icono de posición`. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -228,7 +228,7 @@ Necesitas formatear e instalar el mapa en tu tarjeta SD. Para un tutorial detall
 
 **Paso 4. Ver el mapa**
 
-Espera a que el mapa se cargue. Después de conectarte correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa sin conexión.
+Espera a que el mapa se cargue. Después de conectarse correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa sin conexión.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/OfflineMapL2.png" alt="pir" width={450} height="auto" /></p>
 
@@ -238,7 +238,7 @@ Espera a que el mapa se cargue. Después de conectarte correctamente a la red Wi
 
 **Paso 1. Habilitar GPS**
 
-Necesitas habilitar el GPS para obtener la posición. Esto se puede configurar directamente en el dispositivo `manteniendo pulsado el icono de posición`. 
+Necesitas habilitar el GPS para obtener la posición. Esto se puede configurar directamente en el dispositivo `manteniendo presionado el icono de posición`. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -250,7 +250,7 @@ Configura el nombre y la contraseña de la red Wifi. Esto se puede hacer directa
 
 :::tip
 
-La red Wifi conectada debe ser de 2.4G. El Wifi de 5G no puede ser utilizado por el dispositivo.
+La red Wifi conectada debe ser de 2.4G. El dispositivo no puede utilizar redes Wifi de 5G.
 
 :::
 
@@ -260,7 +260,7 @@ El Wifi está deshabilitado cuando la IP de wifi está vacía y el icono de wifi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
-Mantén pulsado el icono `Wifi` para cambiar el estado.
+Mantén presionado el icono `Wifi` para cambiar el estado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSwitchMUI.png" alt="pir" width={450} height="auto" /></p>
 
@@ -268,7 +268,7 @@ Mantén pulsado el icono `Wifi` para cambiar el estado.
 
 **Paso 3. Ver el mapa**
 
-Espera a que el mapa se cargue. Después de conectarte correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa en línea.
+Espera a que el mapa se cargue. Después de conectarse correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa en línea.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/OfflineMapL2.png" alt="pir" width={300} height="auto" /></p>
 
@@ -429,25 +429,25 @@ Mantén pulsado un chat para eliminarlo. Elige y haz clic en un chat para entrar
 
 | Método de interacción | Efecto |
 |---|---|
-| User Short Name | Cambiar el nombre corto del dispositivo|
-| User Long Name | Cambiar el nombre largo del dispositivo|
-| Screen Pin | Establecer contraseña para el arranque del dispositivo |
-| Configuration Pin | Establecer contraseña para cambios de configuración |
-| Region | Configurar la región LoRa|
+| Nombre corto de usuario | Cambiar el nombre corto del dispositivo|
+| Nombre largo de usuario | Cambiar el nombre largo del dispositivo|
+| PIN de pantalla | Establecer contraseña para el arranque del dispositivo |
+| PIN de configuración | Establecer contraseña para cambios de configuración |
+| Región | Configurar la región LoRa|
 | Modem Preset| Configurar el preset de LoRa |
-| Channel | Editar canal|
-| Device Role | Configurar el rol |
+| Canal | Editar canal|
+| Rol del dispositivo | Configurar rol |
 | WiFi | Establecer SSID y contraseña de Wifi |
-| Screen Timeout| Establecer tiempo de espera de la pantalla|
-| Screen Brightness| Establecer brillo de la pantalla|
-| Theme| Cambia el tema entre fondos claros y oscuros |
-| Screen Calibration | Calibrar pantalla|
-| Language| Cambiar el idioma mostrado|
-| Factory Reset | Configuración restaurada a los valores predeterminados |
-| NodeDB Reset | Datos de nodos borrados |
-| Clear Chat History | Historial de chat borrado |
-| Reboot (green icon) | El dispositivo se reinicia |
-| Turn Off (red icon) | El dispositivo se apaga |
+| Tiempo de espera de pantalla| Establecer tiempo de espera de pantalla|
+| Brillo de pantalla| Establecer brillo de pantalla|
+| Tema| Cambia el tema entre fondos oscuros y claros |
+| Calibración de pantalla | Calibrar pantalla|
+| Idioma| Cambiar el idioma mostrado|
+| Restablecimiento de fábrica | La configuración se restaura a los valores predeterminados |
+| Restablecer NodeDB | Datos de nodos borrados |
+| Borrar historial de chat | Historial de chat borrado |
+| Reiniciar (icono verde) | El dispositivo se reinicia |
+| Apagar (icono rojo) | El dispositivo se apaga |
 
 </TabItem>
 
@@ -493,7 +493,7 @@ Navega a "Node Action"
 |---|---|
 | Seleccionar "GPS Toggle" | GPS encendido/apagado|
 | Seleccionar "GPS Format" | Cambia el formato de GPS|
-| Seleccionar "Compass Headings" | Conmuta entre encabezado dinámico, fijo y congelado para "N" |
+| Seleccionar "Compass Headings" | Alterna entre encabezado Dinámico, Fijo y Congelado para "N" |
 | Seleccionar "Compass Calibrate" | Inicia una rutina de calibración de brújula de 30 segundos |
 </TabItem>
 
@@ -534,7 +534,7 @@ Navega a "Node Action"
 
 ### El dispositivo no puede conectarse a mi Wifi
 
-- Asegúrate de que te estás conectando a una `2.4g Wifi`. El dispositivo no puede emparejarse con Wifi de 5G. Normalmente el punto de acceso del teléfono se puede ajustar a 2.4g en los ajustes del teléfono. Así que puedes probar primero con el punto de acceso de tu teléfono.
+- Asegúrate de que te estás conectando a una `2.4g Wifi`. El dispositivo no puede emparejarse con Wifi de 5G. Normalmente el punto de acceso del teléfono se puede ajustar a 2.4g en la configuración del teléfono. Así que primero puedes probar el punto de acceso de tu teléfono.
 
 - Habilita Wifi después de configurar el nombre de Wifi y la contraseña de Wifi.
 
@@ -549,7 +549,7 @@ Wifi está deshabilitado cuando la IP de wifi está vacía y el icono de wifi es
 - Después de encender el dispositivo, se apagará o reiniciará automáticamente después de un rato.
 - El registro del puerto serie se ejecuta durante un rato y luego se detiene.
 
- Esto puede deberse a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, en proceso de configuración......
 
 **Solución de problemas**
 
@@ -557,7 +557,7 @@ Necesitas realizar un borrado de la memoria flash y luego volver a flashear el f
 
 ### Restablecimiento de fábrica
 
-Si quieres restaurar la configuración predeterminada, puedes hacer un restablecimiento de fábrica. Hay dos métodos para hacerlo.
+Si quieres restaurar la configuración predeterminada, puedes hacer un restablecimiento de fábrica. Hay dos métodos para realizar el restablecimiento de fábrica.
 
 <Tabs>
 
@@ -602,9 +602,9 @@ El dispositivo se reiniciará.
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Entrada de dispositivo en Settings" width={300} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Botón Reset NodeDB en Device Config" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -614,18 +614,18 @@ Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device*
 
 Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo en Settings" width={300} height="auto" /></p>
 
 #### Regenerar clave privada
 
 Cada nodo posee un par de claves pública/privada. Para intercambiar un mensaje privado cifrado, el remitente lo cifra con la clave pública del destinatario, y solo la clave privada de ese destinatario puede descifrarlo. Por lo tanto, dos nodos pueden comunicarse de forma privada una vez que conocen la clave pública del otro. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar su clave privada. Después de la regeneración, elimina ese nodo de las listas de nodos de los otros dispositivos para que puedan reconectarse y obtener su nueva clave pública.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo en Settings" width={600} height="auto" /></p>
 
 Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
 :::note
-Después de la regeneración de la clave, otro dispositivo necesita volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos de otros dispositivos.
+Después de la regeneración de la clave, otro dispositivo necesita volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos del otro dispositivo.
 :::
 
 ### Calidad de la señal
@@ -636,10 +636,28 @@ Después de la regeneración de la clave, otro dispositivo necesita volver a con
 
       Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
 
+## Fuente
 
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
+- [Cálculo de consumo de energía](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
