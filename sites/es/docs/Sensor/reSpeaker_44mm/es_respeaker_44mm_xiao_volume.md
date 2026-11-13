@@ -1,5 +1,5 @@
 ---
-description: Controla el volumen de reproducción del reSpeaker XVF3800 44mm desde el XIAO ESP32-S3 Plus escribiendo en los registros de salida analógica y DAC del AIC3104 a través de I2C, con un tono de prueba de 440 Hz para escuchar el cambio.
+description: Controla el volumen de reproducción del reSpeaker XVF3800 44mm desde el XIAO ESP32-S3 Plus escribiendo los registros de salida analógica y del DAC AIC3104 mediante I2C, con un tono de prueba de 440 Hz para escuchar el cambio.
 title: Control de volumen del reSpeaker XVF3800 44mm con XIAO ESP32-S3 Plus
 keywords:
   - reSpeaker 44mm
@@ -24,6 +24,10 @@ Este sketch hace que el XIAO ESP32-S3 Plus reproduzca un tono generado de **440 
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
@@ -32,8 +36,8 @@ Este sketch hace que el XIAO ESP32-S3 Plus reproduzca un tono generado de **440 
 
 ## Requisitos previos
 
-- La matriz debe estar ejecutando el **firmware I2S**, porque el XVF3800 proporciona los relojes I2S. Consulta [Actualizar firmware](https://wiki.seeedstudio.com/es/respeaker_44mm_introduction/#actualizar-firmware).
-- Arduino IDE con el paquete de placas ESP32 y la biblioteca **Arduino Audio Tools**. Consulta [Preparación de software](https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_getting_started/#preparación-de-software).
+- La matriz debe estar ejecutando el **firmware I2S**, porque el XVF3800 proporciona los relojes I2S. Consulta [Update Firmware](https://wiki.seeedstudio.com/es/respeaker_44mm_introduction/#actualizar-firmware).
+- Arduino IDE con el paquete de placas ESP32 y la biblioteca **Arduino Audio Tools**. Consulta [Software Preparation](https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_getting_started/#preparación-de-software).
 - Placa seleccionada como **XIAO_ESP32S3_Plus**, es necesario seleccionar el número de puerto.
 - Un altavoz en el conector JST o auriculares en el jack de 3,5 mm.
 
@@ -45,7 +49,7 @@ El AIC3104 comparte el bus I2C con el XVF3800. El firmware XMOS y los botones de
 
 ## Mapeo de volumen
 
-El sketch expone una escala de volumen de 0–17, dividida entre atenuación digital y ganancia analógica:
+El sketch expone una escala de volumen de 0 a 17, dividida entre atenuación digital y ganancia analógica:
 
 | Volumen | Resultado |
 |--------|----------|
@@ -53,7 +57,7 @@ El sketch expone una escala de volumen de 0–17, dividida entre atenuación dig
 | `8` | 0 dB (referencia, DAC a escala completa) |
 | `9` … `17` | +1 dB … +9 dB de ganancia de salida analógica |
 
-De 0 a 8 el DAC se atenúa en **pasos de 0,5 dB** (`(8 − volume) × 2`). De 9 a 17 el DAC se mantiene en 0 dB y la etapa de salida analógica se amplifica en `volume − 8` dB.
+De 0 a 8 el DAC se atenúa en **pasos de 0,5 dB** (`(8 − volume) × 2`). De 9 a 17 el DAC se mantiene en 0 dB y la etapa de salida analógica se incrementa en `volume − 8` dB.
 
 ## Mapa de registros
 
@@ -71,11 +75,11 @@ Bits del registro de salida: **D7–D4** = ganancia analógica (`0`–`9` dB), *
 
 ## Cómo funciona
 
-1. `setup()` inicia I2C a 100 kHz y escribe en el registro de control de página del AIC3104, luego ajusta ambos canales DAC a 0 dB y desmutea/enciende las salidas de auriculares y de línea a 0 dB.
+1. `setup()` inicia I2C a 100 kHz y escribe en el registro de control de página del AIC3104, luego ajusta ambos canales del DAC a 0 dB y activa/desmutea las salidas de auriculares y de línea a 0 dB.
 2. `setVolume()` divide el nivel solicitado en un valor de atenuación del DAC y un valor de ganancia analógica, escribe los cuatro registros de salida y lee de nuevo el registro del DAC izquierdo para confirmación.
 3. I2S se inicia en `TX_MODE` a 48 kHz, estéreo, 32 bits, con el XIAO como esclavo para que el XVF3800 genere BCLK y LRCLK.
 4. Un `SineWaveGenerator` produce el tono de 440 Hz al 25 % de la escala completa de 32 bits, envuelto en un `GeneratedSoundStream` y copiado a I2S por `StreamCopy`.
-5. `loop()` mantiene el tono reproduciéndose y atiende los comandos de un solo carácter desde el Monitor Serie.
+5. `loop()` mantiene el tono reproduciéndose y atiende comandos de un solo carácter desde el Monitor Serie.
 
 ## Comandos serie
 

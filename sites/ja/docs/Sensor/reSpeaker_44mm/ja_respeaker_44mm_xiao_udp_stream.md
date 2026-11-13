@@ -26,6 +26,10 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_udp_streaming/
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
@@ -37,7 +41,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_udp_streaming/
 - XIAO をステーションモードで Wi-Fi ネットワークに接続します。
 - XVF3800 から I2S 経由で 48 kHz、ステレオ、32 ビットオーディオを取得します。
 - 5 秒分のオーディオを UDP パケットとして PC に送信します。各パケットには 8 バイトのヘッダー（`AUD0` マジック + シーケンス番号）が付きます。
-- Python 受信プログラムはストリームを再構成し、欠落パケットや重複パケットを検出し、欠落部分には無音を挿入してから `respeaker_recording.wav` に書き込みます。
+- Python 受信プログラムはストリームを再構成し、欠落パケットや重複パケットを検出し、欠落部分には無音を挿入してから `respeaker_recording.wav` として書き出します。
 
 :::note
 このサンプルは、XVF3800 上で 48 kHz の **I2S ファームウェア** が動作していることを前提としています。ボードがまだ USB イメージで動作している場合、I2S クロックは出力されません。[Update Firmware](https://wiki.seeedstudio.com/ja/respeaker_44mm_introduction/#ファームウェアを更新) を参照してください。
@@ -46,13 +50,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_udp_streaming/
 ## 始める前に
 
 1. ボードを PC と同じネットワークに接続します。
-2. スケッチ内で Wi-Fi の認証情報と PC の IPv4 アドレスを設定します。
+2. スケッチ内に Wi-Fi の認証情報と PC の IPv4 アドレスを設定します。
 3. PC のアドレスは `ipconfig`（Windows）または `ip addr`（Linux/macOS）で確認します。
-4. UDP ポート `12345` への受信をファイアウォールで許可します。許可しない場合、パケットは通知なしに破棄されます。
+4. UDP ポート `12345` への受信をファイアウォールで許可します。許可しない場合、パケットは黙って破棄されます。
 
 ## Arduino コード
 
-書き込み前に次の値を更新してください：
+アップロードする前に、次の値を更新してください：
 
 ```cpp
 // WiFi credentials
@@ -821,14 +825,14 @@ WAV saved successfully!
 Receiver finished.
 ```
 
-## オーディオを再生する
+## オーディオを聴く
 
-任意のオーディオプレーヤー（VLC、Windows Media Player、または検証用の Audacity など）で `respeaker_recording.wav` を開きます。これは 48 kHz、ステレオ、32 ビット PCM です。
+`respeaker_recording.wav` を任意のオーディオプレーヤー（VLC、Windows Media Player、または Audacity など）で開いて確認します。48 kHz、ステレオ、32 ビット PCM です。
 
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
