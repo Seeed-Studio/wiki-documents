@@ -4,7 +4,7 @@ title: XIAO ESP32-S3 Plus を用いた reSpeaker XVF3800 44mm 向け I2S テス�
 keywords:
   - reSpeaker 44mm
   - XIAO ESP32-S3 Plus
-  - I2S test
+  - I2S テスト
   - xvf3800
   - arduino audio tools
 image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_board_overview.jpg
@@ -19,9 +19,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_i2s_test/
 ---
 # XIAO ESP32-S3 Plus を用いた reSpeaker XVF3800 44mm 向け I2S テスト
 
-このスケッチは、XIAO ESP32-S3 Plus と 44 mm アレイ上の XVF3800 間の I2S リンクを検証します。440 Hz の矩形波を生成して I2S 送信ラインに書き込み、同時にマイクアレイから戻ってくるステレオフレームを読み取ります。受信サンプルのうち `0` でも `-1` でもないものを有効としてカウントし、戻ってきた有効サンプル数に基づいて PASS か FAIL かをレポートします。
+このスケッチは、XIAO ESP32-S3 Plus と 44 mm アレイ上の XVF3800 間の I2S リンクを検証します。440 Hz の矩形波を生成して I2S 送信ラインに書き込み、同時にマイクアレイから戻ってくるステレオフレームを読み取ります。受信サンプルのうち `0` と `-1` 以外の値を有効としてカウントし、戻ってきた有効サンプル数に基づいてテストの合否（PASS / FAIL）を報告します。
 
 {/* TODO: href="#" の値は、公開後に Seeed Studio の製品ページ URL に置き換えてください。 */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -31,23 +35,23 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_i2s_test/
 
 ## 前提条件
 
-- アレイは **I2S ファームウェア** で動作している必要があります。まだ USB イメージのままの場合は、[Update Firmware](https://wiki.seeedstudio.com/ja/respeaker_44mm_introduction/#update-firmware) を参照してください。
-- ESP32 ボードパッケージと **Arduino Audio Tools** ライブラリがインストールされた Arduino IDE。詳しくは [Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#software-preparation) を参照してください。
+- アレイは **I2S ファームウェア** で動作している必要があります。まだ USB イメージのままの場合は、[Update Firmware](https://wiki.seeedstudio.com/ja/respeaker_44mm_introduction/#ファームウェアを更新) を参照してください。
+- ESP32 ボードパッケージと **Arduino Audio Tools** ライブラリをインストールした Arduino IDE。詳しくは [Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#ソフトウェア準備) を参照してください。
 - ボードに **XIAO_ESP32S3_Plus** を選択し、ポート番号を選択していること。
 - データ通信対応の USB-C ケーブル（充電専用ではないもの）。
 
 
 
 :::note
-このテストでは、XIAO を I2S の **マスター**（`cfg.is_master = true`）として設定します。録音および再生のサンプルでは、XVF3800 がクロックを駆動するため、XIAO は **スレーブ** として動作します。スケッチを切り替える場合は、この違いを覚えておいてください。
+このテストでは、XIAO を I2S の **マスター** として設定します（`cfg.is_master = true`）。録音および再生のサンプルでは、XVF3800 がクロックを駆動するため、XIAO は **スレーブ** として動作します。スケッチを切り替える場合は、この違いに注意してください。
 :::
 
 ## 動作概要
 
 1. スケッチは 48 kHz、ステレオ、32 ビットのフルデュプレックス I2S ストリーム（`RXTX_MODE`）を設定します。
-2. 32,000 フレームそれぞれについて、32 ビットの位相アキュムレータから 440 Hz の矩形波を計算し、同じサンプルを両チャネルに書き込んでから、1 フレーム分のステレオデータを読み戻します。
-3. 受信サンプルのうち `0` でも `-1` でもないものごとに `nonZero` をインクリメントします。最初の 100 フレームは、データを目視確認できるように出力されます。
-4. 実行後に、`nonZero` を `frameCount`（64,000 サンプル中 32,000 サンプル）と比較します。しきい値を下回る場合は、`I2S RX FAIL!` を報告する前にテストをもう一度実行します。
+2. 32,000 フレームそれぞれについて、32 ビットの位相アキュムレータから 440 Hz の矩形波を計算し、同じサンプルを両チャンネルに書き込んでから、1 フレーム分のステレオデータを読み戻します。
+3. 受信サンプルのうち `0` と `-1` 以外の値ごとに `nonZero` をインクリメントします。最初の 100 フレームは、データを目視確認できるように出力されます。
+4. 実行後に、`nonZero` を `frameCount`（64,000 サンプル中 32,000）と比較します。しきい値を下回る場合は、`I2S RX FAIL!` を報告する前にテストをもう一度実行します。
 
 ## Arduino スケッチ
 
@@ -228,13 +232,13 @@ Test complete
 
 ### `I2S RX FAIL!`
 
-- アレイが **I2S** ファームウェアで動作していることを確認してください — USB イメージでは I2S データは生成されません。
-- ボードパッケージが `XIAO_ESP32S3_Plus` であり、他のスケッチで I2S ピンが再定義されていないことを確認してください。
-- スケッチが、上の表と一致する GPIO 8 / 7 / 44 / 43 を使用していることを確認してください。
+- アレイが **I2S** ファームウェアで動作していることを確認してください。USB イメージでは I2S データは出力されません。
+- ボードパッケージが `XIAO_ESP32S3_Plus` になっていること、また他のスケッチで I2S ピンを再定義していないことを確認してください。
+- スケッチが GPIO 8 / 7 / 44 / 43 を使用しており、上の表と一致していることを確認してください。
 
 ### 受信サンプルがすべて `0` または `-1` になる
 
-マイクのストリームが XIAO に届いていません。I2S ファームウェアを書き直し、その後ボードの電源を入れ直してください。アレイがミュートされている場合、処理済みチャネルは無音になることがあります — ミュートボタンを 1 回押してください。
+マイクのストリームが XIAO に届いていません。I2S ファームウェアを書き直し、その後ボードの電源を入れ直してください。アレイがミュートされている場合、処理済みチャンネルは無音になることがあります — ミュートボタンを 1 回押してください。
 
 ### シリアルモニタが何も表示しない
 
@@ -242,7 +246,7 @@ Test complete
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

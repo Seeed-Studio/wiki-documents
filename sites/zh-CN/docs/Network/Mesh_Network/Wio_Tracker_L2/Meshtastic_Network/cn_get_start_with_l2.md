@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
 
 1. 尚未完成消息传输过程
-2. 正在被配置
+2. 正在配置中
 :::
 
 ## 烧录固件
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-将目标设备选择为 `Seeed Wio Tracker L2` 并选择最新固件，然后点击 `Flash`。
+对于 Wio tracker `Wio Tracker L2 Pro` 和 `Wio Tracker L2` 的固件烧录，选择目标设备为 `Seeed Wio Tracker L2` 并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -41,12 +41,12 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 
-然后点击 “Flash”。如果你想覆盖之前的固件，请不要忘记勾选 “Full Erase and Install”。
+然后点击 "Flash"。如果你想覆盖之前的固件，请不要忘记勾选 "Full Erase and Install"。
 
 ## 入门指南
 
 
-### 界面切换
+### UI 切换
 
 
 <Tabs>
@@ -80,7 +80,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 查找 Node ID**
 
-在设备贴纸上找到 MAC 地址。Node ID 基于 MAC 地址的最后四位数字。最后一位应为 `-2`。例如，如果设备为 29CA，则实际节点应为 29c8。
+在设备贴纸上找到 MAC 地址。Node ID 基于 MAC 地址的最后四位数字。最后一位应为 `-2`。例如，如果设备为 29CA，则实际的节点应为 29c8。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
 
@@ -126,7 +126,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- 输入屏幕上显示的代码，然后点击 `Pair` 连接设备。
+- 输入屏幕上显示的代码，然后点击 `Pair` 以连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -138,7 +138,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndroidX1Connection.png" alt="pir" width={300} height="auto" /></p>
 
-- 输入屏幕上显示的代码，然后点击 `OK` 连接设备。
+- 输入屏幕上显示的代码，然后点击 `OK` 以连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
 
@@ -161,7 +161,7 @@ import TabItem from '@theme/TabItem';
 更完整的列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到限制，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到该限制，你的设备将停止发射，直到再次被允许。
 :::
 
 <Tabs>
@@ -202,7 +202,7 @@ import TabItem from '@theme/TabItem';
 
 </Tabs>
 
-现在你已经在设备上设置了 LoRa 区域，可以继续配置任意 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足你的需求。
+现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
 
 ### 地图使用
 
@@ -212,7 +212,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置。这可以通过在设备上 `long pressing the position icon` 直接配置。 
+你需要启用 GPS 才能获取位置信息。这可以通过 `long pressing the position icon` 在设备上直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -220,7 +220,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. SD 卡准备**
 
-你需要在 SD 卡中进行格式化并安装地图。关于 SD 卡使用的详细教程，请[点击这里](/cn/l2_sd_card)查看。
+你需要在 SD 卡中进行格式化并安装地图。有关 SD 卡使用的详细教程，请[点击这里](/cn/l2_sd_card)查看。
 
 **步骤 3. 安装 SD 卡**
 
@@ -238,7 +238,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置。这可以通过在设备上 `long pressing the position icon` 直接配置。 
+你需要启用 GPS 才能获取位置信息。这可以通过 `long pressing the position icon` 在设备上直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -246,11 +246,11 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. 设置并启用 Wifi**
 
-设置 Wifi 名称和密码。这可以直接在设备上操作。 
+设置 Wifi 名称和密码。这可以在设备上直接操作。 
 
 :::tip
 
-连接的 Wifi 需为 2.4G。5G Wifi 无法被设备使用。
+连接的 Wifi 必须为 2.4G。5G Wifi 无法被设备使用。
 
 :::
 
@@ -260,7 +260,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
-长按 `Wifi` 图标可切换状态。
+长按 `Wifi` 图标以切换状态。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSwitchMUI.png" alt="pir" width={450} height="auto" /></p>
 
@@ -278,20 +278,20 @@ import TabItem from '@theme/TabItem';
 
 ## 高级用法
 
-### 通过网页连接
+### 通过网站连接
 
-如果你想在网页中发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+如果你想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   **步骤 1**：切换到 BaseUI
 
-  **步骤 2**：打开网页
+  **步骤 2**：打开网站
 
 [Click here](https://client.meshtastic.org/messages/broadcast/0) 进入该网站。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   **步骤 3**：添加新设备
 
-    点击 "+ New Connection"。
+    点击 "+ New Connection"。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -317,7 +317,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SensorConnection.png" alt="pir" width={500} height="auto" /></p>
 
-你可以通过 Grove 接口为设备添加传感器。以下传感器已经验证与设备上的 Grove 接口兼容。
+你可以通过 Grove 接口为设备添加传感器。以下传感器已验证与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -334,16 +334,16 @@ import TabItem from '@theme/TabItem';
     <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html) 、PCT2075</td>
   </tr>
   <tr>
-    <td>温度 & 湿度</td>
+    <td>温度和湿度</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>温度 & 湿度 & 气压</td>
+    <td>温度、湿度和气压</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
     <td rowspan="2">其他</td>
-    <td>心率 & 血氧饱和度 SpO₂</td>
+    <td>心率和血氧饱和度 SpO₂</td>
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
@@ -382,7 +382,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="13" label="菜单栏">
 | 交互方式 | 效果 |
 |---|---|
-| 长按 home 图标 | 重新同步 |
+| 长按主页图标 | 重新同步 |
 | 长按节点列表图标 | 进入节点筛选页面 |
 | 长按设置图标 | 关闭屏幕 |
 
@@ -399,7 +399,7 @@ import TabItem from '@theme/TabItem';
 | 长按 LoRa 图标| LoRa 发射 关闭/开启|
 | 长按通知图标| 通知 启用/禁用|
 | 点击通知图标| 声音/横幅/声音与横幅 切换|
-| Llong press GPS icon| GPS 开启/关闭|
+| 长按 GPS 图标| GPS 开启/关闭|
 | 长按 WiFi 图标| WiFi 开启/关闭|
 | 长按 MQTT 图标| MQTT 开启/关闭|
 | 点击二维码图标| 显示设备二维码 |
@@ -409,19 +409,19 @@ import TabItem from '@theme/TabItem';
 <TabItem value="16" label="节点页面">
 | 交互方式 | 效果 |
 |---|---|
-| 点击一个节点| 显示详细信息|
-| 长按一个节点| 进入私聊|
-| 查看一个节点位置| 在地图中显示该节点位置|
+| 点击某个节点| 显示详细信息|
+| 长按某个节点| 进入私聊|
+| 查看某个节点位置| 在地图中显示该节点位置|
 
 </TabItem>
 
 <TabItem value="17" label="频道页面">
-长按某个频道以禁用/启用通知。选择并点击一个频道进入聊天窗口。
+长按某个频道以禁用/启用通知。选择并点击某个频道进入聊天窗口。
 
 </TabItem>
 
 <TabItem value="18" label="消息页面">
-长按某个聊天以删除它。选择并点击一个聊天进入聊天窗口。
+长按某个聊天以删除它。选择并点击某个聊天进入聊天窗口。
 
 </TabItem>
 
@@ -454,7 +454,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="20" label="工具">
 | 交互方式 | 效果 |
 |---|---|
-| Mesh 检测器| 显示检测到的活动节点 |
+| Mesh 探测器| 显示检测到的活动节点 |
 | 信号扫描器| 显示所选节点的 RSSI 和 SNR |
 | 路由跟踪| 显示所选节点的路由路径 |
 | 统计 | 显示数据包解码信息 |
@@ -520,15 +520,15 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-## 常见问题 FAQ
+## 常见问题
 
 ### 设备无法通过 BLE 与手机配对
 
-- 使用 MUI 时，请先切换到 Bluetooth Pairing 模式，再与手机配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
+- 使用 MUI 时，请先切换到 Bluetooth 配对模式，再与手机进行配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-- 使用 BaseUI 时，在设置并启用 Wifi 之后，你只能通过网络将设备与手机 APP 连接。
+- 使用 BaseUI 时，在设置并启用 Wifi 之后，你只能通过网络将设备与手机 APP 连接。 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -538,7 +538,7 @@ import TabItem from '@theme/TabItem';
 
 - 在设置 Wifi 名称和 Wifi 密码后，请启用 Wifi。
 
-当 wifi ip 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。当 wifi ip 显示且 wifi 图标为白色时，表示 Wifi 已启用。
+当 Wifi IP 为空且 Wifi 图标为灰色时，表示 Wifi 已禁用。当显示 Wifi IP 且 Wifi 图标为白色时，表示 Wifi 已启用。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -549,15 +549,15 @@ import TabItem from '@theme/TabItem';
 - 设备开机后，过一段时间会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中......
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中等……
 
-**排查方法**
+**故障排查**
 
-你需要执行 flash 擦除，然后重新烧录最新固件。
+你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方式进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
 
 <Tabs>
 
@@ -584,7 +584,7 @@ import TabItem from '@theme/TabItem';
 
 #### NodeDB 重置
 
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过时信息，你需要对其进行更新。
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过期信息，你需要对其进行更新。
 
 <Tabs>
 
@@ -612,13 +612,13 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 #### 交换用户信息
 
-每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换各自的节点信息，才能相互通信。如果你无法与列表中的某个节点发送或接收私信，可以在 App 中手动提示它们交换信息。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点发送或接收私信，可以在 App 中手动提示它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-每个节点都拥有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，只有该接收方的私钥才能对其解密。因此，一旦两个节点都知道彼此的公钥，就可以进行私密通信。如果某个节点在私信传输中持续失败，请尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取该节点的新公钥。
+每个节点都拥有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，只有该接收方的私钥才能解密。因此，一旦两个节点互相知道对方的公钥，就可以进行私密通信。如果某个节点在私信传输中持续失败，请尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取该节点的新公钥。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
@@ -634,12 +634,30 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
 
+## 资源
 
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
+- [功耗计算](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

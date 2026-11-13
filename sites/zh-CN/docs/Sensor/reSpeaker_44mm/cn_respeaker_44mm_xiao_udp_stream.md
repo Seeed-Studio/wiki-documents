@@ -1,6 +1,6 @@
 ---
 description: 使用 XIAO ESP32-S3 Plus 通过 Wi-Fi 从 reSpeaker XVF3800 44mm 以 48 kHz 立体声流式传输音频，并在 PC 上使用带有数据包排序和丢包跟踪的 UDP 接收脚本将其捕获为 WAV 文件。
-title: 使用 XIAO ESP32-S3 Plus 进行 reSpeaker XVF3800 44mm 的 UDP 流式传输
+title: 使用 XIAO ESP32-S3 Plus 对 reSpeaker XVF3800 44mm 进行 UDP 流式传输
 keywords:
   - reSpeaker 44mm
   - XIAO ESP32-S3 Plus
@@ -18,13 +18,17 @@ createdAt: '2026-11-05'
 updatedAt: '2026-11-05'
 url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_udp_streaming/
 ---
-# 使用 XIAO ESP32-S3 Plus 进行 reSpeaker XVF3800 44mm 的 UDP 流式传输
+# 使用 XIAO ESP32-S3 Plus 对 reSpeaker XVF3800 44mm 进行 UDP 流式传输
 
 ## 概述
 
-本项目通过 Wi-Fi 从 reSpeaker XVF3800 44mm 阵列实时流式传输音频。XIAO ESP32-S3 Plus 通过 I2S 捕获处理后的立体声输出，将其拆分为带编号的 UDP 数据包，并发送到你 PC 上的 Python 接收端，后者重新组装音频流并将其保存为 WAV 文件。
+本项目通过 Wi-Fi 从 reSpeaker XVF3800 44mm 阵列实时流式传输音频。XIAO ESP32-S3 Plus 通过 I2S 捕获处理后的立体声输出，将其拆分为带编号的 UDP 数据包，并发送到你 PC 上的 Python 接收端，由其重新组装音频流并保存为 WAV 文件。
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -36,23 +40,23 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_udp_streaming/
 
 - 以 station 模式将 XIAO 连接到 Wi-Fi 网络。
 - 通过 I2S 从 XVF3800 捕获 48 kHz、立体声、32 位音频。
-- 将 5 秒音频作为 UDP 数据包发送到 PC，每个数据包带有 8 字节头部（`AUD0` magic + 序列号）。
-- Python 接收端重新组装音频流，检测丢失或重复的数据包，为间隙插入静音，并写入 `respeaker_recording.wav`。
+- 将 5 秒音频作为 UDP 数据包发送到 PC，每个数据包带有 8 字节头部（`AUD0` 魔数 + 序列号）。
+- Python 接收端重新组装音频流，检测丢包或重复包，为间隙插入静音，并写入 `respeaker_recording.wav`。
 
 :::note
-此示例要求 XVF3800 上运行 48 kHz 的 **I2S 固件**。如果板子仍在运行 USB 镜像，则不会产生 I2S 时钟。请参阅 [Update Firmware](https://wiki.seeedstudio.com/cn/respeaker_44mm_introduction/#更新固件)。
+此示例要求 XVF3800 上烧录 **I2S 固件**，采样率为 48 kHz。如果板子仍在运行 USB 固件镜像，则不会产生 I2S 时钟。请参阅 [Update Firmware](https://wiki.seeedstudio.com/cn/respeaker_44mm_introduction/#更新-固件)。
 :::
 
 ## 开始之前
 
-1. 将开发板连接到与你的 PC 相同的网络。
-2. 在示例程序中设置你的 Wi-Fi 凭据和 PC 的 IPv4 地址。
+1. 将开发板与 PC 连接到同一网络。
+2. 在示例程序中设置你的 Wi-Fi 凭据以及 PC 的 IPv4 地址。
 3. 使用 `ipconfig`（Windows）或 `ip addr`（Linux/macOS）查找 PC 地址。
-4. 允许防火墙放行 UDP `12345` 端口的入站流量，否则数据包会被静默丢弃。
+4. 在防火墙中允许 UDP 端口 `12345` 的入站访问，否则数据包会被静默丢弃。
 
 ## Arduino 代码
 
-在上传前更新以下数值：
+在上传前先更新以下数值：
 
 ```cpp
 // WiFi credentials
@@ -475,11 +479,11 @@ void loop() {
 
 | 字节 | 字段 | 值 |
 |-------|-------|-------|
-| 0–3 | Magic | `AUD0` (ASCII) |
+| 0–3 | Magic | `AUD0`（ASCII） |
 | 4–7 | 序列号 | 小端 `uint32`，从 0 开始 |
 | 8–1031 | 音频负载 | 1024 字节的原始 32 位立体声 PCM |
 
-在 48 kHz × 2 声道 × 4 字节的设置下，一秒是 384,000 字节；五秒是 1,920,000 字节，即 1,875 个 1024 字节的数据包。
+在 48 kHz × 2 通道 × 4 字节的设置下，一秒是 384,000 字节；五秒是 1,920,000 字节，即 1,875 个 1024 字节的数据包。
 
 ## Python 脚本（接收并保存音频）
 
@@ -737,7 +741,7 @@ else:
 print("\nReceiver finished.")
 ```
 
-接收端在 5 秒的 socket 超时后结束，而不是通过结束标记结束，因为该示例程序没有发送可选的 `END0` 数据包。因此统计信息中的 `End marker received: False` 是正常现象。
+接收端在 5 秒的 socket 超时后结束，而不是通过结束标记结束，因为该示例程序没有发送可选的 `END0` 数据包。因此统计信息中的 `End marker received: False` 是正常的。
 
 ## 预期输出
 
@@ -823,12 +827,12 @@ Receiver finished.
 
 ## 收听音频
 
-在任意音频播放器中打开 `respeaker_recording.wav`——例如 VLC、Windows Media Player 或 Audacity 进行检查。它是 48 kHz、立体声、32 位 PCM。
+在任意音频播放器中打开 `respeaker_recording.wav`——例如 VLC、Windows Media Player，或使用 Audacity 进行检查。该文件为 48 kHz、立体声、32 位 PCM。
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

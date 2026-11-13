@@ -26,6 +26,10 @@ Este proyecto transmite audio en tiempo real desde la matriz reSpeaker XVF3800 4
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
@@ -35,12 +39,12 @@ Este proyecto transmite audio en tiempo real desde la matriz reSpeaker XVF3800 4
 ## Descripción de la funcionalidad
 
 - Conecta el XIAO a una red Wi‑Fi en modo estación.
-- Captura audio estéreo de 48 kHz y 32 bits desde el XVF3800 por I2S.
-- Envía cinco segundos de audio al PC como paquetes UDP, cada uno con una cabecera de 8 bytes (`AUD0` mágico + número de secuencia).
+- Captura audio estéreo de 48 kHz y 32 bits desde el XVF3800 mediante I2S.
+- Envía cinco segundos de audio al PC como paquetes UDP, cada uno con una cabecera de 8 bytes (magic `AUD0` + número de secuencia).
 - El receptor en Python vuelve a ensamblar el flujo, detecta paquetes perdidos o duplicados, inserta silencio en los huecos y escribe `respeaker_recording.wav`.
 
 :::note
-Este ejemplo requiere el **firmware I2S** en el XVF3800, a 48 kHz. Si la placa sigue ejecutando la imagen USB no producirá relojes I2S. Consulta [Update Firmware](https://wiki.seeedstudio.com/es/respeaker_44mm_introduction/#actualizar-firmware).
+Este ejemplo requiere el **firmware I2S** en el XVF3800, a 48 kHz. Si la placa sigue ejecutando la imagen USB no generará relojes I2S. Consulta [Update Firmware](https://wiki.seeedstudio.com/es/respeaker_44mm_introduction/#actualizar-firmware).
 :::
 
 ## Antes de empezar
@@ -48,7 +52,7 @@ Este ejemplo requiere el **firmware I2S** en el XVF3800, a 48 kHz. Si la placa s
 1. Conecta la placa a la misma red que tu PC.
 2. Configura en el sketch tus credenciales Wi‑Fi y la dirección IPv4 de tu PC.
 3. Obtén la dirección del PC con `ipconfig` (Windows) o `ip addr` (Linux/macOS).
-4. Permite el puerto UDP de entrada `12345` en el cortafuegos, o los paquetes se descartarán silenciosamente.
+4. Permite el puerto UDP de entrada `12345` en el firewall, o los paquetes se descartarán silenciosamente.
 
 ## Código de Arduino
 
@@ -828,7 +832,7 @@ Abre `respeaker_recording.wav` en cualquier reproductor de audio — VLC, Window
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
