@@ -1,5 +1,5 @@
 ---
-description: Comece a usar o Ripple UI no Wio Tracker L2 Pro. Saiba como gravar firmware, configurar redes MeshCore, enviar mensagens, usar mapas e trilhas de GPS e desbloquear recursos premium.
+description: Comece a usar o Ripple UI no Wio Tracker L2 Pro. Saiba como gravar o firmware, configurar redes MeshCore, enviar mensagens, usar mapas e trilhas de GPS e desbloquear recursos premium.
 title: Introdução ao Ripple
 keywords:
   - Ripple
@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png
 slug: /get_started_with_ripple_l2_pro
 sidebar_position: 2
 last_update:
-  date: 11/06/2026
+  date: 11/10/2026
   author: Michelle Huang
 ---
 
@@ -29,7 +29,7 @@ MeshCore gerencia a comunicação em malha. Ripple UI permite usá-lo diretament
 | Nome | Finalidade |
 | --- | --- |
 | MeshCore | Comunicação em malha LoRa |
-| Firmware Ripple UI | Operação autônoma pela tela sensível ao toque |
+| Firmware Ripple UI | Operação autônoma com tela sensível ao toque |
 | Firmware MeshCore Companion | Operação por meio de um telefone ou outro cliente |
 
 Grave o Ripple UI diretamente; não é necessário instalar o Companion antes.
@@ -54,7 +54,7 @@ O firmware atualizado usa perfis MeshCore e não oferece mais Ripple na tela New
 
 - **Mensagens autônomas:** Envie mensagens diretas e em grupo pela tela sensível ao toque.
 
-- **Múltiplos perfis de rede:** Mantenha configurações de rádio, identidades, contatos e preferências separados.
+- **Vários perfis de rede:** Mantenha configurações de rádio, identidades, contatos e preferências separados.
 
 - **Tela inicial personalizável:** Adicione atalhos para contatos, canais e configurações.
 
@@ -116,23 +116,32 @@ Siga os tutoriais de tela sensível ao toque e botões na primeira inicializaç�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png" alt="Telas de inicialização do Seeed Studio e MeshCore Ripple UI" width={700} height="auto" /></p>
 
+### Botões de hardware
+
+Ripple UI combina entrada por tela sensível ao toque com dois botões de hardware:
+
+- **Tela ligar/desligar (botão superior):** Pressione para ativar a tela ou desligá-la. Desligar a tela não desliga o dispositivo.
+- **ENTER (botão lateral U/B):** Pressione para confirmar uma seleção, salvar alterações ou enviar uma entrada quando solicitado.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_Button_Indication.webp" alt="Botões de hardware do L2 Pro: botão superior para ligar/desligar a tela e botão lateral U/B para ENTER" width={700} height="auto" /></p>
+
 ### Criar um perfil de rede
 
 1. Conclua os tutoriais de tela sensível ao toque e do botão Select exibidos na primeira inicialização.
 
-2. Escolha um pré-ajuste de rádio apropriado para sua região ou insira a frequência, o fator de espalhamento (SF) e outros parâmetros usados pela sua rede local.
+2. Escolha um preset de rádio apropriado para sua região ou insira a frequência, o fator de espalhamento (SF) e outros parâmetros usados pela sua rede local.
 
 3. Dê um nome ao perfil usando letras e números, sem espaços.
 
 4. Salve o perfil. Se solicitado, reinicie o dispositivo para aplicar as configurações.
 
-Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo pré-ajuste é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas a frequência e o SF.
+Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo preset é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas frequência e SF.
 
 ### Defina seu nome
 
 1. Toque em `L` à esquerda, abra o perfil de rede atual e selecione `Identity`.
 
-2. Altere o nome padrão para algo reconhecível, como `micha` ou `michb`. Os nomes podem conter até 12 caracteres.
+2. Altere o nome padrão para algo reconhecível, como `micha` ou `michb`. Os nomes podem conter até 31 caracteres.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ChangeDeviceName.png" alt="Abra o perfil de rede, selecione Identity e altere o nome do dispositivo" width={1000} height="auto" /></p>
 
@@ -142,7 +151,7 @@ Toque em `G`, `L` ou `M` no lado esquerdo da tela para alternar entre as três t
 
 <Tabs>
 
-<TabItem value="grid" label="G: Grade" default>
+<TabItem value="grid" label="G: Grid" default>
 
 `G` é uma tela inicial personalizável com uma grade de 3 × 4.
 
@@ -150,27 +159,27 @@ Toque em `G`, `L` ou `M` no lado esquerdo da tela para alternar entre as três t
 
 - Pressione e segure um atalho existente para removê-lo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_G.jpg" alt="Tela inicial em grade do Ripple UI" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_G.jpg" alt="Tela inicial Grid do Ripple UI" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="list" label="L: Lista">
+<TabItem value="list" label="L: List">
 
 `L` lista seus perfis de rede, contatos, canais de grupo e `Discover`. Use esta página para adicionar contatos, editar sua Identity e abrir conversas.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Página de lista do Ripple UI" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Página List do Ripple UI" width={500} height="auto" /></p>
 
 A captura de tela mostra nomes usados durante os testes. Sua lista dependerá de seus perfis e contatos.
 
 </TabItem>
 
-<TabItem value="map" label="M: Mapa">
+<TabItem value="map" label="M: Map">
 
 `M` exibe o mapa, posições e qualquer trilha de GPS carregada.
 
 - Arraste a tela para mover o mapa.
 
-- Toque em `+` ou `−` para aplicar zoom. Pinçar para aplicar zoom não é compatível.
+- Toque em `+` ou `−` para aplicar zoom. Pinçar para aplicar zoom não é suportado.
 
 - Toque no botão de seguir localização para manter o mapa centralizado na sua posição. O botão fica laranja quando ativado e a tela permanece ligada.
 
@@ -225,14 +234,16 @@ As capturas de tela são arquivos BMP com nomes de arquivo contendo data e hora,
 ### Torne seus dispositivos detectáveis
 
 1. Configure ambos os dispositivos com configurações de rádio MeshCore correspondentes.
+
 2. Dê a cada dispositivo um nome de `Identity` diferente.
+
 3. Defina `Advert` como `On` para permitir anúncios de identidade.
+
 4. Abra `Discover` na página `L` e aguarde os nós próximos aparecerem.
 
 Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="Menu Discover com Scan Local, Send ID Local e Send ID Broadcast" width={400} height="auto" /></p>
-
 
 | Opção | Função |
 | --- | --- |
@@ -246,7 +257,7 @@ Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
 1. Selecione o nó de destino em `Discover`.
 
-2. Abra o menu superior direito e selecione `Add to Contacts`.
+2. Abra o menu no canto superior direito e selecione `Add to Contacts`.
 
 3. Volte para `L` e confirme que o contato está listado.
 
@@ -264,7 +275,7 @@ Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
 4. Abra a conversa no outro dispositivo e responda.
 
-Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio falhar, verifique as configurações de rádio e a distância e tente novamente. Se a rota anterior não puder mais ser usada, selecione `Flood (reset)` em `Path` para encontrar uma nova rota.
+Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio falhar, verifique as configurações de rádio e a distância, depois tente novamente. Se a rota anterior não puder mais ser usada, selecione `Flood (reset)` em `Path` para encontrar uma nova rota.
 
 ## Mapas e trilhas de GPS
 
@@ -280,19 +291,19 @@ Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio 
 
 ```
 
-3. Insira o cartão, ligue o dispositivo e abra `M`.
+3. Insira o cartão, ligue o dispositivo e abra `M`. O dispositivo precisará ser reiniciado se o cartão SD for montado ou desmontado.
 
 4. Desloque o mapa até uma área coberta pelos seus blocos e selecione um nível de zoom disponível.
 
 `zoom` é o nível de zoom; `x` e `y` são coordenadas dos blocos. Dispositivos bloqueados renderizam apenas **níveis de zoom 1–9**. Níveis de zoom mais detalhados exigem um código de desbloqueio.
 
-### Baixar mapas via Wi-Fi (requer desbloqueio)
+### Baixar mapas via Wi-Fi (desbloqueio necessário)
 
 1. Desbloqueie o dispositivo usando as instruções abaixo.
 
 2. Abra `Wi-Fi` no menu do sistema da tela inicial.
 
-3. Digite o nome e a senha da sua rede e ative o download de mapas.
+3. Insira o nome e a senha da sua rede e ative o download de mapas.
 
 4. Pressione `ENTER` para salvar e reinicie quando solicitado.
 
@@ -327,7 +338,7 @@ Se o seu dispositivo veio com um código de desbloqueio aplicável, prossiga par
 
 1. Quando você receber o código de desbloqueio para o seu número de série, abra `Unlock` novamente.
 
-2. Digite o código completo e envie.
+2. Insira o código completo e envie.
 
 3. Após a ativação bem-sucedida, a opção `Unlock` desaparece.
 
@@ -345,7 +356,7 @@ Guarde o código junto com o número de série do dispositivo. Em nosso teste, a
 
 - **Sensor Admin:** Acesse comandos de sensor, telemetria e gerenciamento de permissões.
 
-- **Zoom de mapa mais detalhado:** Exibe blocos de mapa acima do nível de zoom 9.
+- **Zoom de mapa mais detalhado:** Exiba blocos de mapa acima do nível de zoom 9.
 
 - **Download via Wi-Fi:** Baixe blocos de mapa sob demanda e armazene-os em cache no cartão SD.
 
@@ -387,7 +398,7 @@ Esta tela mostra o código de retorno RadioLib da inicialização do rádio LoRa
 
 ### Por que o mapa está em branco
 
-Verifique o formato do cartão SD, os caminhos dos blocos e se existem blocos para a área exibida. Em um dispositivo bloqueado, verifique também se o nível de zoom está entre 1 e 9. Uma posição de GPS válida não significa que os blocos de mapa tenham sido baixados.
+Verifique o formato do cartão SD, os caminhos dos blocos e se existem blocos para a área exibida. Em um dispositivo bloqueado, verifique também se o nível de zoom está entre 1–9. Uma posição de GPS válida não significa que os blocos de mapa foram baixados.
 
 ## Recursos
 

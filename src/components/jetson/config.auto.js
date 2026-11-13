@@ -813,7 +813,7 @@ export const communityList_gen = [
   },
   {
     "name": {
-      "en": "Build a Local AI Agent on Jetson Orin with Laya and Qwen",
+      "en": "Local Browser Agent on Jetson Orin",
       "zh": "在 Jetson Orin 上使用 Laya 和 Qwen 构建本地 AI Agent",
       "ja": "Jetson Orin 上で Laya と Qwen を使ってローカル AI エージェントを構築する",
       "es": "Crea un agente de IA local en Jetson Orin con Laya y Qwen",

@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::danger note
-Quando o dispositivo estiver nos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode deixar de funcionar.
+Quando o dispositivo estiver nos estados abaixo, não o reinicie ou desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 
 1. Não tiver concluído o processo de transmissão de mensagem
 2. Estiver sendo configurado
@@ -37,7 +37,7 @@ Selecione o dispositivo de destino como `Seeed Wio Tracker L2` e escolha o firmw
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
-Ligue o dispositivo, clique em `Enter DFU Mode`, aparecerá uma porta serial chamada `Tracker L2`, clique nela e conecte.
+Ligue o dispositivo, clique em `Enter DFU Mode`, aparecerá uma porta serial chamada `Tracker L2`, clique e conecte-a.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -57,7 +57,7 @@ Vá para a página Setting **->** Escolha `Reboot/Shutdown` **->** Pressione e s
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIToBaseUI.png" alt="pir" width={900} height="auto" /></p>
 
 :::tip
-O pop-up de troca para BaseUI aparece quando você `long-press` o ícone de Bluetooth.
+O pop-up de alternância para BaseUI aparece quando você `pressiona e segura` o ícone de Bluetooth.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/LongPress.gif" alt="pir" width={250} height="auto" /></p>
 
@@ -78,7 +78,13 @@ Se você apenas clicar no ícone de Bluetooth, entrará no modo Bluetooth. Nesse
 
 ### Conexão com o telefone
 
-**Passo 1. Entrar no modo de conexão Bluetooth**
+**Passo 1. Encontrar o ID do nó**
+
+Encontre o endereço MAC na etiqueta do dispositivo. O ID do nó é baseado nos últimos quatro dígitos do endereço MAC. O último dígito deve ser `-2`. Por exemplo, se o dispositivo for 29CA, então o ID de nó real deve ser 29c8.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
+
+**Passo 2. Entrar no modo de conexão Bluetooth**
 
 <Tabs>
 
@@ -89,10 +95,11 @@ Vá para a página `Setting`, clique em `Reboot/Shutdown` e depois clique no `í
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-Ao usar MUI, primeiro altere para o modo de pareamento Bluetooth antes de parear com o seu telefone. Caso contrário, o telefone não conseguirá reconhecer o dispositivo.
+
+Ao usar MUI, primeiro alterne para o modo de pareamento Bluetooth antes de parear com o seu telefone. Caso contrário, o telefone não conseguirá reconhecer o dispositivo.
 :::
 
-O dispositivo será então reiniciado em modo Bluetooth. O código de pareamento Bluetooth será exibido na tela.
+O dispositivo será então reiniciado em modo Bluetooth. O código de pareamento Bluetooth será mostrado na tela.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothParingMode1.png" alt="pir" width={500} height="auto" /></p>
 
@@ -119,7 +126,7 @@ O dispositivo está sempre em modo de pareamento Bluetooth, não sendo necessár
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- Digite o código exibido na tela e clique em `Pair` para conectar o dispositivo.
+- Digite o código mostrado na tela e clique em `Pair` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -131,7 +138,7 @@ O dispositivo está sempre em modo de pareamento Bluetooth, não sendo necessár
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndroidX1Connection.png" alt="pir" width={300} height="auto" /></p>
 
-- Digite o código exibido na tela e clique em `OK` para conectar o dispositivo.
+- Digite o código mostrado na tela e clique em `OK` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
 
@@ -141,7 +148,7 @@ O dispositivo está sempre em modo de pareamento Bluetooth, não sendo necessár
 
 ### Configurar LoRa
 
-Para começar a se comunicar pela malha, você deve definir sua região. Essa configuração controla qual faixa de frequência o dispositivo usa e deve ser ajustada de acordo com sua localização regional.
+Para começar a se comunicar pela malha, você deve definir a sua região. Essa configuração controla qual faixa de frequência o dispositivo usa e deve ser ajustada de acordo com a sua localização regional.
 
 **Lista de regiões**
 
@@ -154,7 +161,7 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma janela contínua de 1 hora. O dispositivo deixará de transmitir ao atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma janela móvel de 1 hora. O dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 <Tabs>
@@ -178,13 +185,13 @@ Vá para a página `LoRa Info`, clique em `Region`, escolha a região e depois c
 <TabItem value="9" label="Configurar no telefone">
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="Aplicativo iOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Aplicativo Android">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndridLorasetting.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -195,7 +202,7 @@ Vá para a página `LoRa Info`, clique em `Region`, escolha a região e depois c
 
 </Tabs>
 
-Agora que você definiu a região LoRa no dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
+Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
 
 ### Uso de mapa
 
@@ -203,7 +210,7 @@ Agora que você definiu a região LoRa no dispositivo, pode continuar configuran
 
 <TabItem value="10" label="Mapa offline">
 
-**Passo 1. Ativar GPS**
+**Passo 1. Ativar o GPS**
 
 Você precisa ativar o GPS para obter a posição. Isso pode ser configurado diretamente no dispositivo `pressionando e segurando o ícone de posição`. 
 
@@ -219,7 +226,7 @@ Você precisa formatar e instalar o mapa no cartão SD. Para um tutorial detalha
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SDCardPlugin.gif" alt="pir" width={450} height="auto" /></p>
 
-**Passo 4. Ver o mapa**
+**Passo 4. Visualizar o mapa**
 
 Aguarde o carregamento do mapa. Após conectar-se com sucesso ao Wi-Fi e obter a localização, o dispositivo exibirá um mapa offline.
 
@@ -229,7 +236,7 @@ Aguarde o carregamento do mapa. Após conectar-se com sucesso ao Wi-Fi e obter a
 
 <TabItem value="11" label="Mapa online">
 
-**Passo 1. Ativar GPS**
+**Passo 1. Ativar o GPS**
 
 Você precisa ativar o GPS para obter a posição. Isso pode ser configurado diretamente no dispositivo `pressionando e segurando o ícone de posição`. 
 
@@ -237,19 +244,19 @@ Você precisa ativar o GPS para obter a posição. Isso pode ser configurado dir
 
 Você também pode configurá-lo no aplicativo do telefone.
 
-**Passo 2. Definir e ativar o Wifi**
+**Passo 2. Configurar e ativar o Wi-Fi**
 
-Defina o nome e a senha do Wifi. Isso pode ser feito diretamente no dispositivo. 
+Defina o nome e a senha do Wi-Fi. Isso pode ser feito diretamente no dispositivo. 
 
 :::tip
 
-O Wifi conectado deve ser 2.4G. Wifi 5G não pode ser usado pelo dispositivo.
+O Wi-Fi conectado deve ser 2.4G. Wi-Fi 5G não pode ser usado pelo dispositivo.
 
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSetting.png" alt="pir" width={450} height="auto" /></p>
 
-O Wifi está desativado quando o IP do wifi está vazio e o ícone de wifi está cinza. O Wifi está ativado quando o IP do wifi é exibido e o ícone de wifi está branco. 
+O Wi-Fi está desativado quando o IP do Wi-Fi está vazio e o ícone de Wi-Fi está cinza. O Wi-Fi está ativado quando o IP do Wi-Fi é exibido e o ícone de Wi-Fi está branco. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -259,7 +266,7 @@ Pressione e segure o ícone `Wifi` para alternar o status.
 
 
 
-**Passo 3. Ver o mapa**
+**Passo 3. Visualizar o mapa**
 
 Aguarde o carregamento do mapa. Após conectar-se com sucesso ao Wi-Fi e obter a localização, o dispositivo exibirá um mapa online.
 
@@ -273,9 +280,9 @@ Aguarde o carregamento do mapa. Após conectar-se com sucesso ao Wi-Fi e obter a
 
 ### Conectar via site
 
-Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo site, pode conectar o dispositivo ao [site Meshtastic](https://client.meshtastic.org/messages/broadcast/0) agora.
+Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo site, agora pode conectar o dispositivo ao [site Meshtastic](https://client.meshtastic.org/messages/broadcast/0).
 
-  **Passo 1**: Alterar para BaseUI
+  **Passo 1**: Alternar para BaseUI
 
   **Passo 2**: Abrir o site
 
@@ -390,10 +397,10 @@ Você pode adicionar sensor ao dispositivo por meio da interface Grove. Os segui
 | Clique no ícone Nó | Navega para a página de nós |
 | Clique no ícone Relógio| Alterna entre hora real/tempo de atividade |
 | Pressione e segure o ícone LoRa| LoRa TX desligado/ligado|
-| Pressione e segure o ícone Notificação| Notificação ativada/desativada|
-| Clique no ícone Notificação| Alterna entre Som/Banner/Som e Banner|
-| Pressione e segure o ícone GPS| GPS ligado/desligado|
-| Pressione e segure o ícone WiFi| WiFi ligado/desligado|
+| Pressione e segure o ícone de Notificação| Notificação ativada/desativada|
+| Clique no ícone de Notificação| Alterna entre Som/Banner/Som e Banner|
+| Pressione e segure o ícone de GPS| GPS ligado/desligado|
+| Pressione e segure o ícone de WiFi| WiFi ligado/desligado|
 | Pressione e segure o ícone MQTT| MQTT ligado/desligado|
 | Clique no ícone de código QR| Exibe o código QR do dispositivo |
 
@@ -436,8 +443,8 @@ Pressione e segure um chat para excluí-lo. Escolha e clique em um chat para ent
 | Tema| Alterna o tema entre fundos escuros e claros |
 | Calibração da tela | Calibra a tela|
 | Idioma| Alterna o idioma exibido|
-| Restauração de fábrica | Configuração restaurada para os padrões |
-| Reset do NodeDB | Dados dos nós apagados |
+| Restauração de fábrica | Configurações restauradas para o padrão |
+| Reinicialização do NodeDB | Dados de nós apagados |
 | Limpar histórico de chat | Histórico de chat apagado |
 | Reiniciar (ícone verde) | O dispositivo reinicia |
 | Desligar (ícone vermelho) | O dispositivo desliga |
@@ -465,7 +472,7 @@ Pressione e segure um chat para excluí-lo. Escolha e clique em um chat para ent
 <TabItem value="21" label="Início">
 | Método de interação | Efeito |
 |---|---|
-| Selecione "Sleep Screen" | Desliga o display temporariamente; acorda com o pressionar do botão do usuário |
+| Selecione "Sleep Screen" | Desliga o visor temporariamente; acorda com o pressionar do botão do usuário |
 | Selecione "Send Position" | Anuncia manualmente a posição do dispositivo para os nós na malha (acelera a descoberta) |
 
 </TabItem>
@@ -485,8 +492,8 @@ Navegue até "Node Action"
 | Método de interação | Efeito |
 |---|---|
 | Selecione "GPS Toggle" | GPS ligado/desligado|
-| Selecione "GPS Format" | Alterna o formato do GPS|
-| Selecione "Compass Headings" | Alterna entre Dinâmico, Fixo e Congelar direção para "N" |
+| Selecione "GPS Format" | Alterna o formato de GPS|
+| Selecione "Compass Headings" | Alterna entre cabeçalho dinâmico, fixo e congelado para "N" |
 | Selecione "Compass Calibrate" | Inicia uma rotina de calibração da bússola de 30 segundos |
 </TabItem>
 
@@ -503,7 +510,7 @@ Navegue até "Node Action"
 | Método de interação | Efeito |
 |---|---|
 | Selecione "Notifications" | Ativa/desativa bipes|
-| Selecione "Bluetooth Toggle" | Ativa/desativa o Bluetooth|
+| Selecione "Bluetooth Toggle" | Ativa/desativa Bluetooth|
 | Selecione "Reboot/Shutdown" | Reinicia manualmente ou desliga o dispositivo|
 
 </TabItem>
@@ -517,11 +524,11 @@ Navegue até "Node Action"
 
 ### O dispositivo não consegue parear com o telefone via BLE
 
-- Ao usar o MUI, primeiro alterne para o modo de pareamento Bluetooth antes de parear com seu telefone. Caso contrário, seu telefone não conseguirá reconhecer o dispositivo. Vá para a página `Setting`, clique em `Reboot/Shutdown` e depois clique no `Bluetooth icon`.
+- Ao usar MUI, primeiro altere para o modo de pareamento Bluetooth antes de parear com seu telefone. Caso contrário, seu telefone não conseguirá reconhecer seu dispositivo. Vá para a página `Setting`, clique em `Reboot/Shutdown` e depois clique no `Bluetooth icon`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-- Ao usar o BaseUI, depois de configurar e ativar o Wifi, você só poderá conectar seu dispositivo ao aplicativo do telefone via rede. 
+- Ao usar BaseUI, depois de configurar e ativar o Wifi, você só poderá conectar seu dispositivo ao aplicativo do telefone via rede. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -540,13 +547,13 @@ O Wifi está desativado quando o IP do wifi está vazio e o ícone do wifi está
 **Descrição**
 
 - Depois de o dispositivo ligar, ele desliga ou reinicia automaticamente após um tempo.
-- O log da porta serial roda por um tempo e depois para.
+- O log da porta serial é executado por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo quando ele está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
+ Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
 
 **Solução de problemas**
 
-Você precisa executar um apagamento do flash e então regravar o firmware mais recente.
+Você precisa executar um apagamento de flash e, em seguida, regravar o firmware mais recente.
 
 ### Restauração de fábrica
 
@@ -566,7 +573,7 @@ O dispositivo será reiniciado com a configuração padrão.
 
 <TabItem value="9" label="Configurar no celular">
 
-Clique no botão `Factory Reset` no aplicativo. O dispositivo será reiniciado automaticamente com a configuração de fábrica. 
+Clique no botão `Factory Reset` no App. O dispositivo será reiniciado automaticamente com a configuração de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 </TabItem>
@@ -575,15 +582,15 @@ Clique no botão `Factory Reset` no aplicativo. O dispositivo será reiniciado a
 
 ### Falha em mensagem direta
 
-#### Resetar NodeDB
+#### Reset do NodeDB
 
-NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu nodedB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
+NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu NodeDB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
 
 <Tabs>
 
 <TabItem value="7" label="Configurar no MUI">
 
-Vá para a página `Setting`, clique em `Configure Reset`, escolha `NodedB Reset` e depois clique em `OK`.
+Vá para a página `Setting`, clique em `Configure Reset`, escolha `NodedB Reset` e então clique em `OK`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/NodedbL2.png" alt="pir" width={900} height="auto" /></p>
 
@@ -593,7 +600,7 @@ O dispositivo será reiniciado.
 
 <TabItem value="9" label="Configurar no celular">
 
-Abra o aplicativo e conecte-se ao dispositivo de destino. Vá para **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
+Abra o app e conecte-se ao dispositivo de destino. Vá para **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
@@ -605,13 +612,13 @@ Abra o aplicativo e conecte-se ao dispositivo de destino. Vá para **Settings**-
 
 #### Trocar informações de usuário
 
-Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, você pode solicitá-los manualmente para trocar informações no aplicativo.
+Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, pode solicitá-los manualmente para trocar informações no app.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### Regenerar chave privada
 
-Cada nó possui um par de chaves pública/privada. Para trocar uma mensagem privada criptografada, o remetente a criptografa com a chave pública do destinatário, e somente a chave privada desse destinatário pode descriptografá-la. Portanto, dois nós podem se comunicar de forma privada assim que conhecerem a chave pública um do outro. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar sua chave privada. Após a regeneração, exclua esse nó das listas de nós dos outros dispositivos para que eles possam se reconectar e obter sua nova chave pública.
+Cada nó possui um par de chaves pública/privada. Para trocar uma mensagem privada criptografada, o remetente a criptografa com a chave pública do destinatário, e somente a chave privada desse destinatário pode descriptografá-la. Dois nós podem, portanto, se comunicar de forma privada assim que souberem a chave pública um do outro. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar sua chave privada. Após a regeneração, exclua esse nó das listas de nós dos outros dispositivos para que eles possam se reconectar e obter sua nova chave pública.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
@@ -623,11 +630,11 @@ Após a regeneração da chave, outro dispositivo precisa se reconectar ao nó. 
 
 ### Qualidade do sinal
 
-- **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica baixo desempenho.
+- **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR menor que -10 dB indica baixo desempenho.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e seu ambiente ao redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo baixo desempenho.
+- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI menor que -115 dBm é considerado como tendo baixo desempenho.
 
-      Para obter o melhor efeito de sinal, utilize o dispositivo em uma área aberta, desobstruída e com interferência mínima.
+      Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
 
 <JetsonLeadQuote

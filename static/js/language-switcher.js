@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-11 10:27:50 (北京时间)
-// 多语言页面: 2643 个
+// 生成时间: 2026-11-12 11:18:40 (北京时间)
+// 多语言页面: 2652 个
 
 (function() {
   'use strict';
@@ -12817,6 +12817,62 @@
     "ja",
     "pt"
   ],
+  "/respeaker_44mm_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_i2s_test": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_led_effects": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_udp_streaming": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_volume_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_clip_basic_sdk_guide": [
     "cn",
     "en",
@@ -13231,6 +13287,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_muse_gadget": [
     "cn",
     "en",
     "es",
