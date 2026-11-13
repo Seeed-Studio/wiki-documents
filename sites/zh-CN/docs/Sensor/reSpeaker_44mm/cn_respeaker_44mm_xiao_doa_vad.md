@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_doa_vad/
 ---
 # 使用 reSpeaker XVF3800 44mm 和 XIAO ESP32-S3 Plus 实现 DoA 和 VAD
 
-XVF3800 在芯片内部计算到达方向（DoA）和语音活动检测（VAD）。主控 MCU 可以通过 I2C 使用基于资源的命令读取这两类结果——主机端无需进行原始音频处理。该示例程序每 250 ms 轮询一次 DoA 角度和语音标志，同时进行 I2S 音频流传输，并打印每个通道的 RMS 电平，以便你观察声音何时出现。
+XVF3800 在芯片内部计算到达方向（DoA）和语音活动检测（VAD）。主控 MCU 可以通过 I2C 使用基于资源的命令读取这两个结果——主机端无需进行原始音频处理。该示例程序每 250 ms 轮询一次 DoA 角度和语音标志，同时流式传输 I2S 音频，并打印每个通道的 RMS 电平，以便你可以看到何时存在声音。
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -30,25 +34,25 @@ XVF3800 在芯片内部计算到达方向（DoA）和语音活动检测（VAD）
     </a>
 </div>
 
-## 前置准备
+## 前置条件
 
 - 阵列必须运行 **I2S 固件**——在此模式下可使用 I2C 控制。
 - 已安装带有 ESP32 开发板包和 **Arduino Audio Tools** 库的 Arduino IDE。参见 [软件准备](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#软件准备)。
-- 在 Arduino 中将开发板选择为 **XIAO_ESP32S3_Plus**，并选择对应的端口号。
+- 在开发板中选择 **XIAO_ESP32S3_Plus**，并选择对应的端口号。
 
 ## 工作原理
 
 XVF3800 通过 *servicers* 暴露控制接口。一次读取是一个两步的 I2C 事务：
 
-1. 写入 `resid`、`cmd | 0x80`，以及预期负载长度加一。
-2. 读取 `status`，随后读取负载字节。
+1. 写入 `resid`、`cmd | 0x80`，以及期望的负载长度加一。
+2. 读取 `status`，然后读取负载字节。
 
 | Service | RESID | Command | Payload |
 |---------|-------|---------|---------|
-| Application servicer — firmware version | `48` | `0` | 3 字节：主版本号、次版本号、补丁号 |
+| Application servicer — firmware version | `48` | `0` | 3 字节：major、minor、patch |
 | GPO servicer — DoA | `20` | `18` | 4 字节：角度（小端序）、语音标志（小端序） |
 
-主循环每次从 I2S 读取 256 帧立体声音频，计算左右声道的 RMS，并以 250 ms 的间隔轮询 DoA/VAD。当 DoA 值大于 359 时，会以 `N/A` 及其原始十六进制值的形式打印；任何非零的 XMOS 状态字节都会被直接报告，而不会被进一步解析。
+主循环每次从 I2S 读取 256 帧立体声音频，计算左右声道的 RMS，并以 250 ms 的间隔轮询 DoA/VAD。大于 359 的 DoA 值会以 `N/A` 和原始十六进制值的形式打印，任何非零的 XMOS 状态字节都会被直接报告，而不会被解码。
 
 ## Arduino 示例程序
 

@@ -1,5 +1,5 @@
 ---
-description: 本指南介绍如何基于 Card Tracker wio tracker L2，使用超低码率图像压缩，在 MeshCore 上发送由 AI 重建的图像。
+description: 本指南介绍如何基于 Card Tracker wio tracker L2，使用超低码率图像压缩，通过 MeshCore 发送由 AI 重建的图像。
 title: 图像传输
 keywords:
   - MeshCore
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/cn/meshcore_ai_image_transmission_l2/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 使用 Wio Tracker L2 在 MeshCore 上进行 AI 图像传输
+# 基于 Wio Tracker L2 的 MeshCore AI 图像传输
 
 <div style={{textAlign:'center'}}>
 
@@ -32,17 +32,17 @@ import TabItem from '@theme/TabItem';
 
 </div>
 
-[MeshCore](https://meshcore.io/) 专为低带宽 LoRa Mesh 通信而设计。传统图像传输较为困难，因为普通照片通常需要数百 KB 甚至更多的数据。[MeshCore Open](https://meshcoreopen.org/) 通过结合以下组件，实现了在 MeshCore 上的**超低码率图像传输**：
+[MeshCore](https://meshcore.io/) 专为低带宽 LoRa Mesh 通信而设计。传统图像传输较为困难，因为普通照片通常需要数百 KB 甚至更多的数据。[MeshCore Open](https://meshcoreopen.org/) 通过结合以下内容，实现了在 MeshCore 上的**超低码率图像传输**：
 
 - MeshCore Open App
 - 基于 AI 的图像压缩
 - MeshCore `GRP_DATA` 数据包
 
 
-此图像传输功能适用于需要在没有可靠互联网或蜂窝网络的环境中共享视觉信息的用户。
+此图像传输功能适用于需要在没有可靠互联网或蜂窝网络的地方共享视觉信息的用户。
 
 - **户外探索者**：徒步者、攀登者和探险队可以共享道路状况、发送远程景观图像，并在文字不足以表达时提供视觉信息。
-- **应急与灾害响应团队**：团队可以共享现场情况，通过图像提供快速的视觉更新，并提升团队态势感知。
+- **应急与灾害响应团队**：团队可以共享现场情况，提供快速的视觉更新，并通过图像提升团队态势感知。
 - **离网通信爱好者**：适合希望探索 AI 驱动边缘通信的 MeshCore 和业余无线电用户。
 
 
@@ -72,8 +72,8 @@ Reconstructed Image
 
 ### 初始设置
 
-1. 安装 MeshCore Open App。[点击这里](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) 安装支持图像传输的 APP 版本。
-2. 将你的 MeshCore 节点连接到 APP。[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#connect-via-app) 阅读 L1 连接指南。
+1. 安装 MeshCore Open App。[点击此处](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) 安装支持图像传输的 APP 版本。
+2. 将你的 MeshCore 节点连接到 APP。[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#connect-via-app) 阅读 L1 连接指南。
 3. 配置你的 LoRa 区域和网络设置。
 4. 确保有另一台 MeshCore 节点可作为接收端。
 
@@ -95,7 +95,7 @@ Reconstructed Image
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
 </div>
 
-APP 会在传输前自动处理图像。压缩后的图像数据将通过 MeshCore 网络进行传输。传输时间取决于 Mesh 跳数、射频配置、网络流量和信号质量。传输的数据仅包含压缩表示，而不包含原始图像。
+APP 会在传输前自动处理图像。压缩后的图像数据将通过 MeshCore 网络进行传输。传输时间取决于 Mesh 跳数、无线电配置、网络流量和信号质量。传输的数据仅包含压缩表示，而不包含原始图像。
 
 当接收节点收到压缩数据后，解码器会执行图像重建。重建后的图像将显示在聊天界面中。
 <div style={{textAlign:'center'}}>
@@ -110,4 +110,25 @@ APP 会在传输前自动处理图像。压缩后的图像数据将通过 MeshCo
 
 - [MeshCore Open 文档](https://meshcoreopen.org/docs/getting-started/)
 - [AEIC-SE 超低码率图像编解码器](https://huggingface.co/zjs81/aeic-se-onnx)
-- [Wio Tracker L2 功耗表](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

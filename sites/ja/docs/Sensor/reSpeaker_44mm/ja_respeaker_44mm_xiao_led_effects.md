@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32-S3 Plus から I2C 経由で reSpeaker XVF3800 44mm 上の 24 個の WS2812 LED リングを制御し、電源、エフェクトモード、明るさ、速度、色を読み出し検証付きで操作します。
+description: I2C 経由で XIAO ESP32-S3 Plus から reSpeaker XVF3800 44mm 上の 24 個の WS2812 LED リングを制御し、電源、エフェクトモード、輝度、速度、色を読み出し検証付きで操作します。
 title: XIAO ESP32-S3 Plus を用いた reSpeaker XVF3800 44mm の LED エフェクト
 keywords:
   - reSpeaker 44mm
@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_led_effects/
 ---
 # XIAO ESP32-S3 Plus を用いた reSpeaker XVF3800 44mm の LED エフェクト
 
-44 mm アレイ上の 24 個の WS2812 LED は XVF3800 によって駆動されています。ホスト MCU は I2C 経由でそれらを制御でき、LED 電源レールをオンにし、エフェクトを選択し、明るさと速度を設定し、RGB カラーを送信できます。このスケッチは 7 色を 2 秒ごとに切り替え、各色を読み戻してコマンドが反映されたことを確認します。
+44 mm アレイ上の 24 個の WS2812 LED は XVF3800 によって駆動されています。ホスト MCU は I2C 経由でそれらを制御でき、LED 電源レールをオンにし、エフェクトを選択し、輝度と速度を設定し、RGB カラーを送信できます。このスケッチは 7 色を 2 秒ごとに切り替え、各色を読み戻してコマンドが反映されたことを確認します。
 
-{/* TODO: href="#" の値は Seeed Studio の製品ページ URL が公開されたら置き換えてください。 */}
+{/* TODO: href="#" の値は、Seeed Studio の製品ページ URL が公開されたら置き換えてください。 */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -33,8 +37,8 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_led_effects/
 ## 前提条件
 
 - アレイは **I2S ファームウェア** を実行している必要があります — このモードで I2C 制御が利用可能です。
-- Arduino IDE と ESP32 ボードパッケージ。**Arduino Audio Tools** ライブラリはこのスケッチには不要です。[Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#ソフトウェア準備) を参照してください。
-- ボードは **XIAO_ESP32S3_Plus** を選択し、ポート番号も選択する必要があります。
+- ESP32 ボードパッケージをインストールした Arduino IDE。**Arduino Audio Tools** ライブラリはこのスケッチには不要です。[Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#ソフトウェア準備) を参照してください。
+- ボードに **XIAO_ESP32S3_Plus** を選択し、ポート番号を選択する必要があります。
 
 
 ## LED 制御コマンド
@@ -59,17 +63,17 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_led_effects/
 | `LED_EFFECT_RING` | `5` | リングアニメーション |
 
 :::note
-カラー値はスケッチ内では `0xRRGGBB` として保存されますが、送信時はリトルエンディアンになるため、ペイロードバイトは **Blue, Green, Red, 0x00** の順になります。
+カラー値はスケッチ内では `0xRRGGBB` として保持されますが、送信時はリトルエンディアンになるため、ペイロードバイトは **Blue, Green, Red, 0x00** の順になります。
 :::
 
-## 動作概要
+## 動作の仕組み
 
-1. `setup()` は I2C を 100 kHz で開始し、XVF3800 自身のブートアニメーションが終了するまで 2.5 秒待機します。
+1. `setup()` は I2C を 100 kHz で開始し、XVF3800 独自のブートアニメーションが終了するまで 2.5 秒待機します。
 2. GPO 書き込みでピン `33` の LED 電源レールを有効にし、輝度を `150` に設定し、`LED_EFFECT_SOLID` を選択します。
 3. `applyColor()` はカラーを送信し、30 ms 待ってからカラーを読み戻し、下位 24 ビットを送信した値と比較し、`Color readback PASS` または `MISMATCH` を出力します。
 4. `loop()` は 2 秒ごとに次のカラーへ進みます。
 
-ボタンと LED が XVF3800 ではなく XIAO にルーティングされている場合（`D11` 上のルーティングスイッチ）、リングは D15 上の `WS2812_DIN_XIAO` から通常の WS2812 チェーンとして駆動することもできます。以下のスケッチは XVF3800 経路を使用します。
+ボタンと LED が XVF3800 ではなく XIAO にルーティングされている場合（`D11` 上のルーティングスイッチ）、リングは D15 の `WS2812_DIN_XIAO` から通常の WS2812 チェーンとして駆動することもできます。以下のスケッチは XVF3800 経由のパスを使用します。
 
 ## Arduino スケッチ
 
@@ -525,7 +529,7 @@ Color readback PASS
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
