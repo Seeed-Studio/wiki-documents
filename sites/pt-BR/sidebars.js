@@ -3340,10 +3340,39 @@ const sidebars = {
         'Network/pt_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
-          label: 'Dispositivos Wio-WM6108 WiFi-HaLow',
+          label: 'Dispositivos Wio-WM6108 Wi-Fi HaLow',
           items: [
             'Network/WiFi-Halow/pt_wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/pt_wifi-halow-mini-pcie-module',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Dispositivos Wi-Fi HaLow Wio-WM8108',
+          items: [
+            {
+              type: 'category',
+              label: 'HaLowLink 2 Wi-Fi HaLow Puerta de enlace',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/pt_HaLowLink2_Introduction',
+                  label: 'Introdução',
+                },
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/pt_HaLowLink2_Getting_Started',
+                  label: 'Começar',
+                },
+                {
+                  type: 'category',
+                  label: 'Aplicação',
+                  items: [
+                    'Network/WiFi-Halow/HaLowLink2/Applications/pt_Media_Gateway',
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],
