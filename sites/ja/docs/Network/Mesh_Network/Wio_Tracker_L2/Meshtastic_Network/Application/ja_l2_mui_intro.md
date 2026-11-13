@@ -123,7 +123,7 @@ Bluetooth アイコンをクリックするだけの場合は、Bluetooth モー
 </TabItem>
 </Tabs>
 
-</TabItem]
+</TabItem>
 
 </Tabs>
 

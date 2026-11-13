@@ -463,7 +463,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-</TabItem]
+</TabItem>
 
 <TabItem value="13" label="BaseUI">
 
