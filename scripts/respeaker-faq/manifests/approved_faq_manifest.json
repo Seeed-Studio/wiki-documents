@@ -1891,6 +1891,140 @@
         "STT",
         "LLM"
       ]
+    },
+    {
+      "publicFaqId": "clip_language_support_and_accuracy",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "reSpeaker Clip"
+      ],
+      "primaryDomain": "firmware_software",
+      "secondaryDomains": [
+        "audio",
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-12",
+      "qualityScore": 0,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "language-support-and-accuracy",
+      "questionEn": "Does reSpeaker Clip support Chinese and other languages, and how accurate is its transcription?",
+      "directAnswerEn": "Yes. Chinese and other languages can be transcribed when the configured STT service supports them. reSpeaker Clip records audio to local storage, and speech recognition is performed by the STT service configured in AI CONFIG in the SenseCraft Voice app. The languages or dialects supported, and the transcription accuracy, therefore depend on the STT service and model you use.\n\nThe STT configuration exposes Provider, Base URL, API key, and Language; each transcription also lets you select the Audio Language and STT Model.",
+      "appliesTo": "reSpeaker Clip (SKU 100020126) with the SenseCraft Voice app, transcribing through an external STT service (cloud or self-hosted)",
+      "prerequisites": [
+        "reSpeaker Clip on current firmware, with the SenseCraft Voice app installed on the phone",
+        "Provider, Base URL and API key for the target STT service, and network access from the phone",
+        "A test recording"
+      ],
+      "steps": [
+        "Open AI CONFIG → STT Service in the app.",
+        "Enter Provider, Base URL, API key and Language, tap `Test Connection`, then `Save Configuration`.",
+        "Open a recording, tap `Transcribe & Summarize`, and select the Audio Language and STT Model.",
+        "Tap `Generate Now` and inspect the transcript."
+      ],
+      "successCriteria": [
+        "Test Connection passes",
+        "The recording produces a transcript in the intended language"
+      ],
+      "notes": [
+        "The Clip does not run on-device speech recognition; all transcription happens in the external STT service.",
+        "Clip audio is 16 kHz mono Opus at 32 kbps.",
+        "For fully local or offline transcription, the official private deployment supports Chinese, Cantonese, English, Japanese and Korean."
+      ],
+      "officialReferences": [
+        {
+          "title": "reSpeaker Clip Getting Started",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        },
+        {
+          "title": "Private On-Premise Transcription for reSpeaker Clip",
+          "url": "https://wiki.seeedstudio.com/solutions/clip-private-transcription/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "reSpeaker Clip",
+        "Chinese",
+        "Mandarin",
+        "Cantonese",
+        "multilingual",
+        "language support",
+        "transcription accuracy",
+        "STT",
+        "Audio Language"
+      ]
+    },
+    {
+      "publicFaqId": "clip_recordings_after_phone_change",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "reSpeaker Clip"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "hardware",
+        "product_business"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-12",
+      "qualityScore": 0,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "recordings-after-phone-change-export",
+      "questionEn": "Can I still use my reSpeaker Clip and access my recordings after changing phones, and can I export them?",
+      "directAnswerEn": "Yes. Recordings are stored on the Clip itself: the device has 2 GB of local storage, about 250+ hours of compressed audio, and recording works without a phone. Changing phones — including retiring a phone that has reached end of life — does not remove recordings from the Clip. Install the SenseCraft Voice app on the new phone, add and pair the Clip, then sync the sessions to the new phone or export the audio or text results from the app. Recordings that have not been deleted remain on the device and can also be downloaded with the official Basic SDK over BLE or Wi-Fi.",
+      "appliesTo": "Undeleted recordings on reSpeaker Clip (SKU 100020126), migrated to a new phone or exported with the official SDK",
+      "prerequisites": [
+        "A charged reSpeaker Clip that powers on",
+        "The SenseCraft Voice app installed on the new phone",
+        "If the Clip is still bound to the old phone, access to that phone to unbind it, or ability to remove the old Bluetooth pairing"
+      ],
+      "steps": [
+        "Install and open the SenseCraft Voice app on the new phone.",
+        "Tap `Add Device`, select the device name that matches the identifier on the Clip screen, and confirm pairing.",
+        "Open the recordings list and sync the required sessions; keep the Clip powered on and near the phone.",
+        "Export the audio or text results from the app.",
+        "Open the exported file or transcript and confirm it is complete."
+      ],
+      "successCriteria": [
+        "The new phone discovers the Clip and completes pairing",
+        "The recordings list shows the sessions stored on the device",
+        "Exported audio or text opens correctly"
+      ],
+      "notes": [
+        "The 2 GB of storage holds about 250+ hours of compressed audio; capacity is finite, so export important recordings regularly.",
+        "A normal sync keeps the files on the device by default. Recordings remain until you delete a session, format the storage, or an auto-delete policy removes them; the device-side auto-delete policy can be configured through the SDK (0–30 days, or disabled).",
+        "Formatting the storage or deleting a session removes recordings from the device; export them first.",
+        "If the old phone is unavailable, the recordings are still on the Clip; the Basic SDK download supports BLE or Wi-Fi and can resume an interrupted transfer.",
+        "If pairing on the new phone fails, remove the old Clip pairing from the old phone or the phone's Bluetooth settings, then pair again."
+      ],
+      "officialReferences": [
+        {
+          "title": "reSpeaker Clip Getting Started (storage, file management and export)",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        },
+        {
+          "title": "reSpeaker Clip Basic SDK Guide (session download over BLE and Wi-Fi)",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip_basic_sdk_guide/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "reSpeaker Clip",
+        "new phone",
+        "replace phone",
+        "end of life",
+        "EOL",
+        "recordings",
+        "export",
+        "backup",
+        "sync",
+        "local storage",
+        "2GB"
+      ]
     }
   ]
 }

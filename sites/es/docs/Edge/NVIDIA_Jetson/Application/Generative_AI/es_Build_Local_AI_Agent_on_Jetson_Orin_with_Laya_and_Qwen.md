@@ -1,16 +1,18 @@
 ---
-title: Crea un agente de IA local en Jetson Orin con Laya y Qwen
-description: Crea un agente de IA local en NVIDIA Jetson Orin con Laya y Qwen. Aprende la mecánica del modelo de decisión y ejecuta automatización de navegador y demostraciones de pizarra en reComputer.
+title: Agente de navegador local en Jetson Orin
+description: Un pequeño modelo local de decisión elige cada acción del navegador en NVIDIA Jetson Orin; Qwen la ejecuta. Demo de Laya + Qwen en reComputer, totalmente en el dispositivo, sin nube.
 keywords:
   - NVIDIA Jetson
   - Jetson Orin
   - Jetson Orin NX
   - agente de IA local
+  - agente de navegador
+  - agente de navegador local
   - modelo de decisión Laya
   - Qwen3.5
   - automatización de navegador
   - reComputer Industrial
-  - IA en el borde
+  - edge AI
 slug: /jetson/local_decision_model_laya
 draft: false
 image: https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-cover-en-v3-dark.png
@@ -22,10 +24,10 @@ updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/es/jetson/local_decision_model_laya/
 ---
 
-# Crea un agente de IA local en Jetson Orin con Laya y Qwen
+# Crea un agente de navegador local en Jetson Orin con un modelo de decisión
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-cover-en-v3-dark.png" alt="Ilustración del hardware reComputer Industrial conectado a un selector de acciones de Laya y Qwen y a un navegador de búsqueda de vuelos, con CLICK seleccionado." />
+  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-cover-en-v3-dark.png" alt="Ilustración del hardware reComputer Industrial conectado a un selector de acciones Laya y Qwen y a un navegador de búsqueda de vuelos, con CLICK seleccionado." />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -36,21 +38,23 @@ url: https://wiki.seeedstudio.com/es/jetson/local_decision_model_laya/
 
 ## Introducción
 
-Este wiki construye un **agente de IA local en NVIDIA Jetson Orin**. **El modelo de decisión local Laya (modelo System One) elige la siguiente acción; Qwen3.5-4B se encarga del análisis de la petición y la generación de texto.** Las mediciones provienen de un **reComputer Industrial J4012 con Jetson Orin NX 16GB**.
+Este wiki construye un **agente de navegador local en NVIDIA Jetson Orin**. **El modelo de decisión local Laya (modelo System One) elige la siguiente acción; Qwen3.5-4B se encarga del análisis de la petición y la generación de texto.** Las mediciones provienen de un **reComputer Industrial J4012 con Jetson Orin NX 16GB**.
 
-Veamos los resultados reales de la prueba. Se le pide al agente que busque vuelos directos de solo ida de Shenzhen a Shanghái, ordenados por el precio más bajo, y que muestre las opciones de billetes para los vuelos coincidentes. Todo el proceso de ejecución solo tomó 32,8 segundos. Quienes hayan utilizado agentes para realizar diversas operaciones de automatización de navegador pueden apreciar que este tiempo de ejecución es bastante ventajoso.
+El modelo de decisión es intercambiable: esta demo usa Laya, pero cualquier modelo que devuelva una acción estructurada como JSON puede ocupar su lugar.
+
+Veamos los resultados reales de la prueba. Se le pide al agente que busque vuelos directos de ida desde Shenzhen a Shanghái, ordenados por el precio más bajo, y que muestre las opciones de billetes para los vuelos coincidentes. Todo el proceso de ejecución solo tomó 32,8 segundos. Quienes hayan usado agentes para realizar diversas operaciones de automatización de navegador pueden apreciar que este tiempo de ejecución es bastante ventajoso.
 <div align="center">
-  <img width={960} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-flight-search-demo.gif" alt="Grabación de pantalla animada de la demo de vuelos: el agente rellena y confirma una búsqueda de solo ida de Shenzhen a Shanghái, restringe los resultados a vuelos sin escalas ordenados por el precio más bajo y abre la capa de opciones de tarifa para un vuelo coincidente." loading="lazy" />
+  <img width={960} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-flight-search-demo.gif" alt="Grabación de pantalla animada de la demo de vuelos: el agente rellena y confirma una búsqueda de ida de Shenzhen a Shanghái, restringe los resultados a vuelos directos ordenados por el precio más bajo y abre la capa de opciones de tarifas para un vuelo coincidente." loading="lazy" />
 </div>
 
-*Demostración de vuelos. Una petición en inglés, la página en vivo de Trip.com y la capa de tarifas que el asistente abre por sí mismo.*
+*Demo de vuelos. Una petición en inglés, la página en vivo de Trip.com y la capa de tarifas que el asistente abre por sí mismo.*
 
 Veamos otra demostración de operación de la pizarra para dibujar. Puedes usar lenguaje natural para controlar al agente para que dibuje, y también puedes usar lenguaje natural en cualquier momento para pedirle al agente que te ayude a modificar el contenido.
 <div align="center">
   <img width={960} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-whiteboard-demo.gif" alt="Grabación de pantalla animada de la demo de pizarra: se dibujan tres cajas etiquetadas como Camera, Jetson y Display y se conectan con flechas; luego Jetson se vuelve verde y se añade debajo una caja conectada llamada Robot Arm." loading="lazy" />
 </div>
 
-*Demostración de pizarra. Dibujar, recolorear, ampliar: tres peticiones en un solo lienzo, sin redibujar nada.*
+*Demo de pizarra. Dibujar, recolorear, ampliar: tres peticiones en un solo lienzo, sin redibujar nada.*
 
 ## Requisitos previos
 
@@ -58,7 +62,7 @@ Veamos otra demostración de operación de la pizarra para dibujar. Puedes usar 
 
 ## ¿Cómo puede un LLM operar una página web?
 
-Imagina pedirle a un agente LLM que encuentre vuelos. Lee la petición, abre la página y necesita decidir qué hacer a continuación. En un momento dado, la página puede mostrar campos de salida y destino, un selector de fecha y un botón de **Search**. Un programa puede proporcionar estos controles como acciones disponibles, pero algo todavía tiene que elegir uno.
+Imagina pedirle a un agente LLM que busque vuelos. Lee la petición, abre la página y necesita decidir qué hacer a continuación. En un momento dado, la página puede mostrar campos de salida y destino, un selector de fecha y un botón de **Search**. Un programa puede proporcionar estos controles como acciones disponibles, pero algo todavía tiene que elegir uno.
 
 Un LLM tradicional de generación de texto puede hacer esa elección leyendo la tarea y la descripción de la página y escribiendo una acción. Por ejemplo, podría devolver una instrucción para hacer clic en Search. El programa interpreta la salida y realiza el clic. Después de que la página cambie, el asistente la observa de nuevo y pide la siguiente acción.
 
@@ -78,11 +82,11 @@ Un modelo de decisión recibe el estado actual, el objetivo y un conjunto de opc
 
 Ambos enfoques procesan la entrada y requieren cómputo. Un modelo de texto también puede producir un ID de acción corto.
 
-Este proyecto utiliza ambos modelos. **Qwen** interpreta la petición del usuario y proporciona texto cuando es necesario. **Laya** selecciona repetidamente una operación y un objetivo de entre los candidatos actuales. El programa proporciona las herramientas, ejecuta la acción seleccionada y comprueba el resultado.
+Este proyecto usa ambos modelos. **Qwen** interpreta la petición del usuario y proporciona texto cuando es necesario. **Laya** selecciona repetidamente una operación y un objetivo de entre los candidatos actuales. El programa proporciona las herramientas, ejecuta la acción seleccionada y comprueba el resultado.
 
 ## ¿Cómo selecciona Laya la siguiente acción?
 
-Usemos la pizarra para ver cómo funciona una decisión. Hay una caja verde etiquetada **Camera**, y queremos hacerla azul sin moverla ni cambiar su etiqueta:
+Usemos la pizarra para ver cómo funciona una decisión. Hay una caja verde etiquetada **Camera**, y queremos volverla azul sin moverla ni cambiar su etiqueta:
 
 ```text
 Make the Camera rectangle background blue. Keep its text and position.
@@ -96,12 +100,12 @@ Antes de pedirle a Laya que elija, el programa describe la situación en texto:
 | Objetivo | Hacer que Camera sea azul y conservar su etiqueta y posición |
 | Candidatos | Los botones rojo, verde, azul y amarillo disponibles |
 
-Piensa en esto como una pregunta de opción múltiple. El programa le dice a Laya qué hay en el lienzo, qué necesita cambiar y qué botones están disponibles. Laya entonces elige entre esos botones. En este ejemplo grabado, el objetivo se proporcionó directamente a Laya.
+Piensa en esto como una pregunta de opción múltiple. El programa le dice a Laya qué hay en el lienzo, qué necesita cambiar y qué botones están disponibles. Luego Laya elige entre esos botones. En este ejemplo grabado, el objetivo se proporcionó directamente a Laya.
 
-Dentro de Laya, un **codificador** lee el texto y construye una comprensión de la situación: verde es el color actual, azul es el color deseado, y la etiqueta y la posición deben permanecer iguales. Una **cabeza de decisión** luego puntúa las respuestas disponibles. En este proyecto, el codificador es mmBERT-base; consulta la [configuración de modelo fijada](https://huggingface.co/cklxx/laya-browser/blob/645cf366a2ae35f1086e8c20eff48f909bb49206/rl_agent_config.json) y la [documentación de la arquitectura](https://huggingface.co/convaiinnovations/laya#architecture) para más detalles.
+Dentro de Laya, un **codificador** lee el texto y construye una comprensión de la situación: verde es el color actual, azul es el color deseado, y la etiqueta y la posición deben permanecer iguales. Una **cabeza de decisión** puntúa entonces las respuestas disponibles. En este proyecto, el codificador es mmBERT-base; consulta la [configuración de modelo fijada](https://huggingface.co/cklxx/laya-browser/blob/645cf366a2ae35f1086e8c20eff48f909bb49206/rl_agent_config.json) y la [documentación de la arquitectura](https://huggingface.co/convaiinnovations/laya#architecture) para más detalles.
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-decision-model-architecture-en.png" alt="El estado textual, el objetivo y los candidatos entran en el codificador bidireccional mmBERT-base y la cabeza de decisión, produciendo elecciones separadas de operación y objetivo de clic." loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-decision-model-architecture-en.png" alt="Estado textual, objetivo y candidatos entran en el codificador bidireccional mmBERT-base y la cabeza de decisión, produciendo elecciones separadas de operación y objetivo de clic." loading="lazy" />
 </div>
 
 *Laya lee texto sobre el estado, el objetivo y los candidatos; esta implementación no envía píxeles de capturas de pantalla al modelo.*
@@ -111,14 +115,14 @@ Para esta decisión, la opción `3` es el botón azul. Una vez que Laya lo elige
 El resultado responde a dos preguntas: **¿qué debo hacer?** y **¿dónde debo hacerlo?** Aquí, Laya seleccionó `CLICK` y el botón azul. Ambas respuestas pueden calcularse en el mismo lote.
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-camera-blue-recorded-decision-en.png" alt="Una decisión registrada selecciona CLICK con probabilidad 0.9785 y el objetivo azul con probabilidad 0.9721; una nueva lectura de la escena confirma que Camera cambió de verde a azul." loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-camera-blue-recorded-decision-en.png" alt="Una decisión grabada selecciona CLICK con probabilidad 0,9785 y el objetivo azul con probabilidad 0,9721; una nueva lectura de la escena confirma que Camera cambió de verde a azul." loading="lazy" />
 </div>
 
-*Una decisión registrada de Camera. Las cajas de colores se reconstruyen a partir de valores de escena guardados.*
+*Una decisión grabada de Camera. Las cajas de colores se reconstruyen a partir de valores de escena guardados.*
 
-En el resultado registrado, `CLICK` recibió una puntuación de **0.9785**, y el botón azul recibió **0.9721** en su propio conjunto de opciones. El programa hizo clic en el botón y luego leyó el lienzo de nuevo. Camera era azul, y su etiqueta y posición no habían cambiado.
+En el resultado grabado, `CLICK` recibió una puntuación de **0,9785**, y el botón azul recibió **0,9721** en su propio conjunto de opciones. El programa hizo clic en el botón y luego leyó el lienzo de nuevo. Camera era azul, y su etiqueta y posición no habían cambiado.
 
-Estas puntuaciones muestran qué opciones favoreció el modelo. El valor de `confidence` del objetivo, **0.8859**, es un campo separado. Una puntuación alta por sí sola no puede garantizar que un clic haya funcionado o que toda la tarea esté completa.
+Estas puntuaciones muestran qué opciones favoreció el modelo. El valor de `confidence` del objetivo, **0,8859**, es un campo separado. Una puntuación alta por sí sola no puede garantizar que un clic haya funcionado o que toda la tarea esté completa.
 
 El programa también debe ofrecer las opciones correctas: Laya no puede elegir un botón que falte en su lista. Cuando hay muchas opciones, el contenedor puede compararlas en grupos. Eso significa que una petición puede implicar más de una evaluación del modelo.
 
@@ -127,7 +131,7 @@ El programa también debe ofrecer las opciones correctas: Laya no puede elegir u
 Laya ha elegido el botón azul. ¿Significa eso que la tarea ha terminado? Aún no. El botón podría haberse movido, o el clic podría no cambiar la caja. El programa debe llevar a cabo la acción y comprobar qué ha ocurrido realmente.
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-verified-action-loop-en.png" alt="Bucle del agente desde el análisis de la petición por Qwen hasta la nueva observación, candidatos legales, selección de Laya, validación del objetivo, ejecución de la interfaz de usuario y verificación independiente de la finalización." loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-verified-action-loop-en.png" alt="Bucle del agente desde el análisis de la petición por Qwen hasta la nueva observación, candidatos legales, selección de Laya, validación del objetivo, ejecución de la interfaz de usuario y verificación independiente de finalización." loading="lazy" />
 </div>
 
 *Qwen interpreta la petición, Laya selecciona entre las acciones disponibles y el programa las ejecuta y verifica.*
@@ -146,7 +150,7 @@ La misma idea se aplica a los vuelos: el programa proporciona acciones como sele
 
 ## Ejecutar rápidamente en Jetson Orin
 
-En el escritorio de Jetson, abre una terminal con tu usuario normal y ejecuta:
+En el escritorio de Jetson, abre una terminal como tu usuario normal y ejecuta:
 
 ```bash
 git clone https://github.com/zibochen6/jetson-browser-assistant.git
@@ -154,13 +158,13 @@ cd jetson-browser-assistant
 ./setup.sh
 ```
 
-El instalador comprueba el dispositivo, prepara el entorno uv aislado y la versión de CUDA PyTorch correspondiente, instala Chromium, descarga los modelos fijados, compila llama.cpp y precarga los servicios. Ejecútalo sin `sudo`; solicitará acceso elevado cuando se necesiten bibliotecas del sistema. Consulta el [README](https://github.com/zibochen6/jetson-browser-assistant#readme) y la [guía de instalación](https://github.com/zibochen6/jetson-browser-assistant/blob/main/docs/installation.md) para ver compatibilidad, descargas y resolución de problemas.
+El instalador comprueba el dispositivo, prepara el entorno uv aislado y la versión de CUDA PyTorch correspondiente, instala Chromium, descarga los modelos fijados, compila llama.cpp y precarga los servicios. Ejecútalo sin `sudo`; solicita acceso elevado cuando se necesitan bibliotecas del sistema. Consulta el [README](https://github.com/zibochen6/jetson-browser-assistant#readme) y la [guía de instalación](https://github.com/zibochen6/jetson-browser-assistant/blob/main/docs/installation.md) para compatibilidad, descargas y resolución de problemas.
 
 ## ¿Cuándo es útil un modelo de decisión?
 
-Vale la pena evaluar un modelo de decisión cuando la meta del usuario o el estado actual pueden cambiar, pero las herramientas disponibles están acotadas. Los filtros de vuelos y las ediciones de objetos existentes en la pizarra son dos ejemplos. La aplicación aún necesita observar el estado actual, proporcionar opciones significativas y verificar lo que ha ocurrido.
+Vale la pena evaluar un modelo de decisión cuando el objetivo del usuario o el estado actual pueden cambiar, pero las herramientas disponibles están acotadas. Los filtros de vuelos y las ediciones de objetos existentes en la pizarra son dos ejemplos. La aplicación aún necesita observar el estado actual, proporcionar opciones significativas y verificar lo que ocurrió.
 
-Para una tarea estable que siempre sigue el mismo camino, un script determinista puede ser más sencillo. Para respuestas abiertas o texto nuevo, un modelo generador de texto sigue siendo útil. Este proyecto no tiene un script de referencia equivalente, por lo que las demostraciones no establecen una ventaja de velocidad o mantenimiento frente a los scripts.
+Para una tarea estable que siempre sigue el mismo camino, un script determinista puede ser más sencillo. Para respuestas abiertas o texto nuevo, un modelo generador de texto sigue siendo útil. Este proyecto no tiene un script de referencia equivalente, por lo que las demostraciones no establecen una ventaja de velocidad o mantenimiento sobre los scripts.
 
 La versión actual cubre un flujo de trabajo limitado de Trip.com y pizarras pequeñas. Otros sitios web, dibujo arbitrario, voz y control industrial requieren desarrollo y validación por separado. Los 16 GB de Jetson son memoria compartida CPU/GPU; otras aplicaciones y el swap afectan la capacidad disponible.
 
@@ -169,7 +173,7 @@ La versión actual cubre un flujo de trabajo limitado de Trip.com y pizarras peq
 Antes de ejecutar las demostraciones, veamos en qué se va el tiempo. La tarea de vuelo grabada tomó **32,8 segundos** en total. Las decisiones de Laya tomaron alrededor de **0,5 segundos en total a lo largo de la tarea**, mientras que el análisis de Qwen tomó alrededor de **3,5 segundos**. Las acciones del navegador, las esperas de página, las comprobaciones y el guardado también contribuyen al total.
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-decision-vs-task-time-en.png" alt="Barras independientes muestran 32,8 segundos de tiempo transcurrido de la tarea, 0,5 segundos de decisiones acumuladas de Laya y 3,5 segundos de análisis de Qwen para una tarea de vuelo que reutilizó las condiciones de búsqueda." loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-decision-vs-task-time-en.png" alt="Barras independientes muestran 32,8 segundos de tiempo transcurrido de la tarea, 0,5 segundos de decisiones acumuladas de Laya y 3,5 segundos de análisis de Qwen para una tarea de vuelo que reutilizó condiciones de búsqueda." loading="lazy" />
 </div>
 
 *Tiempos registrados de la tarea de vuelo. Las barras son contadores separados, no un desglose aditivo completo; la tarea reutilizó condiciones de búsqueda existentes.*
@@ -188,7 +192,7 @@ Introduce la siguiente tarea, sustituyendo la fecha por una fecha futura válida
 Find one-way flights from Shenzhen to Shanghai on 2026-11-13 for 1 adult in economy. Nonstop only, lowest price first. Show up to 3 options and open the fare options for one matching flight.
 ```
 
-El lanzador muestra el sitio web y una ventana Live Flow de solo lectura. Usa `./launch.sh --no-visualize` para mostrar solo el sitio web. Comprueba los candidatos, `Query verified` y `Fare options opened`. El asistente abre la capa de opciones de tarifa sin enviar un pedido ni un pago.
+El lanzador muestra el sitio web y una ventana Live Flow de solo lectura. Usa `./launch.sh --no-visualize` para mostrar solo el sitio web. Revisa los candidatos, `Query verified` y `Fare options opened`. El asistente abre la capa de opciones de tarifa sin enviar un pedido ni un pago.
 
 ### Editar la misma pizarra
 
@@ -198,7 +202,7 @@ Finaliza o cancela cualquier tarea activa y luego abre un lienzo en blanco:
 ./launch-whiteboard.sh --open examples/whiteboard/blank.excalidraw
 ```
 
-`--open` sustituye el lienzo actual; las exportaciones existentes se mantienen. En `Task>`, introduce:
+`--open` reemplaza el lienzo actual; las exportaciones existentes se mantienen. En `Task>`, introduce:
 
 ```text
 Draw three labeled boxes: Camera on the left, Jetson in the center, and Display on the right. Connect Camera to Jetson and Jetson to Display with arrows.
