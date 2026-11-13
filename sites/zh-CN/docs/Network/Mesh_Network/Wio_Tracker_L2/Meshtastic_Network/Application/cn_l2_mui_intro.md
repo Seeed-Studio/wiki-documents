@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 
 ## 什么是 MUI？
 
-MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形界面，为用户提供了一种更直观的方式与设备交互。 
+MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形界面。它为用户提供了一种更直观的方式与设备交互。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -33,9 +33,9 @@ MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形�
 
 - **交互式地图**：MUI 可以在在线或离线地图上直接显示节点位置。无需打开手机或桌面 APP，即可查看附近设备及其位置。
 
-- **便捷的设备配置**：可在设备上直接配置 Meshtastic 设置，包括射频、GPS、显示以及其他常用选项。日常配置无需外部应用。
+- **便捷的设备配置**：可在设备上直接配置 Meshtastic 设置，包括射频、GPS、显示以及其他常用选项。日常配置无需外部应用程序。
 
-- **直观的图形界面**：MUI 提供了针对触摸屏优化的界面，具有清晰的菜单和基于地图的导航。常见操作只需轻点几下即可完成，让新手和有经验的用户都能更轻松地使用设备。
+- **直观的图形界面**：MUI 提供了针对触摸屏优化的界面，具有清晰的菜单和基于地图的导航。常见操作只需轻点几下即可完成，使新手和有经验的用户都能更轻松地使用设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIIntro.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -94,7 +94,7 @@ MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形�
 更完整的列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。当你的设备达到该限制时，将停止发射，直到再次允许发射为止。
 :::
 
 <Tabs>
@@ -137,7 +137,7 @@ MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形�
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接进行配置。 
+你需要启用 GPS 才能获取位置信息。可以通过 `long pressing the position icon` 在设备上直接进行配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -163,7 +163,7 @@ MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形�
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。可以在设备上通过 `long pressing the position icon` 直接进行配置。 
+你需要启用 GPS 才能获取位置信息。可以通过 `long pressing the position icon` 在设备上直接进行配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -175,7 +175,7 @@ MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSetting.png" alt="pir" width={450} height="auto" /></p>
 
-当 Wifi IP 为空且 Wifi 图标为灰色时，表示 Wifi 已禁用；当显示 Wifi IP 且 Wifi 图标为白色时，表示 Wifi 已启用。 
+当 wifi ip 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。当显示 wifi ip 且 wifi 图标为白色时，表示 Wifi 已启用。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -231,7 +231,7 @@ MUI（Meshtastic User Interface）是为 Meshtastic 设备设计的开源图形�
 
 :::tip
 
-只有已配置的频道（例如下图左侧所示的已命名频道）才能进行交互。像右图中那种未配置、仅有标签的频道，无法进行交互。
+只有已配置的频道（例如下图左侧所示的已命名频道）才能进行交互。像右图所示那种未配置、仅有标签的频道，无法进行交互。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/ChannelConfiguration.png" alt="pir" width={300} height="auto" /></p>
 
@@ -278,14 +278,14 @@ MUI 旨在运行于支持 Meshtastic 且提供图形显示的硬件上。要使�
 |-----------|-------------|
 | 显示屏 | 支持触控的彩色显示屏 |
 | GNSS | 内置 GNSS 接收器，用于定位服务 |
-| LoRa® | 兼容 Meshtastic 通信的 LoRa® 射频 |
+| LoRa® | 与 Meshtastic 通信兼容的 LoRa® 射频 |
 | 存储 | 用于离线地图的 microSD 卡槽 |
 | MCU | 需要高性能 MCU，能够同时支持屏幕显示和 Meshtastic 固件|
 
 
 **Seeed Wio Tracker L2** 是 MUI 推荐的硬件平台。
 
-它在单一设备中集成了所有所需组件：
+它在一台设备中集成了所有所需组件：
 
 - 彩色触摸屏
 - 内置 GNSS
@@ -294,7 +294,7 @@ MUI 旨在运行于支持 Meshtastic 且提供图形显示的硬件上。要使�
 - 用于离线地图的 microSD 卡槽
 - 用于编程和供电的 USB Type-C
 
-不需要额外的扩展板。
+无需额外的扩展板。
 
 ## 常见问题
 ### 如何激活键盘
@@ -302,7 +302,7 @@ MUI 旨在运行于支持 Meshtastic 且提供图形显示的硬件上。要使�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Keyboardicon.png" alt="pir" width={500} height="auto" /></p>
 
-然后你就可以输入数字和字母。并非每个页面都有键盘图标；它通常只出现在需要输入的页面上。
+然后你就可以输入数字和字母。并不是每个页面都有键盘图标；它通常只出现在需要输入的页面上。
 
 ### 为什么我的 Wi-Fi 会自动关闭
 
@@ -321,3 +321,24 @@ MUI 旨在运行于支持 Meshtastic 且提供图形显示的硬件上。要使�
 
 **步骤 4**. 开始消息传输
 
+## 技术支持与产品讨论
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

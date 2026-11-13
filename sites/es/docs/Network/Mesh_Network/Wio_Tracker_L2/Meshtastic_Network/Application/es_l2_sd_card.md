@@ -1,6 +1,6 @@
 ---
 description: Tutorial de tarjeta SD para la Serie Wio Tracker L2. Incluye formateo, generación de mapas e instalación de mapas
-title: Uso de la tarjeta SD
+title: Usar tarjeta SD para mapas
 keywords:
   - Meshtastic
   - Wio Tracker L2

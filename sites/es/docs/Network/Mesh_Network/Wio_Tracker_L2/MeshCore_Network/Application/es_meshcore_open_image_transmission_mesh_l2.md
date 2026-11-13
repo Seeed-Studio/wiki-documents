@@ -1,12 +1,12 @@
 ---
 description: Esta guía explica cómo enviar imágenes reconstruidas por IA a través de MeshCore utilizando compresión de imágenes de tasa de bits ultra baja basada en Card Tracker wio tracker L2.
-title: Transmisión de imágenes
+title: Transmisión de Imágenes
 keywords:
   - MeshCore
   - MeshCore Open
   - Wio Tracker L2
-  - Transmisión de imágenes
-  - Compresión de imágenes con IA
+  - Transmisión de Imágenes
+  - Compresión de Imágenes con IA
   - LoRa Mesh
   - AEIC-SE
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCore_Open_L2_Pro.png
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/es/meshcore_ai_image_transmission_l2/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Transmisión de imágenes con IA sobre MeshCore con Wio Tracker L2
+# Transmisión de Imágenes con IA sobre MeshCore con Wio Tracker L2
 
 <div style={{textAlign:'center'}}>
 
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 </div>
 
-[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes de tasa de bits ultra baja** sobre MeshCore combinando:
+[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión tradicional de imágenes es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes con tasa de bits ultra baja** sobre MeshCore combinando:
 
 - App MeshCore Open
 - Compresión de imágenes basada en IA
@@ -43,7 +43,7 @@ Esta función de transmisión de imágenes es adecuada para usuarios que necesit
 
 - **Exploradores al aire libre**: Senderistas, escaladores y equipos de expedición pueden compartir el estado de los senderos, enviar imágenes de paisajes remotos y proporcionar información visual cuando el texto no es suficiente.
 - **Equipos de respuesta a emergencias y desastres**: El equipo puede compartir las condiciones en el terreno, proporcionar actualizaciones visuales rápidas y mejorar la conciencia del equipo mediante imágenes.
-- **Entusiastas de la comunicación fuera de la red**: Adecuado para usuarios de MeshCore y radioaficionados que quieran explorar la comunicación en el borde impulsada por IA.
+- **Entusiastas de la comunicación fuera de la red**: Adecuado para usuarios de MeshCore y radioaficionados que desean explorar la comunicación en el borde impulsada por IA.
 
 
 ## Cómo funciona la transmisión de imágenes en MeshCore
@@ -72,7 +72,7 @@ Reconstructed Image
 
 ### Configuración inicial
 
-1. Instala la app MeshCore Open. [Haz clic aquí](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar la versión de la APP que admite transmisión de imágenes.
+1. Instala la App MeshCore Open. [Haz clic aquí](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar la versión de la APP que admite transmisión de imágenes.
 2. Conecta tu nodo MeshCore a la APP. [Haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#connect-via-app) para leer la guía de conexión L1.
 3. Configura tu región LoRa y los ajustes de red.
 4. Asegúrate de que otro nodo MeshCore esté disponible como receptor.
@@ -110,4 +110,25 @@ La imagen de salida no es una copia perfecta píxel a píxel de la imagen origin
 
 - [Documentación de MeshCore Open](https://meshcoreopen.org/docs/getting-started/)
 - [Códec de imágenes de tasa de bits ultra baja AEIC-SE](https://huggingface.co/zjs81/aeic-se-onnx)
-- [Tabla de consumo de energía de Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

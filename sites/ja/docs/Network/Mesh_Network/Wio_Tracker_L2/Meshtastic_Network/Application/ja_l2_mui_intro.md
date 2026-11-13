@@ -1,6 +1,6 @@
 ---
 description: MUI の紹介。MUI の定義、特徴、使い方を紹介します。
-title: MUI 入門
+title: MUI の紹介
 keywords:
   - Meshtastic
   - Wio Tracker L2
@@ -35,11 +35,11 @@ MUI（Meshtastic User Interface）は、Meshtastic デバイス向けに設計�
 
 - **便利なデバイス設定**: 無線、GPS、ディスプレイ、その他の一般的なオプションを含む Meshtastic の設定を、デバイス上で直接構成できます。日常的な設定には外部アプリは不要です。
 
-- **直感的なグラフィカルインターフェース**: MUI はタッチスクリーンに最適化されたインターフェースを提供し、わかりやすいメニューと地図ベースのナビゲーションを備えています。一般的な操作は数回タップするだけで完了でき、新規ユーザーと経験豊富なユーザーの両方にとってデバイスが使いやすくなります。
+- **直感的なグラフィカルインターフェース**: MUI はタッチスクリーンに最適化されたインターフェースを提供し、わかりやすいメニューと地図ベースのナビゲーションを備えています。一般的な操作は数回タップするだけで完了できるため、初心者から上級者までデバイスを簡単に使用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIIntro.gif" alt="pir" width={600} height="auto" /></p>
 
-## Wio Tracker L2 で MUI を使い始める
+## Wio Tracker L2 をベースにした MUI の使い始め
 
 
 ### UI の切り替え
@@ -52,7 +52,7 @@ Setting ページに移動し **->** `Reboot/Shutdown` を選択 **->** Bluetoot
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIToBaseUI.png" alt="pir" width={900} height="auto" /></p>
 
 :::tip
-Bluetooth アイコンを `long-press` すると、BaseUI 切り替えポップアップが表示されます。
+Bluetooth アイコンを`長押し`すると、BaseUI 切り替えのポップアップが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/LongPress.gif" alt="pir" width={250} height="auto" /></p>
 
@@ -71,25 +71,25 @@ Bluetooth アイコンをクリックするだけの場合は、Bluetooth モー
 </TabItem>
 </Tabs>
 
-### スマートフォン接続
-`Setting` ページに移動し、`Reboot/Shutdown` をクリックしてから、`Bluetooth icon` をクリックします。
+### スマートフォンとの接続
+`Setting` ページに移動し、`Reboot/Shutdown` をクリックしてから、`Bluetooth アイコン` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-その後、デバイスは Bluetooth モードで再起動します。Bluetooth ペアリングコードが画面に表示されます。
+その後、デバイスは Bluetooth モードで再起動します。Bluetooth のペアリングコードが画面に表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothParingMode1.png" alt="pir" width={500} height="auto" /></p>
 
 ### LoRa 設定
-メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分の地域に合わせて設定する必要があります。
+メッシュ通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分の地域に応じて設定する必要があります。
 
 **リージョン一覧**
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|未設定|N/A|N/A|N/A|
-|US|アメリカ合衆国|902.0 - 928.0|100|30|
-|EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
 より包括的な一覧については、[LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
@@ -123,11 +123,11 @@ Bluetooth アイコンをクリックするだけの場合は、Bluetooth モー
 </TabItem>
 </Tabs>
 
-</TabItem>
+</TabItem]
 
 </Tabs>
 
-これでデバイス上の LoRa リージョンを設定できたので、必要に応じて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
+これでデバイス上の LoRa リージョンを設定できたので、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
 
 ### マップの使用
@@ -137,7 +137,7 @@ Bluetooth アイコンをクリックするだけの場合は、Bluetooth モー
 
 **Step1. GPS を有効化**
 
-位置情報を取得するには GPS を有効にする必要があります。これは `long pressing the position icon` によってデバイス上で直接設定できます。 
+位置情報を取得するには GPS を有効にする必要があります。これは `position アイコンを長押し` することでデバイス上で直接設定できます。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -153,7 +153,7 @@ SD カードをフォーマットし、マップを SD カードにインスト�
 
 **Step4. マップの表示**
 
-マップが読み込まれるまで待ちます。Wi-Fi に正常に接続し位置情報を取得すると、デバイスにオフラインマップが表示されます。
+マップが読み込まれるまで待ちます。Wi-Fi に正常に接続し、位置情報を取得すると、デバイスにオフラインマップが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/OfflineMapL2.png" alt="pir" width={450} height="auto" /></p>
 
@@ -163,7 +163,7 @@ SD カードをフォーマットし、マップを SD カードにインスト�
 
 **Step1. GPS を有効化**
 
-位置情報を取得するには GPS を有効にする必要があります。これは `long pressing the position icon` によってデバイス上で直接設定できます。 
+位置情報を取得するには GPS を有効にする必要があります。これは `position アイコンを長押し` することでデバイス上で直接設定できます。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -175,7 +175,7 @@ Wifi 名とパスワードを設定します。これはデバイス上で直接
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSetting.png" alt="pir" width={450} height="auto" /></p>
 
-Wifi IP が空で Wifi アイコンがグレーの場合は Wifi は無効です。Wifi IP が表示され Wifi アイコンが白い場合は Wifi が有効です。 
+Wifi IP が空で Wifi アイコンがグレーの場合は Wifi は無効です。Wifi IP が表示され、Wifi アイコンが白い場合は Wifi が有効です。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -193,7 +193,7 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi は無効です
 
 **Step3. マップの表示**
 
-マップが読み込まれるまで待ちます。Wi-Fi に正常に接続し位置情報を取得すると、デバイスにオンラインマップが表示されます。
+マップが読み込まれるまで待ちます。Wi-Fi に正常に接続し、位置情報を取得すると、デバイスにオンラインマップが表示されます。
 
 
 
@@ -213,25 +213,25 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi は無効です
 
 ### ノードページ
 
-- **任意のノードをクリック**: ノードの詳細なパラメータ情報を展開
+- **任意のノードをクリック**: ノードの詳細なパラメータ情報を展開します
 
-- **任意のノードを長押し**: チャットに入る
+- **任意のノードを長押し**: チャット画面に入ります
 
-- **座標を長押し**: マップ上でノードの位置を表示
+- **座標を長押し**: マップ上でノードの位置を表示します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/NodePaje.png" alt="pir" width={300} height="auto" /></p>
 
 ### チャンネルページ
 
-- **チャンネルをクリック**: チャンネルチャットに入る
+- **チャンネルをクリック**: チャンネルのチャットに入ります
 
-- **チャンネルを長押し**: チャンネルをミュート/ミュート解除
+- **チャンネルを長押し**: チャンネルをミュート/ミュート解除します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/ChannelPage.png" alt="pir" width={300} height="auto" /></p>
 
 :::tip
 
-下の左側の画像に示されている名前付きチャンネルのように、設定済みのチャンネルのみ操作できます。右側の画像に示されているような、設定されておらずラベルのみのチャンネルは操作できません。
+左側の画像に示されている名前付きチャンネルのように、設定済みのチャンネルのみ操作できます。右側の画像に示されているような、設定されておらずラベルのみのチャンネルは操作できません。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/ChannelConfiguration.png" alt="pir" width={300} height="auto" /></p>
 
@@ -239,17 +239,17 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi は無効です
 
 ### メッセージページ
 
-- **チャットをクリック**: チャットに入る。
+- **チャットをクリック**: チャット画面に入ります。
 
 - **チャットを長押し**: DEL ボタンが表示され、削除できます。
 
-- **オレンジ色でハイライト**: 新しい未読メッセージを示します。
+- **オレンジ色でハイライト**: 新しい未読メッセージがあることを示します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/ChatInterct.png" alt="pir" width={900} height="auto" /></p>
 
 ### Setting ページ
 
-- **Reboot**: "Reboot/Shutdown" を選択し、緑色の "Reboot" アイコンをクリックします。
+- **再起動**: "Reboot/Shutdown" を選択し、緑色の "Reboot" アイコンをクリックします。
 
 - **電源オフ**: "Reboot/Shutdown" を選択し、赤色の "Turn off" アイコンをクリックします。
 
@@ -260,23 +260,23 @@ Wifi IP が空で Wifi アイコンがグレーの場合は Wifi は無効です
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SettingMUII.png" alt="pir" width={900} height="auto" /></p>
 
 
-### Tool
+### ツール
 
-- **Mesh Detector**: 検出されたアクティブノードを表示
-- **Signal Scanner**: 選択したノードの RSSI と SNR を表示
-- **Trace Route**: 選択したノードのルーティングパスを表示
-- **Statistic**: パケットデコード情報を表示
-- **Packet Log**: デバイスログを表示
+- **Mesh Detector**: 検出されたアクティブノードを表示します
+- **Signal Scanner**: 選択したノードの RSSI と SNR を表示します
+- **Trace Route**: 選択したノードのルーティングパスを表示します
+- **Statistic**: パケットのデコード情報を表示します
+- **Packet Log**: デバイスログを表示します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/TOOLMUI.png" alt="pir" width={500} height="auto" /></p>
 
 ## MUI デバイス要件
 
-MUI は Meshtastic をサポートし、グラフィカルディスプレイを備えたハードウェア上で動作するように設計されています。オフラインマップを含むすべての MUI 機能を使用するには、デバイスは次の要件を満たす必要があります。
+MUI は Meshtastic をサポートし、グラフィカルディスプレイを備えたハードウェア上で動作するように設計されています。オフラインマップを含むすべての MUI 機能を使用するには、デバイスが次の要件を満たしている必要があります。
 
 | コンポーネント | 要件 |
 |-----------|-------------|
-| ディスプレイ | タッチ操作に対応したカラー表示 |
+| ディスプレイ | タッチ対応のカラー表示 |
 | GNSS | 位置情報サービス用の内蔵 GNSS 受信機 |
 | LoRa® | Meshtastic 通信に対応した LoRa® 無線 |
 | ストレージ | オフラインマップ用の microSD カードスロット |
@@ -292,7 +292,7 @@ MUI は Meshtastic をサポートし、グラフィカルディスプレイを�
 - LoRa® 通信
 - Wi-Fi および Bluetooth® 接続
 - オフラインマップ用 microSD カードスロット
-- プログラミングと電源供給用の USB Type-C
+- プログラミングと電源供給用 USB Type-C
 
 追加の拡張ボードは不要です。
 
@@ -302,12 +302,12 @@ MUI は Meshtastic をサポートし、グラフィカルディスプレイを�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Keyboardicon.png" alt="pir" width={500} height="auto" /></p>
 
-その後、数字や文字を入力できます。すべてのページにキーボードアイコンがあるわけではなく、通常は入力が必要なページにのみ表示されます。
+その後、数字と文字を入力できます。すべてのページにキーボードアイコンがあるわけではなく、通常は入力が必要なページにのみ表示されます。
 
 ### Wi-Fi が自動的にオフになるのはなぜですか
 
 Bluetooth ペアリングモードに入ると、デバイスの Wi-Fi は自動的に無効に設定されます。
-Bluetooth モード中のデバイスは、スマートフォンアプリで Wi-Fi を有効にできます。
+デバイスが Bluetooth モードのときは、スマートフォンアプリで Wi-Fi を有効にできます。
 
 ### MUI で mqtt メッセージを送信する方法
 
@@ -315,9 +315,30 @@ Bluetooth モード中のデバイスは、スマートフォンアプリで Wi-
 
 **Step1**. Bluetooth ペアリングモードに入る
 
-**Step2**. デバイスをスマートフォンアプリとペアリングする
+**Step2**. デバイスをスマートフォンの APP とペアリングする
 
-**Step3**. スマートフォンアプリで mqtt を設定する
+**Step3**. スマートフォンの APP で mqtt を設定する
 
 **Step4**. メッセージ送信を開始する
 
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
