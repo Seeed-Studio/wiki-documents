@@ -69,18 +69,15 @@ import '/src/css/rebot-wiki-style.css';
 如果买的是套件版（只有舵机与五金、不含打印件），先打印结构件。STL 文件在普通 FDM 打印机上即可打印：
 
 - **材料**：PLA+
-- **喷嘴 / 层高**：0.4mm 喷嘴 0.2mm 层高，或 0.6mm 喷嘴 0.4mm 层高
+- **喷嘴 / 层高**：0.4mm 喷嘴 + 0.2mm 层高，或 0.6mm 喷嘴 + 0.4mm 层高
 - **填充率**：15%
 - **支撑**：全域支撑，忽略与水平面夹角大于 45° 的斜面；水平向螺孔内不要生成支撑
 
-主臂或从臂的全部零件都打包在单个 STL 中，且已按 z 轴朝上排布以尽量减少支撑：
+主臂与从臂的全部零件已合并在同一个 STL 文件中，并按最小化支撑方向排布，下载后直接打印即可：
 
-- 220mm × 220mm 热床（如 Ender）：[从臂 Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl) · [主臂 Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-- 205mm × 250mm 热床（如 Prusa / Up）：[从臂 Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl) · [主臂 Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
-:::caution
-随着官方 SO101 更新，SO100 源文件已停止维护，但仍可在我们的 [Makerworld](https://makerworld.com/zh/models/908660) 找到。已购 SO100 的用户，教程与安装方式仍然兼容 —— SO101 的打印件与 SO100 电机套件的安装完全兼容。
-:::
+<div className="image-frame" style={{margin: '0.5rem 0'}}>
+  <a href="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl" target="_blank" rel="noopener noreferrer"><strong>下载 SO-ARM101 打印文件（soarm101.stl）</strong></a>
+</div>
 
 **可选**：为柔软、易碎或不规则物体打印软夹爪（TPU 指夹 + PLA 件），需要装相机时也可打印相机支架嵌件。文件在 [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) 仓库。
 

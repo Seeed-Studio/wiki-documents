@@ -27,6 +27,24 @@ import TabItem from '@theme/TabItem';
 
 # LeRobot における reBot Arm B601-RS
 
+<div className="sensecraft-banner">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ ノーコード · 環境構築不要</span>
+    <p className="sensecraft-banner__title">セットアップをスキップ — reBot Arm と LeRobot を 1 つのアプリから実行</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics は、SO-ARM101、reBot Arm 102 + B601-RS、B601-DM 向けに Seeed が提供するノーコードプラットフォームです。アームを接続し、キャリブレーション、デモ収集、学習、推論実行までをガイド付きインターフェースから行えます — Python 環境もターミナルも不要です。</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6 ステップのガイド付きワークフロー</li>
+      <li>✅ クラウド学習 — ローカル GPU 不要</li>
+      <li>✅ Windows / macOS クライアント</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
+    </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en/download?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics へ移動 ↗</a>
+    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
+  </div>
+</div>
+
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp" />
@@ -71,24 +89,6 @@ Seeed Studio のチュートリアルは、公式ドキュメントに基づい�
 <!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX&autoplay=0&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
-
-<div className="sensecraft-banner">
-  <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ ノーコード · 環境構築不要</span>
-    <p className="sensecraft-banner__title">セットアップをスキップ — reBot Arm と LeRobot を 1 つのアプリから実行</p>
-    <p className="sensecraft-banner__lead">SenseCraft Robotics は、SO-ARM101、reBot Arm 102 + B601-RS、B601-DM 向けに Seeed が提供するノーコードプラットフォームです。アームを接続し、キャリブレーション、デモ収集、学習、推論実行までをガイド付きインターフェースから行えます — Python 環境もターミナルも不要です。</p>
-    <ul className="sensecraft-banner__points">
-      <li>✅ 6 ステップのガイド付きワークフロー</li>
-      <li>✅ クラウド学習 — ローカル GPU 不要</li>
-      <li>✅ Windows / macOS クライアント</li>
-      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
-    </ul>
-  </div>
-  <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">SenseCraft Robotics へ移動 ↗</a>
-    <a className="sensecraft-banner__link" href="/ja/sensecraft_robotics/">ソフトウェアガイド</a>
-  </div>
-</div>
 
 ## 初期システム環境
 
@@ -273,6 +273,107 @@ pip install --pre torch torchvision torchaudio --index-url https://download.pyto
 </section>
 </div>
 
+## アームの接続
+
+:::warning
+**安全上の注意:**
+JST、XT30、その他のケーブルを接続・取り外しする前に、必ず電源を切ってください。すべてのケーブルが正しく接続されていることを確認してから電源を入れてください。
+B601 RS と B601 DM は外観が似ています。必ず見分けてください。
+:::
+
+
+### reBot Arm 102（リーダーアーム）の取り付けと接続
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/02-1-connect-leader-dm-en.webp" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+      <h4>reBot Arm 102 を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 1</p>
+
+木工用クランプを使用して、reBot Arm 102 を平らなテーブルトップに固定します。土台を軽く押して、動かないことを確認します。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 2</p>
+
+接続は 2 つの経路で構成されます。
+
+* **信号経路（アーム -> USB-C ケーブル -> コンピュータ）**
+  1. アームとコンピュータを接続する USB-C ケーブルを用意します（**まだコンピュータには接続しないでください。シリアルポートのバインドとデバイススキャンの段階で接続します**）。
+
+* **電源経路（アーム -> 12 V 2 A 電源 -> 電源タップ）**
+  1. **12 V 2 A 電源アダプタ**をアームの電源コネクタに接続します。
+  2. アダプタを電源タップに接続してアームの電源を入れます。
+
+
+
+---
+
+</div>
+</section>
+
+</div>
+
+### B601 RS（フォロワーアーム）の取り付けと接続
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png" />
+</div>
+
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+    <span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+      <h4>B601 RS を取り付ける</h4>
+      <p className="rebot-step-label">ステップ 4</p>
+
+G クランプを使用して、B601 RS を平らなテーブルトップに固定します。アームを左右に軽く回転させ、土台が動かないことを確認します。
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+    <span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+      <h4>ケーブルを接続する</h4>
+      <p className="rebot-step-label">ステップ 5</p>
+
+作業を始める前に、必ず電源が切れていることを確認してください。接続は 2 つの経路で構成されます。
+
+* **信号経路（アーム -> 信号分離ボード -> USB-CAN -> コンピュータ）**
+  1. XT30 2+2 ケーブルを使用して、アームのベースと信号分離モジュールを接続します。
+  2. 2 ピンケーブルを切断します。一方の端を信号分離モジュールに接続し、もう一方の端の赤い線を USB-CAN の H に、黒い線を L に接続します。
+  3. USB 延長ケーブルを介して USB-CAN の一方の端をコンピュータに接続します（**まだコンピュータには接続しないでください。シリアルポートのバインド準備ができてデバイススキャンを行う段階で接続します**）。
+
+* **電源経路（アーム -> 信号分離ボード -> 48 V 12.5 A 電源 -> コンセント）**
+  1. XT30 2+2 ケーブルを使用して、アームのベースと信号分離モジュールを接続します。
+  2. 電源用 XT30 ケーブルを使用して、信号分離モジュールと 48 V 12.5 A 電源を接続します。
+  3. 電源をコンセントに接続します。アームがしっかり固定されていること、ケーブルが正しいこと、周囲が安全であることを確認したうえで、電源を入れます。
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-connect-follower-rs-en.webp" />
+</div>
+
+
+---
+
+</div>
+</section>
+
+</div>
+
 ## ロボットアームをキャリブレーションする
 
 <!-- <div class="video-container">
@@ -452,6 +553,7 @@ RealSense D405 は、テーブルトップロボットマニピュレーショ�
 RealSense D435i は、深度センシング、RGB 画像、および IMU を組み合わせており、3D 再構成、SLAM、ロボットによる環境認識などの中距離～近距離アプリケーションに適しています。
 
 <div className="rebot-step-flow">
+<div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
   <div className="rebot-step-content">
@@ -605,6 +707,8 @@ lerobot-teleoperate \
 </section>
 </div>
 
+</div>
+
 </TabItem>
 
 <TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
@@ -633,6 +737,7 @@ lerobot-teleoperate \
 
 Gemini 336 は Gemini 330 シリーズの新しいメンバーです。Gemini 335 の優れた深度性能を受け継ぎつつ、反射の多い屋内エリア、高ダイナミックシーンの暗部、明るい屋外環境における深度画像品質をさらに向上させています。ロボットアプリケーション向けには、認識、自己位置推定、マニピュレーションなどのタスクに対して、より安定した高品質な深度データを提供できます。
 
+<div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
   <span className="rebot-step-number">1</span>
@@ -786,6 +891,8 @@ lerobot-find-cameras orbbec
 
 </div>
 </section>
+</div>
+
 </div>
 
 </TabItem>

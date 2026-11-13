@@ -1,5 +1,6 @@
 ---
 description: Este tutorial mostra como construir uma demonstração completa de preensão visual para o reBot Arm B601 usando o pipeline de preensão YOLO/OBB.
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 title: B601-DM Preensão Visual
 keywords:
   - reBot Arm

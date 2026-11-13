@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini 媒体 API 参考，涵盖媒体管理器、音频、摄像头和 WebRTC 组件。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 媒体 API
 slug: /reachymini_api_media
 keywords:

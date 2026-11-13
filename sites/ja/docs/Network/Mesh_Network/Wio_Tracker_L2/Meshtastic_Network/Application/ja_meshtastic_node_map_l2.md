@@ -1,5 +1,5 @@
 ---
-description: このガイドでは、Meshtastic デバイスに Meshtastic ファームウェアが書き込まれていることを前提として、[MeshTracker X1](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) を使用し、Meshtastic Node Map 上に Meshtastic デバイスの位置を表示する方法を説明します。
+description: このガイドでは、Meshtastic デバイスを Meshtastic Node Map 上に表示する方法を説明します。
 title: Meshtastic Node Map
 keywords:
   - Meshtastic
@@ -20,33 +20,33 @@ url: https://wiki.seeedstudio.com/ja/meshtastic_node_map_l2/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-このガイドでは、Meshtastic デバイスに Meshtastic ファームウェアがすでに書き込まれていることを前提として、[MeshTracker X1](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) を使用し、[Meshtastic](https://meshtastic.org/docs/introduction/) デバイスの位置を Meshtastic Node Map 上に表示する方法を説明します。
+このガイドでは、[MeshTracker X1](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) を使用して、[Meshtastic](https://meshtastic.org/docs/introduction/) デバイスの位置を Meshtastic Node Map 上に表示する方法を説明します。ここでは、デバイスにはすでに Meshtastic ファームウェアが書き込まれているものとします。
 
-## Meshtastic ネットワークモニターの概要
+## Meshtastic ネットワークモニタの概要
 
-Meshtastic Node Map は、地図上に Meshtastic デバイスの位置を可視化するオンラインインターフェースです。メッシュネットワーク内のデバイスのリアルタイムな位置を監視でき、ネットワークのカバレッジや接続状況を把握するのに役立ちます。
+Meshtastic Node Map は、Meshtastic デバイスの位置を地図上に可視化するオンラインインターフェースです。これにより、メッシュネットワーク内のデバイスのリアルタイムな位置を監視でき、ネットワークのカバレッジや接続状況を把握することができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:900, height:'auto'}}/></div>
 
-Meshtastic デバイスは、MQTT を介して Meshtastic サーバーに定期的に位置情報を報告します。Node Map はこれらのレポートを取得し、各ノードの位置、経路、電波到達範囲を表示します。デバイスは次の方法で位置を報告できます：
+Meshtastic デバイスは、MQTT を介して定期的に Meshtastic サーバーへ位置情報を報告します。Node Map はこれらのレポートを取得し、各ノードの位置、経路、電波到達範囲を表示します。デバイスは次の方法で位置を報告できます：
 
-- **MapReport による直接報告:** デバイスが位置データをサーバーに直接送信します。
-- **他のノード経由の間接報告:** 位置情報が近隣ノードを介して中継されます。
+- **MapReport による直接報告:** デバイスが位置情報をサーバーへ直接送信します。
+- **他のノード経由の間接報告:** 近隣ノードを経由して位置情報が中継されます。
 
 **適したユースケース**
 
 Meshtastic Node Map は次のような用途に最適です：
 
-- ハイキング、サイクリング、遠征などのアウトドアアクティビティ。
-- 分散した IoT デバイスのリモート監視。
+- ハイキング、サイクリング、探検などのアウトドアアクティビティ。
+- 分散した IoT デバイスの遠隔監視。
 - 携帯電話ネットワークに依存せずに資産やチームメンバーを追跡する用途。
 
 ### 一般的な Meshtastic Node Map
 
 | Node Map | 特徴 | 最適なユーザー | 備考 |
 |----------|----------|-----------|-------|
-| [MeshMap](https://meshmap.net/) | リアルタイムノードトラッキング、メッシュ経路表示、電波到達範囲表示 | 一般ユーザー、初心者 | シンプルなインターフェース、デフォルトの Meshtastic サーバーを使用 |
-| [Liam Cottle's Meshtastic Map](https://meshtastic.liamcottle.net/) | リアルタイムトラッキング、履歴経路表示、電波到達範囲表示 | 上級ユーザー、データ解析用途 | カスタム MQTT サーバーを使用 |
+| [MeshMap](https://meshmap.net/) | リアルタイムノード追跡、メッシュ経路表示、電波到達範囲表示 | 一般ユーザー、初心者 | シンプルなインターフェース、デフォルトの Meshtastic サーバーを使用 |
+| [Liam Cottle's Meshtastic Map](https://meshtastic.liamcottle.net/) | リアルタイム追跡、履歴経路表示、電波到達範囲表示 | 上級ユーザー、データ解析 | カスタム MQTT サーバーを使用 |
 
 ## MeshMap を使い始める
 
@@ -88,7 +88,7 @@ Web ブラウザで **MeshMap** を開きます: [MeshMap Link](https://meshmap.
      - Encryption Enabled: Yes
      - JSON Output: No
      - TLS Enabled: No
-   - `MapReport` を有効にし、`I agree` にチェックを入れます。希望するレポート間隔を選択します。
+   - `MapReport` を有効にし、`I agree` にチェックを入れます。お好みのレポート間隔を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/LiamMQTT.png" style={{width:600, height:'auto'}}/></div>
 
@@ -96,6 +96,28 @@ Web ブラウザで **MeshMap** を開きます: [MeshMap Link](https://meshmap.
 
 Web ブラウザで **Liam Cottle's Meshtastic Map** を開きます: [Liam Cottle's Map Link](https://meshtastic.liamcottle.net/)。地図上にすべてのノードが表示されます。
 
-任意のノードをクリックすると、デバイスに関する詳細情報、電波到達範囲、履歴経路、および過去の位置更新を確認できます。
+任意のノードをクリックすると、デバイスに関する詳細情報、電波到達範囲、履歴経路、過去の位置更新を確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2ProNodeMapLiam.png" style={{width:600, height:'auto'}}/></div>
+
+## 技術サポート & 製品ディスカッション
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

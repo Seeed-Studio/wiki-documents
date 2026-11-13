@@ -1,5 +1,6 @@
 ---
 description: 构建和发布Reachy Mini应用的完整指南，涵盖应用创建、测试、调试和发布到Hugging Face Spaces。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 构建和发布应用
 slug: /reachymini_sdk_apps
 keywords:

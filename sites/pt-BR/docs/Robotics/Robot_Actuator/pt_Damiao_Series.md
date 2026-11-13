@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um tutorial para os motores da série Damiao.
+description: "Guia completo dos atuadores de junta DM (Damiao) para braços robóticos: visão geral da série de motores, modos de controle, comunicação CAN e uso do SDK Python com os kits de robótica da Seeed."
 title: Damiao
 keywords:
   - atuador

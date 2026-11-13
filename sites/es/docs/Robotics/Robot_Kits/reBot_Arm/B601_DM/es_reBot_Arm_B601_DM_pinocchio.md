@@ -1,5 +1,6 @@
 ---
 description: Este tutorial presenta cómo utilizar Pinocchio y MeshCat para el análisis cinemático y la visualización en el brazo robótico reBot Arm B601-DM.
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 title: B601-DM con Pinocchio
 keywords:
   - Pinocchio

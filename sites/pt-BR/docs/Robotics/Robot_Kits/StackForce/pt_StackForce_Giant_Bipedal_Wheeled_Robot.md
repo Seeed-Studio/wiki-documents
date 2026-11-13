@@ -1,5 +1,6 @@
 ---
 description: Guia de desenvolvimento profissional do robô gigante bípede sobre rodas StackForce, incluindo recursos avançados, tutoriais de desenvolvimento aprofundados, documentação de API e casos de aplicação prática
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/LargeWheelLeg/en_version/picture/M_01.png
 title: Início Rápido do Robô Gigante sobre Rodas
 keywords:
   - StackForce

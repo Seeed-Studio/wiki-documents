@@ -1,5 +1,5 @@
 ---
-description: この Wiki では、Stackforce シリーズモーターのチュートリアルを提供します。
+description: "StackForce ロボットアクチュエータの完全ガイド：シリーズ概要、配線、CAN 通信、車輪型・脚式ロボットの制御例。"
 title: Stackforce
 keywords:
   - actuator

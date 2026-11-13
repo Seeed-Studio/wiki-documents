@@ -1,5 +1,6 @@
 ---
 description: 示例演示如何从Reachy Mini的麦克风阵列录制音频并保存为WAV文件，可配置持续时间。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 声音录制
 slug: /reachymini_examples_sound_record
 keywords:

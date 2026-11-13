@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece etapas detalhadas para configurar e executar o algoritmo A-LOAM no reComputer Jetson usando um sensor LiDAR RoboSense RS32.
+description: "Como executar A-LOAM LiDAR SLAM no Jetson: compilar a partir do código-fonte, reproduzir dados rosbag e gerar mapas de nuvem de pontos para navegação de robôs."
 title: Executar A-LOAM 3D SLAM
 keywords:
   - A-LOAM

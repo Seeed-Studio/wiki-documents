@@ -1,5 +1,6 @@
 ---
 description: Setup guide for Reachy Mini simulation using MuJoCo, providing a realistic physics environment to prototype and test applications without physical hardware.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Simulation Setup
 slug: /reachymini_platforms_simulation_get_started
 keywords:

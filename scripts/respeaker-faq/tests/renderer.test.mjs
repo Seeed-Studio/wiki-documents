@@ -43,9 +43,9 @@ const stripToolingFrontmatter = (content) => {
   return `${content.slice(0, open + 4)}${frontmatter}${content.slice(close)}`;
 };
 
-test('manifest: exactly 30 approved entries, all PUBLISH, no BLOCK', () => {
+test('manifest: exactly 34 approved entries, all PUBLISH, no BLOCK', () => {
   const manifest = loadManifest();
-  assert.strictEqual(manifest.entries.length, 30);
+  assert.strictEqual(manifest.entries.length, 34);
   for (const entry of manifest.entries) {
     assert.strictEqual(entry.publicationDecision, 'PUBLISH');
   }
@@ -107,15 +107,15 @@ test('render: only products with approved entries produce pages (no empty pages)
   }
 });
 
-test('render: FAQ counts per product (XVF3800=13, Lite=8, Flex=4, Pi HAT=1, Clip=3, XVF3000=1) and anchors unique', () => {
+test('render: FAQ counts per product (XVF3800=13, Lite=8, Flex=4, Pi HAT=1, Clip=6, XVF3000=2) and anchors unique', () => {
   const manifest = loadManifest();
   const byProduct = (p) => manifest.entries.filter((e) => e.productKey === p);
   assert.strictEqual(byProduct('xvf3800_usb_4_mic').length, 13);
   assert.strictEqual(byProduct('respeaker_lite').length, 8);
   assert.strictEqual(byProduct('flex_xvf3800').length, 4);
   assert.strictEqual(byProduct('respeaker_2_mics_pi_hat').length, 1);
-  assert.strictEqual(byProduct('respeaker_clip').length, 3);
-  assert.strictEqual(byProduct('xvf3000').length, 1);
+  assert.strictEqual(byProduct('respeaker_clip').length, 6);
+  assert.strictEqual(byProduct('xvf3000').length, 2);
 
   const targets = planTargets(manifest);
   for (const t of targets.filter((x) => x.rel.endsWith('.md'))) {
@@ -248,15 +248,17 @@ test('center page: exact lowercase-r "reSpeaker FAQ Center" title/H1, no legacy 
 test('published FAQ pages include author and publication date frontmatter', () => {
   const faqDir = path.join(REPO_ROOT, 'sites', 'en', 'docs', 'FAQ', 'respeaker');
   const files = [
-    'respeaker_faq.mdx',
-    ...PRODUCT_ORDER.map((key) => PRODUCTS[key].file),
+    { file: 'respeaker_faq.mdx', date: '9/2/2026' },
+    ...PRODUCT_ORDER.map((key) => ({
+      file: PRODUCTS[key].file,
+      date: PRODUCTS[key].lastUpdateDate ?? '9/2/2026',
+    })),
   ];
-  for (const file of files) {
+  for (const { file, date } of files) {
     const content = fs.readFileSync(path.join(faqDir, file), 'utf8');
     const frontmatter = content.split('---', 3)[1];
-    assert.match(
-      frontmatter,
-      /\nlast_update:\n  date: 9\/2\/2026\n  author: ray\n/,
+    assert.ok(
+      frontmatter.includes(`\nlast_update:\n  date: ${date}\n  author: ray\n`),
       `${file}: last_update metadata missing or malformed`,
     );
   }

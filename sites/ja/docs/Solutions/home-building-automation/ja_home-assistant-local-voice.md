@@ -1,6 +1,7 @@
 ---
 description: Home Assistant の照明や家電を音声で操作し、音声をローカルで認識する方法：必要な機器、導入、インターフェース、reComputer J40 での実測データ
 title: Home Assistant ローカル音声操作：選定・導入・実測データ
+sidebar_label: 'Home Assistant ローカル音声制御'
 keywords:
   - Home Assistant ローカル音声
   - Home Assistant 音声アシスタント
@@ -19,7 +20,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/home-assistant-local-voice/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -98,7 +99,7 @@ Home Assistant 音声アシスタントでのやり取りです。中国語で�
 | 機器 | 役割 | 備考 |
 |---|---|---|
 | ARM64 Linux ホスト（64 ビット OS、8 GB メモリ） | Home Assistant を実行 | 1 世帯に 1 台 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> [reComputer J40 シリーズ（J4012、Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | ローカルの音声認識と音声合成 | 初回起動時に音声モデルをダウンロード。30 GB 以上の空きディスクを確保 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> [reComputer Super J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | ローカルの音声認識と音声合成 | 初回起動時に音声モデルをダウンロード。30 GB 以上の空きディスクを確保 |
 | Home Assistant Connect ZBT-2 | Zigbee 機器の接続 | Home Assistant ホストの USB ポートに挿す |
 | Home Assistant Voice Preview Edition | 部屋に置く音声端末：コマンドを聞き、応答を再生 | 部屋ごとに 1 台 |
 | SONOFF SNZB Zigbee センサー（オプション） | 温湿度などの状態を取得 | ZBT-2 経由で接続 |

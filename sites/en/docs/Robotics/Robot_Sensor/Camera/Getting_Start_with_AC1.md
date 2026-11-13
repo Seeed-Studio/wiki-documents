@@ -1,5 +1,5 @@
 ---
-description: Show people how to use Orbbec Gemini 335Lg on reComputer Jetson platform.
+description: "How to get started with the Orbbec AC1 3D camera on Jetson: driver setup, SDK installation, depth and RGB streaming for robotics."
 title: Getting Started with AC1
 keywords:
   - Jetson

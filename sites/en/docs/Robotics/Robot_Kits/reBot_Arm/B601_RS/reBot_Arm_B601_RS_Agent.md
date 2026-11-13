@@ -1,5 +1,6 @@
 ---
 description: 'wrc_demo Operation Guide: Complete steps for the reBot Arm B601-RS visual grasping demo — environment setup, model download, LLM switching, hand-eye calibration, demo running, troubleshooting.'
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 title: B601-RS with Agent Claw
 keywords:
   - wrc_demo

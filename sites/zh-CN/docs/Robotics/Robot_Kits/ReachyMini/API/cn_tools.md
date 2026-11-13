@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini工具完整API参考，包括电机设置工具、扫描工具和重新刷写工具。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 工具API参考
 slug: /reachymini_api_tools
 keywords:

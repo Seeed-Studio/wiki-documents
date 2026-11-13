@@ -15,17 +15,17 @@ last_update:
   date: 2025-09-05
   author: Zibo
 createdAt: '2025-09-05'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_ethercat_communication/
 ---
 
 <div align="center">
-    <img width={600}
+    <img alt="Unidade reComputer com o selo NVIDIA Jetson Orin Nano / Orin NX, o mestre EtherCAT usado neste passo a passo" width={600}
     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-EtherCAT (Ethernet for Control Automation Technology) é um protocolo Ethernet industrial de alto desempenho e código aberto, projetado para controle de automação em tempo real em sistemas de automação, robótica e movimento. Este wiki mostrará como realizar comunicação EtherCat na reComputer Jetson Série.
+EtherCAT (Ethernet for Control Automation Technology) é um protocolo Ethernet industrial aberto criado para controle em tempo real em sistemas de automação, robótica e movimento. No reComputer Jetson o mestre é executado em espaço de usuário por meio da biblioteca SOEM sobre uma porta Ethernet padrão; as seções abaixo verificam primeiro o tempo de ciclo, depois compilam o SOEM, conectam um escravo e executam uma troca básica.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -35,13 +35,13 @@ EtherCAT (Ethernet for Control Automation Technology) é um protocolo Ethernet i
 
 ## Pré-requisitos
 
-- reComputer(Jetpack 6.2 pré-instalado)
+- reComputer (Jetpack 6.2 pré-instalado)
 - Cabo Ethernet
 - Dispositivo Escravo EtherCAT
 
 ## Verificação de Desempenho em Tempo Real
 
-Antes de implementar a comunicação EtherCAT, é crucial verificar se o sistema reComputer atende aos requisitos de desempenho em tempo real para automação industrial.
+Antes de implementar a comunicação EtherCAT, é fundamental verificar se o seu sistema reComputer atende aos requisitos de desempenho em tempo real para automação industrial.
 
 ### Instalar Ferramentas de Teste em Tempo Real
 
@@ -59,7 +59,7 @@ sudo cyclictest -t 6 -p 80
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="cyclictest com 6 threads antes de jetson_clocks, mostrando uma alta latência de pior caso em algumas threads" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/cyc1.png" />
 </div>
 
@@ -70,43 +70,43 @@ sudo jetson_clocks
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="cyclictest após jetson_clocks, com latência estável entre 9 e 34 microssegundos" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/cyc2.png" />
 </div>
 :::info
 **Análise de Desempenho em Tempo Real:**
 - Latência máxima: 34 microssegundos
 - Latência média: 2-6 microssegundos  
-- Todas as 6 threads de teste mostram latência estável dentro da faixa de 9-34 microssegundos
+- Todas as 6 threads de teste apresentam latência estável dentro da faixa de 9-34 microssegundos
 - Carga do sistema: 0,00
-- Distribuição de latência é uniforme e consistente
+- A distribuição de latência é uniforme e consistente
 
-Esse desempenho atende ao requisito de aplicação de tempo real rígido de menos de 100 microssegundos, tornando-o adequado para aplicações de controle de robótica e automação industrial.
+Esse desempenho atende ao requisito de aplicação hard real-time de menos de 100 microssegundos, tornando-o adequado para controle de robótica e aplicações de automação industrial.
 :::
 
 ## Visão Geral da Biblioteca SOEM
 
 <div style={{ textAlign: "justify" }}>
-SOEM (Simple Open EtherCAT Master) é uma biblioteca mestre EtherCAT leve e de código aberto que fornece aos desenvolvedores uma maneira portátil e flexível de estabelecer comunicação EtherCAT em tempo real. Embora o NVIDIA Jetson não tenha interface de hardware EtherCAT nativa, o SOEM permite comunicação EtherCAT totalmente em software usando frames Ethernet brutos por meio de interfaces de rede padrão.
+SOEM (Simple Open EtherCAT Master) é uma biblioteca mestre EtherCAT leve e de código aberto que fornece aos desenvolvedores uma forma portátil e flexível de estabelecer comunicação EtherCAT em tempo real. Embora o NVIDIA Jetson não tenha interface de hardware EtherCAT nativa, o SOEM permite a comunicação EtherCAT totalmente em software usando quadros Ethernet brutos por meio de interfaces de rede padrão.
 </div>
 
 ### Principais Recursos
 
 - **Implementação baseada em software** - Nenhum hardware especial é necessário
-- **Capaz de operar em tempo real** - Otimizado para comunicação de baixa latência
+- **Capaz de tempo real** - Otimizado para comunicação de baixa latência
 - **Multiplataforma** - Funciona em Linux, Windows e sistemas embarcados
-- **Código aberto** - Gratuito para uso e modificação
-- **Suporte a múltiplos escravos** - Pode controlar diversos dispositivos EtherCAT
+- **Código aberto** - Gratuito para usar e modificar
+- **Suporte a múltiplos escravos** - Pode controlar numerosos dispositivos EtherCAT
 
 ## Conexão de Hardware
 
 Conecte sua rede EtherCAT usando a seguinte configuração:
 
-1. **Use um cabo Ethernet padrão** (Cat5e ou superior recomendado)
+1. **Use um cabo Ethernet padrão** (recomendado Cat5e ou superior)
 2. **Conecte o reComputer (Mestre)** ao **Dispositivo Escravo EtherCAT**
 
 <div align="center">
-    <img width={1000}
+    <img alt="Servo drive conectado ao reComputer com os cabos Ethernet e de alimentação para o teste EtherCAT" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/hc.jpg" />
 </div>
 
@@ -147,11 +147,11 @@ ifconfig
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="saída do ifconfig listando o nome da interface Ethernet usada para EtherCAT" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/ifname.png" />
 </div>
 
-**Passo 2.** Navegue até o exemplo slaveinfo e execute o programa de detecção:
+**Passo 2.** Navegar até o exemplo slaveinfo e executar o programa de detecção:
 
 ```bash
 # Navigate to slaveinfo sample
@@ -162,7 +162,7 @@ sudo ./slaveinfo enP8p1s0
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="saída do slaveinfo detectando o escravo EtherCAT conectado e exibindo os detalhes da estação" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/slaver_info.png" />
 </div>
 
@@ -180,7 +180,7 @@ Se você vir "slave found" na saída, isso confirma que:
 
 ### Exemplo em C
 
-Crie um programa simples em C para demonstrar a comunicação EtherCAT básica:
+Crie um programa C simples para demonstrar a comunicação EtherCAT básica:
 
 <details>
 <summary> ethercat_communication_test.c </summary>
@@ -619,17 +619,17 @@ sudo ./ethercat_simple_test
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Exemplo em C lendo o status do escravo e alternando seu modo de acionamento" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/conmunicate.png" />
 </div>
 
 <div align="center">
-    <img width={1000}
+    <img alt="Servo drive, fonte de alimentação e o reComputer conectados, filmados durante o teste EtherCAT" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/conmunicate.gif" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-Como mostrado acima, a comunicação EtherCat bem-sucedida irá modificar o modo de acionamento da estação escrava, e será possível ler normalmente as informações de status da estação escrava.
+Como mostrado acima, a comunicação EtherCat bem-sucedida modificará o modo de acionamento da estação escrava e será possível ler normalmente as informações de status da estação escrava.
 </div>
 
 ### Exemplo em Python
@@ -778,7 +778,7 @@ print("EtherCAT communication test completed")
 </details>
 
 <div align="center">
-    <img width={1000}
+    <img alt="Exemplo em Python usando pysoem, lendo o status do escravo no terminal" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/python.png" />
 </div>
 
@@ -794,9 +794,17 @@ sudo python3 ethercat_python.py
 
 :::
 
-## Suporte Técnico & Discussão de Produto
+## Recursos Relacionados
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+- [Interfaces e pinagens do reComputer Robotics J401](/pt-br/recomputer_jetson_robotics_j401_getting_started/)
+- [reComputer Rugged J401 para visão industrial](/pt-br/jetson/recomputer_rugged_j401/industrial_vision/)
+- [Rastreamento de objetos com reComputer e PX4](/pt-br/object_tracking_with_reComputer_jetson_and_pX4/)
+- [Página do produto reComputer J3011](https://www.seeedstudio.com/reComputer-J3011B-p-6405.html)
+- [Repositório SOEM](https://github.com/OpenEtherCATsociety/SOEM)
+
+## Suporte Técnico e Discussão de Produtos
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

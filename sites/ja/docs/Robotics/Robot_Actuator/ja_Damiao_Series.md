@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、Damiaoシリーズモーターのチュートリアルを提供します。
+description: "ロボットアーム向け DM（Damiao）関節アクチュエータの完全ガイド：モーターシリーズの概要、制御モード、CAN 通信、Seeed ロボットキットでの Python SDK の使い方。"
 title: Damiao
 keywords:
   - アクチュエータ

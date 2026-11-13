@@ -1,5 +1,5 @@
 ---
-description: Introdução aos produtos Slamtec LiDAR e documentação de uso.
+description: "Introdução aos produtos LiDAR da SLAMTEC: comparação de modelos, fiação e documentação de uso para mapeamento e navegação de robôs."
 title: Série Slamtec LiDAR
 keywords:
   - LiDAR

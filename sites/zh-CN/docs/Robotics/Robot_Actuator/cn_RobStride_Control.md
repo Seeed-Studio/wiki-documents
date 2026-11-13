@@ -1,5 +1,5 @@
 ---
-description: 本 wiki 提供 RobStride 电机控制完整指南
+description: "RobStride 准直驱执行器控制完整指南：MIT 模式、CAN 协议、参数调节，以及机器人关节的 Python SDK 示例。"
 title: RobStride 电机控制完整指南
 keywords:
   - actuator

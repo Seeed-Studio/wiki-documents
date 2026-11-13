@@ -1,5 +1,5 @@
 ---
-description: '--'
+description: "Como controlar um braço robótico com Phospho e LeRobot: configurar a plataforma no navegador, conectar o braço, teleoperar e executar fluxos de aprendizado por imitação."
 title: Primeiros Passos com Phospho
 keywords:
   - NVIDIA Jetson

@@ -1,6 +1,7 @@
 ---
 description: Running a warehouse management system by voice on edge hardware — which devices you need, how the MCP bridge connects speech to inventory, how to deploy each of the five tiers, and load test results measured on a reComputer R2000 series device
 title: 'Voice-Controlled Warehouse Management on Edge Hardware: Build, Deploy, and Measured Results'
+sidebar_label: 'Voice Warehouse Management'
 keywords:
   - voice controlled warehouse management system
   - edge WMS
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/voice-warehouse-management/
 generated_from: sensecraft-solutions@smart_warehouse
 ---
@@ -121,7 +122,7 @@ Three device roles. Which ones you buy depends on where the data and the voice A
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991275-sensecap-watcher-w1-b_1.jpg" alt="SenseCAP Watcher" width="110" /> | [SenseCAP Watcher](https://www.seeedstudio.com/SenseCAP-Watcher-W1-B-p-5980.html) | Voice terminal, MCP client, on-device face recognition | Always, one per station |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-113991334.jpg" alt="reComputer R1125-10" width="110" /> | [reComputer R1125-10](https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html) | Edge gateway running the warehouse system | Inventory data stays on site, up to 20 operators, face recognition on the Watcher |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/i/m/image_6.jpg" alt="reComputer Industrial R2135-12" width="110" /> | [reComputer Industrial R2135-12](https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html) | Edge gateway with a Hailo-8 accelerator | More than 20 operators, or liveness detection is required |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) | One box running the warehouse system, face recognition and a self-hosted speech service | 2–3 stations share one host |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) | One box running the warehouse system, face recognition and a self-hosted speech service | 2–3 stations share one host |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-100032662--recomputer-robotics-j5012-with-gmsl_1__1.jpg" alt="reComputer Robotics J5011" width="110" /> | [reComputer Robotics J5011](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html) | On-premise LLM and speech, no external service calls | The facility must stay offline |
 
 The Watcher stores at most **20** face templates on the device. Beyond 20 operators, recognition has to move to the gateway: up to 20, pick the R1125; above 20, pick the R2135 with Hailo-8.

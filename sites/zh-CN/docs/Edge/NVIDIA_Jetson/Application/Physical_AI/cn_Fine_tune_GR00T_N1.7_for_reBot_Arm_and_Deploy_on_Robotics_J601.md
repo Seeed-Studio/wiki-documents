@@ -1,5 +1,5 @@
 ---
-description: 本维基介绍如何为 reBot Arm B601 DM 微调 NVIDIA Isaac GR00T N1.7，并在 Jetson Thor 上使用 TensorRT 加速进行部署。
+description: 本文档介绍如何为 reBot Arm B601 DM 微调 NVIDIA Isaac GR00T N1.7，并在搭载 TensorRT 加速的 Jetson Thor 上进行部署。
 title: 为 reBot Arm 微调 GR00T N1.7 并部署到 Jetson Thor
 keywords:
   - Jetson Thor
@@ -7,14 +7,14 @@ keywords:
   - reBot Arm
   - gr00t n1.7
   - reComputer
-image: https://files.seeedstudio.com/wiki/other/cover1.png
+image: https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
 slug: /fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601
 sku: E26052001
 last_update:
   date: 2026-06-12
   author: Zibo
 createdAt: '2026-06-12'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/cn/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/
 ---
 
@@ -22,15 +22,15 @@ url: https://wiki.seeedstudio.com/cn/fine_tune_gr00t_n1.7_for_rebot_arm_and_depl
 
 ## 介绍
 
-本维基介绍如何为 **reBot Arm B601 DM** **微调 NVIDIA Isaac GR00T N1.7**，并在 **reComputer Robotics J601** 上使用 **TensorRT 加速**进行部署。
+**GR00T N1.7** 是一个视觉-语言-动作模型；在 **reBot Arm B601 DM** 的示教数据上对其进行微调，可以让模型适配该机械臂及其任务。微调后的 checkpoint 会导出为 **TensorRT** 引擎，并在搭载 **Jetson Thor** 的 **reComputer Robotics J601** 上提供服务，从而让机械臂在设备端而非工作站上完成推理。
 
 <p></p>
 
-**[NVIDIA GR00T N1.7](https://github.com/Nvidia/Isaac-GR00T)** 作为一款前沿的端到端视觉-语言-动作（Vision-Language-Action，VLA）基础模型，在具身智能的发展中迈出了重要一步。它无缝衔接感知与执行，使机器人能够将复杂的视觉输入和语言指令直接转化为现实世界中的物理动作。在全新的 Cosmos Reason2-2B 视觉语言模型的驱动下，GR00T N1.7 拥有前所未有的环境感知能力，而其最先进的 DiT（Diffusion Transformer）动作解码器则带来极其平滑的动作生成效果，并在真实环境干扰下依然保持极高的鲁棒性。
+**[NVIDIA GR00T N1.7](https://github.com/Nvidia/Isaac-GR00T)** 作为一款前沿的端到端视觉-语言-动作（VLA）基础模型，在具身智能的发展中迈出了重要一步。它无缝衔接感知与执行，使机器人能够将复杂的视觉输入和语言指令直接转化为现实世界中的物理动作。在全新 Cosmos Reason2-2B 视觉语言模型的加持下，GR00T N1.7 拥有前所未有的环境感知能力，而其最先进的 DiT（Diffusion Transformer）动作解码器则带来极其平滑的动作生成以及在真实环境干扰下依然稳健的鲁棒性。
 <p></p>
 
 <div align="center">
-  <img width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
+  <img alt="GR00T N1 架构：图像观测、语言指令和机器人状态输入到视觉语言模型（系统 2），该模型驱动扩散 Transformer（系统 1）输出电机动作 token" width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
   "/>
 </div>
 
@@ -42,19 +42,19 @@ url: https://wiki.seeedstudio.com/cn/fine_tune_gr00t_n1.7_for_rebot_arm_and_depl
 - [reBot Arm B601 DM](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
 - [Star Arm 102 for reBot Arm B601‑DM Leader](https://www.seeedstudio.com/Star-Arm-102-p-6765.html)
 - [USB-to-CAN 适配器](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
-- USB 相机 x2
-- 机械臂的电源和 USB 线缆
+- USB 摄像头 x2
+- 机械臂电源和 USB 连接线
 
 ### 硬件连接
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
+  <img alt="reBot Arm B601 DM 通过线缆连接到 J601 载板，并接入两路 USB 摄像头" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
 </div>
 
 
 ## 数据采集
 
-如果你想部署自己的 VLA 模型，首先需要采集一份适合当前任务的数据集，用于对模型进行微调，使其能够适配我们的抓取任务。你可以参考[这篇维基](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/)进行环境配置和数据采集。
+如果你希望部署自己的 VLA 模型，首先需要采集一套适合当前任务的数据集，用于对模型进行微调，使其能够适配我们的抓取任务。你可以参考 [这篇文档](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/) 进行环境配置和数据采集。
 
 
 ## 模型微调
@@ -91,13 +91,13 @@ uv run --project scripts/lerobot_conversion \
 请将文件路径替换为你自己的数据集路径。
 :::
 
-执行完成后，之前采集的 LeRobot 数据集将从 v3.0 降级为 v2.0 格式。
+执行完成后，之前采集的 LeRobot 数据集会从 v3.0 降级为 v2.0 格式。
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
+  <img alt="在微调前将 LeRobot 数据集从 v3.0 降级为 v2.0 格式" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
 </div>
 
-然后将下面的 `modality.json` 文件复制到已转换数据集的 `meta` 文件夹中：
+然后将下面的 `modality.json` 文件复制到转换后数据集的 `meta` 文件夹中：
 
 <details>
 <summary>modality.json（点击展开）</summary>
@@ -166,20 +166,20 @@ bash examples/finetune.sh \
 :::
 
 :::tip
-由于我们的训练数据集相对较小，你可以减少训练步数以节省算力资源。
+由于我们的训练数据集相对较小，你可以适当减少训练步数以节省算力资源。
 :::
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
+  <img alt="微调过程中随训练步数变化的 loss 曲线" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
 </div>
 
 训练完成后，你可以在 `--output-dir` 目录中找到微调后的 GR00T N1.7 模型文件。
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
+  <img alt="微调完成后输出目录中的 GR00T N1.7 checkpoint 文件" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
 </div>
 
-## 在 Jetson 上部署
+## 部署到 Jetson
 
 ### 权限获取
 
@@ -198,7 +198,7 @@ hf auth login
 🔗 [https://huggingface.co/nvidia/Cosmos-Reason2-2B](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
+  <img alt="在 Hugging Face 页面上为模型权重授予访问权限" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
 </div>
 
 ### 克隆仓库
@@ -213,9 +213,9 @@ cd Isaac-GR00T
 git submodule update --init --recursive
 ```
 
-### Docker 环境配置（推荐）
+### Docker 部署（推荐）
 
-Thor 使用 CUDA 13 和 Python 3.12，其依赖栈与 x86 或 Orin 不同。已在 JetPack 7.1 上测试。Thor 上有两种运行方式：Docker（推荐）或裸机。
+Thor 使用 CUDA 13 和 Python 3.12，其依赖栈与 x86 或 Orin 不同。已在 JetPack 7.1 上测试。Thor 上有两种运行方式：Docker（推荐）或裸机环境。
 
 在仓库根目录构建 Thor 容器：
 
@@ -223,7 +223,7 @@ Thor 使用 CUDA 13 和 Python 3.12，其依赖栈与 x86 或 Orin 不同。已�
 cd docker && sudo bash build.sh --profile=thor
 ```
 
-下载微调后的模型（在宿主机上运行一次即可）：
+下载微调后的模型（在宿主机上执行一次即可）：
 
 ```bash
 uv run hf download nvidia/GR00T-N1.7-LIBERO \
@@ -236,7 +236,7 @@ uv run hf download nvidia/GR00T-N1.7-LIBERO \
   --local-dir checkpoints/GR00T-N1.7-LIBERO
 ```
 
-启动交互式 Docker 会话（推荐用于多步骤 TRT 工作）：
+启动交互式 Docker 会话（推荐用于多步骤的 TRT 工作流程）：
 
 ```bash
 # Add Docker to the user group
@@ -255,7 +255,7 @@ docker run -it --rm --runtime nvidia --gpus all \
   bash
 ```
 
-### 裸机环境配置
+### 裸机环境部署
 
 如果你不想使用 Docker，也可以直接安装依赖：
 
@@ -268,7 +268,7 @@ source scripts/activate_thor.sh
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
+  <img alt="在 Jetson Thor 上完成环境配置，已创建 virtualenv 并执行 activate_thor.sh" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
 </div>
 
 ### 环境验证
@@ -292,7 +292,7 @@ uv run python scripts/deployment/standalone_inference_script.py \
 
 ## 数据集格式转换
 
-GR00T 仅支持 LeRobot v2.1 格式的数据集。然而，使用 LeRobot 框架采集数据时所使用的数据集格式为 v3.0。要在 Jetson 上导出加速的 TensorRT 引擎模型，需要将数据集格式转换为与 GR00T 训练时相同的格式。
+GR00T 只支持 LeRobot v2.1 格式的数据集。然而，使用 LeRobot 框架采集数据时采用的是 v3.0 格式。要在 Jetson 上导出加速后的 TensorRT 引擎模型，需要将数据集格式转换为与 GR00T 训练时相同的格式。
 
 将下面的转换脚本保存为 `scripts/convert_v3_to_v2.py`，放在 `Isaac-GR00T` 仓库中：
 
@@ -706,14 +706,14 @@ python3 scripts/deployment/build_trt_pipeline.py \
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
+  <img alt="Engine export and build finishing for the bf16 TensorRT engine" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
 </div>
 
-在等待过程中，你将会得到一个加速且优化后的引擎格式模型文件，以及中间转换得到的 ONNX 文件。
+在等待的过程中，你将会得到一个加速且优化后的引擎格式模型文件，以及中间转换得到的 ONNX 文件。
 
 ## 在 Jetson Thor 上进行推理
 
-本章节说明如何在 Jetson 上使用已经通过 TensorRT 微调并加速的 GR00T N1.7 模型进行推理。
+本章将说明如何在 Jetson 上使用已经通过 TensorRT 微调并加速的 GR00T N1.7 模型进行推理。
 
 ### 启动推理服务
 
@@ -952,7 +952,7 @@ python eval_rebot_arm_dm.py \
 ```
 
 :::warning
-首次执行时可能会报告找不到机械臂标定文件的错误。这是因为使用 LeRobot 验证 reBot Arm 时生成的标定文件名为 `follower1.json`，而程序正在查找的是 `b601_dm_follower.json`。重命名标定文件即可解决该问题：
+首次执行时可能会报告找不到机械臂标定文件的错误。这是因为使用 LeRobot 对 reBot Arm 进行验证时生成的标定文件名为 `follower1.json`，而程序正在查找的是 `b601_dm_follower.json`。请通过重命名标定文件来解决该问题：
 
 ```bash
 mv ~/.cache/huggingface/lerobot/calibration/robots/seeed_b601_dm_follower/follower1.json \
@@ -961,7 +961,7 @@ mv ~/.cache/huggingface/lerobot/calibration/robots/seeed_b601_dm_follower/follow
 :::
 
 
-<iframe width="950" height="799" src="https://www.youtube.com/embed/S-hnNhC1hGQ" title="在 reComputer J601（Nvidia Thor）上使用 Nvidia GR00T N1.7 控制 reBot Arm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="950" height="799" src="https://www.youtube.com/embed/S-hnNhC1hGQ" title="Control reBot Arm with Nvidia GR00T N1.7 on reComputer J601(Nvidia Thor)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## 参考资料
@@ -970,9 +970,15 @@ mv ~/.cache/huggingface/lerobot/calibration/robots/seeed_b601_dm_follower/follow
 - 🔗 https://github.com/NVIDIA/Isaac-GR00T/tree/main
 - 🔗 https://huggingface.co/nvidia/GR00T-N1.7-LIBERO
 
+## 相关资源
+
+- [reComputer Robotics J601 硬件和 I/O](/cn/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
+- [reComputer Robotics J401 接口和引脚定义](/cn/recomputer_jetson_robotics_j401_getting_started/)
+- [Hugging Face 上的 GR00T N1.7 模型](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
+
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

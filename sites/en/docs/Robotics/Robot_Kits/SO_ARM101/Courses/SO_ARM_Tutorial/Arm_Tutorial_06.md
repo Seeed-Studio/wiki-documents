@@ -74,23 +74,20 @@ If you purchased a pre-assembled robotic arm, skip this chapter and go straight 
     <h2>6.1 3D Printing Guide (Kit Version)</h2>
   </div>
 
-If you bought the kit version (servos and hardware without printed parts), print the structure first. The STL files print on ordinary FDM printers:
+If you bought the kit version (servos and hardware without printed parts), print the structure first. The parts print on ordinary FDM printers:
 
 - **Material:** PLA+
 - **Nozzle / layer height:** 0.4mm nozzle at 0.2mm layer height, or 0.6mm nozzle at 0.4mm layer height
 - **Infill:** 15%
-- **Supports:** everywhere, ignoring slopes greater than 45° to the horizontal; no supports in horizontal screw holes
+- **Supports:** everywhere, ignoring slopes steeper than 45°; no supports in horizontal screw holes
 
-All parts for the leader or follower are packed in a single STL, already oriented z-up to minimize supports:
+All Leader and Follower parts are packed in a single STL file, already oriented to minimize supports — just download and print:
 
-- 220mm × 220mm bed (e.g. Ender): [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl) · [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-- 205mm × 250mm bed (e.g. Prusa / Up): [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl) · [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
+<div className="image-frame" style={{margin: '0.5rem 0'}}>
+  <a href="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl" target="_blank" rel="noopener noreferrer"><strong>Download the SO-ARM101 print file (soarm101.stl)</strong></a>
+</div>
 
-:::caution
-Following the official SO101 update, SO100 source files are no longer maintained upstream, but they can still be found on our [Makerworld](https://makerworld.com/zh/models/908660). For users who previously purchased SO100, the tutorials and installation methods remain compatible — the SO101 print is fully compatible with the SO100 motor kit installation.
-:::
-
-**Optional:** print a soft gripper (TPU fingers, PLA parts) for soft, fragile, or irregular objects, and the camera mount bracket insert if you need to mount a camera. Files are in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
+**Optional:** print a soft gripper (TPU fingers) or the camera mount insert — files in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
 
 </section>
 

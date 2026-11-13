@@ -70,23 +70,20 @@ import '/src/css/rebot-wiki-style.css';
     <h2>6.1 3D プリントガイド（キット版）</h2>
   </div>
 
-プリント部品なしのキット版（サーボとハードウェアのみ）を買った場合は、まず構造をプリントします。STL ファイルは通常の FDM プリンタで出力できます：
+キット版(プリント済み部品なしのサーボとハードウェア)を購入した場合は、まず構造をプリントします。STL ファイルは通常の FDM プリンターで出力できます:
 
-- **材料**：PLA+
-- **ノズル / 積層**：0.4mm ノズル + 0.2mm 積層、または 0.6mm ノズル + 0.4mm 積層
-- **充填率**：15%
-- **サポート**：全面。水平面から 45° を超える斜面は無視。水平方向のネジ穴にはサポートを入れない
+- **材料**:PLA+
+- **ノズル / 積層**:0.4mm ノズル + 0.2mm 積層、または 0.6mm ノズル + 0.4mm 積層
+- **充填率**:15%
+- **サポート**:全面(45° を超える斜面は無視)。水平方向のネジ穴にはサポートを入れない
 
-リーダー／フォロワーの全パーツは 1 つの STL にまとめられており、サポート最小化のために z 軸上向きに配置済みです：
+Leader と Follower の全パーツは 1 つの STL ファイルにまとめられており、サポート最小化の向きに配置済みです:
 
-- 220mm × 220mm ベッド（例：Ender）：[フォロワー](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl) · [リーダー](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-- 205mm × 250mm ベッド（例：Prusa / Up）：[フォロワー](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl) · [リーダー](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
+<div className="image-frame" style={{margin: '0.5rem 0'}}>
+  <a href="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl" target="_blank" rel="noopener noreferrer"><strong>SO-ARM101 プリントファイル(soarm101.stl)をダウンロード</strong></a>
+</div>
 
-:::caution
-公式の SO101 更新に伴い、SO100 のソースファイルは上流で管理されなくなりましたが、当社の [Makerworld](https://makerworld.com/zh/models/908660) で引き続き入手できます。購入済みの SO100 ユーザーにはチュートリアルと手順がそのまま有効です — SO101 のプリントは SO100 モーターキットの取り付けと完全互換です。
-:::
-
-**オプション**：柔らかい・壊れやすい・不整形な物体用にソフトグリッパ（TPU フィンガー + PLA 部品）、カメラ搭載用にカメラブラケットインサートをプリントできます。ファイルは [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) リポジトリにあります。
+**オプション**:ソフトグリッパ(TPU フィンガー)やカメラマウントインサートは [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) リポジトリを参照してください。
 
 </section>
 

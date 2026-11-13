@@ -1,5 +1,6 @@
 ---
 description: Ejemplo que demuestra la reproducción de audio a través del altavoz de Reachy Mini usando archivos WAV o audio en vivo continuo con la API push_audio_sample.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reproducción de sonido
 slug: /reachymini_examples_sound_play
 keywords:

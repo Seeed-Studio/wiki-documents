@@ -1,5 +1,6 @@
 ---
 description: Guia de início rápido para o Reachy Mini cobrindo pré-requisitos, configuração do daemon e seu primeiro script de robô.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Guia de Início Rápido
 slug: /reachymini_sdk_quickstart
 keywords:

@@ -1,5 +1,5 @@
 ---
-description: This wiki provides a step-by-step guide to install Isaac Lab.
+description: "Step-by-step guide to installing NVIDIA Isaac Lab on Jetson and Ubuntu: prerequisites, conda setup, installation and verification for robot learning."
 title: Install the Isaac Lab
 keywords:
   - NVIDIA

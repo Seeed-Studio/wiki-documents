@@ -1,5 +1,5 @@
 ---
-description: 本维基提供了使用 Isaac ROS Visual SLAM 的分步指南。
+description: "如何在 Jetson 上用 NVIDIA Isaac ROS 运行视觉 SLAM：环境配置、相机设置、三维重建与实时跟踪。"
 title: Isaac ROS Visual SLAM
 keywords:
   - NVIDIA

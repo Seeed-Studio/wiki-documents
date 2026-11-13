@@ -9,8 +9,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
-  date: 6/28/2024
-  author: Jessie
+  date: 11/09/2026
+  author: Ray
 createdAt: '2024-07-03'
 updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/reSpeaker_usb_v3/
@@ -301,6 +301,19 @@ dfu-util -l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
+
+### Build a Voice Assistant with Home Assistant
+
+Pair reSpeaker Lite with a [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) and flash the ESPHome firmware to turn it into a voice assistant satellite for Home Assistant. Once configured, you can say "Okay Nabu" to control and automate your home appliances with your voice.
+
+The dedicated tutorial walks you through the whole setup:
+
+- Flashing the I2S firmware required by the ESPHome integration.
+- Installing ESPHome Builder and adding reSpeaker Lite as a new device in Home Assistant.
+- Uploading the YAML configuration and verifying voice commands end to end.
+- Soldering the USR and mute buttons to D2 and D3 to enable button support.
+
+[Build a Voice Assistant System for Home Assistant](/respeaker_lite_ha)
 
 ## Recording and Playback 
 

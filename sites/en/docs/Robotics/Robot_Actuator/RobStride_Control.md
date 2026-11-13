@@ -1,5 +1,5 @@
 ---
-description: This wiki provides RobStride Motor Control Complete Guide
+description: "RobStride quasi-direct-drive actuator control complete guide: MIT mode, CAN protocol, parameter tuning and Python SDK examples for robotic joints."
 title: RobStride
 keywords:
   - actuator

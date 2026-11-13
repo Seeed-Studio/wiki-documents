@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini应用完整API参考，涵盖核心应用类、应用管理、应用信息、应用助手和应用源。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 应用API参考
 slug: /reachymini_api_apps
 keywords:

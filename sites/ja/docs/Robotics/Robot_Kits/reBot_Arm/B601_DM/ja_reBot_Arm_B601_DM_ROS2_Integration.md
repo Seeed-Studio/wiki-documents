@@ -1,5 +1,6 @@
 ---
 description: このチュートリアルでは、アーム制御、RViz による可視化、MoveIt2 との統合を含む、reBot Arm B601-DM 用の ROS2 制御ワークスペースのセットアップ方法を説明します。
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 title: B601-DM と ROS2
 keywords:
   - reBot Arm

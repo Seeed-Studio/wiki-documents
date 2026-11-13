@@ -1,5 +1,5 @@
 ---
-description: 本 wiki 提供了安装 ROS2 humble 的分步指南。
+description: "在 Ubuntu 与 Jetson 上安装 ROS 2 Humble 的分步指南：软件源配置、安装、工作空间创建与第一个节点。"
 title: 安装 ROS2 Humble
 keywords:
   - NVIDIA

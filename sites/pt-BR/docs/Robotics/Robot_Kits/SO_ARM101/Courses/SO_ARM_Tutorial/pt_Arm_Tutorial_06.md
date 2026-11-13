@@ -70,23 +70,20 @@ Se você comprou um braço robótico pré-montado, pule este capítulo e vá dir
     <h2>6.1 Guia de impressão 3D (versão kit)</h2>
   </div>
 
-Se comprou a versão kit (servos e hardware sem peças impressas), imprima a estrutura primeiro. Os STLs saem em impressoras FDM comuns:
+Se comprou a versão em kit (servos e hardware sem peças impressas), imprima primeiro a estrutura. As peças saem em impressoras FDM comuns:
 
-- **Material**: PLA+
-- **Bico / altura de camada**: bico 0.4mm com camada 0.2mm, ou bico 0.6mm com camada 0.4mm
-- **Preenchimento**: 15%
-- **Suportes**: em toda parte, ignorando rampas acima de 45° da horizontal; sem suportes nos furos de parafuso horizontais
+- **Material:** PLA+
+- **Bico / altura de camada:** bico de 0.4mm com camada de 0.2mm, ou bico de 0.6mm com camada de 0.4mm
+- **Preenchimento:** 15%
+- **Suportes:** em toda parte, ignorando inclinações acima de 45°; sem suportes nos furos de parafuso horizontais
 
-Todas as peças do líder ou do seguidor vêm num único STL, já orientadas com z para cima para minimizar suportes:
+Todas as peças do Leader e do Follower estão empacotadas em um único arquivo STL, já orientadas para minimizar os suportes:
 
-- Mesa de 220mm × 220mm (p. ex. Ender): [Seguidor](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl) · [Líder](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-- Mesa de 205mm × 250mm (p. ex. Prusa / Up): [Seguidor](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl) · [Líder](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
+<div className="image-frame" style={{margin: '0.5rem 0'}}>
+  <a href="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl" target="_blank" rel="noopener noreferrer"><strong>Baixar o arquivo de impressão do SO-ARM101 (soarm101.stl)</strong></a>
+</div>
 
-:::caution
-Após a atualização oficial do SO101, os arquivos-fonte do SO100 deixaram de ser mantidos, mas continuam no nosso [Makerworld](https://makerworld.com/zh/models/908660). Para quem já comprou o SO100, os tutoriais e métodos continuam válidos — a impressão do SO101 é totalmente compatível com a instalação do kit de motores do SO100.
-:::
-
-**Opcional**: imprima uma garras macia (dedos de TPU, peças PLA) para objetos macios, frágeis ou irregulares, e o encaixe do suporte de câmera se precisar montar uma. Arquivos no repositório [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
+**Opcional:** garra macia (dedos de TPU) ou inserto do suporte de câmera — arquivos no repositório [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git).
 
 </section>
 

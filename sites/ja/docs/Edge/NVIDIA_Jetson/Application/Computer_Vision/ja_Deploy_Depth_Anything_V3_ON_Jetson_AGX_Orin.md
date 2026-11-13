@@ -1,39 +1,39 @@
 ---
-description: このwikiは、Jetson AGX Orinデバイス上でDepth Anything V3をデプロイするための包括的なステップバイステップガイドを提供します。環境設定、主要な依存関係（CUDA、ROS2、TensorRT）のインストール、TensorRTエンジンへのモデル変換、USBカメラ統合によるリアルタイム深度推定をカバーしています。このガイドでは、Depth Anything V3が単一のRGB画像から最小限の計算オーバーヘッドで高品質な深度マップを生成する能力を強調し、エッジデバイス上でのロボティクス、自律ナビゲーション、3D知覚アプリケーションに理想的であることを示しています。
-title: Jetson AGX Orin上でDepth Anything V3をデプロイ
+description: "Jetson AGX Orin 上で Depth Anything V3 をデプロイ：CUDA と ROS 2 のセットアップ、ONNX から TensorRT への変換、およびビデオからのリアルタイム深度推定。"
+title: Jetson AGX Orin 上で Depth Anything V3 をデプロイする
 keywords:
   - Depth Anything V3
   - Jetson AGX Orin
-  - 深度推定
+  - Depth Estimation
   - TensorRT
   - ROS2
-  - コンピュータビジョン
-  - ロボティクス
-  - 3D知覚
-  - USBカメラ
-  - エッジAI
+  - Computer Vision
+  - Robotics
+  - 3D Perception
+  - USB Camera
+  - Edge AI
 image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
 slug: /deploy_depth_anything_v3_jetson_agx_orin
 last_update:
   date: 2026-01-09
   author: Zibo
-createdAt: '2026-01-12'
+createdAt: '2026-01-09'
 updatedAt: '2026-01-16'
 url: https://wiki.seeedstudio.com/ja/deploy_depth_anything_v3_jetson_agx_orin/
 ---
 
 <div align="center">
-  <img width="600" src="https://github.com/ByteDance-Seed/Depth-Anything-3/raw/main/assets/images/demo320-2.gif"/>
+  <img alt="Depth Anything 3 sample output: the input frame, a colour depth map and the resulting point cloud" width="600" src="https://github.com/ByteDance-Seed/Depth-Anything-3/raw/main/assets/images/demo320-2.gif"/>
 </div>
 
 ## はじめに
 
 <div style={{ textAlign: "justify" }}>
-[Depth Anything V3](https://github.com/ByteDance-Seed/depth-anything-3)は、単一のRGB画像から高品質な深度マップを生成することで3D知覚を革新する最先端の単眼深度推定モデルです。特殊なハードウェアや複数のカメラ入力を必要とする従来の深度推定手法とは異なり、Depth Anything V3は高度な深層学習技術を活用して、標準的な2D画像のみを使用して正確な深度情報を予測します。これにより、ハードウェアの制約と計算効率が重要な考慮事項となるエッジAIアプリケーションにとって特に価値があります。このwikiでは、リアルタイムロボティクスアプリケーション向けのROS2統合を使用して、Jetson AGX Orin上でDepth Anything V3をデプロイする方法をガイドします。
+[Depth Anything V3](https://github.com/ByteDance-Seed/depth-anything-3) は、単一の RGB 画像から深度を推定します。そのため、ロボットはカメラ 1 台だけで、ステレオリグや深度センサを使わずに高密度な深度マップを取得できます。Jetson AGX Orin 上では、このモデルを TensorRT エンジンに変換し、ROS 2 トピック上に深度をパブリッシュします。これを下流の検出器やプランナが利用できます。以下のセクションでは、CUDA と ROS 2 のセットアップ、ONNX から TensorRT エンジンへの変換、そしてカメラ入力およびビデオ入力での実行方法を説明します。
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="reComputer Mini J501 carrier board for Jetson AGX Orin, product photo" width={700}
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg" />
 </div>
 
@@ -44,32 +44,32 @@ url: https://wiki.seeedstudio.com/ja/deploy_depth_anything_v3_jetson_agx_orin/
 
 ## 前提条件
 
-- **[reComputer Mini J501 Carrier Board](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)**（Jetson AGX Orin）JetPack 6.2搭載
-- USBカメラ
-- [ROS2 Humble](https://wiki.seeedstudio.com/ja/install_ros2_humble/)環境がインストール済み
+- **[reComputer Mini J501 Carrier Board](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)**（Jetson AGX Orin）と JetPack 6.2
+- USB カメラ
+- [ROS2 Humble](https://wiki.seeedstudio.com/ja/install_ros2_humble/) 環境がインストールされていること
 
 
 <div align="center">
-    <img width={700}
+    <img alt="Real-time depth estimation from a USB camera running on the reComputer Mini J501" width={700}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/demo.gif"/>
 </div>
 
 
-## 技術的ハイライト
+## 技術ハイライト
 
-- **高品質単眼深度推定**: Depth Anything V3は、特殊な深度センサーやステレオカメラセットアップを必要とせずに、単一のRGB画像から正確な深度マップを生成します。
+- **高品質な単眼深度推定**：Depth Anything V3 は、専用の深度センサやステレオカメラ構成を必要とせず、単一の RGB 画像から高精度な深度マップを生成します。
 
-- **エッジデプロイメント最適化**: このモデルは、Jetson AGX Orinなどのエッジデバイスでの効率的な推論のために特別に設計されており、最大パフォーマンスのためのTensorRT最適化を備えています。
+- **エッジデバイス向けに最適化**：このモデルは Jetson AGX Orin のようなエッジデバイス上で効率的に推論できるよう特別に設計されており、TensorRT による最適化で最大限の性能を引き出します。
 
-- **リアルタイム処理**: 高解像度画像をリアルタイムで処理する能力があり、自律ナビゲーション、障害物回避、ロボット操作タスクに適しています。
+- **リアルタイム処理**：高解像度画像をリアルタイムで処理できるため、自律走行、障害物回避、ロボットマニピュレーションなどのタスクに適しています。
 
-- **ROS2統合**: ロボットシステムへのシームレスな統合のために、深度マップとポイントクラウド配信を備えたネイティブROS2 Humbleサポートを提供します。
+- **ROS2 との統合**：深度マップおよびポイントクラウドをパブリッシュする ROS2 Humble ネイティブサポートを提供し、ロボットシステムへのシームレスな統合を実現します。
 
-- **柔軟な入力サポート**: USBカメラ、ROSイメージトピック、事前録画されたビデオストリームなど、さまざまな入力ソースで動作します。
+- **柔軟な入力サポート**：USB カメラ、ROS イメージトピック、事前に録画したビデオストリームなど、さまざまな入力ソースで動作します。
 
-## 環境設定
+## 環境構築
 
-**ステップ1.**依存関係のインストール
+**Step 1.** 依存パッケージをインストールする
 
 ```bash
 sudo apt update
@@ -83,13 +83,13 @@ sudo apt install -y \
     v4l-utils
 ```
 
-**ステップ2.** Python依存関係のインストール
+**Step 2.** Python の依存パッケージをインストールする
 
 ```bash
 pip3 install numpy opencv-python
 ```
 
-**ステップ3.** CUDA環境変数の設定
+**Step 3.** CUDA の環境変数を設定する
 
 ```bash
 # Add CUDA environment variables to .bashrc
@@ -108,12 +108,12 @@ source ~/.bashrc
 nvcc --version
 ```
 <div align="center">
-    <img width={1000}
+    <img alt="nvcc --version output confirming the CUDA toolkit is on PATH" width={1000}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/nvcc.png"/>
 </div>
 
 
-**ステップ4.** ROS2 USBカメラパッケージのインストール
+**Step 4.** ROS2 USB カメラパッケージをインストールする
 
 ```bash
 # Install USB camera driver for ROS2
@@ -127,7 +127,7 @@ sudo apt install -y ros-humble-cv-bridge ros-humble-image-transport ros-humble-r
 
 ```
 
-**ステップ5.** Depth Anything V3 ROS2環境のセットアップ
+**Step 5.** Depth Anything V3 ROS2 環境をセットアップする
 
 ```bash
 # Clone the repository
@@ -137,7 +137,7 @@ git clone https://github.com/zibochen6/ros2-depth-anything-v3-trt.git
 cd ros2-depth-anything-v3-trt
 ```
 
-**ステップ6.** ROS2パッケージのビルド
+**Step 6.** ROS2 パッケージをビルドする
 
 ```bash
 # Build the depth_anything_v3 package with Release configuration
@@ -147,10 +147,10 @@ colcon build --packages-select depth_anything_v3 --cmake-args -DCMAKE_BUILD_TYPE
 source install/setup.bash
 ```
 
-**ステップ7.** TensorRTエンジンの生成
+**Step 7.** TensorRT エンジンを生成する
 
 :::note
-エンジンファイルを生成する前に、[Depth Anything V3の`.onnx`モデル](https://huggingface.co/TillBeemelmanns/Depth-Anything-V3-ONNX)を事前にダウンロードし、ros2-depth-anything-v3-trt/onnxディレクトリに配置する必要があります。
+エンジンファイルを生成する前に、あらかじめ [Depth Anything V3 の `.onnx` モデル](https://huggingface.co/TillBeemelmanns/Depth-Anything-V3-ONNX) をダウンロードし、ros2-depth-anything-v3-trt/onnx ディレクトリに配置しておく必要があります。
 :::
 
 ```bash
@@ -160,21 +160,21 @@ chmod +x generate_engines.sh
 # Generate TensorRT engines from ONNX models
 ./generate_engines.sh onnx
 ```
-`.engine`ファイルが生成されている間、しばらくお待ちください。変換が完了すると、`onnx`ディレクトリに以下のように2つのファイルが作成されます。
+`.engine` ファイルの生成には時間がかかる場合があります。変換が完了すると、`onnx` ディレクトリ内に次のように 2 つのファイルが作成されます。
 
 <div align="center">
-    <img width={1000}
+    <img alt="onnx directory listing the generated TensorRT .engine files next to the ONNX models" width={1000}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/engine.png"/>
 </div>
 
 
 ## 深度推定の実行
 
-### 深度推定用カメラ
+### カメラを用いた深度推定
 
-**ステップ1.** USBカメラの接続
+**Step 1.** USB カメラを接続する
 
-USBカメラをJetson AGX Orinデバイスに接続します。カメラが検出されていることを確認してください：
+USB カメラを Jetson AGX Orin デバイスに接続します。次のコマンドでカメラが認識されているか確認します：
 
 ```bash
 # Check if USB camera is detected
@@ -186,11 +186,11 @@ ls /dev/video*
 /dev/video0  /dev/video1
 ```
 
-**ステップ2.** カメラキャリブレーション
+**Step 2.** カメラキャリブレーション
 
-`v4l2_camera`パッケージは、Linux Video4Linux2（V4L2）APIとROS 2トピック間のブリッジとして機能し、キャリブレーションパイプラインで簡単に使用できる画像とカメラ情報メッセージを配信します。
+`v4l2_camera` パッケージは、Linux の Video4Linux2 (V4L2) API と ROS 2 トピックの間のブリッジとして機能し、キャリブレーションパイプラインで簡単に利用できる画像およびカメラ情報メッセージをパブリッシュします。
 
-カメラキャリブレーションパッケージのインストール：
+カメラキャリブレーションパッケージをインストールします：
 
 ```bash
 # Install Camera Calibration Package
@@ -200,7 +200,7 @@ sudo apt install ros-humble-camera-calibration
 sudo apt install ros-${ROS_DISTRO}-v4l2-camera
 ```
 
-カメラノードの起動：
+カメラノードを起動します：
 
 ```bash
 # Launch camera node
@@ -210,17 +210,17 @@ ros2 run v4l2_camera v4l2_camera_node \
   -p pixel_format:=YUYV
 ```
 
-デフォルトで配信されるトピックは：
+デフォルトでパブリッシュされるトピックは次のとおりです：
 
-- `/image_raw` - 生カメラ画像
+- `/image_raw` - 生のカメラ画像
 - `/camera` - カメラ情報
 
 <div align="center">
-    <img width={1000}
+    <img alt="v4l2_camera node running with the /image_raw and /camera topics published" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
 </div>
 
-カメラキャリブレーションの実行：
+カメラキャリブレーションを実行します：
 
 ```bash
 # In another terminal
@@ -233,30 +233,30 @@ ros2 run camera_calibration cameracalibrator \
 ```
 
 :::note
-- `--size 8x6`は内側の角の数を指します（8×6 = 9×7グリッドの48角）
-- `--square 0.025`は正方形のサイズをメートル単位で指します（25mm）
-- `CALIBRATE`ボタンが点灯するまで、カメラを動かしてさまざまな角度から画像をキャプチャしてください
+- `--size 8x6` は内側のコーナー数を表します（9×7 グリッドに対して 8×6 = 48 コーナー）
+- `--square 0.025` はマス目 1 辺の長さをメートル単位で表します（25mm）
+- カメラを動かしてさまざまな角度からチェッカーボードを撮影し、`CALIBRATE` ボタンが有効になるまで続けます
 
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator window with the checkerboard view and the CALIBRATE button" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
 </div>
 
-キャリブレーションが成功すると、ターミナルで以下のようなカメラパラメータが取得されます：
+キャリブレーションが成功すると、ターミナルに次のようなカメラパラメータが出力されます：
 
 <div align="center">
-    <img width={1000}
+    <img alt="Camera intrinsics and distortion coefficients printed after calibration finishes" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
 </div>
 
-カメラキャリブレーションについては、[このwiki](https://wiki.seeedstudio.com/ja/pycuvslam_recomputer_robotics/#camera-calibration)を参照してください。
-キャリブレーションされたパラメータを`camera_info_example.yaml`ファイルに書き込みます
+カメラキャリブレーションについては、[この Wiki](https://wiki.seeedstudio.com/ja/pycuvslam_recomputer_robotics/#カメラキャリブレーション) を参照してください。
+キャリブレーションされたパラメータを `camera_info_example.yaml` ファイルに書き込みます。
 
-**ステップ3.** USBカメラノードの起動
+**Step 3.** USB カメラノードを起動する 
 
-GMSLカメラの魚眼歪みを補正するために、キャリブレーションパラメータを`camera_info_example.yaml`ファイルに保存します。その後、リアルタイム深度推定のために以下のコマンドを実行します：
+GMSL カメラの魚眼歪みを補正するために、キャリブレーションパラメータを `camera_info_example.yaml` ファイルに保存します。その後、次のコマンドを実行してリアルタイム深度推定を行います：
 ```bash
 #Start the script for camera depth estimation
 CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1 ./run_camera_depth.sh
@@ -267,13 +267,13 @@ CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1 ./run_camera_dep
 </div>
 
 
-### 深度推定用ビデオ
+### ビデオを用いた深度推定
 
-**ステップ1.** ビデオファイルの準備
+**Step 1.** ビデオファイルを準備する
 
 深度推定用のビデオファイルを準備します。
 
-**ステップ2.** ビデオ深度推定ノードの起動
+**Step 2.** ビデオ深度推定ノードを起動する 
 
 ```bash
 #Start the script for video depth estimation
@@ -281,22 +281,47 @@ CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1 ./run_camera_dep
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz showing the depth map, the camera view and the point cloud built from the video frame" width={1000}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3.gif"/>
 </div>
 
 
-## 参考文献
+## 参考資料
 
-- [Depth Anything V3 GitHubリポジトリ](https://github.com/DepthAnything/Depth-Anything-V3)
-- [ROS2 Depth Anything V3 TRTリポジトリ](https://github.com/ika-rwth-aachen/ros2-depth-anything-v3-trt)
-- [TensorRTドキュメント](https://developer.nvidia.com/tensorrt)
-- [ROS2 Humbleドキュメント](https://docs.ros.org/en/humble/)
+- [Depth Anything V3 GitHub Repository](https://github.com/DepthAnything/Depth-Anything-V3)
+- [ROS2 Depth Anything V3 TRT Repository](https://github.com/ika-rwth-aachen/ros2-depth-anything-v3-trt)
+- [TensorRT Documentation](https://developer.nvidia.com/tensorrt)
+- [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
 
+
+## FAQ
+
+**このビルドはどの JetPack バージョンを対象としていますか？**
+Jetson AGX Orin 上の JetPack 6.2 と reComputer Mini J501 キャリアボード、そして ROS 2 Humble を対象としています。TensorRT エンジンはデバイス上で生成されるため、JetPack のバージョンが異なる場合は、ONNX モデルからエンジンを再生成する必要があります。
+
+**深度カメラやステレオリグは必要ですか？**
+いいえ。Depth Anything V3 は単一の RGB フレームから深度を予測するため、USB カメラ 1 台で十分です。ただし、この深度は計測信号ではなく見た目から推定されたものなので、プランナに入力する前に、既知の物体と比較して絶対スケールを確認してください。
+
+**ONNX モデルはどこに置けばよいですか？**
+`.onnx` ファイルを `ros2-depth-anything-v3-trt/onnx` に配置し、`./generate_engines.sh onnx` を実行します。変換が完了すると、そのディレクトリに 2 つの `.engine` ファイルが生成されます。
+
+**フレーム端の近くでデプスマップが歪んで見えます。何を変更すればよいですか？**
+それはレンズ歪みです。`camera_calibrator` を実行し、得られた内部パラメータを `camera_info_example.yaml` に書き込んでから、`CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1` を指定して起動します。
+
+**ライブカメラではなく、録画済みの動画を処理できますか？**
+はい。`./run_video_depth.sh` は同じエンジンを動画ファイルに対して実行します。これは、カメラをロボットに取り付ける前に出力品質を確認する、より高速な方法です。
+
+## 関連リソース
+
+- [reComputer での PyCuVSLAM を用いたカメラキャリブレーション](/ja/pycuvslam_recomputer_robotics/)
+- [Orbbec デプスカメラと YOLOv11 を組み合わせた距離計測](/ja/yolov11_with_depth_camera/)
+- [Jetson 上での効率的なマルチタスクビジョン推論エンジン](/ja/deploy_visual_perception_engine_recomputer/)
+- [reComputer Mini J501 製品ページ](https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html)
+- [ROS 2 Depth Anything V3 TensorRT リポジトリ](https://github.com/zibochen6/ros2-depth-anything-v3-trt)
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

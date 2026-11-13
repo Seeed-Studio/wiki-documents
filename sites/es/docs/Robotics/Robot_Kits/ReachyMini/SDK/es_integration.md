@@ -1,5 +1,6 @@
 ---
 description: Guía de integraciones y apps para Reachy Mini que cubre creación de apps, SDK de JavaScript, API HTTP/WebSocket y consejos para experimentación con IA.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Integraciones y Apps
 slug: /reachymini_sdk_integration
 keywords:

@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、RobStrideモーター制御の完全ガイドを提供します
+description: "RobStride 準ダイレクトドライブアクチュエータ制御の完全ガイド：MIT モード、CAN プロトコル、パラメータ調整、ロボット関節向け Python SDK の例。"
 title: RobStride
 keywords:
   - アクチュエータ

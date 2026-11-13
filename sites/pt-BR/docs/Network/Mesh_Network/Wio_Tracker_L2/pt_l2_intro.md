@@ -1,5 +1,5 @@
 ---
-description: Introdução à Série Wio Tracker L2. Inclui recursos, funções, parâmetros e comparação entre modelos da série.
+description: Introdução à Wio Tracker L2 Series. Inclui recursos, funções, parâmetros e comparação da série.
 title: Introdução ao Wio Tracker L2
 keywords:
   - Meshtastic
@@ -9,29 +9,76 @@ slug: /meshtastic_wio_tracker_l2_intro
 sku: 100029766
 sidebar_position: 0
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_wio_tracker_l2_intro/
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png" alt="pir" width={900} height="auto" /></p>
 
-A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e módulo GPS L76K para rastreamento de localização preciso. Projetado para flexibilidade, ele suporta tela sensível ao toque QSPI, telas E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-o ideal para uma ampla gama de aplicações de IoT e fora da rede.
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L2-Pro-for-Meshtastic-p-0000.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+    </a>
+</div>
+
+A Wio Tracker L2 Series é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetada para flexibilidade, ela suporta tela sensível ao toque QSPI, displays E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-a ideal para uma ampla gama de aplicações de IoT e fora da rede.
+
+## Modelo da Série L2
+
+A Wio Tracker L2 Series inclui a Wio Tracker L2 para projetos personalizados e a Wio Tracker L2 Pro com gabinete e bateria integrada.
+
+### Comparação de Versões
+
+|Nome do Produto|Wio Tracker L2|Wio Tracker L2 Pro|
+|------------------|--------------------------|-----------------------|
+|Imagem|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/3-100026809-Wio-Tracker-L2.jpg" alt="pir" width={900} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/3-wio-tracke-l2-pro_1.avif" alt="pir" width={900} height="auto" /></p>|
+|Link de Compra|<p style={{textAlign: 'center'}}>Em breve</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/Wio-Tracker-L2-Pro-for-Meshtastic-p-0000.html)</p>|
+|Processador|<p style={{textAlign: 'center'}}>ESP32-S3</p>|<p style={{textAlign: 'center'}}>ESP32-S3</p>|
+|LoRa|<p style={{textAlign: 'center'}}>SX1262</p>|<p style={{textAlign: 'center'}}>SX1262</p>|
+|GPS|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Tela|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Slot para Cartão MicroSD|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Entrada Solar|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Bateria|<p style={{textAlign: 'center'}}>Bateria Li-ion externa via conector</p>|<p style={{textAlign: 'center'}}>Bateria integrada de 3000mAh</p>|
+|Carcaça|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
 
 ## Recursos
 
-- **Tela sensível ao toque de 3,2'' de alta qualidade**: Com um display de 320×240 de alta nitidez e interfaces MUI e Base UI comutáveis, oferece interação fluida diretamente no dispositivo para mensagens, mapas e controle — sem precisar de um celular.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **Baseado em ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro oferece uma plataforma flexível para personalização de interface, desenvolvimento de recursos e aplicações de código aberto.
+- **Um hardware, possibilidades infinitas** Construa sua própria interface, painel, jogo, ferramenta de mapa ou experiência interativa — o L2 Pro está pronto para o que você quiser criar.
 
-- **Mapas offline com posicionamento GNSS**: Faça o pré-download de mapas offline para um cartão MicroSD e visualize sua localização GNSS em tempo real diretamente no dispositivo, mesmo sem cobertura celular ou acesso à internet.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
+
+- **Tela sensível ao toque de alta qualidade de 3,2''**: Com um display de 320×240 de alta nitidez e interfaces alternáveis MUI e Base UI, oferece interação fluida diretamente no dispositivo para mensagens, mapas e controle — sem precisar de um celular.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
+
+- **Alimentado por ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro oferece uma plataforma flexível para personalização de UI, desenvolvimento de recursos e aplicações open source.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **Mapas offline com posicionamento GNSS**: Faça o pré-download de mapas offline para um cartão MicroSD e visualize sua localização GNSS em tempo real diretamente no dispositivo, mesmo sem cobertura celular ou acesso à Internet.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
 
 - **Bateria de longa duração de 3000mAh**: Suporta uso diário prolongado com menor frequência de recarga; opera em condições de -10°C a 55°C.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
+
 - **Fácil de transportar, posicionamento flexível**: Uma antena dobrável melhora a portabilidade, e a interface de montagem de 1/4" permite posicionamento flexível com acessórios compatíveis.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (6).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **Prototipe mais rápido com CodeCraft**
+
+Descreva sua ideia em poucas palavras, e o assistente de codificação com IA CodeCraft da Seeed Studio irá gerar um primeiro rascunho do código em minutos. Revise-o, grave-o no seu Wio Tracker L2 e teste-o na placa.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
 
 ## Especificação
 
@@ -71,7 +118,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td colspan="1">Grove *1: </td>
   </tr>
   <tr>
-    <td colspan="1">Slot para cartão MicroSD</td>
+    <td colspan="1">Slot para Cartão MicroSD</td>
   </tr>
   <tr>
     <td colspan="1">Furo roscado de um quarto de polegada</td>
@@ -88,7 +135,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td colspan="1">Solar:JST-PH 2P-2.0mm, 5V ~ 13V</td>
   </tr>
   <tr>
-    <td colspan="1">Bateria de íons de lítio (2P-1.25mm): 3,7V</td>
+    <td colspan="1">Bateria Li-ion (2P-1.25mm): 3,7V</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="2">**Tela sensível ao toque IPS**</td>
@@ -107,7 +154,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**Áudio**</td>
-    <td colspan="1">Codec I2S: ES8311</td>
+    <td colspan="1">Codec I2S</td>
   </tr>
   <tr>
     <td colspan="1">MIC</td>
@@ -121,7 +168,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
   </tr>
     <tr>
     <td colspan="1">**Dimensão**</td>
-    <td colspan="1">(Antena dobrada) C: 87,5 cm, L: 69 cm, A: 26,6 cm</td>
+    <td colspan="1">(Antena dobrada) C: 87,5 mm, L: 69 mm, A: 26,6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**Peso do dispositivo**</td>
@@ -142,13 +189,17 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
 |Item|Parâmetro|
 | :- | :- |
 |**Capacidade da bateria**|Bateria recarregável de íons de lítio, 3000mAh|
-|**Monitoramento da vida útil da bateria**|Nível de bateria enviado periodicamente em uplink|
+|**Monitoramento da vida útil da bateria**|Envio periódico do nível da bateria|
 |**Protocolo de carregamento**|USB Type-C|
 |**Entrada de energia do dispositivo**|5V, 1A|
 |**Tensão de corte totalmente carregada**|4,2V|
 |**Limite de temperatura de carregamento**|0 a +45℃|
 
-## Lista de pinos
+**Consumo de energia**
+
+Para dados detalhados de consumo de energia e estimativa de vida útil da bateria sob diferentes configurações (modo de tela, faixa de frequência LoRa e modem preset, uso de GPS, etc.), consulte a [Tabela de Consumo de Energia do Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
+
+## Lista de Pinos
 
 <table>
   <tr>
@@ -356,7 +407,7 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
     <td>EXP_P12</td>
   </tr>
   <tr>
-    <td>Botão</td>
+    <td>Button</td>
     <td>WAKEUP_BUTTON</td>
     <td>EXP_P00</td>
     <td>GPIO</td>
@@ -374,3 +425,25 @@ A Série Wio Tracker L2 é um nó [Meshtastic®](https://meshtastic.org/) altame
 **Diagrama esquemático**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SchematicDiagram9.7(1).png" alt="pir" width={800} height="auto" /></p>
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

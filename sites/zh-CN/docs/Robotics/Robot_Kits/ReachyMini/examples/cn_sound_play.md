@@ -1,5 +1,6 @@
 ---
 description: 示例演示通过WAV文件或使用push_audio_sample API的连续实时音频通过Reachy Mini的扬声器进行音频播放。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 声音播放
 slug: /reachymini_examples_sound_play
 keywords:

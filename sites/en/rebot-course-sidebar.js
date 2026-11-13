@@ -13,25 +13,6 @@ const backToRobotics = () => ({
   className: 'sideboard_calss',
 });
 
-// `items` lets a caller add entries (the reBot-RS sidebar adds the DLI course); the default
-// keeps the beginner-course jump that every product's Course group starts with.
-const courseItems = () => [
-  {
-    type: 'ref',
-    id: `${C}/Arm_Tutorial_Introduction`,
-    label: 'Beginner Course',
-  },
-];
-
-const courseLink = (items = courseItems()) => ({
-  type: 'category',
-  label: 'Course',
-  className: 'robotics-section-title',
-  collapsed: false,
-  collapsible: false,
-  items,
-});
-
 // The course's own standalone sidebar (opened when browsing course pages).
 const courseSidebar = () => [
   backToRobotics(),
@@ -160,9 +141,230 @@ const sidebars = {
   // Standalone course sidebar.
   RebotCourseSidebar: courseSidebar(),
 
-  // reBot-RS: Quick Start & SDK / Applications / Course (jumps to course).
+  PaperReadingSidebar: [
+    {
+      "type": "ref",
+      "id": "Edge_Robotics",
+      "label": "<-Back to Robotics",
+      "className": "sideboard_calss"
+    },
+    {
+      "type": "doc",
+      "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started",
+      "label": "Getting Started"
+    },
+    {
+      "type": "category",
+      "label": "Hands-on Deployment",
+      "className": "robotics-section-title robotics-course-sidebar hands-on-reproduction-sidebar",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        {
+          "type": "doc",
+          "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_02_Hardware_and_Teleoperation",
+          "label": "Hardware & Software Setup"
+        },
+        {
+          "type": "doc",
+          "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_03_Task_Design",
+          "label": "Task Design & Demonstration Planning"
+        },
+        {
+          "type": "doc",
+          "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_04_Camera_and_Recording",
+          "label": "Multi-View Data Collection"
+        },
+        {
+          "type": "doc",
+          "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_05_Dataset_Quality",
+          "label": "Data Quality: Structure, Synchronization & Validation"
+        },
+        {
+          "type": "doc",
+          "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_06_ACT_Training",
+          "label": "ACT Model Training"
+        },
+        {
+          "type": "doc",
+          "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_07_ACT_Deployment",
+          "label": "On-Robot Deployment & Performance Evaluation"
+        },
+        {
+          "type": "doc",
+          "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_08_Algorithm_Switching",
+          "label": "Policy Switching & Task Execution"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Paper Deep-Dives",
+      "className": "robotics-section-title robotics-course-sidebar paper-reading-sidebar",
+      "collapsed": false,
+      "collapsible": false,
+      "items": [
+        {
+          "type": "category",
+          "label": "Part 1 · Action Chunking & Multi-Task Policies",
+          "className": "robotics-section-title",
+          "collapsed": false,
+          "collapsible": false,
+          "items": [
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_ACT",
+              "label": "ACT — Low-Cost Bimanual Manipulation"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_MULTI_TASK_DIT",
+              "label": "LBM / MultiTask DiT — Multitask Pretraining"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Part 2 · Lightweight VLA Models & Efficient Deployment",
+          "className": "robotics-section-title",
+          "collapsed": false,
+          "collapsible": false,
+          "items": [
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_SMOLVLA",
+              "label": "SmolVLA — Affordable Vision-Language-Action Models"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_EVO1",
+              "label": "Evo-1 — Lightweight VLA"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Part 3 · π Robot Foundation Models",
+          "className": "robotics-section-title",
+          "collapsed": false,
+          "collapsible": false,
+          "items": [
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_PI0",
+              "label": "π₀ — General-Purpose Robot Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_PI0_FAST",
+              "label": "π₀-FAST — Efficient Action Tokenization"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_PI05",
+              "label": "π₀.₅ — Open-World Generalization"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Part 4 · Generalist VLA & Cross-Embodiment Adaptation",
+          "className": "robotics-section-title",
+          "collapsed": false,
+          "collapsible": false,
+          "items": [
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_GR00T_N1",
+              "label": "NVIDIA GR00T — Adaptation & Fine-Tuning"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_EO1",
+              "label": "EO-1 — Interleaved Multimodal Pre-Training"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_WALL_OSS",
+              "label": "WALL-OSS — Embodied Reasoning & Robot Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LINGBOT_VLA2",
+              "label": "LingBot-VLA 2.0 — Cross-Embodiment Actions & Future Perception"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_DM05",
+              "label": "DM0.5 — Historical Context & Trajectory Alignment"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_G05",
+              "label": "G0.5 — Reasoning and Action in One Sequence"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Part 5 · World Models & Video-Action Learning",
+          "className": "robotics-section-title",
+          "collapsed": false,
+          "collapsible": false,
+          "items": [
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_VLA_JEPA",
+              "label": "VLA-JEPA — Video Supervision & Latent World Models"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LINGBOT_VA",
+              "label": "LingBot-VA — Causal World Modeling & Robot Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_GR00T_2",
+              "label": "GR00T 2 — Joint World-Action Modeling"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "className": "robotics-section-title",
+          "value": "<span class=\"menu__link\" role=\"heading\" aria-level=\"3\" style=\"cursor: default\">Part 6 · Unified Evaluation &amp; Research Summary</span>"
+        }
+      ]
+    }
+  ],
+
+  // reBot-RS: Quick Start & SDK / Applications.
   RebotRsSidebar: [
     backToRobotics(),
+    {
+      type: 'category',
+      label: 'Course',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/Arm_Tutorial_Introduction`,
+      label: 'Beginner Course',
+    },
+    {
+      type: 'ref',
+      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started',
+      label: 'Paper Deep-Dive',
+    },
+    {
+      type: 'link',
+      label: 'Sim-to-Real with NVIDIA Isaac',
+      href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac',
+    },
+      ],
+    },
     {
       type: 'category',
       label: 'Quick Start & SDK',
@@ -191,15 +393,30 @@ const sidebars = {
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Agent`, label: 'reBot-RS with Agent Claw' },
       ],
     },
-    courseLink([
-      ...courseItems(),
-      { type: 'link', label: 'DLI Course: Sim-to-Real VLA Pipeline', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
-    ])
   ],
 
-  // reBot-DM: Quick Start & SDK / Applications / Course (jumps to course).
+  // reBot-DM: Quick Start & SDK / Applications.
   RebotDmSidebar: [
     backToRobotics(),
+    {
+      type: 'category',
+      label: 'Course',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+    {
+      type: 'ref',
+      id: `${C}/Arm_Tutorial_Introduction`,
+      label: 'Beginner Course',
+    },
+    {
+      type: 'ref',
+      id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started',
+      label: 'Paper Deep-Dive',
+    },
+      ],
+    },
     {
       type: 'category',
       label: 'Quick Start & SDK',
@@ -226,7 +443,6 @@ const sidebars = {
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web Control System: Real Robot & MuJoCo' },
       ],
     },
-    courseLink(),
   ],
 
 };

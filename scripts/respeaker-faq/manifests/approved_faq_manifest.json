@@ -1688,6 +1688,72 @@
       ]
     },
     {
+      "publicFaqId": "xvf3000_unique_serial_identification",
+      "productKey": "xvf3000",
+      "productVariants": [
+        "reSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2",
+        "ReSpeaker Mic Array v2.0 with XVF3000"
+      ],
+      "primaryDomain": "connectivity",
+      "secondaryDomains": [
+        "firmware_software",
+        "product_business"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-02",
+      "qualityScore": 0,
+      "wikiSlug": "/respeaker_xvf3000_faq",
+      "wikiAnchor": "unique-serial-identification",
+      "questionEn": "Does the XVF3000 provide a unique serial number for device identification?",
+      "directAnswerEn": "No. The official XVF3000 USB firmware does not expose a unique serial number: `iSerialNumber` is empty, DFU reports `serial=\"UNKNOWN\"`, and `tuning.py` exposes only the firmware version and DSP parameters. For fixed installations, identify the device by its host USB port path. If the identifier must stay with the device, use a product with a factory-programmed serial number such as the XVF3800, or custom firmware with a production-written serial.",
+      "appliesTo": "reSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2 and ReSpeaker Mic Array v2.0 running the official USB audio firmware on Linux, Windows, or macOS hosts",
+      "prerequisites": [
+        "Access to the host USB descriptors and the physical USB port used by the device",
+        "A host application or inventory record that can store the device's port or instance identifier"
+      ],
+      "steps": [
+        "Confirm that the device has no stock serial: `lsusb -v -d 2886:0018 | grep iSerial` should return `iSerial 0`, and `dfu-util -l` should report `serial=\"UNKNOWN\"`.",
+        "On Linux, read the stable port path with `udevadm info -q property -n /dev/bus/usb/001/002 | grep ID_PATH`. The device node number can change, but `ID_PATH` stays the same while the device remains on that port. For ALSA, use `/dev/snd/by-path/`, not `by-id` or the card index.",
+        "On Windows use the device instance ID, and on macOS use the USB Location ID. Record that value with the unit's asset label.",
+        "For a fixed installation, bind the recorded port path to the asset ID in the host application or inventory database. If the identifier must be read from the device itself, use a product with a factory serial number such as the XVF3800, or plan custom firmware and a production step that writes the serial."
+      ],
+      "successCriteria": [
+        "The device reports no stock serial number (`iSerial 0` and DFU `serial=\"UNKNOWN\"`).",
+        "The host resolves the same port path after reconnecting the device to the same port.",
+        "The application maps that port path to the intended physical unit or asset record."
+      ],
+      "notes": [
+        "The port path identifies the USB port, not the device; moving the device to another port or host requires re-binding.",
+        "Do not use `version`, `bcdDevice`, DOA angle, RT60, or noise floor as a unique identifier; these values are shared across units or change with the environment.",
+        "ALSA `by-id` names and card indexes are not stable when multiple identical devices are connected."
+      ],
+      "officialReferences": [
+        {
+          "title": "ReSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2 Wiki",
+          "url": "https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/"
+        },
+        {
+          "title": "Official XVF3000 tuning tool (tuning.py)",
+          "url": "https://github.com/respeaker/usb_4_mic_array/blob/master/tuning.py"
+        },
+        {
+          "title": "reSpeaker XVF3800 FAQ: unique device serial number",
+          "url": "https://wiki.seeedstudio.com/respeaker_xvf3800_faq/#unique-device-serial"
+        }
+      ],
+      "skus": [],
+      "keywords": [
+        "XVF3000",
+        "ReSpeaker Mic Array v2.0",
+        "serial number",
+        "iSerialNumber",
+        "ID_PATH",
+        "dfu-util",
+        "device identification",
+        "2886:0018"
+      ]
+    },
+    {
       "publicFaqId": "xvf3800_improve_recognition_accuracy",
       "productKey": "xvf3800_usb_4_mic",
       "productVariants": [
@@ -1751,6 +1817,213 @@
         "signal to noise ratio",
         "SNR",
         "Whisper"
+      ]
+    },
+    {
+      "publicFaqId": "clip_app_subscription_and_custom_providers",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "reSpeaker Clip"
+      ],
+      "primaryDomain": "product_business",
+      "secondaryDomains": [
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-10-26",
+      "qualityScore": 0,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "app-subscription-and-custom-providers",
+      "questionEn": "Does the reSpeaker Clip app require a monthly subscription, and can I use OpenAI or my own self-hosted STT and LLM models?",
+      "directAnswerEn": "No. A subscription is optional. You can run the app entirely on STT and LLM services that you configure yourself — including a self-hosted model exposed at a Base URL — and that path consumes no reSpeaker AI quota. The optional reSpeaker AI subscription is for users who would rather not manage provider credentials and billing.\n\nIn the app's AI CONFIG page, the STT service takes Provider, Base URL, API key, and Language; the LLM service takes an API key, Base URL, and Model Name. Both provide a Test Connection action, so an OpenAI-hosted service or a model you host yourself can be checked before use as long as it exposes a compatible API.\n\n| Plan | China mainland | Overseas | AI minutes | Notes |\n| --- | --- | --- | --- | --- |\n| Device activation bonus | ¥0 | \\$0 | 300 one-time | Once per account, device, and payment account; valid 180 days |\n| Lite | ¥19/month or ¥179/year | \\$4.99/month or \\$49.99/year | 300/month | Lowest paid tier |\n| Pro | ¥59/month or ¥649/year | \\$12.99/month or \\$129/year | 1,200/month | Main recommended tier |\n| Max | ¥115/month or ¥1,249/year | \\$23.99/month or \\$249/year | 2,400/month | High-priority processing queue |\n| Top-up pack | ¥9/100 min; ¥25/300 min | \\$1.99/100 min; \\$4.99/300 min | 100 or 300 | Active subscribers only; valid until the current monthly cycle ends |\n\nOne platform AI minute covers one transcription plus one basic summary of that recording.",
+      "appliesTo": "reSpeaker Clip app users choosing between the reSpeaker AI subscription and their own STT/LLM provider, on the current app release",
+      "prerequisites": [
+        "The reSpeaker Clip app with the AI CONFIG page, and a device recording to test with",
+        "For the custom-provider path: the provider's Base URL and API key, or a self-hosted endpoint reachable from the phone",
+        "For the subscription path: a reSpeaker account with a plan or the device activation bonus"
+      ],
+      "steps": [
+        "Open AI CONFIG in the app and check the STT Service and LLM Service entries.",
+        "For STT, enter Provider, Base URL, API key, and Language, tap Test Connection, then Save Configuration.",
+        "For the LLM, enter the API key, Base URL, and Model Name, tap Test Connection, then Save Configuration.",
+        "Process one recording and confirm that both the transcript and the summary come from the configured provider.",
+        "To use the reSpeaker AI subscription instead, select the platform AI service in the app; transcription and summarization then consume the plan's AI minutes."
+      ],
+      "successCriteria": [
+        "Test Connection passes for both the STT and LLM services",
+        "A test recording is transcribed and summarized through the configured provider",
+        "On the custom-provider path, no reSpeaker AI quota is consumed"
+      ],
+      "notes": [
+        "Plans, quotas, and prices are as of 2026-10-26. The app shows the current price and any regional variation, and prices and quotas may change.",
+        "Monthly subscription quota does not roll over. A top-up pack is valid only until the current monthly cycle ends and does not roll over either. Cancelling auto-renew keeps the plan usable until the end of the paid period.",
+        "On the custom-provider path the platform does not meter usage; provider charges, rate limits, and availability are your responsibility.",
+        "A self-hosted endpoint must be reachable from the phone and expose a compatible API; the Test Connection action must pass before the service can be used.",
+        "A simpler self-deployed LLM option is planned for a later release. Until then, a self-hosted LLM can already be configured through the custom Base URL and Model Name fields."
+      ],
+      "officialReferences": [
+        {
+          "title": "reSpeaker Clip Getting Started (AI CONFIG, STT and LLM provider settings)",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        },
+        {
+          "title": "reSpeaker Clip Live STT application guide",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip_python_build_app/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "reSpeaker Clip",
+        "subscription",
+        "monthly fee",
+        "AI quota",
+        "Lite",
+        "Pro",
+        "Max",
+        "top-up pack",
+        "API key",
+        "Base URL",
+        "OpenAI",
+        "self-hosted",
+        "local model",
+        "STT",
+        "LLM"
+      ]
+    },
+    {
+      "publicFaqId": "clip_language_support_and_accuracy",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "reSpeaker Clip"
+      ],
+      "primaryDomain": "firmware_software",
+      "secondaryDomains": [
+        "audio",
+        "documentation_usage"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-12",
+      "qualityScore": 0,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "language-support-and-accuracy",
+      "questionEn": "Does reSpeaker Clip support Chinese and other languages, and how accurate is its transcription?",
+      "directAnswerEn": "Yes. Chinese and other languages can be transcribed when the configured STT service supports them. reSpeaker Clip records audio to local storage, and speech recognition is performed by the STT service configured in AI CONFIG in the SenseCraft Voice app. The languages or dialects supported, and the transcription accuracy, therefore depend on the STT service and model you use.\n\nThe STT configuration exposes Provider, Base URL, API key, and Language; each transcription also lets you select the Audio Language and STT Model.",
+      "appliesTo": "reSpeaker Clip (SKU 100020126) with the SenseCraft Voice app, transcribing through an external STT service (cloud or self-hosted)",
+      "prerequisites": [
+        "reSpeaker Clip on current firmware, with the SenseCraft Voice app installed on the phone",
+        "Provider, Base URL and API key for the target STT service, and network access from the phone",
+        "A test recording"
+      ],
+      "steps": [
+        "Open AI CONFIG → STT Service in the app.",
+        "Enter Provider, Base URL, API key and Language, tap `Test Connection`, then `Save Configuration`.",
+        "Open a recording, tap `Transcribe & Summarize`, and select the Audio Language and STT Model.",
+        "Tap `Generate Now` and inspect the transcript."
+      ],
+      "successCriteria": [
+        "Test Connection passes",
+        "The recording produces a transcript in the intended language"
+      ],
+      "notes": [
+        "The Clip does not run on-device speech recognition; all transcription happens in the external STT service.",
+        "Clip audio is 16 kHz mono Opus at 32 kbps.",
+        "For fully local or offline transcription, the official private deployment supports Chinese, Cantonese, English, Japanese and Korean."
+      ],
+      "officialReferences": [
+        {
+          "title": "reSpeaker Clip Getting Started",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        },
+        {
+          "title": "Private On-Premise Transcription for reSpeaker Clip",
+          "url": "https://wiki.seeedstudio.com/solutions/clip-private-transcription/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "reSpeaker Clip",
+        "Chinese",
+        "Mandarin",
+        "Cantonese",
+        "multilingual",
+        "language support",
+        "transcription accuracy",
+        "STT",
+        "Audio Language"
+      ]
+    },
+    {
+      "publicFaqId": "clip_recordings_after_phone_change",
+      "productKey": "respeaker_clip",
+      "productVariants": [
+        "reSpeaker Clip"
+      ],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": [
+        "hardware",
+        "product_business"
+      ],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-12",
+      "qualityScore": 0,
+      "wikiSlug": "/respeaker_clip_faq",
+      "wikiAnchor": "recordings-after-phone-change-export",
+      "questionEn": "Can I still use my reSpeaker Clip and access my recordings after changing phones, and can I export them?",
+      "directAnswerEn": "Yes. Recordings are stored on the Clip itself: the device has 2 GB of local storage, about 250+ hours of compressed audio, and recording works without a phone. Changing phones — including retiring a phone that has reached end of life — does not remove recordings from the Clip. Install the SenseCraft Voice app on the new phone, add and pair the Clip, then sync the sessions to the new phone or export the audio or text results from the app. Recordings that have not been deleted remain on the device and can also be downloaded with the official Basic SDK over BLE or Wi-Fi.",
+      "appliesTo": "Undeleted recordings on reSpeaker Clip (SKU 100020126), migrated to a new phone or exported with the official SDK",
+      "prerequisites": [
+        "A charged reSpeaker Clip that powers on",
+        "The SenseCraft Voice app installed on the new phone",
+        "If the Clip is still bound to the old phone, access to that phone to unbind it, or ability to remove the old Bluetooth pairing"
+      ],
+      "steps": [
+        "Install and open the SenseCraft Voice app on the new phone.",
+        "Tap `Add Device`, select the device name that matches the identifier on the Clip screen, and confirm pairing.",
+        "Open the recordings list and sync the required sessions; keep the Clip powered on and near the phone.",
+        "Export the audio or text results from the app.",
+        "Open the exported file or transcript and confirm it is complete."
+      ],
+      "successCriteria": [
+        "The new phone discovers the Clip and completes pairing",
+        "The recordings list shows the sessions stored on the device",
+        "Exported audio or text opens correctly"
+      ],
+      "notes": [
+        "The 2 GB of storage holds about 250+ hours of compressed audio; capacity is finite, so export important recordings regularly.",
+        "A normal sync keeps the files on the device by default. Recordings remain until you delete a session, format the storage, or an auto-delete policy removes them; the device-side auto-delete policy can be configured through the SDK (0–30 days, or disabled).",
+        "Formatting the storage or deleting a session removes recordings from the device; export them first.",
+        "If the old phone is unavailable, the recordings are still on the Clip; the Basic SDK download supports BLE or Wi-Fi and can resume an interrupted transfer.",
+        "If pairing on the new phone fails, remove the old Clip pairing from the old phone or the phone's Bluetooth settings, then pair again."
+      ],
+      "officialReferences": [
+        {
+          "title": "reSpeaker Clip Getting Started (storage, file management and export)",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip/"
+        },
+        {
+          "title": "reSpeaker Clip Basic SDK Guide (session download over BLE and Wi-Fi)",
+          "url": "https://wiki.seeedstudio.com/respeaker_clip_basic_sdk_guide/"
+        }
+      ],
+      "skus": [
+        "100020126"
+      ],
+      "keywords": [
+        "reSpeaker Clip",
+        "new phone",
+        "replace phone",
+        "end of life",
+        "EOL",
+        "recordings",
+        "export",
+        "backup",
+        "sync",
+        "local storage",
+        "2GB"
       ]
     }
   ]
