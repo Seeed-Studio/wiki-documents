@@ -63,11 +63,11 @@ const TABLE = {
     "{n} TOPS ou mais",
   ),
   computeHelp: row(
-    "Filters by published TOPS for the listed configuration. Figures may use different compute and power modes; they are not measured system performance.",
-    "按所列配置公布的 TOPS 筛选。数值可能对应不同的算力与功耗模式，并不代表实测系统性能。",
-    "掲載構成の公称 TOPS で絞り込みます。数値は演算モードや電力モードが異なる場合があり、測定したシステム性能ではありません。",
-    "Filtra por los TOPS publicados de la configuración indicada. Las cifras pueden usar distintos modos de cómputo y potencia; no son el rendimiento medido del sistema.",
-    "Filtra pelos TOPS publicados da configuração listada. Os valores podem usar modos de computação e potência diferentes; não são o desempenho medido do sistema.",
+    "Filters systems by published TOPS. J601 Thor carrier boards are also included in tiers up to 275; the module is purchased separately. This shortlist does not convert TFLOPS to TOPS or represent measured system performance.",
+    "整机按公布的 TOPS 筛选；不高于 275 的档位也包含 J601 Thor 载板，模组需另购。此选型规则不将 TFLOPS 换算成 TOPS，也不代表实测系统性能。",
+    "システムは公称 TOPS で絞り込みます。275 以下の区分には J601 Thor キャリアボードも含まれます。モジュールは別売です。TFLOPS から TOPS への換算やシステムの実測性能を示すものではありません。",
+    "Filtra sistemas por TOPS publicados. Los niveles hasta 275 incluyen también la placa portadora J601 Thor; el módulo se compra por separado. No convierte TFLOPS a TOPS ni indica rendimiento medido del sistema.",
+    "Filtra sistemas pelos TOPS publicados. Os níveis até 275 também incluem a placa portadora J601 Thor; o módulo é comprado separadamente. Não converte TFLOPS em TOPS nem indica desempenho medido do sistema.",
   ),
   requiredInterfaces: row(
     "Required interfaces",

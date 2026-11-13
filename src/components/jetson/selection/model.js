@@ -155,11 +155,26 @@ export function temperatureRanges(text) {
 }
 export function voltageRange(text) {
   const range = (text || "").match(
-    /(\d+(?:\.\d+)?)\s*(?:V)?\s*[-–]\s*(\d+(?:\.\d+)?)\s*V/i,
+    /(\d+(?:\.\d+)?)\s*(?:V)?\s*(?:[-–—~～]|to)\s*(\d+(?:\.\d+)?)\s*V/i,
   );
   if (range) return [Number(range[1]), Number(range[2])];
   const fixed = (text || "").match(/(\d+(?:\.\d+)?)\s*V/i);
   return fixed ? [Number(fixed[1]), Number(fixed[1])] : null;
+}
+// Shortlisting policy is separate from measured/published TOPS: J601 supports
+// Thor modules and belongs in every existing compute tier (up to 275).
+// This is not a TFLOPS-to-TOPS conversion or an installed module specification.
+function matchesComputeMinimum(product, required) {
+  if (!Number.isFinite(required) || required <= 0) return false;
+  if (
+    product.type === "carrier" &&
+    product.familyId === "board-j601" &&
+    product.supportedModules?.includes("agx_thor") &&
+    required <= 275
+  )
+    return true;
+  const value = publishedTops(product);
+  return value != null && value >= required;
 }
 export function matchesProduct(product, filters, type = product.type) {
   if (!isInView(product, type)) return false;
@@ -182,17 +197,11 @@ export function matchesProduct(product, filters, type = product.type) {
       product.memoryGb < Number(filters.memory))
   )
     return false;
-  if (filters.computeMin) {
-    const required = Number(filters.computeMin),
-      value = publishedTops(product);
-    if (
-      !Number.isFinite(required) ||
-      required <= 0 ||
-      value == null ||
-      value < required
-    )
-      return false;
-  }
+  if (
+    filters.computeMin &&
+    !matchesComputeMinimum(product, Number(filters.computeMin))
+  )
+    return false;
   if (!filters.interfaces.every((key) => hasInterface(product, key)))
     return false;
   if (
