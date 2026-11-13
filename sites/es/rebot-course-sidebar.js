@@ -213,6 +213,8 @@ const sidebars = {
             { type: 'doc', id: `${P}/es_Paper_Reading_EO1`, label: 'EO-1 — Preentrenamiento Multimodal Intercalado' },
             { type: 'doc', id: `${P}/es_Paper_Reading_WALL_OSS`, label: 'WALL-OSS — Razonamiento Encarnado y Control de Robots' },
             { type: 'doc', id: `${P}/es_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — Acciones entre Distintos Cuerpos y Percepción del Futuro' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_DM05`, label: 'DM0.5 — Contexto Histórico y Alineación de Trayectorias' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_G05`, label: 'G0.5 — Razonamiento y Acción en una Secuencia' },
           ],
         },
         {
@@ -232,6 +234,7 @@ const sidebars = {
               id: `${P}/es_Paper_Reading_LINGBOT_VA`,
               label: 'LingBot-VA — Un modelo causal del mundo desde imágenes futuras hasta acciones de robot',
             },
+            { type: 'doc', id: `${P}/es_Paper_Reading_GR00T_2`, label: 'GR00T 2 — Modelado de Mundo-Acción Conjunto' },
           ],
         },
         {

@@ -2082,6 +2082,54 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker 44mm',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_44mm/respeaker_44mm_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker 44mm with XIAO',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_44mm/respeaker_44mm_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: 'Playback & Recording',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_i2s_test',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_record_playback',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Audio Streaming',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_udp_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Device Control',
+                  items: [
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_doa_vad',
+                    'Sensor/reSpeaker_44mm/respeaker_44mm_xiao_led_effects',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
@@ -2311,6 +2359,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_muse_gadget',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
                 'Sensor/reSpeaker_clip/respeaker_clip_chat_architecture',
@@ -3297,10 +3346,39 @@ const sidebars = {
         'Network/LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
-          label: 'Wio-WM6108 WiFi-Halow Devices',
+          label: 'Wio-WM6108 Wi-Fi HaLow Devices',
           items: [
             'Network/WiFi-Halow/wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/wifi-halow-mini-pcie-module',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Wio-WM8108 Wi-Fi HaLow Devices',
+          items: [
+            {
+              type: 'category',
+              label: 'HaLowLink 2 Wi-Fi HaLow Gateway',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/HaLowLink2_Introduction',
+                  label: 'Introduction',
+                },
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/HaLowLink2_Getting_Started',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'category',
+                  label: 'Application',
+                  items: [
+                    'Network/WiFi-Halow/HaLowLink2/Applications/Media_Gateway',
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],

@@ -13,7 +13,7 @@ const docList = [
     {
       "path": "/jetson/local_decision_model_laya",
       "image": "https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-cover-en-v3-dark.png",
-      "title": "Build a Local AI Agent on Jetson Orin with Laya and Qwen",
+      "title": "Local Browser Agent on Jetson Orin",
       "date": "2026-11-04",
       "title_cn": "在 Jetson Orin 上使用 Laya 和 Qwen 构建本地 AI Agent",
       "title_ja": "Jetson Orin 上で Laya と Qwen を使ってローカル AI エージェントを構築する",
