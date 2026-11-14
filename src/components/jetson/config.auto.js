@@ -17,7 +17,7 @@ export const communityList_cv = [
     "description": {
       "en": "Measure four-stream 4K industrial video analytics on Jetson Orin Nano 8GB and Orin NX 16GB with TensorRT YOLO, NVDEC, H.264 encoding, power, latency, and thermal monitoring."
     },
-    "lastUpdated": "11/13/2026",
+    "lastUpdated": "11/14/2026",
     "author": "Dayu"
   },
   {
