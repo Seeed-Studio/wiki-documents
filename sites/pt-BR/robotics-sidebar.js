@@ -173,6 +173,7 @@ const sidebars = {
       items: [
         { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/pt_Arm_Tutorial_Introduction`, label: 'Curso para Iniciantes' },
         { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/pt_Paper_Reading_Getting_Started`, label: 'Análise Detalhada de Artigos' },
+        { type: 'ref', id: `${K}/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA/pt_Sim2Real_VLA_Introduction`, label: 'Sim-to-Real VLA' },
         { type: 'link', label: 'Do Simulado ao Real com NVIDIA Isaac', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
       ],
     },

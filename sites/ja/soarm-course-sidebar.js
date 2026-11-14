@@ -3,6 +3,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 
 const C = 'Robotics/Robot_Kits/SO_ARM101/Courses/SO_ARM_Tutorial';
+const V = 'Robotics/Robot_Kits/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA';
 
 const backToRobotics = () => ({
   type: 'ref',
@@ -82,6 +83,82 @@ const courseSidebar = () => [
 ];
 
 // 製品サイドバーの「コース」グループ用ジャンプ入口（robotics-sidebar.js から利用）。
+// Sim-to-Real VLA コース専用のスタンドアロンサイドバー。
+const sim2RealVlaSidebar = () => [
+  backToRobotics(),
+
+  {
+    type: 'doc',
+    id: `${V}/ja_Sim2Real_VLA_Introduction`,
+    label: 'コース紹介',
+    className: 'sideboard_calss',
+  },
+  {
+    type: 'category',
+    label: '1. 概要',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/ja_Sim2Real_VLA_01`,
+      `${V}/ja_Sim2Real_VLA_02`,
+      `${V}/ja_Sim2Real_VLA_03`,
+      `${V}/ja_Sim2Real_VLA_04`,
+      `${V}/ja_Sim2Real_VLA_05`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '2. ロボットラボの構築',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/ja_Sim2Real_VLA_06`,
+      `${V}/ja_Sim2Real_VLA_07`,
+      `${V}/ja_Sim2Real_VLA_08`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '3. 自分の VLA モデルを入手',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/ja_Sim2Real_VLA_09`,
+      `${V}/ja_Sim2Real_VLA_10`,
+      `${V}/ja_Sim2Real_VLA_11`,
+      `${V}/ja_Sim2Real_VLA_12`,
+      `${V}/ja_Sim2Real_VLA_13`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '4. Jetson へのデプロイ',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/ja_Sim2Real_VLA_14`,
+      `${V}/ja_Sim2Real_VLA_15`,
+      `${V}/ja_Sim2Real_VLA_16`,
+      `${V}/ja_Sim2Real_VLA_17`,
+      `${V}/ja_Sim2Real_VLA_18`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '5. リファレンス',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/ja_Sim2Real_VLA_19`,
+    ],
+  },
+];
+
 const courseLink = () => ({
   type: 'category',
   label: 'コース',
@@ -99,6 +176,11 @@ const courseLink = () => ({
       id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/ja_Paper_Reading_Getting_Started',
       label: '論文ディープダイブ',
     },
+    {
+      type: 'ref',
+      id: `${V}/ja_Sim2Real_VLA_Introduction`,
+      label: 'Sim-to-Real VLA',
+    },
   ],
 });
 
@@ -106,6 +188,7 @@ const sidebars = {
 
   // スタンドアロンコースサイドバー。
   SoArmCourseSidebar: courseSidebar(),
+  SoArmSim2RealVlaSidebar: sim2RealVlaSidebar(),
 
 };
 
