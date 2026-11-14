@@ -1,5 +1,5 @@
 ---
-description: Leer la Dirección de Llegada y el indicador de voz detectada desde el reSpeaker XVF3800 44mm mediante I2C, mientras se transmite audio I2S al XIAO ESP32-S3 Plus y se calcula el RMS por canal.
+description: Leer la Dirección de Llegada y el indicador de voz detectada del reSpeaker XVF3800 44mm mediante I2C, mientras se transmite audio I2S al XIAO ESP32-S3 Plus y se calcula el RMS por canal.
 title: DoA y VAD con reSpeaker XVF3800 44mm y XIAO ESP32-S3 Plus
 keywords:
   - reSpeaker 44mm
@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_doa_vad/
 ---
 # DoA y VAD con reSpeaker XVF3800 44mm y XIAO ESP32-S3 Plus
 
-El XVF3800 calcula la Dirección de Llegada (DoA) y la Detección de Actividad de Voz (VAD) dentro del propio chip. Un MCU host puede leer ambos resultados mediante I2C usando comandos basados en recursos, sin necesidad de procesar audio en bruto en el host. Este sketch consulta el ángulo de DoA y el indicador de voz cada 250 ms, transmite audio I2S al mismo tiempo y muestra el nivel RMS de cada canal para que puedas ver cuándo hay sonido presente.
+El XVF3800 calcula la Dirección de Llegada (DoA) y la Detección de Actividad de Voz (VAD) dentro del propio chip. Un MCU host puede leer ambos resultados a través de I2C usando comandos basados en recursos, sin necesidad de procesar audio en bruto en el host. Este sketch consulta el ángulo de DoA y el indicador de voz cada 250 ms, transmite audio I2S al mismo tiempo y muestra el nivel RMS de cada canal para que puedas ver cuándo hay sonido presente.
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -40,15 +44,15 @@ El XVF3800 calcula la Dirección de Llegada (DoA) y la Detección de Actividad d
 
 El XVF3800 expone controles a través de *servicers*. Una lectura es una transacción I2C de dos pasos:
 
-1. Escribir `resid`, `cmd | 0x80` y la longitud de carga útil esperada más uno.
-2. Leer `status` seguido de los bytes de la carga útil.
+1. Escribe `resid`, `cmd | 0x80` y la longitud de carga útil esperada más uno.
+2. Lee `status` seguido de los bytes de la carga útil.
 
 | Servicio | RESID | Comando | Carga útil |
-|---------|-------|---------|------------|
-| Servicer de aplicación — versión de firmware | `48` | `0` | 3 bytes: mayor, menor, revisión |
+|---------|-------|---------|-----------|
+| Servicer de aplicación — versión de firmware | `48` | `0` | 3 bytes: mayor, menor, corrección |
 | Servicer GPO — DoA | `20` | `18` | 4 bytes: ángulo (little-endian), indicador de voz (little-endian) |
 
-El bucle lee 256 tramas estéreo a la vez desde I2S, calcula el RMS para izquierda y derecha, y consulta DoA/VAD en un intervalo de 250 ms. Un valor de DoA superior a 359 se muestra como `N/A` con el valor hexadecimal en bruto, y cualquier byte de estado XMOS distinto de cero se informa en lugar de ser decodificado.
+El bucle lee 256 tramas estéreo a la vez desde I2S, calcula el RMS para izquierda y derecha, y consulta DoA/VAD en un intervalo de 250 ms. Un valor de DoA por encima de 359 se muestra como `N/A` con el valor hexadecimal en bruto, y cualquier byte de estado XMOS distinto de cero se informa en lugar de ser decodificado.
 
 ## Sketch de Arduino
 
@@ -582,12 +586,12 @@ DOA: 136 deg | Speech: DETECTED | RMS L: 0.00344 | RMS R: 0.00301
 DOA: N/A (0xFFFF) | Speech: SILENT | RMS L: 0.00002 | RMS R: 0.00002
 ```
 
-Cuando nadie está hablando, `Speech: SILENT` y el ángulo informado no es significativo: el XVF3800 informa un valor fuera de rango.
+When nobody is speaking, `Speech: SILENT` and the reported angle is not meaningful — the XVF3800 reports an out-of-range value.
 
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

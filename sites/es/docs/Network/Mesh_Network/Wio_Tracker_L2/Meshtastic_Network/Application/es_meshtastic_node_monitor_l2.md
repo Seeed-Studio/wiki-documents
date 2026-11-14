@@ -30,7 +30,7 @@ import TabItem from '@theme/TabItem';
 
 * Mapa de nodos Meshtastic. Seguimiento y visualización de nodos exteriores en áreas remotas.
 * Analizador Meshtastic. Monitorización del rendimiento de la comunicación y del enrutamiento en redes malladas.
-* Monitor Meshtastic. Depuración y prueba de la conectividad de red para dispositivos Meshtastic.
+* Monitor Meshtatsic. Depuración y prueba de la conectividad de red para dispositivos Meshtastic.
 
 **Monitores Meshtastic comunes**
 
@@ -102,9 +102,31 @@ También puedes configurarlo en la APP de tu teléfono.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPPPosition.png" style={{width:500, height:'auto'}}/></div>
 
-También en el mapa del sitio web de Meshsense puedes ver tu posición en tiempo real.
+También en el mapa del sitio web de Meshsense, puedes ver tu posición en tiempo real.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MapDisplay.png" style={{width:500, height:'auto'}}/></div>
 
 
 Con esta configuración, puedes gestionar tu red privada Meshtastic de forma eficiente y visualizar el comportamiento de los nodos directamente en Meshsense.
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -8,7 +8,7 @@ keywords:
   - matriz de 4 microfones
   - xmos voice
   - matriz de microfones usb
-image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_board_overview.jpg
+image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png
 slug: /respeaker_44mm_introduction
 sku: 100040880,100020767,100066841,100065276,100052499
 last_update:
@@ -20,80 +20,101 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/
 ---
 # Introdução ao reSpeaker XVF3800 44mm 4-Mic Array
 
-{/* TODO: Banner}
+{/* TODO: substituir o render do case abaixo por um banner dedicado quando estiver disponível */}
 
-O reSpeaker XVF3800 4-Mic Array 44mm é um módulo compacto e circular de processamento de voz construído em torno do processador de áudio XMOS XVF3800, projetado para reconhecimento de fala, controle por voz, assistentes inteligentes e robótica. Quatro microfones PDM MEMS são dispostos em um anel com **passo de 44 mm**, oferecendo captura em campo distante de 360° em uma placa visivelmente menor que o reSpeaker XVF3800 Circular 4-Mic Array com passo de 66 mm, mantendo a mesma plataforma de processamento XMOS e a mesma qualidade de áudio.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XVF3800 44mm 4-Mic Array with case" width={600} height="auto" /></p>
+
+O reSpeaker XVF3800 4-Mic Array 44mm é um módulo compacto e circular de processamento de voz construído em torno do processador de áudio XMOS XVF3800, projetado para reconhecimento de fala, controle por voz, assistentes inteligentes e robótica. Quatro microfones PDM MEMS são dispostos em um anel com um **passo de 44 mm**, proporcionando captura em campo distante de 360° em uma placa visivelmente menor que o reSpeaker XVF3800 Circular 4-Mic Array com passo de 66 mm, mantendo a mesma plataforma de processamento XMOS e a mesma qualidade de áudio.
 
 O módulo executa todo o pipeline de voz do XVF3800 — Cancelamento de Eco Acústico (AEC), Controle Automático de Ganho (AGC) com faixa de 60 dB, formação de feixe multicanal, detecção de Direção de Chegada (DoA), Detecção de Atividade de Voz (VAD), supressão dinâmica de ruído e desreverberação — tudo com parâmetros ajustáveis pelo usuário. Um anel de 24 LEDs RGB WS2812, três botões físicos (aumentar volume, diminuir volume, mudo) e um indicador de mudo por hardware tornam o módulo utilizável imediatamente, enquanto os modos USB Audio Class 2.0 e I2S cobrem tanto o uso plug-and-play quanto a integração embarcada. Um XIAO ESP32-S3 Plus opcional pode ser soldado diretamente na placa, e uma expansão de alto-falante opcional adiciona um alto-falante de 5 W com bateria de 1200 mAh.
 
 ## Linha de produtos
 
-{/* TODO: replace the five href="#" values with the Seeed Studio product page URLs once they are published. */}
+{/* TODO: substituir os cinco valores href="#" pelas URLs das páginas de produto da Seeed Studio assim que forem publicadas. */}
 
-<table align="center">
+<div class="table-center">
+<table>
   <tr>
-    <th>Variant</th>
-    <th>SKU</th>
-    <th>Contents</th>
-    <th>Order</th>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm</strong></td>
-    <td><code>100040880</code></td>
-    <td>PCBA única, firmware USB pré-gravado</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case</strong></td>
-    <td><code>100020767</code></td>
-    <td>PCBA + gabinete</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With XIAO ESP32S3 Plus</strong></td>
-    <td><code>100066841</code></td>
-    <td>PCBA + XIAO ESP32-S3 Plus</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case and XIAO ESP32S3 Plus</strong></td>
-    <td><code>100065276</code></td>
-    <td>PCBA + gabinete + XIAO ESP32-S3 Plus</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker Sound Base</strong></td>
-    <td><code>100052499</code></td>
-    <td>Alto-falante de 5 W 4 Ω, bateria de 1200 mAh, carregamento USB-C, interruptor de energia</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-      </a>
-    </div></td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm</strong><br />
+      <code>SKU 100040880</code><br />
+      PCBA única, firmware USB pré-gravado</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case</strong><br />
+      <code>SKU 100020767</code><br />
+      PCBA + gabinete</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm With XIAO ESP32S3 Plus" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With XIAO ESP32S3 Plus</strong><br />
+      <code>SKU 100066841</code><br />
+      PCBA + XIAO ESP32-S3 Plus</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
+</div>
 
-{/* TODO(image): add a product render per variant — see wiki_44mm_images/README.txt */}
+<div class="table-center">
+<table>
+  <tr>
+    <td align="center" width="320" valign="top">
+      {/* TODO(image): substituir pelo render do case + XIAO assim que estiver disponível */}
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case and XIAO ESP32S3 Plus" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case and XIAO ESP32S3 Plus</strong><br />
+      <code>SKU 100065276</code><br />
+      PCBA + gabinete + XIAO ESP32-S3 Plus</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_sound_base.png" alt="reSpeaker Sound Base" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker Sound Base</strong><br />
+      <code>SKU 100052499</code><br />
+      alto-falante de 5 W 4 Ω, bateria de 1200 mAh, carregamento USB-C, interruptor de alimentação</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+</div>
 
 ## Recursos
 
-- **Design compacto de 44 mm**: o passo do microfone é reduzido de 66 mm para 44 mm, encolhendo o diâmetro da placa para que ela caiba em produtos com espaço limitado.
+- **Design compacto de 44 mm**: o passo entre microfones é reduzido de 66 mm para 44 mm, encolhendo o diâmetro da placa para que ela caiba em produtos com espaço limitado.
 
 - **Processamento de áudio XMOS XVF3800**: AEC, AGC (faixa de 60 dB), formação de feixe multicanal, DoA, VAD, supressão dinâmica de ruído e desreverberação, com parâmetros ajustáveis.
 
@@ -105,46 +126,46 @@ O módulo executa todo o pipeline de voz do XVF3800 — Cancelamento de Eco Acú
 
 - **Identificação exclusiva do dispositivo**: leitura e gravação de um UUID/SN para gerenciamento de múltiplos dispositivos, identificação e rastreamento de dados.
 
-- **Feedback RGB programável**: 24 × LEDs WS2812 exibem o status do dispositivo, animação de inicialização e direção de DoA; o estado de mudo é mostrado por um LED vermelho dedicado.
+- **Feedback RGB programável**: 24 × LEDs WS2812 mostram o status do dispositivo, animação de inicialização e direção DoA; o estado de mudo é mostrado por um LED vermelho dedicado.
 
-- **Três botões personalizáveis**: aumentar volume, diminuir volume e mudo por padrão quando conectados ao processador XMOS, com uma chave para redirecioná-los para o XIAO.
+- **Três botões personalizáveis**: aumentar volume, diminuir volume e mudo por padrão quando conectados ao processador XMOS, com uma chave para roteá-los para o XIAO em vez disso.
 
-- **Pronto para alto-falante**: amplificador Classe D integrado, conector vertical JST para um alto-falante de 5 W 4 Ω, conector P2 (3,5 mm) AUX e ilhas de solda para um alto-falante cabeado.
+- **Pronto para alto-falante**: amplificador Classe D onboard, conector vertical JST para alto-falante de 5 W 4 Ω, conector AUX de 3,5 mm e ilhas de solda para um alto-falante cabeado.
 
 - **Ampla compatibilidade de plataforma**: hosts USB como Windows, macOS e Raspberry Pi OS, além de integração I2S com XIAO, ESP32 e placas da classe Arduino.
 
-## Visão geral de hardware
+## Visão geral do hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_board_overview.jpg" alt="reSpeaker XVF3800 44mm PCB component callouts" width={900} height="auto" /></p>
 
-A frente da placa abriga os quatro microfones e os 24 LEDs RGB no anel mais externo, de modo que tanto os orifícios acústicos quanto o anel de luz permaneçam visíveis depois que a placa é montada em um gabinete. A parte de trás abriga o conector USB-C, o conector P2 (3,5 mm), o conector JST do alto-falante, o botão de reset, a área de soldagem para o XIAO ESP32-S3 Plus e todas as ilhas de breakout.
+A frente da placa abriga os quatro microfones e os 24 LEDs RGB no anel mais externo, de modo que tanto os orifícios acústicos quanto o anel de luz permaneçam visíveis depois que a placa é montada em um gabinete. A parte de trás abriga o conector USB-C, o conector de 3,5 mm, o conector JST para alto-falante, o botão de reset, a área de soldagem para o XIAO ESP32-S3 Plus e todas as ilhas de breakout.
 
 ### Principais componentes
 
 | Componente / Recurso | Descrição |
 |--------------------|-------------|
 | **Processador de áudio principal** | XMOS XVF3800 (firmware v3.2.1) para AEC, formação de feixe, supressão de ruído, detecção de DoA e o restante do pipeline de voz |
-| **Matriz de microfones** | 4 × microfones PDM MEMS em um arranjo circular com passo de 44 mm, captura em campo distante de 360° |
+| **Matriz de microfones** | 4 × microfones PDM MEMS em um layout circular com passo de 44 mm, captura em campo distante de 360° |
 | **Codec de áudio** | TLV320AIC3104, conversão de áudio e saída DAC |
 | **Amplificador** | Amplificador de áudio Classe D LM48511 |
 | **LEDs RGB** | 24 × LEDs RGB WS2812 endereçáveis individualmente para status e atividade de áudio |
 | **Botões personalizáveis** | Três botões físicos, que por padrão funcionam como aumentar volume, diminuir volume e mudo quando conectados ao XVF3800 |
 | **Seleção de conexão dos botões** | Chave que direciona os três botões entre o XVF3800 e as ilhas do módulo XIAO |
-| **LED indicador de mudo** | LED vermelho que acende enquanto os microfones estão em mudo; o áudio é ativado ao ligar o equipamento |
+| **LED indicador de mudo** | LED vermelho que acende enquanto os microfones estão em mudo; o áudio é ativado ao ligar |
 | **Entrada em modo de segurança** | Mantenha o botão de mudo pressionado enquanto aplica energia para inicializar o firmware de recuperação |
-| **Antena integrada** | Suporta comunicação sem fio quando um módulo XIAO sem fio compatível é instalado |
+| **Antena onboard** | Suporta comunicação sem fio quando um módulo XIAO sem fio compatível é instalado |
 | **Porta USB Type-C** | Entrada de alimentação de 5 V mais dados USB para áudio UAC, controle e DFU |
 | **USB Power Delivery (USB PD)** | Arranjo de entrada de alimentação USB-C para operar a placa e acionar um alto-falante de 5 W |
-| **Conector P2 (3,5 mm) AUX** | Saída lateral para fones de ouvido / linha a partir do DAC integrado |
-| **Conector de alto-falante** | Conector vertical JST para um alto-falante de 4 Ω com potência nominal de 5 W ou mais, com ilhas de solda mantidas para um alto-falante cabeado |
+| **Conector AUX de 3,5 mm** | Saída lateral de fone de ouvido / linha a partir do DAC onboard |
+| **Conector de alto-falante** | Conector vertical JST para alto-falante de 4 Ω com potência nominal de 5 W ou mais, com ilhas de solda mantidas para um alto-falante cabeado |
 | **Ilhas para fonte de alimentação externa** | Entrada de alimentação alternativa para todo o sistema |
 | **Interface de depuração** | Ilhas compatíveis com XTAG4 para programação e depuração XMOS, sem conector soldado |
 | **Interface I2C do XVF3800** | Expõe os pinos I2C do XVF3800 para controle e configuração no modo INT-Device |
 | **Interface I2S do XVF3800** | Expõe os pinos I2S do XVF3800 para áudio para um host externo no modo INT-Device |
-| **Pinos de alimentação e terra** | Breakout de 5 V e GND para integração externa |
+| **Headers de alimentação e terra** | Breakout de 5 V e GND para integração externa |
 | **Ilhas de GPIO do XVF3800** | I/O adicional do XVF3800 para controle externo |
 | **Área para XIAO ESP32-S3 Plus** | Posição de módulo soldável com roteamento de I2S, I2C, reset, botões e LEDs |
-| **Conector de antena IPEX** | Conecta a antena integrada à interface de antena do XIAO com um cabo RF adequado |
+| **Conector de antena IPEX** | Conecta a antena onboard à interface de antena do XIAO com um cabo RF adequado |
 | **Orifícios de montagem** | Furos de fixação compatíveis com o gabinete |
 
 ### Suporte ao XIAO ESP32-S3 Plus
@@ -157,30 +178,32 @@ O XIAO ESP32-S3 Plus pode ser soldado diretamente na parte de trás da placa. Qu
 |---------|-------------|
 | **Suporte ao XIAO ESP32-S3 Plus** | Solde um módulo XIAO ESP32-S3 Plus diretamente na matriz para processamento de voz integrado e desenvolvimento de aplicações |
 | **Comunicação com o XVF3800** | I2S para gravação e reprodução com BCLK, MCLK e LRCLK compartilhados, além de I2C para controle e configuração do XVF3800 |
-| **Controle de reset do XVF3800** | Um GPIO relacionado a RST para que o XIAO possa reiniciar o XVF3800 por hardware |
-| **Roteamento flexível de botões e LEDs** | Comute os botões e LEDs integrados entre o XVF3800 e as ilhas de GPIO do XIAO para controles e feedback personalizados |
-| **Acesso expandido a GPIO** | I/O restante do XIAO em ilhas identificadas para sensores, periféricos e hardware de aplicação, alinhado com a área de I/O do XVF3800 |
-| **Conexão de antena externa** | Conector IPEX para ligar a antena integrada à interface de antena do XIAO com um cabo alimentador RF |
+| **Controle de Reset do XVF3800** | Um GPIO relacionado a RST para que o XIAO possa resetar o XVF3800 por hardware |
+| **Roteamento flexível de botões e LEDs** | Alterne os botões e LEDs integrados entre o XVF3800 e os pads GPIO do XIAO para controles e feedback personalizados |
+| **Acesso expandido a GPIO** | I/O restante do XIAO em pads identificados para sensores, periféricos e hardware da aplicação, alinhados com a área de I/O do XVF3800 |
+| **Conexão de antena externa** | Conector IPEX para ligar a antena integrada à interface de antena do XIAO com um cabo de RF |
 
 {/* TODO(image): xiao_soldered.jpg — XIAO ESP32-S3 Plus soldered on the board */}
 
-### reSpeaker Sound Base (expansão de alto-falante)
+### reSpeaker Sound Base (Expansão de alto-falante)
 
-A expansão de alto-falante transforma a matriz de microfones em um terminal de voz autônomo. Ela combina um **alto-falante de 5 W, 4 Ω**, uma **bateria recarregável de 1200 mAh**, circuitos de carregamento e gerenciamento de energia, uma porta de carregamento USB-C e um interruptor físico de energia em um gabinete modular que se encaixa ou desliza na parte inferior da carcaça da matriz.
+A expansão de alto-falante transforma a matriz de microfones em um terminal de voz autônomo. Ela combina um **alto-falante de 5 W, 4 Ω**, uma **bateria recarregável de 1200 mAh**, circuito de carregamento e gerenciamento de energia, uma porta USB-C para carregamento e uma chave física de energia em um gabinete modular que se encaixa ou desliza na parte inferior do invólucro da matriz.
 
-- A caixa pode ser destacada para que a bateria e o alto-falante possam ser substituídos pelo usuário.
-- O conector de E/S XMOS exposto transporta a saída do alto-falante, alimentação de 5 V e sinais de nível da bateria entre as duas placas.
+- O gabinete pode ser destacado para que a bateria e o alto-falante possam ser substituídos pelo usuário.
+- O conector de I/O XMOS exposto transporta a saída do alto-falante, alimentação de 5 V e sinais de nível de bateria entre as duas placas.
 - Um anel de LED de carregamento mostra a porcentagem da bateria durante o carregamento e permanece apagado quando nenhuma bateria está conectada.
 - A chave controla apenas a saída; o carregamento continua com a chave desligada.
 
-{/* TODO(image): speaker_expansion.jpg — speaker expansion attached to the array */}
+{/* TODO(image): replace with a photo of the Sound Base attached to the array */}
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_sound_base.png" alt="reSpeaker Sound Base speaker expansion" width={300} height="auto" /></p>
 
 ### Pinout
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/xmos_io_pinout.jpg" alt="XMOS XVF3800 I/O header" width={600} height="auto" /></p>
 
 
-A área de E/S do XVF3800 expõe os barramentos necessários para a operação INT-Device e para a expansão de alto-falante. Siga a serigrafia para a ordem exata dos pads na sua revisão.
+A área de I/O do XVF3800 expõe os barramentos necessários para operação como dispositivo INT e para a expansão de alto-falante. Siga a serigrafia para a ordem exata dos pads na sua revisão.
 
 | Sinal | Descrição |
 |--------|-------------|
@@ -188,31 +211,31 @@ A área de E/S do XVF3800 expõe os barramentos necessários para a operação I
 | **GND** | Terra |
 | **MCLK** | Clock mestre I2S |
 | **BCLK** | Clock de bits I2S |
-| **LRCK** | Clock de palavra I2S esquerda/direita |
+| **LRCK** | Clock de palavra I2S (esquerda/direita) |
 | **DATA0** | Dados I2S, caminho de gravação |
 | **DATA1** | Dados I2S, caminho de reprodução |
 | **SDA / SCL** | Barramento de controle I2C para o XVF3800 |
 | **CS_N / CLK / MISO** | Sinais SPI para periféricos compatíveis |
-| **Speaker pins** | Saída de alto-falante para um alto-falante externo, compartilhada com o conector JST onboard |
+| **Pinos do alto-falante** | Saída de alto-falante para um alto-falante externo, compartilhada com o conector JST integrado |
 
-O footprint do XIAO expõe adicionalmente as demais E/S do módulo em pads identificados (D0, D2, D3, D13, D14, 3V3, GND), para que periféricos possam ser ligados sem uma placa carrier separada.
+O footprint do XIAO expõe adicionalmente o I/O restante do módulo em pads identificados (D0, D2, D3, D13, D14, 3V3, GND), para que periféricos possam ser conectados sem uma placa carrier separada.
 
 {/* TODO(image): respeaker_44mm_pinout_schematic.png — labeled schematic to replace the close-up photos */}
 
 ### Visão geral de GPIO
 
-O XVF3800 expõe GPIO configuráveis para detecção de botão, volume, mute, habilitação do amplificador, alimentação de LED e comunicação com periféricos.
+O XVF3800 expõe GPIO configuráveis para detecção de botões, volume, mute, habilitação do amplificador, alimentação de LED e comunicação com periféricos.
 
 | Nome do pino | Função | Descrição |
 |----------|----------|-------------|
-| **X1D09** | Status do botão de mute (GPI) | Lê o estado do botão de mute; nível alto quando liberado |
-| **X1D13** | Aumentar áudio | Recebe o sinal do botão de aumento de volume |
-| **X1D34** | Diminuir áudio | Recebe o sinal do botão de diminuição de volume |
+| **X1D09** | Status do botão de mute (GPI) | Lê o estado do botão de mute; nível alto quando solto |
+| **X1D13** | Aumentar volume | Recebe o sinal do botão de aumento de volume |
+| **X1D34** | Diminuir volume | Recebe o sinal do botão de diminuição de volume |
 | **X0D11** | Inicialização I2C | Usado para inicialização I2C e controle relacionado |
 | **X0D30** | LED de mute / Controle de mute do microfone | Aciona o LED indicador de mute e a função de mute do microfone |
 | **X0D31** | Habilitar amplificador | Habilita ou desabilita o amplificador de áudio |
 | **X0D33** | Controle de alimentação do LED WS2812 | Controla a alimentação do circuito de LED RGB WS2812 |
-| **X0D39** | SPI MOSI | Dados SPI master-out, slave-in para periféricos compatíveis |
+| **X0D39** | SPI MOSI | Dados SPI mestre-saída, escravo-entrada para periféricos compatíveis |
 
 ## Introdução
 
@@ -220,8 +243,8 @@ O XVF3800 expõe GPIO configuráveis para detecção de botão, volume, mute, ha
 
 - Cabo USB Tipo-C
 - Computador host ou um Raspberry Pi
-- Opcional: alto-falante de 5 W 4 Ω para reprodução
-- Opcional: XIAO ESP32-S3 Plus para operação sem fio/embarcada
+- Opcional: alto-falante de 5 W, 4 Ω para reprodução
+- Opcional: XIAO ESP32-S3 Plus para operação sem fio / embarcada
 
 ### Preparação de software
 
@@ -229,25 +252,25 @@ O XVF3800 expõe GPIO configuráveis para detecção de botão, volume, mute, ha
 - **dfu-util** para atualizações de firmware
 - **Python 3** com `pyusb` para ajuste de parâmetros
 
-### Uso imediato (Out of Box)
+### Uso fora da caixa
 
 :::note
-Para garantir captação de voz ideal e operação correta dos algoritmos de áudio, aponte as portas do microfone (entrada do microfone/furos de som) na parte de trás do dispositivo em direção à fonte sonora. A porta do microfone fica no lado impresso com o logotipo da Seeed Studio.
+Para garantir captação de voz ideal e operação correta dos algoritmos de áudio, aponte as portas do microfone (entrada do microfone / orifícios de som) na parte de trás do dispositivo em direção à fonte sonora. A porta do microfone fica no lado impresso com o logotipo da Seeed Studio.
 
 {/* TODO(image): mic_inlet_orientation.jpg — mic port / Seeed logo side */}
 :::
 
 #### DoA (Direction of Arrival)
 
-O anel de LED segue a direção da voz que chega, para que você possa ver o ângulo detectado sem nenhum software. O valor de DoA também pode ser lido via USB/I2C para a sua própria aplicação.
+O anel de LEDs segue a direção da voz que chega, para que você possa ver o ângulo detectado sem nenhum software. O valor de DoA também pode ser lido via USB/I2C para a sua própria aplicação.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/doa_demo.gif" alt="DoA LED ring following the voice" width={600} height="auto" /></p>
 
 #### Botão de mute
 
-O botão de mute desativa temporariamente a captura pela matriz de microfones.
+O botão de mute desativa temporariamente a captura da matriz de microfones.
 
-- Os microfones são silenciados, então vozes externas não são mais capturadas nem processadas.
+- Os microfones são silenciados, então vozes externas não são mais capturadas ou processadas.
 - O LED vermelho acende enquanto o mute está ativo.
 - Nenhuma entrada de áudio é enviada ao host.
 - Pressionar o botão novamente reativa a matriz. O dispositivo inicia sem mute.
@@ -256,29 +279,29 @@ O botão de mute desativa temporariamente a captura pela matriz de microfones.
 
 #### Aumentar / diminuir volume
 
-Os dois botões restantes ajustam o volume de reprodução por padrão quando estão roteados para o XVF3800. Eles são controles de passo único: cada pressão altera o volume uma vez. O mesmo nível pode ser definido a partir do host com a ferramenta de controle em Python ou com o mixer do sistema operacional.
+Os dois botões restantes ajustam o volume de reprodução por padrão quando estão roteados para o XVF3800. Eles são controles de ação única: cada pressão altera o volume um passo. O mesmo nível pode ser definido a partir do host com a ferramenta de controle em Python ou com o mixer do sistema operacional.
 
 #### Botão de reset
 
-O botão de reset (RST) fornece um reset de hardware do XVF3800. Pressioná-lo reinicia o chip e reinicializa o sistema desde o começo, exatamente como um ciclo completo de energia.
+O botão de reset (RST) fornece um reset por hardware do XVF3800. Pressioná-lo reinicia o chip e reinicializa o sistema desde o início, exatamente como um ciclo completo de energia.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/reset_demo.gif" alt="Reset button behaviour" width={600} height="auto" /></p>
 
 #### Conexão do alto-falante
 
-Você pode conectar um alto-falante pelo conector JST onboard ou pelo conector P2 (3,5 mm), dependendo da sua preferência de saída de áudio. Use o conector JST com um alto-falante de 4 Ω, 5 W para acioná-lo a partir do amplificador LM48511 onboard.
+Você pode conectar um alto-falante através do conector JST integrado ou do conector P2 (3,5 mm) AUX, dependendo da sua preferência de saída de áudio. Use o conector JST com um alto-falante de 4 Ω, 5 W para acioná-lo a partir do amplificador LM48511 integrado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/speaker_connection.jpg" alt="Speaker connected to the JST connector" width={600} height="auto" /></p>
 
 #### Modo de segurança
 
-**Safe Mode** é um modo de recuperação que permite gravar firmware via USB DFU ou I2C DFU. Use-o se você tiver gravado anteriormente o firmware I2S e quiser voltar para o firmware USB, ou se a placa não estiver mais sendo enumerada.
+**Safe Mode** é um modo de recuperação que permite gravar firmware via USB DFU ou I2C DFU. Use-o se você tiver gravado anteriormente o firmware I2S e quiser voltar ao firmware USB, ou se a placa não estiver mais sendo enumerada.
 
 | Firmware | USB DFU | I2C DFU |
 |----------|---------|---------|
-| **USB firmware** | Sim | Não |
-| **I2S firmware** | Não | Sim |
-| **Safe Mode firmware** (partição Factory) | Sim | Sim |
+| **Firmware USB** | Sim | Não |
+| **Firmware I2S** | Não | Sim |
+| **Firmware Safe Mode** (partição Factory) | Sim | Sim |
 
 **Quando usar o Safe Mode**
 
@@ -289,7 +312,7 @@ Você pode conectar um alto-falante pelo conector JST onboard ou pelo conector P
 **Como entrar no Safe Mode**
 
 1. Desligue completamente o dispositivo.
-2. Pressione e segure o botão **Mute**.
+2. Pressione e mantenha pressionado o botão **Mute**.
 3. Enquanto o mantém pressionado, reconecte a alimentação.
 4. O LED vermelho começa a piscar — o dispositivo agora está executando o firmware Safe Mode a partir da partição Factory.
 
@@ -299,11 +322,11 @@ Você pode conectar um alto-falante pelo conector JST onboard ou pelo conector P
 
 Duas imagens de firmware são fornecidas no repositório oficial do GitHub:
 
-- **USB firmware** para sistemas host como Windows, Linux e macOS
-- **I2S firmware** para hosts microcontroladores como o XIAO ESP32-S3 Plus
+- **Firmware USB** para sistemas host como Windows, Linux e macOS
+- **Firmware I2S** para hosts microcontroladores como o XIAO ESP32-S3 Plus
 
 :::note
-**Não** use "Save as" para baixar os arquivos de firmware do GitHub — os binários serão corrompidos. Clone o repositório ou use **Download ZIP** para obter o repositório inteiro com todos os arquivos incluídos.
+**Não** use "Save as" para baixar os arquivos de firmware do GitHub — os binários serão corrompidos. Clone o repositório ou use **Download ZIP** para obter todo o repositório com todos os arquivos incluídos.
 :::
 
 Repositório: [reSpeaker_XVF3800_4MIC_44mm](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm)
@@ -326,9 +349,9 @@ O firmware I2S é usado quando a matriz está conectada a um host microcontrolad
 |----------|----------|-------|
 | `respeaker_44mm_i2s_c48k2ch_v1.0.0.bin` | 2 | Saída processada de 2 canais: Canal 0 = Conference, Canal 1 = ASR |
 
-Para gravar o firmware XMOS, conecte a placa ao seu PC com um cabo USB. Use a **porta XMOS USB-C**, localizada próxima ao conector de áudio de 3,5 mm.
+Para gravar o firmware XMOS, conecte a placa ao seu PC com um cabo USB. Use a **porta USB-C XMOS**, localizada próxima ao conector de áudio P2 (3,5 mm).
 
-### Instalar DFU Util
+### Instalar o DFU Util
 
 `dfu-util` é uma ferramenta de linha de comando para Device Firmware Upgrade via USB.
 
@@ -352,7 +375,7 @@ import TabItem from '@theme/TabItem';
 dfu-util -V
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_version.png" alt="dfu-util version output" width={700} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_version.png" alt="saída da versão do dfu-util" width={700} height="auto" /></p>
 
 - Conecte o reSpeaker XVF3800 44mm e verifique se o dispositivo é detectado:
 
@@ -360,7 +383,7 @@ dfu-util -V
 dfu-util -l
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_list.png" alt="dfu-util list output" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_list.png" alt="saída da lista do dfu-util" width={800} height="auto" /></p>
 
 > Se você obtiver:
 > `Cannot open DFU device 2886:0024 ... (LIBUSB_ERROR_NOT_SUPPORTED)`
@@ -414,7 +437,7 @@ Found DFU: [2886:0024] ver=0100, devnum=57, cfg=1, intf=4, path="1-2", alt=0, na
 sudo apt install dfu-util
 ```
 
-- Conecte a placa e verifique se ela foi detectada:
+- Conecte a placa e verifique se ela é detectada:
 
 ```bash
 sudo dfu-util -l
@@ -446,7 +469,7 @@ Found DFU: [2886:0024] ver=0100, devnum=57, cfg=1, intf=4, path="1-2", alt=0, na
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
 
-- No Linux, execute com `sudo`:
+- No Linux, execute-o com `sudo`:
 
 ```bash
 sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
@@ -454,7 +477,7 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 A opção `-R` reinicia a placa automaticamente após a gravação.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_flash.png" alt="dfu-util flashing output" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_flash.png" alt="saída de gravação do dfu-util" width={800} height="auto" /></p>
 
 Execute `dfu-util -l` novamente para confirmar que a nova versão do firmware está em execução.
 
@@ -466,9 +489,9 @@ Execute `dfu-util -l` novamente para confirmar que a nova versão do firmware es
 ### Configurar o Audacity (Windows)
 
 1. Abra o **Audacity**.
-2. Vá em **Audio Setup > Audio Settings**.
+2. Vá para **Audio Setup > Audio Settings**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_setup.png" alt="Audacity Audio Setup menu" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_setup.png" alt="menu Audacity Audio Setup" width={800} height="auto" /></p>
 
 3. Defina:
    - **Host**: `Windows WASAPI`
@@ -479,11 +502,11 @@ Execute `dfu-util -l` novamente para confirmar que a nova versão do firmware es
    - **Default Sample Rate**: `48000 Hz`
    - **Default Sample Format**: `32-bit float`
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_settings.jpg" alt="Audacity Audio Settings dialog" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_settings.jpg" alt="caixa de diálogo Audacity Audio Settings" width={800} height="auto" /></p>
 
 4. Clique em **OK** — você está pronto para gravar.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_recording.jpg" alt="Audacity recording waveform" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_recording.jpg" alt="forma de onda de gravação do Audacity" width={800} height="auto" /></p>
 
 </TabItem>
 
@@ -492,7 +515,7 @@ Execute `dfu-util -l` novamente para confirmar que a nova versão do firmware es
 ### Configurar o Audacity (macOS)
 
 1. Abra o **Audacity**.
-2. Vá em **Audio Setup** e selecione **Recording Device > reSpeaker XVF3800 4-Mic 44mm**.
+2. Vá para **Audio Setup** e selecione **Recording Device > reSpeaker XVF3800 4-Mic 44mm**.
 3. Abra **Audio Settings** e defina:
    - **Recording Device**: `reSpeaker XVF3800 4-Mic 44mm`
    - **Channels**: `2 (Stereo)`
@@ -511,7 +534,7 @@ O macOS exige permissão de microfone para o Audacity em **System Settings > Pri
 
 ### Gravar pela linha de comando
 
-1. Encontre o número da placa (card):
+1. Encontre o número da placa:
 
 ```bash
 arecord -l
@@ -555,13 +578,13 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 ## Ajuste de parâmetros
 
-O ajuste permite configurar os algoritmos de áudio integrados e se comunicar diretamente com o chip XMOS. É fornecida uma interface de controle em Python para configuração de parâmetros e interação com o dispositivo.
+O ajuste permite configurar os algoritmos de áudio integrados e falar diretamente com o chip XMOS. É fornecida uma interface de controle em Python para configuração de parâmetros e interação com o dispositivo.
 
 [**Diretório de controle em Python**](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm/tree/main/python_control)
 
 Com os scripts fornecidos você pode:
 
-- Configurar parâmetros dos algoritmos de áudio integrados
+- Configurar parâmetros de algoritmos de áudio integrados
 - Obter dados de DoA (Direction of Arrival)
 - Obter dados de VAD (Voice Activity Detection)
 - Controlar os LEDs onboard
@@ -571,7 +594,7 @@ Com os scripts fornecidos você pode:
 
 **Requisitos do sistema**
 
-- Python 3.6 ou superior
+- Python 3.6 ou posterior
 - Biblioteca Python `pyusb`
 - Biblioteca de sistema `libusb`
 
@@ -581,7 +604,7 @@ Com os scripts fornecidos você pode:
 pip install pyusb
 ```
 
-No Windows, o pacote pip `libusb-package` é a forma mais simples de fornecer o libusb. No Linux, instale o libusb através do seu gerenciador de pacotes.
+No Windows, o pacote pip `libusb-package` é a maneira mais simples de fornecer o libusb. No Linux, instale o libusb através do seu gerenciador de pacotes.
 
 ### Uso
 
@@ -598,7 +621,7 @@ python xvf_host.py [options] command [--values value(s)...]
 | `-l`, `--list` | Lista todos os comandos suportados com informações detalhadas |
 | `--vid` | Define o USB Vendor ID (padrão: `0x2886`) |
 | `--pid` | Define o USB Product ID; quando omitido, o dispositivo é descoberto automaticamente pelo VID |
-| `--values` | Fornece valores para comandos de escrita (opcional), em decimal ou hex (`0x7B`) |
+| `--values` | Fornece valores para comandos de escrita (opcional), decimal ou hex (`0x7B`) |
 
 ### Exemplos de uso
 
@@ -618,7 +641,7 @@ python xvf_host.py VERSION
 VERSION: [1, 0, 0]
 ```
 
-A tupla reportada corresponde ao firmware que você gravou.
+A tupla reportada segue o firmware que você gravou.
 
 **3. Ler a direção de chegada (Direction of Arrival)**
 
@@ -660,7 +683,7 @@ AEC_MIC_ARRAY_GEO:
 
 Os valores são as coordenadas X/Y dos microfones em metros, conforme usadas pelo beamformer. Verifique se a geometria reportada corresponde ao espaçamento entre microfones da sua placa e à imagem de firmware que você gravou antes de fazer medições acústicas ou calibração.
 
-### Seleção de canais de saída USB
+### Seleção de canal de saída USB
 
 O firmware USB roteia sinais para a saída estéreo através de `AUDIO_MGR_OP_L` e `AUDIO_MGR_OP_R`. Cada comando recebe dois valores: uma `category` (grupo de sinais) e uma `source` (sinal dentro desse grupo). Omita `--values` para ler o roteamento atual.
 
@@ -670,7 +693,7 @@ python xvf_host.py AUDIO_MGR_OP_L --values 6 3
 python xvf_host.py AUDIO_MGR_OP_R --values 1 0
 ```
 
-Esses dois últimos comandos roteiam o feixe selecionado automaticamente para o canal esquerdo e o microfone bruto 0 para o canal direito. Os fluxos de microfone bruto ignoram o aprimoramento de voz e normalmente são mais baixos que o áudio processado.
+Esses dois últimos comandos roteiam o feixe selecionado automaticamente para o canal esquerdo e o microfone bruto 0 para o canal direito. Os fluxos de microfone bruto ignoram o aprimoramento de voz e normalmente são mais silenciosos do que o áudio processado.
 
 Salve o roteamento para que ele persista após uma reinicialização:
 
@@ -680,7 +703,7 @@ python xvf_host.py SAVE_CONFIGURATION --values 1
 
 ## Solução de problemas
 
-### A reprodução no alto-falante está muito baixa no Linux
+### A reprodução do alto-falante está muito baixa no Linux
 
 A placa de som XVF3800 tem seus próprios níveis de mixer ALSA. Se a reprodução estiver muito baixa:
 
@@ -691,8 +714,8 @@ A placa de som XVF3800 tem seus próprios níveis de mixer ALSA. Se a reproduç�
    ```
 
 2. Pressione **F6**, selecione a placa `reSpeaker XVF3800 4-Mic 44mm` e pressione **Enter**.
-3. Use as setas para selecionar **PCM-1** e aumente para 100%.
-4. Saia com **ESC** e salve as configurações:
+3. Use as setas para selecionar **PCM-1** e aumente-o para 100%.
+4. Saia com **ESC** e armazene as configurações:
 
    ```bash
    sudo alsactl store
@@ -706,15 +729,15 @@ A placa de som XVF3800 tem seus próprios níveis de mixer ALSA. Se a reproduç�
 
 ### A placa não é listada como dispositivo de som no Windows após a gravação
 
-Abra o **Device Manager**, encontre as entradas relacionadas ao reSpeaker, clique com o botão direito em cada uma e escolha **Uninstall device**. Em seguida, desconecte e reconecte o cabo USB — o Windows reinstalará o driver correto da placa de som.
+Abra o **Gerenciador de Dispositivos**, encontre as entradas relacionadas à reSpeaker, clique com o botão direito em cada uma e escolha **Desinstalar dispositivo**. Em seguida, desconecte e reconecte o cabo USB — o Windows reinstalará o driver correto da placa de som.
 
-### `dfu-util -l` retorna LIBUSB_ERROR_NOT_SUPPORTED
+### `dfu-util -l` informa LIBUSB_ERROR_NOT_SUPPORTED
 
-O driver WinUSB não está vinculado à interface DFU. Instale o [Zadig](https://zadig.akeo.ie/), ative `Options > List All Devices`, selecione `reSpeaker 3800 44 mm`, instale o **WinUSB**, desligue e ligue novamente a placa e execute `dfu-util -l` outra vez.
+O driver WinUSB não está vinculado à interface DFU. Instale o [Zadig](https://zadig.akeo.ie/), ative `Options > List All Devices`, selecione `reSpeaker 3800 44 mm`, instale **WinUSB**, desligue e ligue novamente a placa e execute `dfu-util -l` outra vez.
 
 ### A placa não é enumerada de forma alguma
 
-Entre no **Safe Mode** (mantenha pressionado o botão de mute enquanto liga a alimentação, aguarde o LED vermelho piscar), depois regrave o firmware USB. O firmware de Safe Mode oferece suporte a USB DFU e I2C DFU, portanto ele sempre pode ser recuperado.
+Entre no **Modo de Segurança** (mantenha pressionado o botão de mute enquanto liga a alimentação, aguarde o LED vermelho piscar), depois regrave o firmware USB. O firmware do Modo de Segurança oferece suporte tanto a DFU via USB quanto a DFU via I2C, portanto ele sempre pode ser recuperado.
 
 ## Recursos
 
@@ -723,7 +746,7 @@ Entre no **Safe Mode** (mantenha pressionado o botão de mute enquanto liga a al
 
 {/* TODO: add 2D DXF and 3D STEP downloads here once the mechanical files are published */}
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

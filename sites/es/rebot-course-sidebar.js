@@ -214,6 +214,7 @@ const sidebars = {
             { type: 'doc', id: `${P}/es_Paper_Reading_WALL_OSS`, label: 'WALL-OSS — Razonamiento Encarnado y Control de Robots' },
             { type: 'doc', id: `${P}/es_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — Acciones entre Distintos Cuerpos y Percepción del Futuro' },
             { type: 'doc', id: `${P}/es_Paper_Reading_DM05`, label: 'DM0.5 — Contexto Histórico y Alineación de Trayectorias' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_G05`, label: 'G0.5 — Razonamiento y Acción en una Secuencia' },
           ],
         },
         {

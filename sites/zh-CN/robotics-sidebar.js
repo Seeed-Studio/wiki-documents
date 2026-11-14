@@ -202,6 +202,7 @@ const sidebars = {
       items: [
         { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/cn_Arm_Tutorial_Introduction`, label: '入门课程' },
         { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_Getting_Started`, label: '论文精读' },
+        { type: 'ref', id: `${K}/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA/cn_Sim2Real_VLA_Introduction`, label: 'Sim-to-Real VLA' },
         { type: 'link', label: 'Sim-to-Real with NVIDIA Isaac', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
       ],
     },

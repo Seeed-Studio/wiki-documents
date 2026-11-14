@@ -31,7 +31,7 @@ MUI (Meshtastic User Interface) es una interfaz gráfica de código abierto dise
 
 **Características clave**
 
-- **Mapa interactivo**: MUI muestra las ubicaciones de los nodos directamente en mapas en línea o sin conexión. Consulta los dispositivos cercanos y sus posiciones sin abrir una APP móvil o de escritorio.
+- **Mapa interactivo**: MUI muestra las ubicaciones de los nodos directamente en mapas en línea u offline. Comprueba los dispositivos cercanos y sus posiciones sin abrir una APP móvil o de escritorio.
 
 - **Configuración conveniente del dispositivo**: Configura los ajustes de Meshtastic directamente en el dispositivo, incluyendo radio, GPS, pantalla y otras opciones comunes. No se requiere una aplicación externa para la configuración rutinaria.
 
@@ -46,7 +46,7 @@ MUI (Meshtastic User Interface) es una interfaz gráfica de código abierto dise
 
 <Tabs>
 
-<TabItem value="1" label="MUI a BaseUI">
+<TabItem value="1" label="MUI to BaseUI">
 Ve a la página Setting **->** Elige `Reboot/Shutdown` **->** Mantén presionado el icono de Bluetooth **->** Haz clic en `OK`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIToBaseUI.png" alt="pir" width={900} height="auto" /></p>
@@ -64,7 +64,7 @@ Si solo haces clic en el icono de Bluetooth, entrarás en el modo Bluetooth. Si 
 
 </TabItem>
 
-<TabItem value="2" label="BaseUI a MUI">
+<TabItem value="2" label="BaseUI to MUI">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BasetoMui.png" alt="pir" width={900} height="auto" /></p>
 
@@ -91,7 +91,7 @@ Para empezar a comunicarte a través de la malla, debes configurar tu región. E
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
-Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para obtener una lista más completa.
+Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para ver una lista más completa.
 
 :::info
 **EU_868** debe cumplir con una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
@@ -99,7 +99,7 @@ Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 <Tabs>
 
-<TabItem value="7" label="Configurar en MUI">
+<TabItem value="7" label="Configure on MUI">
 
 Ve a la página `Setting`, haz clic en `Region`, elige la región y luego haz clic en `OK`.
 
@@ -107,16 +107,16 @@ Ve a la página `Setting`, haz clic en `Region`, elige la región y luego haz cl
 
 </TabItem>
 
-<TabItem value="9" label="Configurar en el teléfono">
+<TabItem value="9" label="Configure on Phone">
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Android App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndridLorasetting.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -133,7 +133,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 ### Uso del mapa
 <Tabs>
 
-<TabItem value="10" label="Mapa en línea">
+<TabItem value="10" label="Online Map">
 
 **Paso 1. Habilitar GPS**
 
@@ -153,13 +153,13 @@ Necesitas formatear e instalar el mapa en tu tarjeta SD. Para un tutorial detall
 
 **Paso 4. Ver el mapa**
 
-Espera a que el mapa se cargue. Después de conectarse correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa sin conexión.
+Espera a que el mapa se cargue. Después de conectarse correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa offline.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/OfflineMapL2.png" alt="pir" width={450} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="11" label="Mapa sin conexión">
+<TabItem value="11" label="Offline Map">
 
 **Paso 1. Habilitar GPS**
 
@@ -193,7 +193,7 @@ La red Wifi conectada debe ser de 2.4G. El Wifi de 5G no puede ser utilizado por
 
 **Paso 3. Ver el mapa**
 
-Espera a que el mapa se cargue. Después de conectarse correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa en línea.
+Espera a que el mapa se cargue. Después de conectarse correctamente a la red Wi‑Fi y obtener la ubicación, el dispositivo mostrará un mapa online.
 
 
 
@@ -225,7 +225,7 @@ Espera a que el mapa se cargue. Después de conectarse correctamente a la red Wi
 
 - **Haz clic en un canal**: Entra en el chat del canal
 
-- **Mantén presionado un canal**: Silencia/activa el sonido del canal
+- **Mantén presionado un canal**: Silenciar/activar el canal
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/ChannelPage.png" alt="pir" width={300} height="auto" /></p>
 
@@ -280,19 +280,19 @@ MUI está diseñado para ejecutarse en hardware que sea compatible con Meshtasti
 | GNSS | Receptor GNSS integrado para servicios de localización |
 | LoRa® | Radio LoRa® compatible para comunicación Meshtastic |
 | Almacenamiento | Ranura para tarjeta microSD para mapas sin conexión |
-| MCU | Se requiere una MCU de alto rendimiento, capaz de soportar tanto la visualización en pantalla como el firmware Meshtastic|
+| MCU | Se requiere una MCU de alto rendimiento, capaz de admitir tanto la visualización en pantalla como el firmware Meshtastic|
 
 
 **Seeed Wio Tracker L2** es la plataforma de hardware recomendada para MUI.
 
 Integra todos los componentes necesarios en un solo dispositivo:
 
-- Pantalla táctil a color
+- Pantalla táctil en color
 - GNSS integrado
 - Comunicación LoRa®
 - Conectividad Wi-Fi y Bluetooth®
 - Ranura para tarjeta microSD para mapas sin conexión
-- USB Tipo-C para programación y alimentación
+- USB Type-C para programación y alimentación
 
 No se requieren placas de expansión adicionales.
 
@@ -302,7 +302,7 @@ Haz clic en el icono del teclado que se muestra a continuación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Keyboardicon.png" alt="pir" width={500} height="auto" /></p>
 
-Entonces podrás introducir números y letras. No todas las páginas tienen un icono de teclado; normalmente solo aparece en las páginas donde se requiere entrada.
+Después podrás introducir números y letras. No todas las páginas tienen un icono de teclado; normalmente solo aparece en las páginas donde se requiere entrada.
 
 ### Por qué mi wifi se apaga automáticamente
 
@@ -321,3 +321,24 @@ El dispositivo no puede transmitir mensajes mqtt cuando está en MUI. Si quieres
 
 **Paso 4**. Inicia la transmisión de mensajes
 
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

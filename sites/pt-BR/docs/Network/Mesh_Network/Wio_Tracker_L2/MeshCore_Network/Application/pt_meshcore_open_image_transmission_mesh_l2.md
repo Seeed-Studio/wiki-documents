@@ -34,12 +34,12 @@ import TabItem from '@theme/TabItem';
 
 [MeshCore](https://meshcore.io/) é projetado para comunicação LoRa mesh de baixa largura de banda. A transmissão tradicional de imagens é difícil porque fotos normais geralmente exigem centenas de kilobytes ou mais de dados. O [MeshCore Open](https://meshcoreopen.org/) permite **transmissão de imagem com taxa de bits ultrabaixa** sobre MeshCore combinando:
 
-- Aplicativo MeshCore Open
+- App MeshCore Open
 - Compressão de imagem baseada em IA
 - Pacotes `GRP_DATA` do MeshCore
 
 
-Este recurso de transmissão de imagem é adequado para usuários que precisam compartilhar informações visuais em locais sem Internet confiável ou redes celulares.
+Esse recurso de transmissão de imagem é adequado para usuários que precisam compartilhar informações visuais em locais sem Internet confiável ou redes celulares.
 
 - **Exploradores ao ar livre**: Caminhantes, alpinistas e equipes de expedição podem compartilhar condições de trilha, enviar imagens de paisagens remotas e fornecer informações visuais quando o texto não é suficiente.
 - **Equipes de resposta a emergências e desastres**: A equipe pode compartilhar condições de campo, fornecer atualizações visuais rápidas e melhorar a consciência situacional da equipe por meio de imagens.
@@ -68,11 +68,11 @@ AI Decoder
 Reconstructed Image
 ```
 
-## Comece a Usar o MeshCore Open
+## Introdução ao MeshCore Open
 
-### Configuração Inicial
+### Configuração inicial
 
-1. Instale o aplicativo MeshCore Open. [Clique aqui](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar a versão do APP que suporta transmissão de imagem.
+1. Instale o App MeshCore Open. [Clique aqui](https://discord.com/channels/@me/1547501987703037965/1547520066478936134) para instalar a versão do APP que suporta transmissão de imagem.
 2. Conecte seu nó MeshCore ao APP. [Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_other_mesh_firmware/#connect-via-app) para ler o guia de conexão L1.
 3. Configure sua região LoRa e as configurações de rede.
 4. Certifique-se de que outro nó MeshCore esteja disponível como receptor.
@@ -89,7 +89,7 @@ Ative a transmissão de imagem e baixe os arquivos de modelo de ML na configura�
 
 ### Transmissão de Imagem
 
-Escolha uma imagem do seu telefone. 
+Escolha uma imagem do seu celular. 
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
@@ -110,4 +110,25 @@ A imagem de saída não é uma cópia perfeita em pixels da imagem original. O d
 
 - [Documentação do MeshCore Open](https://meshcoreopen.org/docs/getting-started/)
 - [Codec de Imagem de Taxa de Bits Ultrabaixa AEIC-SE](https://huggingface.co/zjs81/aeic-se-onnx)
-- [Tabela de Consumo de Energia do Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+
+## Suporte Técnico & Discussão de Produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
