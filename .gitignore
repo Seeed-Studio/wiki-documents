@@ -10,6 +10,7 @@
 
 # Generated files
 /scripts/respeaker-faq/state
+/scripts/recomputer-faq/state
 .docusaurus
 .cache-loader
 /sites/en/src
