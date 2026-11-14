@@ -1,6 +1,6 @@
 ---
 description: "Capítulo 2 del curso Sim-to-Real VLA de SO-ARM101 — LeRobot: contexto y comunidad: por qué LeRobot, el ecosistema del Hub y el ciclo recopilar-entrenar-desplegar-evaluar."
-title: Capítulo 2 - LeRobot: contexto y comunidad
+title: "Capítulo 2 - LeRobot: contexto y comunidad"
 hide_title: true
 keywords:
   - SO-ARM
