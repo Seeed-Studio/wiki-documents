@@ -186,7 +186,7 @@ SDK 的 `motor_whl/` 目录提供以下 `hightorque_robot` 预编译安装包。
 
 :::
 
-取得 SDK 后，在终端进入包含 `motor_whl/`、`requirements.txt` 和 `scripts/` 的项目根目录。以下 SDK 命令均在该目录执行。[获取 T701-HT SDK](https://github.com/Welt-liu/reBot-Arm-T701-SDK/tree/main)
+取得 SDK 后，在终端进入包含 `motor_whl/`、`requirements.txt` 和 `scripts/` 的项目根目录。以下 SDK 命令均在该目录执行。
 
 电脑上尚未安装 Conda 时，先安装 Miniforge。
 

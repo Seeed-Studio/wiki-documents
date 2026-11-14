@@ -188,7 +188,7 @@ The installation example below uses **Ubuntu 22.04 (x86_64) and Python 3.10**. F
 
 :::
 
-Open a terminal in the SDK root directory, which contains `motor_whl/`, `requirements.txt`, and `scripts/`. Run the SDK commands below from this directory. [Get the T701-HT SDK](https://github.com/Welt-liu/reBot-Arm-T701-SDK/tree/main)
+Open a terminal in the SDK root directory, which contains `motor_whl/`, `requirements.txt`, and `scripts/`. Run the SDK commands below from this directory.
 
 If you do not have Conda, install Miniforge.
 
