@@ -19,10 +19,10 @@ tags:
 image: https://files.seeedstudio.com/wiki/other/rugged-benchmark-front.png
 slug: /jetson-orin-industrial-vision-benchmark
 last_update:
-  date: 11/13/2026
+  date: 11/14/2026
   author: Dayu
 createdAt: '2026-11-13'
-updatedAt: '2026-11-13'
+updatedAt: '2026-11-14'
 url: https://wiki.seeedstudio.com/jetson-orin-industrial-vision-benchmark/
 ---
 
@@ -46,7 +46,7 @@ With the same four source files, sequential inference, and recording target, **O
 
 **Jetson Orin Nano 8GB — CPU x264 emulation**
 
-[![Jetson Orin Nano 8GB industrial vision dashboard with CPU x264 emulation](https://files.seeedstudio.com/wiki/other/jetson-industrial-vision-20261113-rerun-nano-dashboard.png)](https://files.seeedstudio.com/wiki/other/jetson-industrial-vision-20261113-rerun-nano-dashboard.png)
+[![Jetson Orin Nano 8GB industrial vision dashboard with CPU x264 emulation](https://files.seeedstudio.com/wiki/other/jetson-industrial-vision-20261114-nano-dashboard-jp62.png)](https://files.seeedstudio.com/wiki/other/jetson-industrial-vision-20261114-nano-dashboard-jp62.png)
 
 **Jetson Orin NX 16GB — Hardware NVENC**
 
@@ -57,9 +57,10 @@ With the same four source files, sequential inference, and recording target, **O
 | Configuration | Jetson Orin Nano 8GB | Jetson Orin NX 16GB |
 |---|---|---|
 | Module identification | Orin Nano 8GB | Orin NX 16GB |
-| Jetson Linux | L4T 35.5 | L4T 35.5 |
-| CUDA | 11.4 | 11.4 |
-| TensorRT | 8.5.2 | 8.5.2 |
+| JetPack deployment target | 6.2 | 5.1.3 |
+| Jetson Linux | L4T 36.4.3 | L4T 35.5 |
+| CUDA | 12.6.10 | 11.4 |
+| TensorRT | 10.3.0 | 8.5.2 |
 | Configured power mode | 25W | MAXN |
 | Runtime frequency limits | Default DVFS | CPU 1.50 GHz; GPU 816 MHz |
 | CPU normalization | Average across six cores | Average across eight cores |
@@ -67,6 +68,8 @@ With the same four source files, sequential inference, and recording target, **O
 | H.264 encoder | CPU x264 emulation; no NVENC | Hardware NVENC |
 | Inference configuration | Sequential batch 1, FP16 | Sequential batch 1, FP16 |
 | Cooling during the reported run | Passive cooling | Passive cooling |
+
+Software versions above describe deployment targets. The Nano target follows the JetPack 6.2 software stack; its previously recorded benchmark traces have not been repeated on this target image. The power mode is the configured module power budget; Nano's measured average module input power is 11.02 W during the recorded run.
 
 The model is YOLOv8n with a 640×640 letterboxed input, confidence threshold 0.30, and IoU threshold 0.45. Decoding and encoding retain the native **3840×2160** resolution. “4K analytics” describes the video pipeline; the detector itself consumes resized images.
 
