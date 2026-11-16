@@ -213,6 +213,8 @@ $$
 
 ![Teaching illustration 1: future latents condition action inference, and real feedback closes the loop](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop-en.png)
 
+[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop-en.png)
+
 *解説図：緑のボックスは予測された潜在表現、下部の青いボックスは実カメラからのもの。右側のフィードバック矢印を追うことで、実行結果が次の予測の基盤をどのように更新するかが分かる。*
 
 ## ビデオと行動が1つのモデルに入る仕組み
@@ -226,6 +228,8 @@ $$
 **形状の例：** LeRobot のデフォルト `frame_chunk_size=4`、`action_per_frame=4`、`action_dim=30` を用いると、内部の行動ストリームノイズは形状 `[1,30,4,4,1]` を取りうる。これは30チャネルを持つ16個の時間位置を表す。有効な行動チャネルは出力から選択され、`[batch,action_steps,robot_action_dimensions]` に変換される。これは固定実装からのインターフェース例であり、論文中のすべてのプラットフォームに共通するテンソル形状というわけではない。
 
 ![Teaching illustration 2: four video time points correspond to sixteen actions; denoising repeatedly updates the same chunk](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales-en.png)
+
+[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales-en.png)
 
 *解説図：上2行はロボット時間に従い、下の行は生成の進行に従う。各デノイジング更新は、実行時刻点を追加することなく、同じ行動チャンクを更新する。*
 
@@ -274,6 +278,8 @@ $$
 
 ![Teaching illustration 3: future access is restricted across temporal blocks, while bidirectional exchange is allowed within a block](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal-en.png)
 
+[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal-en.png)
+
 *解説図：行を読むことで「誰が読んでいるか」を、列を読むことで「何を読んでいるか」を特定する。この行列は時間ブロック間の関係のみを要約している。論文中の図3は、特に対応する将来視覚条件への逆ダイナミクス接続を含め、ビデオストリームとアクションストリーム間の詳細な可視性を定義している。*
 
 ### ノイズ付き履歴：動画を完全に復元する前にアクションを生成する
@@ -301,6 +307,8 @@ Transformer の KV キャッシュは、各層で履歴トークンから形成�
 論文はこれを **Forward Dynamics Model (FDM) グラウンディング**と呼んでいる：陳腐化した予測を補正する順方向ダイナミクス計算である。最新の実観測と現在実行中のアクションから出発し、その結果を再度予測し、その再整合された将来状態を用いて後続の動画とアクションを予測する。これはモデルの順方向予測能力を利用するものであり、論文は完全に別個のシミュレータを要求してはいない。ポストトレーニングでは式 (13) の順方向予測損失を追加し、アルゴリズム 2 は実行分岐と推論分岐の協調を記述している。
 
 ![解説図 4：最新の観測と進行中のアクションが、次の予測の開始状態を補正する](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding-en.png)
+
+[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding-en.png)
 
 *解説図：2 つの経路の違いは、最新のフィードバックを用いて現在のアクションの結果を再度予測するかどうかにある。下のタイムラインは、計算と実行がオーバーラップしていることを示しており、未来を直接観測しているわけでも、固定された時間比率を意味しているわけでもない。*
 
