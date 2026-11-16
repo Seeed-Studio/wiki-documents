@@ -116,7 +116,7 @@ XIAO ESP32S3 Sense のカードスロットは、ESP32-S3 の 14 本の GPIO を
             <td align="center">DVP_Y6</td>
             <td align="center">GPIO15</td>
             <td align="center">DVP_Y2</td>
-        </tr]
+        </tr>
         <tr>
             <td align="center">GPIO16</td>
             <td align="center">DVP_Y5</td>
