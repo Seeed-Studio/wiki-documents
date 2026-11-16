@@ -1,6 +1,6 @@
 ---
-description: "How to run SmolVLA on reBot Arm & SO-ARM101: a paper deep-dive into the lightweight SmolVLA architecture, community-data pre-training, asynchronous inference and ablations."
-title: "How to Run SmolVLA on reBot Arm & SO-ARM101"
+description: "A paper deep-dive into the lightweight SmolVLA architecture, community-data pre-training, asynchronous inference and ablations."
+title: "SmolVLA: How Lightweight Models Learn Robot Actions Efficiently"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_smolvla/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-smolvla-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-smolvla-title">How to Run SmolVLA on reBot Arm & SO-ARM101</h1>
+  <h1 id="paper-reading-smolvla-title">SmolVLA: How Lightweight Models Learn Robot Actions Efficiently</h1>
   <p className="paper-reading-lead">SmolVLA: A vision-language-action model for affordable and efficient robotics</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Lightweight VLA</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/smolvla" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot SmolVLA Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+- `--policy.path=lerobot/smolvla_base`: Load pretrained SmolVLA before fine-tuning on your task data.
+- `--dataset.repo_id=your_org/your_dataset`: Set the LeRobot dataset; replace the example repository ID with your own.
+- `--rename_map`: Supply a camera-name mapping for your dataset to match the camera1, camera2 and camera3 names expected by the checkpoint.
+
+</aside>
 
 ## Prerequisites
 ### VLMs and VLAs

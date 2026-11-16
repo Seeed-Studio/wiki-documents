@@ -1,36 +1,36 @@
 ---
-description: この Wiki では、reBot Arm B601 DM 向けに NVIDIA Isaac GR00T N1.7 をファインチューニングし、TensorRT アクセラレーションを用いて Jetson Thor 上にデプロイする方法を説明します。
-title: reBot Arm 向け GR00T N1.7 のファインチューニングと Jetson Thor へのデプロイ
+description: このWikiでは、NVIDIA Isaac GR00T N1.7をreBot Arm B601 DM向けにファインチューニングし、TensorRTによる高速化を用いてJetson Thor上にデプロイする方法を説明します。
+title: reBot Arm向けGR00T N1.7のファインチューニングとJetson Thorへのデプロイ
 keywords:
   - Jetson Thor
   - Robotics J601
   - reBot Arm
   - gr00t n1.7
   - reComputer
-image: https://files.seeedstudio.com/wiki/other/cover1.png
+image: https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
 slug: /fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601
 sku: E26052001
 last_update:
   date: 2026-06-12
   author: Zibo
 createdAt: '2026-06-12'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/ja/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/
 ---
 
-# reBot Arm 向け GR00T N1.7 のファインチューニングと Jetson Thor へのデプロイ
+# reBot Arm向けGR00T N1.7のファインチューニングとJetson Thorへのデプロイ
 
 ## はじめに
 
-この Wiki では、**NVIDIA Isaac GR00T N1.7 をファインチューニング**して **reBot Arm B601 DM** に対応させ、**TensorRT アクセラレーション**を用いて **reComputer Robotics J601** 上にデプロイする方法を説明します。
+**GR00T N1.7** はビジョン・ランゲージ・アクションモデルであり、**reBot Arm B601 DM** のデモンストレーションでファインチューニングすることで、そのアームおよびタスクに適応させることができます。チューニング済みチェックポイントは **TensorRT** にエクスポートされ、**Jetson Thor** を搭載した **reComputer Robotics J601** 上で提供されるため、アームはワークステーションではなくデバイス上で推論を実行できます。
 
 <p></p>
 
-**[NVIDIA GR00T N1.7](https://github.com/Nvidia/Isaac-GR00T)** は、最先端のエンドツーエンド Vision-Language-Action (VLA) 基盤モデルとして、エンボディドインテリジェンスの進化における大きな飛躍を示します。知覚と実行のギャップをシームレスに橋渡しし、ロボットが複雑な視覚入力や音声指示を、現実世界での物理的な動作へと直接変換できるようにします。新しい Cosmos Reason2-2B ビジョン・ランゲージモデルによって強化された GR00T N1.7 は、これまでにないレベルの環境認識を実現し、最先端の DiT (Diffusion Transformer) アクションデコーダにより、非常にスムーズなアクション生成と、現実世界の外乱に対する極めて高いロバスト性を提供します。
+**[NVIDIA GR00T N1.7](https://github.com/Nvidia/Isaac-GR00T)** は、最先端のエンドツーエンド Vision-Language-Action (VLA) ファウンデーションモデルとして、エンボディドインテリジェンスの進化における大きな飛躍を示します。知覚と実行のギャップをシームレスに埋め、ロボットが複雑な視覚入力や音声指示を、現実世界での物理的な動作へ直接変換できるようにします。新しい Cosmos Reason2-2B ビジョン・ランゲージモデルによって強化されたGR00T N1.7は、これまでにないレベルの環境認識を実現し、最先端のDiT (Diffusion Transformer) アクションデコーダにより、非常にスムーズなアクション生成と、現実世界の外乱に対する極めて高いロバスト性を提供します。
 <p></p>
 
 <div align="center">
-  <img width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
+  <img alt="GR00T N1 アーキテクチャ：画像観測、言語指示、およびロボット状態がビジョン・ランゲージモデル（System 2）に入力され、それがモーターアクショントークンを出力するディフュージョントランスフォーマー（System 1）を駆動する" width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
   "/>
 </div>
 
@@ -43,23 +43,23 @@ url: https://wiki.seeedstudio.com/ja/fine_tune_gr00t_n1.7_for_rebot_arm_and_depl
 - [reBot Arm B601‑DM Leader 用 Star Arm 102](https://www.seeedstudio.com/Star-Arm-102-p-6765.html)
 - [USB-to-CAN アダプタ](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
 - USB カメラ x2
-- ロボットアーム用の電源および USB ケーブル
+- ロボットアーム用の電源およびUSBケーブル
 
 ### ハードウェア接続
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
+  <img alt="2台のUSBカメラとともに、reBot Arm B601 DM がJ601キャリアボードに配線されている様子" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
 </div>
 
 
 ## データ収集
 
-独自の VLA モデルをデプロイしたい場合、まずはタスクに適したデータセットを収集してモデルをファインチューニングし、クロールタスクに適応できるようにする必要があります。環境構築とデータ収集については、[この Wiki](https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_lerobot/) を参照してください。
+独自のVLAモデルをデプロイしたい場合、まずはタスクに適したデータセットを収集してモデルをファインチューニングし、クロールタスクに適応できるようにする必要があります。環境構築とデータ収集については、[このWiki](https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_lerobot/) を参照してください。
 
 
 ## モデルのファインチューニング
 
-### Python 環境の準備
+### Python環境の準備
 
 ファインチューニング用サーバー（GPU 搭載 x86）上で、リポジトリをクローンし環境をセットアップします：
 
@@ -75,7 +75,7 @@ cd /examples/SO100/
 uv pip install -e .
 ```
 
-### データセット変換
+### データセットの変換
 
 LeRobot フレームワークで収集したデータセットは v3.0 形式ですが、GR00T が必要とするのは v2.0 形式です。Isaac-GR00T リポジトリに含まれる変換スクリプトを実行します：
 
@@ -91,13 +91,13 @@ uv run --project scripts/lerobot_conversion \
 ファイルパスは自身のデータセットパスに置き換えてください。
 :::
 
-実行後、これまでに収集した LeRobot データセットは v3.0 から v2.0 形式へダウングレードされます。
+実行後、これまでに収集したLeRobotデータセットは、v3.0形式からv2.0形式へダウングレードされます。
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
+  <img alt="ファインチューニング前に、LeRobot データセットが v3.0 から v2.0 形式へダウングレードされた状態" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
 </div>
 
-その後、次の `modality.json` ファイルを、変換後データセットの `meta` フォルダ内にコピーします：
+次に、以下の `modality.json` ファイルを、変換後データセットの `meta` フォルダにコピーします：
 
 <details>
 <summary>modality.json（クリックして展開）</summary>
@@ -170,13 +170,13 @@ bash examples/finetune.sh \
 :::
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
+  <img alt="トレーニングステップに対する損失をレポートしているファインチューニングの実行ログ" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
 </div>
 
-トレーニング完了後、`--output-dir` ディレクトリ内にファインチューニング済みの GR00T N1.7 モデルファイルが生成されます。
+トレーニング完了後、`--output-dir` ディレクトリ内に、ファインチューニング済みの GR00T N1.7 モデルファイルが生成されます。
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
+  <img alt="出力ディレクトリに書き出された、ファインチューニング済み GR00T N1.7 チェックポイントファイル" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
 </div>
 
 ## Jetson へのデプロイ
@@ -198,7 +198,7 @@ hf auth login
 🔗 [https://huggingface.co/nvidia/Cosmos-Reason2-2B](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
+  <img alt="モデルウェイトへのアクセス権を付与する Hugging Face ページ" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
 </div>
 
 ### リポジトリのクローン
@@ -215,7 +215,7 @@ git submodule update --init --recursive
 
 ### Docker セットアップ（推奨）
 
-Thor は CUDA 13 と Python 3.12 を使用しており、x86 や Orin とは異なる依存関係スタックが必要です。JetPack 7.1 でテスト済みです。Thor 上で実行する方法は 2 通りあり、Docker（推奨）またはベアメタルでの実行が可能です。
+Thor は CUDA 13 と Python 3.12 を使用しており、x86 や Orin とは異なる依存関係スタックが必要です。JetPack 7.1 でテスト済みです。Thor 上で実行する方法は、Docker（推奨）とベアメタルの2通りがあります。
 
 リポジトリのルートから Thor 用コンテナをビルドします：
 
@@ -223,7 +223,7 @@ Thor は CUDA 13 と Python 3.12 を使用しており、x86 や Orin とは異�
 cd docker && sudo bash build.sh --profile=thor
 ```
 
-ファインチューニング済みモデルをダウンロードします（ホスト上で 1 回だけ実行）：
+ファインチューニング済みモデルをダウンロードします（ホスト上で一度だけ実行）：
 
 ```bash
 uv run hf download nvidia/GR00T-N1.7-LIBERO \
@@ -236,7 +236,7 @@ uv run hf download nvidia/GR00T-N1.7-LIBERO \
   --local-dir checkpoints/GR00T-N1.7-LIBERO
 ```
 
-インタラクティブな Docker セッションを開始します（複数ステップの TRT 作業に推奨）：
+インタラクティブな Docker セッションを開始します（複数ステップのTRT作業に推奨）：
 
 ```bash
 # Add Docker to the user group
@@ -268,7 +268,7 @@ source scripts/activate_thor.sh
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
+  <img alt="virtualenv と activate_thor.sh を読み込んだ Jetson Thor 上での環境セットアップの様子" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
 </div>
 
 ### 環境の検証
@@ -292,9 +292,9 @@ uv run python scripts/deployment/standalone_inference_script.py \
 
 ## データセット形式の変換
 
-GR00T は LeRobot v2.1 形式のデータセットのみをサポートしています。しかし、LeRobot フレームワークでデータを収集する際に使用されるデータセット形式は v3.0 です。Jetson 上で TensorRT による高速化エンジンモデルをエクスポートするには、GR00T のトレーニング時と同じ形式にデータセットを変換する必要があります。
+GR00T は LeRobot v2.1 形式のデータセットのみをサポートしています。しかし、LeRobot フレームワークでデータを収集する際に使用されるデータセット形式は v3.0 です。Jetson 上で高速化された TensorRT エンジンモデルをエクスポートするには、GR00T のトレーニング時に使用したものと同じ形式にデータセットを変換する必要があります。
 
-次の変換スクリプトを `Isaac-GR00T` リポジトリ内の `scripts/convert_v3_to_v2.py` として配置します：
+以下の変換スクリプトを `Isaac-GR00T` リポジトリ内の `scripts/convert_v3_to_v2.py` として配置します：
 
 <details>
 <summary>convert_v3_to_v2.py（クリックして展開）</summary>
@@ -706,10 +706,10 @@ python3 scripts/deployment/build_trt_pipeline.py \
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
+  <img alt="bf16 TensorRT エンジンのエクスポートおよびビルド完了" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
 </div>
 
-エンジン形式の高速化および最適化されたモデルファイルと、待機中に生成される中間変換済み ONNX ファイルを取得できます。
+エンジン形式の高速化および最適化されたモデルファイルと、待機中に生成される中間の変換済み ONNX ファイルを受け取ることができます。
 
 ## Jetson Thor での推論
 
@@ -952,7 +952,7 @@ python eval_rebot_arm_dm.py \
 ```
 
 :::warning
-最初の実行時に、ロボットアーム用のキャリブレーションファイルが見つからないというエラーが報告される場合があります。これは、reBot Arm を検証するために LeRobot を使用した際に生成されるキャリブレーションファイルの名前が `follower1.json` である一方で、プログラム側は `b601_dm_follower.json` を探しているためです。問題を解決するには、キャリブレーションファイルの名前を変更してください：
+最初の実行では、ロボットアーム用のキャリブレーションファイルが見つからないというエラーが報告される場合があります。これは、reBot Arm を検証するために LeRobot を使用した際に生成されるキャリブレーションファイル名が `follower1.json` である一方で、プログラム側は `b601_dm_follower.json` を探しているためです。問題を解決するには、キャリブレーションファイルの名前を変更してください：
 
 ```bash
 mv ~/.cache/huggingface/lerobot/calibration/robots/seeed_b601_dm_follower/follower1.json \
@@ -970,9 +970,15 @@ mv ~/.cache/huggingface/lerobot/calibration/robots/seeed_b601_dm_follower/follow
 - 🔗 https://github.com/NVIDIA/Isaac-GR00T/tree/main
 - 🔗 https://huggingface.co/nvidia/GR00T-N1.7-LIBERO
 
+## 関連リソース
+
+- [reComputer Robotics J601 ハードウェアと I/O](/ja/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
+- [reComputer Robotics J401 インターフェースとピン配置](/ja/recomputer_jetson_robotics_j401_getting_started/)
+- [Hugging Face 上の GR00T N1.7 モデル](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
+
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

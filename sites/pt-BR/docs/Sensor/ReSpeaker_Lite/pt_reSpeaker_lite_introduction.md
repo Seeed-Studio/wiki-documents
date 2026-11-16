@@ -9,8 +9,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
-  date: 6/28/2024
-  author: Jessie
+  date: 11/09/2026
+  author: Ray
 createdAt: '2024-07-03'
 updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/pt-br/reSpeaker_usb_v3/
@@ -71,30 +71,30 @@ Alimentada pelo chipset de som e áudio com IA XMOS XU316, esta placa de desenvo
 |**Dimensões**|35\*86 mm|
 |**Saída de áudio**|Conector para alto-falante / Conector para fone de ouvido de 3,5 mm|
 |**Taxa máxima de amostragem**|16Khz|
-|**Alto-falante**|Suporta alto-falantes amplificados de 5 W.|
+|**Alto-falante**|Suporta alto-falantes com amplificador de 5 W.|
 
-## Visão geral do hardware
+## Visão geral de hardware
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-9.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-10.png" alt="pir" width={800} height="auto" /></p>
 
-## Pinagem
+## Pin Out
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/pinout.png" alt="pir" width={600} height="auto" /></p>
 
 |**1**|**Matriz de dois microfones**|Fornece entrada de áudio de alta qualidade.|
 | :- | :- | :- |
-|**2**|**Luz indicadora de alimentação**|Acende quando está ligado.|
+|**2**|**Luz indicadora de alimentação**|Acende quando está ligada.|
 |**3**|**Luz RGB**|WS2812 programável, fornece interface visual|
 |**4**|**Luz indicadora de mudo**|Acende em vermelho quando o botão de mudo é pressionado.|
 |**5**|**Botão USR**|Botão definido pelo usuário.|
 |**6**|**Botão de mudo**|Silencia a entrada de áudio quando pressionado.|
 |**7**|[XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) **(opcional)**|Para desenvolvimento e integração adicionais.|
-|**8**|**Processador principal XU316**|Responsável pelo processamento e transmissão de áudio.|
-|**9**|**Ilha de solda para alimentação externa**|Suporta fonte de alimentação externa de 5 V.|
+|**8**|**Processador central XU316**|Responsável pelo processamento e transmissão de áudio.|
+|**9**|**Ilha de solda para fonte de alimentação externa**|Suporta fonte de alimentação externa de 5 V.|
 |**10**|**Porta USB Type-C**|Usada para alimentação e transmissão de dados.|
-|**11**|**Conector para alto-falante**|Para saída de áudio. Suporta alto-falantes amplificados de 5 W.|
+|**11**|**Conector para alto-falante**|Para saída de áudio. Suporta alto-falantes com amplificador de 5 W.|
 |**12**|**Conector para fone de ouvido de 3,5 mm**|Saída de áudio. Podemos conectar alto-falantes ativos ou fones de ouvido nesta porta.|
 |**13**|**Ilha de alimentação externa 1**|Pinos de IO não utilizados no XIAO ESP32.|
 |**14**|**Ilha de alimentação externa 2**|Pinos de IO não utilizados no XU316.|
@@ -115,17 +115,17 @@ ReSpeaker Lite é uma interface de voz modular plug-and-play, sem necessidade de
 :::tip note
 Existem 2 versões para a placa ReSpeaker Lite:
 
-Para usá-la como um dispositivo de som USB, grave o firmware da versão USB (firmware padrão).
+Para usá-la como um dispositivo de som USB, faça o flash do firmware da versão USB (firmware padrão).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/usb_firmware.png" alt="pir" width={900} height="auto" /></p>
 
-Para usá-la com XIAO ESP32S3, grave o firmware da versão I2S.
+Para usá-la com XIAO ESP32S3, faça o flash do firmware da versão I2S.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/i2s_firmware.png" alt="pir" width={900} height="auto" /></p>
 :::
 
 #### Fiação
 
-Conecte a placa ReSpeaker Lite ao seu PC por meio do cabo USB.
+Conecte a placa ReSpeaker Lite ao seu PC via cabo USB.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-connect.png" alt="pir" width={500} height="auto" /></p>
 
@@ -149,7 +149,7 @@ import TabItem from '@theme/TabItem';
  Observe que os caminhos na variável Path são separados por ponto e vírgula ;.
  Isso permitirá que o dfu-util seja executado globalmente no prompt de comando.
 
-- Abra o menu Iniciar e digite cmd. Pressione a tecla Enter. No terminal que aparecer, verifique se o caminho do dfu-util.exe está definido com o comando dfu-util -V:
+- Abra o menu iniciar e digite cmd. Pressione a tecla Enter. No terminal que aparecer, verifique se o caminho do dfu-util.exe está definido com o comando dfu-util -V:
 
 ```
 C:\Users\yiping>dfu-util -V
@@ -161,7 +161,7 @@ This program is Free Software and has ABSOLUTELY NO WARRANTY
 Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 ```
 
-- Execute `dfu-util -l` para verificar se o ReSpeaker Lite foi detectado:
+- Execute `dfu-util -l` para verificar se o ReSpeaker Lite é detectado:
 
 ```
 C:\Users\yiping>dfu-util -l
@@ -203,7 +203,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-fac.png" alt="pir" width={500} height="auto" /></p>
 
-- Após a conclusão da instalação (isso levará alguns minutos), desligue e ligue o dispositivo e execute `dfu-util -l` novamente; o ReSpeaker Lite deve ser detectado agora
+- Após a conclusão da instalação (isso levará alguns minutos), desligue e ligue novamente a placa e execute `dfu-util -l` outra vez; o ReSpeaker Lite deve ser detectado agora
 
 </TabItem>
 
@@ -211,7 +211,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 - Instale o dfu-util com o [brew](https://brew.sh/): `brew install dfu-util`
 
-- Execute `dfu-util -l` para verificar se o ReSpeaker Lite foi detectado:
+- Execute `dfu-util -l` para verificar se o ReSpeaker Lite é detectado:
 
 ```
 ➜  ~ dfu-util -l
@@ -253,7 +253,7 @@ Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 </Tabs>
 
-#### Gravar Firmware
+#### Gravar firmware
 
 - Conecte a placa ReSpeaker ao seu PC.
 
@@ -302,12 +302,25 @@ dfu-util -l
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
 
-## Gravação e Reprodução 
+### Crie um assistente de voz com o Home Assistant
+
+Emparelhe o reSpeaker Lite com um [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) e grave o firmware ESPHome para transformá-lo em um satélite de assistente de voz para o Home Assistant. Depois de configurado, você pode dizer "Okay Nabu" para controlar e automatizar seus eletrodomésticos com a voz.
+
+O tutorial dedicado orienta você por toda a configuração:
+
+- Gravar o firmware I2S exigido pela integração ESPHome.
+- Instalar o ESPHome Builder e adicionar o reSpeaker Lite como um novo dispositivo no Home Assistant.
+- Enviar a configuração YAML e verificar os comandos de voz de ponta a ponta.
+- Soldar os botões USR e mute em D2 e D3 para habilitar o suporte a botões.
+
+[Crie um sistema de assistente de voz para o Home Assistant](/pt-br/respeaker_lite_ha)
+
+## Gravação e reprodução 
 
 ### Configurar o Audacity 
 
 1. Abra o **Audacity**
-2. Vá em **Audio Setup > Audio Settings**
+2. Vá para **Audio Setup > Audio Settings**
 
 
 3. Defina:
@@ -328,7 +341,7 @@ dfu-util -l
 
 - **Não é possível encontrar o dispositivo de som `ReSpeaker Lite`.**
 
- Verifique a versão do firmware e certifique-se de que o firmware é a versão USB e acima de `2.0.5`.
+ Verifique a versão do firmware, certifique-se de que o firmware é a versão USB e acima de `2.0.5`.
 
  ```
  dfu-util -l
@@ -336,18 +349,18 @@ dfu-util -l
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
- Se não for a versão USB, siga [esta etapa](https://wiki.seeedstudio.com/pt-br/reSpeaker_usb_v3/#gravar-firmware) para gravar o firmware.
+ Se não for a versão USB, siga [esta etapa](https://wiki.seeedstudio.com/pt-br/reSpeaker_usb_v3/#flash-firmware) para gravar o firmware.
 
 - **Não é possível detectar o dispositivo de som USB ReSpeaker Lite no Windows após gravar o firmware USB?**
 
-- Abra o menu Iniciar e digite `Device manager`. Encontre o dispositivo `ReSpeaker Lite`, clique com o botão direito nele e selecione `Uninstall device`. Selecione `Delete the driver software for this device` e clique em `Uninstall`. Depois disso, reinicie o dispositivo e o Windows irá reinstalar o driver correto da placa de som para ele.
+- Abra o menu iniciar e digite `Device manager`. Encontre o dispositivo `ReSpeaker Lite`, clique com o botão direito nele e selecione `Uninstall device`. Selecione `Delete the driver software for this device` e clique em `Uninstall`. Depois disso, reinicie o dispositivo e o Windows irá reinstalar o driver de placa de som correto para ele.
 
  <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/delete-driver.png" alt="pir" width={600} height="auto" /></p>
 
 ### Recursos
 
-[ReSpeaker Lite XMOS Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
+[Firmware XMOS do ReSpeaker Lite](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
-[ReSpeaker Lite Github](https://github.com/respeaker/ReSpeaker_Lite/)
+[Github do ReSpeaker Lite](https://github.com/respeaker/ReSpeaker_Lite/)
 
 [Arquivo 3D do ReSpeaker Lite](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)

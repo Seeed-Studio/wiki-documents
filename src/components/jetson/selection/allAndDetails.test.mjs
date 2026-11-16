@@ -77,13 +77,17 @@ test("published TOPS thresholds include boundaries and stay independent of other
     ["275", 3],
   ]) {
     const list = filteredProducts(f({ computeMin }), "all");
-    assert.equal(list.length, count);
+    assert.equal(list.length, count + 1);
     assert.ok(
       list.every(
-        (p) => p.type === "system" && publishedTops(p) >= Number(computeMin),
+        (p) =>
+          p.id === "CBR" ||
+          (p.type === "system" && publishedTops(p) >= Number(computeMin)),
       ),
     );
-    assert.deepEqual(list, filteredProducts(f({ computeMin }), "system"));
+    const systems = filteredProducts(f({ computeMin }), "system");
+    assert.equal(systems.length, count);
+    assert.deepEqual(list.filter((p) => p.type === "system"), systems);
   }
   for (const { value } of computeOptions()) {
     assert.ok(
@@ -108,14 +112,14 @@ test("published TOPS thresholds include boundaries and stay independent of other
         p.memoryGb >= 16 && p.ports.usb_a_count >= 6 && publishedTops(p) >= 100,
     ),
   );
-  assert.equal(
+  assert.deepEqual(
     filteredProducts(f({ computeMin: "275", module: "agx_thor" }), "all")
-      .length,
-    0,
+      .map((p) => p.id),
+    ["CBR"],
   );
 });
 
-test("GFLOPS, carriers and undocumented or conflicting compute cannot satisfy TOPS", () => {
+test("GFLOPS, ordinary carriers and undocumented or conflicting compute cannot satisfy TOPS", () => {
   assert.equal(publishedTops(p("C")), null);
   assert.equal(matchesProduct(p("C"), f({ computeMin: "20" }), "all"), false);
   assert.equal(publishedTops(p("CBR")), null);
@@ -251,4 +255,53 @@ test("references consolidate per document; existing guides and batch firmware ev
   );
   assert.doesNotMatch(component, /Source ↗|specSource/);
   assert.match(component, /useState\("all"\)/);
+});
+
+test("J601 joins existing compute tiers without borrowing a TOPS fact or bypassing other filters", () => {
+  const high = f({ computeMin: "275" });
+  assert.deepEqual(
+    filteredProducts(high, "all").map((p) => p.id),
+    ["AF", "AQ", "AT", "CBR"],
+  );
+  assert.equal(groupProducts(filteredProducts(high, "all")).length, 4);
+  for (const { value } of computeOptions())
+    assert.ok(filteredProducts(f({ computeMin: value }), "all").includes(p("CBR")));
+  assert.equal(publishedTops(p("CBR")), null);
+  assert.equal(p("CBR").moduleSpec, null);
+  assert.match(p("CBR").moduleCompatibility, /T4000.*T5000.*purchased separately/);
+  assert.deepEqual(filteredProducts(high, "carrier"), [p("CBR")]);
+  for (const changes of [
+    { module: "agx_orin" },
+    { memory: "4" },
+    { interfaces: ["gmsl"] },
+    { interfaces: ["usb_a"], usbAMin: "5" },
+    { jetpack: "6.2" },
+    { voltage: "49" },
+    { temperature: "61" },
+    { search: "J401" },
+    { application: "learning" },
+    { storage: "sata_count" },
+    { ip: "IP66" },
+    { computeMin: "276" },
+  ]) {
+    assert.equal(
+      matchesProduct(p("CBR"), { ...high, ...changes }, "all"),
+      false,
+      JSON.stringify(changes),
+    );
+  }
+  assert.deepEqual(
+    filteredProducts({
+      ...high,
+      module: "agx_thor",
+      jetpack: "7.1",
+      voltage: "24",
+      interfaces: ["usb_a", "ethernet10"],
+      usbAMin: "4",
+    }, "all"),
+    [p("CBR")],
+  );
+  assert.equal(matchesProduct({ ...p("CBR"), supportedModules: [] }, high, "all"), false);
+  assert.equal(matchesProduct({ ...p("CBR"), familyId: "other" }, high, "all"), false);
+  assert.equal(filteredProducts(emptyFilters(), "all").length, 65);
 });

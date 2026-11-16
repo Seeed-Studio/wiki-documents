@@ -1,5 +1,5 @@
 ---
-description: This wiki focuses on using the J501 carrier board with the GMSL expansion board to perform AI video analysis tasks in a multi - camera system with Jetson AGX Orin. First, it lists the prerequisites including the hardware modules and the required JetPack SDK. Then, it details the GMSL camera configuration process, such as creating and setting up a configuration script and a systemd service. Next, it shows how to quickly deploy YOLO11 for real - time object detection of eight cameras by downloading and installing necessary packages, exporting the TensorRT model, and running a Python script. After that, it explains how to install the VGGT environment and run a script for 3D reconstruction of eight cameras, with a note about the impact of fisheye camera distortion on the result. Finally, it provides useful resources and multiple channels for tech support and product discussion.`
+description: "Run 8 GMSL2 cameras on Jetson AGX Orin with the J501 carrier: camera configuration, YOLO11 TensorRT detection and VGGT 3D reconstruction."
 title: Multi-GMSL Cameras for Real-Time Object Detection and 3D Reconstruction on Jetson AGX Orin
 keywords:
   - j501 carrier board
@@ -13,15 +13,15 @@ image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo1.webp
 slug: /multiple_cameras_with_jetson
 sku: 101090101, 102991855, 102991854, E24081601, 206001693, 206001694
 last_update:
-  date: 06/30/2025
+  date: 11/06/2026
   author: Zibo
 createdAt: '2025-06-27'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/multiple_cameras_with_jetson/
 ---
 
 <div style={{ textAlign: "justify" }}>
-This wiki will use the reServer Industrial J501 Carrier Board with the GMSL extension board to introduce how to deploy real-time object detection and 3D reconstruction in a multi-camera system.
+Eight GMSL2 cameras on one Jetson AGX Orin, with YOLO11 detection and VGGT 3D reconstruction reading from the same streams. The build was verified on JetPack 6.2 with the reServer Industrial J501 carrier board and its J501-GMSL extension board. Working through it leaves you with a camera configuration script, a TensorRT YOLO11 build that handles eight streams, and a VGGT reconstruction pipeline.
 </div>
 
 <div class="table-center">
@@ -34,17 +34,17 @@ This wiki will use the reServer Industrial J501 Carrier Board with the GMSL exte
     <tr>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="NVIDIA Jetson AGX Orin module, top view" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="reServer Industrial J501 carrier board, angled top view" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="reServer Industrial J501-GMSL extension board, angled top view" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
     </tr>
@@ -82,12 +82,16 @@ This wiki will use the reServer Industrial J501 Carrier Board with the GMSL exte
 - reServer Industrial J501-GMSL extension board
 - [GMSL Camera](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
 
+:::note
+This walkthrough targets JetPack 6.2 with CUDA 12.6, the build the wheel links below are compiled for. The [J501 flashing guide](/reserver_j501_getting_started/) lists JetPack 5.x and 6.x images only, so there is no JetPack 7.x image path for this carrier board documented yet.
+:::
+
 ## GMSL Camera Configuration
 
 ## Hardware Connection
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
+  <img alt="J501 with GMSL extension board and eight GMSL cameras connected, FAKRA cables labeled CAM0 to CAM7" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
@@ -158,7 +162,7 @@ sudo systemctl enable mediactl-init.service
 sudo systemctl start mediactl-init.service
 ```
 
-**Step 5.** Reboot the device and check if the service is running:
+**Step 6.** Reboot the device and check if the service is running:
 
 ```bash
 sudo systemctl status mediactl-init.service
@@ -175,7 +179,7 @@ gst-launch-1.0 v4l2src device=/dev/video7  ! xvimagesink -ev
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
+  <img alt="Eight gst-launch-1.0 windows, one per GMSL camera, each showing the live view with its own timestamp overlay" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
 </div>
 
 :::info
@@ -321,7 +325,7 @@ if __name__ == "__main__":
 </details>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
+  <img alt="Multi-Camera window running YOLO11 on eight streams with FPS and box labels, beside jetson_release and jtop output" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
@@ -765,16 +769,43 @@ If you are running this script on a remote server, replace `localhost` with the 
 http://`localhost`:8080
 :::
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
+  <img alt="Terminal output of viser starting on port 8080 with its HTTP and WebSocket URLs" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
+  <img alt="Viser browser view of the point cloud reconstructed from eight cameras, showing a laptop and desk surface" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
 </div>
 
 :::note
 Since the camera we are using is a fisheye camera with severe distortion, the image quality after distortion correction is poor, which will affect the final 3D modeling result. If you use a camera with less distortion and higher image quality, the effect will be improved.
 :::
+
+## FAQ
+
+**How many GMSL cameras can the J501 drive at once?**
+Eight. The J501-GMSL extension board takes eight camera inputs on the reServer Industrial J501 carrier board, which is built for the AGX Orin module in 32GB and 64GB. Once `mediactl-init.service` is running, the streams enumerate as `/dev/video0` through `/dev/video7`.
+
+**Do the cameras need reconfiguring after every reboot?**
+No. The serializer and deserializer formats live in `media-setup.sh`, which is registered as the `mediactl-init.service` systemd unit and re-applies them at boot. If a camera stops appearing, start with `systemctl status mediactl-init.service` before touching the script.
+
+**Are the eight streams time-synchronized?**
+Yes. The extension board provides PTP timestamp accuracy below 1 ms across its eight inputs, which is why the eight `gst-launch-1.0` windows show the same millisecond overlay. That matters for the 3D reconstruction, which needs the views to line up in time.
+
+**Which JetPack version does this build target?**
+JetPack 6.2 with CUDA 12.6. The prebuilt wheels linked in the YOLO11 section — `onnxruntime_gpu` 1.22.0, `torch` 2.7.0 and `torchvision` 0.22.0, all cp310 — are built for that combination, so a different JetPack needs matching wheels from the Jetson AI Lab index rather than the ones on this page.
+
+**Why does the reconstructed point cloud look rough?**
+The demo cameras are fisheye with heavy distortion, and the `defisheye` correction in the script costs image quality before VGGT ever sees the frames. Swapping in a camera with less distortion and better optics gives a denser, cleaner point cloud without changing the rest of the pipeline.
+
+## Related Resources
+
+- [Flash JetPack for reServer Industrial J501](/reserver_j501_getting_started/)
+- [reServer Industrial J501 Carrier Board Interfaces](/j501_carrier_board_interfaces_usage/)
+- [Sensing GMSL Camera](/sensing_gmsl_cameras)
+- [YOLOv11 With Depth Camera on Jetson Orin For Distance Measurement](/yolov11_with_depth_camera/)
+- [Efficient Multi-Task Vision Inference Engine Deployment on Jetson](/deploy_visual_perception_engine_recomputer/)
+- [reServer Industrial J501 product page](https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html)
+- [wiki-documents repository and discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## Resources
 

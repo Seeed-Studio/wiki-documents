@@ -1,6 +1,6 @@
 ---
-description: "How to run ACT on reBot Arm & SO-ARM101: a paper deep-dive into ACT imitation learning, the ALOHA bimanual teleoperation system, action chunking, temporal ensembling and the CVAE network."
-title: "How to Run ACT on reBot Arm & SO-ARM101"
+description: "A paper deep-dive into ACT imitation learning, the ALOHA bimanual teleoperation system, action chunking, temporal ensembling and the CVAE network."
+title: "ACT: How Action Chunking Enables Low-Cost Bimanual Manipulation"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_act/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-act-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-act-title">How to Run ACT on reBot Arm & SO-ARM101</h1>
+  <h1 id="paper-reading-act-title">ACT: How Action Chunking Enables Low-Cost Bimanual Manipulation</h1>
   <p className="paper-reading-lead">Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Imitation learning</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/act" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot ACT Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+- `--policy.type=act`: Select ACT for training from demonstrations.
+- `--policy.chunk_size=100`: Predict 100 actions per chunk; n_action_steps separately controls how many are executed.
+- `--policy.temporal_ensemble_coeff=0.01 --policy.n_action_steps=1`: Enable temporal ensembling and predict again at every control step; ensembling requires n_action_steps=1.
+
+</aside>
 
 ## Prerequisites
 

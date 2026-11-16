@@ -1,11 +1,11 @@
 ---
-description: このFAQでは、Jetson AGX Orin 向けの JetPack 7.2 における主な変更点、Seeed による JetPack 7.2 と JetPack 6.2 の推論比較結果の概要、および Seeed Jetson DevelopTool を用いたアップグレード方法を説明します。
+description: このFAQでは、Jetson AGX Orin 向け JetPack 7.2 の主な変更点、Seeed による JetPack 7.2 と JetPack 6.2 の推論比較結果の概要、および Seeed Jetson DevelopTool を用いたアップグレード方法を説明します。
 title: JetPack 7.2 徹底解説
 keywords:
   - Jetson
   - JetPack 7.2
   - Jetson AGX Orin
-  - エッジ AI
+  - エッジAI
   - 大規模言語モデル
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/-/1-e26020301-recomputer-jetson-agx-orin_-developer-kit-gmsl-bundle.jpg
 slug: /jetpack72_deep_dive_bk
@@ -18,9 +18,16 @@ updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/ja/jetpack72_deep_dive_bk/
 ---
 
-# JetPack 7.2 徹底解説：Jetson AGX Orin の推論はどう変わるのか？
+import Head from '@docusaurus/Head';
 
-このFAQでは、JetPack 7.2 が Jetson AGX Orin ユーザーにとって重要である理由、JetPack 7.2 と JetPack 6.2 を比較する際に Seeed が実施した測定内容、および Seeed Jetson DevelopTool を用いてアップグレードパスを評価する方法をまとめています。
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
+# JetPack 7.2 徹底解説：Jetson AGX Orin の推論はどう変わる？
+
+このFAQでは、JetPack 7.2 が Jetson AGX Orin ユーザーにとって重要である理由、Seeed が JetPack 7.2 と JetPack 6.2 を比較して測定した内容、および Seeed Jetson DevelopTool を使ってアップグレードパスを評価する方法をまとめています。
 
 Seeed が使用したテストプラットフォームは、reComputer Jetson AGX Orin Developer Kit GMSL Bundle です。
 
@@ -38,9 +45,9 @@ Seeed が使用したテストプラットフォームは、reComputer Jetson AG
 
 #### Q1: Jetson ユーザー向けの JetPack 7.2 の主な変更点は何ですか？
 
-JetPack 7.2 は、より新しい Jetson Linux ベース、Ubuntu 24.04、CUDA 13、更新された AI ランタイムコンポーネント、およびメモリ効率やエージェント型 AI ワークフロー向けのプラットフォームレベルの改善により、Jetson ソフトウェアスタックを前進させています。
+JetPack 7.2 は、より新しい Jetson Linux ベース、Ubuntu 24.04、CUDA 13、更新された AI ランタイムコンポーネントに加え、メモリ効率やエージェント型AIワークフロー向けのプラットフォームレベルの改善により、Jetson ソフトウェアスタックを前進させます。
 
-Jetson AGX Orin 32GB ユーザーにとって最も重要な変更点の 1 つは、Seeed のテストで使用された新しい高性能電力モードです。これにより、同じモジュールでもキャリアボードの電源および熱設計が対応できる場合には、より高い GPU 周波数で動作し、より高い AI スループットを実現できます。
+Jetson AGX Orin 32GB ユーザーにとって最も重要な変更点の1つは、Seeed のテストで使用された新しい高性能電力モードです。これにより、同じモジュールでもキャリアボードの電源および熱設計が対応できる場合には、より高い GPU 周波数で動作し、より高い AI スループットを実現できます。
 
 :::note
 対象のキャリアボードおよびイメージでサポートされる正確なコンポーネントバージョンについては、必ず NVIDIA のリリースノートと Seeed の BSP リリースノートを確認してください。
@@ -61,9 +68,9 @@ Seeed は、AGX Orin 32GB Developer Kit と reComputer J5011 を用い、JetPack
 | モデル | Qwen3.5-27B-Q4_K_M.gguf | Qwen3.5-27B-Q4_K_M.gguf |
 | 主なパラメータ | `-ngl 999 -fa on -ub 512 -t 12` | `-ngl 999 -fa on -ub 512 -t 12` |
 
-#### Q3: Seeed はどのようなメモリおよび性能改善を確認しましたか？
+#### Q3: Seeed はどのようなメモリおよび性能向上を確認しましたか？
 
-Seeed の比較では、JetPack 7.2 によりモデル読み込み後のメモリ使用量が削減され、プロンプト処理速度とトークン生成速度の両方が向上しました。
+Seeed の比較では、JetPack 7.2 によってモデル読み込み後のメモリ使用量が削減され、プロンプト処理速度とトークン生成速度の両方が向上しました。
 
 | 指標 | JetPack 6.2 | JetPack 7.2 | 観測された変化 |
 | --- | --- | --- | --- |
@@ -74,9 +81,9 @@ Seeed の比較では、JetPack 7.2 によりモデル読み込み後のメモ�
 
 最も実用的な結果はメモリの余裕です。JetPack 6.2 実行時には、27B モデルが読み込み後に利用可能なメモリの大部分を占有していました。JetPack 7.2 実行時には、システムはおよそ 10 GB 多くのメモリを利用可能な状態に保っており、これは LLM ワークロードと並行してビジョン前処理、ロボティクスミドルウェア、その他のサービスを実行する際に有用です。
 
-#### Q4: JetPack 7.2 と JetPack 6.2 の比較結果を視聴できますか？
+#### Q4: JetPack 7.2 と JetPack 6.2 の比較結果を動画で見ることはできますか？
 
-はい。以下の動画で比較の様子を確認できます。
+はい。以下の動画で比較の様子を見ることができます。
 
 <div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/rO0ZPA2VK9w" title="JetPack 7.2 and JetPack 6.2 comparison on Jetson AGX Orin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -84,20 +91,20 @@ Seeed の比較では、JetPack 7.2 によりモデル読み込み後のメモ�
 
 #### Q5: Jetson デバイスを JetPack 7.2 にアップグレードすべきですか？
 
-まずは次の表を参考にしてください。
+出発点として、次の表を参考にしてください。
 
 | シナリオ | 推奨事項 |
 | --- | --- |
 | 新規 Jetson AGX Orin プロジェクト | 必要な BSP、ドライバ、およびアプリケーションスタックが利用可能であれば、JetPack 7.2 から開始することを検討してください。 |
 | 既存の JetPack 6.x プロジェクト | 移行前に、カーネルモジュール、CUDA 依存関係、TensorRT エンジン、カメラドライバ、および周辺機器ドライバを検証してください。 |
-| メモリに制約のある LLM または VLM ワークロード | 測定されたメモリ削減により、より大きなモデルやマルチサービスパイプラインを実行しやすくなる可能性があるため、JetPack 7.2 を評価する価値があります。 |
-| カスタムキャリアボードを用いた本番システム | `apt upgrade` の実行だけでアップグレードしないでください。Seeed が提供する検証済みのフルイメージ、または正式にサポートされた OTA パスを使用してください。 |
+| メモリに制約されている LLM または VLM ワークロード | 測定されたメモリ削減により、より大きなモデルやマルチサービスパイプラインを実行しやすくなる可能性があるため、JetPack 7.2 を評価する価値があります。 |
+| カスタムキャリアボードを用いた本番システム | `apt upgrade` の実行だけでアップグレードしないでください。Seeed が提供する検証済みのフルイメージ、または公式にサポートされた OTA パスを使用してください。 |
 
 :::caution
 高性能モードでは、電力および熱の要件が増加します。高電力モードを有効にする前に、キャリアボード、電源アダプタ、筐体、および放熱設計が対象ワークロードを継続的に支えられることを確認してください。
 :::
 
-#### Q6: Seeed Jetson DevelopTool を使って JetPack 7.2 にアップグレードするにはどうすればよいですか？
+#### Q6: Seeed Jetson DevelopTool を使って JetPack 7.2 にどのようにアップグレードできますか？
 
 Seeed Jetson DevelopTool は、Jetson のファームウェアダウンロード、フラッシュ、デバイス接続、および OTA 操作のためのガイド付きワークフローを提供します。
 
@@ -107,7 +114,7 @@ Seeed Jetson DevelopTool は、Jetson のファームウェアダウンロード
 
 JetPack 6.x から JetPack 7.x へのようなメジャーバージョン移行では、Seeed が特定の製品および元イメージ向けに検証済み OTA パスを明示的に提供していない限り、フルフラッシュを推奨します。
 
-JetPack 7.2 のフラッシュおよび OTA に関する完全な判断フロー、DevelopTool の動画、検証コマンド、移行チェックリストについては、[Flash and OTA Upgrade to JetPack 7.2](/ja/flash_and_ota_jetpack_7.2/) を参照してください。
+JetPack 7.2 へのフラッシュおよび OTA アップグレードに関する完全な判断フロー、DevelopTool の動画、検証コマンド、および移行チェックリストについては、[Flash and OTA Upgrade to JetPack 7.2](/ja/flash_and_ota_jetpack_7.2/) を参照してください。
 
 一般的なワークフロー：
 
@@ -124,14 +131,14 @@ JetPack 7.2 のフラッシュおよび OTA に関する完全な判断フロー
 
 #### Q7: アップグレード後に何を検証すべきですか？
 
-フラッシュまたはアップグレード後、本番ワークロードを実行する前に次の項目を確認してください。
+フラッシュまたはアップグレード後、本番ワークロードを実行する前に、次の項目を確認してください。
 
 - JetPack、L4T、CUDA、cuDNN、および TensorRT のバージョン。
 - 負荷時の GPU 周波数、電力モード、および熱挙動。
 - カメラ、GMSL、Ethernet、CAN、USB、M.2 などの周辺インターフェース。
 - カスタムカーネルモジュールおよびツリー外ドライバ。
 - PyTorch、TensorRT エンジン、llama.cpp ビルド、CUDA 拡張などを含む AI フレームワークの互換性。
-- 電力および温度の安定性を確認するための長時間ストレステスト。
+- 電力および温度の安定性を確認する長時間ストレステスト。
 
 ## リソース
 
@@ -142,7 +149,7 @@ JetPack 7.2 のフラッシュおよび OTA に関する完全な判断フロー
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

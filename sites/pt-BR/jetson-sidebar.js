@@ -229,6 +229,14 @@ const sidebars = {
               'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_J2032/pt_reServer_J2032_Getting_Started',
             ],
           },
+          {
+            type: 'category',
+            label: 'Placa carrier reServer J501',
+            items: [
+              'Edge/NVIDIA_Jetson/Carrier_Boards/J501/pt_reServer_Industrial_J501_Getting_Started',
+              'Edge/NVIDIA_Jetson/Carrier_Boards/J501/pt_Hardware_Interfaces_Usage',
+            ],
+          },
         ],
       },
 {
@@ -239,6 +247,7 @@ const sidebars = {
       items: [
         'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8822CE_Wireless_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8852BE_Wireless_Module_for_Jetson',
+        'Edge/NVIDIA_Jetson/Other_Devices/pt_USB_KVM_Capture_Kit_getting_start',
         'Edge/NVIDIA_Jetson/Other_Devices/pt_RM520N_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/pt_EM12-G_GNSS_Module_for_reComputer_Robotics_J3011',
         'Edge/NVIDIA_Jetson/FAQs/pt_How_to_use_Camera_IMX219',
@@ -406,6 +415,7 @@ const sidebars = {
       label: 'Visão computacional',
           customProps: { communityCategory: 'cv' },
           items: [
+            'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Industrial_Vision_Benchmark_on_Jetson_Orin_Nano_and_Orin_NX',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson_AGX_Thor',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Streaming_Vision_Agent_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_industrial_vision_monitoring_on_industrial',
@@ -424,6 +434,7 @@ const sidebars = {
           customProps: { communityCategory: 'gen' },
           items: [
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Accelerate_LLM_Inference_with_MTP_on_Jetson',
+            'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Build_Local_AI_Agent_on_Jetson_Orin_with_Laya_and_Qwen',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Finetune_LLM_by_Llama_Factory_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
             'Edge/NVIDIA_Jetson/Application/Generative_AI/pt_Local_RAG_based_on_Jetson_with_LlamaIndex',

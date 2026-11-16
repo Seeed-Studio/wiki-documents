@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 SmolVLA：论文精读轻量级 SmolVLA 架构、社区数据预训练、异步推理与消融实验。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 SmolVLA
+description: "精读 论文精读轻量级 SmolVLA 架构、社区数据预训练、异步推理与消融实验。"
+title: "SmolVLA：轻量模型如何高效学习机器人动作"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_smolvla/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-smolvla-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-smolvla-title">如何在 reBot Arm 与 SO-ARM101 上运行 SmolVLA</h1>
+  <h1 id="paper-reading-smolvla-title">SmolVLA：轻量模型如何高效学习机器人动作</h1>
   <p className="paper-reading-lead">SmolVLA: A vision-language-action model for affordable and efficient robotics</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>轻量 VLA</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/smolvla" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot SmolVLA 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.path=lerobot/smolvla_base`：加载预训练 SmolVLA，再用自己的任务数据微调。
+- `--dataset.repo_id=your_org/your_dataset`：指定 LeRobot 格式的数据集；将示例仓库名替换为自己的数据集。
+- `--rename_map`：按自己的数据字段提供相机名映射，对齐检查点所需的 camera1、camera2、camera3。
+
+</aside>
 
 ## 预备知识
 ### VLM 和 VLA 有什么区别

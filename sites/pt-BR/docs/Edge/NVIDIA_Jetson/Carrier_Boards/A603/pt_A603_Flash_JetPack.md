@@ -149,6 +149,13 @@ Antes de tudo, você precisa instalar os drivers dos periféricos para esta plac
       <td>39.2.0</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+
+<tr>
+      <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -684,6 +691,105 @@ Dicas: Fazer backup e restaurar a imagem do sistema
   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
   ```
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+Aqui iremos instalar o **JetPack 7.2.1** na Placa Carrier A603 com um módulo Jetson Orin NX ou Jetson Orin Nano.
+
+### Requisitos de hardware
+
+- PC host Ubuntu 20.04 ou Ubuntu 22.04 com acesso à internet
+- Cabo de dados Type-C (deve suportar transferência de dados)
+- Placa Carrier A603 com um módulo Jetson Orin NX ou Jetson Orin Nano
+- Adaptador de energia
+- O PC host de gravação deve ter `wget`, `tar` e `sudo` instalados
+
+### Preparar os arquivos de gravação
+
+**Passo 1:** Crie um diretório de trabalho no PC host com Ubuntu.
+
+```bash
+mkdir -p ~/a603_flash
+cd ~/a603_flash
+```
+
+**Passo 2:** Baixe os dois arquivos a seguir e coloque-os no mesmo diretório (por exemplo, a partir de [esta pasta](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo)):
+
+- `603_jp721.sh`
+- `603_jp721.tbz2`
+
+:::note
+**Não** extraia o `603_jp721.tbz2` manualmente — o script extrairá o pacote de drivers automaticamente.
+:::
+
+**Passo 3:** Execute o script:
+
+```bash
+./603_jp721.sh
+```
+
+:::caution
+**Não** execute `sudo ./603_jp721.sh` ou `sudo bash 603_jp721.sh`. O script solicitará sua senha sudo quando forem necessários direitos de administrador. Executar todo o script com `sudo` faz com que o diretório gerado fique `root:root` e cause problemas de permissão nas etapas posteriores.
+:::
+
+**Passo 4:** O script baixa automaticamente os pacotes oficiais do JetPack 7.2.1, extrai o rootfs, extrai o pacote de drivers e substitui os arquivos de driver da A603. O tempo de download depende da velocidade da sua rede — não interrompa o processo.
+
+**Passo 5:** Quando você vir a mensagem a seguir, o diretório de gravação está pronto:
+
+```
+603_jp721 package applied successfully.
+```
+
+O diretório de gravação montado é:
+
+```
+~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+### Coloque o dispositivo em modo de recuperação
+
+1. Desconecte a placa Carrier A603 da alimentação.
+2. Faça um curto-circuito entre o pino RECOVERY e o pino GND na placa carrier.
+3. Conecte a placa carrier ao PC host com um cabo de dados Type-C.
+4. Ligue a placa.
+5. No PC host, execute `lsusb`. Um dispositivo NVIDIA aparecerá quando a placa estiver em modo de recuperação.
+
+### Grave o sistema
+
+1. Certifique-se de que o dispositivo ainda esteja em modo de recuperação.
+2. Entre no diretório de gravação:
+
+```bash
+cd ~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+3. Grave o sistema com o seguinte comando:
+
+```bash
+sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+4. Aguarde até o comando terminar. Não desconecte o cabo Type-C, não desligue o PC host nem corte a alimentação da placa carrier durante a gravação.
+5. Depois que a gravação for concluída, remova o jumper de curto-circuito entre RECOVERY e GND e ligue o dispositivo novamente.
+
+### Perguntas frequentes
+
+1. **`Required path is missing: .../603_jp721.tbz2`**
+   - Causa: o pacote de drivers não está no mesmo diretório do script.
+   - Correção: certifique-se de que `603_jp721.sh` e `603_jp721.tbz2` estejam no mesmo diretório e execute o script novamente.
+
+2. **`Required path is missing: .../bootloader` ou similar**
+   - Causa: o pacote de drivers não foi extraído corretamente, ou o arquivo do pacote está incompleto.
+   - Correção: certifique-se de usar o `603_jp721.tbz2` e baixe novamente o pacote de drivers completo, depois execute o script novamente.
+
+3. **A pasta mostra `root:root` ou permissões `777`**
+   - Causa: o script de montagem foi executado com `sudo`.
+   - Correção: exclua a pasta `603_jp721_flash` gerada e execute `./603_jp721.sh` como usuário normal para remontar.
+
+4. **`lsusb` não mostra um dispositivo NVIDIA**
+   - Correção: verifique se RECOVERY e GND estão em curto-circuito, se o cabo Type-C suporta transferência de dados e se a placa está ligada. Em seguida, reconecte o cabo Type-C e execute `lsusb` novamente.
 
 </TabItem>
 

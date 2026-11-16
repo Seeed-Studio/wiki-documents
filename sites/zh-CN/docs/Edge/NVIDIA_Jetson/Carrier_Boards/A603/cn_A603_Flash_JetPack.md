@@ -149,6 +149,13 @@ A603 载板是一款功能强大的扩展板，支持 Jetson Orin™ NX/Nano 模
       <td>39.2.0</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr" target="_blank" rel="noopener noreferrer">下载</a></td>
     </tr>
+
+<tr>
+      <td>Jetson Orin NX 8GB/16GB、<br />Jetson Orin Nano 4GB/8GB</td>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo" target="_blank" rel="noopener noreferrer">下载</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -683,6 +690,105 @@ sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
   ```
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+这里我们将在 A603 载板配合 Jetson Orin NX 或 Jetson Orin Nano 模组上安装 **JetPack 7.2.1**。
+
+### 硬件准备
+
+- 一台能够访问互联网的 Ubuntu 20.04 或 Ubuntu 22.04 主机电脑
+- Type-C 数据线（请使用支持数据传输的线缆）
+- A603 载板 + Jetson Orin NX 或 Jetson Orin Nano 模组
+- 电源适配器
+- 刷机主机须已安装 wget、tar 和 sudo
+
+### 准备刷机文件
+
+**步骤 1：** 在 Ubuntu 主机电脑上新建工作目录：
+
+```bash
+mkdir -p ~/a603_flash
+cd ~/a603_flash
+```
+
+**步骤 2：** 下载以下两个文件，放到同一个目录（例如从[这个文件夹](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo)）：
+
+- `603_jp721.sh`
+- `603_jp721.tbz2`
+
+:::note
+不要手动解压 `603_jp721.tbz2`，脚本会自动解压驱动包。
+:::
+
+**步骤 3：** 直接运行脚本：
+
+```bash
+./603_jp721.sh
+```
+
+:::caution
+请不要使用 `sudo ./603_jp721.sh` 或 `sudo bash 603_jp721.sh`。脚本会在需要管理员权限时自动提示输入当前用户的 sudo 密码。整段脚本以 sudo 运行会使生成目录变成 root:root，造成后续操作和目录权限异常。
+:::
+
+**步骤 4：** 脚本会自动下载 JetPack 7.2.1 官方包、解压 rootfs、解压驱动包并覆盖 A603 驱动文件。下载时间取决于网络速度，请勿中途中断。
+
+**步骤 5：** 看到以下提示表示刷机目录已组装完成：
+
+```
+603_jp721 package applied successfully.
+```
+
+组装完成后的刷机目录为：
+
+```
+~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+### 使设备进入 Recovery 模式
+
+1. 断开 A603 载板电源。
+2. 短接载板上的 RECOVERY 引脚和 GND 引脚。
+3. 使用 Type-C 数据线连接载板和主机电脑。
+4. 给载板上电。
+5. 在主机电脑执行 `lsusb`。输出中出现 NVIDIA 设备，表示设备已进入 Recovery 模式。
+
+### 开始刷机
+
+1. 确认设备仍处于 Recovery 模式。
+2. 进入刷机目录：
+
+```bash
+cd ~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+3. 执行刷机命令：
+
+```bash
+sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+4. 等待命令执行完成。刷写过程中请不要断开 Type-C 数据线、关闭主机电脑或切断载板电源。
+5. 刷写成功后，断开 RECOVERY 与 GND 的短接，再重新上电启动设备。
+
+### 常见问题
+
+1. **提示 “Required path is missing: .../603_jp721.tbz2”**
+   - 原因：驱动包没有与脚本放在同一个目录。
+   - 处理：确认 `603_jp721.sh` 和 `603_jp721.tbz2` 位于同一目录后重新运行。
+
+2. **提示 “Required path is missing: .../bootloader” 或类似错误**
+   - 原因：驱动包没有正确解压，或驱动包文件不完整。
+   - 处理：确认使用的是 `603_jp721.tbz2`，并重新获取完整驱动包后再次运行脚本。
+
+3. **目录显示为 root:root 或权限为 777**
+   - 原因：使用 sudo 执行了整段组包脚本。
+   - 处理：删除本次生成的 `603_jp721_flash` 目录后，以普通用户执行 `./603_jp721.sh` 重新组包。
+
+4. **lsusb 未发现 NVIDIA 设备**
+   - 处理：检查 RECOVERY 与 GND 是否已短接、Type-C 线是否支持数据传输、设备是否已上电，然后重新插拔 Type-C 线并再次执行 lsusb。
 
 </TabItem>
 

@@ -1,6 +1,6 @@
 ---
 description: Este artículo explica cómo desplegar el framework de agentes NemoClaw/OpenClaw de NVIDIA en Nvidia Jetson Thor e integrar el brazo robótico reBot Arm B601 para construir un sistema local de automatización con IA que combine percepción visual, razonamiento con LLM y ejecución robótica. Proporciona una guía de configuración completa que cubre conexiones de hardware, instalación de NemoClaw y Ollama, configuración del backend del brazo robótico, gestión de permisos, servicios de auto‑inicio con systemd y resolución de problemas.
-title: Controlar reBot Arm con NemoClaw en Nvidia Jetson Thor
+title: Controlar Rebot Arm con NemoClaw en Nvidia Jetson Thor
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor_bk
 sku: 100060965 | 100046482
@@ -12,9 +12,16 @@ url: https://wiki.seeedstudio.com/es/control_rebot_arm_with_nemoclaw_on_nvidia_j
 updatedAt: '2026-07-31'
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Controlar reBot Arm B601 con NemoClaw en Nvidia Jetson Thor
 
-:::note JetPack 7.2 collection copy
+:::note Copia de la colección JetPack 7.2
 Este ejemplo de Jetson Thor está incluido como un flujo de trabajo de IA agentiva en el ecosistema JetPack 7.2. Confirma la versión instalada de JetPack/L4T y vuelve a validar las versiones de NemoClaw, Ollama, contenedor y servicios antes del despliegue.
 :::
 
@@ -45,7 +52,7 @@ NVIDIA `NemoClaw` es una pila de referencia de código abierto que simplifica la
 <table style={{ textAlign: 'center' }}>
     <tr>
         <th> reBot Arm B601 </th>
-        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
+        <th> Kit de desarrollo NVIDIA® Jetson AGX Thor™ </th>
     </tr>
     <tr>
         <td>
@@ -130,10 +137,10 @@ Instala NemoClaw en Jetson:
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-Luego ejecuta `nemoclaw onboard` para crear una nueva aplicación. Un registro de incorporación interactiva de ejemplo se muestra en:
+Luego ejecuta `nemoclaw onboard` para crear una nueva app. Un registro de onboarding interactivo de ejemplo se muestra en:
 
 <details>
-<summary> nemoclaw onboard log </summary>
+<summary> registro de nemoclaw onboard </summary>
 
 ```bash
 seeed@seeed:~$ nemoclaw onboard --no-gpu
@@ -468,7 +475,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 5. Configuración de permisos del dispositivo
 
-Hay dos formas de configurar los permisos del dispositivo.
+Hay dos formas de configurar el permiso del dispositivo.
 
 1. Permiso temporal (se pierde después de reiniciar):
 
@@ -613,22 +620,22 @@ sudo journalctl -u rebot-f1-listener.service -f
 1. Puerto serie ocupado (`Device or resource busy`)  
 Detén los procesos obsoletos y vuelve a conectar. Asegúrate de que solo un proceso de control esté usando el brazo.
 
-2. Escena vacía en WebUI  
+2. Escena WebUI vacía  
 Comprueba que las solicitudes de URDF y mallas devuelvan `200`, especialmente `/assets/urdf/...`.
 
 3. La detección no responde  
-Comprueba que `camera/status` sea `running=true`, luego revisa el endpoint de estado de la misión.
+Comprueba que `camera/status` sea `running=true`, luego comprueba el endpoint de estado de la misión.
 
 4. Fallo al importar Torch por bibliotecas faltantes  
 Asegúrate de que `LD_LIBRARY_PATH` incluya las rutas tanto de `nvpl` como de `cuda_v12`.
 
 5. La tecla rápida F1 no tiene efecto  
-Revisa los registros de `rebot-f1-listener.service` y confirma que escucha el dispositivo de teclado correcto.
+Comprueba los registros de `rebot-f1-listener.service` y confirma que escucha el dispositivo de teclado correcto.
 
 6. Otras teclas del teclado dejan de funcionar después de iniciar el listener  
 Asegúrate de que el script no use `dev.grab()` (la captura exclusiva del teclado debe eliminarse).
 
-7. Fallo en la conexión del segundo brazo  
+7. Fallo en la conexión de un segundo brazo  
 Asegúrate de que la conexión anterior esté completamente liberada; llama a disconnect antes de reconectar.
 
 ## 9. Referencias

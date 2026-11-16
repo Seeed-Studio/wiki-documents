@@ -248,6 +248,16 @@ Please refer to the table below to prepare the host machine.
 
 :::
 
+:::tip Flashing from Windows? Use Seeed Jetson DevelopTool
+
+The manual flashing flow requires an **Ubuntu** host PC. If you are flashing from a **Windows** computer, use [**Seeed Jetson DevelopTool**](/jetson_developtool_overview/) — our all-in-one GUI that supports **Windows hosts** and enables easy one-click flashing (Flash Center) with no commands needed.
+
+- [Seeed Jetson DevelopTool Overview](/jetson_developtool_overview/)
+- [Installation (Ubuntu / Windows)](/jetson_developtool_installation/)
+- [Flash Firmware with Flash Center](/jetson_developtool_flash_firmware/)
+
+:::
+
 ### Enter Force Recovery Mode
 
 :::note

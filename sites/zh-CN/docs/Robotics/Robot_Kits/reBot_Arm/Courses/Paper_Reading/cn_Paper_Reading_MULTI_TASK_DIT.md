@@ -1,6 +1,6 @@
 ---
 description: "精读 TRI LBM 论文：理解条件 Diffusion Transformer、多任务预训练与数据效率，对照 LeRobot MultiTask DiT 的实现与应用。"
-title: LBM 与 MultiTask DiT 论文精读：多任务预训练如何帮助机器人学习
+title: "LBM 与 MultiTask DiT：多任务预训练如何帮助机器人学习"
 hide_title: true
 keywords:
   - 论文精读
@@ -17,10 +17,10 @@ displayed_sidebar: PaperReadingSidebar
 translation:
   skip: [zh-CN]
 last_update:
-  date: 2026-11-03
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-11-03'
-updatedAt: '2026-11-03'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_multi_task_dit/
 ---
 
@@ -44,6 +44,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/multi_task_dit" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot MultiTask DiT 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.type=multi_task_dit`：选择 LeRobot MultiTask DiT；它受 LBM 路线启发，不能直接等同于论文原始系统。
+- `--policy.horizon=32 --policy.n_action_steps=24`：设置包含历史对齐位置的 32 步预测窗口，并取其中 24 步执行；窗口与执行段的区别见正文。
+- `--policy.objective=diffusion`：使用扩散目标；flow_matching 是另一种目标，需要搭配其积分配置。
+
+</aside>
 
 多任务示范能否让机器人用更少数据学会新任务，并更好地应对环境变化？这篇论文固定策略架构，通过受控实验检验预训练的收益。
 
@@ -310,7 +324,7 @@ SR 小提琴图表示基于成功/失败记录估计的真实成功概率的贝�
 
 ## LeRobot 实现与应用
 
-以下对照固定提交 `f5c9bc0`（源码链接见参考资料）。LeRobot MultiTask DiT 参考了 LBM 的条件 DiT 路线，但配置、数据处理与训练结果应按各自来源理解。
+以下对照固定提交 `f5c9bc0`。LeRobot MultiTask DiT 参考了 LBM 的条件 DiT 路线，但配置、数据处理与训练结果应按各自来源理解。
 
 ### 配置对照
 
@@ -356,14 +370,5 @@ LeRobot 可以从 CLIP 预训练权重初始化图像与文本编码器，再用
 这篇论文的重点是用固定策略架构和受控评测，检验多任务预训练是否带来收益。在所测任务上，预训练后微调能提高跨任务汇总表现，并减少达到相近表现所需的目标任务示范；测试条件变化时，部分优势更明显。
 
 这些发现支持多样化示范预训练的价值，也保留了清楚的边界：收益依赖任务与微调条件，完成度提升不一定转化为完整成功；未微调模型没有稳定胜过单任务策略。阅读时，应把网络如何生成动作、实验如何比较策略，以及结果能支持多大范围的结论一起理解。
-
-## 参考资料
-
-1. TRI LBM Team. [A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation](https://arxiv.org/abs/2507.05331v1)，2025。
-2. TRI. [LBM 项目页](https://toyotaresearchinstitute.github.io/lbm1/)。
-3. Hugging Face. [Multitask DiT Policy](https://huggingface.co/docs/lerobot/main/en/multi_task_dit)。
-4. Hugging Face / Bryson Jones. [固定提交的配置](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/configuration_multi_task_dit.py)、[模型](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/modeling_multi_task_dit.py)与[处理器](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/multi_task_dit/processor_multi_task_dit.py)。
-5. Boston Dynamics. [Large Behavior Models and Atlas Find New Footing](https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/)；Atlas 的 DiT 与流匹配应用。
-6. Bryson Jones. [Dissecting and Open-Sourcing Multitask Diffusion Transformer Policy](https://brysonkjones.substack.com/p/dissecting-and-open-sourcing-multitask-diffusion-transformer-policy)；开源实现作者的结构与实践说明。
 
 </div>

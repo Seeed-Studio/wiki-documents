@@ -1,5 +1,5 @@
 ---
-description: reComputer Robotics J401 は、高度なロボティクス用途向けに設計された高性能エッジ AI キャリアボードです。Super/MAXN モードで動作する NVIDIA Jetson Orin Nano および Orin NX モジュールをサポートし、最大 157 TOPS の AI 演算性能を提供します。デュアル Gigabit Ethernet、複数の USB 3.2 ポート、CAN、5G/Wi-Fi/BT モジュール用の M.2 スロット、オプションの GMSL2 カメラ対応など、豊富な接続オプションを備えています。JetPack 6 をプリインストールしており、ロボティクス開発のシームレスなデプロイを実現します。堅牢な設計により広い動作温度範囲をサポートし、ファン付きヒートシンクもあらかじめ搭載されています。セットアップは、対応する Ubuntu ホスト PC を使用して JetPack OS を NVMe SSD にフラッシュし、その後ハードウェア構成と各種インターフェースを使用する手順で行います。開発者向けに、詳細なハードウェア仕様、機構図面、技術リソースが提供されており、トラブルシューティングやディスカッションのためのコミュニティおよび技術サポートチャネルも用意されています。
+description: "reComputer Robotics J401 の使用を開始するためのガイドです。仕様、Orin Nano および NX モジュール、JetPack 7.2 のフラッシュ、ハードウェア概要、初回起動時の確認事項を説明します。"
 title: reComputer Robotics 入門ガイド
 tags:
   - J401-Robotics キャリアボード
@@ -18,11 +18,11 @@ updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/ja/recomputer_robotics_j401_getting_started/
 ---
 <div style={{ textAlign: "justify" }}>
-reComputer Robotics J401 は、高度なロボティクス向けに設計されたコンパクトで高性能なエッジ AI キャリアボードです。Super/MAXN モードで動作する NVIDIA Jetson Orin Nano/Orin NX モジュールに対応し、最大 157 TOPS の AI 性能を発揮します。デュアル Gigabit Ethernet ポート、5G および Wi-Fi/BT モジュール用 M.2 スロット、6 つの USB 3.2 ポート、CAN、GMSL2（オプション拡張経由）、I2C、UART などの豊富な接続オプションを備え、各種センサーからの複雑なデータを処理できる強力なロボットブレインとして機能します。JetPack 6 と Linux BSP をプリインストールしており、シームレスなデプロイを実現します。​
+reComputer Robotics J401 は、高度なロボット向けに設計された、コンパクトで高性能なエッジ AI キャリアボードです。Super/MAXN モードの NVIDIA Jetson Orin Nano/Orin NX モジュールに対応し、最大 157 TOPS の AI 性能を発揮します。デュアル Gigabit Ethernet ポート、5G および Wi-Fi/BT モジュール用 M.2 スロット、6 つの USB 3.2 ポート、CAN、GMSL2（オプション拡張）、I2C、UART など、豊富な接続オプションを備え、各種センサーからの複雑なデータを処理できる強力なロボット用ブレインとして機能します。JetPack 6 と Linux BSP がプリインストールされており、シームレスな導入が可能です。​
 </div>
 
 <div align="center">
-  <img width ="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg"/>  
+  <img alt="NVIDIA Jetson Orin Nano / Orin NX バッジ付きの reComputer Robotics J401 エンクロージャの正面ポートが見える画像" width ="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg"/>  
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -30,13 +30,13 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
 <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
-<!-- Buy links -->
+<!-- 購入リンク -->
 
 ## 特長
 
-- **堅牢なハードウェア設計**: Super/MAXN モードで動作する NVIDIA® Jetson™ Orin™ NX 16GB モジュールを搭載したコンパクトで高性能なエッジ AI コンピュータで、最大 157 TOPS の AI 性能を提供します。
-- **ロボティクス向けの多彩なインターフェース**: デュアル RJ45、5G/Wi-Fi/BT モジュール用 M.2 スロット、6x USB 3.2、2x CAN、GMSL2（追加購入）、I2C、UART を備え、強力なロボットブレインとして機能します。
-- **ソフトウェアセットアップ**: JetPack 6.2 と Linux BSP をプリインストールしており、シームレスなデプロイが可能です。
+- **堅牢なハードウェア設計**: Super/MAXN モードの NVIDIA® Jetson™ Orin™ NX 16GB モジュールを搭載した、コンパクトで高性能なエッジ AI コンピュータで、最大 157 TOPS の AI 性能を提供します。
+- **ロボティクス向けの多彩なインターフェース**: デュアル RJ45、5G/Wi-Fi/BT モジュール用 M.2 スロット、6x USB 3.2、2x CAN、GMSL2（別売）、I2C、UART を備え、強力なロボット用ブレインとして機能します。
+- **ソフトウェアセットアップ**: JetPack 6.2 と Linux BSP をプリインストールしており、シームレスに導入できます。
 - **用途と利点**: 自律ロボットの迅速な開発に最適で、すぐに使えるインターフェースと最適化された AI フレームワークにより、製品化までの時間を短縮します。
 - **広い動作範囲**: 25W モードで -20°C ～ 60°C、40W モードで -20°C ～ 50°C の温度範囲で安定動作します。
 
@@ -61,11 +61,11 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
     <tr>
       <th rowSpan="3">ネットワーキング</th>
       <td>M.2 KEY E</td>
-      <td>1x M.2 Key E（WiFi/Bluetooth モジュール用）</td>
+      <td>WiFi/Bluetooth モジュール用 1x M.2 Key E</td>
     </tr>
     <tr>
       <td>M.2 KEY B</td>
-      <td>1x M.2 Key B（5G モジュール用）</td>
+      <td>5G モジュール用 1x M.2 Key B</td>
     </tr>
     <tr>
       <td>Ethernet</td>
@@ -74,11 +74,11 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
     <tr>
       <th rowSpan="13">I/O</th>
       <td>USB</td>
-      <td>6x USB 3.2 Type-A（5Gbps）；<br />1x USB 3.0 Type-C（Host/DP 1.4）；<br />1x USB 2.0 Type-C（Device Mode/Debug）</td>
+      <td>6x USB 3.2 Type-A (5Gbps);<br />1x USB 3.0 Type-C (Host/DP 1.4);<br />1x USB 2.0 Type-C (Device Mode/Debug)</td>
     </tr>
     <tr>
       <td>カメラ</td>
-      <td>1x 4 in 1 GMSL2（mini fakra）（オプションボード）</td>
+      <td>1x 4 in 1 GMSL2（ミニ fakra）（オプションボード）</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -110,7 +110,7 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
     </tr>
     <tr>
       <td>LED</td>
-      <td>3x LED（PWR、ACT、User LED）</td>
+      <td>3x LED（PWR、ACT、およびユーザー LED）</td>
     </tr>
     <tr>
       <td>ピンホールボタン</td>
@@ -130,11 +130,11 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
     </tr>
     <tr>
       <th rowSpan="1">Jetpack バージョン</th>
-      <td colSpan="2">JetPack 6 プリインストール；JetPack 7.2 対応</td>
+      <td colSpan="2">JetPack 6 プリインストール済み；JetPack 7.2 対応</td>
     </tr>
     <tr>
       <th rowSpan="3">機構</th>
-      <td>寸法（W x D x H）</td>
+      <td>寸法 (W x D x H)</td>
       <td>115mm x 115mm x 38mm</td>
     </tr>
     <tr>
@@ -147,7 +147,7 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
     </tr>
     <tr>
       <th rowSpan="1">動作温度</th>
-      <td colSpan="2">-20℃～60℃（25W モード）；<br />-20℃～55℃（40W モード）；<br />-20℃～50℃（MAXN モード）；<br />（reComputer Robotics ヒートシンク＆ファン使用時）</td>
+      <td colSpan="2">-20℃～60℃（25W モード）；<br />-20℃～55℃（40W モード）；<br />-20℃～50℃（MAXN モード）；<br />（reComputer Robotics ヒートシンク＋ファン使用時）</td>
     </tr>
     <tr>
       <th rowSpan="1">保証</th>
@@ -163,15 +163,15 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
 ## ハードウェア概要
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
+  <img alt="CAN0 と CAN1 が示された reComputer Robotics J401 のフロントパネル" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-1.jpeg"/>  
+  <img alt="Orin モジュール、2x XT30、CAN、UART、IIC ヘッダおよび 5V/12V PWM ファンコネクタがラベル表示された J401 キャリアボードの背面図" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-1.jpeg"/>  
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
+  <img alt="USB、RTC、M.2 Key B/E/M スロット、RJ45、カメラ拡張ヘッダおよび DIP スイッチがラベル表示された J401 キャリアボードの上面図" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
 </div>
 
 ## JetPack OS をフラッシュする
@@ -198,8 +198,8 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="4"> Ubuntu Version (Host Computer) </td>
+        <td  rowspan="2"> JetPack バージョン </td>
+        <td class="dbon" colspan="4"> Ubuntu バージョン（ホストコンピュータ） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -236,10 +236,10 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetpack Version</th>
-      <th>Jetson Module</th>
+      <th>Jetpack バージョン</th>
+      <th>Jetson モジュール</th>
       <th> GMSL </th>
-      <th>Download Link1</th>
+      <th>ダウンロードリンク1</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -285,7 +285,7 @@ reComputer Robotics J401 は、高度なロボティクス向けに設計され�
     <tr>
       <td>Orin NX 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBw84cKdsnuRYQLA1pkfg3mAY1x0HW0UMppZbnaDBaV6XI">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBw84cKdsnuRYQLA1pkfg3mAY1x0HW0UMppZbnaDBaV6XI">ダウンロード</a></td>
       <td>2712fe373afb3dff8202cdd9288b266f<br />080b76837eb13161918efd80111d9035</td>
     </tr>
     <tr>
@@ -305,7 +305,7 @@ JetPack イメージファイルはサイズが大きく、ダウンロードに
 :::info
 ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較します。
 
-Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ正常であることが確認できます。
 :::
 
 ### 強制リカバリーモードに入る
@@ -316,19 +316,19 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 
 <details>
 
-<summary> ステップバイステップ </summary>
+<summary> 手順 </summary>
 
-**Step 1.** スイッチを RESET モードに切り替えます。
+**ステップ 1.** スイッチを RESET モードに切り替えます。
 
 <div align="center">
-  <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
+  <img alt="スイッチが RESET モードに設定され、USB Type-C フラッシュポートが示されている J401 キャリアボード" width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
 </div>
 
-**Step 2.** 電源ケーブルを接続してキャリアボードの電源を入れます。
+**ステップ 2.** 電源ケーブルを接続してキャリアボードの電源を入れます。
 
-**Step 3.** USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続します。
+**ステップ 3.** USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続します。
 
-**Step 4.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
+**ステップ 4.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
@@ -338,14 +338,14 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 以下の画像は Orin Nano 8GB の例です
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
+  <img alt="lsusb の出力で NVIDIA Corp. APX デバイスがハイライトされており、ボードがリカバリーモードであることを確認している" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
 </div>
 
 </details>
 
-### Jetson へのフラッシュ
+### Jetson へフラッシュする
 
-**Step 1:** ダウンロードしたイメージファイルを解凍します：
+**ステップ 1:** ダウンロードしたイメージファイルを解凍します：
 
 ```bash
 cd <path-to-image>
@@ -353,7 +353,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-orin-nano-8g-j401-gmsl-6.2-36.4.3-2026-02-06.tar.gz
 ```
 
-**Step 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします：
+**ステップ 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -363,16 +363,16 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 フラッシュ処理が正常に完了すると、次のような出力が表示されます
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+<div align="center"><img alt="フラッシュスクリプトのターミナルログ。最後にフラッシュ完了のメッセージが表示されている" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**Step 3:** Robotics J401 をディスプレイに接続します。PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します：
+**ステップ 3:** Robotics J401 をディスプレイに接続します。PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します：
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
+  <img alt="HDMI 接続されたディスプレイに表示された JetPack 6 の初回起動構成ウィザード" width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
@@ -382,15 +382,40 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 ## ハードウェアインターフェースの使用
 
 :::info
-ハードウェアインターフェースの詳細な仕様や使用方法についてさらに知りたい場合は、[この wiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/#インターフェースの使用方法) を参照してください。
+ハードウェアインターフェースの詳細な仕様と使用方法についてさらに知りたい場合は、[この wiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/#インターフェースの使用) を参照してください。
 :::
+
+## FAQ
+
+**出荷時にデバイスには何が搭載されていますか？**
+JetPack 6.2 と Seeed Linux BSP がプリインストールされているため、フラッシュ作業を行わなくても、ユニットは Ubuntu デスクトップまで起動します。JetPack 7.2 もサポートされていますが、ホスト PC からフラッシュする必要があります。
+
+**どのモジュールバリエーションを注文できますか？**
+Orin Nano 4GB、Orin Nano 8GB、Orin NX 8GB、Orin NX 16GB です。GMSL カメラ拡張ボードを搭載したユニットは、GMSL ドライバを含む別の JetPack 6.2 イメージを使用します。
+
+**JetPack 7.2 をフラッシュするには、どのホスト Ubuntu を使用すべきですか？**
+Ubuntu 20.04、22.04、24.04 のいずれも、フラッシュおよびターゲット側コンポーネントに使用できます。Ubuntu 24.04 はこれら 2 つのステップに限定されます。ホスト側でも開発コンポーネントが必要な場合は、20.04 または 22.04 を使用してください。
+
+**フラッシュ前に別途リカバリーステップが必要ですか？**
+はい。スイッチを RESET モードに切り替え、USB Type-C データケーブルをホストに接続し、フラッシュスクリプトを実行する前に `lsusb` にモジュールが表示されることを確認してください。
+
+**インターフェースのピン配置とテストコマンドはどこにありますか？**
+それらはハードウェアインターフェースのページにあり、「Related Resources」からリンクされています。M.2 Key M/B/E、CAN および CAN FD、UART、I2C、USB、Ethernet、40 ピンヘッダをカバーしています。
+
+## 関連リソース
+
+- [reComputer Robotics J401 ハードウェアインターフェースの使用](/ja/recomputer_robotics_j401_getting_started/)
+- [GMSL 拡張ボードを使用して Jetson で複数の GMSL カメラを動作させる](/ja/multiple_cameras_with_jetson/)
+- [reComputer で EtherCAT 通信を実装する](/ja/recomputer_ethercat_communication/)
+- [reComputer Robotics J4012 製品ページ](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [wiki-documents リポジトリとディスカッション](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## リソース
 
 - [reComputer Robotics J401 キャリアボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
 - [reComputer Robotics J401 キャリアボードデータシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
 - [reComputer Robotics 3D ファイル](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
-- [Mechanical Document-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
+- [Mechanical Document - reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
 - [Seeed NVIDIA Jetson 製品カタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
 - [Nvidia Jetson 比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Nvidia Jetson 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
@@ -398,7 +423,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

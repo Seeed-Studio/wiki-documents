@@ -1,5 +1,5 @@
 ---
-description: This wiki provides a comprehensive, step-by-step guide for deploying Depth Anything V3 on Jetson AGX Orin devices. It covers environment setup, installation of key dependencies (CUDA, ROS2, TensorRT), model conversion to TensorRT engines, and real-time depth estimation with USB camera integration. The guide highlights Depth Anything V3's ability to generate high-quality depth maps from single RGB images with minimal computational overhead, making it ideal for robotics, autonomous navigation, and 3D perception applications on edge devices.
+description: "Deploy Depth Anything V3 on Jetson AGX Orin: CUDA and ROS 2 setup, ONNX to TensorRT conversion, and real-time depth from video."
 title: Deploy Depth Anything V3 on Jetson AGX Orin
 keywords:
   - Depth Anything V3
@@ -23,17 +23,17 @@ url: https://wiki.seeedstudio.com/deploy_depth_anything_v3_jetson_agx_orin/
 ---
 
 <div align="center">
-  <img width="600" src="https://github.com/ByteDance-Seed/Depth-Anything-3/raw/main/assets/images/demo320-2.gif"/>
+  <img alt="Depth Anything 3 sample output: the input frame, a colour depth map and the resulting point cloud" width="600" src="https://github.com/ByteDance-Seed/Depth-Anything-3/raw/main/assets/images/demo320-2.gif"/>
 </div>
 
 ## Introduction
 
 <div style={{ textAlign: "justify" }}>
-[Depth Anything V3](https://github.com/ByteDance-Seed/depth-anything-3) is a state-of-the-art monocular depth estimation model that revolutionizes 3D perception by generating high-quality depth maps from single RGB images. Unlike traditional depth estimation methods that require specialized hardware or multiple camera inputs, Depth Anything V3 leverages advanced deep learning techniques to predict accurate depth information using only standard 2D images. This makes it particularly valuable for edge AI applications where hardware constraints and computational efficiency are critical considerations. This wiki will guide you through deploying Depth Anything V3 on Jetson AGX Orin with ROS2 integration for real-time robotics applications.
+[Depth Anything V3](https://github.com/ByteDance-Seed/depth-anything-3) estimates depth from a single RGB image, so a robot with one camera gets a dense depth map without a stereo rig or a depth sensor. On Jetson AGX Orin the model is converted to a TensorRT engine and publishes depth on a ROS 2 topic, where a downstream detector or planner can use it. The sections below set up CUDA and ROS 2, convert ONNX to a TensorRT engine, and run it on camera and video input.
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="reComputer Mini J501 carrier board for Jetson AGX Orin, product photo" width={700}
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg" />
 </div>
 
@@ -50,7 +50,7 @@ url: https://wiki.seeedstudio.com/deploy_depth_anything_v3_jetson_agx_orin/
 
 
 <div align="center">
-    <img width={700}
+    <img alt="Real-time depth estimation from a USB camera running on the reComputer Mini J501" width={700}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/demo.gif"/>
 </div>
 
@@ -108,7 +108,7 @@ source ~/.bashrc
 nvcc --version
 ```
 <div align="center">
-    <img width={1000}
+    <img alt="nvcc --version output confirming the CUDA toolkit is on PATH" width={1000}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/nvcc.png"/>
 </div>
 
@@ -163,7 +163,7 @@ chmod +x generate_engines.sh
 Please be patient while the `.engine` file is being generated. Once the conversion is complete, two files will be created in the `onnx` directory as follows.
 
 <div align="center">
-    <img width={1000}
+    <img alt="onnx directory listing the generated TensorRT .engine files next to the ONNX models" width={1000}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/engine.png"/>
 </div>
 
@@ -216,7 +216,7 @@ The default topics published are:
 - `/camera` - Camera info
 
 <div align="center">
-    <img width={1000}
+    <img alt="v4l2_camera node running with the /image_raw and /camera topics published" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
 </div>
 
@@ -240,14 +240,14 @@ ros2 run camera_calibration cameracalibrator \
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator window with the checkerboard view and the CALIBRATE button" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
 </div>
 
 After successful calibration, you will obtain camera parameters in the terminal similar to:
 
 <div align="center">
-    <img width={1000}
+    <img alt="Camera intrinsics and distortion coefficients printed after calibration finishes" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
 </div>
 
@@ -281,7 +281,7 @@ Prepare a video file for depth estimation.
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz showing the depth map, the camera view and the point cloud built from the video frame" width={1000}
      src="https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3.gif"/>
 </div>
 
@@ -293,6 +293,31 @@ Prepare a video file for depth estimation.
 - [TensorRT Documentation](https://developer.nvidia.com/tensorrt)
 - [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
 
+
+## FAQ
+
+**Which JetPack version does this build target?**
+JetPack 6.2 on Jetson AGX Orin with the reComputer Mini J501 carrier board, plus ROS 2 Humble. The TensorRT engines are generated on the device, so a different JetPack version means regenerating them from the ONNX models.
+
+**Do I need a depth camera or a stereo rig?**
+No. Depth Anything V3 predicts depth from a single RGB frame, so one USB camera is enough. Because the depth comes from appearance rather than a measured signal, check the absolute scale against a known object before you feed it to a planner.
+
+**Where does the ONNX model go?**
+Place the `.onnx` file in `ros2-depth-anything-v3-trt/onnx` and run `./generate_engines.sh onnx`. Two `.engine` files appear in that directory when the conversion finishes.
+
+**The depth map looks warped near the frame edges. What should I change?**
+That is lens distortion. Run `camera_calibrator`, write the resulting intrinsics into `camera_info_example.yaml`, then launch with `CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1`.
+
+**Can it process a recorded video instead of a live camera?**
+Yes. `./run_video_depth.sh` runs the same engine over a video file, which is the faster way to check output quality before mounting a camera on the robot.
+
+## Related Resources
+
+- [Camera calibration with PyCuVSLAM on reComputer](/pycuvslam_recomputer_robotics/)
+- [Pair an Orbbec depth camera with YOLOv11 for distance measurement](/yolov11_with_depth_camera/)
+- [Efficient multi-task vision inference engine on Jetson](/deploy_visual_perception_engine_recomputer/)
+- [reComputer Mini J501 product page](https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html)
+- [ROS 2 Depth Anything V3 TensorRT repository](https://github.com/zibochen6/ros2-depth-anything-v3-trt)
 
 ## Tech Support & Product Discussion
 

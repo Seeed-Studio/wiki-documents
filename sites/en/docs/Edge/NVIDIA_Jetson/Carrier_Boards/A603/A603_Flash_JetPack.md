@@ -149,6 +149,13 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td>39.2.0</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDFKQLWsQBBTrenUxxvj-qJAU4s62oPXWg6RxcdSg-uJnY?e=y3buDr" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+
+<tr>
+      <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -684,6 +691,105 @@ Tips: Backup and restore the system image
   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
   ```
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+Here we will install **JetPack 7.2.1** on the A603 Carrier Board with a Jetson Orin NX or Jetson Orin Nano module.
+
+### Hardware Requirements
+
+- Ubuntu 20.04 or Ubuntu 22.04 host PC with internet access
+- Type-C data cable (must support data transfer)
+- A603 Carrier Board with a Jetson Orin NX or Jetson Orin Nano module
+- Power adapter
+- The flashing host must have `wget`, `tar` and `sudo` installed
+
+### Prepare the Flashing Files
+
+**Step 1:** Create a working directory on the Ubuntu host PC.
+
+```bash
+mkdir -p ~/a603_flash
+cd ~/a603_flash
+```
+
+**Step 2:** Download the following two files and put them in the same directory (for example from [this folder](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgBgmedl0575RKpyXH48PdpJAfU_PTww36XxBqcOjWOaDO4?e=SaVsqo)):
+
+- `603_jp721.sh`
+- `603_jp721.tbz2`
+
+:::note
+Do **not** extract `603_jp721.tbz2` manually — the script will extract the driver package automatically.
+:::
+
+**Step 3:** Run the script:
+
+```bash
+./603_jp721.sh
+```
+
+:::caution
+Do **not** run `sudo ./603_jp721.sh` or `sudo bash 603_jp721.sh`. The script will prompt for your sudo password when administrator rights are needed. Running the whole script with `sudo` makes the generated directory `root:root` and causes permission issues in later steps.
+:::
+
+**Step 4:** The script automatically downloads the official JetPack 7.2.1 packages, extracts the rootfs, extracts the driver package and overwrites the A603 driver files. Download time depends on your network speed — do not interrupt the process.
+
+**Step 5:** When you see the following message, the flashing directory is ready:
+
+```
+603_jp721 package applied successfully.
+```
+
+The assembled flashing directory is:
+
+```
+~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+### Put the Device in Recovery Mode
+
+1. Disconnect the A603 carrier board from power.
+2. Short-circuit the RECOVERY pin and GND pin on the carrier board.
+3. Connect the carrier board to the host PC with a Type-C data cable.
+4. Power on the board.
+5. On the host PC, run `lsusb`. A NVIDIA device appears when the board is in Recovery Mode.
+
+### Flash the System
+
+1. Make sure the device is still in Recovery Mode.
+2. Enter the flashing directory:
+
+```bash
+cd ~/a603_flash/603_jp721_flash/Linux_for_Tegra
+```
+
+3. Flash the system with the following command:
+
+```bash
+sudo ./l4t_initrd_flash.sh --erase-all jetson-orin-nano-devkit-super internal
+```
+
+4. Wait until the command finishes. Do not unplug the Type-C cable, shut down the host PC, or cut the carrier board power during flashing.
+5. After flashing succeeds, remove the RECOVERY-to-GND shorting jumper and power on the device again.
+
+### Frequently Asked Questions
+
+1. **`Required path is missing: .../603_jp721.tbz2`**
+   - Cause: the driver package is not in the same directory as the script.
+   - Fix: make sure `603_jp721.sh` and `603_jp721.tbz2` are in the same directory, then run the script again.
+
+2. **`Required path is missing: .../bootloader` or similar**
+   - Cause: the driver package was not extracted correctly, or the package file is incomplete.
+   - Fix: make sure you use `603_jp721.tbz2` and re-download the complete driver package, then run the script again.
+
+3. **The directory shows `root:root` or permissions `777`**
+   - Cause: the assembling script was run with `sudo`.
+   - Fix: delete the generated `603_jp721_flash` directory, then run `./603_jp721.sh` as a normal user to re-assemble.
+
+4. **`lsusb` does not show a NVIDIA device**
+   - Fix: check that RECOVERY and GND are shorted, the Type-C cable supports data transfer, and the board is powered on. Then reconnect the Type-C cable and run `lsusb` again.
 
 </TabItem>
 

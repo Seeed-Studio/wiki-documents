@@ -1,6 +1,6 @@
 ---
-description: "如何在 reBot Arm 与 SO-ARM101 上运行 EO-1：论文精读 EO-1 共享骨干网络、视觉-文本-动作交错学习、具身推理数据与机器人控制实验。"
-title: 如何在 reBot Arm 与 SO-ARM101 上运行 EO-1
+description: "精读 EO-1 共享骨干网络、视觉-文本-动作交错学习、具身推理数据与机器人控制实验。"
+title: "EO-1：如何统一具身推理与机器人控制"
 hide_title: true
 keywords:
   - 论文精读
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-21
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-21'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_eo1/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-eo1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
-  <h1 id="paper-reading-eo1-title">如何在 reBot Arm 与 SO-ARM101 上运行 EO-1</h1>
+  <h1 id="paper-reading-eo1-title">EO-1：如何统一具身推理与机器人控制</h1>
   <p className="paper-reading-lead">EO-1: An Open Unified Embodied Foundation Model for General Robot Control</p>
   <ul className="paper-reading-badges" aria-label="本篇内容">
     <li>统一具身模型</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="LeRobot 关键命令">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/eo1" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot EO-1 文档 ↗</a>
+
+**LeRobot 关键命令**
+
+以下为 LeRobot main 的参数片段，需与数据集、输出目录等配置一起传给 `lerobot-train`；安装要求见上方文档。
+
+- `--policy.path=lerobot/eo1-base`：加载转换后的 EO-1 预训练检查点，保留发布的 VLM 和已训练动作头。
+- `--policy.attn_implementation=sdpa`：使用 PyTorch 的缩放点积注意力后端。
+- `--policy.dtype=bfloat16`：按设备支持情况使用 bfloat16；仅设 policy.type=eo1 并从 Qwen 初始化不等于加载 EO-1 完整预训练。
+
+</aside>
 
 ## 预备知识：模型看见什么，输出什么
 **解释：** 模仿学习（Imitation Learning）让模型从人的操作记录中学习：遇到这样的场景、接到这样的指令时，应怎样运动。视觉\-语言\-动作模型（Vision\-Language\-Action Model，VLA）在此基础上加入语言理解，输入通常包括相机画面、任务文字和机器人自身状态。

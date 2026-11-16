@@ -1,6 +1,6 @@
 ---
-description: "How to run NVIDIA GR00T N1 on reBot Arm & SO-ARM101: a paper deep-dive into GR00T N1 dual-system architecture, data pyramid, flow-matching action chunks and robot adaptation."
-title: "How to Run NVIDIA GR00T N1 on reBot Arm & SO-ARM101"
+description: "A paper deep-dive into GR00T N1 dual-system architecture, data pyramid, flow-matching action chunks and robot adaptation."
+title: "GR00T N1: How a Dual-System Architecture Supports Generalist Humanoid Control"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_gr00t_n1/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-gr00t_n1-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-gr00t_n1-title">How to Run NVIDIA GR00T N1 on reBot Arm & SO-ARM101</h1>
+  <h1 id="paper-reading-gr00t_n1-title">GR00T N1: How a Dual-System Architecture Supports Generalist Humanoid Control</h1>
   <p className="paper-reading-lead">GR00T N1: An Open Foundation Model for Generalist Humanoid Robots</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Humanoid robots</li>
@@ -53,6 +53,22 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/groot" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot GR00T Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+This article studies the N1 paper. The commands below target N1.7 and do not apply to original N1 or N1.5 checkpoints.
+
+- `--policy.type=groot --policy.base_model_path=nvidia/GR00T-N1.7-3B`: Select the N1.7 base model supported by the current LeRobot integration.
+- `--policy.embodiment_tag=new_embodiment`: Use the new-embodiment tag from the official SO-101 example; choose the appropriate configuration for other platforms.
+- `--policy.chunk_size=16 --policy.n_action_steps=16`: Set the predicted chunk length and the number of actions executed before predicting again.
+
+</aside>
 
 ## GR00T N1.7: Adaptation and Fine-Tuning
 

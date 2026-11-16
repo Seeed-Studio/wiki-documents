@@ -9,7 +9,7 @@ const tutorialTabSelector = ':scope > .tabs-container > [role="tablist"] > [role
 
 // Keep the standard Wiki tabs, including keyboard controls and URL selection.
 // TOC links and bookmarked headings also reveal their containing tutorial.
-export default function GraspingTabs({children}) {
+export default function GraspingTabs({children, defaultValue = 'python-sdk', queryString = 'grasping'}) {
   const root = useRef(null);
   const {hash} = useLocation();
   const isBrowser = useIsBrowser();
@@ -111,7 +111,7 @@ export default function GraspingTabs({children}) {
 
   return (
     <div ref={root} className={styles.tutorials}>
-      <Tabs defaultValue="python-sdk" queryString="grasping" block>
+      <Tabs defaultValue={defaultValue} queryString={queryString} block>
         {children}
       </Tabs>
     </div>

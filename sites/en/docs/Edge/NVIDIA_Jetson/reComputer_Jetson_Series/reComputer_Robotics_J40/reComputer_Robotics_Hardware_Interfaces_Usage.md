@@ -1,5 +1,5 @@
 ---
-description: This wiki provides a comprehensive introduction to the hardware features and interface usage of the reComputer Jetson Robotics J401 carrier board. It covers detailed specifications, supported modules, setup instructions, and practical guides for using various interfaces such as M.2, Ethernet, USB, CAN, UART, I2C, and GMSL2 camera expansion, helping users quickly get started with robotics development on the J401 platform.
+description: "reComputer Robotics J401 hardware layout: board dimensions, module options, mounting holes and where each connector sits before wiring."
 title: reComputer Robotics Hardware and Interfaces Usage
 tags:
   - J401-Robotics carrier board
@@ -20,11 +20,11 @@ url: https://wiki.seeedstudio.com/recomputer_robotics_j401_hardware_interfaces_u
 ---
 
 <div align="center">
-  <img width ="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg"/>  
+  <img alt="reComputer Robotics J401 carrier board, product photo with the enclosure and ports" width ="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg"/>  
 </div>
 
 <div style={{ textAlign: "justify" }}>
-This wiki introduces the various different hardware and interfaces on the reComputer Robotics series and how to use them to expand your project ideas.
+Product and board views of the reComputer Robotics J401, followed by the schematic, datasheet, 3D file and mechanical drawing. Interface wiring, pinouts and per-port procedures are on the J401 interfaces page, linked below.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -36,11 +36,11 @@ This wiki introduces the various different hardware and interfaces on the reComp
 ## Hardware Overview
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
+  <img alt="Front panel of the reComputer Robotics J401 with CAN0, CAN1, the debug switch, four USB 3.2 ports, ETH0 and ETH1 labelled" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
+  <img alt="Top view of the J401 carrier board labelled with the USB ports, RTC battery and header, M.2 Key B, E and M slots, RJ45 ports and camera expansion header" width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
 </div>
 
 ## Hardware Interfaces Usage
@@ -59,6 +59,13 @@ The interface usage of the reComputer Robotics is the same as that of the Roboti
 - [Nvidia Jetson Comparison](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Nvidia Jetson Success Cases](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson One Pager](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+## Related Resources
+
+- [reComputer Robotics J401 interfaces and pinouts](/recomputer_jetson_robotics_j401_getting_started/)
+- [Getting Started with reComputer Robotics J401](/recomputer_robotics_j401_getting_started/)
+- [reComputer Robotics J4012 product page](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [wiki-documents repository and discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## Tech Support & Product Discussion
 

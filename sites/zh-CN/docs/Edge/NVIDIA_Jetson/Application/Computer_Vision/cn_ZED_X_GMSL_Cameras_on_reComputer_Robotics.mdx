@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /zed_x_gmsl_cameras_on_recomputer_robotics
 last_update:
-  date: 09/27/2026
+  date: 11/06/2026
   author: Dayu
 createdAt: '2026-09-27'
-updatedAt: '2026-09-28'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/cn/zed_x_gmsl_cameras_on_recomputer_robotics/
 ---
 
@@ -227,7 +227,7 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
-本指南说明如何在 Seeed Studio 机器人硬件上使用 **Stereolabs ZED X 系列 GMSL2 相机**。目前已有四个平台适配 ZED X 相机系列。完整的操作流程目前已提供给 **reComputer Robotics J50 Mini**；其他设备的专用操作流程将很快补充。
+本指南说明如何在 Seeed Studio 机器人硬件上使用 **Stereolabs ZED X 系列 GMSL2 相机**。目前提供 **reComputer Robotics J50 Mini** 和 **reComputer Robotics J50（J501）** 的安装步骤与驱动下载；J40 和 J601 的操作流程将在后续补充。
 
 ## 选择你的平台
 
@@ -259,11 +259,11 @@ import TabItem from '@theme/TabItem';
         <img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="reComputer Robotics J50"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status zed-status-soon">● 指南即将推出</span>
+        <span className="zed-status">● 指南已提供</span>
         <h3>reComputer Robotics J50</h3>
         <div className="zed-product-description">一款面向高负载机器人任务的高 I/O AGX Orin 平台，集成 10GbE、多路 CAN 接口、灵活存储，以及最多八路 GMSL2 相机扩展能力。</div>
         <div className="zed-actions">
-          <a className="zed-button" href="#device-specific-setup">查看状态 ↓</a>
+          <a className="zed-button" href="#device-specific-setup">打开设置 ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank" rel="noopener noreferrer">查看产品 ↗</a>
         </div>
       </div>
@@ -308,7 +308,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-## 设备专用设置
+## 设备专用设置 {#device-specific-setup}
 
 <div className="zed-flow">
   <div className="zed-flow-step"><strong>01 · 连接</strong>关闭电源并连接 ZED X GMSL 摄像头。</div>
@@ -484,13 +484,15 @@ cat /etc/nv_tegra_release
 
 仅使用与报告的 L4T 版本匹配的软件包。不要同时安装两个软件包。
 
+以下命令按载板和 L4T 版本匹配驱动文件名。如果下载目录中有多个匹配版本，请将通配符替换为本次下载的完整文件名。
+
 <Tabs groupId="j50-mini-zed-jetpack">
-  <TabItem value="jp62" label="JetPack 6.2.x" default>
+  <TabItem value="jp62" label="JetPack 6.2.1" default>
 
 对于 **JetPack 6.2.1 / L4T 36.4.4**，下载以下软件包：
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDirqpSbx-mS5LVEQikAnUFAZzzHlhqz6ugZQFBLAhoT9I?e=lmyCH1" target="_blank" rel="noopener noreferrer">下载 JetPack 6.2 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDiTcOof34oQIcDztCDVYWhAQtzFOKxlIbx1s8CvJdVJMQ?e=Q8IpLU" target="_blank" rel="noopener noreferrer">下载 JetPack 6.2.1 DEB ↗</a>
 </div>
 
 使用 APT 安装，然后重启：
@@ -498,7 +500,7 @@ cat /etc/nv_tegra_release
 ```bash
 cd ~/Downloads
 sudo apt update
-sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.6-L4T36.4.4-SDK-VERIFIED_arm64.deb
+sudo apt install ./stereolabs-zedx-j501-mini_*-L4T36.4.4_arm64.deb
 sudo reboot
 ```
 
@@ -508,7 +510,7 @@ sudo reboot
 对于 **JetPack 7.2 / L4T 39.2.0**，下载以下软件包：
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBTbeDwHYOJRpGKDN_UZCByAeEe3sS0MIPTbrSiodHMhlg?e=EE5Uza" target="_blank" rel="noopener noreferrer">下载 JetPack 7.2 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAoefQUD__CR7EvXRd2rgUTAexAh6U9-FjEO2xt85bK7HE?e=Ch6rKe" target="_blank" rel="noopener noreferrer">下载 JetPack 7.2 DEB ↗</a>
 </div>
 
 使用 APT 安装，然后重启：
@@ -516,7 +518,7 @@ sudo reboot
 ```bash
 cd ~/Downloads
 sudo apt update
-sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.7-L4T39.2.0_arm64.deb
+sudo apt install ./stereolabs-zedx-j501-mini_*-L4T39.2.0_arm64.deb
 sudo reboot
 ```
 
@@ -603,12 +605,115 @@ ZED Studio 应该会检测到已连接的相机。打开实时预览并启用 **
   </TabItem>
   <TabItem value="j50" label="J50">
 
-    <div className="zed-coming-soon">
-      <span className="zed-status zed-status-soon">ZED X GMSL 支持已适配</span>
-      <h3>reComputer Robotics J50 指南即将推出</h3>
-      <p>平台集成已就绪。针对具体设备的连接方式、驱动安装和验证步骤将发布在此处。</p>
-      <a className="zed-button zed-button-secondary" href="/cn/ai_robotics_recomputer_j501_robotics_getting_started">探索 J50 平台</a>
-    </div>
+### reComputer Robotics J50 (J501)
+
+本节适用于搭载 GMSL 扩展板的 **reComputer Robotics J501**，需准备支持的 ZED X 系列相机，并运行 **JetPack 6.2.1 / L4T 36.4.4** 或 **JetPack 7.2 / L4T 39.2.0**。GMSL 接口位置与载板布局请参阅 [J501 硬件与快速上手指南](/cn/ai_robotics_recomputer_j501_robotics_getting_started)。
+
+#### 1. 连接相机
+
+关闭 J501 并断开直流电源。使用兼容的 Fakra/Mini-Fakra 线缆将相机连接到 GMSL2 接口，确认接头锁紧后，再接通电源并启动设备。
+
+#### 2. 安装 ZED X GMSL 驱动
+
+确认已安装的 Jetson Linux 版本：
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+根据输出的 L4T 版本选择 **Robotics J501** 软件包。仅安装与载板和系统版本匹配的软件包；Mini 和 Robotics 软件包使用不同的设备树覆盖文件。
+
+以下命令按载板和 L4T 版本匹配驱动文件名。如果下载目录中有多个匹配版本，请将通配符替换为本次下载的完整文件名。
+
+<Tabs groupId="j501-robo-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2.1" default>
+
+对于 **JetPack 6.2.1 / L4T 36.4.4**，下载以下软件包：
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">下载 JetPack 6.2.1 DEB ↗</a>
+</div>
+
+使用 APT 安装，然后重启：
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-robo_*-L4T36.4.4_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2">
+
+对于 **JetPack 7.2 / L4T 39.2.0**，下载以下软件包：
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">下载 JetPack 7.2 DEB ↗</a>
+</div>
+
+使用 APT 安装，然后重启：
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-robo_*-L4T39.2.0_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+重启后，确认 Robotics J501 软件包已安装：
+
+```bash
+dpkg -l | grep stereolabs-zedx-j501-robo
+```
+
+#### 3. 安装 ZED SDK
+
+前往 [Stereolabs ZED SDK 下载页面](https://www.stereolabs.com/developers/release/)，选择与 `cat /etc/nv_tegra_release` 输出版本相匹配的 NVIDIA Jetson 安装程序：
+
+| 已安装系统 | 在 ZED SDK 页面中选择 |
+| --- | --- |
+| JetPack 6.2.x / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+安装 `zstd`，将下载的安装程序设为可执行并运行。请将下面的占位符替换为实际下载的文件名。
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+按照安装程序提示操作，并保持勾选 ZED 工具。安装完成后重启：
+
+```bash
+sudo reboot
+```
+
+:::tip
+ZED SDK 安装程序名称中的 L4T 版本必须与 reComputer 上的 L4T 版本一致。不匹配的 SDK 或摄像头 DEB 可能会导致摄像头无法被检测到。
+:::
+
+#### 4. 使用 ZED Studio 验证
+
+从终端启动 ZED Studio：
+
+```bash
+ZED_Studio
+```
+
+您也可以直接从 SDK 安装目录启动它：
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+ZED Studio 应该会检测到已连接的相机。打开实时预览并启用 **Depth**，以确认图像流和深度管线都在正常工作。
 
   </TabItem>
   <TabItem value="j40" label="J40">

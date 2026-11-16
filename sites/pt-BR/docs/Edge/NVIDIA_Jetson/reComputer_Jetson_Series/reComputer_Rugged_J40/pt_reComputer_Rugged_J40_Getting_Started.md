@@ -1,6 +1,6 @@
 ---
-description: Introdução ao reComputer Rugged J40
-title: Introdução ao reComputer Rugged J40
+description: Introdução ao uso do reComputer Rugged J40
+title: Introdução ao uso da linha reComputer Rugged 
 keywords:
   - reComputer Rugged
   - IP66
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/pt-br/jetson/recomputer_rugged_j401/getting_st
 import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
 import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
-# Introdução ao reComputer Rugged J40
+# Introdução ao uso da linha reComputer Rugged
 
 <JetsonProductDocNav {...ruggedJ401DocNav} />
 
@@ -32,7 +32,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
   <div>
     <span className="jetson-product-eyebrow">Rugged Edge AI · NVIDIA Jetson</span>
     <h2>Implemente IA onde poeira, água e vibração fazem parte do trabalho</h2>
-    <p>O reComputer Rugged J40 combina o desempenho do NVIDIA Jetson Orin com um gabinete sem ventoinha com classificação IP66 e conectividade M12 com trava. Ele é projetado para implantação confiável de IA de borda em veículos, portos, fazendas, no mar e em ambientes industriais.</p>
+    <p>O reComputer Rugged J40 combina o desempenho do NVIDIA Jetson Orin com um gabinete sem ventoinha com classificação IP66 e conectividade M12 com trava. Ele é projetado para implantação confiável de IA de borda em veículos, em portos, em fazendas, no mar e em ambientes industriais.</p>
     <div className="jetson-product-actions">
       <a className="jetson-product-button" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank" rel="noopener noreferrer">Obtenha o reComputer Rugged J4012 ↗</a>
       <a className="jetson-product-button jetson-product-button--secondary" href="#flash-jetpack">Comece com o JetPack ↓</a>
@@ -44,7 +44,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 </section>
 
 <div className="jetson-product-fact-grid">
-  <div className="jetson-product-fact"><strong>IP66</strong><span>Vedado contra poeira e jatos de água potentes</span></div>
+  <div className="jetson-product-fact"><strong>IP66</strong><span>Vedado contra poeira e jatos de água de alta pressão</span></div>
   <div className="jetson-product-fact"><strong>Até 100 TOPS</strong><span>Desempenho de IA de borda com Jetson Orin NX 16GB</span></div>
   <div className="jetson-product-fact"><strong>4× PoE GbE</strong><span>Alimente e conecte câmeras IP industriais</span></div>
   <div className="jetson-product-fact"><strong>−20°C a 60°C</strong><span>Operação sem ventoinha com fluxo de ar de 0,7 m/s</span></div>
@@ -52,7 +52,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 ## Escolha sua configuração Jetson
 
-Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de interfaces industriais. Escolha o módulo Jetson de acordo com a carga de trabalho de IA, o requisito de memória e o orçamento de energia da sua implantação.
+Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de interfaces industriais. Escolha o módulo Jetson de acordo com a carga de trabalho de IA, a necessidade de memória e o orçamento de energia da sua implantação.
 
 <div className="jetson-product-variant-grid">
   <article className="jetson-product-variant-card">
@@ -68,7 +68,7 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
   <article className="jetson-product-variant-card">
     <span className="jetson-product-variant-badge">Configuração de eficiência</span>
     <h3>reComputer Rugged J3011</h3>
-    <p>Para cargas de trabalho eficientes de percepção, monitoramento, telemetria e controle industrial com perfil de energia mais baixo.</p>
+    <p>Para cargas de trabalho eficientes de percepção, monitoramento, telemetria e controle industrial com perfil de energia reduzido.</p>
     <div className="jetson-product-variant-metrics">
       <span>Jetson Orin Nano</span>
       <span>8GB LPDDR5</span>
@@ -81,9 +81,9 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
 
 <div className="jetson-product-feature-grid">
   <div className="jetson-product-feature"><strong>Conectividade M12 vedada</strong><span>Conectores com trava ajudam a manter energia, rede e E/S estáveis em instalações móveis e externas.</span></div>
-  <div className="jetson-product-feature"><strong>Resfriamento passivo sem ventoinha</strong><span>Sem ventoinha móvel, reduz a necessidade de manutenção em ambientes empoeirados e permite operação silenciosa.</span></div>
+  <div className="jetson-product-feature"><strong>Resfriamento passivo sem ventoinha</strong><span>Sem partes móveis de ventilador, reduzindo a necessidade de manutenção em ambientes empoeirados e permitindo operação silenciosa.</span></div>
   <div className="jetson-product-feature"><strong>E/S industrial</strong><span>CAN-FD isolado, RS-232/422/485 e E/S digitais conectam-se diretamente a sensores, atuadores e controladores.</span></div>
-  <div className="jetson-product-feature"><strong>Rede pronta para câmeras</strong><span>Quatro portas PoE GbE simplificam sistemas com múltiplas câmeras, transportando dados e energia pelo mesmo cabo.</span></div>
+  <div className="jetson-product-feature"><strong>Rede pronta para câmeras</strong><span>Quatro portas PoE GbE simplificam sistemas com múltiplas câmeras ao transportar dados e energia pelo mesmo cabo.</span></div>
   <div className="jetson-product-feature"><strong>Expansão sem fio</strong><span>Slots M.2 Key E e Key B suportam expansão com Wi-Fi, Bluetooth, 5G e GPS.</span></div>
   <div className="jetson-product-feature"><strong>Implantação em veículos e ambientes externos</strong><span>Entrada de ampla faixa de tensão, resistência à vibração e gabinete IP66 adequam-se a AMRs, veículos, embarcações e equipamentos de campo.</span></div>
 </div>
@@ -118,17 +118,17 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
     </tr>
     <tr>
       <td>GPU</td>
-      <td>1024 núcleos NVIDIA Ampere, 32 Tensor Cores</td>
-      <td>1024 núcleos NVIDIA Ampere, 32 Tensor Cores</td>
+      <td>1024-core NVIDIA Ampere, 32 Tensor Cores</td>
+      <td>1024-core NVIDIA Ampere, 32 Tensor Cores</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8 núcleos Arm Cortex-A78AE v8.2 64-bit, 2MB L2 + 4MB L3</td>
-      <td>6 núcleos Arm Cortex-A78AE v8.2 64-bit, 1,5MB L2 + 4MB L3</td>
+      <td>8-core Arm Cortex-A78AE v8.2 64-bit, 2MB L2 + 4MB L3</td>
+      <td>6-core Arm Cortex-A78AE v8.2 64-bit, 1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memória</td>
-      <td>16GB 128-bit LPDDR5 @ 102,4 GB/s</td>
+      <td>16GB 128-bit LPDDR5 @ 102.4 GB/s</td>
       <td>8GB 128-bit LPDDR5 @ 68 GB/s</td>
     </tr>
     <tr>
@@ -138,7 +138,7 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
     </tr>
     <tr>
       <td>Expansão</td>
-      <td colSpan={2}>M.2 Key M (2280) NVMe SSD — 128 GB incluídos</td>
+      <td colSpan={2}>M.2 Key M (2280) NVMe SSD — 128 GB incluído</td>
     </tr>
     <tr>
       <td rowSpan={8}>E/S</td>
@@ -147,10 +147,10 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={2}>4× USB 3.2 Tipo-A (M12 à prova d'água) + 1× USB 2.0/3.0 Tipo-C (gravação, tampa à prova d'água) + 1× USB Tipo-C (debug)</td>
+      <td colSpan={2}>4× USB 3.2 Type-A (M12 à prova d'água) + 1× USB 2.0/3.0 Type-C (gravação, tampa à prova d'água) + 1× USB Type-C (debug)</td>
     </tr>
     <tr>
-      <td>Vídeo</td>
+      <td>Display</td>
       <td colSpan={2}>1× HDMI (tampa à prova d'água)</td>
     </tr>
     <tr>
@@ -183,7 +183,7 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
       <td colSpan={2}>Módulo 5G / GPS (opcional)</td>
     </tr>
     <tr>
-      <td rowSpan={2}>Alimentação</td>
+      <td rowSpan={2}>Energia</td>
       <td>Entrada</td>
       <td colSpan={2}>19–48 V DC via conector M12 B/A-code</td>
     </tr>
@@ -210,7 +210,7 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
     </tr>
     <tr>
       <td>Dimensões</td>
-      <td colSpan={2}>210 mm × 190 mm × 93 mm</td>
+      <td colSpan={2}>210 mm × 190 mm × 95 mm</td>
     </tr>
     <tr>
       <td>Cor</td>
@@ -237,7 +237,7 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
   </figure>
   <figure>
     <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png" alt="Opposite side view of reComputer Rugged J40" />
-    <figcaption>Vista lateral · Conexões de alimentação, serial, CAN e E/S digitais</figcaption>
+    <figcaption>Vista lateral · Conexões de energia, serial, CAN e E/S digitais</figcaption>
   </figure>
   <figure>
     <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw3.png" alt="Bottom view of reComputer Rugged J40" />
@@ -253,18 +253,18 @@ Ambas as configurações usam o mesmo gabinete robusto e o mesmo conjunto de int
 | PWR | Verde | Off | Dispositivo está desligado |
 | ACT | Verde | Flashing | Atividade de acesso ao SSD |
 
-Para pinagem de conectores, configuração de interfaces e instruções de expansão, continue para o [guia de hardware e E/S](/pt-br/jetson/recomputer_rugged_j401/hardware_and_interface_usage/).
+Para pinagens de conectores, configuração de interfaces e instruções de expansão, continue para o [guia de hardware e E/S](/pt-br/jetson/recomputer_rugged_j401/hardware_and_interface_usage/).
 
 ## Gravar o JetPack {#flash-jetpack}
 
-Siga o fluxo de trabalho na ordem. A disposição numerada mantém a preparação do host, a operação em modo de recuperação e os comandos de terminal juntos em um só lugar.
+Siga o fluxo de trabalho na ordem. A estrutura numerada mantém a preparação do host, a operação em modo de recuperação e os comandos de terminal juntos em um só lugar.
 
 <div className="jetson-product-step-flow">
 <section className="jetson-product-step-item">
   <span className="jetson-product-step-number">1</span>
   <div className="jetson-product-step-content">
     <h3>Escolha e baixe o BSP</h3>
-    <p className="jetson-product-step-label">Etapa 1 · Faça corresponder a imagem exatamente à configuração Jetson</p>
+    <p className="jetson-product-step-label">Etapa 1 · Faça corresponder a imagem exatamente à configuração do Jetson</p>
 
 Baixe o BSP **JetPack 5.1.3 (L4T 35.5.0)** para o módulo Jetson instalado. Os nomes dos arquivos compactados mantêm o rótulo de versão `5.1`.
 
@@ -321,7 +321,7 @@ Use a imagem que corresponda tanto à placa-carregadora Rugged quanto ao módulo
 Prepare os seguintes itens antes de desconectar ou energizar o dispositivo:
 
 - reComputer Rugged J4012 ou J3011
-- Fonte de alimentação DC de 19–48 V
+- Fonte de alimentação CC de 19–48 V
 - PC host físico com Ubuntu 20.04 para estes pacotes JetPack 5.1.3
 - Cabo de dados USB Type-C para gravação
 - Monitor externo e cabo HDMI
@@ -337,7 +337,7 @@ Use um host Ubuntu físico sempre que possível. O passthrough USB em uma máqui
 <section className="jetson-product-step-item">
   <span className="jetson-product-step-number">3</span>
   <div className="jetson-product-step-content">
-    <h3>Entre no Modo de Recuperação Forçada</h3>
+    <h3>Entrar no Modo Force Recovery</h3>
     <p className="jetson-product-step-label">Etapa 3 · Conecte a porta DEVICE e verifique o ID USB</p>
 
 <img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg" alt="Botão de recuperação e porta DEVICE usados para gravar o reComputer Rugged J40" />
@@ -367,7 +367,7 @@ Se o ID esperado não aparecer, reconecte o cabo USB, tente outra porta USB do h
 <section className="jetson-product-step-item">
   <span className="jetson-product-step-number">4</span>
   <div className="jetson-product-step-content">
-    <h3>Extraia e Grave a Imagem</h3>
+    <h3>Extrair e Gravar a Imagem</h3>
     <p className="jetson-product-step-label">Etapa 4 · Execute o pacote de gravação em massa a partir do host Ubuntu</p>
 
 Altere para o diretório que contém a imagem baixada e extraia o arquivo compactado para o seu módulo:
@@ -406,7 +406,7 @@ Após concluir a configuração, você pode explorar downloads de firmware e ins
 
 ## Aplicações {#applications}
 
-Explore exemplos de aplicação que combinam o hardware reComputer Rugged J40 com fluxos de trabalho de IA de borda prontos para implantação. Novos exemplos podem ser adicionados a esta coleção à medida que se tornarem disponíveis.
+Explore exemplos de aplicação que combinam o hardware reComputer Rugged J40 com fluxos de trabalho de IA de borda implantáveis. Novos exemplos podem ser adicionados a esta coleção à medida que se tornarem disponíveis.
 
 <div className="jetson-product-application-grid">
   <article className="jetson-product-application-card">
@@ -426,7 +426,7 @@ Explore exemplos de aplicação que combinam o hardware reComputer Rugged J40 co
 
 ## Recursos
 
-Use estes arquivos para integração mecânica, revisão de projeto da placa-carregadora, desenvolvimento de BSP e seleção de plataforma Jetson.
+Use estes arquivos para integração mecânica, revisão de projeto da placa-carregadora, desenvolvimento de BSP e seleção da plataforma Jetson.
 
 <div className="jetson-product-resource-grid">
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_rugged_J401_datasheet.pdf" target="_blank" rel="noopener noreferrer">
@@ -441,7 +441,7 @@ Use estes arquivos para integração mecânica, revisão de projeto da placa-car
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
     <span className="jetson-product-resource-icon" aria-hidden="true">PSE</span>
-    <span className="jetson-product-resource-copy"><strong>Esquemático da Placa PSE</strong><small>Referência de projeto de circuito de fornecimento de energia PoE</small></span>
+    <span className="jetson-product-resource-copy"><strong>Esquemático da Placa PSE</strong><small>Referência de projeto de circuito de alimentação PoE</small></span>
     <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp" target="_blank" rel="noopener noreferrer">
@@ -451,7 +451,7 @@ Use estes arquivos para integração mecânica, revisão de projeto da placa-car
   </a>
   <a className="jetson-product-resource-card" href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer">
     <span className="jetson-product-resource-icon" aria-hidden="true">GIT</span>
-    <span className="jetson-product-resource-copy"><strong>Linux_for_Tegra Source</strong><small>Códigos-fonte do BSP Jetson da Seeed e recursos de personalização</small></span>
+    <span className="jetson-product-resource-copy"><strong>Código-fonte do Linux_for_Tegra</strong><small>Códigos-fonte do BSP Jetson da Seeed e recursos de personalização</small></span>
     <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf" target="_blank" rel="noopener noreferrer">
@@ -461,7 +461,7 @@ Use estes arquivos para integração mecânica, revisão de projeto da placa-car
   </a>
 </div>
 
-## Suporte Técnico e Discussão sobre o Produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível.
 

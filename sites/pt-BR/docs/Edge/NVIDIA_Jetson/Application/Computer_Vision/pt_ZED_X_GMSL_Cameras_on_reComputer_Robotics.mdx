@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /zed_x_gmsl_cameras_on_recomputer_robotics
 last_update:
-  date: 09/27/2026
+  date: 11/06/2026
   author: Dayu
 createdAt: '2026-09-27'
-updatedAt: '2026-09-28'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/pt-br/zed_x_gmsl_cameras_on_recomputer_robotics/
 ---
 
@@ -227,7 +227,7 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
-Este guia explica como usar **câmeras GMSL2 Stereolabs ZED X-series** com o hardware de robótica da Seeed Studio. Quatro plataformas foram adaptadas para a família de câmeras ZED X. O passo a passo completo está atualmente disponível para **reComputer Robotics J50 Mini**; os outros tutoriais específicos de dispositivo serão adicionados em breve.
+Este guia explica como usar **câmeras GMSL2 Stereolabs ZED X-series** com o hardware de robótica da Seeed Studio. Há instruções de configuração e downloads de drivers para **reComputer Robotics J50 Mini** e **reComputer Robotics J50 (J501)**. Os tutoriais de J40 e J601 serão adicionados posteriormente.
 
 ## Selecione sua plataforma
 
@@ -259,11 +259,11 @@ Escolha uma plataforma abaixo. Os dois grupos de abas nesta página são sincron
         <img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="reComputer Robotics J50"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status zed-status-soon">● Guia em breve</span>
+        <span className="zed-status">● Guia disponível</span>
         <h3>reComputer Robotics J50</h3>
         <div className="zed-product-description">Uma plataforma AGX Orin com alto número de I/Os para cargas de trabalho de robótica exigentes, combinando 10GbE, múltiplas interfaces CAN, armazenamento flexível e expansão para até oito câmeras GMSL2.</div>
         <div className="zed-actions">
-          <a className="zed-button" href="#device-specific-setup">Ver status ↓</a>
+          <a className="zed-button" href="#device-specific-setup">Abrir configuração ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank" rel="noopener noreferrer">Ver produto ↗</a>
         </div>
       </div>
@@ -308,7 +308,7 @@ Escolha uma plataforma abaixo. Os dois grupos de abas nesta página são sincron
   </TabItem>
 </Tabs>
 
-## Configuração específica do dispositivo
+## Configuração específica do dispositivo {#device-specific-setup}
 
 <div className="zed-flow">
   <div className="zed-flow-step"><strong>01 · Conectar</strong>Desligue e conecte a câmera ZED X GMSL.</div>
@@ -484,13 +484,15 @@ cat /etc/nv_tegra_release
 
 Use apenas o pacote que corresponde à versão L4T informada. Não instale ambos os pacotes.
 
+O comando abaixo corresponde ao nome do driver para esta placa e versão do L4T. Se o diretório de downloads contiver várias versões correspondentes, substitua o curinga pelo nome exato do arquivo baixado.
+
 <Tabs groupId="j50-mini-zed-jetpack">
-  <TabItem value="jp62" label="JetPack 6.2.x" default>
+  <TabItem value="jp62" label="JetPack 6.2.1" default>
 
 Para **JetPack 6.2.1 / L4T 36.4.4**, baixe o pacote abaixo:
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDirqpSbx-mS5LVEQikAnUFAZzzHlhqz6ugZQFBLAhoT9I?e=lmyCH1" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 6.2 ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDiTcOof34oQIcDztCDVYWhAQtzFOKxlIbx1s8CvJdVJMQ?e=Q8IpLU" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 6.2.1 ↗</a>
 </div>
 
 Instale-o com o APT e depois reinicie:
@@ -498,7 +500,7 @@ Instale-o com o APT e depois reinicie:
 ```bash
 cd ~/Downloads
 sudo apt update
-sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.6-L4T36.4.4-SDK-VERIFIED_arm64.deb
+sudo apt install ./stereolabs-zedx-j501-mini_*-L4T36.4.4_arm64.deb
 sudo reboot
 ```
 
@@ -508,7 +510,7 @@ sudo reboot
 Para **JetPack 7.2 / L4T 39.2.0**, baixe o pacote abaixo:
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBTbeDwHYOJRpGKDN_UZCByAeEe3sS0MIPTbrSiodHMhlg?e=EE5Uza" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 7.2 ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAoefQUD__CR7EvXRd2rgUTAexAh6U9-FjEO2xt85bK7HE?e=Ch6rKe" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 7.2 ↗</a>
 </div>
 
 Instale-o com o APT e depois reinicie:
@@ -516,7 +518,7 @@ Instale-o com o APT e depois reinicie:
 ```bash
 cd ~/Downloads
 sudo apt update
-sudo apt install ./stereolabs-zedx-j501-mini_1.4.3.7-L4T39.2.0_arm64.deb
+sudo apt install ./stereolabs-zedx-j501-mini_*-L4T39.2.0_arm64.deb
 sudo reboot
 ```
 
@@ -603,12 +605,115 @@ A câmera aparece no ZED Studio, a imagem ao vivo é estável e a visualização
   </TabItem>
   <TabItem value="j50" label="J50">
 
-    <div className="zed-coming-soon">
-      <span className="zed-status zed-status-soon">Suporte ZED X GMSL adaptado</span>
-      <h3>O guia do reComputer Robotics J50 estará disponível em breve</h3>
-      <p>A integração da plataforma está disponível. Um passo a passo específico para o dispositivo, incluindo conexão, instalação de driver e validação, será publicado aqui.</p>
-      <a className="zed-button zed-button-secondary" href="/pt-br/ai_robotics_recomputer_j501_robotics_getting_started">Explore a plataforma J50</a>
-    </div>
+### reComputer Robotics J50 (J501)
+
+Esta seção se aplica ao **reComputer Robotics J501** com a placa de expansão GMSL, uma câmera ZED X-series compatível e **JetPack 6.2.1 / L4T 36.4.4** ou **JetPack 7.2 / L4T 39.2.0**. Consulte o [guia de hardware e primeiros passos do J501](/pt-br/ai_robotics_recomputer_j501_robotics_getting_started) para localizar os conectores GMSL e conferir a disposição da placa.
+
+#### 1. Conecte a câmera
+
+Desligue o J501 e desconecte a alimentação CC. Conecte a câmera a uma porta GMSL2 com um cabo Fakra/Mini-Fakra compatível, trave o conector e reconecte a alimentação para iniciar o dispositivo.
+
+#### 2. Instale o driver ZED X GMSL
+
+Verifique a versão do Jetson Linux instalada:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+Selecione o pacote **Robotics J501** correspondente à versão do L4T informada. Instale apenas o pacote para sua placa e versão do sistema; os pacotes Mini e Robotics usam sobreposições diferentes da árvore de dispositivos.
+
+O comando abaixo corresponde ao nome do driver para esta placa e versão do L4T. Se o diretório de downloads contiver várias versões correspondentes, substitua o curinga pelo nome exato do arquivo baixado.
+
+<Tabs groupId="j501-robo-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2.1" default>
+
+Para **JetPack 6.2.1 / L4T 36.4.4**, baixe o pacote abaixo:
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 6.2.1 ↗</a>
+</div>
+
+Instale-o com o APT e depois reinicie:
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-robo_*-L4T36.4.4_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2">
+
+Para **JetPack 7.2 / L4T 39.2.0**, baixe o pacote abaixo:
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">Baixar DEB do JetPack 7.2 ↗</a>
+</div>
+
+Instale-o com o APT e depois reinicie:
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./stereolabs-zedx-j501-robo_*-L4T39.2.0_arm64.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+Após reiniciar, confirme que o pacote Robotics J501 está instalado:
+
+```bash
+dpkg -l | grep stereolabs-zedx-j501-robo
+```
+
+#### 3. Instalar o ZED SDK
+
+Acesse a [página de download do Stereolabs ZED SDK](https://www.stereolabs.com/developers/release/) e selecione o instalador NVIDIA Jetson que corresponde à versão informada por `cat /etc/nv_tegra_release`:
+
+| Sistema instalado | Selecione na página do ZED SDK |
+| --- | --- |
+| JetPack 6.2.x / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+Instale `zstd`, torne o instalador baixado executável e execute-o. Substitua o espaço reservado abaixo pelo nome de arquivo realmente baixado.
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+Siga as instruções do instalador e mantenha as ferramentas ZED selecionadas. Reinicie após a conclusão da instalação:
+
+```bash
+sudo reboot
+```
+
+:::tip
+A versão L4T no nome do instalador do ZED SDK deve corresponder à versão L4T no reComputer. Um SDK ou DEB de câmera incompatível pode impedir que a câmera seja detectada.
+:::
+
+#### 4. Validar com o ZED Studio
+
+Inicie o ZED Studio a partir de um terminal:
+
+```bash
+ZED_Studio
+```
+
+Você também pode iniciá-lo diretamente a partir do diretório de instalação do SDK:
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+O ZED Studio deve detectar a câmera conectada. Abra a visualização ao vivo e ative **Depth** para confirmar que tanto o fluxo de imagem quanto o pipeline de profundidade estão funcionando.
 
   </TabItem>
   <TabItem value="j40" label="J40">

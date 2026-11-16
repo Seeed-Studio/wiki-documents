@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/02/2026
+  date: 11/09/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-11-02'
+updatedAt: '2026-11-09'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,75 +18,107 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 9th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Aquaculture Crayfish Behavior Recognition: 4-Stage Pipeline and Edge Benchmarks](https://wiki.seeedstudio.com/solutions/crayfish-behavior-recognition/)
+### [Getting Started with OpenDisplay 4.26" Mono Kit](https://wiki.seeedstudio.com/opendisplay_426_mono_kit/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/crayfish_behavior_recognition/cover-10d95d7f.png" alt="Edge AI aquaculture crayfish behavior recognition reference design" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/4.26.webp" alt="OpenDisplay 4.26-inch monochrome e-paper kit" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This edge AI aquaculture reference design introduces a four-stage pipeline for monitoring crayfish behavior and detecting potential fighting events. The guide covers camera placement, deployment with `solution-cli`, MQTT and WebSocket telemetry, and reported on-device benchmarks.
+The OpenDisplay 4.26" Mono Kit is a ready-to-use black-and-white e-paper display with a 4.26-inch panel and Bluetooth Low Energy connectivity. This guide shows how to power on the kit, send images from a browser, connect it to Home Assistant, and recover or reflash the firmware.
 
 </div>
 
-### [Edge AI Rehabilitation Posture Analysis: 33-Keypoint Pose and Clinical Kinematics](https://wiki.seeedstudio.com/solutions/rehab-posture-analysis/)
+### [Getting Started with OpenDisplay 7.3" Color Kit](https://wiki.seeedstudio.com/opendisplay_73_color_kit/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/rehab_posture_analysis/cover-93765b27.png" alt="33-keypoint edge AI rehabilitation posture analysis reference design" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/7.3.webp" alt="OpenDisplay 7.3-inch Spectra 6 color e-paper kit" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This assistive rehabilitation reference design uses a 33-keypoint pose model to measure joint range of motion and flag movement compensation patterns. It covers edge deployment, model extensions, WebSocket and MQTT integration, and evaluation benchmarks; it is not a certified medical diagnostic tool.
+The OpenDisplay 7.3" Color Kit features a 7.3-inch Spectra 6 color e-paper panel in a fully assembled, battery-powered design. Its getting-started guide explains image updates over Bluetooth Low Energy, optional Home Assistant integration, and additional steps for encryption and firmware recovery.
+
+</div>
+
+### [Get Started with Ripple on Wio Tracker L2 Pro](https://wiki.seeedstudio.com/get_started_with_ripple_l2_pro/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png" alt="Ripple UI on the Wio Tracker L2 Pro" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide introduces Ripple UI, a touchscreen interface for MeshCore communication on the Wio Tracker L2 Pro. It walks through firmware flashing, network profiles, contact discovery, messaging, and the use of maps and GPS tracks, including features that require an unlock code.
+
+</div>
+
+### [Build a Local AI Agent on Jetson Orin with Laya and Qwen](https://wiki.seeedstudio.com/jetson/local_decision_model_laya/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-cover-en-v3-dark.png" alt="Local Laya and Qwen AI agent workflow on Jetson Orin" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This tutorial demonstrates a local AI agent on NVIDIA Jetson Orin, combining Laya for action selection with Qwen for language processing. It explains the decision and verification loop, then walks through setup and browser automation and whiteboard demonstrations.
+
+</div>
+
+### [Jetson Technical Deep Dives: Software Stack, Boot, Camera, Device Tree, and USB](https://wiki.seeedstudio.com/jetson_jetpack_l4t_ubuntu_kernel_uefi/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/technical_deep_dives/jetpack_l4t_ubuntu_kernel_uefi/jetpack_architecture.png" alt="Jetson software stack and platform architecture" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This five-part series explores how Jetson software and hardware work together, from JetPack and the boot sequence to camera pipelines, device trees, and USB connectivity. The guides use architecture diagrams, system logs, and hardware examples to explain practical debugging techniques.
+
+**Explore the series:** [JetPack, L4T, Ubuntu, Kernel, and UEFI](https://wiki.seeedstudio.com/jetson_jetpack_l4t_ubuntu_kernel_uefi/) · [Boot Log Analysis](https://wiki.seeedstudio.com/jetson_boot_log_analysis/) · [Camera Data Chain](https://wiki.seeedstudio.com/jetson_camera_data_chain/) · [Device Tree](https://wiki.seeedstudio.com/jetson_device_tree/) · [USB Troubleshooting](https://wiki.seeedstudio.com/jetson_usb/).
+
+</div>
+
+### [Robotics Paper Deep-Dives: VLA-JEPA and MultiTask DiT](https://wiki.seeedstudio.com/robotics/paper_reading_vla_jepa/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/vla_jepa/fig02-training-framework.png" alt="VLA-JEPA latent-action training framework" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Two new paper readings examine how robots learn actions from visual observations and demonstrations. The VLA-JEPA guide explains video supervision and latent-action prediction, while the LBM and MultiTask DiT guide discusses diffusion-based policies, multitask pretraining, and evaluation limitations.
+
+**Read the guides:** [VLA-JEPA: Learning Latent Actions from Video](https://wiki.seeedstudio.com/robotics/paper_reading_vla_jepa/) · [LBM and MultiTask DiT: How Multitask Pretraining Helps Robots Learn](https://wiki.seeedstudio.com/robotics/paper_reading_multi_task_dit/).
 
 </div>
 
 ## Existing Wiki Updated
 
-### [reBot Arm B601 Setup and LeRobot Guides](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
+### [reBot Arm B601-RS Simulation, Teleoperation, and Visual Grasping](https://wiki.seeedstudio.com/rebot_arm_b601_rs_isaacsim/)
 
 <div style={{ textAlign: "justify" }}>
 
-The B601-RS and B601-DM Quick Start and LeRobot guides now include illustrated leader-and-follower arm mounting, wiring steps, and safety checks. The Chinese SO-ARM100/101 guide also gains 44 community Q&As covering hardware, software setup, calibration, data collection, and training.
+The B601-RS guides have been expanded with Isaac Sim installation and control modes, ROS 2 visual-grasping setup, and a web control workflow featuring MuJoCo simulation, DeepSeek integration, and Arm102 Leader teleoperation. The updates provide more detailed dependency, calibration, and troubleshooting instructions.
 
-**Updated English guides:** [B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/) · [B601-DM Quick Start](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) · [B601-RS with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/) · [B601-DM with LeRobot](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/).
-
-**Chinese Guide:** [SO-ARM100/101 with LeRobot — Expanded FAQ](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/).
+**Updated guides:** [B601-RS with Isaac Sim](https://wiki.seeedstudio.com/rebot_arm_b601_rs_isaacsim/) · [B601-RS with Visual Grasping](https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/) · [B601-RS Web Control](https://wiki.seeedstudio.com/rebot_arm_b601_rs_web_simulator_developer_guide/).
 
 </div>
 
-### [Industrial Edge Solution Deployment Guides](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/)
+### [Flash JetPack 7.2.1 on the A603 Carrier Board](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/)
 
 <div style={{ textAlign: "justify" }}>
 
-Three existing engineering references have been substantially expanded with clearer hardware deployment guidance, interfaces, and operating boundaries. The updates explain multi-protocol data collection over MQTT, HVAC setpoint write-and-readback verification, and face-access library deployment with security and licensing considerations.
-
-**Updated guides:** [Industrial Multi-Protocol Data Hub](https://wiki.seeedstudio.com/solutions/industrial-protocol-gateway/) · [HVAC Setpoint Control](https://wiki.seeedstudio.com/solutions/hvac-setpoint-control/) · [Unmanned Store Face Access](https://wiki.seeedstudio.com/solutions/unmanned-store-face-access/).
+The A603 Carrier Board flashing guide now includes a script-based procedure for installing JetPack 7.2.1 with compatible Jetson Orin NX and Orin Nano modules. The new steps cover preparing the host and flashing files, entering recovery mode, and troubleshooting common setup issues.
 
 </div>
 
-### [Mesh Device Firmware and Recovery Guides](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/)
+### [Flash JetPack 7.2.1 on the Jetson AGX Orin H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/)
 
 <div style={{ textAlign: "justify" }}>
 
-New recovery and troubleshooting sections cover failed firmware updates, DFU/UF2 recovery, and unresponsive devices across four Mesh hardware families. The instructions are integrated into the relevant MeshCore and Meshtastic getting-started guides.
-
-**MeshTracker X1:** [MeshCore](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/).
-
-**SenseCAP T1000-E:** [MeshCore](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/) · [Meshtastic](https://wiki.seeedstudio.com/sensecap_t1000_e/).
-
-**Wio Tracker L1:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/).
-
-**SenseCAP Solar Node P1-Pro:** [MeshCore](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/) · [Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/).
+The Jetson AGX Orin H01 Kit guide has been expanded with a script-based JetPack 7.2.1 flashing workflow. It covers file preparation, recovery mode, and flashing to eMMC or NVMe storage, including commands for supported module configurations.
 
 </div>
 
-### [reSpeaker USB 4-Mic Array XVF3000 v3.0/v3.2](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/)
+### [ZED X-Series GMSL Cameras with reComputer Robotics](https://wiki.seeedstudio.com/zed_x_gmsl_cameras_on_recomputer_robotics/)
 
 <div style={{ textAlign: "justify" }}>
 
-The microphone-array guide now covers both XVF3000 v3.0 and v3.2. It clarifies the additional speaker noise-floor filtering in v3.2 and updates the shared hardware, setup, and ROS-related guidance.
+The ZED X camera setup guide has been expanded with device-specific instructions for reComputer Robotics J50 (J501), alongside the J50 Mini. It now details camera-driver selection for supported JetPack releases, matching ZED SDK installation, and camera validation with ZED Studio.
 
 </div>
 
@@ -244,5 +276,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.10.12th](/Seeed_Elderly/weekly_wiki/2026/wiki261012)
 - [weekly wiki on 2026.10.19th](/Seeed_Elderly/weekly_wiki/2026/wiki261019)
 - [weekly wiki on 2026.10.26th](/Seeed_Elderly/weekly_wiki/2026/wiki261026)
+- [weekly wiki on 2026.11.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki261102)
 
 </details>

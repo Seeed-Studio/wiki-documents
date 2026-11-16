@@ -2077,6 +2077,54 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker 44mm',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_44mm/cn_respeaker_44mm_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker 44mm 搭配 XIAO',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: '音频播放与录制',
+                  items: [
+                    'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_i2s_test',
+                    'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_record_playback',
+                    'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '音频流传输',
+                  items: [
+                    'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_udp_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: '设备控制',
+                  items: [
+                    'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_doa_vad',
+                    'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_led_effects',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
@@ -2306,6 +2354,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_muse_gadget',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_python_usage_stt_llm_transcribe_memory',
                 'Sensor/reSpeaker_clip/cn_respeaker_clip_chat_architecture',
@@ -3292,10 +3341,39 @@ const sidebars = {
         'Network/cn_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
-          label: 'Wio-WM6108 WiFi-Halow 设备',
+          label: 'Wio-WM6108 Wi-Fi HaLow 设备',
           items: [
             'Network/WiFi-Halow/cn_wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/cn_wifi-halow-mini-pcie-module',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Wio-WM8108 Wi-Fi HaLow 设备',
+          items: [
+            {
+              type: 'category',
+              label: 'HaLowLink 2 Wi-Fi HaLow 网关',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/cn_HaLowLink2_Introduction',
+                  label: '介绍',
+                },
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/cn_HaLowLink2_Getting_Started',
+                  label: '入门',
+                },
+                {
+                  type: 'category',
+                  label: '应用',
+                  items: [
+                    'Network/WiFi-Halow/HaLowLink2/Applications/cn_Media_Gateway',
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],
@@ -3336,8 +3414,23 @@ const sidebars = {
           collapsible: true,
           items: [
             'Edge/RockChip_Devices/Application/cn_object_detection_with_yolov11_on_recomputer_rk'
-            ]
-        }
+          ]
+        },
+        {
+          type: 'category',
+          label: '常见问题',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/cn_recomputer_faq',
+          },
+          items: [
+            'FAQ/reComputer/cn_recomputer_rk_faq',
+            'FAQ/reComputer/cn_recomputer_industrial_rk_faq',
+            'FAQ/reComputer/cn_recomputer_rk_module_faq',
+          ],
+        },
       ]
     },
     {
@@ -3546,6 +3639,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/cn_recomputer_r1100_assembly_guide',
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: '常见问题',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/cn_recomputer_pi_faq',
+          },
+          items: [
+            'FAQ/reComputer/cn_recomputer_r1000_faq',
+            'FAQ/reComputer/cn_recomputer_ai_r2000_faq',
+            'FAQ/reComputer/cn_recomputer_industrial_r2x_faq',
+            'FAQ/reComputer/cn_reterminal_faq',
           ],
         },
         {
@@ -4180,6 +4289,18 @@ const sidebars = {
               type: 'doc',
               id: 'Cloud_Chain/SenseCraft_Robotics/guides/cn_sensecraft_robotics_rebot_arm_102_b601_rs',
               label: 'reBot Arm 102 + B601 RS',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: '应用案例',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/applications/cn_sensecraft_robotics_so_arm_pi05',
+              label: 'SO-ARM + π0.5',
             },
           ],
         },

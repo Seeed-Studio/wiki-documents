@@ -287,13 +287,47 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_WALL_OSS",
               "label": "WALL-OSS — Embodied Reasoning & Robot Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LINGBOT_VLA2",
+              "label": "LingBot-VLA 2.0 — Cross-Embodiment Actions & Future Perception"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_DM05",
+              "label": "DM0.5 — Historical Context & Trajectory Alignment"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_G05",
+              "label": "G0.5 — Reasoning and Action in One Sequence"
             }
           ]
         },
         {
-          "type": "html",
+          "type": "category",
+          "label": "Part 5 · World Models & Video-Action Learning",
           "className": "robotics-section-title",
-          "value": "<span class=\"menu__link\" role=\"heading\" aria-level=\"3\" style=\"cursor: default\">Part 5 · World Models &amp; Video-Action Learning</span>"
+          "collapsed": false,
+          "collapsible": false,
+          "items": [
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_VLA_JEPA",
+              "label": "VLA-JEPA — Video Supervision & Latent World Models"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LINGBOT_VA",
+              "label": "LingBot-VA — Causal World Modeling & Robot Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_GR00T_2",
+              "label": "GR00T 2 — Joint World-Action Modeling"
+            }
+          ]
         },
         {
           "type": "html",

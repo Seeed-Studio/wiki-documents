@@ -59,7 +59,7 @@ function componentHarness(pathname = '/cn/robotics_page/') {
     Element,
     window: {matchMedia: () => ({matches: true})},
   });
-  const tree = exports.default({children: Array.from({length: 4}, () => ({props: {children: []}}))});
+  const tree = exports.EnhancedProductShowcase({children: Array.from({length: 4}, () => ({props: {children: []}}))});
   return {
     effects, refs, tree,
     cardTarget: new Element(),

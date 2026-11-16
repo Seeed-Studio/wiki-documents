@@ -212,12 +212,30 @@ const sidebars = {
             { type: 'doc', id: `${P}/ja_Paper_Reading_GR00T_N1`, label: 'NVIDIA GR00T — 適応とファインチューニング' },
             { type: 'doc', id: `${P}/ja_Paper_Reading_EO1`, label: 'EO-1 — インタリーブ型マルチモーダル事前学習' },
             { type: 'doc', id: `${P}/ja_Paper_Reading_WALL_OSS`, label: 'WALL-OSS — エンボディド推論とロボット制御' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — クロスエンボディメント行動と未来知覚' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_DM05`, label: 'DM0.5 — 歴史的背景と軌道整列' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_G05`, label: 'G0.5 — 推理とアクションの連続性' },
           ],
         },
         {
-          type: 'html',
+          type: 'category',
+          label: 'パート 5 · ワールドモデル & ビデオ・アクション学習',
           className: 'robotics-section-title',
-          value: '<span class="menu__link" role="heading" aria-level="3" style="cursor: default">パート 5 · ワールドモデル &amp; ビデオ・アクション学習</span>',
+          collapsed: false,
+          collapsible: false,
+          items: [
+            {
+              type: 'doc',
+              id: `${P}/ja_Paper_Reading_VLA_JEPA`,
+              label: 'VLA-JEPA — 動画による教師信号と潜在世界モデル',
+            },
+            {
+              type: 'doc',
+              id: `${P}/ja_Paper_Reading_LINGBOT_VA`,
+              label: 'LingBot-VA — 未来画像からロボット行動への因果的ワールドモデル',
+            },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_GR00T_2`, label: 'GR00T 2 — 統合世界-アクションモデリング' },
+          ],
         },
         {
           type: 'html',

@@ -1,7 +1,7 @@
 ---
-title: Jetson 摄像头选型指南
-sidebar_label: Jetson 摄像头选型指南
-description: 为基于 Jetson 的 reComputer 和 reServer 设备筛选和对比摄像头，包含规格参数和可用的安装配置指南链接。
+title: Jetson 相机选型指南
+sidebar_label: Jetson 相机选型指南
+description: 按接口、分辨率、视场角以及已完成验证的主板来筛选和比较适用于 Jetson 平台 reComputer 与 reServer 设备的相机，并提供可用的安装配置指南链接。
 keywords:
   - reComputer
   - Jetson camera
@@ -12,19 +12,92 @@ keywords:
 slug: /jetson/camera-selection-guide
 hide_table_of_contents: true
 last_update:
-  date: '2026-10-08'
+  date: '2026-11-09'
   author: zibo
 createdAt: '2026-9-29'
-updatedAt: '2026-10-08'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/cn/jetson/camera-selection-guide
 ---
 
 import CameraSelector from '@site/src/components/camera/CameraSelector';
 
-# Jetson 摄像头选型指南
+# Jetson 相机选型指南
 
-为你的 Jetson 平台 reComputer 或 reServer 查找合适的摄像头。可对比两个型号，然后打开“详情”查看规格参数和可用的安装配置指南。
-
-还没有 Jetson 设备？请先查看 [Jetson 产品选型指南](/cn/jetson-product-selection-guide/)。
+按接口、分辨率、视场角以及每款相机已完成验证的主板来比较适用于 reComputer 或 reServer 的相机。下面的选择器会筛选同样的 29 款型号；下方的表格以纯文本列出它们，这样每个型号和指南链接都可以在不打开对话框的情况下直接阅读。
 
 <CameraSelector />
+
+## 先选接口
+
+CSI、USB 和 GMSL2 解决的是不同的问题，接口通常决定了后续的一切。
+
+**CSI（MIPI CSI-2）。** 一根从相机到载板的软排线，无需转接板也无需集线器。在 J30/J40 主板上，这是增加相机的最低成本方式，但软排线必须同时匹配两端，而且 Seeed BSP 必须在你的 JetPack 版本中包含该传感器的驱动。
+
+**USB。** 只要有空闲接口，任何 reComputer 都能使用，而且不需要 BSP 适配。代价在主机侧：同一控制器上的所有 USB 相机共享带宽和功耗，一路 4K 视频流几乎挤占了第二路相机的空间。
+
+**GMSL2。** 一根同轴线同时传输数据和供电，相机可以通过带锁紧的 FAKRA 接头放在离主板数米远的位置。它需要匹配的 GMSL 扩展板以及该传感器的 3G 或 6G overlay；同一链路也承载 Sensing 和 Orbbec 系列的深度相机。
+
+## 不同主板可接入的相机
+
+| 接口 | 主板需要具备 | 典型主机 |
+|---|---|---|
+| CSI | 到载板的软排线；匹配的 BSP | J30/J40 · Orin Nano/NX |
+| USB | 一个空闲接口；检查功耗预算 | 任意 reComputer 或 reServer |
+| GMSL2 | GMSL 扩展板 + 3G/6G overlay | Robotics J401、J501、J501 Mini、J601；Industrial J501 |
+| GMSL2 depth | 与 GMSL2 相同 | Robotics J401、J501、J601 |
+
+## 镜头与视场角
+
+视场角有两种表示方式，且不能互换。固定镜头的 CSI 模组给出的是对角线角度，这也是 IMX219 系列在型号名中带上数字的原因——77°、130°、160°、200°。深度相机给出的是水平 × 垂直，因为深度流有自己的宽高比。
+
+在镜头卡口可更换的情况下（M12、CS、HQ 相机），视场角由镜头决定，表格中的数值只是一个起点。196° 的 GMSL2 镜头用于环视覆盖，它无法在院子对面读清标签。广角总是以每个目标的像素数为代价，所以请选择仍能把目标保持在画面中的最窄镜头。
+
+## 带宽与帧率
+
+CSI 通道是独占的，因此两路 CSI 相机不会互相竞争。USB 会：同一控制器后的所有相机共享同一总线，两路 1080p30 通常没问题，而一路 4K 加上第二路相机往往就不行。GMSL2 为每个相机提供独立链路，这也是为什么八路相机的设计会采用 GMSL2 而不是 USB。
+
+表格中的帧率是传感器标称的最大值，而不是对你整条处理链路的承诺。TensorRT 推理、颜色空间转换和录像都会为每帧增加处理时间；在确定方案规模前，请在目标设备上测量端到端帧率。
+
+## 常见坑点
+
+- 软排线能插进相机却插不上载板——下单前请检查两个连接器。
+- 没有 overlay 的 GMSL2：相机能枚举出来，但没有视频流。
+- USB 相机接在无法提供足够电流的集线器端口上；设备在负载下掉线。
+- 深度量程不等于精度。标称 10 m 的相机并不意味着在 10 m 处就足以可靠触发距离告警；阈值应基于实地测试来设定。
+- SKU 后缀会改变镜头和串行器。支持列表中的系列名称并不保证与你下单的具体型号完全一致。
+
+## 全部 29 款相机
+
+`—` 表示资料来源未给出该型号的该项数值。
+
+| 型号 | 接口 | 分辨率 | 视场角 | 已验证主板 | 链接 |
+|---|---|---|---|---|---|
+| IMX219-77 | CSI | 3280×2464 | 77°（来自型号名） | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-77IR | CSI | 3280×2464 | 77°（来自型号名） | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-130 | CSI | 3280×2464 | 130°（来自型号名） | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-160 | CSI | 3280×2464 | 160°（来自型号名） | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-160IR | CSI | 3280×2464 | 160°（来自型号名） | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-200 | CSI | 3280×2464 | 200°（来自型号名） | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| Raspberry Pi Camera Module V2 | CSI | 3280×2464 | 62.2° × 48.8° | J30/J40 · Orin Nano/NX | [spec](https://www.raspberrypi.com/documentation/accessories/camera.html#technical-information) |
+| IMX219 M12/CS Mount | CSI | 3280×2464 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-83 Stereo Camera | CSI | 3280×2464 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| Raspberry Pi High Quality Camera | CSI | 4056×3040 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| Raspberry Pi HQ Camera (M12) | CSI | 4056×3040 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| High Quality Camera for CM/Jetson | CSI | 4056×3040 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| X10 USB Camera 1080p | USB | 1920×1080 | — | reComputer Super J4012 应用示例 | [guide](/cn/deploy_live_vlm_webui_on_jetson/) |
+| ET-S231 USB Camera · 90° | USB | 1920×1080 | — | 未声明有主板级适配 | [spec](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) |
+| ET-S231 USB Camera · 120° | USB | 1920×1080 | — | 未声明有主板级适配 | [spec](https://www.seeedstudio.com/ET-S231-120-USB-Camera-p-6683.html) |
+| OV9732 USB Camera · 100° | USB | 1280×720 | — | 未声明有主板级适配 | [spec](https://www.seeedstudio.com/Camera-Module-OV9732-1MP-100-USB2-0-USB2-0-L38-W38-H16-05mm-p-6982.html) |
+| Orbbec Gemini 2 | USB | 1920×1080 · depth 1280×800 | 91° × 66° | reComputer J4012 / J30-J40 工作流 | [guide](/cn/yolov11_with_depth_camera/) |
+| Orbbec Gemini 336 | USB | 1920×1080 · depth 1280×800 | 90° × 65° | 未声明有主板级适配 | [guide](/cn/orbbec_gemini336/) |
+| Intel RealSense D435i | USB | 1920×1080 · depth 1280×720 | 87° × 58° | 未声明有主板级适配 | [guide](/cn/realsense_3d_seg/) |
+| RealSense D405 | USB | 1280×720 · depth 1280×720 | 87° × 58° | 未声明有主板级适配 | [guide](/cn/realsense_3d_seg/) |
+| Sensing SG3S-ISX031C-GMSL2F | GMSL2 | 1920×1536 | 196° × 154° | Robotics J401 / J501 / J501 Mini / J601；Industrial J501 载板 | [guide](/cn/sensing_gmsl_cameras/#入门指南) |
+| Sensing SG3S-ISX031C-GMSL2-H | GMSL2 | 1920×1536 | — | Seeed Sensing 6G overlay 指南；主板列表使用 SG3S 系列名称 | [guide](/cn/sensing_gmsl_cameras/#入门指南) |
+| Sensing SG2-AR0233C-5200-G2A-H | GMSL2 | 1920×1080 | — | 传感器系列：Robotics J401 / J501 / J501 Mini / J601；需核对具体后缀 | [guide](/cn/sensing_gmsl_cameras/#入门指南) |
+| Sensing SG2-IMX390C-5200-G2A-H | GMSL2 | 1920×1080 | — | 传感器系列：Robotics J401 / J501 / J501 Mini / J601；需核对具体后缀 | [guide](/cn/sensing_gmsl_cameras/#入门指南) |
+| Sensing SG8S-AR0820C-5300-G2A-H | GMSL2 | 3840×2160 | — | 传感器系列：Robotics J401 / J501 / J501 Mini / J601；需核对具体后缀 | [guide](/cn/sensing_gmsl_cameras/#入门指南) |
+| Orbbec Gemini 335LG | GMSL2 | 1280×800 · depth 1280×800 | 90° × 65° | Robotics J401 / J501 / J601；J501 Mini 单独公告 | [guide](/cn/orbbec_gemini_335lg/#gmsl2-connection) |
+| Stereolabs ZED X | GMSL2 | 1920×1200 · depth 1920×1200 | 110° × 80° | ZED X 系列：Robotics J50 Mini / J50 / J40 / J601；需核对具体型号 | [guide](/cn/zed_x_gmsl_cameras_on_recomputer_robotics/#device-specific-setup) |
+| Stereolabs ZED X Mini | GMSL2 | 1920×1200 · depth 1920×1200 | 110° × 80° | ZED X 系列：Robotics J50 Mini / J50 / J40 / J601；需核对具体型号 | [guide](/cn/zed_x_gmsl_cameras_on_recomputer_robotics/#device-specific-setup) |
+| Stereolabs ZED X One GS | GMSL2 | 1920×1200 | 110° × 80° | 未有精确到 reComputer 型号级别的支持文档 | [guide](/cn/zed_x_gmsl_cameras_on_recomputer_robotics/#device-specific-setup) |

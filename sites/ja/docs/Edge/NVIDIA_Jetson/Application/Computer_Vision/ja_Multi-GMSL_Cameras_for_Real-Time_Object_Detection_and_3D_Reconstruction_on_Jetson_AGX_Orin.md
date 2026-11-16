@@ -1,6 +1,6 @@
 ---
-description: この Wiki では、Jetson AGX Orin を用いたマルチカメラシステムで、J501 キャリアボードと GMSL 拡張ボードを使用して AI 映像解析タスクを実行する方法に焦点を当てています。まず、必要なハードウェアモジュールと必須の JetPack SDK などの前提条件を示します。次に、設定スクリプトと systemd サービスの作成・設定といった GMSL カメラの構成手順を詳述します。続いて、必要なパッケージのダウンロードとインストール、TensorRT モデルのエクスポート、Python スクリプトの実行により、8 台のカメラで YOLO11 を素早くデプロイしてリアルタイム物体検出を行う方法を示します。その後、VGGT 環境のインストールと 8 台のカメラによる 3D 再構成スクリプトの実行方法を説明し、魚眼カメラの歪みが結果に与える影響について注意喚起します。最後に、有用なリソースと、技術サポートや製品ディスカッションのための複数のチャネルを提供します。\`
-title: Jetson AGX Orin 上でのマルチ GMSL カメラによるリアルタイム物体検出と 3D 再構成
+description: "J501キャリアボードを使用してJetson AGX Orin上で8台のGMSL2カメラを動作させる：カメラ設定、YOLO11 TensorRT検出、およびVGGT 3D再構成。"
+title: Jetson AGX Orin上でのリアルタイム物体検出と3D再構成のためのマルチGMSLカメラ
 keywords:
   - j501 carrier board
   - j501
@@ -13,38 +13,38 @@ image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo1.webp
 slug: /multiple_cameras_with_jetson
 sku: 101090101, 102991855, 102991854, E24081601, 206001693, 206001694
 last_update:
-  date: 06/30/2025
+  date: 11/06/2026
   author: Zibo
 createdAt: '2025-06-27'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/ja/multiple_cameras_with_jetson/
 ---
 
 <div style={{ textAlign: "justify" }}>
-この Wiki では、reServer Industrial J501 キャリアボードと GMSL 拡張ボードを使用して、マルチカメラシステムにおけるリアルタイム物体検出と 3D 再構成のデプロイ方法を紹介します。
+1台のJetson AGX Orinに8台のGMSL2カメラを接続し、同じストリームからYOLO11による検出とVGGTによる3D再構成を実行します。この構成は、reServer Industrial J501キャリアボードとそのJ501-GMSL拡張ボードを用い、JetPack 6.2上で検証されています。手順を最後まで進めることで、カメラ設定スクリプト、8ストリームに対応したTensorRT版YOLO11ビルド、そしてVGGT再構成パイプラインを用意できます。
 </div>
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>NVIDIA Jetson AGX Orin モジュール</th>
-        <th>reServer Industrial J501 キャリアボード</th>
-        <th>reServer Industrial J501-GMSL 拡張ボード</th>
+        <th>NVIDIA Jetson AGX Orin Module</th>
+        <th>reServer Industrial J501 Carrier Board</th>
+        <th>reServer Industrial J501-GMSL extension board</th>
     </tr>
     <tr>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="NVIDIA Jetson AGX Orin module, top view" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="reServer Industrial J501 carrier board, angled top view" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="reServer Industrial J501-GMSL extension board, angled top view" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
     </tr>
@@ -52,21 +52,21 @@ url: https://wiki.seeedstudio.com/ja/multiple_cameras_with_jetson/
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html" target="_blank">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html" target="_blank">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Industrial-J501-GMSL-extension-board-p-5949.html" target="_blank">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
@@ -76,31 +76,35 @@ url: https://wiki.seeedstudio.com/ja/multiple_cameras_with_jetson/
 
 ## 前提条件
 
-- NVIDIA Jetson AGX Orin モジュール 32GB/64GB
-- 最新の [JetPack 6.2 SDK](https://wiki.seeedstudio.com/ja/reserver_j501_getting_started/#prepare-the-jetpack-image) をフラッシュ済み（GMSL 拡張ボード対応）
-- reServer Industrial J501 キャリアボード
-- reServer Industrial J501-GMSL 拡張ボード
-- [GMSL カメラ](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
+- NVIDIA Jetson AGX Orin Module 32GB/64GB
+- 最新の [JetPack 6.2 SDK](https://wiki.seeedstudio.com/ja/reserver_j501_getting_started/#prepare-the-jetpack-image) がフラッシュされていること（GMSL拡張ボードをサポート）
+- reServer Industrial J501 Carrier Board
+- reServer Industrial J501-GMSL extension board
+- [GMSL Camera](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
 
-## GMSL カメラの構成
+:::note
+このウォークスルーはJetPack 6.2およびCUDA 12.6を対象としており、以下のwheelリンクはこの環境向けにビルドされています。[J501フラッシュガイド](/ja/reserver_j501_getting_started/)にはJetPack 5.xおよび6.xイメージのみが記載されており、このキャリアボード向けのJetPack 7.xイメージパスはまだ文書化されていません。
+:::
+
+## GMSLカメラの設定
 
 ## ハードウェア接続
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
+  <img alt="J501にGMSL拡張ボードと8台のGMSLカメラが接続されており、FAKRAケーブルにCAM0からCAM7までラベルが付いている" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
-GMSL カメラから入力を得るためには、まずシリアライザおよびデシリアライザのフォーマットを設定する必要があります。これらをシステム起動スクリプトに追加し、システム起動時に自動で設定されるようにします。
+GMSLカメラから入力を取得するためには、まずシリアライザおよびデシリアライザのフォーマットを設定する必要があります。これらをシステム起動スクリプトに追加し、システムが起動するたびに自動的に設定されるようにします。
 </div>
 
-**ステップ 1.** 構成スクリプトを作成：
+**ステップ1.** 設定スクリプトを作成します：
 
 ```bash
 touch media-setup.sh
 ```
 
-**ステップ 2.** 次の内容を media-setup.sh に貼り付けます：
+**ステップ2.** 以下の内容をmedia-setup.shに貼り付けます：
 
 ```bash
 #!/bin/bash
@@ -124,18 +128,18 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
 media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_3":0[fmt:YUYV8_1X16/1920x1536]'
 ```
 
-**ステップ 3.** media-setup.sh に実行権限を付与：
+**ステップ3.** media-setup.shに実行権限を付与します：
 
 ```bash
 chmod +x media-setup.sh
 ```
 
-**ステップ 4.** systemd サービスを作成：
+**ステップ4.** systemdサービスを作成します：
 
 ```bash
 sudo vim /etc/systemd/system/mediactl-init.service 
 
-# 次の内容を追加します:
+# Add the following content:
 [Unit]
 Description=Set media-ctl formats at boot
 After=multi-user.target
@@ -149,7 +153,7 @@ RemainAfterExit=true
 WantedBy=multi-user.target
 ```
 
-**ステップ 5.** 保存して終了後、サービスを有効化：
+**ステップ5.** 保存して終了したら、サービスを有効化します：
 
 ```bash
 sudo systemctl daemon-reexec
@@ -158,12 +162,12 @@ sudo systemctl enable mediactl-init.service
 sudo systemctl start mediactl-init.service
 ```
 
-**ステップ 5.** デバイスを再起動し、サービスが実行中か確認：
+**ステップ6.** デバイスを再起動し、サービスが動作しているか確認します：
 
 ```bash
 sudo systemctl status mediactl-init.service
 
-# 次のコマンドでカメラを素早く起動し、ウィンドウに映像ストリームを表示できます:
+#Use the following command to quickly start the camera and open a window to display the video stream:
 gst-launch-1.0 v4l2src device=/dev/video0  ! xvimagesink -ev 
 gst-launch-1.0 v4l2src device=/dev/video1  ! xvimagesink -ev 
 gst-launch-1.0 v4l2src device=/dev/video2  ! xvimagesink -ev 
@@ -175,24 +179,24 @@ gst-launch-1.0 v4l2src device=/dev/video7  ! xvimagesink -ev
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
+  <img alt="8つのgst-launch-1.0ウィンドウがあり、それぞれ1台のGMSLカメラに対応し、各ウィンドウに独自のタイムスタンプオーバーレイ付きライブビューが表示されている" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
 </div>
 
 :::info
-私たちの GMSL 拡張ボードは最大 8 台のカメラビデオ入力をサポートし、PTP タイムスタンプ精度は 1ms 未満で、8 つのビデオデータストリームの同期を保証します。
+当社のGMSL拡張ボードは最大8系統のカメラ映像入力をサポートし、8つの映像データストリームの同期を確保するために1ms未満のPTPタイムスタンプ精度を提供します。
 :::
 
-## 8 台のカメラで YOLO11 を迅速デプロイしリアルタイム物体検出
+## 8台のカメラでリアルタイム物体検出を行うYOLO11を素早くデプロイ
 
 <div style={{ textAlign: "justify" }}>
-YOLOv11 は Ultralytics によって公開されたリアルタイム物体検出モデルで、速度・精度・効率の強力なバランスを提供します。改良されたアーキテクチャと学習戦略により、これまでのバージョンよりも性能と展開の柔軟性で優れています。エッジデバイス、自律システム、産業向け AI アプリケーションに特に適しており、検出・セグメンテーション・トラッキングなどのタスクを高い信頼性でサポートします。
+YOLOv11はUltralyticsによってリリースされたリアルタイム物体検出モデルであり、速度・精度・効率の強力なバランスを提供します。改良されたアーキテクチャと学習戦略により、YOLOv11は性能とデプロイの柔軟性の両面で従来バージョンを上回ります。特にエッジデバイス、自律システム、産業向けAIアプリケーションに適しており、高い信頼性で検出・セグメンテーション・トラッキングなどのタスクをサポートします。
 </div>
 
-### YOLO11 をインストールしてマルチカメラ物体検出を実行
+### YOLO11をインストールして複数カメラの物体検出を実行
 
-**ステップ 1.** 必要なパッケージをダウンロードしてインストール：
+**ステップ1.** 必要なパッケージをダウンロードしてインストールします：
 :::note
-以下のパッケージは、CUDA 12.6 を搭載した JetPack 6.2 用にビルドされています。
+以下のパッケージはJetPack 6.2およびCUDA 12.6向けにビルドされています。
 :::
 
 [onnxruntime_gpu-1.22.0-cp310-cp310-linux_aarch64.whl](https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/869/e41abdc35e093/onnxruntime_gpu-1.22.0-cp310-cp310-linux_aarch64.whl#sha256=869e41abdc35e09345876f047fce49267d699df3e44b67c2518b0469739484ff)
@@ -201,14 +205,14 @@ YOLOv11 は Ultralytics によって公開されたリアルタイム物体検�
 
 [torchvision-0.22.0-cp310-cp310-linux_aarch64.whl](https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/daa/bff3a07259968/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl#sha256=daabff3a0725996886b92e4b5dd143f5750ef4b181b5c7d01371a9185e8f0402)
 
-[yolo11n.pt 事前学習重み](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt)
+[yolo11n.pt pretrain weights](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt)
 
-[yolo11n-seg.pt 事前学習重み](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt)
+[yolo11n-seg.pt pretrain weights](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt)
 
-[yolo11n-pose.pt 事前学習重み](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt)
+[yolo11n-pose.pt pretrain weights](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt)
 
 ```bash
-# pip でパッケージをインストール:
+#Install the packages using pip:
 sudo apt update
 sudo apt install python3-pip -y
 pip install -U pip
@@ -218,7 +222,7 @@ pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 pip install ultralytics
 ```
 
-TensorRT モデルをエクスポート：
+TensorRTモデルをエクスポートします：
 
 ```bash
 yolo export model=./models/yolo11n.pt format=engine device=0 half=True dynamic=True
@@ -226,7 +230,7 @@ yolo export model=./models/yolo11n-seg.pt format=engine device=0 half=True dynam
 yolo export model=./models/yolo11n-pose.pt format=engine device=0 half=True dynamic=True
 ```
 
-以下の Python スクリプトを実行すると、8 台のカメラで素早く物体検出を行えます：
+次の Python スクリプトを実行すると、8 台のカメラで素早く物体検出を実行できます：
 
 <details>
 <summary> detect.py </summary>
@@ -278,7 +282,7 @@ def capture_thread(index):
         p_time = current_time
         cv2.putText(annotated, f"FPS: {fps:.2f}", (10, 25),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1, cv2.LINE_AA)
-        
+
         with locks[index]:
             frames[index] = annotated
 
@@ -321,20 +325,20 @@ if __name__ == "__main__":
 </details>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
+  <img alt="Multi-Camera window running YOLO11 on eight streams with FPS and box labels, beside jetson_release and jtop output" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
-J501 は非常に高い計算能力を持つ NVIDIA AGX Orin モジュールを搭載しており、最大 8 台のカメラを扱い、3 種類の異なる検出タスクのモデルを同時に読み込むことで、リアルタイムな物体検出を可能にします。
+J501 には NVIDIA AGX Orin モジュールが搭載されており、非常に高い演算性能を備えています。最大 8 台のカメラを扱い、3 つの異なる検出タスク用のモデルをロードして、リアルタイムの物体検出を実現できます。
 </div>
 
-## VGGT を用いた 3D 再構成を迅速にデプロイ
+## 3D 再構成のための VGGT を素早くデプロイ
 
 <div style={{ textAlign: "justify" }}>
-VGGT は、複雑な環境における 3D 理解と推論のために設計されたビジョン・ランゲージモデルです。マルチビュー画像と言語入力を組み合わせて、詳細な 3D シーン表現を生成し、環境に関する空間的・意味的な質問に回答します。トランスフォーマベースのアーキテクチャを基盤としており、視覚的グラウンディング、3D 物体位置推定、言語ガイド付きナビゲーションなどのタスクで優れた性能を発揮し、ロボティクスやエンボディド AI アプリケーションに非常に適しています。
+VGGT は、複雑な環境における 3D 理解と推論のために設計されたビジョン・ランゲージモデルです。マルチビュー画像と言語入力を組み合わせて、詳細な 3D シーン表現を生成し、環境に関する空間的または意味的な質問に答えることができます。トランスフォーマーベースのアーキテクチャに基づいて構築されており、視覚的グラウンディング、3D オブジェクト位置推定、言語誘導型ナビゲーションなどのタスクに優れているため、ロボティクスやエンボディド AI アプリケーションに非常に適しています。
 </div>
 
-### VGGT 環境をインストールしてマルチカメラで 3D 再構成を実行
+### VGGT 環境をインストールし、複数カメラで 3D 再構成を実行する
 
 ```bash
 git clone https://github.com/facebookresearch/vggt.git
@@ -343,7 +347,7 @@ pip install -r requirements.txt
 pip install -r requirements_demo.txt
 ```
 
-次のスクリプトを実行すると、8 台のカメラで素早く 3D 再構成を行えます：
+次のスクリプトを実行すると、8 台のカメラで素早く 3D 再構成を実行できます：
 
 <details>
 <summary> demo.py </summary>
@@ -713,7 +717,7 @@ def main():
 
     images = load_and_preprocess_images(images).to(device)
     print(f"Preprocessed images shape: {images.shape}")
-    
+
     print("Running inference...")
     dtype = torch.bfloat16 if torch.cuda.get_device_capability()[0] >= 8 else torch.float16
 
@@ -760,31 +764,57 @@ if __name__ == "__main__":
 </details>
 
 :::info
-この Python スクリプトを実行し、ブラウザを開いて viser サーバーにアクセスしてください。vggt モデルの読み込み時間はやや長くなる場合があります。忍耐強く待ってください。
-リモートサーバーでこのスクリプトを実行している場合は、`localhost` をサーバーの IP アドレスに置き換えてください。
+この Python スクリプトを実行し、ブラウザを開いて viser サーバーにアクセスしてください。vggt モデルの読み込み時間はやや長くなる場合があります。しばらくお待ちください。
+このスクリプトをリモートサーバー上で実行している場合は、`localhost` をサーバーの IP アドレスに置き換えてください。
 http://`localhost`:8080
 :::
-
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
+  <img alt="ポート 8080 で起動した viser のターミナル出力（HTTP と WebSocket の URL を表示）" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
+  <img alt="8 台のカメラから再構成された点群の Viser ブラウザビュー（ノート PC と机の表面を表示）" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
 </div>
 
 :::note
-使用しているカメラは歪みの大きい魚眼カメラであるため、歪み補正後の画像品質は低下し、最終的な 3D モデリング結果に影響します。歪みが少なく、画質の高いカメラを使用すれば、結果は改善されます。
+使用しているカメラは歪みの大きい魚眼カメラであるため、歪み補正後の画質が悪くなり、最終的な 3D モデリング結果に影響します。歪みが少なく画質の高いカメラを使用すれば、効果は向上します。
 :::
+
+## FAQ
+
+**J501 は一度に何台の GMSL カメラを駆動できますか？**
+8 台です。J501-GMSL 拡張ボードは、AGX Orin モジュール（32GB および 64GB）向けに設計された reServer Industrial J501 キャリアボード上で 8 系統のカメラ入力を受け付けます。`mediactl-init.service` が動作すると、ストリームは `/dev/video0` から `/dev/video7` として列挙されます。
+
+**再起動のたびにカメラを再設定する必要がありますか？**
+いいえ。シリアライザとデシリアライザのフォーマットは `media-setup.sh` に記述されており、これは `mediactl-init.service` という systemd ユニットとして登録されていて、起動時に再適用されます。カメラが表示されなくなった場合は、スクリプトを触る前に `systemctl status mediactl-init.service` を確認してください。
+
+**8 系統のストリームは時間同期されていますか？**
+はい。拡張ボードは 8 系統すべてに対して 1 ms 未満の PTP タイムスタンプ精度を提供しており、そのため 8 つの `gst-launch-1.0` ウィンドウには同じミリ秒オーバーレイが表示されます。これは、ビューを時間的に揃える必要がある 3D 再構成にとって重要です。
+
+**このビルドが対象としている JetPack バージョンはどれですか？**
+JetPack 6.2（CUDA 12.6）です。YOLO11 セクションでリンクされている事前ビルド済みホイール — `onnxruntime_gpu` 1.22.0、`torch` 2.7.0、`torchvision` 0.22.0（いずれも cp310）— はこの組み合わせ向けにビルドされています。そのため、別の JetPack を使用する場合は、このページのものではなく Jetson AI Lab インデックスから対応するホイールを入手する必要があります。
+
+**再構成された点群が粗く見えるのはなぜですか？**
+デモで使用しているカメラは歪みの大きい魚眼カメラであり、スクリプト内の `defisheye` 補正によって、VGGT がフレームを見る前の段階で画質が低下します。歪みが少なく光学性能の高いカメラに交換すれば、パイプラインの他の部分を変更せずに、より高密度でクリーンな点群が得られます。
+
+## 関連リソース
+
+- [reServer Industrial J501 への JetPack のフラッシュ](/ja/reserver_j501_getting_started/)
+- [reServer Industrial J501 キャリアボードインターフェース](/ja/j501_carrier_board_interfaces_usage/)
+- [Sensing GMSL Camera](/ja/sensing_gmsl_cameras)
+- [Jetson Orin 上での距離計測のための YOLOv11 と Depth カメラ](/ja/yolov11_with_depth_camera/)
+- [Jetson 上での効率的なマルチタスクビジョン推論エンジンのデプロイ](/ja/deploy_visual_perception_engine_recomputer/)
+- [reServer Industrial J501 製品ページ](https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html)
+- [wiki-documents リポジトリとディスカッション](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## リソース
 
 - [YOLOv11 Github](https://github.com/ultralytics/ultralytics)
 - [VGGT: Visual Geometry Grounded Transformer](https://vgg-t.github.io/)
 
-## テクニカルサポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。ご希望や用途に合わせ、以下の窓口をご利用ください。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

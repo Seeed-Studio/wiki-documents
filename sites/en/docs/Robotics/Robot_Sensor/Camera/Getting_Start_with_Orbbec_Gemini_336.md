@@ -23,7 +23,7 @@ url: https://wiki.seeedstudio.com/orbbec_gemini336/
 ---
 
 <div align="center">
-    <img width={400}
+    <img alt="Orbbec Gemini 336 3D camera, product photo" width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
 </div>
 
@@ -80,43 +80,43 @@ The Gemini 336 is a brand-new addition to the Gemini 330 series. Building on the
 
 ## Hardware Overview
 <div align="center">
-    <img width={500}
+    <img alt="Gemini 336 front view labelled with the two IR modules, LRM, LDM, RGB module and IR-pass filter" width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overvew.png" />
 </div>
 
 <div align="center">
-    <img width={500}
+    <img alt="Front view of the Gemini 336 showing the two IR lenses and the RGB module" width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overview1.png" />
 </div>
 
 <div align="center">
-    <img width={500}
+    <img alt="Rear view of the Gemini 336 with the heatsink fins" width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overview2.png" />
 </div>
 
 <div align="center">
-    <img width={500}
+    <img alt="Front dimension drawing of the Gemini 336 with the lens spacing and diameter tolerances" width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overview3.png" />
 </div>
 <div align="center">
-    <img width={500}
+    <img alt="Rear dimension drawing with the 45 mm hole spacing and the M3 mounting points, max insertion depth 3 mm" width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overview4.png" />
 </div>
 <div align="center">
-    <img width={500}
+    <img alt="Side drawing with the field-of-view angles OP 104 degrees / ME 107 degrees and OP 109.6 degrees" width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overview5.png" />
 </div>
 <div align="center">
-    <img width={500}
+    <img alt="Side drawing with the OP 94 degrees / ME 101 degrees angles and the 1/4-20UNC mounting point, max insertion depth 5 mm" width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overview6.png" />
 </div>
 <div align="center">
-    <img width={300}
+    <img alt="Side drawing with the USB Type-C mounting point and the two M2 mounting points, height 15.00 plus or minus 0.15 mm" width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overvew7.png" />
 </div>
 
 <div align="center">
-    <img width={300}
+    <img alt="Side drawing with the 30.70 plus or minus 0.30 mm width and 25.00 plus or minus 0.30 mm height" width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overvew9.png" />
 </div>
 
@@ -129,7 +129,7 @@ The Gemini 336 is a brand-new addition to the Gemini 330 series. Building on the
   ③ Connect the USB-A connector to the host using the same USB-C to USB-A cable, as shown in Step 3 below.
 
 <div align="center">
-    <img width={700}
+    <img alt="Gemini camera mounted on the tripod head with the USB-C to USB-A cable attached" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/step1.png" />
 </div>
 
@@ -143,7 +143,7 @@ Select and download the corresponding [Orbbec Viewer](https://www.orbbec.com/dev
 【Remark】If the camera is not recognized, please check to ensure that the camera and the host are properly connected. You can try disconnecting and then reconnecting the USB cable. If it still isn’t recognized, consider replacing the USB cable or verifying whether the host computer’s power supply meets the required specifications.
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer before a camera is connected, showing the empty preview and the &quot;No device found&quot; message" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft1.png" />
 </div>
 
@@ -151,49 +151,49 @@ Select and download the corresponding [Orbbec Viewer](https://www.orbbec.com/dev
 2. Toggle the ‘Depth’ button at the top of the tool to start and preview the depth stream.
 
 <div align="center">
-    <img width={700}
+    <img alt="Depth stream toggled on in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft2.png" />
 </div>
 
 3. Toggle the ‘Color‘ button at the top of the tool to start and preview the color stream. The color stream and depth stream will be displayed side by side.
 
 <div align="center">
-    <img width={700}
+    <img alt="Colour and depth streams shown side by side in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft3.png" />
 </div>
 
 4. Toggle the ‘IR Left’ and ‘IR Right’ buttons at the top of the tool to strat and preview the IR stream.
 
 <div align="center">
-    <img width={700}
+    <img alt="Left and right IR streams previewed in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft4.png" />
 </div>
 
 5. Toggle the ‘IMU’ button at the top of the tool to start and preview the IMU stream.
 
 <div align="center">
-    <img width={700}
+    <img alt="IMU stream previewed in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft5.png" />
 </div>
 
 6. Toggle the button on the top of each window to show the metadata information.
 
 <div align="center">
-    <img width={700}
+    <img alt="Metadata overlay enabled on the Orbbec Viewer windows" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft6.png" />
 </div>
 
 7. Toggle the ‘PointCloud‘ button at the top of the tool to start and preview the 3D point cloud
 
 <div align="center">
-    <img width={700}
+    <img alt="3D point cloud preview in Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft7.png" />
 </div>
 
 8. Toggle the ‘Display’ button under the ‘Image View’ menu on the left to start and preview the D2C (depth to color registration) stream. The 3D point cloud and the D2C stream will be displayed side by side.
 
 <div align="center">
-    <img width={700}
+    <img alt="Point cloud and D2C registered stream displayed side by side" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft8.png" />
 </div>
 
@@ -204,6 +204,13 @@ Select and download the corresponding [Orbbec Viewer](https://www.orbbec.com/dev
 - [Datasheet](https://doc.orbbec.com/documentation/Orbbec%20Gemini%20330%20Series%20Documentation/Gemini%20330%20Series%20Datasheet%20(Overall))
 - [OrbbecViewer](https://github.com/orbbec/OrbbecSDK/blob/main/doc/OrbbecViewer/English/OrbbecViewer.md)
 - [ROS SDK](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
+
+## Related Resources
+
+- [Orbbec Gemini 2 3D camera](/orbbec_gemini2/)
+- [ORB-SLAM3 with Orbbec Gemini2](/orb_slam3_orbbec_gemini2/)
+- [PyCuVSLAM on reComputer](/pycuvslam_recomputer_robotics/)
+- [Orbbec depth camera on ROS](/orbbec_depth_camera_on_ros/)
 
 ## Tech Support & Product Discussion
 

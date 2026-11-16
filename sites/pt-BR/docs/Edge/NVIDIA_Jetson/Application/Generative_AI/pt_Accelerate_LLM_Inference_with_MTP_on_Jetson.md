@@ -34,20 +34,20 @@ url: https://wiki.seeedstudio.com/pt-br/jetson/accelerate_llm_inference_mtp/
 
 ## Introdução
 
-Este wiki explica como o Multi-Token Prediction (MTP) funciona e como ativá-lo no **llama.cpp no NVIDIA Jetson AGX Orin com Qwen3.5-4B**. Siga a configuração e compare o desempenho com MTP ligado/desligado usando uma demonstração local de monitoramento de multidões.
+Multi-Token Prediction gera vários tokens por etapa e permite que o modelo alvo os verifique em uma única passada, o que reduz o número de passadas de decodificação seriais quando os rascunhos são bons. No Jetson AGX Orin, o llama.cpp pode ativar MTP para o Qwen3.5-4B; as seções abaixo explicam por que a decodificação é lenta, como ativar o MTP e onde ele compensa, medido em comparação com o MTP desativado em uma demonstração local de monitoramento de multidões.
 
 Primeiro, veja os resultados reais do teste. Pedimos ao LLM para gerar um script Python para calcular a sequência de Fibonacci e comparamos a velocidade de geração com e sem o modelo MTP ativado.
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_vs.gif" alt="MTP desligado à esquerda e MTP ligado à direita gerando código Fibonacci com Qwen3.5-4B no Jetson AGX Orin." />
+  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_vs.gif" alt="MTP DESLIGADO à esquerda e MTP LIGADO à direita gerando código Fibonacci com Qwen3.5-4B no Jetson AGX Orin." />
 </div>
 
-Sem o modo MTP ativado, o modelo Qwen3.5 4B gera tokens a uma taxa de cerca de 25,6 tokens/s, enquanto com o modo MTP ativado, o mesmo modelo no mesmo dispositivo atinge uma velocidade de geração de 49,7 tokens/s. Pode-se ver que, para esse tipo de conteúdo relativamente determinístico, a velocidade de geração do modelo praticamente dobra. Isso nos dá uma percepção: para algumas tarefas relativamente rotineiras, ativar o modo MTP pode trazer ganhos de desempenho bem interessantes!
+Sem o modo MTP ativado, o modelo Qwen3.5 4B gera tokens a uma taxa de cerca de 25,6 tokens/s, enquanto com o modo MTP ativado, o mesmo modelo no mesmo dispositivo atinge uma velocidade de geração de 49,7 tokens/s. Pode-se ver que, para esse tipo de conteúdo relativamente determinístico, a velocidade de geração do modelo quase dobra. Isso nos dá uma percepção: para algumas tarefas relativamente rotineiras, ativar o modo MTP pode trazer ganhos de desempenho consideráveis!
 
-Veja outro cenário de análise visual: defina uma região de ROI e monitore se a contagem de pessoas na ROI permanece em cinco ou mais pessoas por 1,5 segundo; se sim, chame o LLM para análise e diagnóstico de anomalias. Vamos ver o quanto fica mais rápido com o modo MTP ativado no cenário de análise visual!
+Veja outro cenário de análise visual: defina uma região de ROI e monitore se a contagem de ROI permanece em cinco pessoas ou mais por 1,5 segundo; se sim, chame o LLM para análise e diagnóstico de anomalias. Vamos ver o quanto ele fica mais rápido com o modo MTP ativado no cenário de análise visual!
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_demo.gif" alt="Rastreamento de ROI baseado em vídeo à esquerda, com resultados de análise de multidão com MTP desligado e ligado nos painéis central e direito." />
+  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_demo.gif" alt="Rastreamento de ROI baseado em vídeo à esquerda, com resultados de análise de multidão com MTP DESLIGADO e LIGADO nos painéis central e direito." />
 </div>
 
 Como pode ser visto, para o cenário acima, ativar o modo MTP pode encurtar nosso tempo de conclusão da tarefa em cerca de 3 segundos — essa otimização é bastante significativa!
@@ -58,12 +58,12 @@ Como pode ser visto, para o cenário acima, ativar o modo MTP pode encurtar noss
 
 ### Um token por vez
 
-Pergunte a um modelo onde o NVIDIA Jetson pode ser usado, e ele pode responder com robótica, visão industrial e monitoramento de borda. A frase aparece gradualmente porque um LLM autorregressivo prevê um token, o adiciona ao contexto e usa esse contexto para prever o próximo.
+Pergunte a um modelo onde o NVIDIA Jetson pode ser usado, e ele pode responder com robótica, visão industrial e monitoramento de borda. A frase aparece gradualmente porque um LLM autoregressivo prevê um token, o adiciona ao contexto e usa esse contexto para prever o próximo.
 
 Um token pode ser uma palavra, parte de uma palavra ou um sinal de pontuação. Cada nova previsão depende do que veio antes, então o modelo repete esse processo até que a resposta esteja completa.
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-token-generation-en.png" alt="A decodificação autorregressiva adiciona cada token gerado ao contexto antes de prever o próximo." loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-token-generation-en.png" alt="A decodificação autoregressiva adiciona cada token gerado ao contexto antes de prever o próximo." loading="lazy" />
 </div>
 
 A 20 tokens/s, gerar 500 tokens leva cerca de 25 segundos de tempo de decodificação. Essa espera se torna perceptível quando um assistente local escreve código ou um relatório.
@@ -91,9 +91,9 @@ Multi-Token Prediction treina cabeças ou camadas de previsão adicionais para p
   <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-vs-mtp-en.png" alt="Decodificação padrão à esquerda; elaboração de candidatos MTP e verificação pelo modelo alvo à direita." loading="lazy" />
 </div>
 
-Quando vários candidatos passam na verificação, a resposta avança por múltiplos tokens em uma única passagem do modelo alvo. Se um candidato falhar, o runtime mantém o prefixo aceito e descarta o candidato rejeitado e o restante do rascunho. O modelo alvo continua a partir desse ponto.
+Quando vários candidatos passam na verificação, a resposta avança por vários tokens em uma única passada do modelo alvo. Se um candidato falhar, o runtime mantém o prefixo aceito e descarta o candidato rejeitado e o restante do rascunho. O modelo alvo continua a partir desse ponto.
 
-Isso reduz o número de passagens de decodificação em série quando as propostas são suficientemente precisas. O modelo alvo ainda verifica a saída. Um speculative decoding sem perdas e correto preserva seu resultado ganancioso (greedy) ou distribuição de amostragem, embora quantização e diferenças numéricas de runtime possam afetar o comportamento prático.
+Isso reduz o número de passadas de decodificação seriais quando as propostas são suficientemente precisas. O modelo alvo ainda verifica a saída. Um speculative decoding sem perdas e correto preserva seu resultado ganancioso ou distribuição de amostragem, embora quantização e diferenças numéricas de runtime possam afetar o comportamento prático.
 
 O [artigo de multi-token prediction](https://arxiv.org/abs/2404.19737) explica a ideia de treinamento. A [documentação de speculative decoding do llama.cpp](https://github.com/ggml-org/llama.cpp/blob/master/docs/speculative.md) descreve seu uso durante a inferência.
 
@@ -101,9 +101,9 @@ O [artigo de multi-token prediction](https://arxiv.org/abs/2404.19737) explica a
 
 ### Mais saída útil por verificação
 
-A verificação em lote permite que o modelo alvo verifique vários candidatos juntos. Em uma carga de trabalho limitada por largura de banda de memória, isso pode custar menos do que gerar os mesmos tokens por meio de passagens seriais separadas.
+A verificação em lote permite que o modelo alvo verifique vários candidatos juntos. Em uma carga de trabalho limitada por largura de banda de memória, isso pode custar menos do que gerar os mesmos tokens por meio de passadas seriais separadas.
 
-A elaboração e a verificação também consomem tempo. O MTP acelera a geração apenas quando o trabalho economizado excede esse custo extra. Um diagnóstico útil é a taxa de aceitação do rascunho, calculada como tokens de rascunho aceitos divididos por tokens de rascunho gerados. Meça também o quanto cada verificação avança a resposta e quanto tempo leva a requisição completa.
+A elaboração e a verificação também consomem tempo. O MTP acelera a geração apenas quando o trabalho economizado excede esse custo extra. Um diagnóstico útil é a taxa de aceitação do rascunho, calculada como tokens de rascunho aceitos divididos por tokens de rascunho gerados. Meça também o quanto cada verificação avança a resposta e quanto tempo a requisição completa leva.
 
 ### A profundidade do rascunho precisa ser testada
 
@@ -122,11 +122,11 @@ As demonstrações usam a seguinte configuração.
 | Runtime | llama.cpp com CUDA |
 | Modelo | Qwen3.5-4B com tensores MTP |
 | Quantização | Q4_K_M GGUF |
-| Comparação | MTP desligado / MTP ligado |
+| Comparação | MTP DESLIGADO / MTP LIGADO |
 
 Compile o llama.cpp com CUDA seguindo as [instruções oficiais de compilação](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md). Escolha o [Qwen3.5-4B GGUF com MTP ativado](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF) e verifique se a saída de ajuda do seu binário lista `draft-mtp`.
 
-Quando o runtime estiver pronto, o comando de inicialização com MTP é curto.
+Quando o runtime estiver pronto, o comando de inicialização do MTP é curto.
 
 ```bash
 llama-server \
@@ -136,9 +136,9 @@ llama-server \
   --spec-draft-n-max 2
 ```
 
-Use o binário `llama-server` da sua compilação. Para um modelo baixado, substitua `-hf` por `-m` seguido do caminho local do GGUF.
+Use o binário `llama-server` da sua compilação. Para um modelo baixado, substitua `-hf` por `-m` seguido do caminho GGUF local.
 
-`--spec-type draft-mtp` ativa o MTP; `--spec-draft-n-max` controla sua profundidade. Para a comparação com MTP desligado, use `--spec-type none` e mantenha o modelo e as configurações compartilhadas inalterados.
+`--spec-type draft-mtp` ativa o MTP; `--spec-draft-n-max` controla sua profundidade. Para a comparação DESLIGADO, use `--spec-type none` e mantenha o modelo e as configurações compartilhadas inalterados.
 
 Após a geração, verifique o log de inicialização em busca dos tensores MTP carregados e das estatísticas de aceitação de rascunho do servidor. Use um slot e requisições somente de texto para esta configuração; consulte as [instruções do publicador do modelo](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF) para as restrições de compatibilidade atuais.
 
@@ -149,7 +149,7 @@ Após a geração, verifique o log de inicialização em busca dos tensores MTP 
 
 Um Jetson pode coletar detecções, leituras de sensores e logs de equipamentos e então pedir a um LLM local para escrever um relatório de inspeção. Campos e descrições recorrentes tornam essa uma carga de trabalho útil para testar a aceitação de candidatos. O benefício é uma espera menor pelo relatório escrito; controle em tempo real e proteção permanecem separados.
 
-### Assistentes de programação locais
+### Assistentes locais de programação
 
 Scripts Python, comandos de shell e arquivos de configuração de dispositivos frequentemente produzem respostas relativamente longas com sintaxe regular. O exemplo de Fibonacci na Introdução mostra o potencial neste dispositivo. O código gerado ainda precisa ser verificado e testado.
 
@@ -158,18 +158,18 @@ Scripts Python, comandos de shell e arquivos de configuração de dispositivos f
 Um assistente de voz passa a fala reconhecida para o LLM local e então envia sua resposta para texto‑para‑fala.
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-voice-assistant-pipeline-en.png" alt="Pipeline de assistente de voz, do reconhecimento de fala passando por um LLM local até a síntese de fala." loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-voice-assistant-pipeline-en.png" alt="Pipeline de assistente de voz desde o reconhecimento de fala até um LLM local e síntese de fala." loading="lazy" />
 </div>
 
 O MTP pode encurtar a etapa de decodificação do LLM para respostas mais longas. Reconhecimento de fala, síntese e streaming determinam quando o usuário realmente ouve uma resposta, então meça o tempo até a primeira fala utilizável, bem como o tempo de resposta completo.
 
 ### Conhecimento local e explicações técnicas
 
-Instruções de solução de problemas e respostas longas baseadas em logs de dispositivos podem gastar bastante tempo gerando saída. Vale a pena testá-las. Para um documento longo que precisa apenas de uma resposta de uma linha, o processamento do prompt pode dominar e deixar pouco tempo de decodificação a ser economizado.
+Instruções de solução de problemas e respostas longas baseadas em logs de dispositivos podem gastar tempo considerável gerando saída. Vale a pena testá-las. Para um documento longo que precisa apenas de uma resposta de uma linha, o processamento do prompt pode dominar e deixar pouco tempo de decodificação a ser economizado.
 
 ## Quando vale a pena ativar o MTP?
 
-Um modelo compatível é o primeiro requisito. O runtime deve suportar seus componentes de previsão, e o trabalho extra de elaboração precisa se pagar no seu hardware e prompts. Maior aceitação e saídas mais longas geralmente ajudam, enquanto baixa aceitação ou respostas muito curtas podem tornar o MTP mais lento.
+Um modelo compatível é o primeiro requisito. O runtime deve suportar seus componentes de previsão, e o trabalho extra de elaboração deve se pagar no seu hardware e prompts. Maior aceitação e saídas mais longas geralmente ajudam, enquanto baixa aceitação ou respostas muito curtas podem tornar o MTP mais lento.
 
 Compare o tempo que sua aplicação realmente precisa. Uma decodificação mais rápida não reduz o processamento de imagem, a execução de ferramentas ou o carregamento de modelos pelo mesmo fator. Mantenha o modelo, os limites de entrada e saída e as configurações de amostragem consistentes e, em seguida, decida com base no resultado medido.
 
@@ -203,7 +203,14 @@ Para uma comparação controlada, use o mesmo evento congelado em vez de duas gr
 - [Modelo Qwen3.5-4B MTP GGUF](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF)
 - [Better & Faster Large Language Models via Multi-token Prediction](https://arxiv.org/abs/2404.19737)
 
-## Suporte Técnico e Discussão de Produtos
+## Recursos relacionados
+
+- [Otimização de memória do JetPack 7.2 para implantação de LLM](/pt-br/jetpack_7_2_memory_optimization_deep_dive/)
+- [Construa um agente de IA local no Jetson com Laya e Qwen](/pt-br/jetson/local_decision_model_laya)
+- [Desempenho de IA do reComputer Super vs Classic](/pt-br/recomputer_jetson_super_performance/)
+- [Repositório do Edge Crowd Agent](https://github.com/zibochen6/edge-crowd-agent)
+
+## Suporte técnico e discussão de produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

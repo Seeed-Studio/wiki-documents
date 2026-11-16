@@ -248,6 +248,16 @@ reComputer J40/ J30 系列在随附的 NVMe SSD 上预装了 JetPack 5.1.3，因
 
 :::
 
+:::tip 使用 Windows 刷机？试试 Seeed Jetson DevelopTool
+
+手动刷写流程需要 **Ubuntu** 主机电脑。如果你使用的是 **Windows** 电脑，可以使用 [**Seeed Jetson DevelopTool**](/jetson_developtool_overview/)，这是一款支持 **Windows 主机** 的一体化 GUI 工具，无需输入命令，一键即可傻瓜式完成刷机。
+
+- [Seeed Jetson DevelopTool 概览](/jetson_developtool_overview/)
+- [安装（Ubuntu / Windows）](/jetson_developtool_installation/)
+- [使用 Flash Center 刷写固件](/jetson_developtool_flash_firmware/)
+
+:::
+
 ### 进入强制恢复模式
 
 :::note

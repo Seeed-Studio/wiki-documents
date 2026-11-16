@@ -1,6 +1,6 @@
 ---
 description: reComputer Rugged J40 入门指南
-title: reComputer Rugged J40 入门指南
+title: reComputer Rugged 系列入门指南 
 keywords:
   - reComputer Rugged
   - IP66
@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/cn/jetson/recomputer_rugged_j401/getting_start
 import JetsonProductDocNav from '@site/src/components/jetson/JetsonProductDocNav';
 import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
-# reComputer Rugged J40 入门指南
+# reComputer Rugged 系列入门指南
 
 <JetsonProductDocNav {...ruggedJ401DocNav} />
 
@@ -32,7 +32,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
   <div>
     <span className="jetson-product-eyebrow">坚固型边缘 AI · NVIDIA Jetson</span>
     <h2>在灰尘、水和振动成为日常的环境中部署 AI</h2>
-    <p>reComputer Rugged J40 将 NVIDIA Jetson Orin 的性能与通过 IP66 认证的无风扇机箱和带锁 M12 连接器相结合。它专为在车辆、港口、农场、海上以及各类工业现场进行可靠的边缘 AI 部署而设计。</p>
+    <p>reComputer Rugged J40 将 NVIDIA Jetson Orin 的性能与通过 IP66 认证的无风扇机箱以及带锁 M12 连接器相结合。它专为在车辆、港口、农场、海上以及各类工业现场实现可靠的边缘 AI 部署而设计。</p>
     <div className="jetson-product-actions">
       <a className="jetson-product-button" href="https://www.seeedstudio.com/reComputer-Rugged-J4012-p-6920.html" target="_blank" rel="noopener noreferrer">获取 reComputer Rugged J4012 ↗</a>
       <a className="jetson-product-button jetson-product-button--secondary" href="#flash-jetpack">从 JetPack 开始 ↓</a>
@@ -80,10 +80,10 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 ## 为什么选择 reComputer Rugged J40
 
 <div className="jetson-product-feature-grid">
-  <div className="jetson-product-feature"><strong>密封 M12 连接</strong><span>带锁连接器有助于在移动和户外部署中保持电源、网络和 I/O 的稳定。</span></div>
-  <div className="jetson-product-feature"><strong>无风扇被动散热</strong><span>无机械风扇可降低在多尘环境中的维护需求，并实现安静运行。</span></div>
+  <div className="jetson-product-feature"><strong>密封 M12 连接</strong><span>带锁连接器有助于在移动和户外部署中保持稳定的电源、网络和 I/O。</span></div>
+  <div className="jetson-product-feature"><strong>无风扇被动散热</strong><span>没有风扇等运动部件，可降低粉尘环境中的维护需求，并实现静音运行。</span></div>
   <div className="jetson-product-feature"><strong>工业 I/O</strong><span>隔离 CAN-FD、RS-232/422/485 和数字 I/O 可直接连接传感器、执行器和控制器。</span></div>
-  <div className="jetson-product-feature"><strong>摄像头就绪网络</strong><span>四个 PoE GbE 端口通过同一根线缆同时传输数据和电源，简化多摄像头系统。</span></div>
+  <div className="jetson-product-feature"><strong>摄像头就绪网络</strong><span>四个 PoE GbE 端口通过同一根线缆同时传输数据和电力，简化多摄像头系统。</span></div>
   <div className="jetson-product-feature"><strong>无线扩展</strong><span>M.2 Key E 和 Key B 插槽支持 Wi-Fi、Bluetooth、5G 和 GPS 扩展。</span></div>
   <div className="jetson-product-feature"><strong>车载与户外部署</strong><span>宽电压输入、抗振设计以及 IP66 机箱，非常适合 AMR、车辆、船舶和野外设备。</span></div>
 </div>
@@ -111,7 +111,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
       <td>Orin Nano 8GB</td>
     </tr>
     <tr>
-      <td rowSpan={4}>处理器系统</td>
+      <td rowSpan={4}>处理系统</td>
       <td>AI 性能</td>
       <td>100 TOPS</td>
       <td>40 TOPS</td>
@@ -185,7 +185,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
     <tr>
       <td rowSpan={2}>电源</td>
       <td>输入</td>
-      <td colSpan={2}>19–48 V DC，通过 M12 B/A-code 连接器</td>
+      <td colSpan={2}>19–48 V DC，通过 M12 B/A-code 接头</td>
     </tr>
     <tr>
       <td>功耗</td>
@@ -210,7 +210,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
     </tr>
     <tr>
       <td>尺寸</td>
-      <td colSpan={2}>210 mm × 190 mm × 93 mm</td>
+      <td colSpan={2}>210 mm × 190 mm × 95 mm</td>
     </tr>
     <tr>
       <td>颜色</td>
@@ -218,7 +218,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
     </tr>
     <tr>
       <td colSpan={2}>认证</td>
-      <td colSpan={2}>CE, FCC, RoHS, REACH</td>
+      <td colSpan={2}>CE、FCC、RoHS、REACH</td>
     </tr>
     <tr>
       <td colSpan={2}>质保</td>
@@ -228,12 +228,12 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 </table>
 </div>
 
-## 硬件总览
+## 硬件概览
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw1.png" alt="Side view of reComputer Rugged J40 showing its industrial connectors" />
-    <figcaption>侧视图 · 网络、USB、显示和天线连接</figcaption>
+    <figcaption>侧视图 · 网络、USB、显示与天线连接</figcaption>
   </figure>
   <figure>
     <img src="https://files.seeedstudio.com/wiki/rugged_J401/hardware_veiw2.png" alt="Opposite side view of reComputer Rugged J40" />
@@ -253,7 +253,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 | PWR | 绿色 | Off | 设备未上电 |
 | ACT | 绿色 | Flashing | SSD 访问活动 |
 
-关于连接器引脚定义、接口配置和扩展说明，请继续查看 [硬件与 I/O 指南](/cn/jetson/recomputer_rugged_j401/hardware_and_interface_usage/)。
+关于连接器引脚定义、接口配置和扩展说明，请继续查看 [硬件与 I/O 指南](/cn/jetson/recomputer_rugged_j401/hardware_and_interface_usage/).
 
 ## 刷写 JetPack {#flash-jetpack}
 
@@ -266,7 +266,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
     <h3>选择并下载 BSP</h3>
     <p className="jetson-product-step-label">步骤 1 · 将镜像与准确的 Jetson 配置匹配</p>
 
-下载适用于你所安装 Jetson 模块的 **JetPack 5.1.3 (L4T 35.5.0)** BSP。压缩包文件名会保留发行标签 `5.1`。
+为你安装的 Jetson 模块下载 **JetPack 5.1.3 (L4T 35.5.0)** BSP。压缩包文件名会保留发行标签 `5.1`。
 
 <div className="jetson-product-table-wrap">
 <table>
@@ -274,7 +274,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
     <tr>
       <th>产品 / Jetson 模组</th>
       <th>JetPack / L4T</th>
-      <th>下载 / 归档</th>
+      <th>下载 / 存档</th>
       <th>SHA-256</th>
     </tr>
   </thead>
@@ -295,7 +295,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 </table>
 </div>
 
-在 Ubuntu 主机上使用 `sha256sum` 验证下载的文件，并将完整输出与上方对应的值进行比较：
+在 Ubuntu 主机上，使用 `sha256sum` 验证下载的文件，并将完整输出与上方对应的值进行比较：
 
 ```bash
 # Orin NX 16GB (J4012)
@@ -306,7 +306,7 @@ sha256sum mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz
 ```
 
 :::warning
-请使用同时匹配 Rugged 载板和已安装 Jetson 模组的镜像。等待下载完成并确认其 SHA-256 后再解压归档文件。
+请使用同时匹配 Rugged 载板和已安装 Jetson 模组的镜像。等待下载完成并在解压存档前确认其 SHA-256。
 :::
 
   </div>
@@ -342,11 +342,11 @@ sha256sum mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz
 
 <img className="jetson-product-step-image" src="https://files.seeedstudio.com/wiki/rugged_J401/1.jpg" alt="用于为 reComputer Rugged J40 烧录的恢复按钮和 DEVICE 端口" />
 
-1. 使用 USB Type-C 数据线将 **DEVICE** 端口与 Ubuntu 主机连接。
+1. 使用 USB Type-C 数据线连接 **DEVICE** 端口与 Ubuntu 主机。
 2. 按住 **REC** 按钮。
-3. 在按住 **REC** 的同时，接通电源以启动设备。
+3. 在按住 **REC** 的同时，连接电源以开启设备。
 4. 松开 **REC** 按钮。
-5. 在 Ubuntu 主机上验证 Jetson 是否被检测到：
+5. 在 Ubuntu 主机上，验证 Jetson 是否被检测到：
 
 ```bash
 lsusb
@@ -370,7 +370,7 @@ lsusb
     <h3>解压并烧录镜像</h3>
     <p className="jetson-product-step-label">步骤 4 · 在 Ubuntu 主机上运行批量烧录包</p>
 
-切换到包含已下载镜像的目录，并为你的模组解压归档文件：
+切换到包含已下载镜像的目录，并为你的模组解压存档：
 
 ```bash
 cd <path-to-image>
@@ -381,7 +381,7 @@ sudo tar xpf mfi_recomputer-rugged-orin-nx-16g-j401-5.1-35.5.0-2026-04-01.tar.gz
 # sudo tar xpf mfi_recomputer-rugged-orin-nano-8g-j401-5.1-35.5.0-2026-04-01.tar.gz
 ```
 
-进入包含 `tools/kernel_flash/l4t_initrd_flash.sh` 的已解压 BSP 目录并开始烧录。将 `<extracted-bsp-directory>` 替换为该目录的实际名称：
+进入解压后的 BSP 目录（其中包含 `tools/kernel_flash/l4t_initrd_flash.sh`），并开始烧录。将 `<extracted-bsp-directory>` 替换为该目录的实际名称：
 
 ```bash
 cd <extracted-bsp-directory>
@@ -389,7 +389,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
   --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-等待终端提示烧录成功完成。然后断开 USB 线缆，对 reComputer 断电重启，连接显示器和输入设备，并完成 Ubuntu 的首次启动设置。
+等待终端提示烧录成功完成。然后断开 USB 线缆，对 reComputer 断电重启，连接显示器和输入设备，并完成 Ubuntu 首次启动设置。
 
   </div>
 </section>
@@ -411,7 +411,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
 <div className="jetson-product-application-grid">
   <article className="jetson-product-application-card">
     <a className="jetson-product-application-cover" href="/cn/jetson/recomputer_rugged_j401/industrial_vision/" aria-label="打开工业叉车视觉应用">
-      <img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="由 reComputer Rugged J401 提供支持的工业叉车视觉应用" />
+      <img src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="由 reComputer Rugged J401 提供算力的工业叉车视觉应用" />
     </a>
     <div className="jetson-product-application-body">
       <div className="jetson-product-application-labels" aria-label="应用能力">
@@ -419,7 +419,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
         <span>推理基准</span>
       </div>
       <h3><a href="/cn/jetson/recomputer_rugged_j401/industrial_vision/">工业叉车视觉</a></h3>
-      <p>在 reComputer Rugged J401 上部署多相机检测、距离预警、驾驶员监控、目标跟踪以及经测量的 Jetson 推理工作负载。</p>
+      <p>在 reComputer Rugged J401 上部署多摄像头检测、距离预警、驾驶员监控、目标跟踪以及经实测的 Jetson 推理负载。</p>
     </div>
   </article>
 </div>
@@ -436,7 +436,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20Carrier%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
     <span className="jetson-product-resource-icon" aria-hidden="true">SCH</span>
-    <span className="jetson-product-resource-copy"><strong>载板原理图</strong><small>查看载板电路和信号走线</small></span>
+    <span className="jetson-product-resource-copy"><strong>载板原理图</strong><small>审阅载板电路和信号走线</small></span>
     <span className="jetson-product-resource-arrow" aria-hidden="true">↗</span>
   </a>
   <a className="jetson-product-resource-card" href="https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Rugged%20J401%20PSE%20Board%20V1.1_SCH.pdf" target="_blank" rel="noopener noreferrer">
@@ -463,7 +463,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

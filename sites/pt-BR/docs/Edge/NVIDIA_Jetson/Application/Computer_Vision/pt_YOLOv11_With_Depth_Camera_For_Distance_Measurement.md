@@ -1,15 +1,15 @@
 ---
-description: Este guia mostra como parear uma câmera de profundidade Orbbec Gemini 2 com um reComputer baseado em Jetson (JetPack 5.1.3) para realizar detecção de objetos em tempo real e medição de distância 3D. Ele orienta a instalação do Gemini 2 Python SDK, sua compilação com pybind11 e a validação da saída da câmera por meio de um script de teste em OpenCV. Em seguida, detalha a conversão de um modelo YOLOv11n em um mecanismo TensorRT para inferência em alta velocidade no Jetson, depois explica como obter os parâmetros intrínsecos da câmera e projetar pixels de profundidade em coordenadas 3D para que as distâncias euclidianas entre objetos detectados possam ser calculadas. Um script de exemplo combina detecções do YOLOv11 com dados de profundidade para exibir distâncias medidas (tipicamente precisas em ±1 cm), e o artigo termina com dicas — filtragem do mapa de profundidade, centralização dos alvos e média de quadros — para mitigar o ruído de profundidade de luz estruturada em bordas, superfícies inclinadas ou reflexivas e sob condições de iluminação desafiadoras.
+description: "Pareie uma Orbbec Gemini 2 com um reComputer no JetPack 5.1.3: compilação do SDK, detecção YOLO11 com TensorRT e mapeamento de pixel para distância."
 title: YOLOv11 com Câmera de Profundidade no Jetson Orin para Medição de Distância
 keywords:
   - reComputer J4012
   - reComputer
   - Orbbec Gemini 2
-  - Depth Camera
+  - Câmera de Profundidade
   - YOLOv11
   - YOLO11
-  - Distance Measurement
-  - Computer Vision
+  - Medição de Distância
+  - Visão Computacional
   - Jetson
 image: https://files.seeedstudio.com/wiki/Yolo11/connection.webp
 slug: /yolov11_with_depth_camera
@@ -18,27 +18,27 @@ last_update:
   date: 07/04/2025
   author: Zibo
 createdAt: '2025-07-07'
-updatedAt: '2026-03-16'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/yolov11_with_depth_camera/
 ---
 
 <div style={{ textAlign: "justify" }}>
-Este wiki demonstra como usar a câmera de profundidade Orbbec Gemini 2 com o reComputer J4012 (com módulo NVIDIA® Jetson™ Orin™ NX 16GB), combinando detecção de objetos com YOLOv11 para medição de distância de alvos visuais.
+Uma Orbbec Gemini 2 em um reComputer J4012 (Jetson Orin NX 16GB) transforma detecções YOLOv11 em distância métrica: o frame de profundidade fornece o alcance, a detecção fornece o pixel. O passo a passo roda no JetPack 5.1.3 e termina com uma janela ao vivo que mostra a que distância cada objeto detectado está.
 </div>
 
 ## Pré-requisitos
 
-- [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) ou outros produtos da série reComputer (com JetPack 5.1.3 pré-instalado)
+- [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) ou outros produtos da linha reComputer (com JetPack 5.1.3 pré-instalado)
 - Câmera de Profundidade Orbbec Gemini 2
-- Cabo de transmissão de dados USB Type-C (conexão da câmera)
+- Cabo de transmissão de dados USB Tipo-C (para conectar a câmera)
 
 ## Conexão de Hardware
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/connection.jpg"/>
+  <img alt="Orbbec Gemini 2 connected to the reComputer over the USB Type-C data cable" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/connection.jpg"/>
 </div>
 
-## Instalar o Gemini 2 Python SDK
+## Instalar o SDK Python da Gemini 2
 
 **Passo 1.** Clone o SDK e instale as dependências:
 
@@ -72,7 +72,7 @@ make install
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/make_install.png"/>
+  <img alt="make install finishing for the Orbbec Gemini 2 Python SDK build" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/make_install.png"/>
 </div>
 
 **Passo 4.** Instale o pacote wheel do Python:
@@ -84,7 +84,7 @@ python setup.py bdist_wheel
 pip install dist/*.whl
 ```
 
-**Passo 5.** (Opcional) Gere stubs para melhor suporte a IntelliSense na sua IDE:
+**Passo 5.** (Opcional) Gere stubs para melhor suporte de IntelliSense no seu IDE:
 
 ```bash
 source env.sh
@@ -98,7 +98,7 @@ Para mais detalhes, consulte [aqui](https://orbbec.github.io/pyorbbecsdk/source/
 
 ## Testar a Câmera de Profundidade
 
-Por meio do exemplo a seguir, mostraremos como usar a API Python da Câmera de Profundidade Orbbec Gemini 2 em combinação com OpenCV para desenvolvimento. Ao mesmo tempo, isso também pode testar se o ambiente de desenvolvimento da sua câmera está funcionando corretamente.
+O exemplo abaixo controla a Gemini 2 por meio de sua API Python e OpenCV: captura cor e profundidade alinhadas e, em seguida, converte um par de pixels em uma distância 3D real. Ao mesmo tempo, ele também pode testar se o ambiente de desenvolvimento da sua câmera está funcionando corretamente.
 
 <details>
 <summary> test.py </summary>
@@ -181,7 +181,7 @@ Se você vir uma janela com a imagem RGB à esquerda e a imagem de profundidade 
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/depth_camera.gif"/>
+  <img alt="Gemini 2 test window with the RGB image on the left and the depth image on the right" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/depth_camera.gif"/>
 </div>
 
 ## Implantar YOLOv11 com TensorRT
@@ -190,7 +190,7 @@ Se você vir uma janela com a imagem RGB à esquerda e a imagem de profundidade 
 YOLOv11 oferece detecção de objetos em tempo real com alto desempenho. As etapas a seguir mostram como implantar o YOLOv11 usando TensorRT para inferência rápida em plataformas Jetson.
 </div>
 
-**Passo 1.** Clone o repositório do YOLOv11 TensorRT:
+**Passo 1.** Clone o repositório YOLOv11 TensorRT:
 
 ```bash
 git clone https://github.com/wang-xinyu/tensorrtx.git
@@ -210,7 +210,7 @@ python gen_wts.py -w yolo11n.pt -o yolo11n.wts -t detect
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/wts.png"/>
+  <img alt="gen_wts.py output writing yolo11n.wts from the yolo11n.pt checkpoint" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/wts.png"/>
 </div>
 
 **Passo 4.** Compile o projeto:
@@ -223,20 +223,20 @@ make -j4
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/yolo_make_install.png"/>
+  <img alt="TensorRT YOLOv11 project building with cmake and make on the Jetson" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/yolo_make_install.png"/>
 </div>
 
-**Passo 5.** Gere o mecanismo TensorRT:
+**Passo 5.** Gere o engine TensorRT:
 
 ```bash
 ./yolo11_det -s yolo11n.wts yolo11n.engine n
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/g_engine.png"/>
+  <img alt="yolo11_det serialising yolo11n.engine from the .wts file" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/g_engine.png"/>
 </div>
 
-Se for bem-sucedido, você encontrará o arquivo `yolo11n.engine` no diretório build.
+Se tudo der certo, você encontrará o arquivo `yolo11n.engine` no diretório build.
 
 **Passo 6.** Instale pycuda para inferência via API Python:
 
@@ -256,10 +256,10 @@ A implantação do yolo11 neste repositório oferece suporte apenas ao TensorRT-
 O valor de profundidade da câmera representa a distância no eixo Z (para frente a partir da câmera), não a distância geométrica real.
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/z.jpg"/>
+  <img alt="Diagram of camera-axis depth Z against the true 3D distance between two pixels" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/z.jpg"/>
 </div>
 
-Para calcular a verdadeira distância euclidiana 3D entre dois pontos, você precisa de:
+Para calcular a verdadeira distância Euclidiana 3D entre dois pontos, você precisa de:
 
 - Coordenadas de pixel (u, v) do alvo
 
@@ -276,7 +276,7 @@ X = (u - cx) * Z / fx
 Y = (v - cy) * Z / fy
 ```
 
-A distância euclidiana `D` entre dois pontos ((X1,Y1,Z1) e (X2,Y2,Z2)) no espaço pode ser calculada usando a seguinte fórmula:
+A distância Euclidiana `D` entre dois pontos ((X1,Y1,Z1) e (X2,Y2,Z2)) no espaço pode ser calculada usando a seguinte fórmula:
 
 ```
 D = sqrt((X1-X2)^2 + (Y1-Y2)^2 + (Z1-Z2)^2)
@@ -309,7 +309,7 @@ print("color_distortion  {}".format(color_distortion))
 </details>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/in.png"/>
+  <img alt="Depth and colour intrinsics printed by the Gemini 2 SDK, with fx=616.707275 and the distortion coefficients highlighted" width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/in.png"/>
 </div>
 
 Obtenha os parâmetros intrínsecos da câmera de profundidade:
@@ -324,7 +324,7 @@ cy = 404.478149
 ### Detecção de Objetos em Tempo Real e Medição de Distância
 
 <div style={{ textAlign: "justify" }}>
-O script a seguir demonstra como usar YOLOv11 com a câmera de profundidade Orbbec Gemini 2 para detectar objetos (por exemplo, um copo e um mouse) e medir em tempo real a distância 3D entre eles:
+O script a seguir demonstra como usar YOLOv11 com a câmera de profundidade Orbbec Gemini 2 para detectar objetos (por exemplo, uma xícara e um mouse) e medir a distância 3D entre eles em tempo real：
 </div>
 
 <details>
@@ -982,7 +982,7 @@ if __name__ == "__main__":
 </details>
 
 <div style={{ textAlign: "justify" }}>
-O script exibirá os resultados de detecção e a distância medida entre dois objetos especificados (por exemplo, xícara e mouse) em tempo real. O lado esquerdo da janela mostra a imagem RGB com caixas de detecção. O lado direito mostra o mapa de profundidade e a distância. No vídeo, você pode ver que o erro de medição geralmente é inferior a um centímetro:
+O script exibirá os resultados da detecção e a distância medida entre dois objetos especificados (por exemplo, xícara e mouse) em tempo real. O lado esquerdo da janela mostra a imagem RGB com caixas de detecção. O lado direito mostra o mapa de profundidade e a distância. No vídeo, você pode ver que o erro de medição geralmente fica dentro de um centímetro:
 </div>
 
 <div class="video-container">
@@ -991,14 +991,14 @@ O script exibirá os resultados de detecção e a distância medida entre dois o
 
 :::note
 <div style={{ textAlign: "justify" }}>
-Como o Orbbec Gemini 2 é baseado no esquema de luz estruturada/visão dupla, em bordas, superfícies inclinadas e objetos reflexivos, os dados de profundidade tendem a flutuar, muitas vezes com erros de vários centímetros. Quando você tira fotos do mesmo objeto de diferentes ângulos, a deformação da textura da projeção infravermelha leva à falha de correspondência e, em última análise, resulta em um desvio de profundidade maior. Ao mesmo tempo, a intensidade da luz ambiente também afeta a qualidade do mapa de profundidade. De acordo com o seu ambiente, fornecemos as seguintes sugestões de ajuste:
+Como o Orbbec Gemini 2 é baseado no esquema de luz estruturada/visão dupla, em bordas, superfícies inclinadas e objetos reflexivos, os dados de profundidade tendem a oscilar, frequentemente com erros de vários centímetros. Quando você tira fotos do mesmo objeto de ângulos diferentes, a deformação da textura da projeção infravermelha leva à falha de correspondência e, por fim, resulta em um desvio de profundidade maior. Ao mesmo tempo, a intensidade da luz ambiente também afeta a qualidade do mapa de profundidade. De acordo com o seu ambiente, fornecemos as seguintes sugestões de ajuste:
 </div>
 
 - Filtrar mapas de profundidade anormais e realizar filtragem de redução de ruído nos mapas de profundidade.
 
 - Tente posicionar o alvo no centro da imagem para reduzir a influência da distorção nas bordas da imagem.
 
-- Realizar a operação de tirar a média de várias imagens de profundidade para reduzir a influência de luz anormal (o que reduzirá o desempenho em tempo real).
+- Realizar a operação de tirar a média de múltiplas imagens de profundidade para reduzir a influência de luz anormal (o que reduzirá o desempenho em tempo real).
 
 :::
 
@@ -1008,9 +1008,34 @@ Como o Orbbec Gemini 2 é baseado no esquema de luz estruturada/visão dupla, em
 - [Orbbec pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
 - [Ultralytics YOLOv11](https://github.com/ultralytics/ultralytics)
 
-## Suporte Técnico & Discussão de Produtos
+## FAQ
 
-Obrigado por escolher os produtos da Seeed Studio! Para suporte técnico e discussão de produtos, utilize os seguintes canais:
+**Qual versão do JetPack este passo a passo utiliza?**
+JetPack 5.1.3 em um reComputer J4012. A wheel Python do Gemini 2 e a build TensorRT do YOLOv11 são ambas compiladas no dispositivo, então um host com JetPack 6.x significa recompilá-las em vez de reutilizar esses binários.
+
+**Eu preciso do valor de profundidade ou da distância euclidiana?**
+Eles são diferentes. O fluxo de profundidade fornece a distância do eixo Z em relação ao plano da câmera; o script a converte em um ponto 3D com as intrínsecas e então mede a distância entre dois pixels. Use o valor de profundidade apenas quando quiser a distância diretamente à frente.
+
+**De onde vêm as intrínsecas?**
+Do perfil de cor do Gemini 2 — `get_intrinsics()` retorna fx, fy, cx, cy e o modelo de distorção, impressos no terminal antes da medição ser executada. Os valores diferem por câmera, então copie aqueles que a sua unidade reportar.
+
+**Quais pesos do YOLO11 são usados?**
+`yolo11n` — o script converte `yolo11n.pt` para `.wts`, depois gera `yolo11n.engine`. Substitua por um checkpoint maior se você precisar de mais precisão e puder arcar com o tempo de quadro.
+
+**A caixa de detecção e a distância medida não coincidem. O que está errado?**
+Verifique se o centro da caixa é usado para a coordenada do pixel e se cor e profundidade estão alinhadas. Uma calibração desatualizada ou um quadro de profundidade descartado pelo SDK deslocam a leitura, então imprima os valores de pixel e profundidade antes de confiar na distância.
+
+## Recursos Relacionados
+
+- [Câmera 3D Orbbec Gemini 2 em ROS 2](/pt-br/orbbec_gemini2/)
+- [Implantar Depth Anything V3 no Jetson AGX Orin](/pt-br/deploy_depth_anything_v3_jetson_agx_orin/)
+- [Instalar PyTorch para reComputer Jetson](/pt-br/install_torch_on_recomputer/)
+- [Página do produto Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- [Repositório YOLOv11](https://github.com/ultralytics/ultralytics)
+
+## Suporte Técnico & Discussão de Produto
+
+Obrigado por escolher os produtos Seeed Studio! Para suporte técnico e discussão de produto, utilize os seguintes canais:
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -34,9 +34,9 @@ url: https://wiki.seeedstudio.com/cn/jetson/accelerate_llm_inference_mtp/
 
 ## 介绍
 
-本 wiki 解释 Multi-Token Prediction（MTP）的工作原理，以及如何在 **NVIDIA Jetson AGX Orin 上的 llama.cpp 中配合 Qwen3.5-4B 启用它**。按照步骤完成配置，并通过本地人群监控演示对比 MTP 开启/关闭时的性能。
+Multi-Token Prediction 在每一步草拟多个 token，并让目标模型在一次前向中验证它们，这样当草稿质量较好时，就能减少串行解码轮数。在 Jetson AGX Orin 上，llama.cpp 可以为 Qwen3.5-4B 启用 MTP；下面的章节将解释解码为何缓慢、如何开启 MTP，以及它在哪些场景中带来收益，并通过本地人群监控演示对比开启和关闭 MTP 的效果。
 
-先来看一下实际测试结果。我们让 LLM 生成一个用于计算斐波那契数列的 Python 脚本，对比在启用和未启用 MTP 模型时的生成速度。
+先来看一下实际测试结果。我们让 LLM 生成一个用于计算斐波那契数列的 Python 脚本，并对比启用和未启用 MTP 模型时的生成速度。
 
 <div align="center">
   <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_vs.gif" alt="左侧为关闭 MTP，右侧为开启 MTP，在 Jetson AGX Orin 上使用 Qwen3.5-4B 生成斐波那契代码。" />
@@ -47,26 +47,26 @@ url: https://wiki.seeedstudio.com/cn/jetson/accelerate_llm_inference_mtp/
 再看一个视觉分析场景：定义一个 ROI 区域，监控该 ROI 内人数是否在 1.5 秒内持续大于等于 5 人；如果满足条件，则调用 LLM 进行异常分析和诊断。让我们看看在视觉分析场景中，启用 MTP 模式后能快多少！
 
 <div align="center">
-  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_demo.gif" alt="左侧为基于视频的 ROI 跟踪，中间和右侧为关闭/开启 MTP 的人群分析结果面板。" />
+  <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_demo.gif" alt="左侧为基于视频的 ROI 跟踪，中间和右侧为关闭和开启 MTP 的人群分析结果。" />
 </div>
 
 可以看到，在上述场景中，启用 MTP 模式可以将任务完成时间缩短约 3 秒——这一优化相当显著！
 
 
 
-## 为什么 LLM 文本生成会耗时？
+## 为何 LLM 文本生成需要时间？
 
-### 一次生成一个 token
+### 一次一个 token
 
-向模型询问 NVIDIA Jetson 可以用于哪些场景，它可能会回答机器人、工业视觉和边缘监控。句子是逐渐出现的，因为自回归 LLM 会先预测一个 token，将其加入上下文，再利用该上下文预测下一个 token。
+问一个模型 NVIDIA Jetson 可以用在什么地方，它可能会回答机器人、工业视觉和边缘监控。句子是逐渐出现的，因为自回归 LLM 会先预测一个 token，将其加入上下文，再利用更新后的上下文预测下一个 token。
 
 一个 token 可能是一个单词、单词的一部分或一个标点符号。每次新的预测都依赖于之前的内容，因此模型会重复这一过程，直到完成整个回复。
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-token-generation-en.png" alt="自回归解码在预测下一个 token 之前，会将每个已生成的 token 加入上下文。" loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-token-generation-en.png" alt="自回归解码在预测下一个 token 之前，将每个生成的 token 添加到上下文中。" loading="lazy" />
 </div>
 
-在 20 tokens/s 的速率下，生成 500 个 token 需要大约 25 秒的解码时间。当本地助手在编写代码或报告时，这样的等待就会变得明显。
+在 20 tokens/s 的速率下，生成 500 个 token 需要大约 25 秒的解码时间。当本地助手在写代码或报告时，这样的等待就会变得明显。
 
 ### 预填充与解码
 
@@ -74,44 +74,44 @@ LLM 推理主要包含两个阶段。
 
 | 阶段 | 主要任务 | 特点 |
 | --- | --- | --- |
-| 预填充（Prefill） | 读取提示词并构建上下文状态 | 输入位置可以并行处理 |
-| 解码（Decode） | 生成回复 | 后续 token 依赖于较早的输出 |
+| 预填充（Prefill） | 读取提示并构建上下文状态 | 输入位置可以并行处理 |
+| 解码（Decode） | 生成回复 | 后续 token 依赖于更早的输出 |
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/prefill-vs-decode-en.png" alt="左侧为对提示词进行预填充处理；右侧为逐步生成输出 token 的解码过程。" loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/prefill-vs-decode-en.png" alt="左侧为对提示进行预填充处理；右侧为逐步生成输出 token 的解码过程。" loading="lazy" />
 </div>
 
-对于在 Jetson 上运行的单用户 LLM，解码阶段往往会花费大量时间从内存中读取模型权重和缓存的上下文。GPU 具备并行计算能力，但单 token 串行步骤的序列可能只能有限利用这些能力。MTP 主要针对的就是这一解码阶段。
+对于 Jetson 上的单用户 LLM，解码阶段往往将大量时间花在从内存中读取模型权重和缓存上下文上。GPU 具备并行计算能力，但一串单 token 步骤可能只能有限利用这些能力。MTP 主要针对的就是这一解码阶段。
 
 ## 什么是 Multi-Token Prediction？
 
 Multi-Token Prediction 会训练额外的预测头或层来提出未来的 token 候选。这些候选随后可用于 speculative decoding，在该过程中，目标模型会一次性验证多个位置，然后再接受输出。
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-vs-mtp-en.png" alt="左侧为标准解码；右侧为 MTP 候选起草与目标模型验证流程。" loading="lazy" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/autoregressive-vs-mtp-en.png" alt="左侧为标准解码；右侧为 MTP 候选草拟和目标模型验证。" loading="lazy" />
 </div>
 
-当多个候选通过验证时，回复可以在一次目标模型前向计算中前进多个 token。如果某个候选未通过，运行时会保留已接受的前缀，并丢弃被拒绝的候选及其后续草稿，目标模型则从该位置继续。
+当多个候选通过验证时，回复可以在一次目标模型前向中前进多个 token。如果某个候选未通过，运行时会保留已接受的前缀，并丢弃被拒绝的候选及其后续草稿，目标模型则从该位置继续生成。
 
-当候选足够准确时，这可以减少串行解码前向计算的次数。目标模型仍然会检查输出。正确的无损 speculative decoding 会保留其贪心结果或采样分布，尽管量化和运行时数值差异可能会影响实际行为。
+当候选足够准确时，这可以减少串行解码轮数。目标模型仍然会检查输出。正确的无损 speculative decoding 会保留其贪心结果或采样分布，尽管量化和运行时数值差异可能会影响实际行为。
 
-[multi-token prediction 论文](https://arxiv.org/abs/2404.19737)解释了训练思路。[llama.cpp speculative decoding 文档](https://github.com/ggml-org/llama.cpp/blob/master/docs/speculative.md)描述了其在推理阶段的使用方式。
+[multi-token prediction 论文](https://arxiv.org/abs/2404.19737)解释了训练思路。[llama.cpp speculative decoding 文档](https://github.com/ggml-org/llama.cpp/blob/master/docs/speculative.md)描述了其在推理阶段的用法。
 
 ## 为什么 MTP 会更快？
 
 ### 每次验证产出更多有效输出
 
-批量验证可以让目标模型一次检查多个候选。在受内存带宽限制的工作负载中，这可能比通过多次串行前向生成相同数量的 token 成本更低。
+批量验证让目标模型可以一次检查多个候选。在受内存带宽限制的工作负载中，这可能比通过多次串行前向生成相同数量的 token 成本更低。
 
-起草和验证本身也需要时间。只有当节省下的工作量超过这部分额外开销时，MTP 才能加速生成。一个有用的诊断指标是草稿接受率，即已接受草稿 token 数除以生成的草稿 token 数。同时也要衡量每次验证能让回复前进多少 token，以及整个请求耗时多久。
+草拟和验证本身也需要时间。只有当节省的工作量超过这部分额外开销时，MTP 才能加速生成。一个有用的诊断指标是草稿接受率，即已接受草稿 token 数除以生成的草稿 token 数。同时也要衡量每次验证能让回复前进多少 token，以及整个请求耗时多久。
 
 ### 草稿深度需要测试
 
 最大草稿长度由 `--spec-draft-n-max` 控制。更长的草稿会给目标模型提供更多候选可供检查，但后面的候选可能不够准确。丢弃这些候选的代价可能会抵消更大批量带来的收益。
 
-从较小的深度开始，并在你自己的提示上进行对比测试。Edge Crowd Agent 的对比实验使用的是深度 2。对常规代码或报告格式表现良好的设置，在其他工作负载上可能会有不同表现。
+先从较小的深度开始，并在你自己的提示上进行对比测试。Edge Crowd Agent 的对比实验使用的是深度 2。对常规代码或报告格式表现良好的设置，在其他工作负载上可能会有不同表现。
 
-## 在 Jetson 上的 llama.cpp 中启用 MTP
+## 在 Jetson 上为 llama.cpp 启用 MTP
 
 本演示使用以下配置。
 
@@ -119,12 +119,12 @@ Multi-Token Prediction 会训练额外的预测头或层来提出未来的 token
 | --- | --- |
 | 硬件 | NVIDIA Jetson AGX Orin 32GB |
 | JetPack | 6.2.1 |
-| 运行时 | llama.cpp（启用 CUDA） |
+| 运行时 | 启用 CUDA 的 llama.cpp |
 | 模型 | 带 MTP 张量的 Qwen3.5-4B |
 | 量化 | Q4_K_M GGUF |
 | 对比 | 关闭 MTP / 开启 MTP |
 
-按照[官方构建说明](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md)使用 CUDA 构建 llama.cpp。选择 [启用 MTP 的 Qwen3.5-4B GGUF](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF)，并检查你编译出的二进制文件的帮助输出中是否列出了 `draft-mtp`。
+按照[官方构建说明](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md)使用 CUDA 构建 llama.cpp。选择 [启用 MTP 的 Qwen3.5-4B GGUF](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF)，并检查你构建的二进制文件的帮助输出中是否列出了 `draft-mtp`。
 
 运行时准备就绪后，启用 MTP 的启动命令非常简短。
 
@@ -136,18 +136,18 @@ llama-server \
   --spec-draft-n-max 2
 ```
 
-使用你构建出的 `llama-server` 二进制文件。对于已下载到本地的模型，将 `-hf` 替换为 `-m`，并在其后跟上本地 GGUF 路径。
+使用你构建中的 `llama-server` 二进制文件。对于已下载到本地的模型，将 `-hf` 替换为 `-m`，并在其后添加本地 GGUF 路径。
 
 `--spec-type draft-mtp` 用于启用 MTP；`--spec-draft-n-max` 用于控制其深度。对于关闭 MTP 的对比实验，使用 `--spec-type none`，并保持模型和其他共享设置不变。
 
-生成结束后，在启动日志中检查已加载的 MTP 张量以及服务器的草稿接受统计信息。本配置下请使用单 slot 且仅文本请求；关于当前兼容性限制，请参考[模型发布者的说明](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF)。
+生成结束后，在启动日志中检查已加载的 MTP 张量以及服务器的草稿接受统计。对于本配置，请使用单 slot 和纯文本请求；关于当前兼容性限制，请参考[模型发布者的说明](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF)。
 
 
 ## MTP 适用于哪些场景？
 
 ### 巡检与监控报告
 
-Jetson 可以采集检测结果、传感器读数和设备日志，然后让本地 LLM 撰写巡检报告。重复出现的字段和描述，使其成为测试候选接受情况的一个有用工作负载。其收益是缩短书面报告的等待时间；实时控制和保护仍然是独立的。
+Jetson 可以收集检测结果、传感器读数和设备日志，然后让本地 LLM 撰写巡检报告。重复出现的字段和描述，使其成为测试候选接受情况的一个有用工作负载。其收益是缩短书面报告的等待时间；实时控制和保护仍然是分离的。
 
 ### 本地编码助手
 
@@ -161,17 +161,17 @@ Python 脚本、shell 命令和设备配置文件通常会产生语法较为规�
   <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-voice-assistant-pipeline-en.png" alt="语音助手流水线：从语音识别，经本地 LLM，到语音合成。" loading="lazy" />
 </div>
 
-对于较长的回复，MTP 可以缩短 LLM 的解码阶段。语音识别、合成以及流式传输共同决定用户真正听到答案的时间，因此既要测量到首段可用语音的时间，也要测量完整回复的时间。
+对于较长的回复，MTP 可以缩短 LLM 的解码阶段。语音识别、合成以及流式传输共同决定用户真正听到答案的时间，因此既要测量到首段可用语音的时间，也要测量完整回复时间。
 
 ### 本地知识与技术说明
 
-基于设备日志生成的故障排查说明和长篇回答，可能会在输出生成上花费大量时间，这类场景值得测试。对于只需要一句话回答的长文档，提示处理可能占主导，从而几乎没有可节省的解码时间。
+基于设备日志的故障排查说明和长篇回答，在生成输出时可能会花费大量时间，这类场景值得测试。对于只需要一句话回答的长文档，提示处理可能占主导，从而几乎没有可节省的解码时间。
 
-## 什么时候值得启用 MTP？
+## 何时值得启用 MTP？
 
-首先需要兼容的模型。运行时必须支持其预测组件，并且额外的起草工作必须能在你的硬件和提示上“回本”。更高的接受率和更长的输出通常有帮助，而较低的接受率或非常短的回复则可能让 MTP 变得更慢。
+首先需要一个兼容的模型。运行时必须支持其预测组件，并且额外的草拟工作需要在你的硬件和提示上“物有所值”。更高的接受率和更长的输出通常有帮助，而较低的接受率或非常短的回复则可能让 MTP 变得更慢。
 
-将其与您的应用实际所需时间进行比较。更快的解码并不会按相同比例缩短图像处理、工具执行或模型加载时间。保持模型、输入、输出限制和采样设置一致，然后根据测得的结果做出决定。
+将这些结果与你的应用实际所需时间进行比较。更快的解码并不会按相同比例缩短图像处理、工具执行或模型加载时间。保持模型、输入、输出限制和采样设置一致，然后根据测得的结果做出决定。
 
 ## 试用人群监控演示
 
@@ -179,19 +179,19 @@ Python 脚本、shell 命令和设备配置文件通常会产生语法较为规�
   <img width={1000} src="https://files.seeedstudio.com/wiki/Jetson/Application/pipeline.png" alt="Edge Crowd Agent pipeline from video detection and ROI alerts to local LLM tools and reports, with MTP ON/OFF decoding." loading="lazy" />
 </div>
 
-开头演示所使用的源码是 [Edge Crowd Agent](https://github.com/zibochen6/edge-crowd-agent)。YOLO11n 和 ByteTrack 用于测量当前 ROI 的占用情况，本地 LLM 会在事件被触发时，根据保存的计数和移动证据进行说明。
+开头演示所用的源码来自 [Edge Crowd Agent](https://github.com/zibochen6/edge-crowd-agent)。YOLO11n 和 ByteTrack 用于测量当前 ROI 占用情况，本地 LLM 在事件被触发时，根据保存的计数和运动证据进行说明。
 
-请按照 **[README 中的 Start on Jetson](https://github.com/zibochen6/edge-crowd-agent#start-on-jetson)** 进行依赖安装、模型和视频路径配置、环境检查以及启动。该项目使用 uv 搭配系统自带的 Python 3.10，以保留对 JetPack 中 TensorRT 绑定的访问。
+请按照 **[README 中的 Start on Jetson](https://github.com/zibochen6/edge-crowd-agent#start-on-jetson)** 进行依赖安装、模型和视频路径配置、环境检查和启动。该项目使用 uv 搭配系统 Python 3.10，以保留对 JetPack 中 TensorRT 绑定的访问。
 
-启动后，选择关闭或开启 MTP，然后选择 **Start demo**。左侧为视频检测，右侧为分析和工具进度。[recording guide](https://github.com/zibochen6/edge-crowd-agent#record-off-and-on) 说明了如何运行这两种演示。
+启动后，选择 MTP 关闭或开启，然后点击 **Start demo**。左侧为视频检测，右侧为分析和工具进度。[recording guide](https://github.com/zibochen6/edge-crowd-agent#record-off-and-on) 说明了如何运行这两种演示。
 
 <div align="center">
   <img width={900} src="https://files.seeedstudio.com/wiki/Jetson/Application/mtp_demo.gif" alt="Video-based ROI tracking on the left, with MTP OFF and ON crowd-analysis results in the center and right panels." />
 </div>
 
-默认的事件条件是在 ROI 中至少有 5 个人，并且在连续 1.5 秒的视频时间内保持。LLM 接收的是结构化证据而不是视频像素；较短的轨迹可以支持占用情况评估，但无法判断意图或长时间逗留。
+默认事件条件是在 ROI 中至少有 5 个人，并且在连续 1.5 秒的视频时间内保持。LLM 接收的是结构化证据而不是视频像素；较短的轨迹可以支持占用评估，但无法确定意图或长时间逗留。
 
-为了进行可控的对比，请使用同一个冻结事件，而不是两段不同的录制。README 中的 [benchmark 部分](https://github.com/zibochen6/edge-crowd-agent#benchmarks-and-measured-latency) 提供了测试方法和测得结果，并将模型加载时间单独列出。
+为了进行可控对比，请使用同一个冻结事件，而不是两段单独的录制。README 的 [benchmark 部分](https://github.com/zibochen6/edge-crowd-agent#benchmarks-and-measured-latency) 提供了测试方法和测得结果，并将模型加载单独列出。
 
 ## 参考资料
 
@@ -202,6 +202,13 @@ Python 脚本、shell 命令和设备配置文件通常会产生语法较为规�
 - [llama.cpp SPEED-Bench](https://github.com/ggml-org/llama.cpp/tree/master/tools/server/bench/speed-bench)
 - [Qwen3.5-4B MTP GGUF 模型](https://huggingface.co/unsloth/Qwen3.5-4B-MTP-GGUF)
 - [Better & Faster Large Language Models via Multi-token Prediction](https://arxiv.org/abs/2404.19737)
+
+## 相关资源
+
+- [JetPack 7.2 在 LLM 部署中的内存优化](/cn/jetpack_7_2_memory_optimization_deep_dive/)
+- [在 Jetson 上使用 Laya 和 Qwen 构建本地 AI Agent](/cn/jetson/local_decision_model_laya)
+- [reComputer Super 与 Classic 的 AI 性能对比](/cn/recomputer_jetson_super_performance/)
+- [Edge Crowd Agent 仓库](https://github.com/zibochen6/edge-crowd-agent)
 
 ## 技术支持与产品讨论
 

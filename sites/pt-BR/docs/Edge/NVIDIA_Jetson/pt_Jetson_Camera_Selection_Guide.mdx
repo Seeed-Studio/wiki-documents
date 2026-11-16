@@ -4,18 +4,18 @@ sidebar_label: Guia de Seleção de Câmeras para Jetson
 description: Filtre e compare câmeras para dispositivos reComputer e reServer baseados em Jetson, com especificações e links para guias de configuração disponíveis.
 keywords:
   - reComputer
-  - câmera Jetson
-  - câmera CSI
-  - câmera USB
-  - câmera GMSL2
-  - câmera de profundidade
+  - Jetson camera
+  - CSI camera
+  - USB camera
+  - GMSL2 camera
+  - depth camera
 slug: /jetson/camera-selection-guide
 hide_table_of_contents: true
 last_update:
-  date: '2026-10-08'
+  date: '2026-11-09'
   author: zibo
 createdAt: '2026-9-29'
-updatedAt: '2026-10-08'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/pt-br/jetson/camera-selection-guide
 ---
 
@@ -23,8 +23,81 @@ import CameraSelector from '@site/src/components/camera/CameraSelector';
 
 # Guia de Seleção de Câmeras para Jetson
 
-Encontre câmeras para o seu reComputer ou reServer baseado em Jetson. Compare dois modelos e, em seguida, abra Detalhes para ver as especificações e os guias de configuração disponíveis.
-
-Ainda não tem um dispositivo Jetson? Comece com o [Guia de Seleção de Produtos Jetson](/pt-br/jetson-product-selection-guide/).
+Compare câmeras para um reComputer ou reServer por interface, resolução, campo de visão e a placa em que cada uma foi validada. O seletor abaixo filtra os mesmos 29 modelos; a tabela mais abaixo os lista como texto simples, para que cada modelo e link de guia possam ser lidos sem abrir uma caixa de diálogo.
 
 <CameraSelector />
+
+## Escolha a interface primeiro
+
+CSI, USB e GMSL2 resolvem problemas diferentes, e a interface geralmente determina o resto.
+
+**CSI (MIPI CSI-2).** Um cabo flat da câmera até a placa carrier, sem adaptador e sem hub. Em placas J30/J40 este é o jeito mais barato de adicionar uma câmera, mas o cabo flat precisa ser compatível com as duas pontas e o BSP da Seeed precisa incluir o driver do sensor para a sua versão do JetPack.
+
+**USB.** Funciona em qualquer reComputer com uma porta livre e não exige trabalho de BSP. As compensações ficam do lado do host: todas as câmeras USB em um mesmo controlador compartilham largura de banda e energia, e um stream 4K deixa pouco espaço para uma segunda câmera.
+
+**GMSL2.** Um único cabo coaxial carrega dados e energia, então a câmera pode ficar a vários metros da placa com um conector FAKRA com trava. Ela precisa da placa de extensão GMSL correspondente e do overlay 3G ou 6G para o sensor; o mesmo link também transporta as câmeras de profundidade das famílias Sensing e Orbbec.
+
+## Que placa alcança qual câmera
+
+| Interface | O que a placa precisa | Host típico |
+|---|---|---|
+| CSI | Cabo flat até a carrier; BSP correspondente | J30/J40 · Orin Nano/NX |
+| USB | Uma porta livre; verifique o orçamento de energia | Qualquer reComputer ou reServer |
+| GMSL2 | Placa de extensão GMSL + overlay 3G/6G | Robotics J401, J501, J501 Mini, J601; Industrial J501 |
+| GMSL2 depth | Igual ao GMSL2 | Robotics J401, J501, J601 |
+
+## Lente e campo de visão
+
+O campo de visão aparece em dois formatos e eles não são intercambiáveis. Módulos CSI com lente fixa informam um ângulo diagonal, por isso a série IMX219 traz o número no nome do modelo — 77°, 130°, 160°, 200°. Câmeras de profundidade informam horizontal × vertical, porque o stream de profundidade tem sua própria proporção.
+
+Quando a montagem é substituível (M12, CS, a câmera HQ), a lente define o ângulo e o número na tabela é apenas um ponto de partida. Uma lente GMSL2 de 196° é para cobertura ao redor; ela não vai ler um rótulo do outro lado do pátio. Grande angular sempre custa pixels por objeto, então escolha a lente mais estreita que ainda mantenha o alvo no enquadramento.
+
+## Largura de banda e taxa de quadros
+
+As lanes CSI são dedicadas, então duas câmeras CSI não competem entre si. USB compete: todas as câmeras atrás de um controlador dividem o mesmo barramento, e dois streams 1080p30 geralmente vão bem onde um stream 4K mais uma segunda câmera não vão. GMSL2 dá a cada câmera seu próprio link, por isso um projeto com oito câmeras é um design GMSL2 e não USB.
+
+A taxa de quadros na tabela é o máximo listado pelo sensor, não uma promessa para o seu pipeline. Inferência com TensorRT, conversão de cor e gravação consomem tempo por quadro; meça a taxa de ponta a ponta no alvo antes de dimensionar um projeto.
+
+## Armadilhas comuns
+
+- Um cabo flat que serve na câmera mas não na carrier — verifique ambos os conectores antes de fazer o pedido.
+- GMSL2 sem o overlay: a câmera é enumerada, mas nenhum stream aparece.
+- Câmeras USB em uma porta de hub que não consegue fornecer a corrente; o dispositivo cai sob carga.
+- Alcance de profundidade não é precisão. Uma câmera classificada para 10 m não é confiável a 10 m para um alarme de distância; defina limites a partir de um teste em campo.
+- Sufixos de SKU mudam a lente e o serializador. O nome da família em uma lista de suporte não garante a variante exata que você encomendou.
+
+## Todas as 29 câmeras
+
+`—` significa que a fonte não informa o valor para esse modelo.
+
+| Modelo | Interface | Resolução | FOV | Validado em | Link |
+|---|---|---|---|---|---|
+| IMX219-77 | CSI | 3280×2464 | 77° (do nome do modelo) | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-77IR | CSI | 3280×2464 | 77° (do nome do modelo) | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-130 | CSI | 3280×2464 | 130° (do nome do modelo) | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-160 | CSI | 3280×2464 | 160° (do nome do modelo) | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-160IR | CSI | 3280×2464 | 160° (do nome do modelo) | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-200 | CSI | 3280×2464 | 200° (do nome do modelo) | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| Raspberry Pi Camera Module V2 | CSI | 3280×2464 | 62.2° × 48.8° | J30/J40 · Orin Nano/NX | [spec](https://www.raspberrypi.com/documentation/accessories/camera.html#technical-information) |
+| IMX219 M12/CS Mount | CSI | 3280×2464 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| IMX219-83 Stereo Camera | CSI | 3280×2464 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| Raspberry Pi High Quality Camera | CSI | 4056×3040 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| Raspberry Pi HQ Camera (M12) | CSI | 4056×3040 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| High Quality Camera for CM/Jetson | CSI | 4056×3040 | — | J30/J40 · Orin Nano/NX | [spec](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Orin-NX-Orin-Nano-Compatible-CSI-Camera-Comparison.pdf) |
+| X10 USB Camera 1080p | USB | 1920×1080 | — | Exemplo de aplicação reComputer Super J4012 | [guide](/pt-br/deploy_live_vlm_webui_on_jetson/) |
+| ET-S231 USB Camera · 90° | USB | 1920×1080 | — | Nenhuma adaptação em nível de placa declarada | [spec](https://www.seeedstudio.com/ET-S231-90-USB-Camera-p-6684.html) |
+| ET-S231 USB Camera · 120° | USB | 1920×1080 | — | Nenhuma adaptação em nível de placa declarada | [spec](https://www.seeedstudio.com/ET-S231-120-USB-Camera-p-6683.html) |
+| OV9732 USB Camera · 100° | USB | 1280×720 | — | Nenhuma adaptação em nível de placa declarada | [spec](https://www.seeedstudio.com/Camera-Module-OV9732-1MP-100-USB2-0-USB2-0-L38-W38-H16-05mm-p-6982.html) |
+| Orbbec Gemini 2 | USB | 1920×1080 · depth 1280×800 | 91° × 66° | Fluxo de trabalho reComputer J4012 / J30-J40 | [guide](/pt-br/yolov11_with_depth_camera/) |
+| Orbbec Gemini 336 | USB | 1920×1080 · depth 1280×800 | 90° × 65° | Nenhuma adaptação em nível de placa declarada | [guide](/pt-br/orbbec_gemini336/) |
+| Intel RealSense D435i | USB | 1920×1080 · depth 1280×720 | 87° × 58° | Nenhuma adaptação em nível de placa declarada | [guide](/pt-br/realsense_3d_seg/) |
+| RealSense D405 | USB | 1280×720 · depth 1280×720 | 87° × 58° | Nenhuma adaptação em nível de placa declarada | [guide](/pt-br/realsense_3d_seg/) |
+| Sensing SG3S-ISX031C-GMSL2F | GMSL2 | 1920×1536 | 196° × 154° | Robotics J401 / J501 / J501 Mini / J601; carrier Industrial J501 | [guide](/pt-br/sensing_gmsl_cameras/#Primeiros-passos) |
+| Sensing SG3S-ISX031C-GMSL2-H | GMSL2 | 1920×1536 | — | Guia de overlay Seeed Sensing 6G; lista de placas usa o nome de família SG3S | [guide](/pt-br/sensing_gmsl_cameras/#Primeiros-passos) |
+| Sensing SG2-AR0233C-5200-G2A-H | GMSL2 | 1920×1080 | — | Família de sensores: Robotics J401 / J501 / J501 Mini / J601; sufixo exato a verificar | [guide](/pt-br/sensing_gmsl_cameras/#Primeiros-passos) |
+| Sensing SG2-IMX390C-5200-G2A-H | GMSL2 | 1920×1080 | — | Família de sensores: Robotics J401 / J501 / J501 Mini / J601; sufixo exato a verificar | [guide](/pt-br/sensing_gmsl_cameras/#Primeiros-passos) |
+| Sensing SG8S-AR0820C-5300-G2A-H | GMSL2 | 3840×2160 | — | Família de sensores: Robotics J401 / J501 / J501 Mini / J601; sufixo exato a verificar | [guide](/pt-br/sensing_gmsl_cameras/#Primeiros-passos) |
+| Orbbec Gemini 335LG | GMSL2 | 1280×800 · depth 1280×800 | 90° × 65° | Robotics J401 / J501 / J601; J501 Mini anunciado separadamente | [guide](/pt-br/orbbec_gemini_335lg/#Conexão-GMSL2) |
+| Stereolabs ZED X | GMSL2 | 1920×1200 · depth 1920×1200 | 110° × 80° | Família ZED X: Robotics J50 Mini / J50 / J40 / J601; modelo exato a verificar | [guide](/pt-br/zed_x_gmsl_cameras_on_recomputer_robotics/#Configuração-específica-do-dispositivo) |
+| Stereolabs ZED X Mini | GMSL2 | 1920×1200 · depth 1920×1200 | 110° × 80° | Família ZED X: Robotics J50 Mini / J50 / J40 / J601; modelo exato a verificar | [guide](/pt-br/zed_x_gmsl_cameras_on_recomputer_robotics/#Configuração-específica-do-dispositivo) |
+| Stereolabs ZED X One GS | GMSL2 | 1920×1200 | 110° × 80° | Suporte em nível de modelo reComputer exato não documentado | [guide](/pt-br/zed_x_gmsl_cameras_on_recomputer_robotics/#Configuração-específica-do-dispositivo) |

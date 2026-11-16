@@ -1,6 +1,6 @@
 ---
-description: "How to run Pi0.5 on reBot Arm & SO-ARM101: a paper deep-dive into pi0.5 multi-source joint training, hierarchical action generation, open-world generalization and differences from pi0."
-title: "How to Run Pi0.5 on reBot Arm & SO-ARM101"
+description: "A paper deep-dive into pi0.5 multi-source joint training, hierarchical action generation, open-world generalization and differences from pi0."
+title: "π0.5: How Joint Training Supports Open-World Generalization"
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -26,10 +26,10 @@ translation:
   skip: [zh-CN]
 sku: 100019336,100065783,100095532,100063143,100045679,100040187,114993666,114993667,114993668,101090144
 last_update:
-  date: 2026-10-22
+  date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_pi05/
 ---
 
@@ -39,7 +39,7 @@ import '/src/css/paper-reading-style.css';
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-pi05-title">
   <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-pi05-title">How to Run Pi0.5 on reBot Arm & SO-ARM101</h1>
+  <h1 id="paper-reading-pi05-title">π0.5: How Joint Training Supports Open-World Generalization</h1>
   <p className="paper-reading-lead">π0.5: a Vision-Language-Action Model with Open-World Generalization</p>
   <ul className="paper-reading-badges" aria-label="In this guide">
     <li>Open-world generalization</li>
@@ -53,6 +53,20 @@ import '/src/css/paper-reading-style.css';
     <span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
+
+<aside className="paper-reading-key-commands" aria-label="Key LeRobot Commands">
+
+<a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/main/en/pi05" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="Hugging Face" width="24" height="24" /> Hugging Face · LeRobot π0.5 Documentation ↗</a>
+
+**Key LeRobot Commands**
+
+These are LeRobot main argument fragments for `lerobot-train`, used alongside dataset, output-directory and other settings. See the documentation above for installation requirements.
+
+- `--policy.type=pi05 --policy.pretrained_path=lerobot/pi05_base`: Select π0.5 and load base weights; pretrained_path loads weights without restoring every checkpoint setting.
+- `--policy.train_expert_only=true`: Optionally freeze the VLM and fine-tune only the action expert and projection layers.
+- `--policy.gradient_checkpointing=true --policy.dtype=bfloat16`: Reduce training memory; default quantile normalization also requires q01 and q99 dataset statistics.
+
+</aside>
 
 ## Prerequisites
 

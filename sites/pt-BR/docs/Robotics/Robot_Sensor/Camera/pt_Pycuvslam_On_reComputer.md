@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece etapas abrangentes para configurar e executar o PyCuVSLAM na reComputer Jetson Série para aplicações de SLAM visual aceleradas por GPU com câmeras RGB-D.
+description: "Execute a odometria visual PyCuVSLAM no reComputer com JetPack 6.2: rastreamento monocular e RGB-D, configuração de dataset e calibração de câmera."
 title: PyCuVSLAM com reComputer
 keywords:
   - PyCuVSLAM
@@ -7,9 +7,9 @@ keywords:
   - reComputer
   - Jetson
   - Aceleração por GPU
-  - SLAM visual
+  - Visual SLAM
   - Câmera RGB-D
-  - Odometria visual
+  - Odometria Visual
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb_homepage.gif
 slug: /pycuvslam_recomputer_robotics
 sku: 101090144,100071398
@@ -17,23 +17,23 @@ last_update:
   date: 2025-10-10
   author: Zibo
 createdAt: '2025-10-10'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/pycuvslam_recomputer_robotics/
 ---
 
 <div align="center">
-    <img width={800}
-    src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" />
+    <img alt="Demonstração do PyCuVSLAM no RViz: o mapa de nuvem de pontos reconstruído e a trajetória em loop do estacionamento acima, com a visualização ao vivo da câmera e uma segunda visualização do mapa abaixo" width={800}
+    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/pycuvslam-cover.gif" />
 </div>
 
 ## Introdução
 
 <div style={{ textAlign: "justify" }}>
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) é o wrapper em Python da NVIDIA para odometria visual acelerada por GPU e para a biblioteca de SLAM cuVSLAM. Ele suporta modos monocular, estéreo, RGB-D, multicâmera e visual-inercial (IMU), fornecendo uma API Python simples que pode se conectar diretamente a fluxos de câmera e gerar em tempo real as poses da câmera, pontos do mapa e informações de fechamento de loop. A otimização CUDA subjacente possibilita inferência SLAM de alta precisão e baixa latência tanto em PCs quanto em dispositivos Jetson, tornando-o adequado para aplicações de navegação robótica, posicionamento de drones e percepção 3D. Este wiki fornecerá instruções sobre como implantar o pycuvslam em reComputer.
+[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) é o wrapper em Python da NVIDIA para a biblioteca de odometria visual e SLAM acelerada por GPU cuVSLAM. Ele oferece suporte aos modos monocular, estéreo, RGB-D, multicâmera e visual-inercial (IMU), fornecendo uma API Python simples que pode se conectar diretamente a fluxos de câmera e gerar em tempo real poses de câmera, pontos de mapa e informações de fechamento de loop. A otimização em CUDA subjacente permite inferência SLAM de alta precisão e baixa latência tanto em PCs quanto em dispositivos Jetson, tornando-o adequado para navegação robótica, posicionamento de drones e aplicações de percepção 3D. Implantá-lo em um reComputer significa compilar a biblioteca contra a pilha CUDA do JetPack, alimentar o sistema com frames de câmera e ler de volta as poses e pontos de mapa.
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="Unidade reComputer com selo NVIDIA Jetson Orin Nano / Orin NX, usada para o passo a passo do PyCuVSLAM" width={700}
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" />
 </div>
 
@@ -80,7 +80,7 @@ Para PC com Ubuntu (arquitetura x86_64):
 pip install -e bin/x86_64
 ```
 
-**Passo 4.** Instalar as dependências necessárias
+**Passo 4.** Instalar dependências necessárias
 
 ```bash
 # Install required packages
@@ -89,9 +89,9 @@ pip install -r examples/requirements.txt
 
 ## Odometria Visual Monocular
 
-### Configuração do Conjunto de Dados
+### Configuração do Dataset
 
-**Passo 1.** Baixar o conjunto de dados EuRoC MH_01_easy:
+**Passo 1.** Baixar o dataset EuRoC MH_01_easy:
 
 ```bash
 mkdir -p examples/euroc/dataset
@@ -110,7 +110,7 @@ cp examples/euroc/sensor_imu0.yaml examples/euroc/dataset/mav0/imu0/sensor_recal
 
 ### Calibração da Câmera
 
-O pacote `v4l2_camera` atua como uma ponte entre a API Linux Video4Linux2 (V4L2) e os tópicos do ROS 2, publicando mensagens de imagem e informações de câmera que podem ser facilmente usadas em fluxos de calibração.
+O pacote `v4l2_camera` atua como uma ponte entre a API Linux Video4Linux2 (V4L2) e os tópicos do ROS 2, publicando mensagens de imagem e informações de câmera que podem ser facilmente usadas em pipelines de calibração.
 
 **Passo 1.** Instalar o pacote de calibração de câmera:
 
@@ -135,7 +135,7 @@ Os tópicos padrão publicados são:
 - `/camera` - Informações da câmera
 
 <div align="center">
-    <img width={1000}
+    <img alt="lista de tópicos do ros2 mostrando /camera_info e /image_raw publicados pelo nó v4l2_camera" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
 </div>
 
@@ -152,19 +152,19 @@ ros2 run camera_calibration cameracalibrator \
 
 - `--size 8x6` refere-se ao número de cantos internos (8×6 = 48 cantos para uma grade 9×7)
 - `--square 0.025` refere-se ao tamanho do quadrado em metros (25mm)
-- Mova a câmera para capturar imagens de ângulos diferentes até o botão `CALIBRATE` acender
+- Mova a câmera para capturar imagens de diferentes ângulos até que o botão `CALIBRATE` acenda
 
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="janela do camera_calibrator com as visualizações do tabuleiro de xadrez e o botão CALIBRATE" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
 </div>
 
-Após uma calibração bem-sucedida, você obterá parâmetros de câmera no terminal semelhantes a:
+Após uma calibração bem-sucedida, você obterá parâmetros da câmera no terminal semelhantes a:
 
 <div align="center">
-    <img width={1000}
+    <img alt="Parâmetros intrínsecos da câmera e coeficientes de distorção impressos no terminal após a calibração" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
 </div>
 
@@ -839,16 +839,16 @@ slam_optimization:
 :::
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz mostrando a nuvem de pontos da odometria monocular ao lado da visualização da câmera, com a sobreposição Speed x 2.5" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb.gif" />
 </div>
 
-## Odometria Visual Monocular com Profundidade
+## Odometria Visual Monocular-Depth
 
 ### Calibração da Câmera
 
 <div style={{ textAlign: "justify" }}>
-A Odometria Visual Monocular com Profundidade requer correspondência pixel a pixel entre as imagens da câmera e de profundidade. A [Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) é uma câmera 3D estéreo de luz estruturada / estéreo IR ativo que fornece saídas de profundidade e RGB (cor). Uma de suas principais características é o alinhamento hardware-acelerado de profundidade para cor (D2C, depth → color), o que significa que o mapa de profundidade e a imagem RGB são espacialmente alinhados em nível de pixel antes de os dados chegarem ao seu computador host. Isso reduz a carga computacional no processador host e simplifica a fusão de profundidade + cor para aplicações como reconstrução 3D, SLAM, detecção de objetos com profundidade, etc.
+A Odometria Visual Monocular-Depth requer correspondência pixel a pixel entre as imagens da câmera e de profundidade. A [Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) é uma câmera 3D estéreo de luz estruturada / estéreo IR ativo que fornece saídas de profundidade e RGB (cor). Um de seus principais recursos é o alinhamento de profundidade para cor acelerado por hardware (D2C, depth → color), o que significa que o mapa de profundidade e a imagem RGB são espacialmente alinhados em nível de pixel antes que os dados cheguem ao seu computador host. Isso reduz a carga computacional no processador host e simplifica a fusão de profundidade + cor para aplicações como reconstrução 3D, SLAM, detecção de objetos com profundidade, etc.
 </div>
 
 **Passo 1.** Instale o Orbbec ROS2 Driver:
@@ -884,9 +884,9 @@ ros2 launch orbbec_camera gemini2.launch.py
 ```
 
 :::note
-Você pode verificar se o nó da câmera pode iniciar normalmente observando se o tópico de dados da câmera está sendo publicado normalmente.
+Você pode verificar se o nó da câmera consegue iniciar normalmente observando se o tópico de dados da câmera está sendo publicado normalmente.
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list mostrando os tópicos de cor e profundidade da câmera Orbbec" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
@@ -899,7 +899,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator em modo fisheye na câmera RGB-D, com o botão CALIBRATE destacado" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal4.png" />
 </div>
 
@@ -930,7 +930,7 @@ projection:
   0.000000 0.000000 1.000000 0.000000
 ```
 
-**Passo 3.** Obtenha as Extrínsecas de Profundidade para Cor
+**Passo 3.** Obtenha as extrínsecas de profundidade para cor
 
 ```bash
 ros2 launch orbbec_camera gemini2.launch.py
@@ -957,7 +957,7 @@ translation:
   - -0.00187313711643219
 ```
 
-**Passo 4.** Configure o SDK Python do Gemini 2
+**Passo 4.** Configure o Gemini 2 Python SDK
 
 ```bash
 #install pybind11
@@ -2170,7 +2170,7 @@ depth_to_color_transform:
 </details>
 
 <div align="center">
-    <img width={1000}
+    <img alt="RViz mostrando a nuvem de pontos da odometria RGB-D com a visualização em cores e uma visualização de profundidade, sob a sobreposição Speed x 2.5" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgbd.gif" />
 </div>
 
@@ -2178,11 +2178,19 @@ depth_to_color_transform:
 
 - [Repositório PyCuVSLAM no GitHub](https://github.com/NVlabs/PyCuVSLAM)
 - [Documentação do cuVSLAM](https://docs.nvidia.com/cuda/cuvslam/)
-- [Calibração de Câmera no ROS2](https://navigation.ros.org/tutorials/docs/camera_calibration.html)
+- [Calibração de câmera no ROS2](https://navigation.ros.org/tutorials/docs/camera_calibration.html)
 
-## Suporte Técnico & Discussão de Produto
+## Recursos Relacionados
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+- [ORB-SLAM3 com Orbbec Gemini2](/pt-br/orb_slam3_orbbec_gemini2/)
+- [Câmera 3D Orbbec Gemini 2 no ROS 2](/pt-br/orbbec_gemini2/)
+- [Implantar Depth Anything V3 no Jetson AGX Orin](/pt-br/deploy_depth_anything_v3_jetson_agx_orin/)
+- [Página do produto reComputer Robotics J4012](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)
+- [Repositório PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM)
+
+## Suporte Técnico e Discussão de Produtos
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,16 +1,16 @@
 ---
-description: "reComputer Jetson で Orbbec Gemini 2 3D カメラを使う方法：ドライバーのセットアップ、SDK のインストール、ロボット知覚向けの深度と RGB ストリーミング。"
-title: Orbbec Gemini2 3D カメラ
+description: "Orbbec Gemini 2 3D カメラを reComputer Jetson で使用する方法：ドライバセットアップ、SDK インストール、ロボティクスの認識向けの深度および RGB ストリーミング。"
+title: Orbbec Gemini2 3D Camera
 keywords:
   - Jetson
   - reComputer Robotics
-  - Computer Vision
-  - Autonomous Driving
-  - Industrial Robot
+  - コンピュータビジョン
+  - 自動運転
+  - 産業用ロボット
   - Orbbec
-  - AI Camera
-  - Stereo Camera
-  - Depth Camera
+  - AI カメラ
+  - ステレオカメラ
+  - 深度カメラ
   - Visual SLAM
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.webp
 slug: /orbbec_gemini2
@@ -24,12 +24,12 @@ url: https://wiki.seeedstudio.com/ja/orbbec_gemini2/
 ---
 
 <div align="center">
-    <img width={400}
+    <img alt="Orbbec Gemini 2 3D camera, product photo" width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-コンパクトな Gemini 2 3D カメラは Active Stereo IR 技術をベースとし、高品質な深度処理、IMU、および単一ケーブル USB 3.0 電源 + 接続のための Orbbec の最新カスタム ASIC を搭載しています。広い FOV と広い深度センシング範囲により、Gemini 2 は多くのアプリケーション、特にロボティクスに適応できます。Orbbec SDK で簡単にセットアップ・操作でき、真っ暗闇から半屋外まで、様々な照明条件で極めて正確で信頼性の高いデータを提供します。
+コンパクトな Gemini 2 3D カメラは Active Stereo IR 技術に基づいており、高品質な深度処理のための Orbbec 最新カスタム ASIC、IMU、そして 1 本の USB 3.0 ケーブルによる電源供給と接続機能を備えています。広い FOV と広い深度検知範囲により、Gemini 2 は特にロボティクスをはじめとする多くのアプリケーションに適応できます。Orbbec SDK により簡単にセットアップおよび操作ができ、真っ暗な環境から半屋外まで、さまざまな照明条件下で非常に高精度かつ信頼性の高いデータを提供します。
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -37,13 +37,13 @@ url: https://wiki.seeedstudio.com/ja/orbbec_gemini2/
 <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
-## 特徴
+## 特長
 
-- **Active Stereo IR** 深度出力にアクティブステレオ IR 技術を採用し、様々な照明条件で正確で信頼性の高いデータ出力を実現
-- **広いセンシング範囲** 0.15m から 10m まで高品質な深度データ出力を提供
-- **広い FOV** 水平 91 度、垂直 66 度の広い視野データを提供
-- **マルチカメラ同期** 深度画像と RGB 画像の両方でマルチカメラ同期をサポート
-- **USB 接続** 電源と接続に単一の USB 3.0 Type-C ケーブルを使用
+- **Active Stereo IR** 深度出力にアクティブステレオ IR 技術を採用し、さまざまな照明条件下で正確かつ信頼性の高いデータ出力を実現します
+- **広い検知範囲** 0.15m から 10m までの高品質な深度データを提供します
+- **広い FOV** 水平 91 度、垂直 66 度の広い視野角データを提供します
+- **マルチカメラ同期** 深度画像および RGB 画像の両方でマルチカメラ同期をサポートします
+- **USB 接続** 電源供給と接続に 1 本の USB 3.0 Type-C ケーブルを使用します
 
 ## 仕様
 
@@ -75,7 +75,7 @@ url: https://wiki.seeedstudio.com/ja/orbbec_gemini2/
       </tr>
 
       <tr style={{ height: "46px" }}>
-        <td style={{ height: "46px", width: "132px" }}>機械的寸法</td>
+        <td style={{ height: "46px", width: "132px" }}>外形寸法</td>
         <td style={{ height: "46px", width: "491px" }}>90mm x 25mm x 30mm</td>
       </tr>
 
@@ -90,12 +90,12 @@ url: https://wiki.seeedstudio.com/ja/orbbec_gemini2/
       </tr>
 
       <tr style={{ height: "46px" }}>
-        <td style={{ height: "46px", width: "132px" }}>深度範囲</td>
+        <td style={{ height: "46px", width: "132px" }}>深度レンジ</td>
         <td style={{ height: "46px", width: "491px" }}>0.15m ~ 10m</td>
       </tr>
 
       <tr style={{ height: "46px" }}>
-        <td style={{ height: "46px", width: "132px" }}>理想的範囲</td>
+        <td style={{ height: "46px", width: "132px" }}>理想レンジ</td>
         <td style={{ height: "46px", width: "491px" }}>0.2m ~ 5m</td>
       </tr>
 
@@ -125,103 +125,103 @@ url: https://wiki.seeedstudio.com/ja/orbbec_gemini2/
 ## ハードウェア概要
 
 <div align="center">
-    <img width={700}
+    <img alt="2 つの IR カメラ、LDP、LDM、および RGB カメラがラベル付けされた Gemini 2 の正面図" width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-1.png" />
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="USB Type-C インターフェースを示す Gemini 2 の側面図" width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-2.png" />
 </div>
 
 <div align="center">
-    <img width={700}
+    <img alt="8 ピンのマルチカメラ同期インターフェースを示す Gemini 2 の背面図" width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
 
-## Gemini シリーズクイックスタートガイド
-- Orbbec カメラの接続
- ① 三脚ヘッドを三脚に組み立て、下記ステップ 1 に示すように、組み立てた三脚にカメラを固定します。
+## Gemini シリーズ クイックスタートガイド
+- Orbbec カメラを接続する
+ ① 三脚ヘッドを三脚に取り付け、その後、下図のステップ 1 のようにカメラを組み立てた三脚に固定します。
 
-  ② 下記ステップ 2 に示すように、USB-C to USB-A ケーブルを使用してカメラの Type-C ポートに接続します。
+  ② 下図のステップ 2 のように、USB-C to USB-A ケーブルを使用してカメラの Type-C ポートに接続します。
 
-  ③ 下記ステップ 3 に示すように、同じ USB-C to USB-A ケーブルを使用して USB-A コネクタをホストに接続します。
+  ③ 下図のステップ 3 のように、同じ USB-C to USB-A ケーブルを使用して USB-A コネクタをホストに接続します。
 
 <div align="center">
-    <img width={700}
+    <img alt="三脚ヘッドに取り付けられた Gemini カメラと接続された USB-C to USB-A ケーブル" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/step1.png" />
 </div>
 
-- Orbbec Viewer の取得
+- Orbbec Viewer を入手
 
-お使いのシステムとバージョンに対応する [Orbbec Viewer](https://www.orbbec.com/developers/orbbec-sdk/) を選択してダウンロードしてください。
+お使いのシステムとバージョンに応じて、対応する [Orbbec Viewer](https://www.orbbec.com/developers/orbbec-sdk/) を選択してダウンロードしてください。
 
-- Orbbec Viewer の起動
+- Orbbec Viewer を起動
 
-1. Orbbec Viewer を起動した後、以下の画像に示すように、ツールが 3D カメラを認識していることを確認してください。
-【備考】カメラが認識されない場合は、カメラとホストが正しく接続されていることを確認してください。USB ケーブルを一度抜いて再接続してみてください。それでも認識されない場合は、USB ケーブルの交換や、ホストコンピュータの電源供給が必要な仕様を満たしているかを確認してください。
+1. Orbbec Viewer を起動したら、次の画像のようにツールが 3D カメラを認識していることを確認してください。
+【備考】カメラが認識されない場合は、カメラとホストが正しく接続されているか確認してください。USB ケーブルを一度抜いてから再接続してみてください。それでも認識されない場合は、USB ケーブルの交換や、ホストコンピュータの電源供給が必要な仕様を満たしているかどうかを確認してください。
 
 <div align="center">
-    <img width={700}
+    <img alt="接続された Gemini 2 カメラが一覧表示されている Orbbec Viewer" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft1.png" />
 </div>
 
 
-2. ツール上部の 'Depth' ボタンを切り替えて、深度ストリームを開始・プレビューします。
+2. ツール上部の「Depth」ボタンを切り替えて、深度ストリームを開始およびプレビューします。
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer で Depth ストリームがオンになっている様子" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft2.png" />
 </div>
 
-3. ツール上部の 'Color' ボタンを切り替えて、カラーストリームを開始・プレビューします。カラーストリームと深度ストリームが並んで表示されます。
+3. ツール上部の「Color」ボタンを切り替えて、カラー ストリームを開始およびプレビューします。カラー ストリームと深度ストリームは左右に並んで表示されます。
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer でカラーと深度ストリームが左右に並んで表示されている様子" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft3.png" />
 </div>
 
-4. ツール上部の 'IR Left' と 'IR Right' ボタンを切り替えて、IR ストリームを開始・プレビューします。
+4. ツール上部の「IR Left」と「IR Right」ボタンを切り替えて、IR ストリームを開始およびプレビューします。
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer で左および右の IR ストリームがプレビューされている様子" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft4.png" />
 </div>
 
-5. ツール上部の 'IMU' ボタンを切り替えて、IMU ストリームを開始・プレビューします。
+5. ツール上部の「IMU」ボタンを切り替えて、IMU ストリームを開始およびプレビューします。
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer でフレームメタデータパネルが深度およびカラー ストリームの横に開いている様子" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft5.png" />
 </div>
 
-6. 各ウィンドウの上部にあるボタンを切り替えて、メタデータ情報を表示します。
+6. 各ウィンドウ上部のボタンを切り替えて、メタデータ情報を表示します。
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer でフレームメタデータと IMU の加速度およびジャイロ値が表示されている様子" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft6.png" />
 </div>
 
-7. ツール上部の 'PointCloud' ボタンを切り替えて、3D ポイントクラウドを開始・プレビューします。
+7. ツール上部の「PointCloud」ボタンを切り替えて、3D ポイントクラウドを開始およびプレビューします。
 
 <div align="center">
-    <img width={700}
+    <img alt="Orbbec Viewer で 3D ポイントクラウドがプレビューされている様子" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft7.png" />
 </div>
 
-8. 左側の 'Image View' メニュー下の 'Display' ボタンを切り替えて、D2C（深度からカラーへの登録）ストリームを開始・プレビューします。3D ポイントクラウドと D2C ストリームが並んで表示されます。
+8. 左側の「Image View」メニュー内の「Display」ボタンを切り替えて、D2C（depth to color registration）ストリームを開始およびプレビューします。3D ポイントクラウドと D2C ストリームは左右に並んで表示されます。
 
 <div align="center">
-    <img width={700}
+    <img alt="ポイントクラウドと D2C 登録済みストリームが左右に並んで表示されている様子" width={700}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft8.png" />
 </div>
 
 
 
-## reComputer での開始
+## reComputer での開始手順
 
-**ステップ 1.** ARM64 アーキテクチャ用の Orbbec SDK をダウンロード・インストールします：
+**ステップ 1.** ARM64 アーキテクチャ向けの Orbbec SDK をダウンロードしてインストールします：
 
 ```bash
 # Download Orbbec SDK
@@ -246,31 +246,31 @@ cd ..
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Orbbec SDK のサンプルがビルドされ、reComputer 上でテストウィンドウが開いている様子" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
 ## アプリケーション例
 
 <div style={{ textAlign: "justify" }}>
-Orbbec Gemini2 は、ロボティクス、3D ビジョン、オブジェクト追跡、産業オートメーションに最適なコンパクトで高性能な深度カメラです。
-NVIDIA Jetson プラットフォームなどの組み込み AI やエッジコンピューティングアプリケーションに完璧に適合します。
+Orbbec Gemini2 は、ロボティクス、3D ビジョン、物体追跡、産業オートメーションに最適な、コンパクトで高性能な深度カメラです。
+NVIDIA Jetson プラットフォーム上のアプリケーションのような、組み込み AI およびエッジコンピューティング用途に理想的にフィットします。
 </div>
 
 :::info
-Gemini2 を使用して私たちが開発したケースチュートリアルがいくつかあります：
+Gemini2 を使用して当社が作成したケースチュートリアルがいくつかあります：
 
 [距離測定](https://wiki.seeedstudio.com/ja/yolov11_with_depth_camera/)
 
 <div align="center">
-    <img width={800}
+    <img alt="Gemini 2 と YOLOv11 を組み合わせた距離測定デモ" width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/distance.png" />
 </div>
 
-[ドローンでのオブジェクト追跡](https://wiki.seeedstudio.com/ja/object_tracking_with_reComputer_jetson_and_pX4/)
+[ドローンでの物体追跡](https://wiki.seeedstudio.com/ja/object_tracking_with_reComputer_jetson_and_pX4/)
 
 <div align="center">
-    <img width={800}
+    <img alt="Gemini 2 と PX4 を使用したドローン上での物体追跡デモ" width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/px4.png" />
 </div>
 
@@ -283,9 +283,34 @@ Gemini2 を使用して私たちが開発したケースチュートリアルが
 - [OrbbecViewer](https://github.com/orbbec/OrbbecSDK/blob/main/doc/OrbbecViewer/English/OrbbecViewer.md)
 - [ROS SDK](https://wiki.seeedstudio.com/ja/orbbec_depth_camera_on_ros/)
 
+## FAQ
+
+**Orbbec Viewer ではどのストリームタイプをプレビューできますか？**
+Depth、カラー、左 IR、右 IR、IMU、3D ポイントクラウド、および D2C 登録ストリームです。各ストリームにはビューア上部に個別のトグルがあり、ポイントクラウドと D2C は並べて表示できます。
+
+**ビューアにカメラが表示されません。最初に何を確認すべきですか？**
+USB 接続です。USB-C から USB-A ケーブルを挿し直し、別のケーブルを試し、ホストポートが十分な電力を供給できることを確認してください — Gemini 2 は低電力ハブポートが供給する電力より多くを消費します。
+
+**Viewer 以外に Jetson 側で必要なものは何ですか？**
+Orbbec SDK v2.4.11 aarch64 パッケージです。`shared/install_udev_rules.sh` から udev ルールをインストールし、その後、任意のアプリケーションがカメラと通信する前に `./build_examples.sh` と `./setup.sh` を実行します。
+
+**これは Gemini 336 ガイドと同じカメラですか？**
+いいえ。このページは Gemini 2 を対象としています。三脚とビューアのスクリーンショットは、両方のカメラが同じ Orbbec Viewer を使用するため、Gemini 336 クイックスタートと共通です。SDK パッケージと測距範囲はモデルごとに異なります。
+
+**距離測定やトラッキングに使用できますか？**
+はい — 最後にリンクされている 2 つの例は reComputer 上で動作し、YOLOv11 による距離測定と、PX4 を用いたドローンでの物体追跡です。どちらも Orbbec SDK を通じて Depth ストリームを読み取ります。
+
+## 関連リソース
+
+- [Gemini 2 と YOLOv11 を組み合わせて距離測定を行う](/ja/yolov11_with_depth_camera/)
+- [Orbbec Gemini2 での ORB-SLAM3](/ja/orb_slam3_orbbec_gemini2/)
+- [Jetson AGX Orin で Depth Anything V3 をデプロイ](/ja/deploy_depth_anything_v3_jetson_agx_orin/)
+- [Orbbec Gemini 2 製品ページ](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- [Orbbec Gemini 2 シリーズ データシート](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
+
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+当社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

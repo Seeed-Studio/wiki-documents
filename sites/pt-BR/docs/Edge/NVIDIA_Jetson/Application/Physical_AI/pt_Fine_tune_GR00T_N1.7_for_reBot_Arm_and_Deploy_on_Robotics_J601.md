@@ -7,14 +7,14 @@ keywords:
   - reBot Arm
   - gr00t n1.7
   - reComputer
-image: https://files.seeedstudio.com/wiki/other/cover1.png
+image: https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
 slug: /fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601
 sku: E26052001
 last_update:
   date: 2026-06-12
   author: Zibo
 createdAt: '2026-06-12'
-updatedAt: '2026-06-16'
+updatedAt: '2026-06-22'
 url: https://wiki.seeedstudio.com/pt-br/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/
 ---
 
@@ -22,15 +22,15 @@ url: https://wiki.seeedstudio.com/pt-br/fine_tune_gr00t_n1.7_for_rebot_arm_and_d
 
 ## Introdução
 
-Este wiki explica como **ajustar finamente o NVIDIA Isaac GR00T N1.7** para o **reBot Arm B601 DM** e implantá-lo no **reComputer Robotics J601** usando **aceleração TensorRT**.
+**GR00T N1.7** é um modelo de visão-linguagem-ação; ajustá-lo finamente com demonstrações do **reBot Arm B601 DM** o adapta a esse braço e a essas tarefas. O checkpoint ajustado é exportado para **TensorRT** e servido no **reComputer Robotics J601** com **Jetson Thor**, para que o braço execute a inferência no próprio dispositivo em vez de em uma estação de trabalho.
 
 <p></p>
 
-**[NVIDIA GR00T N1.7](https://github.com/Nvidia/Isaac-GR00T)** marca um grande avanço na evolução da inteligência incorporada como um modelo de base Vision-Language-Action (VLA) de ponta a ponta e de última geração. Ele conecta perfeitamente a lacuna entre percepção e execução, permitindo que robôs transformem entradas visuais complexas e pistas verbais diretamente em manobras físicas no mundo real. Impulsionado pelo novo modelo de visão e linguagem Cosmos Reason2-2B, o GR00T N1.7 atinge um nível sem precedentes de consciência ambiental, enquanto seu decodificador de ação DiT (Diffusion Transformer) de última geração oferece geração de ações ultrafluida e robustez sólida contra perturbações do mundo real.
+**[NVIDIA GR00T N1.7](https://github.com/Nvidia/Isaac-GR00T)** marca um grande salto na evolução da inteligência incorporada como um modelo de base Vision-Language-Action (VLA) de ponta e de ponta a ponta. Ele conecta perfeitamente a percepção à execução, permitindo que robôs transformem entradas visuais complexas e pistas verbais diretamente em manobras físicas no mundo real. Impulsionado pelo novo modelo de visão-linguagem Cosmos Reason2-2B, o GR00T N1.7 atinge um nível sem precedentes de consciência ambiental, enquanto seu decodificador de ação DiT (Diffusion Transformer) de última geração oferece geração de ações ultrafluida e robustez sólida contra perturbações do mundo real.
 <p></p>
 
 <div align="center">
-  <img width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
+  <img alt="Arquitetura do GR00T N1: observação de imagem, instrução em linguagem natural e estado do robô alimentam o modelo de visão-linguagem (Sistema 2), que aciona um diffusion transformer (Sistema 1) que emite tokens de ação de motor" width="1000" src="https://github.com/NVIDIA/Isaac-GR00T/raw/main/media/model-architecture.png
   "/>
 </div>
 
@@ -48,7 +48,7 @@ Este wiki explica como **ajustar finamente o NVIDIA Isaac GR00T N1.7** para o **
 ### Conexão de hardware
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
+  <img alt="reBot Arm B601 DM conectado à placa carrier J601, com duas câmeras USB" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/rebot-j60-connect.png"/>
 </div>
 
 
@@ -94,7 +94,7 @@ Substitua o caminho do arquivo pelo caminho do seu próprio conjunto de dados.
 Após a execução, o conjunto de dados LeRobot coletado anteriormente será rebaixado do formato v3.0 para v2.0.
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
+  <img alt="Conjunto de dados LeRobot rebaixado do formato v3.0 para v2.0 antes do ajuste fino" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/data_reverse.jpg"/>
 </div>
 
 Em seguida, copie o seguinte arquivo `modality.json` para a pasta `meta` do conjunto de dados convertido:
@@ -170,20 +170,20 @@ Como nosso conjunto de dados de treinamento é relativamente pequeno, você pode
 :::
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
+  <img alt="Execução de ajuste fino mostrando a perda ao longo das etapas de treinamento" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train.jpg"/>
 </div>
 
 Após a conclusão do treinamento, você pode encontrar os arquivos do modelo GR00T N1.7 ajustado finamente no diretório `--output-dir`.
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
+  <img alt="Arquivos de checkpoint do GR00T N1.7 ajustado finamente gravados no diretório de saída" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/train_output.jpg"/>
 </div>
 
 ## Implantar no Jetson
 
 ### Aquisição de permissão
 
-Para baixar modelos e conjuntos de dados do Hugging Face, você precisa conceder acesso primeiro aos repositórios necessários.
+Para baixar modelos e conjuntos de dados do Hugging Face, você precisa primeiro conceder acesso aos repositórios necessários.
 
 Instale o CLI do Hugging Face e faça login:
 
@@ -198,7 +198,7 @@ Visite o seguinte link para obter permissão de download para o modelo necessár
 🔗 [https://huggingface.co/nvidia/Cosmos-Reason2-2B](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
+  <img alt="Página do Hugging Face concedendo acesso aos pesos do modelo" width="800" src="https://files.seeedstudio.com/wiki/rebot_j60/model_download_pemission.PNG"/>
 </div>
 
 ### Clonar o repositório
@@ -268,12 +268,12 @@ source scripts/activate_thor.sh
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
+  <img alt="Configuração de ambiente no Jetson Thor com o virtualenv e activate_thor.sh carregados" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/env_setup.png"/>
 </div>
 
 ### Verificar ambiente
 
-Você pode executar inferência em PyTorch para verificar se o ambiente está configurado corretamente.
+Você pode executar inferência com PyTorch para verificar se o ambiente está configurado corretamente.
 
 :::note
 Antes de executar o script, você precisa fazer login na sua conta Hugging Face com antecedência e inserir seu token.
@@ -688,7 +688,7 @@ python3 scripts/convert_v3_to_v2.py \
 
 ## Exportar modelo como mecanismo TensorRT
 
-Depois de verificar o ambiente e preparar o conjunto de dados, você pode exportar o modelo ajustado para um mecanismo TensorRT para inferência acelerada no Jetson Thor.
+Após verificar o ambiente e preparar o conjunto de dados, você pode exportar o modelo ajustado para um mecanismo TensorRT para inferência acelerada no Jetson Thor.
 
 ```bash
 cd Isaac-GR00T/
@@ -706,7 +706,7 @@ python3 scripts/deployment/build_trt_pipeline.py \
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
+  <img alt="Engine export and build finishing for the bf16 TensorRT engine" width="1000" src="https://files.seeedstudio.com/wiki/rebot_j60/export_engine.png"/>
 </div>
 
 Você receberá um arquivo de modelo acelerado e otimizado no formato de mecanismo, bem como o arquivo ONNX convertido intermediário enquanto aguarda.
@@ -969,6 +969,12 @@ mv ~/.cache/huggingface/lerobot/calibration/robots/seeed_b601_dm_follower/follow
 - 🔗 https://developer.nvidia.com/embedded/jetpack
 - 🔗 https://github.com/NVIDIA/Isaac-GR00T/tree/main
 - 🔗 https://huggingface.co/nvidia/GR00T-N1.7-LIBERO
+
+## Recursos Relacionados
+
+- [Hardware e E/S do reComputer Robotics J601](/pt-br/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
+- [Interfaces e pinagens do reComputer Robotics J401](/pt-br/recomputer_jetson_robotics_j401_getting_started/)
+- [Modelo GR00T N1.7 no Hugging Face](https://huggingface.co/nvidia/Cosmos-Reason2-2B)
 
 ## Suporte Técnico e Discussão de Produtos
 

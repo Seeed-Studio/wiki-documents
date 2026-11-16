@@ -113,6 +113,13 @@ En primer lugar, debes instalar los controladores periféricos para esta placa. 
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOW5tcK2vPTagiGOFw9oMcAYITLgRqj_dXQJMchlUeGOk?e=8ar0lu" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+
+    <tr>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC6VvNqTyoXTb4M2m7wsjmvATyd9KFbfTsTKZTJk8myBhY?e=DvQOVl" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -485,6 +492,164 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 ```
 
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+Aquí usaremos **NVIDIA L4T 39.2.1** para instalar **JetPack 7.2.1** en el Kit Jetson AGX Orin 32GB H01.
+
+### Requisitos de hardware
+
+- PC host con Ubuntu 20.04 o Ubuntu 22.04 con acceso a internet
+- Cable de datos Type-C (debe admitir transferencia de datos)
+- Kit Jetson AGX Orin 32GB H01 (placa carrier A605 con módulo Orin)
+- Adaptador de corriente
+- SSD NVMe
+- El host de flasheo debe tener instalados `wget`, `tar` y `sudo`
+
+### Preparar los archivos de flasheo
+
+**Paso 1:** Crea un directorio de trabajo en el PC host con Ubuntu.
+
+```bash
+mkdir -p ~/a605_flash
+cd ~/a605_flash
+```
+
+**Paso 2:** Descarga los siguientes dos archivos y colócalos en el mismo directorio (por ejemplo, desde [esta carpeta](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC6VvNqTyoXTb4M2m7wsjmvATyd9KFbfTsTKZTJk8myBhY?e=DvQOVl)):
+
+- `605_jp721.sh`
+- `605_jp721.tbz2`
+
+:::note
+**No** extraigas `605_jp721.tbz2` manualmente: el script extraerá el paquete de controladores automáticamente.
+:::
+
+**Paso 3:** Ejecuta el script:
+
+```bash
+./605_jp721.sh
+```
+
+:::caution
+**No** ejecutes `sudo ./605_jp721.sh` ni `sudo bash 605_jp721.sh`. El script te pedirá tu contraseña de sudo cuando se necesiten derechos de administrador. Ejecutar todo el script con `sudo` hace que el directorio generado sea `root:root` y causa problemas de permisos en pasos posteriores.
+:::
+
+**Paso 4:** El script descarga automáticamente los paquetes oficiales de JetPack 7.2.1, extrae el rootfs, extrae el paquete de controladores y sobrescribe los archivos de controladores de A605. El tiempo de descarga depende de la velocidad de tu red; no interrumpas el proceso.
+
+**Paso 5:** Cuando veas el siguiente mensaje, el directorio de flasheo estará listo:
+
+```
+605_jp721 package applied successfully.
+```
+
+El directorio de flasheo ensamblado es:
+
+```
+~/a605_flash/605_jp721_flash/Linux_for_Tegra
+```
+
+### Poner el dispositivo en modo de recuperación
+
+1. Desconecta la placa carrier A605 de la alimentación.
+2. Haz un cortocircuito entre el pin RECOVERY y el pin GND en la placa carrier.
+3. Conecta la placa carrier al PC host con un cable de datos Type-C.
+4. Enciende la placa.
+5. En el PC host, ejecuta `lsusb`. Si el ID de producto es `7023` o `7223`, el dispositivo está en modo de recuperación.
+
+### Flashear el sistema
+
+1. Asegúrate de que el dispositivo siga en modo de recuperación.
+2. Entra en el directorio de flasheo:
+
+```bash
+cd ~/a605_flash/605_jp721_flash/Linux_for_Tegra
+```
+
+3. Flashea en la eMMC. Elige el comando según la capacidad del módulo:
+
+   - Módulo Orin de 32 GB (modo Super):
+
+     ```bash
+     sudo ./l4t_initrd_flash.sh --erase-all jetson-agx-orin-devkit-super internal
+     ```
+
+   - Módulo Orin de 64 GB:
+
+     ```bash
+     sudo ./l4t_initrd_flash.sh --erase-all jetson-agx-orin-devkit internal
+     ```
+
+4. Flashea en el SSD NVMe. Elige el comando según la capacidad del módulo:
+
+   - Módulo Orin de 32 GB (modo Super):
+
+     ```bash
+     sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+       -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+       --showlogs --network usb0 jetson-agx-orin-devkit-super external
+     ```
+
+   - Módulo Orin de 64 GB:
+
+     ```bash
+     sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+       -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+       --showlogs --network usb0 jetson-agx-orin-devkit external
+     ```
+
+5. Espera hasta que el comando termine. No desconectes el cable Type-C, no apagues el PC host ni cortes la alimentación de la placa carrier durante el flasheo.
+6. Después de que el flasheo se complete correctamente, retira el puente de cortocircuito entre RECOVERY y GND y vuelve a encender el dispositivo.
+
+### Copia de seguridad y restauración del sistema
+
+Las siguientes operaciones requieren que el dispositivo esté en modo de recuperación y deben ejecutarse en el directorio `Linux_for_Tegra`.
+
+1. **Haz una copia de seguridad de la imagen del sistema:**
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e <device> -b jetson-agx-orin-devkit
+   ```
+
+   Reemplaza `<device>` con:
+   - `mmcblk0`: el sistema está en el almacenamiento interno eMMC
+   - `nvme0n1`: el sistema está en el SSD NVMe
+
+   Por ejemplo, para hacer una copia de seguridad del sistema en el SSD NVMe:
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-agx-orin-devkit
+   ```
+
+2. **Restaura el sistema desde una imagen de respaldo:**
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e <device> -r jetson-agx-orin-devkit
+   ```
+
+   `<device>` debe ser el mismo que el utilizado para la copia de seguridad. Por ejemplo, para restaurar en el SSD NVMe:
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-agx-orin-devkit
+   ```
+
+### Preguntas frecuentes
+
+1. **`Required path is missing: .../605_jp721.tbz2`**
+   - Causa: el paquete de controladores no está en el mismo directorio que el script.
+   - Solución: asegúrate de que `605_jp721.sh` y `605_jp721.tbz2` estén en el mismo directorio y vuelve a ejecutar el script.
+
+2. **`Required path is missing: .../bootloader` o similar**
+   - Causa: el paquete de controladores no se extrajo correctamente o el archivo del paquete está incompleto.
+   - Solución: asegúrate de usar `605_jp721.tbz2` y vuelve a descargar el paquete de controladores completo, luego vuelve a ejecutar el script.
+
+3. **El directorio muestra `root:root` o permisos `777`**
+   - Causa: el script de ensamblaje se ejecutó con `sudo`.
+   - Solución: elimina el directorio `605_jp721_flash` generado y ejecuta `./605_jp721.sh` como usuario normal para volver a ensamblarlo.
+
+4. **`lsusb` no muestra el dispositivo**
+   - Solución: comprueba que RECOVERY y GND estén en cortocircuito, que el cable Type-C admita transferencia de datos y que la placa esté encendida. Luego vuelve a conectar el cable Type-C y ejecuta `lsusb` de nuevo.
 
 </TabItem>
 
