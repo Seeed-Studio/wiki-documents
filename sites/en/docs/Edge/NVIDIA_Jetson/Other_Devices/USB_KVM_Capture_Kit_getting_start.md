@@ -9,13 +9,13 @@ keywords:
   - Video Capture
   - OSRBOT Link
 image: https://files.seeedstudio.com/wiki/reComputer/usb-kvm-capture-kit/product.png
-slug: /USB_KVM_Capture_Kit_getting_start
+slug: /usb_kvm_capture_kit_getting_start
 last_update:
   date: '2026-11-13'
   author: zibo
 createdAt: '2026-11-13'
 updatedAt: '2026-11-13'
-url: https://wiki.seeedstudio.com/USB_KVM_Capture_Kit_getting_start/
+url: https://wiki.seeedstudio.com/usb_kvm_capture_kit_getting_start/
 ---
 
 <div align="center">
