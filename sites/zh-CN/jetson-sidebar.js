@@ -247,6 +247,7 @@ const sidebars = {
       items: [
         'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8822CE_Wireless_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8852BE_Wireless_Module_for_Jetson',
+        'Edge/NVIDIA_Jetson/Other_Devices/cn_USB_KVM_Capture_Kit_getting_start',
         'Edge/NVIDIA_Jetson/Other_Devices/cn_RM520N_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/cn_EM12-G_GNSS_Module_for_reComputer_Robotics_J3011',
         'Edge/NVIDIA_Jetson/FAQs/cn_How_to_use_Camera_IMX219',
