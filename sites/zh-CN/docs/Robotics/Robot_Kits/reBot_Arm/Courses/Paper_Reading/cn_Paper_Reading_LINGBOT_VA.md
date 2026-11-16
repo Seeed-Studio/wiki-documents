@@ -132,11 +132,6 @@ export const toc = [
     "value": "结论",
     "id": "结论",
     "level": 2
-  },
-  {
-    "value": "参考资料",
-    "id": "参考资料",
-    "level": 2
   }
 ];
 
@@ -218,8 +213,6 @@ $$
 
 ![中文教学图 1：未来潜状态参与动作推断，真实反馈重新进入闭环](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop.png)
 
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop.png)
-
 *教学示意：绿色框是模型预测的潜在表示，底部蓝色框来自实际相机；沿右侧反馈箭头看，下一轮的依据会随真实执行结果更新。*
 
 ## 视频和动作怎样进入同一个模型
@@ -233,8 +226,6 @@ $$
 **形状例子：** 按 LeRobot 默认 `frame_chunk_size=4`、`action_per_frame=4`、`action_dim=30`，动作流内部噪声可组织为 `[1,30,4,4,1]`，共有 16 个时序位置，每个位置 30 个通道。模型输出后选择有效动作通道，再转换成 `[批量,动作步数,机器人动作维度]`。这是固定实现的接口示例，不是论文所有平台的统一张量形状。
 
 ![中文教学图 2：四个视频时间点对应十六步动作，去噪迭代反复更新同一动作块](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales.png)
-
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales.png)
 
 *教学示意：上面两排沿机器人时间展开，下面一排沿生成进度展开。每次去噪更新的是同一块动作，不会因此多产生一个执行时刻。*
 
@@ -283,8 +274,6 @@ $$
 
 ![中文教学图 3：时间块之间限制未来读取，块内允许双向交流](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal.png)
 
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal.png)
-
 *教学示意：先按行找“谁在读取”，再按列找“读取什么”。矩阵只概括时间块的关系；视频与动作两种流的具体可见范围仍以原论文图 3 为准，尤其要保留逆动力学读取相应未来视觉条件的连接。*
 
 ### 带噪历史：不等视频完全清晰也能生成动作
@@ -312,8 +301,6 @@ Transformer 的 KV 缓存保存历史 token 在各层形成的键和值，避免
 论文的 **FDM 校正** 在此插入一次前向动力学计算：从最近真实观测出发，给定正在执行的动作，重新预测它的结果；再使用这个重新对齐的未来状态预测后续视频与动作。它使用模型中的前向预测能力，论文没有要求另部署一个完全独立的模拟器。后训练额外引入式（13）的前向预测损失，算法 2 描述执行分支与推理分支的配合。
 
 ![中文教学图 4：最新观测与正在执行的动作共同校正下一轮预测起点](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding.png)
-
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding.png)
 
 *教学示意：上下两路的区别在于是否用最新反馈重新预测当前动作的后果。下方时间线表示计算与执行重叠，不表示已经直接观测到未来，也不代表固定的时间比例。*
 
@@ -422,11 +409,5 @@ LeRobot 提供基础模型、LIBERO-Long 与 RoboTwin 后训练检查点。检�
 LingBot-VA 的关键认识是：**未来表示可以成为动作的生成条件，但它必须持续接受真实环境的纠正。** 视频分支学习变化，动作分支从变化推断控制，历史缓存保留交互上下文；部分去噪和异步执行则处理生成模型进入控制环后的时间成本。
 
 实验支持这条路线在所测仿真、实机与少样本设置中的价值，也留下明确边界：叠衣服进度分退步、简单异步明显退化、FDM 校正仍有成功率代价，且当前公开共享骨干与 LeRobot 接口不等同于论文完整系统。理解这些条件，比仅记住平均成功率更有助于判断方法适合怎样的后续实验。
-
-## 参考资料
-
-1. [原论文](https://arxiv.org/abs/2601.21998v2)、[论文 PDF](https://arxiv.org/pdf/2601.21998v2)：第 3 节式（7）—（13）、算法 1—2；第 4 节表 1—3、图 5—10；附录表 S1—S7。
-2. [作者实现固定提交 7c6ffa9](https://github.com/Robbyant/lingbot-va/tree/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb)：[README 与共享骨干发布说明](https://github.com/Robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/README.md)、[LIBERO 配置](https://github.com/Robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/wan_va/configs/va_libero_cfg.py)。
-3. [LeRobot 接入文档](https://huggingface.co/docs/lerobot/lingbot_va)与[固定源码 d490e472](https://github.com/huggingface/lerobot/tree/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va)：[配置与采样索引](https://github.com/huggingface/lerobot/blob/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va/configuration_lingbot_va.py)、[训练和缓存执行路径](https://github.com/huggingface/lerobot/blob/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/policies/lingbot_va/modeling_lingbot_va.py)。
 
 </div>

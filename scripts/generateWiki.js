@@ -20,6 +20,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
   path.join(docsDirectory, 'FAQ', 'respeaker'), // 9.2 排除 respeaker FAQ目录
+  path.join(docsDirectory, 'FAQ', 'reComputer'), // 排除 reComputer FAQ 目录（管线生成的 FAQ 页不进入最新文档列表）
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_Pro'), // 9.21 排除 reCamera_Pro 目录
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'reBot_Arm_Tutorial'), // 9.17 排除 reBot_Arm_Tutorial 目录
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'Paper_Reading'), // 10.22 排除 Paper_Reading 目录
@@ -27,7 +28,6 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'SO_ARM101', 'Courses', 'SO_ARM_Tutorial'), // 10.19 排除 SO_ARM_Tutorial 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Network', 'Mesh_Network', 'MeshPager_X2', 'x2_node.md'), //占位文档，暂时没更新内容
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Boot_Log_Analysis.md'), //11.2
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Camera_Data_Chain.md'), //11.2
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Device_Tree.md'), //11.2

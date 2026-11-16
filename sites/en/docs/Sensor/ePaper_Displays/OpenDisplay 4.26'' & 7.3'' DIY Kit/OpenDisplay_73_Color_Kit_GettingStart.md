@@ -204,6 +204,8 @@ Model your schedule at [Battery calculator](https://opendisplay.org/firmware/bat
 - **[GitHub]** [Home Assistant Integration](https://github.com/OpenDisplay/Home_Assistant_Integration)
 - **[Discord]** [OpenDisplay Discord](https://discord.gg/XmTHz8RfJE)
 - **[Wiki]** [In-depth OpenDisplay guide](https://wiki.seeedstudio.com/EN04_opendisplay/)
+- **[ZIP]** [3D-Printed Case Files](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/Resources/OpenDisplay_7.3_Color_Kit_3D_Files.zip)
+- **[UF2]** [Factory Firmware (7.3" Color Kit)](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/7.3/Resources/OpenDisplay_7.3_Color_Kit_Factory_Firmware.uf2)
 
 ## Troubleshooting
 

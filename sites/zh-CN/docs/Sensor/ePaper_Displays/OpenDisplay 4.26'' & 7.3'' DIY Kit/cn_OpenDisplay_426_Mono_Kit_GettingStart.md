@@ -19,29 +19,29 @@ updatedAt: '2026-10-22'
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/OpenDisplay-4-26-Mono-Kit-p-7032.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
 ## 介绍
 
-OpenDisplay 4.26" Mono Kit 是由 Seeed Studio 与 OpenDisplay 共同开发的开箱即用电子纸显示屏套件。它以**完全组装好**的形式出厂，内含一块 4.26 英寸 800×480 黑白面板、一块 Seeed [XIAO ePaper Display Board EN05](https://wiki.seeedstudio.com/cn/epaper_en05/)（XIAO nRF52840 Plus）、一块 2000 mAh 电池以及一个 3D 打印外壳——固件已预装。
+OpenDisplay 4.26" Mono Kit 是由 Seeed Studio 与 OpenDisplay 共同开发的开箱即用电子纸显示屏。它以**完全组装好**的形式出厂，内含一块 4.26 英寸 800×480 黑白面板、一块 Seeed [XIAO ePaper Display Board EN05](https://wiki.seeedstudio.com/cn/epaper_en05/)（XIAO nRF52840 Plus）、一块 2000 mAh 电池以及一个 3D 打印外壳——固件已预装完成。
 
-你可以通过浏览器或 Home Assistant 使用 **Bluetooth Low Energy** 控制它，无需 Wi-Fi。射频部分会保持在低功耗监听模式，因此只要显示屏开机且在范围内，你就可以随时发送新图像。黑白模式下支持局部刷新。在大约每 15 分钟更新一次的情况下，预计两次充电之间可达到约 **两年** 的续航。
+你可以通过浏览器或 Home Assistant 使用 **Bluetooth Low Energy** 控制它，无需 Wi-Fi。射频模块会保持在低功耗监听模式，因此只要显示屏处于开启且在范围内，你就可以随时发送新图像。黑白模式下支持局部刷新。在大约每 15 分钟更新一次的情况下，预计两次充电之间可达到约 **两年** 的续航。
 
 ### 你需要准备
 
-- 已上电且处于蓝牙范围内的套件
+- 套件已上电，并处于蓝牙覆盖范围内
 - 一台带蓝牙的手机或电脑
 - Chrome 或 Edge（桌面/Android），或 iPhone/iPad 上的 Bluefy
 
-## 一览参数
+## 一览
 
 <table>
   <thead>
     <tr>
       <th>参数</th>
-      <th>说明</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -84,7 +84,7 @@ OpenDisplay 4.26" Mono Kit 是由 Seeed Studio 与 OpenDisplay 共同开发的�
 
 1. 打开包装并将套件开机。
 2. 等待启动刷新——黑白模式通常需要**几秒钟**。闪烁是正常现象。
-3. 完成后，启动屏会显示你的设备名称（以 **OD** 开头）、**KEY1:** / **KEY2:** 以及一个二维码。
+3. 完成后，启动屏会显示你的设备名称（以 **OD** 开头）、**KEY1:** / **KEY2:**，以及一个二维码。
 
 加密默认是**关闭**的，因此密钥行会显示 **not set**。开箱正常使用时你不需要密钥。
 
@@ -144,7 +144,7 @@ OpenDisplay 4.26" Mono Kit 是由 Seeed Studio 与 OpenDisplay 共同开发的�
   </tbody>
 </table>
 
-在落地页中选择 **Send an image**（或直接打开 [opendisplay.org](https://opendisplay.org/firmware/display/index.html)）。点击 **Connect**，在浏览器列表中选择你的设备（名称以 **OD** 开头——例如 **OD592B4A**），然后选择一张照片或进行绘制，并点击 **Send to device**。
+在落地页中选择 **Send an image**（或打开 [opendisplay.org](https://opendisplay.org/firmware/display/index.html)）。点击 **Connect**，在浏览器列表中选择你的设备（名称以 **OD** 开头——例如 **OD592B4A**），然后选择一张照片或进行绘制，并点击 **Send to device**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/BLE_Tester.png" style={{width:600, height:'auto'}}/></div>
 
@@ -153,7 +153,7 @@ OpenDisplay 4.26" Mono Kit 是由 Seeed Studio 与 OpenDisplay 共同开发的�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/BLE_Tester_connected.png" style={{width:600, height:'auto'}}/></div>
 
 :::note
-BLE Tester 可能会将面板标记为 4.3"，而套件产品名称是 4.26" Mono Kit。
+BLE Tester 里可能会将面板标记为 4.3"，而套件产品名称是 4.26" Mono Kit。
 :::
 
 **完成标志：图像出现在电子纸显示屏上。**
@@ -169,7 +169,7 @@ BLE Tester 可能会将面板标记为 4.3"，而套件产品名称是 4.26" Mon
 Shelly BLE 代理**不受支持**——它们无法建立此显示屏所需的主动连接。请使用本地适配器或 ESPHome 代理。
 :::
 
-在蓝牙范围内为显示屏上电。Home Assistant 应该会自动发现它——在 **Settings → Devices & Services → Discovered** 下查找以 **OD** 开头的名称，然后点击 **Add** 和 **Submit**。
+在蓝牙覆盖范围内为显示屏上电。Home Assistant 应该会自动发现它——在 **Settings → Devices & Services → Discovered** 下查找以 **OD** 开头的名称，然后点击 **Add** 和 **Submit**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/HA_1.png" style={{width:300, height:'auto'}}/></div>
 
@@ -179,11 +179,11 @@ Shelly BLE 代理**不受支持**——它们无法建立此显示屏所需的�
 
 设备页面会显示电池、电源按键、固件状态以及显示内容。更多详情： [Home Assistant integration](https://github.com/OpenDisplay/Home_Assistant_Integration)
 
-## 进阶使用
+## 更进一步
 
 ### 启用加密
 
-加密默认是**关闭**的。在 Toolbox → More options 中，将 Encryption 设置为 **Locked**，然后选择 **Configure over Bluetooth**。重启后，密钥会显示在 **KEY1:** / **KEY2:** 上，并出现在二维码落地页中。如果你丢失了密钥，可重新断电上电以再次显示密钥。
+加密默认是**关闭**的。在 Toolbox → More options 中，将 Encryption 设置为 **Locked**，然后选择 **Configure over Bluetooth**。重启后，密钥会显示在 **KEY1:** / **KEY2:** 上，并出现在二维码落地页中。如果你丢失了密钥，可以重新断电重启显示屏以再次显示密钥。
 
 ### 重新刷写或恢复
 
@@ -195,9 +195,9 @@ Shelly BLE 代理**不受支持**——它们无法建立此显示屏所需的�
 
 对于自定义 Python 项目，可通过 pip install py-opendisplay 安装——[py-opendisplay](https://github.com/OpenDisplay/py-opendisplay)
 
-### 电池续航
+### 电池寿命
 
-使用随附的 2000 mAh 电池，在大约每 15 分钟更新一次的情况下，典型使用场景下两次充电之间可达到约 **两年** 的续航。实际运行时间取决于更新频率、图像大小、局部刷新使用情况以及温度。
+使用随附的 2000 mAh 电池，在大约每 15 分钟更新一次的情况下，典型使用场景下两次充电之间预计可达到约 **两年** 的续航。实际运行时间取决于更新频率、图像大小、局部刷新使用情况以及温度。
 
 你可以在 [Battery calculator](https://opendisplay.org/firmware/battery/index.html) 中对你的使用计划进行建模（选择 4.26" Mono Kit / nRF52840 / 2000 mAh）。
 
@@ -212,65 +212,67 @@ Shelly BLE 代理**不受支持**——它们无法建立此显示屏所需的�
 - **[GitHub]** [Home Assistant Integration](https://github.com/OpenDisplay/Home_Assistant_Integration)
 - **[Discord]** [OpenDisplay Discord](https://discord.gg/XmTHz8RfJE)
 - **[Wiki]** [OpenDisplay 深度指南](https://wiki.seeedstudio.com/cn/EN04_opendisplay/)
+- **[ZIP]** [3D 打印外壳文件](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/Resources/OpenDisplay_4.26_Mono_Kit_3D_Files.zip)
+- **[UF2]** [出厂固件（4.26" Mono Kit）](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/Resources/OpenDisplay_4.26_Mono_Kit_Factory_Firmware.uf2)
 
 ## 故障排查
 
-**Q1：需要重新查看启动屏或二维码。**
+**Q1：需要重新显示启动画面或二维码。**
 
-*   **对显示屏进行断电重启**：先关机，等待 10 秒，再重新开机。带有设备名称、KEY1:/KEY2: 行和二维码的启动屏只会在完整上电刷新后显示。
-*   **等待刷新完成**：单色启动刷新通常需要几秒钟。闪烁和中间的灰度图案都是正常现象。请勿在刷新过程中关闭显示屏。
+*   **对显示屏进行断电重启**：先关机，等待 10 秒，再重新开机。启动画面——包括设备名称、KEY1:/KEY2: 行以及二维码——只会在完整上电刷新后显示。
+*   **等待刷新完成**：单色启动刷新通常需要几秒钟。闪烁和中间出现的灰度图案都是正常现象。请勿在刷新过程中关闭显示屏。
 *   **再次扫描二维码**，或者如果你需要加密密钥，可以直接从屏幕上读取 KEY1:/KEY2:。
-*   **无需重新刷写或重新配置**——每次断电重启后启动屏都会重新出现。
+*   **无需重新刷写或重新配置**——每次断电重启后，启动画面都会重新出现。
 *   **注意**：显示屏一次只允许一个主动蓝牙连接。如果另一台设备仍在连接，请先断开它。
 
 **Q2：显示屏无法开机或无响应。**
 
 *   **先通过 USB 充电**：电池电量极低时，设备可能看起来像是“死机”或卡住。将套件连接到 USB 电源，充电一段时间后再重试。
-*   **充电后**：先关机，等待 10 秒，再开机，并等待启动屏出现。
+*   **充电后**：先关机，等待 10 秒，再开机，并等待启动画面出现。
 *   **确认电源开关已打开**：将开关牢固地拨到 ON 位置。
-*   **检查电池连接器**：打开外壳，确认电池 JST 连接器已完全插紧。红线应朝向 “+” 标记，黑线应朝向 “−” 标记。反向插入连接器可能会损坏电路板。
-*   **确保没有其他设备仍保持打开的 BLE 连接**——该显示屏一次只支持一个活动连接。
+*   **检查电池连接器**：打开外壳并确认电池 JST 连接器已完全插紧。红色线应朝向 “+” 标记，黑色线应朝向 “−” 标记。反向插入连接器可能会损坏电路板。
+*   **确保没有其他设备仍保持打开的 BLE 连接** —— 显示屏一次只支持一个活动连接。
 
-**Q3：Home Assistant 无法发现该显示屏。**
+**Q3：Home Assistant 无法发现显示屏。**
 
 *   **检查集成版本**：Home Assistant 2026.4 及之后的版本内置了 OpenDisplay 集成。对于更早的版本或 drawcustom 工作流，请安装 HACS 自定义集成（将 `opendisplay` 文件夹复制到 `custom_components/` 中），然后重启 Home Assistant。
-*   **先断开其他蓝牙客户端**：关闭 BLE Tester、浏览器标签页和 Bluefy——该显示屏一次只允许一个活动 BLE 连接。如果有其他设备已连接，Home Assistant 将无法发现或连接。
-*   **检查蓝牙路径**：在 Home Assistant 主机上使用内置或 USB 蓝牙适配器，或使用支持主动 / 可连接连接的 ESPHome 蓝牙代理。Shelly BLE 代理不受支持——它们无法建立此显示屏所需的主动连接。
-*   **仍然找不到？** 等待一分钟，把显示屏移近一些，然后在 设置 → Devices & Services → Discovered 中查找以 "OD" 开头的名称。
-*   **手动添加**：如果显示屏没有被自动发现，前往 设置 → Devices & Services，点击 Add Integration，搜索 "OpenDisplay"，并按照设置流程操作。
+*   **先断开其他蓝牙客户端**：关闭 BLE Tester、浏览器标签页和 Bluefy —— 显示屏一次只允许一个活动 BLE 连接。如果有其他设备已连接，Home Assistant 将无法发现或连接。
+*   **检查蓝牙路径**：在 Home Assistant 主机上使用内置或 USB 蓝牙适配器，或使用支持主动 / 可连接连接的 ESPHome 蓝牙代理。不支持 Shelly BLE 代理 —— 它们无法建立此显示屏所需的主动连接。
+*   **仍然找不到？** 等待一分钟，把显示屏移近一些，然后在 Settings → Devices & Services → Discovered 中查找以 “OD” 开头的名称。
+*   **手动添加**：如果显示屏没有被自动发现，前往 Settings → Devices & Services，点击 Add Integration，搜索 “OpenDisplay”，并按照设置流程操作。
 
 **Q4：我的浏览器找不到或无法连接到显示屏。**
 
 *   **使用受支持的浏览器**：Web Bluetooth 可在 Chrome 和 Edge（桌面端和 Android）中使用。在 iPhone 或 iPad 上，请使用 Bluefy 浏览器（App Store id 1492822055）。Firefox 和 Safari（桌面端）不支持 Web Bluetooth。
-*   **打开蓝牙**：确保在手机或电脑上启用了蓝牙。在 Android 上，还需要打开定位功能——Chrome 在进行 BLE 扫描时需要它。
+*   **打开蓝牙**：确保在手机或电脑上启用了蓝牙。在 Android 上，还需要打开定位功能 —— Chrome 在进行 BLE 扫描时需要它。
 *   **将设备靠近套件。**
-*   **先断开所有其他客户端**：该显示屏一次只允许一个活动 BLE 连接。如果 Home Assistant 或其他浏览器已经连接，请先断开，然后再重试。
-*   **选择以 "OD" 开头的设备名称**（例如 OD592B4A）。
-*   **如果没有出现**：按一次显示屏上的按键，或断电重启（断电 10 秒 → 再开机），在启动刷新完成后重试。
+*   **先断开所有其他客户端**：显示屏一次只允许一个活动 BLE 连接。如果 Home Assistant 或其他浏览器已经连接，请先断开再重试。
+*   **选择以 “OD” 开头的设备名称**（例如 OD592B4A）。
+*   **如果没有出现**：按一次显示屏上的按键，或断电重启（关闭 10 秒 → 再打开），在启动刷新完成后重试。
 *   **如果完全没有响应**：先通过 USB 给套件充电。
 
 **Q5：图像上传失败或超时。**
 
-*   **确认显示屏已开启且在范围内**：该套件始终保持 BLE 就绪状态，没有深度睡眠唤醒窗口，但必须处于开机状态并在蓝牙范围内。
-*   **断开所有其他客户端**：同一时间只能有一个活动 BLE 连接。仅从 BLE Tester 重新连接后再试一次。
-*   **如果启用了加密**：输入启动画面或二维码落地页上的密钥。
+*   **确认显示屏已开启且在范围内**：套件保持 BLE 就绪状态，没有深度睡眠唤醒窗口，但必须处于开机状态并在蓝牙范围内。
+*   **断开所有其他客户端**：同一时间只能有一个活动 BLE 连接。仅从 BLE Tester 重新连接并重试。
+*   **如果启用了加密**：输入启动屏或二维码落地页上的密钥。
 *   **尝试使用更小的图像**，或等待一次完整刷新完成后再发送下一张。
-*   **设备在会话中途停止响应**：通过 USB 充电，然后断电重启（断电 10 秒 → 再开机）。
+*   **设备在会话中途停止响应**：通过 USB 充电，然后断电重启（关闭 10 秒 → 再打开）。
 
-**Q6：加密密钥被拒绝或显示为 "not set"。**
+**Q6：加密密钥被拒绝或显示为 “not set”。**
 
-*   **出厂套件默认关闭加密**：KEY1: 和 KEY2: 在开箱时会显示 "not set"——请将密钥字段留空。
-*   **启用了加密但丢失了密钥？** 断电重启显示屏（断电 10 秒 → 再开机）——重启后密钥会显示在启动画面上。你也可以扫描二维码；落地页会显示相同的密钥。
-*   **丢失密钥且无法看清屏幕**：打开 Toolbox → 将 Encryption 设置为 Unlocked → 通过蓝牙进行配置。这样会移除加密，以便你重新设置。如果仍然无效，请重新刷写固件并重新配置。
+*   **出厂套件默认关闭加密**：KEY1: 和 KEY2: 在开箱时会显示 “not set” —— 将密钥字段留空即可。
+*   **启用了加密但丢失了密钥？** 断电重启显示屏（关闭 10 秒 → 再打开）—— 重启后密钥会显示在启动屏上。你也可以扫描二维码；落地页会显示相同的密钥。
+*   **丢失密钥且无法看清屏幕**：打开 Toolbox → 将 Encryption 设置为 Unlocked → 通过蓝牙配置。这会移除加密，以便你重新设置。如果仍然无效，请重新刷写固件并重新配置。
 
-**Q7：屏幕看起来卡住、出现残影，或在发送后保持空白。**
+**Q7：屏幕看起来卡住、有残影，或发送后保持空白。**
 
 *   **等待刷新完成**：不要在更新过程中关闭显示屏。一次完整的黑白刷新需要几秒钟。
-*   **局部刷新仅支持黑白**：局部刷新在单色模式下工作。如果你在使用可选的 4 级灰度模式，则不支持局部刷新——请始终使用完整刷新，以避免残影或卡点。
-*   **断电 10 秒 → 再开机** 以返回启动画面，然后确认 BLE 有响应。
+*   **局部刷新仅支持黑白**：局部刷新在单色模式下工作。如果你在使用可选的 4 级灰度模式，则不支持局部刷新 —— 始终使用完整刷新以避免残影或卡点。
+*   **断电 10 秒 → 再开机** 以返回启动屏，然后确认 BLE 有响应。
 *   **检查是否有其他已连接设备**：如果同时有其他设备连接，请断开它，然后仅使用一个客户端重试。
 *   **仍然无法启动或连接？** 先通过 USB 充电，然后再次断电重启。
-*   **重新刷写固件**：如果在完成上述所有步骤后，显示屏仍然卡住或空白，请使用 Toolbox 通过 USB 重新刷写固件（参见“更进一步”章节中的 "Reflash or recover"）。
+*   **重新刷写固件**：如果在完成以上所有步骤后显示屏仍然卡住或空白，请使用 Toolbox 通过 USB 重新刷写固件（参见 “更进一步” 部分中的 “Reflash or recover”）。
 
 ## 技术支持与产品讨论
 

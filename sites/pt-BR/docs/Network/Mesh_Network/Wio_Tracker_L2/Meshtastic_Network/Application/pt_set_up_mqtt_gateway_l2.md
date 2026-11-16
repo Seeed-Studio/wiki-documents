@@ -42,7 +42,7 @@ Selecione o dispositivo de destino como `Seeed Wio Tracker L2` e escolha o firmw
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
-Ligue o dispositivo, clique em `Enter DFU Mode`, haverá uma porta serial chamada `Tracker L2`, clique nela e conecte.
+Ligue o dispositivo, clique em `Enter DFU Mode`, haverá uma porta serial chamada `Tracker L2`, clique e conecte-a.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/StartFlash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -73,7 +73,7 @@ Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 </TabItem>
 </Tabs>
 
-### Etapa 3: Conexão com o app
+### Etapa 3: Conexão com o aplicativo
 
 <Tabs>
 
@@ -83,7 +83,7 @@ Vá para a página `Setting`, clique em `Reboot/Shutdown` e depois clique no `Bl
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-O dispositivo será reiniciado no modo Bluetooth. O código de pareamento Bluetooth será exibido na tela.
+O dispositivo será então reiniciado no modo Bluetooth. O código de pareamento Bluetooth será mostrado na tela.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothParingMode1.png" alt="pir" width={500} height="auto" /></p>
 
@@ -96,9 +96,9 @@ O dispositivo está sempre em modo de pareamento Bluetooth, não exigindo nenhum
 </TabItem>
 </Tabs>
 
-[Clique aqui](https://meshtastic.org/downloads/) para baixar o app Meshtastic.
+[Clique aqui](https://meshtastic.org/downloads/) para baixar o aplicativo Meshtastic.
 
-Emparelhe seu dispositivo com o app no seu telefone.
+Emparelhe seu dispositivo com o aplicativo do seu telefone.
 
 <Tabs>
 
@@ -108,7 +108,7 @@ Emparelhe seu dispositivo com o app no seu telefone.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- Digite o código exibido na tela e clique em `Pair` para conectar o dispositivo.
+- Digite o código mostrado na tela e clique em `Pair` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -120,7 +120,7 @@ Emparelhe seu dispositivo com o app no seu telefone.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndroidX1Connection.png" alt="pir" width={300} height="auto" /></p>
 
-- Digite o código exibido na tela e clique em `OK` para conectar o dispositivo.
+- Digite o código mostrado na tela e clique em `OK` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
 
@@ -163,15 +163,15 @@ Emparelhe seu dispositivo com o app no seu telefone.
 
 **4. Configuração de rede**
 
-Após essa configuração, seu dispositivo não poderá mais se conectar ao seu app via Bluetooth. Mas ele poderá se conectar ao seu app via rede.
+Após essa configuração, seu dispositivo não poderá mais se conectar ao seu aplicativo via Bluetooth. Mas ele pode se conectar ao seu aplicativo via rede.
 
-- Preencha o SSID (nome do Wi-Fi) e a senha do Wi-Fi. O Wi-Fi que você pretende usar deve ser 2.4G.
+- Preencha o SSID (nome do Wi-Fi) e a senha do Wi-Fi. O Wi-Fi que você pretende usar deve ser 2,4G.
 - Clique em Send
 - O dispositivo reinicia automaticamente. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTNetwork.jpg" style={{width:350, height:'auto'}}/></div> 
 
-**5. Conexão do app**
+**5. Conexão com o aplicativo**
 
 Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode conectar via rede.
 
@@ -211,15 +211,15 @@ Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode cone
 
 **4. Configuração de rede**
 
-Após essa configuração, seu dispositivo não poderá mais se conectar ao seu app via Bluetooth. Mas ele poderá se conectar ao seu app via rede.
+Após essa configuração, seu dispositivo não poderá mais se conectar ao seu aplicativo via Bluetooth. Mas ele pode se conectar ao seu aplicativo via rede.
 
-- Preencha o SSID (nome do Wi-Fi) e a senha do Wi-Fi. O Wi-Fi que você pretende usar deve ser 2.4G.
+- Preencha o SSID (nome do Wi-Fi) e a senha do Wi-Fi. O Wi-Fi que você pretende usar deve ser 2,4G.
 - Clique em Send
 - O dispositivo reinicia automaticamente. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMTTNestwork.png" style={{width:350, height:'auto'}}/></div> 
 
-**5. Conexão do app**
+**5. Conexão com o aplicativo**
 
 Agora seu dispositivo não pode ser conectado via Bluetooth. Mas você pode conectar via rede.
 
@@ -235,4 +235,26 @@ Agora você pode se comunicar com outras pessoas pela internet.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTTest.png" style={{width:600, height:'auto'}}/></div> 
 
 Se você tiver outro dispositivo Meshtastic que esteja na mesma faixa de frequência do gateway MQTT, ele também poderá transmitir mensagens via gateway L2 com outras pessoas na internet.
+
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
 

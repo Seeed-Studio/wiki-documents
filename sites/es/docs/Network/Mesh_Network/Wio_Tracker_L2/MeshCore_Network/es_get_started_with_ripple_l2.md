@@ -1,5 +1,5 @@
 ---
-description: Comienza con Ripple UI en el Wio Tracker L2 Pro. Aprende a flashear firmware, configurar redes MeshCore, enviar mensajes, usar mapas y rutas GPS, y desbloquear funciones premium.
+description: Comienza con Ripple UI en el Wio Tracker L2 Pro. Aprende cómo flashear firmware, configurar redes MeshCore, enviar mensajes, usar mapas y rutas GPS, y desbloquear funciones premium.
 title: Primeros pasos con Ripple
 keywords:
   - Ripple
@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png
 slug: /get_started_with_ripple_l2_pro
 sidebar_position: 2
 last_update:
-  date: 11/06/2026
+  date: 11/10/2026
   author: Michelle Huang
 ---
 
@@ -24,11 +24,11 @@ Ripple UI es un firmware con pantalla táctil para el L2 Pro. Te permite añadir
 
 ### ¿Cómo se relaciona Ripple con MeshCore?
 
-MeshCore gestiona la comunicación en malla. Ripple UI te permite usarlo directamente en la pantalla táctil del L2 Pro.
+MeshCore se encarga de la comunicación mesh. Ripple UI te permite usarlo directamente en la pantalla táctil del L2 Pro.
 
 | Nombre | Propósito |
 | --- | --- |
-| MeshCore | Comunicación LoRa en malla |
+| MeshCore | Comunicación mesh LoRa |
 | Firmware Ripple UI | Funcionamiento autónomo con pantalla táctil |
 | Firmware MeshCore Companion | Funcionamiento a través de un teléfono u otro cliente |
 
@@ -80,11 +80,11 @@ Hay dos variantes de firmware disponibles:
 
 Visita el [Wio Tracker L2 Web Flasher](https://flasher.meshcore.io/wio-tracker-l2/) y selecciona el firmware Ripple UI y la variante de almacenamiento para el L2. Usa un navegador de escritorio que admita acceso serie, como Chrome o Edge.
 
-Selecciona `Seeed Studio Wio Tracker L2 Pro`, elige una variante Ripple GUI y selecciona la versión de firmware. La captura de pantalla de abajo muestra la v12.3.
+Selecciona `Seeed Studio Wio Tracker L2 Pro`, elige una variante de Ripple GUI y selecciona la versión de firmware. La captura de pantalla de abajo muestra la v12.3.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_flasher.png" alt="Selecciona el L2 Pro, la variante Ripple GUI y la versión de firmware en el flasher web" width={1000} height="auto" /></p>
 
-**Paso 2: Entra manualmente en modo de descarga**
+**Paso 2: Entra en modo de descarga manualmente**
 
 Mantén pulsado el botón `U/B` mientras conectas el cable de datos USB y luego pulsa `RST` para entrar en modo de descarga de firmware.
 
@@ -116,23 +116,32 @@ Sigue los tutoriales de pantalla táctil y botones en el primer arranque.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png" alt="Pantallas de inicio de Seeed Studio y MeshCore Ripple UI" width={700} height="auto" /></p>
 
+### Botones de hardware
+
+Ripple UI combina la entrada táctil con dos botones de hardware:
+
+- **Encendido/apagado de pantalla (botón superior):** Pulsa para activar la pantalla o apagarla. Apagar la pantalla no apaga el dispositivo.
+- **ENTER (botón lateral U/B):** Pulsa para confirmar una selección, guardar cambios o enviar una entrada cuando se te solicite.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_Button_Indication.webp" alt="Botones de hardware del L2 Pro: botón superior para encender/apagar la pantalla y botón lateral U/B para ENTER" width={700} height="auto" /></p>
+
 ### Crear un perfil de red
 
 1. Completa los tutoriales de pantalla táctil y del botón Select que se muestran en el primer arranque.
 
-2. Elige un ajuste preestablecido de radio apropiado para tu región o introduce la frecuencia, el factor de dispersión (SF) y otros parámetros usados por tu red local.
+2. Elige un preset de radio apropiado para tu región o introduce la frecuencia, el factor de dispersión (SF) y otros parámetros usados por tu red local.
 
 3. Nombra el perfil usando letras y números, sin espacios.
 
 4. Guarda el perfil. Si se te solicita, reinicia el dispositivo para aplicar los ajustes.
 
-Para una prueba con dos dispositivos, usa ajustes de radio coincidentes en ambos dispositivos. Seleccionar el mismo ajuste preestablecido es la opción más sencilla. Con ajustes personalizados, comprueba también el ancho de banda, la tasa de codificación y otros parámetros, en lugar de hacer coincidir solo la frecuencia y el SF.
+Para una prueba con dos dispositivos, usa ajustes de radio coincidentes en ambos dispositivos. Seleccionar el mismo preset es la opción más sencilla. Con ajustes personalizados, comprueba también el ancho de banda, la tasa de codificación y otros parámetros, en lugar de hacer coincidir solo la frecuencia y el SF.
 
 ### Configura tu nombre
 
 1. Toca `L` en la izquierda, abre el perfil de red actual y selecciona `Identity`.
 
-2. Cambia el nombre predeterminado por algo reconocible, como `micha` o `michb`. Los nombres pueden contener hasta 12 caracteres.
+2. Cambia el nombre predeterminado por algo reconocible, como `micha` o `michb`. Los nombres pueden contener hasta 31 caracteres.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ChangeDeviceName.png" alt="Abre el perfil de red, selecciona Identity y cambia el nombre del dispositivo" width={1000} height="auto" /></p>
 
@@ -190,7 +199,7 @@ Abre el menú de la pantalla de inicio en la esquina inferior izquierda para acc
 
 - **GPS Config:** Configura los ajustes de comunicación GPS; los valores predeterminados normalmente funcionan para el L2 Pro.
 
-- **Timezone:** Establece el desfase local de UTC.
+- **Timezone:** Establece el desfase UTC local.
 
 - **SX1262:** Comprueba el estado de inicialización de la radio LoRa. `code=0` significa éxito.
 
@@ -205,7 +214,7 @@ Abre el menú de la pantalla de inicio en la esquina inferior izquierda para acc
 | Área | Función |
 | --- | --- |
 | Tocar el lado izquierdo de la barra de título | Abre `Switch To` para cambiar perfiles de red |
-| Mantener pulsada la esquina superior izquierda | Captura una pantalla |
+| Mantener pulsada la esquina superior izquierda | Captura una captura de pantalla |
 | Centro de la barra de título | Abre los interruptores rápidos |
 | Lado derecho de la barra de título | Abre la información de GPS |
 | Menú inferior izquierdo en la pantalla de inicio | Abre los ajustes del sistema, incluidos Display, Wi-Fi, Networks y Timezone |
@@ -218,21 +227,23 @@ Abre el menú de la pantalla de inicio en la esquina inferior izquierda para acc
 
 Las capturas de pantalla se guardan como archivos BMP con nombres de archivo de fecha y hora, como se muestra a continuación.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_bmp_screenshot.png" alt="Capturas de pantalla BMP con nombres de archivo de fecha y hora" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_bmp_screenshot.png" alt="Capturas de pantalla BMP guardadas con nombres de archivo de fecha y hora" width={800} height="auto" /></p>
 
 ## Envía tu primer mensaje
 
 ### Haz que tus dispositivos sean detectables
 
 1. Configura ambos dispositivos con ajustes de radio MeshCore coincidentes.
+
 2. Asigna a cada dispositivo un nombre de `Identity` diferente.
+
 3. Ajusta `Advert` a `On` para permitir anuncios de identidad.
+
 4. Abre `Discover` desde la página `L` y espera a que aparezcan los nodos cercanos.
 
 Para enviar un anuncio de identidad inmediatamente, abre el menú `Discover`:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="Menú Discover con Scan Local, Send ID Local y Send ID Broadcast" width={400} height="auto" /></p>
-
 
 | Opción | Función |
 | --- | --- |
@@ -246,7 +257,7 @@ Para enviar un anuncio de identidad inmediatamente, abre el menú `Discover`:
 
 1. Selecciona el nodo de destino en `Discover`.
 
-2. Abre el menú superior derecho y selecciona `Add to Contacts`.
+2. Abre el menú de la esquina superior derecha y selecciona `Add to Contacts`.
 
 3. Vuelve a `L` y confirma que el contacto aparece en la lista.
 
@@ -264,7 +275,7 @@ Para enviar un anuncio de identidad inmediatamente, abre el menú `Discover`:
 
 4. Abre la conversación en el otro dispositivo y responde.
 
-Los mensajes directos esperan una confirmación (ACK) del destinatario. Si el envío falla, comprueba la configuración de radio y la distancia, y vuelve a intentarlo. Si la ruta anterior ya no es utilizable, selecciona `Flood (reset)` en `Path` para encontrar una nueva ruta.
+Los mensajes directos esperan un acuse de recibo (ACK) del destinatario. Si el envío falla, comprueba la configuración de radio y la distancia, y vuelve a intentarlo. Si la ruta anterior ya no es utilizable, selecciona `Flood (reset)` en `Path` para encontrar una nueva ruta.
 
 ## Mapas y rutas GPS
 
@@ -272,7 +283,7 @@ Los mensajes directos esperan una confirmación (ACK) del destinatario. Si el en
 
 1. Prepara una tarjeta microSD con formato FAT32 de 32 GB o menos.
 
-2. Guarda teselas de mapa ráster usando esta estructura de carpetas en la tarjeta:
+2. Guarda mosaicos de mapa ráster usando esta estructura de carpetas en la tarjeta:
 
 ```text
 
@@ -280,15 +291,15 @@ Los mensajes directos esperan una confirmación (ACK) del destinatario. Si el en
 
 ```
 
-3. Inserta la tarjeta, enciende el dispositivo y abre `M`.
+3. Inserta la tarjeta, enciende el dispositivo y abre `M`. El dispositivo necesitará un reinicio si la tarjeta SD se monta o desmonta.
 
-4. Desplázate hasta un área cubierta por tus teselas y selecciona un nivel de zoom disponible.
+4. Desplázate hasta un área cubierta por tus mosaicos y selecciona un nivel de zoom disponible.
 
-`zoom` es el nivel de zoom; `x` e `y` son coordenadas de tesela. Los dispositivos bloqueados solo representan **niveles de zoom 1–9**. Los niveles de zoom más detallados requieren un código de desbloqueo.
+`zoom` es el nivel de zoom; `x` e `y` son las coordenadas del mosaico. Los dispositivos bloqueados solo representan **niveles de zoom 1–9**. Los niveles de zoom más detallados requieren un código de desbloqueo.
 
 ### Descargar mapas por Wi‑Fi (requiere desbloqueo)
 
-1. Desbloquea el dispositivo usando las instrucciones de abajo.
+1. Desbloquea el dispositivo usando las instrucciones siguientes.
 
 2. Abre `Wi-Fi` desde el menú del sistema en la pantalla de inicio.
 
@@ -298,7 +309,7 @@ Los mensajes directos esperan una confirmación (ACK) del destinatario. Si el en
 
 5. Confirma que el menú de Wi‑Fi muestra un indicador de conexión naranja.
 
-6. Abre el mapa y desplázate o haz zoom hasta el área requerida. Las teselas se descargan bajo demanda y se almacenan en caché en la tarjeta SD.
+6. Abre el mapa y desplázate o haz zoom hasta el área requerida. Los mosaicos se descargan bajo demanda y se almacenan en caché en la tarjeta SD.
 
 ### Establecer la ubicación usada en los anuncios
 
@@ -345,9 +356,9 @@ Guarda el código junto con el número de serie de su dispositivo. En nuestra pr
 
 - **Administrador de sensor:** Accede a comandos de sensor, telemetría y gestión de permisos.
 
-- **Zoom de mapa más detallado:** Muestra teselas de mapa por encima del nivel de zoom 9.
+- **Zoom de mapa más detallado:** Muestra mosaicos de mapa por encima del nivel de zoom 9.
 
-- **Descarga por Wi‑Fi:** Descarga teselas de mapa bajo demanda y guárdalas en caché en la tarjeta SD.
+- **Descarga por Wi‑Fi:** Descarga mosaicos de mapa bajo demanda y guárdalos en caché en la tarjeta SD.
 
 - **Rutas GPS más largas:** Registra más de los 64 puntos GPS permitidos en dispositivos bloqueados.
 
@@ -367,7 +378,7 @@ Guarda el código junto con el número de serie de su dispositivo. En nuestra pr
 
 Cada perfil tiene su propia identidad, contactos y preferencias. Abrir un contacto que pertenezca a otro perfil puede pedirte que cambies de perfil. Este aviso no indica que el dispositivo haya detectado qué red está usando actualmente el otro nodo.
 
-## Preguntas frecuentes (FAQ)
+## Preguntas frecuentes
 
 ### Código de estado SX1262
 
@@ -383,11 +394,11 @@ Esta pantalla muestra el código de retorno de RadioLib de la inicialización de
 
 - Empieza con una prueba a corta distancia en un área abierta.
 
-- `Scan Local` solo lista nodos que responden a solicitudes de descubrimiento; no sustituye los anuncios de identidad de todos los dispositivos.
+- `Scan Local` solo muestra los nodos que responden a las solicitudes de descubrimiento; no sustituye los anuncios de identidad de todos los dispositivos.
 
 ### Por qué el mapa está en blanco
 
-Comprueba el formato de la tarjeta SD, las rutas de las teselas y si existen teselas para el área mostrada. En un dispositivo bloqueado, comprueba también que el nivel de zoom esté entre 1 y 9. Una posición GPS válida no significa que se hayan descargado teselas de mapa.
+Comprueba el formato de la tarjeta SD, las rutas de los mosaicos y si existen mosaicos para el área mostrada. En un dispositivo bloqueado, comprueba también que el nivel de zoom esté entre 1 y 9. Una posición GPS válida no significa que se hayan descargado mosaicos de mapa.
 
 ## Recursos
 

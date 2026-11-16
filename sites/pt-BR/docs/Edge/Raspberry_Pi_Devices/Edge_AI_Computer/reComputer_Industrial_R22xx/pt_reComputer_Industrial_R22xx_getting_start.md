@@ -1,5 +1,5 @@
 ---
-description: O reComputer Industrial R22xx é um NVR industrial com IA integrado, baseado no Raspberry Pi CM5, equipado com um acelerador de IA Hailo-8 que oferece até 26 TOPS. Com 4 portas Ethernet Gigabit com suporte PoE PSE, além de uma porta Ethernet Gigabit adicional, ele permite streaming de vídeo de alta largura de banda e implantação PoE simplificada para câmeras IP. Oferece ricas E/S industriais, conectividade sem fio flexível, design térmico sem ventoinha e ampla faixa de temperatura de operação de –20 °C a 50 °C, garantindo análise de vídeo com IA confiável e operação contínua e estável em cenários exigentes.
+description: O reComputer Industrial R22xx é um NVR industrial com IA, baseado no Raspberry Pi CM5, equipado com um acelerador de IA Hailo-8 que oferece até 26 TOPS. Com 4 portas Ethernet Gigabit com suporte a PoE PSE, além de uma porta Ethernet Gigabit adicional, ele possibilita streaming de vídeo de alta largura de banda e implantação simplificada de PoE para câmeras IP. Oferece ricas interfaces industriais de E/S, conectividade sem fio flexível, design térmico sem ventoinha e ampla faixa de temperatura de operação de –20 °C a 50 °C, garantindo análise de vídeo com IA confiável e operação contínua e estável em cenários exigentes.
 title: Introdução ao reComputer Industrial R22xx
 keywords:
   - NVR de IA de Borda
@@ -19,9 +19,9 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r22xx_getting_star
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
-O reComputer Industrial R22xx, com Raspberry Pi CM5, é um NVR de borda com IA adaptável e recursos de IA. Ele possui interfaces industriais abrangentes **(5x Ethernet, 4xUSB, 2x RS485, 1x RS232, 1x CAN FD, 4x DI e 4x DO)** e opções flexíveis de conectividade sem fio (4G/5G, LoRa®, Wi-Fi/BLE), tornando-o ideal para diversas aplicações industriais.
+O reComputer Industrial R22xx, com Raspberry Pi CM5, é um NVR de borda com IA e recursos avançados de inteligência artificial. Ele possui interfaces industriais abrangentes **(5x Ethernet, 4xUSB, 2x RS485, 1x RS232, 1x CAN FD, 4x DI e 4x DO)** e opções flexíveis de conectividade sem fio (4G/5G, LoRa®, Wi-Fi/BLE), tornando-o ideal para diversas aplicações industriais.
 
-A série reComputer Industrial R22xx é ideal para uso em aplicações industriais de IA. Ela pode ser utilizada em aspectos como aquisição de dados e monitoramento de processos, automação e controle de robôs, manufatura inteligente e comunicação e redes industriais. Com seu tamanho reduzido, flexibilidade, baixo custo e programabilidade, oferece forte suporte para sistemas de automação e IoT e muito mais.
+A linha reComputer Industrial R22xx é ideal para uso em aplicações industriais de IA. Pode ser utilizada em aspectos como aquisição de dados e monitoramento de processos, automação e controle de robôs, manufatura inteligente e comunicação e redes industriais. Com seu tamanho reduzido, flexibilidade, baixo custo e programabilidade, oferece forte suporte para sistemas de automação e IoT e muito mais.
 
 :::note
 Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
@@ -113,7 +113,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
       </tr>
       <tr>
         <td>PoE (como dispositivo alimentado)</td>
-        <td>Padrão IEEE 802.3at, PoE de 25,5W</td>
+        <td>Padrão IEEE 802.3at PoE de 25,5W</td>
       </tr>
       <tr>
         <td>Interruptor de energia</td>
@@ -223,7 +223,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
         <td>EFT: EN61000-4-4, Nível 2</td>
       </tr>
       <tr>
-        <td>Sobretensão: EN61000-4-5, Nível 2</td>
+        <td>Surto: EN61000-4-5, Nível 2</td>
       </tr>
       <tr>
         <td rowspan="4">Certificação</td>
@@ -261,7 +261,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
         <td colspan="2">Outros</td>
       </tr>
       <tr>
-        <td>UPS de supercapacitor</td>
+        <td>UPS com supercapacitor</td>
         <td>Módulo SuperCAP UPS LTC3350*</td>
       </tr>
       <tr>
@@ -344,7 +344,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 
 ![](https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/assets/images/architecture-2bfc6ed440e1add56388738e87558050.png)
 
-O Hailo AI Software Suite fornece ferramentas poderosas para executar modelos de IA de forma eficiente em aceleradores de hardware. Ele é projetado para se integrar perfeitamente com estruturas de deep learning existentes, oferecendo fluxos de trabalho suaves para desenvolvedores. O processo envolve gerar um HEF (Hailo Executable Binary File) a partir de um arquivo ONNX no Ambiente de Construção de Modelo. Depois de criado, o arquivo HEF é transferido para a máquina de inferência (Ambiente de Runtime), onde é usado para executar a inferência com a HailoRT API. O script fornecido facilita a conversão de um arquivo ONNX em um arquivo HEF dentro do Ambiente de Construção de Modelo.
+O Hailo AI Software Suite fornece ferramentas poderosas para executar modelos de IA de forma eficiente em aceleradores de hardware. Ele foi projetado para se integrar perfeitamente aos frameworks de deep learning existentes, oferecendo fluxos de trabalho suaves para desenvolvedores. O processo envolve gerar um HEF (Hailo Executable Binary File) a partir de um arquivo ONNX no ambiente de construção de modelo (Model Build Environment). Depois de criado, o arquivo HEF é transferido para a máquina de inferência (Runtime Environment), onde é usado para executar a inferência com a HailoRT API. O script fornecido facilita a conversão de um arquivo ONNX em um arquivo HEF dentro do ambiente de construção de modelo.
 
 > **Nota:**
 > **Se você quiser saber mais sobre exemplos de uso do Hailo NPU, clique neste [link](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero).**
@@ -400,17 +400,17 @@ O reComputer Industrial R22xx não vem com um botão de energia por padrão, e o
 
 | Tipo            | Descrição                                                                           |
 |-----------------|---------------------------------------------------------------------------------------|
-| **Ethernet**    | 4 x 10/100/1000 Mbps (suporta PoE PSE) ; 1 x 10/100/1000 Mbps IEEE 802.3/802.3u       |
-| **USB**         | 4 x USB-A 3.0 Host ; 1 x USB-C 2.0 (para gravação do SO e depuração)                  |
-| **RS485**       | 2x RS485 (isolado)                                                                    |
-| **RS232**       | 1x RS232 (isolado)                                                                    |
-| **CAN**         | 1x porta CAN FD isolada                                                               |
-| **DI**          | 4 x portas DI isoladas (tensão de entrada: 5-24V DC)                                  |
-| **DO**          | 4 x portas DO isoladas (tensão de saída: < 60V DC)                                    |
+| **Ethernet**    | 4 x 10/100/1000 Mbps (suporta PoE PSE); 1 x 10/100/1000 Mbps IEEE 802.3/802.3u       |
+| **USB**         | 4 x USB-A 3.0 Host; 1 x USB-C 2.0 (para gravação do SO e depuração)                  |
+| **RS485**       | 2x RS485 (isolado)                                                                   |
+| **RS232**       | 1x RS232 (isolado)                                                                   |
+| **CAN**         | 1x porta CAN FD isolada                                                              |
+| **DI**          | 4 x portas DI isoladas (tensão de entrada: 5-24V DC)                                 |
+| **DO**          | 4 x portas DO isoladas (tensão de saída: < 60V DC)                                   |
 | **HDMI**        | 2 x HDMI 2.0                                                                          |
-| **LED**         | 4 x indicadores LED                                                                   |
+| **LED**         | 4 x indicadores LED                                                                  |
 | **Slot para cartão SIM**   | suporta cartão Nano SIM                                                   |
-| **Slot M.2 M-KEY**  | 2x slot M.2 M-key 2280 para SSD NVMe；1x slot M.2 M-key 2240 para acelerador de IA (pré-instalado 1x Hailo-8 M.2 Aceleração de IA 26TOPS) |
+| **Slot M.2 M-KEY**  | 2x slot M.2 M-key 2280 para SSD NVMe; 1x slot M.2 M-key 2240 para acelerador de IA (pré-instalado 1x Hailo-8 M.2 Aceleração de IA 26TOPS) |
 | **Slot M.2 B-KEY**  | 1x para 5G/4G LTE                                                                 |
 | **Buzzer**          | 1                                                                                 |
 | **Botão de reset**  | 1                                                                                 |
@@ -443,7 +443,7 @@ O reComputer Industrial R22xx possui 4 indicadores LED que servem para sinalizar
         <td> **ACT** </td>
         <td>Laranja</td>
         <td>On</td>
-        <td>No Linux, este pino piscará para indicar o acesso à eMMC. Se ocorrer algum erro durante a inicialização, este LED piscará um padrão de erro que pode ser decodificado usando a tabela de consulta ([Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)) no site do Raspberry Pi.</td>
+        <td>No Linux, este pino piscará para indicar acesso à eMMC. Se ocorrer algum erro durante a inicialização, este LED piscará em um padrão de erro que pode ser decodificado usando a tabela de consulta ([Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)) no site do Raspberry Pi.</td>
       </tr>
       <tr>
         <td> **USER** </td>
@@ -480,9 +480,9 @@ O indicador de status 4G/5G está sujeito às especificações específicas do m
 | 2              | 1               | Partição não é FAT                   |
 | 2              | 2               | Falha ao ler da partição             |
 | 2              | 3               | Partição estendida não é FAT         |
-| 2              | 4               | Assinatura/hash de arquivo não confere - Pi 4 |
+| 2              | 4               | Assinatura/hash de arquivo incompatível - Pi 4 |
 | 4              | 4               | Tipo de placa não suportado          |
-| 4              | 5               | Erro fatal de firmware                |
+| 4              | 5               | Erro fatal de firmware               |
 | 4              | 6               | Falha de energia tipo A              |
 | 4              | 7               | Falha de energia tipo B              |
 
@@ -511,7 +511,7 @@ Este comando exibirá que o GPIO correspondente ao Buzzer_EN é o gpio627.
 ### RS485
 
 Os equipamentos da série reComputer Industrial R2200 incluem 2x portas RS485, terminais phoenix de 6 pinos com espaçamento de 3,5 mm.
-A serigrafia de um único RS485 é "A/B/GND".
+A serigrafia de uma única RS485 é "A/B/GND".
 
 **Definições de pinos**  
 As atribuições dos pinos do terminal são as seguintes:  
@@ -825,7 +825,7 @@ As diferenças de tamanho entre os cartões SIM padrão, Micro SIM e Nano SIM s�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.9_sim_slot(internal)_2.png" style={{width:900, height:'auto'}}/></div>
 
 > **Nota**  
-> Observe que a versão padrão do reComputer Industrial R2000 não vem com módulo 5G/4G.
+> Observe que a versão padrão do reComputer Industrial R2000 não vem com um módulo 5G/4G.
 > Se você precisar de funcionalidade 5G/4G, um módulo 5G/4G adicional deve ser adquirido separadamente.
 
 ### Slot M.2 M-KEY
@@ -840,17 +840,17 @@ As diferenças de tamanho entre os cartões SIM padrão, Micro SIM e Nano SIM s�
 | **M.2 M-KEY 2280** | 2 x M.2 NVMe SSD        |  
 | **M.2 M-KEY 2240** | 1 x M.2 AI  Accelerator |  
 
-O slot M.2 M-KEY 2280 no reComputer Industrial R22xx é projetado para acomodar SSDs NVMe M.2 2280 com capacidades de 128GB, 256GB, 512GB, 1TB e 2TB. Este slot permite expansão de armazenamento em alta velocidade, possibilitando aos usuários aumentar o desempenho e a capacidade do sistema.
+O slot M.2 M-KEY 2280 no reComputer Industrial R22xx é projetado para acomodar SSDs NVMe M.2 2280 com capacidades de 128GB, 256GB, 512GB, 1TB e 2TB. Este slot permite expansão de armazenamento em alta velocidade, possibilitando aos usuários melhorar o desempenho e a capacidade do seu sistema.
 
 > **Nota**  
 > Existem dois usos principais para os cartões SSD:
 >
-> 1. **Armazenamento de alta capacidade:** Cartões SSD podem ser utilizados para necessidades de armazenamento de alta capacidade.
-> 2. **Unidade de boot com imagem:** Outro uso envolve utilizar o SSD tanto como armazenamento de alta capacidade quanto para armazenar imagens de sistema, permitindo inicializar diretamente a partir do cartão SSD.
+> 1. **Armazenamento de alta capacidade:** cartões SSD podem ser utilizados para necessidades de armazenamento de alta capacidade.
+> 2. **Unidade de boot com imagem:** outro uso envolve utilizar o SSD tanto como armazenamento de alta capacidade quanto para armazenar imagens de sistema, permitindo inicializar diretamente a partir do cartão SSD.
 >  
 > É importante observar que nem todos os cartões SSD disponíveis no mercado suportam o segundo uso. Portanto, se você pretende utilizá-lo como unidade de boot e não tem certeza de qual modelo comprar, recomendamos optar pelo nosso SSD de 2TB recomendado (SKU 114993467). Este modelo foi testado e verificado quanto à funcionalidade de boot, reduzindo o risco de problemas de compatibilidade e minimizando os custos de tentativa e erro.
 
-O slot M.2 M-KEY 2240 no reComputer Industrial R22xx é projetado para acomodar um Acelerador de IA PCIE M.2. E a série R22xx-12 vem pré-instalada com um módulo de Aceleração de IA Hailo-8 M.2 de até 26TOPS.
+O slot M.2 M-KEY 2240 no reComputer Industrial R22xx é projetado para acomodar um Acelerador de IA PCIE M.2. E a série R22xx-12 vem pré-instalada com um Hailo-8 M.2 AI Acceleration de até 26TOPS.
 
 ### Slot Mini-PCIe
 
@@ -881,23 +881,19 @@ O **reComputer R1100** está equipado com duas portas Ethernet:
 | ETH1  | Convertido de USB            | 10/100/1000 Mbit/s  | Não suportado       |
 | ETH2-4|	Convertido de PCIe           | 10/100/1000 Mbit/s	 | Suportado           |
 
-O reComputer Industrial R2200 possui múltiplas portas Ethernet RJ45 para conectividade versátil: ETH0 é uma interface Ethernet Gigabit nativa CM5 que suporta 10/100/1000 Mbit/s e funcionalidade PoE PD, permitindo que o dispositivo seja alimentado por esta porta; ETH1 é convertida de USB suportando 10/100/1000 Mbit/s; enquanto ETH2, ETH3 e ETH4 são convertidas de PCIe para garantir desempenho em alta velocidade. Notavelmente, todas as portas de expansão (ETH1-ETH4) suportam PoE PSE, permitindo que o R2200 forneça energia para dispositivos externos conectados.
+O reComputer Industrial R2200 possui múltiplas portas Ethernet RJ45 para conectividade versátil: ETH0 é uma interface Ethernet Gigabit nativa CM5 que suporta 10/100/1000 Mbit/s e funcionalidade PoE PD, o que permite que o dispositivo seja alimentado por esta porta; ETH1 é convertido de USB suportando 10/100/1000 Mbit/s; enquanto ETH2, ETH3 e ETH4 são convertidas de PCIe para garantir desempenho em alta velocidade. Notavelmente, todas as portas de expansão (ETH1-ETH4) suportam PoE PSE, permitindo que o R2200 forneça energia para dispositivos externos conectados.
 
 ### HDMI
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.15-1.png" style={{width:200, height:'auto'}}/></div>
 
-O reComputer Industrial R2200 possui 2 interfaces HDMI nativas do CM5, suportando saída de vídeo de até 4K @ 60 fps. É ideal para aplicações que exigem múltiplas telas, permitindo aos usuários enviar seu conteúdo para telas externas de grande porte.
+O reComputer Industrial R2200 possui 2x interfaces HDMI nativas do CM5, suportando saída de vídeo de até 4K @ 60 fps. É ideal para aplicações que exigem múltiplos monitores, permitindo aos usuários enviar seu conteúdo para telas externas de grande porte.
 
 
 ### RTC
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.16-1.png" style={{width:200, height:'auto'}}/></div>
 O reComputer Industrial R2200 possui um circuito RTC alimentado por capacitor, permitindo manter a funcionalidade de contagem de tempo mesmo em caso de perda de energia.
-
-:::note
-Ao usar o RTC, se o dispositivo perder energia de forma súbita, é necessário esperar até que o RTC esteja completamente descarregado antes de reconectar a alimentação e reiniciar. Se não estiver completamente descarregado, o dispositivo pode não atender à condição de reinício e pode não iniciar corretamente.
-:::
 
 ### Watchdog
 
@@ -922,27 +918,27 @@ Aqui está a lista de acessórios e módulos opcionais:
       <tr>
         <td rowspan="7">Devem ser usados juntos para a função LoRa®WAN</td>
         <td rowspan="6">Módulo LoRa®</td>
-        <td>Módulo Gateway LoRaWAN (USB) com região opcional - US915</td>
+        <td>Módulo Gateway LoRaWAN opcional por região (USB) - US915</td>
         <td>114992969</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN (USB) com região opcional - US915</td>
+        <td>Módulo Gateway LoRaWAN opcional por região (USB) - US915</td>
         <td>114992629</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN (USB) com região opcional - US915</td>
+        <td>Módulo Gateway LoRaWAN opcional por região (USB) - US915</td>
         <td>114992991</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN (SPI) com região opcional - EU868</td>
+        <td>Módulo Gateway LoRaWAN opcional por região (SPI) - EU868</td>
         <td>114993268</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN (SPI) com região opcional - EU868</td>
+        <td>Módulo Gateway LoRaWAN opcional por região (SPI) - EU868</td>
         <td>114992549</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN (USB) com região opcional - EU868</td>
+        <td>Módulo Gateway LoRaWAN opcional por região (USB) - EU868</td>
         <td>114992628</td>
       </tr>
       <tr>
@@ -953,23 +949,23 @@ Aqui está a lista de acessórios e módulos opcionais:
       <tr>
         <td rowspan="8">Antena 4G com módulo 4G para função 4G, antena GPS com módulo 4G para função GPS</td>
         <td rowspan="6">Módulo 4G</td>
-        <td>Módulo LTE Cat 4 EC25-AFXGA-Mini-PCIe - para América do Norte</td>
+        <td>Módulo Mini-PCIe LTE Cat 4 EC25-AFXGA - para América do Norte</td>
         <td>113991134</td>
       </tr>
       <tr>
-        <td>Módulo LTE Cat 4 EC25-EUXGR-Mini-PCIe - para EMEA e Tailândia</td>
+        <td>Módulo Mini-PCIe LTE Cat 4 EC25-EUXGR - para EMEA e Tailândia</td>
         <td>113991135</td>
       </tr>
       <tr>
-        <td>Módulo LTE Cat 4 EC25-AUXGR-Mini-PCIe - para Austrália</td>
+        <td>Módulo Mini-PCIe LTE Cat 4 EC25-AUXGR - para Austrália</td>
         <td>113991174</td>
       </tr>
       <tr>
-        <td>Módulo LTE Cat 4 EC25-EFA-Mini-PCIe - para Tailândia</td>
+        <td>Módulo Mini-PCIe LTE Cat 4 EC25-EFA - para Tailândia</td>
         <td>113991214</td>
       </tr>
       <tr>
-        <td>Módulo LTE Cat 4 EC25-EMGA-Mini-PCIe - para Malásia</td>
+        <td>Módulo Mini-PCIe LTE Cat 4 EC25-EMGA - para Malásia</td>
         <td>113991234</td>
       </tr>
       <tr>
@@ -989,7 +985,7 @@ Aqui está a lista de acessórios e módulos opcionais:
       <tr>
         <td></td>
         <td>Chip de Criptografia TPM 2.0</td>
-        <td>Módulo TPM 2.0 com infineon SLB9670</td>
+        <td>Módulo TPM 2.0 com Infineon SLB9670</td>
         <td>114993114</td>
       </tr>
       <tr>
@@ -1059,7 +1055,7 @@ O slot Mini-PCIe suporta módulo LoRa® usando os protocolos USB e SPI. O módul
 
 ### SSD
 
-O reComputer Industrial R2000 suporta SSD NVMe 2280 por meio do uso de um slot PCIe (J7). É importante observar que o PCIe do CM5 é gen2.0 com uma velocidade teórica máxima de 5Gbps. Se você estiver usando um SSD Gen3.0 ou superior, ele pode não conseguir atingir a velocidade máxima do SSD. Após os testes, o reTerminal DM com SSD instalado pode atingir uma velocidade máxima de gravação de 230MB/s e uma velocidade máxima de leitura de 370MB/s. Se você não tiver certeza de quais SSDs são compatíveis, você pode comprar seguindo a lista de acessórios abaixo.
+O reComputer Industrial R2000 suporta SSD NVMe 2280 por meio do uso de um slot PCIe (J7). É importante observar que o PCIe do CM5 é gen2.0 com uma velocidade teórica máxima de 5Gbps. Se você estiver usando um SSD Gen3.0 ou superior, ele pode não conseguir atingir a velocidade máxima do SSD. Após testes, o reTerminal DM com SSD instalado pode atingir uma velocidade máxima de gravação de 230MB/s e uma velocidade máxima de leitura de 370MB/s. Se você não tiver certeza de quais SSDs são compatíveis, você pode comprar seguindo a lista de acessórios abaixo.
 
 > Nota
 > Observe que:
@@ -1080,7 +1076,7 @@ O TPM com OPTIGA™ TPM SLB9670 da Infineon, que é compatível com a especifica
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.3.8-1.png" style={{width:900, height:'auto'}}/></div>
 
-O UPS é 7F, que opera em série. O módulo UPS é posicionado entre os componentes DC5V e CM5, com um sinal GPIO utilizado para alertar a CPU no caso de perda de energia da fonte de 5V. Ao receber esse sinal, a CPU executa um script de urgência antes que a energia do supercapacitor seja esgotada, iniciando um comando "$ shutdown".
+O UPS é 7F, que opera em série. O módulo UPS é posicionado entre os componentes DC5V e CM5, com um sinal GPIO utilizado para alertar a CPU no caso de perda de energia da fonte de 5V. Ao receber esse sinal, a CPU executa um script de emergência antes que a energia do supercapacitor seja esgotada, iniciando um comando "$ shutdown".
 A duração de backup fornecida pelo UPS depende fortemente da carga do sistema. Abaixo estão alguns cenários típicos testados com um módulo CM5 com 4GB de RAM, 32GB de armazenamento eMMC e um módulo Wi-Fi.
 
 | **Modo de Operação** | **Tempo(s)**  | **Observação**          |

@@ -1,6 +1,6 @@
 ---
-description: Wio Tracker L2 系列 SD 卡教程。包括格式化、地图生成和地图安装
-title: SD 卡使用
+description: Wio Tracker L2 系列的 SD 卡教程。包括格式化、地图生成和地图安装
+title: 使用 SD 卡加载地图
 keywords:
   - Meshtastic
   - Wio Tracker L2

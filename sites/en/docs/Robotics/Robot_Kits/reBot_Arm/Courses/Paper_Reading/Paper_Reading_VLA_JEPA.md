@@ -217,11 +217,4 @@ These experiments support the overall method's competitiveness and the contribut
 
 **VLA-JEPA turns state changes in video into supervision for robot representations.** Latent actions explain changes, the action head produces control values, and robot demonstrations connect the two. This supervision design improves performance under the tested perturbations, while reliable execution and generalization to unseen tasks remain unresolved.
 
-## References
-
-1. [VLA-JEPA paper v2](https://arxiv.org/abs/2602.10098v2) and [paper PDF](https://arxiv.org/pdf/2602.10098v2). Introduction and related work: Sections 1–2; method: Section 3; experiments: Section 4; configuration and hardware protocol: Appendices A–B.
-2. [Author project page](https://ginwind.github.io/VLA-JEPA/) and [model repository](https://huggingface.co/ginwind/VLA-JEPA).
-3. Author code at commit [ec90777](https://github.com/ginwind/VLA-JEPA/tree/ec907778b4af46a45742baf5ebfb2e055560346e): [model and losses](https://github.com/ginwind/VLA-JEPA/blob/ec907778b4af46a45742baf5ebfb2e055560346e/starVLA/model/framework/VLA_JEPA.py), [pretraining configuration](https://github.com/ginwind/VLA-JEPA/blob/ec907778b4af46a45742baf5ebfb2e055560346e/scripts/configs/vlajepa_pretrain.yaml).
-4. LeRobot at commit [f5c9bc0](https://github.com/huggingface/lerobot/tree/f5c9bc02137c331b009eccd44ece6f11b62187a8): [model](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/vla_jepa/modeling_vla_jepa.py), [action head](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/vla_jepa/action_head.py), and [configuration](https://github.com/huggingface/lerobot/blob/f5c9bc02137c331b009eccd44ece6f11b62187a8/src/lerobot/policies/vla_jepa/configuration_vla_jepa.py). Implementation differences supplement data-flow and training details; they are not sources for paper results.
-
 </div>

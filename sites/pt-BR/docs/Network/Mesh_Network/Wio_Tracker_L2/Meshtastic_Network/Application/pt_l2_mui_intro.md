@@ -1,5 +1,5 @@
 ---
-description: Introdução ao MUI. Apresenta a definição, recursos e uso do MUI.
+description: Introdução ao MUI. Apresenta a definição, os recursos e o uso do MUI.
 title: Introdução ao MUI
 keywords:
   - Meshtastic
@@ -25,13 +25,13 @@ import TabItem from '@theme/TabItem';
 
 ## O que é MUI?
 
-MUI (Meshtastic User Interface) é uma interface gráfica de código aberto projetada para dispositivos Meshtastic. Ela fornece uma forma mais intuitiva para os usuários interagirem com o dispositivo. 
+MUI (Meshtastic User Interface) é uma interface gráfica de código aberto projetada para dispositivos Meshtastic. Ela oferece uma forma mais intuitiva para os usuários interagirem com o dispositivo. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIMUI.png" alt="pir" width={900} height="auto" /></p>
 
 **Principais recursos**
 
-- **Mapa interativo**: o MUI exibe as localizações dos nós diretamente em mapas online ou offline. Verifique dispositivos próximos e suas posições sem abrir um APP móvel ou de desktop.
+- **Mapa interativo**: o MUI exibe as localizações dos nós diretamente em mapas online ou offline. Verifique dispositivos próximos e suas posições sem abrir um aplicativo móvel ou de desktop.
 
 - **Configuração conveniente do dispositivo**: configure as definições do Meshtastic diretamente no dispositivo, incluindo rádio, GPS, tela e outras opções comuns. Nenhum aplicativo externo é necessário para configurações de rotina.
 
@@ -39,7 +39,7 @@ MUI (Meshtastic User Interface) é uma interface gráfica de código aberto proj
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIIntro.gif" alt="pir" width={600} height="auto" /></p>
 
-## Comece a usar o MUI com o Wio Tracker L2
+## Começando com MUI baseado no Wio Tracker L2
 
 
 ### Alternância de UI
@@ -76,12 +76,12 @@ Vá para a página `Setting`, clique em `Reboot/Shutdown` e depois clique no `Bl
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-O dispositivo será então reiniciado no modo Bluetooth. O código de pareamento Bluetooth será exibido na tela.
+O dispositivo será então reiniciado em modo Bluetooth. O código de pareamento Bluetooth será exibido na tela.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothParingMode1.png" alt="pir" width={500} height="auto" /></p>
 
 ### Configuração LoRa
-Para começar a se comunicar pela malha, você deve definir sua região. Essa configuração controla qual faixa de frequência seu dispositivo usa e deve ser definida de acordo com sua localização regional.
+Para começar a se comunicar pela malha, você deve definir sua região. Essa configuração controla qual faixa de frequência seu dispositivo usa e deve ser ajustada de acordo com sua localização regional.
 
 **Lista de regiões**
 
@@ -110,13 +110,13 @@ Vá para a página `Setting`, clique em `Region`, escolha a região e depois cli
 <TabItem value="9" label="Configurar no telefone">
 
 <Tabs>
-<TabItem value="ios" label="App iOS">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Android App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndridLorasetting.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -169,13 +169,13 @@ Você precisa ativar o GPS para obter a posição. Isso pode ser configurado dir
 
 Você também pode configurá-lo no APP do seu telefone.
 
-**Passo 2. Definir e ativar o Wi-Fi**
+**Passo 2. Definir e ativar o Wifi**
 
-Defina o nome e a senha do Wi-Fi. Isso pode ser feito diretamente no dispositivo. 
+Defina o nome e a senha do Wifi. Isso pode ser feito diretamente no dispositivo. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSetting.png" alt="pir" width={450} height="auto" /></p>
 
-O Wi-Fi está desativado quando o IP do Wi-Fi está vazio e o ícone de Wi-Fi está cinza. O Wi-Fi está ativado quando o IP do Wi-Fi é exibido e o ícone de Wi-Fi está branco. 
+O Wifi fica desativado quando o IP do wifi está vazio e o ícone de wifi está cinza. O Wifi fica ativado quando o IP do wifi é exibido e o ícone de wifi está branco. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -185,7 +185,7 @@ Pressione e segure o ícone `Wifi` para alternar o status.
 
 :::tip
 
-O Wi-Fi conectado deve ser 2.4G. Wi-Fi 5G não pode ser usado pelo dispositivo.
+O Wifi conectado deve ser 2.4G. Wifi 5G não pode ser usado pelo dispositivo.
 
 :::
 
@@ -262,7 +262,7 @@ Apenas canais configurados, como o canal nomeado mostrado na imagem à esquerda 
 
 ### Ferramenta
 
-- **Mesh Detector**: exibe nós ativos detectados
+- **Mesh Detector**: exibe os nós ativos detectados
 - **Signal Scanner**: exibe o RSSI e o SNR do nó selecionado
 - **Trace Route**: exibe o caminho de roteamento do nó selecionado
 - **Statistic**: exibe informações de decodificação de pacotes
@@ -272,7 +272,7 @@ Apenas canais configurados, como o canal nomeado mostrado na imagem à esquerda 
 
 ## Requisitos de dispositivo para MUI
 
-O MUI foi projetado para ser executado em hardware que ofereça suporte ao Meshtastic e forneça uma tela gráfica. Para usar todos os recursos do MUI, incluindo mapas offline, seu dispositivo deve atender aos seguintes requisitos.
+MUI foi projetado para ser executado em hardware que ofereça suporte ao Meshtastic e forneça uma tela gráfica. Para usar todos os recursos do MUI, incluindo mapas offline, seu dispositivo deve atender aos seguintes requisitos.
 
 | Componente | Requisito |
 |-----------|-------------|
@@ -307,17 +307,38 @@ Em seguida, você pode inserir números e letras. Nem todas as páginas têm um 
 ### Por que meu Wi-Fi foi desligado automaticamente
 
 Quando você entra no modo de pareamento Bluetooth, o Wi-Fi do dispositivo será automaticamente definido como desativado. 
-Você pode ativar o Wi-Fi no aplicativo de celular quando o dispositivo estiver no modo Bluetooth.
+Você pode ativar o Wi-Fi no aplicativo do telefone enquanto o dispositivo estiver no modo Bluetooth.
 
-### Como enviar mensagem MQTT no MUI
+### Como enviar mensagem mqtt no MUI
 
-O dispositivo não pode transmitir mensagem MQTT quando está no MUI. Se você quiser transmitir mensagem MQTT, por favor:
+O dispositivo não pode transmitir mensagem mqtt quando está no MUI. Se você quiser transmitir mensagem mqtt, por favor:
 
 **Passo 1**. Entre no modo de pareamento Bluetooth
 
-**Passo 2**. Emparelhe seu dispositivo com o aplicativo de celular
+**Passo 2**. Emparelhe seu dispositivo com o aplicativo do telefone
 
-**Passo 3**. Configure MQTT no aplicativo de celular
+**Passo 3**. Configure mqtt no aplicativo do telefone
 
 **Passo 4**. Inicie a transmissão de mensagens
 
+## Suporte técnico e discussão sobre o produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

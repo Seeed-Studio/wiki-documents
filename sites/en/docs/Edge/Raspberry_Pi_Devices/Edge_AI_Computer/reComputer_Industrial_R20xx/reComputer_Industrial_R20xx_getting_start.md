@@ -365,9 +365,9 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.1.1-1.png" style={{width:800, height:'auto'}}/></div>
 
-#### Mainboard Overview
+<!-- #### Mainboard Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.2_mainboard_overview_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.2_mainboard_overview_1.png" style={{width:800, height:'auto'}}/></div> -->
 
 #### Power Diagram
 
@@ -905,10 +905,6 @@ The reComputer Industrial R2000 features 2x native HDMI interface from CM5, supp
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.16_rtc_1.png" style={{width:200, height:'auto'}}/></div>
 The reComputer Industrial R2000 features an RTC circuit that powered by the capacitor, enabling it to maintain timekeeping functionality even in the event of power loss.
-
-:::note
-When using the RTC, if the device suddenly loses power, you need to wait until the RTC is fully discharged before reconnecting power and restarting. If it is not fully discharged, the device may fail to meet the restart condition and may not start up properly.
-:::
 
 ### Watchdog
 
