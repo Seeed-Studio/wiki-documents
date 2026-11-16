@@ -155,6 +155,7 @@ const sidebars = {
         { type: 'ref', id: `${K}/Lerobot/Lerobot_SO100Arm_New`, label: 'SO-ARM101', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Getting_Started`, label: 'reBot-RS', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/reBot_Arm/T701_HT/reBot_Arm_T701_HT_Getting_Started`, label: 'reBot Arm T701 HT', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/Lerobot_Starai_Arm`, label: 'Star AI Arm', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Hand/AmazingHand`, label: 'AmazingHand', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/Lerobot_Lekiwi`, label: 'Lekiwi', className: 'sideboard_calss' },
@@ -292,6 +293,11 @@ const sidebars = {
         { type: 'doc', id: `${K}/ReachyMini/platforms/reachy_mini_lite/get_started`, label: 'Getting Started' },
       ],
     },
+  ],
+
+  T701HtSidebar: [
+    backToRobotics(),
+    `${K}/reBot_Arm/T701_HT/reBot_Arm_T701_HT_Getting_Started`,
   ],
 
   StackForceSidebar: [

@@ -138,6 +138,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 </details>
 
 
+<details id="rebot-t701-ht" className="product-card rebot product-card--cover">
+  <summary className="product-head">
+    <img className="t701-ht-cover" src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="" width={921} height={904} loading="lazy" decoding="async" draggable={false} />
+    <h3>reBot Arm T701 HT</h3>
+  </summary>
+  <div className="product-body">
+    <div className="learning-steps">
+      <a className="step-card" href="/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Quick Start</b></a>
+    </div>
+  </div>
+</details>
+
+
 <details id="soarm" className="product-card soarm product-card--cover">
   <summary className="product-head">
     <h3>SO100 / SO101 Robotic Arm</h3>
