@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
 // 生成时间: 2026-11-12 11:18:40 (北京时间)
-// 多语言页面: 2652 个
+// 多语言页面: 2653 个
 
 (function() {
   'use strict';
@@ -7749,6 +7749,10 @@
     "es",
     "ja",
     "pt"
+  ],
+  "/soarm101_isaac_sim_dli": [
+    "cn",
+    "en"
   ],
   "/training_soarm101_policy_with_isaacLab": [
     "cn",
