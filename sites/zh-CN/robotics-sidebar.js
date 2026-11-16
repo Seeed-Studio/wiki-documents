@@ -268,6 +268,7 @@ const sidebars = {
         `${K}/Lerobot/cn_SOARM101_XIAO_MicroROS_Wireless_Teleoperation`,
         `${K}/Lerobot/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor`,
         `${K}/Lerobot/cn_Lerobot_SO_ARM101_DAMO`,
+        `${K}/Lerobot/cn_SOARM101_Isaac_Sim_DLI`,
       ],
     },
   ],

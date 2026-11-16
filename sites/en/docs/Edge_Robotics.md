@@ -172,6 +172,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM with Amazing Hand Dexterous Hand</b></div></a>
         <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac Simulation</b></div></a>
         <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab Reinforcement Learning</b></div></a>
+        <a className="step-card" href="/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 with Isaac Sim</b></div></a>
         <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
@@ -375,7 +376,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     </div>
     <div className="resource-columns">
       <div><h4>ROS Ecosystem</h4><a href="/installing_ros1/">ROS 1 Installation</a><a href="/install_ros2_humble/">ROS 2 Installation</a><a href="/install_isaacros/">Isaac ROS Installation</a><a href="/isaac_ros_apriltag/">Isaac ROS AprilTag</a><a href="/isaac_ros_visual_slam/">Isaac ROS V-SLAM</a></div>
-      <div><h4>NVIDIA Isaac</h4><a href="/install_isaaclab/">Isaac Lab Installation</a><a href="/training_soarm101_policy_with_isaacLab/">SO Arm 101 Reinforcement Learning</a><a href="/simulate_soarm101_by_leisaac/">SO Arm 101 Robotic Arm with Isaac Sim</a></div>
+      <div><h4>NVIDIA Isaac</h4><a href="/install_isaaclab/">Isaac Lab Installation</a><a href="/training_soarm101_policy_with_isaacLab/">SO Arm 101 Reinforcement Learning</a><a href="/simulate_soarm101_by_leisaac/">SO Arm 101 Robotic Arm with Isaac Sim</a><a href="/soarm101_isaac_sim_dli/">SO-ARM101 Isaac Sim DLI</a></div>
       <div><h4>PX4 / VLA</h4><a href="/control_px4_with_recomputer_jetson/">PX4 and Jetson</a><a href="/object_tracking_with_reComputer_jetson_and_pX4/">PX4 Object Tracking</a><a href="/control_robotic_arm_via_gr00t/">StarAI and NVIDIA GR00T</a></div>
     </div>
   </section>
