@@ -119,7 +119,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
       <tr>
         <td>Interruptor de encendido</td>
         <td colspan="2">No</td>
-      </tr]
+      </tr>
       <tr>
         <td>Interruptor de reinicio</td>
         <td colspan="2">Sí</td>

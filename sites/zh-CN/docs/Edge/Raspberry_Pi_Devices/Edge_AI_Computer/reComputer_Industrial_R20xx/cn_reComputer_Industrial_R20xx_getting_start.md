@@ -152,7 +152,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用，可用于数
       <tr>
         <td rowspan="2"> DI </td>
         <td colspan="3"> 8 x 隔离 DI 端口 </td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="3"> 输入电压：5~24V DC </td>
       </tr>

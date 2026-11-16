@@ -129,7 +129,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
       <tr>
         <td rowspan="2"> Ethernet </td>
         <td colspan="2"> 1 x 10/100/1000 Mbps (compatible con PoE PD) </td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="2"> 1 x 10/100 Mbps IEEE 802.3/802.3u </td>
       </tr>

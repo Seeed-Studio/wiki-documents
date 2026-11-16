@@ -170,7 +170,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
       </tr>
       <tr>
         <td colspan="3"> Tensión de salida: por debajo de 60V DC </td>
-      </tr]
+      </tr>
       <tr>
         <td>Tarjeta SIM</td>
         <td colspan="3">1x ranura para tarjeta Nano SIM</td>

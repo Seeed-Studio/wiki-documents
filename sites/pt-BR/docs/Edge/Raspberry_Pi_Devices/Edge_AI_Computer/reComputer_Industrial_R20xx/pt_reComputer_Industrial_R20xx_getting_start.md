@@ -162,7 +162,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
       </tr>
       <tr>
         <td colspan="3"> Tensão de saída: abaixo de 60V DC </td>
-      </tr]
+      </tr>
       <tr>
         <td>Cartão SIM</td>
         <td colspan="3">1x slot para cartão Nano SIM</td>

@@ -244,7 +244,7 @@ reComputer Industrial R22xx 系列非常适用于工业 AI 应用。它可用于
       <tr>
         <td>防护等级</td>
         <td>IP40</td>
-      </tr]
+      </tr>
       <tr>
         <td>工作温度</td>
         <td>-20~50 °C</td>
@@ -993,7 +993,7 @@ reComputer Industrial R2000 支持丰富的扩展模块和配件，适用于多�
         <td rowspan="5">SSD 卡</td>
         <td>NVMe M.2 2280 SSD 2TB</td>
         <td>114993467</td>
-      </tr]
+      </tr>
       <tr>
         <td>NVMe M.2 2280 SSD 1TB</td>
         <td>114993467</td>

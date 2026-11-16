@@ -91,7 +91,7 @@ reComputer Industrial R21xx 系列非常适用于工业 AI 应用。它可用于
       <tr>
         <td> **CPU** </td>
         <td colspan="2">Raspberry Pi Compute Module 5，2.4GHz 四核 64 位 Arm Cortex-A76</td>
-      </tr]
+      </tr>
       <tr>
         <td> **AI 处理器** </td>
         <td>预装 1 个 Hailo-8 M.2 AI 加速模块，26TOPS</td>
@@ -604,7 +604,7 @@ reComputer Industrial R21xx 系列设备包含 1 个 RS232 接口，采用 6-Pin
       <tr>
         <td>4</td>
         <td>RS232-1_RX</td>
-      </tr]
+      </tr>
       <tr>
         <td>6</td>
         <td>RS232-1_GND </td>

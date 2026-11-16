@@ -96,7 +96,7 @@ reComputer Industrial R20xx シリーズは、産業向け AI アプリケーシ
       <tr>
         <td> **オペレーティングシステム** </td>
         <td colspan="2">Raspbian、Debian</td>
-      </tr]
+      </tr>
       <tr>
         <td> **RAM** </td>
         <td colspan="2">2GB/4GB/8GB/16GB</td>

@@ -161,7 +161,7 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
       </tr>
       <tr>
         <td colspan="2"> 出力電圧: 60V DC 未満 </td>
-      </tr]
+      </tr>
       <tr>
         <td>SIM カード</td>
         <td colspan="2">1x Nano SIM カードスロット</td>
@@ -928,7 +928,7 @@ reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリ�
       <tr>
         <td>地域別オプション LoRaWAN Gateway Module(USB)-US915</td>
         <td>114992991</td>
-      </tr]
+      </tr>
       <tr>
         <td>地域別オプション LoRaWAN Gateway Module(SPI)-EU868</td>
         <td>114993268</td>

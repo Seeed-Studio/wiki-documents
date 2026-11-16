@@ -132,7 +132,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
       </tr>
       <tr>
         <td colspan="2"> 1 x 10/100 Mbps IEEE 802.3/802.3u </td>
-      </tr]
+      </tr>
       <tr>
         <td rowspan="2"> USB </td>
         <td colspan="2"> 4 x USB-A 3.0 Host</td>
@@ -993,7 +993,7 @@ Aqui está a lista de acessórios e módulos opcionais:
         <td rowspan="5">Cartão SSD</td>
         <td>NVMe M.2 2280 SSD 2TB</td>
         <td>114993467</td>
-      </tr]
+      </tr>
       <tr>
         <td>NVMe M.2 2280 SSD 1TB</td>
         <td>114993467</td>

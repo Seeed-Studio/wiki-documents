@@ -195,7 +195,7 @@ reComputer Industrial R21xx シリーズは、産業用 AI アプリケーショ
       <tr>
         <td>LED</td>
         <td colspan="2">4 x LED インジケータ</td>
-      </tr]
+      </tr>
       <tr>
         <td>ブザー</td>
         <td colspan="2">1</td>
