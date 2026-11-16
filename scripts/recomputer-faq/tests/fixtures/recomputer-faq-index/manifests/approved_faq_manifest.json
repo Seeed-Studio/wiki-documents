@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "recomputer_faq_approved_manifest",
+  "lastVerifiedAt": "2026-11-01",
+  "entries": [
+    {
+      "publicFaqId": "rk_npu_device_paths",
+      "productKey": "recomputer_rk",
+      "productVariants": ["reComputer RK (RK3588)"],
+      "primaryDomain": "hardware_interfaces",
+      "secondaryDomains": ["algorithm_tuning"],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-01",
+      "qualityScore": 0,
+      "wikiSlug": "/recomputer_rk_faq",
+      "wikiAnchor": "npu-device-paths",
+      "questionEn": "Which NPU device path does my reComputer RK use?",
+      "directAnswerEn": "The RK3588 uses renderD129 and the RK3576 uses renderD128.",
+      "appliesTo": "reComputer RK3576 and RK3588 boards",
+      "notes": ["The camera node differs as well."],
+      "officialReferences": [
+        {
+          "title": "Object Detection with YOLOv11 on reComputer-RK",
+          "url": "https://wiki.seeedstudio.com/object_detection_with_yolov11_on_recomputer_rk/"
+        }
+      ],
+      "skus": ["100000000"],
+      "keywords": ["reComputer RK", "NPU", "renderD129"]
+    },
+    {
+      "publicFaqId": "rk3576_nvme_boot",
+      "productKey": "recomputer_rk",
+      "productVariants": ["reComputer RK (RK3576)"],
+      "primaryDomain": "documentation_usage",
+      "secondaryDomains": ["hardware_interfaces"],
+      "publicationDecision": "PUBLISH",
+      "lastVerifiedAt": "2026-11-01",
+      "qualityScore": 0,
+      "wikiSlug": "/recomputer_rk_faq",
+      "wikiAnchor": "rk3576-nvme-boot",
+      "questionEn": "Can the reComputer RK3576 boot the system from an M.2 NVMe SSD?",
+      "directAnswerEn": "Yes. The engineers confirmed that the reComputer RK3576 supports installing and booting the system from an M.2 NVMe SSD.",
+      "appliesTo": "reComputer RK3576 series, using an M.2 NVMe SSD as the system disk",
+      "prerequisites": ["An M.2 NVMe SSD"],
+      "officialReferences": [
+        {
+          "title": "Install Armbian on an NVMe SSD on reComputer RK3576 | reComputer AI Lab",
+          "url": "https://sensecraft.seeed.cc/ai-lab/tutorials"
+        }
+      ],
+      "skus": [],
+      "keywords": ["reComputer RK3576", "NVMe", "M.2", "Armbian"]
+    }
+  ]
+}

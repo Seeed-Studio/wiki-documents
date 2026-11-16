@@ -365,6 +365,14 @@ module.exports = (async () => {
         path.resolve(__dirname, '../../plugins/respeaker-faq-index'),
         { locale: 'en' },
       ],
+      [
+        path.resolve(__dirname, '../../plugins/recomputer-faq-index'),
+        { locale: 'en' },
+      ],
+      [
+        path.resolve(__dirname, '../../plugins/recomputer-pi-faq-index'),
+        { locale: 'en' },
+      ],
       'docusaurus-plugin-sass',
       [
         'docusaurus-plugin-copy-page-button',
