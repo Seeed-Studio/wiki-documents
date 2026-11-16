@@ -213,8 +213,6 @@ $$
 
 ![中文教学图 1：未来潜状态参与动作推断，真实反馈重新进入闭环](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop.png)
 
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop.png)
-
 *教学示意：绿色框是模型预测的潜在表示，底部蓝色框来自实际相机；沿右侧反馈箭头看，下一轮的依据会随真实执行结果更新。*
 
 ## 视频和动作怎样进入同一个模型
@@ -228,8 +226,6 @@ $$
 **形状例子：** 按 LeRobot 默认 `frame_chunk_size=4`、`action_per_frame=4`、`action_dim=30`，动作流内部噪声可组织为 `[1,30,4,4,1]`，共有 16 个时序位置，每个位置 30 个通道。模型输出后选择有效动作通道，再转换成 `[批量,动作步数,机器人动作维度]`。这是固定实现的接口示例，不是论文所有平台的统一张量形状。
 
 ![中文教学图 2：四个视频时间点对应十六步动作，去噪迭代反复更新同一动作块](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales.png)
-
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales.png)
 
 *教学示意：上面两排沿机器人时间展开，下面一排沿生成进度展开。每次去噪更新的是同一块动作，不会因此多产生一个执行时刻。*
 
@@ -278,8 +274,6 @@ $$
 
 ![中文教学图 3：时间块之间限制未来读取，块内允许双向交流](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal.png)
 
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal.png)
-
 *教学示意：先按行找“谁在读取”，再按列找“读取什么”。矩阵只概括时间块的关系；视频与动作两种流的具体可见范围仍以原论文图 3 为准，尤其要保留逆动力学读取相应未来视觉条件的连接。*
 
 ### 带噪历史：不等视频完全清晰也能生成动作
@@ -307,8 +301,6 @@ Transformer 的 KV 缓存保存历史 token 在各层形成的键和值，避免
 论文的 **FDM 校正** 在此插入一次前向动力学计算：从最近真实观测出发，给定正在执行的动作，重新预测它的结果；再使用这个重新对齐的未来状态预测后续视频与动作。它使用模型中的前向预测能力，论文没有要求另部署一个完全独立的模拟器。后训练额外引入式（13）的前向预测损失，算法 2 描述执行分支与推理分支的配合。
 
 ![中文教学图 4：最新观测与正在执行的动作共同校正下一轮预测起点](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding.png)
-
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding.png)
 
 *教学示意：上下两路的区别在于是否用最新反馈重新预测当前动作的后果。下方时间线表示计算与执行重叠，不表示已经直接观测到未来，也不代表固定的时间比例。*
 

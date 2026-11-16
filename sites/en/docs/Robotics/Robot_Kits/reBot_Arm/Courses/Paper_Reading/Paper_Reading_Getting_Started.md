@@ -122,6 +122,7 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/robotics/paper_reading_vla_jepa/">VLA-JEPA — Video Supervision &amp; Latent World Models</a></li>
         <li><a href="/robotics/paper_reading_lingbot_va/">LingBot-VA — Causal World Modeling &amp; Robot Control</a></li>
         <li><a href="/robotics/paper_reading_gr00t_2/">GR00T 2 — Joint World-Action Modeling</a></li>
+        <li><a href="/robotics/paper_reading_lawam/">LaWAM — Predicting Scene Changes Before Generating Robot Actions</a></li>
       </ul>
       <h3>Part 6 · Unified Evaluation &amp; Research Summary</h3>
       <span className="paper-reading-update-badge">
