@@ -414,6 +414,7 @@ const sidebars = {
       label: 'Computer Vision',
           customProps: { communityCategory: 'cv' },
           items: [
+            'Edge/NVIDIA_Jetson/Application/Computer_Vision/Industrial_Vision_Benchmark_on_Jetson_Orin_Nano_and_Orin_NX',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson_AGX_Thor',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/Streaming_Vision_Agent_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/industrial_vision_monitoring_on_industrial',

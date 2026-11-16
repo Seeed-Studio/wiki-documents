@@ -286,6 +286,13 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
           <span className="course-compatibility-badge">SO101</span>
         </span>
       </a>
+      <a className="step-card" href="/pt-br/robotics/soarm_sim2real_vla_course/">
+        <span className="step-index">🚀</span>
+        <div><b>Curso VLA Sim-to-Real</b></div>
+        <span className="course-compatibility" aria-label="Supported robotic arms">
+          <span className="course-compatibility-badge">SO101</span>
+        </span>
+      </a>
       <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer">
         <span className="step-index">📘</span>
         <div><b>Do Simulado ao Real com NVIDIA Isaac</b></div>
