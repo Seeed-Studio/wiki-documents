@@ -448,12 +448,6 @@ Here is the Arduino program for this project.
 #define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 
 #include "camera_pins.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (github.com/0015/ESP32-OV5640-AF)
-
-OV5640 ov5640 = OV5640();
-
-#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA // AF focusing requires >=1280x1024
-#define OV5640_FOCUS_TIMEOUT_MS  8000
 
 unsigned long lastCaptureTime = 0; // Last shooting time
 int imageCount = 1;                // File Counter
@@ -492,23 +486,6 @@ void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
         Serial.println("Write failed");
     }
     file.close();
-}
-
-// Wait for the OV5640 continuous auto-focus to settle (FW_STATUS == 0x10 FOCUSED)
-bool waitForOv5640Focus() {
-  const uint32_t started = millis();
-  uint8_t status = 0;
-  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
-    status = ov5640.getFWStatus();
-    if (status == 0x10) {
-      Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status);
-      return true;
-    }
-    delay(100);
-  }
-  Serial.printf("ERROR: OV5640 focus not settled within %u ms; last FW_STATUS=0x%02X\n",
-                OV5640_FOCUS_TIMEOUT_MS, status);
-  return false;
 }
 
 void setup() {
@@ -764,19 +741,12 @@ Here is the Arduino program for this project.
  * added for JPEG conversion.
  *
  * Adapted by MRovai @02June23
- *
- * Generic OV5640 auto-focus patch (only applies to the OV5640; fixed-focus modules
- * such as the OV3660/NT99141 are skipped automatically):
- *  - After esp_camera_init, run focusInit / autoFocusMode only when PID == OV5640_PID
- *  - In RGB565 mode do not switch to SXGA (it would overflow the fb buffer);
- *    rely on the OV5640's internal full-size image for focus evaluation
 */
 
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include "esp_camera.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (github.com/0015/ESP32-OV5640-AF), OV5640 only
 #include "FS.h"
 #include "SD.h"
 
@@ -805,27 +775,6 @@ bool camera_sign = false;          // Check camera status
 bool sd_sign = false;              // Check sd status
 
 TFT_eSPI tft = TFT_eSPI();
-
-// --- OV5640 AF (OV5640 module only) ---
-OV5640 ov5640 = OV5640();
-#define OV5640_FOCUS_TIMEOUT_MS 8000
-
-// Wait for the OV5640 continuous auto-focus to settle (FW_STATUS == 0x10 FOCUSED)
-bool waitForOv5640Focus() {
-  const uint32_t started = millis();
-  uint8_t status = 0;
-  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
-    status = ov5640.getFWStatus();
-    if (status == 0x10) {
-      Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status);
-      return true;
-    }
-    delay(100);
-  }
-  Serial.printf("WARN: OV5640 focus not settled within %u ms; last FW_STATUS=0x%02X\n",
-                OV5640_FOCUS_TIMEOUT_MS, status);
-  return false;
-}
 
 // SD card write file
 void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
@@ -1249,7 +1198,6 @@ Here is the Arduino program for this project.
 
 ```cpp
 #include "esp_camera.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (OV5640 only)
 #include <WiFi.h>
 
 //
@@ -1275,22 +1223,6 @@ const char *password = "**********";
 
 void startCameraServer();
 void setupLedFlash(int pin);
-
-// --- OV5640 AF (OV5640 module only; fixed-focus modules such as the OV3660/NT99141 are skipped automatically) ---
-OV5640 ov5640 = OV5640();
-#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA  // AF focus evaluation requires >=1280x1024
-#define OV5640_FOCUS_TIMEOUT_MS 8000
-bool waitForOv5640Focus() {
-  const uint32_t started = millis();
-  uint8_t status = 0;
-  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
-    status = ov5640.getFWStatus();
-    if (status == 0x10) { Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status); return true; }
-    delay(100);
-  }
-  Serial.printf("WARN: OV5640 focus not settled; last FW_STATUS=0x%02X\n", status);
-  return false;
-}
 
 void setup() {
   Serial.begin(115200);
