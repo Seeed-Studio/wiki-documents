@@ -1,6 +1,6 @@
 ---
 description: "Explore os métodos centrais por trás do ACT, da série π e dos modelos VLA generalistas, com tutoriais LeRobot sobre demonstrações, treinamento e implantação."
-title: "Análises Profundas de Artigos sobre IA Física e Reprodução Prática"
+title: "Mergulhos Profundos em Artigos de IA Física e Reprodução Prática"
 hide_title: true
 keywords:
   - reBot
@@ -39,14 +39,14 @@ import '/src/css/paper-reading-style.css';
   <aside className="paper-reading-support" aria-label="Support the open-source project">
     <div>
       <strong>Cursos gratuitos, juntos em código aberto</strong>
-      <p>Este curso é totalmente gratuito. Para incentivar nosso trabalho, dê uma estrela ao nosso braço robótico open source!</p>
+      <p>Este curso é totalmente gratuito. Para incentivar nosso trabalho, dê uma estrela para o nosso braço robótico open source!</p>
     </div>
     <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Star on GitHub</a>
   </aside>
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
     <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
-    <h1 id="paper-reading-title">Análises Profundas de Artigos sobre IA Física e Reprodução Prática</h1>
+    <h1 id="paper-reading-title">Mergulhos Profundos em Artigos de IA Física e Reprodução Prática</h1>
     <p className="paper-reading-lead">Explore pesquisas de ponta em IA Física, destrinche modelos e algoritmos-chave com braços robóticos da Seeed</p>
     <p>Um <strong>curso que será sempre gratuito</strong>, cuidadosamente desenvolvido pela equipe de IA Robotics da SeeedStudio, combinado com o <strong>braço robótico reBot 100% open source, disponível para uso comercial e reprodução</strong>. Conclua o curso e torne-se o próximo especialista em robótica!</p>
     <ul className="paper-reading-badges" aria-label="Course features">
@@ -77,12 +77,12 @@ import '/src/css/paper-reading-style.css';
   <div className="paper-reading-directory">
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-hands-on-title">
       <h2 id="paper-reading-hands-on-title">Implantação Prática</h2>
-      <p>Comece com a preparação da plataforma e a coleta de dados, siga os passos para treinar e implantar o ACT, depois aprenda a alternar do ACT para outras políticas e domine gradualmente o fluxo de reprodução para diferentes algoritmos.</p>
+      <p>Comece com a preparação da plataforma e a coleta de dados, siga os passos para treinar e implantar o ACT, depois aprenda a alternar do ACT para outras políticas e domine gradualmente o fluxo de trabalho de reprodução para diferentes algoritmos.</p>
       <ol className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_hardware_and_teleoperation/">Configuração de Hardware &amp; Software</a></li>
         <li><a href="/pt-br/robotics/hands_on_task_design/">Design de Tarefas &amp; Planejamento de Demonstrações</a></li>
         <li><a href="/pt-br/robotics/hands_on_camera_recording/">Coleta de Dados Multivisualização</a></li>
-        <li><a href="/pt-br/robotics/hands_on_dataset_quality/">Qualidade dos Dados: Estrutura, Sincronização &amp; Validação</a></li>
+        <li><a href="/pt-br/robotics/hands_on_dataset_quality/">Qualidade de Dados: Estrutura, Sincronização &amp; Validação</a></li>
         <li><a href="/pt-br/robotics/hands_on_act_training/">Treinamento do Modelo ACT</a></li>
         <li><a href="/pt-br/robotics/hands_on_act_deployment/">Implantação no Robô &amp; Avaliação de Desempenho</a></li>
         <li><a href="/pt-br/robotics/hands_on_algorithm_switching/">Alternância de Políticas &amp; Execução de Tarefas</a></li>
@@ -90,16 +90,16 @@ import '/src/css/paper-reading-style.css';
     </section>
 
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-papers-title">
-      <h2 id="paper-reading-papers-title">Análises Profundas de Artigos</h2>
-      <p>Leia artigos por tópico, desde políticas básicas de aprendizado por imitação até modelos visão-linguagem-ação.</p>
-      <h3>Parte 1 · Action Chunking &amp; Políticas Multitarefas</h3>
+      <h2 id="paper-reading-papers-title">Mergulhos Profundos em Artigos</h2>
+      <p>Leia artigos por tópico, desde políticas básicas de aprendizado por imitação até modelos de visão-linguagem-ação.</p>
+      <h3>Parte 1 · Action Chunking &amp; Políticas Multitarefa</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_act/">ACT — Manipulação Bimanual de Baixo Custo</a></li>
-        <li><a href="/pt-br/robotics/paper_reading_multi_task_dit/">LBM / MultiTask DiT — Pré-treinamento Multitarefas</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_multi_task_dit/">LBM / MultiTask DiT — Pré-treinamento Multitarefa</a></li>
       </ul>
       <h3>Parte 2 · Modelos VLA Leves &amp; Implantação Eficiente</h3>
       <ul className="paper-reading-directory-list">
-        <li><a href="/pt-br/robotics/paper_reading_smolvla/">SmolVLA — Modelos Visão-Linguagem-Ação Acessíveis</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_smolvla/">SmolVLA — Modelos de Visão-Linguagem-Ação Acessíveis</a></li>
         <li><a href="/pt-br/robotics/paper_reading_evo1/">Evo-1 — VLA Leve</a></li>
       </ul>
       <h3>Parte 3 · Modelos Fundamentais de Robôs π</h3>
@@ -115,14 +115,15 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/pt-br/robotics/paper_reading_wall_oss/">WALL-OSS — Raciocínio Incorporado &amp; Controle de Robôs</a></li>
         <li><a href="/pt-br/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Ações Entre Corpos &amp; Percepção Futura</a></li>
         <li><a href="/pt-br/robotics/paper_reading_dm05/">DM0.5 — Contexto Histórico &amp; Alinhamento de Trajetória</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_g05/">G0.5 — Raciocínio e Ação em Uma Única Sequência</a></li>
       </ul>
       <h3>Parte 5 · Modelos de Mundo &amp; Aprendizado Vídeo-Ação</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/pt-br/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisão por Vídeo &amp; Modelos de Mundo Latentes</a></li>
         <li><a href="/pt-br/robotics/paper_reading_lingbot_va/">LingBot-VA — Modelagem Causal de Mundo &amp; Controle de Robôs</a></li>
-        <li><a href="/pt-br/robotics/paper_reading_gr00t_2/">GR00T 2 — Modelagem Conjunta Mundo-Ação</a></li>
+        <li><a href="/pt-br/robotics/paper_reading_gr00t_2/">GR00T 2 — Modelagem Conjunta de Mundo-Ação</a></li>
       </ul>
-      <h3>Parte 6 · Avaliação Unificada &amp; Resumo da Pesquisa</h3>
+      <h3>Parte 6 · Avaliação Unificada &amp; Resumo de Pesquisa</h3>
       <span className="paper-reading-update-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
           <path d="M3 12a9 9 0 0 1 15.36-6.36L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.36 6.36L3 16M8 16H3v5" />

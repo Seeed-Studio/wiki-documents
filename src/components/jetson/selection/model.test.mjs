@@ -358,6 +358,16 @@ test("IP66 excludes IP40 and unknown ratings", () => {
 test("input voltage and operating temperature include boundaries and reject missing data", () => {
   assert.deepEqual(voltageRange("12V-36V"), [12, 36]);
   assert.deepEqual(voltageRange("5V/3A"), [5, 5]);
+  for (const power of ["DC 19V ~ 48V", "19～48V DC", "19V to 48V", "19–48V DC", "19V — 48V"])
+    assert.deepEqual(voltageRange(power), [19, 48], power);
+  for (const id of ["AE", "AF"]) {
+    for (const voltage of ["19", "24", "36", "48"])
+      assert.equal(matchesProduct(p(id), f({ voltage })), true, `${id}: ${voltage}V`);
+    for (const voltage of ["18.9", "48.1"])
+      assert.equal(matchesProduct(p(id), f({ voltage })), false);
+  }
+  assert.equal(matchesProduct(p("C"), f({ voltage: "5" })), true);
+  assert.equal(matchesProduct(p("C"), f({ voltage: "5.1" })), false);
   assert.deepEqual(
     temperatureRanges("-20°C to 60°C (25W); -20°C to 50°C (MAXN)"),
     [
@@ -660,4 +670,23 @@ test("wiki links use a language prefix only when that page exists", () => {
   assert.deepEqual(jetsonDocTarget(englishOnly, "zh"), { kind: "anchor", href: englishOnly });
   assert.deepEqual(jetsonDocTarget(guide, "en"), { kind: "link", href: guide });
   assert.deepEqual(jetsonDocTarget(external, "ja"), { kind: "link", href: external });
+});
+
+test("J601 and Rugged canonical guides resolve in every selector language", () => {
+  for (const [id, path] of [
+    ["CBR", "/jetson/recomputer_robotics_j601/getting_started/"],
+    ["Y", "/jetson/recomputer_rugged_j401/getting_started/"],
+    ["Z", "/jetson/recomputer_rugged_j401/getting_started/"],
+  ]) {
+    assert.equal(p(id).guides[0].url, path);
+    assert.equal(p(id).sources[0], path);
+    for (const [lang, prefix, site] of [["en", "", "en"], ["zh", "/cn", "zh-CN"], ["ja", "/ja", "ja"], ["es", "/es", "es"], ["pt", "/pt-br", "pt-BR"]]) {
+      assert.equal(localizeWikiHref(path, lang), `${prefix}${path}`);
+      assert.deepEqual(jetsonDocTarget(path, lang), { kind: "link", href: path });
+      const docsRoot = new URL(`../../../../sites/${site}/docs/`, import.meta.url);
+      assert.ok(readdirSync(docsRoot, { recursive: true }).filter((f) => /\.(md|mdx)$/.test(f)).some((file) =>
+        readFileSync(new URL(file, docsRoot), "utf8").includes(`slug: ${path.slice(0, -1)}\n`)
+      ), `${site}: ${path}`);
+    }
+  }
 });

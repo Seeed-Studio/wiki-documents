@@ -8,7 +8,7 @@ keywords:
   - ESP32S3
   - xvf3800
   - i2s microphone array
-image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_board_overview.jpg
+image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png
 slug: /respeaker_44mm_xiao_getting_started
 sku: 100066841,100065276
 last_update:
@@ -30,31 +30,45 @@ The board keeps the compact **44 mm microphone pitch** of the standard 44 mm arr
 
 {/* TODO: replace the href="#" values with the Seeed Studio product page URLs once they are published. */}
 
-<table align="center">
+<div class="table-center">
+<table>
   <tr>
-    <th>Variant</th>
-    <th>Contents</th>
-    <th>Order</th>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32S3 Plus" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+    </td>
+    <td align="center" width="320" valign="top">
+      {/* TODO(image): replace with the case + XIAO render once available */}
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XVF3800 44mm with case and XIAO ESP32S3 Plus" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+    </td>
   </tr>
   <tr>
-    <td><strong>reSpeaker XVF3800 4-Mic Array 44mm with XIAO ESP32-S3 Plus</strong></td>
-    <td>PCBA with pre-soldered XIAO ESP32-S3 Plus, I2S firmware<br /><code>SKU 100066841</code></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XVF3800 4-Mic Array 44mm with Case &amp; XIAO ESP32-S3 Plus</strong></td>
-    <td>PCBA + enclosure + pre-soldered XIAO ESP32-S3 Plus<br /><code>SKU 100065276</code></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
+    <td align="center" valign="top">
+      <p><strong>reSpeaker XVF3800 4-Mic Array 44mm with XIAO ESP32-S3 Plus</strong><br />
+      <code>SKU 100066841</code><br />
+      PCBA with pre-soldered XIAO ESP32-S3 Plus, I2S firmware</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+    <td align="center" valign="top">
+      <p><strong>reSpeaker XVF3800 4-Mic Array 44mm with Case &amp; XIAO ESP32-S3 Plus</strong><br />
+      <code>SKU 100065276</code><br />
+      PCBA + enclosure + pre-soldered XIAO ESP32-S3 Plus</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
+</div>
 
 ## Features
 

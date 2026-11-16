@@ -5,6 +5,23 @@
 export const communityList_cv = [
   {
     "name": {
+      "en": "4K Industrial Vision Benchmark on Jetson Orin Nano and Orin NX"
+    },
+    "img": "https://files.seeedstudio.com/wiki/other/rugged-benchmark-front.png",
+    "URL": {
+      "en": "https://wiki.seeedstudio.com/jetson-orin-industrial-vision-benchmark"
+    },
+    "category": {
+      "en": []
+    },
+    "description": {
+      "en": "Measure four-stream 4K industrial video analytics on Jetson Orin Nano 8GB and Orin NX 16GB with TensorRT YOLO, NVDEC, H.264 encoding, power, latency, and thermal monitoring."
+    },
+    "lastUpdated": "11/13/2026",
+    "author": "Dayu"
+  },
+  {
+    "name": {
       "en": "AI NVR with Jetson Orin",
       "zh": "基于 Jetson Orin 的 AI NVR",
       "ja": "Jetson OrinによるAI NVR",
@@ -813,7 +830,7 @@ export const communityList_gen = [
   },
   {
     "name": {
-      "en": "Build a Local AI Agent on Jetson Orin with Laya and Qwen",
+      "en": "Local Browser Agent on Jetson Orin",
       "zh": "在 Jetson Orin 上使用 Laya 和 Qwen 构建本地 AI Agent",
       "ja": "Jetson Orin 上で Laya と Qwen を使ってローカル AI エージェントを構築する",
       "es": "Crea un agente de IA local en Jetson Orin con Laya y Qwen",

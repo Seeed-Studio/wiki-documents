@@ -8,7 +8,7 @@ keywords:
   - 4 mic array
   - xmos voice
   - usb microphone array
-image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_board_overview.jpg
+image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png
 slug: /respeaker_44mm_introduction
 sku: 100040880,100020767,100066841,100065276,100052499
 last_update:
@@ -20,7 +20,9 @@ url: https://wiki.seeedstudio.com/respeaker_44mm_introduction/
 ---
 # Getting Started with reSpeaker XVF3800 44mm 4-Mic Array
 
-{/* TODO: Banner}
+{/* TODO: replace the case render below with a dedicated banner when available */}
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XVF3800 44mm 4-Mic Array with case" width={600} height="auto" /></p>
 
 The reSpeaker XVF3800 4-Mic Array 44mm is a compact, circular voice-processing module built around the XMOS XVF3800 audio processor, designed for speech recognition, voice control, smart assistants, and robotics. Four PDM MEMS microphones are arranged in a ring with a **44 mm pitch**, giving 360° far-field capture in a board that is noticeably smaller than the 66 mm-pitch reSpeaker XVF3800 Circular 4-Mic Array, while keeping the same XMOS processing platform and the same audio quality.
 
@@ -30,66 +32,85 @@ The module runs the full XVF3800 voice pipeline — Acoustic Echo Cancellation (
 
 {/* TODO: replace the five href="#" values with the Seeed Studio product page URLs once they are published. */}
 
-<table align="center">
+<div class="table-center">
+<table>
   <tr>
-    <th>Variant</th>
-    <th>SKU</th>
-    <th>Contents</th>
-    <th>Order</th>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm</strong></td>
-    <td><code>100040880</code></td>
-    <td>Single PCBA, USB firmware pre-flashed</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case</strong></td>
-    <td><code>100020767</code></td>
-    <td>PCBA + enclosure</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With XIAO ESP32S3 Plus</strong></td>
-    <td><code>100066841</code></td>
-    <td>PCBA + XIAO ESP32-S3 Plus</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case and XIAO ESP32S3 Plus</strong></td>
-    <td><code>100065276</code></td>
-    <td>PCBA + enclosure + XIAO ESP32-S3 Plus</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
-  </tr>
-  <tr>
-    <td><strong>reSpeaker Sound Base</strong></td>
-    <td><code>100052499</code></td>
-    <td>5 W 4 Ω speaker, 1200 mAh battery, USB-C charging, power switch</td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="#" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-    </div></td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm</strong><br />
+      <code>SKU 100040880</code><br />
+      Single PCBA, USB firmware pre-flashed</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case</strong><br />
+      <code>SKU 100020767</code><br />
+      PCBA + enclosure</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm With XIAO ESP32S3 Plus" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With XIAO ESP32S3 Plus</strong><br />
+      <code>SKU 100066841</code><br />
+      PCBA + XIAO ESP32-S3 Plus</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
+</div>
 
-{/* TODO(image): add a product render per variant — see wiki_44mm_images/README.txt */}
+<div class="table-center">
+<table>
+  <tr>
+    <td align="center" width="320" valign="top">
+      {/* TODO(image): replace with the case + XIAO render once available */}
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case and XIAO ESP32S3 Plus" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker XMOS XVF3800 4 Mics Array 44mm With Case and XIAO ESP32S3 Plus</strong><br />
+      <code>SKU 100065276</code><br />
+      PCBA + enclosure + XIAO ESP32-S3 Plus</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+    <td align="center" width="320" valign="top">
+      <div style={{height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_sound_base.png" alt="reSpeaker Sound Base" style={{maxWidth: 300, maxHeight: 300}} />
+      </div>
+      <p><strong>reSpeaker Sound Base</strong><br />
+      <code>SKU 100052499</code><br />
+      5 W 4 Ω speaker, 1200 mAh battery, USB-C charging, power switch</p>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="#" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+</div>
 
 ## Features
 
@@ -173,7 +194,9 @@ The speaker expansion turns the microphone array into a standalone voice termina
 - A charging LED ring shows the battery percentage while charging and stays off when no battery is connected.
 - The switch only controls the output; charging continues with the switch off.
 
-{/* TODO(image): speaker_expansion.jpg — speaker expansion attached to the array */}
+{/* TODO(image): replace with a photo of the Sound Base attached to the array */}
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_sound_base.png" alt="reSpeaker Sound Base speaker expansion" width={300} height="auto" /></p>
 
 ### Pinout
 

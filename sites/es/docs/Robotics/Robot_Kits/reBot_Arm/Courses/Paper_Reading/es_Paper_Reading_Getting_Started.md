@@ -7,17 +7,17 @@ keywords:
   - B601-DM
   - B601-RS
   - SO101
-  - Robotic Arm
-  - Physical AI
-  - Course
+  - Brazo Robótico
+  - IA Física
+  - Curso
   - Tutorial
   - SO-ARM101
   - LeRobot
   - Hugging Face
-  - Arm
-  - Robotics
-  - Paper Deep-Dive
-  - Hands-on Deployment
+  - Brazo
+  - Robótica
+  - Análisis Profundo de Artículos
+  - Despliegue Práctico
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /robotics/paper_reading_getting_started
 displayed_sidebar: PaperReadingSidebar
@@ -39,16 +39,16 @@ import '/src/css/paper-reading-style.css';
   <aside className="paper-reading-support" aria-label="Support the open-source project">
     <div>
       <strong>Cursos gratuitos, juntos en código abierto</strong>
-      <p>Este curso es completamente gratuito. Para apoyar nuestro trabajo, ¡dale una estrella a nuestro brazo robótico de código abierto!</p>
+      <p>Este curso es completamente gratuito. Para apoyar nuestro trabajo, ¡por favor dale una estrella a nuestro brazo robótico de código abierto!</p>
     </div>
-    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Dar estrella en GitHub</a>
+    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Star on GitHub</a>
   </aside>
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
-    <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
+    <span className="paper-reading-eyebrow">SEEED STUDIO · ROBÓTICA IA</span>
     <h1 id="paper-reading-title">Análisis Profundo de Artículos de IA Física y Reproducción Práctica</h1>
-    <p className="paper-reading-lead">Explora la investigación de vanguardia en IA Física, desglosa modelos y algoritmos clave con brazos robóticos de Seeed</p>
-    <p>Un <strong>curso que siempre será gratuito</strong>, cuidadosamente desarrollado por el equipo de SeeedStudio AI Robotics, acompañado del <strong>brazo robótico reBot 100% de código abierto, disponible para uso comercial y reproducción</strong>. ¡Complétalo y conviértete en la próxima persona experta en robótica!</p>
+    <p className="paper-reading-lead">Explora la investigación más avanzada en IA Física, desglosa modelos y algoritmos clave con brazos robóticos de Seeed</p>
+    <p>Un <strong>curso que siempre será gratuito</strong>, cuidadosamente desarrollado por el equipo de Robótica IA de SeeedStudio, junto con el <strong>brazo robótico reBot 100% de código abierto, disponible para uso comercial y reproducción</strong>. ¡Complétalo y conviértete en la próxima persona experta en robótica!</p>
     <ul className="paper-reading-badges" aria-label="Course features">
       <li>Siempre gratuito</li>
       <li>100% código abierto · Uso comercial</li>
@@ -90,9 +90,9 @@ import '/src/css/paper-reading-style.css';
     </section>
 
     <section className="paper-reading-directory-panel" aria-labelledby="paper-reading-papers-title">
-      <h2 id="paper-reading-papers-title">Análisis Profundo de Artículos</h2>
+      <h2 id="paper-reading-papers-title">Análisis Profundos de Artículos</h2>
       <p>Lee artículos por tema, desde políticas básicas de aprendizaje por imitación hasta modelos de visión-lenguaje-acción.</p>
-      <h3>Parte 1 · Fragmentación de Acciones y Políticas Multitarea</h3>
+      <h3>Parte 1 · Segmentación de Acciones y Políticas Multitarea</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/es/robotics/paper_reading_act/">ACT — Manipulación Bimanual de Bajo Costo</a></li>
         <li><a href="/es/robotics/paper_reading_multi_task_dit/">LBM / MultiTask DiT — Preentrenamiento Multitarea</a></li>
@@ -102,9 +102,9 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/es/robotics/paper_reading_smolvla/">SmolVLA — Modelos de Visión-Lenguaje-Acción Asequibles</a></li>
         <li><a href="/es/robotics/paper_reading_evo1/">Evo-1 — VLA Ligero</a></li>
       </ul>
-      <h3>Parte 3 · Modelos Fundacionales de Robots π</h3>
+      <h3>Parte 3 · Modelos Fundacionales Robóticos π</h3>
       <ul className="paper-reading-directory-list">
-        <li><a href="/es/robotics/paper_reading_pi0/">π₀ — Control de Robots de Propósito General</a></li>
+        <li><a href="/es/robotics/paper_reading_pi0/">π₀ — Control Robótico de Propósito General</a></li>
         <li><a href="/es/robotics/paper_reading_pi0_fast/">π₀-FAST — Tokenización de Acciones Eficiente</a></li>
         <li><a href="/es/robotics/paper_reading_pi05/">π₀.₅ — Generalización en Mundo Abierto</a></li>
       </ul>
@@ -115,12 +115,13 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/es/robotics/paper_reading_wall_oss/">WALL-OSS — Razonamiento Incorporado y Control de Robots</a></li>
         <li><a href="/es/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Acciones Entre Cuerpos y Percepción Futura</a></li>
         <li><a href="/es/robotics/paper_reading_dm05/">DM0.5 — Contexto Histórico y Alineación de Trayectorias</a></li>
+        <li><a href="/es/robotics/paper_reading_g05/">G0.5 — Razonamiento y Acción en una Sola Secuencia</a></li>
       </ul>
-      <h3>Parte 5 · Modelos del Mundo y Aprendizaje de Video-Acción</h3>
+      <h3>Parte 5 · Modelos del Mundo y Aprendizaje Video-Acción</h3>
       <ul className="paper-reading-directory-list">
         <li><a href="/es/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisión por Video y Modelos del Mundo Latentes</a></li>
         <li><a href="/es/robotics/paper_reading_lingbot_va/">LingBot-VA — Modelado Causal del Mundo y Control de Robots</a></li>
-        <li><a href="/es/robotics/paper_reading_gr00t_2/">GR00T 2 — Modelado Conjunto de Mundo y Acción</a></li>
+        <li><a href="/es/robotics/paper_reading_gr00t_2/">GR00T 2 — Modelado Conjunto Mundo-Acción</a></li>
       </ul>
       <h3>Parte 6 · Evaluación Unificada y Resumen de Investigación</h3>
       <span className="paper-reading-update-badge">
