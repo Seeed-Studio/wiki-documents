@@ -58,37 +58,10 @@ Power off the carrier board before installing or removing modules or wiring head
 
 ## Heatsink Installation
 
-To ensure stable heat dissipation during long-term operation, you can install a heatsink on the reComputer J601 Carrier Board.
+Refer to the video tutorial below for instructions on installing the heatsink.
 
-**Materials needed:**
-
-- thermal silicone pad
-- heatsink with fan
-- reComputer J601 Carrier Board
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png" alt="Heatsink, fan, thermal pad, and J601 carrier board for installation" loading="lazy" />
-    <figcaption>Heatsink, fan, thermal pad, and J601 carrier board for installation</figcaption>
-  </figure>
-</div>
-
-**Step 1.** Attach the thermal silicone pad to the contact point between the heatsink and the carrier board.
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png" alt="Copper heatsink plate with the blue thermal pads applied, next to the J601 carrier board" loading="lazy" />
-    <figcaption>Thermal silicone pad positioned at the heatsink contact point</figcaption>
-  </figure>
-</div>
-
-**Step 2.** Connect the heatsink and the carrier board.
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png" alt="Heatsink and fan attached to the J601 carrier board" loading="lazy" />
-    <figcaption>Heatsink and fan attached to the J601 carrier board</figcaption>
-  </figure>
+<div className="video-container" style={{paddingBottom: '42.75%'}}>
+  <iframe width="2103" height="899" src="https://www.youtube.com/embed/_NuenzpgHug" title="Heatsink Installation for reComputer J601 Carrier Board" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
 </div>
 
 ## USB
