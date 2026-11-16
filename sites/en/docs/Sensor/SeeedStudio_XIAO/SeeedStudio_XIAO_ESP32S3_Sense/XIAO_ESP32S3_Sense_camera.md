@@ -571,32 +571,6 @@ void setup() {
   
   camera_sign = true; // Camera initialization check passes
 
-  // --- OV5640 auto-focus init (a key step missing from factory firmware; without it the lens defaults out of focus) ---
-  sensor_t *s = esp_camera_sensor_get();
-  if (s && s->id.PID == OV5640_PID) {
-    Serial.println("OV5640 detected, initializing auto-focus...");
-    // Switch to SXGA for focusing (the AF firmware needs >=1280x1024 to evaluate contrast)
-    if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) != 0) {
-      Serial.println("WARN: cannot set SXGA for AF focus, captures will be out of focus");
-    } else if (!ov5640.start(s)) {
-      Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
-      s->set_framesize(s, config.frame_size); // restore the capture framesize
-    } else {
-      int r1 = ov5640.focusInit();                       // load focus firmware, 0 = success
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // enable continuous auto-focus
-      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
-      if (r1 == 0 && r2 == 0 && waitForOv5640Focus()) {
-        Serial.println("OV5640 AF ready.");
-      } else {
-        Serial.println("ERROR: OV5640 AF setup failed; captures will be out of focus.");
-      }
-      // Restore the capture framesize
-      if (s->set_framesize(s, config.frame_size) != 0) {
-        Serial.println("WARN: cannot restore capture framesize");
-      }
-    }
-  }
-
   // Initialize SD card
   if(!SD.begin(21)){
     Serial.println("Card Mount Failed");
@@ -924,31 +898,6 @@ void setup() {
   }
   Serial.println("Camera ready");
   camera_sign = true; // Camera initialization check passes
-
-  // --- OV5640 auto-focus init (OV5640 only; fixed-focus modules are skipped) ---
-  // A key step missing from factory firmware: esp_camera_init does not set up AF,
-  // so the OV5640 defaults to an out-of-focus lens.
-  // In RGB565 mode do not switch to SXGA (it would overflow the fb buffer);
-  // rely on the OV5640's internal full-size image for focus evaluation.
-  sensor_t *s = esp_camera_sensor_get();
-  if (s && s->id.PID == OV5640_PID) {
-    Serial.println("OV5640 detected, initializing auto-focus...");
-    if (!ov5640.start(s)) {
-      Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
-    } else {
-      int r1 = ov5640.focusInit();                       // load focus firmware, 0 = success
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // enable continuous auto-focus
-      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
-      if (r1 == 0 && r2 == 0) {
-        waitForOv5640Focus();
-      } else {
-        Serial.println("ERROR: OV5640 AF setup failed; captures will be out of focus.");
-      }
-    }
-  } else {
-    Serial.printf("PID=0x%04X (not OV5640), AF skipped - fixed-focus module works as-is.\n",
-                  s ? s->id.PID : 0);
-  }
 
   // Display initialization
   tft.init();
@@ -1412,22 +1361,7 @@ void setup() {
   // --- OV5640 Heat Optimization: lower IO drive (0x302C bit[7:6] 11->00) ---
   if (s && s->id.PID == OV5640_PID) {
     s->set_reg(s, 0x302C, 0xC0, 0x00);
-  }
-  // --- OV5640 auto-focus init (OV5640 only; fixed-focus modules are skipped) ---
-  if (s && s->id.PID == OV5640_PID) {
-    Serial.println("OV5640 detected, initializing auto-focus...");
-    if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) == 0 && ov5640.start(s)) {
-      int r1 = ov5640.focusInit();
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;
-      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
-      if (r1 == 0 && r2 == 0) waitForOv5640Focus();
-      s->set_framesize(s, config.frame_size);  // restore the capture framesize
-    } else {
-      Serial.println("WARN: OV5640 AF setup failed, skipped");
-      s->set_framesize(s, config.frame_size);
-    }
-  }
-  // initial sensors are flipped vertically and colors are a bit saturated
+  }  // initial sensors are flipped vertically and colors are a bit saturated
   if (s->id.PID == OV3660_PID) {
     s->set_vflip(s, 1);        // flip it back
     s->set_brightness(s, 1);   // up the brightness just a bit
