@@ -1,50 +1,50 @@
 ---
-description: 本wiki专注于使用J501载板配合GMSL扩展板在Jetson AGX Orin上的多摄像头系统中执行AI视频分析任务。首先，它列出了包括硬件模块和所需JetPack SDK在内的先决条件。然后，详细介绍了GMSL摄像头配置过程，如创建和设置配置脚本以及systemd服务。接下来，展示了如何通过下载和安装必要的软件包、导出TensorRT模型以及运行Python脚本来快速部署YOLO11进行八个摄像头的实时目标检测。之后，解释了如何安装VGGT环境并运行脚本进行八个摄像头的3D重建，并说明了鱼眼摄像头畸变对结果的影响。最后，提供了有用的资源以及技术支持和产品讨论的多个渠道。
-title: 基于Jetson AGX Orin的多GMSL摄像头实时目标检测和3D重建
+description: "在搭载 J501 载板的 Jetson AGX Orin 上运行 8 路 GMSL2 相机：相机配置、YOLO11 TensorRT 检测以及 VGGT 三维重建。"
+title: 基于 Jetson AGX Orin 的多路 GMSL 相机实时目标检测与三维重建
 keywords:
   - j501 carrier board
   - j501
   - multiple cameras
   - GMSL Camera
-  - Computer Vision
-  - application
+  - 计算机视觉
+  - 应用
   - Jetson Agx Orin
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo1.webp
 slug: /multiple_cameras_with_jetson
 sku: 101090101, 102991855, 102991854, E24081601, 206001693, 206001694
 last_update:
-  date: 06/30/2025
+  date: 11/06/2026
   author: Zibo
 createdAt: '2025-06-27'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/cn/multiple_cameras_with_jetson/
 ---
 
 <div style={{ textAlign: "justify" }}>
-本wiki将使用reServer Industrial J501载板配合GMSL扩展板来介绍如何在多摄像头系统中部署实时目标检测和3D重建。
+在一块 Jetson AGX Orin 上连接八路 GMSL2 相机，使用 YOLO11 进行检测，并由 VGGT 三维重建从同一视频流中读取数据。该方案已在搭载 JetPack 6.2 的 reServer Industrial J501 载板及其 J501-GMSL 扩展板上完成验证。完成全部步骤后，你将获得一个相机配置脚本、一个可处理八路视频流的 TensorRT YOLO11 构建，以及一条 VGGT 重建流水线。
 </div>
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>NVIDIA Jetson AGX Orin模块</th>
-        <th>reServer Industrial J501载板</th>
-        <th>reServer Industrial J501-GMSL扩展板</th>
+        <th>NVIDIA Jetson AGX Orin 模组</th>
+        <th>reServer Industrial J501 载板</th>
+        <th>reServer Industrial J501-GMSL 扩展板</th>
     </tr>
     <tr>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="NVIDIA Jetson AGX Orin 模组俯视图" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/9/0/900-13701-0040-000-3t_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="reServer Industrial J501 载板俯视斜视图" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
         <td>
             <div style={{textAlign:'center'}}>
-                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
+                <img alt="reServer Industrial J501-GMSL 扩展板俯视斜视图" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991855-reserver-industrial-j501-gmsl-extension-board-45font.jpg" style={{width:250, height:'auto'}}/>
             </div>
         </td>
     </tr>
@@ -74,24 +74,28 @@ url: https://wiki.seeedstudio.com/cn/multiple_cameras_with_jetson/
   </table>
 </div>
 
-## 前提条件
+## 前置条件
 
-- NVIDIA Jetson AGX Orin 模块 32GB/64GB
-- 已刷入最新的 [JetPack 6.2 SDK](https://wiki.seeedstudio.com/cn/reserver_j501_getting_started/#prepare-the-jetpack-image)（支持 GMSL 扩展板）
+- NVIDIA Jetson AGX Orin 模组 32GB/64GB
+- 已刷写最新的 [JetPack 6.2 SDK](https://wiki.seeedstudio.com/cn/reserver_j501_getting_started/#prepare-the-jetpack-image)（支持 GMSL 扩展板）
 - reServer Industrial J501 载板
 - reServer Industrial J501-GMSL 扩展板
-- [GMSL 摄像头](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
+- [GMSL Camera](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
 
-## GMSL 摄像头配置
+:::note
+本教程面向 JetPack 6.2 和 CUDA 12.6，下面提供的 wheel 构建也都是针对这一环境编译的。[J501 刷机指南](/cn/reserver_j501_getting_started/) 目前只列出了 JetPack 5.x 和 6.x 的镜像，因此目前尚未为该载板提供 JetPack 7.x 镜像路径的文档。
+:::
+
+## GMSL 相机配置
 
 ## 硬件连接
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
+  <img alt="连接了 GMSL 扩展板和八路 GMSL 相机的 J501，FAKRA 线缆标记为 CAM0 到 CAM7" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
-为了获取 GMSL 摄像头的输入，我们需要首先配置串行器和解串器的格式。将它们添加到系统启动脚本中，以便每次系统启动时都能自动配置。
+为了从 GMSL 相机获取输入，我们首先需要配置串行器和解串器的格式。将这些配置加入系统启动脚本，这样每次系统启动时就能自动完成配置。
 </div>
 
 **步骤 1.** 创建配置脚本：
@@ -124,7 +128,7 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
 media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_3":0[fmt:YUYV8_1X16/1920x1536]'
 ```
 
-**步骤 3.** 为 media-setup.sh 添加执行权限:
+**步骤 3.** 为 media-setup.sh 添加执行权限：
 
 ```bash
 chmod +x media-setup.sh
@@ -148,6 +152,7 @@ RemainAfterExit=true
 [Install]
 WantedBy=multi-user.target
 ```
+
 **步骤 5.** 保存并退出后，启用该服务：
 
 ```bash
@@ -157,7 +162,7 @@ sudo systemctl enable mediactl-init.service
 sudo systemctl start mediactl-init.service
 ```
 
-**步骤 5.** 重启设备并检查服务是否正在运行：
+**步骤 6.** 重启设备并检查服务是否正在运行：
 
 ```bash
 sudo systemctl status mediactl-init.service
@@ -174,24 +179,24 @@ gst-launch-1.0 v4l2src device=/dev/video7  ! xvimagesink -ev
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
+  <img alt="八个 gst-launch-1.0 窗口，每个对应一路 GMSL 相机，分别显示带有各自时间戳叠加的实时画面" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/time_speed.gif"/>
 </div>
 
 :::info
-我们的 GMSL 扩展板支持多达 8 个摄像头视频输入，并提供小于 1ms 的 PTP 时间戳精度，以确保 8 个视频数据流的同步。
+我们的 GMSL 扩展板最多支持 8 路相机视频输入，并提供小于 1ms 精度的 PTP 时间戳，以确保 8 路视频数据流的同步。
 :::
 
-## 快速部署 YOLO11 进行八个摄像头的实时目标检测
+## 快速部署 YOLO11，实现八路相机的实时目标检测
 
 <div style={{ textAlign: "justify" }}>
-YOLOv11 是 Ultralytics 发布的实时目标检测模型，在速度、精度和效率之间提供了强大的平衡。YOLOv11 采用改进的架构和训练策略设计，在性能和部署灵活性方面都优于以前的版本。它特别适合边缘设备、自主系统和工业 AI 应用，支持检测、分割和跟踪等任务，具有高可靠性。
+YOLOv11 是 Ultralytics 发布的一款实时目标检测模型，在速度、精度和效率之间实现了强大的平衡。通过改进的网络结构和训练策略，YOLOv11 在性能和部署灵活性方面都优于以往版本。它尤其适合边缘设备、自动化系统和工业 AI 应用，能够以高可靠性支持检测、分割和跟踪等任务。
 </div>
 
-### 安装 YOLO11 并运行多摄像头目标检测
+### 安装 YOLO11 并运行多路相机目标检测
 
-**步骤 1.** 下载并安装必要的软件包：
+**步骤 1.** 下载并安装所需软件包：
 :::note
-以下软件包是为带有 CUDA 12.6 的 JetPack 6.2 构建的。
+以下软件包是针对 JetPack 6.2 和 CUDA 12.6 构建的。
 :::
 
 [onnxruntime_gpu-1.22.0-cp310-cp310-linux_aarch64.whl](https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/869/e41abdc35e093/onnxruntime_gpu-1.22.0-cp310-cp310-linux_aarch64.whl#sha256=869e41abdc35e09345876f047fce49267d699df3e44b67c2518b0469739484ff)
@@ -217,7 +222,7 @@ pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 pip install ultralytics
 ```
 
-Export the TensorRT model:
+导出 TensorRT 模型：
 
 ```bash
 yolo export model=./models/yolo11n.pt format=engine device=0 half=True dynamic=True
@@ -225,7 +230,7 @@ yolo export model=./models/yolo11n-seg.pt format=engine device=0 half=True dynam
 yolo export model=./models/yolo11n-pose.pt format=engine device=0 half=True dynamic=True
 ```
 
-运行以下 Python 脚本可以快速在八个摄像头上执行目标检测：
+运行以下 Python 脚本可以快速对八路摄像头进行目标检测：
 
 <details>
 <summary> detect.py </summary>
@@ -277,7 +282,7 @@ def capture_thread(index):
         p_time = current_time
         cv2.putText(annotated, f"FPS: {fps:.2f}", (10, 25),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1, cv2.LINE_AA)
-        
+
         with locks[index]:
             frames[index] = annotated
 
@@ -320,20 +325,20 @@ if __name__ == "__main__":
 </details>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
+  <img alt="Multi-Camera window running YOLO11 on eight streams with FPS and box labels, beside jetson_release and jtop output" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo_1.gif"/>
 </div>
 
 <div style={{ textAlign: "justify" }}>
-J501 配备了 NVIDIA AGX Orin 模块，拥有极高的计算能力。它可以处理多达 8 个摄像头，并加载三种不同检测任务的模型，实现实时目标检测。
+J501 搭载 NVIDIA AGX Orin 模块，具备极高的算力。它可以同时处理多达 8 路摄像头，并加载三个不同检测任务的模型，实现实时目标检测。
 </div>
 
 ## 快速部署 VGGT 进行 3D 重建
 
 <div style={{ textAlign: "justify" }}>
-VGGT 是一个专为复杂环境中的 3D 理解和推理而设计的视觉语言模型。它结合多视角图像和语言输入来生成详细的 3D 场景表示，并回答关于环境的空间或语义问题。基于 transformer 架构构建，VGGT 在视觉定位、3D 目标定位和语言引导导航等任务中表现出色，使其非常适合机器人和具身 AI 应用。
+VGGT 是一款面向复杂环境中 3D 理解与推理的视觉-语言模型。它结合多视角图像和语言输入，生成详细的 3D 场景表示，并回答关于环境的空间或语义问题。基于 Transformer 架构构建，VGGT 在视觉定位、3D 目标定位以及语言引导导航等任务中表现出色，非常适合用于机器人和具身智能等应用场景。
 </div>
 
-### 安装 VGGT 环境并使用多摄像头运行 3D 重建
+### 安装 VGGT 环境并使用多路摄像头运行 3D 重建
 
 ```bash
 git clone https://github.com/facebookresearch/vggt.git
@@ -342,7 +347,7 @@ pip install -r requirements.txt
 pip install -r requirements_demo.txt
 ```
 
-运行以下脚本在八个摄像头上快速执行3D重建：
+运行以下脚本可以快速对八路摄像头进行 3D 重建：
 
 <details>
 <summary> demo.py </summary>
@@ -712,7 +717,7 @@ def main():
 
     images = load_and_preprocess_images(images).to(device)
     print(f"Preprocessed images shape: {images.shape}")
-    
+
     print("Running inference...")
     dtype = torch.bfloat16 if torch.cuda.get_device_capability()[0] >= 8 else torch.float16
 
@@ -759,21 +764,48 @@ if __name__ == "__main__":
 </details>
 
 :::info
-运行这个 Python 脚本并打开浏览器访问 viser 服务器。vggt 模型的加载时间可能会稍长一些，请耐心等待。
-如果您在远程服务器上运行此脚本，请将 `localhost` 替换为服务器的 IP 地址。
+运行此 python 脚本并打开浏览器访问 viser 服务器。vggt 模型的加载时间可能会稍长一些，请耐心等待。
+如果你在远程服务器上运行此脚本，请将 `localhost` 替换为服务器的 IP 地址。
 http://`localhost`:8080
 :::
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
+  <img alt="Terminal output of viser starting on port 8080 with its HTTP and WebSocket URLs" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/server.png"/>
 </div>
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
+  <img alt="Viser browser view of the point cloud reconstructed from eight cameras, showing a laptop and desk surface" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/3D_r_1080.gif"/>
 </div>
 
 :::note
-由于我们使用的是鱼眼相机，畸变严重，畸变校正后的图像质量较差，这会影响最终的 3D 建模结果。如果您使用畸变较小且图像质量更高的相机，效果会有所改善。
+由于我们使用的摄像头是畸变较严重的鱼眼摄像头，畸变矫正后的图像质量较差，这会影响最终的 3D 建模效果。如果你使用畸变更小、图像质量更高的摄像头，效果会有所提升。
 :::
+
+## 常见问题
+
+**J501 一次可以驱动多少个 GMSL 摄像头？**
+八个。J501-GMSL 扩展板在 reServer Industrial J501 载板上提供了八路摄像头输入，该载板适用于 32GB 和 64GB 的 AGX Orin 模块。一旦 `mediactl-init.service` 运行，这些视频流会被枚举为 `/dev/video0` 到 `/dev/video7`。
+
+**每次重启后需要重新配置摄像头吗？**
+不需要。串行器和解串器的格式保存在 `media-setup.sh` 中，该脚本被注册为 `mediactl-init.service` systemd 单元，并会在启动时重新应用这些配置。如果某个摄像头不再出现，请先查看 `systemctl status mediactl-init.service`，再考虑修改脚本。
+
+**这八路视频流是时间同步的吗？**
+是的。扩展板在其八路输入之间提供了低于 1 ms 的 PTP 时间戳精度，这也是为什么八个 `gst-launch-1.0` 窗口会显示相同的毫秒级叠加信息。这对 3D 重建非常重要，因为需要各个视角在时间上对齐。
+
+**此构建目标对应哪个 JetPack 版本？**
+JetPack 6.2 和 CUDA 12.6。YOLO11 章节中链接的预编译 wheel —— `onnxruntime_gpu` 1.22.0、`torch` 2.7.0 和 `torchvision` 0.22.0，均为 cp310 —— 都是针对这一组合构建的，因此如果使用不同的 JetPack，需要从 Jetson AI Lab 索引中获取匹配的 wheel，而不是使用本页提供的这些。
+
+**为什么重建出来的点云看起来很粗糙？**
+演示用摄像头是畸变很大的鱼眼镜头，而脚本中的 `defisheye` 矫正在 VGGT 看到图像之前就已经损失了一部分图像质量。换用畸变更小、光学质量更好的摄像头，在不改变其余处理流程的前提下，就能得到更稠密、更干净的点云。
+
+## 相关资源
+
+- [为 reServer Industrial J501 刷写 JetPack](/cn/reserver_j501_getting_started/)
+- [reServer Industrial J501 载板接口](/cn/j501_carrier_board_interfaces_usage/)
+- [Sensing GMSL Camera](/cn/sensing_gmsl_cameras)
+- [在 Jetson Orin 上使用 YOLOv11 与深度摄像头进行距离测量](/cn/yolov11_with_depth_camera/)
+- [在 Jetson 上高效部署多任务视觉推理引擎](/cn/deploy_visual_perception_engine_recomputer/)
+- [reServer Industrial J501 产品页面](https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html)
+- [wiki-documents 仓库与讨论](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
 ## 资源
 
@@ -782,7 +814,7 @@ http://`localhost`:8080
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

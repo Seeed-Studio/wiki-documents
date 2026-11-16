@@ -1,5 +1,5 @@
 ---
-description: 本文档提供了使用 Isaac ROS AprilTag 的分步指南。
+description: "如何在 Jetson 上用 NVIDIA Isaac ROS 检测 AprilTag：环境配置、运行检测流程，并将位姿用于机器人感知。"
 title: Isaac ROS AprilTag
 keywords:
   - NVIDIA

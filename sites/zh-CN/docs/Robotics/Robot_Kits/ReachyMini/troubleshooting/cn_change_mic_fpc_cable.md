@@ -1,5 +1,6 @@
 ---
 description: 更换Reachy Mini麦克风组件中损坏的FPC线缆的分步教程。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 更换麦克风FPC线缆
 slug: /reachymini_troubleshooting_change_mic_fpc_cable
 keywords:

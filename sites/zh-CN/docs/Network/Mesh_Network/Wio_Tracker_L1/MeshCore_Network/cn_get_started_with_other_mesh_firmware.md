@@ -1,5 +1,5 @@
 ---
-description: 通过 Web USB 或拖放方式在 Wio Tracker L1 Pro 上烧录 MeshCore 固件的指南，以及在应用中配置 LoRa 区域、GPS 和发送消息的步骤。
+description: 通过 Web USB 或拖放方式在 Wio Tracker L1 Pro 上烧录 MeshCore 固件的指南，以及在应用中配置 LoRa 区域、GPS 和发送消息。
 title: MeshCore 入门
 keywords:
   - Meshcore
@@ -8,10 +8,10 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 10/16/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2026-02-28'
-updatedAt: '2026-10-16'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 ---
 
@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
 使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。
 
 :::warning
-请在数据传输过程中保持 USB 线连接，否则设备可能会损坏。
+在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
 前往 [Meshcore Web Flasher](https://meshcore.io/flasher)。
@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Erase Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU 模式。
+如果你点击了 `Erase Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU。
 
 如果你看到 "Flashing erase firmware:100%"，说明设备已成功擦除。
 
@@ -66,7 +66,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU 模式。
+如果你点击了 `Flash` 但没有响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU。
 
 当进度条完全填满时，表示 Flash 已完成。然后设备会自动重启。
 
@@ -77,7 +77,7 @@ import TabItem from '@theme/TabItem';
 使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。
 
 :::warning
-请在数据传输过程中保持 USB 线连接，否则设备可能会损坏。
+在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
 前往 [Meshcore Web Flasher](https://meshcore.io/flasher)。
@@ -96,7 +96,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `TRACKER L1` 的磁盘弹出。
+双击 RST 按钮手动进入 DFU 模式。10~15 秒后你会看到一个名为 `TRACKER L1` 的磁盘弹出。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -104,7 +104,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-固件成功烧录后，该磁盘会消失。此时设备中没有固件，所以设备 `不会` 自动重启。
+固件成功烧录后，该磁盘会消失。此时设备中没有固件，所以设备 `NOT` 会自动重启。
 
 #### 烧录固件
 
@@ -116,7 +116,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/CompanionUF2Download.png" alt="pir" width={800} height="auto" /></p>
 
-双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `TRACKER L1` 的磁盘弹出。
+双击 RST 按钮手动进入 DFU 模式。10~15 秒后你会看到一个名为 `TRACKER L1` 的磁盘弹出。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -133,7 +133,7 @@ import TabItem from '@theme/TabItem';
 将电源开关向上拨动以开启设备。
 
 :::tip
-如果按下按钮时设备没有响应，请先为其充电。不要使用快充充电器。
+如果按下按钮设备没有响应，请先为其充电。不要使用快充充电器。
 :::
 
 ### 获取 APP
@@ -148,7 +148,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
 
-输入设备屏幕上显示的 PIN 码，然后点击 `Pair` 以连接设备。
+输入设备屏幕上显示的 pin 码，然后点击 `Pair` 以连接设备。
 
 :::tip
 如果连接失败，请打开手机的蓝牙列表并 `forget` 或 `Unpair` 该设备，然后再尝试重新连接。
@@ -186,13 +186,13 @@ import TabItem from '@theme/TabItem';
 
 **区域列表**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**区域代码**|**描述**|**频率范围 (MHz)**|**占空比 (%)**|**功率限制 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902.0 - 928.0|100|30|
-|EU_868|European Union 868 MHz|869.4 - 869.65|10|27|
+|UNSET|未设置|N/A|N/A|N/A|
+|US|美国|902.0 - 928.0|100|30|
+|EU_868|欧盟 868 MHz|869.4 - 869.65|10|27|
 
-现在你已经在设备上设置了 LoRa 区域，可以继续配置任意[LoRa 参数](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general)以满足你的需求。
+现在你已经在设备上设置了 LoRa 区域，可以继续配置任意[LoRa 参数](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-常规)以满足你的需求。
 
 ### 配置 GPS
 
@@ -204,23 +204,23 @@ import TabItem from '@theme/TabItem';
 
 ### 配置蜂鸣器
 
-点击用户按钮三次来控制蜂鸣器的开启或关闭。
+连续按下用户按钮三次即可控制蜂鸣器的开启或关闭。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
 
 ### 配置传感器
 
-Wio Tracker L1 出厂时预装了 MeshCore 固件 `1.12`。通过内置 Grove 接口支持 Grove 传感器的功能是在固件 `1.13` 中加入的；最新版本为 `1.16`。
+Wio Tracker L1 出厂预装 MeshCore 固件 `1.12`。通过板载 Grove 接口对 Grove 传感器的支持是在固件 `1.13` 中加入的；当前最新版本为 `1.16`。
 
 :::note
 Grove 传感器需要固件 `1.13` 或更高版本。如果你的设备仍然运行出厂固件 `1.12`，请按照 [Method1 via Web Flasher](#method1-via-web-flasher) 操作，并选择最新版本。
 :::
 
-从 `1.13` 开始，这就为环境传感器的直接集成打开了大门——温度、湿度、空气质量等——都可以通过 L1 内置的 Grove 接口实现，无需焊接或额外硬件。将兼容的 Grove 传感器插入该接口后，它会被自动识别。
+从 `1.13` 版本开始，这就为环境传感器的直接集成打开了大门——温度、湿度、空气质量等——都可以通过 L1 的板载 Grove 接口接入，无需焊接或额外硬件。将兼容的 Grove 传感器插入该接口后，它会被自动识别。
 
 ## 消息传输
 
-如果你有两台受支持的设备，并且你附近没有太多 MeshCore 用户，可以将两台设备都刷写为 BLE Companion 固件，这样你就可以使用这些设备与附近的朋友和家人进行通信。
+如果你有两台受支持的设备，并且你附近没有太多 MeshCore 用户，可以将两台设备都刷写为 BLE Companion 固件，这样你就可以用这些设备与附近的朋友和家人进行通信。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Frame.png" alt="pir" width={900} height="auto" /></p>
 
@@ -228,7 +228,7 @@ Grove 传感器需要固件 `1.13` 或更高版本。如果你的设备仍然运
 
 MeshCore 允许你手动广播你的姓名、位置和公钥，这些信息也会被签名以防止伪造。当你点击 advert 按钮时，它会通过 LoRa 广播这些数据。MeshCore 将此称为 Advert。Advert 有两种方式：“zero hop”和“flood”。
 
-- **Zero hop** 表示你的 advert 只会广播给能听到它的设备，仅此而已。
+- **Zero hop** 表示你的 advert 只会被广播给能听到它的设备，仅此而已。
 - **Flooded** 表示它会被广播出去，然后由所有听到它的中继器重复转发。
 
 你可以在 APP 上发送 advert，也可以直接在设备的 advert 页面上发送。
@@ -245,16 +245,26 @@ MeshCore 允许你手动广播你的姓名、位置和公钥，这些信息也�
 
 ## 常见问题
 
-### 设备变砖与 Bootloader 恢复 {#device-bricked--bootloader-installation}
+### 固件更新失败 / OTA 恢复
 
-**说明：**
+如果你的 Wio Tracker L1 在固件更新后没有响应，请尝试以下操作：
 
-设备没有响应，没有 LED 指示灯，无法与你的应用配对。如果你在刷写自定义固件后发现设备完全失效，你也可以尝试重新安装 bootloader。
+1. 使用 USB 数据线将设备连接到电脑，并双击 Reset 按钮以[手动进入 DFU 模式](#unable-to-enter-dfu--entering-dfu-mode-manually)。
+2. 如果出现 UF2 盘符，请按照 [Firmware Flashing](#firmware-flashing) 指南重新安装合适的应用固件。
+3. 如果设备仍然无法恢复，但可以看到 DFU 串口，请按照 [Device Bricked & Bootloader Recovery](#device-bricked--bootloader-installation) 操作，然后重新安装应用固件。
+
+如果设备无法进入 DFU 模式，或电脑无法识别设备，请联系技术支持。
+
+### 设备变砖 & Bootloader 恢复 {#device-bricked--bootloader-installation}
+
+**问题描述：**
+
+设备没有响应，没有 LED 指示灯，无法与你的应用配对。如果你在刷写自定义固件后发现设备完全“死机”，也可以尝试重新安装 bootloader。
 
 Bootloader 通过 USB 串口（Serial DFU）使用 `adafruit-nrfutil` 进行恢复。
 
 :::danger note
-在刷写过程中，请保持线缆连接稳定，并且 **不要** 断开连接——即使串口号发生变化也不要断开。
+在刷写过程中，请保持线缆连接稳定，**不要**断开连接——即使串口号发生变化也不要断开。
 :::
 
 **步骤 1：准备工作**
@@ -262,7 +272,7 @@ Bootloader 通过 USB 串口（Serial DFU）使用 `adafruit-nrfutil` 进行恢�
 - 一台 Wio Tracker L1 系列设备（L1 / L1 Pro）
 - 一根已知良好的 USB 数据线（不是仅充电线）
 - 一台安装了 Python 3 和 pip 的 Windows、macOS 或 Linux 电脑
-- Bootloader 压缩包：[点击此处下载 Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) —— 不要解压 ZIP；`adafruit-nrfutil` 会直接使用它
+- Bootloader 压缩包：[点击此处下载 Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) —— 不要解压 ZIP；`adafruit-nrfutil` 会直接使用该文件
 
 **步骤 2：安装 adafruit-nrfutil**
 
@@ -311,7 +321,7 @@ pipx install adafruit-nrfutil
 pipx ensurepath
 ```
 
-在 Fedora 上，使用 `sudo dnf install pipx` 而不是 apt。重新打开终端，然后进行验证：
+在 Fedora 上，请使用 `sudo dnf install pipx` 而不是 apt。重新打开终端，然后进行验证：
 
 ```
 adafruit-nrfutil version
@@ -326,12 +336,12 @@ adafruit-nrfutil version
 
 **步骤 3：检查串口**
 
-记下设备的串口——下面的示例会因电脑不同而有所差异：
+记下设备的串口号——下面的示例会因电脑不同而有所差异：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-打开 **Device Manager → Ports (COM & LPT)**，例如：
+打开 **设备管理器 → 端口 (COM 和 LPT)**，例如：
 
 ```
 USB Serial Device (COM43)
@@ -373,7 +383,7 @@ ls /dev/ttyACM*
 adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p COM43 -b 115200 --singlebank --touch 1200
 ```
 
-如果 ZIP 不在终端当前文件夹中，请将其完整路径传给 `--package`，例如 `"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`。
+如果 ZIP 文件不在当前终端所在的文件夹中，请将其完整路径传给 `--package`，例如 `"C:\path\to\wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip"`。
 
 </TabItem>
 
@@ -396,7 +406,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 **步骤 5：处理串口变化**
 
-`--touch 1200` 会将设备重启到 DFU 模式，因此串口通常会发生变化，第一次命令可能会以类似下面的回溯信息结束：
+`--touch 1200` 会将设备重启到 DFU 模式，因此串口通常会发生变化，第一次命令可能会以类似下面的 traceback 结束：
 
 ```
 Touched serial port COM43
@@ -404,11 +414,11 @@ Touched serial port COM43
 FileNotFoundError: could not open port 'COM43'
 ```
 
-这并不是失败——设备已经在新的端口上进入 DFU 模式。例如，在测试的 Windows 电脑上，它从 `COM43` 变为 `COM45`：
+这并不是失败——设备已经在新的串口上进入 DFU 模式。例如，在测试用的 Windows 电脑上，它从 `COM43` 变成了 `COM45`：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="DFU serial port after re-enumeration in Windows Device Manager" width={600} height="auto" /></p>
 
-**保持 USB 线缆连接。** 找到新的端口（刷新 **Device Manager → Ports (COM & LPT)**，或重新运行 `ls /dev/cu.*` / `ls /dev/ttyACM*`），然后在新端口上再次刷写，这一次不要使用 `--touch 1200`：
+**保持 USB 线缆连接。** 找到新的串口（刷新 **设备管理器 → 端口 (COM 和 LPT)**，或重新运行 `ls /dev/cu.*` / `ls /dev/ttyACM*`），然后在新的串口上再次刷写，这一次不要使用 `--touch 1200`：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -442,7 +452,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="adafruit-nrfutil output ending with Device programmed" width={600} height="auto" /></p>
 
-之后，电脑上会出现一个 UF2 盘（截图来自测试用的 Windows 电脑）。其卷标会随 bootloader 构建版本而变化——测试设备显示为 `XIAO-BOOT`——这并不是通过/失败的判断标准；不要根据驱动器名称或 `INFO_UF2.TXT` 来判断结果：
+之后，你的电脑上会出现一个 UF2 盘符（截图来自测试用的 Windows 电脑）。其卷标会随 bootloader 构建版本而变化——测试设备显示为 `XIAO-BOOT`——这并不是通过/失败的判断标准；请不要根据盘符名称或 `INFO_UF2.TXT` 来判断结果。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/05_uf2_drive.png" alt="UF2 drive appears after bootloader flashing" width={600} height="auto" /></p>
 
@@ -452,28 +462,28 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 恢复 bootloader 并不会重新安装应用固件——在你再次刷写之前，设备仍然没有可用的固件。
 :::
 
-完成上述步骤后，请按照 [Firmware Flashing](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#firmware-flashing) 操作来刷写应用固件。
+完成上述步骤后，请按照 [Firmware Flashing](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#firmware-flashing) 操作，刷写应用固件。
 
 **故障排查**
 
-- 安装后无法识别 `adafruit-nrfutil`：将 Python 用户脚本目录添加到 PATH 中（Windows 为 `Scripts`，macOS 为用户主目录下的 `bin`）；在 Linux 上，执行 `pipx ensurepath` 后请重新打开终端。
-- 端口忙 / 访问被拒绝：关闭串口监视器、Web Flasher 标签页、Arduino IDE 或任何占用该端口的程序。
-- 在 `Touched serial port ...` 之后出现 `FileNotFoundError: could not open port ...`：设备已经在新的端口上进入 DFU 模式——请参考步骤 5。
+- 安装后无法识别 `adafruit-nrfutil`：将 Python 用户脚本目录添加到 PATH 中（Windows 为 `Scripts`，macOS 为主目录下的 `bin`）；在 Linux 上，执行 `pipx ensurepath` 后重新打开终端。
+- 端口忙 / 访问被拒绝：关闭串口监视器、网页刷写器标签页、Arduino IDE 或其他占用该端口的程序。
+- 在 `Touched serial port ...` 之后出现 `FileNotFoundError: could not open port ...`：设备已在新的端口进入 DFU 模式——请参考步骤 5。
 - 无法进入 DFU 模式：请参阅 [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#unable-to-enter-dfu--entering-dfu-mode-manually)。
 
 **手动 DFU 恢复**
 
-如果 `--touch 1200` 无法让设备进入 DFU 模式（例如固件完全无响应），请手动进入：连接设备，双击按下 `Reset`（黄色 LED 常亮），像步骤 3 那样找到 DFU 串口，然后在该串口上运行步骤 5 的命令，但不要加 `--touch 1200`。成功效果与步骤 6 相同。
+如果 `--touch 1200` 无法让设备进入 DFU 模式（例如固件完全无响应），请手动进入：连接设备，双击 `Reset`（黄色 LED 常亮），按照步骤 3 查找 DFU 串口，然后在该端口上运行步骤 5 的命令，但不要带 `--touch 1200`。成功效果与步骤 6 相同。
 
 ### 无法进入 DFU 与手动进入 DFU 模式
 
-将设备连接到电脑并双击按下 `Reset` 按钮——黄色 LED 将保持常亮，并且在电脑上会出现一个 DFU 串口。
+将设备连接到电脑并双击 `Reset` 按钮——黄色 LED 常亮，并且电脑上会出现一个 DFU 串口。
 
-要在此模式下烧录 bootloader，请参考 [设备变砖与 Bootloader 恢复](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#device-bricked--bootloader-installation)，但跳过 `--touch 1200`——设备已经处于 DFU 模式。
+要在此模式下刷写 bootloader，请参考 [Device Bricked & Bootloader Recovery](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#device-bricked--bootloader-installation)，但跳过 `--touch 1200`——设备已经处于 DFU 模式。
 
 ### 退出 DFU 模式
 
-单击 `Reset` 按钮一次即可退出 DFU 模式。
+按一次 `Reset` 按钮即可退出 DFU 模式。
 
 ### 设备自动关机
 
@@ -482,7 +492,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 - 设备开机后，过一段时间会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中……
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中……
 
 #### 故障排查
 
@@ -490,7 +500,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方法进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方法进行恢复出厂设置。
 
 - [Flash Erase](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#flash-erase-1) 固件
 

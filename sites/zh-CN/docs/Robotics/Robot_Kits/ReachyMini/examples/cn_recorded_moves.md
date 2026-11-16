@@ -1,5 +1,6 @@
 ---
 description: 示例演示如何从数据集播放Reachy Mini的录制移动，包括舞蹈、情绪或自定义数据集。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 录制移动
 slug: /reachymini_examples_recorded_moves
 keywords:

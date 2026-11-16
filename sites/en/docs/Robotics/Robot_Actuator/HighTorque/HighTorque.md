@@ -1,5 +1,5 @@
 ---
-description: This document will introduce how to quickly get started with the HighTorque series motors.
+description: "Getting started with HighTorque actuators for robotic arms: unboxing, wiring, power requirements, first power-on and quick tests."
 title: HighTorque SDK
 keywords:
   - Joint Module

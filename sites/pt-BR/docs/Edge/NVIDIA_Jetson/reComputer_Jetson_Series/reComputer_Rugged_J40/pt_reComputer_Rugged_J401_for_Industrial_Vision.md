@@ -1,5 +1,5 @@
 ---
-description: Explore quatro aplicações de visão computacional para empilhadeiras industriais usando o reComputer Rugged J401, incluindo rastreamento de alvo, alerta de área traseira, monitoramento do motorista e gravação de vídeo.
+description: "Quatro aplicações de visão para empilhadeiras no reComputer Rugged J401: rastreamento frontal, alerta traseiro, monitoramento do motorista e gravação multicâmera."
 title: reComputer Rugged J401 para Visão Industrial
 keywords:
   - reComputer Rugged J401
@@ -32,14 +32,14 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 ## Introdução
 
-Empilhadeiras industriais trabalham em docas de carregamento, armazéns, pátios externos, câmaras frias e áreas de lavagem. Poeira, água, vibração, variações de temperatura e cobertura de rede instável tornam esses locais difíceis para um computador convencional. Um sistema de visão veicular precisa de hardware selado, conectores seguros, alimentação estável para as câmeras e capacidade de computação local suficiente para processar vídeo no próprio veículo.
+Empilhadeiras industriais trabalham em docas de carga, armazéns, pátios externos, câmaras frias e áreas de lavagem. Poeira, água, vibração, mudanças de temperatura e cobertura de rede instável tornam esses locais difíceis para um computador convencional. Um sistema de visão veicular precisa de hardware selado, conectores seguros, alimentação estável para as câmeras e capacidade de computação local suficiente para processar vídeo no próprio veículo.
 
-Este wiki apresenta várias maneiras de usar visão computacional em empilhadeiras industriais. O exemplo usa o reComputer Rugged J401 como controlador de borda. Seu gabinete IP66, conectores M12, resistência à vibração, quatro portas PoE e Jetson Orin NX permitem que ele fique próximo às câmeras e execute as cargas de trabalho de visão localmente.
+Empilhadeiras industriais trabalham em condições com poeira, lavagem e câmaras frias, portanto o sistema de visão precisa ir a bordo do veículo em vez de ficar em um rack. O reComputer Rugged J401 coloca um gabinete IP66, conectores M12, quatro portas PoE e um Jetson Orin NX na empilhadeira. Seu gabinete IP66, conectores M12, resistência a vibração, quatro portas PoE e Jetson Orin NX permitem que ele fique próximo às câmeras e execute as cargas de trabalho de visão localmente.
 
-O exemplo abrange quatro tarefas práticas: rastrear um objeto selecionado à frente da empilhadeira, monitorar a área cega traseira, verificar fadiga do motorista e uso de capacete, e gravar imagens para revisão posterior. As quatro são gerenciadas a partir de um único console web.
+O exemplo abrange quatro tarefas práticas: rastrear um objeto selecionado à frente da empilhadeira, monitorar o ponto cego traseiro, verificar fadiga do motorista e uso de capacete, e gravar imagens para revisão posterior. As quatro são gerenciadas a partir de um único console web.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="Banner do reComputer Rugged: a unidade em um armazém ao lado de uma empilhadeira, com rótulos Driver Monitoring, Collision Warning, Object Perception, IP66 Protection e Real-Time Edge AI" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -66,7 +66,7 @@ Este projeto é um protótipo de assistência, não um sistema de segurança fun
 Este caso usa duas câmeras POE de 48 V e uma câmera USB. Dependendo de diferentes cenários, essas câmeras podem ser livremente substituídas.
 ### Conexão de hardware
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="Duas câmeras PoE conectadas via Ethernet ao Rugged J401, com seus conectores M12 e antenas Wi-Fi" />
 </div>
 
 ### Rastreamento de alvo na visão frontal
@@ -74,7 +74,7 @@ Este caso usa duas câmeras POE de 48 V e uma câmera USB. Dependendo de diferen
 Durante o manuseio de paletes, o operador pode precisar manter uma determinada carga ou área de trabalho em vista enquanto a empilhadeira se move. A aplicação frontal usa EfficientTAM para rastreamento por clique-para-segmentar. O operador seleciona um alvo no vídeo, e o sistema segue seu contorno nos quadros posteriores.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="Bloco de segmentação frontal: o alvo clicado mascarado em verde, com o controle Clear target e o seletor de câmera USB" />
 </div>
 
 
@@ -82,31 +82,31 @@ Este é um rastreamento interativo, não reconhecimento automático de objetos. 
 
 ### Alerta de área traseira
 
-O contrapeso e o mastro deixam grandes áreas cegas ao redor de uma empilhadeira. Uma câmera PoE voltada para trás usa Depth Anything V2 para estimar a profundidade da cena e um detector de pessoas para monitorar a área de trabalho atrás do veículo. A interface informa `SAFE`, `WARNING` ou `DANGER` de acordo com os limites de distância configurados.
+O contrapeso e o mastro deixam grandes pontos cegos ao redor de uma empilhadeira. Uma câmera PoE voltada para trás usa Depth Anything V2 para estimar a profundidade da cena e um detector de pessoas para monitorar a área de trabalho atrás do veículo. A interface informa `SAFE`, `WARNING` ou `DANGER` de acordo com os limites de distância configurados.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="Bloco de alerta traseiro: inserção de profundidade, moldura de perigo e o status STOP com NEAREST 0.6 m" />
 </div>
 
 :::note
 A estimativa de profundidade monocular tem limitações. A distância real não é confiável. É necessário ajustar o limite de alarme com base nas condições e requisitos do local!
 :::
 
-### Monitoramento do motorista e de EPI
+### Monitoramento do motorista e EPI
 
-Uma câmera na cabine pode verificar condições que não são visíveis do lado de fora. Os pontos de referência faciais do MediaPipe fornecem sinais relacionados à fadiga, enquanto um modelo separado verifica o uso de capacete. Quando o algoritmo do modelo detecta fadiga do motorista durante a operação, ele ativa uma luz de alerta para avisar o motorista e evitar grandes acidentes de segurança causados por direção fatigada.
+Uma câmera na cabine pode verificar condições que não são visíveis do lado de fora. Pontos de referência faciais do MediaPipe fornecem sinais relacionados à fadiga, enquanto um modelo separado verifica o uso de capacete. Quando o algoritmo do modelo detecta fadiga do motorista durante a operação, ele ativa uma luz de alerta para avisar o motorista e evitar grandes acidentes de segurança causados por direção fatigada.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="Bloco de detecção na cabine: o motorista enquadrado com o rótulo PERSON 1 | HELMET: NOT WORN" />
 </div>
 
 
-### Gravação com múltiplas câmeras
+### Gravação multicâmera
 
 Podemos exibir imagens de monitoramento de diferentes perspectivas em um único painel, tornando conveniente monitorar a situação em tempo real.
 
 <div align="center">
-  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="Industrial forklift vision dashboard" />
+  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="Painel Forklift Vision Control com blocos de segmentação frontal, alerta traseiro e detecção na cabine, os limites de distância traseira e o fluxo de eventos unificado" />
 </div>
 
 
@@ -114,12 +114,12 @@ Podemos exibir imagens de monitoramento de diferentes perspectivas em um único 
 
 | Aplicação | Câmera | Método de visão |
 | --- | --- | --- |
-| Frontal | PoE RTSP | Rastreamento EfficientTAM clique-para-segmentar |
-| Traseira | PoE RTSP | Alerta de profundidade métrica Depth Anything V2 com estados `SAFE`, `WARNING`, `DANGER` e `SYSTEM ERROR` |
+| Frontal | PoE RTSP | Rastreamento por clique-para-segmentar com EfficientTAM |
+| Traseira | PoE RTSP | Alerta de profundidade métrica com Depth Anything V2 com estados `SAFE`, `WARNING`, `DANGER` e `SYSTEM ERROR` |
 | Cabine | USB UVC | Detecção de fadiga com MediaPipe e status de capacete |
 | Gravação | Qualquer câmera configurada | Gravação 1080p H.264 MP4 sem inferência de IA |
 
-O servidor FastAPI inicia e interrompe cada aplicação, impede que duas aplicações abram a mesma câmera e envia os fluxos de vídeo para o navegador. Modelos e câmeras permanecem inativos até serem solicitados, portanto uma aplicação não utilizada não ocupa memória da GPU.
+O servidor FastAPI inicia e interrompe cada aplicação, impede que duas aplicações abram a mesma câmera e envia os fluxos de vídeo para o navegador. Modelos e câmeras permanecem ociosos até serem solicitados, portanto uma aplicação não utilizada não ocupa memória de GPU.
 
 ## Implantar a aplicação de exemplo
 
@@ -154,7 +154,7 @@ MAX_JOBS=4 /home/seeed/workspace/seg_demo/.venv/bin/python setup.py install
 cd /home/seeed/workspace/seg_demo
 ```
 
-Aponte o ambiente virtual para os pacotes JetPack OpenCV e TensorRT e, em seguida, instale as dependências do projeto:
+Aponte o ambiente virtual para os pacotes OpenCV e TensorRT do JetPack e, em seguida, instale as dependências do projeto:
 
 ```bash
 SP="$(.venv/bin/python -c 'import site; print(site.getsitepackages()[0])')"
@@ -197,7 +197,7 @@ curl -fL --retry 3 -o checkpoints/yolov8n.pt \
 ```
 
 <details>
-<summary>Exportar os modelos ONNX e construir os mecanismos TensorRT</summary>
+<summary>Exportar os modelos ONNX e construir os engines TensorRT</summary>
 
 Crie `export_depth_onnx.py` na raiz do projeto:
 
@@ -259,7 +259,7 @@ curl -fL --retry 3 -o models/onnx/ppe_hard_hat.experimental.onnx \
   https://raw.githubusercontent.com/Sanaurrehmanarain/object-detection-yolov8/main/best.onnx
 ```
 
-Compile todos os três engines no J401. Os engines TensorRT são vinculados à arquitetura da GPU e à versão do TensorRT, portanto não copie engines compilados em outro computador.
+Compile os três engines no J401. Engines TensorRT são vinculados à arquitetura da GPU e à versão do TensorRT, portanto não copie engines compilados em outro computador.
 
 ```bash
 TRTEXEC=/usr/src/tensorrt/bin/trtexec
@@ -282,7 +282,7 @@ TRTEXEC=/usr/src/tensorrt/bin/trtexec
 
 ### Etapa 4. Instale o serviço e configure as câmeras
 
-Visualize as alterações do sistema antes de instalar o serviço:
+Visualize as alterações no sistema antes de instalar o serviço:
 
 ```bash
 sudo ./deploy/install.sh --dry-run
@@ -303,9 +303,9 @@ sudo systemctl start visual-hub
 curl -s http://127.0.0.1:8000/api/health
 ```
 
-## Teste os aplicativos
+## Experimente os aplicativos
 
-Abra o seguinte endereço a partir de um navegador na mesma LAN:
+Abra o seguinte endereço em um navegador na mesma LAN:
 
 ```text
 http://<Jetson-LAN-IP>:8000/
@@ -324,15 +324,15 @@ O primeiro carregamento do modelo leva vários segundos. Depois que um alvo é s
 
 ### Verifique a área de trabalho traseira
 
-Selecione a câmera PoE traseira e inicie o aplicativo traseiro. O painel de status alterna entre `SAFE`, `WARNING` e `DANGER` à medida que a distância estimada cruza os limites configurados.
+Selecione a câmera PoE traseira e inicie o aplicativo traseiro. O painel de status alterna entre `SAFE`, `WARNING` e `DANGER` conforme a distância estimada cruza os limites configurados.
 
 Antes de usar a distância exibida, defina os parâmetros intrínsecos da câmera, altura de montagem, inclinação e correção de distância em `configs/warning.yaml`. Uma câmera ou posição de montagem diferente exige uma nova calibração.
 
 ### Ative o monitoramento da cabine
 
-Selecione a câmera USB da cabine e inicie o aplicativo da cabine. As verificações de fadiga e capacete têm chaves separadas. Desative o caminho que não for necessário; o modelo correspondente não será carregado.
+Selecione a câmera USB da cabine e inicie o aplicativo da cabine. As verificações de fadiga e de capacete têm chaves separadas. Desative o caminho que não for necessário; o modelo correspondente não será carregado.
 
-Coloque a câmera onde o rosto do motorista fique visível sem bloquear a visão do operador. Teste-a sob as mesmas condições de iluminação usadas durante os turnos normais.
+Posicione a câmera de forma que o rosto do motorista fique visível sem bloquear a visão do operador. Teste-a sob as mesmas condições de iluminação usadas durante os turnos normais.
 
 
 Comandos úteis do serviço:
@@ -373,7 +373,7 @@ Para uma câmera ausente no seletor, verifique primeiro o inventário:
 curl -s http://127.0.0.1:8000/api/hub/cameras
 ```
 
-Adicione fontes RTSP extras a `HUB_EXTRA_CAMERAS` em `/etc/seg-demo/visual-hub.env`, ou insira a URL por meio da linha manual no seletor.
+Adicione fontes RTSP extras em `HUB_EXTRA_CAMERAS` em `/etc/seg-demo/visual-hub.env`, ou insira a URL por meio da linha manual no seletor.
 
 ## Segurança e limites do aplicativo
 
@@ -394,11 +394,18 @@ Adicione fontes RTSP extras a `HUB_EXTRA_CAMERAS` em `/etc/seg-demo/visual-hub.e
 - [3D File](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Rugged_asm.stp)
 - [Linux_for_Tegra Source Code](https://github.com/Seeed-Studio/Linux_for_Tegra)
 - [NVIDIA Jetson Devices Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
-- [Repositório do projeto rugged_cv_demo](https://github.com/zibochen6/rugged_cv_demo)
+- [rugged_cv_demo project repository](https://github.com/zibochen6/rugged_cv_demo)
 - [EfficientTAM](https://github.com/yformer/EfficientTAM)
 - [Depth Anything V2 Metric Indoor Small](https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf)
 - [MediaPipe Face Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker)
-- [Primeiros passos com reComputer Rugged J40](/jetson/recomputer_rugged_j401/getting_started/)
+- [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/pt-br/jetson/recomputer_rugged_j401/getting_started/)
+
+## Recursos relacionados
+
+- [Interfaces e pinagens do reComputer Robotics J401](/pt-br/recomputer_jetson_robotics_j401_getting_started/)
+- [Implementar comunicação EtherCAT no reComputer](/pt-br/recomputer_ethercat_communication/)
+- [PyCuVSLAM no reComputer](/pt-br/pycuvslam_recomputer_robotics/)
+- [Página do produto reComputer Rugged J401](https://www.seeedstudio.com/reComputer-Rugged-J401-p-6509.html)
 
 ## Suporte técnico e discussão sobre o produto
 

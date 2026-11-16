@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona un tutorial para servomotores Feetech.
+description: "Guía completa de servos de bus serie Feetech STS/SM: cableado, baud rate e ID, calibración, realimentación de posición y control en Python para proyectos SO-ARM y LeRobot."
 title: Feetech
 keywords:
   - actuador

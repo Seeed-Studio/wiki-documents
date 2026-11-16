@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra como acessar os dados do sensor IMU, incluindo acelerômetro, giroscópio, orientação por quaternions e temperatura, a partir do Reachy Mini sem fio.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Exemplo de IMU
 slug: /reachymini_examples_imu
 keywords:

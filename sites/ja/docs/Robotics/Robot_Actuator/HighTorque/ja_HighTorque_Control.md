@@ -1,5 +1,5 @@
 ---
-description: このWikiはHighTorqueモーター制御の完全ガイドを提供します
+description: "HighTorque アクチュエータ制御の完全ガイド：MIT モード、位置・速度モード、CAN コマンド、ロボットアーム関節向け Python SDK の例。"
 title: HighTorque Motor SDK
 keywords:
   - アクチュエータ

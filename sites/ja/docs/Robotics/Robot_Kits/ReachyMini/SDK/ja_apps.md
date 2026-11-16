@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini アプリの構築と公開に関する完全ガイド。アプリの作成、テスト、デバッグ、および Hugging Face Spaces への公開までを網羅します。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: アプリの構築と公開
 slug: /reachymini_sdk_apps
 keywords:

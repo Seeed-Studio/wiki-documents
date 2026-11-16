@@ -1,5 +1,6 @@
 ---
 description: Exemplo que apresenta diferentes movimentos no Reachy Mini, demonstrando vários padrões e sequências de movimento.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Demonstração de sequência
 slug: /reachymini_examples_sequence
 keywords:

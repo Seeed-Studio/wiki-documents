@@ -1,5 +1,5 @@
 ---
-description: Este documento presentará cómo comenzar rápidamente con los motores de la serie HighTorque.
+description: "Primeros pasos con los actuadores HighTorque para brazos robóticos: desembalaje, cableado, requisitos de alimentación, primer encendido y pruebas rápidas."
 title: HighTorque SDK
 keywords:
   - Módulo de articulación

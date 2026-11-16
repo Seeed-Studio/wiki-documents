@@ -1,6 +1,7 @@
 ---
 description: 端侧投放点垃圾分类——一次触发拍一张图，给出八个物料类别与中国生活垃圾四分类，经 MQTT 发出，并用 GPIO 回调驱动翻盖。含硬件构成、部署轮廓、输出契约与完整实测边界。
 title: 端侧垃圾分类方案：物料类别、中国四分类与 MQTT 输出
+sidebar_label: '端侧垃圾分类'
 keywords:
   - 垃圾分类
   - 端侧 AI 垃圾识别
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-waste-sorting/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -112,8 +113,8 @@ generated_from: sensecraft-solutions@cbbfa60
 
 | | 分类主机 | 加速器 | 当前下发的分类器 | 开放词汇 track | 什么时候选它 |
 |---|---|---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011（Jetson Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>基础边缘计算主机 | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 不提供 | 单个投放点、只跑基线分类器 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Jetson Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>大算力边缘计算主机 | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 提供（唯一提供它的设备类别） | 以后要在不重训的前提下加物品类别 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011（Jetson Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>基础边缘计算主机 | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 不提供 | 单个投放点、只跑基线分类器 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012（Jetson Orin NX 16GB）](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>大算力边缘计算主机 | Orin GPU | EfficientNet-Lite0 224²，TensorRT FP16 | 提供（唯一提供它的设备类别） | 以后要在不重训的前提下加物品类别 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>无风扇工业机箱 | Hailo-8 | EfficientNet-Lite0 224²，INT8 HEF | 不提供 | 已有摄像头、装控制柜；HEF 在设备外编译，部署时下载，Hailo 运行时版本必须对齐 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>高性价比工控板卡 | RK3588 NPU | EfficientNet-Lite0 224²，INT8 | 不提供 | 已有摄像头、硬件成本压到最低，装在桶体或自助终端里；模型在设备外转换，不在设备上构建引擎 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002（SG2002）](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>一体化智能相机 | 相机自带 TPU | EfficientNet-Lite0 224²，BF16 | 不提供 | 投放点还没有摄像头、硬件成本压到最低；分类器跑在相机上，不用另配主机 |

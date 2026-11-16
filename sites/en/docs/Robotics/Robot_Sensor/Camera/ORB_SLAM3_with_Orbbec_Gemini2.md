@@ -1,5 +1,5 @@
 ---
-description: This wiki provides detailed steps to set up and run ORB-SLAM3 algorithm on reComputer Jetson using an Orbbec Gemini2 RGB-D camera for advanced visual SLAM applications.
+description: "Run ORB-SLAM3 on reComputer J30/J40 with an Orbbec Gemini2: Orbbec SDK build, camera calibration and the monocular SLAM launch."
 title: ORB-SLAM3 with Orbbec Gemini2
 keywords:
   - ORB-SLAM3
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/orb_slam3_orbbec_gemini2/
 ---
 
 <div align="center">
-    <img width={400}
+    <img alt="Orbbec Gemini 2 RGB-D camera, angled view showing the depth and colour lenses and the mounting point" width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
@@ -37,7 +37,7 @@ The Orbbec Gemini 2 is a high-performance RGB-D camera featuring a dual-eye stru
 ## Introduction
 
 <div style={{ textAlign: "justify" }}>
-[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) is an advanced visual SLAM algorithm for monocular, stereo, and RGB-D cameras. It uses ORB features for robust tracking and mapping, supports loop closure and relocalization, and delivers high accuracy and efficiency for robotics, AR/VR, and autonomous navigation.This wiki provides comprehensive steps to set up and run ORB-SLAM3 on reComputer Jetson Series using an Orbbec Gemini2 RGB-D camera for advanced visual SLAM applications.
+[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) is an advanced visual SLAM algorithm for monocular, stereo, and RGB-D cameras. It uses ORB features for robust tracking and mapping, supports loop closure and relocalization, and delivers high accuracy and efficiency for robotics, AR/VR, and autonomous navigation.The steps below build ORB-SLAM3 on reComputer against the Orbbec SDK and Pangolin, patch the C++ clock calls, calibrate the Gemini 2, and launch the RGB-D mode.
 </div>
 
 ## Prerequisites
@@ -47,7 +47,7 @@ The Orbbec Gemini 2 is a high-performance RGB-D camera featuring a dual-eye stru
 - **[ROS2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/)** environment installed
 
 <div align="center">
-    <img width={700}
+    <img alt="reComputer J4012 badged NVIDIA Jetson Orin NX 16GB, the host used in this walkthrough" width={700}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
 </div>
 
@@ -78,7 +78,7 @@ cd ..
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Orbbec SDK example window showing the Gemini 2 colour and depth streams" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
@@ -175,7 +175,7 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Pangolin SimpleDisplay window opened to confirm the viewer library is installed" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/v_tool.png" />
 </div>
 
@@ -1058,7 +1058,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 :::note
 You can check whether the camera node can start normally by observing whether the camera data topic is published normally.
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list showing the Orbbec camera colour and depth topics" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
@@ -1091,12 +1091,12 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 
 Collect images from different angles, automatically calculate the camera parameters, and save the calibration data in a tooltip.
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator with the checkerboard corners detected on a fisheye camera and the CALIBRATE, SAVE and COMMIT buttons" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_tool.png" />
 </div>
 
 <div align="center">
-    <img width={1000}  
+    <img alt="Calibration YAML written to ~/.ros/camera_info/camera.yaml, with the camera matrix, distortion and rectification values" width={1000}  
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_save.png" />
 </div>
 
@@ -1200,7 +1200,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="ORB-SLAM3 running in RGB-D mode: live camera view, tracked features and the reconstructed map" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.gif" />
 </div>
 
@@ -1210,6 +1210,31 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 - [Orbbec ROS2 Driver](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [ORB-SLAM3 Repository](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 - [ROS SDK](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
+
+## FAQ
+
+**Which host and JetPack version does this build target?**
+A reComputer from the J30/J40 series (J4012 in the photos) with JetPack 6.2 and ROS 2 Humble, plus an Orbbec Gemini 2. ORB-SLAM3 itself is built from source on that machine, so the JetPack version decides which CUDA and OpenCV you compile against.
+
+**Does it run in monocular or RGB-D mode?**
+RGB-D. The launch command uses `Examples/RGB-D/rgbd_orbbec_gemini2` with the `Orbbec_Gemini2.yaml` parameter file, because the Gemini 2 publishes synchronized colour and depth streams and the depth stream removes the scale ambiguity of monocular SLAM.
+
+**Which Orbbec SDK version should I install?**
+SDK v2.4.11 for aarch64 (`OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64`). The CMakeLists example points at that path, so if you install a different version, update `set(ORBBEC_SDK_PATH ...)` to match.
+
+**The build fails with `monotonic_clock` errors. What do I change?**
+The guide replaces `std::chrono::monotonic_clock` with `std::chrono::steady_clock` in the ORB-SLAM3 sources and targets C++14 in CMakeLists. Both changes are needed on JetPack 6.2, where the C++ standard library no longer ships `monotonic_clock`.
+
+**Do I have to calibrate the camera before running SLAM?**
+Yes. Run `camera_calibration` with the 8×6 / 25 mm checkerboard, save the result, and copy the intrinsics into `Examples/RGB-D/Orbbec_Gemini2.yaml`. Tracking is unstable with the factory parameters.
+
+## Related Resources
+
+- [Orbbec Gemini 2 3D camera on ROS 2](/orbbec_gemini2/)
+- [Deploy Depth Anything V3 on Jetson AGX Orin](/deploy_depth_anything_v3_jetson_agx_orin/)
+- [PyCuVSLAM on reComputer](/pycuvslam_recomputer_robotics/)
+- [Orbbec Gemini 2 product page](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- [ORB-SLAM3 repository](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 
 ## Tech Support & Product Discussion
 

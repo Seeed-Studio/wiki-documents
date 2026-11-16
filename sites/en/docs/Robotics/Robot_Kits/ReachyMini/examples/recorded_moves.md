@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating how to play recorded moves from datasets including dances, emotions, or custom datasets for Reachy Mini.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Recorded Moves
 slug: /reachymini_examples_recorded_moves
 keywords:

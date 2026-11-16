@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um tutorial para o sensor WHEELTEC IMU.
+description: "Como usar o sensor IMU WHEELTEC: fiação, configuração do driver e leitura de dados para navegação de robôs e projetos de SLAM."
 title: WHEELTEC IMU Sensor
 keywords:
   - IMU

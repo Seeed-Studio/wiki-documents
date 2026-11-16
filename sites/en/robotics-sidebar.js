@@ -4,6 +4,9 @@
 
 const K = 'Robotics/Robot_Kits';
 
+// Beginner course jump group for the SO-ARM101 product sidebar.
+const soArmCourseLink = require('./soarm-course-sidebar').courseLink();
+
 const backToRobotics = () => ({
   type: 'ref',
   id: 'Edge_Robotics',
@@ -152,6 +155,7 @@ const sidebars = {
         { type: 'ref', id: `${K}/Lerobot/Lerobot_SO100Arm_New`, label: 'SO-ARM101', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_RS/reBot_Arm_B601_RS_Getting_Started`, label: 'reBot-RS', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/reBot_Arm/T701_HT/reBot_Arm_T701_HT_Getting_Started`, label: 'reBot Arm T701 HT', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/Lerobot_Starai_Arm`, label: 'Star AI Arm', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Hand/AmazingHand`, label: 'AmazingHand', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/Lerobot_Lekiwi`, label: 'Lekiwi', className: 'sideboard_calss' },
@@ -159,6 +163,19 @@ const sidebars = {
         { type: 'ref', id: `${K}/StackForce/StackForce_Giant_Bipedal_Wheeled_Robot`, label: 'Wheeled Robot', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Humanoid/Atom-S/Atom-S`, label: 'Humanoid Robot', className: 'sideboard_calss' },
       ]
+    },
+    {
+      type: 'category',
+      label: 'Courses',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/Arm_Tutorial_Introduction`, label: 'Beginner Course' },
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started`, label: 'Paper Deep-Dive' },
+        { type: 'ref', id: `${K}/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA/Sim2Real_VLA_Introduction`, label: 'Sim-to-Real VLA' },
+        { type: 'link', label: 'Sim-to-Real with NVIDIA Isaac', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+      ],
     },
     asReferences(actuatorCategory),
     asReferences(sensorCategory),
@@ -199,6 +216,7 @@ const sidebars = {
 
   SoArm101Sidebar: [
     backToRobotics(),
+    soArmCourseLink,
     {
       type: 'category',
       label: 'Quick Start & Tools',
@@ -275,6 +293,11 @@ const sidebars = {
         { type: 'doc', id: `${K}/ReachyMini/platforms/reachy_mini_lite/get_started`, label: 'Getting Started' },
       ],
     },
+  ],
+
+  T701HtSidebar: [
+    backToRobotics(),
+    `${K}/reBot_Arm/T701_HT/reBot_Arm_T701_HT_Getting_Started`,
   ],
 
   StackForceSidebar: [

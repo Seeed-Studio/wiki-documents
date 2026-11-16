@@ -1,5 +1,5 @@
 ---
-description: 在 NVIDIA Jetson 上部署使用 YOLO 目标检测和 VLM 行为分析的工业视觉监控演示
+description: 在 NVIDIA Jetson 上部署基于 YOLO 目标检测和 VLM 行为分析的工业视觉监控演示
 title: 工业场景下的工业视觉监控
 tags:
   - AI 模型部署
@@ -13,17 +13,24 @@ last_update:
   date: 07/14/2026
   author: HaoChen
 createdAt: '2026-07-13'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/cn/industrial_vision_monitoring_on_industrial_bk/
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
 
 # 工业场景下的工业视觉监控
 
 ## 介绍
 
-工业和工地安全依赖于实时了解现场正在发生的事情——而不是事后回看。摄像头无处不在，但大多数系统仍然依赖人工回放审查。**工业视觉 AI** 填补了这一空白：检测工人是否在场、是否佩戴了所需的 PPE（个人防护装备）、画面中是否出现不安全行为，然后在边缘侧立即发出告警。
+工业和工地安全依赖于实时了解现场正在发生的事情——而不是事后回看。摄像头无处不在，但大多数系统仍然依赖人工回放审查。**工业视觉 AI** 填补了这一空白：检测工人是否在场、是否佩戴必需的 PPE，以及画面中是否出现不安全行为，然后在边缘侧立即发出告警。
 
-本 wiki 在 Seeed 工业 Jetson 设备上部署一个参考性的**工业安全监控演示**。USB 摄像头将画面推流到浏览器；**YOLO** 负责人员和 PPE 检测，而 **VLM** 用于分析行为风险。这两类模型都可以互换——该仓库只是一个起点，而不是锁定在某个固定 checkpoint 上。
+本 Wiki 在 Seeed 工业 Jetson 设备上部署一个参考性的**工业安全监控演示**。USB 摄像头将画面推送到浏览器；**YOLO** 负责人员和 PPE 检测，**VLM** 负责行为风险分析。两类模型都可以替换——该仓库只是一个起点，而不是绑定到某个固定 checkpoint。
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -71,7 +78,7 @@ url: https://wiki.seeedstudio.com/cn/industrial_vision_monitoring_on_industrial_
 | YOLO | 人员检测（绿色框）以及缺少安全帽或反光背心等 PPE 违规（红色框） |
 | VLM | 场景级行为告警——使用手机、吸烟、跌倒、火焰/烟雾等 |
 
-在浏览器中打开 `http://<jetson-ip>:8080`，即可查看实时 WebRTC 视频、检测叠加层和告警信息流。
+在浏览器中打开 `http://<jetson-ip>:8080`，即可查看实时 WebRTC 视频、检测叠加层和告警流。
 
 ## 支持的硬件
 
@@ -84,7 +91,7 @@ url: https://wiki.seeedstudio.com/cn/industrial_vision_monitoring_on_industrial_
 | **摄像头** | USB UVC / V4L2 (`/dev/video*`) |
 
 :::note
-已在 **reComputer Industrial J4012** 和 **reServer Industrial J4011** 上使用 **JetPack 7.2** 进行测试。对于其他 Jetson 工业设备，只要 JetPack 版本匹配，即可使用相同步骤。
+已在 **reComputer Industrial J4012** 和 **reServer Industrial J4011** 上使用 **JetPack 7.2** 测试。对于其他 Jetson 工业设备，只要 JetPack 版本匹配，即可使用相同步骤。
 :::
 
 ## 安装
@@ -97,7 +104,7 @@ cd industrial-inspection
 ./run.sh
 ```
 
-`./run.sh` 会在缺失时复制 `.env`，下载模型，构建 Docker 镜像（首次运行 **15–30 分钟**），并启动容器。
+`./run.sh` 会在缺失时复制 `.env`，下载模型，构建 Docker 镜像（首次运行约 **15–30 分钟**），并启动容器。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_run.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -128,7 +135,7 @@ http://<jetson-ip>:8080
 有关轮子包来源，请参阅 [Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/cn/install_torch_on_recomputer/)。
 
 :::caution
-不要在 JetPack 或 CUDA 版本不同的设备之间复制 Docker 镜像。务必在目标 Jetson 上重新构建。
+不要在 JetPack 或 CUDA 版本不同的设备之间拷贝 Docker 镜像。务必在目标 Jetson 上重新构建。
 :::
 
 ### 可选的 `.env` 调优
@@ -143,19 +150,19 @@ CAMERA_PIPELINE=sw    # sw (default) or hw
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_ui_en.png" style={{width:900, height:'auto'}}/></div>
 
-摄像头推流开始前的空闲界面。
+摄像头画面开始推流前的空闲界面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_phone.png" style={{width:900, height:'auto'}}/></div>
 
-VLM 行为告警——在工作区域使用手机。
+VLM 行为告警——在作业区域使用手机。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_no_helmet.png" style={{width:900, height:'auto'}}/></div>
 
-YOLO PPE 告警——缺少安全帽。
+YOLO PPE 告警——未佩戴安全帽。
 
 ## 本演示中使用的模型
 
-默认发行版附带以下 checkpoint。你可以通过更新仓库配置和 `models/` 目录，将它们替换为其他 YOLO 或 VLM 模型。
+默认发行版内置以下 checkpoint。你可以通过更新仓库配置和 `models/` 目录，将它们替换为其他 YOLO 或 VLM 模型。
 
 | 角色 | 默认模型 | 文件 |
 | --- | --- | --- |
@@ -179,7 +186,7 @@ YOLO PPE 告警——缺少安全帽。
 | Docker 权限被拒绝 | 将用户加入 `docker` 组，或使用 `sudo docker` |
 | 首次构建较慢 | 正常现象（15–30 分钟）。在 JetPack 6.2 或更早版本上，请将轮子包放入 `wheels/` |
 | PyTorch / CUDA 不匹配 | 在目标 Jetson 上重新构建；不要复用来自其他 JetPack 的镜像 |
-| 容器中看不到摄像头 | 确认宿主机上存在 `/dev/video*`；`./run.sh` 会自动挂载检测到的摄像头 |
+| 容器中看不到摄像头 | 确认宿主机存在 `/dev/video*`；`./run.sh` 会自动挂载检测到的摄像头 |
 | 浏览器中无视频 | 使用 `docker ps` 检查 `industrial-go2rtc`；端口 `1984` 必须可访问 |
 
 ## 资源

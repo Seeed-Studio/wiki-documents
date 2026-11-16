@@ -1,5 +1,6 @@
 ---
 description: Complete guide to building and publishing Reachy Mini apps, covering app creation, testing, debugging, and publishing to Hugging Face Spaces.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Building & Publishing Apps
 slug: /reachymini_sdk_apps
 keywords:

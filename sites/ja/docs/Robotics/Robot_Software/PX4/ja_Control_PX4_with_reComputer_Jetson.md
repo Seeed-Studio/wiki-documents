@@ -1,5 +1,5 @@
 ---
-description: reComputer JetsonでPX4を制御する
+description: "reComputer Jetson で PX4 フライトコントローラーを制御する方法：配線、MAVLink のセットアップ、ドローンとロボット向けのオフボード制御例。"
 title: reComputer JetsonでPX4を制御する
 keywords:
   - NVIDIA

@@ -9,7 +9,7 @@ last_update:
   date: 09/10/2026
   author: Luki
 createdAt: '2025-07-25'
-updatedAt: '2026-09-11'
+updatedAt: '2026-09-10'
 url: https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1001/
 ---
 import Tabs from '@theme/Tabs';
@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 </div><br />
 
 :::tip Prueba demos sin configurar un entorno de desarrollo
-Si quieres previsualizar rápidamente los resultados de un proyecto o probar el firmware demo básico antes de configurar un entorno de desarrollo, abre el **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Puedes elegir un dispositivo compatible de la reTerminal E Serie y flashear el firmware demo directamente desde un navegador.
+Si quieres previsualizar rápidamente los resultados de proyectos o probar el firmware demo básico antes de configurar un entorno de desarrollo, abre el **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. Puedes elegir un dispositivo compatible de la reTerminal E Serie y flashear firmware de demostración directamente desde un navegador.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
@@ -36,17 +36,17 @@ Si quieres previsualizar rápidamente los resultados de un proyecto o probar el 
 :::
 
 :::caution Consejos para actualizar el firmware
-Recomendamos que **[completes la actualización de firmware de tu producto](#preliminary)** tan pronto como lo recibas para obtener la mejor experiencia.
+Recomendamos que **[completes la actualización de firmware de tu producto](#preliminar)** tan pronto como lo recibas para obtener la mejor experiencia.
 :::
 
 ## Introducción
 
-reTerminal E1001 es una pantalla ePaper monocroma de código abierto de 7,5 pulgadas con una excepcional duración de batería de 3 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz sin código SenseCraft Seeedash para una creación de paneles sencilla, y además es compatible con Home Assistant, TRMNL E-ink dashboard, Arduino y ESP-IDF para un desarrollo adicional. Ya sea para visualización de paneles de hogar inteligente, pantallas de oficina o proyectos educativos, este dispositivo Seeedash listo para usar ofrece imágenes atractivas y una personalización flexible en un único y elegante paquete.
+reTerminal E1001 es una pantalla ePaper monocroma de código abierto de 7,5 pulgadas con una excepcional autonomía de batería de 3 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de UI sin código SenseCraft Seeedash para una creación de paneles de control sin esfuerzo, y al mismo tiempo es compatible con Home Assistant, TRMNL E-ink dashboard, Arduino y ESP-IDF para un desarrollo adicional. Ya sea para visualización de paneles de hogar inteligente, pantallas de oficina o proyectos educativos, este dispositivo Seeedash listo para usar ofrece imágenes atractivas y una personalización flexible en un único y elegante paquete.
 
 ### Características
 
 - **Hermosa pantalla ePaper lista para usar**
-- **Ultrabajo consumo con 3 meses de duración de batería**
+- **Ultrabajo consumo con batería de 3 meses de duración**
 - **Diseño e implementación de UI sin código con SenseCraft Seeedash**
 - **Funciona con plataformas de software populares**
 - **Personalización flexible de hardware y software**
@@ -69,7 +69,7 @@ reTerminal E1001 es una pantalla ePaper monocroma de código abierto de 7,5 pulg
 		</tr>
 		<tr>
 			<td align="center"><strong>Almacenamiento</strong></td>
-			<td align="center">32MB Flash, compatible con tarjeta Micro SD</td>
+			<td align="center">Flash de 32MB, compatible con tarjeta Micro SD</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Pantalla</strong></td>
@@ -137,7 +137,7 @@ El hardware de reTerminal E1001 incluye:
 
 ## Primeros pasos
 
-### Preparativos
+### Preliminar
 
 **Paso 1.** Desempaqueta tu reTerminal E1001 y asegúrate de que todos los componentes estén incluidos:
 
@@ -146,7 +146,7 @@ El hardware de reTerminal E1001 incluye:
 - Guía de inicio rápido
 - Destornillador largo
 - Tornillos
-- Soporte impreso en 3D
+- Soporte de apoyo impreso en 3D
 
 **Paso 2.** (Opcional) Instala el soporte impreso en 3D para colocar el dispositivo en posición vertical:
 
@@ -169,7 +169,7 @@ La tarjeta SD de 32GB viene formateada como exFAT por defecto. Después de forma
 
 **Paso 4.** (Opcional) Instala los controladores USB si es necesario:
 
-Según tu sistema operativo, puede que necesites instalar controladores USB para garantizar una comunicación adecuada con tu reTerminal E1001:
+Según tu sistema operativo, es posible que necesites instalar controladores USB para garantizar una comunicación adecuada con tu reTerminal E1001:
 
 <Tabs>
 <TabItem value="Windows" label="Windows" default>
@@ -224,7 +224,7 @@ Por lo tanto, necesitamos completar los siguientes pasos de configuración de re
 **Paso 3.** Selecciona tu red Wi-Fi local e introduce la contraseña, luego haz clic en "Connect".
 
 :::note
-La pantalla ePaper reTerminal E Serie solo admite redes WiFi de 2,4GHz, no de 5GHz ni otras bandas.
+La pantalla ePaper reTerminal E Serie solo admite redes WiFi de 2,4GHz, no 5GHz ni otras bandas.
 :::
 
 **Paso 4.** Tras una conexión correcta, el dispositivo emitirá un pitido de confirmación y mostrará una pantalla con el código de emparejamiento.
@@ -245,7 +245,7 @@ La pantalla ePaper reTerminal E Serie solo admite redes WiFi de 2,4GHz, no de 5G
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/200.png" style={{width:600, height:'auto'}}/></div>
 
-**Paso 3.** Nombra tu dispositivo, introduce el código de emparejamiento que aparece en la pantalla de tu dispositivo y haz clic en **Create**.
+**Paso 3.** Nombra tu dispositivo, introduce el código de emparejamiento que se muestra en la pantalla de tu dispositivo y haz clic en **Create**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
@@ -319,7 +319,7 @@ También puedes comprobar manualmente la versión del firmware en cualquier mome
 
 1. **Select your device** — conecta el reTerminal E1001 a tu ordenador mediante el cable USB‑C, asegúrate de que el interruptor de encendido esté en **ON**, luego haz clic en **Select** y elige tu dispositivo de la lista.
 
-2. **Select firmware** — elige el firmware más reciente en el menú desplegable de opciones de lanzamiento.
+2. **Select firmware** — elige el firmware más reciente en el desplegable de opciones de versiones.
 
 3. **Flash** — haz clic en **Flash** y espera a que la actualización se complete. Activa **Full Flash** solo si quieres restablecer el dispositivo al estado de fábrica (se borrarán todos los datos, ajustes y diseños).
 
@@ -341,11 +341,11 @@ SenseCraft Seeedash tiene su propio Wiki dedicado con tutoriales completos y doc
 
 - **[SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
-Dado que este artículo es una **Guía de inicio** del producto, no repetiremos el mismo contenido aquí; a continuación solo se muestra cómo visualizar rápidamente algo en tu reTerminal E1001.
+Dado que este artículo es una **Guía de inicio rápido** del producto, no repetiremos el mismo contenido aquí; a continuación solo se muestra cómo visualizar rápidamente algo en tu reTerminal E1001.
 
 ### Home — Empieza desde una plantilla de la comunidad
 
-La forma más rápida de mostrar algo en tu pantalla es empezar desde una plantilla ya preparada. En la página **Home** de SenseCraft Seeedash encontrarás una colección grande y en continuo crecimiento de plantillas aportadas por la comunidad: paneles de control, relojes, paneles meteorológicos, muros de citas, calendarios, marcos de fotos y más. Explora la galería, elige el diseño que más te guste y desplíegalo en tu reTerminal E1001 con un solo clic.
+La forma más rápida de mostrar algo en tu pantalla es partir de una plantilla ya preparada. En la página **Home** de SenseCraft Seeedash encontrarás una colección amplia y en continuo crecimiento de plantillas aportadas por la comunidad: paneles de control, relojes, paneles meteorológicos, muros de citas, calendarios, marcos de fotos y más. Explora la galería, elige el diseño que más te guste y desplíegalo en tu reTerminal E1001 con un solo clic.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -360,9 +360,9 @@ La página **Workspace** es donde gestionas todas las páginas y el contenido qu
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/205.png" style={{width:1000, height:'auto'}}/></div>
 
-Una vez que tu diseño esté guardado, haz clic en **Deploy to Device**, selecciona tu reTerminal E1001 emparejado y el contenido se transmitirá de forma inalámbrica al dispositivo. La pantalla de tinta electrónica se actualizará para mostrar tu diseño, y podrás usar los botones de navegación izquierda/derecha del dispositivo para cambiar entre varias páginas si las has creado.
+Una vez que tu diseño esté guardado, haz clic en **Deploy to Device**, selecciona tu reTerminal E1001 emparejado y el contenido se transmitirá de forma inalámbrica al dispositivo. La pantalla de tinta electrónica se actualizará para mostrar tu diseño y podrás usar los botones de navegación izquierda/derecha del dispositivo para cambiar entre varias páginas si las has creado.
 
-Para todo lo demás —operaciones detalladas del editor, consejos y notas de lanzamiento— consulta el [SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
+Para todo lo demás —operaciones detalladas del editor, consejos y notas de versión— consulta el [SenseCraft Seeedash Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
 
 ## Manejo del dispositivo
 
@@ -374,7 +374,7 @@ El botón de actualización en la parte superior del dispositivo cumple varias f
 
 - **Pulsación corta**: Actualiza manualmente la pantalla y comprueba si hay contenido nuevo desde la plataforma SenseCraft. El zumbador emitirá un pitido para confirmar la acción. Este botón también se usa habitualmente para activar el dispositivo. Puedes usar este botón para despertar un dispositivo cuando ha entrado en suspensión y normalmente no hay disponible de inmediato un comando de actualización del panel de control para el dispositivo.
 
-- **Pulsación larga** (funcionalidad futura): Activará el modo de entrada por voz.
+- **Pulsación larga** (funcionalidad futura): Activará el modo de entrada de voz.
 
 ### Botones de navegación
 
@@ -392,16 +392,16 @@ Si necesitas conectarte a una red Wi‑Fi diferente:
 
 **Paso 1.** Mantén pulsados ambos botones de navegación (izquierdo y derecho) simultáneamente durante 2 segundos.
 
-**Paso 2.** El dispositivo entrará en modo de configuración Wi‑Fi y podrás seguir de nuevo los pasos de [Configuración de red](#configuración-de-red) para conectarte a una nueva red.
+**Paso 2.** El dispositivo entrará en modo de configuración Wi‑Fi y podrás seguir de nuevo los pasos de [Network Setup](#network-setup) para conectarte a una nueva red.
 
 ### Indicadores LED
 
 - **LED rojo**:
-  - Apagado: completamente cargado o sin cargar
+  - Apagado: Completamente cargado o sin cargar
   - Siempre encendido: cargando
 
 - **LED verde**:
-  - Encendido durante 30 segundos al arrancar: el dispositivo se está encendiendo
+  - Encendido durante 30 segundos al arrancar: El dispositivo se está encendiendo
 
 ### Funcionamiento con batería
 
@@ -425,10 +425,14 @@ El reTerminal E1001 incorpora un conector de expansión de 8 pines (J2) que prop
 
 El conector de expansión de 8 pines (J2) tiene la siguiente distribución de pines:
 
+:::note
+Al ver el dispositivo desde la parte trasera con el botón superior orientado hacia arriba, los pines del conector de expansión se numeran de abajo hacia arriba, empezando por el Pin 1 en la parte inferior y el Pin 8 en la parte superior.
+:::
+
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>Pin (de arriba a abajo)</th>
+   <th>Pin (de abajo hacia arriba)</th>
    <th>Etiqueta</th>
    <th>Pin ESP32-S3</th>
    <th>Función</th>
@@ -452,7 +456,7 @@ El conector de expansión de 8 pines (J2) tiene la siguiente distribución de pi
    <td>3</td>
    <td>ESP_IO46</td>
    <td>GPIO46</td>
-   <td>GPIO/ADC</td>
+   <td>GPIO</td>
    <td>Entrada/salida de propósito general con capacidad de entrada analógica</td>
   </tr>
   <tr>
@@ -534,7 +538,7 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 
 ### P3: La pantalla no se actualiza
 
-- Pulsa el botón de actualización para forzar una actualización manual
+- Pulsa el botón de actualización para activar manualmente una actualización
 - Verifica que el dispositivo esté conectado al Wi‑Fi (sin icono de desconexión en la esquina)
 - Comprueba tu cuenta de SenseCraft para asegurarte de que el panel de control esté desplegado correctamente
 - Si el problema persiste, intenta reiniciar el dispositivo

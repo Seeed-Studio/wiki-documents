@@ -645,12 +645,12 @@ OTA またはファームウェア更新に失敗した場合は、次の操作�
 | --- | --- |
 | 製品ページ | [reSpeaker Clip ウェアラブル AI レコーダー](https://www.seeedstudio.com/respeaker-clip-wearable-ai-recorder.html) |
 | SenseCraft Voice アプリのダウンロード | [ダウンロードページ](https://sensecraft-voice-download.seeed.cc/) |
-| ファームウェアのダウンロード | Coming soon |
+| ファームウェアのダウンロード | [ファームウェア](https://github.com/Seeed-Studio/reSpeaker_Clip/tags) |
 | ファームウェア SDK ドキュメント | [ファームウェア SDK 入門ガイド](/ja/respeaker_clip_firmware_quick_start) |
 | SDK リポジトリ | [reSpeaker Clip GitHub](https://github.com/Seeed-Studio/reSpeaker_Clip) |
 | ユーザーマニュアル | <a href="https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_user_manual.pdf" target="_blank" rel="noopener noreferrer">reSpeaker Clip ユーザーマニュアル</a> |
 | データシート | Coming soon |
-| 機械図面 | Coming soon |
+| 機械図面 | [STEP ファイル](https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_20260724.stp) |
 
 ## 技術サポート & 製品ディスカッション
 

@@ -1,5 +1,6 @@
 ---
 description: モーター制御、動作、状態管理のメソッドを含む ReachyMini メインクラスの完全な API リファレンス。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: ReachyMini API リファレンス
 slug: /reachymini_api_reachymini
 keywords:

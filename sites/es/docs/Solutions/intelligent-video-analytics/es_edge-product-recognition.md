@@ -1,13 +1,14 @@
 ---
-description: "Reconocimiento de productos de supermercado en el edge: un detector de una sola clase, una galería de embeddings que registra un nuevo SKU a partir de fotografías en lugar de una ejecución de entrenamiento, qué hardware necesita, cómo se despliega, los datos medidos por placa y los detalles de implementación para ingenieros"
-title: 'Reconocimiento de productos en el edge: construcción, despliegue y resultados medidos'
+description: Reconocimiento de productos de supermercado en el edge - un detector de una sola clase, una galería de embeddings que registra un nuevo SKU a partir de fotografías en lugar de una ejecución de entrenamiento, qué hardware necesita, cómo se despliega, los datos medidos por placa y detalles de implementación para ingenieros
+title: 'Reconocimiento de Productos en el Edge: Construcción, Despliegue y Resultados Medidos'
+sidebar_label: 'Edge Product Recognition'
 keywords:
   - reconocimiento de productos en el edge
   - reconocimiento de productos en caja sin código de barras
   - auditoría de estanterías con detección de huecos vacíos
   - registro de SKU sin reentrenamiento
   - galería de productos FAISS
-  - recuperación de imágenes con embedding ArcFace
+  - recuperación de imágenes embedding ArcFace
   - detector de una sola clase YOLOX
   - embedding DINOv2 INT8
   - paridad RKNN fp16
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/es/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -33,9 +34,9 @@ Los resultados de reconocimiento no son una medición legal y no pueden utilizar
 
 ## Qué hace esta solución
 
-Una cámara observa una cinta de caja o el frente de una estantería. Cada producto en el encuadre se encuadra, recorta, convierte en un vector de 512 dimensiones y se busca en una galería de SKUs registrados. En la caja, la salida es una cesta (SKU a cantidad, agregada por id de pista para que un artículo que pasa por la cámara se cuente una sola vez); en la estantería es un estado de hueco (ok, vacío, wrong_sku, desconocido, agregado por posición de planograma). Un mensaje MQTT por fotograma transporta los resultados.
+Una cámara observa una cinta de caja o el frente de una estantería. Cada producto en el encuadre se encuadra, recorta, convierte en un vector de 512 dimensiones y se busca en una galería de SKUs registrados. En la caja, la salida es una cesta (SKU-a-cantidad, agregada por id de pista para que un artículo que pasa por la cámara se cuente una sola vez); en la estantería es un estado de hueco (ok, vacío, wrong_sku, desconocido, agregado por posición de planograma). Un mensaje MQTT por fotograma transporta los resultados.
 
-Añadir un producto en tienda no requiere reentrenamiento: fotografía el nuevo SKU entre tres y ocho veces, envía las imágenes a la consola, y la galería obtiene una nueva versión inmutable. El detector es de una sola clase y solo responde "hay un producto aquí", por lo que nunca aprende productos individuales; el generador de embeddings tampoco se actualiza.
+Añadir un producto en tienda no requiere reentrenamiento: fotografía el nuevo SKU entre tres y ocho veces, envía las imágenes a la consola, y la galería obtiene una nueva versión inmutable. El detector es de una sola clase y solo responde "hay un producto aquí", por lo que nunca aprende productos individuales; el embedder tampoco se actualiza.
 
 - Selección y despliegue: [Página de diseño de referencia](https://www.seeed.cc/solutions/reference-designs/edge_retail_recognition)
 - Repositorio upstream: no publicado. El paquete no incluye `intro.links.github`; el código vive en un repositorio interno en el momento del empaquetado.
@@ -57,7 +58,7 @@ Añadir un producto en tienda no requiere reentrenamiento: fotografía el nuevo 
         <li class="info-item">
             <div class="info-content">
                 <h3>Tus propias cámaras y sistemas de tienda</h3>
-                <p>Cualquier cámara RTSP / USB. El POS lee SKU a cantidad desde MQTT, un sistema de reposición lee huecos vacíos y erróneos, y una API HTTP sirve consultas de eventos y gestión de la galería.</p>
+                <p>Cualquier cámara RTSP / USB. El POS lee SKU-a-cantidad desde MQTT, un sistema de reposición lee huecos vacíos y erróneos, y una API HTTP sirve consultas de eventos y gestión de la galería.</p>
             </div>
         </li>
         <li class="info-item">
@@ -82,7 +83,7 @@ La decisión de estantería se midió en la reComputer RK3588 serie y en la reCo
 </div>
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-empty-e969556c.png" alt="Un artículo retirado de la misma estantería; ese hueco pasa a estar vacío"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-empty-e969556c.png" alt="Se ha retirado un artículo de la misma estantería; ese hueco pasa a vacío"/>
 </div>
 
 <div align="center">
@@ -92,7 +93,7 @@ La decisión de estantería se midió en la reComputer RK3588 serie y en la reCo
 Los tres estados en secuencia:
 
 <div align="center">
-  <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-states-c62596bb.gif" alt="La misma estantería pasando por los estados correcto, vacío y SKU erróneo"/>
+  <img class='img-responsive' src="https://files.seeedstudio.com/wiki/reference-design/edge_retail_recognition/shelf-states-c62596bb.gif" alt="La misma estantería pasando por los estados correcto, vacío y SKU-erróneo"/>
 </div>
 
 La cadena de caja produce pistas por artículo:
@@ -113,13 +114,13 @@ Cuatro elementos por sitio: una cámara, un host de reconocimiento, un host de c
 
 | | Host | Medido en este hardware | Cuándo elegirlo |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8, 26 TOPS)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Detector en la NPU, generador de embeddings en los cuatro núcleos A76 | Ambas etapas: 9,04 ms de detección, 91,95 ms por embedding de recorte | Necesitas datos medidos tanto para detección como para embedding |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Detector en la NPU de Rockchip, generador de embeddings en la CPU o en la NPU | Detector con un 99,85% de coincidencia de cajas y 56,7 ms; con el generador de embeddings en la NPU, una reproducción de estantería de 20 SKUs publicó resultados a 924 ms p50 desde la detección | Ya utilizas placas Rockchip, o la cámara apunta a una estantería. RK3576 usa la misma cadena de herramientas |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) o [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Ruta TensorRT, detector y generador de embeddings en la GPU | J4012: 5,18 ms de detección, 4,23 ms por embedding de recorte; reproducción de caja de 2956 fotogramas sin fotogramas perdidos | Ya utilizas Jetson, o quieres toda la cadena en una sola máquina |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8, 26 TOPS)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Detector en la NPU, embedder en los cuatro núcleos A76 | Ambas etapas: 9,04 ms de detección, 91,95 ms por embedding de recorte | Necesitas datos medidos tanto de detección como de embedding |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Detector en la NPU de Rockchip, embedder en la CPU o en la NPU | Detector con un 99,85% de coincidencia de cajas y 56,7 ms; con el embedder en la NPU, una reproducción de estantería de 20 SKUs publicó resultados a 924 ms p50 desde la detección | Ya utilizas placas Rockchip, o la cámara mira a una estantería. RK3576 usa la misma cadena de herramientas |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) o [reComputer Super J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Ruta TensorRT, detector y embedder en la GPU | J4012: 5,18 ms de detección, 4,23 ms por embedding de recorte; reproducción de caja de 2956 fotogramas sin fotogramas perdidos | Ya utilizas Jetson, o quieres toda la cadena en una sola máquina |
 
 Todas las cifras se miden en el hardware de esa fila.
 
-**③ Host de consola**: tu propia máquina Linux amd64 o arm64 con Docker, sin necesidad de GPU, accesible desde cada dispositivo de reconocimiento. Ejecuta tres contenedores: el servicio de registro/consulta, la interfaz de gestión y el broker MQTT. **Ambas imágenes de contenedor se construyen en este host a partir del repositorio upstream**, no se extraen de un registro.
+**③ Host de consola**: tu propia máquina Linux amd64 o arm64 con Docker, sin necesidad de GPU, accesible desde cada dispositivo de reconocimiento. Ejecuta tres contenedores: el servicio de registro/consulta, la interfaz de gestión y el broker MQTT. **Ambas imágenes de contenedor se construyen en este host desde el repositorio upstream**, no se extraen de un registro.
 
 **④ Una máquina de conversión x86_64**: ni rknn-toolkit2 ni Hailo Dataflow Compiler se ejecutan en la placa de destino. Cada modelo se convierte una vez; los despliegues no repiten este paso.
 
@@ -135,7 +136,7 @@ Fija primero el artefacto y la posición de la cámara, luego instala el softwar
 ### 1. Montaje: elige el artefacto y luego la posición de la cámara
 
 :::tip[El tamaño de entrada se fija en la conversión]
-El tamaño de entrada se compila en el artefacto y no puede cambiarse en tiempo de ejecución. Un artefacto de 640² mirando a una estantería no detecta productos lejanos; pasar a 1280² eleva el mAP50-95 de objetos pequeños en la prueba SKU-110K de 17,49 a 26,88. Decide primero si es caja o estantería, luego monta la cámara de modo que los productos ocupen una parte adecuada del encuadre.
+El tamaño de entrada se compila en el artefacto y no puede cambiarse en tiempo de ejecución. Un artefacto 640² mirando a una estantería no detecta productos lejanos; pasar a 1280² eleva el mAP50-95 de objetos pequeños en la prueba SKU-110K de 17,49 a 26,88. Decide primero caja o estantería y luego monta la cámara de modo que los productos ocupen una parte adecuada del encuadre.
 :::
 
 En el preset Hailo-8, el embedding es una inferencia de CPU por caja. Con los 91,95 ms por recorte medidos en la reComputer R2000 serie, una cesta de cinco artículos tarda alrededor de medio segundo; un fotograma de estantería con la densidad medida de 157,6 cajas tarda unos 14 segundos. **Los despliegues en estantería con este preset deben submuestrear fotogramas o muestrear por hueco.** En reComputer J40 serie (J4012) el embedding se ejecuta en la GPU a 4,23 ms por recorte.
@@ -151,9 +152,9 @@ Los pasos por dispositivo están en la página de diseño de referencia; esta se
 </div><br />
 
 1. **Levantar la consola**: el servicio de registro, la interfaz y el broker se ejecutan en el host de consola, con una tabla de tokens de rol escrita en el momento del despliegue. No hay token por defecto ni lectura anónima; con una tabla vacía el servicio se niega a arrancar.
-2. **Coloca el modelo de embedding en su sitio**: coloca el ONNX de DINOv2 donde la consola lo monte y cambia `RETAIL_EMBEDDER` para que deje de usar el marcador de posición. El valor predeterminado upstream es `fake`, que convierte los bytes de la imagen en un vector mediante hashing; `GET /api/health` no informa de esto, y el único síntoma es que el registro funciona pero todas las búsquedas devuelven el SKU equivocado.
-3. **Registra SKUs**: de 3 a 8 fotos cada uno, al menos frontal, trasera y lateral, bajo dos condiciones de iluminación. Menos de tres se rechaza; un sku_id repetido devuelve 409 a menos que se establezca `replace=true`.
-4. **Convierte y comprueba el detector en la placa**: convierte en el host x86_64, copia el artefacto a la placa y ejecuta una comprobación de consistencia frente a la referencia de CPU.
+2. **Coloca el modelo de embedding en su sitio**: coloca el ONNX de DINOv2 donde la consola lo monte y cambia `RETAIL_EMBEDDER` para que deje de usar el marcador de posición. El valor predeterminado upstream es `fake`, que convierte los bytes de la imagen en un vector mediante un hash; `GET /api/health` no informa de esto, y el único síntoma es que el registro funciona pero todas las búsquedas devuelven el SKU equivocado.
+3. **Registra los SKUs**: de 3 a 8 fotos cada uno, al menos frontal, trasera y lateral, bajo dos condiciones de iluminación. Menos de tres se rechaza; un sku_id repetido devuelve 409 a menos que se establezca `replace=true`.
+4. **Convierte y comprueba el detector en la placa**: convierte en el host x86_64, copia el artefacto a la placa y ejecuta una comprobación de consistencia frente a la referencia en CPU.
 
 Calcula unos 90 minutos por preset para los cuatro pasos, más el tiempo de construcción del contenedor en el host de la consola.
 
@@ -165,30 +166,30 @@ Calcula unos 90 minutos por preset para los cuatro pasos, más el tiempo de cons
 
 ## Qué interfaces están disponibles
 
-Toda la salida está en el host de la consola: MQTT en 1883 y dos interfaces HTTP en 8089 y 8080, todas en la red local, y todas excepto el broker detrás de la misma comprobación de token.
+Todas las salidas están en el host de la consola: MQTT en 1883 y dos interfaces HTTP en 8089 y 8080, todas en la red local, y todas excepto el broker protegidas por la misma comprobación de token.
 
 - **Checkout / POS** se suscribe a `retail/v1/events` y lee `summary.items`, el mapa de SKU a cantidad del frame, sin analizar el array por caja.
 - **Reposición o auditoría de estanterías** lee `summary.empty_slots` y `summary.wrong_slots` del mismo mensaje.
 - **Un sistema que necesite trazar una decisión** lee `detections[]`: cada caja lleva `track_id`, un `bbox` normalizado, `sku_id`, `similarity`, `top2_margin`, un bloque `ocr` y un flag `fallback`.
 
-### El topic y payload completos
+### El topic y el payload completos
 
 | Interfaz / puerto | Contenido | Notas |
 |---|---|---|
 | MQTT `retail/v1/events`, 1883 | `event_id`, `scene`, `timestamp`, `gallery.{version,sha256}`, `detections[]`, `summary.{items,empty_slots,wrong_slots}`, `models.{detector_sha256,embedder_sha256}` | Uno por frame, no uno por caja |
 | HTTP `/v1/gallery/skus`, 8089 | `POST` de un sku_id, nombre para mostrar, alias, campos de licencia y 3–8 imágenes → una nueva versión inmutable | El mismo sku_id devuelve 409 a menos que `replace=true` |
 | HTTP `/v1/gallery`, `/v1/gallery/{version}`, `/v1/gallery/current/download`, `/v1/gallery/rollback/{version}`, 8089 | Lista de versiones, manifiesto por versión, tar.gz con SHA256SUMS y rollback que vuelve a verificar los SHA del destino antes de cambiar | El rollback no crea una versión nueva |
-| HTTP `/api/events`, `/api/events/{id}`, `/api/summary`, 8080 | Lista de eventos filtrada por escena / SKU / dispositivo / tiempo, detalle por caja, resumen de la placa | API de solo lectura, misma comprobación de token |
+| HTTP `/api/events`, `/api/events/{id}`, `/api/summary`, 8080 | Lista de eventos filtrada por escena / SKU / dispositivo / tiempo, detalle por caja, resumen por placa | API de solo lectura, misma comprobación de token |
 
-**Lee `similarity` junto con `gallery.version`, `gallery.sha256` y los hashes de modelo en el mismo mensaje.** Los vectores de dos embedders diferentes no son comparables, y mezclarlos se manifiesta como que no se reconoce nada; cada mensaje lleva los cuatro por esta razón.
+**Lee `similarity` junto con `gallery.version`, `gallery.sha256` y los hashes de modelo en el mismo mensaje.** Los vectores de dos embedders diferentes no son comparables, y mezclarlos se manifiesta como que no se reconoce nada; por este motivo cada mensaje lleva los cuatro.
 
-La autenticación es `Bearer <token>` con roles viewer < operator < admin. El broker se entrega anónimo y en texto plano, así que cualquiera que pueda alcanzar el puerto 1883 puede publicar eventos de reconocimiento falsificados.
+La autenticación es `Bearer <token>` con roles viewer < operator < admin. El broker se entrega anónimo y en texto claro, así que cualquiera que pueda alcanzar el puerto 1883 puede publicar eventos de reconocimiento falsificados.
 
 ## Rendimiento y datos medidos
 
 ### Detección, medida en el dispositivo
 
-| Dispositivo | Artefacto | p50 / p95 | Acuerdo de cajas con la referencia de CPU |
+| Dispositivo | Artefacto | p50 / p95 | Coincidencia de cajas con la referencia en CPU |
 |---|---|---:|---:|
 | reComputer serie R2000 + Hailo-8 | INT8 HEF, 640² | 9.04 / 9.10 ms | 94.77% (200 imágenes), 94.68% (300 imágenes) |
 | reComputer serie RK3588 | RKNN fp16, 640² | 56.7 / 89.5 ms | 99.85% |
@@ -197,7 +198,7 @@ La autenticación es `Bearer <token>` con roles viewer < operator < admin. El br
 | reComputer serie J40 (J4012) | TensorRT fp16, 640² | 5.18 / 5.28 ms | 99.91% |
 | reComputer serie J30 (J3011) | TensorRT fp16, 640² | 5.88 / 8.89 ms | 99.27% (frames de checkout) |
 
-Condiciones: el acuerdo se compara con la referencia de CPU a IoU ≥ 0.5; RK3588, RK3576 y J4012 usan las mismas 50 imágenes SKU-110K, J3011 usa 50 frames de checkout. Throughput de un solo stream en Hailo 110.4 fps (`hailortcli benchmark` 110.64 fps, tiempo puramente de hardware 8.21 ms; los 0.8 ms extra son el viaje de ida y vuelta del vstream de Python). **De extremo a extremo en reComputer serie R2000 (incluidos letterbox, concatenación de salida, decodificación y NMS) es p50 18.74 ms / p95 24.25 ms**: el NMS por clase en pure-numpy sobre unas 160 cajas tarda más que la propia inferencia.
+Condiciones: la coincidencia se compara con la referencia en CPU a IoU ≥ 0.5; RK3588, RK3576 y J4012 usan las mismas 50 imágenes SKU-110K, J3011 usa 50 frames de checkout. El throughput de un solo stream en Hailo es 110.4 fps (`hailortcli benchmark` 110.64 fps, tiempo puramente de hardware 8.21 ms; los 0.8 ms extra son el viaje de ida y vuelta del vstream en Python). **De extremo a extremo en reComputer serie R2000 (incluidos letterbox, concatenación de salidas, decodificación y NMS) es p50 18.74 ms / p95 24.25 ms**: el NMS por clase en pure-numpy sobre unas 160 cajas tarda más que la propia inferencia.
 
 Reproducir: `evaluation/runs/2026-09-06-det-hef/`, `evaluation/runs/2026-09-06-det-rk3588-radxa/`, `evaluation/runs/2026-09-07-embed-rknn-rk3576/`, `evaluation/runs/2026-09-07-jetson-trt/`, `evaluation/runs/2026-09-08-orin-nano-acceptance/`
 
@@ -205,12 +206,12 @@ Reproducir: `evaluation/runs/2026-09-06-det-hef/`, `evaluation/runs/2026-09-06-d
 
 | Dispositivo | Variante | p50 / p95 por recorte | Coste de recuperación frente a fp32 |
 |---|---|---:|---|
-| reComputer serie R2000 (CPU, 4 hilos) | DINOv2-small, INT8 cuantizado dinámicamente | 91.95 / 105.98 ms | Dentro de 0.65 pp en los 7 puntos de operación medidos |
+| reComputer serie R2000 (CPU, 4 hilos) | DINOv2-small, INT8 con cuantización dinámica | 91.95 / 105.98 ms | Dentro de 0.65 pp en los 7 puntos de operación medidos |
 | reComputer serie R2000 (CPU, 4 hilos) | DINOv2-small, fp32 | 180.75 / 233.41 ms | Línea base |
-| reComputer serie RK3588 (NPU) | DINOv2-small, RKNN fp16 | 48.68 / 49.86 ms | Como máximo 0.85 pp en 21 métricas |
-| reComputer serie RK3576 (NPU, dos núcleos) | DINOv2-small, RKNN fp16 | 56.38 / 62.17 ms | Como máximo 0.36 pp en 21 métricas |
-| reComputer serie J40 (J4012) | DINOv2-small, TensorRT fp16 | 4.23 / 4.69 ms | Como máximo 0.24 pp en 21 métricas |
-| reComputer serie J30 (J3011) | DINOv2-small, TensorRT fp16 | 5.06 / 7.64 ms | Como máximo 0.21 pp en 21 métricas |
+| reComputer serie RK3588 (NPU) | DINOv2-small, RKNN fp16 | 48.68 / 49.86 ms | Como mucho 0.85 pp en 21 métricas |
+| reComputer serie RK3576 (NPU, dos núcleos) | DINOv2-small, RKNN fp16 | 56.38 / 62.17 ms | Como mucho 0.36 pp en 21 métricas |
+| reComputer serie J40 (J4012) | DINOv2-small, TensorRT fp16 | 4.23 / 4.69 ms | Como mucho 0.24 pp en 21 métricas |
+| reComputer serie J30 (J3011) | DINOv2-small, TensorRT fp16 | 5.06 / 7.64 ms | Como mucho 0.21 pp en 21 métricas |
 
 Condiciones: las 21 métricas son top-1, top-5 y AUROC open-set en 4 niveles de registro en el Grocery Store Dataset y 3 en Products-10K. En la CPU, cuantizar solo los pesos casi no cuesta precisión de recuperación; cuantizar también las activaciones cuesta mucho.
 
@@ -220,14 +221,14 @@ Reproducir: `evaluation/runs/2026-09-06-embed-small/` §8, `evaluation/runs/2026
 
 | Dispositivo | Escena | Resultado | Condiciones |
 |---|---|---|---|
-| reComputer serie J40 (J4012) | Replay de checkout | De detección a resultado publicado p50 22.3 ms / p95 42.8 ms; 0 frames perdidos sobre 2956 frames | Replay de vídeo grabado, galería de 30 SKU; detección, embedding, recuperación y publicación MQTT en el mismo dispositivo |
-| reComputer serie J30 (J3011) | Replay de checkout | 0 frames perdidos sobre 6726 frames (2.27 bucles), los 84 eventos publicados | Mismo vídeo grabado y galería |
-| reComputer serie RK3588 | Replay de estantería | De detección a resultado publicado p50 924 ms / p95 1153 ms; top-1 541/704 en 704 recortes de slots, idéntico a la referencia de CPU fp32 | 20 SKUs, detector y embedder ambos RKNN fp16 en la NPU |
-| reComputer serie RK3576 | Recortes de estantería | Top-1 76.28% en 704 recortes (CPU fp32 76.99%), 99.29% de acuerdo mismo SKU; embedder p50 61.0 ms por recorte | Los mismos 704 recortes, detector y embedder ambos RKNN fp16 |
+| reComputer serie J40 (J4012) | Replay de checkout | De detección a resultado publicado p50 22.3 ms / p95 42.8 ms; 0 frames perdidos sobre 2956 frames | Replay de vídeo grabado, galería de 30 SKUs; detección, embedding, recuperación y publicación MQTT en el mismo dispositivo |
+| reComputer serie J30 (J3011) | Replay de checkout | 0 frames perdidos sobre 6726 frames (2.27 bucles), los 84 eventos publicados | Mismo vídeo grabado y misma galería |
+| reComputer serie RK3588 | Replay de estantería | De detección a resultado publicado p50 924 ms / p95 1153 ms; top-1 541/704 en 704 recortes de slots, idéntico a la referencia CPU fp32 | 20 SKUs, detector y embedder ambos RKNN fp16 en la NPU |
+| reComputer serie RK3576 | Recortes de estantería | Top-1 76.28% en 704 recortes (CPU fp32 76.99%), 99.29% de coincidencia mismo SKU; embedder p50 61.0 ms por recorte | Los mismos 704 recortes, detector y embedder ambos RKNN fp16 |
 
 Reproducir: `evaluation/runs/2026-09-07-jetson-trt/`, `evaluation/runs/2026-09-08-orin-nano-acceptance/`, `evaluation/runs/2026-09-08-rk3588-console-acceptance-020/`, `evaluation/runs/2026-09-08-rk3576-acceptance/`
 
-### Precisión de recuperación y detección (off-device)
+### Precisión de recuperación y detección (fuera del dispositivo)
 
 | Configuración | Resultado | Dataset |
 |---|---:|---|
@@ -247,26 +248,26 @@ Reproducir: `evaluation/runs/` (evaluación de embedding: `evaluation/eval_embed
 | Dispositivo | Detector | Embedder | Cómo llega el modelo al dispositivo |
 |---|---|---|---|
 | reComputer serie RK3588 / RK3576 | `.rknn` en la NPU, fp16 o INT8 | onnxruntime en la CPU, o RKNN fp16 en la NPU | Convertido en un host x86_64 con rknn-toolkit2 2.3.2; la versión del toolkit debe coincidir con `librknnrt.so` en la placa |
-| reComputer serie R2000 + Hailo-8 | INT8 `.hef` en la NPU | DINOv2-small INT8 cuantizado dinámicamente en la CPU | Compilado en un host x86_64 con Hailo Dataflow Compiler, luego copiado a la placa |
+| reComputer serie R2000 + Hailo-8 | INT8 `.hef` en la NPU | DINOv2-small INT8 con cuantización dinámica en la CPU | Compilado en un host x86_64 con Hailo Dataflow Compiler, luego copiado a la placa |
 | reComputer serie J40 / J30 (Jetson Orin) | TensorRT fp16 (GPU) | TensorRT fp16 (GPU) | Motores construidos desde ONNX en el dispositivo en tiempo de despliegue; 427 s para el detector y 132 s para el embedder en J3011 |
 
-El detector es un YOLOX-Tiny de una sola clase (640² o 1280²); el embedder es DINOv2 ajustado con ArcFace sobre imágenes de productos de comercio electrónico, base (348 MB fp32) o small (23.5 MB INT8), produciendo un vector de 512 dimensiones por recorte; la identidad de SKU solo existe en la búsqueda de coseno de FAISS sobre la galería versionada.
+El detector es un YOLOX-Tiny de una sola clase (640² o 1280²); el embedder es DINOv2 ajustado con ArcFace sobre imágenes de productos de comercio electrónico, base (348 MB fp32) o small (23.5 MB INT8), produciendo un vector de 512 dimensiones por recorte; la identidad del SKU solo existe en la búsqueda de coseno de FAISS sobre la galería versionada.
 
 - Tamaño de entrada: **640²** para checkout, **1280²** para estanterías; compilado en el artefacto y fijo en tiempo de ejecución
 - Imágenes de registro: **3–8** por SKU; menos de tres se rechazan
-- `RETAIL_EMBEDDER`: el valor predeterminado upstream es `fake` (convierte los bytes de la imagen en un vector mediante hashing); cámbialo al ONNX de DINOv2 en el momento del despliegue
+- `RETAIL_EMBEDDER`: el valor predeterminado upstream es `fake` (convierte los bytes de la imagen en un vector mediante un hash); cámbialo al ONNX de DINOv2 en el momento del despliegue
 
 ### Degradaciones conocidas
 
-- En el preset Hailo-8, el embedding es una inferencia de CPU por caja: a 91.95 ms por recorte, una cesta de cinco artículos tarda alrededor de medio segundo y un frame de estantería (157.6 cajas) unos 14 segundos, así que los despliegues en estanterías deben muestrear frames o muestrear por slot.
+- En el preset Hailo-8, el embedding es una inferencia en CPU por caja: a 91.95 ms por recorte, una cesta de cinco artículos tarda alrededor de medio segundo y un frame de estantería (157.6 cajas) unos 14 segundos, así que los despliegues en estantería deben muestrear frames o muestrear por slot.
 - Ninguno de los dos intentos de cuantización en Hailo-8 para el embedder DINOv2 dio un resultado utilizable (en uno, cada imagen se mapeaba al mismo vector), por lo que el preset Hailo-8 mantiene el embedding en la CPU.
 - Cuando detección y embedding comparten una GPU, la detección en proceso en reComputer serie J40 (J4012) sube de 5.18 ms p50 en solitario a 8.76 ms, y el embedding de 4.23 ms a 5.37 ms.
-- El INT8 QDQ estático (activaciones cuantizadas también) pierde entre 3.78 y 9.96 puntos porcentuales de recuperación y es inutilizable.
-- Una discrepancia entre rknn-toolkit2 y `librknnrt.so` puede cargar normalmente y devolver valores erróneos; comprueba el acuerdo frente a la referencia de CPU después de cada conversión.
-- Un artefacto 640² en una estantería no detecta productos lejanos; el mAP50-95 de objetos pequeños de SKU-110K es 17.49 a 640² y 26.88 a 1280².
+- El INT8 QDQ estático (activaciones también cuantizadas) pierde entre 3.78 y 9.96 puntos porcentuales de recuperación y es inutilizable.
+- Una discrepancia entre rknn-toolkit2 y `librknnrt.so` puede cargar con normalidad y devolver valores erróneos; comprueba la coincidencia frente a la referencia en CPU después de cada conversión.
+- Un artefacto 640² en una estantería no detecta productos lejanos; el mAP50-95 para objetos pequeños de SKU-110K es 17.49 a 640² y 26.88 a 1280².
 - Los vectores de dos embedders diferentes no son comparables; mezclarlos se manifiesta como que no se reconoce nada.
-- El runtime del lado del dispositivo que extrae una versión de galería, la verifica y cambia de forma atómica no está implementado, por lo que los SKUs recién registrados no llegan automáticamente a los dispositivos.
-- El re-ranking por OCR y el fallback VLM no están implementados: el mensaje ya lleva bloques `top2_margin`, `ocr` y `fallback`, pero el código no está implementado.
+- El runtime en el dispositivo que descarga una versión de galería, la verifica y cambia de forma atómica no está implementado, así que los SKUs recién registrados no llegan automáticamente a los dispositivos.
+- El re-ranking por OCR y el fallback VLM no están implementados: el mensaje ya lleva los bloques `top2_margin`, `ocr` y `fallback`, pero el código no está implementado.
 
 ### Próximos pasos
 

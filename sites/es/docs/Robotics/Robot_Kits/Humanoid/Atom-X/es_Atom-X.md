@@ -1,5 +1,5 @@
 ---
-description: Primeros pasos con Atom-X.
+description: "Cómo empezar con el robot humanoide Atom-X: desembalaje, encendido, primer arranque, movimientos básicos y configuración del software."
 title: Guía rápida de Atom-X
 keywords:
   - Humanoid

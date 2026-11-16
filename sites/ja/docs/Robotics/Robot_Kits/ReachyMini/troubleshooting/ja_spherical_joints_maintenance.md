@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の球面ジョイントに関するメンテナンスガイドです。Stewart プラットフォーム上のボールジョイントを清掃し再グリスアップして、スムーズで静かな動作を復元します。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 球面ジョイントのメンテナンス
 slug: /reachymini_troubleshooting_spherical_joints_maintenance
 keywords:

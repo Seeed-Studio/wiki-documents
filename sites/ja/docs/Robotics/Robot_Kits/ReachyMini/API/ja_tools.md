@@ -1,5 +1,6 @@
 ---
 description: モーターセットアップツール、スキャニングツール、リフラッシュツールを含む Reachy Mini ツールの完全な API リファレンス。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: ツール API リファレンス
 slug: /reachymini_api_tools
 keywords:

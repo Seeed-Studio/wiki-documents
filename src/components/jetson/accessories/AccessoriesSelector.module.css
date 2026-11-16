@@ -1,0 +1,599 @@
+/**
+ * AccessoriesSelector — CSS Module
+ * Adapted from CameraSelector.module.css
+ * Supports light/dark themes via Docusaurus [data-theme] attribute.
+ */
+
+.selector,
+.dialog,
+.filterMenu {
+  --acc-accent: #26764a;
+  --acc-ink: var(--ifm-font-color-base, #202926);
+  --acc-muted: var(--ifm-color-emphasis-700, #59635d);
+  --acc-line: var(--ifm-color-emphasis-300, #dce3dd);
+  --acc-surface: var(--ifm-background-surface-color, #fff);
+  --acc-soft: var(--ifm-color-emphasis-100, #f5f7f5);
+  font-family: var(--ifm-font-family-base);
+}
+
+[data-theme='dark'] :is(.selector, .dialog, .filterMenu) {
+  --acc-accent: #82c78d;
+  --acc-ink: var(--ifm-font-color-base, #e3e3e3);
+  --acc-muted: var(--ifm-color-emphasis-700, #dadde1);
+  --acc-line: var(--ifm-color-emphasis-300, #606770);
+  --acc-surface: var(--ifm-background-surface-color, #242526);
+  --acc-soft: var(--ifm-color-emphasis-100, #1c1e21);
+}
+
+/* ── Selector container ── */
+.selector {
+  margin: 18px 0 0;
+  color: var(--acc-ink);
+}
+
+/* ── Filter panel ── */
+.filterPanel {
+  background: var(--acc-soft);
+  border: 1px solid var(--acc-line);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.coreFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ── Filter trigger button ── */
+.trigger {
+  position: relative;
+}
+
+.triggerBtn {
+  background: var(--acc-surface);
+  color: var(--acc-ink);
+  border: 1px solid var(--acc-line);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.triggerBtn:hover {
+  border-color: var(--acc-accent);
+}
+
+.triggerBtnActive {
+  border-color: var(--acc-accent);
+}
+
+.triggerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.35;
+}
+
+.triggerLabel {
+  color: var(--acc-muted);
+  font-size: 10.4px;
+  font-weight: 500;
+}
+
+.triggerValue {
+  color: var(--acc-ink);
+  font-size: 12.8px;
+  font-weight: 400;
+}
+
+.arrow {
+  font-size: 14px;
+  color: var(--acc-muted);
+}
+
+/* ── Dropdown menu ── */
+.filterMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: var(--acc-surface);
+  border: 1px solid var(--acc-line);
+  border-radius: 8px;
+  padding: 4px;
+  z-index: 50;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+}
+
+.filterOption {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: var(--acc-ink);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.1s;
+}
+
+.filterOption:hover {
+  background: var(--acc-soft);
+}
+
+.filterOptionSelected {
+  color: var(--acc-accent);
+  font-weight: 600;
+}
+
+/* ── Spec help ── */
+.specHelp {
+  margin: 8px 0 4px;
+}
+
+.specHelp summary {
+  color: var(--acc-muted);
+  font-size: 11.2px;
+  font-weight: 400;
+  cursor: pointer;
+  outline: none;
+}
+
+.specHelp summary:hover {
+  color: var(--acc-ink);
+}
+
+.specHelp[open] summary {
+  margin-bottom: 8px;
+}
+
+.specHelpBody p {
+  font-size: 0.8rem;
+  color: var(--acc-muted);
+  margin-bottom: 0.5rem;
+  padding-left: 8px;
+  border-left: 2px solid var(--acc-line);
+}
+
+/* ── Results ── */
+.resultsTitle {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--acc-ink);
+  margin: 16px 0 8px;
+}
+
+.compareHelp {
+  color: var(--acc-muted);
+  font-size: 12.16px;
+  margin: 4px 0 13px;
+}
+
+.notice {
+  min-height: 0;
+  color: var(--acc-accent);
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+/* ── Card grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* ── Card ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--acc-surface);
+  border: 1px solid var(--acc-line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--acc-accent);
+}
+
+.cardSelected {
+  border-color: var(--acc-accent);
+}
+
+/* ── Card media (image area) ── */
+.media {
+  height: 220px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.media img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.placeholderIcon {
+  font-size: 3.5rem;
+  opacity: 0.15;
+  color: #333;
+}
+
+.placeholderBadge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Card body ── */
+.cardBody {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+.badgeType {
+  color: var(--acc-accent);
+  font-size: 10.56px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.badgeIface {
+  color: var(--acc-muted);
+  font-size: 10.56px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.cardName {
+  font-size: 15.04px;
+  font-weight: 700;
+  color: var(--acc-ink);
+  margin: 4px 0 8px;
+  line-height: 1.3;
+}
+
+/* ── Spec grid ── */
+.cardSpecs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+.specItem dt {
+  font-size: 10.72px;
+  color: var(--acc-muted);
+  font-weight: 400;
+}
+
+.specItem dd {
+  font-size: 12.48px;
+  color: var(--acc-ink);
+  font-weight: 650;
+  margin-top: 2px;
+}
+
+.cardKeyFact {
+  color: var(--acc-muted);
+  font-size: 11.68px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+/* ── Card actions ── */
+.cardActions {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.detailBtn,
+.buyBtn {
+  background: var(--acc-surface);
+  color: var(--acc-ink);
+  border: 1px solid var(--acc-line);
+  border-radius: 7px;
+  padding: 6px 14px;
+  font-size: 12.48px;
+  font-weight: 650;
+  text-decoration: none !important;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s;
+  display: inline-block;
+}
+
+.detailBtn:hover,
+.buyBtn:hover {
+  border-color: var(--acc-accent);
+  color: var(--acc-accent);
+}
+
+.buyBtnDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.buyBtnDisabled:hover {
+  border-color: var(--acc-line);
+  color: var(--acc-ink);
+}
+
+/* ── Compare choice ── */
+.compareChoice {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  color: var(--acc-muted);
+  border: none;
+  font-size: 12.48px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.compareChoice input {
+  cursor: pointer;
+  accent-color: var(--acc-accent);
+}
+
+/* ── Dialog ── */
+.dialog {
+  border: 1px solid var(--acc-line);
+  border-radius: 12px;
+  background: var(--acc-surface);
+  color: var(--acc-ink);
+  padding: 0;
+  width: min(1050px, calc(100vw - 32px));
+  max-height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialogOpen {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--acc-line);
+}
+
+.dialogTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--acc-muted);
+  line-height: 1;
+  padding: 4px;
+}
+
+.closeBtn:hover {
+  color: var(--acc-ink);
+}
+
+.dialogBody {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ── Detail view ── */
+.detailLayout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.detailMedia {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+}
+
+.detailMedia img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.detailSpecs {
+  display: grid;
+  gap: 12px;
+}
+
+.detailSpecRow {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--acc-line);
+}
+
+.detailSpecLabel {
+  color: var(--acc-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.detailSpecValue {
+  color: var(--acc-ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.detailActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--acc-accent);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+[data-theme='dark'] .primaryBtn {
+  color: #102517 !important;
+}
+
+.primaryBtn:hover {
+  opacity: 0.85;
+}
+
+/* ── Compare view ── */
+.compareGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.compareCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compareMedia {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+.compareMedia img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.compareName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--acc-ink);
+}
+
+.compareSpecs {
+  display: grid;
+  gap: 8px;
+}
+
+.compareSpecRow {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--acc-line);
+  font-size: 0.82rem;
+}
+
+.compareSpecLabel {
+  color: var(--acc-muted);
+}
+
+.compareSpecValue {
+  color: var(--acc-ink);
+  font-weight: 600;
+}
+
+/* ── Responsive ── */
+@media (max-width: 800px) {
+  .detailLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .detailMedia {
+    height: 200px;
+  }
+
+  .compareGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardSpecs {
+    grid-template-columns: 1fr 1fr;
+  }
+}

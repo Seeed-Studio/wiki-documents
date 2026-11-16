@@ -1,5 +1,6 @@
 ---
 description: Guía de configuración para Reachy Mini Wireless que incluye instrucciones de montaje, primer arranque, configuración de Wi‑Fi, actualización del sistema y acceso SSH.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Guía de Configuración de Reachy Mini Wireless
 slug: /reachymini_platforms_reachy_mini_get_started
 keywords:

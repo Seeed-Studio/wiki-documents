@@ -1,6 +1,6 @@
 ---
 description: YOLO 物体検出と VLM 振る舞い解析を用いて、NVIDIA Jetson 上に産業用ビジョン監視デモをデプロイする
-title: 産業向けビジョン監視デモ
+title: 産業向けビジョン監視
 tags:
   - AI モデルデプロイ
   - YOLO
@@ -13,17 +13,24 @@ last_update:
   date: 07/14/2026
   author: HaoChen
 createdAt: '2026-07-13'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/ja/industrial_vision_monitoring_on_industrial_bk/
 ---
 
-# 産業向けビジョン監視デモ
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
+# 産業向けビジョン監視
 
 ## はじめに
 
-産業現場や作業現場の安全性は、現場で「今」何が起きているかを把握することにかかっています — 事故発生後ではなく、リアルタイムで把握する必要があります。カメラは至るところにありますが、多くのシステムはいまだに人手による映像確認に依存しています。**産業用ビジョン AI** はこのギャップを埋めます。作業員がいるか、必要な PPE（個人用保護具）を着用しているか、危険な行動がシーン内に現れていないかを検出し、そのうえでエッジ側で即座にアラートを発報します。
+産業現場や作業現場の安全性は、現場で「今」何が起きているかを把握することにかかっています。事故発生後ではなく、リアルタイムで把握する必要があります。カメラは至るところにありますが、多くのシステムはいまだに人手による映像確認に依存しています。**産業用ビジョン AI** はこのギャップを埋めます。作業員がいるか、必要な PPE（個人用保護具）を着用しているか、危険な行動がシーン内に現れていないかを検出し、そのうえでエッジ側で即座にアラートを発報します。
 
-この Wiki では、Seeed の産業用 Jetson デバイス上に、リファレンスとなる**産業安全監視デモ**をデプロイします。USB カメラの映像をブラウザへ配信し、**YOLO** が人と PPE を検出し、**VLM** が危険な振る舞いを解析します。どちらのモデルファミリーも差し替え可能であり、このリポジトリは特定のチェックポイントに固定されたものではなく、あくまで出発点として提供されます。
+この wiki では、Seeed の産業用 Jetson デバイス上に、リファレンスとなる**産業安全監視デモ**をデプロイします。USB カメラの映像をブラウザへストリーミングし、**YOLO** が人と PPE を検出し、**VLM** が危険な振る舞いを解析します。どちらのモデルファミリーも入れ替え可能であり、このリポジトリは特定のチェックポイントに固定されたものではなく、あくまで出発点です。
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -62,29 +69,29 @@ url: https://wiki.seeedstudio.com/ja/industrial_vision_monitoring_on_industrial_
 </table>
 </div>
 
-**reComputer Industrial J4012** と **reServer Industrial J4011** 上で **JetPack 7.2** にて検証済みです。
+**JetPack 7.2** を搭載した **reComputer Industrial J4012** および **reServer Industrial J4011** で検証済みです。
 
 ## 概要
 
 | レイヤー | 役割 |
 | --- | --- |
 | YOLO | 人物検出（緑のボックス）およびヘルメットやベスト未着用などの PPE 違反（赤いボックス） |
-| VLM | シーン全体の振る舞いアラート — 携帯電話の使用、喫煙、転倒、火災／煙など |
+| VLM | シーンレベルの行動アラート — 携帯電話の使用、喫煙、転倒、火災／煙など |
 
-ブラウザで `http://<jetson-ip>:8080` を開くと、WebRTC によるライブ映像、検出オーバーレイ、アラートフィードを確認できます。
+ブラウザで `http://<jetson-ip>:8080` を開くと、ライブ WebRTC 映像、検出オーバーレイ、アラートフィードを確認できます。
 
 ## 対応ハードウェア
 
 | 項目 | 構成 |
 | --- | --- |
 | **デバイス** | [reComputer Industrial](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html)、[reServer Industrial](https://www.seeedstudio.com/reServer-industrial-J4011-p-5748.html) |
-| **検証済み** | reComputer Industrial J4012、reServer Industrial J4011 · **JetPack 7.2**（L4T 39.2.0） |
-| **JetPack** | **7.2** で検証済み · **6.2** は互換性がある想定 · 6.2 未満では手動で PyTorch の wheel が必要 |
+| **検証済み** | reComputer Industrial J4012、reServer Industrial J4011 · **JetPack 7.2** (L4T 39.2.0) |
+| **JetPack** | **7.2** で検証済み · **6.2** は互換性がある想定 · 6.2 未満は手動で PyTorch ホイールが必要 |
 | **RAM / ディスク** | RAM 最低 8 GB · 空きディスク 8 GB |
 | **カメラ** | USB UVC / V4L2 (`/dev/video*`) |
 
 :::note
-**reComputer Industrial J4012** と **reServer Industrial J4011** 上で **JetPack 7.2** にてテスト済みです。同じ手順は、対応する JetPack バージョンを搭載した他の Seeed 産業用 Jetson デバイスにも適用できます。
+**JetPack 7.2** を搭載した **reComputer Industrial J4012** および **reServer Industrial J4011** でテスト済みです。同じ JetPack バージョンを使用する他の Seeed 産業用 Jetson デバイスでも、同じ手順が適用できます。
 :::
 
 ## インストール
@@ -97,11 +104,11 @@ cd industrial-inspection
 ./run.sh
 ```
 
-`./run.sh` は `.env` がなければコピーし、モデルをダウンロードし、Docker イメージをビルドします（初回は **15～30 分**）、その後コンテナを起動します。
+`./run.sh` は `.env` がなければコピーし、モデルをダウンロードし、Docker イメージをビルドします（初回は **15～30 分**）。その後コンテナを起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_run.png" style={{width:1000, height:'auto'}}/></div>
 
-次に、以下を開きます：
+その後、次を開きます：
 
 ```text
 http://<jetson-ip>:8080
@@ -116,16 +123,16 @@ http://<jetson-ip>:8080
 | JetPack | PyTorch |
 | --- | --- |
 | **7.2** | Docker ビルド中に自動インストールされます（`TORCH_INDEX_URL=cu130`） |
-| **6.2** | `TORCH_INDEX_URL` を使用中の CUDA 12.x のインデックスに設定するか、対応する wheel を `wheels/` に配置します |
+| **6.2** | `TORCH_INDEX_URL` を使用中の CUDA 12.x のインデックスに設定するか、対応するホイールを `wheels/` に配置します |
 | **6.2 未満** | `./run.sh` 実行前に、Jetson に対応した `torch-*.whl` / `torchvision-*.whl` を `wheels/` に配置します |
 
-JetPack 関連ファイルを変更した後は、対象デバイス上で再ビルドしてください：
+JetPack 関連ファイルを変更した後は、対象デバイス上で再ビルドします：
 
 ```bash
 ./clean.sh && ./run.sh
 ```
 
-wheel の入手元については、[Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/ja/install_torch_on_recomputer/) を参照してください。
+ホイールの入手元については、[Install Pytorch for reComputer Jetson](https://wiki.seeedstudio.com/ja/install_torch_on_recomputer/) を参照してください。
 
 :::caution
 JetPack や CUDA のバージョンが異なるデバイス間で Docker イメージをコピーしないでください。必ず対象の Jetson 上で再ビルドしてください。
@@ -147,7 +154,7 @@ CAMERA_PIPELINE=sw    # sw (default) or hw
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_phone.png" style={{width:900, height:'auto'}}/></div>
 
-VLM による振る舞いアラート — 作業エリアでの携帯電話の使用。
+VLM による行動アラート — 作業エリアでの携帯電話の使用。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_no_helmet.png" style={{width:900, height:'auto'}}/></div>
 
@@ -161,7 +168,7 @@ YOLO による PPE アラート — 安全ヘルメット未着用。
 | --- | --- | --- |
 | 人物検出 | YOLOv8n | `models/yolov8n.onnx` |
 | PPE 検出 | YOLOv8 PPE | `models/ppe-yolov8n.pt` |
-| 振る舞い解析 | SmolVLM-500M-Instruct | `models/SmolVLM-500M-Instruct/` |
+| 行動解析 | SmolVLM-500M-Instruct | `models/SmolVLM-500M-Instruct/` |
 
 モデルは初回の `./run.sh` 実行時に自動ダウンロードされるか、`./scripts/download_models.sh` で手動ダウンロードできます。
 
@@ -176,11 +183,11 @@ YOLO による PPE アラート — 安全ヘルメット未着用。
 
 | 問題 | 対処 |
 | --- | --- |
-| Docker の権限拒否 | ユーザーを `docker` グループに追加するか、`sudo docker` を使用します |
-| 初回ビルドが遅い | 正常です（15～30 分）。JetPack 6.2 以前では、wheel を `wheels/` に配置してください |
-| PyTorch / CUDA の不整合 | 対象 Jetson 上で再ビルドし、別の JetPack からのイメージを再利用しないでください |
-| コンテナ内にカメラが見えない | ホスト上の `/dev/video*` を確認してください。`./run.sh` は検出したカメラを自動マウントします |
-| ブラウザに映像が出ない | `docker ps` で `industrial-go2rtc` を確認し、ポート `1984` に到達できることを確認してください |
+| Docker permission denied | ユーザーを `docker` グループに追加するか、`sudo docker` を使用します |
+| 初回ビルドが遅い | 正常です（15～30 分）。JetPack 6.2 以前では、ホイールを `wheels/` に配置します |
+| PyTorch / CUDA の不整合 | 対象 Jetson 上で再ビルドします。他の JetPack からのイメージを再利用しないでください |
+| コンテナ内でカメラが見えない | ホスト上の `/dev/video*` を確認します。`./run.sh` は検出したカメラを自動マウントします |
+| ブラウザに映像が出ない | `docker ps` で `industrial-go2rtc` を確認します。ポート `1984` に到達できる必要があります |
 
 ## リソース
 

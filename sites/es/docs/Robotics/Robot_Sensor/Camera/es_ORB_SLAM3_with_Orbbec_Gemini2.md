@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona pasos detallados para configurar y ejecutar el algoritmo ORB-SLAM3 en reComputer Jetson usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
+description: "Ejecuta ORB-SLAM3 en reComputer J30/J40 con una Orbbec Gemini2: compilación del Orbbec SDK, calibración de la cámara y lanzamiento del SLAM monocular."
 title: ORB-SLAM3 con Orbbec Gemini2
 keywords:
   - ORB-SLAM3
@@ -7,8 +7,8 @@ keywords:
   - reComputer
   - Jetson
   - Orbbec Gemini2
-  - RGB-D camera
-  - Visual SLAM
+  - Cámara RGB-D
+  - SLAM visual
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.webp
 slug: /orb_slam3_orbbec_gemini2
 sku: 101090144, 100071398
@@ -21,39 +21,39 @@ url: https://wiki.seeedstudio.com/es/orb_slam3_orbbec_gemini2/
 ---
 
 <div align="center">
-    <img width={400}
+    <img alt="Cámara RGB-D Orbbec Gemini 2, vista en ángulo que muestra las lentes de profundidad y color y el punto de montaje" width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que cuenta con un sensor de profundidad de luz estructurada de doble ojo y una IMU integrada de 6 ejes. Proporciona flujos de datos RGB y de profundidad completamente sincronizados, asegurando una alineación precisa de Profundidad a Color en tiempo real, lo cual es esencial para una percepción 3D precisa. Esta combinación de características hace que la Gemini 2 sea ideal para robótica, visión por computadora y otras aplicaciones 3D, permitiendo tareas como detección de objetos, mapeo, navegación y análisis espacial con alta confiabilidad y precisión. La cámara es compacta, fácil de configurar y completamente compatible con el SDK de Orbbec, haciéndola adecuada tanto para investigación como para implementaciones industriales.
+La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que incorpora un sensor de profundidad de luz estructurada de doble ojo y una IMU integrada de 6 ejes. Proporciona flujos de datos RGB y de profundidad totalmente sincronizados, lo que garantiza una alineación Precisión de Profundidad a Color en tiempo real, esencial para una percepción 3D precisa. Esta combinación de características hace que la Gemini 2 sea ideal para robótica, visión por computadora y otras aplicaciones 3D, permitiendo tareas como detección de objetos, mapeo, navegación y análisis espacial con alta fiabilidad y precisión. La cámara es compacta, fácil de configurar y está totalmente soportada por el Orbbec SDK, lo que la hace adecuada tanto para investigación como para despliegues industriales.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 </a></div>
 
 ## Introducción
 
 <div style={{ textAlign: "justify" }}>
-[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) es un algoritmo avanzado de SLAM visual para cámaras monoculares, estéreo y RGB-D. Utiliza características ORB para seguimiento y mapeo robustos, soporta cierre de bucle y relocalización, y ofrece alta precisión y eficiencia para robótica, AR/VR y navegación autónoma. Este wiki proporciona pasos completos para configurar y ejecutar ORB-SLAM3 en reComputer Jetson Series usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
+[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) es un algoritmo avanzado de SLAM visual para cámaras monoculares, estéreo y RGB-D. Utiliza características ORB para un seguimiento y mapeo robustos, admite cierre de bucle y relocalización, y ofrece alta precisión y eficiencia para robótica, AR/VR y navegación autónoma. Los pasos siguientes compilan ORB-SLAM3 en reComputer contra el Orbbec SDK y Pangolin, parchean las llamadas de reloj de C++, calibran la Gemini 2 y lanzan el modo RGB-D.
 </div>
 
-## Prerrequisitos
+## Requisitos previos
 
 - **[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)** con Jetpack 6.2 preinstalado
 - **Cámara 3D Orbbec Gemini2**
 - Entorno **[ROS2 Humble](https://wiki.seeedstudio.com/es/install_ros2_humble/)** instalado
 
 <div align="center">
-    <img width={700}
+    <img alt="reComputer J4012 con distintivo NVIDIA Jetson Orin NX 16GB, el host utilizado en este tutorial" width={700}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
 </div>
 
-## Instalar SDK de Orbbec
+## Instalar Orbbec SDK
 
-**Paso 1.** Descargar e instalar el SDK de Orbbec para arquitectura ARM64:
+**Paso 1.** Descarga e instala el Orbbec SDK para arquitectura ARM64:
 
 ```bash
 # Download Orbbec SDK
@@ -63,7 +63,7 @@ wget https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.11/OrbbecSDK_
 unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
-**Paso 2.** Compilar ejemplos y probar:
+**Paso 2.** Compila los ejemplos y realiza pruebas:
 
 ```bash
 # Install udev rules
@@ -78,11 +78,11 @@ cd ..
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Ventana de ejemplo del Orbbec SDK que muestra los flujos de color y profundidad de la Gemini 2" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
-## Compilando ORB-SLAM3
+## Compilar ORB-SLAM3
 
 **Paso 1.** Instalar dependencias del sistema:
 
@@ -96,7 +96,7 @@ sudo apt update && sudo apt install -y \
     libepoxy-dev python3-dev libboost-serialization-dev
 ```
 
-**Paso 2.** Instalar Pangolin que es requerido para la visualización de ORB-SLAM3:
+**Paso 2.** Instalar Pangolin, que es necesario para la visualización de ORB-SLAM3:
 
 ```bash
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
@@ -118,7 +118,7 @@ sudo make install
 ```
 
 :::warning
-Si encuentras errores de compilación relacionados con OpenEXR, es posible que necesites modificar el código fuente:
+Si encuentras errores de compilación relacionados con OpenEXR, puede que necesites modificar el código fuente:
 
 En `./components/pango_image/src/image_io_exr.cpp`, reemplaza:
 
@@ -129,7 +129,7 @@ En `./components/pango_image/src/image_io_exr.cpp`, reemplaza:
 #include <ImfOutputFile.h>
 ```
 
-con:
+por:
 
 ```cpp
 #include <OpenEXR/ImfChannelList.h>
@@ -148,7 +148,7 @@ git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 cd ORB_SLAM3
 ```
 
-ORB-SLAM3 puede tener problemas de compatibilidad con estándares C++ más nuevos. Corrige el problema de `monotonic_clock`:
+ORB-SLAM3 puede tener problemas de compatibilidad con estándares C++ más recientes. Corrige el problema de `monotonic_clock`:
 
 ```bash
 # Replace monotonic_clock with steady_clock in all source files
@@ -175,17 +175,17 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="Ventana Pangolin SimpleDisplay abierta para confirmar que la biblioteca de visualización está instalada" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/v_tool.png" />
 </div>
 
-Si la instalación se realizó correctamente, la ventana como se muestra en la imagen anterior puede abrirse normalmente.
+Si la instalación se ha realizado correctamente, la ventana mostrada en la imagen anterior se puede abrir con normalidad.
 
 **Paso 5.** Modificar CMakeLists.txt
 
-Modifica el archivo CMakeLists.txt para hacer el proyecto compatible con el SDK de Orbbec. Copia directamente la siguiente configuración completa de CMakeList.txt:
+Modifica el archivo CMakeLists.txt para hacer que el proyecto sea compatible con el Orbbec SDK. Copia directamente la siguiente configuración completa de CMakeList.txt:
 :::info
-Necesitas modificar: `set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")` a la ruta donde instalaste tu propio SDK.
+Debes modificar: `set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")` a la ruta donde instalaste tu propio SDK.
 :::
 <details>
 <summary> CMakeLists.txt </summary>
@@ -754,9 +754,9 @@ endif()
 
 </details>
 
-**Paso 6.** Crear un script que use el adaptador Orbbec Gemini2 para el modo RGB-D de ORB-SLAM3
+**Paso 6.** Crea un script que use el adaptador Orbbec Gemini2 para el modo RGB-D de ORB-SLAM3
 
-Crear un archivo llamado `rgbd_orbbec_gemini2_cpp.cc` bajo el directorio `Examples/RGB-D/` de la siguiente manera:
+Crea un archivo llamado `rgbd_orbbec_gemini2_cpp.cc` en el directorio `Examples/RGB-D/` como se muestra a continuación:
 
 <details>
 <summary> rgbd_orbbec_gemini2_cpp.cc </summary>
@@ -1013,20 +1013,20 @@ int main(int argc, char **argv)
 
 </details>
 
-**Paso 7.** Compilar ORB-SLAM3
+**Paso 7.** Compila ORB-SLAM3
 
 ```bash
 chmod +x build.sh
 ./build.sh
 ```
 
-## Calibración de Cámara
+## Calibración de la cámara
 
 <div style={{ textAlign: "justify" }}>
-Antes de ejecutar ORB-SLAM3, es necesario calibrar la Cámara para obtener la configuración de parámetros de la cámara. Aquí, demostramos el uso de la herramienta de calibración de cámara proporcionada por ROS para calibrar la cámara y obtener sus parámetros.
+Antes de ejecutar ORB-SLAM3, es necesario calibrar la cámara para obtener la configuración de parámetros de la cámara. Aquí mostramos cómo usar la herramienta de calibración de cámara proporcionada por ROS para calibrar la cámara y obtener sus parámetros.
 </div>
 
-**Paso 1.** Instalar el Driver ROS2 de Orbbec
+**Paso 1.** Instala el controlador Orbbec ROS2
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -1056,24 +1056,24 @@ ros2 launch orbbec_camera gemini2.launch.py
 ```
 
 :::note
-Puedes verificar si el nodo de la cámara puede iniciarse normalmente observando si el tópico de datos de la cámara se publica normalmente.
+Puedes comprobar si el nodo de la cámara puede iniciarse con normalidad observando si el tópico de datos de la cámara se publica con normalidad.
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list showing the Orbbec camera colour and depth topics" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
 
-**Paso 2.** Instalar el Paquete de Calibración de Cámara
+**Paso 2.** Instalar el paquete de calibración de la cámara
 
 ```bash
 sudo apt install ros-humble-camera-calibration
 ```
 
-**Paso 3.** Descargar el Tablero de Calibración
+**Paso 3.** Descargar el tablero de calibración
 
 Descarga el tablero de calibración desde [Checkerboard Collection](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) e imprímelo.
 
-**Paso 4.** Ejecutar la Calibración de Cámara
+**Paso 4.** Ejecutar la calibración de la cámara
 
 ```bash
 # For 8x6 checkerboard with 25mm squares
@@ -1084,25 +1084,25 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 :::note
 
 - `--size 8x6` se refiere al número de esquinas internas (8×6 = 48 esquinas para una cuadrícula de 9×7)
-- `--square 0.025` se refiere al tamaño del cuadrado en metros (25mm)
-- Mueve la cámara alrededor para capturar imágenes desde diferentes ángulos
+- `--square 0.025` se refiere al tamaño del cuadrado en metros (25 mm)
+- Mueve la cámara para capturar imágenes desde diferentes ángulos
 
 :::
 
-Recopila imágenes desde diferentes ángulos, calcula automáticamente los parámetros de la cámara y guarda los datos de calibración en una herramienta.
+Recoge imágenes desde diferentes ángulos, calcula automáticamente los parámetros de la cámara y guarda los datos de calibración en un tooltip.
 <div align="center">
-    <img width={1000}
+    <img alt="camera_calibrator with the checkerboard corners detected on a fisheye camera and the CALIBRATE, SAVE and COMMIT buttons" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_tool.png" />
 </div>
 
 <div align="center">
-    <img width={1000}  
+    <img alt="Calibration YAML written to ~/.ros/camera_info/camera.yaml, with the camera matrix, distortion and rectification values" width={1000}  
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_save.png" />
 </div>
 
 **Paso 5.** Configurar el archivo YAML de la cámara
 
-Crea un archivo de configuración de parámetros.yaml llamado `Orbbec_Gemini2.yaml` para la cámara Orbbec Gemini2 bajo la carpeta `Examples/RGB-D/` en tu proyecto ORB-SLAM3.
+Crea un archivo de configuración de parámetros configuration.yaml llamado `Orbbec_Gemini2.yaml` para la cámara Orbbec Gemini2 en la carpeta `Examples/RGB-D/` de tu proyecto ORB-SLAM3.
 
 <details>
 <summary> Orbbec_Gemini2.yaml </summary>
@@ -1190,7 +1190,7 @@ Viewer.ViewpointF: 500.0
 
 </details>
 
-## Ejecutando ORB-SLAM3
+## Ejecutar ORB-SLAM3
 
 ```bash
 # Set Library Path
@@ -1200,20 +1200,45 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="ORB-SLAM3 running in RGB-D mode: live camera view, tracked features and the reconstructed map" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.gif" />
 </div>
 
 ## Recursos
 
-- [Guía de API de Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
-- [Driver ROS2 de Orbbec](https://github.com/orbbec/OrbbecSDK_ROS2)
+- [Guía de la API de Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
+- [Controlador Orbbec ROS2](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [Repositorio ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 - [ROS SDK](https://wiki.seeedstudio.com/es/orbbec_depth_camera_on_ros/)
 
-## Soporte Técnico y Discusión de Productos
+## Preguntas frecuentes
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+**¿Qué host y versión de JetPack son el objetivo de esta compilación?**
+Un reComputer de la serie J30/J40 (J4012 en las fotos) con JetPack 6.2 y ROS 2 Humble, además de una Orbbec Gemini 2. ORB-SLAM3 en sí se compila desde el código fuente en esa máquina, por lo que la versión de JetPack determina contra qué versiones de CUDA y OpenCV compilas.
+
+**¿Se ejecuta en modo monocular o RGB-D?**
+RGB-D. El comando de lanzamiento usa `Examples/RGB-D/rgbd_orbbec_gemini2` con el archivo de parámetros `Orbbec_Gemini2.yaml`, porque la Gemini 2 publica flujos sincronizados de color y profundidad, y el flujo de profundidad elimina la ambigüedad de escala del SLAM monocular.
+
+**¿Qué versión del Orbbec SDK debo instalar?**
+SDK v2.4.11 para aarch64 (`OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64`). El ejemplo de CMakeLists apunta a esa ruta, así que si instalas una versión diferente, actualiza `set(ORBBEC_SDK_PATH ...)` para que coincida.
+
+**La compilación falla con errores de `monotonic_clock`. ¿Qué debo cambiar?**
+La guía reemplaza `std::chrono::monotonic_clock` por `std::chrono::steady_clock` en las fuentes de ORB-SLAM3 y establece C++14 como objetivo en CMakeLists. Ambos cambios son necesarios en JetPack 6.2, donde la biblioteca estándar de C++ ya no incluye `monotonic_clock`.
+
+**¿Tengo que calibrar la cámara antes de ejecutar SLAM?**
+Sí. Ejecuta `camera_calibration` con el tablero de 8×6 / 25 mm, guarda el resultado y copia los parámetros intrínsecos en `Examples/RGB-D/Orbbec_Gemini2.yaml`. El seguimiento es inestable con los parámetros de fábrica.
+
+## Recursos relacionados
+
+- [Cámara 3D Orbbec Gemini 2 en ROS 2](/es/orbbec_gemini2/)
+- [Desplegar Depth Anything V3 en Jetson AGX Orin](/es/deploy_depth_anything_v3_jetson_agx_orin/)
+- [PyCuVSLAM en reComputer](/es/pycuvslam_recomputer_robotics/)
+- [Página de producto de Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- [Repositorio ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
+
+## Soporte técnico y debate sobre el producto
+
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

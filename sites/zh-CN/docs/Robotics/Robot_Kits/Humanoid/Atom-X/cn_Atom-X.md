@@ -1,5 +1,5 @@
 ---
-description: Atom-X 入门指南。
+description: "如何上手 Atom-X 人形机器人：开箱、上电、首次启动、基础动作与软件配置。"
 title: Atom-X 入门指南
 keywords:
   - Humanoid

@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona un tutorial para los motores de la serie Myactuator.
+description: "Guía completa de actuadores de articulación MyActuator serie R: descripción de modelos, cableado CAN, modos de control y ajuste para brazos robóticos."
 title: MyActuator
 keywords:
   - actuador

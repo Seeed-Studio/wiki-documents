@@ -248,6 +248,16 @@ reComputer J40/ J30 シリーズには、付属の NVMe SSD に JetPack 5.1.3 �
 
 :::
 
+:::tip Windows からフラッシュする場合: Seeed Jetson DevelopTool を使用
+
+手動でのフラッシュ作業には **Ubuntu** ホスト PC が必要です。**Windows** コンピュータからフラッシュする場合は、[**Seeed Jetson DevelopTool**](/jetson_developtool_overview/) を使用してください。**Windows ホスト**に対応したオールインワン GUI で、コマンド入力不要、ワンクリックの簡単操作でフラッシュできます。
+
+- [Seeed Jetson DevelopTool 概要](/jetson_developtool_overview/)
+- [インストール (Ubuntu / Windows)](/jetson_developtool_installation/)
+- [Flash Center でファームウェアをフラッシュ](/jetson_developtool_flash_firmware/)
+
+:::
+
 ### 強制リカバリモードに入る
 
 :::note

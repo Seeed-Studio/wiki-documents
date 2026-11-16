@@ -1,5 +1,6 @@
 ---
 description: 示例演示如何使用操纵杆（PS4或Xbox控制器）控制Reachy Mini的头部偏航角，以实现直观的实时控制。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 操纵杆控制器
 slug: /reachymini_examples_joy_controller
 keywords:

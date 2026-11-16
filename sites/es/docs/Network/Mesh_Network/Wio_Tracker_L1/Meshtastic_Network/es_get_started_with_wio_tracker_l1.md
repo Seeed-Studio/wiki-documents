@@ -8,10 +8,10 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 09/03/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-24'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
@@ -25,7 +25,7 @@ La Wio Tracker L1 Serie comparte el mismo marco de hardware. Aunque la guía en 
 
 ### Parte 1 Desempaquetado
 
-Cuando utilices los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectarlos a la fuente de alimentación USB, levanta el interruptor de encendido hacia arriba para encenderlos.
+Cuando uses los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectarlos a la fuente de alimentación USB, levanta el interruptor de encendido hacia arriba para encenderlos.
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -59,18 +59,18 @@ Solo el firmware 2.7 es compatible con la barra de menú. Si quieres usar la bar
 
 #### Zumbador
 
-Si quieres encender o apagar el zumbador, primero `update the firmware` a la versión `2.7`. Porque solo el firmware de la versión 2.7 tiene la barra de menú.
+Si quieres encender o apagar el zumbador, primero `update the firmware` a la versión `2.7`. Porque solo el firmware versión 2.7 tiene la barra de menú.
 
 - Encender el zumbador
-Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> Disable
+Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> Disable
 - Apagar el zumbador
-Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> All enabled
+Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### Parte 4 Conexión del teléfono
+### Parte 4 Conexión con el teléfono
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -87,7 +87,7 @@ Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> All enab
 :::danger note
 Cuando el dispositivo se encuentre en los estados siguientes, por favor no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inservible.
 
-1. No ha finalizado el proceso de transmisión de mensajes
+1. No ha terminado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
 
@@ -159,7 +159,7 @@ import TabItem from '@theme/TabItem';
 
 ### Configurar el LoRa
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencia usa tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
 
 <Tabs>
 <TabItem value="ios" label="App IOS">
@@ -176,7 +176,7 @@ Para empezar a comunicarte a través de la malla, debes establecer tu región. E
 
 **Lista de regiones**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Sin establecer|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
@@ -185,7 +185,7 @@ Para empezar a comunicarte a través de la malla, debes establecer tu región. E
 Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para obtener una lista más completa.
 
 :::info
-**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
+**EU_868** debe cumplir con una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
 :::
 
 Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para adaptarlo a tus necesidades.
@@ -211,7 +211,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 
  Método 1: Vía Bluetooth
 
-    Elige el método Bluetooth. Elige el ID del dispositivo en la ventana emergente.
+    Elige el método bluetooth. Elige el ID del dispositivo en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  Método 2: Vía serie
@@ -225,7 +225,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 
 ### Configurar GPS
 
-Por favor, activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de transmisión para obtener información de ubicación más actualizada.
+Por favor, activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de difusión para obtener información de ubicación más actualizada.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
@@ -298,19 +298,19 @@ La pantalla OLED mostrará los datos del sensor si activas `on screen`.
 ### Conexión de pantalla
 
 - Pantalla E-Ink
-  [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
+  [Haz clic aquí](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) para obtener la pantalla E-Ink compatible.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - Pantalla OLED
-[Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) to get the compatible OLED screen. The current OLED driver is SSD1306.
+[Haz clic aquí](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) para obtener la pantalla OLED compatible. El controlador OLED actual es SSD1306.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### Teclado virtual
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-¡La versión de firmware 2.7 ahora es compatible con el teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otro dispositivo. Sigue el [Flash Firmware Tutorial](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para actualizar el firmware.
+¡La versión de firmware 2.7 ahora admite teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otro dispositivo. Sigue el [Tutorial de flasheo de firmware](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#parte-2-flasheo-de-firmware) para actualizar el firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### Configurar tono de llamada
@@ -377,11 +377,21 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ## Preguntas frecuentes (FAQ)
 
+### Fallo en la actualización de firmware / Recuperación OTA
+
+Si tu Wio Tracker L1 deja de responder después de una actualización de firmware NRF-OTA, prueba lo siguiente:
+
+1. Conecta el dispositivo a tu ordenador usando un cable de datos USB y pulsa dos veces el botón Reset para [entrar en modo DFU manualmente](#incapaz-de-entrar-en-dfu--entrar-en-modo-dfu-manualmente).
+2. Si aparece la unidad UF2, sigue la guía [Flash Firmware](#flashear-firmware) para reinstalar el firmware de aplicación adecuado.
+3. Si el dispositivo aún no puede recuperarse y hay un puerto serie DFU disponible, sigue [Dispositivo bloqueado y recuperación del bootloader](#dispositivo-bloqueado--instalación-del-bootloader), luego reinstala el firmware de la aplicación.
+
+Si el dispositivo no puede entrar en modo DFU o no puede ser detectado por tu ordenador, ponte en contacto con el soporte técnico.
+
 ### Dispositivo bloqueado y recuperación del bootloader {#device-bricked--bootloader-installation}
 
 **Descripción:**
 
-El dispositivo no responde, no hay LED, no se puede emparejar con tu App. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
+El dispositivo no responde, no hay LED, no se puede emparejar con tu App. Si encuentras el dispositivo completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
 
 El bootloader se restaura a través del puerto serie USB (Serial DFU) con `adafruit-nrfutil`.
 
@@ -394,7 +404,7 @@ Durante el flasheo, mantén la conexión del cable estable y **NO** lo desconect
 - Un dispositivo de la serie Wio Tracker L1 (L1 / L1 Pro)
 - Un cable de datos USB en buen estado (no solo de carga)
 - Un PC con Windows, macOS o Linux con Python 3 y pip
-- El paquete de bootloader: [Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — no extraigas el ZIP; `adafruit-nrfutil` lo usa tal cual
+- El paquete de bootloader: [Haz clic aquí para descargar el Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip) — NO extraigas el ZIP; `adafruit-nrfutil` lo usa tal cual
 
 **Paso 2: Instalar adafruit-nrfutil**
 
@@ -454,7 +464,7 @@ adafruit-nrfutil version
 </Tabs>
 
 :::note
-Comprueba siempre la versión con `adafruit-nrfutil version`. No uses `adafruit-nrfutil --version`.
+Comprueba siempre la versión con `adafruit-nrfutil version`. NO uses `adafruit-nrfutil --version`.
 :::
 
 **Paso 3: Comprobar el puerto serie**
@@ -490,7 +500,7 @@ El dispositivo aparece como `/dev/cu.usbmodemXXXX`.
 ls /dev/ttyACM*
 ```
 
-El dispositivo normalmente aparece como `/dev/ttyACM0`; si no se lista nada, prueba también con `ls /dev/ttyUSB*`. Compara los resultados antes y después de conectar el dispositivo para identificar su puerto. Vuelve a comprobar después de entrar en modo DFU, porque el número de puerto puede cambiar.
+El dispositivo normalmente aparece como `/dev/ttyACM0`; si no se muestra nada, prueba también `ls /dev/ttyUSB*`. Compara los resultados antes y después de conectar el dispositivo para identificar su puerto. Vuelve a comprobar después de entrar en modo DFU, porque el número de puerto puede cambiar.
 
 Comprueba los permisos del puerto, sustituyendo `/dev/ttyACM0` por tu puerto real:
 
@@ -504,16 +514,16 @@ En Ubuntu/Debian, los puertos serie normalmente pertenecen al grupo `dialout`. S
 sudo usermod -aG dialout "$USER"
 ```
 
-Cierra la sesión y vuelve a iniciarla para que el cambio surta efecto. En otras distribuciones, usa el grupo de acceso serie mostrado por `ls -l` y sigue las instrucciones de tu distribución.
+Cierra sesión y vuelve a iniciarla para que el cambio surta efecto. En otras distribuciones, usa el grupo con acceso serie que muestre `ls -l` y sigue las instrucciones de tu distribución.
 
 </TabItem>
 </Tabs>
 
 **Paso 4: Flashear el bootloader**
 
-Reemplaza el puerto con el que encontraste en el Paso 3:
+Sustituye el puerto por el que encontraste en el Paso 3:
 
-Cierra cualquier monitor serie o flasher del navegador conectado al dispositivo. Si ya has entrado en modo DFU pulsando dos veces `Reset`, usa el puerto DFU actual y omite `--touch 1200` de los comandos siguientes.
+Cierra cualquier monitor serie o flasher del navegador conectado al dispositivo. Si ya has entrado en modo DFU pulsando dos veces `Reset`, usa el puerto DFU actual y omite `--touch 1200` de los siguientes comandos.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -545,7 +555,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 **Paso 5: Gestionar el cambio de puerto serie**
 
-`--touch 1200` solicita el modo DFU abriendo y cerrando el puerto serie a 1200 baudios. El sistema operativo puede entonces asignar un puerto diferente, y el primer comando puede detenerse con un traceback como este:
+`--touch 1200` solicita el modo DFU abriendo y cerrando el puerto serie a 1200 baudios. El sistema operativo puede asignar entonces un puerto diferente, y el primer comando puede detenerse con un traceback como este:
 
 ```
 Touched serial port COM43
@@ -553,7 +563,7 @@ Touched serial port COM43
 FileNotFoundError: could not open port 'COM43'
 ```
 
-Comprueba si ha aparecido un nuevo puerto DFU antes de reintentar. Este error por sí solo no confirma que el dispositivo haya entrado en modo DFU ni que el bootloader se haya flasheado correctamente. En el PC con Windows probado, el puerto cambió de `COM43` a `COM45`:
+Comprueba si ha aparecido un nuevo puerto DFU antes de volver a intentarlo. Este error por sí solo no confirma que el dispositivo haya entrado en modo DFU ni que el bootloader se haya flasheado correctamente. En el PC con Windows probado, el puerto cambió de `COM43` a `COM45`:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/03_dfu_com_port.png" alt="Puerto serie DFU tras la nueva enumeración en el Administrador de dispositivos de Windows" width={600} height="auto" /></p>
 
@@ -578,7 +588,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 <TabItem value="linux" label="Linux">
 
-Por ejemplo, si el nuevo puerto DFU es `/dev/ttyACM1`, usa el siguiente comando. Reemplázalo por tu puerto real:
+Por ejemplo, si el nuevo puerto DFU es `/dev/ttyACM1`, usa el siguiente comando. Sustitúyelo por tu puerto real:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip" -p /dev/ttyACM1 -b 115200 --singlebank
@@ -591,7 +601,7 @@ adafruit-nrfutil --verbose dfu serial --package "wio_tracker_l1_bootloader-0.10.
 
 El flasheo se ha realizado correctamente cuando la salida termina con `Device programmed.`:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="Salida de adafruit-nrfutil terminando con Device programmed" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/04_flash_success.png" alt="Salida de adafruit-nrfutil que termina con Device programmed" width={600} height="auto" /></p>
 
 Después de eso, aparece una unidad UF2 en tu PC (captura de pantalla del PC con Windows probado). Su etiqueta de volumen varía según la compilación del bootloader — la unidad probada mostraba `XIAO-BOOT` — y NO es un criterio de aprobado/suspenso; no juzgues el resultado por el nombre de la unidad ni por `INFO_UF2.TXT`:
 
@@ -607,16 +617,16 @@ Cuando hayas completado los pasos anteriores, sigue [Flash Firmware](https://wik
 
 **Solución de problemas**
 
-- `adafruit-nrfutil` no se reconoce después de la instalación: añade el directorio de scripts de usuario de Python a tu PATH (`Scripts` en Windows, `bin` en tu directorio de inicio en macOS); en Linux, vuelve a abrir tu terminal después de `pipx ensurepath`.
+- `adafruit-nrfutil` no se reconoce después de la instalación: añade el directorio de scripts de usuario de Python a tu PATH (`Scripts` en Windows, `bin` en tu directorio personal en macOS); en Linux, vuelve a abrir tu terminal después de `pipx ensurepath`.
 - Puerto ocupado / acceso denegado: cierra monitores serie, pestañas del flasher web, Arduino IDE o cualquier otra cosa que esté usando el puerto. En Linux, comprueba también los permisos del puerto serie y la pertenencia al grupo como se describe en el Paso 3.
-- `FileNotFoundError: could not open port ...` después de `Touched serial port ...`: comprueba si ha aparecido un nuevo puerto DFU y sigue el Paso 5. Si no aparece ningún puerto DFU, prueba la recuperación manual de DFU que se muestra a continuación.
+- `FileNotFoundError: could not open port ...` después de `Touched serial port ...`: comprueba si ha aparecido un nuevo puerto DFU y sigue el Paso 5. Si no aparece ningún puerto DFU, prueba la recuperación manual de DFU que aparece a continuación.
 - No se puede entrar en modo DFU: consulta [Unable to enter DFU & Entering DFU Mode Manually](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually).
 
 **Recuperación manual de DFU**
 
 Si `--touch 1200` no puede poner el dispositivo en modo DFU (por ejemplo, el firmware no responde en absoluto), entra en él manualmente: conecta el dispositivo, pulsa dos veces `Reset` (el LED amarillo permanece fijo), encuentra el puerto serie DFU como en el Paso 3 y luego ejecuta el comando del Paso 5 en ese puerto SIN `--touch 1200`. El éxito se ve igual que en el Paso 6.
 
-### Unable to enter DFU & Entering DFU Mode Manually
+### No se puede entrar en DFU y entrar en modo DFU manualmente
 
 Conecta el dispositivo a tu PC y pulsa dos veces el botón `Reset`: el LED amarillo permanece fijo y aparece un puerto serie DFU en tu PC.
 
@@ -628,7 +638,7 @@ Pulsa el botón `Reset` una vez para salir del modo DFU.
 
 ### No se puede comunicar en el canal primario
 
-Si el dispositivo no puede comunicarse con nodos cercanos ni enviar mensajes, primero comprueba que la región LoRa y el preset del módem coinciden con los de los nodos circundantes. También debes comprobar si la **PSK** predeterminada se ha cambiado. Una PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
+Si el dispositivo no puede comunicarse con nodos cercanos ni enviar mensajes, primero comprueba que la región LoRa y el preset del módem coinciden con los de los nodos circundantes. También deberías comprobar si la **PSK** predeterminada se ha cambiado. Una PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
 
 La forma más sencilla de encontrar este problema es a través de la app móvil. Abre la app, conéctate al dispositivo de destino y luego ve a `Settings` -> `Channels`. Selecciona el canal primario y comprueba el valor de **PSK**. Si es diferente al de los nodos circundantes, actualízalo a la misma PSK y guarda la configuración del canal.
 
@@ -665,16 +675,16 @@ Si no estás seguro de qué ajustes se cambiaron, restaura el dispositivo a su c
 
 ### Restablecimiento de fábrica
 
-Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para que hagas el restablecimiento de fábrica.
+Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.
 
 - [click here](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para ver el vídeo. Necesitas realizar un borrado de la flash y luego volver a flashear el firmware más reciente.
 
 - Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará automáticamente con la configuración de fábrica.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### Fallo en mensaje directo
+### Fallo de mensaje directo
 
-#### Restablecer NodeDB
+#### Restablecimiento de NodeDB
 
 NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, puede deberse a que tu nodedB haya almacenado información obsoleta para ese nodo. Necesitarás actualizarla.
 
@@ -684,27 +694,27 @@ Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device*
 
 #### Intercambiar información de usuario
 
-Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos de la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre sí. Si no puedes enviar ni recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
+Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la aplicación.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo en Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo en Configuración" width={300} height="auto" /></p>
 
 #### Regenerar clave privada
 
-Cada nodo posee un par de claves pública/privada. Para intercambiar un mensaje privado cifrado, el remitente lo cifra con la clave pública del destinatario, y solo la clave privada de ese destinatario puede descifrarlo. Dos nodos pueden, por tanto, comunicarse de forma privada una vez que conocen la clave pública del otro. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar su clave privada. Después de la regeneración, elimina ese nodo de las listas de nodos de los otros dispositivos para que puedan volver a conectarse y obtener su nueva clave pública.
+Cada nodo posee un par de claves pública/privada. Para intercambiar un mensaje privado cifrado, el remitente lo cifra con la clave pública del destinatario, y solo la clave privada de ese destinatario puede descifrarlo. Por lo tanto, dos nodos pueden comunicarse de forma privada una vez que conocen la clave pública del otro. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar su clave privada. Después de la regeneración, elimina ese nodo de las listas de nodos de los otros dispositivos para que puedan reconectarse y obtener su nueva clave pública.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo en Configuración" width={600} height="auto" /></p>
 
-Reinicia el dispositivo defectuoso para que la función de configuración surta efecto.
+Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
 :::note
-Después de la regeneración de la clave, otros dispositivos deben volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos de otros dispositivos.
+Después de la regeneración de la clave, otros dispositivos necesitan volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos de otros dispositivos.
 :::
 
 ### Calidad de la señal
 
 - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con una SNR inferior a -10 dB indica un rendimiento deficiente.
 
-- **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente.
 
       Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
 
@@ -714,7 +724,7 @@ Si necesitas un reemplazo de antena para L1 Pro, [haz clic aquí](https://www.se
 
 ## Recursos
 
-- [Bootloader (Serial DFU package)](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
+- [Bootloader (paquete Serial DFU)](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/adafruit/wio_tracker_l1_bootloader-0.10.0_s140_7.3.0.zip)
 - [Archivo de referencia para impresión 3D (V1)](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
 - [Archivo de referencia para impresión 3D (V2 nuevo joystick de cuatro direcciones)](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [Desafío de diseño de carcasa L1](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)

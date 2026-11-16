@@ -1,5 +1,6 @@
 ---
 description: This tutorial shows how to set up the ROS2 control workspace for the reBot Arm B601-DM, including arm control, RViz visualization, and MoveIt2 integration.
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png
 title: B601-DM with ROS2
 keywords:
   - reBot Arm

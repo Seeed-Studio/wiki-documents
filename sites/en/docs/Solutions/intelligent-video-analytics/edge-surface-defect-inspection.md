@@ -1,6 +1,7 @@
 ---
 description: On-device steel surface defect inspection — six defect classes, an OK/NG verdict delivered to the PLC over Modbus TCP and to the MES over MQTT, on Jetson Orin or a reComputer R2000 series with a Hailo-8. Hardware, deployment outline, output contracts and measured data.
 title: 'Edge Surface Defect Inspection: Six Classes, Modbus and MQTT'
+sidebar_label: 'Edge Surface Defect Inspection'
 keywords:
   - surface defect inspection
   - steel strip defect detection
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/edge-surface-defect-inspection/
 generated_from: sensecraft-solutions@edge_inspection_surface
 ---
@@ -103,9 +104,8 @@ Two things on site: a camera and a host.
 
 | | Host | Streams measured | When to pick it |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011](https://www.seeedstudio.com/reComputer-J3011-p-5590.html) (Jetson Orin Nano 8GB)<br/>Entry host for a single camera | 1–2 stable | One camera, cost-sensitive. Measured capture→coil P50 10.56 ms |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) (Jetson Orin NX 16GB)<br/>The measured host | 8 stable | More than one camera; all data below was measured on this host |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110191.jpg" alt="reComputer Industrial J4012" width="110" /> | [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) (Orin NX 16GB, fanless) | same as J4012 | The host goes in a control cabinet; same module and runtime, different enclosure |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html) (Jetson Orin Nano 8GB)<br/>Entry host for a single camera | 1–2 stable | One camera, cost-sensitive. Measured capture→coil P50 10.56 ms |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) (Jetson Orin NX 16GB)<br/>The measured host | 8 stable | More than one camera; all data below was measured on this host |
 
 A third host is the **reComputer R2000 series with a Hailo-8**. Deployment steps exist for it; the configurator does not quote it yet.
 

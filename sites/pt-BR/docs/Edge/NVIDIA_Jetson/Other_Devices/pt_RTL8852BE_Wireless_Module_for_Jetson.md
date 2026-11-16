@@ -1,5 +1,5 @@
 ---
-description: Este wiki apresenta os recursos e especificações do módulo sem fio RTL8852BE, um módulo sem fio Wi-Fi 6 e Bluetooth M.2 compatível com dispositivos NVIDIA Jetson. O artigo fornece informações detalhadas sobre suas especificações técnicas, instalação de driver para JetPack 5 e JetPack 6, e métodos para configurar redes sem fio e Bluetooth.
+description: "Adicione Wi-Fi 6 ao Jetson com o módulo M.2 RTL8852BE: instalação do driver para JetPack 5 e 6, detecção do módulo e configuração de rede."
 title: Módulo Sem Fio RTL8852BE para Jetson
 keywords:
   - Edge
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">
-  <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/8852be.png"/>
+  <img alt="Módulo M.2 RTL8852BE Wi-Fi 6 e Bluetooth, foto do produto" width ="600" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/8852be.png"/>
 </div>
 
 
@@ -67,7 +67,7 @@ O RTL8852BE é um módulo sem fio M.2 Wi-Fi 6 (802.11ax) baseado no chipset Real
     </tr>
     <tr>
       <td>Antena</td>
-      <td>Conecta-se às antenas externas por meio de conector MHF4</td>
+      <td>Conecta às antenas externas através de conector MHF4</td>
     </tr>
     <tr>
       <td>Dimensão</td>
@@ -92,7 +92,7 @@ O RTL8852BE é um módulo sem fio M.2 Wi-Fi 6 (802.11ax) baseado no chipset Real
     </table>
 </div>
 
-## Dispositivos Compatíveis
+## Dispositivos Suportados
 
 Toda a linha reComputer
 
@@ -106,7 +106,7 @@ O módulo RTL8852BE pode ser detectado pelo Jetson como um dispositivo PCIe, mas
 lspci | grep -i network
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/lspci.PNG"/>
+  <img alt="saída do lspci listando o controlador de rede RTL8852BE" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/lspci.PNG"/>
 </div>
 
 
@@ -122,7 +122,7 @@ sudo apt-get update
 sudo apt-get install make gcc linux-headers-$(uname -r) build-essential git
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp5_install.png"/>
+  <img alt="saída do make compilando os módulos rtw89 para o RTL8852BE, terminando com modprobe 8852be" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp5_install.png"/>
 </div>
 
 ```bash
@@ -140,7 +140,7 @@ git clone https://github.com/a5a5aa555oo/rtw89
 cd rtw89
 ```
 
-Edite o `Makefile` para definir o caminho correto dos cabeçalhos do kernel:
+Edite o `Makefile` para definir o caminho correto dos headers do kernel:
 
 ```diff
 # JP 6.2
@@ -150,7 +150,7 @@ KDIR ?= /usr/src/linux-headers-5.15.148-tegra-ubuntu22.04_aarch64/3rdparty/canon
 KDIR ?= /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/makefile.png"/>
+  <img alt="Makefile editado para apontar para o código-fonte do kernel a partir dos headers instalados" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/makefile.png"/>
 </div>
 
 Em seguida, compile e instale:
@@ -161,7 +161,7 @@ sudo make install
 sudo modprobe rtw89_8852be
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp6_install.png"/>
+  <img alt="make install copiando os arquivos .ko do rtw89 para /lib/modules/5.15.136-tegra" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp6_install.png"/>
 </div>
 ## Verificar o Módulo Sem Fio
 :::info
@@ -175,7 +175,7 @@ Ajuste o nome da interface nos comandos abaixo conforme necessário. Use o segui
 ifconfig
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/interface.png"/>
+  <img alt="saída do ifconfig mostrando a nova interface wlan0" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/interface.png"/>
 </div>
 
 :::
@@ -190,14 +190,14 @@ sudo iw dev wlan0 scan | grep -E "SSID|freq"
 
 Substitua `wlan0` pelo nome real da sua interface, se for diferente.
 
-### Conectar-se a uma Rede WiFi
+### Conectar a uma Rede WiFi
 
 ```bash
 sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
+  <img alt="nmcli conectando wlan0 ao ponto de acesso" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
 ### Verificar Conexão WiFi 6
@@ -208,13 +208,13 @@ Verifique o status atual do link:
 iw dev wlan0 link
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
+  <img alt="saída de iw dev wlan0 link confirmando a conexão Wi-Fi 6" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
 </div>
 
 A saída mostrará informações como:
 
 - **freq**: A frequência de operação (por exemplo, 5180 MHz corresponde à banda de 5 GHz)
-- **HE-MCS**: O esquema de modulação e codificação Wi-Fi 6 (por exemplo, MCS 9 representa a maior eficiência de codificação)
+- **HE-MCS**: O esquema de modulação e codificação do Wi-Fi 6 (por exemplo, MCS 9 representa a maior eficiência de codificação)
 - **TX/RX rate**: As velocidades atuais de transmissão e recepção
 
 ## Configuração de Bluetooth
@@ -225,11 +225,17 @@ A funcionalidade Bluetooth do módulo RTL8852BE pode ser configurada usando `blu
 bluetoothctl
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/bluetooth.png"/>
+  <img alt="bluetoothctl mostrando o controlador registrado com seu endereço MAC e Paired: yes" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/bluetooth.png"/>
 </div>
+## Recursos Relacionados
+
+- [Uso de hardware e interfaces do reComputer Super](/pt-br/recomputer_jetson_super_hardware_interfaces_usage/)
+- [Interfaces e pinagens do reComputer Robotics J401](/pt-br/recomputer_jetson_robotics_j401_getting_started/)
+- [repositório wiki-documents e discussões](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
+
 ## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

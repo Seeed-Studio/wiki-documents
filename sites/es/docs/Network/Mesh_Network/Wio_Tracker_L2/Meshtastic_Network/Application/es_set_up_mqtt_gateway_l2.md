@@ -52,15 +52,15 @@ Luego haz clic en "Flash". No olvides marcar "Full Erase and Install" si quieres
 
 <Tabs>
 <TabItem value="23" label="Comprueba la parte trasera del dispositivo">
-Los `últimos cuatro dígitos` de la dirección MAC son el ID del dispositivo
+Los `last four digit` de la dirección MAC son el ID del dispositivo
 
-Por ejemplo, el ID del dispositivo del dispositivo de abajo sería `A0D4`
+Por ejemplo, el ID del dispositivo que se muestra a continuación sería `A0D4`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/MACAd.png" alt="pir" width={800} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="22" label="Vía herramienta serie">
+<TabItem value="22" label="A través de herramienta serie">
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
  Haz clic en `Open Serial Monitor`, conecta el dispositivo a tu PC, revisa el registro serie, palabra clave `using nodenum`.
@@ -79,7 +79,7 @@ Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
 <TabItem value="3" label="MUI">
 
-Ve a la página `Setting`, haz clic en `Reboot/Shutdown`, luego haz clic en el `Bluetooth icon`.
+Ve a la página `Setting`, haz clic en `Reboot/Shutdown` y luego haz clic en el `Bluetooth icon`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -96,7 +96,7 @@ El dispositivo está siempre en modo de emparejamiento Bluetooth, sin necesidad 
 </TabItem>
 </Tabs>
 
-[Haz clic aquí](https://meshtastic.org/downloads/) para descargar la APP Meshtastic.
+[Click here](https://meshtastic.org/downloads/) para descargar la APP Meshtastic.
 
 Empareja tu dispositivo con la APP de tu teléfono.
 
@@ -122,13 +122,13 @@ Empareja tu dispositivo con la APP de tu teléfono.
 
 - Introduce el código que se muestra en la pantalla y luego haz clic en `OK` para conectar el dispositivo.
 
-<p style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/CodePairingPhone.png" alt="pir" width={300} height="auto" /></p>
 
 
 </TabItem>
 </Tabs>
 
-### Paso 4 Configurar la pasarela Mesh-mqtt de Xiao ESP32S3
+### Paso 4 Configurar la pasarela Mesh-mqtt con Xiao ESP32S3
 
 <Tabs>
 <TabItem value="pypi" label="Android">
@@ -137,25 +137,25 @@ Empareja tu dispositivo con la APP de tu teléfono.
 - cambia la región de UNSET a tu país/región (por ejemplo, EU868 para Europa, US para EE. UU., etc.).
 - Elige `OK to MQTT`
 - Haz clic en Send
-- El dispositivo se reinicia y se reconecta automáticamente. El dispositivo se reiniciará y se reconectará automáticamente. Esto puede tardar de 30 s a 2 min.
+- El dispositivo se reinicia y se vuelve a conectar automáticamente. El dispositivo se reiniciará y se volverá a conectar automáticamente. Esto puede tardar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTLoRaConfiguration.jpg" style={{width:350, height:'auto'}}/></div>
 
 **2. Configuración MQTT**
 
-- Puedes usar los valores predeterminados `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats). 
+- Puedes usar la `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats) predeterminadas. 
 - Elige `MQTT Enabled`
 - Elige `MQTT Client Proxy Enabled`
-- (Opcional) Si quieres que otros usuarios mqtt te vean en el mapa, elige `Map Reporting` y `I agree`.
+- (Opcional) Si quieres que otros usuarios de mqtt te vean en el mapa, selecciona `Map Reporting` y `I agree`.
 - Haz clic en Send
-- El dispositivo se reinicia y se reconecta automáticamente. El dispositivo se reiniciará y se reconectará automáticamente. Esto puede tardar de 30 s a 2 min.
+- El dispositivo se reinicia y se vuelve a conectar automáticamente. El dispositivo se reiniciará y se volverá a conectar automáticamente. Esto puede tardar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTSetting.jpg" style={{width:350, height:'auto'}}/></div>
 
 
 **3. Configuración de canal**
 
-- abre `Uplink enabled` y `Downlink enabled` para tu canal principal
+- activa `Uplink enabled` y `Downlink enabled` para tu canal principal
 - Haz clic en Send
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UPLINKDOWNLINK.jpg" style={{width:350, height:'auto'}}/></div>
@@ -163,9 +163,9 @@ Empareja tu dispositivo con la APP de tu teléfono.
 
 **4. Configuración de red**
 
-Después de esta configuración, tu dispositivo no podrá conectarse a tu APP vía Bluetooth. Pero podrá conectarse a tu APP vía red.
+Después de esta configuración, tu dispositivo no podrá conectarse a tu APP mediante Bluetooth. Pero podrá conectarse a tu APP a través de la red.
 
-- Rellena el SSID (nombre de la Wifi) y la contraseña de la Wifi. La wifi que esperas usar debe ser de 2,4 G.
+- Rellena el SSID (nombre de la Wifi) y la contraseña de la Wifi. La wifi que pretendes usar debe ser de 2,4G.
 - Haz clic en Send
 - El dispositivo se reinicia automáticamente. 
 
@@ -173,7 +173,7 @@ Después de esta configuración, tu dispositivo no podrá conectarse a tu APP v�
 
 **5. Conexión con la APP**
 
-Ahora tu dispositivo no puede conectarse vía Bluetooth. Pero puedes conectarte vía red.
+Ahora tu dispositivo no puede conectarse mediante Bluetooth. Pero puedes conectarte a través de la red.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -185,25 +185,25 @@ Ahora tu dispositivo no puede conectarse vía Bluetooth. Pero puedes conectarte 
 - cambia la región de UNSET a tu país/región (por ejemplo, EU868 para Europa, US para EE. UU., etc.).
 - Elige `OK to MQTT`
 - Haz clic en Send
-- El dispositivo se reinicia y se reconecta automáticamente. El dispositivo se reiniciará y se reconectará automáticamente. Esto puede tardar de 30 s a 2 min.
+- El dispositivo se reinicia y se vuelve a conectar automáticamente. El dispositivo se reiniciará y se volverá a conectar automáticamente. Esto puede tardar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTLoRa.png" style={{width:350, height:'auto'}}/></div>
 
 **2. Configuración MQTT**
 
-- Puedes usar los valores predeterminados `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats). 
+- Puedes usar la `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats) predeterminadas. 
 - Elige `MQTT Enabled`
 - Elige `MQTT Client Proxy Enabled`
-- (Opcional) Si quieres que otros usuarios mqtt te vean en el mapa, elige `Map Reporting` y `I agree`.
+- (Opcional) Si quieres que otros usuarios de mqtt te vean en el mapa, selecciona `Map Reporting` y `I agree`.
 - Haz clic en Send
-- El dispositivo se reinicia y se reconecta automáticamente. El dispositivo se reiniciará y se reconectará automáticamente. Esto puede tardar de 30 s a 2 min.
+- El dispositivo se reinicia y se vuelve a conectar automáticamente. El dispositivo se reiniciará y se volverá a conectar automáticamente. Esto puede tardar de 30 s a 2 min.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTSetting.png" style={{width:350, height:'auto'}}/></div>
 
 
 **3. Configuración de canal**
 
-- abre `Uplink enabled` y `Downlink enabled` para tu canal principal
+- activa `Uplink enabled` y `Downlink enabled` para tu canal principal
 - Haz clic en Send
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTChanel.png" style={{width:350, height:'auto'}}/></div>
@@ -211,9 +211,9 @@ Ahora tu dispositivo no puede conectarse vía Bluetooth. Pero puedes conectarte 
 
 **4. Configuración de red**
 
-Después de esta configuración, tu dispositivo no podrá conectarse a tu APP vía Bluetooth. Pero podrá conectarse a tu APP vía red.
+Después de esta configuración, tu dispositivo no podrá conectarse a tu APP mediante Bluetooth. Pero podrá conectarse a tu APP a través de la red.
 
-- Rellena el SSID (nombre de la Wifi) y la contraseña de la Wifi. La wifi que esperas usar debe ser de 2,4 G.
+- Rellena el SSID (nombre de la Wifi) y la contraseña de la Wifi. La wifi que pretendes usar debe ser de 2,4G.
 - Haz clic en Send
 - El dispositivo se reinicia automáticamente. 
 
@@ -221,7 +221,7 @@ Después de esta configuración, tu dispositivo no podrá conectarse a tu APP v�
 
 **5. Conexión con la APP**
 
-Ahora tu dispositivo no puede conectarse vía Bluetooth. Pero puedes conectarte vía red.
+Ahora tu dispositivo no puede conectarse mediante Bluetooth. Pero puedes conectarte a través de la red.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTConnect.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -235,4 +235,26 @@ Ahora puedes comunicarte con otras personas desde Internet.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTTest.png" style={{width:600, height:'auto'}}/></div> 
 
 Si tienes otro dispositivo Meshtastic que esté en la misma banda de frecuencia que la pasarela MQTT, también podrá transmitir mensajes a través de la pasarela L2 con otras personas en Internet.
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
 

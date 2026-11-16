@@ -9,11 +9,11 @@ slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
 sidebar_position: 1
 last_update:
-  date: 8/17/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-26'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -27,7 +27,7 @@ updatedAt: '2026-10-08'
 
 :::danger note
 デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
-1. メッセージ送信処理が完了していない
+1. メッセージ送信プロセスが完了していない
 2. 設定中である
 :::
 
@@ -38,7 +38,7 @@ updatedAt: '2026-10-08'
 USB ケーブルでデバイスをコンピュータに接続します。ケーブルがデータ通信に対応していることを確認してください。 
 
 :::warning
-データ転送中は USB ケーブルを接続したままにしてください。そうしないとデバイスが破損する可能性があります。
+データ転送中は USB ケーブルを抜かないでください。そうしないとデバイスが破損する可能性があります。
 :::
 
 [Meshcore Web Flasher](https://meshcore.io/flasher) にアクセスします。 
@@ -51,7 +51,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### Flash 消去
+#### フラッシュ消去
 
 `Enter DFU Mode` をクリックし、「Solar Node」または「TinyUSB serial」という名前のシリアルポートを選択します。その後、`Erase Flash` をクリックしてシリアルポートを選択します。
 
@@ -76,11 +76,11 @@ MeshCore ファームウェアのバージョンによって、LoRa TX インジ
 :::note
 **ファームウェアバージョンの違い（LoRa TX インジケータ）**
 
-以下の図ではインジケータ LED に番号が振られているため、色の説明がどの LED を指しているかを簡単に識別できます。
+以下の図ではインジケータ LED に番号が振られているので、色の説明がどの LED を指しているかを簡単に識別できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/interactive.png" alt="pir" width={800} height="auto" /></p>
 
-- **No.12 - 黄色 LED**: ソーラー入力 / 光の状態インジケータ。
+- **No.12 - 黄色 LED**: ソーラー入力 / 光状態インジケータ。
 - **No.13 - 青色 LED**: LoRa TX インジケータ。
 - **No.14 - 白色 LED**: LoRa TX インジケータ。
 
@@ -89,16 +89,16 @@ MeshCore ファームウェアのバージョンによって、LoRa TX 用に点
 - v1.12.0 ～ v1.14.0: LoRa TX 中は青色 LED（No.13）が点滅します。
 - v1.14.1 ～ v1.15.x: LoRa TX 中は白色 LED（No.14）が点滅します。
 - v1.16.0 以降: LoRa TX 中は再び青色 LED（No.13）が点滅します。
-- バージョンによって青色または白色の点滅が見えても、ハードウェアの故障を示すものではありません。
+- バージョンによって青色または白色の点滅が見えても、ハードウェアの故障を意味するものではありません。
 
 赤、緑、黄色の LED は主にハードウェアの電源状態インジケータであり、MeshCore TX インジケータのバージョン差とは関係ありません。
 
 - 赤: 主にデバイスが充電中であることを示します。
 - 緑: 主に充電完了を示します。
-- 黄色（No.12）: 主にソーラー入力 / 光の状態を示します。
+- 黄色（No.12）: 主にソーラー入力 / 光状態を示します。
 :::
 
-`Enter DFU Mode` をクリックし、「P1 Pro」または「TinyUSB serial」という名前のシリアルポートを選択します。その後、`Flash` をクリックしてシリアルポートを選択します。
+`Enter DFU Mode` をクリックし、「P1 Pro」または「TinyUSB」シリアルという名前のシリアルポートを選択します。その後、`Flash` をクリックしてシリアルポートを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
@@ -113,7 +113,7 @@ MeshCore ファームウェアのバージョンによって、LoRa TX 用に点
 USB ケーブルでデバイスをコンピュータに接続します。ケーブルがデータ通信に対応していることを確認してください。 
 
 :::warning
-データ転送中は USB ケーブルを接続したままにしてください。そうしないとデバイスが破損する可能性があります。
+データ転送中は USB ケーブルを抜かないでください。そうしないとデバイスが破損する可能性があります。
 :::
 
 [Meshcore Web Flasher](https://meshcore.io/flasher) にアクセスします。 
@@ -126,17 +126,17 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### Flash 消去
+#### フラッシュ消去
 
 UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-RST ボタンをダブルクリックして、手動で DFU モードに入ります。10～15 秒後に `Xiao-Boot` または `Solar Node` という名前のディスクがポップアップ表示されます。 
+RST ボタンをダブルクリックして DFU モードに手動で入ります。10～15 秒後に `Xiao-Boot` または `Solar Node` という名前のディスクがポップアップ表示されます。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-ダウンロードした UF2 ファイルを、ポップアップしたディスクにドラッグします。
+ダウンロードした UF2 ファイルをポップアップしたディスクにドラッグします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
@@ -152,11 +152,11 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FlashFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-RST ボタンをダブルクリックして、手動で DFU モードに入ります。10～15 秒後に `Xiao-Boot` または `Solar Node` という名前のディスクがポップアップ表示されます。 
+RST ボタンをダブルクリックして DFU モードに手動で入ります。10～15 秒後に `Xiao-Boot` または `Solar Node` という名前のディスクがポップアップ表示されます。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-ダウンロードした UF2 ファイルを、ポップアップしたディスクにドラッグします。
+ダウンロードした UF2 ファイルをポップアップしたディスクにドラッグします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
@@ -171,7 +171,7 @@ RST ボタンをダブルクリックして、手動で DFU モードに入り�
 #### デバイスの組み立て
 
 :::danger note
-本デバイスは長期間屋外で使用されるため、パネルを水平に設置することは避けてください。水たまりを防ぐため、傾斜または斜めに取り付けることを推奨します。さらに、すべてのネジがしっかり締め付けられていること、およびカバーが正しく取り付けられていることを確認してください。防水性を高めるために、追加のシーリング処理を施すことも検討してください。
+本デバイスは屋外で長期間使用されるため、パネルを水平に設置することは避けてください。水たまりを防ぐため、傾斜または斜めに設置することを推奨します。さらに、すべてのネジがしっかり締め付けられ、カバーが正しく取り付けられていることを確認してください。防水性能を高めるために、追加のシーリング処理を施すことも検討してください。
 :::
 
 - **部品リスト**
@@ -179,31 +179,31 @@ RST ボタンをダブルクリックして、手動で DFU モードに入り�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 
-- ステップ1: ワッシャーとネジを使用して、部品1をデバイスの底面に取り付けます。
+- Step1: ワッシャーとネジを使用して、部品1をデバイスの底面に取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ2: ユニバーサルジョイント（部品2）とブラケット（部品3）をネジで接続します。
+- Step2: ユニバーサルジョイント（部品2）とブラケット（部品3）をネジで接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ3: RF ケーブル（部品4）とアンテナ（部品5）を接続します。
+- Step3: RF ケーブル（部品4）とアンテナ（部品5）を接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ4: 適切な位置にフープリングを取り付けます。
+- Step4: 適切な位置にフープリングを取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ5: ユニバーサルジョイントブラケットを接続します。
+- Step5: ユニバーサルジョイントブラケットを接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -228,7 +228,7 @@ RST ボタンをダブルクリックして、手動で DFU モードに入り�
 :::tip
 バッテリーを取り付ける、または交換する必要がある場合は、`Button-top` 18650（3.6V）バッテリーを使用してください。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵されていますが、P1 バージョンでは、必要に応じてユーザーがバッテリーと GPS モジュールを手動で取り付ける必要があります。
+P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵されていますが、P1 バージョンでは、必要に応じてユーザーが手動でバッテリーと GPS モジュールを取り付ける必要があります。
 :::
 
 
@@ -257,21 +257,21 @@ P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵さ�
 
 より高利得のアンテナが必要な場合は、[860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) アンテナと [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) アンテナをお勧めします。
 
-### デバイスの電源オン
+### デバイスの電源を入れる
 
-デバイスは、電源が供給されるとすぐに起動します。USB、バッテリー、またはソーラー電源を接続すると、電源オンリセットで MCU が動作を開始します（電源オンはすべてのファームウェアバージョンで動作します）。ファームウェア v1.14.1 以降では、デバイスがオフ状態のときに電源ボタンを短く押して離すことでも、デバイスを起動できます。
+デバイスは電源が供給されるとすぐに起動します。USB、バッテリー、またはソーラー電源を接続すると、電源オンリセットで MCU が動作を開始します（電源オンはすべてのファームウェアバージョンで動作します）。ファームウェア v1.14.1 以降では、デバイスがオフ状態のときに電源ボタンを短く押して離すことでも、デバイスを起動できます。
 
-デバイスが正常に電源オンされたことを確認するには、次の 2 つの確実な方法のいずれかを使用します。
+デバイスの電源が正常に入ったことを確認するには、次の 2 つの信頼できる方法のいずれかを使用します。
 
-1. 電源オンから約 16 秒後に TX LED が 1 回点滅します。起動後、デバイスは自動的にアドバタイズを送信し、その送信の瞬間に TX LED が点滅して、デバイスがオンであることを示します。
-2. あるいは `https://meshcore.io/flasher` を開き、Console をクリックしてシリアル経由でデバイスに接続し、`ver` コマンドを送信します。有効なバージョン文字列が返ってくれば、デバイスは正常に電源オンされ、ファームウェアが正常に動作しています。
+1. 電源投入から約 16 秒後に TX LED が 1 回点滅します。起動後、デバイスは自動的にアドバタイズを送信し、その送信の瞬間に TX LED が点滅して、デバイスがオンであることを示します。
+2. または `https://meshcore.io/flasher` を開き、Console をクリックしてシリアル経由でデバイスに接続し、`ver` コマンドを送信します。有効なバージョン文字列が返ってくれば、デバイスの電源が正常に入り、ファームウェアが正常に動作していることを意味します。
 
-TX LED は、Solar Node 自身が LoRa データを送信しているとき（たとえばアドバタイズ送信時）のみ点滅します。データ受信時には TX LED は点灯しません。TX LED の色はファームウェアバージョンによって異なります（上記「Firmware Version Differences」を参照）：v1.12.0～v1.14.0 = 青、v1.14.1～v1.15.0 = 白、v1.16.0 以降 = 青です。
+TX LED は、Solar Node 自身が LoRa データを送信しているとき（たとえばアドバタイズ送信時）のみ点滅します。データ受信時には TX LED は点灯しません。TX LED の色はファームウェアバージョンによって異なります（上記の「Firmware Version Differences」を参照）：v1.12.0～v1.14.0 = 青、v1.14.1～v1.15.0 = 白、v1.16.0 以降 = 青です。
 
 :::tip
 **電源ボタン（電源オン／オフ）**
 
-MeshCore v1.14.0 以前は、電源ボタンの長押しによる電源オン／オフをサポートしていません。電源をオンにするには、電源（USB / バッテリー / ソーラー — いずれか 1 つの電源で動作可能）を供給してください。これらのファームウェアバージョンでは、電源ボタンでデバイスの電源をオフにすることはできません。これはボタンの故障ではなく、仕様上の正常な動作です。
+MeshCore v1.14.0 以前は、電源ボタンの長押しによる電源オン／オフをサポートしていません。電源を入れるには、電源（USB／バッテリー／ソーラーのいずれか 1 つで十分です）を供給してください。これらのファームウェアバージョンでは、電源ボタンでデバイスの電源を切ることはできません。これはボタンの故障ではなく、これらのバージョンにおける正常な動作です。
 
 MeshCore v1.14.1 以降では、電源ボタンは次のようにサポートされています。
 
@@ -303,7 +303,7 @@ MeshCore を LoRa デバイスに初めて書き込んだときは、その国�
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-LoRa リージョンを変更して設定を保存します。その後デバイスを `Reboot` してください。そうしないと設定が有効になりません。
+LoRa リージョンを変更して設定を保存します。その後デバイスを `Reboot` してください。そうしないと設定は有効になりません。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/LoRaSettingg.png" alt="pir" width={600} height="auto" /></p>
 
@@ -322,7 +322,7 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 
 - **ステップ2 アドバタイズ送信**
 
-"send advert" をクリックして、他の Meshcore デバイスがこのリピーターを認識できるようにします。その後、デバイス一覧にリピーターが表示されます。
+"send advert" をクリックすると、他の Meshcore デバイスがこのリピーターを認識できるようになります。その後、このリピーターはデバイスリストに表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
 
@@ -348,18 +348,18 @@ TX LED は、Solar Node 自身が LoRa データ（TX）を送信しているこ
 
 また、アドバタイズのブロードキャスト間隔を調整することもできます。
 
-- **Advert interval**：ローカル／ゼロホップアドバタイズの送信間隔。間隔範囲は 60～240 分です。
-- **Flood advert interval**：Flood アドバタイズの送信間隔。間隔範囲は 3～168 時間です。
+- **Advert interval**：ローカル／ゼロホップアドバタイズの送信間隔。間隔の範囲は 60～240 分です。
+- **Flood advert interval**：Flood アドバタイズの送信間隔。間隔の範囲は 3～168 時間です。
 
 実際のアドバタイズ周期は、現在のファームウェアバージョンとデバイスに保存されている設定に依存するため、設定ページ上の `Advert interval` と `Flood advert interval` の実際の値を常に参照してください。ある間隔が `0` に設定されている場合、その自動アドバタイズは無効になります。
 
-**注意：** MeshCore v1.16.0 以降、デフォルトの Flood アドバタイズ間隔は 12 時間から 47 時間に変更されています。そのため、自動アドバタイズを待ってデバイスを検証することは推奨しません。TX と LED を確認するには、**Send Advert** をクリックして、1 回の LoRa TX を能動的にトリガーしてください。
+**注意：** MeshCore v1.16.0 以降、デフォルトの Flood アドバタイズ間隔は 12 時間から 47 時間に変更されました。そのため、自動アドバタイズを待ってデバイスを検証することは推奨しません。TX と LED を確認するには、**Send Advert** をクリックして、LoRa TX を能動的に 1 回トリガーしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### パスの設定
 
-リピーターをルートに追加する前に、まずリピーターからアドバタイズを送信する必要がある場合があります。リピーターは、デバイスに保存されている `Advert interval` と `Flood advert interval` に従って、一定間隔で自動的にアドバタイズを送信します。これらの間隔はファームウェアバージョンと現在のデバイス設定に依存し、数時間に及ぶことがあります。自動アドバタイズを待つのではなく、**Send Advert** をクリックしてすぐにトリガーすることをお勧めします。
+ルートにリピーターを追加する前に、まずリピーターを使ってアドバタイズを送信する必要がある場合があります。リピーターは、デバイスに保存されている `Advert interval` と `Flood advert interval` に従って、一定間隔で自動的にアドバタイズを送信します。これらの間隔はファームウェアバージョンと現在のデバイス設定に依存し、数時間に及ぶことがあります。自動アドバタイズを待つのではなく、**Send Advert** をクリックしてすぐにトリガーすることをお勧めします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
@@ -372,7 +372,7 @@ TX LED は、Solar Node 自身が LoRa データ（TX）を送信しているこ
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
 :::note
-MeshCore Repeater は、受信したすべての LoRa パケットを再送信するわけではありません。
+MeshCore リピーターは、受信したすべての LoRa パケットを再送信するわけではありません。
 
 - **ケース 1**: Companion がデータを送信 → Solar Node がそれを受信（RX）→ 応答や転送が不要 → Solar Node は TX を実行しない → TX LED は点滅しません。これは正常です。
 - **ケース 2**: Solar Node がデータを受信 → 応答または転送が必要 → Solar Node が LoRa TX を実行 → TX LED が対応するファームウェアバージョンの色で点滅します。
@@ -384,14 +384,14 @@ Solar Node が LoRa データを正常に受信しても、TX LED が点滅す�
 
 ## デバイスが正常に動作しているか確認する
 
-検証の前に、Solar Node デバイス 1 台のみを使用しているのか、あるいは他に MeshCore Companion デバイスもセットアップに含まれているのかを確認してください。
+検証の前に、Solar Node デバイス 1 台のみを使用しているのか、あるいはセットアップ内に他の MeshCore Companion デバイスもあるのかを確認してください。
 
 リピーターモードでは、以下の動作が期待されます：
 
 - デバイスを USB 接続すると、オンライン状態になり、設定が可能です。
 - USB 電源を抜くと、デバイスはバッテリーモードに切り替わり、リピーターとして動作を継続します。
-- Solar Node 自身が LoRa データを送信する際、TX LED は対応するファームウェアバージョンの色で短く点滅します。これは正常であり、LoRa の動作を示します。
-- Solar Node Repeater は、Companion デバイスと一緒に使用しない限り、単体で電話に接続されるデバイスのように動作することは想定されていません。
+- Solar Node 自身が LoRa データを送信する際、TX LED が対応するファームウェアバージョンの色で短く点滅します。これは正常であり、LoRa の動作を示します。
+- Solar Node Repeater は、Companion デバイスと一緒に使用しない限り、単体のスマートフォン接続デバイスのように動作することは想定されていません。
 
 リピーターが正常に動作しているか正しく検証するには、以下の 2 つの能動的な検証ステップに従ってください。自動アドバタイズを待つことを主な検証方法として頼らないでください。
 
@@ -428,14 +428,14 @@ TX LED は RX インジケーターではありません。Solar Node がパケ�
 :::
 
 :::tip
-アドバタイズ間隔が非常に長くなる場合があるため、デバイスが動作しているかどうかを確認するために自動アドバタイズを待つことは推奨しません。**Send Advert** を使用して、TX をすぐに能動的にトリガーしてください。
+アドバタイズ間隔が非常に長くなる場合があるため、自動アドバタイズを待ってデバイスの動作を確認することは推奨しません。**Send Advert** を使用して、TX をすぐに能動的にトリガーしてください。
 :::
 
 :::note
 モバイルアプリは主に Companion デバイスと一緒に使用するものであり、Repeater と直接使用するものではありません。Repeater 自体は、通常の Bluetooth 接続のスマートフォンアクセサリのようには動作しません。
 :::
 
-LED の動作と USB 接続状態が上記の説明と一致していれば、通常はリピーターが正常に動作していることを示します。
+上記の説明と LED の動作および USB 接続状態が一致していれば、通常はリピーターが正常に動作していることを示します。
 
 ## FAQ
 
@@ -445,11 +445,11 @@ LED の動作と USB 接続状態が上記の説明と一致していれば、�
 
 これは通常、ファームウェアの書き込み失敗が原因です。ファームウェアを書き込む際は、接続を安定した状態に保ってください。 
 
-- トラブルシュート
+- トラブルシューティング
 
 [ここをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase)して、ファームウェアを書き直してください。
 
-### デバイスが文鎮化した
+### デバイスが文鎮化した（bricked）
 
 #### 説明
 
@@ -462,7 +462,7 @@ LED の動作と USB 接続状態が上記の説明と一致していれば、�
 - [ブートローダーのダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを必ず確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
 :::
 
 **ステップ 1: Adafruit-nrfutil のインストール**
@@ -476,7 +476,7 @@ Mac ユーザーは、"Command" キーと "Space" キーを押して Spotlight �
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-コマンドラインで、python と pip が正しくインストールされているかどうかを確認します。
+コマンドラインで、python と pip が正しくインストールされているか確認します。
 
 ```
 python --version
@@ -486,7 +486,7 @@ python --version
 python -m pip --version
 ```
 
-その後、「Python xxx」および「pip xxx」と表示されるはずです。表示されない場合は、Python を再インストールしてみてください。
+その後、「Python xxx」および「pip xxx」と表示されるはずです。表示されない場合は、Python を再インストールしてください。
 
 <Tabs>
 <TabItem value="pypi" label="PyPI からインストール">
@@ -565,15 +565,15 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 デバイスを PC に接続し、ポート番号を確認します。
 
-Windows ユーザーの場合の例：
+Windows ユーザーの例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-Mac ユーザーの場合の例：
+Mac ユーザーの例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 **ステップ 3: ブートローダーを書き込む**
 
-ターミナルまたはコマンドプロンプトで、ブートローダーの zip パッケージをダウンロードしたディレクトリに移動し、次のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください：
+ターミナルまたはコマンドプロンプトで、ブートローダーの zip パッケージをダウンロードしたディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください：
 
 - **Windows の場合**:
 
@@ -584,7 +584,7 @@ COMXX を自分の COM 番号に変更してください。例えば、デバイ
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
- このコマンドを入力した後、一部のデバイスではポート番号が変わることがあります。そのため、インストールに失敗した場合は、もう一度ポート番号を確認してください。
+ コマンドを入力した後、一部のデバイスではポート番号が変わることがあります。そのため、インストールに失敗した場合は、もう一度ポート番号を確認してください。
 
 
 - **その他の OS の場合**:
@@ -597,39 +597,50 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 上記の手順を完了したら、[アプリケーションファームウェアを書き込む](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase)ことができます。
 
+### デバイスが USB 経由で応答しない／認識されない
+
+Solar Node P1-Pro が突然応答しなくなり、緑色 LED のみが点灯し、USB 経由でデバイスが認識されない場合は、次を試してください：
+
+1. USB ケーブルを外し、ソーラーパネルを日光から遠ざけます。
+2. ショートを避けながら、背面カバーとバッテリーを慎重に取り外します。
+3. しばらくの間、バッテリーを外したままにします。
+4. バッテリーを再装着し、デバイスが起動し、USB 経由で認識されるか確認します。
+
+問題が解決しない場合は、テクニカルサポートにお問い合わせください。
+
 ### 信号品質
 
-- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB より上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
+- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB より高い値で動作します。SNR が -10 dB より低いデバイスは性能が低いことを示します。
 
-- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm より上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
+- **RSSI** はデバイスとその周囲環境の両方によって決まります。通常のデバイスは -110 dBm より高い値で動作します。RSSI が -115 dBm より低いデバイスは、性能が低いと見なされます。
 
-      最良の信号状態を得るために、開けた障害物の少ない場所で、干渉が最小限となるようにデバイスを使用してください。
+      最良の信号効果を得るために、開けていて遮るものが少なく、干渉の少ない場所で本機を使用してください。
 
 ### 充電電流
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-Xiao nRF-52840 Plus の最大充電電流は 200 mA です。充電管理チップ CN3165 は 0.99A です。そのため、最大充電電流は 1A です。
+Xiao nRF-52840 Plus の最大充電電流は 200 mA です。充電管理チップ CN3165 は 0.99A です。したがって最大充電電流は 1A です。
 
 ### データ送信時に、Solar Node が青ではなく白で点滅するのはなぜですか？
 
-これはハードウェアの故障ではなく、MeshCore ファームウェアバージョンの違いによるものです：
+これは MeshCore ファームウェアバージョンの違いによるもので、ハードウェアの故障ではありません：
 
-- v1.12.0 ～ v1.14.0: 青色 LED 送信
-- v1.14.1 ～ v1.15.x: 白色 LED 送信
-- v1.16.0 以降: 青色 LED 送信
+- v1.12.0 ～ v1.14.0：青色 LED TX
+- v1.14.1 ～ v1.15.x：白色 LED TX
+- v1.16.0 以降：青色 LED TX
 
-v1.14.1 ～ v1.15.x で白く点滅しても、ハードウェアの故障を示すものではありません。
+v1.14.1 ～ v1.15.x で白くフラッシュしても、ハードウェアの故障を示すものではありません。
 
-### 電源ボタンを押し続けても電源をオフにできないのはなぜですか？
+### 電源ボタンを長押ししても電源を切れないのはなぜですか？
 
-電源ボタンの長押しによる電源オン／オフは、MeshCore v1.14.1 以降でサポートされています。v1.14.0 以前では、電源ボタンを長押ししても反応がなく、これはそのファームウェアバージョンにおける正常な動作です。
+電源ボタンの長押しによる電源オン／オフは、MeshCore v1.14.1 以降でサポートされています。v1.14.0 以前では、電源ボタンを長押ししても反応しませんが、これはそのファームウェアバージョンでの正常な動作です。
 
-### Solar Node が長時間点滅しないのはなぜですか？
+### Solar Node が長い間点滅しないのはなぜですか？
 
-- TX LED は、Solar Node 自身が LoRa 送信を行ったときにのみ点滅します。
-- 受信（RX）では必ずしも TX LED は点灯しません。
-- 中継器（Repeater）は、受信したすべてのパケットを転送するわけではありません。
+- TX LED は、Solar Node 自身が LoRa TX を行ったときにのみ点滅します。
+- RX では必ずしも TX LED が点灯するとは限りません。
+- Repeater は受信したすべてのパケットを中継するわけではありません。
 - 自動アドバタイズ間隔は非常に長くなる場合があります。
 - v1.16.0 以降、デフォルトの Flood アドバタイズ間隔は 47 時間です。
 - すぐに確認する必要がある場合は、**Send Advert** を使用してください。

@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating Direction of Arrival (DoA) detection using Reachy Mini's microphone array to automatically look toward the speaker.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Sound Direction of Arrival
 slug: /reachymini_examples_sound_doa
 keywords:

@@ -1,5 +1,6 @@
 ---
 description: Tkinter を使用して Reachy Mini の頭部の位置と姿勢をスライダーでロール、ピッチ、ヨー、X、Y、Z、およびボディヨーを制御するインタラクティブな GUI のサンプルです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Head Position GUI
 slug: /reachymini_examples_mini_head_position_gui
 keywords:

@@ -1,5 +1,6 @@
 ---
 description: Comprehensive installation guide for Reachy Mini Python SDK and daemon on Linux, macOS, and Windows, covering prerequisites, virtual environment setup, and troubleshooting.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Installation Guide
 slug: /reachymini_sdk_installation
 keywords:

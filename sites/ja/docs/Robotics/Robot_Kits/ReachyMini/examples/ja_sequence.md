@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini 上でさまざまな動作パターンとシーケンスを実演する、異なる動きを紹介する例です。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: シーケンスデモ
 slug: /reachymini_examples_sequence
 keywords:

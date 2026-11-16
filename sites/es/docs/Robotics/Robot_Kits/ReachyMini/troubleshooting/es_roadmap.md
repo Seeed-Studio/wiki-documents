@@ -1,5 +1,6 @@
 ---
 description: Hoja de ruta de Reachy Mini que muestra actualizaciones recientes, próximas funciones y áreas de enfoque de desarrollo futuro, incluida la app móvil y el espacio de programación vibe.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Hoja de ruta de Reachy Mini
 slug: /reachymini_troubleshooting_roadmap
 keywords:

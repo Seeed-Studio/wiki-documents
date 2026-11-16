@@ -1,5 +1,6 @@
 ---
 description: Referência da API de mídia para o Reachy Mini, cobrindo o gerenciador de mídia, áudio, câmera e componentes WebRTC.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: API de Mídia
 slug: /reachymini_api_media
 keywords:

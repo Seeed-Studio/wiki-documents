@@ -1,5 +1,5 @@
 ---
-description: Guia completo para treinamento de SO-ARM de dois braços com o LeRobot.
+description: "Como treinar uma política bimanual (dois braços) do SO-ARM com o LeRobot: calibrar quatro braços, teleoperar, gravar datasets, treinar ACT e implantar nos robôs reais."
 title: SO-Arm Teleoperação Dupla
 keywords:
   - Lerobot

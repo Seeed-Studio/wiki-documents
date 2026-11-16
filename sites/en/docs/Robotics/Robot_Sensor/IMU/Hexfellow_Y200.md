@@ -1,5 +1,5 @@
 ---
-description: This wiki provides tutorial for HEXFELLOW Y200 IMU Sensor.
+description: "How to use the HEXFELLOW Y200 IMU sensor: wiring, driver setup, data reading and calibration for robot navigation and balance."
 title: HEXFELLOW Y200 IMU Sensor
 keywords:
   - IMU

@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra a gravação de áudio a partir do array de microfones do Reachy Mini e o salvamento em um arquivo WAV com duração configurável.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Gravação de Som
 slug: /reachymini_examples_sound_record
 keywords:

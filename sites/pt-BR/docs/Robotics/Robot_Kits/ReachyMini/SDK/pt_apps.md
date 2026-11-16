@@ -1,5 +1,6 @@
 ---
 description: Guia completo para criar e publicar apps Reachy Mini, cobrindo criação de apps, testes, depuração e publicação no Hugging Face Spaces.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Criando e Publicando Apps
 slug: /reachymini_sdk_apps
 keywords:

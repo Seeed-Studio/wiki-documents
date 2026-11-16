@@ -1,6 +1,7 @@
 ---
 description: デバイス上の鋼材表面欠陥検査 — 6 つの欠陥クラス、Modbus TCP と MQTT による OK/NG 判定、Jetson Orin または Hailo-8 搭載 reComputer R2000 シリーズでの構築、導入概要、出力契約、実測データ。
 title: 'エッジ表面欠陥検査：6クラス、Modbus、MQTT'
+sidebar_label: 'エッジ表面欠陥検査'
 keywords:
   - surface defect inspection
   - steel strip defect detection
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-surface-defect-inspection/
 generated_from: sensecraft-solutions@edge_inspection_surface
 ---
@@ -103,9 +104,8 @@ generated_from: sensecraft-solutions@edge_inspection_surface
 
 | | ホスト | 実測ストリーム | 選択する場面 |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011](https://www.seeedstudio.com/reComputer-J3011-p-5590.html) (Jetson Orin Nano 8GB)<br/>単一カメラ向けのエントリーホスト | 1〜2 安定 | カメラ 1 台でコスト重視の場合。実測 capture→coil P50 10.56 ms |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) (Jetson Orin NX 16GB)<br/>実測ホスト | 8 安定 | カメラが 2 台以上の場合。以下のデータはすべてこのホストで測定 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110191.jpg" alt="reComputer Industrial J4012" width="110" /> | [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) (Orin NX 16GB、ファンレス) | J4012 と同じ | 制御盤内にホストを置く場合。モジュールとランタイムは同じで筐体だけが異なる |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html) (Jetson Orin Nano 8GB)<br/>単一カメラ向けのエントリーホスト | 1〜2 安定 | カメラ 1 台でコスト重視の場合。実測 capture→coil P50 10.56 ms |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) (Jetson Orin NX 16GB)<br/>実測ホスト | 8 安定 | カメラが 2 台以上の場合。以下のデータはすべてこのホストで測定 |
 
 3 つ目のホストは **Hailo-8 搭載の reComputer R2000 シリーズ**です。導入手順はありますが、構成ツールではまだ見積もりが出ません。
 
@@ -291,7 +291,7 @@ D-FINE-S と RT-DETRv2-S は Jetson でのみ使えます。Hailo Dataflow Compi
 
 ## データと素材の出典 {#data-and-asset-sources}
 
-- **NEU-DET（東北大学表面欠陥データベース、Roboflow 転載版）** — 付属のベースライン検出器の学習および検証データであり、上記の精度数値の出典です。変換済みモデル重みはリファレンスデザイン評価およびパイプライン検証用に公式 CDN でホストされています。商用運用にあたっては、対象ワークや照明環境に合わせ、現場画像での再学習を推奨します。
+-- **NEU-DET（東北大学表面欠陥データベース、Roboflow 転載版）** — 付属のベースライン検出器の学習および検証データであり、上記の精度数値の出典です。変換済みモデル重みはリファレンスデザイン評価およびパイプライン検証用に公式 CDN でホストされています。商用運用にあたっては、対象ワークや照明環境に合わせ、現場画像での再学習を推奨します。
 - **DeepPCB** — [github.com/tangsanli5201/DeepPCB](https://github.com/tangsanli5201/DeepPCB)、MIT ライセンス。任意の教師なし anomaly トラックだけが使用し、NEU-DET とは無関係です。MIT ライセンスは再配布と商用利用を許可し、コピーや派生物に著作権表示を残すことを求めます。
 - **YOLOX** — [github.com/Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)、Apache-2.0。既定の検出 backbone で、AGPL の条件を避けるため Ultralytics ではなくこちらを選びました。本ソリューションのどこでも Ultralytics のコードや重みは使用していません。
 - **D-FINE** — [github.com/Peterande/D-FINE](https://github.com/Peterande/D-FINE)、Apache-2.0、および **RT-DETRv2** — [github.com/lyuwenyu/RT-DETR](https://github.com/lyuwenyu/RT-DETR)、Apache-2.0。2 つの任意検出トラックで、それぞれ COCO ライセンスの checkpoint だけから fine-tune しています。上流自身が Objects365 学習重みのライセンス未確認を記載しているため、それらの重みはダウンロードも配布もしていません。ライセンスと commit の固定は `tracks/detector/PROVENANCE.md` にあります。

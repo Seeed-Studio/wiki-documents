@@ -1,5 +1,6 @@
 ---
 description: 使用Dynamixel Wizard 2.0软件读取电机参数以诊断和配置Reachy Mini Lite电机的指南。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 使用Dynamixel Wizard读取电机参数
 slug: /reachymini_platforms_reachy_mini_lite_wizard
 keywords:

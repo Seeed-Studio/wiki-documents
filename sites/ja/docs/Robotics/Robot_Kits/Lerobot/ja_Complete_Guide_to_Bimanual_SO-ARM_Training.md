@@ -1,5 +1,5 @@
 ---
-description: LeRobot を使用した両腕 SO-ARM トレーニングの完全ガイド。
+description: "LeRobot で双腕 SO-ARM ポリシーを訓練する方法：4 本のアームをキャリブレーションし、テレオペレーション、データセット収録、ACT の訓練を行い、実機へデプロイします。"
 title: SO-Arm デュアルテレオペレーション
 keywords:
   - Lerobot

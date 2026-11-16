@@ -1,5 +1,5 @@
 ---
-description: Getting started with Atom-X.
+description: "How to get started with the Atom-X humanoid robot: unboxing, power-on, first boot, basic motions and software setup."
 title: Atom-X Quick Start
 keywords:
   - Humanoid

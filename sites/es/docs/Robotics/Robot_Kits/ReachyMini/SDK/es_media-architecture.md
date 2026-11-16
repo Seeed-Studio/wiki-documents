@@ -1,5 +1,6 @@
 ---
 description: Guía detallada de la arquitectura multimedia de Reachy Mini, que explica las capacidades de transmisión de audio y vídeo en diferentes modelos de robot usando GStreamer y WebRTC.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Arquitectura multimedia
 slug: /reachymini_sdk_media-architecture
 keywords:

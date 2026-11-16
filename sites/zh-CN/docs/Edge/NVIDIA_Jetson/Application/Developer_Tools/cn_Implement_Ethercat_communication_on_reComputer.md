@@ -1,31 +1,31 @@
 ---
-description: 本wiki提供了在reComputer Jetson上实现EtherCAT通信的详细步骤，用于实时工业自动化控制应用。
-title: 在reComputer上实现Ethercat通信
+description: 本文档提供在 reComputer Jetson 上实现 EtherCAT 通信的详细步骤，用于实时工业自动化控制应用。
+title: 在 reComputer 上实现 EtherCAT 通信
 keywords:
   - EtherCAT
   - reComputer
   - Jetson
-  - Real-time communication
-  - Industrial automation
+  - 实时通信
+  - 工业自动化
   - SOEM
-  - Robotics control
+  - 机器人控制
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics_2.webp
 slug: /recomputer_ethercat_communication
 last_update:
   date: 2025-09-05
   author: Zibo
 createdAt: '2025-09-05'
-updatedAt: '2025-09-24'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/recomputer_ethercat_communication/
 ---
 
 <div align="center">
-    <img width={600}
+    <img alt="带有 NVIDIA Jetson Orin Nano / Orin NX 标识的 reComputer 单元，本教程中使用的 EtherCAT 主站" width={600}
     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-EtherCAT（用于控制自动化技术的以太网）是一种高性能、开源的工业以太网协议，专为自动化、机器人和运动系统中的实时自动化控制而设计。本wiki将向您展示如何在reComputer Jetson系列上进行EtherCat通信。
+EtherCAT（Ethernet for Control Automation Technology）是一种开放的工业以太网协议，为自动化、机器人和运动控制系统中的实时控制而构建。在 reComputer Jetson 上，主站通过 SOEM 库在用户空间运行，并使用标准以太网端口；下面的章节将先验证周期时间，然后构建 SOEM、连接从站并运行一个基础的数据交换示例。
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -33,15 +33,15 @@ EtherCAT（用于控制自动化技术的以太网）是一种高性能、开源
 <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 
-## 先决条件
+## 前置条件
 
-- reComputer（预装Jetpack 6.2）
-- 以太网电缆
-- EtherCAT从设备
+- reComputer（预装 Jetpack 6.2）
+- 以太网线
+- EtherCAT 从站设备
 
 ## 实时性能验证
 
-在实现EtherCAT通信之前，验证您的reComputer系统是否满足工业自动化的实时性能要求至关重要。
+在实现 EtherCAT 通信之前，必须先验证你的 reComputer 系统是否满足工业自动化所需的实时性能要求。
 
 ### 安装实时测试工具
 
@@ -51,7 +51,7 @@ sudo apt update
 sudo apt install rt-tests -y
 ```
 
-### Run Cyclictest
+### 运行 Cyclictest
 
 ```bash
 # Run cyclictest with 6 threads and priority 80
@@ -59,54 +59,54 @@ sudo cyclictest -t 6 -p 80
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="在启用 jetson_clocks 之前使用 6 个线程运行 cyclictest，部分线程显示较高的最坏情况延迟" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/cyc1.png" />
 </div>
 
-在启用 `jetson_clocks` 之前，您可以观察到某些线程的延迟相对较高。因此，我们需要通过以下命令启用 `jetson_clocks`：
+在启用 `jetson_clocks` 之前，你可以观察到某些线程的延迟相对较高。因此，我们需要通过以下命令启用 `jetson_clocks`：
 
 ```bash
 sudo jetson_clocks
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="启用 jetson_clocks 之后的 cyclictest，延迟稳定在 9 到 34 微秒之间" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/cyc2.png" />
 </div>
 :::info
 **实时性能分析：**
 - 最大延迟：34 微秒
 - 平均延迟：2-6 微秒  
-- 所有 6 个测试线程显示稳定的延迟在 9-34 微秒范围内
+- 所有 6 个测试线程的延迟都稳定在 9-34 微秒范围内
 - 系统负载：0.00
 - 延迟分布均匀且一致
 
-此性能满足低于 100 微秒的硬实时应用要求，适用于机器人控制和工业自动化应用。
+该性能满足硬实时应用小于 100 微秒的要求，适用于机器人控制和工业自动化应用。
 :::
 
 ## SOEM 库概述
 
 <div style={{ textAlign: "justify" }}>
-SOEM（Simple Open EtherCAT Master）是一个轻量级的开源 EtherCAT 主站库，为开发者提供了一种便携且灵活的方式来建立实时 EtherCAT 通信。虽然 NVIDIA Jetson 没有原生的 EtherCAT 硬件接口，但 SOEM 能够通过标准网络接口使用原始以太网帧完全在软件中实现 EtherCAT 通信。
+SOEM（Simple Open EtherCAT Master）是一个轻量级、开源的 EtherCAT 主站库，为开发者提供了一种可移植且灵活的方式来建立实时 EtherCAT 通信。虽然 NVIDIA Jetson 没有原生的 EtherCAT 硬件接口，但 SOEM 通过标准网络接口使用原始以太网帧，在纯软件层面实现 EtherCAT 通信。
 </div>
 
-### 主要特性
+### 关键特性
 
 - **基于软件的实现** - 无需特殊硬件
-- **实时能力** - 针对低延迟通信进行优化
-- **跨平台** - 适用于 Linux、Windows 和嵌入式系统
-- **开源** - 免费使用和修改
-- **多从站支持** - 可以控制众多 EtherCAT 设备
+- **具备实时能力** - 针对低延迟通信进行了优化
+- **跨平台** - 可运行于 Linux、Windows 和嵌入式系统
+- **开源** - 免费使用并可修改
+- **支持多从站** - 可控制众多 EtherCAT 设备
 
 ## 硬件连接
 
-使用以下设置连接您的 EtherCAT 网络：
+按照以下方式连接你的 EtherCAT 网络：
 
-1. **使用标准以太网电缆**（推荐 Cat5e 或更高规格）
-2. **连接 reComputer（主站）** 到 **EtherCAT 从站设备**
+1. **使用标准以太网线**（推荐 Cat5e 或更高规格）
+2. **将 reComputer（主站）** 连接到 **EtherCAT 从站设备**
 
 <div align="center">
-    <img width={1000}
+    <img alt="用于 EtherCAT 测试的伺服驱动器，通过以太网和电源线连接到 reComputer" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/hc.jpg" />
 </div>
 
@@ -147,11 +147,11 @@ ifconfig
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="ifconfig 输出中列出的用于 EtherCAT 的以太网接口名称" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/ifname.png" />
 </div>
 
-**步骤 2.** 导航到 slaveinfo 示例并运行检测程序：
+**步骤 2.** 进入 slaveinfo 示例并运行检测程序：
 
 ```bash
 # Navigate to slaveinfo sample
@@ -162,25 +162,25 @@ sudo ./slaveinfo enP8p1s0
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="slaveinfo 输出检测到已连接的 EtherCAT 从站并打印其站点详细信息" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/slaver_info.png" />
 </div>
 
 :::success
 **验证成功：**
-如果您在输出中看到"slave found"，这确认了：
+如果你在输出中看到 "slave found"，则说明：
 
-- SOEM 软件栈正常工作
-- EtherCAT 从站设备正确连接
+- SOEM 软件栈工作正常
+- EtherCAT 从站设备连接正确
 - 通信链路已建立
 
 :::
 
-## 基本通信示例
+## 基础通信示例
 
 ### C 示例
 
-创建一个简单的 C 程序来演示基本的 EtherCAT 通信：
+创建一个简单的 C 程序，用于演示基础的 EtherCAT 通信：
 
 <details>
 <summary> ethercat_communication_test.c </summary>
@@ -212,10 +212,10 @@ int main(int argc, char *argv[])
 
     printf("EtherCAT Communication Test - C Version\n");
     printf("=======================================\n\n");
-    
+
     // Initialize EtherCAT communication
     printf("Initializing EtherCAT communication...\n");
-    
+
     // Initialize EtherCAT master
     if (ec_init(ifname)) {
         printf("✅ EtherCAT master initialized successfully\n");
@@ -223,7 +223,7 @@ int main(int argc, char *argv[])
         printf("❌ Failed to initialize EtherCAT master\n");
         return -1;
     }
-    
+
     // Find and configure slaves
     if (ec_config_init(FALSE) > 0) {
         printf("✅ Found %d slaves\n", ec_slavecount);
@@ -232,11 +232,11 @@ int main(int argc, char *argv[])
         ec_close();
         return -1;
     }
-    
+
     // Print slave information
     printf("Found slave: %s, state: %d\n", 
            ec_slave[1].name, ec_slave[1].state);
-    
+
     // Enter PRE-OP state (SDO communication allowed)
     printf("\n📡 Entering PRE-OP state (SDO communication allowed)...\n");
     ec_statecheck(0, EC_STATE_PRE_OP, EC_TIMEOUTSTATE);
@@ -246,7 +246,7 @@ int main(int argc, char *argv[])
     } else {
         print_state_info("PRE-OP", 0);
     }
-    
+
     // Enter SAFE-OP state (safe PDO communication allowed)
     printf("\n📡 Entering SAFE-OP state (safe PDO communication allowed)...\n");
     ec_statecheck(0, EC_STATE_SAFE_OP, EC_TIMEOUTSTATE);
@@ -256,7 +256,7 @@ int main(int argc, char *argv[])
     } else {
         print_state_info("SAFE-OP", 0);
     }
-    
+
     // Enter OP state (full PDO communication allowed)
     printf("\n📡 Entering OP state (full PDO communication allowed)...\n");
     ec_statecheck(0, EC_STATE_OPERATIONAL, EC_TIMEOUTSTATE);
@@ -266,10 +266,10 @@ int main(int argc, char *argv[])
     } else {
         print_state_info("OP", 0);
     }
-    
+
     // Switch between different control modes
     printf("\n=== Control Mode Testing ===\n");
-    
+
     set_control_mode(1);  // Position control
     set_control_mode(3);  // Velocity control
     set_control_mode(4);  // Torque control
@@ -277,20 +277,20 @@ int main(int argc, char *argv[])
     set_control_mode(7);  // Interpolated position mode
     set_control_mode(8);  // Cyclic synchronous position mode
     set_control_mode(0);  // No mode
-    
+
     // Set servo parameters
     printf("\n=== Setting Servo Parameters ===\n");
     set_servo_parameters();
-    
+
     // Configure PDO mapping
     printf("\n=== Configuring PDO Mapping ===\n");
     configure_pdo_mapping();
-    
+
     // Print final slave state
     printf("\nSlave state: %d\n", ec_slave[1].state);
-    
+
     printf("\nEtherCAT communication test completed\n");
-    
+
     // Cleanup
     ec_close();
     return 0;
@@ -312,7 +312,7 @@ void set_control_mode(int mode)
 
     // Write control mode to object 0x6060
     ret = ec_SDOwrite(1, 0x6060, 0, FALSE, sizeof(mode_data), &mode_data, EC_TIMEOUTRXM);
-    
+
     if (ret > 0) {
         switch(mode) {
             case 1:
@@ -343,7 +343,7 @@ void set_control_mode(int mode)
     } else {
         printf("❌ Failed to set control mode %d\n", mode);
     }
-    
+
     // Read back the current mode
     read_control_mode();
     sleep_ms(1000);
@@ -356,7 +356,7 @@ void read_control_mode(void)
     int wkc;
 
     ret = ec_SDOread(1, 0x6060, 0, FALSE, &wkc, &mode_data, sizeof(mode_data), EC_TIMEOUTRXM);
-    
+
     if (ret > 0) {
         printf("Current mode: %d\n", mode_data);
     } else {
@@ -378,13 +378,13 @@ void set_servo_parameters(void)
     } else {
         printf("❌ Failed to set position range\n");
     }
-    
+
     // Read back position range
     ret = ec_SDOread(1, 0x607F, 0, FALSE, &wkc, &param_value, sizeof(param_value), EC_TIMEOUTRXM);
     if (ret > 0) {
         printf("Position range: %u\n", param_value);
     }
-    
+
     // Set maximum velocity (0x6081)
     param_value = 1000000;
     ret = ec_SDOwrite(1, 0x6081, 0, FALSE, sizeof(param_value), &param_value, EC_TIMEOUTRXM);
@@ -393,13 +393,13 @@ void set_servo_parameters(void)
     } else {
         printf("❌ Failed to set velocity\n");
     }
-    
+
     // Read back velocity
     ret = ec_SDOread(1, 0x6081, 0, FALSE, &wkc, &param_value, sizeof(param_value), EC_TIMEOUTRXM);
     if (ret > 0) {
         printf("Maximum velocity: %u\n", param_value);
     }
-    
+
     // Set maximum acceleration (0x6083)
     param_value = 1000;
     ret = ec_SDOwrite(1, 0x6083, 0, FALSE, sizeof(param_value), &param_value, EC_TIMEOUTRXM);
@@ -408,13 +408,13 @@ void set_servo_parameters(void)
     } else {
         printf("❌ Failed to set acceleration\n");
     }
-    
+
     // Read back acceleration
     ret = ec_SDOread(1, 0x6083, 0, FALSE, &wkc, &param_value, sizeof(param_value), EC_TIMEOUTRXM);
     if (ret > 0) {
         printf("Maximum acceleration: %u\n", param_value);
     }
-    
+
     printf("✅ Successfully set servo parameters\n");
 }
 
@@ -427,54 +427,54 @@ void configure_pdo_mapping(void)
 
     // Configure receive PDO mapping (1600h) - Master to slave
     printf("Configuring receive PDO mapping (1600h)...\n");
-    
+
     // Clear existing mapping
     mapping_count = 0;
     ret = ec_SDOwrite(1, 0x1600, 0, FALSE, sizeof(mapping_count), &mapping_count, EC_TIMEOUTRXM);
-    
+
     // Set control word mapping (6040h, 16-bit)
     mapping_data = 0x60400010;
     ret = ec_SDOwrite(1, 0x1600, 1, FALSE, sizeof(mapping_data), &mapping_data, EC_TIMEOUTRXM);
-    
+
     // Set target position mapping (607Ah, 32-bit)
     mapping_data = 0x607A0020;
     ret = ec_SDOwrite(1, 0x1600, 2, FALSE, sizeof(mapping_data), &mapping_data, EC_TIMEOUTRXM);
-    
+
     // Set mapping count
     mapping_count = 2;
     ret = ec_SDOwrite(1, 0x1600, 0, FALSE, sizeof(mapping_count), &mapping_count, EC_TIMEOUTRXM);
-    
+
     if (ret > 0) {
         printf("✅ Receive PDO mapping configured\n");
     } else {
         printf("❌ Failed to configure receive PDO mapping\n");
     }
-    
+
     // Configure transmit PDO mapping (1A00h) - Slave to master
     printf("Configuring transmit PDO mapping (1A00h)...\n");
-    
+
     // Clear existing mapping
     mapping_count = 0;
     ret = ec_SDOwrite(1, 0x1A00, 0, FALSE, sizeof(mapping_count), &mapping_count, EC_TIMEOUTRXM);
-    
+
     // Set status word mapping (6041h, 16-bit)
     mapping_data = 0x60410010;
     ret = ec_SDOwrite(1, 0x1A00, 1, FALSE, sizeof(mapping_data), &mapping_data, EC_TIMEOUTRXM);
-    
+
     // Set actual position mapping (6064h, 32-bit)
     mapping_data = 0x60640020;
     ret = ec_SDOwrite(1, 0x1A00, 2, FALSE, sizeof(mapping_data), &mapping_data, EC_TIMEOUTRXM);
-    
+
     // Set mapping count
     mapping_count = 2;
     ret = ec_SDOwrite(1, 0x1A00, 0, FALSE, sizeof(mapping_count), &mapping_count, EC_TIMEOUTRXM);
-    
+
     if (ret > 0) {
         printf("✅ Transmit PDO mapping configured\n");
     } else {
         printf("❌ Failed to configure transmit PDO mapping\n");
     }
-    
+
     printf("✅ PDO mapping configuration completed\n");
 }
 
@@ -487,9 +487,9 @@ void sleep_ms(int milliseconds)
 
 </details>
 
-创建一个 Makefile 文件来编译这个程序：
+创建一个 Makefile 文件来编译此程序：
 :::note
-将 `SOEM_PATH` 替换为您自己的安装路径！
+将 `SOEM_PATH` 替换为你自己的安装路径！
 :::
 
 <details>
@@ -619,22 +619,22 @@ sudo ./ethercat_simple_test
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="C example output reading the slave status and switching its drive mode" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/conmunicate.png" />
 </div>
 
 <div align="center">
-    <img width={1000}
+    <img alt="Servo drive, power supply and the reComputer wired together, filmed during the EtherCAT test" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/conmunicate.gif" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-如上所示，成功的 EtherCat 通信将修改从站的驱动模式，并且能够正常读取从站的状态信息。
+如上所示，成功的 EtherCat 通信会修改从站的驱动模式，并且能够正常读取从站的状态信息。
 </div>
 
 ### Python 示例
 
-对于基于 Python 的应用程序，您可以使用 pysoem 库：
+对于基于 Python 的应用，你可以使用 pysoem 库：
 
 <details>
 <summary> conmunicate_test.py </summary>
@@ -778,12 +778,12 @@ print("EtherCAT communication test completed")
 </details>
 
 <div align="center">
-    <img width={1000}
+    <img alt="Python example using pysoem, reading the slave status in the terminal" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/python.png" />
 </div>
 
 :::info
-在运行 Python 脚本之前，您需要安装 pysoem 库：
+在运行 Python 脚本之前，你需要安装 pysoem 库：
 
 ```bash
 pip3 install pysoem
@@ -794,9 +794,17 @@ sudo python3 ethercat_python.py
 
 :::
 
+## 相关资源
+
+- [reComputer Robotics J401 接口和引脚定义](/cn/recomputer_jetson_robotics_j401_getting_started/)
+- [用于工业视觉的 reComputer Rugged J401](/cn/jetson/recomputer_rugged_j401/industrial_vision/)
+- [使用 reComputer 和 PX4 进行目标跟踪](/cn/object_tracking_with_reComputer_jetson_and_pX4/)
+- [reComputer J3011 产品页面](https://www.seeedstudio.com/reComputer-J3011B-p-6405.html)
+- [SOEM 仓库](https://github.com/OpenEtherCATsociety/SOEM)
+
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

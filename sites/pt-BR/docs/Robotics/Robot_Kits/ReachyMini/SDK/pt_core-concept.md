@@ -1,5 +1,6 @@
 ---
 description: Documentação de conceitos centrais e arquitetura do Reachy Mini, cobrindo sistemas de coordenadas, limites de segurança, modos de motor e arquitetura de software.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Conceitos Centrais & Arquitetura
 slug: /reachymini_sdk_core-concept
 keywords:

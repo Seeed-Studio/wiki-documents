@@ -1,5 +1,6 @@
 ---
 description: 示例演示使用Reachy Mini的麦克风阵列进行到达方向（DoA）检测，以自动看向说话者。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 声音到达方向
 slug: /reachymini_examples_sound_doa
 keywords:

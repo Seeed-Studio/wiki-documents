@@ -1,6 +1,6 @@
 ---
-description: NVIDIA Jetson Orin Nano/Orin NXを搭載したreComputer Miniは、PX4フライトコントローラー、ROS 2、Orbbec Gemini 2 3Dカメラを統合してリアルタイム目標追跡を実行するドローン向けに設計されたコンパクトなAIコンピューターです。このセットアップでは、PX4のROS2通信の設定、同期RGB-DデータをキャプチャするためのGemini 2 Python SDKのインストール、最適化された検出のためにTensorRTでエクスポートされたYOLOv11nモデルの使用が含まれます。ROS2パッケージは、正確なマルチオブジェクト追跡のためにYOLO検出とByteTrackアルゴリズムを組み合わせ、深度データによってドローンと目標間の距離を推定し、飛行中の精密なリアルタイムドローン追跡を可能にします。
-title: reComputer JetsonとPX4による物体追跡
+description: "reComputer Jetson 上で物体をトラッキングし、その位置を ROS 2 経由で PX4 に送信します：Gemini 2 の深度入力、YOLO 検出、MAVROS 出力。"
+title: reComputer Jetson と PX4 を用いた物体追跡
 keywords:
   - NVIDIA
   - PX4
@@ -16,7 +16,7 @@ sku: 101090144,100071398
 last_update:
   date: 8/08/2025
   author: Zibo
-createdAt: '2025-09-12'
+createdAt: '2025-08-08'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/object_tracking_with_reComputer_jetson_and_pX4/
 ---
@@ -24,35 +24,34 @@ url: https://wiki.seeedstudio.com/ja/object_tracking_with_reComputer_jetson_and_
 ## はじめに
 
 <div style={{ textAlign: "justify" }}>
-reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載した小型AIコンピューターで、最大100 TOPSのAI性能を提供します。
-コンパクトな設計により、ドローンに搭載してAIタスクを処理するのに非常に適しています。このWikiでは、reComputerとpx4を使用してドローンでリアルタイム目標追跡を実現する方法を紹介します。
+reComputer Mini は Jetson Orin Nano または Orin NX モジュールを搭載し、機体に搭載できるコンパクトな筐体で最大 100 TOPS の性能を発揮します。本構成では ROS 2 を介して PX4 と接続し、Gemini 2 のカラー映像に対して ByteTrack を用いた YOLO 検出を実行し、深度フレームを利用して追跡対象がドローンからどれだけ離れているかを計測します。
 </div>
 
 <div align="center">
-  <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
+  <img alt="Wi-Fi アンテナ付きの reComputer Mini が 2 台、NVIDIA Jetson Orin Nano / Orin NX のバッジ付き" width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlY29tcHUiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjoyLCJjX3RvdGFsX3Jlc3VsdHMiOjg4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
 ## 前提条件
 
-- reComputerシリーズ製品
-- PX4フライトコントローラー
-- Jetson Pack 6.2と[ROS 2 Humble](https://wiki.seeedstudio.com/ja/install_ros2_humble/)がインストール済み
-- [Orbbec Gemini 2 3Dカメラ](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+- reComputer シリーズ製品
+- PX4 フライトコントローラ
+- JetPack 6.2 と [ROS 2 Humble](https://wiki.seeedstudio.com/ja/install_ros2_humble/) がインストール済みであること
+- [Orbbec Gemini 2 3D Camera](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
 
-## ROS2のPX4通信環境の設定
+## ROS2 の PX4 通信環境を構成する
 
-JetsonでドローンのState監視を実装するには、まず[このwiki](https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/)を参照してPX4のROS2通信環境を設定してください。
+Jetson 上でドローンの状態監視を行うために、まず [この Wiki](https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/) を参照して、PX4 用の ROS2 通信環境を構成してください。
 
-## Gemini 2 Python SDKのセットアップ
+## Gemini 2 Python SDK のセットアップ
 
-Orbbec Gemini 2は、ロボティクス、3Dスキャン、コンピュータービジョンなどのアプリケーション向けに同期された深度とカラーデータをキャプチャする高精度RGB-D 3Dカメラです。
+Orbbec Gemini 2 は高精度な RGB-D 3D カメラで、ロボティクス、3D スキャン、コンピュータビジョンなどの用途向けに、同期された深度データとカラー データを取得できます。
 
-**ステップ1.** 依存関係をインストールしてリポジトリをクローンします：
+**ステップ 1.** 依存関係をインストールし、リポジトリをクローンします：
 
 ```bash
 sudo apt-get install python3-dev python3-venv python3-pip python3-opencv
@@ -88,51 +87,52 @@ sudo bash ./scripts/install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-## ROS2でpx4が公開するトピックを読み取る
+## ROS2 で PX4 が公開するトピックを読み取る
 
-PX4コントローラーをJetsonのUART1シリアルポートに接続します
+PX4 コントローラを Jetson の UART1 シリアルポートに接続します
+
 <div align="center">
-    <img width={1000}
+    <img alt="Micro-XRCE-DDS 接続用に、Jetson の UART1 シリアルポートに配線された PX4 コントローラ" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_mini.jpg" />
 </div>
 
-ターミナルを1つ開き、jetson上でAgentを起動します：
+1 つ目のターミナルを開き、Jetson 上で Agent を起動します：
 
 ```bash
 cd /path/to/Micro-XRCE-DDS-Agent/build
 ./MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600
 ```
 
-以下のコマンドを使用して別のターミナルを開くことで、px4によって公開されているステータストピックを確認できます：
+次のコマンドを使用して別のターミナルを開くと、px4 が公開しているステータストピックを確認できます：
 
 ```bash
 ros2 topic list | grep "/fmu/out/"
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="/fmu/out/ でフィルタした ros2 topic list に表示される PX4 ステータストピック" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_topic.png" />
 </div>
 
 :::info
-以下のトピックの内容を読むことで、ドローンの基本的なステータス情報を取得できます：
+次のトピックの内容を読むことで、ドローンの基本的なステータス情報を取得できます：
 
-- /fmu/out/failsafe_flags -> 現在のフェイルセーフ状態のインジケーター。
-- /fmu/out/sensor_combined -> 同期された生のIMU、磁力計、気圧計データ。
-- /fmu/out/timesync_status -> 外部ソースとの時刻同期のステータス。
-- /fmu/out/vehicle_attitude -> 四元数としての現在の機体姿勢。
-- /fmu/out/vehicle_control_mode -> 現在アクティブな制御およびナビゲーションモード。
-- /fmu/out/vehicle_local_position -> ローカルNEDフレームでの位置と速度。
-- /fmu/out/vehicle_odometry -> 完全な6自由度姿勢と速度データ。
+- /fmu/out/failsafe_flags -> 現在のフェイルセーフ状態を示すインジケータ。
+- /fmu/out/sensor_combined -> 同期された生の IMU、磁力計、気圧計データ。
+- /fmu/out/timesync_status -> 外部ソースとの時刻同期ステータス。
+- /fmu/out/vehicle_attitude -> クォータニオンで表される現在の機体姿勢。
+- /fmu/out/vehicle_control_mode -> 現在有効な制御モードおよびナビゲーションモード。
+- /fmu/out/vehicle_local_position -> ローカル NED 座標系での位置と速度。
+- /fmu/out/vehicle_odometry -> 6 自由度の姿勢と速度の完全なデータ。
 - /fmu/out/vehicle_status -> 機体の全体的な状態、モード、準備状況。
 
 :::
 
-## オブジェクト検出環境の迅速な設定
+## 物体検出環境を素早く構成する
 
-**ステップ1.** お使いのJetpackバージョンに応じて、[PyTorchのインストール](https://wiki.seeedstudio.com/ja/install_torch_on_recomputer/)とTorchvisionについては、このwikiを参照してください。
+**ステップ 1.** 使用している JetPack のバージョンに応じて、この Wiki を参照し [PyTorch をインストール](https://wiki.seeedstudio.com/ja/install_torch_on_recomputer/) し、Torchvision を導入します。
 
-**ステップ2.** 必要な依存関係とパッケージをインストールします：
+**ステップ 2.** 必要な依存関係とパッケージをインストールします：
 
 ```bash
 sudo apt-get update
@@ -142,19 +142,19 @@ pip install https://github.com/ultralytics/assets/releases/download/v0.0.0/onnxr
 pip install numpy==1.23.5
 ```
 
-**ステップ3.** YOLOv11nの事前学習済みモデルをダウンロードします：
+**ステップ 3.** YOLOv11n の事前学習済みモデルをダウンロードします：
 
 ```bash
 wget -O yolo11n.pt https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt
 ```
 
-**ステップ4.** TensorRT推論を使用するためのエンジンモデルをエクスポートします：
+**ステップ 4.** TensorRT 推論で使用するためにエンジンモデルをエクスポートします：
 
 ```bash
 yolo export model=/path/to/yolo11n.pt format=engine device=0 half=True dynamic=True
 ```
 
-## ターゲット追跡用のROS2パッケージをインストールする
+## ターゲットトラッキング用 ROS2 パッケージのインストール
 
 ```bash
 cd /path/to/your/work_space/src
@@ -167,8 +167,9 @@ colcon build
 ```
 
 :::note
-検出ノードを実行する前に、以前に生成されたエンジンモデルファイルを `/ROS2-package-for-target-tracking/models` ディレクトリに移動する必要があります。さらに、ワークスペースのsrcディレクトリに `px4_msgs` と `px4_ros_com` パッケージ（[このwiki](https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/#step-2-build-the-px4_msgs-ros-2-package)を参照）をクローンする必要があります。
-srcディレクトリの構造は以下のようになります：
+検出ノードを実行する前に、先ほど生成したエンジンモデルファイルを `/ROS2-package-for-target-tracking/models` ディレクトリに移動する必要があります。さらに、ワークスペースの src ディレクトリ内に `px4_msgs` と `px4_ros_com` パッケージ（[この Wiki](https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/#step-2-build-the-px4_msgs-ros-2-package) を参照）をクローンしておく必要があります。
+
+src ディレクトリの構成は次のようになっている必要があります：
 
 ```bash
 └── src
@@ -179,7 +180,7 @@ srcディレクトリの構造は以下のようになります：
 
 :::
 
-ターゲット追跡の通常動作のためにROS2パッケージを実行するには、ターミナルを開いてMicroXRCEAgentを起動する必要があります：
+ターゲットトラッキングを正常に動作させるために ROS2 パッケージを実行するには、ターミナルを 1 つ開き、MicroXRCEAgent を起動する必要があります：
 
 ```bash
 ./MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600
@@ -195,12 +196,33 @@ ros2 run detect detect
 </div>
 
 <div style={{ textAlign: "justify" }}>
-上記の動画は、ドローンでターゲット追跡を実現する例を示しています。ターゲット検出を通じてターゲットを特定し、ByteTrackターゲット追跡アルゴリズムを使用して特定のターゲットを正確に追跡します。同時に、深度画像を使用してドローンとターゲット間の距離を推定します。
+上の動画は、ドローンでターゲットトラッキングを実現する例を示しています。ターゲット検出によって対象物を特定し、ByteTrack ターゲットトラッキングアルゴリズムを用いて特定のターゲットを高精度に追跡します。同時に、深度画像を使用してドローンとターゲット間の距離を推定します。
 </div>
 
-## 技術サポート & 製品ディスカッション
+## FAQ
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+**Jetson は何を行い、PX4 は何を行いますか？**
+Jetson は ByteTrack を用いた YOLO 検出を実行し、Gemini 2 の深度フレームから距離を読み取り、そのターゲット位置を ROS 2 経由で PX4 に送信します。PX4 は機体の飛行を継続して制御しており、この構成はフライトコントローラを置き換えるものではありません。
+
+**PX4 への ROS 2 リンクにはどのシリアルポートを使用しますか？**
+`/dev/ttyTHS1` を 921600 ボーで使用し、Micro-XRCE-DDS Agent を介して接続します：`./MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600`。最初にエージェントを実行し、その後 2 つ目のターミナルで検出ノードを起動します。
+
+**リンクが確立されていることはどのように確認できますか？**
+`ros2 topic list | grep "/fmu/out/"` を実行すると、`vehicle_status`、`vehicle_local_position`、`vehicle_attitude` など PX4 のステータストピックが一覧表示されるはずです。トピックが何も表示されない場合は、問題は検出器ではなく、エージェントまたは配線にあります。
+
+**この構成で使用している JetPack のバージョンはどれですか？**
+JetPack 6.2 と ROS 2 Humble に加え、Orbbec Gemini 2 と `./scripts/install_udev_rules.sh` の udev ルールを使用しています。検出ノードは ROS 2 ワークスペース内でビルドされており、`PYTHONPATH` を `install/lib/` に拡張する必要があります。
+
+## 関連リソース
+
+- [ROS 2 上の Orbbec Gemini 2 3D カメラ](/ja/orbbec_gemini2/)
+- [距離計測のために Gemini 2 を YOLOv11 と組み合わせる](/ja/yolov11_with_depth_camera/)
+- [reComputer に ROS 2 Humble をインストール](/ja/install_ros2_humble/)
+- [Orbbec Gemini 2 製品ページ](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+
+## 技術サポートと製品ディスカッション
+
+当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -224,13 +224,13 @@ On the EN04, the three buttons are connected to the XIAO nRF52840 Plus as follow
 The user buttons are programmable and can be configured for various functions such as page switching, mode selection, or triggering specific actions in your ePaper project.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:700, height:'auto'}}/></div>
 
 ### Battery Connector
 
 The EN04 is equipped with a JST 2.0 mm battery connector and a built-in charging IC, making it suitable for battery-powered low-power ePaper projects.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:700, height:'auto'}}/></div>
 
 ## Getting Started with Arduino
 
@@ -254,15 +254,15 @@ Open the Arduino IDE, navigate to **Sketch → Include Library → Add .ZIP Libr
 
 1. Navigate to **File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → nRF52840 Series → XIAO ePaper Display Board - EN04 → 7.5-inch ePaper - Monochrome 800x480 → HelloWorld**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:800, height:'auto'}}/></div>
 
 2. In **Tools → Board**, select **Seeed XIAO nRF52840 Plus**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:400, height:'auto'}}/></div>
 
 3. Connect the board via USB Type-C, select the corresponding serial port, and click **Upload**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:300, height:'auto'}}/></div>
 
 :::note
 The example paths above use the 7.5-inch Monochrome display as an example. For other supported displays, simply pick the folder matching your screen model under **XIAO ePaper Display Board - EN04** — each screen ships with **HelloWorld**, **Bitmap** and **Custom_Demo** examples (except the 7.5-inch Tri-Color, which ships with **HelloWorld** and **Custom_Demo**).

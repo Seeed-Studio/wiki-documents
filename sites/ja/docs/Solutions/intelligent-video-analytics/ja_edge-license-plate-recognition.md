@@ -1,6 +1,7 @@
 ---
 description: 既存のゲートカメラとエッジホスト 1 台でナンバー認識とホワイトリスト自動開閉を構成する方法：必要な機器、導入、インターフェース、Jetson と RK ホストでの実測データ
 title: エッジ ナンバープレート認識：選定・導入・実測データ
+sidebar_label: 'エッジナンバープレート認識'
 keywords:
   - ナンバープレート認識
   - ANPR
@@ -19,7 +20,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-license-plate-recognition/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -100,8 +101,8 @@ generated_from: sensecraft-solutions@76f6c0f
 
 | | 認識ホスト | 実測（1080p 入力） | 選ぶ場面 |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 シリーズ（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin Nano、JetPack 6.2 | 毎秒 30 フレーム | 標準の選択 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 シリーズ（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX、JetPack 6.2 | J30 と同じパッケージ | 同じホストで他のモデルも動かす |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin Nano、JetPack 6.2 | 毎秒 30 フレーム | 標準の選択 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Jetson Orin NX、JetPack 6.2 | J30 と同じパッケージ | 同じホストで他のモデルも動かす |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 シリーズ](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>オンボード NPU | 導入と出力を実測 | 現場を Rockchip で統一する |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 シリーズ](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>オンボード NPU | 毎秒 29–30 フレーム | コスト優先 |
 

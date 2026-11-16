@@ -1,6 +1,7 @@
 ---
 description: エッジデバイスで割り込み可能な音声端末を構築する方法——必要なボードとマイク、利用できるインターフェース、言語×デバイス対応表、RK3576でのASR/TTS実測データ
 title: 'エッジで割り込み可能な対話音声AI：構築・導入・実測結果'
+sidebar_label: 'エッジ対話型音声AI'
 keywords:
   - conversational voice AI
   - barge-in voice assistant
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/conversational-voice-ai/
 generated_from: sensecraft-solutions@aa522af
 ---
@@ -102,8 +103,8 @@ generated_from: sensecraft-solutions@aa522af
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>Rockchip NPU、Qwen3-ASR W8A8 + Matcha | 中国語、英語 | ローカル音声スタック全体を動かせる最も低コストのホストです。「性能と実測データ」の実測データはこの機種で取得しています |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Rockchip NPU、TTSにKokoro RKNNを追加 | 全30言語 | 中国語・英語以外の28言語が必要な場合、または後からRK1828カードを追加してローカル対話を行う場合 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>GPUでQwen3-ASR int4 + Matcha | 全30言語 | ホストで他のAI処理も動かし、GPUに余裕が必要な場合。このホストでローカル4Bモデルは動かさないでください |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>音声処理とQwen3.5-4Bを同じホストで実行 | 全30言語 | 対話テキストを現場外に出せない場合 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>GPUでQwen3-ASR int4 + Matcha | 全30言語 | ホストで他のAI処理も動かし、GPUに余裕が必要な場合。このホストでローカル4Bモデルは動かさないでください |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>音声処理とQwen3.5-4Bを同じホストで実行 | 全30言語 | 対話テキストを現場外に出せない場合 |
 
 reComputer R2000シリーズでもCPU音声スタック（sherpa-onnx、英語のみ）を動かせますが、参考設計ページのコンフィギュレーターにはまだ掲載していません。中国語には対応せず、ASRとTTSが4つのCPUコアを共有します。
 

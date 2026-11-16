@@ -1,6 +1,7 @@
 ---
 description: 端侧超市商品图像识别——单类检测器加嵌入商品库，新 SKU 拍几张照片就能注册而不用重训；需要哪些设备、怎么部署、各板卡实测数据，以及给工程师的实现细节
 title: 端侧商品图像识别方案：搭建、部署与实测数据
+sidebar_label: '端侧商品图像识别'
 keywords:
   - 端侧商品识别
   - 收银台商品识别 免扫码
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-product-recognition/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -115,7 +116,7 @@ generated_from: sensecraft-solutions@cbbfa60
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8，26 TOPS）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>检测上 NPU，嵌入跑在四个 A76 核上 | 两段都测了：检测 9.04 ms，嵌入每裁剪 91.95 ms | 检测与嵌入都要有实测数据 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588-30" width="110" /> | [reComputer RK3588-30](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>检测上 Rockchip NPU，嵌入在 CPU 或 NPU | 检测框一致率 99.85%，56.7 ms；嵌入上 NPU 后，20 SKU 货架回放从检出到结果发出 p50 924 ms | 已经在用 Rockchip 板卡，或相机对着货架。RK3576 工具链相同 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) 或 [reComputer J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>TensorRT 路线，检测与嵌入都上 GPU | J4012：检测 5.18 ms，嵌入每裁剪 4.23 ms；2956 帧收银回放 0 丢帧 | 已经在用 Jetson，或要整条链路跑在一台机器上 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) 或 [reComputer Super J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>TensorRT 路线，检测与嵌入都上 GPU | J4012：检测 5.18 ms，嵌入每裁剪 4.23 ms；2956 帧收银回放 0 丢帧 | 已经在用 Jetson，或要整条链路跑在一台机器上 |
 
 数字都是该行硬件上的实测。
 

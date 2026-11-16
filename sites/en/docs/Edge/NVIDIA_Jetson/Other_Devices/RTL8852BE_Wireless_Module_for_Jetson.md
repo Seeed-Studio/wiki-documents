@@ -1,5 +1,5 @@
 ---
-description: This wiki introduces the features and specifications of the RTL8852BE wireless module, a Wi-Fi 6 and Bluetooth M.2 wireless module compatible with NVIDIA Jetson devices. The article provides detailed information on its technical specifications, driver installation for JetPack 5 and JetPack 6, and methods to configure wireless networks and Bluetooth.
+description: "Add Wi-Fi 6 to Jetson with the RTL8852BE M.2 module: driver install for JetPack 5 and 6, module detection and network configuration."
 title: RTL8852BE Wireless Module for Jetson
 keywords:
   - Edge
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">
-  <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/8852be.png"/>
+  <img alt="RTL8852BE Wi-Fi 6 and Bluetooth M.2 module, product photo" width ="600" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/8852be.png"/>
 </div>
 
 
@@ -106,7 +106,7 @@ The RTL8852BE module may be detected by the Jetson as a PCIe device but may not 
 lspci | grep -i network
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/lspci.PNG"/>
+  <img alt="lspci output listing the RTL8852BE network controller" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/lspci.PNG"/>
 </div>
 
 
@@ -122,7 +122,7 @@ sudo apt-get update
 sudo apt-get install make gcc linux-headers-$(uname -r) build-essential git
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp5_install.png"/>
+  <img alt="make output building the rtw89 modules for the RTL8852BE, ending with modprobe 8852be" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp5_install.png"/>
 </div>
 
 ```bash
@@ -150,7 +150,7 @@ KDIR ?= /usr/src/linux-headers-5.15.148-tegra-ubuntu22.04_aarch64/3rdparty/canon
 KDIR ?= /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/makefile.png"/>
+  <img alt="Makefile edited to point at the kernel source from the installed headers" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/makefile.png"/>
 </div>
 
 Then build and install:
@@ -161,7 +161,7 @@ sudo make install
 sudo modprobe rtw89_8852be
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp6_install.png"/>
+  <img alt="make install copying the rtw89 .ko files into /lib/modules/5.15.136-tegra" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp6_install.png"/>
 </div>
 ## Verify the Wireless Module
 :::info
@@ -175,7 +175,7 @@ Adjust the interface name in the commands below accordingly.Use following comman
 ifconfig
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/interface.png"/>
+  <img alt="ifconfig output showing the new wlan0 interface" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/interface.png"/>
 </div>
 
 :::
@@ -197,7 +197,7 @@ sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
+  <img alt="nmcli connecting wlan0 to the access point" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
 ### Verify WiFi 6 Connection
@@ -208,7 +208,7 @@ Check the current link status:
 iw dev wlan0 link
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
+  <img alt="iw dev wlan0 link output confirming the Wi-Fi 6 connection" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
 </div>
 
 The output will show information such as:
@@ -225,8 +225,14 @@ The Bluetooth functionality of the RTL8852BE module can be configured using `blu
 bluetoothctl
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/bluetooth.png"/>
+  <img alt="bluetoothctl showing the controller registered with its MAC address and Paired: yes" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/bluetooth.png"/>
 </div>
+## Related Resources
+
+- [reComputer Super hardware and interfaces usage](/recomputer_jetson_super_hardware_interfaces_usage/)
+- [reComputer Robotics J401 interfaces and pinouts](/recomputer_jetson_robotics_j401_getting_started/)
+- [wiki-documents repository and discussions](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

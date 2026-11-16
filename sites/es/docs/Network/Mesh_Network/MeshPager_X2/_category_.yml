@@ -1,8 +1,10 @@
 position: 2.5
-label: 'MeshPager X2'
+label: 'Serie MeshPager X2'
 collapsible: true
 collapsed: true
-className: hidden
+className: meshpager_x2_node
 link:
-  type: doc
-  id: es_x2_node
+  type: generated-index
+  slug: meshpager_x2_node
+  title: Serie MeshPager X2
+  description: Nodos Meshtastic de la serie MeshPager X2

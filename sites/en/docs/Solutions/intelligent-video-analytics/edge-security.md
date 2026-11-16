@@ -1,6 +1,7 @@
 ---
 description: Build a local restricted-zone, line-crossing and loitering alerting system for a plant, warehouse or server-room door — what hardware you need, how to deploy it, which interfaces it exposes, and measured timing and throughput on three hosts.
 title: "Edge Security Alerting: Restricted Zones, Line Crossing and Loitering on the Edge"
+sidebar_label: 'Edge Security Alerting'
 keywords:
   - edge security
   - intrusion detection
@@ -22,7 +23,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/edge-security/
 generated_from: sensecraft-solutions@edge_security
 ---
@@ -153,7 +154,7 @@ One machine is enough — detection, verdicts and the workbench all run on it.
 
 | | Host | Accelerator | Video decode | Ports used | Free disk |
 |---|---|---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin module | Jetson GPU (TensorRT) | NVDEC hardware decode | 8090 / 1883 / 8099 | ~10 GB, engine build included |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 / Super J4012](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin module | Jetson GPU (TensorRT) | NVDEC hardware decode | 8090 / 1883 / 8099 | ~10 GB, engine build included |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 Series](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>Rockchip NPU | Rockchip NPU (RKNN) | On-board MPP hardware decode | 8090 / 1883 / 8099 | ~6 GB |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>Fanless industrial box | Hailo-8 (HailoRT) | CPU software decode | 8090 / 1883 / 8099 | ~6 GB |
 

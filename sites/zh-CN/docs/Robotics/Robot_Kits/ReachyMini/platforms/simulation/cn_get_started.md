@@ -1,5 +1,6 @@
 ---
 description: 使用MuJoCo进行Reachy Mini仿真设置指南，提供真实的物理环境来原型设计和测试应用，无需物理硬件。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini仿真设置
 slug: /reachymini_platforms_simulation_get_started
 keywords:

@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の頭部およびアンテナを目標ポーズへ動かす際の、さまざまな補間方法（linear、minjerk、ease_in_out、cartoon）を示すサンプルです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Goto 補間プレイグラウンド
 slug: /reachymini_examples_goto_interpolation_playground
 keywords:

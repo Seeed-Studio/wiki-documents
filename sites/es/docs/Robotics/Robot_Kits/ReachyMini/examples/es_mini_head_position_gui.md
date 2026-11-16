@@ -1,5 +1,6 @@
 ---
 description: Ejemplo de GUI interactiva usando Tkinter para controlar la posición y orientación de la cabeza de Reachy Mini con deslizadores para roll, pitch, yaw, X, Y, Z y yaw del cuerpo.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: GUI de Posición de la Cabeza
 slug: /reachymini_examples_mini_head_position_gui
 keywords:

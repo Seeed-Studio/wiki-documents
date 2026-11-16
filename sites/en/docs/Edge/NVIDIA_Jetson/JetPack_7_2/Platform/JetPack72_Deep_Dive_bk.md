@@ -18,6 +18,13 @@ updatedAt: '2026-07-31'
 url: https://wiki.seeedstudio.com/jetpack72_deep_dive_bk/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?
 
 This FAQ summarizes why JetPack 7.2 matters for Jetson AGX Orin users, what Seeed measured when comparing JetPack 7.2 with JetPack 6.2, and how to evaluate an upgrade path with Seeed Jetson DevelopTool.

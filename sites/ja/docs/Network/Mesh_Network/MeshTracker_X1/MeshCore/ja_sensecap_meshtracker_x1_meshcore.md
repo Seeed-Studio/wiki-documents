@@ -10,10 +10,10 @@ slug: /sensecap_meshtracker_x1_meshcore
 sku: 100087698
 sidebar_position: 3
 last_update:
-  date: 3/11/2026
+  date: 10/30/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-09-20'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/
 ---
 
@@ -282,11 +282,21 @@ MAC アドレスの `last four digits` がデバイス ID です
 
 ## トラブルシューティング
 
+### ファームウェア更新失敗 / OTA 復旧
+
+SenseCAP MeshTracker X1 がファームウェア更新後に起動しない、応答しない、または白色 ⚪️ LED が点灯したままの場合、デバイスが DFU モードで止まっている可能性があります。次の手順を試してください。
+
+1. 再起動を強制して DFU モードを終了します。USB 充電ケーブルを外し、デバイスのボタンを押し続けたまま USB 充電ケーブルを接続し、すぐにボタンを離します。ボタンを押し続けないでください。ケーブル接続後に 3 秒を超えて押し続けると、デバイスは再び DFU モードに入ります。
+2. デバイスが正常に起動するか確認します。起動しない場合は、USB データケーブルでデバイスをコンピュータに接続し、[ファームウェアの書き込み](#ファームウェアの書き込み)の手順に従って DFU モードに入り、フラッシュを消去して MeshCore ファームウェアを再インストールします。
+3. それでも復旧できない場合は、[ブートローダーのインストール](#ブートローダーのインストール)に従ってブートローダーを再書き込みし、その後アプリケーションファームウェアを再インストールします。
+
+ファームウェアの消去または書き込み中は、強制的に再起動したり USB ケーブルを抜いたりしないでください。デバイスが DFU モードに入れない、またはコンピュータで検出されない場合は、テクニカルサポートにお問い合わせください。
+
 ### デバイスの電源が入らない
 
 - 動作確認済みの USB ケーブルを使用して、バッテリーにシステムを起動するのに十分な電力が供給されるように、1～2 時間連続して `charge the device` してください。
 
-- 充電後もデバイスが反応しない場合は、次の手順で `perform a hard reset` を行ってください。USB ケーブルを抜きます。ボタンを押し続けたまま、ボタンを押した状態で USB ケーブルを接続します。約 3 秒間押し続けてから離します。これによりシステムリセットが強制的に行われます。
+- 充電後もデバイスが反応しない場合は、次の手順で `perform a hard reset` を行ってください。USB ケーブルを抜きます。ボタンを押し続けたまま USB ケーブルを接続し、すぐにボタンを離します。これによりシステムリセットが強制的に行われます。
 
  - それでも改善しない場合は、USB ケーブルをコンピュータに接続します。デバイスのボタンを押し続けたまま、デバイスをコンピュータに接続し、PC にディスクが表示されるかどうかを確認します。表示される場合は、ブートローダーを再インストールしてください。
 
@@ -298,7 +308,7 @@ MAC アドレスの `last four digits` がデバイス ID です
 
 **解決方法：**
 
-- ステップ 1：DFU モードへの手動移行を試します。デバイスのボタンを押し続けたまま、**素早く** 2 回充電ケーブルを接続します。
+- ステップ 1：DFU モードへの手動移行を試します。デバイスのボタンを押し続けたまま、**素早く** USB ケーブルでデバイスをコンピュータに接続し、白色 ⚪️ LED が点灯するまでボタンを押し続けます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
@@ -400,7 +410,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#firmware-flashing)に従ってアプリケーションファームウェアを書き込むことができます。
+上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェアの書き込み)に従ってアプリケーションファームウェアを書き込むことができます。
 
 
 **2) デバイスが DFU モードに入れないが、シリアルポートは検出できる場合**
@@ -410,7 +420,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 - ボーレートを `1200` に設定します。
 
 - デバイスを接続します。
-   接続するとライトが一瞬点滅します。ライトが点灯し続けるまでこの操作を繰り返してください。ライトが点灯し続ける状態になれば、デバイスは DFU モードに戻ることができます。その後、[flash bootloader](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ブートローダーのインストール) -> [erase flash](https://wiki.seeedstudio.sensecap_meshtracker_x1_meshcore/#ファームウェア-書き込み) -> [flash the firmware](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェア-書き込み) の順に実行します。
+   接続するとライトが一瞬点滅します。ライトが点灯し続けるまでこの操作を繰り返してください。ライトが点灯し続ける状態になれば、デバイスは DFU モードに戻ることができます。その後、[flash bootloader](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ブートローダーのインストール) -> [erase flash](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェアの書き込み) -> [flash the firmware](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェアの書き込み) の順に実行します。
 
 **3) デバイスが DFU モードに入れず、シリアルポートも表示されない場合**
 

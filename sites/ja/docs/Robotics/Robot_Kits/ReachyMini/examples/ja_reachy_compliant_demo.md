@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini をコンプライアンスモードにし、重力補償を行うことで、ロボットが軽く押した動きに追従し、手を離すとその場に留まるデモです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: コンプライアンスモード デモ
 slug: /reachymini_examples_reachy_compliant_demo
 keywords:

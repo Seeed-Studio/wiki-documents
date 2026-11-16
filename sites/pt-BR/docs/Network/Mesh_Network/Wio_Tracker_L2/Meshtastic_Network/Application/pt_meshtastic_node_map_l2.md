@@ -30,8 +30,8 @@ O Mapa de Nós Meshtastic é uma interface online que visualiza as localizaçõe
 
 Os dispositivos Meshtastic relatam periodicamente sua localização para um servidor Meshtastic via MQTT. O Mapa de Nós recupera esses relatórios e exibe a posição, rota e alcance de sinal de cada nó. Os dispositivos podem relatar sua localização:
 
-- **Diretamente via MapReport:** o dispositivo envia os dados de localização diretamente para o servidor.
-- **Indiretamente via outros nós:** a localização é retransmitida por nós vizinhos.
+- **Diretamente via MapReport:** O dispositivo envia os dados de localização diretamente para o servidor.
+- **Indiretamente via outros nós:** A localização é retransmitida por nós vizinhos.
 
 **Casos de Uso Adequados**
 
@@ -63,7 +63,7 @@ Os Mapas de Nós Meshtastic são ideais para:
 
 ### Visualizando as Localizações dos Dispositivos
 
-Abra o **MeshMap** no seu navegador: [Link do MeshMap](https://meshmap.net/). 
+Abra o **MeshMap** no seu navegador: [MeshMap Link](https://meshmap.net/). 
 
 Você verá todos os nós no mapa. Nós relatados **via MapReport** são atualizações diretas do dispositivo. Nós relatados **via outros nós** são atualizações retransmitidas.
 
@@ -88,14 +88,36 @@ Clique em qualquer nó para ver informações detalhadas (ID do dispositivo, ní
      - Encryption Enabled: Yes
      - JSON Output: No
      - TLS Enabled: No
-   - Ative `MapReport` e marque `I agree`. Selecione o intervalo de relatório de sua preferência.
+   - Ative `MapReport` e marque `I agree`. Selecione seu intervalo de relatório preferido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/LiamMQTT.png" style={{width:600, height:'auto'}}/></div>
 
 ### Visualizando as Localizações dos Dispositivos
 
-Abra o **Mapa Meshtastic de Liam Cottle** no seu navegador: [Link do Mapa de Liam Cottle](https://meshtastic.liamcottle.net/). Você verá todos os nós exibidos no mapa.
+Abra o **Mapa Meshtastic de Liam Cottle** no seu navegador: [Liam Cottle's Map Link](https://meshtastic.liamcottle.net/). Você verá todos os nós exibidos no mapa.
 
 Clique em qualquer nó para ver: informações detalhadas sobre o dispositivo, alcance de sinal, rotas históricas e atualizações de localização anteriores
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2ProNodeMapLiam.png" style={{width:600, height:'auto'}}/></div>
+
+## Suporte Técnico e Discussão de Produto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
