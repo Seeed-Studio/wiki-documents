@@ -374,11 +374,11 @@ module.exports = (async () => {
       ],
       [
         path.resolve(__dirname, '../../plugins/recomputer-faq-index'),
-        { locale: 'ja' },
+        { locale: 'es' },
       ],
       [
         path.resolve(__dirname, '../../plugins/recomputer-pi-faq-index'),
-        { locale: 'ja' },
+        { locale: 'es' },
       ],
       'docusaurus-plugin-sass',
       [
