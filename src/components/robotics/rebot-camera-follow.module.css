@@ -1,0 +1,116 @@
+.diagram {
+  container-type: inline-size;
+  margin: 1.25rem 0 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 18px;
+  background: var(--ifm-background-surface-color);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  background: var(--ifm-background-color);
+}
+
+.row > .card:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -1.24rem;
+  color: var(--ifm-color-primary);
+  content: '→';
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.card p,
+.note {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--ifm-color-primary);
+  border-radius: 0 8px 8px 0;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.lane + .lane {
+  margin-top: 1.35rem;
+}
+
+.laneTitle {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .diagram {
+    padding: 1rem;
+  }
+
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .row > .card:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -1.25rem;
+    left: 50%;
+    content: '↓';
+    transform: translateX(-50%);
+  }
+}
+
+/* The article can be narrow even on a wide screen when sidebars are open. */
+@container (max-width: 600px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .row > .card:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -1.25rem;
+    left: 50%;
+    content: '↓';
+    transform: translateX(-50%);
+  }
+}
