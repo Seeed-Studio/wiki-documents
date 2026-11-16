@@ -13,7 +13,6 @@ keywords:
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
-import diagram from '@site/src/components/robotics/rebot-camera-follow.module.css';
 
 # reBot-RS 腕部相机手掌跟随
 
@@ -61,73 +60,21 @@ import diagram from '@site/src/components/robotics/rebot-camera-follow.module.cs
 
 ### 系统架构
 
-<div className={diagram.diagram}>
-  <ol className={diagram.row} aria-label="系统架构：从相机到机械臂">
-    <li className={diagram.card}>
-      <span className={diagram.label}>输入</span>
-      <strong>腕部深度相机</strong>
-      <p>采集彩色图像与深度帧，提供手掌识别和距离信息。</p>
-    </li>
-    <li className={diagram.card}>
-      <span className={diagram.label}>处理</span>
-      <strong>Linux 主机</strong>
-      <p>识别手部，计算目标位置，并通过运动学和保护逻辑生成指令。</p>
-    </li>
-    <li className={diagram.card}>
-      <span className={diagram.label}>执行</span>
-      <strong>B601-RS 机械臂</strong>
-      <p>接收 CAN 指令，驱动六轴与夹爪；关节反馈返回控制程序。</p>
-    </li>
-  </ol>
-  <p className={diagram.note}><strong>本地网页：</strong>通过本机服务管理控制程序，并显示相机预览、机械臂模型与状态。</p>
-</div>
+<p align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/camera_follow/system-architecture-zh-dark.png" alt="系统架构：腕部相机采集图像，Linux 主机处理后经 CAN 控制机械臂，并接收关节反馈；本地网页显示状态。" />
+</p>
+
+相机向主机提供彩色和深度帧，主机处理后通过 CAN 控制机械臂并接收关节反馈。本地网页管理控制程序、显示预览和状态。
 
 视觉线程获取相机帧并识别手部；伺服线程读取最新目标，利用机械臂模型和相机位姿计算关节指令。网页通过本机服务启动和管理控制程序，并接收状态；网页本身不直接连接 CAN。页面显示可能来自实际反馈、指令或模型估算，请以数据来源标识为准。
 
 ### 手掌跟随与夹爪控制流程
 
-<div className={diagram.diagram}>
-  <div className={diagram.lane}>
-    <p className={diagram.laneTitle}>手掌跟随</p>
-    <ol className={diagram.row} aria-label="手掌跟随流程">
-      <li className={diagram.card}>
-        <span className={diagram.label}>01 · 感知</span>
-        <strong>识别三维掌心</strong>
-        <p>从彩色图像提取手部关键点，结合对齐深度图采样掌心距离。</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>02 · 计算</span>
-        <strong>生成跟随目标</strong>
-        <p>对三维掌心滤波和预测，再转换到机械臂坐标系。</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>03 · 执行</span>
-        <strong>驱动机械臂</strong>
-        <p>通过视觉伺服和雅可比逆解生成受限关节指令，经 CAN 下发。</p>
-      </li>
-    </ol>
-  </div>
-  <div className={diagram.lane}>
-    <p className={diagram.laneTitle}>捏合控制夹爪</p>
-    <ol className={diagram.row} aria-label="夹爪控制流程">
-      <li className={diagram.card}>
-        <span className={diagram.label}>01 · 识别</span>
-        <strong>提取指尖位置</strong>
-        <p>读取拇指与食指关键点。</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>02 · 映射</span>
-        <strong>计算捏合距离</strong>
-        <p>对距离滤波，并映射为夹爪开合目标。</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>03 · 执行</span>
-        <strong>控制夹爪</strong>
-        <p>跟随启用且选择捏合控制时，发送夹爪指令。</p>
-      </li>
-    </ol>
-  </div>
-</div>
+<p align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/camera_follow/following-workflow-zh-dark.png" alt="手掌跟随流程：识别三维掌心、生成跟随目标、驱动机械臂；夹爪流程：提取指尖、计算捏合距离、控制夹爪。" />
+</p>
+
+手掌跟随依次识别三维掌心、计算跟随目标并驱动机械臂；夹爪控制则通过指尖位置和捏合距离生成开合指令。
 
 相机安装在腕部，因此控制计算需要将相机坐标转换到机械臂坐标。手掌短时丢失时程序可能有限外推，较长时间丢失后保持；重新识别后可能继续运动。捏合控制与跟随共用手部检测结果，也可在网页选择保持夹爪当前位置。
 

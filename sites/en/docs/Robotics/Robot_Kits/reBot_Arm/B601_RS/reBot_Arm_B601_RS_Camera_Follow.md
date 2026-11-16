@@ -13,7 +13,6 @@ keywords:
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
-import diagram from '@site/src/components/robotics/rebot-camera-follow.module.css';
 
 # reBot-RS Wrist Camera Palm Following
 
@@ -61,73 +60,21 @@ Initialization enables the motors and moves the arm to HOME; exiting also moves 
 
 ### System Architecture
 
-<div className={diagram.diagram}>
-  <ol className={diagram.row} aria-label="System architecture: camera to robot arm">
-    <li className={diagram.card}>
-      <span className={diagram.label}>INPUT</span>
-      <strong>Wrist Depth Camera</strong>
-      <p>Captures color and depth frames for hand detection and distance measurements.</p>
-    </li>
-    <li className={diagram.card}>
-      <span className={diagram.label}>PROCESSING</span>
-      <strong>Linux Host</strong>
-      <p>Detects the hand, calculates a target, and generates commands using kinematics and protection logic.</p>
-    </li>
-    <li className={diagram.card}>
-      <span className={diagram.label}>EXECUTION</span>
-      <strong>B601-RS Arm</strong>
-      <p>Receives CAN commands for the six joints and gripper; joint feedback returns to the controller.</p>
-    </li>
-  </ol>
-  <p className={diagram.note}><strong>Local web page:</strong> Manages the control process through a local service and displays the camera preview, robot model, and status.</p>
-</div>
+<p align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/camera_follow/system-architecture-en-dark.png" alt="System architecture: a wrist camera sends frames to a Linux host, which controls the arm over CAN and receives joint feedback; a local web page displays status." />
+</p>
+
+The wrist camera supplies color and depth frames to the host, which controls the arm over CAN and receives joint feedback. The local web page manages the controller and displays the preview and status.
 
 The vision thread captures camera frames and detects the hand. The servo thread reads the latest target and uses the robot model and camera pose to calculate joint commands. The web page starts and manages the controller through a local service and receives status; it does not connect to CAN directly. The display may show actual feedback, commands, or estimates; check its data-source label.
 
 ### Palm Following and Gripper Control
 
-<div className={diagram.diagram}>
-  <div className={diagram.lane}>
-    <p className={diagram.laneTitle}>Palm following</p>
-    <ol className={diagram.row} aria-label="Palm following workflow">
-      <li className={diagram.card}>
-        <span className={diagram.label}>01 · PERCEPTION</span>
-        <strong>Detect the 3D palm</strong>
-        <p>Extract hand landmarks from the color image and sample palm depth from the aligned depth image.</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>02 · COMPUTATION</span>
-        <strong>Generate a target</strong>
-        <p>Filter and predict the 3D palm position, then transform it into the robot coordinate frame.</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>03 · EXECUTION</span>
-        <strong>Move the arm</strong>
-        <p>Use visual servoing and a Jacobian inverse solution to generate limited joint commands and send them over CAN.</p>
-      </li>
-    </ol>
-  </div>
-  <div className={diagram.lane}>
-    <p className={diagram.laneTitle}>Pinch-to-grip control</p>
-    <ol className={diagram.row} aria-label="Gripper control workflow">
-      <li className={diagram.card}>
-        <span className={diagram.label}>01 · DETECT</span>
-        <strong>Find the fingertips</strong>
-        <p>Read the thumb and index-finger landmarks.</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>02 · MAP</span>
-        <strong>Calculate pinch distance</strong>
-        <p>Filter the distance and map it to a gripper opening target.</p>
-      </li>
-      <li className={diagram.card}>
-        <span className={diagram.label}>03 · EXECUTE</span>
-        <strong>Control the gripper</strong>
-        <p>Send gripper commands while following is enabled and pinch control is selected.</p>
-      </li>
-    </ol>
-  </div>
-</div>
+<p align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/camera_follow/following-workflow-en-dark.png" alt="Palm following detects the 3D palm, generates a target, and moves the arm. Pinch control detects fingertips, calculates pinch distance, and commands the gripper." />
+</p>
+
+Palm following detects the 3D palm, calculates a follow target, and moves the arm. Gripper control uses fingertip positions and pinch distance to produce an opening command.
 
 Because the camera is mounted on the wrist, the controller must transform camera coordinates into robot coordinates. If the palm is lost briefly, the program may extrapolate for a limited time; after a longer loss, it holds position. Motion may resume when the hand is detected again. Pinch control shares the hand detection result with following, and the web page also lets you hold the gripper at its current position.
 
