@@ -3419,7 +3419,7 @@ const sidebars = {
           collapsible: true,
           items: [
             'Edge/RockChip_Devices/Application/object_detection_with_yolov11_on_recomputer_rk'
-            ]
+          ]
         },
         {
           type: 'category',
