@@ -5,7 +5,7 @@ tags:
   - J601-Robotics 载板
   - Jetson
   - AGX Thor
-  - Robotics
+  - 机器人
   - 接口使用
   - 接口
   - 硬件
@@ -46,60 +46,33 @@ import {roboticsJ601DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 | 任务 | 接口与操作说明 |
 | --- | --- |
-| 安装散热 | [散热片安装](#heatsink-installation) |
+| 安装散热 | [散热片安装](#散热片安装) |
 | 连接外设或调试控制台 | [USB](#usb) 和 [UART](#uart) |
-| 启用摄像头输入 | [GMSL](#gmsl) |
+| 启用相机输入 | [GMSL](#gmsl) |
 | 连接音频和传感器 | [I2S](#i2s)、[I2C](#i2c) 和 [GPIO](#gpio-gpigpo) |
 | 连接控制器 | [CAN](#can)、[RS485](#rs485) 和 [DB9](#db9) |
-| 检查状态指示 | [RGB LED](#rgb) |
-| 连接网络 | [以太网](#ethernet)、[Wi-Fi/Bluetooth](#m2-key-e) 和 [5G/GPS](#5g-module-m2-key-b) |
+| 检查状态指示灯 | [RGB LED](#rgb) |
+| 连接网络 | [以太网](#ethernet)、[Wi-Fi/Bluetooth](#m2-key-e) 和 [5G/GPS](#5g-模块-m2-key-b) |
 
-在安装或拆卸模组、接线端子前，请先关闭载板电源。请根据你所使用的电路板版本原理图，确认连接器的引脚编号和信号电压。
+在安装或拆卸模组或接线端子前，请先关闭载板电源。请根据你所使用的电路板版本，对照原理图确认连接器的引脚编号和信号电压。
 
 ## 散热片安装
 
-为确保长时间运行时的稳定散热，你可以在 reComputer J601 载板上安装散热片。
+有关安装散热片的说明，请参考下方视频教程。
 
-**所需材料：**
-
-- 导热硅胶垫
-- 带风扇的散热片
-- reComputer J601 载板
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png" alt="Heatsink, fan, thermal pad, and J601 carrier board for installation" loading="lazy" />
-    <figcaption>用于安装的散热片、风扇、导热垫和 J601 载板</figcaption>
-  </figure>
-</div>
-
-**步骤 1.** 将导热硅胶垫贴在散热片与载板之间的接触位置。
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png" alt="Copper heatsink plate with the blue thermal pads applied, next to the J601 carrier board" loading="lazy" />
-    <figcaption>导热硅胶垫已放置在散热片接触位置</figcaption>
-  </figure>
-</div>
-
-**步骤 2.** 将散热片与载板固定连接。
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png" alt="Heatsink and fan attached to the J601 carrier board" loading="lazy" />
-    <figcaption>散热片和风扇已安装到 J601 载板上</figcaption>
-  </figure>
+<div className="video-container" style={{paddingBottom: '42.75%'}}>
+  <iframe width="2103" height="899" src="https://www.youtube.com/embed/_NuenzpgHug" title="Heatsink Installation for reComputer J601 Carrier Board" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
 </div>
 
 ## USB
 
-Robotics J601 载板配备多个 USB 接口，包括 4 个 USB 3.2 Type-A 端口（Host，10Gbps）用于高速外设连接、1 个 USB 3.0 Type-C 端口（J4）用于恢复/刷机，以及 1 个 USB 2.0 Type-C 端口（J3）用于串口调试。
+Robotics J601 载板配备多个 USB 接口，包括 4 个 USB 3.2 Type-A 端口（Host，10Gbps），用于高速外设连接；1 个 USB 3.0 Type-C 端口（J4），用于恢复/刷机；以及 1 个 USB 2.0 Type-C 端口（J3），用于串口调试。
 
 ### USB 3.2 速度测试
 
-插入一个 USB 3.x 存储设备，并使用 `lsblk -f` 确认其挂载点。协商得到的 USB 速率可以通过 `lsusb -t` 查看；实际吞吐量还取决于存储设备和文件系统。
+插入一个 USB 3.x 存储设备，并使用 `lsblk -f` 确认其挂载点。协商得到的 USB 速率可以通过 `lsusb -t` 查看；实际测得的吞吐量还取决于存储设备和文件系统。
 
-下面的示例会在已挂载的 USB 文件系统上写入一个**1 GiB 的临时文件**，再读回并删除它。将 `<usb-volume>` 替换为实际卷名，并确保至少有 1 GiB 的可用空间。
+下面的示例会在已挂载的 USB 文件系统上写入一个**1 GiB 的临时文件**，再将其读回并删除。将 `<usb-volume>` 替换为实际卷名，并确保至少有 1 GiB 的可用空间。
 
 ```bash
 lsblk -f
@@ -126,7 +99,7 @@ rm -- "$USB_TEST_FILE"
 
 #### Windows
 
-**步骤 1.** 使用 USB-C 数据线将 J601 连接到 PC。
+**步骤 1.** 通过 USB-C 数据线将 J601 连接到 PC。
 
 <div className="jetson-product-hardware-gallery">
   <figure>
@@ -136,7 +109,7 @@ rm -- "$USB_TEST_FILE"
 </div>
 
 
-**步骤 2.** 在 PC 上下载 [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)。
+**步骤 2.** 在你的 PC 上下载 [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)。
 
 <div className="jetson-product-hardware-gallery">
   <figure>
@@ -154,16 +127,16 @@ rm -- "$USB_TEST_FILE"
   </figure>
 </div>
 
-**步骤 4.** 在 Windows PC 上打开 Device Manager，并检查分配给 reComputer J601 的 COM 端口号。它应显示在“Ports (COM & LPT)”下，名称为“Silicon Labs CP210x USB to UART Bridge (COMX)”，其中 X 为 COM 端口号。
+**步骤 4.** 在 Windows PC 上打开设备管理器，检查分配给 reComputer J601 的 COM 端口号。它应显示在“Ports (COM & LPT)”下，名称为“Silicon Labs CP210x USB to UART Bridge (COMX)”，其中 X 为 COM 端口号。
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png" alt="Windows Device Manager showing the USB-to-UART COM port" loading="lazy" />
-    <figcaption>Windows Device Manager 中显示的 USB-to-UART COM 端口</figcaption>
+    <figcaption>Windows 设备管理器中显示的 USB-to-UART COM 端口</figcaption>
   </figure>
 </div>
 
-**步骤 5.** 打开串口工具（此处以 MobaXterm 工具为例），创建一个新会话。
+**步骤 5.** 打开串口工具（这里以 MobaXterm 工具为例），创建一个新会话。
 
 <div className="jetson-product-hardware-gallery">
   <figure>
@@ -177,16 +150,16 @@ rm -- "$USB_TEST_FILE"
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png" alt="MobaXterm session type chooser with Serial highlighted" loading="lazy" />
-    <figcaption>MobaXterm 会话类型选择界面，已选择 Serial</figcaption>
+    <figcaption>MobaXterm 会话类型选择界面，选中 Serial</figcaption>
   </figure>
 </div>
 
-**步骤 7.** 选择对应的串口，将波特率设置为 115200，然后点击“OK”。
+**步骤 7.** 选择对应的串口，将波特率设置为 115200，然后点击 "OK"。
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png" alt="Serial console configured for 115200 baud" loading="lazy" />
-    <figcaption>串口控制台已配置为 115200 波特率</figcaption>
+    <figcaption>配置为 115200 波特率的串口控制台</figcaption>
   </figure>
 </div>
 
@@ -201,7 +174,7 @@ rm -- "$USB_TEST_FILE"
 
 #### Linux
 
-**步骤 1.** 使用 USB-C 数据线将 J601 连接到 Linux PC。
+**步骤 1.** 通过 USB-C 数据线将 J601 连接到 Linux PC。
 
 **步骤 2.** 查找串口设备：
 
@@ -222,13 +195,13 @@ ls /dev/ttyUSB*
 screen /dev/ttyUSB0 115200
 ```
 
-现在你应该可以看到 J601 的串口控制台输出，并可使用你的用户名和密码登录。
+现在你应该可以看到 J601 的串口控制台输出，并可使用用户名和密码登录。
 
 ## GMSL
 
-Robotics J601 配备一个 GMSL 摄像头扩展排针，可同时支持多达 **8 路 GMSL 摄像头**，以实现多摄像头机器人视觉应用。
+Robotics J601 配备一个 GMSL 相机扩展排针，可同时支持多达 **8 路 GMSL 相机**，以实现多相机机器人视觉应用。
 
-### 支持的 GMSL 摄像头型号
+### 支持的 GMSL 相机型号
 
 - [SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
 - SG2-AR0233C-5200-G2A
@@ -238,19 +211,19 @@ Robotics J601 配备一个 GMSL 摄像头扩展排针，可同时支持多达 **
 
 ### 硬件连接
 
-将 GMSL 扩展板连接到 J601 载板上的摄像头扩展排针，然后将你的 GMSL 摄像头连接到扩展板。
+将 GMSL 扩展板连接到 J601 载板上的相机扩展排针，然后将你的 GMSL 相机连接到扩展板。
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/GMSL_connect.png" alt="J601 board with the heatsink fan and the 40-pin cable fitted, and the two GMSL connectors boxed" loading="lazy" />
-    <figcaption>J601 上的 GMSL 扩展板与摄像头接线</figcaption>
+    <figcaption>J601 上的 GMSL 扩展板与相机接线</figcaption>
   </figure>
 </div>
 
 ### 使用说明
 
 :::note
-在启用 GMSL 功能之前，请确保已安装带有 GMSL 扩展板驱动的 JetPack 版本。
+在启用 GMSL 功能之前，请确保你已安装带有 GMSL 扩展板驱动的 JetPack 版本。
 :::
 
 **步骤 1.** 安装视频接口配置工具：
@@ -288,7 +261,7 @@ gst-launch-1.0 -q filesrc location=/tmp/gmsl0.yuyv do-timestamp=true blocksize=4
   </figure>
 </div>
 
-### 使用 Gemini 335Lg 摄像头
+### 使用 Gemini 335Lg 的摄像头
 
 ```bash
 # Download the Orbbec Gemini 335Lg visualization tool
@@ -299,11 +272,11 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 ./OrbbecViewer
 ```
 
-首次开启时，可能需要更新固件。打开数据流后，你可以查看来自摄像头的视频。
+第一次开启时，你可能需要更新固件。打开数据流后，你就可以查看来自摄像头的视频。
 
 ## UART
 
-Robotics J601 通过标准 JST 排针提供 UART 接口，用于与外部设备进行串行通信。该 UART 端口在 Jetson 系统上对应 `/dev/ttyTHS1`，默认波特率为 115200。
+Robotics J601 通过标准 JST 排针提供 UART 接口，用于与外部设备进行串行通信。UART 端口在 Jetson 系统中连接到 `/dev/ttyTHS1`，默认波特率为 115200。
 
 ### 硬件连接
 
@@ -360,14 +333,14 @@ Robotics J601 提供 I2S 音频接口，带有功放输出和麦克风输入，�
 
 ### 引脚定义
 
-| Pin # | 模块引脚名称 | 模块引脚号 | 用途/描述 | 类型/方向 |
+| Pin # | Module Pin Name | Module Pin # | Usage/Description | Type/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | 3V3 电源 | Power |
-| 2 | I2S2_DIN | F6 | I2S2 音频端口 2 数据输入（电平从 1.8V 转换到 3.3V） | Input |
-| 3 | I2S2_FS | E4 | I2S2 音频端口 2 左/右时钟（电平从 1.8V 转换到 3.3V） | Bidir |
-| 4 | I2S2_CLK | G4 | I2S2 音频端口 2 时钟（电平从 1.8V 转换到 3.3V） | Bidir |
-| 5 | I2S2_DOUT | F5 | I2S2 音频端口 2 数据输出（电平从 1.8V 转换到 3.3V） | Output |
-| 6 | - | - | 地 | Ground |
+| 1 | - | - | 3V3 Power Supply | Power |
+| 2 | I2S2_DIN | F6 | I2S2 Audio Port 2 Data In (Level Shifted from 1.8V to 3.3V) | Input |
+| 3 | I2S2_FS | E4 | I2S2 Audio Port 2 Left/Right Clock (Level Shifted from 1.8V to 3.3V) | Bidir |
+| 4 | I2S2_CLK | G4 | I2S2 Audio Port 2 Clock (Level Shifted from 1.8V to 3.3V) | Bidir |
+| 5 | I2S2_DOUT | F5 | I2S2 Audio Port 2 Data Out (Level Shifted from 1.8V to 3.3V) | Output |
+| 6 | - | - | Ground | Ground |
 
 ### 硬件连接
 
@@ -380,7 +353,7 @@ Robotics J601 提供 I2S 音频接口，带有功放输出和麦克风输入，�
 
 ### 使用说明
 
-**步骤 1.** 配置 I2S2 音频复用并测试音频信号输出：
+**步骤 1.** 配置 I2S2 音频复用并测试音频输出：
 
 ```bash
 # Configure I2S2 mux
@@ -391,7 +364,7 @@ speaker-test -D hw:2,0 -c 2 -r 48000 -t sine -f 440 -l 1
 ```
 
 :::info
-`-l 1` 参数表示测试音频只播放一次然后停止。
+`-l 1` 标志表示测试音频只播放一次然后停止。
 :::
 
 **步骤 2.** 播放你自己的音频文件：
@@ -407,29 +380,29 @@ aplay -D hw:2,0 -c 2 -r 48000 your_audio_file.wav
 
 ## I2C
 
-Robotics J601 通过 J12 JST GH-1.25 连接器提供 I2C 接口，便于连接传感器和外设以扩展系统功能。
+Robotics J601 通过 J12 JST GH-1.25 连接器提供 I2C 接口，可方便连接传感器和外设以扩展系统功能。
 
 ### 引脚定义
 
-| Pin # | 模块引脚名称 | 模块引脚号 | 用途/描述 | 类型/方向 |
+| Pin # | Module Pin Name | Module Pin # | Usage/Description | Type/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | 地 | Ground |
+| 1 | - | - | Ground | Ground |
 | 2 | DP_AUX_CH2_N | E18 | I2C4_SDA_3V3 | Bidir |
 | 3 | DP_AUX_CH2_P | E19 | I2C4_SCL_3V3 | Output |
-| 4 | - | - | 3V3 电源 | Power |
+| 4 | - | - | 3V3 Power Supply | Power |
 
 :::info
-该 I2C 连接器使用 Jetson AGX Thor SoC 上的 **I2C4** 总线。
+I2C 连接器使用 Jetson AGX Thor SoC 上的 **I2C4** 总线。
 :::
 
 ### 硬件连接
 
 将你的 I2C 设备连接到载板上的 I2C 接口：
 
-- Ground → Ground（引脚 1）
-- SDA → SDA（引脚 2）
-- SCL → SCL（引脚 3）
-- Power → 3V3（引脚 4）
+- Ground → Ground (Pin 1)
+- SDA → SDA (Pin 2)
+- SCL → SCL (Pin 3)
+- Power → 3V3 (Pin 4)
 
 <div className="jetson-product-hardware-gallery">
   <figure>
@@ -486,7 +459,7 @@ sudo i2cget -y 1 0x58 0x00
   </figure>
 </div>
 
-## GPIO（GPI/GPO）
+## GPIO (GPI/GPO)
 
 Robotics J601 通过两个 JST GH-1.25 连接器提供数字 GPIO 接口：一个带有 4 路输入通道的 **GPI（通用输入）** 连接器 J20，以及一个带有 4 路输出通道的 **GPO（通用输出）** 连接器 J17。所有 GPIO 信号都从 1.8V（SoC 域）电平转换为 3.3V，使其可直接兼容标准 3.3V 传感器和外设。
 
@@ -496,38 +469,38 @@ Robotics J601 通过两个 JST GH-1.25 连接器提供数字 GPIO 接口：一�
 
 #### GPI 连接器 - J20（输入）
 
-| Pin # | 模块引脚名称 | 模块引脚号 | 用途/描述 | 类型/方向 |
+| Pin # | Module Pin Name | Module Pin # | Usage/Description | Type/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | 3V3 电源 | Power |
-| 2 | SPI2_MISO | D62 | GPI_1_3V3（电平从 1.8V 转换到 3.3V） | Input, 3.3V |
-| 3 | GPIO64 | J6 | GPI_2_3V3（电平从 1.8V 转换到 3.3V） | Input, 3.3V |
-| 4 | GPIO65 | J7 | GPI_3_3V3（电平从 1.8V 转换到 3.3V） | Input, 3.3V |
-| 5 | GPIO49 | G6 | GPI_4_3V3（电平从 1.8V 转换到 3.3V） | Input, 3.3V |
-| 6 | - | - | 地 | Ground |
+| 1 | - | - | 3V3 Power Supply | Power |
+| 2 | SPI2_MISO | D62 | GPI_1_3V3 (Level Shifted from 1.8V to 3.3V) | Input, 3.3V |
+| 3 | GPIO64 | J6 | GPI_2_3V3 (Level Shifted from 1.8V to 3.3V) | Input, 3.3V |
+| 4 | GPIO65 | J7 | GPI_3_3V3 (Level Shifted from 1.8V to 3.3V) | Input, 3.3V |
+| 5 | GPIO49 | G6 | GPI_4_3V3 (Level Shifted from 1.8V to 3.3V) | Input, 3.3V |
+| 6 | - | - | Ground | Ground |
 
 #### GPO 连接器 - J17（输出）
 
-| Pin # | 模块引脚名称 | 模块引脚号 | 用途/描述 | 类型/方向 |
+| Pin # | Module Pin Name | Module Pin # | Usage/Description | Type/Dir |
 | --- | --- | --- | --- | --- |
-| 1 | - | - | 3V3 电源 | Power |
-| 2 | GPIO13 | G7 | GPO_1_3V3（电平从 1.8V 转换到 3.3V） | Output, 3.3V |
-| 3 | SPI2_CS0_N | D60 | GPO_2_3V3（电平从 1.8V 转换到 3.3V） | Output, 3.3V |
-| 4 | SPI2_CLK | E61 | GPO_3_3V3（电平从 1.8V 转换到 3.3V） | Output, 3.3V |
-| 5 | SPI2_MOSI | F60 | GPO_4_3V3（电平从 1.8V 转换到 3.3V） | Output, 3.3V |
-| 6 | - | - | 地 | Ground |
+| 1 | - | - | 3V3 Power Supply | Power |
+| 2 | GPIO13 | G7 | GPO_1_3V3 (Level Shifted from 1.8V to 3.3V) | Output, 3.3V |
+| 3 | SPI2_CS0_N | D60 | GPO_2_3V3 (Level Shifted from 1.8V to 3.3V) | Output, 3.3V |
+| 4 | SPI2_CLK | E61 | GPO_3_3V3 (Level Shifted from 1.8V to 3.3V) | Output, 3.3V |
+| 5 | SPI2_MOSI | F60 | GPO_4_3V3 (Level Shifted from 1.8V to 3.3V) | Output, 3.3V |
+| 6 | - | - | Ground | Ground |
 
 ### 硬件连接
 
 使用 GH-1.25 线缆将你的 GPIO 设备连接到载板上的 GPI 或 GPO 连接器：
 
-- VCC → 3V3（引脚 1）
-- Signal → GPI/GPO 引脚（引脚 2–5）
-- GND → Ground（引脚 6）
+- VCC → 3V3 (Pin 1)
+- Signal → GPI/GPO 引脚 (Pin 2–5)
+- GND → Ground (Pin 6)
 
 ### 使用说明
 
 :::note
-GPI 和 GPO 引脚可通过 `libgpiod`（`gpioset`/`gpioget`）访问。你可以使用 `gpioinfo` 查找 GPIO 芯片和线路编号。
+GPI 和 GPO 引脚可通过 `libgpiod`（`gpioset`/`gpioget`）访问。你可以使用 `gpioinfo` 查找 GPIO 芯片和引脚编号。
 :::
 
 **步骤 1.** 安装 GPIO 工具：
@@ -543,14 +516,14 @@ sudo apt-get install gpiod
 gpioinfo
 ```
 
-**步骤 3.** 读取一个 GPI 引脚。例如，要读取 GPI_2（GPIO64，J20 上的 3 号引脚）：
+**步骤 3.** 读取 GPI 引脚。例如，读取 GPI_2（GPIO64，J20 上的 Pin 3）：
 
 ```bash
 # Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
 gpioget <chip> <line>
 ```
 
-**步骤 4.** 写入一个 GPO 引脚。例如，将 GPO_1（GPIO13，J17 上的 2 号引脚）设置为高电平：
+**步骤 4.** 写入 GPO 引脚。例如，将 GPO_1（GPIO13，J17 上的 Pin 2）设置为高电平：
 
 ```bash
 # Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
@@ -578,11 +551,11 @@ gpo_line.set_value(1)  # Set high
 
 ## CAN
 
-CAN（控制器局域网，Controller Area Network）是一种可靠的车载总线标准，使微控制器和设备无需主机计算机即可相互通信。使用 **T5000** 模组时，Robotics J601 通过 JST GH-1.25 连接器提供 **四路 CAN FD 接口**（CAN0–CAN3）。**T4000** 模组支持 **两路 CAN 接口**。在选择测试端口之前，请使用 `ip -details link show type can` 检查 BSP 暴露的接口。
+CAN（控制器局域网，Controller Area Network）是一种可靠的车载总线标准，使微控制器和设备无需主机计算机即可相互通信。使用 **T5000** 模块时，Robotics J601 通过 JST GH-1.25 连接器提供 **四个 CAN FD 接口**（CAN0–CAN3）。**T4000** 模块支持 **两个 CAN 接口**。在选择用于测试的端口之前，请使用 `ip -details link show type can` 检查 BSP 暴露的接口。
 
 ### CAN 连接器引脚映射
 
-| CAN 接口 | 连接器 | 引脚 1 | 引脚 2 | 引脚 3 | 引脚 4 |
+| CAN 接口 | 连接器 | Pin 1 | Pin 2 | Pin 3 | Pin 4 |
 | --- | --- | --- | --- | --- | --- |
 | CAN0 | J31 | 地 | CAN0_L_ISO | CAN0_H_ISO | 5V 电源 |
 | CAN1 | J30 | 地 | CAN1_L_ISO | CAN1_H_ISO | 5V 电源 |
@@ -590,14 +563,14 @@ CAN（控制器局域网，Controller Area Network）是一种可靠的车载总
 | CAN3 | J25 | 地 | CAN3_L_ISO | CAN3_H_ISO | 5V 电源 |
 
 :::info
-这些 CAN 接口是隔离的。每个连接器在 4 号引脚提供 5V 电源。上表描述的是载板的连线方式，实际可用的接口由所安装的模组决定。
+CAN 接口是隔离的。每个连接器在 Pin 4 提供 5V 电源。连接器表描述的是载板布线；实际可用的接口由已安装的模块决定。
 :::
 
 ### 120Ω 终端电阻控制
 
-每个 CAN 接口都配有一个由软件控制的 120Ω 终端电阻。GPIO 映射如下：
+每个 CAN 接口都有一个由软件控制的 120Ω 终端电阻。GPIO 映射如下：
 
-| 接口 | GPIO 芯片 | GPIO 引脚 | 控制名称 |
+| 接口 | GPIO 芯片 | GPIO 线号 | 控制名称 |
 | --- | --- | --- | --- |
 | CAN0_120R_EN_3V3 | 3 | 0 | CAN0 终端电阻 |
 | CAN1_120R_EN_3V3 | 3 | 1 | CAN1 终端电阻 |
@@ -605,7 +578,7 @@ CAN（控制器局域网，Controller Area Network）是一种可靠的车载总
 | CAN3_120R_EN_3V3 | 3 | 3 | CAN3 终端电阻 |
 | RS485_120R_EN_3V3 | 3 | 4 | RS485 终端电阻 |
 
-你可以通过以下命令查看对应的 GPIO 引脚：
+你可以使用以下命令查看对应的 GPIO 线：
 
 ```bash
 gpioinfo
@@ -614,13 +587,13 @@ gpioinfo
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gpioinfo.PNG" alt="J601 GPIO lines used for termination control" loading="lazy" />
-    <figcaption>J601 终端电阻控制所使用的 GPIO 引脚</figcaption>
+    <figcaption>J601 用于终端电阻控制的 GPIO 线</figcaption>
   </figure>
 </div>
 
-### CAN Classic 通信
+### 经典 CAN 通信
 
-这里演示 CAN0 与 CAN1 之间的数据通信。
+这里我们演示 CAN0 与 CAN1 之间的数据通信。
 
 **步骤 1.** 安装 CAN 工具：
 
@@ -655,7 +628,7 @@ cansend can0 123#DEADBEEF
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/can_c1.png" alt="J601 classic CAN communication result" loading="lazy" />
-    <figcaption>J601 Classic CAN 通信结果</figcaption>
+    <figcaption>J601 经典 CAN 通信结果</figcaption>
   </figure>
 </div>
 
@@ -694,7 +667,7 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 
 :::info
 - `5AA` / `7DF` 是 CAN ID
-- `##` 表示一帧 CAN FD 帧
+- `##` 表示 CAN FD 帧
 - `##` 后面的数字是 BRS（Bit Rate Switch，比特率切换）标志：`1` = BRS 激活
 - 后面的是数据负载（最多 64 字节，对应 128 个十六进制字符）
 :::
@@ -826,7 +799,7 @@ rm -f /tmp/can_test_rx.log
 
 </details>
 
-使脚本具有可执行权限并运行它，以测试任意两路 CAN 接口：
+使脚本具有可执行权限并运行它，以测试任意两个 CAN 接口：
 
 ```bash
 chmod +x can_test.sh
@@ -844,12 +817,12 @@ chmod +x can_test.sh
 
 ## RS485
 
-reComputer J601 载板配备了一个专用的隔离 RS-485 接口，通过 J24 JST GH-1.25 四针连接器引出。各引脚定义如下：
+reComputer J601 载板配备了一个专用的隔离 RS-485 端口，通过 J24 JST GH-1.25 4 针连接器引出。引脚定义如下：
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png" alt="J601 J24 RS-485 connector pinout" loading="lazy" />
-    <figcaption>J601 J24 RS-485 接口引脚定义</figcaption>
+    <figcaption>J601 J24 RS-485 连接器引脚分布</figcaption>
   </figure>
 </div>
 
@@ -886,14 +859,14 @@ echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-1.png" alt="RS-485 port 1 test: received pattern data and &quot;hello from pc&quot; in the serial console" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-1.png" alt="RS-485 端口 1 测试：在串口控制台中接收到模式数据和 &quot;hello from pc&quot;" loading="lazy" />
     <figcaption>J601 485 1 接口连接</figcaption>
   </figure>
 </div>
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-2.png" alt="RS-485 port 2 test: received pattern data and &quot;hello from pc&quot; in the serial console" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-2.png" alt="RS-485 端口 2 测试：在串口控制台中接收到模式数据和 &quot;hello from pc&quot;" loading="lazy" />
     <figcaption>J601 485 2 接口连接</figcaption>
   </figure>
 </div>
@@ -902,15 +875,15 @@ echo "hello from jetson" | sudo tee /dev/ttyAMA10 >/dev/null
 
 ## DB9 (RS232 / RS422 / RS485) {#db9}
 
-Robotics J601 提供一个可通过软件选择模式的 DB9 串口接口。该 DB9 端口在 Jetson 系统中对应 `/dev/ttyAMA9`，并且可以通过设置 SW3 拨码开关配置为 RS232、RS422 或 RS485 模式。
+Robotics J601 提供一个可通过软件选择的 DB9 串行接口。DB9 端口在 Jetson 系统上连接到 `/dev/ttyAMA9`，并且可以通过设置 SW3 拨码开关配置为 RS232、RS422 或 RS485。
 
 ### 引脚定义
 
-每个 DB9 引脚的功能取决于所选择的通信模式。在连接适配器之前，请参考下表和下面的连接器示意图。
+每个 DB9 引脚的功能取决于所选的通信模式。在接线适配器之前，请参考下表和下面的连接器示意图。
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png" alt="DB9 pin numbering with the RS-232 / RS-422 / RS-485 pin assignment table for the MODE settings" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png" alt="DB9 引脚编号以及用于 MODE 设置的 RS-232 / RS-422 / RS-485 引脚分配表" loading="lazy" />
     <figcaption>J601 db9 配置接口连接</figcaption>
   </figure>
 </div>
@@ -922,7 +895,7 @@ Robotics J601 提供一个可通过软件选择模式的 DB9 串口接口。该 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png" alt="SW2 switch with the RS485 Mode OFF_1 / ON_0 positions boxed" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png" alt="SW2 开关，RS485 模式 OFF_1 / ON_0 位置用方框标出" loading="lazy" />
     <figcaption>J601 485 模式接口连接</figcaption>
   </figure>
 </div>
@@ -931,13 +904,13 @@ Robotics J601 提供一个可通过软件选择模式的 DB9 串口接口。该 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png" alt="USB-to-RS485 adapter wired to Data+(A) and Data-(B) on the J601 terminal block" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c.png" alt="USB 转 RS485 适配器接线到 J601 端子排上的 Data+(A) 和 Data-(B)" loading="lazy" />
     <figcaption>J601 485 c 接口连接</figcaption>
   </figure>
 </div>
 
 :::tip
-对于 RS485 接线，将 USB-RS485 适配器的 `A/D+` 连接到 DB9 引脚 2，`B/D-` 连接到 DB9 引脚 1。某些 USB-RS485 适配器的 A/B 标注可能相反。如果在 PC 未发送数据时 Jetson 收到随机字节，请交换 A 和 B 再次测试。
+对于 RS485 接线，将 USB-RS485 适配器的 `A/D+` 连接到 DB9 引脚 2，`B/D-` 连接到 DB9 引脚 1。某些 USB-RS485 适配器的 A/B 标注是相反的。如果在 PC 未发送数据时 Jetson 收到随机字节，请交换 A 和 B 再次测试。
 :::
 
 ### 通信测试
@@ -956,7 +929,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-要在 minicom 中看到你输入的文本，需要启用 Local Echo 功能。默认情况下，minicom 不会显示你的按键输入，因此这是一种非常常见的问题。
+要在 minicom 中看到你输入的文本，需要启用 Local Echo 功能。默认情况下，minicom 不会显示你的按键输入，因此这是一个非常常见的问题。
 - 步骤 1. 按下 `Ctrl+A`
 - 步骤 2. 然后按下 `E`
 
@@ -967,26 +940,26 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png" alt="minicom windows on the PC and the Jetson exchanging &quot;hello jetson&quot; over RS-485" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c1.png" alt="PC 和 Jetson 上的 minicom 窗口通过 RS-485 互发 &quot;hello jetson&quot;" loading="lazy" />
     <figcaption>J601 DB9 RS-485 硬件连接</figcaption>
   </figure>
 </div>
 
-由于 RS485 是半双工协议，为了测试 Jetson 能够通过 RS485 向 PC 发送信息，需要在软件中激活 RS485 模式。
+由于 RS485 是半双工协议，为了测试 Jetson 能够通过 RS485 向 PC 发送信息，需要启用 RS485 模式。
 - 步骤 1. 按下 `Ctrl+A`
 - 步骤 2. 然后按下 `O` 打开配置选项。
 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c2.png" alt="Serial tool configuration menu for RS-485" loading="lazy" />
-    <figcaption>串口工具 RS-485 配置菜单</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c2.png" alt="用于 RS-485 的串口工具配置菜单" loading="lazy" />
+    <figcaption>用于 RS-485 的串口工具配置菜单</figcaption>
   </figure>
 </div>
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c3.png" alt="Serial tool RS-485 configuration settings" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c3.png" alt="串口工具 RS-485 配置设置" loading="lazy" />
     <figcaption>串口工具 RS-485 配置设置</figcaption>
   </figure>
 </div>
@@ -995,8 +968,8 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c4.png" alt="RS-485 received data in the host serial console" loading="lazy" />
-    <figcaption>主机串口终端中接收到的 RS-485 数据</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c4.png" alt="主机串口控制台中接收到的 RS-485 数据" loading="lazy" />
+    <figcaption>主机串口控制台中接收到的 RS-485 数据</figcaption>
   </figure>
 </div>
 
@@ -1008,7 +981,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png" alt="SW2 mode switch set for RS-232 on the J601 board" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png" alt="J601 板上 SW2 模式开关设置为 RS-232" loading="lazy" />
     <figcaption>J601 232 模式接口连接</figcaption>
   </figure>
 </div>
@@ -1017,7 +990,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png" alt="TX, RX and GND wired between the J601 RS-232 header and the USB-to-TTL adapter" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c.png" alt="J601 RS-232 排针与 USB 转 TTL 适配器之间连接 TX、RX 和 GND" loading="lazy" />
     <figcaption>J601 232 c 接口连接</figcaption>
   </figure>
 </div>
@@ -1044,7 +1017,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-要在 minicom 中看到你输入的文本，需要启用 Local Echo 功能。默认情况下，minicom 不会显示你的按键输入，因此这是一种非常常见的问题。
+要在 minicom 中看到你输入的文本，需要启用 Local Echo 功能。默认情况下，minicom 不会显示你的按键输入，因此这是一个非常常见的问题。
 - 步骤 1. 按下 `Ctrl+A`
 - 步骤 2. 然后按下 `E`
 :::
@@ -1054,7 +1027,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png" alt="minicom windows on the PC and the Jetson exchanging &quot;Hello Jetson Rs232test&quot;" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c1.png" alt="PC 和 Jetson 上的 minicom 窗口互发 &quot;Hello Jetson Rs232test&quot;" loading="lazy" />
     <figcaption>J601 DB9 RS-232 模式开关位置</figcaption>
   </figure>
 </div>
@@ -1063,7 +1036,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 同时打开测试模式。
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png" alt="minicom serial port setup with RS485 Enable set to Yes during the RS-232 test" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c2.png" alt="在 RS-232 测试期间，minicom 串口设置中将 RS485 Enable 设为 Yes" loading="lazy" />
     <figcaption>J601 RS-232 主机连接</figcaption>
   </figure>
 </div>
@@ -1072,8 +1045,8 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c3.png" alt="RS-232 received data in the host serial console" loading="lazy" />
-    <figcaption>主机串口终端中接收到的 RS-232 数据</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-c3.png" alt="主机串口控制台中接收到的 RS-232 数据" loading="lazy" />
+    <figcaption>主机串口控制台中接收到的 RS-232 数据</figcaption>
   </figure>
 </div>
 
@@ -1085,7 +1058,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png" alt="SW2 mode switch set for RS-422 on the J601 board" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png" alt="J601 板上 SW2 模式开关设置为 RS-422" loading="lazy" />
     <figcaption>J601 422 模式接口连接</figcaption>
   </figure>
 </div>
@@ -1094,7 +1067,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png" alt="RX+, RX-, TX+ and TX- wired between the J601 RS-422 header and the USB adapter, with a common GND" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c.png" alt="J601 RS-422 排针与 USB 适配器之间连接 RX+、RX-、TX+ 和 TX-，并共用 GND" loading="lazy" />
     <figcaption>J601 422 c 接口连接</figcaption>
   </figure>
 </div>
@@ -1128,12 +1101,12 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 - 步骤 2. 然后按下 `E`
 :::
 
-测试从 PC 向 Jetson 发送消息。
+测试从 PC 向 Jetson 发送消息。 
 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png" alt="minicom on the PC and the Jetson showing the first RS-422 test exchange" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png" alt="PC 和 Jetson 上的 minicom 显示第一次 RS-422 测试通信" loading="lazy" />
     <figcaption>J601 422 c1 接口连接</figcaption>
   </figure>
 </div>
@@ -1142,7 +1115,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 同时打开测试模式。
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png" alt="both minicom windows after the RS-422 test, each showing &quot;Hello Jetson RS422 Test&quot;" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png" alt="RS-422 测试结束后 PC 和 Jetson 上的两个 minicom 窗口，都显示 &quot;Hello Jetson RS422 Test&quot;" loading="lazy" />
     <figcaption>J601 422 c2 接口连接</figcaption>
   </figure>
 </div>
@@ -1244,7 +1217,7 @@ sudo ./test_rgb.sh
 
 ## 以太网
 
-Robotics J601 载板支持 **4× 10GbE RJ45 连接（搭配 T5000）**，或 **3× 10GbE（搭配 T4000）**。使用一个独立的对端系统和合适的线缆来测试某个端口。
+Robotics J601 载板在搭配 **T5000** 时支持 **4× 10GbE RJ45 连接**，在搭配 **T4000** 时支持 **3× 10GbE**。使用一台独立的对端系统和合适的线缆来测试某个端口。
 
 ### 硬件连接
 
@@ -1257,14 +1230,14 @@ Robotics J601 载板支持 **4× 10GbE RJ45 连接（搭配 T5000）**，或 **3
 
 ### 使用说明
 
-在两个系统上都安装 `iperf3`。在对端系统上启动服务器：
+在两台系统上都安装 `iperf3`。在对端系统上启动服务器：
 
 ```bash
 sudo apt install iperf3
 iperf3 -s
 ```
 
-在 J601 上，使用 `ip -br address` 确认分配给待测端口的地址，然后运行：
+在 J601 上，使用 `ip -br address` 找到分配给待测端口的地址，然后运行：
 
 **上传速度测试：**
 
@@ -1348,7 +1321,7 @@ sudo nmcli device wifi list ifname wlP1p1s0
   </figure>
 </div>
 
-**步骤 5.** 连接到某个 Wi-Fi 网络：
+**步骤 5.** 连接到 Wi-Fi 网络：
 
 ```bash
 sudo nmcli device wifi connect "your WiFi name" password "WiFi password" ifname wlP1p1s0
@@ -1409,7 +1382,7 @@ sudo apt install -y minicom
 sudo minicom -D /dev/ttyUSB3
 ```
 
-**步骤 2.** 依次按下 **Ctrl+A** 然后 **E** 进入交互模式。
+**步骤 2.** 按下 **Ctrl+A** 然后 **E** 进入交互模式。
 
 **步骤 3.** 测试 AT 命令：
 
@@ -1447,7 +1420,7 @@ AT+COPS?
 
 ### GPS
 
-GPS 的可用性和 AT 命令取决于所安装的蜂窝模块。下面的示例使用 Quectel 风格的 `AT+QGPS` 命令；请在你的模块文档中确认支持情况和串口分配。
+GPS 的可用性和 AT 命令取决于所安装的蜂窝模块。下面的示例使用 Quectel 风格的 `AT+QGPS` 命令；请在模块文档中确认支持情况和串口分配。
 
 ### 使用说明
 
@@ -1468,15 +1441,15 @@ AT+QGPS=1
 - 如果响应为 `+CME ERROR: 549`，则表示 GPS 已经启用——无需再次启用。
 :::
 
-**步骤 3.** 依次按下 **Ctrl+A** 然后 **X** 退出 minicom，并选择 **Yes** 退出。
+**步骤 3.** 按下 **Ctrl+A** 然后 **X** 退出 minicom，并选择 **Yes** 退出。
 
-**步骤 4.** 启用 GPS 后，卫星数据会从 GPS 数据端口（通常为 `/dev/ttyUSB1`）持续输出。读取原始 NMEA 数据：
+**步骤 4.** 启用 GPS 后，卫星数据会从 GPS 数据端口（通常为 `/dev/ttyUSB1`）输出。读取原始 NMEA 数据：
 
 ```bash
 sudo cat /dev/ttyUSB1
 ```
 
-你应该会看到类似下面这样的标准 GPS NMEA 语句：
+你应该会看到类似如下的标准 GPS NMEA 语句：
 
 ```
 $GPRMC,023011.00,A,2232.12345,N,11356.54321,E,0.026,,100626,,,A*7A
@@ -1485,7 +1458,7 @@ $GPGSV,3,1,11,01,65,120,42,03,45,210,38,08,30,045,35,11,15,290,31*74
 ```
 
 :::note
-请确保设备具有开阔的天空视野以获取 GPS 信号。获得有效定位可能需要几分钟时间。
+请确保有开阔的天空视野以获取 GPS 信号。获得有效定位可能需要几分钟时间。
 :::
 
 ## 资源
@@ -1501,7 +1474,7 @@ $GPGSV,3,1,11,01,65,120,42,03,45,210,38,08,30,045,35,11,15,290,31*74
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div className="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" className="button_forum" aria-label="Seeed community forum"></a>
