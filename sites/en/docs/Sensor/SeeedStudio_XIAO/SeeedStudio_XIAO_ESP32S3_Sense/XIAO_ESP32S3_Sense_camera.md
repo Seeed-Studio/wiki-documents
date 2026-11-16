@@ -59,7 +59,7 @@ Installing the expansion board is very simple, you just need to align the connec
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
-We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV5640, on our shelves, and if you purchase it, you can replace the camera to use it.
+We now have a fully XIAO ESP32S3 Sense-compatible powerful camera, the OV5640, on our shelves — the **auto-focus (AF) version with a heat sink**. If you purchase it, you can replace the camera to use it.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -1510,6 +1510,10 @@ Oh, my big face is circled.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" style={{width:600, height:'auto'}}/></div>
 
 ## OV5640 AutoFocus
+
+:::note
+The AF feature in this section applies **only to the standalone long OV5640 module (sold separately, with heat sink)**. The OV5640 bundled with the Sense board is fixed-focus and has no AF hardware — skip this section with that module.
+:::
 
 ### Hadware Preparation
 
