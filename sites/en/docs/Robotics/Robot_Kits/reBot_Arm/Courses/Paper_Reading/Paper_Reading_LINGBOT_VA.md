@@ -213,8 +213,6 @@ For opening a box lid, the current and predicted future representations jointly 
 
 ![Teaching illustration 1: future latents condition action inference, and real feedback closes the loop](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop-en.png)
 
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide01-world-model-loop-en.png)
-
 *Teaching illustration: green boxes are predicted latent representations; the blue box at the bottom comes from the real camera. Follow the feedback arrow on the right to see how real execution updates the basis for the next prediction.*
 
 ## How Video and Actions Enter One Model
@@ -228,8 +226,6 @@ Visual changes are usually slower than changes in control commands. Section 3.3 
 **Shape example:** With LeRobot defaults `frame_chunk_size=4`, `action_per_frame=4`, and `action_dim=30`, internal action-stream noise can have shape `[1,30,4,4,1]`: 16 temporal positions with 30 channels each. Valid action channels are selected from the output and converted to `[batch,action_steps,robot_action_dimensions]`. This is an interface example from the pinned implementation, rather than a universal tensor shape for every platform in the paper.
 
 ![Teaching illustration 2: four video time points correspond to sixteen actions; denoising repeatedly updates the same chunk](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales-en.png)
-
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide02-three-timescales-en.png)
 
 *Teaching illustration: the top two rows follow robot time; the bottom row follows generation progress. Each denoising update modifies the same action chunk without adding an execution time point.*
 
@@ -278,8 +274,6 @@ Real future actions should not directly condition the current prediction. Bounda
 
 ![Teaching illustration 3: future access is restricted across temporal blocks, while bidirectional exchange is allowed within a block](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal-en.png)
 
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide03-block-causal-en.png)
-
 *Teaching illustration: read rows to identify who is reading, then columns to identify what is read. This matrix only summarizes temporal-block relationships. Figure 3 in the paper defines detailed visibility between video and action streams, particularly the inverse-dynamics connections to corresponding future visual conditions.*
 
 ### Noisy History: Generate Actions before Video Is Fully Denoised
@@ -307,8 +301,6 @@ The cost is stale information: the current block has not finished when the next 
 The paper calls this **Forward Dynamics Model (FDM) grounding**: a forward-dynamics computation that corrects stale predictions. Starting from the latest real observation and the actions currently being executed, it predicts their outcome again, then uses this realigned future state to predict subsequent video and actions. It uses the model's forward-prediction capability; the paper does not require a wholly separate simulator. Post-training adds the forward-prediction loss in Equation (13), while Algorithm 2 describes coordination between execution and inference branches.
 
 ![Teaching illustration 4: the latest observation and ongoing actions correct the starting state for the next prediction](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding-en.png)
-
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/guide04-async-grounding-en.png)
 
 *Teaching illustration: the two paths differ in whether the latest feedback is used to predict the current actions' consequences again. The timeline below shows overlapping computation and execution, not direct observation of the future or fixed timing proportions.*
 
