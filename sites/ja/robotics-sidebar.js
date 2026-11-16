@@ -155,6 +155,7 @@ const sidebars = {
         { type: 'ref', id: `${K}/Lerobot/ja_Lerobot_SO100Arm_New`, label: 'SO-ARM101', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Getting_Started`, label: 'reBot-RS', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/reBot_Arm/T701_HT/ja_reBot_Arm_T701_HT_Getting_Started`, label: 'reBot Arm T701 HT', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/ja_Lerobot_Starai_Arm`, label: 'Star AI Arm', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Hand/ja_AmazingHand`, label: 'AmazingHand', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/ja_Lerobot_Lekiwi`, label: 'Lekiwi', className: 'sideboard_calss' },
@@ -172,6 +173,7 @@ const sidebars = {
       items: [
         { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_Introduction`, label: '初心者向けコース' },
         { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/ja_Paper_Reading_Getting_Started`, label: '論文ディープダイブ' },
+        { type: 'ref', id: `${K}/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA/ja_Sim2Real_VLA_Introduction`, label: 'Sim-to-Real VLA' },
         { type: 'link', label: 'NVIDIA Isaac による Sim-to-Real', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
       ],
     },
@@ -291,6 +293,11 @@ const sidebars = {
         { type: 'doc', id: `${K}/ReachyMini/platforms/reachy_mini_lite/ja_get_started`, label: 'はじめに' },
       ],
     },
+  ],
+
+  T701HtSidebar: [
+    backToRobotics(),
+    `${K}/reBot_Arm/T701_HT/ja_reBot_Arm_T701_HT_Getting_Started`,
   ],
 
   StackForceSidebar: [

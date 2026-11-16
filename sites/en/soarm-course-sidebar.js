@@ -3,6 +3,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 
 const C = 'Robotics/Robot_Kits/SO_ARM101/Courses/SO_ARM_Tutorial';
+const V = 'Robotics/Robot_Kits/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA';
 
 const backToRobotics = () => ({
   type: 'ref',
@@ -81,6 +82,82 @@ const courseSidebar = () => [
   },
 ];
 
+// The Sim-to-Real VLA course's own standalone sidebar.
+const sim2RealVlaSidebar = () => [
+  backToRobotics(),
+
+  {
+    type: 'doc',
+    id: `${V}/Sim2Real_VLA_Introduction`,
+    label: 'Course Introduction',
+    className: 'sideboard_calss',
+  },
+  {
+    type: 'category',
+    label: '1. Overview',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/Sim2Real_VLA_01`,
+      `${V}/Sim2Real_VLA_02`,
+      `${V}/Sim2Real_VLA_03`,
+      `${V}/Sim2Real_VLA_04`,
+      `${V}/Sim2Real_VLA_05`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '2. Build Your Robot Lab',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/Sim2Real_VLA_06`,
+      `${V}/Sim2Real_VLA_07`,
+      `${V}/Sim2Real_VLA_08`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '3. Get Your Own VLA Model',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/Sim2Real_VLA_09`,
+      `${V}/Sim2Real_VLA_10`,
+      `${V}/Sim2Real_VLA_11`,
+      `${V}/Sim2Real_VLA_12`,
+      `${V}/Sim2Real_VLA_13`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '4. Deploy on Jetson',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/Sim2Real_VLA_14`,
+      `${V}/Sim2Real_VLA_15`,
+      `${V}/Sim2Real_VLA_16`,
+      `${V}/Sim2Real_VLA_17`,
+      `${V}/Sim2Real_VLA_18`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '5. Reference',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/Sim2Real_VLA_19`,
+    ],
+  },
+];
+
 // The course jump entry that the SO-ARM101 product sidebar's Course group uses
 // (consumed by robotics-sidebar.js).
 const courseLink = () => ({
@@ -100,13 +177,19 @@ const courseLink = () => ({
       id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_Getting_Started',
       label: 'Paper Deep-Dive',
     },
+    {
+      type: 'ref',
+      id: `${V}/Sim2Real_VLA_Introduction`,
+      label: 'Sim-to-Real VLA',
+    },
   ],
 });
 
 const sidebars = {
 
-  // Standalone course sidebar.
+  // Standalone course sidebars.
   SoArmCourseSidebar: courseSidebar(),
+  SoArmSim2RealVlaSidebar: sim2RealVlaSidebar(),
 
 };
 
