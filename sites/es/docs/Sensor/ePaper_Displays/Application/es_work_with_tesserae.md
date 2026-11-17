@@ -1,8 +1,8 @@
 ---
-description: Usa Tesserae, el servidor de paneles de tinta electrónica autoalojado y de código abierto, con los reTerminal E1001, E1002, E1003, E1004 y reTerminal Sticky. Color completo en Spectra 6, escala de grises de 16 niveles en el E1003, y táctil en el E1003 y Sticky.
+description: Usa Tesserae, el servidor de paneles de tinta electrónica autoalojado y de código abierto, con los reTerminal E1001, E1002, E1003, E1004 y reTerminal Sticky. Color completo en Spectra 6, escala de grises de 16 niveles en el E1003, y táctil en el E1003 y en el Sticky.
 title: Trabajar con Tesserae
 keywords:
-  - pantalla de papel electrónico
+  - Pantalla ePaper
   - Tesserae
   - Home Assistant
   - reTerminal
@@ -15,11 +15,11 @@ image: https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/cover.webp
 slug: /reterminal_e10xx_tesserae
 sidebar_position: 12
 last_update:
-  date: 11/13/2026
+  date: 11/17/2026
   author: Kayden D'Mello
 createdAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_tesserae/
-updatedAt: '2026-11-13'
+updatedAt: '2026-11-17'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/cover.jpg" style={{width:700, height:'auto'}}/></div>
 
-Esta guía lleva un dispositivo reTerminal E Serie o un reTerminal Sticky desde la caja hasta un panel en la pared con **Tesserae**. Flasheas el firmware una vez desde el navegador, conectas el dispositivo a tu propio servidor Tesserae y diseñas sus páginas en el editor web. Los pasos son los mismos en todos los dispositivos. Donde difieran, elige tu dispositivo en las pestañas.
+Esta guía lleva un dispositivo reTerminal E Serie o un reTerminal Sticky desde la caja hasta un panel en la pared con **Tesserae**. Flasheas el firmware una vez desde el navegador, conectas el dispositivo a tu propio servidor Tesserae y diseñas sus páginas en el editor web. Los pasos son los mismos en todos los dispositivos. Donde difieren, elige tu dispositivo en las pestañas.
 
 :::tip Color completo y escala de grises
 Tesserae controla cada panel a su máxima capacidad. El **E1002** y el **E1004** pintan en los seis colores Spectra™ 6, el **E1003** pinta en 16 niveles de gris y el **Sticky** en 4. El servidor renderiza cada fotograma en los bytes exactos que el panel espera, así que el dispositivo solo tiene que pintarlo.
@@ -37,20 +37,20 @@ Tesserae controla cada panel a su máxima capacidad. El **E1002** y el **E1004**
 
 ## ¿Qué es [Tesserae](https://tesserae.ink/)?
 
-Tesserae es un servidor de paneles de control para pantallas de papel electrónico, de código abierto y autoalojado. Lo ejecutas en casa como una App de Home Assistant, un contenedor Docker o una instalación sencilla en macOS, Linux, Windows o una Raspberry Pi. Compones paneles de control a partir de widgets en el navegador, y cada dispositivo obtiene su fotograma, lo pinta y vuelve a dormir. Nada sale de tu red a menos que tú lo decidas.
+Tesserae es un servidor de paneles de control para pantallas de tinta electrónica, de código abierto y autoalojado. Lo ejecutas en casa como una App de Home Assistant, un contenedor Docker o una instalación sencilla en macOS, Linux, Windows o una Raspberry Pi. Compones paneles de control a partir de widgets en el navegador, y cada dispositivo obtiene su fotograma, lo pinta y vuelve a dormir. Nada sale de tu red a menos que tú lo decidas.
 
-El proyecto comenzó con la reTerminal E Serie y creció junto a ella. El E1001 fue uno de los primeros dispositivos que Tesserae soportó, y la E Serie sigue siendo de los hardware más flasheados en el flasher web del proyecto.
+El proyecto comenzó con la reTerminal E Serie y creció junto a ella. El E1001 fue uno de los primeros dispositivos que Tesserae soportó, y la Serie E sigue estando entre el hardware más flasheado en el flasher web del proyecto.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/15-editor-html-view.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/27-editor-live-view.png" style={{width:500, height:'auto'}}/></div>
 
 ### ¿Por qué usar Tesserae?
 
 - **Autoalojado y privado**: el servidor se ejecuta en tu propio hardware, sin cuenta y sin suscripción. Hay una opción alojada, [Tesserae Cloud](https://cloud.tesserae.ink), disponible si prefieres no ejecutar un servidor.
-- **Creado para Home Assistant**: Tesserae se instala como una App de Home Assistant. Muestra tus entidades en el panel y, en dispositivos táctiles, puede llamar a servicios de vuelta. Con el descubrimiento MQTT activado, cada panel aparece en Home Assistant como un dispositivo.
-- **Todos los colores que tiene el panel**: color Spectra™ 6 en el E1002 y el E1004, escala de grises de 16 niveles en el E1003. Las fotos se tramitan (dithering) en el servidor, para que se vean bien en cada panel.
+- **Creado para Home Assistant**: Tesserae se instala como una App de Home Assistant. Muestra tus entidades en el panel y, en los dispositivos táctiles, puede llamar a servicios de vuelta. Con el descubrimiento MQTT activado, cada panel aparece en Home Assistant como un dispositivo.
+- **Todos los colores que tiene el panel**: color Spectra™ 6 en el E1002 y el E1004, escala de grises de 16 niveles en el E1003. Las fotos se traman en el servidor, para que se vean bien en cada panel.
 - **Widgets y plantillas**: tiempo, calendarios, transporte, tareas, fotos, Home Assistant y más, además de widgets de la comunidad, temas y plantillas completas de paneles de control del catálogo.
-- **Táctil y botones**: los botones frontales y las pantallas táctiles pueden rotar páginas, saltar a un panel, forzar una actualización o disparar un webhook. En el Sticky y el E1003, las zonas táctiles en una página actúan como controles.
-- **Firmware con prioridad a la batería**: el dispositivo permanece en sueño profundo entre actualizaciones. Las actualizaciones de firmware están firmadas y se entregan por el aire desde tu propio servidor, así que solo flasheas desde el navegador una vez.
+- **Táctil y botones**: los botones frontales y las pantallas táctiles pueden rotar páginas, saltar a un panel de control, forzar una actualización o disparar un webhook. En el Sticky y el E1003, las zonas táctiles en una página actúan como controles.
+- **Firmware con prioridad a la batería**: el dispositivo permanece en suspensión profunda entre actualizaciones. Las actualizaciones de firmware están firmadas y se entregan por el aire desde tu propio servidor, así que solo flasheas desde el navegador una vez.
 - **Código abierto**: el [servidor](https://github.com/dmellok/tesserae) y el [firmware del dispositivo](https://github.com/dmellok/tesserae-device-firmware) están en GitHub.
 
 ## Hardware compatible
@@ -153,10 +153,10 @@ Elige la ruta que se adapte a tu configuración. Cada una termina con la interfa
 | Ruta | Ideal para |
 |---|---|
 | [Home Assistant App](#home-assistant-app) | Ya ejecutas Home Assistant OS o Supervised |
-| [Docker](#docker) | Una Raspberry Pi, NAS o máquina Linux que ya ejecute contenedores |
-| [Proxmox VE](#proxmox-ve) | Un servidor homelab que ejecute Proxmox |
-| [macOS, Linux o Raspberry Pi](#macos-linux-or-raspberry-pi) | Un ordenador que permanezca encendido, sin contenedores |
-| [Windows](#windows) | Un PC con Windows que permanezca encendido |
+| [Docker](#docker) | Una Raspberry Pi, NAS o máquina Linux que ya ejecuta contenedores |
+| [Proxmox VE](#proxmox-ve) | Un servidor homelab que ejecuta Proxmox |
+| [macOS, Linux o Raspberry Pi](#macos-linux-o-raspberry-pi) | Un ordenador que permanece encendido, sin contenedores |
+| [Windows](#windows) | Un PC con Windows que permanece encendido |
 | [Tesserae Cloud](#tesserae-cloud) | Sin servidor propio |
 
 :::caution Manténlo en tu red doméstica
@@ -200,7 +200,7 @@ Añádela a `docker-compose.yml` bajo `environment:`:
 TESSERAE_SECRET_KEY: "<the key>"
 ```
 
-Ejecuta `docker compose up -d` de nuevo, navega a la dirección de la máquina en el puerto 8765 y elige una contraseña.
+Ejecuta de nuevo `docker compose up -d`, navega a la dirección de la máquina en el puerto 8765 y elige una contraseña.
 
 ### Proxmox VE
 
@@ -247,7 +247,7 @@ La primera vez que abras Tesserae (excepto como una App de Home Assistant, que i
 
 1. **Help out**: elige si quieres enviar un recuento de instalaciones anónimo al proyecto Tesserae o mantener la instalación sin conexión.
 2. **Timezone**: confirma la zona horaria detectada, para que las programaciones se ejecuten en tu hora local.
-3. **Transport**: deja **REST API** seleccionado. Es la opción adecuada para dispositivos con batería como el reTerminal y el Sticky.
+3. **Transport**: deja **REST API** seleccionado. Es la opción adecuada para dispositivos con batería como el reTerminal y Sticky.
 4. **Device**: la página espera a que un panel se anuncie. Haz clic en **Skip for now** y aprueba el dispositivo en el Paso 4, o deja esta página abierta mientras flasheas: cuando el dispositivo aparezca bajo **Discovered**, asígnale un nombre y haz clic en **Register**. No necesitas un código de emparejamiento.
 5. **Dashboard**: elige **I'll set this up later**, o vuelve después del Paso 4 para crear un panel de control inicial vinculado a tu dispositivo.
 
@@ -265,10 +265,10 @@ La primera vez que abras Tesserae (excepto como una App de Home Assistant, que i
 <TabItem value="e-series" label="reTerminal E Serie" default>
 
 :::caution macOS: instala primero el controlador CH340
-La reTerminal E Serie se conecta a través de un chip USB-serial WCH CH340, y macOS no tiene un controlador integrado para él. Instala el [controlador CH34x de WCH](https://github.com/WCHSoftGroup/ch34xser_macos) y luego actívalo en **System Settings → General → Login Items & Extensions → Driver Extensions**. Linux y las versiones actuales de Windows suelen instalar automáticamente un controlador compatible. Si Windows no detecta un puerto serie, instala el [controlador WCH CH341SER](https://www.wch-ic.com/downloads/CH341SER_EXE.html); Windows 10 y anteriores pueden requerirlo. En Linux, si el puerto no aparece, ejecuta `sudo usermod -aG dialout $USER` y cierra sesión y vuelve a iniciarla.
+La reTerminal E Serie se conecta a través de un chip USB‑serie WCH CH340, y macOS no tiene un controlador integrado para él. Instala el [controlador CH34x de WCH](https://github.com/WCHSoftGroup/ch34xser_macos) y luego actívalo en **System Settings → General → Login Items & Extensions → Driver Extensions**. Linux y las versiones actuales de Windows suelen instalar automáticamente un controlador compatible. Si Windows no detecta un puerto serie, instala el [controlador WCH CH341SER](https://www.wch-ic.com/downloads/CH341SER_EXE.html); Windows 10 y anteriores pueden requerirlo. En Linux, si el puerto no aparece, ejecuta `sudo usermod -aG dialout $USER` y cierra sesión y vuelve a iniciarla.
 :::
 
-1. Conecta el dispositivo a tu ordenador con el cable de datos USB-C.
+1. Conecta el dispositivo a tu ordenador con el cable de datos USB‑C.
 2. Abre **[tesserae.ink/flash](https://tesserae.ink/flash)** en Chrome o Edge.
 3. En **Choose your panel**, selecciona tu modelo de reTerminal y luego elige la versión más reciente en **Firmware build**.
 4. Haz clic en **Next: plug it in**, luego en **Connect & flash**, y elige el puerto serie del dispositivo.
@@ -276,29 +276,29 @@ La reTerminal E Serie se conecta a través de un chip USB-serial WCH CH340, y ma
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/20-flasher-reterminal-selected.png" style={{width:700, height:'auto'}}/></div>
 
-Cuando el flasheo termine, el paso **Connect it** del flasher puede enviar los datos de tu Wi-Fi y la dirección del servidor al dispositivo por el mismo cable. Elige **My own Tesserae server**, introduce la dirección del Paso 1 y pasa al Paso 4.
+Cuando el flasheo termine, el paso **Connect it** del flasher puede enviar los datos de tu Wi‑Fi y la dirección del servidor al dispositivo por el mismo cable. Elige **My own Tesserae server**, introduce la dirección del Paso 1 y salta al Paso 4.
 
 </TabItem>
 <TabItem value="sticky" label="reTerminal Sticky">
 
-Los propietarios de Sticky pueden flashear Tesserae directamente desde Sticky Playground.
+Quienes tengan una Sticky pueden flashear Tesserae directamente desde Sticky Playground.
 
 1. Abre la [página de Tesserae en Sticky Playground](https://www.seeedstudio.com/sticky/playground/tesserae/), o encuentra la tarjeta **Tesserae** en el Playground y haz clic en **Flash Now**.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/21-playground-tesserae-card.png" style={{width:300, height:'auto'}}/></div>
 
-2. Conecta el Sticky a tu ordenador con el cable de datos USB-C y mantenlo conectado hasta que el flasheo se complete.
+2. Conecta la Sticky a tu ordenador con el cable de datos USB‑C y mantenla conectada hasta que el flasheo se complete.
 3. En **Version and setup**, selecciona la versión de firmware de Tesserae que se muestra en la página.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/22-playground-tesserae-page.png" style={{width:700, height:'auto'}}/></div>
 
 4. En **Flash to device**, elige un modo de flasheo:
-   - **Standard flash** escribe el firmware y mantiene la configuración Wi-Fi guardada del Sticky.
+   - **Standard flash** escribe el firmware y mantiene la configuración Wi‑Fi guardada de la Sticky.
    - **Erase flash + flash** borra primero toda la memoria flash. Úsalo cuando vengas de un firmware diferente.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/23-playground-flash-mode.png" style={{width:500, height:'auto'}}/></div>
 
-5. Haz clic en **Connect & flash**. Cuando Chrome o Edge lo solicite, selecciona el puerto serie del Sticky, que aparece como **USB Single Serial**, y haz clic en **Connect**.
+5. Haz clic en **Connect & flash**. Cuando Chrome o Edge lo pida, selecciona el puerto serie de la Sticky, que aparece como **USB Single Serial**, y haz clic en **Connect**.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/24-playground-serial-port.png" style={{width:300, height:'auto'}}/></div>
 
@@ -306,7 +306,7 @@ Los propietarios de Sticky pueden flashear Tesserae directamente desde Sticky Pl
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/25-playground-device-log.png" style={{width:350, height:'auto'}}/></div>
 
-El Playground utiliza el mismo paquete de firmware que [tesserae.ink/flash](https://tesserae.ink/flash), así que puedes usar cualquiera de los dos.
+El Playground usa el mismo paquete de firmware que [tesserae.ink/flash](https://tesserae.ink/flash), así que puedes usar cualquiera de los dos.
 
 </TabItem>
 </Tabs>
@@ -315,25 +315,25 @@ El Playground utiliza el mismo paquete de firmware que [tesserae.ink/flash](http
 Flashear Tesserae reemplaza el firmware que hay actualmente en el dispositivo. Puedes volver atrás en cualquier momento flasheando otro firmware.
 :::
 
-## Paso 3: Conectar a Wi-Fi
+## Paso 3: Conectar a Wi‑Fi
 
 Después de flashear, el dispositivo muestra una pantalla de **Setup mode** con un código QR, el nombre de la red de configuración y su contraseña.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/sticky-setup-mode.jpg" style={{width:300, height:'auto'}}/></div>
 
-1. En tu teléfono u ordenador, conéctate a la red Wi-Fi **Tesserae-Setup** (contraseña `tesserae`), ya sea escaneando el código QR o eligiéndola de la lista.
+1. En tu teléfono u ordenador, conéctate a la red Wi‑Fi **Tesserae-Setup** (contraseña `tesserae`), ya sea escaneando el código QR o eligiéndola de la lista.
 2. La página de configuración se abre sola. Si no lo hace, ve a `http://192.168.4.1`.
-3. Introduce el nombre y la contraseña de tu Wi-Fi de 2,4 GHz, o elige tu red de la lista que el dispositivo ha escaneado.
+3. Introduce el nombre y la contraseña de tu Wi‑Fi de 2,4 GHz, o elige tu red de la lista que el dispositivo ha escaneado.
 4. Elige cómo llega el dispositivo a Tesserae:
    - **Local** (la opción predeterminada): introduce la dirección de tu servidor Tesserae, por ejemplo `http://192.168.1.50:8765`. Deja **Pairing code** en blanco y aprobarás el dispositivo en el Paso 4.
    - **Cloud**: introduce el código de reclamación de ocho dígitos de **Settings → Panels → Add a panel** en Tesserae Cloud.
    - **Relay**: para un dispositivo en una red diferente a la de tu servidor. Introduce el código de emparejamiento de **Settings → Cloud relay → Add a remote panel** en tu servidor.
-5. Toca **Save & restart**. El dispositivo se une a tu Wi-Fi y se anuncia al servidor.
+5. Toca **Save & restart**. El dispositivo se une a tu Wi‑Fi y se anuncia al servidor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/07-device-setup-portal-phone.png" style={{width:300, height:'auto'}}/></div>
 
 :::tip
-La red de configuración permanece activa durante 15 minutos después de que se vaya el último visitante. Si se ha agotado el tiempo, reinicia el dispositivo, o pulsa un botón frontal en las placas que lo tengan, para que vuelva a aparecer la pantalla de configuración.
+La red de configuración permanece activa durante 15 minutos después de que se vaya el último visitante. Si ha expirado, reinicia el dispositivo, o pulsa un botón frontal en las placas que lo tengan, para que vuelva a aparecer la pantalla de configuración.
 :::
 
 ## Paso 4: Registrar el dispositivo en Tesserae
@@ -344,8 +344,8 @@ Los dispositivos nuevos esperan tu aprobación, para que el dispositivo de otra 
 
 1. En la interfaz web de Tesserae, aparece una insignia de **New device** en la barra lateral. Abre **Settings → Devices**, donde un banner dice "1 device has been heard but is not registered".
 2. Haz clic en **Register** en el banner. Tesserae muestra el modelo del dispositivo, el tamaño del panel y la versión de firmware, con el modelo ya seleccionado.
-3. Asígnale un nombre para mostrar, como "Cocina" o "Pasillo", y haz clic en **Register**.
-4. El dispositivo recoge su token de acceso en su siguiente check-in y pasa a la lista de **Devices**. Su tarjeta muestra lo que está mostrando, la batería, la versión de firmware y la próxima actualización programada.
+3. Asígnale un nombre para mostrar, como "Kitchen" o "Hallway", y haz clic en **Register**.
+4. El dispositivo recoge su token de acceso en su siguiente registro y pasa a la lista de **Devices**. Su tarjeta muestra lo que está mostrando, la batería, la versión de firmware y la próxima actualización programada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/08-devices-discovered.png" style={{width:700, height:'auto'}}/></div>
 
@@ -355,15 +355,16 @@ Los dispositivos nuevos esperan tu aprobación, para que el dispositivo de otra 
 
 ## Paso 5: Crea un panel y envíalo
 
-1. Abre **Dashboards → New dashboard**, o instala una plantilla lista para usar desde **Settings → Widgets → Browse catalog**.
-2. Rellena el diseño con widgets. Cambia la vista previa a **Panel view** para ver el marco exacto que tu dispositivo pintará, con sus colores o grises.
-3. Marca tu dispositivo en **Target devices** y haz clic en **Push**. El dispositivo pinta el nuevo marco en su próximo despertar.
+1. Abre **Dashboards → New dashboard** y asígnale un nombre, o instala una plantilla lista para usar desde **Settings → Widgets → Browse catalog**.
+2. El editor te guía por los pasos: elige tu dispositivo como pantalla, selecciona un diseño y elige un widget para cada celda.
+3. Cambia la vista previa de **Live** a **As the panel shows it** para ver el marco exacto que pintará tu dispositivo, con sus colores o grises.
+4. Haz clic en el botón **Push to**, que lleva el nombre de tu dispositivo. El dispositivo pinta el nuevo marco en su siguiente activación.
 
 :::tip Primer panel más rápido
 De vuelta en el paso **Dashboard** del asistente de configuración, **Create a starter dashboard** crea un reloj ajustado al tamaño de tu dispositivo y vinculado a él. Haz clic en **Push to panel** para confirmar que todo está conectado y luego ábrelo en el editor para adaptarlo a tus necesidades.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/16-editor-panel-view.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/28-editor-as-the-panel-shows-it.png" style={{width:500, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/13-device-card-after-push.png" style={{width:700, height:'auto'}}/></div>
 
@@ -371,16 +372,16 @@ Algunos consejos para cada panel:
 
 - **E1001 y Sticky**: los tipos de letra en negrita y de alto contraste se leen mejor.
 - **E1002 y E1004**: dale a cada elemento su propio bloque de color. Una actualización completa Spectra™ 6 tarda unos 30 segundos en el E1002 y unos 40 en el E1004. Eso es normal para el panel.
-- **E1003**: las fotos y los degradados se renderizan en 16 niveles de gris, y el lienzo alto es ideal para listas y agendas.
+- **E1003**: las fotos y los degradados se representan en 16 niveles de gris, y el lienzo alto se adapta bien a listas y agendas.
 
-Para cambiar lo que muestra un dispositivo a lo largo del día, abre **Lineups** y elige **Set up a display**. Puedes elegir las páginas, con qué frecuencia se actualizan y cuándo el dispositivo permanece en silencio durante la noche. Para dispositivos alimentados por batería, **Smart sync** renderiza cada fotograma justo antes de que el dispositivo se despierte, de modo que siempre pinta contenido nuevo sin desperdiciar batería.
+Para cambiar lo que muestra un dispositivo a lo largo del día, abre **Lineups** y elige **Set up a display**. Puedes elegir las páginas, con qué frecuencia se actualizan y cuándo el dispositivo permanece en silencio durante la noche. Para dispositivos alimentados por batería, **Smart sync** renderiza cada marco justo antes de que el dispositivo se active, de modo que siempre pinta contenido nuevo sin desperdiciar batería.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/sticky-dashboard-desk.jpg" style={{width:700, height:'auto'}}/></div>
 
 ### Conecta tus datos
 
 - **Home Assistant**: añade un token de acceso de larga duración y la URL de tu Home Assistant en **Settings → Widgets → Home Assistant Core**. Para que cada panel aparezca como un dispositivo en Home Assistant, activa **Home Assistant discovery** en **Settings → Server**. La App ya utiliza el broker Mosquitto de Home Assistant si ejecutas uno.
-- **Calendars**: añade URLs iCal en **Settings → Widgets → Calendar Feeds**.
+- **Calendars**: añade URLs de iCal en **Settings → Widgets → Calendar Feeds**.
 - **More widgets**: los widgets, temas y plantillas de la comunidad están en **Settings → Widgets → Browse catalog**.
 
 ## Botones y táctil
@@ -396,22 +397,22 @@ Los tres botones frontales funcionan desde el primer momento:
 | Derecho | Panel siguiente |
 | Refresh | Renderizar y pintar de nuevo el panel actual |
 
-Cambia la asignación para cada dispositivo en **Controls → Button map** en su tarjeta de dispositivo. Un botón también puede saltar directamente a un panel específico o disparar un webhook. Mantén pulsado **Refresh** durante unos **3 segundos** y suéltalo para cambiar a la configuración por Bluetooth mediante la app compañera Tesserae. Manténlo pulsado durante **20 segundos** para restablecer a valores de fábrica, lo que borra la Wi-Fi y la configuración del servidor guardadas y devuelve el dispositivo a la pantalla de configuración.
+Cambia la asignación para cada dispositivo en **Controls → Button map** en su tarjeta de dispositivo. Un botón también puede saltar directamente a un panel específico o lanzar un webhook. Mantén pulsado **Refresh** durante unos **3 segundos** y suéltalo para cambiar a la configuración por Bluetooth mediante la app complementaria Tesserae. Manténlo pulsado durante **20 segundos** para restablecer a valores de fábrica, lo que borra la Wi-Fi y la configuración del servidor guardadas y devuelve el dispositivo a la pantalla de configuración.
 
-El **E1003** también es compatible con la función táctil. Consulta la sección Touch en la pestaña Sticky; funciona de la misma manera en ambos dispositivos.
+El **E1003** también es compatible con táctil. Consulta la sección Touch en la pestaña Sticky; funciona de la misma manera en ambos dispositivos.
 
 </TabItem>
 <TabItem value="sticky" label="reTerminal Sticky">
 
 - Pulsa el **botón de encendido** una vez para activar el Sticky y obtener la página actual de inmediato.
-- Mantén pulsado el botón de encendido durante unos **3 segundos** y suéltalo para cambiar a la configuración por Bluetooth mediante la app compañera Tesserae.
+- Mantén pulsado el botón de encendido durante unos **3 segundos** y suéltalo para cambiar a la configuración por Bluetooth mediante la app complementaria Tesserae.
 - Mantén pulsado el botón de encendido durante **20 segundos** para restablecer a valores de fábrica. Esto borra la Wi-Fi y la configuración del servidor guardadas y devuelve el Sticky a la pantalla de configuración.
 
 ### Táctil
 
-La función táctil está desactivada de forma predeterminada para ahorrar batería. Para activarla, abre la tarjeta del dispositivo, ve a **General** y activa **Touch input**. Las zonas táctiles de una página actúan entonces como botones. Pueden conmutar luces de Home Assistant, cambiar de página o activar acciones, y el panel confirma cada toque con una actualización parcial en menos de un segundo.
+El táctil está desactivado de forma predeterminada para ahorrar batería. Para activarlo, abre la tarjeta del dispositivo, ve a **General** y activa **Touch input**. Las zonas táctiles de una página actúan entonces como botones. Pueden conmutar luces de Home Assistant, cambiar de página o activar acciones, y el panel confirma cada toque con una actualización parcial en menos de un segundo.
 
-La función táctil mantiene el controlador táctil alimentado durante la suspensión profunda. Para una mayor duración de la batería, ajusta **Touch wake** a **Double tap or swipe**, que consume alrededor de 1 mA. Con ese ajuste, un solo toque no activa el panel, pero un doble toque o un deslizamiento sí lo hace. La función táctil funciona mejor con alimentación por USB.
+El táctil mantiene el controlador táctil alimentado durante la suspensión profunda. Para una mayor duración de la batería, ajusta **Touch wake** a **Double tap or swipe**, que consume alrededor de 1 mA. Con ese ajuste, un solo toque no activa el panel, pero un doble toque o un deslizamiento sí lo hace. El táctil funciona mejor con alimentación por USB.
 
 Activa **Beep on interaction** si quieres que el zumbador confirme cada toque o pulsación antes de que el panel se vuelva a pintar.
 
@@ -422,19 +423,19 @@ Activa **Beep on interaction** si quieres que el zumbador confirme cada toque o 
 
 ## Actualizaciones de firmware
 
-Las actualizaciones de firmware llegan por el aire. **Settings → Firmware** en la interfaz web de Tesserae muestra la versión instalada y disponible para cada dispositivo. Haz clic en **Queue update**, o activa **Auto**, y el dispositivo descargará, verificará e instalará la actualización firmada en su próximo despertar. Solo necesitas flashear desde el navegador de nuevo para una instalación limpia o para recuperación.
+Las actualizaciones de firmware llegan por el aire. **Settings → Firmware** en la interfaz web de Tesserae muestra la versión instalada y disponible para cada dispositivo. Haz clic en **Queue update**, o activa **Auto**, y el dispositivo descargará, verificará e instalará la actualización firmada en su siguiente activación. Solo necesitas flashear desde el navegador de nuevo para una instalación limpia o para recuperación.
 
 Tesserae comprueba si hay nuevo firmware cuando las funciones en línea están activadas (**Settings → System → Online features**). En una instalación sin conexión, descarga el archivo `descriptor-<kind>.json` desde la [versión de firmware](https://github.com/dmellok/tesserae-device-firmware/releases) e impórtalo en **Manual import**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/19b-firmware-update-available-crop.png" style={{width:700, height:'auto'}}/></div>
 
-## Preguntas frecuentes (FAQ)
+## Preguntas frecuentes
 
 ### P1: El flasher no puede encontrar mi dispositivo
 
 - Usa un cable USB-C que transmita datos y un puerto USB que admita datos. Algunos puertos del panel frontal en torres de escritorio no lo hacen.
 - Usa Chrome o Edge. Firefox y Safari no son compatibles con Web Serial.
-- En macOS con un reTerminal E Series, instala y habilita el controlador CH340 (consulta el Paso 2).
+- En macOS con un reTerminal E Serie, instala y habilita el controlador CH340 (consulta el Paso 2).
 - Cierra cualquier otro programa que pueda estar usando el puerto serie.
 
 ### P2: El dispositivo no aparece en Discovered
@@ -445,15 +446,15 @@ Tesserae comprueba si hay nuevo firmware cuando las funciones en línea están a
 
 ### P3: El dispositivo muestra "Can't reach the server" o "Wi-Fi unavailable"
 
-El dispositivo muestra el problema en el panel y reintenta por sí solo. Si la Wi-Fi se cae, reintenta cada minuto durante unos 12 minutos y luego abre el portal de configuración una vez durante 15 minutos. Después de eso sigue reintentando la red guardada en segundo plano y se vuelve a unir cuando la red regresa. Para abrir de nuevo el portal de configuración, reinicia el dispositivo o pulsa un botón frontal.
+El dispositivo muestra el problema en el panel y reintenta por sí solo. Si la Wi-Fi se cae, reintenta cada minuto durante unos 12 minutos y luego abre el portal de configuración una vez durante 15 minutos. Después de eso, sigue reintentando la red guardada en segundo plano y se vuelve a unir cuando la red regresa. Para abrir de nuevo el portal de configuración, reinicia el dispositivo o pulsa un botón frontal.
 
-### P4: El fotograma se descarga pero el panel no se pinta
+### P4: El marco se descarga pero el panel no se pinta
 
-Es posible que la batería esté demasiado baja para una actualización del panel. Conecta alimentación USB, deja que cargue durante una hora y vuelve a intentarlo.
+Es posible que la batería esté demasiado baja para una actualización del panel. Conecta la alimentación USB, deja que cargue durante una hora e inténtalo de nuevo.
 
 ## Agradecimientos especiales
 
-Agradecimientos especiales al equipo de **Seeed Studio** por su apoyo durante todo el desarrollo de reTerminal E Series y Sticky, y en particular a **Mason Cao** y **Lily Li**.
+Agradecimientos especiales al equipo de **Seeed Studio** por su apoyo durante todo el desarrollo de reTerminal E Serie y Sticky, y en particular a **Mason Cao** y **Lily Li**.
 
 Gracias también a los colaboradores de Tesserae que ayudaron a hacer posible el proyecto, en particular **[skynet01](https://github.com/skynet01)**, **[charmmmz](https://github.com/charmmmz)**, **[theiereman](https://github.com/theiereman)**, **[vaibhav8a](https://github.com/vaibhav8a)**, **[partridgeworks](https://github.com/partridgeworks)**, **[bablokb](https://github.com/bablokb)**, **[varanu5](https://github.com/varanu5)** y **[Frankynov](https://github.com/Frankynov)**, y a la comunidad en general por los widgets, las pruebas de firmware y los informes de hardware detrás de esta integración.
 
