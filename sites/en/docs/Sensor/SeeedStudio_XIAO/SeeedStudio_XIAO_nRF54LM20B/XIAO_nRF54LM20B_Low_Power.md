@@ -60,7 +60,7 @@ The nRF54LM20B supports two distinct standby modes. They differ in what stays al
 <tr><td>Radio, NFCT, temp sensor, ADC, PDM, extra SPI/I²C/UART, PWM</td><td>Each explicitly <code>status = "disabled"</code> in overlay (the SoC is still alive, so every enabled node would otherwise draw)</td><td>Not touched in overlay — <code>sys_poweroff()</code> removes power from all SoC peripheral controllers at once, so there is nothing left to gate by hand</td></tr>
 <tr><td>nPM1300 BUCK1 / BUCK2 (VSYS_3V3 → SoC VDD)</td><td>On</td><td>On — must stay to bias the SoC always-on DETECT/reset domain</td></tr>
 <tr><td>Wake source</td><td>BOOT button (SW0) GPIO interrupt — wakes the CPU <b>without</b> a reset, program continues</td><td><b>None</b> — only an external reset or power cycle restarts the board</td></tr>
-<tr><td>Measured avg current @ 3.7 V</td><td>~10 µA (PPK2)</td><td>~2.5 µA (R&amp;D lab instrument)</td></tr>
+<tr><td>Measured avg current @ 3.7 V</td><td>~11.54 µA (PPK2)</td><td>~2.5 µA (R&amp;D lab instrument)</td></tr>
 </table>
 </div>
 
@@ -359,7 +359,7 @@ After flashing, the board runs a five-second LED-on CPU-active interval, then tu
 
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/lower_power/a5.png" alt="R&amp;D lab measurement of System OFF current" style={{width:800, height:'auto'}}/>
+  <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/lower_power/a5.png" alt="PPK2 capture of System ON Sleep current" style={{width:800, height:'auto'}}/>
 </div>
 
 :::tip
@@ -552,14 +552,12 @@ int main(void)
 
 ### Result
 
-<!-- VK: R&D laboratory measurement, ~2.5 µA at 3.7 V. PPK2 cannot resolve this low a current cleanly, so the figure is taken from a higher-precision bench instrument. -->
-
 After startup, the firmware blinks the LED once, puts the external flash into Deep Power-Down, suspends the UART console, and enters System OFF. The board draws approximately **2.5 µA** at 3.7 V on the battery rail.
 
 This current is at — and partly below — the practical resolution floor of a PPK2 in its µA range, where offset and noise make a clean average difficult to read. The figure shown is taken from an R&amp;D laboratory instrument with a lower noise floor. Because no wake source is configured, there is nothing to measure dynamically: reset the board (or power-cycle it) to restart it.
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/lower_power/a1.png" alt="PPK2 capture of System ON Sleep current" style={{width:800, height:'auto'}}/>
+  <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/lower_power/a1.png" alt="R&amp;D lab measurement of System OFF current" style={{width:800, height:'auto'}}/>
 </div>
 
 :::tip

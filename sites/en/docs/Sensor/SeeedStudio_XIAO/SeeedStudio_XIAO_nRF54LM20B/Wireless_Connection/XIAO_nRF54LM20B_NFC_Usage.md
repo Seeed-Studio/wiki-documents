@@ -17,11 +17,6 @@ updatedAt: '2026-11-11'
 url: https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_nfc/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import Steppers from '@site/src/components/utils/Stepper';
-import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/XIAO_nRF54LM20B_Wiki_Banners/XIAO_nRF54LM20B_NFC_Usage.png" style={{width:600, height:'auto'}}/></div>
 
 <div className="table-center">
@@ -95,7 +90,7 @@ You need an XIAO nRF54LM20B and an NFC antenna. The bare 20B board has **no on-b
 </div>
 
 :::tip
-The Nordic NFC antenna is not sold separately on Seeed Studio Bazaar, so you will need to purchase it from other sources. A bare 13.56 MHz coil antenna (roughly 4.6 µH) also works — see the tuning note under soldering.
+The Nordic NFC antenna is not sold separately on Seeed Studio Bazaar, so you will need to purchase it from other sources.
 :::
 
 
@@ -107,10 +102,6 @@ On the XIAO nRF54LM20B the NFC pins are P1.01 and P1.02, the same as on the 20A.
 
 :::caution
 The NFC pins do not distinguish positive and negative. Soldering fine-pitch test points is challenging — take safety precautions to avoid personal injury and equipment damage, or use flying wires instead.
-:::
-
-:::note Tuning caveat
-The on-board 300 pF (C25/C26) is sized for a **bare coil antenna**. If you instead wire a pre-tuned commercial NFC tag — which carries its own internal matching capacitance — to TP19/TP20, its capacitance goes in parallel with the 300 pF, the tank detunes away from 13.56 MHz, and it still will not scan. For a bare coil, keep C25/C26; for a pre-tuned tag, remove C25/C26 and let the tag use its own matching network.
 :::
 
 ## Software

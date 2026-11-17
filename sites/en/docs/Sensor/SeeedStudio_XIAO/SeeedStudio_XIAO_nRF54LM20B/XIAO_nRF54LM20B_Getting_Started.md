@@ -60,7 +60,7 @@ The XIAO nRF54LM20B is a compact wireless development board based on the Nordic 
 
 In this section, we will guide you to quickly get started with the XIAO nRF54LM20B through the multi-color blinking effect of an RGB LED.
 Please complete the hardware and software preparations below to set up your XIAO for subsequent development.
-### Hardware Preperation
+### Hardware Preparation
 
 You need to prepare the following:
 
@@ -205,7 +205,7 @@ This tutorial is developed based on Zephyr RTOS. The project consists of three c
 The complete getting-started project is also available on GitHub:
 
 <div className="github_container" style={{textAlign: 'center'}}>
-    <a className="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/seeed-xiao-nrf54lm20b/zephyr-blink" target="_blank" rel="noopener noreferrer">
+    <a className="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/1_getting_start" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> View on GitHub</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br/>
@@ -507,7 +507,7 @@ CONFIG_I2C_GPIO=y
 
 Every upload on this board goes through the **MCUboot bootloader**, so it is important to understand how the board enters it. The XIAO nRF54LM20B has no on-board debug probe — flashing always happens through the bootloader's serial recovery mode over the USB serial port.
 
-软触发指令（将 `<PORT>` 替换为板子实际的 USB 串口，例如 `/dev/cu.usbmodem*`、`/dev/ttyACM0` 或 Windows 上的 `COMx`）：
+To trigger it manually (replace `<PORT>` with the board's actual USB serial port, for example `/dev/cu.usbmodem*`, `/dev/ttyACM0`, or `COMx` on Windows):
 
 ```bash
 ~/.platformio/penv/bin/python -c "import serial; serial.Serial('<PORT>', 1200, timeout=1).close()"
@@ -642,13 +642,13 @@ The peripheral circuitry on this board includes an IMU and a microphone. You can
 The XIAO nRF54LM20B Sense features an LSM6DS3TR-C IMU with a 3-axis accelerometer and a 3-axis gyroscope.
 
 - [Obtain Six-axis Data](https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_onboard/#obtain-six-axis-data)
-- [运动唤醒](https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_onboard/#运动唤醒)
-- [电子海洋](https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_onboard/#电子海洋)
+- [Wake on Motion](https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_onboard/#wake-on-motion)
+- [Posture Recognition](https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_onboard/#posture-recognition)
 
 ## MIC
 
 The XIAO nRF54LM20B Sense is equipped with an MSM261DGT006 digital microphone for audio capture.
-- [Audio Recording and BLE Upload](https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_onboard/#audio-recording-and-ble-upload)
+- [Audio Recording](https://wiki.seeedstudio.com/xiao_nrf54lm20b_with_onboard/#record-and-save)
 
 ### FAQ
 

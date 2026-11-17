@@ -19,8 +19,6 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20b_ncs/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import Steppers from '@site/src/components/utils/Stepper';
-import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/XIAO_nRF54LM20B_Wiki_Banners/XIAO_nRF54LM20B_NCS.png" style={{width:600, height:'auto'}}/></div>
 

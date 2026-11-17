@@ -52,7 +52,7 @@ The XIAO nRF54LM20B is equipped with abundant on-board sensors to support multi-
 
 :::
 
-## Hardware Properation
+## Hardware Preparation
 
 This article is developed based on the XIAO nRF54LM20B, and you need to prepare the relevant hardware in advance.
 
@@ -92,7 +92,7 @@ The LSM6DS3TR-C is a six-axis sensor integrating a 3-axis digital accelerometer 
 ### Obtain Six-axis Data
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/4_imu_demo" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/4_imu/1_6axis_data" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -112,7 +112,7 @@ If you want to directly verify the performance of the IMU, clone the Platform-se
 ### Wake on Motion
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/4_imu_demo" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/4_imu/2_motion_wake" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -150,7 +150,7 @@ monitor_speed = 115200
 The IMU can fuse three-axis acceleration data to calculate pitch, yaw and roll attitude angles for posture recognition. It can also work with corresponding controllers to realize motion control, or be applied in low-power scenarios such as attitude-triggered wake-up.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/4_imu_demo" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/4_imu/3_electronic_ocean" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -162,14 +162,16 @@ The IMU can fuse three-axis acceleration data to calculate pitch, yaw and roll a
 
 ## RTC
 
-The chip adopted by XIAO nRF54LM20B is equipped with built-in GRTC hardware resources, enabling RTC functions without additional RTC modules.
+The XIAO nRF54LM20B features a built-in Global Real-Time Counter (GRTC), enabling timekeeping, timestamp generation, and scheduled wake-up without requiring an external RTC module.
 
-The RTC supports timestamp counting and can record operating time even after power failure, which facilitates log recording and time tracking.
+The GRTC can continue operating in System OFF mode as long as the board remains powered, allowing the device to wake up at a configured time while maintaining low power consumption.
 
-This section introduces a sample program implemented on XIAO nRF54LM20B. After power-on, it obtains timestamps starting from the compilation time via RTC and prints data every second. After entering System OFF mode, the system will be woken up by the RTC alarm to continue counting.
+:::note
+The XIAO nRF54LM20B does not include a dedicated RTC backup battery. If all power is removed, the GRTC stops counting and the time reference must be reinitialized when power is restored.
+:::
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/2_Mic_demo" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/9_RTC/1_rtc_systemoff" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -197,41 +199,30 @@ The XIAO nRF54LM20B is equipped with the MSM261DGT006 digital MEMS microphone fo
 
 ### Result
 
-Compile and flash the program, then use a Windows computer to receive recorded audio via Bluetooth with the help of scripts.
+Compile and flash the program. While recording, the board streams 16 kHz / 16-bit / mono PCM to the host over the USB CDC serial port, and the receiver script wraps that stream into a `.wav` file.
 
-1. Run the Python script
+#### Run the receiver script
 
-Install required dependent libraries before execution:
-
-```bash
-pip install bleak 
-```
-
-
-Script execution command:
+The script depends on pyserial. Install it first:
 
 ```bash
-python ble_recorder_receiver.py
+pip install pyserial
 ```
 
+Start the script before pressing anything on the board — it opens the serial port, asserts DTR, and waits for the stream:
 
-:::tip
-The BLE UUID is already configured in the Python program, so it will connect automatically after running the script.
-:::
+```bash
+python3 capture.py
+```
 
-2. Audio Recording and BLE Upload
+It auto-detects the first `/dev/cu.usbmodem*` port at 115200 baud. On Linux or Windows, pass the port explicitly, for example `python3 capture.py /dev/ttyACM0` or `python3 capture.py COM3`.
 
-This section demonstrates the microphone function through a voice example. The specific process is as follows:
+#### Record and save
 
-- Press the BOOT button, the RGB-G LED will stay on and start recording; press it again to stop recording (maximum 10 seconds).
-- After recording, the audio file will be sent to the host computer via Bluetooth. The RGB-G LED flashes during transmission.
-- Run the receiving script on Windows to save the audio file to the `./recordings` directory.
-- The RGB-G LED turns off after the transmission is completed.
+Press the BOOT (User) button to start recording — the RGB-G LED blinks at about 2.5 Hz and the PDM microphone begins capturing. Speak towards the microphone, then press the button again to stop; the LED returns to steady on and the board sends the end-of-stream marker. The script writes `rec_<timestamp>.wav` to its current working directory and prints the file path, byte size and duration. Each button press produces one file.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/boad_use/5_gif.gif" style={{width:800, height:'auto'}}/></div>
 <br/>
-
-- Press the BOOT key to start recording. The steady green RGB LED indicates recording is in progress. You can speak loudly towards the microphone, then press the BOOT key again to stop recording. The flashing green RGB LED means the audio file is being transmitted.
 
 | State | Meaning |
 |---|---|
@@ -239,15 +230,11 @@ This section demonstrates the microphone function through a voice example. The s
 | ~2.5 Hz flashing | Recording in progress |
 | Returns to steady on | Recording finished |
 
+:::tip
+Run `capture.py` first and wait for the "Listening on ..." prompt before pressing the BOOT button — the script must be ready to catch the start-of-stream marker, or that recording will be lost. If the port is reported busy, close any other serial monitor (screen, the VS Code serial monitor, a web-serial page) first.
+:::
 
-
-
-- Open the serial port to view the log. Set the baud rate to 921600.
-
-
-- The received audio file and its byte size will be displayed.
-
-
+As each recording is finalized the script prints the saved file name, byte size and duration.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/boad_use/4.png" style={{width:800, height:'auto'}}/></div>
 <br/>

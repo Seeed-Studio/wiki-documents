@@ -1163,7 +1163,7 @@ struct bt_le_cs_create_config_params config_params = {
 	.ch3c_shape = BT_CONN_LE_CS_CH3C_SHAPE_HAT,
 	.ch3c_jump = 2,
 };
-/* enable 32 consecutive channels (starting at 26; channels 23/24/25 are forbidden by the spec) */
+/* enable 36 consecutive channels (starting at 26; channels 23/24/25 are forbidden by the spec) */
 for (uint8_t i = 26; i < 62; i++)
 	BT_LE_CS_CHANNEL_BIT_SET_VAL(config_params.channel_map, i, 1);
 ```
@@ -1214,7 +1214,7 @@ Flash the initiator and reflector onto the two boards, power the reflector on fi
 <br/>
 
 
-Each procedure interval is about 40 seconds (`min=max_procedure_interval=100`, 32 channels, `subevent_len=50000`, plus the reflector's 512-byte GATT write-back) — the board is not stuck. After the link comes up the reflector's serial port stays quiet — the distance is computed only on the initiator, and the reflector does not print while it normally writes its step data back. That is by design, not a sign it is not working.
+Each procedure interval is about 40 seconds (`min=max_procedure_interval=100`, 36 channels, `subevent_len=50000`, plus the reflector's 512-byte GATT write-back) — the board is not stuck. After the link comes up the reflector's serial port stays quiet — the distance is computed only on the initiator, and the reflector does not print while it normally writes its step data back. That is by design, not a sign it is not working.
 
 The difference between the two methods' output is expected, and worth understanding: **Phase-Based Ranging** (PBR) gives a stable, trustworthy distance — with the two boards placed roughly half a meter apart, PBR fluctuates in a small band around 0.4–0.7 m, which is the right order of magnitude. **Round-Trip Timing** (RTT) frequently returns negative values (-0.7 to -5 m), because this example does not perform antenna delay calibration. The ToF method in CS ranging is only accurate after subtracting the antenna TX/RX delay; at short range, an uncalibrated delay pushes the distance off, even negative. That is the known behavior of the upstream sample, not a porting or hardware problem.
 

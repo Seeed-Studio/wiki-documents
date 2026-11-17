@@ -309,7 +309,7 @@ Pulse-width modulation is a timed waveform built on top of a digital output: it 
 
 ### Software Preparation
 
-By the pin assignment, **P1.04 / D8** is the PWM output pin for the servo (the M20B's only PWM output, PWM20 channel 0). A standard servo wants a 50 Hz refresh (20 ms period), with 0.5 ms pulse width mapping to 0° and 2.5 ms to 180°. `XiaoPWM(0)` selects this channel; `init(freq=..., duty_ns=...)` sets the frequency and the pulse width in nanoseconds.
+The MicroPython `boards.xiao` helper exposes PWM through `XiaoPWM(channel)`. For a servo, use channel 0 — the helper routes PWM20 channel 0 to **P1.04 / D8**. A standard servo wants a 50 Hz refresh (20 ms period), with 0.5 ms pulse width mapping to 0° and 2.5 ms to 180°. `XiaoPWM(0)` selects this channel; `init(freq=..., duty_ns=...)` sets the frequency and the pulse width in nanoseconds.
 
 ```python
 import time

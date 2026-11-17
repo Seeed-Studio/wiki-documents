@@ -160,7 +160,7 @@ CONFIG_STREAM_FLASH=y
 /*
  * XIAO nRF54LM20B -- Pin Multiplexing demo 1: Digital GPIO
  * ----------------------------------------------------------------------------
- * Port of the official XIAO nRF54LM20A wiki "数字引脚" demo to the 20B:
+ * Port of the official XIAO nRF54LM20A wiki "digital pins" demo to the 20B:
  *   Grove Button (P1.0 / D0)  -> input,  active-high (onboard pull-down)
  *   Grove Buzzer (P1.31 / D1) -> output, HIGH = on
  *   Button pressed  => Buzzer ON
@@ -475,7 +475,7 @@ After flashing, press RST once; the servo sweeps back and forth between 0° and 
 
 ## Analog
 
-Analog I/O centers on the analog-to-digital converter (ADC), which samples continuous voltages from external sensors. The raw 16-bit sample is then mapped to an engineering value through a linear or non-linear conversion. This example reads SAADC channel 0 on P1.0 / D0 (AIN0) every 500 ms and prints the raw value.
+Analog I/O centers on the analog-to-digital converter (ADC), which samples continuous voltages from external sensors. The raw 12-bit sample (0–4095) is then mapped to an engineering value through a linear or non-linear conversion. This example reads SAADC channel 0 on P1.0 / D0 (AIN0) every 500 ms and prints the raw value.
 
 ### Hardware Preparation
 
@@ -568,7 +568,7 @@ CONFIG_FLASH_MAP=y
 CONFIG_STREAM_FLASH=y
 ```
 
-**`src/main.c`** — Configures the ADC channel from the devicetree spec, reads one 16-bit sample every 500 ms, and prints `ADC raw: N`. The full source is fairly long — click to expand.
+**`src/main.c`** — Configures the ADC channel from the devicetree spec, reads one 12-bit sample (0–4095) every 500 ms, and prints `ADC raw: N`. The full source is fairly long — click to expand.
 
 <details>
 
@@ -579,7 +579,7 @@ CONFIG_STREAM_FLASH=y
  * XIAO nRF54LM20B -- Pin Multiplexing demo 3: Analog (ADC on P1.0 / AIN0)
  * ----------------------------------------------------------------------------
  * Port of the wiki "Analog" demo. Reads SAADC channel 0 (P1.0 / D0 = AIN0)
- * and prints the raw 16-bit sample every 500 ms.
+ * and prints the raw 12-bit sample (0–4095) every 500 ms.
  *
  * 20B adaptations vs the 20A original:
  *   - self-confirm the mcuboot image at startup;
