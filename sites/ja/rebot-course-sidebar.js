@@ -235,6 +235,11 @@ const sidebars = {
               label: 'LingBot-VA — 未来画像からロボット行動への因果的ワールドモデル',
             },
             { type: 'doc', id: `${P}/ja_Paper_Reading_GR00T_2`, label: 'GR00T 2 — 統合世界-アクションモデリング' },
+            {
+              "type": "doc",
+              "id": `${P}/ja_Paper_Reading_LAWAM`,
+              "label": "LaWAM — シーン変化の予測とロボットアクションの生成"
+            }
           ],
         },
         {
