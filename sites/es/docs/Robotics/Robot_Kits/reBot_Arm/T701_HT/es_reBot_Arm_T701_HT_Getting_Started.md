@@ -1,6 +1,6 @@
 ---
 title: Guía rápida de inicio de reBot Arm T701 HT
-sidebar_label: Quick Start
+sidebar_label: Guía rápida
 description: Desempaqueta y ensambla el reBot Arm T701 HT, instala el SDK en Ubuntu, comprueba la retroalimentación de las articulaciones, establece las posiciones cero y ejecuta las demostraciones.
 keywords:
   - reBot
@@ -33,9 +33,9 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 El reBot Arm T701 es una plataforma robótica bimanual de código abierto de Seeed Studio para IA Física, aprendizaje de robots y recopilación de datos en el mundo real. Se basa en el diseño de código abierto del reBot Arm B601 y ofrece a los desarrolladores una única plataforma para recopilar datos y estudiar tareas coordinadas de dos brazos.
 
-- **Configuración bimanual.** Dos brazos de 7 GDL se montan en un solo torso. Motores con bus CAN accionan las articulaciones y cada brazo tiene su propia garra.
+- **Configuración bimanual.** Dos brazos de 7 GDL se montan en un solo torso. Motores con bus CAN accionan las articulaciones y cada brazo tiene su propia pinza.
 - **Visión y computación en el borde.** La plataforma tiene puntos de montaje para cámaras de muñeca RealSense D405, una cámara de cabeza D435 y un módulo de cómputo NVIDIA Jetson Orin. **La versión Basic no incluye cámaras.**
-- **Recursos de código abierto.** Los archivos CAD, la lista de materiales (BOM), las guías de ensamblaje y el software se publican por etapas según la hoja de ruta del proyecto.
+- **Recursos de código abierto.** Los archivos CAD, la lista de materiales (BOM), las guías de ensamblaje y el software se publican por etapas de acuerdo con la hoja de ruta del proyecto.
 
 ## Descargo de responsabilidad de seguridad y aviso de riesgos
 
@@ -54,11 +54,17 @@ El reBot Arm T701 es una plataforma robótica bimanual de código abierto de See
 - **TODO** Add the power supply model, rated output, connector specifications, and availability.
 */}
 
-## Desempaqueta y ensambla el robot
+## Desembalar y ensamblar el robot
 
-### Comprueba el contenido del paquete
+<div className="rebot-step-flow" role="list">
 
-Abre el estuche de transporte y compara las piezas del robot y los elementos de fijación con la lista de empaque.
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
+### Comprobar el contenido del paquete
+
+Abre el maletín de transporte y comprueba las piezas del robot y los sujetadores con la lista de empaque.
 
 :::note[The Basic version does not include cameras]
 Consulta la lista de empaque para conocer el contenido de tu envío.
@@ -68,7 +74,14 @@ Consulta la lista de empaque para conocer el contenido de tu envío.
   <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="Open carrying case showing both arms, the torso column, the covers, and the cameras in the pictured configuration" loading="lazy" />
 </div>
 
-### Monta ambos brazos en la columna del torso
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+
+### Montar ambos brazos en la columna del torso
 
 1. Saca la columna del torso y el brazo derecho. Alinea los cuatro orificios de montaje marcados en rojo en ambas fotos.
 2. Fija el brazo derecho a la columna usando cuatro de los **tornillos M6** suministrados.
@@ -97,16 +110,23 @@ Una vez fijado el brazo derecho, comprueba cómo se apoya contra la columna desd
   </figure>
 </div>
 
-Con la alimentación desconectada, enchufa el **arnés de cable XT30 2+2** que sale del lateral de la columna del torso en el conector del brazo derecho que se muestra a continuación. Monta y conecta el brazo izquierdo de la misma manera en el otro lado de la columna.
+Con la alimentación desconectada, enchufa el **arnés de cables XT30 2+2** que sale del lateral de la columna del torso en el conector del brazo derecho que se muestra a continuación. Monta y conecta el brazo izquierdo de la misma manera en el otro lado de la columna.
 
 <div align="center">
   <img width={680} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-arm-connector.webp" alt="Routing of the XT30 2+2 cable harness from the torso column to the arm connector" loading="lazy" />
 </div>
 
-### Instala las cubiertas de los hombros
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+
+### Instalar las cubiertas de los hombros
 
 1. Ajusta las mitades superior e inferior de cada cubierta verde alrededor del hombro.
-2. Inserta los **tornillos M3 medianos-cortos** suministrados en las posiciones marcadas en rojo. Usa cuatro tornillos por lado, ocho en total.
+2. Inserta los **tornillos M3 de longitud media-corta** suministrados en las posiciones marcadas en rojo. Usa cuatro tornillos por lado, ocho en total.
 
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
@@ -127,7 +147,14 @@ Con la alimentación desconectada, enchufa el **arnés de cable XT30 2+2** que s
   </figure>
 </div>
 
-### Instala la cubierta del torso
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
+### Instalar la cubierta del torso
 
 1. Una vez fijadas ambas cubiertas de hombro, coloca la cubierta del torso y guía los cables laterales a través de las aberturas correspondientes. Si tu robot tiene la cámara **RealSense D435i** que se muestra a continuación, alinéala con la abertura en la cubierta frontal. **La versión Basic no incluye cámaras.**
 
@@ -148,9 +175,14 @@ Con la alimentación desconectada, enchufa el **arnés de cable XT30 2+2** que s
      <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/17-torso-cover-screws-repaired.webp" alt="Four screw positions circled in red on the rear torso cover" loading="lazy" />
    </div>
 
+  </div>
+</div>
+
+</div>
+
 {/* - **TODO** Add instructions for securing the base and installing the grippers separately. */}
 
-## Conecta el robot
+## Conectar el robot
 
 :::warning
 Desconecta la alimentación antes de cablear. Antes de encender el robot, asegúrate de que esté firmemente montado y mantén libre todo el rango de movimiento de ambos brazos.
@@ -171,24 +203,37 @@ Desconecta la alimentación antes de cablear. Antes de encender el robot, asegú
   </figure>
 </div>
 
-## Calibra y ejecuta el robot con el SDK T701-HT
+## Calibrar y ejecutar el robot con el SDK T701-HT
 
-### Instala el SDK
+<div className="rebot-step-flow" role="list">
 
-:::info[Supported Platforms for the Motor Library]
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
 
-The SDK includes the following prebuilt `hightorque_robot` wheels in `motor_whl/`.
+### Instalar el SDK
 
-| Platform | Motor library version | CPython versions |
+:::info[Plataformas compatibles con la biblioteca de motor]
+
+El SDK incluye las siguientes ruedas `hightorque_robot` precompiladas en `motor_whl/`.
+
+| Plataforma | Versión de la biblioteca de motor | Versiones de CPython |
 | --- | --- | --- |
 | Linux x86_64 | 1.2.0 | 3.9, 3.10, 3.11, 3.12 |
 | Linux aarch64 (ARM64) | 1.0.0 | 3.9, 3.10, 3.11, 3.12 |
 
-The installation example below uses **Ubuntu 22.04 (x86_64) and Python 3.10**. For another combination in the table, choose the `.whl` file that matches your architecture and Python version, then run the environment check below.
+El ejemplo de instalación siguiente usa **Ubuntu 22.04 (x86_64) y Python 3.10**. Para otra combinación de la tabla, elige el archivo `.whl` que coincida con tu arquitectura y versión de Python, y luego ejecuta la comprobación de entorno que aparece a continuación.
 
 :::
 
-Abre una terminal en el directorio raíz del SDK, que contiene `motor_whl/`, `requirements.txt` y `scripts/`. Ejecuta los comandos del SDK que aparecen a continuación desde este directorio.
+Clona el [repositorio del SDK T701-HT](https://github.com/Seeed-Projects/reBot-Arm-T701-SDK) y entra en el directorio raíz del SDK.
+
+```bash
+git clone https://github.com/Seeed-Projects/reBot-Arm-T701-SDK.git
+cd reBot-Arm-T701-SDK
+```
+
+Ejecuta los siguientes comandos del SDK desde este directorio, salvo que se indique lo contrario.
 
 Si no tienes Conda, instala Miniforge.
 
@@ -206,106 +251,122 @@ python -I -m pip install ./motor_whl/hightorque_robot-1.2.0-cp310-cp310-linux_x8
 python -I -m pip install -r requirements.txt
 ```
 
-Ejecuta el siguiente comando para comprobar que Python puede importar las dependencias y cargar el modelo URDF. Puedes realizar esta comprobación con el robot desconectado.
+Ejecuta el siguiente comando para comprobar que Python puede importar las dependencias y cargar el modelo URDF. Puedes ejecutar esta comprobación con el robot desconectado.
 
 ```bash
-python -I -c "import hightorque_robot, numpy, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
+python -I -c "import hightorque_robot, numpy, osqp, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### Comprobar la conexión serie
 
-1. **Lista los puertos serie.** Conecta el robot y luego ejecuta el siguiente comando en una terminal.
+El brazo izquierdo se conecta a CAN1 y el brazo derecho a CAN2. Establece `board_serial` en `T701-HT_robot_param/serial_binding.yaml` del SDK con el número de serie USB de tu placa de comunicación. El SDK utiliza la identidad USB de la placa para encontrar los dispositivos serie actuales al iniciar.
 
-   ```bash
-   ls -l /dev/ttyACM*
-   ```
-
-2. **Comprueba los puertos serie de ambos brazos.** Ejecuta el script de comprobación.
-
-   ```bash
-   python scripts/t701_ht_read_state.py --arm both --check
-   ```
-
-   El script comprueba lo siguiente.
-
-   - Orden de enumeración de los puertos serie
-   - Identificadores USB de la placa de comunicación
-   - Permisos de lectura y escritura del puerto serie
-
-:::tip[Comprobar un solo brazo]
-
-Sustituye `--arm both` por el argumento del brazo que quieras comprobar.
-
-| Brazo | Argumento | Puerto serie predeterminado | ID serie del SDK |
-| --- | --- | --- | --- |
-| Brazo izquierdo | `--arm left` | `/dev/ttyACM0` | `serial_id=1` |
-| Brazo derecho | `--arm right` | `/dev/ttyACM1` | `serial_id=2` |
-
-:::
-
-**Errores de permisos del puerto serie**
-
-Si el script informa de un error de permisos, el siguiente comando de la guía del SDK concede temporalmente a todos los usuarios locales acceso de lectura y escritura a los puertos serie especificados. Al comprobar un solo brazo, especifica solo su puerto.
+Ejecuta los siguientes comandos para comprobar la asignación de ambos brazos sin abrir los puertos serie. Para comprobar un solo brazo, pasa solo su archivo YAML.
 
 ```bash
-sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1
+ls -l /dev/serial/by-id/
+python scripts/t701_ht_can_serial_adapter.py T701-HT_robot_param/T701-HT_left.yaml T701-HT_robot_param/T701-HT_right.yaml
 ```
 
-Vuelve a ejecutar la comprobación del puerto serie después de conceder el acceso. Al reconectar el dispositivo o reiniciar el sistema, estos permisos se restablecen.
+  </div>
+</div>
 
-### Leer el estado de las articulaciones y del efector de agarre
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
-Después de que la comprobación serie se complete correctamente, lee una muestra de ambos brazos. Verifica que las siete articulaciones y el efector de agarre de cada brazo devuelven retroalimentación. El script informa de la posición de la articulación (rad), la velocidad (rad/s) y el par (N·m), y de la posición (rad) y velocidad (rad/s) del efector de agarre.
+### Leer el estado de las articulaciones y la pinza
 
-```bash
-python scripts/t701_ht_read_state.py --arm both --once
-```
-
-Para lecturas continuas, ejecuta el siguiente comando e introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos. Pulsa `Ctrl+C` para salir.
+Ejecuta el script e introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos. Confirma que las siete articulaciones y la pinza de cada brazo seleccionado informan retroalimentación. Pulsa `Ctrl+C` para salir.
 
 ```bash
 python scripts/t701_ht_read_state.py
 ```
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### Establecer las posiciones cero
 
-- **TODO** Añadir las posiciones cero estándar y los diagramas de calibración para las articulaciones y los efectores de agarre de ambos brazos. Aclarar si los robots calibrados de fábrica necesitan ser recalibrados.
+<div align="center">
+  <img width={520} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-zero-pose.png" alt="T701-HT zero pose" loading="lazy" />
+</div>
 
-Después de confirmar las posiciones cero estándar, mueve las articulaciones y el efector de agarre del brazo seleccionado a esas posiciones. El siguiente comando selecciona el brazo izquierdo. Sustituye `left` por `right` o `both` para seleccionar el brazo derecho o ambos brazos. Introducir `yes` escribe las posiciones actuales como las nuevas posiciones cero y sobrescribe los valores almacenados.
+Inicia el script y selecciona el brazo. Mueve las articulaciones y la pinza a sus posiciones cero previstas y luego selecciona `3` en el menú de operación para reemplazar las posiciones cero almacenadas del brazo seleccionado con la pose actual. Selecciona `4` para moverte a la posición cero guardada o `0` para salir.
 
 ```bash
-python scripts/t701_ht_set_zero.py --arm left
+python scripts/t701_ht_set_zero.py
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
 
 ### Ejecutar las demostraciones
 
-:::warning
-Antes de ejecutar una demostración, verifica las posiciones cero de las articulaciones, retira cualquier carga y despeja el rango de movimiento de los brazos. Comienza con un solo brazo y sujétalo al iniciar y detener la demostración. En las demostraciones de impedancia articular, el brazo seleccionado se mueve hacia la pose objetivo establecida en el script.
+:::warning[Antes de ejecutar las demostraciones]
+Verifica las posiciones cero de las articulaciones, retira cualquier carga y despeja el rango de movimiento de los brazos. Empieza con un solo brazo en la primera ejecución. Sujeta el brazo al iniciar y detener la demostración de compensación de gravedad.
 :::
 
-En cualquiera de las tres demostraciones, introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos. También puedes especificar `--arm left`, `--arm right` o `--arm both` en la línea de comandos. Pulsa `Ctrl+C` para salir y enviar comandos de parada a los brazos y efectores de agarre seleccionados.
+Entra en el directorio `scripts`. Después de iniciar una demo, introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos.
+
+```bash
+cd scripts
+```
 
 #### Compensación de gravedad
 
-La demostración aplica 0,8 veces el par de gravedad calculado para la pose actual como par de avance, lo que facilita mover el brazo a mano.
+La demo aplica `0.8 × G(q)` como par de avance MIT para que el brazo sea más fácil de mover a mano. Las ganancias `Kp` y `Kd` de las articulaciones y el par de la pinza son cero.
 
 ```bash
-python scripts/t701_ht_gravity_compensation.py
+python t701_ht_gravity_compensation.py
 ```
 
-#### Impedancia articular con avance de gravedad
+#### Impedancia articular
+
+:::warning[Antes de iniciar una demo de impedancia articular]
+**Asegúrate de que el área alrededor del robot y dentro del rango de movimiento de los brazos esté libre de personas y objetos frágiles antes de iniciar cualquiera de las demostraciones.** El brazo seleccionado se mueve hacia una pose fija tan pronto como comienza la demo.
+:::
+
+El objetivo del brazo izquierdo es aproximadamente `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad. El objetivo del brazo derecho invierte el signo de cada ángulo articular.
+
+**Impedancia articular con avance de gravedad**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity.py
+python t701_ht_joint_impedance_with_gravity.py
 ```
 
-#### Impedancia articular con avance de gravedad y compensación de fricción
+**Impedancia articular con avance de gravedad y compensación de fricción**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity_friction.py
+python t701_ht_joint_impedance_with_gravity_friction.py
 ```
+
+Las tres demostraciones aplican los límites de par articular configurados. Pulsa `Ctrl+C` para detener la compensación de gravedad o para devolver los brazos a cero antes de detener una demo de impedancia articular. Durante el retorno, pulsa `Ctrl+C` de nuevo para detener los brazos.
+
+Consulta [T701 HT con Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) para comprobaciones de cinemática directa e inversa, trayectorias cartesianas y ejemplos de control por teclado.
+
+  </div>
+</div>
+
+</div>
 
 ## Solución de problemas
 
-- **No se encontró ningún puerto serie.** Comprueba que el robot esté encendido y que el cable de datos USB esté conectado al puerto USB-C de la placa principal. Ejecuta `ls -l /dev/ttyACM*` de nuevo.
-- **La enumeración del puerto serie no coincide con la configuración.** Comprueba la ruta de dispositivo predeterminada para el brazo seleccionado y si hay otros dispositivos serie USB conectados.
+- **No se encontró ningún puerto serie.** Confirma que el robot está encendido y que el cable de datos USB está conectado al puerto USB-C de la placa base, y luego ejecuta de nuevo `ls -l /dev/serial/by-id/`.
+- **Falta la interfaz USB coincidente.** Comprueba que `board_serial` coincide con la placa conectada y que el brazo izquierdo usa CAN1 y el brazo derecho usa CAN2.
+- **Permiso denegado.** En Ubuntu, comprueba que tu usuario tenga acceso de lectura y escritura al dispositivo serie a través del grupo `dialout`.
