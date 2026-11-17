@@ -235,6 +235,11 @@ const sidebars = {
               label: 'LingBot-VA — Un modelo causal del mundo desde imágenes futuras hasta acciones de robot',
             },
             { type: 'doc', id: `${P}/es_Paper_Reading_GR00T_2`, label: 'GR00T 2 — Modelado de Mundo-Acción Conjunto' },
+            {
+              "type": "doc",
+              "id": `${P}/es_Paper_Reading_LAWAM`,
+              "label": "LaWAM — Predecir cambios de escena antes de generar acciones de robot"
+            }
           ],
         },
         {
