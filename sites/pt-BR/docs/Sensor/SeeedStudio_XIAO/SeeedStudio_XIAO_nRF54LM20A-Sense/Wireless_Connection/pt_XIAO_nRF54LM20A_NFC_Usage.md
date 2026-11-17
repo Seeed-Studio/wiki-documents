@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF
 slug: /xiao_nrf54lm20a_with_nfc
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 11/17/2026
   author: Zeller
 createdAt: '2025-05-25'
-updatedAt: '2026-07-08'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54lm20a_with_nfc/
 ---
 
@@ -47,7 +47,7 @@ Near Field Communication (NFC) é uma tecnologia para transferência sem fio de 
 - *Para tutoriais e referências de NFC para chips da série Nordic, consulte [Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html)*
 - *As especificações técnicas para NFC estão disponíveis em [NFC Forum specification overview](https://nfc-forum.org/build/specifications)*.
 
-O XIAO nRF54LM20A está equipado com uma interface NFC reservada para que você possa explorar e utilizar ainda mais as funções de NFC.
+O XIAO nRF54LM20A está equipado com uma interface NFC reservada para que você possa explorar e utilizar ainda mais as funções NFC.
 
 :::tip
 
@@ -83,7 +83,7 @@ A antena NFC da Nordic não é vendida separadamente no Seeed Studio Bazaar, por
 
 :::
 
-### Soldar a antena
+### Solde a antena
 
 No XIAO nRF54LM20A, os pinos padrão para a antena NFC externa são P1.01 e P1.02, marcados como N1 e N2 na serigrafia. Veja o exemplo de soldagem abaixo.
 
@@ -97,7 +97,7 @@ No XIAO nRF54LM20A, os pinos padrão para a antena NFC externa são P1.01 e P1.0
 <br/>
 :::caution
 
-Este processo de soldagem é bastante desafiador e requer técnicas de soldagem avançadas. Como alternativa, você pode optar por conectar o XIAO e a NFC usando fios voadores. Por favor, preste atenção às precauções de segurança para evitar ferimentos pessoais e danos ao equipamento.
+Este processo de soldagem é bastante desafiador e requer técnicas de soldagem avançadas. Como alternativa, você pode optar por conectar o XIAO e a NFC usando fios jumper. Por favor, preste atenção às precauções de segurança para evitar ferimentos pessoais e danos ao equipamento.
 
 Os pinos da NFC não distinguem entre positivo e negativo
 
@@ -172,7 +172,7 @@ Witaj świecie!
 
 Esta seção aborda a função NFC. Pesquise por **nRF Toolbox for Bluetooth LE**.
 
-1. Dentro da extensão, crie um projeto de exemplo em branco, selecione copiar um exemplo existente e escolha **NFC Launch App**. Configure e compile consultando [NFC Records text](#Registros-de-texto-NFC).
+1. Dentro da extensão, crie um projeto de exemplo em branco, selecione copiar um exemplo existente e escolha **NFC Launch App**. Configure e compile consultando [NFC Records text](#nfc-registros-de-texto).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -208,7 +208,7 @@ Esta seção aborda a função NFC. Pesquise por **nRF Toolbox for Bluetooth LE*
 
 ## Resumo
 
-Os recursos de NFC podem ser reutilizados em vários cenários, como gravação de dados e despertar de baixo consumo de energia. O nRF Connect SDK fornece códigos de exemplo correspondentes. Você pode estender esses exemplos para aplicações práticas. Por exemplo, combinar o despertar de baixo consumo de energia por NFC com controle de motor permite um simples cadeado inteligente para uso diário.
+Os recursos de NFC podem ser reutilizados em vários cenários, como gravação de dados e despertar de baixo consumo. O nRF Connect SDK fornece códigos de exemplo correspondentes. Você pode estender esses exemplos para aplicações práticas. Por exemplo, combinar o despertar de baixo consumo por NFC com controle de motor permite um simples cadeado inteligente para uso diário.
 
 Além disso, acreditamos que você obteve uma compreensão básica da implementação de NFC no XIAO nRF54LM20A por meio dos exemplos acima. Aguardamos suas ideias criativas e contribuições para a comunidade de código aberto.
 
