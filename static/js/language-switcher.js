@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
 // 生成时间: 2026-11-16 17:09:34 (北京时间)
-// 多语言页面: 2697 个
+// 多语言页面: 2696 个
 
 (function() {
   'use strict';
@@ -7141,10 +7141,6 @@
     "es",
     "ja",
     "pt"
-  ],
-  "/rebot_t701_ht_pinocchio": [
-    "cn",
-    "en"
   ],
   "/robotics/paper_reading_hardware_and_teleoperation": [
     "cn",
