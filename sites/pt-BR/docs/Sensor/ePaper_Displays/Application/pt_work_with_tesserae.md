@@ -1,8 +1,8 @@
 ---
-description: Use Tesserae, o servidor de dashboard e‑ink auto-hospedado e open source, com o reTerminal E1001, E1002, E1003, E1004 e reTerminal Sticky. Cores completas no Spectra 6, escala de cinza em 16 níveis no E1003, toque no E1003 e no Sticky.
+description: Use Tesserae, the open source self-hosted e-ink dashboard server, with the reTerminal E1001, E1002, E1003, E1004 and reTerminal Sticky. Full colour on Spectra 6, 16-level greyscale on the E1003, touch on the E1003 and Sticky.
 title: Trabalhar com Tesserae
 keywords:
-  - Display ePaper
+  - ePaper display
   - Tesserae
   - Home Assistant
   - reTerminal
@@ -15,11 +15,11 @@ image: https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/cover.webp
 slug: /reterminal_e10xx_tesserae
 sidebar_position: 12
 last_update:
-  date: 11/13/2026
+  date: 11/17/2026
   author: Kayden D'Mello
 createdAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_tesserae/
-updatedAt: '2026-11-13'
+updatedAt: '2026-11-17'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -32,26 +32,26 @@ import TabItem from '@theme/TabItem';
 Este guia leva um dispositivo reTerminal E Series ou um reTerminal Sticky da caixa até um dashboard na parede com o **Tesserae**. Você grava o firmware uma vez a partir do navegador, conecta o dispositivo ao seu próprio servidor Tesserae e projeta suas páginas no editor web. As etapas são as mesmas em todos os dispositivos. Onde forem diferentes, escolha seu dispositivo nas abas.
 
 :::tip Cores completas e escala de cinza
-Tesserae dirige cada painel em toda a sua capacidade. O **E1002** e o **E1004** pintam em todas as seis cores Spectra™ 6, o **E1003** pinta em 16 níveis de cinza e o **Sticky** em 4. O servidor renderiza cada quadro nos bytes exatos que o painel espera, então o dispositivo só precisa pintá-lo.
+Tesserae aciona cada painel em toda a sua capacidade. O **E1002** e o **E1004** pintam em todas as seis cores Spectra™ 6, o **E1003** pinta em 16 níveis de cinza e o **Sticky** em 4. O servidor renderiza cada quadro nos bytes exatos que o painel espera, então o dispositivo só precisa pintá-lo.
 :::
 
 ## O que é o [Tesserae](https://tesserae.ink/)?
 
-Tesserae é um servidor de dashboard para displays de papel eletrônico, open source e auto-hospedado. Você o executa em casa como um App do Home Assistant, um contêiner Docker ou uma instalação simples em macOS, Linux, Windows ou um Raspberry Pi. Você compõe dashboards a partir de widgets no navegador, e cada dispositivo busca seu quadro, o pinta e volta a dormir. Nada sai da sua rede a menos que você escolha isso.
+Tesserae é um servidor de dashboard auto-hospedado e de código aberto para displays de papel eletrônico. Você o executa em casa como um App do Home Assistant, um contêiner Docker ou uma instalação simples em macOS, Linux, Windows ou um Raspberry Pi. Você compõe dashboards a partir de widgets no navegador, e cada dispositivo busca seu quadro, o pinta e volta a dormir. Nada sai da sua rede a menos que você escolha.
 
-O projeto começou com a reTerminal E Series e cresceu junto com ela. O E1001 foi um dos primeiros dispositivos que o Tesserae suportou, e a E Series continua entre o hardware mais utilizado no web flasher do projeto.
+O projeto começou com o reTerminal E Series e cresceu junto com ele. O E1001 foi um dos primeiros dispositivos que o Tesserae suportou, e a E Series continua entre o hardware mais utilizado no web flasher do projeto.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/15-editor-html-view.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/27-editor-live-view.png" style={{width:500, height:'auto'}}/></div>
 
 ### Por que usar o Tesserae?
 
 - **Auto-hospedado e privado**: o servidor roda no seu próprio hardware, sem conta e sem assinatura. Uma opção hospedada, [Tesserae Cloud](https://cloud.tesserae.ink), está disponível se você preferir não executar um servidor.
 - **Feito para Home Assistant**: Tesserae é instalado como um App do Home Assistant. Ele mostra suas entidades no painel e, em dispositivos com toque, pode chamar serviços de volta. Com a descoberta MQTT ativada, cada painel aparece no Home Assistant como um dispositivo.
-- **Todas as cores que o painel tem**: cor Spectra™ 6 no E1002 e E1004, escala de cinza em 16 níveis no E1003. As fotos são ditherizadas no servidor, para que pareçam corretas em cada painel.
+- **Todas as cores que o painel tem**: cor Spectra™ 6 no E1002 e E1004, escala de cinza de 16 níveis no E1003. As fotos são convertidas com dithering no servidor, para que pareçam corretas em cada painel.
 - **Widgets e modelos**: clima, calendários, transporte, tarefas, fotos, Home Assistant e mais, além de widgets da comunidade, temas e modelos completos de dashboard do catálogo.
 - **Toque e botões**: os botões frontais e as telas sensíveis ao toque podem girar páginas, pular para um dashboard, forçar uma atualização ou disparar um webhook. No Sticky e no E1003, regiões de toque em uma página atuam como controles.
 - **Firmware com foco em bateria**: o dispositivo permanece em deep sleep entre as atualizações. As atualizações de firmware são assinadas e entregues pelo ar pelo seu próprio servidor, então você só grava a partir do navegador uma vez.
-- **Open source**: o [servidor](https://github.com/dmellok/tesserae) e o [firmware do dispositivo](https://github.com/dmellok/tesserae-device-firmware) estão no GitHub.
+- **Código aberto**: o [servidor](https://github.com/dmellok/tesserae) e o [firmware do dispositivo](https://github.com/dmellok/tesserae-device-firmware) estão no GitHub.
 
 ## Hardware compatível
 
@@ -95,7 +95,7 @@ O projeto começou com a reTerminal E Series e cresceu junto com ela. O E1001 fo
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg" style={{width:200, height:'auto'}}/></div></td>
     </tr>
     <tr>
-      <td align="center">10,3" Monocromático<br/>Escala de cinza em 16 níveis, 1872 × 1404<br/>Toque suportado</td>
+      <td align="center">10,3" Monocromático<br/>Escala de cinza de 16 níveis, 1872 × 1404<br/>Toque suportado</td>
       <td align="center">13,3" Spectra™ 6 (Cor)<br/>1200 × 1600<br/>Cores completas no Tesserae</td>
     </tr>
     <tr>
@@ -122,7 +122,7 @@ O projeto começou com a reTerminal E Series e cresceu junto com ela. O E1001 fo
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/sticky-product.jpg" style={{width:200, height:'auto'}}/></div></td>
     </tr>
     <tr>
-      <td align="center">Escala de cinza em 4 níveis, 480 × 800 em retrato<br/>Toque suportado</td>
+      <td align="center">Escala de cinza de 4 níveis, 480 × 800 em retrato<br/>Toque suportado</td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -135,15 +135,15 @@ O projeto começou com a reTerminal E Series e cresceu junto com ela. O E1001 fo
 </div>
 
 :::note
-O mesmo firmware também roda na família XIAO ePaper, incluindo o kit EE02 13,3" Spectra™ 6, o kit EE03 10,3", o XIAO 7,5" ePaper Panel e o kit TRMNL 7,5" (OG) DIY. Veja a [lista de compatibilidade do Tesserae](https://docs.tesserae.ink/compatibility/) para todas as placas suportadas.
+O mesmo firmware também roda na família XIAO ePaper, incluindo o kit EE02 13,3" Spectra™ 6, o kit EE03 10,3", o XIAO 7,5" ePaper Panel e o TRMNL 7,5" (OG) DIY Kit. Veja a [lista de compatibilidade do Tesserae](https://docs.tesserae.ink/compatibility/) para todas as placas suportadas.
 :::
 
 ## O que você precisa
 
 - Um dispositivo reTerminal E Series ou reTerminal Sticky
-- Um cabo USB-C que transmita dados (um cabo apenas de carga alimenta o dispositivo, mas o computador não o enxerga)
-- Chrome ou Edge para desktop (o gravador usa Web Serial, que o Firefox e o Safari não suportam)
-- Uma rede Wi‑Fi de 2,4 GHz
+- Um cabo USB-C que transmita dados (um cabo apenas de carga alimenta o dispositivo, mas o computador não consegue vê-lo)
+- Chrome ou Edge para desktop (o flasher usa Web Serial, que o Firefox e o Safari não suportam)
+- Uma rede Wi-Fi de 2,4 GHz
 - Um computador, Raspberry Pi ou instalação do Home Assistant para executar o servidor Tesserae
 
 ## Etapa 1: Instalar o servidor Tesserae
@@ -174,7 +174,7 @@ https://github.com/dmellok/homeassistant-tesserae-addon
 
 3. Encontre **Tesserae** na App store, clique em **Install**, depois em **Start**, e abra-o a partir da barra lateral. O Home Assistant faz seu login.
 
-Seus dispositivos alcançam o Tesserae no próprio endereço do Home Assistant na porta 8765, por exemplo `http://homeassistant.local:8765`. Se você executar o App do broker Mosquitto, o Tesserae o usa automaticamente, para que seus painéis possam aparecer no Home Assistant depois (veja a Etapa 5).
+Seus dispositivos alcançam o Tesserae no próprio endereço do Home Assistant na porta 8765, por exemplo `http://homeassistant.local:8765`. Se você executar o App Mosquitto broker, o Tesserae o usa automaticamente, para que seus painéis possam aparecer no Home Assistant depois (veja a Etapa 5).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/26-ha-app-store-tesserae.png" style={{width:400, height:'auto'}}/></div>
 
@@ -204,15 +204,15 @@ Execute `docker compose up -d` novamente, acesse o endereço da máquina na port
 
 ### Proxmox VE
 
-Um único comando no host Proxmox cria um contêiner Debian 13 sem privilégios, instala a versão mais recente do Tesserae e o inicia como um serviço:
+Um comando no host Proxmox cria um contêiner Debian 13 sem privilégios, instala a versão mais recente do Tesserae e o inicia como um serviço:
 
 ```bash
 COMMUNITY_SCRIPTS_URL=https://raw.githubusercontent.com/dmellok/tesserae/main/scripts/proxmox \
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/dmellok/tesserae/main/scripts/proxmox/ct/tesserae.sh)"
 ```
 
-1. Quando for perguntado sobre o canal de release, pressione Enter ou aguarde dez segundos para escolher **stable**.
-2. Na caixa de diálogo do contêiner, escolha **Default** para usar os tamanhos do script, ou **Advanced** para definir você mesmo CPU, RAM, disco e rede. Mantenha os tamanhos de recursos padrão do script, incluindo o disco de 16 GB; o Tesserae também instala o Chromium para renderização. Se usar **Advanced**, reserve espaço em disco suficiente para o aplicativo, dependências do navegador e futuras atualizações.
+1. Quando for perguntado sobre um canal de lançamento, pressione Enter ou aguarde dez segundos para escolher **stable**.
+2. Na caixa de diálogo do contêiner, escolha **Default** para usar os tamanhos do script, ou **Advanced** para definir você mesmo CPU, RAM, disco e rede. Mantenha os tamanhos de recursos padrão do script, incluindo o disco de 16 GB; o Tesserae também instala o Chromium para renderização. Se você usar **Advanced**, deixe espaço em disco suficiente para o aplicativo, dependências do navegador e futuras atualizações.
 3. Quando terminar, o script mostra o endereço do contêiner. Abra `http://<container-ip>:8765` e escolha uma senha.
 
 Para atualizar depois, execute `update` dentro do contêiner.
@@ -243,9 +243,9 @@ Acesse o endereço do PC na porta 8765 e escolha uma senha. Se o dispositivo nã
 
 ### Primeira execução
 
-Na primeira vez que você abrir o Tesserae (exceto como um App do Home Assistant, que faz login para você), escolha uma senha. Um breve assistente de configuração será exibido:
+Na primeira vez que você abrir o Tesserae (exceto como um App do Home Assistant, que faz login para você), escolha uma senha. Em seguida, um breve assistente de configuração será exibido:
 
-1. **Help out**: escolha se deseja enviar uma contagem de instalações anônima para o projeto Tesserae ou manter a instalação offline.
+1. **Help out**: escolha se deseja enviar uma contagem anônima de instalações para o projeto Tesserae ou manter a instalação offline.
 2. **Timezone**: confirme o fuso horário detectado, para que os agendamentos sejam executados no seu horário local.
 3. **Transport**: deixe **REST API** selecionado. É a escolha certa para dispositivos alimentados por bateria como o reTerminal e o Sticky.
 4. **Device**: a página aguarda um painel se anunciar. Clique em **Skip for now** e aprove o dispositivo na Etapa 4, ou deixe esta página aberta enquanto você faz o flash: quando o dispositivo aparecer em **Discovered**, dê um nome a ele e clique em **Register**. Você não precisa de um código de pareamento.
@@ -259,7 +259,7 @@ Na primeira vez que você abrir o Tesserae (exceto como um App do Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/06b-wizard-device-discovered.png" style={{width:700, height:'auto'}}/></div>
 
-## Etapa 2: Grave o Firmware do Tesserae
+## Etapa 2: Fazer flash do firmware Tesserae
 
 <Tabs groupId="tesserae-hardware">
 <TabItem value="e-series" label="reTerminal E Series" default>
@@ -272,37 +272,37 @@ O reTerminal E Series se conecta por meio de um chip USB-serial WCH CH340, e o m
 2. Abra **[tesserae.ink/flash](https://tesserae.ink/flash)** no Chrome ou Edge.
 3. Em **Choose your panel**, selecione o modelo do seu reTerminal e, em seguida, escolha a versão mais recente em **Firmware build**.
 4. Clique em **Next: plug it in**, depois em **Connect & flash**, e selecione a porta serial do dispositivo.
-5. Aguarde de 60 a 90 segundos. Deixe o cabo conectado até que o gravador confirme o sucesso.
+5. Aguarde de 60 a 90 segundos. Deixe o cabo conectado até que o flasher confirme o sucesso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/20-flasher-reterminal-selected.png" style={{width:700, height:'auto'}}/></div>
 
-Quando a gravação terminar, a etapa **Connect it** do gravador pode enviar seus dados de Wi-Fi e o endereço do servidor para o dispositivo pelo mesmo cabo. Escolha **My own Tesserae server**, insira o endereço da Etapa 1 e avance para a Etapa 4.
+Quando o processo de flash terminar, a etapa **Connect it** do flasher pode enviar os dados da sua rede Wi-Fi e o endereço do servidor para o dispositivo pelo mesmo cabo. Escolha **My own Tesserae server**, insira o endereço da Etapa 1 e avance para a Etapa 4.
 
 </TabItem>
 <TabItem value="sticky" label="reTerminal Sticky">
 
-Quem possui um Sticky pode gravar o Tesserae diretamente a partir do Sticky Playground.
+Quem possui um Sticky pode fazer o flash do Tesserae diretamente a partir do Sticky Playground.
 
-1. Abra a [página do Tesserae no Sticky Playground](https://www.seeedstudio.com/sticky/playground/tesserae/) ou encontre o card **Tesserae** no Playground e clique em **Flash Now**.
+1. Abra a [página do Tesserae no Sticky Playground](https://www.seeedstudio.com/sticky/playground/tesserae/) ou encontre o cartão **Tesserae** no Playground e clique em **Flash Now**.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/21-playground-tesserae-card.png" style={{width:300, height:'auto'}}/></div>
 
-2. Conecte o Sticky ao computador com o cabo de dados USB-C e mantenha-o conectado até que a gravação seja concluída.
+2. Conecte o Sticky ao computador com o cabo de dados USB-C e mantenha-o conectado até que o processo de flash seja concluído.
 3. Em **Version and setup**, selecione a versão do firmware Tesserae exibida na página.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/22-playground-tesserae-page.png" style={{width:700, height:'auto'}}/></div>
 
-4. Em **Flash to device**, escolha um modo de gravação:
+4. Em **Flash to device**, escolha um modo de flash:
    - **Standard flash** grava o firmware e mantém as configurações de Wi-Fi salvas no Sticky.
-   - **Erase flash + flash** apaga toda a flash primeiro. Use-o quando estiver vindo de um firmware diferente.
+   - **Erase flash + flash** apaga toda a memória flash primeiro. Use-o quando estiver vindo de um firmware diferente.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/23-playground-flash-mode.png" style={{width:500, height:'auto'}}/></div>
 
-5. Clique em **Connect & flash**. Quando o Chrome ou Edge perguntar, selecione a porta serial do Sticky, que aparece como **USB Single Serial**, e clique em **Connect**.
+5. Clique em **Connect & flash**. Quando o Chrome ou o Edge perguntar, selecione a porta serial do Sticky, que aparece como **USB Single Serial**, e clique em **Connect**.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/24-playground-serial-port.png" style={{width:300, height:'auto'}}/></div>
 
-6. Aguarde até que a barra de progresso e o **Device Log** indiquem que a gravação foi concluída. O Playground reinicia o dispositivo para você.
+6. Aguarde até que a barra de progresso e o **Device Log** indiquem que o processo de flash foi concluído. O Playground reinicia o dispositivo para você.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/25-playground-device-log.png" style={{width:350, height:'auto'}}/></div>
 
@@ -312,12 +312,12 @@ O Playground usa o mesmo pacote de firmware que o [tesserae.ink/flash](https://t
 </Tabs>
 
 :::note
-Gravar o Tesserae substitui o firmware que está atualmente no dispositivo. Você pode voltar a qualquer momento gravando outro firmware.
+Fazer flash do Tesserae substitui o firmware atualmente no dispositivo. Você pode voltar a qualquer momento fazendo flash de outro firmware.
 :::
 
 ## Etapa 3: Conectar ao Wi-Fi
 
-Após a gravação, o dispositivo mostra uma tela de **Setup mode** com um código QR, o nome da rede de configuração e sua senha.
+Após o flash, o dispositivo mostra uma tela de **Setup mode** com um código QR, o nome da rede de configuração e sua senha.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/sticky-setup-mode.jpg" style={{width:300, height:'auto'}}/></div>
 
@@ -336,7 +336,7 @@ Após a gravação, o dispositivo mostra uma tela de **Setup mode** com um códi
 A rede de configuração permanece ativa por 15 minutos após a saída do último visitante. Se ela tiver expirado, reinicie o dispositivo ou pressione um botão frontal nas placas que tiverem um, para trazer a tela de configuração de volta.
 :::
 
-## Etapa 4: Registrar o Dispositivo no Tesserae
+## Etapa 4: Registrar o dispositivo no Tesserae
 
 Novos dispositivos aguardam sua aprovação, para que o dispositivo de mais ninguém possa se conectar ao seu servidor. Até que você o aprove, o dispositivo mostra **Almost done** e pede que você o aprove no Tesserae em **Settings → Devices**.
 
@@ -345,7 +345,7 @@ Novos dispositivos aguardam sua aprovação, para que o dispositivo de mais ning
 1. Na interface web do Tesserae, um selo **New device** aparece na barra lateral. Abra **Settings → Devices**, onde um banner informa "1 device has been heard but is not registered".
 2. Clique em **Register** no banner. O Tesserae mostra o modelo do dispositivo, o tamanho do painel e a versão do firmware, com o modelo já selecionado.
 3. Dê a ele um nome de exibição, como "Cozinha" ou "Corredor", e clique em **Register**.
-4. O dispositivo coleta seu token de acesso na próxima verificação e é movido para a lista **Devices**. Seu card mostra o que ele está exibindo, bateria, versão do firmware e a próxima atualização agendada.
+4. O dispositivo coleta seu token de acesso na próxima verificação e é movido para a lista **Devices**. Seu cartão mostra o que ele está exibindo, bateria, versão do firmware e a próxima atualização agendada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/08-devices-discovered.png" style={{width:700, height:'auto'}}/></div>
 
@@ -353,17 +353,18 @@ Novos dispositivos aguardam sua aprovação, para que o dispositivo de mais ning
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/10-device-registered.png" style={{width:700, height:'auto'}}/></div>
 
-## Etapa 5: Crie um Dashboard e Envie-o
+## Etapa 5: Crie um Dashboard e envie-o
 
-1. Abra **Dashboards → New dashboard**, ou instale um modelo pronto em **Settings → Widgets → Browse catalog**.
-2. Preencha o layout com widgets. Altere a visualização para **Panel view** para ver exatamente o quadro que seu dispositivo irá desenhar, com suas cores ou tons de cinza.
-3. Marque seu dispositivo em **Target devices** e clique em **Push**. O dispositivo desenha o novo quadro no próximo despertar.
+1. Abra **Dashboards → New dashboard** e dê um nome, ou instale um modelo pronto em **Settings → Widgets → Browse catalog**.
+2. O editor guia você pelas etapas: escolha seu dispositivo como exibição, selecione um layout e escolha um widget para cada célula.
+3. Altere a visualização de **Live** para **As the panel shows it** para ver exatamente o quadro que seu dispositivo irá desenhar, com suas cores ou tons de cinza.
+4. Clique no botão **Push to**, que traz o nome do seu dispositivo. O dispositivo desenha o novo quadro no próximo despertar.
 
 :::tip Primeiro dashboard mais rápido
 De volta à etapa **Dashboard** do assistente de configuração, **Create a starter dashboard** cria um relógio dimensionado para o seu dispositivo e vinculado a ele. Clique em **Push to panel** para confirmar que tudo está conectado e depois abra-o no editor para deixá-lo do seu jeito.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/16-editor-panel-view.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/28-editor-as-the-panel-shows-it.png" style={{width:500, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/13-device-card-after-push.png" style={{width:700, height:'auto'}}/></div>
 
@@ -396,22 +397,22 @@ Os três botões frontais funcionam imediatamente:
 | Direita | Próximo dashboard |
 | Refresh | Renderizar e desenhar o dashboard atual novamente |
 
-Altere o mapeamento para cada dispositivo em **Controls → Button map** no cartão do dispositivo. Um botão também pode ir diretamente para um dashboard específico ou disparar um webhook. Mantenha o **Refresh** pressionado por cerca de **3 segundos** e solte para alternar para a configuração Bluetooth por meio do app companheiro Tesserae. Mantenha-o pressionado por **20 segundos** para restaurar as configurações de fábrica, o que apaga as configurações salvas de Wi-Fi e servidor e retorna o dispositivo à tela de configuração.
+Altere o mapeamento para cada dispositivo em **Controls → Button map** no cartão do dispositivo. Um botão também pode ir direto para um dashboard específico ou disparar um webhook. Mantenha **Refresh** pressionado por cerca de **3 segundos** e solte para mudar para a configuração Bluetooth pelo app companheiro Tesserae. Mantenha-o pressionado por **20 segundos** para restaurar as configurações de fábrica, o que apaga as configurações salvas de Wi-Fi e servidor e retorna o dispositivo à tela de configuração.
 
-O **E1003** também oferece suporte a toque. Veja a seção Touch na aba Sticky; ele funciona da mesma forma em ambos os dispositivos.
+O **E1003** também suporta toque. Veja a seção Touch na aba Sticky; funciona da mesma forma em ambos os dispositivos.
 
 </TabItem>
 <TabItem value="sticky" label="reTerminal Sticky">
 
 - Pressione o **botão de energia** uma vez para acordar o Sticky e buscar a página atual imediatamente.
-- Mantenha o botão de energia pressionado por cerca de **3 segundos** e solte para alternar para a configuração Bluetooth por meio do app companheiro Tesserae.
+- Mantenha o botão de energia pressionado por cerca de **3 segundos** e solte para mudar para a configuração Bluetooth pelo app companheiro Tesserae.
 - Mantenha o botão de energia pressionado por **20 segundos** para restaurar as configurações de fábrica. Isso apaga as configurações salvas de Wi-Fi e servidor e retorna o Sticky à tela de configuração.
 
 ### Toque
 
-O toque vem desativado por padrão para economizar bateria. Para ativá-lo, abra o cartão do dispositivo, vá para **General** e ative **Touch input**. Regiões de toque em uma página passam a agir como botões. Elas podem alternar luzes do Home Assistant, trocar páginas ou acionar ações, e o painel confirma cada toque com uma atualização parcial em menos de um segundo.
+O toque vem desativado por padrão para economizar bateria. Para ativá-lo, abra o cartão do dispositivo, vá em **General** e ative **Touch input**. Regiões de toque em uma página passam a agir como botões. Elas podem alternar luzes do Home Assistant, trocar páginas ou acionar ações, e o painel confirma cada toque com uma atualização parcial em menos de um segundo.
 
-O toque mantém o controlador de toque alimentado durante o modo de sono profundo. Para uma vida útil de bateria maior, defina **Touch wake** como **Double tap or swipe**, que consome cerca de 1 mA. Com essa configuração, um único toque não acorda o painel, mas um toque duplo ou um gesto de deslizar acorda. O toque funciona melhor com alimentação USB.
+O toque mantém o controlador de toque alimentado durante o deep sleep. Para uma vida útil de bateria maior, defina **Touch wake** como **Double tap or swipe**, que consome cerca de 1 mA. Com essa configuração, um toque simples não acorda o painel, mas um toque duplo ou um gesto de deslizar acordam. O toque funciona melhor com alimentação USB.
 
 Ative **Beep on interaction** se quiser que o buzzer confirme cada toque ou pressão antes de o painel redesenhar.
 
@@ -430,11 +431,11 @@ O Tesserae verifica se há novo firmware quando os recursos online estão ativad
 
 ## FAQ
 
-### P1: O flasher não consegue encontrar meu dispositivo
+### P1: O flasher não encontra meu dispositivo
 
-- Use um cabo USB-C que transmita dados e uma porta USB que ofereça suporte a dados. Portas do painel frontal em alguns desktops não oferecem.
-- Use Chrome ou Edge. Firefox e Safari não oferecem suporte a Web Serial.
-- No macOS com um reTerminal E Series, instale e ative o driver CH340 (veja a Etapa 2).
+- Use um cabo USB-C que transmita dados e uma porta USB que suporte dados. Portas do painel frontal em alguns desktops não suportam.
+- Use Chrome ou Edge. Firefox e Safari não suportam Web Serial.
+- No macOS com um reTerminal E Série, instale e ative o driver CH340 (veja a Etapa 2).
 - Feche qualquer outro programa que possa estar usando a porta serial.
 
 ### P2: O dispositivo não aparece em Discovered
@@ -445,7 +446,7 @@ O Tesserae verifica se há novo firmware quando os recursos online estão ativad
 
 ### P3: O dispositivo mostra "Can't reach the server" ou "Wi-Fi unavailable"
 
-O dispositivo mostra o problema no painel e tenta novamente por conta própria. Se o Wi-Fi cair, ele tenta novamente a cada minuto por cerca de 12 minutos e então abre o portal de configuração uma vez por 15 minutos. Depois disso, ele continua tentando a rede salva em segundo plano e se reconecta quando a rede voltar. Para abrir o portal de configuração novamente, reinicie o dispositivo ou pressione um botão frontal.
+O dispositivo mostra o problema no painel e tenta novamente por conta própria. Se o Wi-Fi cair, ele tenta novamente a cada minuto por cerca de 12 minutos e então abre o portal de configuração uma vez por 15 minutos. Depois disso, continua tentando a rede salva em segundo plano e se reconecta quando a rede voltar. Para abrir o portal de configuração novamente, reinicie o dispositivo ou pressione um botão frontal.
 
 ### P4: O quadro é baixado, mas o painel não desenha
 
@@ -453,7 +454,7 @@ A bateria pode estar muito fraca para uma atualização do painel. Conecte a ali
 
 ## Agradecimentos Especiais
 
-Agradecimentos especiais à equipe da **Seeed Studio** pelo suporte durante todo o desenvolvimento do reTerminal E Series e do Sticky, em particular a **Mason Cao** e **Lily Li**.
+Agradecimentos especiais à equipe da **Seeed Studio** pelo suporte durante todo o desenvolvimento do reTerminal E Série e do Sticky, em particular a **Mason Cao** e **Lily Li**.
 
 Agradecimentos também aos contribuidores do Tesserae que ajudaram a tornar o projeto possível, em particular **[skynet01](https://github.com/skynet01)**, **[charmmmz](https://github.com/charmmmz)**, **[theiereman](https://github.com/theiereman)**, **[vaibhav8a](https://github.com/vaibhav8a)**, **[partridgeworks](https://github.com/partridgeworks)**, **[bablokb](https://github.com/bablokb)**, **[varanu5](https://github.com/varanu5)** e **[Frankynov](https://github.com/Frankynov)**, e à comunidade em geral pelos widgets, testes de firmware e relatos de hardware que sustentam esta integração.
 
@@ -461,13 +462,13 @@ Agradecimentos também aos contribuidores do Tesserae que ajudaram a tornar o pr
 
 - **[Website]** [Tesserae](https://tesserae.ink): página do projeto, lista de compatibilidade e o flasher no navegador
 - **[Docs]** [Documentação do Tesserae](https://docs.tesserae.ink/): instalação do servidor, dispositivos, toque, botões, Lineups e Home Assistant
-- **[Docs]** [Guia rápido do Seeed ePaper](https://docs.tesserae.ink/quickstart/seeed-unified/): os mesmos passos, com notas para cada dispositivo
+- **[Docs]** [Guia rápido do ePaper da Seeed](https://docs.tesserae.ink/quickstart/seeed-unified/): os mesmos passos, com notas para cada dispositivo
 - **[GitHub]** [Servidor Tesserae](https://github.com/dmellok/tesserae)
 - **[GitHub]** [Firmware de dispositivo Tesserae](https://github.com/dmellok/tesserae-device-firmware): código-fonte, releases e rastreador de issues
 - **[GitHub]** [App Tesserae para Home Assistant](https://github.com/dmellok/homeassistant-tesserae-addon)
 - **[Community]** [Discussões no GitHub](https://github.com/dmellok/tesserae/discussions)
-- **[Wiki]** [Primeiros Passos com o reTerminal E1003](/pt-br/getting_started_with_reterminal_e1003)
-- **[Wiki]** [Primeiros Passos com o reTerminal E1004](/pt-br/getting_started_with_reterminal_e1004)
+- **[Wiki]** [Primeiros passos com o reTerminal E1003](/pt-br/getting_started_with_reterminal_e1003)
+- **[Wiki]** [Primeiros passos com o reTerminal E1004](/pt-br/getting_started_with_reterminal_e1004)
 
 ## Suporte Técnico & Discussão de Produto
 
