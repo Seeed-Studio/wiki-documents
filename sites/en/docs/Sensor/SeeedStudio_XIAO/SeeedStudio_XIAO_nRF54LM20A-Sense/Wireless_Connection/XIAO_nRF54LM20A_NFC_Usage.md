@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF
 slug: /xiao_nrf54lm20a_with_nfc
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 11/17/2026
   author: Zeller
 createdAt: '2025-05-25'
 updatedAt: '2026-07-06'
@@ -97,7 +97,7 @@ On the XIAO nRF54LM20A, the default pins for the external NFC antenna are P1.01 
 <br/>
 :::caution
 
-This welding process is quite challenging and requires skilled welding techniques. Alternatively, you can choose to connect XIAO and NFC using flying wires. Please pay attention to safety precautions to avoid personal injury and equipment damage.
+This soldering process is quite challenging and requires skilled soldering techniques. Alternatively, you can choose to connect XIAO and NFC using flying wires. Please pay attention to safety precautions to avoid personal injury and equipment damage.
 
 The pins of NFC do not distinguish between positive and negative
 

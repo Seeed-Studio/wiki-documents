@@ -7,6 +7,7 @@ keywords:
   - NVIDIA DLI
   - LeRobot
 slug: /soarm101_isaac_sim_dli
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/isaac%20sim/isaac_sim_dli.gif
 last_update:
   date: 11/16/2026
   author: ZhuYuan
