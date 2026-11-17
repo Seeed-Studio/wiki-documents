@@ -326,6 +326,11 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_GR00T_2",
               "label": "GR00T 2 — Joint World-Action Modeling"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LAWAM",
+              "label": "LaWAM — Predicting Scene Changes Before Generating Robot Actions"
             }
           ]
         },
