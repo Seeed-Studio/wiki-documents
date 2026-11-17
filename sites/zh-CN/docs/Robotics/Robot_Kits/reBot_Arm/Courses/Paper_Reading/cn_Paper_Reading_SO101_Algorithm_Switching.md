@@ -16,6 +16,7 @@ url: https://wiki.seeedstudio.com/cn/robotics/hands_on_so101_algorithm_switching
 displayed_sidebar: PaperReadingSidebar
 translation:
   skip: [zh-CN]
+author: liujunjie
 ---
 
 import {Redirect} from '@docusaurus/router';

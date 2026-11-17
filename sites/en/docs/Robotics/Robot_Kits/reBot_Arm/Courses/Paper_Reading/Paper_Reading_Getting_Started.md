@@ -30,6 +30,7 @@ last_update:
 createdAt: '2026-10-16'
 updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_getting_started/
+author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';

@@ -20,6 +20,7 @@ last_update:
 createdAt: '2026-11-03'
 updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_vla_jepa/
+author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';

@@ -30,6 +30,7 @@ last_update:
 createdAt: '2026-10-21'
 updatedAt: '2026-10-21'
 url: https://wiki.seeedstudio.com/cn/robotics/hands_on_dataset_quality/
+author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';

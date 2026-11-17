@@ -13,6 +13,7 @@ last_update:
 createdAt: '2026-11-10'
 updatedAt: '2026-11-10'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_dm05/
+author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';

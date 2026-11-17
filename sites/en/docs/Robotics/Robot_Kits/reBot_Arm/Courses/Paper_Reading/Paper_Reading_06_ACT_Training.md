@@ -30,6 +30,7 @@ last_update:
 createdAt: '2026-10-21'
 updatedAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/robotics/hands_on_act_training/
+author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';

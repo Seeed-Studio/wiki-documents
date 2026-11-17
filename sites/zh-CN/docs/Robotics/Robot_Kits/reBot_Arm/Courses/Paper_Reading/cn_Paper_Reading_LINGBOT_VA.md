@@ -13,6 +13,7 @@ last_update:
 createdAt: '2026-11-06'
 updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_lingbot_va/
+author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';
