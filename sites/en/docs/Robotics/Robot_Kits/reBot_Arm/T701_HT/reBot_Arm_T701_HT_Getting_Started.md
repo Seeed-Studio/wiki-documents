@@ -56,6 +56,12 @@ The reBot Arm T701 is an open-source bimanual robotic platform from Seeed Studio
 
 ## Unbox and Assemble the Robot
 
+<div className="rebot-step-flow" role="list">
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
 ### Check the Package Contents
 
 Open the carrying case and check the robot parts and fasteners against the packing list.
@@ -67,6 +73,13 @@ Refer to the packing list for the contents of your shipment.
 <div align="center">
   <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="Open carrying case showing both arms, the torso column, the covers, and the cameras in the pictured configuration" loading="lazy" />
 </div>
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### Mount Both Arms to the Torso Column
 
@@ -103,6 +116,13 @@ With power disconnected, plug the **XT30 2+2 cable harness** extending from the 
   <img width={680} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-arm-connector.webp" alt="Routing of the XT30 2+2 cable harness from the torso column to the arm connector" loading="lazy" />
 </div>
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+
 ### Install the Shoulder Covers
 
 1. Fit the upper and lower halves of each green cover together around the shoulder.
@@ -127,6 +147,13 @@ With power disconnected, plug the **XT30 2+2 cable harness** extending from the 
   </figure>
 </div>
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### Install the Torso Cover
 
 1. Once both shoulder covers are secured, fit the torso cover and route the side cables through the corresponding cutouts. If your robot has the **RealSense D435i** camera shown below, align it with the opening in the front cover. **The Basic version does not include cameras.**
@@ -147,6 +174,11 @@ With power disconnected, plug the **XT30 2+2 cable harness** extending from the 
    <div align="center">
      <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/17-torso-cover-screws-repaired.webp" alt="Four screw positions circled in red on the rear torso cover" loading="lazy" />
    </div>
+
+  </div>
+</div>
+
+</div>
 
 {/* - **TODO** Add instructions for securing the base and installing the grippers separately. */}
 
@@ -173,6 +205,12 @@ Disconnect power before wiring. Before turning the robot on, make sure it is sec
 
 ## Calibrate and Run the Robot with the T701-HT SDK
 
+<div className="rebot-step-flow" role="list">
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
 ### Install the SDK
 
 :::info[Supported Platforms for the Motor Library]
@@ -188,7 +226,14 @@ The installation example below uses **Ubuntu 22.04 (x86_64) and Python 3.10**. F
 
 :::
 
-Open a terminal in the SDK root directory, which contains `motor_whl/`, `requirements.txt`, and `scripts/`. Run the SDK commands below from this directory.
+Clone the [T701-HT SDK repository](https://github.com/Seeed-Projects/reBot-Arm-T701-SDK) and enter the SDK root directory.
+
+```bash
+git clone https://github.com/Seeed-Projects/reBot-Arm-T701-SDK.git
+cd reBot-Arm-T701-SDK
+```
+
+Run the SDK commands below from this directory unless instructed otherwise.
 
 If you do not have Conda, install Miniforge.
 
@@ -209,103 +254,119 @@ python -I -m pip install -r requirements.txt
 Run the following command to check that Python can import the dependencies and load the URDF model. You can run this check with the robot disconnected.
 
 ```bash
-python -I -c "import hightorque_robot, numpy, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
+python -I -c "import hightorque_robot, numpy, osqp, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### Check the Serial Connection
 
-1. **List the serial ports.** Connect the robot, then run the following command in a terminal.
+The left arm connects to CAN1 and the right arm to CAN2. Set `board_serial` in the SDK's `T701-HT_robot_param/serial_binding.yaml` to the USB serial number of your communication board. The SDK uses the board's USB identity to find the current serial devices at startup.
 
-   ```bash
-   ls -l /dev/ttyACM*
-   ```
-
-2. **Check the serial ports for both arms.** Run the check script.
-
-   ```bash
-   python scripts/t701_ht_read_state.py --arm both --check
-   ```
-
-   The script checks the following.
-
-   - Serial port enumeration order
-   - USB identifiers of the communication board
-   - Serial port read and write permissions
-
-:::tip[Check a single arm]
-
-Replace `--arm both` with the argument for the arm you want to check.
-
-| Arm | Argument | Default serial port | SDK serial ID |
-| --- | --- | --- | --- |
-| Left arm | `--arm left` | `/dev/ttyACM0` | `serial_id=1` |
-| Right arm | `--arm right` | `/dev/ttyACM1` | `serial_id=2` |
-
-:::
-
-**Serial port permission errors**
-
-If the script reports a permission error, the following command from the SDK guide temporarily grants all local users read and write access to the specified serial ports. When checking one arm, specify only its port.
+Run the following commands to check the mapping for both arms without opening the serial ports. To check one arm, pass only its YAML file.
 
 ```bash
-sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1
+ls -l /dev/serial/by-id/
+python scripts/t701_ht_can_serial_adapter.py T701-HT_robot_param/T701-HT_left.yaml T701-HT_robot_param/T701-HT_right.yaml
 ```
 
-Run the serial port check again after granting access. Reconnecting the device or rebooting resets these permissions.
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
 ### Read Joint and Gripper State
 
-After the serial check passes, read one sample from both arms. Check that all seven joints and the gripper on each arm return feedback. The script reports joint position (rad), velocity (rad/s), and torque (N·m), and gripper position (rad) and velocity (rad/s).
-
-```bash
-python scripts/t701_ht_read_state.py --arm both --once
-```
-
-For continuous readings, run the following command and enter `1` for the left arm, `2` for the right arm, or `3` for both. Press `Ctrl+C` to exit.
+Run the script and enter `1` for the left arm, `2` for the right arm, or `3` for both. Confirm that all seven joints and the gripper of each selected arm report feedback. Press `Ctrl+C` to exit.
 
 ```bash
 python scripts/t701_ht_read_state.py
 ```
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### Set Zero Positions
 
-- **TODO** Add the standard zero positions and calibration diagrams for the joints and grippers on both arms. Clarify whether factory-calibrated robots need to be recalibrated.
+<div align="center">
+  <img width={520} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-zero-pose.png" alt="T701-HT zero pose" loading="lazy" />
+</div>
 
-After confirming the standard zero positions, move the joints and gripper of the selected arm to those positions. The command below selects the left arm. Replace `left` with `right` or `both` to select the right arm or both arms. Entering `yes` writes the current positions as the new zero positions and overwrites the stored values.
+Start the script and select the arm. Move the joints and gripper to their intended zero positions, then select `3` in the operation menu to replace the selected arm's stored zero positions with the current pose. Select `4` to move to the saved zero position or `0` to exit.
 
 ```bash
-python scripts/t701_ht_set_zero.py --arm left
+python scripts/t701_ht_set_zero.py
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
 
 ### Run the Demos
 
-:::warning
-Before running a demo, verify the joint zero positions, remove any payload, and clear the arms' range of motion. Start with one arm and support it when starting and stopping the demo. In the joint impedance demos, the selected arm moves toward the target pose set in the script.
+:::warning[Before running the demos]
+Verify the joint zero positions, remove any payload, and clear the arms' range of motion. Start with one arm on the first run. Support the arm when starting and stopping the gravity compensation demo.
 :::
 
-In any of the three demos, enter `1` for the left arm, `2` for the right arm, or `3` for both. You can also specify `--arm left`, `--arm right`, or `--arm both` on the command line. Press `Ctrl+C` to exit and send stop commands to the selected arms and grippers.
+Enter the `scripts` directory. After starting a demo, enter `1` for the left arm, `2` for the right arm, or `3` for both.
+
+```bash
+cd scripts
+```
 
 #### Gravity Compensation
 
-The demo applies 0.8 times the gravity torque calculated for the current pose as feedforward torque, making the arm easier to move by hand.
+The demo applies `0.8 × G(q)` as MIT torque feedforward to make the arm easier to move by hand. The joint `Kp` and `Kd` gains and the gripper torque are zero.
 
 ```bash
-python scripts/t701_ht_gravity_compensation.py
+python t701_ht_gravity_compensation.py
 ```
 
-#### Joint Impedance with Gravity Feedforward
+#### Joint Impedance
+
+:::warning[Before starting a joint impedance demo]
+**Make sure the area around the robot and within the arms' range of motion is clear of people and fragile objects before starting either demo.** The selected arm moves toward a fixed pose as soon as the demo starts.
+:::
+
+The left-arm target is approximately `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad. The right-arm target reverses the sign of each joint angle.
+
+**Joint impedance with gravity feedforward**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity.py
+python t701_ht_joint_impedance_with_gravity.py
 ```
 
-#### Joint Impedance with Gravity Feedforward and Friction Compensation
+**Joint impedance with gravity feedforward and friction compensation**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity_friction.py
+python t701_ht_joint_impedance_with_gravity_friction.py
 ```
+
+All three demos apply the configured joint torque limits. Press `Ctrl+C` to stop gravity compensation or to return the arms to zero before stopping a joint impedance demo. During the return, press `Ctrl+C` again to stop the arms.
+
+See [T701 HT with Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
+
+  </div>
+</div>
+
+</div>
 
 ## Troubleshooting
 
-- **No serial port found.** Check that the robot is powered on and that the USB data cable is plugged into the mainboard's USB-C port. Run `ls -l /dev/ttyACM*` again.
-- **Serial port enumeration does not match the configuration.** Check the default device path for the selected arm and whether any other USB serial devices are connected.
+- **No serial port found.** Confirm that the robot is powered on and the USB data cable is connected to the mainboard's USB-C port, then run `ls -l /dev/serial/by-id/` again.
+- **Matching USB interface missing.** Check that `board_serial` matches the connected board and that the left arm uses CAN1 and the right arm uses CAN2.
+- **Permission denied.** On Ubuntu, check that your user has read and write access to the serial device through the `dialout` group.
