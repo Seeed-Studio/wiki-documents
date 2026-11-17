@@ -179,7 +179,7 @@ Inserta la tarjeta microSD preparada. Desde **Home**, desliza hacia abajo para e
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Cairn/Cairn_record.jpg" style={{width:600, height:'auto'}}/>
-</div]
+</div>
 
 La grabadora guarda archivos WAV en **`Recordings`**, usando fechas y horas cuando el reloj está configurado. Ofrece grabación a 8 o 16 kHz, **Voice start** para comenzar al detectar sonido y marcadores. La barra de estado muestra **MIC** o **REC** mientras el micrófono está activo.
 
