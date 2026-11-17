@@ -8,7 +8,7 @@ keywords:
   - Audio
   - I2S
 image: https://files.seeedstudio.com/wiki/SenseCAP/Cairn/Cairn_music.jpg
-slug: /meshcore_audio_development_l2/
+slug: /meshcore_audio_development_l2
 sku: 100029766
 sidebar_position: 2
 last_update:
