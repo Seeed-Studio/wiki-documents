@@ -179,6 +179,8 @@ Power on the display within Bluetooth range. Home Assistant should discover it a
 
 The device page shows battery, buttons, firmware status, and display content. More detail: [Home Assistant integration](https://github.com/OpenDisplay/Home_Assistant_Integration)
 
+:::note While Home Assistant ships with an OpenDisplay Integration you may need to install the marketplace version by the OpenDisplay team above in order to access some features like "opendisplay.drawcustom".:::
+
 ## Going further
 
 ### Enable encryption
@@ -214,6 +216,7 @@ Model your schedule at [Battery calculator](https://opendisplay.org/firmware/bat
 - **[Wiki]** [In-depth OpenDisplay guide](https://wiki.seeedstudio.com/EN04_opendisplay/)
 - **[ZIP]** [3D-Printed Case Files](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/Resources/OpenDisplay_4.26_Mono_Kit_3D_Files.zip)
 - **[UF2]** [Factory Firmware (4.26" Mono Kit)](https://files.seeedstudio.com/wiki/OpenDisplay_diy_kit/4.26/Resources/OpenDisplay_4.26_Mono_Kit_Factory_Firmware.uf2)
+- **[Search for Community HA Blueprints]** [Home Assistant Community Forum](https://community.home-assistant.io/search?q=%23blueprints-exchange%20opendisplay%20Mono%20Kit)
 
 ## Troubleshooting
 
