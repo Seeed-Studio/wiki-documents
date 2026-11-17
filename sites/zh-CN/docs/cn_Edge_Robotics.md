@@ -144,8 +144,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <h3>reBot Arm T701 HT</h3>
   </summary>
   <div className="product-body">
-    <div className="learning-steps">
-      <a className="step-card" href="/cn/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>快速开始</b></a>
+    <div className="learning-group">
+      <h4>快速上手与 SDK</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>快速开始</b></a>
+        <a className="step-card" href="/cn/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+      </div>
     </div>
   </div>
 </details>
