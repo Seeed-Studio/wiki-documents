@@ -171,8 +171,6 @@ export const toc = [
 
 ![中文教学图 1：VA 在推理路径中预测未来，VLA 2.0 将未来监督学进查询表示](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide01-future-information.png)
 
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide01-future-information.png)
-
 *教学示意：沿实线看动作生成，沿橙色虚线看训练监督。VLA 2.0 的教师目标对齐到动作专家实际读取的查询表示，推理行保留学到的查询路径。图中省略机器人状态等共同条件。*
 
 | 比较项 | LingBot-VA | LingBot-VLA 2.0 |
@@ -211,8 +209,6 @@ $$
 
 ![中文教学图 2：未来手轨迹统一转换到固定的当前相机坐标系](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide02-current-camera.png)
 
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide02-current-camera.png)
-
 *教学示意：先从世界坐标减去当前相机的位置，再用同一个参考系表达后续各点。图中的 0.1、0.2、0.3 米是方向一致时的一维平移例子；完整变换还包含旋转。*
 
 语言监督由 Qwen3.6-27B 自动标注，包含整段任务指令及时间连续的子任务指令。动作标签使用 15 类操作与 `transit`、`idle`、`other` 三类辅助标签；物体名称是开放词汇。同一次交互的抓取、搬运、释放归入一个子任务，避免切得过碎。原文图 5 显示 `move` 与 `transit` 合计约占子任务数量的 88.7%，`idle` 被排除出训练；数据量大仍不意味着各类技能均衡。
@@ -238,8 +234,6 @@ $$
 **教学例子：** 一个“5 个关节 + 1 个夹爪”的单臂数据集，原始向量可为 `[q₁,…,q₅,g]`。LeRobot 将前 5 个数放到 `arm.position` 槽位前部，将 `g` 放到 `effector.position`，其余补零并通过有效维度掩码排除动作损失；输出后再取回原始 6 维。对应映射分别用于状态与动作，还需与相机映射、归一化统计保持一致。
 
 ![中文教学图 3：六维原生动作映入规范槽位，经掩码训练后再取回执行](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide03-action-slots.png)
-
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide03-action-slots.png)
 
 *教学示意：五个关节和一个夹爪占用各自对应的槽位，中间可以隔着未使用维度。灰色槽位被屏蔽的是动作损失；输出还要取回有效维度、恢复机器人的控制接口。*
 
@@ -275,8 +269,6 @@ $u$ 是动作 token 的内部特征，$e_j$ 是路由向量，$s_j$ 是匹配分
 
 ![中文教学图 4：加偏置选专家，回到原始得分计算混合权重](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide04-expert-routing.png)
 
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide04-expert-routing.png)
-
 *教学示意：从上到下依次看选择、加权和汇合。三选二与路由分支缩放系数取 1 都是教学简化；共享专家另走一路，公开配置仍是 32 选 4。*
 
 论文预训练采用不额外加入均衡损失的策略：专家负载高于均值就减小偏置，低于均值就增大偏置（式 8）。这里的“loss-free”仅指负载均衡，不表示模型没有动作损失。**当前公开后训练配置另启用了序列均衡损失和 router z-loss，不能与论文预训练机制混为同一设置。**
@@ -292,8 +284,6 @@ $u$ 是动作 token 的内部特征，$e_j$ 是路由向量，$s_j$ 是匹配分
 教师有互补作用：**LingBot-Depth** 提供空间几何特征，**DINO-Video** 提供带运动信息的视频特征。学生看到当前观测与指令，教师在训练时还可看到未来画面来提供目标。未来图像不作为学生推理时的输入。
 
 ![中文教学图 5：两组查询接受深度和视频特征监督，推理只保留学生动作路径](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide05-query-training-inference.png)
-
-[查看原尺寸](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide05-query-training-inference.png)
 
 *教学示意：绿色大框包含当前与未来两组查询，训练中的深度、视频教师共同提供两时刻的目标。橙色虚线表示特征对齐，具体投影与损失见下式；推理只沿下排实线计算。*
 

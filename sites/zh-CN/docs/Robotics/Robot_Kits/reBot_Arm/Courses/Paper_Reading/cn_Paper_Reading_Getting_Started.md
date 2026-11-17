@@ -122,6 +122,7 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/cn/robotics/paper_reading_vla_jepa/">VLA-JEPA 论文精读</a></li>
         <li><a href="/cn/robotics/paper_reading_lingbot_va/">LingBot-VA 论文精读</a></li>
         <li><a href="/cn/robotics/paper_reading_gr00t_2/">GR00T 2 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_lawam/">LaWAM 论文精读</a></li>
       </ul>
       <span className="paper-reading-update-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
