@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF
 slug: /xiao_nrf54lm20a_with_nfc
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 11/17/2026
   author: Zeller
 createdAt: '2025-05-25'
-updatedAt: '2026-07-08'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_nfc/
 ---
 
@@ -44,7 +44,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_with_nfc/
 <br/>
 近距離無線通信（NFC）は、2 つのデバイス間で少量のデータをワイヤレス転送するための技術です。非常にシンプルな通信プロトコルを使用するため、Bluetooth® Low Energy よりも素早く接続できます。ただし、NFC は通信を有効にするために磁気誘導を使用するため、デバイス同士を接続するには非常に近づける必要があります（10 cm 未満）。】
 
-- *Nordic シリーズチップ向けの NFC チュートリアルとリファレンスについては、[Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html) を参照してください。*
+- *Nordic シリーズチップ向けの NFC チュートリアルおよびリファレンスについては、[Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html) を参照してください*
 - *NFC の技術仕様は [NFC Forum specification overview](https://nfc-forum.org/build/specifications) から入手できます。*
 
 XIAO nRF54LM20A には、NFC 機能をさらに探索・活用するための NFC インターフェースが予約されています。
@@ -97,7 +97,7 @@ XIAO nRF54LM20A では、外部 NFC アンテナ用のデフォルトピンは P
 <br/>
 :::caution
 
-このはんだ付け作業はかなり難しく、高度なはんだ付け技術が必要です。代わりに、ジャンパーワイヤーを使用して XIAO と NFC を接続することもできます。人身事故や機器の損傷を避けるため、安全対策には十分注意してください。
+このはんだ付け作業はかなり難しく、高度なはんだ付け技術が必要です。代わりに、ジャンパーワイヤーを使用して XIAO と NFC を接続することもできます。人身事故や機器の損傷を避けるため、安全対策に十分注意してください。
 
 NFC のピンには極性（プラス・マイナス）の区別はありません。
 
@@ -140,9 +140,9 @@ NFC のピンには極性（プラス・マイナス）の区別はありませ�
 
 この実験を行うには、NFC 機能を備えたスマートフォンを用意してください。
 
-1. NFC で読み取った情報をより詳細に確認するには、お使いのシステムに対応したアプリをダウンロードする必要があります。
+1. NFC 読み取り情報をより詳細に確認するには、お使いのシステムに対応したアプリをダウンロードする必要があります。
 
-- iOS：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
+- iOS ：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
 - Android：[nRF NFC Toolbox](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nfc)
 
 2. スマートフォンの NFC エリアを NFC アンテナに近づけて、詳細な NFC 情報を読み取ります。
@@ -170,9 +170,9 @@ Witaj świecie!
 
 ### NFC Launch App
 
-このセクションでは NFC のアプリ起動機能を扱います。**nRF Toolbox for Bluetooth LE** を検索してください。
+このセクションでは NFC の機能を扱います。**nRF Toolbox for Bluetooth LE** を検索してください。
 
-1. 拡張機能内で空のサンプルプロジェクトを作成し、既存のサンプルをコピーするオプションを選択してから **NFC Launch App** を選びます。[NFC Records text](#nfc-records-text) を参照して設定とコンパイルを行います。
+1. 拡張機能内で空のサンプルプロジェクトを作成し、既存のサンプルをコピーするオプションを選択してから、**NFC Launch App** を選択します。[NFC Records text](#nfc-records-text) を参照して設定およびコンパイルを行います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -186,9 +186,9 @@ Witaj świecie!
 
 #### 結果
 
-1. NFC で読み取った情報をより詳細に確認するには、お使いのシステムに対応したアプリをダウンロードする必要があります。
+1. NFC 読み取り情報をより詳細に確認するには、お使いのシステムに対応したアプリをダウンロードする必要があります。
 
-- iOS：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
+- iOS ：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
 - Android：[nRF NFC Toolbox](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nfc)
 
 2. スマートフォンの NFC センサーを NFC アンテナに近づけます。ブラウザが起動して「no.nordicsemi.android.nrftoolbox」を検索し、読み取り履歴が nRF NFC Toolbox に表示されます。
@@ -208,13 +208,13 @@ Witaj świecie!
 
 ## まとめ
 
-NFC 機能は、データ書き込みや低消費電力でのウェイクアップなど、さまざまなシナリオで再利用できます。nRF Connect SDK には対応するサンプルコードが用意されており、これらを拡張して実際のアプリケーションに応用できます。例えば、NFC の低消費電力ウェイクアップとモーター制御を組み合わせることで、日常的に使用できるシンプルなスマートロックを実現できます。
+NFC 機能は、データ書き込みや低消費電力でのウェイクアップなど、さまざまなシナリオで再利用できます。nRF Connect SDK には対応するサンプルコードが用意されています。これらのサンプルを拡張して実際のアプリケーションに応用できます。例えば、NFC の低消費電力ウェイクアップとモーター制御を組み合わせることで、日常的に使用できるシンプルなスマートロックを実現できます。
 
 さらに、上記の例を通じて、XIAO nRF54LM20A 上での NFC 実装について基本的な理解が得られたと考えています。皆さまの創造的なアイデアやオープンソースコミュニティへの貢献を楽しみにしています。
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
