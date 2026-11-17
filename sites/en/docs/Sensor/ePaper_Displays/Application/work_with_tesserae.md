@@ -15,11 +15,11 @@ image: https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/cover.webp
 slug: /reterminal_e10xx_tesserae
 sidebar_position: 12
 last_update:
-  date: 11/16/2026
+  date: 11/17/2026
   author: Kayden D'Mello
 createdAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_tesserae/
-updatedAt: '2026-11-16'
+updatedAt: '2026-11-17'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -41,7 +41,7 @@ Tesserae is an open source, self-hosted dashboard server for e-paper displays. Y
 
 The project began with the reTerminal E Series and grew alongside it. The E1001 was one of the first devices Tesserae supported, and the E Series remains among the most-flashed hardware on the project's web flasher.
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/dmellok/tesserae-seeed-docs/main/wiki/images/27-editor-live-view.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/27-editor-live-view.png" style={{width:500, height:'auto'}}/></div>
 
 ### Why use Tesserae?
 
@@ -364,7 +364,7 @@ New devices wait for your approval, so nobody else's device can attach itself to
 Back on the setup wizard's **Dashboard** step, **Create a starter dashboard** makes a clock sized to your device and bound to it. Click **Push to panel** to confirm everything is connected, then open it in the editor to make it yours.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/dmellok/tesserae-seeed-docs/main/wiki/images/28-editor-as-the-panel-shows-it.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/28-editor-as-the-panel-shows-it.png" style={{width:500, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/13-device-card-after-push.png" style={{width:700, height:'auto'}}/></div>
 
