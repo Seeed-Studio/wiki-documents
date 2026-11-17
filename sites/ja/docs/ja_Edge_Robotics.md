@@ -58,8 +58,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>クイックスタート &amp; SDK</h4>
       <div className="learning-steps">
         <a className="step-card" href="/ja/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>reBot-RS クイックスタート</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>LeRobot を用いた reBot-RS</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio を用いた reBot-RS</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS と LeRobot</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS と Pinocchio</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>reBot-RS モーター SDK</b></div></a>
         <a className="step-card" href="/ja/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>ノーコード VLA：SenseCraft Robotics Platform</b></div></a>
       </div>
@@ -67,11 +67,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>アプリケーション</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>ビジュアルグラスピングによる reBot-RS</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>ROS2 と連携した reBot-RS</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>Isaac Sim と連携した reBot-RS</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web 制御システム：実機 &amp; MuJoCo</b></div></a>
-        <a className="step-card" href="/ja/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>Agent Claw と連携した reBot-RS</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS とビジュアルグラスピング</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS 手首追従</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">3</span><div><b>reBot-RS と ROS2</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">4</span><div><b>reBot-RS と Isaac Sim</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-RS Web 制御システム：実機 &amp; MuJoCo</b></div></a>
+        <a className="step-card" href="/ja/wrc_demo_tutorial/"><span className="step-index">6</span><div><b>reBot-RS と Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -81,7 +82,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">カメラマウントコレクション</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS/3D_Printed_Parts/Soft_Gripper" target="_blank" rel="noopener noreferrer">ソフトグリッパーキット（RS / DM 共有）</a>
         <a href="https://motorbridge.seeedstudio.com/" target="_blank" rel="noopener noreferrer">MotorBridge モーター SDK とデバッグガイド</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README.md" target="_blank" rel="noopener noreferrer">reBot-RS ハードウェアドキュメントおよび部品表（BOM）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README.md" target="_blank" rel="noopener noreferrer">reBot-RS ハードウェアドキュメントと部品表（BOM）</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/reBot_B601_RS_v1.0_20260625.step" target="_blank" rel="noopener noreferrer">reBot-RS 完全 STEP モデル（v1.0）</a>
         <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">reBot-RS デジタルツイン / Web 制御システム</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Pinocchio 運動学および制御コード</a>
@@ -103,8 +104,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>クイックスタート &amp; SDK</h4>
       <div className="learning-steps">
         <a className="step-card" href="/ja/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>reBot-DM クイックスタート</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>LeRobot を用いた reBot-DM</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>Pinocchio を用いた reBot-DM</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM と LeRobot</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM と Pinocchio</b></div></a>
         <a className="step-card" href="/ja/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>ノーコード VLA：SenseCraft Robotics Platform</b></div></a>
       </div>
     </div>
@@ -112,8 +113,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>アプリケーション</h4>
       <div className="learning-steps">
         <a className="step-card" href="/ja/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM ビジュアルグラスプ</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>ROS2 と連携した reBot-DM</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>Isaac Sim と連携した reBot-DM</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM と ROS2</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM と Isaac Sim</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web 制御システム：実機 &amp; MuJoCo</b></div></a>
       </div>
     </div>
@@ -124,7 +125,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">カメラマウントコレクション</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper" target="_blank" rel="noopener noreferrer">ソフトグリッパーキット（RS / DM 共有）</a>
         <a href="https://motorbridge.seeedstudio.com/" target="_blank" rel="noopener noreferrer">MotorBridge モーター SDK とデバッグガイド</a>
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme.md" target="_blank" rel="noopener noreferrer">reBot-DM ハードウェアドキュメントおよび部品表（BOM）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/readme.md" target="_blank" rel="noopener noreferrer">reBot-DM ハードウェアドキュメントと部品表（BOM）</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/reBot_B601_DM_v1.1_20260625.step" target="_blank" rel="noopener noreferrer">reBot-DM 完全 STEP モデル（v1.1）</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">reBot-DM 実機性能テスト</a>
         <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">reBot-DM デジタルツイン / Web 制御システム</a>
@@ -172,7 +173,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM と Amazing Hand デクストラスハンド</b></div></a>
         <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac シミュレーション</b></div></a>
         <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 強化学習</b></div></a>
-        <a className="step-card" href="/ja/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 と Isaac Sim</b></div></a>
+        <a className="step-card" href="/ja/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>Isaac Sim を用いた SO-ARM101</b></div></a>
         <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
@@ -270,7 +271,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   <section id="courses" className="section-block compact-section">
     <div className="section-title-row">
       <div>
-        <span className="section-kicker">Learning</span>
+        <span className="section-kicker">ラーニング</span>
         <h2>コース</h2>
       </div>
       <p>Seeed Robotics チームが執筆・共有する無料コースシリーズです。</p>
@@ -278,7 +279,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-steps">
       <a className="step-card" href="/ja/robotics/rebot_physical_ai_course_introduction/">
         <span className="step-index">🎓</span>
-        <div><b>初心者向けコース</b></div>
+        <div><b>ビギナーコース</b></div>
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">reBot-rs</span>
           <span className="course-compatibility-badge">reBot-dm</span>
@@ -286,7 +287,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </a>
       <a className="step-card" href="/ja/robotics/soarm_physical_ai_course_introduction/">
         <span className="step-index">🎓</span>
-        <div><b>初心者向けコース</b></div>
+        <div><b>ビギナーコース</b></div>
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">SO101</span>
         </span>
@@ -323,7 +324,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   <section id="actuators" className="section-block compact-section">
     <div className="section-title-row">
       <div>
-        <span className="section-kicker">Actuators</span>
+        <span className="section-kicker">アクチュエータ</span>
         <h2>関節アクチュエータ &amp; モーター</h2>
       </div>
       <p>モーターデバッグ、通信プロトコル、関節トラブルシューティングのためのリソースです。</p>
@@ -353,7 +354,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   <section id="sensors" className="section-block compact-section">
     <div className="section-title-row">
       <div>
-        <span className="section-kicker">Sensors</span>
+        <span className="section-kicker">センサー</span>
         <h2>センサー &amp; 認識</h2>
       </div>
       <p>ビジュアルグラスピング、SLAM、音声インタラクション、ロボット状態認識のためのリソースです。</p>
