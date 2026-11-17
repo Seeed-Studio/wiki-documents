@@ -228,6 +228,7 @@ const sidebars = {
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_VLA_JEPA', label: 'VLA-JEPA 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LINGBOT_VA', label: 'LingBot-VA 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_GR00T_2', label: 'GR00T 2 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LAWAM', label: 'LaWAM 论文精读' },
           ],
         },
         {

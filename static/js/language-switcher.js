@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-12 11:18:40 (北京时间)
-// 多语言页面: 2653 个
+// 生成时间: 2026-11-16 17:09:34 (北京时间)
+// 多语言页面: 2696 个
 
 (function() {
   'use strict';
@@ -697,6 +697,13 @@
     "pt"
   ],
   "/How_to_Train_and_Deploy_YOLOv8_on_reComputer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson-orin-industrial-vision-benchmark": [
     "cn",
     "en",
     "es",
@@ -1956,6 +1963,13 @@
     "pt"
   ],
   "/rtl8852be_wireless_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/usb_kvm_capture_kit_getting_start": [
     "cn",
     "en",
     "es",
@@ -4720,6 +4734,69 @@
     "ja",
     "pt"
   ],
+  "/recomputer_ai_r2000_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_industrial_r2x_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_industrial_rk_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_pi_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_r1000_r1100_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_rk_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_rk_module_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/R1000_default_username_password": [
     "cn",
     "en",
@@ -5084,6 +5161,27 @@
     "ja",
     "pt"
   ],
+  "/wio_lr2021_dev_kit_command_reference": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_lr2021_dev_kit_factory_firmware_user_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_lr2021_dev_kit_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/wio-s3_wireless_module_command_list": [
     "cn",
     "en",
@@ -5287,7 +5385,21 @@
     "ja",
     "pt"
   ],
-  "/meshpager_x2_node": [
+  "/x2_get_started_for_meshtastic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshpager_x2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/easyskymesh_x1": [
     "cn",
     "en",
     "es",
@@ -5407,6 +5519,13 @@
     "pt"
   ],
   "/meshtastic_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/easyskymesh_t1000e": [
     "cn",
     "en",
     "es",
@@ -6267,6 +6386,27 @@
     "ja",
     "pt"
   ],
+  "/halowlink2_media_gateway": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/halowlink2_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/halowlink2_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_wifi_halow_mini_pcie_module": [
     "cn",
     "en",
@@ -6429,6 +6569,13 @@
     "pt"
   ],
   "/lerobot_starai_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/soarm101_isaac_sim_dli": [
     "cn",
     "en",
     "es",
@@ -7072,6 +7219,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_g05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_getting_started": [
     "cn",
     "en",
@@ -7443,6 +7597,153 @@
     "ja",
     "pt"
   ],
+  "/rebot_t701_ht_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_4": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_5": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_6": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_7": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_8": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_9": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_10": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_11": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_12": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_13": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_14": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_15": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_16": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_17": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_18": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_19": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_course": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/soarm_physical_ai_course_chapter_1": [
     "cn",
     "en",
@@ -7749,10 +8050,6 @@
     "es",
     "ja",
     "pt"
-  ],
-  "/soarm101_isaac_sim_dli": [
-    "cn",
-    "en"
   ],
   "/training_soarm101_policy_with_isaacLab": [
     "cn",
@@ -9764,6 +10061,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_squareline_vision": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_tesserae": [
     "cn",
     "en",
     "es",
