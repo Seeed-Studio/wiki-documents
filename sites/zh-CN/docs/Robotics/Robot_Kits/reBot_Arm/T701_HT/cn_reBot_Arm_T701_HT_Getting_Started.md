@@ -356,7 +356,7 @@ python t701_ht_joint_impedance_with_gravity_friction.py
 
 三个示例均按配置限制关节力矩。按 `Ctrl+C` 后，重力补偿示例停止，关节阻抗示例回零再停止。回零期间再次按 `Ctrl+C` 可停止机械臂。
 
-正逆运动学验证、笛卡尔轨迹和键盘控制示例见 [T701 HT 与 Pinocchio](./cn_reBot_Arm_T701_HT_pinocchio.md)。
+正逆运动学验证、笛卡尔轨迹和键盘控制示例见 [T701 HT 与 Pinocchio](/cn/rebot_t701_ht_pinocchio/)。
 
   </div>
 </div>

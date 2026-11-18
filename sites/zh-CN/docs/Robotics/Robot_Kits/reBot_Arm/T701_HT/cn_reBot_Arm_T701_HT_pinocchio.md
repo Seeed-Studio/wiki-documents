@@ -27,7 +27,7 @@ T701-HT SDK 使用 Pinocchio 加载 URDF 模型，计算机械臂末端位姿和
 
 ## 实机准备
 
-按 [T701 HT 快速开始的 SDK 安装步骤](./cn_reBot_Arm_T701_HT_Getting_Started.md#安装-sdk) 获取 SDK 并安装依赖。然后按快速开始的后续步骤检查串口映射、读取关节和夹爪反馈，并确认零点。
+按 [T701 HT 快速开始的 SDK 安装步骤](/cn/rebot_t701_ht_getting_started/#安装-sdk) 获取 SDK 并安装依赖。然后按快速开始的后续步骤检查串口映射、读取关节和夹爪反馈，并确认零点。
 
 :::warning[启动实机示例前]
 
