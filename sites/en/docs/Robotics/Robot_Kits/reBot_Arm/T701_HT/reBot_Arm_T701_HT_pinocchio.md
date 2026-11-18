@@ -107,7 +107,6 @@ Run these examples in an interactive local terminal or SSH session. After you se
 | End-effector pose | `python t701_ht_keyboard_cartesian_pos_control.py` | Each key press changes the target end-effector pose by one step. If IK fails, the example retains the previous joint target. |
 | End-effector velocity | `python t701_ht_keyboard_cartesian_vel_control.py` | Hold a key to translate or rotate the end effector continuously. Release it to ramp the commanded velocity down to zero. |
 | End-effector velocity with collision prediction | `python t701_ht_keyboard_cartesian_vel_collision_control.py` | Use the keys to control end-effector velocity. If the example predicts a collision or joint limit violation, it commands zero velocity and displays a message. |
-| Cartesian impedance | `python t701_ht_keyboard_cartesian_impedance_control.py` | Use the keys to adjust the target end-effector pose. The arm tracks it compliantly using joint torque control with gravity compensation. |
 | Null-space posture lock | `python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py` | Tracks the target end-effector pose while keeping the joint posture as close as possible to the reference posture. |
 
 - **Translate.** Use `W` / `S`, `A` / `D`, and `Q` / `E` to move along the X, Y, and Z axes, respectively.

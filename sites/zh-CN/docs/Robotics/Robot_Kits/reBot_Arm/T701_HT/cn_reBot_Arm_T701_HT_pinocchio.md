@@ -105,7 +105,6 @@ cd scripts
 | 末端位姿 | `python t701_ht_keyboard_cartesian_pos_control.py` | 按键逐步改变末端目标位姿。逆解失败时保持上一关节目标。 |
 | 末端速度 | `python t701_ht_keyboard_cartesian_vel_control.py` | 按住键时末端持续平移或旋转，松开后速度指令逐步降至零。 |
 | 末端速度与碰撞预测 | `python t701_ht_keyboard_cartesian_vel_collision_control.py` | 按键控制末端速度。预测到碰撞或关节越限时下发零速度并提示。 |
-| 笛卡尔阻抗 | `python t701_ht_keyboard_cartesian_impedance_control.py` | 按键调整末端目标位姿，通过关节力矩和重力补偿柔顺跟踪。 |
 | 零空间姿态锁定 | `python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py` | 跟踪末端目标位姿，同时尽量保持参考关节姿态。 |
 
 - **平移**。`W` / `S`、`A` / `D`、`Q` / `E` 分别沿 X、Y、Z 轴移动。
