@@ -1,5 +1,5 @@
 ---
-description: I2C 経由で reSpeaker XVF3800 44mm から到来方向（DoA）と音声検出フラグを読み取りつつ、I2S オーディオを XIAO ESP32-S3 Plus にストリーミングし、チャネルごとの RMS を計算します。
+description: I2C 経由で reSpeaker XVF3800 44mm から到来方向 (DoA) と音声検出フラグを読み取りつつ、I2S オーディオを XIAO ESP32-S3 Plus にストリーミングし、チャネルごとの RMS を計算します。
 title: reSpeaker XVF3800 44mm と XIAO ESP32-S3 Plus を用いた DoA と VAD
 keywords:
   - reSpeaker 44mm
@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_doa_vad/
 ---
 # reSpeaker XVF3800 44mm と XIAO ESP32-S3 Plus を用いた DoA と VAD
 
-XVF3800 はチップ内部で到来方向（DoA）と音声活動検出（VAD）を計算します。ホスト MCU は、リソースベースのコマンドを使って I2C 経由で両方の結果を読み取ることができ、ホスト側で生オーディオを処理する必要はありません。このスケッチは 250 ms ごとに DoA 角度と音声フラグをポーリングし、同時に I2S オーディオをストリーミングして各チャネルの RMS レベルを出力することで、音が存在しているタイミングを確認できるようにします。
+XVF3800 はチップ内部で到来方向 (DoA) と音声活動検出 (VAD) を計算します。ホスト MCU は I2C を介してリソースベースのコマンドを使い、両方の結果を読み取ることができます — ホスト側で生オーディオを処理する必要はありません。このスケッチは 250 ms ごとに DoA 角度と音声フラグをポーリングし、同時に I2S オーディオをストリーミングして各チャネルの RMS レベルを出力することで、音が存在するときが分かるようにします。
 
 {/* TODO: href="#" の値は、Seeed Studio の製品ページ URL が公開されたら置き換えてください。 */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -32,23 +36,23 @@ XVF3800 はチップ内部で到来方向（DoA）と音声活動検出（VAD）
 
 ## 前提条件
 
-- アレイは **I2S firmware** を実行している必要があります — このモードでは I2C 制御が利用可能です。
-- ESP32 ボードパッケージと **Arduino Audio Tools** ライブラリをインストールした Arduino IDE。詳しくは [Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#software-preparation) を参照してください。
+- アレイは **I2S ファームウェア** を実行している必要があります — このモードでは I2C 制御が利用可能です。
+- Arduino IDE（ESP32 ボードパッケージおよび **Arduino Audio Tools** ライブラリを含む）。[Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#software-preparation) を参照してください。
 - ボードに **XIAO_ESP32S3_Plus** を選択し、ポート番号を選択する必要があります。
 
 ## 動作概要
 
-XVF3800 は *servicers* を通じて制御を公開しています。読み取りは 2 段階の I2C トランザクションです：
+XVF3800 は *servicers* を通じて制御を公開します。読み出しは 2 段階の I2C トランザクションです：
 
-1. `resid`、`cmd | 0x80`、および期待されるペイロード長に 1 を加えた値を書き込みます。
-2. `status` に続いてペイロードバイトを読み取ります。
+1. `resid`、`cmd | 0x80`、および想定されるペイロード長に 1 を加えた値を書き込みます。
+2. `status` に続いてペイロードバイトを読み出します。
 
 | サービス | RESID | コマンド | ペイロード |
 |---------|-------|---------|---------|
 | アプリケーション servicer — ファームウェアバージョン | `48` | `0` | 3 バイト：major、minor、patch |
 | GPO servicer — DoA | `20` | `18` | 4 バイト：角度（リトルエンディアン）、音声フラグ（リトルエンディアン） |
 
-ループでは I2S から一度に 256 フレームのステレオデータを読み取り、左チャネルと右チャネルの RMS を計算し、250 ms 間隔で DoA/VAD をポーリングします。DoA の値が 359 を超える場合は `N/A` として生の 16 進値とともに表示され、XMOS のステータスバイトが 0 以外の場合はデコードせずにそのまま報告されます。
+ループでは I2S から一度に 256 フレームのステレオデータを読み出し、左・右の RMS を計算し、250 ms 間隔で DoA/VAD をポーリングします。DoA の値が 359 を超える場合は、生の 16 進値とともに `N/A` として出力され、また、ゼロ以外の XMOS ステータスバイトはデコードせずにそのまま報告されます。
 
 ## Arduino スケッチ
 
@@ -582,12 +586,12 @@ DOA: 136 deg | Speech: DETECTED | RMS L: 0.00344 | RMS R: 0.00301
 DOA: N/A (0xFFFF) | Speech: SILENT | RMS L: 0.00002 | RMS R: 0.00002
 ```
 
-誰も話していないとき、`Speech: SILENT` となり、報告される角度には意味がありません — XVF3800 は範囲外の値を返します。
+誰も話していないとき、`Speech: SILENT` となり、報告される角度には意味がありません — XVF3800 は範囲外の値を報告します。
 
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

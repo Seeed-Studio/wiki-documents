@@ -247,6 +247,7 @@ const sidebars = {
       items: [
         'Edge/NVIDIA_Jetson/Other_Devices/RTL8822CE_Wireless_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/RTL8852BE_Wireless_Module_for_Jetson',
+        'Edge/NVIDIA_Jetson/Other_Devices/USB_KVM_Capture_Kit_getting_start',
         'Edge/NVIDIA_Jetson/Other_Devices/RM520N_Module_for_Jetson',
         'Edge/NVIDIA_Jetson/Other_Devices/EM12-G_GNSS_Module_for_reComputer_Robotics_J3011',
         'Edge/NVIDIA_Jetson/FAQs/How_to_use_Camera_IMX219',
@@ -414,6 +415,7 @@ const sidebars = {
       label: 'Computer Vision',
           customProps: { communityCategory: 'cv' },
           items: [
+            'Edge/NVIDIA_Jetson/Application/Computer_Vision/Industrial_Vision_Benchmark_on_Jetson_Orin_Nano_and_Orin_NX',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/Build_a_Four_Camera_Fisheye_Surround_View_Demo_on_Jetson_AGX_Thor',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/Streaming_Vision_Agent_on_Jetson',
             'Edge/NVIDIA_Jetson/Application/Computer_Vision/industrial_vision_monitoring_on_industrial',

@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32-S3 Plus から I2C 経由で AIC3104 DAC とアナログ出力レジスタに書き込み、440 Hz のテストトーンを使って reSpeaker XVF3800 44mm の再生音量を変化させて確認します。
+description: XIAO ESP32-S3 Plus から I2C 経由で AIC3104 DAC とアナログ出力レジスタに書き込み、440 Hz のテストトーンを使って reSpeaker XVF3800 44mm の再生音量を制御します。
 title: XIAO ESP32-S3 Plus による reSpeaker XVF3800 44mm の音量制御
 keywords:
   - reSpeaker 44mm
@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_volume_control/
 ---
 # XIAO ESP32-S3 Plus による reSpeaker XVF3800 44mm の音量制御
 
-このスケッチでは、XIAO ESP32-S3 Plus が I2S 経由でオンボードの **AIC3104** コーデックから生成した **440 Hz** トーンを再生し、シリアルモニタに `+` または `-` を入力して音量を調整します。`m` を入力すると出力先がヘッドホン（`HPLOUT`/`HPROUT`）とラインアウト（`LOP`）の間で切り替わり、コーデックの設定はすべて I2C 経由で行われます。トーンはコード内で合成されるため、オーディオファイルは不要です。
+このスケッチでは、XIAO ESP32-S3 Plus が I2S 経由でオンボードの **AIC3104** コーデックから生成した **440 Hz** トーンを再生し、シリアルモニタに `+` または `-` を入力して音量を調整します。`m` を入力すると、ヘッドホン出力（`HPLOUT`/`HPROUT`）とライン出力（`LOP`）の間で出力先を切り替えます。コーデックの設定はすべて I2C 経由で行われます。このトーンはコード内で合成されるため、オーディオファイルは不要です。
 
 {/* TODO: href="#" の値は、Seeed Studio の製品ページ URL が公開されたら置き換えてください。 */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -30,22 +34,22 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_volume_control/
     </a>
 </div>
 
-## 前提条件
+## 事前準備
 
-- XVF3800 が I2S クロックを供給するため、アレイは **I2S ファームウェア** を実行している必要があります。詳しくは [Update Firmware](https://wiki.seeedstudio.com/ja/respeaker_44mm_introduction/#update-firmware) を参照してください。
-- ESP32 ボードパッケージと **Arduino Audio Tools** ライブラリをインストールした Arduino IDE。詳しくは [Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#software-preparation) を参照してください。
-- ボードに **XIAO_ESP32S3_Plus** を選択し、ポート番号を選択していること。
+- アレイは **I2S ファームウェア** を実行している必要があります。XVF3800 が I2S クロックを提供するためです。[Update Firmware](https://wiki.seeedstudio.com/ja/respeaker_44mm_introduction/#update-firmware) を参照してください。
+- ESP32 ボードパッケージと **Arduino Audio Tools** ライブラリをインストールした Arduino IDE。[Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#software-preparation) を参照してください。
+- ボードに **XIAO_ESP32S3_Plus** を選択し、ポート番号を選択しておきます。
 - JST コネクタに接続したスピーカー、または 3.5 mm ジャックに接続したヘッドホン。
 
 
 
 :::note
-AIC3104 は XVF3800 と I2C バスを共有しています。XMOS ファームウェアとオンボードの音量ボタンも同じレジスタに書き込むため、XIAO から設定したレベルが後で上書きされる場合があります。
+AIC3104 は XVF3800 と I2C バスを共有しています。XMOS ファームウェアとオンボードの音量ボタンも同じレジスタに書き込むため、XIAO から設定したレベルが後で上書きされる可能性があります。
 :::
 
 ## 音量マッピング
 
-このスケッチでは、0〜17 の音量スケールを公開しており、デジタル減衰とアナログゲインに分割して使用します：
+このスケッチでは、デジタル減衰とアナログゲインに分割された 0〜17 の音量スケールを提供します。
 
 | Volume | 結果 |
 |--------|--------|
@@ -53,7 +57,7 @@ AIC3104 は XVF3800 と I2C バスを共有しています。XMOS ファーム�
 | `8` | 0 dB（基準、DAC フルスケール） |
 | `9` … `17` | +1 dB … +9 dB のアナログ出力ゲイン |
 
-0 から 8 までは DAC が **0.5 dB ステップ**（`(8 − volume) × 2`）で減衰します。9 から 17 では DAC は 0 dB のまま、アナログ出力段が `volume − 8` dB だけブーストされます。
+0 から 8 までは、DAC が **0.5 dB ステップ**（`(8 − volume) × 2`）で減衰します。9 から 17 では DAC は 0 dB のままで、アナログ出力段が `volume − 8` dB だけブーストされます。
 
 ## レジスタマップ
 
@@ -67,15 +71,15 @@ AIC3104 は XVF3800 と I2C バスを共有しています。XMOS ファーム�
 | LEFT_LOP レベル | `0x56` | ラインアウト左 |
 | RIGHT_LOP レベル | `0x5D` | ラインアウト右 |
 
-出力レジスタのビット：**D7–D4** = アナログゲイン（`0`〜`9` dB）、**D3** = ミュート解除、**D0** = 電源オン。ヘッドホン用レジスタでは、電源オフ時に高インピーダンスとする **D2** も設定するため、下位 4 ビットの固定値として `0x0D` を使用し、ラインアウト用レジスタでは `0x09` を使用します。
+出力レジスタのビット: **D7–D4** = アナログゲイン（`0`〜`9` dB）、**D3** = ミュート解除、**D0** = 電源オン。ヘッドホン用レジスタでは、電源オフ時に高インピーダンスとする **D2** も設定するため、下位 4 ビットの固定値として `0x0D` を使用し、ラインアウト用レジスタでは `0x09` を使用します。
 
 ## 動作概要
 
 1. `setup()` は I2C を 100 kHz で開始し、AIC3104 のページ制御レジスタに書き込んだ後、両方の DAC チャンネルを 0 dB に設定し、ヘッドホン出力とライン出力を 0 dB でミュート解除／電源オンにします。
-2. `setVolume()` は要求されたレベルを DAC 減衰値とアナログゲイン値に分割し、4 つすべての出力レジスタに書き込んだうえで、確認のため左 DAC レジスタを読み戻します。
-3. I2S は 48 kHz、ステレオ、32 ビットで `TX_MODE` を開始し、XIAO をスレーブとして XVF3800 が BCLK と LRCLK を駆動します。
+2. `setVolume()` は要求されたレベルを DAC 減衰値とアナログゲイン値に分割し、4 つすべての出力レジスタに書き込んでから、確認のため左 DAC レジスタを読み戻します。
+3. I2S は `TX_MODE`、48 kHz、ステレオ、32 ビットで開始され、XIAO をスレーブとして XVF3800 が BCLK と LRCLK を駆動します。
 4. `SineWaveGenerator` が 32 ビットフルスケールの 25 % レベルで 440 Hz トーンを生成し、`GeneratedSoundStream` でラップして `StreamCopy` により I2S へコピーします。
-5. `loop()` はトーンの再生を継続しつつ、シリアルモニタからの 1 文字コマンドを処理します。
+5. `loop()` はトーンの再生を継続し、シリアルモニタからの 1 文字コマンドを処理します。
 
 ## シリアルコマンド
 
@@ -591,7 +595,7 @@ v : Show current volume
 h : Show help
 ```
 
-Send `+` to step up. Above level 8 the log switches to `Analog output gain: +N dB`:
+`+` を送信してステップアップします。レベル 8 を超えると、ログは `Analog output gain: +N dB` に切り替わります：
 
 ```text
 ------------------------------
@@ -607,7 +611,7 @@ DAC readback: 0x00
 
 ### `I2C WRITE ERROR: Register 0x.., Error 2`
 
-AIC3104 が `0x18` で応答していません。D4（GPIO5）の SDA と D5（GPIO6）の SCL を確認し、I2S ファームウェアが動作していることを確認してから、ボードの電源を入れ直してください。
+AIC3104 が `0x18` で ACK を返していません。D4（GPIO5）の SDA と D5（GPIO6）の SCL を確認し、I2S ファームウェアが動作していることを確認してから、ボードの電源を入れ直してください。
 
 ### `AIC3104 initialization FAILED!`
 
@@ -617,7 +621,7 @@ AIC3104 が `0x18` で応答していません。D4（GPIO5）の SDA と D5（G
 
 - スピーカーまたはヘッドホンが JST / 3.5 mm 出力に接続されていることを確認します。
 - 440 Hz のトーンはフルスケールの 25 % で生成されるため、レベル 8 では意図的に小さな音量になっています。
-- `m` を押して、別の出力経路（ヘッドホン出力とライン出力）を試します。
+- `m` を押して、別の出力経路（ヘッドホン出力とライン出力）を試してください。
 
 ### 数秒後に音量が元に戻ってしまう
 
@@ -629,7 +633,7 @@ XVF3800 ファームウェアまたはオンボードの `+` / `-` ボタンが�
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

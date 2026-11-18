@@ -214,6 +214,7 @@ const sidebars = {
             { type: 'doc', id: `${P}/pt_Paper_Reading_WALL_OSS`, label: 'WALL-OSS — Raciocínio Incorporado & Controle de Robôs' },
             { type: 'doc', id: `${P}/pt_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — Ações entre Diferentes Corpos e Percepção do Futuro' },
             { type: 'doc', id: `${P}/pt_Paper_Reading_DM05`, label: 'DM0.5 — Contexto Histórico e Alineação de Trajetórias' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_G05`, label: 'G0.5 — Raciocínio e Ação em uma Sequência' },
           ],
         },
         {
@@ -234,6 +235,11 @@ const sidebars = {
               label: 'LingBot-VA — Um Modelo de Mundo Causal de Imagens Futuras para Ações de Robôs',
             },
             { type: 'doc', id: `${P}/pt_Paper_Reading_GR00T_2`, label: 'GR00T 2 — Modelagem de Mundo-Ação Conjunta' },
+            {
+              "type": "doc",
+              "id": `${P}/pt_Paper_Reading_LAWAM`,
+              "label": "LaWAM — Prever Mudanças de Cena Antes de Gerar Ações de Robô"
+            }
           ],
         },
         {
@@ -294,6 +300,7 @@ const sidebars = {
       collapsible: false,
       items: [
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS com Pega Visual' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS com Seguimento de Muque' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS com ROS2' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS com Isaac Sim' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-RS: Robô Real e MuJoCo' },

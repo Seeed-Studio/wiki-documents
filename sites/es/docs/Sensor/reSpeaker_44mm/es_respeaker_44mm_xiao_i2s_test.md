@@ -23,6 +23,10 @@ Este sketch verifica el enlace I2S entre el XIAO ESP32-S3 Plus y el XVF3800 en l
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
@@ -31,8 +35,8 @@ Este sketch verifica el enlace I2S entre el XIAO ESP32-S3 Plus y el XVF3800 en l
 
 ## Requisitos previos
 
-- La matriz debe estar ejecutando el **firmware I2S**. Consulta [Actualizar firmware](https://wiki.seeedstudio.com/es/respeaker_44mm_introduction/#actualizar-firmware) si todavía está en la imagen USB.
-- Arduino IDE con el paquete de placas ESP32 y la biblioteca **Arduino Audio Tools** instalada. Consulta [Preparación de software](https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_getting_started/#preparación-de-software).
+- La matriz debe estar ejecutando el **firmware I2S**. Consulta [Update Firmware](https://wiki.seeedstudio.com/es/respeaker_44mm_introduction/#actualizar-firmware) si todavía está en la imagen USB.
+- Arduino IDE con el paquete de placas ESP32 y la biblioteca **Arduino Audio Tools** instalada. Consulta [Software Preparation](https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_getting_started/#preparación-de-software).
 - Placa seleccionada como **XIAO_ESP32S3_Plus**, es necesario seleccionar el número de puerto.
 - Un cable de datos USB-C (no solo de carga).
 
@@ -46,8 +50,8 @@ Esta prueba configura el XIAO como **maestro** I2S (`cfg.is_master = true`). Los
 
 1. El sketch configura un flujo I2S full-dúplex (`RXTX_MODE`) a 48 kHz, estéreo, 32 bits.
 2. Para cada una de las 32 000 tramas calcula una onda cuadrada de 440 Hz a partir de un acumulador de fase de 32 bits, escribe la misma muestra en ambos canales y luego lee una trama estéreo de vuelta.
-3. Cada muestra recibida que no sea `0` o `-1` incrementa `nonZero`; las primeras 100 tramas se imprimen para que puedas revisar los datos a simple vista.
-4. Después de la ejecución, se compara `nonZero` con `frameCount` (32 000 de 64 000 muestras). Si está por debajo del umbral, la prueba se ejecuta una vez más antes de informar `I2S RX FAIL!`.
+3. Cada muestra recibida que no sea `0` o `-1` incrementa `nonZero`; las primeras 100 tramas se imprimen para que puedas revisar visualmente los datos.
+4. Después de la ejecución, `nonZero` se compara con `frameCount` (32 000 de 64 000 muestras). Si está por debajo del umbral, la prueba se ejecuta una vez más antes de informar `I2S RX FAIL!`.
 
 ## Sketch de Arduino
 
@@ -224,7 +228,7 @@ Test complete
 
 Los valores exactos en las primeras tramas dependen de lo que capten los micrófonos. La línea importante es `I2S RX PASS!`.
 
-## Solución de problemas
+## Resolución de problemas
 
 ### `I2S RX FAIL!`
 

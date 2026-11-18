@@ -2919,7 +2919,7 @@ const catalogRecords = [
     guides: [
       {
         label: "Hardware & setup guide",
-        url: "/ai_robotics_recomputer_rugged_j40_getting_started/",
+        url: "/jetson/recomputer_rugged_j401/getting_started/",
       },
       {
         label: "JetPack flashing guide",
@@ -2931,7 +2931,7 @@ const catalogRecords = [
       },
     ],
     sources: [
-      "/ai_robotics_recomputer_rugged_j40_getting_started/",
+      "/jetson/recomputer_rugged_j401/getting_started/",
       "https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/",
     ],
     notes: null,
@@ -3003,7 +3003,7 @@ const catalogRecords = [
     guides: [
       {
         label: "Hardware & setup guide",
-        url: "/ai_robotics_recomputer_rugged_j40_getting_started/",
+        url: "/jetson/recomputer_rugged_j401/getting_started/",
       },
       {
         label: "JetPack flashing guide",
@@ -3015,7 +3015,7 @@ const catalogRecords = [
       },
     ],
     sources: [
-      "/ai_robotics_recomputer_rugged_j40_getting_started/",
+      "/jetson/recomputer_rugged_j401/getting_started/",
       "https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/",
     ],
     notes: null,
@@ -4438,7 +4438,7 @@ const catalogRecords = [
     guides: [
       {
         label: "Hardware & setup guide",
-        url: "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/",
+        url: "/jetson/recomputer_robotics_j601/getting_started/",
       },
       {
         label: "JetPack flashing guide",
@@ -4446,7 +4446,7 @@ const catalogRecords = [
       },
     ],
     sources: [
-      "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/",
+      "/jetson/recomputer_robotics_j601/getting_started/",
     ],
     notes:
       "Port counts shown for T4000; T5000 has four 10GbE ports and four CAN connections. GMSL requires the optional expansion board.",

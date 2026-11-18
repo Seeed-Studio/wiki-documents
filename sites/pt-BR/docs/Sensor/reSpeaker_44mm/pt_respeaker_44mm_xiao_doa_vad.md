@@ -24,6 +24,10 @@ O XVF3800 calcula a direção de chegada (DoA) e a detecção de atividade de vo
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
@@ -32,7 +36,7 @@ O XVF3800 calcula a direção de chegada (DoA) e a detecção de atividade de vo
 
 ## Pré-requisitos
 
-- O array deve estar executando o **firmware I2S** — o controle I2C está disponível neste modo.
+- A matriz deve estar executando o **firmware I2S** — o controle I2C está disponível neste modo.
 - Arduino IDE com o pacote de placas ESP32 e a biblioteca **Arduino Audio Tools**. Consulte [Preparação de software](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_getting_started/#preparação-de-software).
 - Placa selecionada como **XIAO_ESP32S3_Plus**, o número da porta precisa ser selecionado.
 
@@ -40,13 +44,13 @@ O XVF3800 calcula a direção de chegada (DoA) e a detecção de atividade de vo
 
 O XVF3800 expõe controles por meio de *servicers*. Uma leitura é uma transação I2C em duas etapas:
 
-1. Escreva `resid`, `cmd | 0x80` e o comprimento de payload esperado mais um.
-2. Leia `status` seguido pelos bytes de payload.
+1. Escreva `resid`, `cmd | 0x80` e o comprimento esperado do payload mais um.
+2. Leia `status` seguido pelos bytes do payload.
 
 | Serviço | RESID | Comando | Payload |
 |---------|-------|---------|---------|
-| Application servicer — versão do firmware | `48` | `0` | 3 bytes: major, minor, patch |
-| GPO servicer — DoA | `20` | `18` | 4 bytes: ângulo (little-endian), sinalizador de fala (little-endian) |
+| Servicer de aplicação — versão do firmware | `48` | `0` | 3 bytes: major, minor, patch |
+| Servicer GPO — DoA | `20` | `18` | 4 bytes: ângulo (little-endian), sinalizador de fala (little-endian) |
 
 O loop lê 256 quadros estéreo por vez do I2S, calcula o RMS para esquerda e direita e consulta DoA/VAD em um intervalo de 250 ms. Um valor de DoA acima de 359 é impresso como `N/A` com o valor hexadecimal bruto, e qualquer byte de status XMOS diferente de zero é relatado em vez de ser decodificado.
 
@@ -585,7 +589,7 @@ DOA: N/A (0xFFFF) | Speech: SILENT | RMS L: 0.00002 | RMS R: 0.00002
 Quando ninguém está falando, `Speech: SILENT` e o ângulo informado não é significativo — o XVF3800 informa um valor fora da faixa.
 
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

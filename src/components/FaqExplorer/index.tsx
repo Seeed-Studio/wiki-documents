@@ -41,6 +41,14 @@ export interface FaqExplorerProps {
    * attribute stays stable. Unknown slots fall back to English defaults.
    */
   children?: ReactNode;
+  /**
+   * Plugin global-data key of the FAQ index to render.
+   *
+   * The reSpeaker FAQ center keeps the default; the reComputer FAQ center
+   * passes 'recomputer-faq-index' so both product families publish and
+   * search their own, fully isolated index.
+   */
+  source?: string;
 }
 
 /**
@@ -164,8 +172,8 @@ function StaticFallback({ items, ui }: { items: FaqItem[]; ui: UiStrings }) {
   );
 }
 
-export default function FaqExplorer({ children }: FaqExplorerProps) {
-  const data = (usePluginData('respeaker-faq-index') as FaqIndexData | undefined) ?? EMPTY_INDEX;
+export default function FaqExplorer({ children, source = 'respeaker-faq-index' }: FaqExplorerProps) {
+  const data = (usePluginData(source) as FaqIndexData | undefined) ?? EMPTY_INDEX;
   const items = data.items || [];
   const productOptions = data.products || [];
   const domainOptions = data.domains || [];

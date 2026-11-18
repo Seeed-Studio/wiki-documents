@@ -1,5 +1,5 @@
 ---
-description: Controla el anillo de 24 x WS2812 LED en el reSpeaker XVF3800 44mm desde el XIAO ESP32-S3 Plus a través de I2C, incluyendo alimentación, modo de efecto, brillo, velocidad y color con verificación de lectura.
+description: Controla el anillo de 24 x WS2812 LED en la reSpeaker XVF3800 44mm desde la XIAO ESP32-S3 Plus a través de I2C, incluyendo alimentación, modo de efecto, brillo, velocidad y color con verificación de lectura.
 title: Efectos LED para reSpeaker XVF3800 44mm con XIAO ESP32-S3 Plus
 keywords:
   - reSpeaker 44mm
@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_led_effects/
 ---
 # Efectos LED para reSpeaker XVF3800 44mm con XIAO ESP32-S3 Plus
 
-Los 24 × WS2812 LED de la matriz de 44 mm son controlados por el XVF3800. Un MCU host puede tomar el control sobre I2C: alimentar el raíl de LED, elegir un efecto, ajustar el brillo y la velocidad, y enviar un color RGB. Este sketch recorre siete colores cada dos segundos y lee cada color de vuelta para confirmar que el comando se recibió correctamente.
+Los 24 × WS2812 LED en la matriz de 44 mm son controlados por el XVF3800. Un MCU host puede tomar el control sobre I2C: alimentar el raíl de LED, elegir un efecto, ajustar el brillo y la velocidad, y enviar un color RGB. Este sketch recorre siete colores cada dos segundos y lee cada color de vuelta para confirmar que el comando se recibió correctamente.
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -33,7 +37,7 @@ Los 24 × WS2812 LED de la matriz de 44 mm son controlados por el XVF3800. Un MC
 ## Requisitos previos
 
 - La matriz debe estar ejecutando el **firmware I2S**; el control por I2C está disponible en este modo.
-- Arduino IDE con el paquete de placas ESP32. La biblioteca **Arduino Audio Tools** no es necesaria para este sketch. Consulta [Preparación de software](https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_getting_started/#Preparación-de-software).
+- Arduino IDE con el paquete de placas ESP32. La biblioteca **Arduino Audio Tools** no es necesaria para este sketch. Consulta [Preparación de software](https://wiki.seeedstudio.com/es/respeaker_44mm_xiao_getting_started/#preparación-de-software).
 - Placa seleccionada como **XIAO_ESP32S3_Plus**, es necesario seleccionar el número de puerto.
 
 
@@ -41,8 +45,8 @@ Los 24 × WS2812 LED de la matriz de 44 mm son controlados por el XVF3800. Un MC
 
 Todos los comandos van al servicio GPO (`RESID 20`). Las escrituras usan la forma `[resid, cmd, len, payload...]`; las lecturas usan `[resid, cmd | 0x80, len + 1]` y devuelven primero un byte de estado.
 
-| Comando | ID | Carga útil | Notas |
-|---------|----|------------|-------|
+| Comando | ID | Payload | Notas |
+|---------|----|---------|-------|
 | Escritura de valor GPO | `1` | pin, valor | Se usa para conmutar el raíl de alimentación de los LED (`X0D33` = 33) |
 | Efecto LED | `12` | 1 byte | Consulta la tabla de efectos a continuación |
 | Brillo LED | `13` | 1 byte | `0`–`255` |
@@ -51,7 +55,7 @@ Todos los comandos van al servicio GPO (`RESID 20`). Las escrituras usan la form
 
 | Efecto | Valor | Descripción |
 |--------|-------|-------------|
-| `LED_EFFECT_OFF` | `0` | LEDs apagados |
+| `LED_EFFECT_OFF` | `0` | LED apagados |
 | `LED_EFFECT_BREATHING` | `1` | Fundido de respiración |
 | `LED_EFFECT_RAINBOW` | `2` | Ciclo arcoíris |
 | `LED_EFFECT_SOLID` | `3` | Color sólido único |
@@ -59,17 +63,17 @@ Todos los comandos van al servicio GPO (`RESID 20`). Las escrituras usan la form
 | `LED_EFFECT_RING` | `5` | Animación en anillo |
 
 :::note
-El valor de color se almacena como `0xRRGGBB` en el sketch, pero se transmite en little-endian, por lo que los bytes de la carga útil son **Azul, Verde, Rojo, 0x00**.
+El valor de color se almacena como `0xRRGGBB` en el sketch, pero se transmite en little-endian, por lo que los bytes del payload son **Azul, Verde, Rojo, 0x00**.
 :::
 
 ## Cómo funciona
 
 1. `setup()` inicia I2C a 100 kHz y espera 2,5 s a que termine la animación de arranque del propio XVF3800.
 2. Habilita el raíl de alimentación de los LED con una escritura GPO al pin `33`, ajusta el brillo a `150` y selecciona `LED_EFFECT_SOLID`.
-3. `applyColor()` envía el color, espera 30 ms, luego lee el color de vuelta y compara los 24 bits bajos con lo que se envió, imprimiendo `Color readback PASS` o `MISMATCH`.
+3. `applyColor()` envía el color, espera 30 ms y luego lee el color de vuelta y compara los 24 bits bajos con lo que se envió, imprimiendo `Color readback PASS` o `MISMATCH`.
 4. `loop()` avanza al siguiente color cada dos segundos.
 
-Si los botones y los LED están conectados al XIAO en lugar del XVF3800 (conmutador de enrutamiento en `D11`), el anillo también se puede controlar desde `WS2812_DIN_XIAO` en D15 como una cadena WS2812 simple. El sketch siguiente utiliza la ruta del XVF3800.
+Si los botones y los LED están conectados al XIAO en lugar del XVF3800 (conmutador de ruteo en `D11`), el anillo también se puede controlar desde `WS2812_DIN_XIAO` en D15 como una cadena WS2812 simple. El siguiente sketch utiliza la ruta a través del XVF3800.
 
 ## Sketch de Arduino
 

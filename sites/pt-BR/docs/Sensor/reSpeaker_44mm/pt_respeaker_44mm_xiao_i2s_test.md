@@ -1,5 +1,5 @@
 ---
-description: Verifique o I2S full-duplex entre o XIAO ESP32-S3 Plus e o array reSpeaker XVF3800 44 mm transmitindo um tom de teste de 440 Hz e conferindo as amostras de microfone recebidas.
+description: Verifique o I2S full-duplex entre o XIAO ESP32-S3 Plus e o array reSpeaker XVF3800 44 mm transmitindo um tom de teste de 440 Hz e conferindo as amostras recebidas do microfone.
 title: Teste de I2S para reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
 keywords:
   - reSpeaker 44mm
@@ -23,6 +23,10 @@ Este sketch verifica o link I2S entre o XIAO ESP32-S3 Plus e o XVF3800 no array 
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
@@ -31,15 +35,15 @@ Este sketch verifica o link I2S entre o XIAO ESP32-S3 Plus e o XVF3800 no array 
 
 ## Pré-requisitos
 
-- O array deve estar executando o **firmware I2S**. Consulte [Update Firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware) se ele ainda estiver na imagem USB.
-- Arduino IDE com o pacote de placas ESP32 e a biblioteca **Arduino Audio Tools** instalada. Consulte [Software Preparation](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_getting_started/#preparação-de-software).
+- O array deve estar executando o **firmware I2S**. Consulte [Update Firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#update-firmware) se ele ainda estiver na imagem USB.
+- Arduino IDE com o pacote de placas ESP32 e a biblioteca **Arduino Audio Tools** instalada. Consulte [Software Preparation](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_getting_started/#software-preparation).
 - Placa selecionada como **XIAO_ESP32S3_Plus**, o número da porta precisa ser selecionado.
-- Um cabo de dados USB-C (não apenas de carregamento).
+- Um cabo de dados USB-C (não apenas para carregamento).
 
 
 
 :::note
-Este teste configura o XIAO como **master** I2S (`cfg.is_master = true`). Os exemplos de gravação e reprodução executam o XIAO como **slave**, porque o XVF3800 gera os clocks. Se você alternar entre sketches, mantenha essa diferença em mente.
+Este teste configura o XIAO como **mestre** I2S (`cfg.is_master = true`). Os exemplos de gravação e reprodução executam o XIAO como **escravo**, porque o XVF3800 gera os clocks. Se você alternar entre sketches, mantenha essa diferença em mente.
 :::
 
 ## Como funciona
@@ -205,7 +209,7 @@ void loop() {
 
 ## Saída esperada
 
-Abra o Serial Monitor em **115200 baud**. Um link saudável se parece com isto:
+Abra o Monitor Serial em **115200 baud**. Um link saudável se parece com isto:
 
 ```text
 I2S full-duplex test started
@@ -236,7 +240,7 @@ Os valores exatos nos primeiros quadros dependem do que os microfones captam. A 
 
 O stream do microfone não está chegando ao XIAO. Regrave o firmware I2S e, em seguida, desligue e ligue a placa. Se o array estiver em mute, os canais processados podem ficar silenciosos — pressione o botão de mute uma vez.
 
-### O Serial Monitor permanece vazio
+### O Monitor Serial permanece vazio
 
 Selecione a porta correta em `Tools > Port` depois que a placa for reenumerada.
 

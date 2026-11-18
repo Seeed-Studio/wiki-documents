@@ -3341,10 +3341,39 @@ const sidebars = {
         'Network/cn_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
-          label: 'Wio-WM6108 WiFi-Halow 设备',
+          label: 'Wio-WM6108 Wi-Fi HaLow 设备',
           items: [
             'Network/WiFi-Halow/cn_wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/cn_wifi-halow-mini-pcie-module',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Wio-WM8108 Wi-Fi HaLow 设备',
+          items: [
+            {
+              type: 'category',
+              label: 'HaLowLink 2 Wi-Fi HaLow 网关',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/cn_HaLowLink2_Introduction',
+                  label: '介绍',
+                },
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/cn_HaLowLink2_Getting_Started',
+                  label: '入门',
+                },
+                {
+                  type: 'category',
+                  label: '应用',
+                  items: [
+                    'Network/WiFi-Halow/HaLowLink2/Applications/cn_Media_Gateway',
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],
@@ -3385,8 +3414,23 @@ const sidebars = {
           collapsible: true,
           items: [
             'Edge/RockChip_Devices/Application/cn_object_detection_with_yolov11_on_recomputer_rk'
-            ]
-        }
+          ]
+        },
+        {
+          type: 'category',
+          label: '常见问题',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/cn_recomputer_faq',
+          },
+          items: [
+            'FAQ/reComputer/cn_recomputer_rk_faq',
+            'FAQ/reComputer/cn_recomputer_industrial_rk_faq',
+            'FAQ/reComputer/cn_recomputer_rk_module_faq',
+          ],
+        },
       ]
     },
     {
@@ -3595,6 +3639,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/cn_recomputer_r1100_assembly_guide',
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: '常见问题',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/cn_recomputer_pi_faq',
+          },
+          items: [
+            'FAQ/reComputer/cn_recomputer_r1000_faq',
+            'FAQ/reComputer/cn_recomputer_ai_r2000_faq',
+            'FAQ/reComputer/cn_recomputer_industrial_r2x_faq',
+            'FAQ/reComputer/cn_reterminal_faq',
           ],
         },
         {

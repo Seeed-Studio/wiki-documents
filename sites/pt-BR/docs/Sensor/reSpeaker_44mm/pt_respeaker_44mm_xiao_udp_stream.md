@@ -1,10 +1,10 @@
 ---
-description: Transmita áudio estéreo de 48 kHz do reSpeaker XVF3800 44mm via Wi-Fi com o XIAO ESP32-S3 Plus e capture-o em um PC como um arquivo WAV usando um script receptor UDP com sequenciamento de pacotes e rastreamento de perdas.
-title: Streaming UDP reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
+description: Transmita áudio estéreo de 48 kHz do reSpeaker XVF3800 44mm via Wi‑Fi com o XIAO ESP32-S3 Plus e capture-o em um PC como um arquivo WAV usando um script receptor UDP com sequenciamento de pacotes e rastreamento de perdas.
+title: Streaming UDP do reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
 keywords:
   - reSpeaker 44mm
   - XIAO ESP32-S3 Plus
-  - UDP streaming
+  - streaming UDP
   - áudio WiFi
   - xvf3800
   - wav
@@ -18,13 +18,17 @@ createdAt: '2026-11-05'
 updatedAt: '2026-11-05'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_udp_streaming/
 ---
-# Streaming UDP reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
+# Streaming UDP do reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
 
 ## Visão geral
 
-Este projeto transmite áudio em tempo real do array reSpeaker XVF3800 44mm via Wi-Fi. O XIAO ESP32-S3 Plus captura a saída estéreo processada via I2S, divide-a em pacotes UDP numerados e os envia para um receptor em Python no seu PC, que remonta o fluxo e o salva como um arquivo WAV.
+Este projeto transmite áudio em tempo real do array reSpeaker XVF3800 44mm via Wi‑Fi. O XIAO ESP32-S3 Plus captura a saída estéreo processada via I2S, divide-a em pacotes UDP numerados e os envia para um receptor em Python no seu PC, que remonta o fluxo e o salva como um arquivo WAV.
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -34,21 +38,21 @@ Este projeto transmite áudio em tempo real do array reSpeaker XVF3800 44mm via 
 
 ## Visão geral da funcionalidade
 
-- Conecta o XIAO a uma rede Wi-Fi em modo estação.
-- Captura áudio estéreo de 48 kHz, 32 bits do XVF3800 via I2S.
+- Conecta o XIAO a uma rede Wi‑Fi em modo estação.
+- Captura áudio de 48 kHz, estéreo, 32 bits do XVF3800 via I2S.
 - Envia cinco segundos de áudio para o PC como pacotes UDP, cada um com um cabeçalho de 8 bytes (magic `AUD0` + número de sequência).
 - O receptor em Python remonta o fluxo, detecta pacotes ausentes ou duplicados, insere silêncio nas lacunas e grava `respeaker_recording.wav`.
 
 :::note
-Este exemplo espera o **firmware I2S** no XVF3800, a 48 kHz. Se a placa ainda estiver executando a imagem USB, ela não produzirá clocks I2S. Consulte [Update Firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware).
+Este exemplo espera o **firmware I2S** no XVF3800, a 48 kHz. Se a placa ainda estiver executando a imagem USB, ela não produzirá clocks I2S. Consulte [Atualizar firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware).
 :::
 
 ## Antes de começar
 
 1. Coloque a placa na mesma rede que o seu PC.
-2. Defina as credenciais do Wi-Fi e o endereço IPv4 do seu PC no sketch.
+2. Defina as credenciais do Wi‑Fi e o endereço IPv4 do seu PC no sketch.
 3. Encontre o endereço do PC com `ipconfig` (Windows) ou `ip addr` (Linux/macOS).
-4. Permita a porta UDP de entrada `12345` no firewall, ou os pacotes serão descartados silenciosamente.
+4. Permita a porta UDP de entrada `12345` no firewall, caso contrário os pacotes serão descartados silenciosamente.
 
 ## Código Arduino
 
@@ -483,7 +487,7 @@ Com 48 kHz × 2 canais × 4 bytes, um segundo tem 384.000 bytes; cinco segundos 
 
 ## Script Python (receber e salvar o áudio)
 
-Salve isto como `udp_receiver.py` e execute no PC **antes** de resetar a placa.
+Salve isto como `udp_receiver.py` e execute no PC **antes** de reiniciar a placa.
 
 ```python
 import socket
@@ -737,7 +741,7 @@ else:
 print("\nReceiver finished.")
 ```
 
-O receptor termina no timeout de soquete de 5 segundos em vez de um marcador de fim, porque o sketch não envia o pacote opcional `END0`. Portanto, `End marker received: False` nas estatísticas é normal.
+O receptor termina após o tempo limite de 5 segundos do socket em vez de um marcador de fim, porque o sketch não envia o pacote opcional `END0`. Portanto, `End marker received: False` nas estatísticas é normal.
 
 ## Saída esperada
 

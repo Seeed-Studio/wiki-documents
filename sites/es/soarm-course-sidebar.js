@@ -3,6 +3,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 
 const C = 'Robotics/Robot_Kits/SO_ARM101/Courses/SO_ARM_Tutorial';
+const V = 'Robotics/Robot_Kits/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA';
 
 const backToRobotics = () => ({
   type: 'ref',
@@ -82,6 +83,82 @@ const courseSidebar = () => [
 ];
 
 // Entrada de salto para el grupo «Curso» de la barra lateral del producto (usada por robotics-sidebar.js).
+// Barra lateral propia del curso Sim-to-Real VLA.
+const sim2RealVlaSidebar = () => [
+  backToRobotics(),
+
+  {
+    type: 'doc',
+    id: `${V}/es_Sim2Real_VLA_Introduction`,
+    label: 'Introducción del curso',
+    className: 'sideboard_calss',
+  },
+  {
+    type: 'category',
+    label: '1. Overview',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/es_Sim2Real_VLA_01`,
+      `${V}/es_Sim2Real_VLA_02`,
+      `${V}/es_Sim2Real_VLA_03`,
+      `${V}/es_Sim2Real_VLA_04`,
+      `${V}/es_Sim2Real_VLA_05`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '2. Construye tu laboratorio de robótica',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/es_Sim2Real_VLA_06`,
+      `${V}/es_Sim2Real_VLA_07`,
+      `${V}/es_Sim2Real_VLA_08`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '3. Obtén tu propio modelo VLA',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/es_Sim2Real_VLA_09`,
+      `${V}/es_Sim2Real_VLA_10`,
+      `${V}/es_Sim2Real_VLA_11`,
+      `${V}/es_Sim2Real_VLA_12`,
+      `${V}/es_Sim2Real_VLA_13`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '4. Despliegue en Jetson',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/es_Sim2Real_VLA_14`,
+      `${V}/es_Sim2Real_VLA_15`,
+      `${V}/es_Sim2Real_VLA_16`,
+      `${V}/es_Sim2Real_VLA_17`,
+      `${V}/es_Sim2Real_VLA_18`,
+    ],
+  },
+  {
+    type: 'category',
+    label: '5. Referencias',
+    className: 'robotics-section-title',
+    collapsed: false,
+    collapsible: false,
+    items: [
+      `${V}/es_Sim2Real_VLA_19`,
+    ],
+  },
+];
+
 const courseLink = () => ({
   type: 'category',
   label: 'Curso',
@@ -99,6 +176,11 @@ const courseLink = () => ({
       id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/es_Paper_Reading_Getting_Started',
       label: 'Análisis profundo de artículos',
     },
+    {
+      type: 'ref',
+      id: `${V}/es_Sim2Real_VLA_Introduction`,
+      label: 'Sim-to-Real VLA',
+    },
   ],
 });
 
@@ -106,6 +188,7 @@ const sidebars = {
 
   // Barra lateral independiente del curso.
   SoArmCourseSidebar: courseSidebar(),
+  SoArmSim2RealVlaSidebar: sim2RealVlaSidebar(),
 
 };
 

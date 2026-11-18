@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_led_effects/
 ---
 # 使用 XIAO ESP32-S3 Plus 控制 reSpeaker XVF3800 44mm 的 LED 效果
 
-44 mm 阵列上的 24 颗 WS2812 LED 由 XVF3800 驱动。主控 MCU 可以通过 I2C 接管它们——给 LED 供电、选择效果、设置亮度和速度，并推送一个 RGB 颜色。这个示例程序每两秒循环七种颜色，并将每种颜色读回，以确认命令已生效。
+44 mm 阵列上的 24 颗 WS2812 LED 由 XVF3800 驱动。主控 MCU 可以通过 I2C 接管它们——给 LED 供电、选择效果、设置亮度和速度，并推送 RGB 颜色。这个示例程序每两秒循环七种颜色，并将每种颜色读回，以确认指令已生效。
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -30,10 +34,10 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_led_effects/
     </a>
 </div>
 
-## 前置条件
+## 前置准备
 
 - 阵列必须运行 **I2S 固件**——I2C 控制在此模式下可用。
-- 已安装带 ESP32 开发板包的 Arduino IDE。本示例程序不需要 **Arduino Audio Tools** 库。请参阅 [软件准备](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#软件准备)。
+- 已安装带 ESP32 开发板包的 Arduino IDE。本示例程序不需要 **Arduino Audio Tools** 库。请参阅 [软件准备](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#软件-准备)。
 - 在 Arduino 中选择开发板为 **XIAO_ESP32S3_Plus**，并选择对应的端口号。
 
 
@@ -41,7 +45,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_led_effects/
 
 所有命令都发送到 GPO 服务端（`RESID 20`）。写命令使用 `[resid, cmd, len, payload...]` 形式；读命令使用 `[resid, cmd | 0x80, len + 1]`，并首先返回一个状态字节。
 
-| 命令 | ID | 载荷 | 说明 |
+| 命令 | ID | 负载 | 说明 |
 |---------|----|---------|-------|
 | GPO 写入数值 | `1` | 引脚, 数值 | 用于切换 LED 供电电源轨（`X0D33` = 33） |
 | LED 效果 | `12` | 1 字节 | 参见下方效果表 |
@@ -51,7 +55,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_led_effects/
 
 | 效果 | 数值 | 描述 |
 |--------|-------|-------------|
-| `LED_EFFECT_OFF` | `0` | LED 关闭 |
+| `LED_EFFECT_OFF` | `0` | 关闭 LED |
 | `LED_EFFECT_BREATHING` | `1` | 呼吸渐变 |
 | `LED_EFFECT_RAINBOW` | `2` | 彩虹循环 |
 | `LED_EFFECT_SOLID` | `3` | 单一纯色 |
@@ -59,17 +63,17 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_led_effects/
 | `LED_EFFECT_RING` | `5` | 环形动画 |
 
 :::note
-在示例程序中，颜色值以 `0xRRGGBB` 存储，但在传输时为小端序，因此载荷字节顺序为 **蓝、绿、红、0x00**。
+在示例程序中，颜色值以 `0xRRGGBB` 存储，但在传输时为小端序，因此负载字节顺序为 **蓝、绿、红、0x00**。
 :::
 
 ## 工作原理
 
 1. `setup()` 以 100 kHz 启动 I2C，并等待 2.5 秒，让 XVF3800 自身的启动动画完成。
-2. 通过向引脚 `33` 发送 GPO 写命令使 LED 供电电源轨上电，将亮度设置为 `150`，并选择 `LED_EFFECT_SOLID`。
+2. 通过向引脚 `33` 发送 GPO 写命令使 LED 电源轨上电，将亮度设置为 `150`，并选择 `LED_EFFECT_SOLID`。
 3. `applyColor()` 发送颜色，等待 30 ms，然后将颜色读回，并将低 24 位与发送值比较，打印 `Color readback PASS` 或 `MISMATCH`。
-4. `loop()` 每两秒切换到下一个颜色。
+4. `loop()` 每两秒切换到下一种颜色。
 
-如果按键和 LED 被切换到 XIAO 而不是 XVF3800（路由开关拨到 `D11`），则可以从 D15 上的 `WS2812_DIN_XIAO` 作为普通 WS2812 灯串来驱动灯环。下面的示例程序使用的是 XVF3800 路径。
+如果按键和 LED 被切换到 XIAO 而不是 XVF3800（`D11` 上的路由开关），则可以从 D15 上的 `WS2812_DIN_XIAO` 作为普通 WS2812 灯链来驱动灯环。下面的示例程序使用的是 XVF3800 路径。
 
 ## Arduino 示例程序
 
@@ -521,11 +525,11 @@ Color readback PASS
 ----------------------------
 ```
 
-灯环应每两秒依次显示红色、绿色、蓝色、橙色、紫色、白色和黄色。
+指示环应每两秒依次显示红色、绿色、蓝色、橙色、紫色、白色和黄色。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

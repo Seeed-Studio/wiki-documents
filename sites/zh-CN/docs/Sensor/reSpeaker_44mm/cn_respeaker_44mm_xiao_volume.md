@@ -24,6 +24,10 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_volume_control/
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
@@ -34,18 +38,18 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_volume_control/
 
 - 阵列必须运行 **I2S 固件**，因为 XVF3800 提供 I2S 时钟。请参阅 [Update Firmware](https://wiki.seeedstudio.com/cn/respeaker_44mm_introduction/#update-firmware)。
 - 已安装带有 ESP32 开发板包和 **Arduino Audio Tools** 库的 Arduino IDE。请参阅 [Software Preparation](https://wiki.seeedstudio.com/cn/respeaker_44mm_xiao_getting_started/#software-preparation)。
-- 在开发板中选择 **XIAO_ESP32S3_Plus**，并选择对应的端口号。
-- 在 JST 接插件上连接扬声器，或在 3.5 mm 插孔上连接耳机。
+- 已选择开发板为 **XIAO_ESP32S3_Plus**，并选择好端口号。
+- 在 JST 连接器上连接扬声器，或在 3.5 mm 插孔上连接耳机。
 
 
 
 :::note
-AIC3104 与 XVF3800 共享 I2C 总线。XMOS 固件和板载音量按键也可以写入相同的寄存器，因此由 XIAO 设置的电平可能会在之后被覆盖。
+AIC3104 与 XVF3800 共用 I2C 总线。XMOS 固件和板载音量按键也可以写入相同的寄存器，因此由 XIAO 设置的电平可能会在之后被覆盖。
 :::
 
 ## 音量映射
 
-该示例提供了一个 0–17 的音量刻度，在数字衰减和模拟增益之间进行分配：
+该示例提供 0–17 的音量刻度，在数字衰减和模拟增益之间进行分配：
 
 | 音量 | 结果 |
 |--------|--------|
@@ -53,7 +57,7 @@ AIC3104 与 XVF3800 共享 I2C 总线。XMOS 固件和板载音量按键也可�
 | `8` | 0 dB（参考值，DAC 满量程） |
 | `9` … `17` | +1 dB … +9 dB 模拟输出增益 |
 
-从 0 到 8，DAC 以 **0.5 dB 步进** 进行衰减（`(8 − volume) × 2`）。从 9 到 17，DAC 保持在 0 dB，模拟输出级则提升 `volume − 8` dB。
+从 0 到 8，DAC 以 **0.5 dB 步进** 衰减（`(8 − volume) × 2`）。从 9 到 17，DAC 保持在 0 dB，而模拟输出级则提升 `volume − 8` dB。
 
 ## 寄存器映射
 
@@ -67,21 +71,21 @@ AIC3104 与 XVF3800 共享 I2C 总线。XMOS 固件和板载音量按键也可�
 | LEFT_LOP 电平 | `0x56` | 左声道线路输出 |
 | RIGHT_LOP 电平 | `0x5D` | 右声道线路输出 |
 
-输出寄存器位：**D7–D4** = 模拟增益（`0`–`9` dB），**D3** = 取消静音，**D0** = 上电。耳机寄存器还会设置 **D2**（掉电时为高阻抗），这就是它们使用 `0x0D` 作为固定低 4 位的原因，而线路输出寄存器使用 `0x09`。
+输出寄存器位：**D7–D4** = 模拟增益（`0`–`9` dB），**D3** = 取消静音，**D0** = 上电。耳机寄存器还会设置 **D2**（掉电时为高阻态），这就是它们使用 `0x0D` 作为固定低 4 位的原因，而线路输出寄存器使用 `0x09`。
 
 ## 工作原理
 
 1. `setup()` 以 100 kHz 启动 I2C 并写入 AIC3104 页面控制寄存器，然后将两个 DAC 通道设置为 0 dB，并以 0 dB 取消静音/上电耳机和线路输出。
-2. `setVolume()` 将请求的音量级别拆分为 DAC 衰减值和模拟增益值，写入全部四个输出寄存器，并回读左声道 DAC 寄存器以进行确认。
+2. `setVolume()` 将请求的电平拆分为 DAC 衰减值和模拟增益值，写入全部四个输出寄存器，并回读左声道 DAC 寄存器以进行确认。
 3. 在 `TX_MODE` 下启动 I2S，48 kHz、立体声、32 位，XIAO 作为从机，由 XVF3800 驱动 BCLK 和 LRCLK。
-4. `SineWaveGenerator` 以 32 位满量程的 25 % 生成 440 Hz 音调，封装在 `GeneratedSoundStream` 中，并由 `StreamCopy` 复制到 I2S。
-5. `loop()` 保持音调持续播放，并处理来自串口监视器的单字符命令。
+4. `SineWaveGenerator` 以 32 位满量程的 25% 生成 440 Hz 音调，封装在 `GeneratedSoundStream` 中，并由 `StreamCopy` 复制到 I2S。
+5. `loop()` 持续播放音调，并处理来自串口监视器的单字符命令。
 
 ## 串口命令
 
 | 按键 | 动作 |
 |-----|--------|
-| `+` | 增大音量（最高到 17） |
+| `+` | 增加音量（最高到 17） |
 | `-` | 减小音量（最低到 0） |
 | `m` | 在耳机输出和线路输出之间切换 |
 | `v` | 打印当前音量 |
@@ -591,7 +595,7 @@ v : Show current volume
 h : Show help
 ```
 
-Send `+` to step up. Above level 8 the log switches to `Analog output gain: +N dB`:
+发送 `+` 以提升一级。高于 8 级时，日志会切换为 `Analog output gain: +N dB`：
 
 ```text
 ------------------------------
@@ -607,25 +611,25 @@ DAC readback: 0x00
 
 ### `I2C WRITE ERROR: Register 0x.., Error 2`
 
-AIC3104 在 `0x18` 地址没有应答。检查 D4（GPIO5）上的 SDA 和 D5（GPIO6）上的 SCL，确认 I2S 固件正在运行，并对板卡断电重启。
+AIC3104 在 `0x18` 地址没有应答。请检查 D4（GPIO5）上的 SDA 和 D5（GPIO6）上的 SCL，确认 I2S 固件正在运行，并对开发板断电重启。
 
 ### `AIC3104 initialization FAILED!`
 
-编解码器未接受页选择写入。通常是 I2C 总线被其他主控占用，或者板卡仍在启动中——在 `setupAIC3104()` 之前增加一个短暂延时，然后重试。
+编解码器未接受页选择写入。通常是因为 I2C 总线被其他主控占用，或者开发板仍在启动中——请在 `setupAIC3104()` 之前增加一个短暂延时，然后重试。
 
 ### 没有音调，但串口日志看起来正常
 
 - 确认扬声器或耳机已连接到 JST / 3.5 mm 输出端口。
 - 440 Hz 音调以满量程的 25% 生成，因此在 8 级时声音刻意偏小。
-- 按 `m` 以尝试另一条输出路径（耳机输出 vs 线路输出）。
+- 按下 `m` 以尝试另一条输出路径（耳机输出 vs 线路输出）。
 
-### 音量在几秒后不断跳回
+### 音量在几秒后总是跳回去
 
-XVF3800 固件或板载的 `+`/`-` 按钮会写入同一组 AIC3104 寄存器。请在不触碰按钮的情况下从 XIAO 设置音量级别，或者仅让 XIAO 控制编解码器。
+XVF3800 固件或板载的 `+`/`-` 按钮会写入同一组 AIC3104 寄存器。请在不触碰按钮的情况下从 XIAO 设置音量，或者只让 XIAO 控制编解码器。
 
 ### 使用 `m` 切换时出现咔嗒声或爆音
 
-每次切换时两个输出级都会被重新写入。这在 AIC3104 上是预期行为；在切换前降低音量可以减小这种现象。
+每次切换时两个输出级都会被重新写入。这在 AIC3104 上是预期行为；请在切换前调低音量以减小这种现象。
 
 ## 技术支持与产品讨论
 

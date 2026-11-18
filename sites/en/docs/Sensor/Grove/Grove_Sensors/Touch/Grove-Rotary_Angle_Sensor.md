@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Rotary_Angle_Sensor
 sku: 101020048, 101020017
 last_update:
-  date: 1/19/2023
+  date: 11/17/2026
   author: jianjing Huang
 createdAt: '2023-01-19'
 updatedAt: '2026-01-07'
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/
 
 The rotary angle sensor produces analog output between 0 and Vcc (5V DC with Seeeduino) on its D1 connector. The D2 connector is not used. The angular range is 300 degrees with a linear change in value. The resistance value is 10k ohms, perfect for Arduino use. This may also be known as a “potentiometer ”.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
 
 There is another product, Grove - Rotary Angle Sensor(P). What does “P” mean? “P” is for “panel mount” in this product.It is the sister version of Grove - Rotary Angle Sensor. They are identical except the Grove connecter is moved to the back so that you can easily use it as a neat and wire-free human interface device.
 
@@ -35,7 +35,7 @@ There is another product, Grove - Rotary Angle Sensor(P). What does “P” mean
     </tr>
   </tbody></table>
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/depot/grove-rotary-angle-sensorp-p-1242.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-P.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
 
 ## Version
 
