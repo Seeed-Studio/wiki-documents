@@ -140,7 +140,7 @@ Com a alimentação desconectada, conecte o **chicote de cabos XT30 2+2** que se
   <figure className="rebot-power-gallery-item">
     <figcaption>Posições dos parafusos da cobertura de ombro, vista superior</figcaption>
     <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-top.webp" alt="Dois parafusos da cobertura de ombro circulados em vermelho na vista superior" loading="lazy" />
-  </figure]
+  </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>Posição do parafuso da cobertura de ombro, vista lateral</figcaption>
     <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-side.webp" alt="Parafuso da cobertura de ombro circulado em vermelho na vista lateral" loading="lazy" />
