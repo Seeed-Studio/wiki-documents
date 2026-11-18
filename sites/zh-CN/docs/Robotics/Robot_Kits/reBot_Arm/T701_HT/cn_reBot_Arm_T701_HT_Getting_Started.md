@@ -9,6 +9,9 @@ keywords:
   - 双臂机器人
   - Python SDK
 slug: /rebot_t701_ht_getting_started
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -356,9 +359,9 @@ python t701_ht_joint_impedance_with_gravity_friction.py
 
 三个示例均按配置限制关节力矩。按 `Ctrl+C` 后，重力补偿示例停止，关节阻抗示例回零再停止。回零期间再次按 `Ctrl+C` 可停止机械臂。
 
-单电机五参数控制、状态反馈和回零退出说明见 [MIT 控制 SDK](./cn_reBot_Arm_T701_HT_control_mit.md)。
+单电机五参数控制、状态反馈和回零退出说明见 [MIT 控制 SDK](https://wiki.seeedstudio.com/cn/rebot_t701_ht_control_mit/)。
 
-正逆运动学验证、笛卡尔轨迹和键盘控制示例见 [T701 HT 与 Pinocchio](/cn/rebot_t701_ht_pinocchio/)。
+正逆运动学验证、笛卡尔轨迹和键盘控制示例见 [T701 HT 与 Pinocchio](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/)。
 
   </div>
 </div>

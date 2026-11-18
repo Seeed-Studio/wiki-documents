@@ -11,6 +11,9 @@ keywords:
 slug: /rebot_t701_ht_control_mit
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -31,13 +34,13 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="Star T701-HT SDK on GitHub"
 />
 
-The T701-HT SDK's MIT interface sets target position, target velocity, feedforward torque, position gain `Kp`, and velocity gain `Kd` together. This page introduces the single-motor sinusoidal tracking example, its parameters, feedback, and shutdown sequence. For whole-arm gravity compensation, joint impedance, and Cartesian control, see [T701 HT with Pinocchio](./reBot_Arm_T701_HT_pinocchio.md).
+The T701-HT SDK's MIT interface sets target position, target velocity, feedforward torque, position gain `Kp`, and velocity gain `Kd` together. This page introduces the single-motor sinusoidal tracking example, its parameters, feedback, and shutdown sequence. For whole-arm gravity compensation, joint impedance, and Cartesian control, see [T701 HT with Pinocchio](https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/).
 
 <section className="section-card">
 
 ## Prepare the Robot
 
-Get the SDK and install its dependencies using the [T701 HT Quick Start installation instructions](./reBot_Arm_T701_HT_Getting_Started.md#install-the-sdk). Complete the serial mapping and joint and gripper feedback checks, then verify the selected motor's zero position.
+Get the SDK and install its dependencies using the [T701 HT Quick Start installation instructions](https://wiki.seeedstudio.com/rebot_t701_ht_getting_started/#install-the-sdk). Complete the serial mapping and joint and gripper feedback checks, then verify the selected motor's zero position.
 
 - **Connections.** The left arm uses CAN1; the right arm uses CAN2. Set `board_serial` in `T701-HT_robot_param/serial_binding.yaml` to the communication board's USB serial number.
 - **Motor IDs.** On each arm, ID1–ID7 are the seven joints, and ID8 is the gripper.
@@ -154,7 +157,7 @@ The single-motor example uses a low-level `motor` object. Whole-arm control uses
 | `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Five joint vectors of length 7, excluding the gripper. Checks the configured target joint position range before sending; returns `False` for an out-of-range target. |
 | `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | Five scalar gripper parameters. Checks the target gripper position range and sends by default. With `send=False`, only queues the command for sending with the joint command in the same cycle. Returns `False` for an out-of-range target. |
 
-The whole-arm MIT interface's target position checks do not replace trajectory design or torque limiting. For gravity feedforward, joint impedance, or automatic shutdown handling, use the complete examples linked from the [Pinocchio page](./reBot_Arm_T701_HT_pinocchio.md).
+The whole-arm MIT interface's target position checks do not replace trajectory design or torque limiting. For gravity feedforward, joint impedance, or automatic shutdown handling, use the complete examples linked from the [Pinocchio page](https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/).
 
 </section>
 

@@ -11,6 +11,9 @@ keywords:
 slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -37,7 +40,7 @@ The T701-HT SDK uses Pinocchio to load the URDF model and compute end-effector p
 
 ## Prepare the Robot
 
-Install the SDK and its dependencies using the [T701 HT Quick Start installation instructions](/rebot_t701_ht_getting_started/#install-the-sdk). Then follow the remaining Quick Start steps to check the serial port mapping, read joint and gripper feedback, and verify the zero positions.
+Install the SDK and its dependencies using the [T701 HT Quick Start installation instructions](https://wiki.seeedstudio.com/rebot_t701_ht_getting_started/#install-the-sdk). Then follow the remaining Quick Start steps to check the serial port mapping, read joint and gripper feedback, and verify the zero positions.
 
 :::warning[Before running the examples on the robot]
 
