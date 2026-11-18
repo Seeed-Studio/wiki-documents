@@ -1,18 +1,18 @@
 ---
-description: XIAO 土壌水分センサーの使用開始
-title: XIAO 土壌水分センサーの使用開始
+description: XIAO Soil Moisture Sensor のはじめかた
+title: XIAO Soil Moisture Sensor のはじめかた
 keywords:
   - XIAO
-  - Soil Moisture Sensor
+  - 土壌水分センサー
   - ESP32-C6
-  - Moisture
+  - 水分
 image: https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/1.webp
 slug: /xiao_soil_moisture_sensor
 last_update:
   date: 05/26/2025
   author: Robben
 createdAt: '2025-05-26'
-updatedAt: '2026-02-25'
+updatedAt: '2026-02-24'
 url: https://wiki.seeedstudio.com/ja/xiao_soil_moisture_sensor/
 ---
 
@@ -29,44 +29,44 @@ import TabItem from '@theme/TabItem';
 
 ## はじめに
 
-XIAO 土壌水分センサーは、[XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html)を搭載したコンパクトで低消費電力の環境モニターです。単三電池1本で動作し、長時間の運用とリアルタイムの土壌状態更新を提供します。正確な土壌監視のための事前校正済み適応型土壌水分センシング機能を備えています。また、動的な監視間隔と瞬時読み取りにより、正確で応答性の高いデータを実現します。Home Assistant と完全に互換性があり、スマートガーデニングと精密農業に最適です。効率的で信頼性が高く、持続可能な植物ケアのために作られています。
+XIAO Soil Moisture Sensor は、[XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html) を搭載した、コンパクトで低消費電力の環境モニタです。単三電池 1 本で動作し、長時間の稼働とリアルタイムな土壌状態の更新を実現します。高精度な土壌モニタリングのために、事前校正済みのアダプティブ土壌水分センシング機能を備えています。同時に、水分レベルに応じた動的な監視間隔と即時読み取りを可能にし、正確で応答性の高いデータを提供します。Home Assistant と完全互換で、スマートガーデニングや精密農業に最適です。効率的で信頼性が高く、持続可能な植物ケアのために設計されています。
 
-## 特徴
+## 特長
 
-**1.3段階土壌水分監視**  
+**1. 3 段階の土壌水分モニタリング**  
 
-- 🌿 **正常:** 土壌水分が最適で、水やりは不要です。  
-- 🌤 **ほぼ乾燥:** 水分が減少中、まもなく水やりの準備をしてください。  
-- 🌵 **乾燥:** 危険なレベルの低さ、すぐに水やりしてください。
+- 🌿 **Normal:** 土壌水分は最適で、散水の必要はありません。  
+- 🌤 **Almost Dry:** 水分が減少しているため、近いうちに散水の準備をしてください。  
+- 🌵 **Dry:** 水分が非常に少ない状態なので、すぐに散水してください。
 
-デフォルトの閾値：
+デフォルトのしきい値：
 
-- **60%** → 緑から黄色への移行。
-- **20%** → 黄色から赤への移行。
+- **60%** → 緑から黄色への遷移。
+- **20%** → 黄色から赤への遷移。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-**2.Home Assistant とのプラグアンドプレイ**  
-ESPHome がプリロードされており、Home Assistant ですぐに動作し、スマートホームダッシュボードから直接監視と自動化が可能です。
+**2. Home Assistant とのプラグアンドプレイ**  
+ESPHome がプリインストールされており、Home Assistant とすぐに連携して動作します。スマートホームのダッシュボードから、直接モニタリングや自動化を行うことができます。
 
-**3.適応型監視と瞬時読み取り**  
+**3. アダプティブモニタリング & 即時読み取り**  
 
-- 水分レベルに応じてチェック間隔を自動調整（8時間 → 1時間 → 15分）。  
-- ボタンを1回押すといつでも瞬時に水分測定値を取得できます。
+- 水分レベルに応じて、チェック間隔を自動調整します（8 時間 → 1 時間 → 15 分）。  
+- ボタンを 1 回押すだけで、いつでも即時の水分読み取りが可能です。
 
-**4.簡単な校正（オプション）**  
-ボタンを3回素早く押すことで、特定の土壌に対して再校正できます：乾燥読み取り + 湿潤読み取り → システムが自動調整。
+**4. かんたんキャリブレーション（任意）**  
+ボタンを素早く 3 回押すだけで、お使いの土壌に合わせて再キャリブレーションできます：乾いた状態の読み取り + 湿った状態の読み取り → システムが自動的に調整します。
 
-- 3回短押し → 校正モードに入る：
-  - 赤色LEDが点滅 → 10秒以内に、センサーを完全に乾燥した土壌に挿入してください。
-  - 赤色LEDの点滅が止まるまで待ち、その後3秒待ちます。
-  - 緑色LEDが点滅 → 10秒以内に、センサーを完全に湿った土壌に挿入してください。
-  - 緑色LEDの点滅が止まるまで待ち、その後3秒待ちます。
-  - 校正結果：
-    - 2回の素早い緑色点滅 → 成功。
-    - 2回の素早い赤色点滅 → 失敗（乾燥/湿潤読み取りが入れ替わった可能性があります）。
+- ボタンを短く 3 回押す → キャリブレーションモードに入る：
+  - 赤色 LED が点滅 → 10 秒以内に、センサーを完全に乾いた土壌に挿し込みます。
+  - 赤色 LED の点滅が止まるまで待ち、その後 3 秒待ちます。
+  - 緑色 LED が点滅 → 10 秒以内に、センサーを十分に湿った土壌に挿し込みます。
+  - 緑色 LED の点滅が止まるまで待ち、その後 3 秒待ちます。
+  - キャリブレーション結果：
+    - 緑色 LED が 2 回素早く点滅 → 成功。
+    - 赤色 LED が 2 回素早く点滅 → 失敗（乾湿の読み取りが逆になっている可能性があります）。
 
-注意：校正中、センサーが迅速に挿入されない場合、初期読み取り値が不安定になる可能性があります。システムは複数のサンプルを取得し、フィルタリングを適用し、信頼性の高い校正のために読み取り値を平均化します。
+注意：キャリブレーション中に、センサーをすぐに挿し込まないと初期読み取り値が不安定になる場合があります。システムは複数回サンプリングを行い、フィルタリングと平均化を適用して、信頼性の高いキャリブレーションを行います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_4.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -74,18 +74,18 @@ ESPHome がプリロードされており、Home Assistant ですぐに動作し
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/hardware.jpg" style={{width:800, height:'auto'}}/></div>
 
-## 使用開始
+## はじめかた
 
-このセクションでは、XIAO 土壌水分センサーを初めて設定する方法をガイドします。
+このセクションでは、XIAO Soil Moisture Sensor を初めてセットアップする手順を説明します。
 
-### 必要な材料
+### 必要なもの
 
-この記事のチュートリアル内容を始める前に、以下のハードウェアを準備する必要があります。
+この記事のチュートリアル内容を始める前に、以下のハードウェアを用意しておいてください。
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>XIAO 土壌水分センサー</th>
+      <th>XIAO Soil Moisture Sensor</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
@@ -107,27 +107,27 @@ ESPHome がプリロードされており、Home Assistant ですぐに動作し
   </table>
 </div>
 
-Home Assistant Green は、ホームオートメーションの最も簡単でプライバシーに焦点を当てた方法です。簡単なセットアップを提供し、すべてのスマートデバイスを1つのシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは繁栄する Home Assistant エコシステムの恩恵を受け、オープンソースによって毎月改善されます。
+Home Assistant Green は、最も簡単かつプライバシー重視のホームオートメーションの方法です。セットアップは簡単で、すべてのスマートデバイスを 1 つのシステムから制御でき、データはデフォルトでローカルに保存されます。このボードは活発な Home Assistant エコシステムの恩恵を受けており、オープンソースによって毎月改善されていきます。
 
-このチュートリアルでは Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を備えた任意の Home Assistant ホストを使用することもできます。
+このチュートリアルでは、Home Assistant ホストとして Home Assistant Green を使用することを推奨しますが、Supervisor を備えた任意の Home Assistant ホストを使用することもできます。
 
-:::tip Home Assistant のインストール
-Seeed Studio 製品の一部について Home Assistant のインストール方法も書いていますので、参考にしてください。
+:::tip install Home Assistant
+Seeed Studio のいくつかの製品向けに、Home Assistant のインストール方法も記載していますので、そちらも参照してください。
 
-- **[ODYSSEY-X86 での Home Assistant 使用開始](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
-- **[reTerminal での Home Assistant 使用開始](https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/)**
-- **[LinkStar H68K/reRouter CM4 での Home Assistant 使用開始](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
+- **[ODYSSEY-X86 での Home Assistant 入門](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
+- **[reTerminal での Home Assistant 入門](https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/)**
+- **[LinkStar H68K/reRouter CM4 での Home Assistant 入門](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
 
-Seeed Studio 製品を使用していない場合は、Home Assistant 公式ウェブサイトで他の製品への Home Assistant インストール方法を確認して学習することもできます。
+Seeed Studio 製品を使用していない場合は、公式の Home Assistant ウェブサイトで、他の製品向けの Home Assistant のインストール方法を確認して学ぶこともできます。
 
 - **[Home Assistant インストール](https://www.home-assistant.io/installation/)**
 :::
 
-### ステップ 1. ESPHome のインストール
+### ステップ 1. ESPHome をインストールする
 
 すでに ESPHome をインストールしている場合は、このステップをスキップできます。
 
-**Settings** -> **Add-ons** -> **ADD-ON STORE** に移動します
+**Settings** -> **Add-ons** -> **ADD-ON STORE** に移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/01.png" style={{width:800, height:'auto'}}/></div>
 
@@ -136,7 +136,7 @@ Seeed Studio 製品を使用していない場合は、Home Assistant 公式ウ�
 ESPHome を検索してクリックします。**INSTALL** と **START** をクリックします。
 
 :::tip
-アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や監視付きインストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）の場合、Docker を使用して ESPHome Device Builder を独立して実行する必要がある場合があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
+アドオンストアに ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や supervised インストールなど）を使用していることを確認してください。その他のインストールタイプ（Home Assistant Container など）の場合は、Docker を使用して ESPHome Device Builder を単独で実行する必要があるかもしれません。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio) を参照してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
@@ -147,63 +147,63 @@ ESPHome を検索してクリックします。**INSTALL** と **START** をク�
 
 ### ステップ 2: 土壌水分センサーの準備
 
-デフォルトでは、デバイス（XIAO ESP32C6）には XIAO 土壌水分センサー用のファームウェアが事前にフラッシュされています。ただし、デフォルトファームウェアを変更またはアップグレードする必要がある場合は、以下のリソースセクションで工場出荷時の YAML 設定ファイルが利用できます。必要に応じてロジックをカスタマイズし、Home Assistant 経由でフラッシュできます。
+デフォルトでは、お使いのデバイス（XIAO ESP32C6）には XIAO Soil Moisture Sensor 用のファームウェアがプリインストールされています。ただし、デフォルトのファームウェアを変更またはアップグレードする必要がある場合は、下記のリソースセクションに工場出荷時の YAML 設定ファイルが用意されています。必要に応じてロジックをカスタマイズし、Home Assistant 経由で書き込むことができます。
 
 :::tip
-正確な読み取り値を確保するため、使用前にセンサーの簡単な校正を実行してください。
+正確な測定値を得るために、使用前にセンサーの簡単なキャリブレーションを行ってください。
 :::
 
 ### ステップ 3: ネットワーク設定
 
-1. **アクセスポイントの有効化**:
-   - 初回電源投入時、モジュールは Wi-Fi ネットワーク（SSID: `Xiao-Soil-Moisture-Monitor`）を作成します。
+1. **アクセスポイントを有効化**:
+   - 初回起動時に、モジュールは Wi-Fi ネットワーク（SSID: `Xiao-Soil-Moisture-Monitor`）を作成します。
 
-2. **設定へのアクセス**:
-   - 電話またはPCを使用してネットワークに接続します。
-   - ブラウザを開いて `http://192.168.4.1` に移動します。
-   - ホーム Wi-Fi ネットワークの SSID とパスワードを入力します。
+2. **設定画面へのアクセス**:
+   - スマートフォンまたは PC でそのネットワークに接続します。
+   - ブラウザを開き、`http://192.168.4.1` にアクセスします。
+   - 自宅の Wi-Fi ネットワークの SSID とパスワードを入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap_wireless_setting_page.png" style={{width:'auto', height:650, "border-radius": '15px'}}/></div>
 
-3. **Home Assistant 統合**:
-   - ホームネットワークに接続されると、モジュールは Home Assistant の `Settings -> Devices & Services` で発見可能になります。
+3. **Home Assistant との連携**:
+   - ホームネットワークに接続されると、モジュールは Home Assistant の `Settings -> Devices & Services` から検出できるようになります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ha_new_device_discovered.png" style={{width:400, height:'auto', "border-radius": '15px'}}/></div>
 
-この方法で、モジュールを Home Assistant ネットワークに接続し、Home Assistant に発見させることができます。
+このようにして、モジュールを Home Assistant ネットワークに接続し、Home Assistant に検出させることができます。
 
-### ステップ 4: モジュールデバイスの追加
+### ステップ 4: モジュールデバイスを追加する
 
-1. **自動発見**:
+1. **自動検出**:
    - Home Assistant に **ESPHome** がインストールされていることを確認します。
-   - `Settings -> Devices & Services -> Integrations` に移動してデバイスを探します。
+   - `Settings -> Devices & Services -> Integrations` に移動し、デバイスを探します。
 
 2. **手動設定**:
-   - 自動的に発見されない場合は、IP アドレスを指定してデバイスを手動で追加します。
+   - 自動検出されない場合は、IP アドレスを指定してデバイスを手動で追加します。
 
-デバイスを追加すると、Home Assistant の概要ページに Solid_sensor という名前の新しいセンサーカードが表示され、バッテリー測定値と現在の土壌水分状態の両方が表示されます。
+デバイスを追加すると、Home Assistant の Overview ページに Solid_sensor という名前の新しいセンサーカードが表示され、バッテリーの測定値と現在の土壌水分ステータスが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/View_in_HA.png" style={{width:400, height:'auto', "border-radius": '15px'}}/></div>
 
-土壌センサーが稼働したので、植物の監視を楽しんでください！
+これで土壌センサーの準備が整いました。植物の状態をモニタリングして、楽しんでください！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_2.jpg" style={{width:800, height:'auto'}}/></div>
 
-## 高度な使用方法
+## 応用編
 
-元のファームウェアロジックを変更し、Home Assistant を通じて土壌センサーのカスタマイズされたバージョンを直接フラッシュできます。
+Home Assistant を通じて、元のファームウェアロジックを変更し、カスタマイズしたバージョンの土壌センサーを直接書き込むことができます。
 
-### ステップ 1. ESPHome をインストール
+### ステップ 1. ESPHome をインストールする
 
 上記のステップ 1 のインストールガイドを参照してください。
 
-### ステップ 2. 新しいデバイスを追加
+### ステップ 2. 新しいデバイスを追加する
 
-ESPHome に移動し、**NEW DEVICE** をクリックします。
+ESPHome を開き、**NEW DEVICE** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-デバイスに好きな名前を付けて、**NEXT** をクリックします。
+デバイスに好きな名前を付け、**NEXT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -212,27 +212,26 @@ ESPHome に移動し、**NEW DEVICE** をクリックします。
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-新しいデバイスを作成した後、**EDIT** をクリックします。
+新しいデバイスを作成したら、**EDIT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
 
-### ステップ 3. ファームウェアをインストール
+### ステップ 3. ファームウェアをインストールする
 
-こちらがファクトリーファームウェアです：
+こちらが工場出荷時ファームウェアです：
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao-soil-moisture-monitor" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-こちらは Home Assistant 用のすぐに使える `ESPHome` YAML 設定です：
+こちらは Home Assistant 用の、すぐに使える `ESPHome` YAML 設定です：
 <details>
 
-<summary>完全なコードをプレビューするにはここをクリック</summary>
+<summary>ここをクリックしてコード全体をプレビュー</summary>
 
 ```yaml
 # ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
-
 substitutions:
   name: "xiao-soil-moisture"
   friendly_name: "XIAO Soil Moisture Monitor"
@@ -553,6 +552,7 @@ sensor:
   - platform: adc
     pin: GPIO0
     name: "Battery measurement"
+    device_class: "battery"
     attenuation: 12db
     # internal: true
     filters:                     # When the battery drops below 1V, it is dead.
@@ -569,7 +569,7 @@ sensor:
     force_update: True
 
   - platform: wifi_signal
-    name: "wifi singnal strength"
+    name: "wifi signal strength"
     update_interval: 10s
 
 # text_sensor:
@@ -611,11 +611,6 @@ text_sensor:
 interval:
   - interval: 5s
     then:
-      - text_sensor.template.publish:
-          id: soil_status
-          state: !lambda |-
-            return "";
-      - delay: 10ms
       - text_sensor.template.publish:
           id: soil_status
           state: !lambda |-
@@ -676,140 +671,140 @@ captive_portal:
 </details>
 
 <details>
-<summary>YAML設定で使用される主要な機能とロジックの概要です。</summary>
+<summary>ここでは、YAML 設定で使用されている主な機能とロジックの概要を説明します。</summary>
 
-`on_boot` – デバイス起動時の動作を定義します。
-
-- **入力パラメータ**: なし。
-- **動作**: GPIO 14をオンにし、PWM LED輝度を設定し、Wi-Fiステータスをチェックし、最初の水分チェックをトリガーします。
-
-`scripts (red_led_blink, green_led_blink, fast_blink_green, fast_blink_red, etc.)` – 事前定義されたLED点滅パターン。
+`on_boot` – デバイスが起動したときに何が起こるかを定義します。
 
 - **入力パラメータ**: なし。
-- **動作**: ステータスやキャリブレーション手順を示すために、様々なパターンでLEDを点滅させます。
+- **動作**: GPIO 14 をオンにし、PWM LED の明るさを設定し、Wi-Fi ステータスを確認し、最初の水分チェックをトリガーします。
 
-`do_calibration` – 乾燥土壌と湿潤土壌のキャリブレーションプロセスを実行します。
+`scripts (red_led_blink, green_led_blink, fast_blink_green, fast_blink_red, etc.)` – あらかじめ定義された LED 点滅パターンです。
 
 - **入力パラメータ**: なし。
-- **動作**: 赤色LEDを点滅させ、乾燥読み取り値を待機；その後緑色LEDを点滅させ、湿潤読み取り値を待機；平均値を保存し、成功または失敗を確認します。
+- **動作**: ステータスやキャリブレーション手順を示すために、さまざまなパターンで LED を点滅させます。
+
+`do_calibration` – 乾燥および湿潤な土壌のキャリブレーションプロセスを実行します。
+
+- **入力パラメータ**: なし。
+- **動作**: 赤色 LED を点滅させて乾燥状態の測定値を待ち、その後緑色 LED を点滅させて湿潤状態の測定値を待ちます。平均値を保存し、成功か失敗かを確認します。
 
 `check_moisture_once` – 土壌水分レベルを読み取り、評価します。
 
 - **入力パラメータ**: なし。
-- **動作**: 複数のADC読み取り値を取得し、平均化し、キャリブレーションされた閾値と比較し、水分状態を決定し、それに応じてLEDとディープスリープ設定をトリガーします。
+- **動作**: 複数回 ADC を読み取り、その平均を取り、キャリブレーション済みのしきい値と比較し、水分状態を判定して、それに応じて LED とディープスリープ設定をトリガーします。
 
-`binary_sensor (GPIO2)` – 物理ボタン押下ロジックを処理します。
+`binary_sensor (GPIO2)` – 物理ボタン押下のロジックを処理します。
 
 - **入力パラメータ**: なし。
-- **動作**: ボタン押下回数をカウント；1回押しで水分チェックをトリガー、3回押しでキャリブレーションをトリガーします。
+- **動作**: ボタンの押下回数をカウントします。1 回押しで水分チェックをトリガーし、3 回押しでキャリブレーションをトリガーします。
 
 `globals` – システム状態とキャリブレーションデータを保存します。
 
 - **変数**:
-  - `button_press_count`: ボタン押下回数を追跡します。
-  - `dry_value`, `wet_value`: キャリブレーションされた乾燥/湿潤ADC値を保存します。
-  - `wifi_net_status`: Wi-Fi接続状態を追跡します。
-  - `ref_dry`, `ref_wet`: 閾値計算のための参照スケーリング係数。
+  - `button_press_count`: ボタンの押下回数を記録します。
+  - `dry_value`, `wet_value`: キャリブレーションされた乾燥/湿潤時の ADC 値を保存します。
+  - `wifi_net_status`: Wi-Fi 接続状態を記録します。
+  - `ref_dry`, `ref_wet`: しきい値計算用の基準スケーリング係数です。
 
-`deep_sleep` – 省電力スリープサイクルを管理します。
-
-- **入力パラメータ**: なし。
-- **動作**: 120秒間実行し、その後最大180分間スリープ；ボタン押下または間隔でウェイクアップします。
-
-`sensor (ADC)` – 土壌センサーとバッテリーからアナログ値を読み取ります。
+`deep_sleep` – 省電力のスリープサイクルを管理します。
 
 - **入力パラメータ**: なし。
-- **動作**: 土壌水分とバッテリー電圧を測定；バッテリーはパーセンテージ表示にスケーリングされます。
+- **動作**: 通常動作では、デバイスは約 120 秒間起動した後、最後の水分評価結果に基づき、ディープスリープに入る前に 15 分（Dry）、60 分（Almost Dry）、または 8 時間（Normal Moisture）スリープします。
 
-`text_sensor` – 人間が読める土壌水分ステータスを公開します。
+`sensor (ADC)` – 土壌センサーおよびバッテリーからアナログ値を読み取ります。
 
 - **入力パラメータ**: なし。
-- **動作**: Home Assistantで "Dry"、"Almost Dry"、または "Normal Moisture" を表示します。
+- **動作**: 土壌水分とバッテリー電圧を測定し、バッテリーはパーセンテージで表示されるようにスケーリングされます。
 
-`wifi` + `api` + `ota` – ネットワーク接続、Home Assistant統合、およびオーバーザエアファームウェア更新を管理します。
+`text_sensor` – 人間が読みやすい土壌水分ステータスを公開します。
 
-- **入力パラメータ**: Wi-Fi SSIDとパスワード。
-- **動作**: デバイスをネットワークに接続し、APIを公開し、リモート更新を有効にします。
+- **入力パラメータ**: なし。
+- **動作**: Home Assistant に "Dry"、"Almost Dry"、または "Normal Moisture" を表示します。
+
+`wifi` + `api` + `ota` – ネットワーク接続、Home Assistant との連携、および OTA ファームウェア更新を管理します。
+
+- **入力パラメータ**: Wi-Fi の SSID とパスワード。
+- **動作**: デバイスをネットワークに接続し、その API を公開し、リモート更新を有効にします。
 
 </details>
 
-**INSTALL**をクリックしてデバイスにコードをインストールすると、次の画像が表示されます。
+**INSTALL** をクリックしてコードをデバイスにインストールすると、次の画像のような画面が表示されます。
 
 <Tabs>
-<TabItem value='ブラウザ経由でインストール'>
+<TabItem value='Install through browser'>
 
 :::tip
-Home Assistantホスト（Raspberry PI/Green/Yellow等）が遠くにある場合は、この方法をお勧めします。手元にあるコンピュータでインストールできます。
+Home Assistant ホスト（Raspberry Pi/Green/Yellow など）が手元から離れている場合は、この方法を推奨します。手元にあるコンピュータを使ってインストールできます。
 :::
 
-まず、**Manual download**をクリックしてコンパイル済みファームウェアをダウンロードする必要があります。
+まず、**Manual download** をクリックして、コンパイル済みファームウェアをダウンロードする必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-ePaperパネルにファームウェアをアップロードするこのウェブサイトを開きます。
+次に、この Web サイトを開き、ここから XIAO Soil Moisture Sensor にファームウェアをアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
-ESPHomeに戻ってファームウェアをダウンロードします。
+ESPHome に戻り、ファームウェアをダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-Factory formatを選択します。
+Factory format を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-USBケーブルを使用して**ePaperパネルをコンピュータに接続**し、**CONNECT**をクリックします。
+USB ケーブルを使用して **XIAO Soil Moisture Sensor をコンピュータに接続し**、**CONNECT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-usbmodemxxx（WindowsはCOMxxx）を選択し、connectをクリックします。
+usbmodemxxx（Windows では COMxxx）を選択し、connect をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-**INSTALL**をクリックし、先ほどダウンロードしたファームウェアを選択します。
+**INSTALL** をクリックし、先ほどダウンロードしたファームウェアを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:650, height:'auto'}}/></div>
 
-ファームウェアがまもなくフラッシュされます～
+まもなくファームウェアの書き込みが完了します～
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/71.png" style={{width:650, height:'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value='ホスト経由でインストール'>
+<TabItem value='Install through host'>
 
 :::tip
-Home Assistantホスト（Raspberry PI/Green/Yellow等）が近くにある場合は、より簡単なのでこの方法をお勧めします。
+Home Assistant ホスト（Raspberry Pi/Green/Yellow など）が近くにある場合は、この方法の方が簡単なので推奨します。
 :::
 
-デバイスにコードをインストールする前に、USBケーブルを使用して**このデバイスをHome Assistantを実行しているRaspberry PiまたはHA Green（Yellow）等に接続**する必要があります。
+コードをデバイスにインストールする前に、USB ケーブルを使用して **このデバイスを Home Assistant を実行している Raspberry Pi や HA Green（Yellow）などに接続** する必要があります。
 
-画像に従ってオプションをクリックし、デバイスにコードをインストールします。
+画像の手順に従ってオプションをクリックし、コードをデバイスにインストールします。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-しばらく待つと、次の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
+しばらく待つと、次の画像のようなフィードバックが表示されます。これはコードが正常に動作していることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/9.png" style={{width:650, height:'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value='Wi-Fi経由でインストール'>
+<TabItem value='Install through Wi-Fi'>
 
 :::tip
-これは最も簡単な方法ですが、初回プログラムインストール時は、まず左側の方法を使用してePaperパネルにプログラムをアップロードする必要があります。その後、wifi経由でアップロードできます。また、この方法が機能するためには、YAML設定に有効な暗号化キーを持つ適切に設定された`ota`と`api`セクションが含まれていることを確認してください。
+これは最も簡単な方法ですが、初回インストール時には、まず左側の方法を使って XIAO Soil Moisture Sensor にプログラムをアップロードしておく必要があります。その後は Wi-Fi 経由でアップロードできます。また、この方法が機能するためには、YAML 設定に有効な暗号化キーを含む適切に設定された `ota` と `api` セクションが含まれていることを確認してください。
 :::
 
-この方法では、ePaperパネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
+この方法では、XIAO Soil Moisture Sensor を何かに接続する必要はなく、オンラインになっていることだけを確認してください。
 
-オプションをクリックすると、ファームウェアが自動的にePaperパネルにインストールされます。
+オプションをクリックすると、ファームウェアが自動的に XIAO Soil Moisture Sensor にインストールされます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-しばらく待つと、次の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱い可能性があります。デバイスをルーターに近づけてください。
+しばらく待つと、次の画像のようなフィードバックが表示されます。失敗した場合は、電波が弱い可能性があります。デバイスをルーターの近くに移動してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/73.png" style={{width:650, height:'auto'}}/></div>
 
@@ -818,24 +813,24 @@ Home Assistantホスト（Raspberry PI/Green/Yellow等）が近くにある場�
 
 ## リセット
 
-ファームウェアを再フラッシュする必要がある場合は、次のリンクを使用してデフォルトファームウェアを復元できます：  
+ファームウェアを再書き込みする必要がある場合は、次のリンクを使用してデフォルトのファームウェアを復元できます。  
 [https://gadgets.seeed.cc/](https://gadgets.seeed.cc/)
 
-まずデバイスをコンピュータに接続します。  
-次に、ページで**XIAO Soil Moisture Monitor**を見つけ、**Connect**をクリックして再フラッシュを進めます。
+まず、デバイスをコンピュータに接続します。  
+次に、ページ上で **XIAO Soil Moisture Monitor** を見つけ、**Connect** をクリックして再書き込みを進めます。
 
 ## リソース
 
 - **[PDF]** [XIAO Soil Moisture Sensor SCH](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/SCH.pdf)
 - **[Kicad]** [XIAO Soil Moisture Sensor PCB](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/Kicad.kicad_pcb)
-- **[Yaml]** [XIAO Soil Moisture Sensor HA Yaml](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/HomeAssistanceYaml.yaml)
+- **[Yaml]** [XIAO Soil Moisture Sensor HA Yaml](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao-soil-moisture-monitor)
 - **[Bin]** [XIAO Soil Moisture Sensor HA Factory Bin](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/factory.bin)
 - **[LINK]** [XIAO Soil Moisture Sensor 3D file Printtables](https://www.printables.com/model/1260595-3d-enclosure-for-seeed-studio-xiao-75-epaper-panel/edit)
 - **[LINK]** [XIAO Soil Moisture Sensor 3D file Thingiverse](https://www.thingiverse.com/thing:7039325)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
