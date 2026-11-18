@@ -3414,8 +3414,23 @@ const sidebars = {
           collapsible: true,
           items: [
             'Edge/RockChip_Devices/Application/ja_object_detection_with_yolov11_on_recomputer_rk'
-            ]
-        }
+          ]
+        },
+        {
+          type: 'category',
+          label: 'よくある質問',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/ja_recomputer_faq',
+          },
+          items: [
+            'FAQ/reComputer/ja_recomputer_rk_faq',
+            'FAQ/reComputer/ja_recomputer_industrial_rk_faq',
+            'FAQ/reComputer/ja_recomputer_rk_module_faq',
+          ],
+        },
       ]
     },
     {
@@ -3624,6 +3639,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/ja_recomputer_r1100_assembly_guide',
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'よくある質問',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/ja_recomputer_pi_faq',
+          },
+          items: [
+            'FAQ/reComputer/ja_recomputer_r1000_faq',
+            'FAQ/reComputer/ja_recomputer_ai_r2000_faq',
+            'FAQ/reComputer/ja_recomputer_industrial_r2x_faq',
+            'FAQ/reComputer/ja_reterminal_faq',
           ],
         },
         {

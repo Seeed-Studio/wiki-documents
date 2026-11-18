@@ -4,7 +4,7 @@ title: Uso de la cámara para la versión Sense
 keywords:
   - xiao esp32s3
   - esp32s3
-  - camera
+  - cámara
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_camera_usage
 last_update:
@@ -47,19 +47,19 @@ Este tutorial puede implicar el uso de tarjeta microSD, cámara, antena, etc. Po
 
 #### Instalación de la antena
 
-En la parte inferior izquierda del frontal de la XIAO ESP32S3, hay un "WiFi/BT Antenna Connector" independiente. Para obtener una mejor señal WiFi/Bluetooth, necesitas sacar la antena del interior del paquete e instalarla en el conector.
+En la parte inferior izquierda del frontal de la XIAO ESP32S3, hay un "Conector de antena WiFi/BT" independiente. Para obtener una mejor señal WiFi/Bluetooth, debes sacar la antena del interior del paquete e instalarla en el conector.
 
-La instalación de la antena tiene un pequeño truco: si la presionas directamente con fuerza hacia abajo, verás que es muy difícil de presionar y ¡te dolerán los dedos! La forma correcta de instalar la antena es introducir primero un lado del conector de la antena en el bloque del conector, luego presionar un poco el otro lado, y la antena quedará instalada.
+Hay un pequeño truco para la instalación de la antena: si la presionas directamente con fuerza hacia abajo, verás que es muy difícil de presionar y ¡te dolerán los dedos! La forma correcta de instalar la antena es introducir primero un lado del conector de la antena en el bloque del conector, luego presionar un poco el otro lado, y la antena quedará instalada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
 ### Instalación de las placas de expansión (para Sense)
 
-Instalar la placa de expansión es muy sencillo, solo necesitas alinear el conector de la placa de expansión con el conector B2B de la XIAO ESP32S3, presionarlo con fuerza y escuchar un "clic"; la instalación estará completa.
+Instalar la placa de expansión es muy sencillo, solo necesitas alinear el conector de la placa de expansión con el conector B2B de la XIAO ESP32S3, presionarlo con fuerza y, cuando escuches un "clic", la instalación estará completa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
-Ahora tenemos en nuestro catálogo una nueva y potente cámara totalmente compatible con XIAO ESP32S3 Sense, la OV5640, y si la compras, puedes sustituir la cámara para usarla.
+Ahora tenemos en nuestros estantes una potente cámara totalmente compatible con XIAO ESP32S3 Sense, la OV5640, —la **versión con autoenfoque (AF) y disipador de calor**. Si la compras, puedes sustituir la cámara para usarla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -74,22 +74,22 @@ Si necesitas conocer la información detallada de los parámetros de la OV5640, 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Todos los programas sobre cámaras en el Wiki son compatibles tanto con las cámaras OV5640 como con OV2640.
+Todos los programas sobre cámaras en el Wiki son compatibles tanto con las cámaras OV5640 como con las OV2640.
 :::
 
 ### Preparar la tarjeta microSD
 
-XIAO ESP32S3 Sense admite tarjetas microSD de hasta **32GB**, así que si estás listo para comprar una tarjeta microSD para XIAO, por favor, toma como referencia esta especificación. Y formatea la tarjeta microSD al formato **FAT32** antes de usarla.
+XIAO ESP32S3 Sense admite tarjetas microSD de hasta **32GB**, así que si estás listo para comprar una tarjeta microSD para XIAO, por favor consulta esta especificación. Y formatea la tarjeta microSD al formato **FAT32** antes de usarla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-Después de formatearla, puedes insertar la tarjeta microSD en la ranura correspondiente. Por favor, presta atención a la dirección de inserción: el lado con los contactos dorados debe mirar hacia adentro.
+Después de formatearla, puedes insertar la tarjeta microSD en la ranura correspondiente. Ten en cuenta la dirección de inserción: el lado con los contactos dorados debe mirar hacia adentro.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
 ### Diseño del circuito de la ranura de la cámara para las placas de expansión
 
-La ranura de tarjeta de la XIAO ESP32S3 Sense ocupa 14 GPIO del ESP32-S3, y los detalles de los pines ocupados se muestran en la tabla siguiente.
+La ranura de tarjeta de XIAO ESP32S3 Sense ocupa 14 GPIO del ESP32-S3, y los detalles de los pines ocupados se muestran en la tabla siguiente.
 
 <div class="table-center">
     <table align="center">
@@ -148,7 +148,7 @@ La ranura de tarjeta de la XIAO ESP32S3 Sense ocupa 14 GPIO del ESP32-S3, y los 
 
 La PSRAM del ESP32 se refiere a la PSRAM externa (Pseudo Static Random Access Memory) en el chip ESP32, que proporciona espacio de memoria adicional para aumentar la memoria disponible del sistema ESP32. En el sistema ESP32, la PSRAM tiene los siguientes usos principales:
 
-1. Ampliar la RAM disponible: La RAM integrada del ESP32 es limitada, especialmente para algunas aplicaciones que necesitan mucha memoria, como el procesamiento de imágenes, el procesamiento de audio, etc., la RAM integrada puede no ser suficiente. Mediante el uso de PSRAM, se puede ampliar la RAM disponible del ESP32 para satisfacer las necesidades de estas aplicaciones.
+1. Ampliar la RAM disponible: La RAM integrada del ESP32 es limitada, especialmente para algunas aplicaciones que necesitan mucha memoria, como el procesamiento de imágenes, el procesamiento de audio, etc., la RAM integrada puede no ser suficiente. Al usar PSRAM, se puede ampliar la RAM disponible del ESP32 para satisfacer las necesidades de estas aplicaciones.
 
 2. Acelerar el acceso a la memoria: Dado que la PSRAM es memoria externa, la velocidad de acceso es más lenta que la de la RAM interna; sin embargo, puede utilizarse como caché o memoria temporal para acelerar el acceso a la memoria y el procesamiento de datos.
 
@@ -158,15 +158,15 @@ Para el contenido de este tutorial, **necesitas activar la función PSRAM** del 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/94.png" style={{width:700, height:'auto'}}/></div>
 
-## Descripción general de la biblioteca de la cámara
+## Descripción general de la biblioteca de cámara
 
-Antes de empezar, te recomendamos leer este capítulo para comprender las funciones comunes de la cámara, de modo que puedas usar estas funciones para completar el desarrollo de tu propio proyecto o poder leer el programa más fácilmente.
+Antes de empezar, te recomendamos leer este capítulo para comprender las funciones comunes de la cámara. De este modo podrás usar estas funciones para completar el desarrollo de tu propio proyecto o ser capaz de leer el programa con mayor facilidad.
 
 ### Parte I: esp_camera.h
 
 1. Estructura de configuración para la inicialización de la cámara.
 
-A continuación se muestra un ejemplo de la configuración; solo tienes que rellenarla según la situación real de los pines.
+A continuación se muestra un ejemplo de la configuración; solo tienes que completarla según la situación real de los pines.
 
 ```cpp
 static camera_config_t camera_example_config = {
@@ -232,7 +232,7 @@ typedef struct {
 } camera_fb_t;
 ```
 
-4. Devuelve el búfer de fotogramas para volver a utilizarlo.
+4. Devolver el búfer de fotogramas para que se vuelva a utilizar.
 
 ```cpp
 void esp_camera_fb_return(camera_fb_t * fb);
@@ -240,7 +240,7 @@ void esp_camera_fb_return(camera_fb_t * fb);
 
 - **Parámetros de entrada**: Puntero al búfer de fotogramas
 
-5. Obtén un puntero a la estructura de control del sensor de imagen.
+5. Obtener un puntero a la estructura de control del sensor de imagen.
 
 ```cpp
 sensor_t * esp_camera_sensor_get();
@@ -248,7 +248,7 @@ sensor_t * esp_camera_sensor_get();
 
 - **Salida**: puntero al sensor
 
-6. Guarda la configuración de la cámara en la memoria no volátil (NVS).
+6. Guardar la configuración de la cámara en el almacenamiento no volátil (NVS).
 
 ```cpp
 esp_err_t esp_camera_save_to_nvs(const char *key);
@@ -256,7 +256,7 @@ esp_err_t esp_camera_save_to_nvs(const char *key);
 
 - **Parámetros de entrada**: Un nombre de clave NVS único para la configuración de la cámara
 
-7. Carga la configuración de la cámara desde la memoria no volátil (NVS).
+7. Cargar la configuración de la cámara desde el almacenamiento no volátil (NVS).
 
 ```cpp
 esp_err_t esp_camera_load_from_nvs(const char *key);
@@ -266,7 +266,7 @@ esp_err_t esp_camera_load_from_nvs(const char *key);
 
 ### Parte II: img_converters.h
 
-1. Convierte el búfer de imagen a JPEG.
+1. Convertir el búfer de imagen a JPEG.
 
 ```cpp
 bool fmt2jpg_cb(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t quality, jpg_out_cb cb, void * arg);
@@ -284,7 +284,7 @@ bool fmt2jpg_cb(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, p
 
 - **Salida**: true si tiene éxito
 
-2. Convierte el búfer de fotogramas de la cámara a JPEG.
+2. Convertir el búfer de fotogramas de la cámara a JPEG.
 
 ```cpp
 bool frame2jpg_cb(camera_fb_t * fb, uint8_t quality, jpg_out_cb cb, void * arg);
@@ -298,7 +298,7 @@ bool frame2jpg_cb(camera_fb_t * fb, uint8_t quality, jpg_out_cb cb, void * arg);
 
 - **Salida**: true si tiene éxito
 
-3. Convierte el búfer de imagen a un búfer JPEG.
+3. Convertir el búfer de imagen a un búfer JPEG.
 
 ```cpp
 bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t quality, uint8_t ** out, size_t * out_len);
@@ -316,7 +316,7 @@ bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
 
 - **Salida**: true si tiene éxito
 
-4. Convierte el búfer de fotogramas de la cámara a un búfer JPEG.
+4. Convertir el búfer de fotogramas de la cámara a un búfer JPEG.
 
 ```cpp
 bool frame2jpg(camera_fb_t * fb, uint8_t quality, uint8_t ** out, size_t * out_len);
@@ -330,7 +330,7 @@ bool frame2jpg(camera_fb_t * fb, uint8_t quality, uint8_t ** out, size_t * out_l
 
 - **Salida**: true si tiene éxito
 
-5. Convierte el búfer de imagen a un búfer BMP.
+5. Convertir el búfer de imagen a un búfer BMP.
 
 ```cpp
 bool fmt2bmp(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t ** out, size_t * out_len);
@@ -348,7 +348,7 @@ bool fmt2bmp(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
 
 - **Salida**: true si tiene éxito
 
-6. Convierte el búfer de fotogramas de la cámara a un búfer BMP.
+6. Convertir el búfer de fotogramas de la cámara a un búfer BMP.
 
 ```cpp
 bool frame2bmp(camera_fb_t * fb, uint8_t ** out, size_t * out_len);
@@ -376,7 +376,7 @@ static int run_face_recognition(fb_data_t *fb, std::list<dl::detect::result_t> *
 
 - **Parámetros de entrada**:
   - **fb**: un puntero a una estructura que representa un búfer de fotogramas que contiene datos de imagen.
-  - **results**: un puntero a una lista de resultados de rostros detectados.
+  - **results**: un puntero a una lista de resultados de caras detectadas.
 
 2. Gestiona solicitudes HTTP para archivos de imagen BMP.
 
@@ -414,7 +414,7 @@ static esp_err_t stream_handler(httpd_req_t *req)
 
 - **Parámetros de entrada**: un puntero a una estructura que representa la solicitud HTTP.
 
-6. Inicializa y arranca un servidor de cámara que captura y transmite vídeo a través de HTTP.
+6. Inicializa y pone en marcha un servidor de cámara que captura y transmite vídeo a través de HTTP.
 
 ```cpp
 void startCameraServer()
@@ -423,7 +423,7 @@ void startCameraServer()
 
 ## Tomar fotos con la cámara
 
-A continuación empezamos con el uso más básico de la cámara; por ejemplo, primero utilizaremos la cámara para completar la adquisición de imágenes. En el primer proyecto utilizaremos la tarjeta microSD; la tarea principal de este programa es obtener las imágenes de la cámara cada minuto y luego guardarlas en la tarjeta microSD.
+A continuación empezamos con el uso más básico de la cámara, por ejemplo, primero utilizaremos la cámara para completar la adquisición de imágenes. En el primer proyecto utilizaremos la tarjeta microSD; la tarea principal de este programa es obtener las imágenes de la cámara cada minuto y luego guardarlas en la tarjeta microSD.
 
 Antes de empezar, haz lo mismo que yo e instala la tarjeta microSD y la cámara.
 
@@ -448,12 +448,6 @@ Aquí está el programa de Arduino para este proyecto.
 #define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 
 #include "camera_pins.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (github.com/0015/ESP32-OV5640-AF)
-
-OV5640 ov5640 = OV5640();
-
-#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA // AF focusing requires >=1280x1024
-#define OV5640_FOCUS_TIMEOUT_MS  8000
 
 unsigned long lastCaptureTime = 0; // Last shooting time
 int imageCount = 1;                // File Counter
@@ -492,23 +486,6 @@ void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
         Serial.println("Write failed");
     }
     file.close();
-}
-
-// Wait for the OV5640 continuous auto-focus to settle (FW_STATUS == 0x10 FOCUSED)
-bool waitForOv5640Focus() {
-  const uint32_t started = millis();
-  uint8_t status = 0;
-  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
-    status = ov5640.getFWStatus();
-    if (status == 0x10) {
-      Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status);
-      return true;
-    }
-    delay(100);
-  }
-  Serial.printf("ERROR: OV5640 focus not settled within %u ms; last FW_STATUS=0x%02X\n",
-                OV5640_FOCUS_TIMEOUT_MS, status);
-  return false;
 }
 
 void setup() {
@@ -571,32 +548,6 @@ void setup() {
 
   camera_sign = true; // Camera initialization check passes
 
-  // --- OV5640 auto-focus init (a key step missing from factory firmware; without it the lens defaults out of focus) ---
-  sensor_t *s = esp_camera_sensor_get();
-  if (s && s->id.PID == OV5640_PID) {
-    Serial.println("OV5640 detected, initializing auto-focus...");
-    // Switch to SXGA for focusing (the AF firmware needs >=1280x1024 to evaluate contrast)
-    if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) != 0) {
-      Serial.println("WARN: cannot set SXGA for AF focus, captures will be out of focus");
-    } else if (!ov5640.start(s)) {
-      Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
-      s->set_framesize(s, config.frame_size); // restore the capture framesize
-    } else {
-      int r1 = ov5640.focusInit();                       // load focus firmware, 0 = success
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // enable continuous auto-focus
-      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
-      if (r1 == 0 && r2 == 0 && waitForOv5640Focus()) {
-        Serial.println("OV5640 AF ready.");
-      } else {
-        Serial.println("ERROR: OV5640 AF setup failed; captures will be out of focus.");
-      }
-      // Restore the capture framesize
-      if (s->set_framesize(s, config.frame_size) != 0) {
-        Serial.println("WARN: cannot restore capture framesize");
-      }
-    }
-  }
-
   // Initialize SD card
   if(!SD.begin(21)){
     Serial.println("Card Mount Failed");
@@ -650,7 +601,7 @@ void loop() {
 La compilación y carga de este programa requiere otras dos dependencias, por favor ve a GitHub y descárgalas completas.
 :::
 
-Por favor carga el programa para XIAO ESP32S3, después de que el programa se cargue correctamente, enciende el monitor serie, ajusta la cámara para que apunte al objeto que quieres fotografiar, espera un minuto y la toma se guardará en la tarjeta SD. A continuación, XIAO tomará una foto cada minuto.
+Por favor carga el programa para XIAO ESP32S3; después de que el programa se cargue correctamente, enciende el monitor serie, ajusta la cámara para que apunte al objeto que quieres fotografiar, espera un minuto y la toma se guardará en la tarjeta SD. A continuación, XIAO tomará una foto cada minuto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/89.png" style={{width:700, height:'auto'}}/></div>
 
@@ -660,7 +611,7 @@ Retira la tarjeta microSD y, con la ayuda del lector de tarjetas, podrás ver la
 
 El programa comienza con las librerías de la cámara y de la tarjeta SD que necesitamos usar, y la importación de algunos archivos de dependencia de pines que definimos para la XIAO ESP32S3.
 
-Luego, para facilitar la lectura, definimos dos funciones una tras otra, una es la función `photo_save()` que guarda la imagen capturada en la tarjeta SD, y la otra es la función `writeFile()` que escribe el archivo.
+Luego, para facilitar la lectura, definimos dos funciones una tras otra: una es la función `photo_save()` que guarda la imagen capturada en la tarjeta SD, y la otra es la función `writeFile()` que escribe el archivo.
 
 ```cpp
 // Save pictures to SD card
@@ -681,11 +632,11 @@ void photo_save(const char * fileName) {
 }
 ```
 
-En la función que guarda la imagen en la tarjeta microSD, se realizan dos tareas principales. La primera es la adquisición de la imagen y la segunda es la llamada a la función que escribe el archivo.
+En la función que guarda la imagen en la tarjeta microSD se realizan dos tareas principales. La primera es la adquisición de la imagen y la segunda es la llamada a la función que escribe el archivo.
 
-La obtención de la imagen se puede hacer con `esp_camera_fb_get()`, la información de la imagen se guardará en el puntero `fb`, y luego podemos escribir el `buf` de `fb` en la tarjeta SD.
+La obtención de la imagen se puede realizar con `esp_camera_fb_get()`, la información de la imagen se guardará en el puntero `fb`, y luego podremos escribir el `buf` de `fb` en la tarjeta SD.
 
-En la función `Setup()`, un gran segmento del programa está configurando los pines de la cámara y la inicialización de la cámara, podemos simplemente aplicarlo directamente por defecto. Si tienes requisitos para los píxeles o la calidad de la cámara, puedes ajustar los valores internos de acuerdo con las funciones descritas en el capítulo [Camera Library Overview](#visión-general-de-la-biblioteca-de-cámara).
+En la función `Setup()`, un gran segmento del programa está configurando los pines de la cámara y la inicialización de la cámara; podemos simplemente aplicarlo directamente por defecto. Si tienes requisitos para los píxeles o la calidad de la cámara, puedes ajustar los valores internos según las funciones descritas en el capítulo [Camera Library Overview](#visión-general-de-la-biblioteca-de-cámara).
 
 Lo último que hay que hacer en la función `loop()` es controlar que las fotos se tomen cada minuto y seguir el número incremental como sufijo del nombre de archivo de las fotos tomadas.
 
@@ -715,7 +666,7 @@ A continuación, utilizamos los conocimientos teóricos anteriores para crear un
 
 ### Preparación preliminar
 
-Antes de comenzar este proyecto, tendrás que preparar con antelación el siguiente hardware.
+Antes de comenzar este proyecto, tendrás que preparar de antemano el siguiente hardware.
 
 <div class="table-center">
   <table align="center">
@@ -742,12 +693,12 @@ Antes de comenzar este proyecto, tendrás que preparar con antelación el siguie
   </table>
 </div>
 
-Dado que este proyecto utilizará Round Display for XIAO, lee el contenido de **[Wiki environment configuration of the display expansion board](https://wiki.seeedstudio.com/es/get_start_round_display#software-preparation)**, instala las librerías necesarias y configura el entorno TFT antes de ejecutar las rutinas de este proyecto.
+Dado que este proyecto utilizará Round Display for XIAO, lee el contenido de la **[configuración del entorno Wiki de la placa de expansión de pantalla](https://wiki.seeedstudio.com/es/get_start_round_display#software-preparation)**, instala las librerías necesarias y configura el entorno TFT antes de ejecutar las rutinas de este proyecto.
 
-Dado que el XIAO EPS32S3 Sense está diseñado con tres resistencias pull-up R4~R6 conectadas a la ranura de la tarjeta SD, y la pantalla redonda también tiene resistencias pull-up, las dos ranuras de tarjeta SD entran en conflicto cuando ambas placas se utilizan al mismo tiempo. Hay dos maneras de resolver este problema:
+Dado que la XIAO EPS32S3 Sense está diseñada con tres resistencias pull-up R4~R6 conectadas a la ranura de la tarjeta SD, y la pantalla redonda también tiene resistencias pull-up, las dos ranuras de tarjeta SD entran en conflicto cuando ambas placas se utilizan al mismo tiempo. Hay dos maneras de resolver este problema:
 
-- **Opción 1 — sin cambios de hardware (utilizada por el código de ejemplo de este proyecto)**: mantén J3 intacto y utiliza la ranura de tarjeta microSD en el propio XIAO ESP32S3 Sense. Como lo demuestra el **ingeniero Mjrovai**, esto es posible a nivel de software: el código siguiente inicializa la tarjeta SD con `SD_CS_PIN 21` (el lector de tarjetas Sense). Para más detalles, consulta **[sus métodos y procedimientos](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
-- **Opción 2 — cortar J3 y usar la ranura de Round Display**: corta J3 en la placa de expansión XIAO ESP32S3 Sense. Después de desconectar J3, la ranura de tarjeta SD en XIAO ESP32S3 Sense ya no funcionará, por lo que tendrás que insertar la tarjeta microSD en la ranura de tarjeta SD en la Round Display y cambiar `SD_CS_PIN` en el código de `21` a `D2`.
+- **Opción 1 — sin cambios de hardware (utilizada por el código de ejemplo de este proyecto)**: mantén J3 intacto y utiliza la ranura de tarjeta microSD en la propia XIAO ESP32S3 Sense. Como lo demuestra el **ingeniero Mjrovai**, esto es posible a nivel de software: el código siguiente inicializa la tarjeta SD con `SD_CS_PIN 21` (el lector de tarjetas de Sense). Para más detalles, consulta **[sus métodos y procedimientos](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
+- **Opción 2 — cortar J3 y usar la ranura de Round Display**: corta J3 en la placa de expansión XIAO ESP32S3 Sense. Después de desconectar J3, la ranura de tarjeta SD en XIAO ESP32S3 Sense ya no funcionará, por lo que tendrás que insertar la tarjeta microSD en la ranura de tarjeta SD de Round Display y cambiar `SD_CS_PIN` en el código de `21` a `D2`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:500, height:'auto'}}/></div>
 
@@ -755,7 +706,7 @@ Dado que el XIAO EPS32S3 Sense está diseñado con tres resistencias pull-up R4~
 Si eliges la Opción 2, te recomendamos que primero retires el módulo de la cámara para evitar rayar la cámara cuando cortes la conexión J3 con la cuchilla.
 :::
 
-A continuación, instala la tarjeta microSD, XIAO ESP32S3 Sense y Round Display en orden.
+A continuación, instala la tarjeta microSD, la XIAO ESP32S3 Sense y la Round Display en orden.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/101.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -790,19 +741,12 @@ Aquí está el programa de Arduino para este proyecto.
  * added for JPEG conversion.
  *
  * Adapted by MRovai @02June23
- *
- * Generic OV5640 auto-focus patch (only applies to the OV5640; fixed-focus modules
- * such as the OV3660/NT99141 are skipped automatically):
- *  - After esp_camera_init, run focusInit / autoFocusMode only when PID == OV5640_PID
- *  - In RGB565 mode do not switch to SXGA (it would overflow the fb buffer);
- *    rely on the OV5640's internal full-size image for focus evaluation
 */
 
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include "esp_camera.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (github.com/0015/ESP32-OV5640-AF), OV5640 only
 #include "FS.h"
 #include "SD.h"
 
@@ -831,27 +775,6 @@ bool camera_sign = false;          // Check camera status
 bool sd_sign = false;              // Check sd status
 
 TFT_eSPI tft = TFT_eSPI();
-
-// --- OV5640 AF (OV5640 module only) ---
-OV5640 ov5640 = OV5640();
-#define OV5640_FOCUS_TIMEOUT_MS 8000
-
-// Wait for the OV5640 continuous auto-focus to settle (FW_STATUS == 0x10 FOCUSED)
-bool waitForOv5640Focus() {
-  const uint32_t started = millis();
-  uint8_t status = 0;
-  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
-    status = ov5640.getFWStatus();
-    if (status == 0x10) {
-      Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status);
-      return true;
-    }
-    delay(100);
-  }
-  Serial.printf("WARN: OV5640 focus not settled within %u ms; last FW_STATUS=0x%02X\n",
-                OV5640_FOCUS_TIMEOUT_MS, status);
-  return false;
-}
 
 // SD card write file
 void writeFile(fs::FS &fs, const char * path, uint8_t * data, size_t len){
@@ -924,31 +847,6 @@ void setup() {
   }
   Serial.println("Camera ready");
   camera_sign = true; // Camera initialization check passes
-
-  // --- OV5640 auto-focus init (OV5640 only; fixed-focus modules are skipped) ---
-  // A key step missing from factory firmware: esp_camera_init does not set up AF,
-  // so the OV5640 defaults to an out-of-focus lens.
-  // In RGB565 mode do not switch to SXGA (it would overflow the fb buffer);
-  // rely on the OV5640's internal full-size image for focus evaluation.
-  sensor_t *s = esp_camera_sensor_get();
-  if (s && s->id.PID == OV5640_PID) {
-    Serial.println("OV5640 detected, initializing auto-focus...");
-    if (!ov5640.start(s)) {
-      Serial.println("WARN: OV5640 CHIPID check failed, AF skipped");
-    } else {
-      int r1 = ov5640.focusInit();                       // load focus firmware, 0 = success
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;  // enable continuous auto-focus
-      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
-      if (r1 == 0 && r2 == 0) {
-        waitForOv5640Focus();
-      } else {
-        Serial.println("ERROR: OV5640 AF setup failed; captures will be out of focus.");
-      }
-    }
-  } else {
-    Serial.printf("PID=0x%04X (not OV5640), AF skipped - fixed-focus module works as-is.\n",
-                  s ? s->id.PID : 0);
-  }
 
   // Display initialization
   tft.init();
@@ -1031,13 +929,13 @@ void loop() {
 }
 ```
 
-Sube el programa a XIAO ESP32S3 Sense; si la pantalla no se enciende después de una carga correcta, puede que necesites pulsar el botón Reset en la XIAO. Entonces verás la pantalla de monitorización mostrada en la Round Display en tiempo real. Haz clic en cualquier parte de la pantalla, la imagen se grabará y guardará en la tarjeta microSD.
+Sube el programa a XIAO ESP32S3 Sense; si la pantalla no se enciende después de una carga correcta, puede que necesites pulsar el botón Reset en el XIAO. Entonces verás la pantalla de monitorización mostrada en tiempo real en la Round Display. Haz clic en cualquier parte de la pantalla, la imagen se grabará y se guardará en la tarjeta microSD.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/95.gif" style={{width:800, height:'auto'}}/></div>
 
 ### Anotación del programa
 
-La configuración de la cámara y de la tarjeta microSD son contenidos anteriores, por lo que no los repetiremos aquí. Para el uso de la tarjeta microSD, puedes consultar el Wiki [XIAO ESP32S3 Sense file system](https://wiki.seeedstudio.com/es/xiao_esp32s3_sense_filesystem) para aprender cómo utilizarla.
+La configuración de la cámara y de la tarjeta microSD son contenidos anteriores, por lo que no los repetiremos aquí. Para el uso de la tarjeta microSD, puedes consultar el Wiki de [XIAO ESP32S3 Sense file system](https://wiki.seeedstudio.com/es/xiao_esp32s3_sense_filesystem) para aprender cómo utilizarla.
 
 ```cpp
 // Take a photo
@@ -1083,21 +981,21 @@ tft.endWrite();
 
 Esta parte del código muestra la imagen capturada en una pantalla. Primero obtiene el búfer de imagen y su longitud desde la estructura `camera_fb_t`. Luego, configura la pantalla para recibir los datos de imagen y muestra la imagen en la pantalla usando la función `pushColors()`.
 
-## Grabar vídeos cortos y guardarlos en la tarjeta microSD
+## Grabar vídeos cortos y guardar en la tarjeta microSD
 
 :::note
 No recomendamos la exportación de codificación de vídeo sobre un MCU porque los recursos de la biblioteca de codificación actualmente soportada son demasiado pequeños y la operación es muy complicada y tediosa.
 
-Este ejemplo no implica codificación de vídeo, y el vídeo exportado es un MJPG compuesto de AVI por fotograma, por lo que la grabación de vídeo puede no ser especialmente buena ni satisfactoria. El propósito de este tutorial es proporcionarte métodos e ideas sencillos para grabar vídeos cortos, y damos la bienvenida a los compañeros que tengan mejores soluciones a enviarnos PR.
+Este ejemplo no implica codificación de vídeo, y el vídeo exportado es un MJPG compuesto de AVI por fotograma, por lo que la grabación de vídeo puede no ser especialmente buena ni satisfactoria. El propósito de este tutorial es proporcionarte métodos e ideas sencillas para grabar vídeos cortos, y damos la bienvenida a los compañeros que tengan mejores soluciones a enviarnos PR.
 :::
 
-En los capítulos anteriores, dominamos cómo usar la cámara para capturar imágenes. Sabemos que una sola imagen se une con otras para formar un vídeo en movimiento. Basándonos en esta teoría, nuestro proyecto en este capítulo te guiará para escribir un programa que grabe un vídeo de 10 segundos cada 1 minuto y lo guarde en una tarjeta microSD.
+En los capítulos anteriores, dominamos cómo usar la cámara para capturar imágenes. Sabemos que una sola imagen se une con otras para formar un vídeo en movimiento. Basándonos en esta teoría, nuestro proyecto en este capítulo te guiará sobre cómo escribir un programa para grabar un vídeo de 10 segundos cada 1 minuto y guardarlo en una tarjeta microSD.
 
 Puedes encontrar el código completo del programa y los archivos de dependencias necesarios en el siguiente enlace.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/record_video" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar el código</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -1237,7 +1135,7 @@ void loop() {
 }
 ```
 
-Sube el código a XIAO ESP32S3 Sense, enciende el monitor serie; en este momento ajusta la posición de la cámara hacia el objeto que quieres grabar. Después de un minuto, el LED naranja en la XIAO empezará a parpadear y la grabación comenzará y se guardará en la tarjeta microSD.
+Sube el código a XIAO ESP32S3 Sense, enciende el monitor serie; en este momento ajusta la posición de la cámara hacia el objeto que quieres grabar. Después de un minuto, el LED naranja del XIAO empezará a parpadear y la grabación comenzará y se guardará en la tarjeta microSD.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/96.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1262,7 +1160,7 @@ while ((millis() - lastCaptureTime) < captureDuration) {
 }
 ```
 
-Además de eso, anidamos una capa de juicios de espera de 1 minuto en el exterior para asegurar que el vídeo comience cada 1 minuto.
+Además de eso, anidamos una capa de juicios de espera de 1 minuto en el exterior para asegurarnos de que el vídeo comience cada 1 minuto.
 
 ```cpp
 //If it has been more than 1 minute since the last video capture, start capturing a new video
@@ -1280,11 +1178,11 @@ Al final de este tutorial, mostremos un proyecto de transmisión de vídeo. Este
 
 Puedes encontrar el código completo del programa y los archivos de dependencias necesarios en el siguiente enlace.
 
-Si estás usando el paquete de placas esp32 con versión **2.0.x** en Arduino, descárgalo con:
+Si estás utilizando el paquete de placas esp32 con versión **2.0.x** en Arduino, descárgalo con:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/CameraWebServer_for_esp-arduino_2.0.x" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar el código</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -1300,7 +1198,6 @@ Aquí está el programa de Arduino para este proyecto.
 
 ```cpp
 #include "esp_camera.h"
-#include "ESP32_OV5640_AF.h"   // OV5640 auto-focus library (OV5640 only)
 #include <WiFi.h>
 
 //
@@ -1326,22 +1223,6 @@ const char *password = "**********";
 
 void startCameraServer();
 void setupLedFlash(int pin);
-
-// --- OV5640 AF (OV5640 module only; fixed-focus modules such as the OV3660/NT99141 are skipped automatically) ---
-OV5640 ov5640 = OV5640();
-#define OV5640_AF_FOCUS_FRAMESIZE FRAMESIZE_SXGA  // AF focus evaluation requires >=1280x1024
-#define OV5640_FOCUS_TIMEOUT_MS 8000
-bool waitForOv5640Focus() {
-  const uint32_t started = millis();
-  uint8_t status = 0;
-  while (millis() - started < OV5640_FOCUS_TIMEOUT_MS) {
-    status = ov5640.getFWStatus();
-    if (status == 0x10) { Serial.printf("OV5640 focus settled: FW_STATUS=0x%02X\n", status); return true; }
-    delay(100);
-  }
-  Serial.printf("WARN: OV5640 focus not settled; last FW_STATUS=0x%02X\n", status);
-  return false;
-}
 
 void setup() {
   Serial.begin(115200);
@@ -1412,22 +1293,7 @@ void setup() {
   // --- OV5640 Heat Optimization: lower IO drive (0x302C bit[7:6] 11->00) ---
   if (s && s->id.PID == OV5640_PID) {
     s->set_reg(s, 0x302C, 0xC0, 0x00);
-  }
-  // --- OV5640 auto-focus init (OV5640 only; fixed-focus modules are skipped) ---
-  if (s && s->id.PID == OV5640_PID) {
-    Serial.println("OV5640 detected, initializing auto-focus...");
-    if (s->set_framesize(s, OV5640_AF_FOCUS_FRAMESIZE) == 0 && ov5640.start(s)) {
-      int r1 = ov5640.focusInit();
-      int r2 = (r1 == 0) ? ov5640.autoFocusMode() : -1;
-      Serial.printf("  focusInit=%d autoFocusMode=%d\n", r1, r2);
-      if (r1 == 0 && r2 == 0) waitForOv5640Focus();
-      s->set_framesize(s, config.frame_size);  // restore the capture framesize
-    } else {
-      Serial.println("WARN: OV5640 AF setup failed, skipped");
-      s->set_framesize(s, config.frame_size);
-    }
-  }
-  // initial sensors are flipped vertically and colors are a bit saturated
+  }  // initial sensors are flipped vertically and colors are a bit saturated
   if (s->id.PID == OV3660_PID) {
     s->set_vflip(s, 1);        // flip it back
     s->set_brightness(s, 1);   // up the brightness just a bit
@@ -1478,26 +1344,26 @@ void loop() {
 Antes de subir el programa, necesitas cambiar en el código el nombre y la contraseña de la red WiFi por los tuyos. Después de subir el programa, si el XIAO ESP32C3 se conecta correctamente a tu WiFi, se imprimirá su dirección IP.
 
 :::caution
-XIAO ESP32S3 se calentará mucho durante la transmisión de larga duración; por favor, ten cuidado para no quemarte. Para reducir la temperatura, aplica el parche [OV5640 Heat Optimization](#OV5640-optimización-del-calor) que aparece a continuación.
+XIAO ESP32S3 se calentará mucho durante la transmisión de larga duración; por favor, ten cuidado para no quemarte. Para reducir la temperatura, aplica el parche [OV5640 Heat Optimization](#OV5640-optimización-de-calor) que aparece a continuación.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/97.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Como puedes ver en la figura anterior, si activas la salida de información de depuración, entonces podrás ver que se imprime en el monitor serie parte de la información de depuración del núcleo del chip. Por ejemplo `[0;31mE (2947) MFN: Partition Not found[0m`, por favor no te preocupes, no afecta a la ejecución del programa.
+Como puedes ver en la figura anterior, si activas la salida de información de depuración, entonces podrás ver parte de la información de depuración del núcleo del chip impresa en el monitor serie. Por ejemplo `[0;31mE (2947) MFN: Partition Not found[0m`, por favor no te preocupes, no afecta a la ejecución del programa.
 :::
 
 Por favor, abre tu navegador, recomendamos Edge o Google Chrome, e introduce esa dirección IP y verás la página de configuración del vídeo.
 
 :::note
-Ten en cuenta que el dispositivo en el que estás utilizando el navegador debe estar en la misma LAN que el XIAO.
+Ten en cuenta que el dispositivo en el que estás usando el navegador debe estar en la misma LAN que XIAO.
 :::
 
-Después de configurar las especificaciones del flujo de vídeo que quieras establecer, haz clic en **Start Stream** en la parte inferior de la barra de herramientas izquierda y verás la transmisión en directo de la cámara.
+Después de configurar las especificaciones del flujo de vídeo que quieres establecer, haz clic en **Start Stream** en la parte inferior de la barra de herramientas izquierda y verás la transmisión en vivo de la cámara.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/98.png" style={{width:1000, height:'auto'}}/></div>
 
-Afortunadamente, ESP32 también ha añadido oficialmente el reconocimiento facial al programa. Puedes probar esta función activando el interruptor de botón para el reconocimiento facial con una calidad de imagen reducida.
+Afortunadamente, ESP32 también ha añadido oficialmente el reconocimiento facial al programa. Puedes probar esta función activando el interruptor de botón para el reconocimiento facial con calidad de imagen reducida.
 
 :::tip
 Por razones de rendimiento, la calidad de la pantalla no puede ser superior a **CIF**, de lo contrario la página web mostrará un error cuando actives el interruptor de reconocimiento facial.
@@ -1509,7 +1375,11 @@ Oh, mi gran cara está rodeada por un círculo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" style={{width:600, height:'auto'}}/></div>
 
-## Autoenfoque OV5640
+## OV5640 AutoFocus
+
+:::note
+La función AF de esta sección se aplica **solo al módulo OV5640 largo independiente (se vende por separado, con disipador de calor)**. El OV5640 incluido con la placa Sense es de enfoque fijo y no tiene hardware AF; omite esta sección con ese módulo.
+:::
 
 ### Preparación de hardware
 
@@ -1535,7 +1405,7 @@ Oh, mi gran cara está rodeada por un círculo.
 
 #### Método 1
 
-Agradecimientos especiales a **@Eric** por proporcionar el código de código abierto
+Un agradecimiento especial a **@Eric** por proporcionar el código de código abierto
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/0015/ESP32-OV5640-AF/tree/main" target="_blank" rel="noopener noreferrer">
@@ -1674,10 +1544,10 @@ void loop() {
 
 ```
 
-### Tabla de resultados
+### Gráfico de resultados
 
 :::tip
-La resolución debe ser superior a 1280*1024 para ver el efecto de enfoque; la pantalla se retrasará y tendrás que esperar un rato a la pantalla cuando esté enfocando.
+La resolución debe ser superior a 1280*1024 para ver el efecto de enfoque; la pantalla se quedará congelada y tendrás que esperar un rato a que se actualice mientras se está enfocando.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/OV5640.gif" style={{width:700, height:'auto'}}/></div>
@@ -1685,7 +1555,7 @@ La resolución debe ser superior a 1280*1024 para ver el efecto de enfoque; la p
 #### Método 2
 
 :::tip
-La resolución debe ser superior a 1600*1200 para ver el efecto de enfoque; la pantalla se retrasará y tendrás que esperar un rato a la pantalla cuando esté enfocando.
+La resolución debe ser superior a 1600*1200 para ver el efecto de enfoque; la pantalla se quedará congelada y tendrás que esperar un rato a que se actualice mientras se está enfocando.
 :::
 
 Descarga el siguiente archivo zip y añádelo a Arudino
@@ -1693,7 +1563,7 @@ Descarga el siguiente archivo zip y añádelo a Arudino
 - **[ZIP]** [OV5640 Auto](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/OV5640_AF.zip)
 
 :::tip
-El OV5640 en las bibliotecas del método 1 y del método 2 no pueden existir al mismo tiempo
+El OV5640 de las bibliotecas del método 1 y el método 2 no pueden existir al mismo tiempo
 :::
 
 ```cpp
@@ -1830,33 +1700,33 @@ void loop() {
 ```
 
 :::tip
-Se recomienda el modo 1 porque tiene un efecto de enfoque más pronunciado que el modo 2 y proporciona una imagen más nítida.
+Se recomienda el Modo 1 porque tiene un efecto de enfoque más pronunciado que el Modo 2 y proporciona una imagen más nítida.
 :::
 
-## Optimización de calor de la OV5640
+## Optimización del calor del OV5640
 
 El módulo OV5640 se calienta notablemente durante un uso prolongado. Esta sección ofrece dos formas de reducir la temperatura: ajustar los parámetros de software (Método 1) y reducir la capacidad de accionamiento de E/S mediante una configuración de registros (Método 2).
 
 ### Método 1: Reducir el calor ajustando parámetros
 
-El código de ejemplo de este Wiki está ajustado para obtener la mejor calidad de imagen posible — resolución UXGA (1600×1200) con captura continua de fotogramas con doble búfer en los ejemplos de fotos y una CPU a 240 MHz — por lo que la placa se calienta notablemente durante ejecuciones prolongadas. Si consideras que la temperatura es demasiado alta, o no necesitas tanta resolución, puedes reducir el consumo de energía de las siguientes maneras, la mayoría de las cuales no afectan a la nitidez de las capturas individuales:
+El código de ejemplo de este Wiki está ajustado para obtener la mejor calidad de imagen posible — resolución UXGA (1600×1200) con captura continua de fotogramas con doble búfer en los ejemplos de fotos, y una CPU a 240MHz — por lo que la placa se calienta notablemente durante ejecuciones largas. Si consideras que la temperatura es demasiado alta, o no necesitas tanta resolución, puedes reducir el consumo de energía de las siguientes maneras, la mayoría de las cuales no afectan a la nitidez de las capturas individuales:
 
-| Palanca | Qué cambiar | Reducción de calor | ¿Afecta la calidad de imagen? |
+| Palanca | Qué cambiar | Reducción de calor | ¿Afecta a la calidad de imagen? |
 |---|---|---|---|
 | Frecuencia de la CPU | Arduino IDE: `Tools → CPU Frequency: 240MHz` → `160MHz` (o añade `setCpuFrequencyMhz(160);` en `setup()`) | Media | No (la captura del sensor y la codificación JPEG se realizan dentro del OV5640, independientemente de la CPU) |
 | Frecuencia de enfoque | Cambia el autoenfoque continuo (`autoFocusMode`) a enfoque de disparo único activado periódicamente, o alarga el intervalo de enfoque | Pequeña | Sin cambios para escenas estáticas; las escenas en movimiento tardan más en reenfocarse |
-| Captura de fotogramas | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY` (la cámara llena los búferes disponibles, lo que reduce el procesamiento continuo de fotogramas; no es captura bajo demanda y no pone el sensor en modo de espera) | Media | El fotograma que capturas puede ser unos cuantos fotogramas más antiguo que con `CAMERA_GRAB_LATEST`; la nitidez no se ve afectada |
+| Captura de fotogramas | `CAMERA_GRAB_LATEST` → `CAMERA_GRAB_WHEN_EMPTY` (la cámara llena los búferes disponibles, lo que reduce el procesamiento continuo de fotogramas; no es captura bajo demanda y no pone el sensor en modo de espera) | Media | El fotograma que captures puede ser unos cuantos fotogramas más antiguo que con `CAMERA_GRAB_LATEST`; la nitidez no se ve afectada |
 | Resolución | `FRAMESIZE_UXGA` (1600×1200) → `FRAMESIZE_HD` (1280×720) o `SVGA` (800×600) | Grande | Menos píxeles, por lo que hay menos detalle al ampliar (la nitidez por píxel no cambia) |
 | Doble búfer | `fb_count` de 2 a 1 (junto con el cambio de modo de captura anterior) | Media | No |
 
-> La combinación con mejor relación calidad‑precio es usar una resolución más baja y un único búfer de fotograma para reducir la sobrecarga de captura y procesamiento; es decir, bajar un nivel de resolución más `CAMERA_GRAB_WHEN_EMPTY` con `fb_count = 1`. La temperatura baja de forma notable, con casi ningún impacto en la nitidez de las capturas individuales. Ten en cuenta que `CAMERA_GRAB_WHEN_EMPTY` llena los búferes disponibles; no proporciona captura del sensor bajo demanda ni modo de espera.
+> La combinación con mejor relación calidad-precio es usar una resolución más baja y un único búfer de fotogramas para reducir la sobrecarga de captura y procesamiento; es decir, bajar un nivel de resolución y usar `CAMERA_GRAB_WHEN_EMPTY` con `fb_count = 1`. La temperatura desciende de forma notable, con casi ningún impacto en la nitidez de las capturas individuales. Ten en cuenta que `CAMERA_GRAB_WHEN_EMPTY` llena los búferes disponibles; no proporciona captura bajo demanda del sensor ni modo de espera.
 
-### Método 2: Reducir la potencia bajando la capacidad de accionamiento de E/S
+### Método 2: Reducir el consumo bajando la capacidad de manejo de E/S
 :::tip
-Esta sección solo se aplica al módulo de cámara **OV5640**. El OV2640 no tiene tal registro y se omite automáticamente mediante la comprobación de `PID` en el código siguiente.
+Esta sección se aplica solo al módulo de cámara **OV5640**. El OV2640 no tiene tal registro y se omite automáticamente mediante la comprobación de `PID` en el código siguiente.
 :::
 
-Cuando el OV5640 funciona continuamente durante mucho tiempo —transmisión de vídeo, vista previa en vivo o autoenfoque continuo— la temperatura del chip puede subir por encima de 70°C. Esta es una causa raíz a nivel de hardware y no puede eliminarse completamente por software; solo puede mitigarse.
+Cuando el OV5640 funciona de forma continua durante mucho tiempo —transmisión de vídeo, vista previa en vivo o autoenfoque continuo— la temperatura del chip puede superar los 70°C. Esta es una causa raíz a nivel de hardware y no puede eliminarse por completo mediante software; solo puede mitigarse.
 
 #### Por qué se calienta el OV5640
 
@@ -1864,20 +1734,20 @@ Cuando el OV5640 funciona continuamente durante mucho tiempo —transmisión de 
 2. **Una secuencia de encendido incorrecta** introduce corriente de fuga y aumenta el consumo de potencia estática.
 3. La hoja de datos **recomienda encarecidamente cortar toda la alimentación (incluida la DVDD externa) cuando el sensor no está en uso**, lo que confirma que el consumo en espera del OV5640 no es ideal.
 
-La única palanca de software efectiva es **bajar la corriente de accionamiento de los pines de E/S** para reducir la potencia dinámica.
+La única palanca de software efectiva es **reducir la corriente de manejo de los pines de E/S** para disminuir la potencia dinámica.
 
 #### Cómo funciona — registro 0x302C
 
-El registro `0x302C` (llamado `DRIVE_CAPABILITY` en el código fuente de esp32-camera) controla la capacidad de accionamiento de los pines de E/S (D0–D7, PCLK, VSYNC, HREF). El campo clave es **Bit[7:6]**:
+El registro `0x302C` (llamado `DRIVE_CAPABILITY` en el código fuente de esp32-camera) controla la capacidad de manejo de los pines de E/S (D0–D7, PCLK, VSYNC, HREF). El campo clave es **Bit[7:6]**:
 
-| Bit[7:6] | Capacidad de accionamiento |
+| Bit[7:6] | Capacidad de manejo |
 |---|---|
 | `11` | 4x (valor predeterminado al encender el chip) |
 | `10` | 3x |
 | `01` | 2x |
 | `00` | 1x (la más débil, menor corriente, menos calor) |
 
-Cambiar Bit[7:6] de `11` a `00` reduce la capacidad de accionamiento de 4x a 1x. Ese es todo el principio: no hay ninguna otra magia implicada.
+Cambiar Bit[7:6] de `11` a `00` reduce la capacidad de manejo de 4x a 1x. Ese es todo el principio: no hay ninguna otra magia implicada.
 
 #### Código — añade esto justo después de `esp_camera_init()`
 
@@ -1896,29 +1766,29 @@ if (s && s->id.PID == OV5640_PID) {
 - `esp_camera_init(&config)` — se llama como de costumbre, la función **no** se modifica. Internamente llama a `sensor.reset()`, que escribe un lote de registros predeterminados.
 - `esp_camera_sensor_get()` — obtiene el puntero `sensor_t *` necesario para comunicarse con el sensor.
 - `if (s->id.PID == OV5640_PID)` — solo se aplica al OV5640. Todos los ejemplos de este wiki también son compatibles con el OV2640, y `0x302C` es específico del OV5640, por lo que no debe escribirse en un OV2640. El ejemplo de transmisión de vídeo ya utiliza el mismo patrón `if (s->id.PID == OV3660_PID)`.
-- `s->set_reg(s, 0x302C, 0xC0, 0x00)` — lee de vuelta `0x302C`, borra solo **Bit[7:6]** a `00` (máscara `0xC0 = 0b11000000`, valor `0x00`), y deja los otros bits tal como los configuró la biblioteca. Esto es más seguro que escribir `0x03` directamente: no depende del valor predeterminado de la biblioteca y solo toca los bits de capacidad de accionamiento.
+- `s->set_reg(s, 0x302C, 0xC0, 0x00)` — lee `0x302C`, borra solo **Bit[7:6]** a `00` (máscara `0xC0 = 0b11000000`, valor `0x00`), y deja los otros bits tal como los configuró la biblioteca. Esto es más seguro que escribir `0x03` directamente: no depende del valor predeterminado de la biblioteca y solo toca los bits de capacidad de manejo.
 
 #### Efecto y riesgos
 
-- **Efecto**: bajo transmisión continua de larga duración, la temperatura del chip OV5640 baja de ~70°C+ a ~54°C (varía con la temperatura ambiente y el disipador).
-- **Riesgo**: una menor capacidad de accionamiento ralentiza los flancos de señal, lo que eleva el listón para la inmunidad al ruido de las pistas de PCB; en casos extremos puede introducir ruido de imagen o distorsión de muestreo. En el XIAO ESP32S3 Sense + OV5640 (versión con disipador) el impacto es aceptable en las pruebas.
+- **Efecto**: en transmisión continua de larga duración, la temperatura del chip OV5640 baja de ~70°C+ a ~54°C (varía con la temperatura ambiente y el disipador).
+- **Riesgo**: una menor capacidad de manejo ralentiza los flancos de señal, lo que eleva el listón para la inmunidad al ruido de las pistas del PCB; en casos extremos puede introducir ruido en la imagen o distorsión de muestreo. En el XIAO ESP32S3 Sense + OV5640 (versión con disipador) el impacto es aceptable en las pruebas.
 - **Alcance**: solo OV5640; el OV2640 no tiene tal registro y se omite mediante la comprobación de `PID`.
 
 ## Solución de problemas
 
 ### P1: Cuando se usan juntos XIAO ESP32S3 Sense y Round Display, ¿tengo que cortar el pin J3? ¿Qué ranura de tarjeta SD se puede usar?
 
-R: En principio, necesitas cortar el pin J3 cuando XIAO ESP32S3 Sense se usa junto con Round Display para usar la tarjeta microSD. La razón es que hay resistencias de pull‑up en el diseño del circuito de ambas placas de expansión, por lo que, teóricamente, si dos resistencias de pull‑up funcionan al mismo tiempo, entonces la ranura de la tarjeta SD no funcionará correctamente. Aparecerá un mensaje de error de fallo al montar la tarjeta SD. Dado que la resistencia de pull‑up en el Round Display no se puede bloquear, necesitas cortar J3 en la placa de expansión Sense para asegurarte de que solo una resistencia de pull‑up esté funcionando cuando se usan ambas juntas. Esto también determina que, cuando se usan ambas juntas, hay y solo la ranura de tarjeta SD en el Round Display está activa.
+R: En principio, necesitas cortar el pin J3 cuando XIAO ESP32S3 Sense se usa junto con Round Display para usar la tarjeta microSD. La razón es que hay resistencias pull-up en el diseño del circuito de ambas placas de expansión, por lo que, teóricamente, si dos resistencias pull-up funcionan al mismo tiempo, entonces la ranura de la tarjeta SD no funcionará correctamente. Aparecerá un mensaje de error de fallo al montar la tarjeta SD. Dado que la resistencia pull-up en el Round Display no se puede bloquear, necesitas cortar J3 en la placa de expansión Sense para asegurarte de que solo una resistencia pull-up esté funcionando cuando se usan ambas juntas. Esto también determina que, cuando ambas se usan juntas, hay y solo la ranura de tarjeta SD en el Round Display está activa.
 
 Sin embargo, **debemos agradecer al ingeniero Mjrovai por el nuevo método de usar la ranura de tarjeta microSD en el XIAO ESP32S3 Sense al mismo tiempo**, lo cual también es posible a nivel de software. Podemos remitirnos a **[sus métodos y procedimientos](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
 
 ### P2: El OV5640 se calienta mucho durante la transmisión de larga duración. ¿Qué debo hacer?
 
-R: Esto es de esperar para el OV5640 bajo captura continua. Reduce la capacidad de accionamiento de E/S mediante el registro `0x302C` como se describe en [OV5640 Heat Optimization](#ov5640-optimización-del-calor), lo que baja la temperatura del chip de ~70°C+ a ~54°C. Si no necesitas alta resolución, reducir también el tamaño de fotograma y cambiar a `CAMERA_GRAB_WHEN_EMPTY` reduce aún más la potencia.
+R: Esto es de esperar para el OV5640 bajo captura continua. Reduce la capacidad de manejo de E/S mediante el registro `0x302C` como se describe en [OV5640 Heat Optimization](#ov5640-heat-optimization): reduce la temperatura del chip de ~70°C+ a ~54°C. Si no necesitas alta resolución, reducir también el tamaño de fotograma y cambiar a `CAMERA_GRAB_WHEN_EMPTY` reduce aún más el consumo.
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

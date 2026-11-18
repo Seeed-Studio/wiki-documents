@@ -235,6 +235,11 @@ const sidebars = {
               label: 'LingBot-VA — Um Modelo de Mundo Causal de Imagens Futuras para Ações de Robôs',
             },
             { type: 'doc', id: `${P}/pt_Paper_Reading_GR00T_2`, label: 'GR00T 2 — Modelagem de Mundo-Ação Conjunta' },
+            {
+              "type": "doc",
+              "id": `${P}/pt_Paper_Reading_LAWAM`,
+              "label": "LaWAM — Prever Mudanças de Cena Antes de Gerar Ações de Robô"
+            }
           ],
         },
         {
@@ -295,6 +300,7 @@ const sidebars = {
       collapsible: false,
       items: [
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS com Pega Visual' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS com Seguimento de Muque' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS com ROS2' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS com Isaac Sim' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-RS: Robô Real e MuJoCo' },

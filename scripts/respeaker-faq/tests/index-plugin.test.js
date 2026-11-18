@@ -203,7 +203,13 @@ test('plugin ABI: loadContent builds the index and contentLoaded publishes it as
 test('no static data import: FaqExplorer consumes plugin global data only', () => {
   const source = fs.readFileSync(path.join(REPO_ROOT, 'src', 'components', 'FaqExplorer', 'index.tsx'), 'utf8');
   assert.ok(!source.includes("@site/src/data"), 'FaqExplorer must not import from src/data');
-  assert.ok(source.includes("usePluginData('respeaker-faq-index')"), 'FaqExplorer must read the plugin global data');
+  assert.ok(source.includes('usePluginData(source)'), 'FaqExplorer must read the plugin global data');
+  // The reSpeaker index stays the default source: the reComputer FAQ center
+  // opts into its own index through the `source` prop.
+  assert.ok(
+    source.includes("source = 'respeaker-faq-index'"),
+    'the reSpeaker FAQ index must stay the default data source',
+  );
 });
 
 test('UI chrome: FAQ Center MDX declares a data-slot for every UI string with English defaults', () => {

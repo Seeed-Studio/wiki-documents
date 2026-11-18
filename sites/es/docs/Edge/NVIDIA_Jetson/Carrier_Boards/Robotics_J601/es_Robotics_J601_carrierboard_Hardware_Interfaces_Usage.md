@@ -1,5 +1,5 @@
 ---
-description: "Interfaces de la carrier board J601: GMSL, USB, CAN, M.2 y pinouts de 40 pines, nombres de dispositivos Linux y comprobaciones por puerto, además de instalación del disipador."
+description: "Interfaces de la carrier board J601: GMSL, USB, CAN, M.2 y pines de 40 contactos, nombres de dispositivos en Linux y comprobaciones por puerto, además de la instalación del disipador."
 title: Hardware e I/O de reComputer Robotics J601
 tags:
   - Carrier board J601-Robotics
@@ -31,14 +31,14 @@ import {roboticsJ601DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 <div className="jetson-product-page">
 
-Utiliza esta guía para el cableado de conectores, definiciones de pines, mapeos de dispositivos Linux y comprobaciones de interfaces en la carrier board J601. Para la selección de módulo, especificaciones, requisitos de alimentación y el flujo completo de flasheo de JetPack, comienza con [Getting Started](/es/jetson/recomputer_robotics_j601/getting_started/).
+Utiliza esta guía para el cableado de conectores, definiciones de pines, mapeos de dispositivos en Linux y comprobaciones de interfaces en la carrier board J601. Para la selección de módulo, especificaciones, requisitos de alimentación y el flujo completo de flasheo de JetPack, comienza con [Getting Started](/es/jetson/recomputer_robotics_j601/getting_started/).
 
-El módulo Jetson instalado determina las conexiones Ethernet y CAN disponibles: **T5000 admite cuatro puertos 10GbE y cuatro interfaces CAN; T4000 admite tres puertos 10GbE y dos interfaces CAN**. Las funciones Wi‑Fi/Bluetooth y celular requieren módulos de expansión compatibles.
+El módulo Jetson instalado determina las conexiones Ethernet y CAN disponibles: **T5000 admite cuatro puertos 10GbE y cuatro interfaces CAN; T4000 admite tres puertos 10GbE y dos interfaces CAN**. Las funciones de Wi‑Fi/Bluetooth y celular requieren módulos de expansión compatibles.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/thor.jpg" alt="reComputer Robotics J601 carrier board hardware overview" />
-    <figcaption>Carrier board J601 · Interfaces y expansión para robótica</figcaption>
+    <figcaption>Carrier board J601 · Interfaces de robótica y expansión</figcaption>
   </figure>
 </div>
 
@@ -52,43 +52,16 @@ El módulo Jetson instalado determina las conexiones Ethernet y CAN disponibles:
 | Conectar audio y sensores | [I2S](#i2s), [I2C](#i2c) y [GPIO](#gpio-gpigpo) |
 | Conectar controladores | [CAN](#can), [RS485](#rs485) y [DB9](#db9) |
 | Comprobar indicadores de estado | [LED RGB](#rgb) |
-| Conectar una red | [Ethernet](#ethernet), [Wi‑Fi/Bluetooth](#m2-clave-e) y [5G/GPS](#módulo-5g-m2-clave-b) |
+| Conectar una red | [Ethernet](#ethernet), [Wi‑Fi/Bluetooth](#m2-key-e) y [5G/GPS](#5g-module-m2-key-b) |
 
-Apaga la carrier board antes de instalar o retirar módulos o cablear cabeceras. Haz coincidir la numeración de pines del conector y el voltaje de señal con el esquema de tu revisión de placa.
+Apaga la carrier board antes de instalar o retirar módulos o cables en los headers. Haz coincidir la numeración de pines del conector y el voltaje de señal con el esquema de tu revisión de placa.
 
 ## Instalación del disipador
 
-Para garantizar una disipación de calor estable durante el funcionamiento a largo plazo, puedes instalar un disipador en la reComputer J601 Carrier Board.
+Consulta el siguiente tutorial en vídeo para obtener instrucciones sobre cómo instalar el disipador.
 
-**Materiales necesarios:**
-
-- almohadilla de silicona térmica
-- disipador con ventilador
-- reComputer J601 Carrier Board
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink1.png" alt="Heatsink, fan, thermal pad, and J601 carrier board for installation" loading="lazy" />
-    <figcaption>Disipador, ventilador, almohadilla térmica y carrier board J601 para la instalación</figcaption>
-  </figure>
-</div>
-
-**Paso 1.** Coloca la almohadilla de silicona térmica en el punto de contacto entre el disipador y la carrier board.
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink2.png" alt="Copper heatsink plate with the blue thermal pads applied, next to the J601 carrier board" loading="lazy" />
-    <figcaption>Almohadilla de silicona térmica colocada en el punto de contacto del disipador</figcaption>
-  </figure>
-</div>
-
-**Paso 2.** Conecta el disipador y la carrier board.
-
-<div className="jetson-product-hardware-gallery">
-  <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/j601_heatsink3.png" alt="Heatsink and fan attached to the J601 carrier board" loading="lazy" />
-    <figcaption>Disipador y ventilador conectados a la carrier board J601</figcaption>
-  </figure>
+<div className="video-container" style={{paddingBottom: '42.75%'}}>
+  <iframe width="2103" height="899" src="https://www.youtube.com/embed/_NuenzpgHug" title="Heatsink Installation for reComputer J601 Carrier Board" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
 </div>
 
 ## USB
@@ -111,7 +84,7 @@ dd if="$USB_TEST_FILE" of=/dev/null bs=1M iflag=direct status=progress
 rm -- "$USB_TEST_FILE"
 ```
 
-Mantén el dispositivo montado hasta que la prueba termine. Si su sistema de archivos no admite I/O directo, omite `iflag=direct` e interpreta el resultado de lectura como potencialmente afectado por la caché.
+Mantén el dispositivo montado hasta que la prueba finalice. Si su sistema de archivos no admite I/O directo, omite `iflag=direct` e interpreta el resultado de lectura como potencialmente afectado por la caché.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
@@ -141,7 +114,7 @@ Usando este puerto serie, a través del cable de datos USB‑C, puedes monitoriz
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png" alt="Silicon Labs CP210x USB-to-UART driver download page" loading="lazy" />
-    <figcaption>Página de descarga del controlador Silicon Labs CP210x USB-to-UART</figcaption>
+    <figcaption>Página de descarga del controlador Silicon Labs CP210x USB‑to‑UART</figcaption>
   </figure>
 </div>
 
@@ -154,7 +127,7 @@ Usando este puerto serie, a través del cable de datos USB‑C, puedes monitoriz
   </figure>
 </div>
 
-**Paso 4.** Abre el Administrador de dispositivos en tu PC con Windows y comprueba el número de puerto COM asignado a la reComputer J601. Debería aparecer en "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número de puerto COM.
+**Paso 4.** Abre el Administrador de dispositivos en tu PC con Windows y comprueba el número de puerto COM asignado al reComputer J601. Debería aparecer en "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número de puerto COM.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
@@ -226,9 +199,9 @@ Ahora deberías ver la salida de la consola serie de la J601 y podrás iniciar s
 
 ## GMSL
 
-La Robotics J601 incorpora un conector de expansión para cámaras GMSL que admite hasta **8 cámaras GMSL** simultáneamente, lo que permite aplicaciones de visión robótica multicámara.
+La Robotics J601 incorpora un header de expansión para cámaras GMSL que admite hasta **8 cámaras GMSL** simultáneamente, lo que permite aplicaciones de visión robótica multicámara.
 
-### Modelos de cámara GMSL compatibles
+### Modelos de cámaras GMSL compatibles
 
 - [SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
 - SG2-AR0233C-5200-G2A
@@ -238,7 +211,7 @@ La Robotics J601 incorpora un conector de expansión para cámaras GMSL que admi
 
 ### Conexión de hardware
 
-Conecta la placa de expansión GMSL al conector de expansión de cámara en la carrier board J601 y, a continuación, conecta tus cámaras GMSL a la placa de expansión.
+Conecta la placa de expansión GMSL al header de expansión de cámara en la carrier board J601 y, a continuación, conecta tus cámaras GMSL a la placa de expansión.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
@@ -250,10 +223,10 @@ Conecta la placa de expansión GMSL al conector de expansión de cámara en la c
 ### Instrucciones de uso
 
 :::note
-Antes de habilitar la funcionalidad GMSL, asegúrate de haber instalado una versión de JetPack con el controlador de la placa de expansión GMSL.
+Antes de habilitar la funcionalidad GMSL, asegúrate de haber instalado una versión de JetPack con el controlador para la placa de expansión GMSL.
 :::
 
-**Paso 1.** Instala las herramientas de configuración de la interfaz de video:
+**Paso 1.** Instala las herramientas de configuración de la interfaz de vídeo:
 
 ```bash
 sudo apt update
@@ -274,7 +247,7 @@ gst-launch-1.0 -q filesrc location=/tmp/gmsl0.yuyv do-timestamp=true blocksize=4
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_camera.png" alt="Tabla de compatibilidad de cámara GMSL J601: modelos Sensing SG3S 3G y SG2/SG8S 6G con resoluciones, más Orbbec Gemini 335Lg" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl_camera.png" alt="Tabla de compatibilidad de cámara GMSL J601: modelos Sensing SG3S 3G y SG2/SG8S 6G con resoluciones, además de Orbbec Gemini 335Lg" loading="lazy" />
     <figcaption>Salida de flujo de la cámara GMSL J601</figcaption>
   </figure>
 </div>
@@ -283,12 +256,12 @@ gst-launch-1.0 -q filesrc location=/tmp/gmsl0.yuyv do-timestamp=true blocksize=4
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl.png" alt="Fotograma de cámara GMSL en una ventana de video con la salida de media-ctl en la terminal" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/gmsl.png" alt="Fotograma de cámara GMSL en una ventana de vídeo con la salida de media-ctl en la terminal" loading="lazy" />
     <figcaption>Pantalla de la cámara GMSL J601</figcaption>
   </figure>
 </div>
 
-### Usar la cámara Gemini 335Lg
+### Usar la cámara de Gemini 335Lg
 
 ```bash
 # Download the Orbbec Gemini 335Lg visualization tool
@@ -299,15 +272,15 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 ./OrbbecViewer
 ```
 
-La primera vez que la enciendas, es posible que necesites actualizar el firmware. Al abrir el flujo de datos, podrás ver el video de la cámara.
+La primera vez que la enciendas, es posible que necesites actualizar el firmware. Al abrir el flujo de datos, podrás ver el vídeo de la cámara.
 
 ## UART
 
-La Robotics J601 proporciona una interfaz UART mediante un conector JST estándar para comunicación serie con dispositivos externos. El puerto UART está conectado a `/dev/ttyTHS1` en el sistema Jetson con una velocidad en baudios predeterminada de 115200.
+La Robotics J601 proporciona una interfaz UART mediante un conector estándar JST para la comunicación serie con dispositivos externos. El puerto UART está conectado a `/dev/ttyTHS1` en el sistema Jetson con una velocidad en baudios predeterminada de 115200.
 
 ### Conexión de hardware
 
-Para la comunicación UART, conecta la herramienta USB‑a‑TTL según el siguiente cableado:
+Para la comunicación UART, conecta la herramienta USB a TTL según el siguiente cableado:
 
 - TX → RX
 - RX → TX
@@ -315,16 +288,16 @@ Para la comunicación UART, conecta la herramienta USB‑a‑TTL según el sigui
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png" alt="Conector UART J601 y cableado USB-a-TTL" loading="lazy" />
-    <figcaption>Conector UART J601 y cableado USB-a-TTL</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png" alt="Conector UART J601 y cableado USB a TTL" loading="lazy" />
+    <figcaption>Conector UART J601 y cableado USB a TTL</figcaption>
   </figure>
 </div>
 
 ### Instrucciones de uso
 
-Conecta la herramienta USB‑a‑TTL al puerto UART de la Robotics J601 y al PC, luego abre la herramienta de puerto serie en el PC y establece la velocidad en baudios en **115200**.
+Conecta la herramienta USB a TTL al puerto UART de la Robotics J601 y al PC, luego abre la herramienta de puerto serie en el PC y ajusta la velocidad en baudios a **115200**.
 
-Puedes usar un script sencillo de Python para probar la comunicación serie:
+Puedes usar un sencillo script de Python para probar la comunicación serie:
 
 ```python
 import serial
@@ -349,8 +322,8 @@ python3 uart_test.py
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png" alt="Conector UART J601 y cableado USB-a-TTL" loading="lazy" />
-    <figcaption>Conector UART J601 y cableado USB-a-TTL</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/uart_connect.png" alt="Conector UART J601 y cableado USB a TTL" loading="lazy" />
+    <figcaption>Conector UART J601 y cableado USB a TTL</figcaption>
   </figure>
 </div>
 
@@ -360,7 +333,7 @@ La Robotics J601 proporciona una interfaz de audio I2S con salida de amplificado
 
 ### Definición de pines
 
-| Pin # | Nombre de pin del módulo | Pin # del módulo | Uso/Descripción | Tipo/Dir |
+| Pin # | Nombre de pin del módulo | # de pin del módulo | Uso/Descripción | Tipo/Dir |
 | --- | --- | --- | --- | --- |
 | 1 | - | - | Fuente de alimentación 3V3 | Alimentación |
 | 2 | I2S2_DIN | F6 | Puerto de audio I2S2 2 Datos de entrada (nivel desplazado de 1.8V a 3.3V) | Entrada |
@@ -391,7 +364,7 @@ speaker-test -D hw:2,0 -c 2 -r 48000 -t sine -f 440 -l 1
 ```
 
 :::info
-La bandera `-l 1` significa que el tono de prueba se reproducirá solo una vez y luego se detendrá.
+La opción `-l 1` significa que el tono de prueba se reproducirá solo una vez y luego se detendrá.
 :::
 
 **Paso 2.** Reproduce tu propio archivo de audio:
@@ -401,17 +374,17 @@ aplay -D hw:2,0 -c 2 -r 48000 your_audio_file.wav
 ```
 
 :::note
-Reemplaza `your_audio_file.wav` con la ruta a tu archivo de audio real. Asegúrate de que el formato del archivo de audio coincida con la frecuencia de muestreo especificada (48000 Hz) y el número de canales (2).
+Sustituye `your_audio_file.wav` por la ruta a tu archivo de audio real. Asegúrate de que el formato del archivo de audio coincida con la frecuencia de muestreo especificada (48000 Hz) y el número de canales (2).
 :::
 
 
 ## I2C
 
-La Robotics J601 proporciona una interfaz I2C mediante el conector J12 JST GH-1.25, lo que permite una fácil conexión de sensores y periféricos para la expansión del sistema.
+La Robotics J601 proporciona una interfaz I2C mediante el conector J12 JST GH-1.25, lo que permite una conexión sencilla de sensores y periféricos para la expansión del sistema.
 
 ### Definición de pines
 
-| Pin # | Nombre de pin del módulo | Pin # del módulo | Uso/Descripción | Tipo/Dir |
+| Pin # | Nombre de pin del módulo | # de pin del módulo | Uso/Descripción | Tipo/Dir |
 | --- | --- | --- | --- | --- |
 | 1 | - | - | Tierra | Tierra |
 | 2 | DP_AUX_CH2_N | E18 | I2C4_SDA_3V3 | Bidireccional |
@@ -488,15 +461,15 @@ sudo i2cget -y 1 0x58 0x00
 
 ## GPIO (GPI/GPO)
 
-La Robotics J601 proporciona interfaces GPIO digitales mediante dos conectores JST GH-1.25: un conector **GPI (General Purpose Input)** J20 con 4 canales de entrada, y un conector **GPO (General Purpose Output)** J17 con 4 canales de salida. Todas las señales GPIO tienen nivel desplazado de 1.8V (dominio SoC) a 3.3V, lo que las hace directamente compatibles con sensores y periféricos estándar de 3.3V.
+La Robotics J601 proporciona interfaces GPIO digitales mediante dos conectores JST GH-1.25: un conector **GPI (General Purpose Input)** J20 con 4 canales de entrada, y un conector **GPO (General Purpose Output)** J17 con 4 canales de salida. Todas las señales GPIO se desplazan de nivel desde 1.8V (dominio del SoC) a 3.3V, lo que las hace directamente compatibles con sensores y periféricos estándar de 3.3V.
 
-El [esquemático J601 V1.0](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf) identifica **GPO como J17** e **I2S como J14**. Verifica estas etiquetas con la revisión de tu placa antes de cablear.
+El [esquemático J601 V1.0](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20J601%20Carrier%20Board_V1.0_SCH_260612.pdf) identifica **GPO como J17** e **I2S como J14**. Comprueba estas etiquetas con la revisión de tu placa antes de cablear.
 
 ### Definición de pines
 
 #### Conector GPI - J20 (Entrada)
 
-| Pin # | Nombre de pin del módulo | Pin # del módulo | Uso/Descripción | Tipo/Dir |
+| Pin # | Nombre de pin del módulo | # de pin del módulo | Uso/Descripción | Tipo/Dir |
 | --- | --- | --- | --- | --- |
 | 1 | - | - | Fuente de alimentación 3V3 | Alimentación |
 | 2 | SPI2_MISO | D62 | GPI_1_3V3 (nivel desplazado de 1.8V a 3.3V) | Entrada, 3.3V |
@@ -507,7 +480,7 @@ El [esquemático J601 V1.0](https://files.seeedstudio.com/products/NVIDIA-Jetson
 
 #### Conector GPO - J17 (Salida)
 
-| Pin # | Nombre de pin del módulo | Pin # del módulo | Uso/Descripción | Tipo/Dir |
+| Pin # | Nombre de pin del módulo | # de pin del módulo | Uso/Descripción | Tipo/Dir |
 | --- | --- | --- | --- | --- |
 | 1 | - | - | Fuente de alimentación 3V3 | Alimentación |
 | 2 | GPIO13 | G7 | GPO_1_3V3 (nivel desplazado de 1.8V a 3.3V) | Salida, 3.3V |
@@ -537,27 +510,27 @@ sudo apt update
 sudo apt-get install gpiod
 ```
 
-**Paso 2.** Ver todos los chips y líneas GPIO disponibles:
+**Paso 2.** Visualiza todos los chips y líneas GPIO disponibles:
 
 ```bash
 gpioinfo
 ```
 
-**Paso 3.** Leer un pin GPI. Por ejemplo, para leer GPI_2 (GPIO64, Pin 3 en J20):
+**Paso 3.** Lee un pin GPI. Por ejemplo, para leer GPI_2 (GPIO64, Pin 3 en J20):
 
 ```bash
 # Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
 gpioget <chip> <line>
 ```
 
-**Paso 4.** Escribir en un pin GPO. Por ejemplo, para poner GPO_1 (GPIO13, Pin 2 en J17) en alto:
+**Paso 4.** Escribe en un pin GPO. Por ejemplo, para poner en alto GPO_1 (GPIO13, Pin 2 en J17):
 
 ```bash
 # Replace <chip> and <line> with the actual GPIO chip/line numbers from gpioinfo
 gpioset <chip> <line>=1
 ```
 
-**Paso 5.** Usar los pines en un script de Python con la biblioteca `gpiod`:
+**Paso 5.** Usa los pines en un script de Python con la biblioteca `gpiod`:
 
 ```python
 import gpiod
@@ -578,7 +551,7 @@ gpo_line.set_value(1)  # Set high
 
 ## CAN
 
-CAN (Controller Area Network) es un estándar robusto de bus para vehículos que permite que microcontroladores y dispositivos se comuniquen entre sí sin un ordenador host. Con un módulo **T5000**, la Robotics J601 proporciona **cuatro interfaces CAN FD** (CAN0–CAN3) mediante conectores JST GH-1.25. Un módulo **T4000** admite **dos interfaces CAN**. Comprueba las interfaces expuestas por tu BSP con `ip -details link show type can` antes de elegir puertos para una prueba.
+CAN (Controller Area Network) es un estándar de bus de vehículos robusto que permite que microcontroladores y dispositivos se comuniquen entre sí sin un ordenador host. Con un módulo **T5000**, la Robotics J601 proporciona **cuatro interfaces CAN FD** (CAN0–CAN3) mediante conectores JST GH-1.25. Un módulo **T4000** admite **dos interfaces CAN**. Comprueba las interfaces expuestas por tu BSP con `ip -details link show type can` antes de elegir puertos para una prueba.
 
 ### Asignación de pines del conector CAN
 
@@ -590,7 +563,7 @@ CAN (Controller Area Network) es un estándar robusto de bus para vehículos que
 | CAN3 | J25 | Tierra | CAN3_L_ISO | CAN3_H_ISO | Alimentación 5V |
 
 :::info
-Las interfaces CAN están aisladas. Cada conector proporciona una alimentación de 5V en el Pin 4. La tabla del conector describe el cableado de la carrier board; el módulo instalado determina qué interfaces están disponibles.
+Las interfaces CAN están aisladas. Cada conector proporciona una alimentación de 5V en el Pin 4. La tabla de conectores describe el cableado de la carrier board; el módulo instalado determina qué interfaces están disponibles.
 :::
 
 ### Control de la resistencia de terminación de 120Ω
@@ -622,14 +595,14 @@ gpioinfo
 
 Aquí demostramos la comunicación de datos entre CAN0 y CAN1.
 
-**Paso 1.** Instalar las utilidades CAN:
+**Paso 1.** Instala las utilidades CAN:
 
 ```bash
 sudo apt update
 sudo apt install can-utils -y
 ```
 
-**Paso 2.** Configurar las interfaces CAN:
+**Paso 2.** Configura las interfaces CAN:
 
 ```bash
 sudo ip link set down can0
@@ -642,7 +615,7 @@ sudo ip link set up can0
 sudo ip link set up can1
 ```
 
-**Paso 3.** Abrir una nueva terminal para recibir datos en CAN1 y enviar datos desde CAN0:
+**Paso 3.** Abre una nueva terminal para recibir datos en CAN1 y envía datos desde CAN0:
 
 ```bash
 # In a new terminal, listen on CAN1
@@ -663,7 +636,7 @@ cansend can0 123#DEADBEEF
 
 CAN FD (Flexible Data-Rate) amplía el protocolo CAN clásico para admitir mayores velocidades de datos y cargas útiles más grandes (hasta 64 bytes).
 
-**Paso 1.** Configurar CAN0 y CAN1 para el modo FD:
+**Paso 1.** Configura CAN0 y CAN1 para el modo FD:
 
 ```bash
 sudo ip link set down can0
@@ -679,7 +652,7 @@ sudo ip link set up can0
 sudo ip link set up can1
 ```
 
-**Paso 2.** Abrir una nueva terminal y probar la comunicación CAN FD:
+**Paso 2.** Abre una nueva terminal y prueba la comunicación CAN FD:
 
 ```bash
 # Listen on CAN1 with extended output
@@ -695,7 +668,7 @@ cansend can0 7DF##1101020203030404050506060707080809090A0A0B0B0C0C0D0D0E0E0F0F01
 :::info
 - `5AA` / `7DF` es el ID CAN
 - `##` indica una trama CAN FD
-- La cifra después de `##` es el indicador BRS (Bit Rate Switch): `1` = BRS activo
+- El dígito después de `##` es el indicador BRS (Bit Rate Switch): `1` = BRS activo
 - Lo siguiente es la carga útil de datos (hasta 128 caracteres hexadecimales para 64 bytes)
 :::
 
@@ -848,8 +821,8 @@ La carrier board reComputer J601 incorpora un puerto RS-485 aislado dedicado exp
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png" alt="J601 J24 RS-485 connector pinout" loading="lazy" />
-    <figcaption>Distribución de pines del conector RS-485 J601 J24</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/rs485-jstpin.png" alt="Distribución de pines del conector RS-485 J24 de la J601" loading="lazy" />
+    <figcaption>Distribución de pines del conector RS-485 J24 de la J601</figcaption>
   </figure>
 </div>
 
@@ -857,8 +830,8 @@ La carrier board reComputer J601 incorpora un puerto RS-485 aislado dedicado exp
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png" alt="USB-to-RS485 adapter wired to Data+(A) and Data-(B) on the J601 terminal block" loading="lazy" />
-    <figcaption>Cableado del encabezado RS-485 dedicado J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/jst485-c.png" alt="Adaptador USB-a-RS485 cableado a Data+(A) y Data-(B) en el bloque de terminales de la J601" loading="lazy" />
+    <figcaption>Cableado del encabezado RS-485 dedicado de la J601</figcaption>
   </figure>
 </div>
 
@@ -906,12 +879,12 @@ El Robotics J601 proporciona una interfaz serie DB9 seleccionable por software. 
 
 ### Definición de pines
 
-La función de cada pin DB9 depende del modo de comunicación seleccionado. Consulta la tabla y el diagrama del conector a continuación antes de cablear el adaptador.
+La función de cada pin DB9 depende del modo de comunicación seleccionado. Consulta la tabla y el diagrama del conector que aparecen a continuación antes de cablear el adaptador.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/db9_config.png" alt="DB9 pin numbering with the RS-232 / RS-422 / RS-485 pin assignment table for the MODE settings" loading="lazy" />
-    <figcaption>Conexión de la interfaz de configuración DB9 J601</figcaption>
+    <figcaption>Conexión de la interfaz de configuración J601 db9</figcaption>
   </figure>
 </div>
 
@@ -923,7 +896,7 @@ Cambia el interruptor en la parte inferior de la placa al modo RS485 como se mue
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-mode.png" alt="SW2 switch with the RS485 Mode OFF_1 / ON_0 positions boxed" loading="lazy" />
-    <figcaption>Conexión de la interfaz en modo J601 485</figcaption>
+    <figcaption>Conexión de la interfaz de modo J601 485</figcaption>
   </figure>
 </div>
 
@@ -956,7 +929,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra tus pulsaciones de teclas, por lo que este es un problema muy común.
+Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra lo que tecleas, por lo que este es un problema muy común.
 - paso 1. Pulsa `Ctrl+A`
 - paso 2. Luego, pulsa `E`
 
@@ -972,7 +945,7 @@ Prueba que el PC envíe un mensaje a Jetson.
   </figure>
 </div>
 
-Dado que RS485 es un protocolo half-duplex, para probar que Jetson puede enviar información al PC mediante RS485, es necesario activar el modo RS485.
+Dado que RS485 es un protocolo half-duplex, para probar que Jetson puede enviar información al PC mediante RS485 es necesario activar el modo RS485.
 - paso 1. Pulsa `Ctrl+A`
 - paso 2. Luego, pulsa `O` para abrir la opción de configuración.
 
@@ -987,7 +960,7 @@ Dado que RS485 es un protocolo half-duplex, para probar que Jetson puede enviar 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/485-c3.png" alt="Serial tool RS-485 configuration settings" loading="lazy" />
-    <figcaption>Ajustes de configuración RS-485 de la herramienta serie</figcaption>
+    <figcaption>Parámetros de configuración RS-485 de la herramienta serie</figcaption>
   </figure>
 </div>
 
@@ -1009,7 +982,7 @@ Cambia el interruptor en la parte inferior de la placa al modo RS232 como se mue
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/232-mode.png" alt="SW2 mode switch set for RS-232 on the J601 board" loading="lazy" />
-    <figcaption>Conexión de la interfaz en modo J601 232</figcaption>
+    <figcaption>Conexión de la interfaz de modo J601 232</figcaption>
   </figure>
 </div>
 
@@ -1044,7 +1017,7 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra tus pulsaciones de teclas, por lo que este es un problema muy común.
+Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra lo que tecleas, por lo que este es un problema muy común.
 - paso 1. Pulsa `Ctrl+A`
 - paso 2. Luego, pulsa `E`
 :::
@@ -1086,7 +1059,7 @@ Cambia el interruptor en la parte inferior de la placa al modo RS422 como se mue
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-mode.png" alt="SW2 mode switch set for RS-422 on the J601 board" loading="lazy" />
-    <figcaption>Conexión de la interfaz en modo J601 422</figcaption>
+    <figcaption>Conexión de la interfaz de modo J601 422</figcaption>
   </figure>
 </div>
 
@@ -1123,18 +1096,18 @@ sudo minicom -D /dev/ttyACM0 -b 115200
 ```
 
 :::tip
-Para ver el texto que escribes en minicom, necesitas habilitar la función de Eco Local (Local Echo). De forma predeterminada, minicom no muestra tus pulsaciones de teclas, por lo que este es un problema muy común.
+Para ver el texto que escribes en minicom, necesitas habilitar la función Local Echo. De forma predeterminada, minicom no muestra lo que tecleas, por lo que este es un problema muy común.
 - paso 1. Pulsa `Ctrl+A`
 - paso 2. Luego, pulsa `E`
 :::
 
-Prueba el PC para enviar un mensaje a Jetson. 
+Prueba que el PC envíe un mensaje a Jetson. 
 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c1.png" alt="minicom on the PC and the Jetson showing the first RS-422 test exchange" loading="lazy" />
-    <figcaption>Conexión de interfaz J601 422 c1</figcaption>
+    <figcaption>Conexión de la interfaz J601 422 c1</figcaption>
   </figure>
 </div>
 
@@ -1143,7 +1116,7 @@ Activa también el modo de prueba.
 <div className="jetson-product-hardware-gallery">
   <figure>
     <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/422-c2.png" alt="both minicom windows after the RS-422 test, each showing &quot;Hello Jetson RS422 Test&quot;" loading="lazy" />
-    <figcaption>Conexión de interfaz J601 422 c2</figcaption>
+    <figcaption>Conexión de la interfaz J601 422 c2</figcaption>
   </figure>
 </div>
 
@@ -1237,21 +1210,21 @@ sudo ./test_rgb.sh
 ```
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif" alt="J601 user RGB LED color test" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/grb.gif" alt="Prueba de color del LED RGB de usuario J601" loading="lazy" />
     <figcaption>Prueba de color del LED RGB de usuario J601</figcaption>
   </figure>
 </div>
 
 ## Ethernet
 
-La placa portadora Robotics J601 admite **4× conexiones 10GbE RJ45 con T5000**, o **3× 10GbE con T4000**. Utiliza un sistema par separado y un cable adecuado para probar un puerto.
+La placa carrier Robotics J601 es compatible con **4× conexiones RJ45 10GbE con T5000**, o **3× 10GbE con T4000**. Utiliza un sistema par independiente y un cable adecuado para probar un puerto.
 
 ### Conexión de hardware
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/ethnet.png" alt="Four RJ45 Ethernet ports and two M12 connectors on the J601 front panel" loading="lazy" />
-    <figcaption>Ubicaciones de los puertos Ethernet RJ45 de J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/ethnet.png" alt="Cuatro puertos Ethernet RJ45 y dos conectores M12 en el panel frontal del J601" loading="lazy" />
+    <figcaption>Ubicaciones de los puertos Ethernet RJ45 del J601</figcaption>
   </figure>
 </div>
 
@@ -1264,7 +1237,7 @@ sudo apt install iperf3
 iperf3 -s
 ```
 
-En J601, usa `ip -br address` para identificar la dirección asignada al puerto bajo prueba y luego ejecuta:
+En el J601, usa `ip -br address` para identificar la dirección asignada al puerto bajo prueba y luego ejecuta:
 
 **Prueba de velocidad de subida:**
 
@@ -1274,8 +1247,8 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed1.png" alt="J601 Ethernet upload throughput measurement" loading="lazy" />
-    <figcaption>Medición del rendimiento de subida Ethernet de J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed1.png" alt="Medición del rendimiento de subida Ethernet del J601" loading="lazy" />
+    <figcaption>Medición del rendimiento de subida Ethernet del J601</figcaption>
   </figure>
 </div>
 
@@ -1287,15 +1260,15 @@ iperf3 -c <server_ip> -B <bind_ip> -R
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed2.png" alt="J601 Ethernet download throughput measurement" loading="lazy" />
-    <figcaption>Medición del rendimiento de descarga Ethernet de J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/eth_speed2.png" alt="Medición del rendimiento de descarga Ethernet del J601" loading="lazy" />
+    <figcaption>Medición del rendimiento de descarga Ethernet del J601</figcaption>
   </figure>
 </div>
 
 :::info
 - `<server_ip>` es la dirección IP del servidor iperf3. El cliente se conectará a este servidor para realizar una prueba de ancho de banda.
 - `<bind_ip>` vincula la dirección IP local especificada como origen del tráfico de prueba.
-- La opción `-R` invierte la dirección de la prueba para medir la velocidad de descarga.
+- La opción `-R` invierte la dirección de la prueba para las pruebas de velocidad de descarga.
 :::
 
 ## M.2 Key E
@@ -1329,7 +1302,7 @@ sudo modprobe rtw88_8822ce
 sudo reboot
 ```
 
-**Paso 3.** Después del reinicio, activa la interfaz inalámbrica:
+**Paso 3.** Después del reinicio, levanta la interfaz inalámbrica:
 
 ```bash
 sudo ip link set wlP1p1s0 up
@@ -1343,8 +1316,8 @@ sudo nmcli device wifi list ifname wlP1p1s0
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_1.png" alt="Wi-Fi network scan on J601" loading="lazy" />
-    <figcaption>Escaneo de redes Wi‑Fi en J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_1.png" alt="Escaneo de redes Wi‑Fi en el J601" loading="lazy" />
+    <figcaption>Escaneo de redes Wi‑Fi en el J601</figcaption>
   </figure>
 </div>
 
@@ -1356,8 +1329,8 @@ sudo nmcli device wifi connect "your WiFi name" password "WiFi password" ifname 
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_2.png" alt="J601 Wi-Fi connection result" loading="lazy" />
-    <figcaption>Resultado de la conexión Wi‑Fi en J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/wifi_2.png" alt="Resultado de la conexión Wi‑Fi del J601" loading="lazy" />
+    <figcaption>Resultado de la conexión Wi‑Fi del J601</figcaption>
   </figure>
 </div>
 
@@ -1380,8 +1353,8 @@ scan on
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/blue_tooth.png" alt="Bluetooth device scan on J601" loading="lazy" />
-    <figcaption>Escaneo de dispositivos Bluetooth en J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/blue_tooth.png" alt="Escaneo de dispositivos Bluetooth en el J601" loading="lazy" />
+    <figcaption>Escaneo de dispositivos Bluetooth en el J601</figcaption>
   </figure>
 </div>
 
@@ -1395,8 +1368,8 @@ Instala el módulo 5G en la ranura M.2 Key B y conecta las antenas.
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/5g_c1.png" alt="Cellular module installed in the J601 M.2 Key B slot" loading="lazy" />
-    <figcaption>Módulo celular instalado en la ranura M.2 Key B de J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/5g_c1.png" alt="Módulo celular instalado en la ranura M.2 Key B del J601" loading="lazy" />
+    <figcaption>Módulo celular instalado en la ranura M.2 Key B del J601</figcaption>
   </figure>
 </div>
 
@@ -1431,7 +1404,7 @@ AT+COPS?
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png" alt="lsusb output listing the Quectel EM060K-EA modem on the USB bus" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/lsusb_5g.png" alt="Salida de lsusb que muestra el módem Quectel EM060K-EA en el bus USB" loading="lazy" />
     <figcaption>Identificación del módulo celular y salida de comandos AT</figcaption>
   </figure>
 </div>
@@ -1440,14 +1413,14 @@ AT+COPS?
 
 <div className="jetson-product-hardware-gallery">
   <figure>
-    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png" alt="Ubuntu Settings mobile network panel showing the CHN-CT operator and network mode" loading="lazy" />
-    <figcaption>Ubicación de la ranura Nano SIM de J601</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/reComputer_Robotics_J601/sim.png" alt="Panel de red móvil de Ubuntu Settings que muestra el operador CHN-CT y el modo de red" loading="lazy" />
+    <figcaption>Ubicación de la ranura Nano SIM del J601</figcaption>
   </figure>
 </div>
 
 ### GPS
 
-La disponibilidad de GPS y los comandos AT dependen del módulo celular instalado. El siguiente ejemplo utiliza comandos `AT+QGPS` de estilo Quectel; verifica la compatibilidad y la asignación de puertos serie en la documentación de tu módulo.
+La disponibilidad de GPS y los comandos AT dependen del módulo celular instalado. El ejemplo siguiente utiliza comandos `AT+QGPS` de estilo Quectel; verifica la compatibilidad y la asignación de puertos serie en la documentación de tu módulo.
 
 ### Instrucciones de uso
 
@@ -1470,7 +1443,7 @@ AT+QGPS=1
 
 **Paso 3.** Sal de minicom pulsando **Ctrl+A** y luego **X**, y selecciona **Yes** para salir.
 
-**Paso 4.** Después de habilitar el GPS, los datos de los satélites se transmitirán desde el puerto de datos GPS (normalmente `/dev/ttyUSB1`). Lee los datos NMEA en bruto:
+**Paso 4.** Una vez habilitado el GPS, los datos de los satélites se transmitirán desde el puerto de datos GPS (normalmente `/dev/ttyUSB1`). Lee los datos NMEA en bruto:
 
 ```bash
 sudo cat /dev/ttyUSB1
@@ -1485,23 +1458,23 @@ $GPGSV,3,1,11,01,65,120,42,03,45,210,38,08,30,045,35,11,15,290,31*74
 ```
 
 :::note
-Asegúrate de tener una vista despejada del cielo para la adquisición de la señal GPS. Puede tardar unos minutos en obtener una fijación válida.
+Asegúrate de tener una vista despejada del cielo para la adquisición de señal GPS. Puede tardar unos minutos en obtener una fijación válida.
 :::
 
 ## Recursos
 
-La [colección de recursos de J601](/es/jetson/recomputer_robotics_j601/getting_started/#recursos) proporciona la hoja de datos de la carrier-board, el esquema V1.0, el modelo mecánico STEP y el código fuente del BSP Linux_for_Tegra. Utiliza el esquema para el enrutamiento de señales y los designadores de referencia de los conectores.
+La [colección de recursos del J601](/es/jetson/recomputer_robotics_j601/getting_started/#recursos) proporciona la hoja de datos de la placa carrier, el esquema V1.0, el modelo mecánico STEP y el código fuente del BSP Linux_for_Tegra. Utiliza el esquema para el encaminamiento de señales y los designadores de referencia de los conectores.
 
 ## Recursos relacionados
 
-- [Interfaces y pinouts de reComputer Robotics J401](/es/recomputer_jetson_robotics_j401_getting_started/)
+- [Interfaces y pinouts del reComputer Robotics J401](/es/recomputer_jetson_robotics_j401_getting_started/)
 - [Implementar comunicación EtherCAT en reComputer](/es/recomputer_ethercat_communication/)
-- [Ajustar finamente GR00T N1.7 y desplegar en Robotics J601](/es/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/)
+- [Ajustar finamente GR00T N1.7 y desplegarlo en Robotics J601](/es/fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601/)
 - [Repositorio y debates de wiki-documents](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
 
-## Soporte técnico y debate sobre productos
+## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div className="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" className="button_forum" aria-label="Seeed community forum"></a>
