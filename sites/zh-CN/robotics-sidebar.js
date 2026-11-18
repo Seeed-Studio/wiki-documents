@@ -336,6 +336,7 @@ const sidebars = {
       collapsible: false,
       items: [
         `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_Getting_Started`,
+        `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_control_mit`,
         `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_pinocchio`,
       ],
     },

@@ -14,6 +14,7 @@ translation:
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm T701 HT with Pinocchio
 
@@ -22,6 +23,13 @@ import '/src/css/rebot-wiki-style.css';
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
 </div>
+
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-Arm-T701-SDK"
+  fallbackCount={0}
+  ariaLabel="Star T701-HT SDK on GitHub"
+/>
 
 The T701-HT SDK uses Pinocchio to load the URDF model and compute end-effector poses and joint torques due to gravity. Use the forward kinematics (FK) and inverse kinematics (IK) examples to check joint feedback from the robot before running the gravity compensation, Cartesian trajectory, and keyboard control examples.
 

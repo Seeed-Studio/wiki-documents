@@ -358,6 +358,8 @@ python t701_ht_joint_impedance_with_gravity_friction.py
 
 All three demos apply the configured joint torque limits. Press `Ctrl+C` to stop gravity compensation or to return the arms to zero before stopping a joint impedance demo. During the return, press `Ctrl+C` again to stop the arms.
 
+For single-motor five-parameter control, state feedback, and return-to-zero shutdown, see [MIT Control SDK](./reBot_Arm_T701_HT_control_mit.md).
+
 See [T701 HT with Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
 
   </div>
