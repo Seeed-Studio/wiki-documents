@@ -743,7 +743,7 @@ Enter **Safe Mode** (hold the mute button while applying power, wait for the red
 
 - [reSpeaker XVF3800 44mm firmware and Python control (GitHub)](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm)
 - [XMOS XVF3800 documentation](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/index.html)
-- [PCBA](https://files.seeedstudio.com/wiki/reSpeaker_44mm/1.step)
+- [PCBA-CAD](https://files.seeedstudio.com/wiki/reSpeaker_44mm/1.step)
 
 {/* TODO: add 2D DXF and 3D STEP downloads here once the mechanical files are published */}
 
