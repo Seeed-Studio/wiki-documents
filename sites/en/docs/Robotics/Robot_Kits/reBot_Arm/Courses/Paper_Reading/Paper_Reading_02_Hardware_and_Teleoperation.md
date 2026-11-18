@@ -31,7 +31,6 @@ last_update:
 createdAt: '2026-10-16'
 updatedAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_hardware_and_teleoperation/
-author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';

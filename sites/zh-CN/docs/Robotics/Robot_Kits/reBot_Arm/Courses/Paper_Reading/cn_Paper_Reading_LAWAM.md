@@ -8,9 +8,9 @@ slug: /robotics/paper_reading_lawam
 displayed_sidebar: PaperReadingSidebar
 last_update:
   date: 2026-11-16
+  author: liujunjie
 createdAt: '2026-11-16'
 updatedAt: '2026-11-16'
-author: liujunjie
 ---
 
 import '/src/css/paper-reading-style.css';
