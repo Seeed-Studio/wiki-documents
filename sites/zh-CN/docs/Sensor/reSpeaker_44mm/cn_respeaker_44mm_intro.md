@@ -1,5 +1,5 @@
 ---
-description: reSpeaker XVF3800 4-Mic Array 44mm 是一款由 XMOS XVF3800 驱动的紧凑型圆形语音模块，具有 44 mm 麦克风间距、360° 远场拾音、AEC/AGC/DoA/波束成形、24 颗 RGB LED、三个按键，并支持 USB 或 I2S 工作模式。
+description: reSpeaker XVF3800 4-Mic Array 44mm 是一款由 XMOS XVF3800 驱动的紧凑型圆形语音模块，麦克风间距为 44 mm，具备 360° 远场拾音、AEC/AGC/DoA/波束成形、24 颗 RGB LED、三个按键，并支持 USB 或 I2S 工作模式。
 title: reSpeaker XVF3800 44mm 4-Mic Array 入门指南
 keywords:
   - reSpeaker 44mm
@@ -24,9 +24,9 @@ url: https://wiki.seeedstudio.com/cn/respeaker_44mm_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XVF3800 44mm 4-Mic Array with case" width={600} height="auto" /></p>
 
-reSpeaker XVF3800 4-Mic Array 44mm 是一款紧凑的圆形语音处理模块，基于 XMOS XVF3800 音频处理器构建，适用于语音识别、语音控制、智能助理和机器人等应用。四颗 PDM MEMS 麦克风以环形排布，**间距为 44 mm**，在一块明显小于 66 mm 间距 reSpeaker XVF3800 Circular 4-Mic Array 的电路板上实现 360° 远场拾音，同时保持相同的 XMOS 处理平台和相同的音频质量。
+reSpeaker XVF3800 4-Mic Array 44mm 是一款紧凑的圆形语音处理模块，基于 XMOS XVF3800 音频处理器构建，专为语音识别、语音控制、智能助理和机器人应用而设计。四个 PDM MEMS 麦克风以 **44 mm 间距**环形排布，在明显小于 66 mm 间距的 reSpeaker XVF3800 Circular 4-Mic Array 的板卡尺寸下，实现 360° 远场拾音，同时保持相同的 XMOS 处理平台和相同的音频质量。
 
-该模块运行完整的 XVF3800 语音处理链路——声学回声消除（AEC）、60 dB 范围的自动增益控制（AGC）、多通道波束成形、声源到达方向（DoA）检测、语音活动检测（VAD）、动态噪声抑制以及混响消除——并且所有参数都支持用户调节。外圈配有 24 颗 WS2812 RGB LED、三个物理按键（音量加、音量减、静音）以及一个硬件静音指示灯，开箱即可使用；同时支持 USB Audio Class 2.0 和 I2S 模式，既可即插即用，也便于嵌入式集成。可选的 XIAO ESP32-S3 Plus 可直接焊接在板上，可选的扬声器扩展板则提供一个 5 W 扬声器和一块 1200 mAh 电池。
+该模块运行完整的 XVF3800 语音处理链路——声学回声消除（AEC）、具有 60 dB 范围的自动增益控制（AGC）、多通道波束成形、声源到达方向（DoA）检测、语音活动检测（VAD）、动态噪声抑制以及混响消除——并且所有参数均可由用户调节。外圈配有 24 颗 WS2812 RGB LED、三个物理按键（音量加、音量减、静音）以及一个硬件静音指示灯，使其开箱即用；同时支持 USB Audio Class 2.0 和 I2S 模式，既适用于即插即用，也适用于嵌入式集成。可选的 XIAO ESP32-S3 Plus 可直接焊接在板上，可选的扬声器扩展板则提供一个 5 W 扬声器和 1200 mAh 电池。
 
 ## 产品阵容
 
@@ -114,7 +114,7 @@ reSpeaker XVF3800 4-Mic Array 44mm 是一款紧凑的圆形语音处理模块，
 
 ## 特性
 
-- **紧凑的 44 mm 设计**：麦克风间距从 66 mm 减小到 44 mm，缩小了电路板直径，使其能够安装在空间受限的产品中。
+- **紧凑的 44 mm 设计**：麦克风间距从 66 mm 减小到 44 mm，缩小了板卡直径，使其能够安装在空间受限的产品中。
 
 - **XMOS XVF3800 音频处理**：AEC、AGC（60 dB 范围）、多通道波束成形、DoA、VAD、动态噪声抑制和混响消除，并支持参数调节。
 
@@ -122,13 +122,13 @@ reSpeaker XVF3800 4-Mic Array 44mm 是一款紧凑的圆形语音处理模块，
 
 - **双工作模式**：USB Audio Class 2.0 适用于与 PC 和 SBC 的即插即用，或 I2S/INT-Device 模式适用于嵌入式主机——通过固件进行选择。
 
-- **灵活的控制与升级**：通过 USB 或 I2C 进行配置，根据烧录的固件支持 USB DFU 和 I2C DFU。
+- **灵活的控制与更新**：通过 USB 或 I2C 进行配置，根据已烧录固件支持 USB DFU 和 I2C DFU。
 
 - **唯一设备标识**：可读写 UUID/SN，用于多设备管理、识别和数据追踪。
 
 - **可编程 RGB 反馈**：24 × WS2812 LED 显示设备状态、启动动画和 DoA 方向；静音状态由专用红色 LED 指示。
 
-- **三个可自定义按键**：默认连接到 XMOS 处理器时分别为音量加、音量减和静音，可通过开关将其切换连接到 XIAO。
+- **三个可自定义按键**：默认连接到 XMOS 处理器时为音量加、音量减和静音，可通过开关将其切换连接到 XIAO。
 
 - **扬声器就绪**：板载 D 类功放、用于 5 W 4 Ω 扬声器的垂直 JST 扬声器连接器、3.5 mm AUX 插孔，以及用于硬连线扬声器的焊盘。
 
@@ -138,34 +138,34 @@ reSpeaker XVF3800 4-Mic Array 44mm 是一款紧凑的圆形语音处理模块，
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_board_overview.jpg" alt="reSpeaker XVF3800 44mm PCB component callouts" width={900} height="auto" /></p>
 
-电路板正面放置了四个麦克风以及最外圈的 24 颗 RGB LED，因此在将电路板安装到外壳中后，声学开孔和灯环都能保持可见。背面则放置了 USB-C 接口、3.5 mm 插孔、JST 扬声器连接器、复位按键、XIAO ESP32-S3 Plus 焊盘以及所有引出焊盘。
+板卡正面放置了四个麦克风以及最外圈的 24 颗 RGB LED，因此在将板卡安装到外壳中后，声学开孔和灯环都能保持可见。背面则放置了 USB-C 接口、3.5 mm 插孔、JST 扬声器连接器、复位按键、XIAO ESP32-S3 Plus 焊盘以及所有引出焊盘。
 
 ### 主要元件
 
-| 元件 / 功能 | 描述 |
+| 元件 / 特性 | 描述 |
 |--------------------|-------------|
 | **主音频处理器** | XMOS XVF3800（固件 v3.2.1），用于 AEC、波束成形、噪声抑制、DoA 检测以及完整语音处理链路 |
-| **麦克风阵列** | 4 × PDM MEMS 麦克风，环形排布，间距 44 mm，实现 360° 远场拾音 |
+| **麦克风阵列** | 4 × PDM MEMS 麦克风，环形布局，间距 44 mm，实现 360° 远场拾音 |
 | **音频编解码器** | TLV320AIC3104，音频转换和 DAC 输出 |
-| **功放** | LM48511 D 类音频功率放大器 |
+| **功放** | LM48511 D 类音频功放 |
 | **RGB LED** | 24 × WS2812 可单独寻址 RGB LED，用于状态和音频活动指示 |
-| **可自定义按键** | 三个物理按键，连接到 XVF3800 时默认分别为音量加、音量减和静音 |
-| **按键连接选择** | 用于在 XVF3800 与 XIAO 模块焊盘之间切换三颗按键连接的开关 |
+| **可自定义按键** | 三个物理按键，连接到 XVF3800 时默认功能为音量加、音量减和静音 |
+| **按键连接选择** | 开关可在 XVF3800 与 XIAO 模块焊盘之间切换三颗按键的连接 |
 | **静音指示 LED** | 当麦克风被静音时点亮的红色 LED；上电时音频为非静音状态 |
 | **安全模式进入方式** | 上电时按住静音按键可启动恢复固件 |
-| **板载天线** | 当焊接兼容的 XIAO 无线模块时支持无线通信 |
+| **板载天线** | 当焊接兼容的 XIAO 无线模块时，支持无线通信 |
 | **USB Type-C 接口** | 5 V 电源输入以及用于 UAC 音频、控制和 DFU 的 USB 数据 |
-| **USB Power Delivery (USB PD)** | USB-C 供电方案，用于驱动电路板并带动 5 W 扬声器工作 |
+| **USB Power Delivery (USB PD)** | USB-C 供电方案，用于驱动整板并带动 5 W 扬声器工作 |
 | **3.5 mm AUX 插孔** | 侧面安装的耳机 / 线路输出，来自板载 DAC |
-| **扬声器连接器** | 垂直 JST 连接器，用于连接额定功率 5 W 或更高的 4 Ω 扬声器，同时保留有线扬声器焊盘 |
+| **扬声器连接器** | 垂直 JST 连接器，用于 4 Ω、额定功率 5 W 或更高的扬声器，并保留有硬连线扬声器焊盘 |
 | **外部电源焊盘** | 整个系统的备用电源输入 |
 | **调试接口** | 兼容 XTAG4 的焊盘，用于 XMOS 编程和调试，未焊接连接器 |
 | **XVF3800 I2C 接口** | 引出 XVF3800 的 I2C 引脚，用于在 INT-Device 模式下进行控制和配置 |
 | **XVF3800 I2S 接口** | 引出 XVF3800 的 I2S 引脚，用于在 INT-Device 模式下向外部主机输出音频 |
 | **电源与地排针** | 5 V 和 GND 引出，用于外部集成 |
 | **XVF3800 GPIO 焊盘** | 额外的 XVF3800 I/O，用于外部控制 |
-| **XIAO ESP32-S3 Plus 焊盘** | 可焊接模块位置，引出 I2S、I2C、复位、按键和 LED 连接 |
-| **IPEX 天线连接器** | 通过合适的射频线缆，将板载天线连接到 XIAO 的天线接口 |
+| **XIAO ESP32-S3 Plus 焊盘** | 可焊接模块位置，提供 I2S、I2C、复位、按键和 LED 连接 |
+| **IPEX 天线连接器** | 通过合适的射频线缆，将板载天线连接到 XIAO 天线接口 |
 | **安装孔** | 与外壳匹配的固定孔 |
 
 ### XIAO ESP32-S3 Plus 支持
@@ -176,10 +176,10 @@ XIAO ESP32-S3 Plus 可以直接焊接在板子的背面。安装后，它会与 
 
 | 功能 | 描述 |
 |---------|-------------|
-| **XIAO ESP32-S3 Plus 支持** | 将 XIAO ESP32-S3 Plus 模组直接焊接到阵列上，实现集成语音处理和应用开发 |
-| **XVF3800 通信** | 通过 I2S 进行录音和回放，共享 BCLK、MCLK 和 LRCLK，并通过 I2C 实现对 XVF3800 的控制和配置 |
+| **XIAO ESP32-S3 Plus 支持** | 将 XIAO ESP32-S3 Plus 模块直接焊接到阵列上，实现集成语音处理和应用开发 |
+| **XVF3800 通信** | 使用 I2S 进行录音和回放，共享 BCLK、MCLK 和 LRCLK，并通过 I2C 对 XVF3800 进行控制和配置 |
 | **XVF3800 复位控制** | 一个与 RST 相关的 GPIO，使 XIAO 可以在硬件上复位 XVF3800 |
-| **灵活的按键和 LED 走线** | 可在 XVF3800 与 XIAO 的 GPIO 焊盘之间切换板载按键和 LED，用于自定义控制和反馈 |
+| **灵活的按键和 LED 走线** | 可在 XVF3800 和 XIAO 的 GPIO 焊盘之间切换板载按键和 LED，用于自定义控制和反馈 |
 | **扩展 GPIO 访问** | 其余 XIAO I/O 通过带标签的焊盘引出（用于传感器、外设和应用硬件），并与 XVF3800 I/O 区域对齐 |
 | **外接天线连接** | IPEX 连接器通过射频馈线将板载天线连接到 XIAO 的天线接口 |
 
@@ -187,12 +187,12 @@ XIAO ESP32-S3 Plus 可以直接焊接在板子的背面。安装后，它会与 
 
 ### reSpeaker Sound Base（扬声器扩展）
 
-扬声器扩展可将麦克风阵列变成一个独立的语音终端。它在一个模块化外壳中集成了一个 **5 W、4 Ω 扬声器**、一个 **1200 mAh 可充电电池**、充电与电源管理电路、一个 USB-C 充电口以及一个物理电源开关，该外壳可以卡扣或滑动安装到阵列外壳的底部。
+扬声器扩展可将麦克风阵列变成一个独立的语音终端。它集成了一个 **5 W、4 Ω 扬声器**、一块 **1200 mAh 可充电电池**、充电与电源管理电路、一个 USB-C 充电口以及一个物理电源开关，全部封装在一个模块化外壳中，可卡扣或滑动安装在阵列外壳的底部。
 
 - 外壳可以拆卸，用户可以自行更换电池和扬声器。
 - 暴露的 XMOS I/O 连接器在两块板之间传输扬声器输出、5 V 电源和电池电量信号。
-- 充电 LED 灯环在充电时显示电池电量百分比，在未连接电池时保持熄灭。
-- 开关只控制输出；在开关关闭的情况下仍会继续充电。
+- 充电指示 LED 灯环在充电时显示电池电量百分比，在未连接电池时保持熄灭。
+- 开关仅控制输出；在开关关闭的情况下仍会继续充电。
 
 {/* TODO(image): replace with a photo of the Sound Base attached to the array */}
 
@@ -203,11 +203,11 @@ XIAO ESP32-S3 Plus 可以直接焊接在板子的背面。安装后，它会与 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/xmos_io_pinout.jpg" alt="XMOS XVF3800 I/O header" width={600} height="auto" /></p>
 
 
-XVF3800 I/O 区域引出了 INT-Device 工作模式以及扬声器扩展所需的总线。请根据你所使用版本的丝印标记来确认具体焊盘顺序。
+XVF3800 I/O 区域引出了 INT-Device 工作模式以及扬声器扩展所需的总线。请根据你所用版本的丝印标记确认具体焊盘顺序。
 
 | 信号 | 描述 |
 |--------|-------------|
-| **3V3** | 为外部逻辑提供 3.3 V 电源轨 |
+| **3V3** | 为外部逻辑提供 3.3 V 电源 |
 | **GND** | 地 |
 | **MCLK** | I2S 主时钟 |
 | **BCLK** | I2S 位时钟 |
@@ -218,7 +218,7 @@ XVF3800 I/O 区域引出了 INT-Device 工作模式以及扬声器扩展所需�
 | **CS_N / CLK / MISO** | 兼容外设使用的 SPI 信号 |
 | **Speaker pins** | 外接扬声器的扬声器输出，与板载 JST 连接器共用 |
 
-XIAO 焊盘区域还通过带标签的焊盘（D0、D2、D3、D13、D14、3V3、GND）引出了模组剩余的 I/O，因此可以在不使用单独载板的情况下连接外设。
+XIAO 焊盘区域还通过带标签的焊盘（D0、D2、D3、D13、D14、3V3、GND）引出了模块剩余的 I/O，因此可以在不使用单独载板的情况下连接外设。
 
 {/* TODO(image): respeaker_44mm_pinout_schematic.png — labeled schematic to replace the close-up photos */}
 
@@ -232,7 +232,7 @@ XVF3800 提供可配置的 GPIO，用于按键检测、音量、静音、功放�
 | **X1D13** | 音量增大 | 接收音量增大按键信号 |
 | **X1D34** | 音量减小 | 接收音量减小按键信号 |
 | **X0D11** | I2C 初始化 | 用于 I2C 初始化及相关控制 |
-| **X0D30** | 静音 LED / 麦克风静音控制 | 驱动静音指示 LED 和麦克风静音功能 |
+| **X0D30** | 静音 LED / 麦克风静音控制 | 驱动静音指示 LED 以及麦克风静音功能 |
 | **X0D31** | 功放使能 | 使能或关闭音频功放 |
 | **X0D33** | WS2812 LED 供电控制 | 控制 WS2812 RGB LED 电路的供电 |
 | **X0D39** | SPI MOSI | 面向兼容外设的 SPI 主输出从输入数据 |
@@ -250,19 +250,19 @@ XVF3800 提供可配置的 GPIO，用于按键检测、音量、静音、功放�
 
 - 用于录音和回放测试的 **Audacity**
 - 用于固件更新的 **dfu-util**
-- 带有 `pyusb` 的 **Python 3**，用于参数调节
+- 安装了 `pyusb` 的 **Python 3**，用于参数调节
 
 ### 开箱即用
 
 :::note
-为确保最佳的语音拾取效果以及音频算法的正确运行，请将设备背面麦克风端口（麦克风进音口 / 声孔）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。
+为确保最佳的语音拾取效果以及音频算法的正确运行，请将设备背面麦克风端口（麦克风入口 / 声孔）朝向声源。麦克风端口位于印有 Seeed Studio 标志的一侧。
 
 {/* TODO(image): mic_inlet_orientation.jpg — mic port / Seeed logo side */}
 :::
 
-#### DoA（到达方向）
+#### DoA（声源方向）
 
-LED 灯环会跟随来声方向变化，因此无需任何软件就能看到检测到的角度。DoA 数值也可以通过 USB/I2C 读取，用于你自己的应用。
+LED 灯环会跟随输入语音的方向变化，因此无需任何软件就能看到检测到的角度。DoA 数值也可以通过 USB/I2C 读取，用于你自己的应用。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/doa_demo.gif" alt="DoA LED ring following the voice" width={600} height="auto" /></p>
 
@@ -279,7 +279,7 @@ LED 灯环会跟随来声方向变化，因此无需任何软件就能看到检�
 
 #### 音量增大 / 减小
 
-当按键被路由到 XVF3800 时，剩下的两个按键默认用于调节回放音量。它们是单次触发控制：每按一次，音量调整一个步进。同样的音量级别也可以通过主机上的 Python 控制工具或操作系统的混音器来设置。
+当按键被路由到 XVF3800 时，剩下的两个按键默认用于调节回放音量。它们是单次触发控制：每按一次，音量调整一个步进。同样的音量级别也可以通过主机上的 Python 控制工具或操作系统的混音器进行设置。
 
 #### 复位按键
 
@@ -295,26 +295,26 @@ LED 灯环会跟随来声方向变化，因此无需任何软件就能看到检�
 
 #### 安全模式
 
-**安全模式**是一种恢复模式，允许你通过 USB DFU 或 I2C DFU 烧录固件。如果你之前烧录了 I2S 固件并希望切换回 USB 固件，或者开发板不再被识别时，可以使用该模式。
+**Safe Mode** 是一种恢复模式，允许你通过 USB DFU 或 I2C DFU 烧录固件。如果你之前烧录了 I2S 固件并希望切换回 USB 固件，或者开发板不再被识别时，可以使用该模式。
 
 | 固件 | USB DFU | I2C DFU |
 |----------|---------|---------|
 | **USB 固件** | 支持 | 不支持 |
 | **I2S 固件** | 不支持 | 支持 |
-| **安全模式固件**（出厂分区） | 支持 | 支持 |
+| **Safe Mode 固件**（出厂分区） | 支持 | 支持 |
 
-**何时使用安全模式**
+**何时使用 Safe Mode**
 
 - 固件工作异常（USB 未被检测到、LED 行为异常）。
 - 需要重新烧录，但当前固件没有响应。
-- 烧录了错误的固件，希望恢复开发板。
+- 烧录了错误的固件，需要恢复开发板。
 
-**如何进入安全模式**
+**如何进入 Safe Mode**
 
-1. 将设备完全断电。
+1. 将设备完全断电关闭。
 2. 按住 **Mute** 按键。
 3. 在按住的同时重新接通电源。
-4. 红色 LED 开始闪烁——设备现在正在从出厂分区运行安全模式固件。
+4. 红色 LED 开始闪烁——设备现在正在从出厂分区运行 Safe Mode 固件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/safe_mode_demo.gif" alt="Red LED blinking in Safe Mode" width={600} height="auto" /></p>
 
@@ -322,11 +322,11 @@ LED 灯环会跟随来声方向变化，因此无需任何软件就能看到检�
 
 官方 GitHub 仓库中提供了两个固件镜像：
 
-- 面向 Windows、Linux 和 macOS 等主机系统的 **USB 固件**
+- 面向 Windows、Linux 和 macOS 主机系统的 **USB 固件**
 - 面向 XIAO ESP32-S3 Plus 等微控制器主机的 **I2S 固件**
 
 :::note
-从 GitHub 下载固件文件时 **不要** 使用 “Save as”（另存为）——这样得到的二进制文件会损坏。请克隆仓库，或使用 **Download ZIP** 获取包含所有文件的完整仓库。
+**不要**使用 “Save as” 从 GitHub 下载固件文件——这样得到的二进制文件会损坏。请克隆仓库，或使用 **Download ZIP** 获取包含所有文件的完整仓库。
 :::
 
 仓库： [reSpeaker_XVF3800_4MIC_44mm](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm)
@@ -339,11 +339,11 @@ USB 固件会枚举为 UAC 2.0 声卡，适用于 Windows、Linux 和 macOS 主�
 |----------------|-------------------|
 | `respeaker_44mm_usb_c48k2ch_v1.0.0.bin` | 48 kHz、2 通道 USB 音频 |
 
-固件目录中不包含 USB 音频类描述符转储文件。烧录完成后，请在配置录音应用之前，先在主机上验证设备报告的格式——不要在未从设备描述符确认的情况下，擅自假定采样位宽或额外的采样率 / 通道配置。
+固件目录中未提供 USB 音频类描述符转储文件。烧录完成后，请在配置录音应用之前，先在主机上验证设备报告的格式——不要在未从设备描述符确认的情况下，假定采样位宽或额外的采样率 / 通道配置。
 
 ### I2S 固件
 
-当阵列连接到 XIAO ESP32-S3 Plus 等微控制器主机时，需要使用 I2S 固件。音频通过 I2S 传输，XVF3800 通过 I2C 控制。
+当阵列连接到 XIAO ESP32-S3 Plus 等微控制器主机时，会使用 I2S 固件。音频通过 I2S 传输，XVF3800 通过 I2C 控制。
 
 | 固件 | 通道数 | 说明 |
 |----------|----------|-------|
@@ -363,19 +363,19 @@ import TabItem from '@theme/TabItem';
 
 - 下载 `dfu-util-0.11-binaries.tar.xz` 并解压，例如解压到 `D:\dfu-util-0.11-binaries\win64\`
 
-  [Download Link](http://dfu-util.sourceforge.net/)
+  [下载链接](http://dfu-util.sourceforge.net/)
 
 - 将 `dfu-util.exe` 的路径添加到系统的 `Path` 变量中：
 
   `My Computer > Properties > Advanced > Environment Variables > Path`
 
-- 打开 **Command Prompt**（`cmd`）并验证安装：
+- 打开 **命令提示符**（`cmd`）并验证安装：
 
 ```bash
 dfu-util -V
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_version.png" alt="dfu-util version output" width={700} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_version.png" alt="dfu-util 版本输出" width={700} height="auto" /></p>
 
 - 连接 reSpeaker XVF3800 44mm 并检查设备是否被检测到：
 
@@ -383,7 +383,7 @@ dfu-util -V
 dfu-util -l
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_list.png" alt="dfu-util list output" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_util_list.png" alt="dfu-util 列表输出" width={800} height="auto" /></p>
 
 > 如果你看到：
 > `Cannot open DFU device 2886:0024 ... (LIBUSB_ERROR_NOT_SUPPORTED)`
@@ -469,7 +469,7 @@ Found DFU: [2886:0024] ver=0100, devnum=57, cfg=1, intf=4, path="1-2", alt=0, na
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
 
-- 在 Linux 上，请使用 `sudo` 运行：
+- 在 Linux 上，使用 `sudo` 运行：
 
 ```bash
 sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
@@ -477,9 +477,9 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 `-R` 选项会在烧录完成后自动重启开发板。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_flash.png" alt="dfu-util flashing output" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/dfu_flash.png" alt="dfu-util 烧录输出" width={800} height="auto" /></p>
 
-再次运行 `dfu-util -l` 以确认新的固件版本已经在运行。
+再次运行 `dfu-util -l` 以确认新的固件版本已在运行。
 
 ## 录音与回放
 
@@ -491,7 +491,7 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 1. 打开 **Audacity**。
 2. 进入 **Audio Setup > Audio Settings**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_setup.png" alt="Audacity Audio Setup menu" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_setup.png" alt="Audacity 音频设置菜单" width={800} height="auto" /></p>
 
 3. 设置：
    - **Host**：`Windows WASAPI`
@@ -502,11 +502,11 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
    - **Default Sample Rate**：`48000 Hz`
    - **Default Sample Format**：`32-bit float`
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_settings.jpg" alt="Audacity Audio Settings dialog" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_audio_settings.jpg" alt="Audacity 音频设置对话框" width={800} height="auto" /></p>
 
 4. 点击 **OK** —— 现在可以开始录音了。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_recording.jpg" alt="Audacity recording waveform" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/audacity_recording.jpg" alt="Audacity 录音波形" width={800} height="auto" /></p>
 
 </TabItem>
 
@@ -540,7 +540,7 @@ macOS 需要在 **System Settings > Privacy & Security > Microphone** 中为 Aud
 arecord -l
 ```
 
-找到名为 `reSpeaker XVF3800 4-Mic 44mm` 的条目，并记下它的声卡编号，例如 `card 3`。
+找到名为 `reSpeaker XVF3800 4-Mic 44mm` 的条目，并记下其声卡编号，例如 `card 3`。
 
 2. 录制 5 秒音频：
 
@@ -580,7 +580,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 
 调参可以让你配置内置音频算法，并直接与 XMOS 芯片通信。我们提供了一个 Python 控制接口，用于参数配置和设备交互。
 
-[**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm/tree/main/python_control)
+[**Python 控制目录**](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm/tree/main/python_control)
 
 使用提供的脚本，你可以：
 
@@ -604,7 +604,7 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 pip install pyusb
 ```
 
-在 Windows 上，`libusb-package` pip 包是提供 libusb 的最简单方式。在 Linux 上，请通过你的包管理器安装 libusb。
+在 Windows 上，使用 `libusb-package` 这个 pip 包是提供 libusb 的最简单方式。在 Linux 上，请通过你的包管理器安装 libusb。
 
 ### 用法
 
@@ -619,8 +619,8 @@ python xvf_host.py [options] command [--values value(s)...]
 | Option | Description |
 |--------|-------------|
 | `-l`, `--list` | 列出所有支持的命令及其详细信息 |
-| `--vid` | 设置 USB Vendor ID（默认：`0x2886`） |
-| `--pid` | 设置 USB Product ID；如果省略，则通过 VID 自动发现设备 |
+| `--vid` | 设置 USB 供应商 ID（默认：`0x2886`） |
+| `--pid` | 设置 USB 产品 ID；如果省略，则通过 VID 自动发现设备 |
 | `--values` | 为写命令提供数值（可选），十进制或十六进制（`0x7B`） |
 
 ### 使用示例
@@ -641,7 +641,7 @@ python xvf_host.py VERSION
 VERSION: [1, 0, 0]
 ```
 
-返回的元组格式取决于你烧录的固件。
+返回的元组与您烧录的固件版本相对应。
 
 **3. 读取到达方向（DoA）**
 
@@ -667,7 +667,7 @@ python xvf_host.py LED_COLOR --values 0xFF0000
 python xvf_host.py LED_BRIGHTNESS --values 50
 ```
 
-**6. 读取麦克风阵列几何结构**
+**6. 读取麦克风阵列几何信息**
 
 ```bash
 python xvf_host.py AEC_MIC_ARRAY_GEO
@@ -681,7 +681,7 @@ AEC_MIC_ARRAY_GEO:
 -0.033, -0.033, 0.000]
 ```
 
-这些数值是波束形成器使用的麦克风 X/Y 坐标（单位：米）。在进行声学测量或校准之前，请检查报告的几何结构是否与你的开发板麦克风间距以及你烧录的固件镜像相匹配。
+这些数值是波束形成器使用的麦克风 X/Y 坐标（单位：米）。在进行声学测量或校准之前，请检查报告的几何信息是否与你的开发板麦克风间距以及所烧录的固件镜像相匹配。
 
 ### USB 输出通道选择
 
@@ -693,7 +693,7 @@ python xvf_host.py AUDIO_MGR_OP_L --values 6 3
 python xvf_host.py AUDIO_MGR_OP_R --values 1 0
 ```
 
-最后两条命令会将自动选择的波束路由到左声道，将原始麦克风 0 路由到右声道。原始麦克风数据流会绕过语音增强，通常比处理后的音频更安静。
+最后两条命令会将自动选择的波束路由到左声道，将原始麦克风 0 路由到右声道。原始麦克风数据流会绕过语音增强处理，通常比处理后的音频更安静。
 
 保存路由配置，使其在重启后仍然生效：
 
@@ -737,18 +737,19 @@ WinUSB 驱动未绑定到 DFU 接口。安装 [Zadig](https://zadig.akeo.ie/)，
 
 ### 开发板完全无法枚举
 
-进入 **安全模式（Safe Mode）**（在上电时按住静音按钮，等待红色 LED 闪烁），然后重新刷写 USB 固件。安全模式固件同时支持 USB DFU 和 I2C DFU，因此始终可以恢复。
+进入 **安全模式（Safe Mode）**（按住静音按钮的同时上电，等待红色 LED 闪烁），然后重新刷写 USB 固件。安全模式固件同时支持 USB DFU 和 I2C DFU，因此始终可以恢复。
 
 ## 资源
 
 - [reSpeaker XVF3800 44mm 固件和 Python 控制（GitHub）](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm)
 - [XMOS XVF3800 文档](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/index.html)
+- [PCBA-CAD](https://files.seeedstudio.com/wiki/reSpeaker_44mm/1.step)
 
-{/* TODO: add 2D DXF and 3D STEP downloads here once the mechanical files are published */}
+{/* TODO: 一旦机械文件发布，在此添加 2D DXF 和 3D STEP 下载链接 */}
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
