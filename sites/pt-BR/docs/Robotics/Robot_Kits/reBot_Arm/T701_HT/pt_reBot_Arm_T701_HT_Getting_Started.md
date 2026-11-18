@@ -11,6 +11,9 @@ keywords:
 slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -19,23 +22,23 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 # Início Rápido do reBot Arm T701 HT
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="Robô bimanual reBot Arm T701 HT" />
 </div>
 
 <GitHubStarButton
   owner="Seeed-Projects"
   repo="reBot-Arm-T701"
   fallbackCount={35}
-  ariaLabel="Star reBot Arm T701 on GitHub"
+  ariaLabel="Dar estrela ao reBot Arm T701 no GitHub"
 />
 
 ## Introdução ao Projeto
 
-O reBot Arm T701 é uma plataforma robótica bimanual open source da Seeed Studio para IA Física, aprendizado de robôs e coleta de dados no mundo real. Ele se baseia no design open source do reBot Arm B601 e oferece aos desenvolvedores uma plataforma única para coletar dados e estudar tarefas coordenadas de dois braços.
+O reBot Arm T701 é uma plataforma robótica bimanual open-source da Seeed Studio para IA Física, aprendizado de robôs e coleta de dados no mundo real. Ele se baseia no design open-source do reBot Arm B601 e oferece aos desenvolvedores uma plataforma única para coletar dados e estudar tarefas coordenadas de dois braços.
 
-- **Configuração bimanual.** Dois braços de 7 DOF são montados em um único torso. Motores com barramento CAN acionam as juntas, e cada braço possui sua própria garra.
+- **Configuração bimanual.** Dois braços de 7 DOF são montados em um único torso. Motores em barramento CAN acionam as juntas, e cada braço possui sua própria garra.
 - **Visão e computação de borda.** A plataforma possui pontos de fixação para câmeras de pulso RealSense D405, uma câmera de cabeça D435 e um módulo de computação NVIDIA Jetson Orin. **A versão Basic não inclui câmeras.**
-- **Recursos open source.** Arquivos CAD, lista de materiais (BOM), guias de montagem e software são lançados em etapas de acordo com o roteiro do projeto.
+- **Recursos open-source.** Arquivos CAD, lista de materiais (BOM), guias de montagem e software são lançados em etapas de acordo com o roteiro do projeto.
 
 ## Aviso de Segurança e Notificação de Risco
 
@@ -64,14 +67,14 @@ O reBot Arm T701 é uma plataforma robótica bimanual open source da Seeed Studi
 
 ### Verifique o Conteúdo da Embalagem
 
-Abra a maleta de transporte e confira as peças do robô e os fixadores em comparação com a lista de embalagem.
+Abra a maleta e confira as peças do robô e os fixadores em comparação com a lista de embalagem.
 
 :::note[A versão Basic não inclui câmeras]
-Consulte a lista de embalagem para o conteúdo da sua remessa.
+Consulte a lista de embalagem para o conteúdo do seu envio.
 :::
 
 <div align="center">
-  <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="Maleta de transporte aberta mostrando ambos os braços, a coluna do torso, as coberturas e as câmeras na configuração ilustrada" loading="lazy" />
+  <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="Maleta aberta mostrando ambos os braços, a coluna do torso, as coberturas e as câmeras na configuração ilustrada" loading="lazy" />
 </div>
 
   </div>
@@ -164,8 +167,8 @@ Com a alimentação desconectada, conecte o **chicote de cabos XT30 2+2** que se
        <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-front.webp" alt="Caixa vermelha marcando onde a D435i se alinha com a abertura na cobertura frontal" loading="lazy" />
      </figure>
      <figure className="rebot-power-gallery-item">
-       <figcaption>Recorte lateral para cabos</figcaption>
-       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-cable.webp" alt="Círculo vermelho marcando o recorte de cabos na lateral da cobertura do torso" loading="lazy" />
+       <figcaption>Recorte para cabo lateral</figcaption>
+       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-cable.webp" alt="Círculo vermelho marcando o recorte de cabo na lateral da cobertura do torso" loading="lazy" />
      </figure>
    </div>
 
@@ -213,11 +216,11 @@ Desconecte a alimentação antes da fiação. Antes de ligar o robô, certifique
 
 ### Instalar o SDK
 
-:::info[Plataformas compatíveis com a biblioteca de motor]
+:::info[Plataformas compatíveis com a biblioteca de motores]
 
 O SDK inclui os seguintes wheels `hightorque_robot` pré-compilados em `motor_whl/`.
 
-| Plataforma | Versão da biblioteca de motor | Versões do CPython |
+| Plataforma | Versão da biblioteca de motores | Versões do CPython |
 | --- | --- | --- |
 | Linux x86_64 | 1.2.0 | 3.9, 3.10, 3.11, 3.12 |
 | Linux aarch64 (ARM64) | 1.0.0 | 3.9, 3.10, 3.11, 3.12 |
@@ -266,7 +269,7 @@ python -I -c "import hightorque_robot, numpy, osqp, pinocchio, scipy, yaml; pino
 
 ### Verificar a conexão serial
 
-O braço esquerdo conecta-se ao CAN1 e o braço direito ao CAN2. Defina `board_serial` em `T701-HT_robot_param/serial_binding.yaml` do SDK para o número de série USB da sua placa de comunicação. O SDK usa a identidade USB da placa para encontrar os dispositivos seriais atuais na inicialização.
+O braço esquerdo se conecta ao CAN1 e o braço direito ao CAN2. Defina `board_serial` em `T701-HT_robot_param/serial_binding.yaml` do SDK para o número de série USB da sua placa de comunicação. O SDK usa a identidade USB da placa para encontrar os dispositivos seriais atuais na inicialização.
 
 Execute os seguintes comandos para verificar o mapeamento de ambos os braços sem abrir as portas seriais. Para verificar apenas um braço, passe somente o arquivo YAML correspondente.
 
@@ -284,7 +287,7 @@ python scripts/t701_ht_can_serial_adapter.py T701-HT_robot_param/T701-HT_left.ya
 
 ### Ler o estado das juntas e do gripper
 
-Execute o script e insira `1` para o braço esquerdo, `2` para o braço direito ou `3` para ambos. Confirme que todas as sete juntas e o gripper de cada braço selecionado fornecem feedback. Pressione `Ctrl+C` para sair.
+Execute o script e digite `1` para o braço esquerdo, `2` para o braço direito ou `3` para ambos. Confirme que todas as sete juntas e o gripper de cada braço selecionado fornecem feedback. Pressione `Ctrl+C` para sair.
 
 ```bash
 python scripts/t701_ht_read_state.py
@@ -322,7 +325,7 @@ python scripts/t701_ht_set_zero.py
 Verifique as posições de zero das juntas, remova qualquer carga e deixe livre a área de movimento dos braços. Comece com um braço na primeira execução. Dê suporte ao braço ao iniciar e parar o demo de compensação de gravidade.
 :::
 
-Entre no diretório `scripts`. Após iniciar um demo, insira `1` para o braço esquerdo, `2` para o braço direito ou `3` para ambos.
+Entre no diretório `scripts`. Após iniciar um demo, digite `1` para o braço esquerdo, `2` para o braço direito ou `3` para ambos.
 
 ```bash
 cd scripts
@@ -339,7 +342,7 @@ python t701_ht_gravity_compensation.py
 #### Impedância de junta
 
 :::warning[Antes de iniciar um demo de impedância de junta]
-**Certifique-se de que a área ao redor do robô e dentro da faixa de movimento dos braços esteja livre de pessoas e objetos frágeis antes de iniciar qualquer um dos demos.** O braço selecionado move-se em direção a uma pose fixa assim que o demo é iniciado.
+**Certifique-se de que a área ao redor do robô e dentro da faixa de movimento dos braços esteja livre de pessoas e objetos frágeis antes de iniciar qualquer um dos demos.** O braço selecionado se move em direção a uma pose fixa assim que o demo é iniciado.
 :::
 
 O alvo do braço esquerdo é aproximadamente `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad. O alvo do braço direito inverte o sinal de cada ângulo de junta.
@@ -356,9 +359,11 @@ python t701_ht_joint_impedance_with_gravity.py
 python t701_ht_joint_impedance_with_gravity_friction.py
 ```
 
-Todos os três demos aplicam os limites de torque de junta configurados. Pressione `Ctrl+C` para parar a compensação de gravidade ou para retornar os braços à posição de zero antes de interromper um demo de impedância de junta. Durante o retorno, pressione `Ctrl+C` novamente para parar os braços.
+Todos os três demos aplicam os limites de torque de junta configurados. Pressione `Ctrl+C` para parar a compensação de gravidade ou para retornar os braços à posição de zero antes de encerrar um demo de impedância de junta. Durante o retorno, pressione `Ctrl+C` novamente para parar os braços.
 
-Consulte [T701 HT com Pinocchio](/pt-br/rebot_t701_ht_pinocchio/) para verificações de cinemática direta e inversa, trajetórias cartesianas e exemplos de controle por teclado.
+Para controle de cinco parâmetros de motor único, feedback de estado e desligamento com retorno à posição de zero, consulte o [MIT Control SDK](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_control_mit/).
+
+Consulte [T701 HT com Pinocchio](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_pinocchio/) para verificações de cinemática direta e inversa, trajetórias cartesianas e exemplos de controle por teclado.
 
   </div>
 </div>
