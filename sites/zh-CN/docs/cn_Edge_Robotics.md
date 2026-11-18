@@ -148,7 +148,15 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>快速上手与 SDK</h4>
       <div className="learning-steps">
         <a className="step-card" href="/cn/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>快速开始</b></a>
+        <a className="step-card" href="/cn/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT 控制 SDK</b></a>
         <a className="step-card" href="/cn/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>常用资源</h4>
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">机械臂描述与仿真模型（URDF / Mesh）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">硬件资料与物料清单（BOM）</a>
       </div>
     </div>
   </div>

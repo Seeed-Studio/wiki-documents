@@ -11,9 +11,13 @@ keywords:
 slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm T701 HT with Pinocchio
 
@@ -23,13 +27,20 @@ import '/src/css/rebot-wiki-style.css';
   <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
 </div>
 
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-Arm-T701-SDK"
+  fallbackCount={0}
+  ariaLabel="Star T701-HT SDK on GitHub"
+/>
+
 The T701-HT SDK uses Pinocchio to load the URDF model and compute end-effector poses and joint torques due to gravity. Use the forward kinematics (FK) and inverse kinematics (IK) examples to check joint feedback from the robot before running the gravity compensation, Cartesian trajectory, and keyboard control examples.
 
 <section className="section-card">
 
 ## Prepare the Robot
 
-Install the SDK and its dependencies using the [T701 HT Quick Start installation instructions](/rebot_t701_ht_getting_started/#install-the-sdk). Then follow the remaining Quick Start steps to check the serial port mapping, read joint and gripper feedback, and verify the zero positions.
+Install the SDK and its dependencies using the [T701 HT Quick Start installation instructions](https://wiki.seeedstudio.com/rebot_t701_ht_getting_started/#install-the-sdk). Then follow the remaining Quick Start steps to check the serial port mapping, read joint and gripper feedback, and verify the zero positions.
 
 :::warning[Before running the examples on the robot]
 
