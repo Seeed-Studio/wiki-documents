@@ -68,6 +68,10 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="在 GitHub 上为 reBot-DevArm 点亮 Star"
 />
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV1GpWA6tE1Y&autoplay=0&muted=1" title="reBot Arm B601-RS MotorBridge 电机校准教程" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 ## 项目简介
 
 **reBot-DevArm (reBot Arm B601 DM 和 reBot Arm B601 RS)** 是一个致力于降低具身智能学习门槛的机械臂项目。我们主打 **"真·开源"** —— 不仅仅是代码，我们无保留地开源了所有的：
@@ -948,6 +952,12 @@ reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。
 <summary>DM/RS机械臂 接电池怎么办？</summary>
 
 DM\RS机械臂接电池需要额外的稳压模块以及电路设计，对于电流浪涌和反向电动势，可以购买我们的 [RS 泄放模块](https://www.seeedstudio.com/Rebotic-Bleeder-Module-for-reBot-Arm-B601-RS-p-6987.html) 和 [DM 叠放模块](https://www.seeedstudio.com/Rebotic-Power-Discharge-Module-for-reBot-Arm-B601-DM-p-6988.html)
+
+RS 泄放模块组装参考视频：
+
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV116sF6GEpZ&autoplay=0&muted=1" title="reBot Arm B601-RS 泄放模块组装示意" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
 
 </details>
 

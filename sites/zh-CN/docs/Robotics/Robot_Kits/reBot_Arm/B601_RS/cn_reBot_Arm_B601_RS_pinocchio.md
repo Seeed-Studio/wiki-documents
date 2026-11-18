@@ -71,6 +71,10 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="在 GitHub 上为 reBotArm_control_py 点亮 Star"
 />
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV1nQxQ6SEzo&autoplay=0&muted=1" title="reBot Arm B601-RS Pinocchio 与 MeshCat 运动学教程" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 
 ---
 

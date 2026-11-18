@@ -10,6 +10,7 @@ translation:
   skip: [zh-CN]
 last_update:
   date: 2026-11-06
+  author: liujunjie
 createdAt: '2026-11-05'
 updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_lingbot_vla2/
