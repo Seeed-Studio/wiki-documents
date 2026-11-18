@@ -371,7 +371,7 @@ LED meaning: blue slow blink = advertising; green steady = connected; red = erro
 </div>
 
 
-This example passively scans the surrounding advertising packets and flashes the green LED once per packet received. It also parses the device name out of the AD data and de-duplicates by address — each address is printed only once, so the same device does not flood the log across the three advertising channels and its scan response. The parsing and de-duplication logic lives in the `device_found()` callback in `observer.c`: it first walks the AD fields with `bt_data_parse()` looking for `BT_DATA_NAME_SHORTENED`/`BT_DATA_NAME_COMPLETE`, then keeps a small 16-entry table of already-reported addresses and skips the print on a hit (the green fast flash still fires every time, so scanning activity stays visible).
+This example actively scans the surrounding advertising packets and flashes the green LED once per packet received. It also parses the device name out of the AD data and de-duplicates by address — each address is printed only once, so the same device does not flood the log across the three advertising channels and its scan response. The parsing and de-duplication logic lives in the `device_found()` callback in `observer.c`: it first walks the AD fields with `bt_data_parse()` looking for `BT_DATA_NAME_SHORTENED`/`BT_DATA_NAME_COMPLETE`, then keeps a small 16-entry table of already-reported addresses and skips the print on a hit (the green fast flash still fires every time, so scanning activity stays visible).
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/3_ble/ble_oberver" target="_blank" rel="noopener noreferrer">

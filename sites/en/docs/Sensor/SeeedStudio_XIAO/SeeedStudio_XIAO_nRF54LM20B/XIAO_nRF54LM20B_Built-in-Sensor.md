@@ -147,7 +147,7 @@ monitor_speed = 115200
 
 
 
-The IMU can fuse three-axis acceleration data to calculate pitch, yaw and roll attitude angles for posture recognition. It can also work with corresponding controllers to realize motion control, or be applied in low-power scenarios such as attitude-triggered wake-up.
+The IMU can fuse three-axis acceleration data to calculate pitch and roll attitude angles for posture recognition. It can also work with corresponding controllers to realize motion control, or be applied in low-power scenarios such as attitude-triggered wake-up.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/4_imu/3_electronic_ocean" target="_blank" rel="noopener noreferrer">
@@ -209,17 +209,17 @@ The script depends on pyserial. Install it first:
 pip install pyserial
 ```
 
-Start the script before pressing anything on the board — it opens the serial port, asserts DTR, and waits for the stream:
+Start the script before pressing anything on the board — it opens the serial port, asserts DTR, and waits for the stream. The script lives at `2_Mic_demo/tools/capture.py`; run it from the `2_Mic_demo` directory:
 
 ```bash
-python3 capture.py
+python3 tools/capture.py
 ```
 
-It auto-detects the first `/dev/cu.usbmodem*` port at 115200 baud. On Linux or Windows, pass the port explicitly, for example `python3 capture.py /dev/ttyACM0` or `python3 capture.py COM3`.
+It auto-detects the first `/dev/cu.usbmodem*` port at 115200 baud. On Linux or Windows, pass the port explicitly, for example `python3 tools/capture.py /dev/ttyACM0` or `python3 tools/capture.py COM3`.
 
 #### Record and save
 
-Press the BOOT (User) button to start recording — the RGB-G LED blinks at about 2.5 Hz and the PDM microphone begins capturing. Speak towards the microphone, then press the button again to stop; the LED returns to steady on and the board sends the end-of-stream marker. The script writes `rec_<timestamp>.wav` to its current working directory and prints the file path, byte size and duration. Each button press produces one file.
+Press the BOOT (User) button to start recording — the RGB-G LED blinks at about 2.5 Hz and the PDM microphone begins capturing. Speak towards the microphone, then press the button again to stop; the LED returns to steady on and the board sends the end-of-stream marker. The script writes `rec_<timestamp>.wav` to its current working directory and prints the file path, byte size and duration. Each completed start–stop recording produces one file.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/boad_use/5_gif.gif" style={{width:800, height:'auto'}}/></div>
 <br/>

@@ -443,14 +443,14 @@ int main(void)
 
 2. Add **xiao_nrf54lm20b_nrf54lm20b_cpuapp.overlay**
 
-- Create a **board** folder in the root directory of the `1_getting_start` project, at the same level as folders such as src.
+- Create a **boards** folder in the root directory of the `1_getting_start` project, at the same level as folders such as src.
 
 <div style={{display:'flex', gap:'1rem', justifyContent:'center', alignItems:'center'}}>
   <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/ncs/5_wenjianja_2.png" style={{flex:1, minWidth:0, width:'100%', height:'auto'}}/>
   <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/ncs/6_wenjain_2.png" style={{flex:1, minWidth:0, width:'100%', height:'auto'}}/>
 </div>
 
-- Create the devicetree file **xiao_nrf54lm20b_nrf54lm20b_cpuapp.overlay** inside the board folder.
+- Create the devicetree file **xiao_nrf54lm20b_nrf54lm20b_cpuapp.overlay** inside the boards folder.
 
 <details>
 
@@ -754,7 +754,7 @@ The result on the serial monitor is shown below:
 
  **Q1: Downloading the nRF Connect SDK is very slow or gets stuck**
 
-If the SDK download is very slow or gets stuck, you can use **aria2** to download the required packages with multiple connections, and then install the SDK using **nrfutil**.
+If the SDK download is very slow or gets stuck, you can use **aria2** to download the required packages with multiple connections, and then install the SDK using **nrfutil**. The steps below cover the **macOS (Apple Silicon)** case, where the nRF Connect toolchain manager has no aarch64 build and you must fetch the toolchain bundle by hand; on Windows and Linux the official toolchain manager handles this directly, so this workaround is not needed.
 
 **Step 1. Install aria2**
 
@@ -762,12 +762,6 @@ For macOS:
 
 ```bash
 brew install aria2
-```
-
-For Windows:
-
-```bash
-winget install aria2.aria2
 ```
 
 **Step 2. Create the download directory**

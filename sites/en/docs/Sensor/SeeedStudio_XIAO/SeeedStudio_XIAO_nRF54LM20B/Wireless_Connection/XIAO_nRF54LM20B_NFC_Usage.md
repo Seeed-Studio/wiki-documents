@@ -133,9 +133,11 @@ This is the Nordic Connect SDK **[writable NDEF message](https://docs.nordicsemi
 4. Flash the signed image through MCUboot serial-recovery DFU. Hold **B0 (P0.09)**, tap **RST**, release **B0**, then:
 
 ```bash
-nrfutil mcu-manager serial image-upload
-nrfutil mcu-manager serial reset
+nrfutil mcu-manager serial image-upload --serial-port /dev/cu.usbmodem1201 --firmware <path-to-your-build>/zephyr.signed.bin
+nrfutil mcu-manager serial reset --serial-port /dev/cu.usbmodem1201
 ```
+
+Replace `/dev/cu.usbmodem1201` with your board's serial port (`COM5` on Windows, `/dev/ttyACM0` on Linux) and point `--firmware` at the `zephyr.signed.bin` produced by the build in the previous step.
 
 #### Result
 

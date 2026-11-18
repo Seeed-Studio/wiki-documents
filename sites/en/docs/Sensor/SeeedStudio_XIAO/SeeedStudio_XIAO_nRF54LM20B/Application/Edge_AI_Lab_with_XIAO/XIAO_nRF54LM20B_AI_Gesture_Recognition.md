@@ -212,8 +212,10 @@ If the clone fails, do not keep retrying: open [the Nordic SDK Edge AI repositor
 ```bash
 cd sdk-edge-ai/tools/data_forwarder_host
 python3.12 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate   # macOS / Linux
 ```
+
+On Windows PowerShell, replace the last line with `.venv\Scripts\Activate.ps1`.
 
 <details>
 <summary>Why a virtual environment?</summary>

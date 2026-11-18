@@ -219,7 +219,7 @@ Digital pins switch external sensors and actuators by driving high and low level
 
 ### Software Preparation
 
-By the pin assignment, **P1.0 / D0** is the input for the Grove Button and **P1.31 / D1** is the output for the Grove Buzzer. `XiaoPin(0, ...)` maps D0 to P1.0, `XiaoPin(1, ...)` maps D1 to P1.31. The full example script is in [micropython-seeed-boards/example](https://github.com/Seeed-Studio/micropython-seeed-boards/tree/main/example).
+By the pin assignment, **P1.0 / D0** is the input for the Grove Button and **P1.31 / D1** is the output for the Grove Buzzer. `XiaoPin(0, ...)` maps D0 to P1.0, `XiaoPin(1, ...)` maps D1 to P1.31. The full example script is in [micropython-seeed-boards/example](https://github.com/Seeed-Studio/micropython-seeed-boards/tree/master/example).
 
 :::tip
 
@@ -273,7 +273,7 @@ After flashing and pressing RST once, press the Grove Button: the buzzer sounds 
 
 ## PWM
 
-Pulse-width modulation is a timed waveform built on top of a digital output: it toggles the pin level at a fixed frequency and trims the high-level duty cycle within each period, delivering an equivalent analog signal to the load. It is commonly used to drive servos or dim lights. This example sweeps a standard servo back and forth between 0° and 180° on P1.0 / D0.
+Pulse-width modulation is a timed waveform built on top of a digital output: it toggles the pin level at a fixed frequency and trims the high-level duty cycle within each period, delivering an equivalent analog signal to the load. It is commonly used to drive servos or dim lights. This example drives a standard servo on P1.04 / D8, stepping it through a sequence of angles.
 
 ### Hardware Preparation
 
@@ -338,7 +338,7 @@ Power the servo from a separate 5 V supply and tie its ground to the XIAO's grou
 
 ### Result
 
-After flashing and pressing RST once, the servo sweeps back and forth between 0° and 180°, and the Shell keeps printing `Angle: N deg`.
+After flashing and pressing RST once, the servo steps through 0°, 90°, 180°, 90°, 0° once, pausing one second at each angle, and the Shell prints `Angle: N deg` at each step.
 
 <div style={{display:'flex', justifyContent:'center', gap:'1rem', flexWrap:'wrap', alignItems:'center'}}>
   <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/pinmax/2.png" style={{width:400, height:'auto'}}/>
@@ -348,7 +348,7 @@ After flashing and pressing RST once, the servo sweeps back and forth between 0�
 
 ## Analog
 
-Analog I/O is based on the analog-to-digital converter (ADC): it captures continuous voltage signals from external sensors, and the raw 16-bit sample is then mapped to an engineering quantity through a linear or non-linear conversion. This example reads and prints the raw value on P1.0 / D0 (AIN0, SAADC channel 0) once every 500 ms.
+Analog I/O is based on the analog-to-digital converter (ADC): it captures continuous voltage signals from external sensors, and a normalized 16-bit reading (0–65535) is then mapped to an engineering quantity through a linear or non-linear conversion. This example reads and prints the raw value on P1.0 / D0 (AIN0, SAADC channel 0) once every 500 ms.
 
 ### Hardware Preparation
 

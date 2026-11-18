@@ -199,7 +199,7 @@ Start with the recommended parameters, click the blue microphone, and test three
 | Test | Action | Expected result |
 |---|---|---|
 | Normal wake | say `seeed` 10 times in a row | recognize as many as possible |
-| False wake | say Hi Seeed, Hey Siri, other English phrases | trigger as little as possible |
+| False wake | say Hey Siri, OK Google, and other phrases that do not contain the wake word | trigger as little as possible |
 | Environmental interference | play music, speak from a distance, vary volume | watch for missed or false triggers |
 
 </div>
@@ -233,7 +233,7 @@ The page's recommended starting parameters look like this:
 
 A lower threshold wakes more easily but also raises the false-wake risk.
 
-**Detections is the consecutive detection count.** Keywords Detections = 2 means the model's predictions over consecutive audio windows have to hit the threshold at least 2 times in a row to trigger a wake. It does not mean you say the wake word twice — in the second or two you speak, the model already makes many predictions over consecutive audio windows, and this parameter debounces among them.
+**Detections is a debounce count over a sliding window of recent predictions.** Keywords Detections = 2 means that within the recent sliding window of audio predictions, at least 2 windows whose `seeed` probability clears the threshold are needed to trigger a wake — not 2 windows hit back-to-back with no gap, and not saying the wake word twice. In the second or two you speak, the model already makes many predictions over consecutive audio windows, and this parameter debounces among them. When you port the model to the board, this same sliding-window debounce is expressed through the Kconfig `count` parameter (see the Build step below: threshold / window / count), whose value comes from these page settings rather than being typed in by hand.
 
 **OTHER and SILENCE are system categories**: `OTHER` is non-target speech, and `SILENCE` is a near-silent segment. Setting them to threshold = 0 and detections = 4 just lets the detection logic handle the non-keyword state stably; it does not make them trigger a wake.
 
@@ -430,7 +430,7 @@ From the `zephyr/` of the 7_AI_Gesture_5Class project, copy into the `zephyr/` o
 
 | Source file (7_AI_Gesture) | Target (8_AI_Wakeword) | Change |
 |---|---|---|
-| `CMakeLists.txt` | `zephyr/CMakeLists.txt` | ① change the `project()` name to wakeword; ② the `main.c` path in the trailing `target_sources` stays the same, and the model `.c` is still `nrf_edgeai_user_model.c` (same name, convenient) |
+| `CMakeLists.txt` | `zephyr/CMakeLists.txt` | ① change the `project()` name to wakeword; ② in the trailing `target_sources`, keep `main.c` and `nrf_edgeai_generated/nrf_edgeai_user_model.c`, but **delete the `imu_lsm6dsl.c` line** — the gesture project drives an IMU, the wake-word project does not, so leaving that source in would fail to build |
 | `mdk_lm20b_compat.h` | `zephyr/mdk_lm20b_compat.h` | as-is, one line `#undef NRF54LM20A_XXAA` |
 | `nrf_axon_platform_wrapper.c.in` | `zephyr/nrf_axon_platform_wrapper.c.in` | as-is (template, generated at CMake configure time) |
 | `Kconfig` | `zephyr/Kconfig` | adjust parameters for the wake word: threshold 800 / window 20 / count 12 (was gesture parameters) |
