@@ -358,7 +358,7 @@ python t701_ht_joint_impedance_with_gravity_friction.py
 
 Todos os três demos aplicam os limites de torque de junta configurados. Pressione `Ctrl+C` para parar a compensação de gravidade ou para retornar os braços à posição de zero antes de interromper um demo de impedância de junta. Durante o retorno, pressione `Ctrl+C` novamente para parar os braços.
 
-Consulte [T701 HT com Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) para verificações de cinemática direta e inversa, trajetórias cartesianas e exemplos de controle por teclado.
+Consulte [T701 HT com Pinocchio](/pt-br/rebot_t701_ht_pinocchio/) para verificações de cinemática direta e inversa, trajetórias cartesianas e exemplos de controle por teclado.
 
   </div>
 </div>

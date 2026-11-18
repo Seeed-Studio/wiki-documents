@@ -358,7 +358,7 @@ python t701_ht_joint_impedance_with_gravity_friction.py
 
 3 つすべてのデモで、設定された関節トルク制限が適用されます。重力補償を停止する場合、または関節インピーダンスデモを停止する前にアームをゼロ位置へ戻す場合は、`Ctrl+C` を押してください。戻り動作の最中に再度 `Ctrl+C` を押すと、アームの動作が停止します。
 
-順運動学および逆運動学のチェック、デカルト軌道、キーボード操作の例については、[T701 HT with Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) を参照してください。
+順運動学および逆運動学のチェック、デカルト軌道、キーボード操作の例については、[T701 HT with Pinocchio](/ja/rebot_t701_ht_pinocchio/) を参照してください。
 
   </div>
 </div>

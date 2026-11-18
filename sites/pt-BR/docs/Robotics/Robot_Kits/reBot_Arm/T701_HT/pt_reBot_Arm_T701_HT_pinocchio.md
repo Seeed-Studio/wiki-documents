@@ -29,7 +29,7 @@ O SDK do T701-HT usa o Pinocchio para carregar o modelo URDF e calcular as poses
 
 ## Preparar o robô
 
-Instale o SDK e suas dependências usando as [instruções de instalação do T701 HT Quick Start](./reBot_Arm_T701_HT_Getting_Started.md#install-the-sdk). Em seguida, siga as etapas restantes do Quick Start para verificar o mapeamento da porta serial, ler o retorno das juntas e do gripper e verificar as posições de zero.
+Instale o SDK e suas dependências usando as [instruções de instalação do T701 HT Quick Start](/pt-br/rebot_t701_ht_getting_started/#instalar-o-sdk). Em seguida, siga as etapas restantes do Quick Start para verificar o mapeamento da porta serial, ler o retorno das juntas e do gripper e verificar as posições de zero.
 
 :::warning[Antes de executar os exemplos no robô]
 

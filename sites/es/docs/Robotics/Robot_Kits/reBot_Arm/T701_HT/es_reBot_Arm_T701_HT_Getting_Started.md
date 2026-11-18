@@ -358,7 +358,7 @@ python t701_ht_joint_impedance_with_gravity_friction.py
 
 Las tres demostraciones aplican los límites de par articular configurados. Pulsa `Ctrl+C` para detener la compensación de gravedad o para devolver los brazos a cero antes de detener una demo de impedancia articular. Durante el retorno, pulsa `Ctrl+C` de nuevo para detener los brazos.
 
-Consulta [T701 HT con Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) para comprobaciones de cinemática directa e inversa, trayectorias cartesianas y ejemplos de control por teclado.
+Consulta [T701 HT con Pinocchio](/es/rebot_t701_ht_pinocchio/) para comprobaciones de cinemática directa e inversa, trayectorias cartesianas y ejemplos de control por teclado.
 
   </div>
 </div>
