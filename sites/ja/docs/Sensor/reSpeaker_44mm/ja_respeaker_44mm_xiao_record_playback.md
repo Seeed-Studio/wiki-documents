@@ -4,7 +4,7 @@ title: reSpeaker XVF3800 44mm と XIAO ESP32-S3 Plus による録音と再生
 keywords:
   - reSpeaker 44mm
   - XIAO ESP32-S3 Plus
-  - I2S 録音 再生
+  - I2S record playback
   - xvf3800
   - PSRAM
 image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_board_overview.jpg
@@ -19,9 +19,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_record_playback/
 ---
 # reSpeaker XVF3800 44mm と XIAO ESP32-S3 Plus による録音と再生
 
-このサンプルでは、XVF3800 からのステレオ音声を I2S 経由で XIAO の PSRAM に 5 秒間取り込み、その後同じバッファを I2S 送信経路で再生します。PC を使わずにフルのオーディオ往復が動作することを確認する最も手早い方法であり、音声録音アプリケーションの良い出発点となります。
+このサンプルでは、XVF3800 からのステレオ音声を I2S 経由で XIAO の PSRAM に 5 秒間キャプチャし、その後同じバッファを I2S 送信経路で再生します。PC を使わずにフルのオーディオ往復が動作することを確認する最も手早い方法であり、音声録音アプリケーションの良い出発点となります。
 
-{/* TODO: href="#" の値は Seeed Studio の製品ページ URL が公開されたら置き換えてください。 */}
+{/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -31,8 +35,8 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_record_playback/
 
 ## 前提条件
 
-- アレイは **I2S ファームウェア** を実行している必要があります。[Update Firmware](https://wiki.seeedstudio.com/ja/respeaker_44mm_introduction/#ファームウェアを更新) を参照してください。
-- ESP32 ボードパッケージと **Arduino Audio Tools** ライブラリをインストールした Arduino IDE。[Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#ソフトウェア準備) を参照してください。
+- アレイは **I2S ファームウェア** を実行している必要があります。 [Update Firmware](https://wiki.seeedstudio.com/ja/respeaker_44mm_introduction/#ファームウェアを更新) を参照してください。
+- ESP32 ボードパッケージと **Arduino Audio Tools** ライブラリをインストールした Arduino IDE。 [Software Preparation](https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_getting_started/#ソフトウェア準備) を参照してください。
 - ボードに **XIAO_ESP32S3_Plus** を選択し、ポート番号を選択していること。
 - **PSRAM を有効化**：`Tools > PSRAM > OPI PSRAM`。録音バッファは内部 RAM には収まりません。
 
@@ -47,8 +51,8 @@ url: https://wiki.seeedstudio.com/ja/respeaker_44mm_xiao_record_playback/
 
 1. 起動時にスケッチは PSRAM の合計と空き容量を表示し、その後 `heap_caps_malloc(..., MALLOC_CAP_SPIRAM)` を使って `RECORD_BYTES`（5 秒分）を確保します。
 2. **録音**：I2S を `RX_MODE` で再起動し、バッファがいっぱいになるか 1 秒の読み取りタイムアウトが発生するまで、8 KB チャンクでバッファにバイトを読み込みます。
-3. 再生時の整合性を保つため、バイト数をステレオフレームの整数倍になるように切り詰めます。
-4. **再生**：I2S を `TX_MODE` で再起動し、バッファを 8 KB チャンクで書き出します。その後 `flush()` と短いディレイを入れ、ストリームを停止する前に最後のフレームが吐き出されるようにします。
+3. 再生時の整合性を保つため、バイト数をステレオフレームの整数個分に切り詰めます。
+4. **再生**：I2S を `TX_MODE` で再起動し、バッファを 8 KB チャンクで書き出します。その後 `flush()` と短いディレイを入れて、ストリームを停止する前に最後のフレームが吐き出されるようにします。
 5. ループは繰り返され、1 秒の待機の後に再度録音を行います。
 
 ## Arduino スケッチ
@@ -339,18 +343,18 @@ Transmitted bytes: 1920000 / 1920000
 
 PSRAM の合計値はモジュールによって異なります。重要なのは、`Recording buffer required` が `PSRAM free` より小さいこと、`1920000 / 1920000` のフルキャプチャができていること、そして送信カウントが一致していることです。
 
-再生フェーズ中の録音を聞くために、スピーカーまたはヘッドホンをアレイに接続してください。
+再生フェーズの間、録音を聞くためにスピーカーまたはヘッドホンをアレイに接続してください。
 
 ## トラブルシューティング
 
 ### `PSRAM allocation failed!`
 
-`Tools > PSRAM > OPI PSRAM` が有効になっていないか、選択しているボードが `XIAO_ESP32S3_Plus` ではありません。ボードを再選択し、PSRAM を有効にしてから再度書き込んでください。
+`Tools > PSRAM > OPI PSRAM` が有効になっていないか、選択されているボードが `XIAO_ESP32S3_Plus` ではありません。ボードを再選択し、PSRAM を有効にしてから再度アップロードしてください。
 
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

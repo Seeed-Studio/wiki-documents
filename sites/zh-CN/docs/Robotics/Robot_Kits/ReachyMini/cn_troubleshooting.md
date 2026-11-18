@@ -308,6 +308,19 @@ Reachy Mini数字组装指南[BETA](https://huggingface.co/spaces/pollen-robotic
 </details>
 
 <details>
+<summary><strong>序列号标签上的蓝牙PIN码不起作用</strong></summary>
+
+PIN码是序列号的最后5位数字。如果硬件被更换过，标签可能不再匹配。通过SSH在机器人上读取真实序列号：
+
+```bash
+dfu-util -l
+```
+
+使用`Reachy Mini Audio DFU`行的`serial`字段，例如`serial="xxxxxxxx12345"`对应PIN码`12345`。
+
+</details>
+
+<details>
 <summary><strong>机器人有Web API吗？</strong></summary>
 
 是的。守护进程提供REST API（FastAPI）和WebSocket支持。
@@ -387,6 +400,48 @@ export HF_ENDPOINT=https://hf-mirror.com/
 ```
 
 请注意，您可能还需要使用镜像来访问PyPI和GitHub等服务。
+
+</details>
+
+<details>
+<summary><strong>如何在HTTP代理后使用Reachy Mini？</strong></summary>
+
+Reachy Mini遵循标准的代理环境变量来处理所有出站HTTP(S)流量——Hugging Face认证、应用商店列表、应用安装和更新，以及WebRTC信令服务器：
+
+```bash
+export HTTP_PROXY=http://proxy.example.com:3128
+export HTTPS_PROXY=http://proxy.example.com:3128
+export NO_PROXY=localhost,127.0.0.1,reachy-mini.local
+```
+
+在`NO_PROXY`中保留本地地址，使守护进程API（Reachy Mini Control使用）和mDNS发现在不经过代理的情况下保持可达。
+
+对于无线版，变量必须对守护进程服务可见，而不仅仅是对你的shell。将它们添加到单元中并重启：
+
+```bash
+sudo systemctl edit reachy-mini-daemon
+```
+
+添加以下内容，然后保存：
+
+```ini
+[Service]
+Environment="HTTP_PROXY=http://proxy.example.com:3128"
+Environment="HTTPS_PROXY=http://proxy.example.com:3128"
+Environment="NO_PROXY=localhost,127.0.0.1,reachy-mini.local"
+```
+
+```bash
+sudo systemctl restart reachy-mini-daemon
+```
+
+已知限制：
+
+- 我们的测试只覆盖无认证的HTTP代理。需要凭据的代理（`http://user:password@host:port`）会直接传递给底层客户端，未在CI中测试。
+- 不支持SOCKS代理，代理URL必须是纯`http://`（HTTPS通过它们隧道传输）；`https://`代理URL会被忽略并发出警告。
+- 不支持`ALL_PROXY`——请显式设置`HTTP_PROXY`和`HTTPS_PROXY`。
+- 这些调用不会查询`~/.netrc`：代理是按请求显式解析的。
+- 应用在自己的进程中运行并继承守护进程环境，但应用自身发起网络调用时需自行处理代理。
 
 </details>
 
@@ -739,6 +794,33 @@ print(mini.client.get_status())
 
 </details>
 
+<details>
+<summary><strong>我的机器人不动且没有报错</strong></summary>
+
+如果运动指令被接受但没有任何反应，电机很可能处于禁用状态。在力矩关闭时，守护进程仍会接受每个指令、报告成功，并以50Hz的频率保持控制循环运行，没有任何错误，因此没有迹象表明机器人没有在移动。
+
+两种常见情况会导致电机被禁用：
+- 机器人在一个应用停止后处于休眠和松弛状态，或守护进程刚启动。
+- 单独调用了`wake_up()`。它会播放唤醒姿势、表情和声音，但不会使能力矩。
+
+检查当前模式：
+
+```python
+mini = ReachyMini()
+print(mini.client.get_status().backend_status.motor_control_mode)
+```
+
+如果显示`MotorControlMode.Disabled`，在移动机器人之前先使能电机：
+
+```python
+mini.enable_motors()
+mini.wake_up()
+```
+
+注意：松弛的机器人会保持头部低垂在睡眠位置，靠近身体。摄像头朝向壳体内部，返回一张暗的、几乎均匀的图像，曝光和增益都达到最大值，很容易被误认为是摄像头坏了。在调查摄像头之前，先确认头部确实抬起来了。
+
+</details>
+
 ## 👁️ 视觉和音频
 
 <details>
@@ -756,6 +838,13 @@ sudo alsactl store "$CARD"
 ```
 
 这是XVF3800声卡的[已知问题](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/02_setting_up_the_hardware.html#low-volume-of-playback-audio-on-linux-for-project-ua)。
+
+</details>
+
+<details>
+<summary><strong>音质不好/扬声器听起来很"闷"。</strong></summary>
+
+守护进程已经应用了默认均衡器来补偿头部外壳的声染色。如果声音仍然不满意，可以通过守护进程配置文件中的`speaker_eq_gains`条目调整每个频段的增益——或者禁用EQ。
 
 </details>
 
@@ -786,6 +875,13 @@ mini.media.push_audio_sample(numpy_chunk)
 </details>
 
 <details>
+<summary><strong>可以获取原始麦克风输出吗？</strong></summary>
+
+可以——安装[6通道固件](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/assets/firmware)。
+
+</details>
+
+<details>
 <summary><strong>如何让Reachy看向某个东西？</strong></summary>
 
 * **2D（图像）：** `mini.look_at_image(x, y)` - （0,0是左上角）。
@@ -797,6 +893,35 @@ mini.media.push_audio_sample(numpy_chunk)
 <summary><strong>面部追踪感觉慢。</strong></summary>
 
 性能很大程度上取决于光照条件。确保面部光线充足。LOCAL后端（GStreamer IPC）为设备上的应用提供最低延迟。
+
+</details>
+
+<details>
+<summary><strong>摄像头无法对焦。</strong></summary>
+
+运行look_at示例时，将手放在摄像头前很容易看出摄像头是否在对焦。如果没有，摄像头可能被物理阻挡。它通过4颗螺丝固定在黑色部件上——将它们松开非常少的一点，大约1/8圈。
+
+![camera_focus](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/troubleshooting_screw_focus_camera.png)
+
+</details>
+
+<details>
+<summary><strong>摄像头未被检测到（所有应用无法启动）</strong></summary>
+
+头部和身体运动正常，但所有应用都无法启动，通常报连接拒绝而非任何提及摄像头的错误。守护进程在启动时需要摄像头，因此未被检测到的摄像头会导致整个媒体栈崩溃。
+
+首先检查摄像头排线：两端是否完全插入，方向是否正确。与麦克风排线相同的规则——蓝色面朝上，或写有"Main Board"的一面朝上。在重新插入之前给机器人断电，然后重新上电。
+
+在无线版上确认：
+
+```bash
+rpicam-hello --list-cameras     # 当摄像头被检测到时列出 imx708_wide
+dmesg | grep "camera module ID" # 每个检测到的传感器一行
+```
+
+健康的机器人会打印类似`imx708 0-001a: camera module ID 0x0302`的内容。如果两个命令都没有报告传感器，则摄像头确实未被检测到，排线是首要嫌疑。
+
+> **注意：** `dmesg`中的`failed to read chip id 708, with error -5`行是正常的，不是故障症状。CM4暴露了两个CSI端口，Reachy Mini只使用其中一个，因此未使用的端口在启动时总是探测失败。只有`camera module ID`行的缺失才意味着摄像头缺失。
 
 </details>
 

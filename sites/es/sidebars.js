@@ -3340,10 +3340,39 @@ const sidebars = {
         'Network/es_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
-          label: 'Dispositivos WiFi-Halow Wio-WM6108',
+          label: 'Dispositivos Wi-Fi HaLow Wio-WM6108',
           items: [
             'Network/WiFi-Halow/es_wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/es_wifi-halow-mini-pcie-module',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Dispositivos Wi-Fi HaLow Wio-WM8108',
+          items: [
+            {
+              type: 'category',
+              label: 'HaLowLink 2 Wi-Fi HaLow Puerta de enlace',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/es_HaLowLink2_Introduction',
+                  label: 'Introducción',
+                },
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/es_HaLowLink2_Getting_Started',
+                  label: 'Empezar',
+                },
+                {
+                  type: 'category',
+                  label: 'Aplicación',
+                  items: [
+                    'Network/WiFi-Halow/HaLowLink2/Applications/es_Media_Gateway',
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],
@@ -3384,8 +3413,23 @@ const sidebars = {
           collapsible: true,
           items: [
             'Edge/RockChip_Devices/Application/es_object_detection_with_yolov11_on_recomputer_rk'
-            ]
-        }
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Preguntas frecuentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/es_recomputer_faq',
+          },
+          items: [
+            'FAQ/reComputer/es_recomputer_rk_faq',
+            'FAQ/reComputer/es_recomputer_industrial_rk_faq',
+            'FAQ/reComputer/es_recomputer_rk_module_faq',
+          ],
+        },
       ]
     },
     {
@@ -3594,6 +3638,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/es_recomputer_r1100_assembly_guide',
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Preguntas frecuentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/es_recomputer_pi_faq',
+          },
+          items: [
+            'FAQ/reComputer/es_recomputer_r1000_faq',
+            'FAQ/reComputer/es_recomputer_ai_r2000_faq',
+            'FAQ/reComputer/es_recomputer_industrial_r2x_faq',
+            'FAQ/reComputer/es_reterminal_faq',
           ],
         },
         {

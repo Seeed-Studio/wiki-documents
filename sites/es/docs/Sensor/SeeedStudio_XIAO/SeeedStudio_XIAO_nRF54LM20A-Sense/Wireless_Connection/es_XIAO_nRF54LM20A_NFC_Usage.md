@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF
 slug: /xiao_nrf54lm20a_with_nfc
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 11/17/2026
   author: Zeller
 createdAt: '2025-05-25'
-updatedAt: '2026-07-08'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_nfc/
 ---
 
@@ -45,7 +45,7 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54lm20a_with_nfc/
 Near Field Communication (NFC) es una tecnología para la transferencia inalámbrica de pequeñas cantidades de datos entre dos dispositivos. Utiliza protocolos de comunicación muy simples y, por lo tanto, permite una conexión más rápida que Bluetooth® Low Energy. Sin embargo, debido a que NFC utiliza inducción magnética para habilitar la comunicación, los dispositivos deben estar muy cerca (< 10 cm) para conectarse.】
 
 - *Para tutoriales y referencias de NFC para chips de la serie Nordic, consulta [Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-3.2.0/page/nrf/protocols/nfc/index.html)*
-- *Las especificaciones técnicas de NFC están disponibles en la [NFC Forum specification overview](https://nfc-forum.org/build/specifications)*.
+- *Las especificaciones técnicas de NFC están disponibles en [NFC Forum specification overview](https://nfc-forum.org/build/specifications)*.
 
 El XIAO nRF54LM20A está equipado con una interfaz NFC reservada para que puedas explorar y utilizar más a fondo las funciones NFC.
 
@@ -120,7 +120,7 @@ Este ejemplo demuestra la lectura de información de texto mediante NFC.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_3.png" style={{width:800, height:'auto'}}/></div>
 
-2. Escribe nfc y selecciona el ejemplo NFC text Records
+2. Escribe nfc, selecciona el ejemplo NFC text Records
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -168,7 +168,7 @@ Witaj świecie!
 </table>
 </div>
 
-### NFC Launch App
+### Lanzar app con NFC
 
 Esta sección cubre la función NFC. Busca **nRF Toolbox for Bluetooth LE**.
 
@@ -191,7 +191,7 @@ Esta sección cubre la función NFC. Busca **nRF Toolbox for Bluetooth LE**.
 - iOS :[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
 - Android：[nRF NFC Toolbox](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nfc)
 
-2. Acerca el sensor NFC de tu teléfono a la antena NFC. El navegador se iniciará y buscará "no.nordicsemi.android.nrftoolbox", y el registro de lectura se mostrará en nRF NFC Toolbox.
+2. Acerca el sensor NFC de tu teléfono a la antena NFC. El navegador se abrirá y buscará "no.nordicsemi.android.nrftoolbox", y el registro de lectura se mostrará en nRF NFC Toolbox.
 
 <div className="table-center">
 <table align="center">
@@ -208,7 +208,7 @@ Esta sección cubre la función NFC. Busca **nRF Toolbox for Bluetooth LE**.
 
 ## Resumen
 
-Las funciones NFC pueden reutilizarse en diversos escenarios, como escritura de datos y activación de bajo consumo. El nRF Connect SDK proporciona códigos de ejemplo correspondientes. Puedes ampliar estos ejemplos para aplicaciones prácticas. Por ejemplo, combinar la activación de bajo consumo por NFC con el control de un motor permite un sencillo cerrojo inteligente para el uso diario.
+Las funciones NFC se pueden reutilizar en diversos escenarios, como escritura de datos y activación de bajo consumo. El nRF Connect SDK proporciona códigos de ejemplo correspondientes. Puedes ampliar estos ejemplos para aplicaciones prácticas. Por ejemplo, combinar el despertar de bajo consumo por NFC con el control de un motor permite implementar una cerradura inteligente sencilla para el uso diario.
 
 Además, creemos que has adquirido una comprensión básica de la implementación de NFC en el XIAO nRF54LM20A a través de los ejemplos anteriores. Esperamos tus ideas creativas y tus contribuciones a la comunidad de código abierto.
 

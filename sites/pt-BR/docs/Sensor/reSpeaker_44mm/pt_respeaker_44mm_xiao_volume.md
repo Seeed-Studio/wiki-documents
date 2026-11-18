@@ -20,9 +20,13 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_volume_control/
 ---
 # Controle de volume do reSpeaker XVF3800 44mm com XIAO ESP32-S3 Plus
 
-Este sketch faz o XIAO ESP32-S3 Plus reproduzir um tom gerado de **440 Hz** por meio do codec **AIC3104** integrado via I2S e, em seguida, ajusta o volume digitando `+` ou `-` no Monitor Serial. Ao digitar `m`, a saída é alternada entre fones de ouvido (`HPLOUT`/`HPROUT`) e line out (`LOP`), e o codec é configurado inteiramente via I2C. O tom é sintetizado em código, portanto nenhum arquivo de áudio é necessário.
+Este sketch faz o XIAO ESP32-S3 Plus reproduzir um tom gerado de **440 Hz** por meio do codec **AIC3104** integrado via I2S e, em seguida, ajusta o volume digitando `+` ou `-` no Serial Monitor. Ao digitar `m`, a saída é alternada entre fones de ouvido (`HPLOUT`/`HPROUT`) e line out (`LOP`), e o codec é totalmente configurado via I2C. O tom é sintetizado em código, portanto nenhum arquivo de áudio é necessário.
 
 {/* TODO: replace the href="#" value with the Seeed Studio product page URL once it is published. */}
+
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png" alt="reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus" width={300} height="auto" />
+</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="#" target="_blank">
@@ -35,7 +39,7 @@ Este sketch faz o XIAO ESP32-S3 Plus reproduzir um tom gerado de **440 Hz** por 
 - O array deve estar executando o **firmware I2S**, porque o XVF3800 fornece os clocks I2S. Consulte [Update Firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware).
 - Arduino IDE com o pacote de placas ESP32 e a biblioteca **Arduino Audio Tools**. Consulte [Software Preparation](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_xiao_getting_started/#preparação-de-software).
 - Placa selecionada como **XIAO_ESP32S3_Plus**, e o número da porta precisa ser selecionado.
-- Um alto-falante no conector JST ou fones de ouvido no conector P2 de 3,5 mm.
+- Um alto-falante no conector JST ou fones de ouvido no conector de 3,5 mm.
 
 
 
@@ -45,10 +49,10 @@ O AIC3104 compartilha o barramento I2C com o XVF3800. O firmware XMOS e os botõ
 
 ## Mapeamento de volume
 
-O sketch expõe uma escala de volume de 0 a 17, dividida entre atenuação digital e ganho analógico:
+O sketch expõe uma escala de volume de 0–17, dividida entre atenuação digital e ganho analógico:
 
 | Volume | Resultado |
-|--------|--------|
+|--------|----------|
 | `0` | −8 dB (atenuação do DAC) |
 | `8` | 0 dB (referência, DAC em escala total) |
 | `9` … `17` | +1 dB … +9 dB de ganho de saída analógica |
@@ -58,29 +62,29 @@ De 0 a 8 o DAC é atenuado em **passos de 0,5 dB** (`(8 − volume) × 2`). De 9
 ## Mapa de registradores
 
 | Registrador | Endereço | Finalidade |
-|----------|---------|---------|
-| Controle de página | `0x00` | Seleciona a página de registradores 0 |
-| Volume do DAC esquerdo | `0x2B` | Atenuação digital, 0,5 dB por passo |
-| Volume do DAC direito | `0x2C` | Atenuação digital, 0,5 dB por passo |
-| Nível de HPLOUT | `0x33` | Saída de fone de ouvido esquerdo |
-| Nível de HPROUT | `0x41` | Saída de fone de ouvido direito |
-| Nível de LEFT_LOP | `0x56` | Line-out esquerdo |
-| Nível de RIGHT_LOP | `0x5D` | Line-out direito |
+|------------|----------|-----------|
+| Page control | `0x00` | Seleciona a página de registradores 0 |
+| Left DAC volume | `0x2B` | Atenuação digital, 0,5 dB por passo |
+| Right DAC volume | `0x2C` | Atenuação digital, 0,5 dB por passo |
+| HPLOUT level | `0x33` | Saída de fone de ouvido esquerda |
+| HPROUT level | `0x41` | Saída de fone de ouvido direita |
+| LEFT_LOP level | `0x56` | Line-out esquerda |
+| RIGHT_LOP level | `0x5D` | Line-out direita |
 
-Bits do registrador de saída: **D7–D4** = ganho analógico (`0`–`9` dB), **D3** = desmutar, **D0** = ligar. Os registradores de fone de ouvido também configuram **D2** (alta impedância quando desligado), por isso eles usam `0x0D` como o nibble baixo fixo e os registradores de line-out usam `0x09`.
+Bits do registrador de saída: **D7–D4** = ganho analógico (`0`–`9` dB), **D3** = desmutar, **D0** = ligar. Os registradores de fone de ouvido também definem **D2** (alta impedância quando desligados), razão pela qual eles usam `0x0D` como o nibble baixo fixo e os registradores de line-out usam `0x09`.
 
 ## Como funciona
 
 1. `setup()` inicia o I2C a 100 kHz e escreve no registrador de controle de página do AIC3104, depois define ambos os canais do DAC para 0 dB e desmuta/ativa as saídas de fone de ouvido e line-out em 0 dB.
-2. `setVolume()` divide o nível solicitado em um valor de atenuação do DAC e um valor de ganho analógico, escreve todos os quatro registradores de saída e lê o registrador do DAC esquerdo de volta para confirmação.
+2. `setVolume()` divide o nível solicitado em um valor de atenuação do DAC e um valor de ganho analógico, escreve em todos os quatro registradores de saída e lê o registrador do DAC esquerdo de volta para confirmação.
 3. O I2S é iniciado em `TX_MODE` a 48 kHz, estéreo, 32 bits, com o XIAO como escravo para que o XVF3800 gere BCLK e LRCLK.
 4. Um `SineWaveGenerator` produz o tom de 440 Hz a 25 % da escala total de 32 bits, encapsulado em um `GeneratedSoundStream` e copiado para o I2S por `StreamCopy`.
-5. `loop()` mantém o tom tocando e atende comandos de um caractere vindos do Monitor Serial.
+5. `loop()` mantém o tom tocando e atende comandos de um caractere vindos do Serial Monitor.
 
 ## Comandos seriais
 
 | Tecla | Ação |
-|-----|--------|
+|-------|------|
 | `+` | Aumenta o volume (até 17) |
 | `-` | Diminui o volume (até 0) |
 | `m` | Alterna entre saída de fone de ouvido e line-out |
@@ -625,7 +629,7 @@ O firmware do XVF3800 ou os botões `+`/`-` na placa escrevem nos mesmos registr
 
 ### Um clique ou estalo ao alternar com `m`
 
-Ambos os estágios de saída são reescritos a cada mudança. Isso é esperado no AIC3104; reduza o volume antes de alternar para diminuir o efeito.
+Ambos os estágios de saída são reescritos a cada mudança. Isso é esperado no AIC3104; abaixe o volume antes de alternar para reduzi-lo.
 
 ## Suporte técnico e discussão sobre o produto
 

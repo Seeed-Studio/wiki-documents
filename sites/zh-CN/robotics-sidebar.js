@@ -184,6 +184,7 @@ const sidebars = {
         { type: 'ref', id: `${K}/Lerobot/cn_Lerobot_SO100Arm_New`, label: 'SO-ARM101', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_RS/cn_reBot_Arm_B601_RS_Getting_Started`, label: 'reBot-RS', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_Getting_Started`, label: 'reBot Arm T701 HT', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/cn_Lerobot_Starai_Arm`, label: 'StarAI Arm', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Hand/cn_AmazingHand`, label: '灵巧手', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/cn_Lerobot_Lekiwi`, label: 'Lekiwi', className: 'sideboard_calss' },
@@ -201,6 +202,7 @@ const sidebars = {
       items: [
         { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/cn_Arm_Tutorial_Introduction`, label: '入门课程' },
         { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_Getting_Started`, label: '论文精读' },
+        { type: 'ref', id: `${K}/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA/cn_Sim2Real_VLA_Introduction`, label: 'Sim-to-Real VLA' },
         { type: 'link', label: 'Sim-to-Real with NVIDIA Isaac', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
       ],
     },
@@ -266,6 +268,7 @@ const sidebars = {
         `${K}/Lerobot/cn_SOARM101_XIAO_MicroROS_Wireless_Teleoperation`,
         `${K}/Lerobot/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor`,
         `${K}/Lerobot/cn_Lerobot_SO_ARM101_DAMO`,
+        `${K}/Lerobot/cn_SOARM101_Isaac_Sim_DLI`,
       ],
     },
   ],
@@ -319,6 +322,21 @@ const sidebars = {
       collapsed: false,
       items: [
         { type: 'doc', id: `${K}/ReachyMini/platforms/reachy_mini_lite/cn_get_started`, label: '快速入门' },
+      ],
+    },
+  ],
+
+  T701HtSidebar: [
+    backToRobotics(),
+    {
+      type: 'category',
+      label: '快速上手与 SDK',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_Getting_Started`,
+        `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_pinocchio`,
       ],
     },
   ],

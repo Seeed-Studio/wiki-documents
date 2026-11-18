@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF
 slug: /xiao_nrf54lm20a_with_nfc
 sku: 100018440
 last_update:
-  date: 05/13/2026
+  date: 11/17/2026
   author: Zeller
 createdAt: '2025-05-25'
-updatedAt: '2026-07-08'
+updatedAt: '2026-07-06'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_with_nfc/
 ---
 
@@ -79,7 +79,7 @@ XIAO nRF54LM20A 预留了 NFC 接口，方便你进一步探索和使用 NFC 功
 
 :::tip
 
-Nordic NFC 天线在 Seeed Studio Bazaar 上没有单独销售，因此你需要从其他渠道购买。
+Nordic NFC 天线目前未在 Seeed Studio Bazaar 单独销售，因此你需要从其他渠道购买。
 
 :::
 
@@ -97,7 +97,7 @@ Nordic NFC 天线在 Seeed Studio Bazaar 上没有单独销售，因此你需要
 <br/>
 :::caution
 
-该焊接过程难度较大，需要较熟练的焊接技术。你也可以选择使用飞线连接 XIAO 和 NFC。操作时请注意安全，避免造成人身伤害和设备损坏。
+该焊接过程难度较大，需要熟练的焊接技巧。你也可以选择使用飞线连接 XIAO 和 NFC。操作时请注意安全，避免造成人身伤害和设备损坏。
 
 NFC 的引脚不区分正负极
 
@@ -140,7 +140,7 @@ NFC 的引脚不区分正负极
 
 请准备一部带有 NFC 功能的手机来尝试本实验。
 
-1. 若想更详细地查看 NFC 读取信息，需要根据你的系统下载相应的 App。
+1. 若想更详细地查看 NFC 读取的信息，需要根据你的系统下载对应的 App。
 
 - iOS ：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
 - Android：[nRF NFC Toolbox](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nfc)
@@ -172,7 +172,7 @@ Witaj świecie!
 
 本节涉及 NFC 启动应用功能。请搜索 **nRF Toolbox for Bluetooth LE**。
 
-1. 在扩展中创建一个空白示例项目，选择复制现有示例，并选择 **NFC Launch App**。配置和编译方式可参考 [NFC Records text](#nfc-records-text)。
+1. 在扩展中创建一个空白示例项目，选择复制现有示例，并选择 **NFC Launch App**。配置和编译方式可参考 [NFC Records text](#NFC-文本记录)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/nfc_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -180,13 +180,13 @@ Witaj świecie!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/5.png" style={{width:800, height:'auto'}}/></div>
 
-3. 打开终端，输入 `west flash` 命令将其烧录到 XIAO nRF54LM20A 上。
+3. 打开终端，输入 `west flash` 命令将固件烧录到 XIAO nRF54LM20A 上。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/nfc/6.png" style={{width:800, height:'auto'}}/></div>
 
 #### 结果
 
-1. 若想更详细地查看 NFC 读取信息，需要根据你的系统下载相应的 App。
+1. 若想更详细地查看 NFC 读取的信息，需要根据你的系统下载对应的 App。
 
 - iOS ：[NFC Tools](https://apps.apple.com/app/nfc-tools/id1252962749)
 - Android：[nRF NFC Toolbox](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nfc)
@@ -210,7 +210,7 @@ Witaj świecie!
 
 NFC 功能可以在多种场景中复用，例如数据写入和低功耗唤醒。nRF Connect SDK 提供了相应的示例代码，你可以在此基础上扩展为实际应用。例如，将 NFC 低功耗唤醒与电机控制结合，就可以实现一个简单的日常使用智能门锁。
 
-此外，通过以上示例，我们相信你已经对在 XIAO nRF54LM20A 上实现 NFC 有了基本了解。期待你将更多创意和项目贡献到开源社区。
+此外，通过以上示例，我们相信你已经对在 XIAO nRF54LM20A 上实现 NFC 有了基本了解。期待你将更多创意应用于实践，并为开源社区做出贡献。
 
 ## 技术支持与产品讨论
 

@@ -297,6 +297,11 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_DM05",
               "label": "DM0.5 — Historical Context & Trajectory Alignment"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_G05",
+              "label": "G0.5 — Reasoning and Action in One Sequence"
             }
           ]
         },
@@ -321,6 +326,11 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_GR00T_2",
               "label": "GR00T 2 — Joint World-Action Modeling"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LAWAM",
+              "label": "LaWAM — Predicting Scene Changes Before Generating Robot Actions"
             }
           ]
         },
@@ -382,6 +392,7 @@ const sidebars = {
       collapsible: false,
       items: [
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS with Visual Grasping' },
+        { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS Wrist Following' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS with ROS2' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS with Isaac Sim' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web Control System: Real Robot & MuJoCo' },
