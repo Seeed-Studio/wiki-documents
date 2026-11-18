@@ -1,7 +1,7 @@
 ---
-title: MR60BHA2 呼吸心拍センサーとHome Assistant
+title: MR60BHA2 呼吸・心拍センサーと Home Assistant の連携
 description: |
-  MR60BHA2 心拍mmWaveセンサーとHome Assistant
+  MR60BHA2 心拍 mmWave センサーと Home Assistant の連携
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ha_with_mr60bha2
 keywords:
@@ -10,7 +10,7 @@ sidebar_position: 1
 last_update:
   date: 09/23/2024
   author: Spencer
-createdAt: '2025-05-27'
+createdAt: '2024-10-08'
 updatedAt: '2025-10-20'
 url: https://wiki.seeedstudio.com/ja/ha_with_mr60bha2/
 ---
@@ -18,17 +18,17 @@ url: https://wiki.seeedstudio.com/ja/ha_with_mr60bha2/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-:::danger Home AssistantでのRADAR使用範囲について
-RADARファームウェアの更新とESPHome YAMLの更新は2つの異なるソフトウェアです。ESPHome YAMLはOTAで更新できますが、RADARボードはケース内でUSB経由でのみ更新でき、SEEEDが提供する専用ソフトウェアが必要です。ESPHomeソフトウェアはカスタマイズできますが、[RADARファームウェアはカスタマイズできません](https://wiki.seeedstudio.com/ja/getting_started_with_mr60bha2_mmwave_kit/#module-firmware-upgrade)。Seeed StudioはビジネスアプリケーションでのみRADARのカスタマイズを許可しています。
+:::danger Home Assistant におけるレーダー利用範囲について
+RADAR のファームウェア更新と ESPHome の YAML 更新は、2 つの異なるソフトウェアです。ESPHome の YAML は OTA で更新できますが、RADAR ボードは SEEED が提供する専用ソフトウェアを用いて、ケース内部の USB 経由でのみ更新できます。ESPHome ソフトウェアはカスタマイズ可能ですが、[RADAR ファームウェアはカスタマイズできません](https://wiki.seeedstudio.com/ja/getting_started_with_mr60bha2_mmwave_kit/#モジュール-ファームウェア-アップグレード)。Seeed Studio は、ビジネス用途の場合にのみ RADAR のカスタマイズを許可しています。
 :::
 
 ## はじめに {#introduction}
 
-MR60BHA2は、XIAO ESP32C6マイクロコントローラーとの統合用に設計された60GHz mmWave呼吸・心拍検出センサーモジュールです。この先進的なセンサーは、ミリ波技術を利用してバイタルサインの非侵襲的監視と存在検出を提供します。
+MR60BHA2 は、XIAO ESP32C6 マイコンとの統合用に設計された 60GHz mmWave 呼吸・心拍検出センサーモジュールです。この高度なセンサーはミリ波技術を利用し、バイタルサインおよび在室検知を非接触で行います。
 
-このガイドは、XIAO ESP32C6マイクロコントローラーを使用してMR60BHA2 mmWaveセンサーをHome Assistantと統合するための明確で包括的なウォークスルーを提供することを目的としています。このガイドに従うことで、ユーザーは心拍検出用のセンサーの設定、Home Assistant環境への接続、ESPHomeを使用したデバイスの効果的な管理と監視の方法を学ぶことができます。
+本ガイドは、XIAO ESP32C6 マイコンを用いて MR60BHA2 mmWave センサーを Home Assistant と連携するための、わかりやすく包括的な手順を提供することを目的としています。本ガイドに従うことで、ユーザーは心拍検出用にセンサーをセットアップし、Home Assistant 環境に接続し、ESPHome を利用してデバイスを効果的に管理・監視する方法を学ぶことができます。
 
-この統合により、ユーザーは高度なセンシング機能でスマートホームシステムを強化し、さまざまなアプリケーションでの自動応答とリアルタイム監視を可能にします。
+この連携により、高度なセンシング機能をスマートホームシステムに追加でき、さまざまな用途において自動応答やリアルタイム監視を実現できます。
 
 <div><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-light-on.png" style={{"border-radius": '6px'}}/></div>
 
@@ -37,7 +37,7 @@ MR60BHA2は、XIAO ESP32C6マイクロコントローラーとの統合用に設
 <div class="table-center">
    <table align="center">
       <tr>
-         <th>MR60BHA2 mmWaveセンサー</th>
+         <th>MR60BHA2 mmWave センサー</th>
       </tr>
       <tr>
          <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
@@ -45,98 +45,98 @@ MR60BHA2は、XIAO ESP32C6マイクロコントローラーとの統合用に設
       <tr>
          <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
-               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
             </div>
          </td>
       </tr>
    </table>
 </div>
 
-### MR60BHA2 mmWaveセンサーとXIAO ESP32C6
+### MR60BHA2 mmWave センサーと XIAO ESP32C6
 
-XIAO ESP32C6を使用してMR60BHA2 mmWaveセンサーをHome Assistantと効果的に統合するには、以下の重要なステップに従ってください：
+MR60BHA2 mmWave センサーを XIAO ESP32C6 を用いて Home Assistant と効果的に連携させるには、次の基本ステップに従ってください。
 
 :::caution
-MR60BHA2モジュールの[ファームウェアを最新バージョンにアップグレード](/ja/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade)していることを確認してください。  
-最新のファームウェアには人の存在検出と人員検出機能が追加されています。
+MR60BHA2 モジュールの[ファームウェアをアップグレード](/ja/getting_started_with_mr60bha2_mmwave_kit#モジュール-ファームウェア-アップグレード)し、最新バージョンにしていることを確認してください。  
+最新のファームウェアでは、人の在室検知および人物検出機能が追加されています。
 :::
 
-1. **[Home Assistantのセットアップ](#setting-up-home-assistant)**：スマートホームデバイスを管理するためにHome Assistantをインストールして設定し、センサーとのシームレスな接続を確保します。
-2. **[MR60BHA2センサーの接続](#discovering-and-adding-the-device-in-home-assistant)**：MR60BHA2センサーをHome Assistantセットアップに発見して追加し、バイタルサインのリアルタイム監視を可能にする方法を学びます。
-3. **[センサーデータの監視](#sensor-data-monitoring)**：統合後、センサーデータを効果的に監視し、心拍数と呼吸パターンの洞察を得ることができます。
-4. **[自動化の実装](#implementing-automation-in-home-assistant)**：Home Assistantの強力な自動化機能を探索して、センサーデータに基づく応答アクションを作成し、スマートホーム環境を強化します。
-5. **[ESPHomeでのファームウェア変更](#modifying-the-firmware-with-esphome)**：ESPHomeを利用してセンサーの機能をカスタマイズし、特定のニーズに合わせて調整して、より大きな柔軟性と制御を実現します。
+1. **[Home Assistant のセットアップ](#home-assistant-のセットアップ)**: まず Home Assistant をインストールして設定し、センサーとのシームレスな接続が行えるようにスマートホームデバイスを管理します。
+2. **[MR60BHA2 センサーの接続](#home-assistant-でのデバイス検出と追加)**: MR60BHA2 センサーを Home Assistant 環境に検出・追加する方法を学び、バイタルサインをリアルタイムで監視できるようにします。
+3. **[センサーデータの監視](#センサーデータの監視)**: 連携後は、センサーデータを効果的に監視し、心拍数や呼吸パターンに関する洞察を得ることができます。
+4. **[自動化の実装](#home-assistant-での自動化の実装)**: Home Assistant の強力な自動化機能を活用し、センサーデータに基づいて応答動作を作成し、スマートホーム環境を強化します。
+5. **[ESPHome によるファームウェアの変更](#esphome-によるファームウェアの変更)**: ESPHome を利用してセンサーの機能をカスタマイズし、ニーズに合わせて柔軟性と制御性を高めます。
 
-これらのステップは統合プロセスをガイドし、MR60BHA2 mmWaveセンサーとXIAO ESP32C6セットアップを最大限に活用するのに役立ちます。
+これらのステップに従うことで、MR60BHA2 mmWave センサーと XIAO ESP32C6 のセットアップを最大限に活用しながら、連携プロセスを進めることができます。
 
-## はじめに {#getting-started}
+## 入門ガイド {#getting-started}
 
 :::note 注意
-ファームウェアの更新や変更について言及する場合、XIAO ESP32C6上のファームウェアを特に指していることにご注意ください。
+ここでファームウェアの更新や変更について言及する場合、それは XIAO ESP32C6 上のファームウェアを指していることにご注意ください。
 :::
 
-MR60BHA2 mmWaveセンサーをHome Assistantと正常に統合するには、以下のコンポーネントが必要です：
+MR60BHA2 mmWave センサーを Home Assistant と正常に連携させるには、以下のコンポーネントが必要です。
 
-- **Home Assistant**：センサーデータを管理するスマートホームプラットフォーム。
-- **ESPHome Add-on**：ESP32デバイスの簡単な設定と管理を可能にするファームウェア。
+- **Home Assistant**: センサーデータを管理するスマートホームプラットフォーム。
+- **ESPHome アドオン**: ESP32 デバイスの簡単な設定と管理を可能にするファームウェア。
 
-### ステップ1：Home Assistantのセットアップ {#setting-up-home-assistant}
+### ステップ 1: Home Assistant のセットアップ {#setting-up-home-assistant}
 
-1. **インストール**：最適なパフォーマンスのために、仮想マシンまたはRaspberry Piに[Home Assistant OS](https://www.home-assistant.io/installation/)をインストールすることをお勧めします。Home Assistantウェブサイトのオフィシャルインストールガイドに従ってください。
-2. **ESPHome Add-onの有効化**：
-   - Home Assistantダッシュボードにアクセスします。
-   - 「Add-ons」セクションに移動し、ESPHome add-onを検索します。
-   - 「Install」をクリックし、次に「Start」をクリックして有効にします。
-   - インストール後、XIAO ESP32C6との適切な通信を確保するためにadd-onを設定します。
+1. **インストール**: 最適なパフォーマンスのため、[Home Assistant OS](https://www.home-assistant.io/installation/) を仮想マシンまたは Raspberry Pi にインストールすることを推奨します。Home Assistant 公式サイトのインストールガイドに従ってください。
+2. **ESPHome アドオンの有効化**:
+   - Home Assistant のダッシュボードにアクセスします。
+   - 「Add-ons」セクションに移動し、ESPHome アドオンを検索します。
+   - "Install" をクリックし、その後 "Start" をクリックして有効化します。
+   - インストール後、XIAO ESP32C6 と適切に通信できるようアドオンを設定します。
 
 :::caution 注意
-新しいアイコンのため、ESPHomeプラグインバージョン2024.12.0以上をインストールしてください。
+新しいアイコンに対応するため、ESPHome プラグインはバージョン 2024.12.0 以降をインストールしてください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-enabling_ESPHome_Add-on.png" style={{width:1000, height:'auto'}}/></div>
 
-必要なコンポーネントを収集し、ESPHome add-onでHome Assistantをセットアップすることで、MR60BHA2 mmWaveセンサーの統合を進める準備が整います。
+必要なコンポーネントを揃え、ESPHome アドオン付きの Home Assistant をセットアップすれば、MR60BHA2 mmWave センサーとの連携を進める準備が整います。
 
-:::tip Home Assistantのインストール
-Seeed Studio製品の一部についてHome Assistantのインストール方法も書いていますので、参考にしてください。
+:::tip Home Assistant のインストール
+Seeed Studio のいくつかの製品向けに、Home Assistant のインストール方法も記載していますので、そちらも参照してください。
 
-- [ODYSSEY-X86でのHome Assistant入門](/ja/ODYSSEY-X86-Home-Assistant)
-- [reTerminalでのHome Assistant入門](/ja/reTerminal_Home_Assistant)
-- [LinkStar H68K/reRouter CM4でのHome Assistant入門](/ja/h68k-ha-esphome)
+- [ODYSSEY-X86 での Home Assistant 入門](/ja/ODYSSEY-X86-Home-Assistant)
+- [reTerminal での Home Assistant 入門](/ja/reTerminal_Home_Assistant)
+- [LinkStar H68K/reRouter CM4 での Home Assistant 入門](/ja/h68k-ha-esphome)
 :::
 
-### ステップ2：キットの準備
+### ステップ 2: キットの準備
 
-デフォルトでは、デバイス（XIAO ESP32C6）には呼吸と心拍検出用のファームウェアが事前にフラッシュされています。ただし、ファームウェアを更新する必要がある2つのシナリオがあります：
+既定では、デバイス（XIAO ESP32C6）には呼吸および心拍検出用のファームウェアが書き込まれた状態で出荷されています。ただし、次の 2 つの状況ではファームウェアを更新する必要があります。
 
-1. **ファームウェアの再フラッシュ**：既存のファームウェアが破損している場合や、新しく開始する必要がある場合。
-2. **ファームウェアのアップグレード**：機能が改善された新しいバージョンのファームウェアがある場合。
+1. **ファームウェアの再書き込み**: 既存のファームウェアが破損している場合、または一からやり直す必要がある場合。
+2. **ファームウェアのアップグレード**: 機能が向上した新しいバージョンのファームウェアがある場合。
 
-ファームウェアをフラッシュする2つの簡単な方法があります：
+ファームウェアを書き込む簡単な方法は 2 つあります。
 
 :::caution
-FirefoxはESPデバイスでのファームウェアフラッシュをサポートしていません。代わりにGoogle ChromeまたはMicrosoft Edgeを使用してください。
+Firefox は ESP デバイスへのファームウェア書き込みをサポートしていません。代わりに Google Chrome または Microsoft Edge を使用してください。
 :::
 
 <Tabs>
 <TabItem value='Web Tool'>
 
-ファームウェアをフラッシュする簡単で直接的な方法として、この[Web Tool](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/)を使用できます。画面の指示に従ってください。
+この[Web Tool](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/)を使用すると、簡単かつ直接的な方法でファームウェアを書き込むことができます。画面の指示に従うだけです。
 
-- `CONNECT`ボタンをクリックして接続を開始します。ツールが自動的にファームウェアを更新します。
+- `CONNECT` ボタンをクリックして接続を開始します。ツールが自動的にファームウェアを更新します。
 
-何か問題が発生した場合は、画面のトラブルシューティング手順に従うか、`ESPHome Web`方法に切り替えてプロセスを完了してください。
+問題が発生した場合は、画面上のトラブルシューティング手順に従うか、`ESPHome Web` の方法に切り替えて処理を完了してください。
 
 </TabItem>
 <TabItem value='ESPHome Web'>
 
-この方法では、[こちら](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/releases)から`bin`ファームウェアファイルをダウンロードする必要があります（ダウンロードしたファイルを解凍する必要があります）。
+この方法では、[こちら](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/releases)から `bin` ファームウェアファイルをダウンロードする必要があります（ダウンロードしたファイルは解凍する必要があります）。
 
-1. センサーキットをPCに接続します。
-2. [ESPHome Web](https://web.esphome.io/)ページにアクセスします。
-3. `*.factory.bin`サフィックスのファームウェアファイルを選択します。
+1. センサーキットを PC に接続します。
+2. [ESPHome Web](https://web.esphome.io/) ページにアクセスします。
+3. `*.factory.bin` という拡張子のファームウェアファイルを選択します。
 
-ESPHome Web経由でファームウェアをフラッシュする詳細なウォークスルーについては、以下のビデオをご覧ください：
+ESPHome Web を介してファームウェアを書き込む手順については、次の動画をご覧ください。
 
 <div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -145,31 +145,31 @@ ESPHome Web経由でファームウェアをフラッシュする詳細なウォ
 </TabItem>
 </Tabs>
 
-どちらの方法でも、ファームウェアが更新され、Home Assistantとの統合の準備が整います。
+どちらの方法でも、ファームウェアを更新し、Home Assistant との連携に備えることができます。
 
-#### キットのホットスポットに接続
+#### キットのホットスポットに接続する
 
-ファームウェアを使用して、センサーキットの電源を入れると、Wi-Fiアクセスポイントが表示されます：`seeedstudio-mr60bha2`。
+ファームウェアが書き込まれた状態でセンサーキットの電源を入れると、`seeedstudio-mr60bha2` という Wi-Fi アクセスポイントが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/hotspot-name.png" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
-`192.168.4.1`に移動して、Home Assistantサーバーのローカルネットワーク設定を構成します。
+`192.168.4.1` にアクセスし、Home Assistant サーバーのローカルネットワーク設定を行います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/opt-for-wifi-ap.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-enter-psw.JPEG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
-### ステップ3：Home Assistantでのデバイスの発見と追加 {#discovering-and-adding-the-device-in-home-assistant}
+### ステップ 3: Home Assistant でのデバイス検出と追加 {#discovering-and-adding-the-device-in-home-assistant}
 
-このセクションでは、Home Assistantアプリを使用したプロセスを説明します。ロジックはWebと同じです。
+このセクションでは、Home Assistant アプリを使用した手順を説明します。ロジックは Web 版と同じです。
 
-1. **アプリを開く**：アプリを起動したら、Home Assistantサーバーを選択します。アプリが自動的にサーバーを見つけます。
+1. **アプリを開く**: アプリを起動したら、Home Assistant サーバーを選択します。アプリは自動的にサーバーを検出します。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-server-option.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
-2. **アカウントの作成**：アカウントを作成していない場合は、作成する必要があります。その後、認証情報でログインします。
+2. **アカウントを作成する**: まだアカウントを作成していない場合は、作成する必要があります。その後、認証情報を使ってログインします。
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
-3. **統合ページに移動**：ログイン後、Home Assistantの「Integrations」ページに移動します。ESPHome add-onをインストールし、XIAO ESP32C6とHome Assistantサーバーの両方が同じネットワーク上にある場合、発見されたデバイスの下に`Seeed Studio MR60BHA2 Kit {device-mac-address}`デバイスが表示されるはずです。
-4. **デバイスの追加**：クリックしてデバイスをHome Assistantセットアップに追加します。
+3. **インテグレーションページへ移動**: ログイン後、Home Assistant の「Integrations」ページに移動します。ESPHome アドオンをインストールしており、XIAO ESP32C6 と Home Assistant サーバーの両方が同じネットワーク上にある場合、検出されたデバイスの一覧に `Seeed Studio MR60BHA2 Kit {device-mac-address}` が表示されるはずです。
+4. **デバイスを追加する**: クリックしてデバイスを Home Assistant のセットアップに追加します。
   <div class="img-container" align="center">
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-find.JPG" alt="find device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-submit.JPG" alt="submit a device"/>
@@ -177,64 +177,63 @@ ESPHome Web経由でファームウェアをフラッシュする詳細なウォ
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-addon-device.JPG" alt="addon"/>
   </div>
 
-  `CONFIGURE`ボタンをクリックし、`SUBMIT`ボタンを押して確認し、デバイスを希望するエリア（例：寝室）に割り当てます。この後、デバイスはESPHome統合を通じて管理され、Home Assistantでの完全な制御と監視が可能になります。
+  `CONFIGURE` ボタンをクリックし、`SUBMIT` ボタンを押して確認したうえで、デバイスを任意のエリア（例：Bedroom）に割り当てます。これが完了すると、デバイスは ESPHome 連携を通じて管理され、Home Assistant 上で完全な制御とモニタリングが可能になります。
 
-## 監視と制御 {#監視と制御}
+## 監視と制御 {#monitoring-and-control}
 
-上記の手順に従うことで、MR60BHA2センサーをHome Assistantに正常に発見・追加し、リアルタイムでの監視と制御が可能になります。
+上記の手順に従うことで、MR60BHA2 センサーを Home Assistant に検出・追加でき、リアルタイムでの監視と制御が可能になります。
 
-### センサーデータの監視
+### センサーデータのモニタリング
 
-センサーが「寝室」に追加されたので、「概要」タブに移動します。寝室セクションにmmWaveカードが表示されます。
+センサーが "Bedroom" に追加されたので、「Overview」タブに移動します。Bedroom セクションに mmWave カードが表示されているのが確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-data-with-person-detection.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
-### RGBライトの制御
+### RGB ライトの制御
 
-このセクションでは、RGBライトの制御方法について説明します。
+このセクションでは、RGB ライトをどのように制御するかを説明します。
 
 <div class="img-container">
    <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-light-on.png" style={{"border-radius": '6px'}}/>
    <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/light-on.jpg" style={{"border-radius": '6px'}}/>
 </div>
 
-対応するボックスをクリックして、RGBライトを直接制御します：
+対応するボックスをクリックすると、RGB ライトを直接制御できます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-light-panel.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
 <iframe class="video-mp4" src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-control-light.mp4" title="Home Assistant Control RGB Light" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
 
-### 次のステップ {#次のステップ}
+### 次のステップ {#next-steps}
 
-MR60BHA2 mmWaveセンサーとXIAO ESP32C6、Home Assistantの統合が正常に完了したので、セットアップを最大限に活用するためのさらなる機能強化を探求できます。考慮すべき2つの重要な方向性をご紹介します：
+MR60BHA2 mmWave センサーを XIAO ESP32C6 と Home Assistant に正常に統合できたので、セットアップを最大限に活用するためのさらなる拡張を検討できます。ここでは、特に重要な 2 つの方向性を紹介します。
 
-#### Home Assistantでの自動化の実装
+#### Home Assistant でオートメーションを実装する
 
-Home Assistantの強力な自動化機能により、MR60BHA2センサーから収集されたデータに基づいて、より応答性の高いスマートホーム環境を作成できます。これは、動作や心拍検出に関連する特定のトリガーに基づいて自動的に実行されるアクションを設定できることを意味します。
+Home Assistant の強力なオートメーション機能を使うと、MR60BHA2 センサーから収集されたデータに基づいて、より応答性の高いスマートホーム環境を構築できます。つまり、動きや心拍検出に関連する特定のトリガーに基づいて、自動的に実行されるアクションを設定できます。
 
-自動化を段階的に実装する方法は次のとおりです：
+以下の手順で、オートメーションを段階的に実装します：
 
-1. **自動化セクションに移動**：Home Assistantダッシュボードで「自動化」タブを見つけてクリックします。このエリアは、ホーム内での自動化されたアクションの作成と管理に専用されています。
-2. **新しい自動化を作成**：「自動化を追加」ボタンをクリックします。Home Assistantは、自動化の設定プロセスをガイドするユーザーフレンドリーなウィザードを提供します。
-3. **トリガーを定義**：MR60BHA2センサーのデータに基づいてトリガーを選択します。例えば、センサーが動作や特定の心拍パターンを検出したときに自動化がトリガーされるように設定できます。これにより、自動化がセンサーの読み取り値に即座に応答できます。
-4. **条件を設定（オプション）**：条件により、自動化が実行されるタイミングを細かく調整できます。例えば、外が暗いときや特定のユーザーが在宅のときにのみライトを点灯させたい場合があります。
-5. **アクションを決定**：トリガー条件が満たされたときに実行されるアクションを指定します。アクションには、ライトの点灯、通知の送信、サーモスタット設定の調整などが含まれます。例えば、動作が検出されたときにRGBライトを点灯させるアクションを作成し、セキュリティと快適性の両方を向上させることができます。
-6. **保存とテスト**：自動化を設定した後、保存してその機能をテストします。センサーの前を歩いて、期待通りにライトが点灯するかを確認します。問題が発生した場合は、自動化設定に戻ってトラブルシューティングと調整を行うことができます。
+1. **オートメーションセクションへ移動**：Home Assistant のダッシュボードで「Automations」タブを探してクリックします。このエリアでは、家庭内の自動アクションの作成と管理を行います。
+2. **新しいオートメーションを作成**：「Add Automation」ボタンをクリックします。Home Assistant には、オートメーションの設定プロセスを案内してくれるユーザーフレンドリーなウィザードが用意されています。
+3. **トリガーを定義**：MR60BHA2 センサーのデータに基づいてトリガーを選択します。例えば、センサーが動きを検出したときや、特定の心拍パターンを検出したときにオートメーションが起動するように設定できます。これにより、オートメーションはセンサーの読み取り値に即座に反応できます。
+4. **条件を設定（任意）**：条件を設定することで、オートメーションを実行するタイミングをさらに絞り込めます。例えば、外が暗いときだけ、または特定のユーザーが在宅している場合にのみライトを点灯させる、といった設定が可能です。
+5. **アクションを決定**：トリガー条件が満たされたときに実行されるアクションを指定します。アクションには、ライトのオン／オフ、通知の送信、サーモスタット設定の調整などが含まれます。例えば、動きが検出されたときに RGB ライトを点灯させるアクションを作成し、防犯性と快適性の両方を高めることができます。
+6. **保存してテスト**：オートメーションの設定が完了したら保存し、その動作をテストします。センサーの前を歩いて、ライトが期待どおりに点灯するか確認します。問題が発生した場合は、オートメーション設定に戻ってトラブルシューティングや調整を行ってください。
 
-Home Assistantの自動化機能を活用することで、あなたの動きや健康指標に応答する真にスマートな環境を作成し、生活空間があなたのライフスタイルにシームレスに適応することを確実にできます。
+Home Assistant のオートメーション機能を活用することで、動きや健康指標に反応する真のスマート環境を構築でき、生活空間があなたのライフスタイルにシームレスに適応するようになります。
 
-## ESPHomeでのファームウェアの変更
+## ESPHome によるファームウェアの変更
 
-XIAO ESP32C6を使用する大きな利点の一つは、マイクロコントローラーファームウェアの管理とカスタマイズのための強力なツールであるESPHomeとの互換性です。ESPHomeを使用すると、ファームウェアを直接変更して、MR60BHA2 mmWaveセンサーの機能を特定のニーズに合わせて調整できます。
+XIAO ESP32C6 を使用する大きな利点の 1 つは、マイコンのファームウェア管理とカスタマイズに強力なツールである ESPHome と互換性があることです。ESPHome を使用すると、MR60BHA2 mmWave センサーの機能をニーズに合わせて調整できるよう、ファームウェアを直接変更できます。
 
-ESPHomeを開始するには、次の手順に従ってください：
+ESPHome を使い始めるには、次の手順に従います：
 
-1. **ESPHomeダッシュボードにアクセス**：Home AssistantでESPHomeアドオンに移動します。デバイス一覧にXIAO ESP32C6が表示されているはずです。
+1. **ESPHome ダッシュボードにアクセス**：Home Assistant で ESPHome アドオンに移動します。デバイス一覧に XIAO ESP32C6 が表示されているはずです。
 
-2. **新しい設定を作成**：デバイスをクリックして設定を開きます。ここで、センサーの感度、レポート間隔、出力形式などの設定を調整できます。ESPHomeはユーザーフレンドリーなYAML設定形式を使用し、さまざまなパラメータを定義できます。MR60BHA2センサー専用に設計された以下のテンプレートYAMLファイルを設定の出発点として使用できます：
+2. **新しい設定を作成**：デバイスをクリックして、その設定画面を開きます。ここで、センサーの感度、レポート間隔、出力フォーマットなどの設定を調整できます。ESPHome は YAML 設定フォーマットを使用しており、ユーザーフレンドリーでさまざまなパラメータを定義できます。MR60BHA2 センサー専用に設計された、以下のテンプレート YAML ファイルを設定の出発点として使用できます：
 
   ```yaml showLineNumbers title=example/mr60bha2.yaml
-    # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
     substitutions:
       name: "seeedstudio-mr60bha2-kit"
       friendly_name: "seeedstudio-mr60bha2-kit"
@@ -245,10 +244,10 @@ ESPHomeを開始するには、次の手順に従ってください：
       name_add_mac_suffix: true
       project:
         name: "seeedstudio.mr60bha2_kit"
-        version: "3.5"
+        version: "3.6"
       platformio_options:
         board_upload.maximum_size: 4194304
-      min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
+      min_version: "2026.8.0"
 
 
     esp32:
@@ -257,15 +256,6 @@ ESPHomeを開始するには、次の手順に従ってください：
       flash_size: 4MB # upload.flash_size
       framework:
         type: esp-idf
-
-    # If you want to experience the latest components, you can remove this comment.
-    # external_components:
-    #   - source:
-    #       type: git
-    #       url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
-    #       ref: main
-    #     components: [ seeed_mr60bha2 ]
-    #     refresh: 0s
 
     # Enable logging
     logger:
@@ -279,9 +269,9 @@ ESPHomeを開始するには、次の手順に従ってください：
       - platform: esphome
 
     # It is highly recommended to use secrets
-  wifi:
-    ssid: !secret wifi_ssid
-    password: !secret wifi_password
+    wifi:
+      ssid: !secret wifi_ssid
+      password: !secret wifi_password
 
       ap:
         ssid: "seeedstudio-mr60bha2"
@@ -302,7 +292,7 @@ ESPHomeを開始するには、次の手順に従ってください：
         name: "Seeed MR60BHA2 RGB Light"
         pin: GPIO1
         num_leds: 1
-        rgb_order: GRB
+        channel_colors: GRB
         chipset: ws2812
 
     i2c:
@@ -343,100 +333,100 @@ ESPHomeを開始するには、次の手順に従ってください：
           name: "Target number"
   ```
 
-3. **機能のカスタマイズ**：ESPHomeで利用可能なさまざまな機能を探索することで、センサーの機能を強化し、特定のニーズに合わせて柔軟に調整できます。
+3. **機能をカスタマイズ**：ESPHome で利用可能なさまざまな機能を活用することで、センサーの機能を拡張し、ニーズに合わせて柔軟に調整できます。
 
-4. **更新されたファームウェアをアップロード**：変更を行った後、設定を保存します。ESPHomeダッシュボードでは、ファームウェアを無線で直接アップロードできます。`Upload`ボタンをクリックし、プロンプトに従ってプロセスを完了します。この合理化された方法により、ファームウェアを最新の状態に保つことが簡単になります。
+4. **更新したファームウェアをアップロード**：変更を加えたら、設定を保存します。ESPHome ダッシュボードからは、ファームウェアを OTA（無線）で直接アップロードできます。`Upload` ボタンをクリックし、表示される手順に従ってプロセスを完了してください。この合理化された方法により、ファームウェアを簡単に最新状態に保つことができます。
 
-5. **テストと反復**：アップロードが完了したら、変更をリアルタイムでテストします。センサーのパフォーマンスを監視して、期待通りに動作することを確認します。問題が発生した場合は、ESPHomeダッシュボードに戻って設定を調整します。この反復的なアプローチにより、ファームウェアを継続的に改善し、要件を効果的に満たすことができます。
+5. **テストと反復**：アップロードが完了したら、リアルタイムで変更内容をテストします。センサーの動作を監視し、期待どおりに動いているか確認します。問題が発生した場合は、ESPHome ダッシュボードに戻って設定を微調整してください。この反復的なアプローチにより、ファームウェアを継続的に改善し、要件を効果的に満たせるようにできます。
 
-ESPHomeを活用することで、センサーセットアップの継続的な改善を行い、進化するニーズに適応させることができます。この機能は、プロジェクトの機能性を向上させるだけでなく、IoT開発での学習と実験のプラットフォームも提供します。
+ESPHome を活用することで、センサー構成を継続的に改善し、変化するニーズに合わせて調整することができます。この機能は、プロジェクトの機能性を高めるだけでなく、IoT 開発における学習と実験のためのプラットフォームも提供します。
 
-これらの手順を通じて、MR60BHA2 mmWaveセンサーとXIAO ESP32C6セットアップの機能を最大化し、あなたの好みとニーズに合わせて高度にカスタマイズされた応答性の高いスマートホームシステムに変換できます。
+これらのステップを通じて、MR60BHA2 mmWave センサーと XIAO ESP32C6 のセットアップの機能を最大限に引き出し、好みやニーズに合わせて高度にカスタマイズされた応答性の高いスマートホームシステムへと変貌させることができます。
 
 ## リソース
 
 - [ESPHome — ESPHome](https://esphome.io/)
 - [Installation - Home Assistant](https://www.home-assistant.io/installation/)
-- [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
+- [MR60BHA2 ESPHome project source](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-mr60bha2-kit)
 
 ## トラブルシューティング
 
-### レーダーセンサーデータレポートメカニズムの説明（v1.6.12以降）
+### レーダーセンサーのデータ報告メカニズムの説明（v1.6.12 以降）
 
-この部分では、レーダーセンサーのさまざまな検出機能によってレポートされるデータのタイミング、精度、および必要な条件について詳しく説明します。これは、ユーザーがセンサーデータをより良く理解し、活用するのに役立つことを目的としています。
-
----
-
-### 1. 人体静的存在検知
-
-- **機能説明**:
-    指定されたエリア内の静止している人体ターゲットの存在を検知します。
-- **主要パラメータ**:
-  - **有効検知範囲**: 最大**4メートル**。
-- **データ報告ロジック**:
-  - エリア内に人体ターゲットが検知された場合、「存在」ステータスを報告します。
-  - エリアに人体ターゲットがいない場合、「不在」ステータスを報告します。
-  - **注意**: 4メートルの検知範囲は人体静的存在検知機能専用です。呼吸・心拍検知やターゲット距離検知など、独自のより短い有効範囲を持つ他の機能には適用されません。この機能の唯一の目的は存在または不在を判定することであり、詳細なデータを提供することではありません。
+このパートでは、レーダーセンサーの各種検出機能によって報告されるデータのタイミング、精度、および必要条件について詳しく説明します。これは、ユーザーがセンサーデータをよりよく理解し、活用できるようにすることを目的としています。
 
 ---
 
-### 2. 呼吸・心拍検知
+### 1. 人体静止在席検知
+
+- **機能説明**：
+    指定されたエリア内に静止した人体ターゲットが存在するかどうかを検出します。
+- **主要パラメータ**：
+  - **有効検出距離**：最大 **4 メートル**。
+- **データ報告ロジック**：
+  - エリア内で人体ターゲットが検出された場合、「Presence」ステータスを報告します。
+  - エリア内に人体ターゲットが存在しない場合、「No Presence」ステータスを報告します。
+  - **注意**：4 メートルの検出距離は、人体静止在席検知機能にのみ適用されます。Breathing & Heartbeat Detection や Target Distance Detection などの他の機能には適用されず、それぞれ独自の、より短い有効距離があります。この機能の唯一の目的は在席か不在かを判定することであり、詳細なデータを提供することではありません。
+
+---
+
+### 2. 呼吸および心拍検出
 
 - **機能説明**:
-    単一の静止している人体ターゲットに対して非接触バイタルサイン検知を実行します。
-- **主要パラメータ**:
-  - **有効検知範囲**: 約**1.5メートル**。
-  - **検知ターゲット**: 単一の静止している人間。
+    単一の静止した人間ターゲットに対して、非接触でバイタルサインを検出します。
+- **主なパラメータ**:
+  - **有効検出距離**: およそ **1.5 メートル**。
+  - **検出ターゲット**: 単一の静止した人。
 - **必要な動作条件**:
-  - **ターゲットの静止**: 監視対象者は完全に静止している必要があります。
-  - **デバイスの安定性**: レーダーデバイスは確実に固定され、揺れや振動がないようにする必要があります。
-  - **単一ターゲット**: 検知範囲内には一人だけがいる必要があります。
+  - **ターゲットの静止**: 監視対象の人物は完全に静止している必要があります。
+  - **デバイスの安定性**: レーダーデバイスはしっかりと固定され、揺れや振動がない状態である必要があります。
+  - **単一ターゲット**: 検出範囲内には 1 人だけが存在する必要があります。
 - **データ報告ロジック**:
-  - **正常報告**: 上記の条件がすべて満たされた場合、レーダーはリアルタイムの呼吸数と心拍数の値を報告します。
+  - **通常の報告**: 上記の条件がすべて満たされている場合、レーダーはリアルタイムの呼吸および心拍数の値を報告します。
   - **異常報告シナリオ**:
-    - **ターゲットが1.5m超**: 検知されたターゲットが1.5メートルの有効範囲を超えている場合、呼吸数と心拍数のデータは**更新を停止**し、最後の有効な測定値で保持されます。
-    - **コアゾーンにターゲットなし**: 0.5～1.5メートルのコア検知ゾーン内にターゲットが検知されない場合、呼吸数と心拍数の値は積極的に**0**として報告されます。
-- **注意**: 環境干渉にご注意ください。ファン、エアコン、揺れるカーテンなどからの微細な動きは、センサーによって誤解釈されることがあります。このような場合、人体ターゲットが検知されていなくても（呼吸数は0として報告される）、レーダーは非ゼロの**心拍数**値を報告する可能性があります。
+    - **ターゲットが 1.5m を超える場合**: 検出されたターゲットが 1.5 メートルの有効範囲を超えた場合、呼吸および心拍数データは**更新を停止**し、最後に有効だった測定値が保持されます。
+    - **コアゾーン内にターゲットがいない場合**: 0.5 ～ 1.5 メートルのコア検出ゾーン内にターゲットが検出されない場合、呼吸および心拍数の値は積極的に **0** として報告されます。
+- **注意**: 周囲環境による干渉にご注意ください。扇風機、エアコン、揺れるカーテンなどによる微小な動きが、センサーによって誤って解釈される場合があります。そのような場合、人間ターゲットが検出されていない（呼吸数は 0 と報告される）にもかかわらず、レーダーが 0 以外の**心拍数**の値を報告することがあります。
 
 ---
 
-### 3. ターゲット距離検知
+### 3. ターゲット距離検出
 
-- **対応ファームウェア**: `1.6.10`以降。
+- **対応ファームウェア**: `1.6.10` 以降。
 - **機能説明**:
-    レーダーとターゲット間の直線距離を検知して報告します。
-- **主要パラメータ**:
-  - **最大有効検知範囲**: **5メートル**。
-- **データ報告ロジックと制限**:
-  - **ターゲットなし状態**: ターゲットが検知されない場合、距離値は**0**として報告されます。
-  - **ターゲット検知**: 5メートル範囲内で1つ以上のターゲットが検知された場合、レーダーはセンサーに**最も近い**ターゲットの距離を報告します。
-  - **データ未更新（最後の値を保持）**: 最も近いターゲットが5メートルの有効検知範囲に達するか、それを超えて移動した場合、距離値は更新を停止します。この場合、値は最後の有効な測定値で保持されます。
+    レーダーとターゲット間の直線距離を検出して報告します。
+- **主なパラメータ**:
+  - **最大有効検出距離**: **5 メートル**。
+- **データ報告ロジックと制限事項**:
+  - **ターゲットなしの状態**: ターゲットが検出されない場合、距離の値は **0** として報告されます。
+  - **ターゲットが検出された場合**: 5 メートル範囲内に 1 つ以上のターゲットが検出された場合、レーダーはセンサーに**最も近い**ターゲットまでの距離を報告します。
+  - **データが更新されない（最後の値を保持）**: 最も近いターゲットが 5 メートルの有効検出範囲に達するか、それを超えて移動した場合、距離の値は更新を停止します。この場合、その値は最後に有効だった測定値として保持されます。
 - **追跡性能**:
-    近距離での静止ターゲットの安定性を確保するため、レーダーの追跡戦略は異なる距離に対して最適化されています。性能は以下の表に詳述されています：
+    近距離における静止ターゲットの安定性を確保するため、レーダーの追跡戦略は距離ごとに最適化されています。性能の詳細は以下の表のとおりです。
 
 | 距離範囲 | ターゲット状態 | 追跡性能と注意事項 |
 | :--- | :--- | :--- |
-| **0.5m～1.5m** | 静止 | **追跡成功率 > 96%**。性能は非常に安定しています。 |
-| **1.5m～3m** | 静止 | **追跡成功率 > 90%**。性能は安定しています。 |
-| **3m～5m** | 静止 | 追跡安定性が低下し、時折ターゲットロストが発生します。バージョン1.6.12では以前のバージョンより80%改善されています。 |
-| **接近中** | 移動 | ターゲットが遠距離からレーダーに向かって移動する場合、安定した追跡は通常、人が約**3メートル**に到達したときに開始されます。 |
-| **離脱中** | 移動 | ターゲットがレーダーから離れて移動する場合、追跡は**5メートルを超えて**継続できます。 |
+| **0.5m ~ 1.5m** | 静止 | **追跡成功率 > 96%**。性能は非常に安定しています。 |
+| **1.5m ~ 3m** | 静止 | **追跡成功率 > 90%**。性能は安定しています。 |
+| **3m ~ 5m** | 静止 | 追跡の安定性が低下し、ターゲットを見失うことがあります。バージョン 1.6.12 では、以前のバージョンと比べて 80% の改善が見られます。 |
+| **接近** | 移動 | ターゲットが遠方からレーダーに向かって移動する場合、人物が約 **3 メートル** に達したあたりから、通常は安定した追跡が開始されます。 |
+| **遠ざかる** | 移動 | ターゲットがレーダーから遠ざかる場合、追跡は **5 メートルを超えて**継続することがあります。 |
 
 ---
 
-### 4. 環境内人数カウント
+### 4. 環境内在室人数カウント
 
 - **機能説明**:
-    検知エリア内の個人数の予備的な推定カウントを提供します。
-- **データ説明**:
-  - この機能は現在開発段階にあり、実験的なものと考えるべきです。返される値は複雑な信号解析から導出された大まかな推定値です。
-  - その精度は、複数の人からの信号の重複、個人の姿勢、動きパターンなどの要因に大きく影響されます。
-  - したがって、**この機能は正確な在室者数に依存するアプリケーションには適していません**。
-  - 私たちは基盤となるアルゴリズムの改良に積極的に取り組んでおり、将来のファームウェアリリースで大幅な精度向上を提供することを期待しています。
+    検出エリア内にいる人物の概算人数を予備的に提供します。
+- **データの説明**:
+  - この機能は現在開発段階にあり、実験的なものと見なしてください。返される値は、複雑な信号解析から導き出された大まかな推定値です。
+  - 精度は、複数人からの信号の重なり、個々の姿勢、動きのパターンなどの要因に大きく影響されます。
+  - したがって、**正確な在室人数に依存するアプリケーションには、この機能は適していません**。
+  - 当社は基盤となるアルゴリズムの改良に積極的に取り組んでおり、今後のファームウェアリリースで精度の大幅な向上を提供できると見込んでいます。
 
-## 技術サポート・製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
