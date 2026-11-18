@@ -234,7 +234,6 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 2. **创建新配置**：点击设备打开其配置。在这里，您可以调整传感器的灵敏度、报告间隔和输出格式等设置。ESPHome 使用 YAML 配置格式，这是用户友好的，允许您定义各种参数。您可以使用以下模板 YAML 文件作为配置的起点，该文件专为 MR60BHA2 传感器设计：
 
   ```yaml showLineNumbers title=example/mr60bha2.yaml
-    # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
     substitutions:
       name: "seeedstudio-mr60bha2-kit"
       friendly_name: "seeedstudio-mr60bha2-kit"
@@ -245,10 +244,10 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
       name_add_mac_suffix: true
       project:
         name: "seeedstudio.mr60bha2_kit"
-        version: "3.5"
+        version: "3.6"
       platformio_options:
         board_upload.maximum_size: 4194304
-      min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
+      min_version: "2026.8.0"
 
 
     esp32:
@@ -257,15 +256,6 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
       flash_size: 4MB # upload.flash_size
       framework:
         type: esp-idf
-
-    # If you want to experience the latest components, you can remove this comment.
-    # external_components:
-    #   - source:
-    #       type: git
-    #       url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
-    #       ref: main
-    #     components: [ seeed_mr60bha2 ]
-    #     refresh: 0s
 
     # Enable logging
     logger:
@@ -279,9 +269,9 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
       - platform: esphome
 
     # It is highly recommended to use secrets
-  wifi:
-    ssid: !secret wifi_ssid
-    password: !secret wifi_password
+    wifi:
+      ssid: !secret wifi_ssid
+      password: !secret wifi_password
 
       ap:
         ssid: "seeedstudio-mr60bha2"
@@ -302,7 +292,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
         name: "Seeed MR60BHA2 RGB Light"
         pin: GPIO1
         num_leds: 1
-        rgb_order: GRB
+        channel_colors: GRB
         chipset: ws2812
 
     i2c:
@@ -357,7 +347,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 
 - [ESPHome — ESPHome](https://esphome.io/)
 - [安装 - Home Assistant](https://www.home-assistant.io/installation/)
-- [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
+- [MR60BHA2 ESPHome 项目源码](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-mr60bha2-kit)
 
 ## 故障排除
 

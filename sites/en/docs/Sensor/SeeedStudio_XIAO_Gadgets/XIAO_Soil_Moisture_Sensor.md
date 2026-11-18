@@ -232,7 +232,6 @@ Here’s a ready-to-use `ESPHome` YAML configuration for Home Assistant:
 
 ```yaml
 # ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
-
 substitutions:
   name: "xiao-soil-moisture"
   friendly_name: "XIAO Soil Moisture Monitor"
@@ -553,6 +552,7 @@ sensor:
   - platform: adc
     pin: GPIO0
     name: "Battery measurement"
+    device_class: "battery"
     attenuation: 12db
     # internal: true
     filters:                     # When the battery drops below 1V, it is dead.
@@ -569,7 +569,7 @@ sensor:
     force_update: True
 
   - platform: wifi_signal
-    name: "wifi singnal strength"
+    name: "wifi signal strength"
     update_interval: 10s
 
 # text_sensor:
@@ -611,11 +611,6 @@ text_sensor:
 interval:
   - interval: 5s
     then:
-      - text_sensor.template.publish:
-          id: soil_status
-          state: !lambda |-
-            return "";
-      - delay: 10ms
       - text_sensor.template.publish:
           id: soil_status
           state: !lambda |-
@@ -714,7 +709,7 @@ captive_portal:
 `deep_sleep` – Manages power-saving sleep cycles.
 
 - **Input parameters**: None.
-- **Action**: Runs for 120 seconds, then sleeps for up to 180 minutes; wakes up on button press or interval.
+- **Action**: In normal operation, the device stays awake for about 120 seconds, then sleeps for 15 minutes (Dry), 60 minutes (Almost Dry), or 8 hours (Normal Moisture), based on the last moisture assessment before it enters deep sleep.
 
 `sensor (ADC)` – Reads analog values from the soil sensor and battery.
 
@@ -746,7 +741,7 @@ First, you need to click **Manual download** to download the compiled firmware.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-Open this website where we will upload the firmware to the ePaper panel.
+Open this website where we will upload the firmware to the XIAO Soil Moisture Sensor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -758,7 +753,7 @@ Select Factory format.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-Use USB cable to **connect the ePaper panel to your computer** and click **CONNECT**.
+Use USB cable to **connect the XIAO Soil Moisture Sensor to your computer** and click **CONNECT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
@@ -800,12 +795,12 @@ Wait a moment and you will see the feedback like the following image. It means t
 <TabItem value='Install through Wi-Fi'>
 
 :::tip
-This is the simplest way, but on the premise that when installing the program for the first time, you should first upload the program to the ePaper Panel using the method on the left. After that, you can upload it via wifi. Also, make sure your YAML configuration includes properly configured `ota` and `api` sections with valid encryption keys for this method to work.
+This is the simplest way, but on the premise that when installing the program for the first time, you should first upload the program to the XIAO Soil Moisture Sensor using the method on the left. After that, you can upload it via wifi. Also, make sure your YAML configuration includes properly configured `ota` and `api` sections with valid encryption keys for this method to work.
 :::
 
-In this way, you don't need to connect the ePaper panel to anything, just make sure it is online.
+In this way, you don't need to connect the XIAO Soil Moisture Sensor to anything, just make sure it is online.
 
-Click the option and then the firmware will be installed to ePaper penal automatically.
+Click the option and then the firmware will be installed to XIAO Soil Moisture Sensor automatically.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
@@ -828,7 +823,7 @@ Then, find **XIAO Soil Moisture Monitor** on the page and click **Connect** to p
 
 - **[PDF]** [XIAO Soil Moisture Sensor SCH](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/SCH.pdf)
 - **[Kicad]** [XIAO Soil Moisture Sensor PCB](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/Kicad.kicad_pcb)
-- **[Yaml]** [XIAO Soil Moisture Sensor HA Yaml](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/HomeAssistanceYaml.yaml)
+- **[Yaml]** [XIAO Soil Moisture Sensor HA Yaml](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao-soil-moisture-monitor)
 - **[Bin]** [XIAO Soil Moisture Sensor HA Factory Bin](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/factory.bin)
 - **[LINK]** [XIAO Soil Moisture Sensor 3D file Printtables](https://www.printables.com/model/1260595-3d-enclosure-for-seeed-studio-xiao-75-epaper-panel/edit)
 - **[LINK]** [XIAO Soil Moisture Sensor 3D file Thingiverse](https://www.thingiverse.com/thing:7039325)
