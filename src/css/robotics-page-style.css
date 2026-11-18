@@ -610,6 +610,28 @@ html[data-theme='dark'] .robotics-quicklinks {
   max-width: none;
   white-space: nowrap;
 }
+#rebot-t701-ht .product-head {
+  background: #000;
+}
+#rebot-t701-ht .product-head::before {
+  content: none;
+}
+.t701-ht-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  #rebot-t701-ht[data-active='true'] .t701-ht-cover {
+    animation: t701-ht-cover-zoom 3.6s ease-in-out;
+  }
+}
+@keyframes t701-ht-cover-zoom {
+  50% { transform: scale(1.025); }
+}
 #soarm {
   --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp');
 }

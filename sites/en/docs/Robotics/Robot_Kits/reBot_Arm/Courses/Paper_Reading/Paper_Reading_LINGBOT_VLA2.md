@@ -10,6 +10,7 @@ translation:
   skip: [zh-CN]
 last_update:
   date: 2026-11-06
+  author: liujunjie
 createdAt: '2026-11-05'
 updatedAt: '2026-11-06'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_lingbot_vla2/
@@ -171,8 +172,6 @@ Related work has two groups (Section 2):
 
 ![Teaching illustration 1: VA predicts the future during inference; VLA 2.0 learns future supervision in query representations](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide01-future-information-en.png)
 
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide01-future-information-en.png)
-
 *Teaching illustration: solid arrows trace action generation; orange dashed arrows trace training supervision. VLA 2.0's teacher targets align the query representations actually read by the action experts, and the inference row retains the learned query path. Shared conditions such as robot state are omitted.*
 
 | Aspect | LingBot-VA | LingBot-VLA 2.0 |
@@ -211,8 +210,6 @@ Here, $\tau$ is trajectory time, $t$ the current observation time, and $W$ the w
 
 ![Teaching illustration 2: future hand trajectories are transformed into the fixed current-camera frame](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide02-current-camera-en.png)
 
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide02-current-camera-en.png)
-
 *Teaching illustration: subtract the current camera position from world coordinates, then express subsequent points in the same reference frame. The 0.1, 0.2, and 0.3 m values illustrate one-dimensional translation with aligned axes; the full transformation also includes rotation.*
 
 Qwen3.6-27B automatically annotates language supervision, including full-task instructions and temporally continuous subtask instructions. Action labels contain 15 manipulation classes plus `transit`, `idle`, and `other`; object names are open-vocabulary. Grasping, transporting, and releasing within one interaction form one subtask to avoid excessive fragmentation. Figure 5 shows `move` and `transit` together account for about 88.7% of subtasks, while `idle` is excluded from training. A large dataset does not imply balanced skills.
@@ -238,8 +235,6 @@ The total is `14 + 14 + 2 + 12 + 4 + 2 + 3 + 4 = 55`. Missing body parts or dime
 **Teaching example:** A single-arm dataset with 5 joints and 1 gripper might use `[q₁,…,q₅,g]`. LeRobot places the first 5 values at the start of `arm.position`, places `g` in `effector.position`, zero-pads the rest, and excludes invalid dimensions from the action loss with a mask. Outputs are mapped back to the original 6 dimensions. Corresponding mappings apply separately to states and actions and must agree with camera mappings and normalization statistics.
 
 ![Teaching illustration 3: six native action dimensions enter canonical slots, train with a mask, and map back for execution](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide03-action-slots-en.png)
-
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide03-action-slots-en.png)
 
 *Teaching illustration: five joints and one gripper occupy their respective slots, which may be separated by unused dimensions. Gray slots are masked from the action loss. Outputs must still be reduced to valid dimensions and restored to the robot's control interface.*
 
@@ -275,8 +270,6 @@ $u$ is an action token's internal feature, $e_j$ a routing vector, $s_j$ a token
 
 ![Teaching illustration 4: select experts with biased scores, then compute mixing weights from original scores](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide04-expert-routing-en.png)
 
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide04-expert-routing-en.png)
-
 *Teaching illustration: follow selection, weighting, and merging from top to bottom. Selecting 2 of 3 experts and setting the routed-branch scale to 1 are teaching simplifications. The shared expert has a separate path; the released configuration still selects 4 of 32.*
 
 The paper's pretraining uses **auxiliary-loss-free load balancing**: decrease an expert's bias when its load exceeds the mean and increase it when below (Equation 8). Loss-free refers only to load balancing, not the absence of an action loss. **The released post-training configuration additionally enables sequence-balancing loss and router z-loss, and must be distinguished from the paper's pretraining mechanism.**
@@ -292,8 +285,6 @@ A **query token** is a learnable internal token. After processing by the vision-
 The teachers complement each other: **LingBot-Depth**, the depth teacher, provides geometric supervision, while **DINO-Video**, the causal video teacher, provides motion-aware visual representations. The student sees current observations and instructions; during training, teachers can also see future images to supply targets. Future images are not student inputs at inference.
 
 ![Teaching illustration 5: both query groups receive depth and video supervision; inference retains only the student action path](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide05-query-training-inference-en.png)
-
-[View full size](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/guide05-query-training-inference-en.png)
 
 *Teaching illustration: the large green box contains current and future query groups. During training, depth and video teachers jointly supply targets for both times. Orange dashed lines denote feature alignment; projections and losses are detailed below. Inference follows only the solid path in the bottom row.*
 

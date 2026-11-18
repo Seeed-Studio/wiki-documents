@@ -58,7 +58,7 @@ Seeed Studio IoT 按钮是一个多功能智能按钮，配备内置的 ESP32-C6
   - 单击、双击和三击。
   - 短长按（按住 1-5 秒）。
   - 长按（按住 > 5 秒）触发 Zigbee 恢复出厂设置。
-  - 立即报告按下和释放事件，用于实时自动化。
+  - 连接 Zigbee 网关时实时上报按键，断连期间记录的按键在重连后补报。
 
 - **四个 Zigbee 端点**
   - **端点 10：** 反映物理按钮实时状态的主二进制传感器（按下时为开，释放时为关）。
@@ -77,7 +77,7 @@ Seeed Studio IoT 按钮是一个多功能智能按钮，配备内置的 ESP32-C6
   - 红色状态 LED（仅限 V2）指示低电量状态。
 
 - **电源管理**
-  - 在 2 分钟不活动后自动进入睡眠模式以节省电力。
+  - 已连接 Zigbee 网关时，空闲约 30 秒后自动休眠。未连接时，空闲约 2 分钟后自动休眠。
   - V1 使用轻度睡眠，V2 使用带 RTC 状态保持的深度睡眠，确保按钮点击状态不会丢失。
   - 按下按钮时立即从睡眠中唤醒。
 
@@ -135,12 +135,31 @@ IoT 按钮固件使用 `FastLED` 库来实现 RGB 效果，以及包含在 ESP32
 #endif
 
 #include "Zigbee.h"
+// FastLED 3.10.7+ declares the RISC-V interrupt helpers with FL_NO_EXCEPT
+// (= noexcept on ESP) in riscv.hpp but defines them without it in the new
+// riscv.cpp.hpp, so any RISC-V build (ESP32-C3/C6) fails with "declaration
+// ... has a different exception specifier". The mismatch is compiled inside
+// FastLED's own unity-build unit (src/fl/build/platforms+.cpp), so a #define
+// here only fixes the sketch unit -- the empty FL_NO_EXCEPT override must
+// also be injected for every unit via the compile command line; CI does this
+// with -DFL_NO_EXCEPT= in build.extra_flags (.github/workflows/ci.yml).
+// The define below is kept for documentation and IDE builds; drop both once
+// the mismatch is fixed upstream (FastLED#4869).
+#define FL_NO_EXCEPT
 #include <FastLED.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <freertos/queue.h>
 #include <esp_sleep.h>
 #include "driver/rtc_io.h"
+#include <Preferences.h>
+
+// Release builds inject the published GitHub release tag as a token.
+#define STRINGIFY_TOKEN(value) #value
+#define STRINGIFY(value) STRINGIFY_TOKEN(value)
+#ifndef FIRMWARE_VERSION
+#define FIRMWARE_VERSION development
+#endif
 
 // Logging macro switch
 #define ENABLE_LOGGING // Comment out to disable logging
@@ -153,7 +172,7 @@ IoT 按钮固件使用 `FastLED` 库来实现 RGB 效果，以及包含在 ESP32
 #define LOG_PRINTF(x, ...)
 #endif
 
-#define IOT_BUTTON_V1  //Uncomment this line to select to compile the iot button v1 version
+// #define IOT_BUTTON_V1  //Uncomment this line to select to compile the iot button v1 version
 // #define IOT_BUTTON_V2  //Uncomment this line to select to compile the iot button v2 version
 
 #if !defined(IOT_BUTTON_V1) && !defined(IOT_BUTTON_V2)
@@ -189,7 +208,9 @@ const uint32_t MULTI_CLICK_TIME = 300;             // Maximum time between click
 const uint32_t SHORT_LONG_PRESS_TIME = 1000;       // Minimum time for short long press (1 second)
 const uint32_t LONG_PRESS_TIME = 5000;             // Minimum time for long press (5 seconds)
 const uint32_t DEBOUNCE_TIME = 20;                 // Debounce time (ms)
-const uint32_t INACTIVITY_TIMEOUT = 2 * 60 * 1000; // 2 minutes inactivity timeout (ms)
+const uint32_t SLEEP_TIMEOUT_DISCONNECTED = 2 * 60 * 1000; // 2 minutes when disconnected (for configuration) (ms)
+const uint32_t SLEEP_TIMEOUT_CONNECTED = 30 * 1000; // 30 seconds when connected (ms)
+const uint32_t REPORT_SPACING_TIME = 200;           // Reports carry the value at send time, so hold each replayed value (ms)
 
 /* LED Configuration */
 CRGB rgbs[NUM_RGBS];
@@ -203,7 +224,8 @@ enum class ButtonEvent
   DOUBLE_CLICK,     // Double click
   TRIPLE_CLICK,     // Triple click
   SHORT_LONG_PRESS, // Short long press (1-5 seconds)
-  LONG_PRESS        // Long press (>5 seconds)
+  LONG_PRESS,       // Long press (>5 seconds)
+  ZIGBEE_CONNECTED  // Zigbee (re)connected; queued with button events so switch reports stay in order
 };
 
 /* Zigbee Configuration */
@@ -211,17 +233,66 @@ enum class ButtonEvent
 #define SWITCH1_ENDPOINT 11
 #define SWITCH2_ENDPOINT 12
 #define SWITCH3_ENDPOINT 13
-ZigbeeBinary zbIoTButton = ZigbeeBinary(BUTTON_ENDPOINT);
-ZigbeeBinary zbSwitch1 = ZigbeeBinary(SWITCH1_ENDPOINT);
-ZigbeeBinary zbSwitch2 = ZigbeeBinary(SWITCH2_ENDPOINT);
-ZigbeeBinary zbSwitch3 = ZigbeeBinary(SWITCH3_ENDPOINT);
+
+class VersionedZigbeeBinary : public ZigbeeBinary
+{
+public:
+  explicit VersionedZigbeeBinary(uint8_t endpoint) : ZigbeeBinary(endpoint) {}
+
+  bool setSoftwareBuildId(const char *version)
+  {
+    const size_t versionLength = strlen(version);
+    if (versionLength > ZB_MAX_NAME_LENGTH)
+    {
+      return false;
+    }
+
+    esp_zb_attribute_list_t *basicCluster =
+        esp_zb_cluster_list_get_cluster(_cluster_list, ESP_ZB_ZCL_CLUSTER_ID_BASIC, ESP_ZB_ZCL_CLUSTER_SERVER_ROLE);
+    if (basicCluster == nullptr)
+    {
+      return false;
+    }
+
+    char zclVersion[ZB_MAX_NAME_LENGTH + 2] = {};
+    zclVersion[0] = static_cast<char>(versionLength);
+    memcpy(zclVersion + 1, version, versionLength);
+    return esp_zb_basic_cluster_add_attr(basicCluster, ESP_ZB_ZCL_ATTR_BASIC_SW_BUILD_ID, zclVersion) == ESP_OK;
+  }
+};
+
+class InitialStateZigbeeBinary : public ZigbeeBinary
+{
+public:
+  explicit InitialStateZigbeeBinary(uint8_t endpoint) : ZigbeeBinary(endpoint) {}
+
+  bool setInitialBinaryInput(bool input)
+  {
+    esp_zb_attribute_list_t *binaryInputCluster =
+        esp_zb_cluster_list_get_cluster(_cluster_list, ESP_ZB_ZCL_CLUSTER_ID_BINARY_INPUT, ESP_ZB_ZCL_CLUSTER_SERVER_ROLE);
+    return binaryInputCluster != nullptr &&
+           esp_zb_cluster_update_attr(binaryInputCluster, ESP_ZB_ZCL_ATTR_BINARY_INPUT_PRESENT_VALUE_ID, &input) == ESP_OK;
+  }
+};
+
+VersionedZigbeeBinary zbIoTButton(BUTTON_ENDPOINT);
+InitialStateZigbeeBinary zbSwitch1(SWITCH1_ENDPOINT);
+InitialStateZigbeeBinary zbSwitch2(SWITCH2_ENDPOINT);
+InitialStateZigbeeBinary zbSwitch3(SWITCH3_ENDPOINT);
 bool buttonStatus = false;
 RTC_DATA_ATTR bool switch1Status = false;
 RTC_DATA_ATTR bool switch2Status = false;
 RTC_DATA_ATTR bool switch3Status = false;
+// Last switch states reported to the network, replayed on reconnect so offline changes arrive as transitions
+RTC_DATA_ATTR bool switch1Reported = false;
+RTC_DATA_ATTR bool switch2Reported = false;
+RTC_DATA_ATTR bool switch3Reported = false;
 
 /* Global Variables */
 QueueHandle_t eventQueue;
+
+Preferences preferences;
+float voltageOffset = 0; // Default voltage offset value (positive: subtract if measured high, negative: add if measured low)
 
 uint32_t pressStartTime = 0;
 uint32_t lastReleaseTime = 0;
@@ -233,6 +304,10 @@ uint32_t lastActivityTime = 0;  // Tracks last button activity for sleep
 volatile bool isAwake = true;   // Tracks device awake/sleep state
 bool lastConnected = false;     // Track previous Zigbee connection state
 bool zigbeeInitialized = false; // Track Zigbee initialization status
+bool zigbeeConnected = false; // Track Zigbee connection status for battery sampling
+volatile bool zigbeeStatesSynced = false; // Button and switch states replayed since the last (re)connect
+uint32_t pendingButtonPresses = 0;        // Presses not yet reported, e.g. the one that woke the device
+bool disableSleep = false; // Flag to disable automatic sleep
 
 #if defined(IOT_BUTTON_V2)
 // RTC variables for button state persistence
@@ -241,9 +316,11 @@ RTC_DATA_ATTR uint32_t lastReleaseTimeRTC = 0;
 RTC_DATA_ATTR uint8_t clickCountRTC = 0;
 RTC_DATA_ATTR bool longPressTriggeredRTC = false;
 RTC_DATA_ATTR bool clickSequenceActiveRTC = false;
+RTC_DATA_ATTR float lastBatteryPercentageRTC = 100.0;
 
-float emaVoltage = 0.0;
 float batteryPercentage = 100.0;
+float emaVoltage = 0.0;
+
 #endif
 
 #if defined(IOT_BUTTON_V2)
@@ -251,7 +328,7 @@ float batteryPercentage = 100.0;
 void measureBattery()
 {
   digitalWrite(BATTERY_ENABLE_PIN, HIGH);
-  vTaskDelay(10 / portTICK_PERIOD_MS); // Wait for stabilization
+  vTaskDelay(50 / portTICK_PERIOD_MS); // Increased delay for ADC stabilization and gate delay
 
   // Take multiple samples and compute average
   float adcSum = 0;
@@ -263,12 +340,14 @@ void measureBattery()
   digitalWrite(BATTERY_ENABLE_PIN, LOW);
 
   float adcAverage = adcSum / SAMPLE_COUNT;
-  float voltage = (adcAverage / 4095.0) * 3.3 * 3.0; // Apply divider ratio
+  float voltage = (adcAverage / 4095.0) * 3.3 * 4.0 + voltageOffset; // Apply divider ratio and calibration offset
+  if (voltage < 0) voltage = 0; // Prevent negative voltage
 
   if (voltage < MIN_VOLTAGE)
   {
     emaVoltage = 0.0;
     batteryPercentage = 0.0;
+    lastBatteryPercentageRTC = 0.0;
     LOG_PRINTF("Battery voltage: %.2fV (too low or not connected), EMA voltage: %.2fV, Percentage: %.2f%%\n",
                voltage, emaVoltage, batteryPercentage);
   }
@@ -285,17 +364,28 @@ void measureBattery()
     }
 
     // Calculate battery percentage from emaVoltage
-    float localBatteryPercentage = (emaVoltage - MIN_VOLTAGE) / (MAX_VOLTAGE - MIN_VOLTAGE) * 100;
-    if (localBatteryPercentage < 0)
-      localBatteryPercentage = 0;
-    if (localBatteryPercentage > 100)
-      localBatteryPercentage = 100;
+    // Lookup table algorithm: precise mapping of lithium battery discharge curve
+    float localBatteryPercentage;
+    if (emaVoltage >= 4.15f) localBatteryPercentage = 100.0f;
+    else if (emaVoltage >= 4.0f) localBatteryPercentage = 96.3f + (emaVoltage - 4.0f) * 24.5f;
+    else if (emaVoltage >= 3.7f) localBatteryPercentage = 53.3f + (emaVoltage - 3.7f) * 143.5f;
+    else if (emaVoltage >= 3.5f) localBatteryPercentage = 6.1f + (emaVoltage - 3.5f) * 235.7f;
+    else if (emaVoltage >= 3.0f) localBatteryPercentage = (emaVoltage - 3.0f) * 12.3f;
+    else localBatteryPercentage = 0.0f;
 
-    // Update global battery percentage
-    batteryPercentage = localBatteryPercentage;
+    // Clamp to 0-100 range
+    localBatteryPercentage = constrain(localBatteryPercentage, 0.0f, 100.0f);
+    
+    // Anti-jitter logic: ensure numerical stability
+    if (localBatteryPercentage > lastBatteryPercentageRTC && (localBatteryPercentage - lastBatteryPercentageRTC) < 5.0f) {
+    batteryPercentage = lastBatteryPercentageRTC;
+    } else {
+        batteryPercentage = localBatteryPercentage;
+        lastBatteryPercentageRTC = batteryPercentage;
+    }
 
-    LOG_PRINTF("Battery voltage: %.2fV, EMA voltage: %.2fV, Percentage: %.2f%%\n",
-               voltage, emaVoltage, localBatteryPercentage);
+    LOG_PRINTF("Battery voltage: %.2fV, EMA voltage: %.2fV, Percentage: %.2f%% (stored: %.2f%%)\n",
+               voltage, emaVoltage, localBatteryPercentage, batteryPercentage);
   }
 }
 #endif
@@ -538,6 +628,15 @@ void buttonTask(void *pvParameters)
   }
 }
 
+static void reportSwitchState(ZigbeeBinary &zbSwitch, bool state, bool &reportedState)
+{
+  zbSwitch.setBinaryInput(state);
+  if (zbSwitch.reportBinaryInput())
+  {
+    reportedState = state;
+  }
+}
+
 void mainTask(void *pvParameters)
 {
   ButtonEvent event;
@@ -552,7 +651,7 @@ void mainTask(void *pvParameters)
         {
           buttonStatus = true;
           LOG_PRINTLN("Button Pressed");
-          if (zigbeeInitialized && Zigbee.connected())
+          if (zigbeeStatesSynced && Zigbee.connected())
           {
             zbIoTButton.setBinaryInput(buttonStatus);
             zbIoTButton.reportBinaryInput();
@@ -565,10 +664,14 @@ void mainTask(void *pvParameters)
         {
           buttonStatus = false;
           LOG_PRINTLN("Button Released");
-          if (zigbeeInitialized && Zigbee.connected())
+          if (zigbeeStatesSynced && Zigbee.connected())
           {
             zbIoTButton.setBinaryInput(buttonStatus);
             zbIoTButton.reportBinaryInput();
+          }
+          else
+          {
+            pendingButtonPresses++;
           }
         }
         break;
@@ -576,10 +679,9 @@ void mainTask(void *pvParameters)
       case ButtonEvent::SINGLE_CLICK:
         LOG_PRINTLN("Single Click");
         switch1Status = !switch1Status;
-        if (zigbeeInitialized && Zigbee.connected())
+        if (zigbeeStatesSynced && Zigbee.connected())
         {
-          zbSwitch1.setBinaryInput(switch1Status);
-          zbSwitch1.reportBinaryInput();
+          reportSwitchState(zbSwitch1, switch1Status, switch1Reported);
         }
         xTaskCreate(breathingLedTask, "BreathingLed", 2048, NULL, 1, NULL);
         break;
@@ -587,10 +689,9 @@ void mainTask(void *pvParameters)
       case ButtonEvent::DOUBLE_CLICK:
         LOG_PRINTLN("Double Click");
         switch2Status = !switch2Status;
-        if (zigbeeInitialized && Zigbee.connected())
+        if (zigbeeStatesSynced && Zigbee.connected())
         {
-          zbSwitch2.setBinaryInput(switch2Status);
-          zbSwitch2.reportBinaryInput();
+          reportSwitchState(zbSwitch2, switch2Status, switch2Reported);
         }
         xTaskCreate(blinkLedTask, "BlinkLed", 2048, NULL, 1, NULL);
         break;
@@ -606,10 +707,9 @@ void mainTask(void *pvParameters)
       case ButtonEvent::SHORT_LONG_PRESS:
         LOG_PRINTLN("Short Long Press");
         switch3Status = !switch3Status;
-        if (zigbeeInitialized && Zigbee.connected())
+        if (zigbeeStatesSynced && Zigbee.connected())
         {
-          zbSwitch3.setBinaryInput(switch3Status);
-          zbSwitch3.reportBinaryInput();
+          reportSwitchState(zbSwitch3, switch3Status, switch3Reported);
         }
         xTaskCreate(rainbowLedTask, "RainbowLed", 2048, NULL, 1, NULL);
         break;
@@ -622,6 +722,57 @@ void mainTask(void *pvParameters)
           Zigbee.factoryReset();
         }
         break;
+
+      case ButtonEvent::ZIGBEE_CONNECTED:
+      {
+        // Replay last reported states first so offline changes, like the wake click, arrive as transitions
+        zbSwitch1.setBinaryInput(switch1Reported);
+        zbSwitch1.reportBinaryInput();
+        zbSwitch2.setBinaryInput(switch2Reported);
+        zbSwitch2.reportBinaryInput();
+        zbSwitch3.setBinaryInput(switch3Reported);
+        zbSwitch3.reportBinaryInput();
+        bool switchesChanged =
+            switch1Status != switch1Reported || switch2Status != switch2Reported || switch3Status != switch3Reported;
+        if (pendingButtonPresses > 0 || switchesChanged)
+        {
+          vTaskDelay(REPORT_SPACING_TIME / portTICK_PERIOD_MS);
+        }
+        // Presses come before the switch changes they caused, matching the order while connected
+        for (; pendingButtonPresses > 0; pendingButtonPresses--)
+        {
+          zbIoTButton.setBinaryInput(true);
+          zbIoTButton.reportBinaryInput();
+          vTaskDelay(REPORT_SPACING_TIME / portTICK_PERIOD_MS);
+          zbIoTButton.setBinaryInput(false);
+          zbIoTButton.reportBinaryInput();
+          vTaskDelay(REPORT_SPACING_TIME / portTICK_PERIOD_MS);
+        }
+        if (buttonStatus)
+        {
+          zbIoTButton.setBinaryInput(true);
+          zbIoTButton.reportBinaryInput();
+        }
+        if (switch1Status != switch1Reported)
+        {
+          reportSwitchState(zbSwitch1, switch1Status, switch1Reported);
+        }
+        if (switch2Status != switch2Reported)
+        {
+          reportSwitchState(zbSwitch2, switch2Status, switch2Reported);
+        }
+        if (switch3Status != switch3Reported)
+        {
+          reportSwitchState(zbSwitch3, switch3Status, switch3Reported);
+        }
+        if (switchesChanged)
+        {
+          // Keep a click queued during the sync from replacing these values before they are sent
+          vTaskDelay(REPORT_SPACING_TIME / portTICK_PERIOD_MS);
+        }
+        zigbeeStatesSynced = true;
+        break;
+      }
       }
     }
   }
@@ -715,7 +866,8 @@ void sleepTask(void *pvParameters)
 {
   while (1)
   {
-    if (isAwake && (millis() - lastActivityTime > INACTIVITY_TIMEOUT))
+    uint32_t sleepTimeout = zigbeeConnected ? SLEEP_TIMEOUT_CONNECTED : SLEEP_TIMEOUT_DISCONNECTED;
+    if (isAwake && !disableSleep && (millis() - lastActivityTime > sleepTimeout))
     {
       LOG_PRINTLN("Entering sleep due to inactivity");
 #if defined(IOT_BUTTON_V1)
@@ -764,12 +916,8 @@ void onZigbeeConnected()
   zbIoTButton.setBatteryPercentage((uint8_t)batteryPercentage);
   zbIoTButton.reportBatteryPercentage();
 #endif
-  zbSwitch1.setBinaryInput(switch1Status);
-  zbSwitch1.reportBinaryInput();
-  zbSwitch2.setBinaryInput(switch2Status);
-  zbSwitch2.reportBinaryInput();
-  zbSwitch3.setBinaryInput(switch3Status);
-  zbSwitch3.reportBinaryInput();
+  ButtonEvent event = ButtonEvent::ZIGBEE_CONNECTED;
+  xQueueSend(eventQueue, &event, portMAX_DELAY);
 }
 
 void zigbeeSetupTask(void *pvParameters)
@@ -786,6 +934,9 @@ void zigbeeSetupTask(void *pvParameters)
   zbSwitch3.addBinaryInput();
   zbSwitch3.setBinaryInputApplication(BINARY_INPUT_APPLICATION_TYPE_SECURITY_MOTION_DETECTION);
   zbSwitch3.setBinaryInputDescription("Switch3");
+  zbSwitch1.setInitialBinaryInput(switch1Reported);
+  zbSwitch2.setInitialBinaryInput(switch2Reported);
+  zbSwitch3.setInitialBinaryInput(switch3Reported);
 
   // Set Zigbee device information
 #if defined(IOT_BUTTON_V1)
@@ -794,6 +945,10 @@ void zigbeeSetupTask(void *pvParameters)
   zbIoTButton.setManufacturerAndModel("Seeed Studio", "IoT Button V2");
   zbIoTButton.setPowerSource(ZB_POWER_SOURCE_BATTERY, 100);
 #endif
+  if (!zbIoTButton.setSoftwareBuildId(STRINGIFY(FIRMWARE_VERSION)))
+  {
+    LOG_PRINTLN("Failed to set Zigbee software build ID");
+  }
 
   // Add endpoint to Zigbee Core
   Zigbee.addEndpoint(&zbIoTButton);
@@ -826,6 +981,11 @@ void setup()
   Serial.begin(115200);
 
   LOG_PRINTLN("Zigbee IoT Button Starting...");
+
+  // Initialize NVS and load voltage offset
+  preferences.begin("iot_button", false);
+  voltageOffset = preferences.getFloat("voltage_offset", 0);
+  LOG_PRINTF("Loaded voltage offset: %.2f\n", voltageOffset);
 #if defined(IOT_BUTTON_V2)
   // Restore button state from RTC memory
   pressStartTime = pressStartTimeRTC;
@@ -879,6 +1039,48 @@ void setup()
 #endif
 }
 
+/********************* Serial Command Handling **************************/
+void handleSerialCommand(String command)
+{
+  if (command.startsWith("set_offset "))
+  {
+    String valueStr = command.substring(11);
+    float newOffset = valueStr.toFloat();
+    voltageOffset = newOffset;
+    preferences.putFloat("voltage_offset", voltageOffset);
+    LOG_PRINTF("Voltage offset set to: %.2f\n", voltageOffset);
+  }
+  else if (command == "get_offset")
+  {
+    LOG_PRINTF("Current voltage offset: %.2f\n", voltageOffset);
+  }
+  else if (command == "disable_sleep")
+  {
+    disableSleep = true;
+    Serial.println("Automatic sleep disabled");
+  }
+  else if (command == "enable_sleep")
+  {
+    disableSleep = false;
+    Serial.println("Automatic sleep enabled");
+  }
+  else if (command == "help")
+  {
+    Serial.println("Available commands:");
+    Serial.println("  set_offset <value>  - Set voltage calibration offset (e.g., set_offset -0.22 if measured voltage is high)");
+    Serial.println("                        Positive value: subtract from measured voltage");
+    Serial.println("                        Negative value: add to measured voltage");
+    Serial.println("  get_offset          - Get current voltage offset");
+    Serial.println("  disable_sleep       - Disable automatic sleep mode");
+    Serial.println("  enable_sleep        - Enable automatic sleep mode");
+    Serial.println("  help                - Show this help");
+  }
+  else
+  {
+    Serial.println("Unknown command. Type 'help' for available commands.");
+  }
+}
+
 /********************* Arduino Loop **************************/
 void loop()
 {
@@ -888,11 +1090,14 @@ void loop()
     if (currentConnected && !lastConnected)
     {
       LOG_PRINTLN("Zigbee connected!");
+      zigbeeConnected = true;
       onZigbeeConnected();
     }
     else if (!currentConnected && lastConnected)
     {
       LOG_PRINTLN("Zigbee disconnected!");
+      zigbeeConnected = false;
+      zigbeeStatesSynced = false;
     }
     lastConnected = currentConnected;
     if (!currentConnected)
@@ -908,6 +1113,14 @@ void loop()
   else
   {
     vTaskDelay(1000 / portTICK_PERIOD_MS); // Keep loop running even if Zigbee fails
+  }
+
+  // Handle serial commands
+  if (Serial.available())
+  {
+    String command = Serial.readStringUntil('\n');
+    command.trim();
+    handleSerialCommand(command);
   }
 }
 ```

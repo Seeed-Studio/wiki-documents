@@ -7,9 +7,9 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Rotary_Angle_Sensor
 sku: 101020048, 101020017
 last_update:
-  date: 1/19/2023
+  date: 11/17/2026
   author: jianjing Huang
-createdAt: '2025-08-07'
+createdAt: '2023-01-19'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-Rotary_Angle_Sensor/
 ---
@@ -18,11 +18,11 @@ url: https://wiki.seeedstudio.com/cn/Grove-Rotary_Angle_Sensor/
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rotary.jpg)
 
-旋转角度传感器在其D1连接器上产生0到Vcc（使用Seeeduino时为5V DC）之间的模拟输出。D2连接器未使用。角度范围为300度，值呈线性变化。电阻值为10k欧姆，非常适合Arduino使用。这也可能被称为"电位器"。
+旋转角度传感器在其 D1 接口上输出 0 到 Vcc（在 Seeeduino 上为 5V 直流电）之间的模拟信号。D2 接口未使用。角度范围为 300 度，输出值线性变化。电阻值为 10k 欧姆，非常适合 Arduino 使用。这种器件也被称为“电位器（potentiometer）”。
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
 
-还有另一个产品，Grove - 旋转角度传感器(P)。"P"是什么意思？在这个产品中，"P"代表"面板安装"。它是Grove - 旋转角度传感器的姊妹版本。除了Grove连接器移到背面以便您可以轻松将其用作整洁且无线的人机界面设备外，它们是相同的。
+还有另一款产品，Grove - Rotary Angle Sensor(P)。 “P” 是什么意思？在这款产品中，“P” 代表“面板安装（panel mount）”。它是 Grove - Rotary Angle Sensor 的姊妹版本。两者完全相同，只是 Grove 接插件被移到了背面，这样你就可以轻松地将其作为一个整洁且无线的人机交互设备来使用。
 
 <table>
   <tbody><tr>
@@ -35,28 +35,28 @@ url: https://wiki.seeedstudio.com/cn/Grove-Rotary_Angle_Sensor/
     </tr>
   </tbody></table>
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/depot/grove-rotary-angle-sensorp-p-1242.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-P.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
 
 ## 版本
 
-| 产品版本                   | 变更                              | 发布日期 |
+| 产品版本                           | 变更说明                            | 发布日期     |
 |-----------------------------------|--------------------------------------|---------------|
-|Grove-旋转角度传感器(P) V1.1  | 初始版本                              | 2013年1月    |
-|Grove-旋转角度传感器 V1.2     | 初始版本                              | 2014年5月    |
+|Grove-Rotary Angle Sensor(P) V1.1  | 初始版本                            | 2013 年 1 月 |
+|Grove-Rotary Angle Sensor V1.2     | 初始版本                            | 2014 年 5 月 |
 
 ## 特性
 
-- Grove接口
+- Grove 接口
 - 易于使用
-- Grove基础模块
+- Grove 基础模块
 
 :::tip
-有关Grove模块的更多详细信息，请参考[Grove系统](https://wiki.seeedstudio.com/cn/Grove_System/)
+关于 Grove 模块的更多细节请参考 [Grove System](https://wiki.seeedstudio.com/cn/Grove_System/)
 :::
 
 ## 规格参数
 
-|项目|最小值|典型值|最大值|单位|
+|项目|最小|典型|最大|单位|
 |----|----|----|----|----|
 |电压|4.75|5.0|5.25|VDC|
 |旋转角度|0|/|300|度|
@@ -69,38 +69,38 @@ url: https://wiki.seeedstudio.com/cn/Grove-Rotary_Angle_Sensor/
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
 
 :::caution
-上述提到的支持平台是/是该模块软件或理论兼容性的指示。在大多数情况下，我们只为Arduino平台提供软件库或代码示例。不可能为所有可能的MCU平台提供软件库/演示代码。因此，用户必须编写自己的软件库。
+上面提到的受支持平台仅表示该模块在软件或理论上的兼容性。在大多数情况下，我们只为 Arduino 平台提供软件库或代码示例。不可能为所有可能的 MCU 平台都提供软件库或演示代码。因此，用户需要自行编写软件库。
 :::
 
-## 开始使用
+## 入门指南
 
 :::note
-如果这是您第一次使用Arduino，我们强烈建议您在开始之前先查看[Arduino入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是你第一次使用 Arduino，我们强烈建议你在开始之前先阅读 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
-### 与Arduino一起使用
+### 使用 Arduino 玩一玩
 
 **硬件**
 
-- **步骤1.** 准备以下物品：
+- **步骤 1.** 准备以下物品：
 
-| Seeeduino V4.2 | Base Shield|  Grove-旋转角度传感器 |Grove-LED|
+| Seeeduino V4.2 | Base Shield|  Grove-Rotary Angle Sensor |Grove-LED|
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rorary_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/grove_led.jpg)|
-|[立即购买](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[立即购买](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[立即购买](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[立即购买](https://www.seeedstudio.com/Grove-LED-p-767.html)|
+|[立即获取](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[立即获取](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[立即获取](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[立即获取](https://www.seeedstudio.com/Grove-LED-p-767.html)|
 
-- **步骤2.** 将Grove-旋转角度传感器连接到Grove-Base Shield的**A0**端口。
-- **步骤3.** 将Grove-LED连接到Grove-Base Shield的**D3**端口。
-- **步骤4.** 将Grove - Base Shield插入Seeeduino。
-- **步骤5.** 通过USB线将Seeeduino连接到PC。
+- **步骤 2.** 将 Grove-Rotary Angle Sensor 连接到 Grove-Base Shield 的 **A0** 端口。
+- **步骤 3.** 将 Grove-LED 连接到 Grove-Base Shield 的 **D3** 端口。
+- **步骤 4.** 将 Grove - Base Shield 插到 Seeeduino 上。
+- **步骤 5.** 通过 USB 线将 Seeeduino 连接到电脑。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/seeeduino_rotary.jpg)
 
 :::note
-如果我们没有Grove Base Shield，我们也可以直接将Grove-旋转角度传感器和Grove-Led连接到Seeeduino，如下所示。Grove-Led必须连接到PWM端口。对于Seeeduino，它们是D3,5,6,9,10,11。
+如果我们没有 Grove Base Shield，也可以像下面这样将 Grove-Rotary Angle Sensor 和 Grove-Led 直接连接到 Seeeduino。Grove-Led 必须连接到 PWM 端口。对于 Seeeduino，它们是 D3、5、6、9、10、11。
 :::
 
-| Seeeduino | Grove-旋转角度传感器 | Seeeduino | Grove-LED |
+| Seeeduino | Grove-Rotary Angle Sensor | Seeeduino | Grove-LED |
 |-----------|---------------------------|-----------|-----------|
 | 5V        | Red                       | 5V        | Red       |
 | GND       | Black                     | GND       | Black     |
@@ -109,7 +109,7 @@ url: https://wiki.seeedstudio.com/cn/Grove-Rotary_Angle_Sensor/
 
 **软件**
 
-- **步骤1.** 请将下面的代码复制到Arduino IDE并上传到arduino。如果您不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/cn/Upload_Code/)。
+- **步骤 1.** 请将下面的代码复制到 Arduio IDE 中并上传到 Arduino。如果你不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/cn/Upload_Code/)。
 
 ```cpp
 /*macro definitions of Rotary angle sensor and LED pin*/
@@ -145,65 +145,65 @@ void loop()
 
 ```
 
-- **步骤2.** 调整Grove-旋转角度传感器，我们将看到Grove-LED改变亮度。
+- **步骤 2.** 调节 Grove-Rotary Angle Sensor，我们会看到 Grove-LED 的亮度发生变化。
 
-### 与Codecraft一起使用
+### 使用 Codecraft 玩一玩
 
 #### 硬件
 
-**步骤1.** 将Grove - 旋转角度传感器连接到Base Shield的A0端口，并将Grove - 红色LED连接到D3端口。
+**步骤 1.** 将一个 Grove - Rotary Angle Sensor 连接到 A0 端口，将一个 Grove - Red LED 连接到 Base Shield 的 D3 端口。
 
-**步骤2.** 将Base Shield插入您的Seeeduino/Arduino。
+**步骤 2.** 将 Base Shield 插到你的 Seeeduino/Arduino 上。
 
-**步骤3.** 通过USB线将Seeeduino/Arduino连接到您的PC。
+**步骤 3.** 通过 USB 线将 Seeeduino/Arduino 连接到电脑。
 
 #### 软件
 
-**步骤1.** 打开[Codecraft](https://ide.chmakered.com/)，添加Arduino支持，并将主程序拖到工作区域。
+**步骤 1.** 打开 [Codecraft](https://ide.chmakered.com/)，添加 Arduino 支持，并拖拽一个主程序到工作区。
 
 :::note
-如果这是您第一次使用Codecraft，请参阅[使用Arduino的Codecraft指南](https://wiki.seeedstudio.com/cn/Guide_for_Codecraft_using_Arduino/)。
+如果这是你第一次使用 Codecraft，请同时参考[在 Arduino 上使用 Codecraft 的指南](https://wiki.seeedstudio.com/cn/Guide_for_Codecraft_using_Arduino/)。
 :::
 
-**步骤2.** 按照下图拖拽代码块或打开可在本页面末尾下载的cdc文件。
+**步骤 2.** 按下图拖拽积木块，或者打开本页末尾可下载的 cdc 文件。
 
 ![cc](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/cc_Rotary_Angle_Sensor.png)
 
-将程序上传到您的Arduino/Seeeduino。
+将程序上传到你的 Arduino/Seeeduino。
 
 :::tip
-当代码上传完成后，LED的亮度将根据传感器的角度而变化，角度值显示在串口监视器中。
+当代码上传完成后，LED 的亮度会根据传感器的角度而变化，角度值会显示在串口监视器中。
 :::
 
-### 与Raspberry Pi一起使用（使用Grove Base Hat for Raspberry Pi）
+### 使用 Raspberry Pi 玩一玩（搭配 Grove Base Hat for Raspberry Pi）
 
 #### 硬件
 
-- **步骤1**. 本项目中使用的物品：
+- **步骤 1**. 本项目中使用的器件：
 
-| Raspberry pi | Grove Base Hat for RasPi| Grove - 旋转角度传感器 |
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Rotary Angle Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rorary_s.jpg)|
-|[立即购买](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[立即购买](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[立即购买](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html)|
+|[立即获取](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[立即获取](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[立即获取](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html)|
 
-- **步骤2**. 将Grove Base Hat插入Raspberry。
-- **步骤3**. 将旋转传感器连接到Base Hat的A0端口。
-- **步骤4**. 通过USB线将Raspberry Pi连接到PC。
+- **步骤 2**. 将 Grove Base Hat 插到 Raspberry 上。
+- **步骤 3**. 将旋转传感器连接到 Base Hat 的 A0 端口。
+- **步骤 4**. 通过 USB 线将 Raspberry Pi 连接到电脑。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/Rotary_Hat.jpg)
 
 :::note
-对于步骤3，您可以将旋转角度传感器连接到**任何模拟端口**，但请确保您使用相应的端口号更改命令。
+在步骤 3 中，你也可以将旋转角度传感器连接到**任意模拟端口**，但请确保将命令中的端口号改为对应的端口。
 :::
 
 #### 软件
 
 :::caution
-如果您使用的是**Raspberry Pi with Raspberrypi OS >= Bullseye**，您必须**仅使用Python3**运行此命令行。
+如果你使用的是 **搭载 Raspberrypi OS >= Bullseye 的 Raspberry Pi**，你必须**只在 Python3 下**使用这条命令行。
 :::
 
-- **步骤1**. 按照[软件设置](https://wiki.seeedstudio.com/cn/Grove_Base_Hat_for_Raspberry_Pi/#installation)配置开发环境。
-- **步骤2**. 通过克隆grove.py库下载源文件。
+- **步骤 1**. 按照 [Setting Software](https://wiki.seeedstudio.com/cn/Grove_Base_Hat_for_Raspberry_Pi/#installation) 配置开发环境。
+- **步骤 2**. 通过克隆 grove.py 库来下载源文件。
 
 ```
 cd ~
@@ -219,7 +219,7 @@ python3 grove_rotary_angle_sensor.py 0
 
 ```
 
-以下是 grove_rotary_angle_sensor.py 代码。
+下面是 grove_rotary_angle_sensor.py 代码。
 
 ```python
 
@@ -233,7 +233,7 @@ class GroveRotaryAngleSensor(ADC):
     def __init__(self, channel):
         self.channel = channel
         self.adc = ADC()
-    
+
     @property
     def value(self):
         return self.adc.read(self.channel)
@@ -260,7 +260,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-    如果一切顺利，您将能够看到以下结果
+    如果一切顺利，你将能够看到如下结果
 :::
 
 ```python
@@ -302,37 +302,37 @@ KeyboardInterrupt
 
 ```
 
-您可以通过简单地按 ++ctrl+c++ 来退出此程序。
+你可以通过按 ++ctrl+c++ 来退出该程序。
 
 :::note
-您可能已经注意到，对于模拟端口，丝印引脚编号类似于 **A0, A1**，但在命令中我们使用参数 **0** 和 **1**，就像数字端口一样。因此请确保您将模块插入正确的端口，否则可能会出现引脚冲突。
+你可能已经注意到，对于模拟端口，丝印引脚编号类似 **A0, A1**，然而在命令中我们使用参数 **0** 和 **1**，与数字端口相同。所以请确保你将模块插入正确的端口，否则可能会出现引脚冲突。
 :::
 
-### 与 Raspberry Pi 配合使用（使用 GrovePi_Plus）
+### 使用 Raspberry Pi（搭配 GrovePi_Plus）玩一玩
 
 **硬件**
 
 - **步骤 1.** 准备以下物品：
 
-| Raspberry pi | GrovePi_Plus |  Grove-旋转角度传感器 |Grove-LED|
+| Raspberry pi | GrovePi_Plus |  Grove-Rotary Angle Sensor |Grove-LED|
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rorary_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/grove_led.jpg)|
-|[立即获取](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[立即获取](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[立即获取](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[立即获取](https://www.seeedstudio.com/Grove-LED-p-767.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[立即获取](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[立即获取](https://www.seeedstudio.com/Grove-LED-p-767.html)|
 
-- **步骤 2.** 将 GrovePi_Plus 插入 Raspberry。
-- **步骤 3.** 将 Grove-旋转角度传感器连接到 GrovePi_Plus 的 **A0** 端口。
+- **步骤 2.** 将 GrovePi_Plus 插到 Raspberry 上。
+- **步骤 3.** 将 Grove-Rotary Angle Sensor 连接到 GrovePi_Plus 的 **A0** 端口。
 - **步骤 4.** 将 Grove-LED 连接到 GrovePi_Plus 的 **D5** 端口。
-- **步骤 5.** 通过 USB 线将 Raspberry 连接到 PC。
+- **步骤 5.** 通过 USB 线将 Raspberry 连接到电脑。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rpi_rotary.jpg)
 
 **软件**
 
 :::caution
-如果您使用的是 **Raspberry Pi with Raspberrypi OS >= Bullseye**，您必须 **仅使用 Python3** 来使用此命令行。
+如果你使用的是 **搭载 Raspberrypi OS >= Bullseye 的 Raspberry Pi**，你必须**只使用 Python3** 来运行这条命令行。
 :::
 
-- **步骤 1.** 按照 [设置软件](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) 来配置开发环境。
+- **步骤 1.** 按照 [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) 配置开发环境。
 - **步骤 2.** Git 克隆 Github 仓库。
 
 ```
@@ -341,24 +341,24 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
-- **步骤 3.** 执行以下命令来监控响度。
+- **步骤 3.** 执行以下命令来监测响度。
 
 ```python
 cd ~/GrovePi/Software/Python
 python3 grove_rotary_angle_sensor.py
 ```
 
-这里是 grove_rotary_angle_sensor.py 代码。
+下面是 grove_rotary_angle_sensor.py 代码。
 
 ```python
 import time
 import grovepi
 
-# 将 Grove 旋转角度传感器连接到模拟端口 A0
+# Connect the Grove Rotary Angle Sensor to analog port A0
 # SIG,NC,VCC,GND
 potentiometer = 0
 
-# 将 LED 连接到数字端口 D5
+# Connect the LED to digital port D5
 # SIG,NC,VCC,GND
 led = 5
 
@@ -366,30 +366,30 @@ grovepi.pinMode(potentiometer,"INPUT")
 grovepi.pinMode(led,"OUTPUT")
 time.sleep(1)
 
-# ADC 的参考电压是 5v
+# Reference voltage of ADC is 5v
 adc_ref = 5
 
-# grove 接口的 Vcc 通常是 5v
+# Vcc of the grove interface is normally 5v
 grove_vcc = 5
 
-# 旋转角度的全值是 300 度，根据其规格（0 到 300）
+# Full value of the rotary angle is 300 degrees, as per it's specs (0 to 300)
 full_angle = 300
 
 while True:
     try:
-        # 从电位器读取传感器值
+        # Read sensor value from potentiometer
         sensor_value = grovepi.analogRead(potentiometer)
 
-        # 计算电压
+        # Calculate voltage
         voltage = round((float)(sensor_value) * adc_ref / 1023, 2)
 
-        # 计算旋转角度（0 到 300）
+        # Calculate rotation in degrees (0 to 300)
         degrees = round((voltage * full_angle) / grove_vcc, 2)
 
-        # 从角度（0 到 300）计算 LED 亮度（0 到 255）
+        # Calculate LED brightess (0 to 255) from degrees (0 to 300)
         brightness = int(degrees / full_angle * 255)
 
-        # 给 LED 提供 PWM 输出
+        # Give PWM output to LED
         grovepi.analogWrite(led,brightness)
 
         print("sensor_value = %d voltage = %.2f degrees = %.1f brightness = %d" %(sensor_value, voltage, degrees, brightness))
@@ -401,98 +401,98 @@ while True:
 
 ```
 
-- **步骤 4.** 调整 Grove-旋转角度传感器，我们将看到 Grove-LED 改变亮度。
+- **步骤 4.** 调节 Grove-Rotary Angle Sensor，我们将看到 Grove-LED 的亮度发生变化。
 
-### 与 TI LaunchPad 配合使用
+### 使用 TI LaunchPad 玩一玩
 
 **读取电位器（旋转角度传感器）**
 
-此示例展示如何读取来自 Grove 电位器模块的模拟输出。我们将在此示例中组合几个 Grove 模块！通过转动电位器旋钮，我们将在 Grove 4 位数字显示器上显示模拟读数值。
+本示例展示如何读取来自 Grove 电位器模块的模拟输出。在这个示例中我们将组合使用几个 Grove 模块！通过旋转电位器旋钮，我们将在 Grove 4 位数码管上显示模拟读数值。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/Angle_sensor.jpg)
 
 ```
 /*
-    旋转角度传感器
-    通过读取 Grove Base BoosterPack 的 J16 上的模拟传感器来演示模拟输入。LaunchPad 上红色 LED 的速度将根据电位器旋钮的位置而改变。此示例还将在 Grove 4 位数字显示器上显示模拟读数值。
+    Rotary Angle Sensor
+    Demonstrates analog input by reading an analog sensor on J16 of the Grove Base BoosterPack. The speed of the red LED on the LaunchPad will change depending on the position of the potentiometer knob. This example will also display the analog reading value on the Grove 4-digital display.
 
-    电路：
-    * 电位器连接到引脚 24（Grove Base BoosterPack 上的 J6）
-    * 电位器的中心引脚连接到模拟引脚
-    * 一侧引脚（任意一个）连接到地
-    * 另一侧引脚连接到 VCC (3.3V)
+    The circuit:
+    * Potentiometer attached to pin 24 (J6 on Grove Base BoosterPack)
+    * center pin of the potentiometer to the analog pin
+    * one side pin (either one) to ground
+    * the other side pin to VCC (3.3V)
 
-    * 注意：由于电压不稳定，旋转角度传感器的值
-            即使您不触摸它，每次运行时也会略有变化。
+    * Note: Because of unstable of the voltage, the value of the rotary angle sensor
+            varies slightly from run to run even you don't touch it.  
 
-    由 Oliver Wang 创建
+    Created by Oliver Wang
 
-    此示例代码属于公共领域。
+    This example code is in the public domain.
 
     https://www.seeedstudio.com/wiki/GROVE_-_Starter_Kit_v1.1b#Grove_-_Rotary_Angle_Sensor
     */
 
 #include "TM1637.h"
 
-/* 宏定义 */
-#define CLK               39                  /* 4 位数字显示器时钟引脚 */
-#define DIO               38                /* 4 位数字显示器数据引脚 */
-#define ROTARY_ANGLE_P    24               /* 旋转角度传感器引脚 */
+/* Macro Define */
+#define CLK               39                  /* 4-digital display clock pin */
+#define DIO               38                /* 4-digital display data pin */
+#define ROTARY_ANGLE_P    24               /* pin of rotary angle sensor */
 
-/* 全局变量 */
-TM1637 tm1637(CLK, DIO);                  /* 4 位数字显示器对象 */
-int analog_value = 0;                     /* 存储来自旋转角度传感器值的变量 */
+/* Global Variables */
+TM1637 tm1637(CLK, DIO);                  /* 4-digital display object */
+int analog_value = 0;                     /* variable to store the value coming from rotary angle sensor */
 
-int8_t bits[4] = {0};                     /* 存储值的单个位的数组 */
+int8_t bits[4] = {0};                     /* array to store the single bits of the value */
 
-/* setup() 方法在草图开始时运行一次 */
+/* the setup() method runs once, when the sketch starts */
 void setup() {
 
-    /* 初始化 4 位数字显示器 */
+    /* Initialize 4-digital display */
     tm1637.init();
     tm1637.set(BRIGHT_TYPICAL);
 
 }
 
-/* loop() 方法反复运行 */
+/* the loop() method runs over and over again */
 void loop() {   
 
-    analog_value = analogRead(ROTARY_ANGLE_P);      /* 从传感器读取值 */
-    memset(bits, 0, 4);                             /* 使用时重置数组 */
+    analog_value = analogRead(ROTARY_ANGLE_P);      /* read the value from the sensor */
+    memset(bits, 0, 4);                             /* reset array when we use it */
     for(int i = 3; i >= 0; i--) {
-        /* 获取模拟值的单个位 */
-        bits[i] = analog_value % 10;
+        /* get single bits of the analog value */
+        bits[i] = analog_value % 10;
         analog_value = analog_value / 10;  
-        tm1637.display(i, bits[i]);                 /* 通过 4 位数字显示器显示 */
+        tm1637.display(i, bits[i]);                 /* display by 4-digital display */
     }
     delay(100);
 }
 ```
 
-# Grove - 旋转角度传感器(P) v1.1 原理图文件
+# Grove - Rotary Angle Sensor(P) v1.1 原理图文件
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20%20-%20Rotary%20Angle%20Sensor(P)%20v1.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-# Grove-旋转角度传感器 v1.2 原理图文件
+# Grove-Rotary Angle Sensor v1.2 原理图文件
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20-%20Rotary%20Angle%20Sensor%20v1.2.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 ## 资源
 
-- **[Eagle&PDF]** [Grove-旋转角度传感器 v1.2 原理图文件](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20-%20Rotary%20Angle%20Sensor%20v1.2.zip)
-- **[Eagle&PDF]** [Grove - 旋转角度传感器(P) v1.1 原理图文件](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20%20-%20Rotary%20Angle%20Sensor(P)%20v1.1.zip)
-- **[库文件]** [旋转角度传感器的Github仓库](https://github.com/Seeed-Studio/Grove_Rotary_Angle_Sensor)
-- **[Codecraft]** [CDC文件](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove_Rotary_Angle_Sensor_CDC_File.zip)
+- **[Eagle&PDF]** [Grove-Rotary Angle Sensor v1.2 原理图文件](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20-%20Rotary%20Angle%20Sensor%20v1.2.zip)
+- **[Eagle&PDF]** [Grove - Rotary Angle Sensor(P) v1.1 原理图文件](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20%20-%20Rotary%20Angle%20Sensor(P)%20v1.1.zip)
+- **[Library]** [Rotary Angle Sensor 的 Github 仓库](https://github.com/Seeed-Studio/Grove_Rotary_Angle_Sensor)
+- **[Codecraft]** [CDC 文件](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove_Rotary_Angle_Sensor_CDC_File.zip)
 
 ## 项目
 
-**使用Grove-旋转角度传感器(P)控制Grove LED**：使用Arduino/Genuino 101通过Grove-旋转角度传感器(P)控制LED的亮度。
+**使用 Grove-Rotary Angle Sensor(P) 控制 Grove LED**：使用 Arduino/Genuino 101 通过 Grove-Rotary Angle Sensor(P) 控制 LED 的亮度。
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/user50338573/using-grove-rotary-angle-sensor-p-to-control-grove-led-725e32/embed' width='350'></iframe>
 
-**旋转角度Grove模块**：
+**旋转角度 Grove 模块**：
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/31RaX7JGv5s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -504,7 +504,7 @@ void loop() {
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
