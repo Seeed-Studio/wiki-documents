@@ -360,7 +360,7 @@ All three demos apply the configured joint torque limits. Press `Ctrl+C` to stop
 
 For single-motor five-parameter control, state feedback, and return-to-zero shutdown, see [MIT Control SDK](./reBot_Arm_T701_HT_control_mit.md).
 
-See [T701 HT with Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
+See [T701 HT with Pinocchio](/rebot_t701_ht_pinocchio/) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
 
   </div>
 </div>
