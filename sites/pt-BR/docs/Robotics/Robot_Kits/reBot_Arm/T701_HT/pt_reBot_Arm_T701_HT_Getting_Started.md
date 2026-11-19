@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -339,27 +339,7 @@ O demo aplica `0.8 × G(q)` como torque feedforward do MIT para tornar o braço 
 python t701_ht_gravity_compensation.py
 ```
 
-#### Impedância de junta
-
-:::warning[Antes de iniciar um demo de impedância de junta]
-**Certifique-se de que a área ao redor do robô e dentro da faixa de movimento dos braços esteja livre de pessoas e objetos frágeis antes de iniciar qualquer um dos demos.** O braço selecionado se move em direção a uma pose fixa assim que o demo é iniciado.
-:::
-
-O alvo do braço esquerdo é aproximadamente `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad. O alvo do braço direito inverte o sinal de cada ângulo de junta.
-
-**Impedância de junta com feedforward de gravidade**
-
-```bash
-python t701_ht_joint_impedance_with_gravity.py
-```
-
-**Impedância de junta com feedforward de gravidade e compensação de atrito**
-
-```bash
-python t701_ht_joint_impedance_with_gravity_friction.py
-```
-
-Todos os três demos aplicam os limites de torque de junta configurados. Pressione `Ctrl+C` para parar a compensação de gravidade ou para retornar os braços à posição de zero antes de encerrar um demo de impedância de junta. Durante o retorno, pressione `Ctrl+C` novamente para parar os braços.
+O demo aplica os limites de torque de junta configurados. Pressione `Ctrl+C` para parar os motores.
 
 Para controle de cinco parâmetros de motor único, feedback de estado e desligamento com retorno à posição de zero, consulte o [MIT Control SDK](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_control_mit/).
 

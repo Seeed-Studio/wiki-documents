@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_control_mit
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -34,7 +34,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="Star T701-HT SDK on GitHub"
 />
 
-A interface MIT do SDK T701-HT define posição alvo, velocidade alvo, torque de feedforward, ganho de posição `Kp` e ganho de velocidade `Kd` em conjunto. Esta página apresenta o exemplo de rastreamento senoidal de motor único, seus parâmetros, feedback e sequência de desligamento. Para compensação de gravidade de todo o braço, impedância de juntas e controle cartesiano, consulte [T701 HT com Pinocchio](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_pinocchio/).
+A interface MIT do SDK T701-HT define posição alvo, velocidade alvo, torque de feedforward, ganho de posição `Kp` e ganho de velocidade `Kd` em conjunto. Esta página apresenta o exemplo de rastreamento senoidal de motor único, seus parâmetros, feedback e sequência de desligamento. Para compensação de gravidade de todo o braço e controle cartesiano, consulte [T701 HT com Pinocchio](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_pinocchio/).
 
 <section className="section-card">
 
@@ -157,7 +157,7 @@ O exemplo de motor único usa um objeto `motor` de baixo nível. O controle de t
 | `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco vetores de juntas de comprimento 7, excluindo o gripper. Verifica a faixa de posição alvo de junta configurada antes de enviar; retorna `False` para um alvo fora da faixa. |
 | `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | Cinco parâmetros escalares do gripper. Verifica a faixa de posição alvo do gripper e envia por padrão. Com `send=False`, apenas coloca o comando em fila para envio com o comando das juntas no mesmo ciclo. Retorna `False` para um alvo fora da faixa. |
 
-As verificações de posição alvo da interface MIT de todo o braço não substituem o projeto de trajetória ou a limitação de torque. Para feedforward de gravidade, impedância de juntas ou tratamento automático de desligamento, use os exemplos completos vinculados na [página do Pinocchio](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_pinocchio/).
+As verificações de posição alvo da interface MIT de todo o braço não substituem o projeto de trajetória ou a limitação de torque. Para feedforward de gravidade ou tratamento automático de desligamento, use os exemplos completos vinculados na [página do Pinocchio](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_pinocchio/).
 
 </section>
 

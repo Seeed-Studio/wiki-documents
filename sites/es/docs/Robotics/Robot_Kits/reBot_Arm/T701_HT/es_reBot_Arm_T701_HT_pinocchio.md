@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -77,18 +77,16 @@ La cinemática directa calcula la pose del efector final a partir de los ángulo
 
 <section className="section-card">
 
-## Compensación de gravedad e impedancia articular
+## Compensación de gravedad
 
-`G(q)` es el par de gravedad que el modelo calcula a partir de los ángulos articulares `q`. La compensación de gravedad facilita mover los brazos a mano. Los ejemplos de impedancia articular mueven activamente los brazos a una postura preestablecida y la mantienen.
+`G(q)` es el par de gravedad que el modelo calcula a partir de los ángulos articulares `q`. La compensación de gravedad facilita mover los brazos a mano.
 
 | Ejemplo | Comando | Comportamiento esperado |
 | --- | --- | --- |
 | Compensación de gravedad | `python t701_ht_gravity_compensation.py` | Aplica `0.8 × G(q)` sujeto a los límites de par e imprime el par de compensación. |
 | Compensación de gravedad con salida de FK | `python t701_ht_gravity_compensation_with_fk.py` | Aplica `G(q)` sujeto a los límites de par e imprime los ángulos articulares, el par de compensación y la pose del efector final. |
-| Impedancia articular con avance de gravedad | `python t701_ht_joint_impedance_with_gravity.py` | Se mueve y mantiene una postura articular preestablecida, añade compensación de gravedad e imprime el par total. |
-| Impedancia articular con avance de gravedad y fricción | `python t701_ht_joint_impedance_with_gravity_friction.py` | Se mueve y mantiene una postura articular preestablecida, añade compensación de gravedad y fricción, e imprime el par total. |
 
-Cuando pulsas `Ctrl+C`, ambos ejemplos de compensación de gravedad detienen los motores directamente. Ambos ejemplos de impedancia articular regresan a cero antes de detenerse.
+Cuando pulsas `Ctrl+C`, ambos ejemplos de compensación de gravedad detienen los motores directamente.
 
 </section>
 

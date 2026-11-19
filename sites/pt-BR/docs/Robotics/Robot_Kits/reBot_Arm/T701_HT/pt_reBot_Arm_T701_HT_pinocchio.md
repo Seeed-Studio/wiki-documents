@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -77,18 +77,16 @@ A cinemática direta calcula a pose do efetuador final a partir dos ângulos atu
 
 <section className="section-card">
 
-## Compensação de gravidade e impedância de junta
+## Compensação de gravidade
 
-`G(q)` é o torque de gravidade que o modelo calcula a partir dos ângulos das juntas `q`. A compensação de gravidade facilita o movimento manual dos braços. Os exemplos de impedância de junta movem ativamente os braços para uma postura predefinida e a mantêm.
+`G(q)` é o torque de gravidade que o modelo calcula a partir dos ângulos das juntas `q`. A compensação de gravidade facilita o movimento manual dos braços.
 
 | Exemplo | Comando | Comportamento esperado |
 | --- | --- | --- |
 | Compensação de gravidade | `python t701_ht_gravity_compensation.py` | Aplica `0.8 × G(q)` sujeita aos limites de torque e imprime o torque de compensação. |
 | Compensação de gravidade com saída de FK | `python t701_ht_gravity_compensation_with_fk.py` | Aplica `G(q)` sujeita aos limites de torque e imprime os ângulos das juntas, o torque de compensação e a pose do efetuador final. |
-| Impedância de junta com feedforward de gravidade | `python t701_ht_joint_impedance_with_gravity.py` | Move para e mantém uma postura de junta predefinida, adiciona compensação de gravidade e imprime o torque total. |
-| Impedância de junta com feedforward de gravidade e atrito | `python t701_ht_joint_impedance_with_gravity_friction.py` | Move para e mantém uma postura de junta predefinida, adiciona compensação de gravidade e de atrito e imprime o torque total. |
 
-Quando você pressiona `Ctrl+C`, ambos os exemplos de compensação de gravidade param os motores diretamente. Ambos os exemplos de impedância de junta retornam ao zero antes de parar.
+Quando você pressiona `Ctrl+C`, ambos os exemplos de compensação de gravidade param os motores diretamente.
 
 </section>
 

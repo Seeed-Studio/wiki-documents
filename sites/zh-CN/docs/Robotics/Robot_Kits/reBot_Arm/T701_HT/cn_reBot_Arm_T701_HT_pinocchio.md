@@ -10,7 +10,7 @@ keywords:
   - 重力补偿
 slug: /rebot_t701_ht_pinocchio
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -75,18 +75,16 @@ cd scripts
 
 <section className="section-card">
 
-## 重力补偿与关节阻抗
+## 重力补偿
 
-`G(q)` 表示模型根据关节角 `q` 计算的重力矩。重力补偿便于手动移动机械臂，关节阻抗示例会主动移向并保持预设姿态。
+`G(q)` 表示模型根据关节角 `q` 计算的重力矩。重力补偿便于手动移动机械臂。
 
 | 示例 | 运行命令 | 预期行为 |
 | --- | --- | --- |
 | 重力补偿 | `python t701_ht_gravity_compensation.py` | 施加限幅后的 `0.8 × G(q)`，输出补偿力矩。 |
 | 重力补偿并输出 FK | `python t701_ht_gravity_compensation_with_fk.py` | 施加限幅后的 `G(q)`，输出关节角、补偿力矩和末端位姿。 |
-| 关节阻抗与重力前馈 | `python t701_ht_joint_impedance_with_gravity.py` | 移向预设关节姿态并保持，叠加重力补偿，输出总力矩。 |
-| 关节阻抗、重力与摩擦前馈 | `python t701_ht_joint_impedance_with_gravity_friction.py` | 移向预设关节姿态并保持，叠加重力与摩擦补偿，输出总力矩。 |
 
-按 `Ctrl+C` 退出时，两个重力补偿示例直接停止电机，两个关节阻抗示例先回零再停止。
+按 `Ctrl+C` 退出时，两个重力补偿示例直接停止电机。
 
 </section>
 

@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -339,27 +339,7 @@ cd scripts
 python t701_ht_gravity_compensation.py
 ```
 
-#### 関節インピーダンス
-
-:::warning[関節インピーダンスデモを開始する前に]
-**いずれかのデモを開始する前に、ロボットの周囲および腕の可動範囲内に人や壊れやすい物がないことを必ず確認してください。** デモが開始されると、選択した腕はすぐに固定姿勢へ向けて動き始めます。
-:::
-
-左腕の目標姿勢は、おおよそ `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad です。右腕の目標姿勢は、各関節角度の符号を反転させたものになります。
-
-**重力フィードフォワード付き関節インピーダンス**
-
-```bash
-python t701_ht_joint_impedance_with_gravity.py
-```
-
-**重力フィードフォワードおよび摩擦補償付き関節インピーダンス**
-
-```bash
-python t701_ht_joint_impedance_with_gravity_friction.py
-```
-
-3 つすべてのデモで、設定された関節トルク制限が適用されます。重力補償を停止する場合、または関節インピーダンスデモを停止する前に腕をゼロ位置へ戻す場合は、`Ctrl+C` を押します。戻り動作の最中に再度 `Ctrl+C` を押すと、腕の動作が停止します。
+このデモでは、設定された関節トルク制限が適用されます。`Ctrl+C` を押すとモータが停止します。
 
 単一モータの 5 パラメータ制御、状態フィードバック、およびゼロ位置への復帰を伴うシャットダウンについては、[MIT Control SDK](https://wiki.seeedstudio.com/ja/rebot_t701_ht_control_mit/) を参照してください。
 

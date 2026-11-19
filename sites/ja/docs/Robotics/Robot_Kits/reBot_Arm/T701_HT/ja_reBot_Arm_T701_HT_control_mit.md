@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_control_mit
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -34,7 +34,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="GitHub で T701-HT SDK に Star を付ける"
 />
 
-T701-HT SDK の MIT インターフェースは、目標位置、目標速度、フィードフォワードトルク、位置ゲイン `Kp`、速度ゲイン `Kd` をまとめて設定します。このページでは、単一モーターの正弦波追従サンプル、そのパラメータ、フィードバック、およびシャットダウンシーケンスを紹介します。アーム全体の重力補償、関節インピーダンス、デカルト制御については、[T701 HT with Pinocchio](https://wiki.seeedstudio.com/ja/rebot_t701_ht_pinocchio/) を参照してください。
+T701-HT SDK の MIT インターフェースは、目標位置、目標速度、フィードフォワードトルク、位置ゲイン `Kp`、速度ゲイン `Kd` をまとめて設定します。このページでは、単一モーターの正弦波追従サンプル、そのパラメータ、フィードバック、およびシャットダウンシーケンスを紹介します。アーム全体の重力補償とデカルト制御については、[T701 HT with Pinocchio](https://wiki.seeedstudio.com/ja/rebot_t701_ht_pinocchio/) を参照してください。
 
 <section className="section-card">
 
@@ -157,7 +157,7 @@ robot.motor_send_cmd()
 | `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | グリッパを除く長さ 7 の 5 つの関節ベクトル。送信前に設定された目標関節位置範囲をチェックし、範囲外の目標に対しては `False` を返します。 |
 | `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | グリッパ用の 5 つのスカラーパラメータ。目標グリッパ位置範囲をチェックし、デフォルトで送信します。`send=False` の場合は、同じサイクルでの関節コマンド送信に向けてコマンドをキューに入れるだけです。範囲外の目標に対しては `False` を返します。 |
 
-アーム全体の MIT インターフェースにおける目標位置チェックは、軌道設計やトルク制限の代わりにはなりません。重力フィードフォワード、関節インピーダンス、自動シャットダウン処理については、[Pinocchio ページ](https://wiki.seeedstudio.com/ja/rebot_t701_ht_pinocchio/) からリンクされている完全なサンプルを使用してください。
+アーム全体の MIT インターフェースにおける目標位置チェックは、軌道設計やトルク制限の代わりにはなりません。重力フィードフォワードや自動シャットダウン処理については、[Pinocchio ページ](https://wiki.seeedstudio.com/ja/rebot_t701_ht_pinocchio/) からリンクされている完全なサンプルを使用してください。
 
 </section>
 

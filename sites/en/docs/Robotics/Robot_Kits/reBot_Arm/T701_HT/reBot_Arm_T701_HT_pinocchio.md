@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -77,18 +77,16 @@ Forward kinematics computes the end-effector pose from the current joint angles.
 
 <section className="section-card">
 
-## Gravity Compensation and Joint Impedance
+## Gravity Compensation
 
-`G(q)` is the gravity torque the model computes from the joint angles `q`. Gravity compensation makes it easier to move the arms by hand. The joint impedance examples actively move the arms to a preset posture and hold it.
+`G(q)` is the gravity torque the model computes from the joint angles `q`. Gravity compensation makes it easier to move the arms by hand.
 
 | Example | Command | Expected behavior |
 | --- | --- | --- |
 | Gravity compensation | `python t701_ht_gravity_compensation.py` | Applies `0.8 × G(q)` subject to the torque limits and prints the compensation torque. |
 | Gravity compensation with FK output | `python t701_ht_gravity_compensation_with_fk.py` | Applies `G(q)` subject to the torque limits and prints the joint angles, compensation torque, and end-effector pose. |
-| Joint impedance with gravity feedforward | `python t701_ht_joint_impedance_with_gravity.py` | Moves to and holds a preset joint posture, adds gravity compensation, and prints the total torque. |
-| Joint impedance with gravity and friction feedforward | `python t701_ht_joint_impedance_with_gravity_friction.py` | Moves to and holds a preset joint posture, adds gravity and friction compensation, and prints the total torque. |
 
-When you press `Ctrl+C`, both gravity compensation examples stop the motors directly. Both joint impedance examples return to zero before stopping.
+When you press `Ctrl+C`, both gravity compensation examples stop the motors directly.
 
 </section>
 

@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_control_mit
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -34,7 +34,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="Star T701-HT SDK on GitHub"
 />
 
-La interfaz MIT del SDK T701-HT establece conjuntamente la posición objetivo, la velocidad objetivo, el par de avance, la ganancia de posición `Kp` y la ganancia de velocidad `Kd`. Esta página presenta el ejemplo de seguimiento sinusoidal de un solo motor, sus parámetros, la retroalimentación y la secuencia de apagado. Para compensación de gravedad de todo el brazo, impedancia articular y control cartesiano, consulta [T701 HT with Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
+La interfaz MIT del SDK T701-HT establece conjuntamente la posición objetivo, la velocidad objetivo, el par de avance, la ganancia de posición `Kp` y la ganancia de velocidad `Kd`. Esta página presenta el ejemplo de seguimiento sinusoidal de un solo motor, sus parámetros, la retroalimentación y la secuencia de apagado. Para compensación de gravedad de todo el brazo y control cartesiano, consulta [T701 HT with Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
 
 <section className="section-card">
 
@@ -157,7 +157,7 @@ El ejemplo de un solo motor usa un objeto `motor` de bajo nivel. El control de t
 | `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco vectores articulares de longitud 7, excluyendo la pinza. Comprueba el rango configurado de posición objetivo de articulaciones antes de enviar; devuelve `False` para un objetivo fuera de rango. |
 | `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | Cinco parámetros escalares de la pinza. Comprueba el rango de posición objetivo de la pinza y envía por defecto. Con `send=False`, solo pone en cola el comando para enviarlo junto con el comando de articulaciones en el mismo ciclo. Devuelve `False` para un objetivo fuera de rango. |
 
-Las comprobaciones de posición objetivo de la interfaz MIT de todo el brazo no sustituyen el diseño de trayectorias ni la limitación de par. Para avance de gravedad, impedancia articular o gestión automática del apagado, usa los ejemplos completos enlazados desde la [página de Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
+Las comprobaciones de posición objetivo de la interfaz MIT de todo el brazo no sustituyen el diseño de trayectorias ni la limitación de par. Para avance de gravedad o gestión automática del apagado, usa los ejemplos completos enlazados desde la [página de Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
 
 </section>
 

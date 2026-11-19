@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -339,27 +339,7 @@ La demo aplica `0.8 × G(q)` como par de avance MIT para que el brazo sea más f
 python t701_ht_gravity_compensation.py
 ```
 
-#### Impedancia articular
-
-:::warning[Antes de iniciar una demo de impedancia articular]
-**Asegúrate de que el área alrededor del robot y dentro del rango de movimiento de los brazos esté libre de personas y objetos frágiles antes de iniciar cualquiera de las demostraciones.** El brazo seleccionado se mueve hacia una pose fija tan pronto como comienza la demo.
-:::
-
-El objetivo del brazo izquierdo es aproximadamente `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad. El objetivo del brazo derecho invierte el signo de cada ángulo articular.
-
-**Impedancia articular con avance de gravedad**
-
-```bash
-python t701_ht_joint_impedance_with_gravity.py
-```
-
-**Impedancia articular con avance de gravedad y compensación de fricción**
-
-```bash
-python t701_ht_joint_impedance_with_gravity_friction.py
-```
-
-Las tres demostraciones aplican los límites de par articular configurados. Pulsa `Ctrl+C` para detener la compensación de gravedad o para devolver los brazos a cero antes de detener una demo de impedancia articular. Durante el retorno, pulsa `Ctrl+C` de nuevo para detener los brazos.
+La demo aplica los límites de par articular configurados. Pulsa `Ctrl+C` para detener los motores.
 
 Para control de cinco parámetros de un solo motor, retroalimentación de estado y apagado con retorno a cero, consulta el [MIT Control SDK](https://wiki.seeedstudio.com/es/rebot_t701_ht_control_mit/).
 

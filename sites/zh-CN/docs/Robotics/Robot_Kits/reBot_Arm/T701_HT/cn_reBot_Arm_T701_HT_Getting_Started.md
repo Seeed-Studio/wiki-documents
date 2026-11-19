@@ -10,7 +10,7 @@ keywords:
   - Python SDK
 slug: /rebot_t701_ht_getting_started
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -337,27 +337,7 @@ cd scripts
 python t701_ht_gravity_compensation.py
 ```
 
-#### 关节阻抗
-
-:::warning[启动关节阻抗示例前]
-**启动前请确认机器人周围及机械臂活动范围内无人、无易碎品，再运行下方示例。** 机械臂启动后会向固定目标姿态移动。
-:::
-
-左臂目标约为 `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad，右臂逐关节取反。
-
-**关节阻抗 + 重力前馈**
-
-```bash
-python t701_ht_joint_impedance_with_gravity.py
-```
-
-**关节阻抗 + 重力前馈 + 摩擦补偿**
-
-```bash
-python t701_ht_joint_impedance_with_gravity_friction.py
-```
-
-三个示例均按配置限制关节力矩。按 `Ctrl+C` 后，重力补偿示例停止，关节阻抗示例回零再停止。回零期间再次按 `Ctrl+C` 可停止机械臂。
+示例按配置限制关节力矩。按 `Ctrl+C` 退出时停止电机。
 
 单电机五参数控制、状态反馈和回零退出说明见 [MIT 控制 SDK](https://wiki.seeedstudio.com/cn/rebot_t701_ht_control_mit/)。
 
