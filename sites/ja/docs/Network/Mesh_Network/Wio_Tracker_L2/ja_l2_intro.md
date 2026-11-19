@@ -197,7 +197,7 @@ Wio Tracker L2 シリーズには、カスタム構成向けの Wio Tracker L2 �
 
 **消費電力**
 
-画面モード、LoRa 周波数帯およびモデムプリセット、GPS 使用状況など、さまざまな構成における詳細な消費電力データと推定バッテリー寿命については、[Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx) を参照してください。
+画面モード、LoRa 周波数帯およびモデムプリセット、GPS 使用状況など、さまざまな構成における詳細な消費電力データと推定バッテリー寿命については、[Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx) を参照してください。
 
 ## ピン一覧
 
