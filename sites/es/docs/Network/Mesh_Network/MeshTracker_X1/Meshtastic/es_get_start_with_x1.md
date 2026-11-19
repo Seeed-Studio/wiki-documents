@@ -10,7 +10,7 @@ sku: 100087698
 sidebar_position: 1
 last_update:
   date: 10/30/2026
-  author: Michelle Huang
+  author: Advent Jiang
 createdAt: '2026-07-13'
 updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/
@@ -78,7 +78,7 @@ import TabItem from '@theme/TabItem';
 
 ### Configurar el LoRa
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse según tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencia utiliza tu dispositivo y debe configurarse según tu ubicación regional.
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -141,7 +141,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
     <tr>
     <td>⚪️white</td>
     <td>Constante</td>
-    <td>Modo DFU/Modo bootloader</td>
+    <td>Modo DFU/Modo Bootloader</td>
   </tr>
 </table>
 
@@ -153,7 +153,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
     <th colspan="1">Respuesta del dispositivo</th>
   </tr>
   <tr>
-   <td>Pulsar una vez (apagado)</td>
+   <td>Clic una vez (apagado)</td>
     <td>Dispositivo encendiéndose</td>
   </tr>
   <tr>
@@ -181,7 +181,7 @@ Por favor, `no uses OTA` para actualizar el firmware, ya que puede hacer que el 
 :::
 #### Paso 1: Entrar en modo DFU
 
-Entra en DFU a través del web flasher. Si esto falla muchas veces, entra en DFU manualmente.
+Entra en DFU mediante el web flasher. Si esto falla muchas veces, entra en DFU manualmente.
 
 <Tabs>
 <TabItem value="method1" label="Via Web Flasher">
@@ -214,7 +214,7 @@ Para entrar correctamente en el modo DFU, debes realizar esta operación rápida
 El LED blanco ⚪️ permanecerá fijo si el X1 está en modo DFU. Y debería aparecer un controlador llamado `X1` en tu ordenador.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1DriveMAC.png" alt="pir" width={300} height="auto" /></p>
 
-#### Paso 2: Borrado de la memoria flash
+#### Paso 2: Borrado de la memoria Flash
 
 Antes de flashear el firmware, ¡primero bórralo!
 
@@ -226,7 +226,7 @@ Descarga el firmware de borrado y cópialo en la unidad.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/FlashFirmwareX11.png" alt="pir" width={800} height="auto" /></p>
 
-Este proceso puede llevar algún tiempo; espera a que la unidad desaparezca.
+Este proceso puede llevar algo de tiempo; espera a que la unidad desaparezca.
 
 #### Paso 3: Flashear firmware
 
@@ -304,7 +304,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 |Vibra|-|05|
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="Aplicación IOS">
 
 Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output Pin GPIO`.
 
@@ -312,7 +312,7 @@ Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Aplicación Android">
 
 Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output Pin GPIO`.
 
@@ -332,13 +332,13 @@ Después de actualizar la configuración del dispositivo, este se reiniciará, l
 Ve a `Settings` -> `Ringtone Config`, luego introduce la cadena de tono RTTTL que quieras usar para las notificaciones externas.
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="Aplicación IOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Aplicación Android">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ringtonex1.png" alt="pir" width={900} height="auto" /></p>
 
 </TabItem>
@@ -454,7 +454,7 @@ Por ejemplo, el ID del dispositivo del dispositivo de abajo sería `A0D4`
 <TabItem value="22" label="A través de herramienta serie">
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
- Haz clic en `Open Serial Monitor`, conecta el dispositivo a tu PC, revisa el registro serie, palabra clave `using nodenum`.
+ Haz clic en `Open Serial Monitor`, conecta el dispositivo a tu PC, comprueba el registro serie, palabra clave `using nodenum`.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -478,15 +478,15 @@ Puedes calcular el consumo de energía mediante la [tabla de consumo de energía
 
 ## Solución de problemas
 
-### Falló la actualización de firmware / Recuperación por OTA
+### Error en la actualización de firmware / Recuperación OTA
 
-Si tu SenseCAP MeshTracker X1 no arranca, deja de responder, o el LED blanco ⚪️ permanece encendido de forma fija después de una actualización de firmware, es posible que el dispositivo esté atascado en modo DFU. Prueba lo siguiente:
+Si tu SenseCAP MeshTracker X1 no se inicia, deja de responder o el LED blanco ⚪️ permanece encendido de forma continua después de una actualización de firmware, es posible que el dispositivo esté atascado en modo DFU. Prueba lo siguiente:
 
-1. Fuerza un reinicio para salir del modo DFU: desconecta el cable de carga USB, mantén pulsado el botón del dispositivo, conecta el cable de carga USB y suelta el botón inmediatamente. No mantengas pulsado el botón: si lo mantienes pulsado durante más de 3 segundos después de conectar el cable, el dispositivo volverá a entrar en modo DFU.
-2. Comprueba si el dispositivo arranca con normalidad. Si no es así, conecta el dispositivo al ordenador con un cable de datos USB y sigue [Paso 1: Entrar en modo DFU](#paso-1-entrar-en-modo-dfu); a continuación, realiza [Paso 2: Borrado de la memoria flash](#paso-2-borrado-de-la-memoria-flash) y [Paso 3: Flashear firmware](#paso-3-flashear-firmware) para reinstalar el firmware de Meshtastic.
-3. Si el dispositivo sigue sin poder recuperarse, sigue [Instalación del bootloader](#instalación-del-bootloader) para volver a flashear el bootloader y, a continuación, reinstala el firmware de la aplicación.
+1. Fuerza un reinicio para salir del modo DFU: desconecta el cable de carga USB, mantén pulsado el botón del dispositivo, conecta el cable de carga USB y suelta el botón inmediatamente. No mantengas pulsado el botón: si lo mantienes más de 3 segundos después de conectar el cable, forzarás que el dispositivo vuelva al modo DFU.
+2. Comprueba si el dispositivo se inicia con normalidad. Si no es así, conecta el dispositivo a tu ordenador con un cable de datos USB y sigue [Step 1: Enter DFU mode](#Step-1-Entrar-en-modo-DFU), luego realiza [Step 2: Flash Erase](#Step-2-Borrado-de-Flash) y [Step 3: Flash Firmware](#Step-3-Flashear-firmware) para reinstalar el firmware de Meshtastic.
+3. Si el dispositivo aún no se puede recuperar, sigue [Bootloader Installation](#Instalación-del-bootloader) para volver a flashear el bootloader y luego reinstala el firmware de la aplicación.
 
-No fuerces un reinicio ni desconectes el cable USB mientras se borra o se flashea el firmware. Si el dispositivo no puede entrar en modo DFU o tu ordenador no lo detecta, ponte en contacto con el soporte técnico.
+No fuerces un reinicio ni desconectes el cable USB mientras el firmware se está borrando o flasheando. Si el dispositivo no puede entrar en modo DFU o no puede ser detectado por tu ordenador, ponte en contacto con el soporte técnico.
 
 ### El dispositivo nunca se enciende
 
@@ -494,13 +494,13 @@ No fuerces un reinicio ni desconectes el cable USB mientras se borra o se flashe
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
-- Usa un cable USB que sepas que funciona para `cargar el dispositivo` de forma continua durante 1–2 horas para asegurarte de que la batería tenga suficiente energía para activar el sistema.
+- Utiliza un cable USB que sepas que funciona para `cargar el dispositivo` de forma continua durante 1–2 horas para asegurarte de que la batería tiene suficiente energía para activar el sistema.
 
-- Si el dispositivo sigue sin responder después de la carga, `realiza un reinicio forzado` de la siguiente manera: Desconecta el cable USB. Mantén pulsado el botón, luego conecta el cable USB y suelta el botón inmediatamente. 
+- Si el dispositivo sigue sin responder después de la carga, `realiza un restablecimiento completo` de la siguiente manera: Desconecta el cable USB. Mantén pulsado el botón, luego conecta el cable USB y suelta el botón inmediatamente. 
 
- - Si aún así no hay suerte, conecta un cable USB a un ordenador. Mantén pulsado el botón del dispositivo, luego conecta el dispositivo al ordenador y suelta el botón; comprueba si aparece o no un disco en tu PC. Si es así, vuelve a instalar el bootloader
+ - Si aún no hay suerte, conecta un cable USB a un ordenador. Mantén pulsado el botón del dispositivo, luego conecta el dispositivo al ordenador y suelta el botón; comprueba si aparece un disco en tu PC. Si es así, vuelve a instalar el bootloader
 
-### El dispositivo se queda atascado en un bucle de arranque
+### Dispositivo atascado en un bucle de arranque
 
 **Descripción:**
 
@@ -516,16 +516,16 @@ Para entrar correctamente en el modo DFU, debes realizar esta operación rápida
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
-El dispositivo está en modo DFU si el LED blanco permanece encendido de forma continua.
+El dispositivo está en modo DFU si el LED blanco está encendido de forma continua.
 
-- Paso 2: [Erase Flash](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#Paso-2-Flash-erase)
+- Paso 2: [Erase Flash](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#Step-2-Borrado-de-Flash)
 
-- Paso 3: [Flash Firmware](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#Paso-3-Flash-firmware)
+- Paso 3: [Flash Firmware](https://wiki.seeedstudio.com/es/x1_get_started_for_meshtastic/#Step-3-Flashear-firmware)
 
 ### Instalación del bootloader
 
 
-- [Descarga del bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
 
 :::danger note
 Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** la desconectes durante el proceso de flasheo.
@@ -535,7 +535,7 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 Para usuarios de Windows, pulsa la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y pulsa "Enter". Esto puede abrir la línea de comandos. 
 
-Para usuarios de MAC, pulsa la tecla "Command" y la tecla "Space", de modo que puedas abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto puede abrir la línea de comandos. 
+Para usuarios de MAC, presiona la tecla "Command" y la tecla "Space", para que puedas abrir Spotlight. Luego introduce "termial" y haz clic en "Return". Esto puede abrir la línea de comandos. 
 
 **Requisitos previos**
 
@@ -578,7 +578,7 @@ Para usuarios de Windows, es posible que tengas que añadir la ruta manualmente.
 
 Conecta tu dispositivo a tu PC y comprueba el número de puerto.
 
-Para usuarios de Windows, abre el administrador de dispositivos y ve a `port`; el número de puerto que aparece después de conectar el dispositivo es el número de puerto del dispositivo.
+Para usuarios de Windows, abre el administrador de dispositivos y ve a `port`; el número de puerto que aparece de nuevo después de la conexión del dispositivo es el número de puerto del dispositivo.
 
 Para usuarios de Mac, por ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
@@ -588,7 +588,7 @@ Para usuarios de Windows, por ejemplo:
 
 **Paso 3: Flashear el bootloader**
 
-En la terminal o en el símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, reemplazando el puerto correcto para tu dispositivo:
+En la terminal o en el símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
 
 - **Para Windows**:
 
@@ -600,7 +600,7 @@ Cambia COMXX por tu número de COM. Por ejemplo, si tu dispositivo está en com6
 
 `adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- Algunos dispositivos cambiarán su número de puerto después de que introduzcas este comando. Así que si la instalación falla, comprueba de nuevo el número de puerto.
+ Algunos dispositivos cambiarán su número de puerto después de introducir este comando. Así que si la instalación falla, comprueba de nuevo el número de puerto.
 
 - **Para otros**:
 
@@ -627,18 +627,18 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
 - Mantén pulsado el botón del dispositivo, luego conecta el cable de carga y suelta el botón inmediatamente. Después de que aparezca un disco en tu PC, es posible que veas el puerto serie.
 
-- Si aún así no hay suerte, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
+- Si aún no tienes suerte, desconecta el cable de carga y deja el dispositivo durante unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
 
-**4) Si ninguno de los pasos anteriores funciona, contacta con el soporte técnico: support@sensecapmx.com**
+**4) Si ninguno de los pasos anteriores funciona, ponte en contacto con el soporte técnico: support@sensecapmx.com**
 
  ### El dispositivo se apaga automáticamente
 
 - **Descripción del fenómeno**
 
- - Después de encender el dispositivo, se apagará o reiniciará automáticamente al cabo de un rato. 
+ - Después de encender el dispositivo, se apagará o se reiniciará automáticamente al cabo de un rato. 
  - El registro del puerto serie funcionó durante un tiempo y luego se detuvo.
 
- Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto puede deberse a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
 - **Solución de problemas**
 
@@ -656,7 +656,7 @@ Si quieres restaurar la configuración predeterminada, puedes hacer un restablec
 
 #### Restablecer NodeDB
 
-NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, puede deberse a que tu NodeDB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, puede deberse a que tu nodeDB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
@@ -666,13 +666,13 @@ Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device*
 
 #### Intercambiar información de usuario
 
-Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
+Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos de la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre sí. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### Regenerar clave privada
 
-Cada nodo mantiene su clave privada para sí mismo y nunca la comparte. Para comunicarse de forma privada, dos nodos intercambian sus claves públicas entre sí a través de la malla. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar su clave privada: esto rota su par de claves, por lo que otros nodos necesitan volver a sincronizarse con su nueva clave pública.
+Cada nodo mantiene su clave privada para sí mismo y nunca la comparte. Para comunicarse de forma privada, dos nodos intercambian sus claves públicas entre sí a través de la malla. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar la clave privada para él: esto rota su par de claves, por lo que otros nodos necesitan volver a sincronizarse con su nueva clave pública.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
@@ -688,8 +688,13 @@ Después de la regeneración de la clave, otros dispositivos necesitan volver a 
 
   - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente. 
 
-      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
+      Para conseguir el mejor efecto de señal, utiliza el dispositivo en una zona abierta y sin obstáculos, con una interferencia mínima.
 
+### Mapeo de batería
+
+```bash
+#define OCV_ARRAY 4290, 4118, 4002, 3889, 3798, 3728, 3677, 3643, 3594, 3500, 3100
+```
 
 ## Soporte técnico y debate sobre el producto
 

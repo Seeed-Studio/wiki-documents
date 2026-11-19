@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::danger note
-Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo podría quedar inutilizable.
+Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inutilizable.
 
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
@@ -96,7 +96,7 @@ Ve a la página `Setting`, haz clic en `Reboot/Shutdown`, luego haz clic en el `
 
 :::tip
 
-Cuando uses MUI, primero cambia al modo de emparejamiento Bluetooth antes de emparejar con tu teléfono. De lo contrario, tu teléfono no podrá reconocer tu dispositivo.
+Al usar MUI, primero cambia al modo de emparejamiento Bluetooth antes de emparejar con tu teléfono. De lo contrario, tu teléfono no podrá reconocer tu dispositivo.
 :::
 
 El dispositivo se reiniciará entonces en modo Bluetooth. El código de emparejamiento Bluetooth se mostrará en la pantalla.
@@ -185,13 +185,13 @@ Ve a la página `LoRa Info`, haz clic en `Region`, elige la región y luego haz 
 <TabItem value="9" label="Configurar en el teléfono">
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="App IOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="App Android">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/AndridLorasetting.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -250,7 +250,7 @@ Configura el nombre y la contraseña de la red Wifi. Esto se puede hacer directa
 
 :::tip
 
-La red Wifi conectada debe ser de 2.4G. El dispositivo no puede utilizar redes Wifi de 5G.
+La red Wifi conectada debe ser de 2.4G. El dispositivo no puede usar redes Wifi de 5G.
 
 :::
 
@@ -308,7 +308,7 @@ Puedes ajustar el intervalo de actualización y el intervalo de difusión para o
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-Para IOS, por favor activa `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
+Para IOS, activa `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -317,7 +317,7 @@ Para IOS, por favor activa `Accurate Location`. De lo contrario, el posicionamie
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/SensorConnection.png" alt="pir" width={500} height="auto" /></p>
 
-Puedes añadir sensores al dispositivo mediante la interfaz Grove. Los siguientes sensores han sido verificados como compatibles con la interfaz Grove del dispositivo.
+Puedes añadir sensores al dispositivo mediante la interfaz Grove. Los siguientes sensores se han verificado como compatibles con la interfaz Grove del dispositivo.
 
 <table>
   <tr>
@@ -382,9 +382,9 @@ Puedes añadir sensores al dispositivo mediante la interfaz Grove. Los siguiente
 <TabItem value="13" label="Barra de menús">
 | Método de interacción | Efecto |
 |---|---|
-| Pulsación larga en el icono de inicio | Resincronizado |
-| Pulsación larga en el icono de lista de nodos | Entra en la página de filtro de nodos |
-| Pulsación larga en el icono de ajustes | La pantalla se apaga |
+| Mantener pulsado el icono de inicio | Resincronizado |
+| Mantener pulsado el icono de lista de nodos | Entra en la página de filtro de nodos |
+| Mantener pulsado el icono de ajustes | La pantalla se apaga |
 
 </TabItem>
 
@@ -395,13 +395,13 @@ Puedes añadir sensores al dispositivo mediante la interfaz Grove. Los siguiente
 |---|---|
 | Clic en el icono de Mensaje| Navega a la página de mensajes |
 | Clic en el icono de Nodo | Navega a la página de nodos |
-| Clic en el icono de Reloj| Conmutación Tiempo real/Uptime |
-| Pulsación larga en el icono LoRa| LoRa TX apagado/encendido|
-| Pulsación larga en el icono de Notificación| Notificación habilitada/deshabilitada|
-| Clic en el icono de Notificación| Conmutación Sonido/Banner/Sonido y banner|
-| Pulsación larga en el icono de GPS| GPS encendido/apagado|
-| Pulsación larga en el icono de WiFi| WiFi encendido/apagado|
-| Pulsación larga en el icono MQTT| MQTT encendido/apagado|
+| Clic en el icono de Reloj| Conmutador de tiempo real/tiempo de actividad |
+| Mantener pulsado el icono LoRa| LoRa TX apagado/encendido|
+| Mantener pulsado el icono de Notificación| Notificación habilitada/deshabilitada|
+| Clic en el icono de Notificación| Conmutador de sonido/banner/sonido y banner|
+| Mantener pulsado el icono de GPS| GPS encendido/apagado|
+| Mantener pulsado el icono de WiFi| WiFi encendido/apagado|
+| Mantener pulsado el icono MQTT| MQTT encendido/apagado|
 | Clic en el icono de código QR| Muestra el código QR del dispositivo |
 
 </TabItem>
@@ -410,7 +410,7 @@ Puedes añadir sensores al dispositivo mediante la interfaz Grove. Los siguiente
 | Método de interacción | Efecto |
 |---|---|
 | Clic en un nodo| Muestra información detallada|
-| Pulsación larga en un nodo| Entra en el chat privado|
+| Mantener pulsado un nodo| Entra en el chat privado|
 | Ver la posición de un nodo| Muestra la ubicación del nodo en el mapa|
 
 </TabItem>
@@ -433,7 +433,7 @@ Mantén pulsado un chat para eliminarlo. Elige y haz clic en un chat para entrar
 | Nombre largo de usuario | Cambiar el nombre largo del dispositivo|
 | PIN de pantalla | Establecer contraseña para el arranque del dispositivo |
 | PIN de configuración | Establecer contraseña para cambios de configuración |
-| Región | Configurar la región LoRa|
+| Región | Configurar región LoRa|
 | Modem Preset| Configurar el preset de LoRa |
 | Canal | Editar canal|
 | Rol del dispositivo | Configurar rol |
@@ -443,7 +443,7 @@ Mantén pulsado un chat para eliminarlo. Elige y haz clic en un chat para entrar
 | Tema| Cambia el tema entre fondos oscuros y claros |
 | Calibración de pantalla | Calibrar pantalla|
 | Idioma| Cambiar el idioma mostrado|
-| Restablecimiento de fábrica | La configuración se restaura a los valores predeterminados |
+| Restablecimiento de fábrica | Configuración restaurada a los valores predeterminados |
 | Restablecer NodeDB | Datos de nodos borrados |
 | Borrar historial de chat | Historial de chat borrado |
 | Reiniciar (icono verde) | El dispositivo se reinicia |
@@ -472,7 +472,7 @@ Mantén pulsado un chat para eliminarlo. Elige y haz clic en un chat para entrar
 <TabItem value="21" label="Inicio">
 | Método de interacción | Efecto |
 |---|---|
-| Seleccionar "Sleep Screen" | Apaga la pantalla temporalmente; se activa con la pulsación del botón de usuario |
+| Seleccionar "Sleep Screen" | Apaga la pantalla temporalmente; se activa con el botón de usuario |
 | Seleccionar "Send Position" | Anuncia manualmente la posición del dispositivo a los nodos de la malla (acelera el descubrimiento) |
 
 </TabItem>
@@ -493,7 +493,7 @@ Navega a "Node Action"
 |---|---|
 | Seleccionar "GPS Toggle" | GPS encendido/apagado|
 | Seleccionar "GPS Format" | Cambia el formato de GPS|
-| Seleccionar "Compass Headings" | Alterna entre encabezado Dinámico, Fijo y Congelado para "N" |
+| Seleccionar "Compass Headings" | Alterna entre encabezado dinámico, fijo y congelado para "N" |
 | Seleccionar "Compass Calibrate" | Inicia una rutina de calibración de brújula de 30 segundos |
 </TabItem>
 
@@ -534,7 +534,7 @@ Navega a "Node Action"
 
 ### El dispositivo no puede conectarse a mi Wifi
 
-- Asegúrate de que te estás conectando a una `2.4g Wifi`. El dispositivo no puede emparejarse con Wifi de 5G. Normalmente el punto de acceso del teléfono se puede ajustar a 2.4g en la configuración del teléfono. Así que primero puedes probar el punto de acceso de tu teléfono.
+- Asegúrate de que te estás conectando a una `2.4g Wifi`. El dispositivo no puede emparejarse con Wifi de 5G. Normalmente el punto de acceso del teléfono se puede ajustar a 2.4g en la configuración del teléfono. Así que primero puedes probar con el punto de acceso de tu teléfono.
 
 - Habilita Wifi después de configurar el nombre de Wifi y la contraseña de Wifi.
 
@@ -546,10 +546,10 @@ Wifi está deshabilitado cuando la IP de wifi está vacía y el icono de wifi es
 
 **Descripción**
 
-- Después de encender el dispositivo, se apagará o reiniciará automáticamente después de un rato.
+- Después de encender el dispositivo, se apagará o se reiniciará automáticamente después de un rato.
 - El registro del puerto serie se ejecuta durante un rato y luego se detiene.
 
- Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, en proceso de configuración......
+ Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, en configuración......
 
 **Solución de problemas**
 
@@ -571,7 +571,7 @@ El dispositivo se reiniciará con la configuración predeterminada.
 
 </TabItem>
 
-<TabItem value="9" label="Configurar en el teléfono">
+<TabItem value="9" label="Configure on Phone">
 
 Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
@@ -580,7 +580,7 @@ Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará a
 
 </Tabs>
 
-### Fallo de mensaje directo
+### Error en mensaje directo
 
 #### Restablecer NodeDB
 
@@ -588,7 +588,7 @@ NodeDB es la base de datos local que almacena información sobre los nodos descu
 
 <Tabs>
 
-<TabItem value="7" label="Configurar en MUI">
+<TabItem value="7" label="Configure on MUI">
 
 Ve a la página `Setting`, haz clic en `Configure Reset`, elige `NodedB Reset` y luego haz clic en `OK`.
 
@@ -598,13 +598,13 @@ El dispositivo se reiniciará.
 
 </TabItem>
 
-<TabItem value="9" label="Configurar en el teléfono">
+<TabItem value="9" label="Configure on Phone">
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Entrada de dispositivo en Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Botón Reset NodeDB en Device Config" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -614,13 +614,13 @@ Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device*
 
 Cada nodo enviará periódicamente su propia información de nodo, lo que permite que otros nodos en la malla lo "vean" y lo "reconozcan". Dos nodos necesitan intercambiar su información de nodo entre sí para poder comunicarse entre ellos. Si no puedes enviar o recibir mensajes privados con otro nodo de la lista, puedes pedirles manualmente que intercambien información en la app.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Entrada de dispositivo en Settings" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### Regenerar clave privada
 
 Cada nodo posee un par de claves pública/privada. Para intercambiar un mensaje privado cifrado, el remitente lo cifra con la clave pública del destinatario, y solo la clave privada de ese destinatario puede descifrarlo. Por lo tanto, dos nodos pueden comunicarse de forma privada una vez que conocen la clave pública del otro. Si un nodo sigue fallando en la transmisión de mensajes privados, intenta regenerar su clave privada. Después de la regeneración, elimina ese nodo de las listas de nodos de los otros dispositivos para que puedan reconectarse y obtener su nueva clave pública.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Entrada de dispositivo en Settings" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
 Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
@@ -636,7 +636,13 @@ Después de la regeneración de la clave, otro dispositivo necesita volver a con
 
       Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
 
-## Fuente
+### Mapeo de batería
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
+
+## Recursos
 
 - [Cálculo de consumo de energía](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
 
