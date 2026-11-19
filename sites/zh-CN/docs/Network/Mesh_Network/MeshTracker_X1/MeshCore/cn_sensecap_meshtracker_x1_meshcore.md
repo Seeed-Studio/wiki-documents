@@ -1,5 +1,5 @@
 ---
-description: 开始在 Meshcore 上使用 SenseCAP MeshTracker X1。指导设备安装、固件烧录和设备连接。
+description: 开始使用适用于 Meshcore 的 SenseCAP MeshTracker X1。指导设备安装、固件烧录和设备连接。
 title: 开始使用 MeshCore
 keywords:
   - 追踪器
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 使用 USB 线将设备连接到电脑。
 
 :::warning
-请在数据传输过程中保持 USB 线连接，否则设备可能会损坏。
+在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
 前往 [Meshcore Web Flasher](https://meshcore.io/flasher)。
@@ -71,7 +71,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 使用 USB 线将设备连接到电脑。
 
 :::warning
-请在数据传输过程中保持 USB 线连接，否则设备可能会损坏。
+在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
 前往 [Meshcore Web Flasher](https://meshcore.io/flasher)。
@@ -90,7 +90,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-尝试手动进入 DFU 模式：按住设备按键，然后**快速**通过 USB 线将设备连接到电脑，持续按住按键直到白色 ⚪️ LED 亮起。
+尝试手动进入 DFU 模式：按住设备按键，然后**迅速**通过 USB 线将设备连接到电脑，持续按住按键直到白色 ⚪️ LED 亮起。
 
 :::warning
 要成功进入 DFU 模式，你需要快速完成上述操作。可能需要多次尝试。
@@ -118,7 +118,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Firmwareuf2.png" alt="pir" width={500} height="auto" /></p>
 
-尝试手动进入 DFU 模式：按住设备按键，然后**快速**通过 USB 线将设备连接到电脑，持续按住按键直到白色 ⚪️ LED 亮起。
+尝试手动进入 DFU 模式：按住设备按键，然后**迅速**通过 USB 线将设备连接到电脑，持续按住按键直到白色 ⚪️ LED 亮起。
 
 :::warning
 要成功进入 DFU 模式，你需要快速完成上述操作。可能需要多次尝试。
@@ -144,7 +144,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 
 ### 启动设备
 
-按下按键开机。LED 会亮起，并播放一个上升的提示音。
+按下按键开机。LED 会点亮，并播放一个上升的提示音。
 
 ### 关闭设备
 
@@ -156,7 +156,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 
 ### APP 连接
 
-可从 Google Store 或 Apple Store 下载。或者[点击这里](https://meshcore.io/#download)获取 Meshcore APP。
+从 Google Store 或 Apple Store 下载。或者[点击这里](https://meshcore.io/#download)获取 Meshcore APP。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -165,7 +165,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
 
-输入默认 PIN 码 `123456`，然后点击 `Pair` 以连接设备。
+输入默认 PIN 码 `123456`，然后点击 `Pair` 连接设备。
 
 :::tip
 如果连接失败，请打开手机的蓝牙列表并 `forget` 或 `Unpair` 该设备，然后再尝试重新连接。
@@ -174,7 +174,7 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 
 ### 配置 LoRa
 
-为了开始在 mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始通过 mesh 通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的区域进行设置。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -226,29 +226,29 @@ url: https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/
 
 ## 消息传输
 
-如果你有两台受支持的设备，并且你附近没有太多 MeshCore 用户，可以将两台设备都刷写为 BLE Companion 固件，这样你就可以使用这些设备与附近的朋友和家人进行通信。
+如果你有两台受支持的设备，并且你附近没有太多 MeshCore 用户，可以将两台设备都刷写为 BLE Companion 固件，这样你就可以使用你的设备与附近的朋友和家人进行通信。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/MeshCoreFramework.png" alt="pir" width={800} height="auto" /></p>
 
 ### 广播（Advert）
 
-MeshCore 允许你手动广播你的姓名、位置和公钥，这些信息也会被签名以防止伪造。当你点击广播按钮时，它会通过 LoRa 广播这些数据。MeshCore 将此称为 Advert。有两种广播方式，“zero hop”和“flood”。
+MeshCore 允许你手动广播你的姓名、位置和公钥，这些信息也会被签名以防止伪造。当你点击 advert 按钮时，它会通过 LoRa 广播这些数据。MeshCore 将此称为 Advert。有两种广播方式：“zero hop”和“flood”。
 
 - **Zero hop** 意味着你的广播只会发送给能听到它的设备，仅此而已。
 - **Flooded** 意味着广播发出后，会被所有听到它的中继设备重复转发。
 
-你可以在 APP 上发送广播，也可以直接在设备的广播页面上发送广播。
+你可以在 APP 上发送 advert，也可以直接在设备的 advert 页面上发送。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Advert.png" alt="pir" width={300} height="auto" /></p>
 
 ### 公共消息
 
-在你配置好 LoRa 之后，你可以在主信道中发送消息。同一频段内的所有附近用户都能收到。
+在你配置好 LoRa 之后，你可以在主频道中发送消息。同一频段内的所有附近用户都能听到。
 
 
 ### 私人消息
 
-只有当两台设备都接收到对方的广播后，它们之间才会建立连接。
+只有当两台设备都接收到对方的 advert 时，它们才会建立连接。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -261,16 +261,16 @@ X1 Companion 固件（v1.18.0+）支持按钮多次按压的快捷操作。每�
 
 | 按钮操作 | 功能 | 屏幕反馈 |
 | --- | --- | --- |
-| 单击 | 唤醒 / 刷新显示屏 | — |
-| 双击 | 发送一次 Advert | `Advert sent!` |
-| 三击 | 循环切换告警模式：蜂鸣+震动 → 仅蜂鸣 → 仅震动 → 静音 | `Alerts: ...` |
+| 单击 | 唤醒 / 刷新显示 | — |
+| 双击 | 发送 Advert | `Advert sent!` |
+| 三击 | 循环切换提醒模式：蜂鸣+震动 → 仅蜂鸣 → 仅震动 → 静音 | `Alerts: ...` |
 | 四击 | 切换 GPS 开 / 关 | `GPS: Enabled` / `GPS: Disabled` |
 | 长按 3 秒（连接充电线时） | 强制重置 / 进入 DFU 模式 | — |
 
 :::note
-- 在三击时，新告警模式会通过蜂鸣和/或震动进行确认，因此你无需看屏幕也能切换模式。
-- 按钮按下 4 次或更多次时，始终被视为四击。
-- 关于长按行为（重启和 DFU 模式）的详细信息，请参见 [How to reboot the device](#how-to-reboot-the-device)。
+- 在三击时，新提醒模式会通过蜂鸣和/或震动进行确认，因此你可以在不看屏幕的情况下切换模式。
+- 按钮按 4 次或更多次时，始终被视为四击。
+- 关于长按行为（重启和 DFU 模式）的详细信息，请参阅 [How to reboot the device](#how-to-reboot-the-device)。
 :::
 
 ### 如何查看设备 ID
@@ -293,7 +293,7 @@ MAC 地址的 `后四位` 即为设备 ID
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
-   如果你想退出 DFU 模式，只需按住按钮不放，然后连接充电线，立即松开按钮。
+   如果你想退出 DFU 模式，只需按住按钮不放，然后连接充电线，立即松开按钮即可。
 
  :::
 
@@ -321,7 +321,7 @@ MAC 地址的 `后四位` 即为设备 ID
 
 **现象说明：**
 
-设备会不断重启，串口会反复连接和断开。
+设备会反复重启，串口会反复连接和断开。
 
 **解决方案：**
 
@@ -332,7 +332,7 @@ MAC 地址的 `后四位` 即为设备 ID
 如果白灯常亮，则说明设备已进入 DFU 模式。
 
 :::note
-要成功进入 DFU 模式，你需要快速完成上述操作，可能需要多次尝试。
+要成功进入 DFU 模式，你需要快速完成这一操作，可能需要多次尝试。
 :::
 
 - 步骤 2：擦除 Flash
@@ -350,7 +350,7 @@ MAC 地址的 `后四位` 即为设备 ID
 
 **步骤 1：安装 Adafruit-nrfutil**
 
-对于 Windows 用户，同时按下 "Win" 键和 "r" 键，在弹出的窗口中输入 "cmd"，然后按 "Enter"。这样可以打开命令行。
+对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，再按 "Enter"。这样可以打开命令行。
 
 对于 MAC 用户，同时按下 "Command" 键和 "Space" 键，以打开 Spotlight。然后输入 "termial"，按 "Return"。这样可以打开命令行。
 
@@ -359,7 +359,7 @@ MAC 地址的 `后四位` 即为设备 ID
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-在命令行中检查 Python 和 pip 是否已成功安装。
+在命令行中检查 Python 和 pip 是否安装成功。
 
 ```
 python --version
@@ -371,7 +371,7 @@ python -m pip --version
 
 然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 Python。
 
-这是安装最新版本的推荐方式：
+这是安装最新版本的推荐方法：
 
 ```
 pip3 install --user adafruit-nrfutil
@@ -387,7 +387,7 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-对于 Windows 用户，你可能需要手动添加路径。复制上一步中显示的安装位置，然后按如下方式添加：
+对于 Windows 用户，你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -417,7 +417,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p COMxx -b 11520
 
 `adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
- 部分设备在你输入此命令后会改变端口号。因此如果安装失败，请重新检查端口号。
+ 部分设备在你输入此命令后会改变端口号。因此如果安装失败，请再次检查端口号。
 
 - **其他平台**：
 
@@ -437,7 +437,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 - 将波特率设置为 `1200`。
 
 - 连接设备。
-   当你连接设备时，指示灯会短暂闪烁。重复尝试，直到指示灯常亮，这意味着设备可以回到 DFU 模式，然后[烧录 bootloader](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#bootloader-安装) -> [擦除 flash](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录) -> [烧录固件](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录)。
+   当你连接设备时，指示灯会短暂闪烁。持续尝试，直到指示灯常亮，这意味着设备可以回到 DFU 模式，然后[烧录 bootloader](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#bootloader-安装) -> [擦除 flash](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录) -> [烧录固件](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录)。
 
 **3) 设备无法进入 DFU 模式，且没有串口显示**
 
@@ -458,7 +458,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
 - **排查步骤**
 
- [点击这里](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录)执行一次 flash 擦除。 
+ [点击这里](https://wiki.seeedstudio.com/cn/sensecap_meshtracker_x1_meshcore/#固件烧录)执行 flash 擦除。 
 
 
 ### 信号质量
@@ -467,8 +467,13 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
   - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。 
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的环境中使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
 
+### 电池映射
+
+```bash
+#define OCV_ARRAY 4290, 4118, 4002, 3889, 3798, 3728, 3677, 3643, 3594, 3500, 3100
+```
 
 ## 技术支持与产品讨论
 

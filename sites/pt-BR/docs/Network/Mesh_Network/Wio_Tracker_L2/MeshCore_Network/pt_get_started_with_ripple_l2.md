@@ -1,5 +1,5 @@
 ---
-description: Comece a usar o Ripple UI no Wio Tracker L2 Pro. Saiba como gravar o firmware, configurar redes MeshCore, enviar mensagens, usar mapas e trilhas de GPS e desbloquear recursos premium.
+description: Comece a usar o Ripple UI no Wio Tracker L2 Pro. Saiba como gravar firmware, configurar redes MeshCore, enviar mensagens, usar mapas e trilhas de GPS e desbloquear recursos premium.
 title: Introdução ao Ripple
 keywords:
   - Ripple
@@ -54,7 +54,7 @@ O firmware atualizado usa perfis MeshCore e não oferece mais Ripple na tela New
 
 - **Mensagens autônomas:** Envie mensagens diretas e em grupo pela tela sensível ao toque.
 
-- **Vários perfis de rede:** Mantenha configurações de rádio, identidades, contatos e preferências separados.
+- **Múltiplos perfis de rede:** Mantenha configurações de rádio, identidades, contatos e preferências separados.
 
 - **Tela inicial personalizável:** Adicione atalhos para contatos, canais e configurações.
 
@@ -102,7 +102,7 @@ A opção `Erase device` mostrada acima apaga dados e configurações na memóri
 
 **Etapa 4: Reinicie**
 
-Após a conclusão da gravação, pressione `RST` para iniciar o Ripple UI.
+Depois que a gravação terminar, pressione `RST` para iniciar o Ripple UI.
 
 :::tip
 
@@ -120,7 +120,7 @@ Siga os tutoriais de tela sensível ao toque e botões na primeira inicializaç�
 
 Ripple UI combina entrada por tela sensível ao toque com dois botões de hardware:
 
-- **Tela ligar/desligar (botão superior):** Pressione para ativar a tela ou desligá-la. Desligar a tela não desliga o dispositivo.
+- **Tela ligada/desligada (botão superior):** Pressione para ativar a tela ou desligá-la. Desligar a tela não desliga o dispositivo.
 - **ENTER (botão lateral U/B):** Pressione para confirmar uma seleção, salvar alterações ou enviar uma entrada quando solicitado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_Button_Indication.webp" alt="Botões de hardware do L2 Pro: botão superior para ligar/desligar a tela e botão lateral U/B para ENTER" width={700} height="auto" /></p>
@@ -129,13 +129,13 @@ Ripple UI combina entrada por tela sensível ao toque com dois botões de hardwa
 
 1. Conclua os tutoriais de tela sensível ao toque e do botão Select exibidos na primeira inicialização.
 
-2. Escolha um preset de rádio apropriado para sua região ou insira a frequência, o fator de espalhamento (SF) e outros parâmetros usados pela sua rede local.
+2. Escolha um pré-ajuste de rádio apropriado para sua região ou insira a frequência, o fator de espalhamento (SF) e outros parâmetros usados pela sua rede local.
 
 3. Dê um nome ao perfil usando letras e números, sem espaços.
 
 4. Salve o perfil. Se solicitado, reinicie o dispositivo para aplicar as configurações.
 
-Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo preset é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas frequência e SF.
+Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo pré-ajuste é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas frequência e SF.
 
 ### Defina seu nome
 
@@ -151,7 +151,7 @@ Toque em `G`, `L` ou `M` no lado esquerdo da tela para alternar entre as três t
 
 <Tabs>
 
-<TabItem value="grid" label="G: Grid" default>
+<TabItem value="grid" label="G: Grade" default>
 
 `G` é uma tela inicial personalizável com uma grade de 3 × 4.
 
@@ -159,31 +159,31 @@ Toque em `G`, `L` ou `M` no lado esquerdo da tela para alternar entre as três t
 
 - Pressione e segure um atalho existente para removê-lo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_G.jpg" alt="Tela inicial Grid do Ripple UI" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_G.jpg" alt="Tela inicial em grade do Ripple UI" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="list" label="L: List">
+<TabItem value="list" label="L: Lista">
 
 `L` lista seus perfis de rede, contatos, canais de grupo e `Discover`. Use esta página para adicionar contatos, editar sua Identity e abrir conversas.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Página List do Ripple UI" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Página de lista do Ripple UI" width={500} height="auto" /></p>
 
 A captura de tela mostra nomes usados durante os testes. Sua lista dependerá de seus perfis e contatos.
 
 </TabItem>
 
-<TabItem value="map" label="M: Map">
+<TabItem value="map" label="M: Mapa">
 
 `M` exibe o mapa, posições e qualquer trilha de GPS carregada.
 
-- Arraste a tela para mover o mapa.
+- Arraste a tela para mover.
 
 - Toque em `+` ou `−` para aplicar zoom. Pinçar para aplicar zoom não é suportado.
 
 - Toque no botão de seguir localização para manter o mapa centralizado na sua posição. O botão fica laranja quando ativado e a tela permanece ligada.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_M.jpg" alt="Mapa e controles de zoom do Ripple UI" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_M.jpg" alt="Mapa do Ripple UI e controles de zoom" width={500} height="auto" /></p>
 
 </TabItem>
 
@@ -217,7 +217,7 @@ Abra o menu da tela inicial no canto inferior esquerdo para acessar `Extra`, que
 | Pressione e segure o canto superior esquerdo | Captura uma captura de tela |
 | Meio da barra de título | Abre alternâncias rápidas |
 | Lado direito da barra de título | Abre informações de GPS |
-| Menu inferior esquerdo na tela inicial | Abre as configurações do sistema, incluindo Display, Wi-Fi, Networks e Timezone |
+| Menu inferior esquerdo na tela inicial | Abre configurações do sistema, incluindo Display, Wi-Fi, Networks e Timezone |
 
 ### Fazer uma captura de tela
 
@@ -225,9 +225,9 @@ Abra o menu da tela inicial no canto inferior esquerdo para acessar `Extra`, que
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_screenshot.gif" alt="Pressionando e segurando o canto superior esquerdo para fazer uma captura de tela" width={500} height="auto" /></p>
 
-As capturas de tela são arquivos BMP com nomes de arquivo contendo data e hora, como mostrado abaixo.
+As capturas de tela geradas são arquivos BMP com nomes de arquivo de data e hora, como mostrado abaixo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_bmp_screenshot.png" alt="Capturas de tela BMP com nomes de arquivo contendo data e hora" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_bmp_screenshot.png" alt="Capturas de tela BMP geradas com nomes de arquivo de data e hora" width={800} height="auto" /></p>
 
 ## Envie sua primeira mensagem
 
@@ -295,7 +295,7 @@ Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio 
 
 4. Desloque o mapa até uma área coberta pelos seus blocos e selecione um nível de zoom disponível.
 
-`zoom` é o nível de zoom; `x` e `y` são coordenadas dos blocos. Dispositivos bloqueados renderizam apenas **níveis de zoom 1–9**. Níveis de zoom mais detalhados exigem um código de desbloqueio.
+`zoom` é o nível de zoom; `x` e `y` são coordenadas de blocos. Dispositivos bloqueados renderizam apenas **níveis de zoom 1–9**. Níveis de zoom mais detalhados exigem um código de desbloqueio.
 
 ### Baixar mapas via Wi-Fi (desbloqueio necessário)
 
@@ -313,7 +313,7 @@ Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio 
 
 ### Definir a localização usada em anúncios
 
-| Configuração de localização do anúncio | Localização usada |
+| Configuração de localização de anúncio | Localização usada |
 | --- | --- |
 | `GPS` | A posição obtida pelo GPS do dispositivo |
 | `Manual` | Uma posição fixa selecionada com `Advert Loc` no mapa |
@@ -326,7 +326,7 @@ Você pode testar a troca de mensagens básica antes de comprar um código de de
 
 ### Encontrar o número de série do seu dispositivo
 
-Encontre e abra `Unlock` nos menus do dispositivo. Anote o **Serial number** exibido nessa tela. Use esse número de série completo para sua compra, em vez dos últimos caracteres de um endereço MAC ou de um PIN de Pair Device.
+Encontre e abra `Unlock` nos menus do dispositivo. Anote o **número de série** exibido nessa tela. Use esse número de série completo para sua compra, em vez dos últimos caracteres de um endereço MAC ou de um PIN de Pair Device.
 
 ### Obter um código de desbloqueio
 
@@ -350,7 +350,7 @@ Guarde o código junto com o número de série do dispositivo. Em nosso teste, a
 
 - **Telemetria automática:** Solicita telemetria quando você abre uma conversa com um caminho direto. Mostra localização, direção e distância se o outro nó permitir telemetria de GPS.
 
-- **Room Admin CLI:** Acesse a linha de comando do Room Server com sua senha de administrador.
+- **Room Admin CLI:** Acesse a linha de comando do Room Server com a senha de administrador.
 
 - **Repeater Admin:** Verifique o status do repetidor e gerencie o nó remotamente.
 
@@ -399,6 +399,12 @@ Esta tela mostra o código de retorno RadioLib da inicialização do rádio LoRa
 ### Por que o mapa está em branco
 
 Verifique o formato do cartão SD, os caminhos dos blocos e se existem blocos para a área exibida. Em um dispositivo bloqueado, verifique também se o nível de zoom está entre 1–9. Uma posição de GPS válida não significa que os blocos de mapa foram baixados.
+
+### Mapeamento da bateria
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
 
 ## Recursos
 
