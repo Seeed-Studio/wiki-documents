@@ -690,6 +690,11 @@ After the key regeneration, other devices need to reconnect with the node. So it
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
+### Battery Mapping
+
+```bash
+#define OCV_ARRAY 4290, 4118, 4002, 3889, 3798, 3728, 3677, 3643, 3594, 3500, 3100
+```
 
 ## Tech Support & Product Discussion
 
