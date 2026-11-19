@@ -145,9 +145,20 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <h3>reBot Arm T701 HT</h3>
   </summary>
   <div className="product-body">
-    <div className="learning-steps">
-      <a className="step-card" href="/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Quick Start</b></a>
-      <a className="step-card" href="/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+    <div className="learning-group">
+      <h4>Quick Start &amp; SDK</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Quick Start</b></a>
+        <a className="step-card" href="/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT Control SDK</b></a>
+        <a className="step-card" href="/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>Common Resources</h4>
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">Description and simulation models (URDF / Mesh)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">Hardware documentation and bill of materials (BOM)</a>
+      </div>
     </div>
   </div>
 </details>

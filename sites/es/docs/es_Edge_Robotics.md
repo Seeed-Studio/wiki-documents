@@ -57,7 +57,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Inicio Rápido y SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/es/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Inicio rápido de reBot-RS</b></div></a>
+        <a className="step-card" href="/es/rebot_b601_rs_getting_started/"><span className="step-index">1</span><div><b>Inicio Rápido de reBot-RS</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_lerobot/"><span className="step-index">2</span><div><b>reBot-RS con LeRobot</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-RS con Pinocchio</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_rs_mit_control/"><span className="step-index">4</span><div><b>SDK de motor de reBot-RS</b></div></a>
@@ -87,8 +87,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">Gemelo digital / sistema de control web de reBot-RS</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Código de cinemática y control de Pinocchio</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador seguidor LeRobot (B601)</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperación líder LeRobot (102)</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador seguidor de LeRobot (B601)</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperación líder de LeRobot (102)</a>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Inicio Rápido y SDK</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/es/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Inicio rápido de reBot-DM</b></div></a>
+        <a className="step-card" href="/es/rebot_b601_dm_getting_started/"><span className="step-index">1</span><div><b>Inicio Rápido de reBot-DM</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_dm_lerobot/"><span className="step-index">2</span><div><b>reBot-DM con LeRobot</b></div></a>
         <a className="step-card" href="/es/rebot_arm_b601_dm_pinocchio_meshcat/"><span className="step-index">3</span><div><b>reBot-DM con Pinocchio</b></div></a>
         <a className="step-card" href="/es/sensecraft_robotics/"><span className="step-index">🖥️</span><div><b>VLA sin código: Plataforma de Robótica SenseCraft</b></div></a>
@@ -131,8 +131,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">Gemelo digital / sistema de control web de reBot-DM</a>
         <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Código de cinemática y control de Pinocchio</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador seguidor LeRobot (B601)</a>
-        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperación líder LeRobot (102)</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador seguidor de LeRobot (B601)</a>
+        <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperación líder de LeRobot (102)</a>
       </div>
     </div>
   </div>
@@ -145,9 +145,20 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <h3>Brazo reBot T701 HT</h3>
   </summary>
   <div className="product-body">
-    <div className="learning-steps">
-      <a className="step-card" href="/es/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Inicio rápido</b></a>
-      <a className="step-card" href="/es/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+    <div className="learning-group">
+      <h4>Inicio Rápido y SDK</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/es/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Inicio Rápido</b></a>
+        <a className="step-card" href="/es/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>SDK de Control MIT</b></a>
+        <a className="step-card" href="/es/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>Recursos Comunes</h4>
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">Descripción y modelos de simulación (URDF / Malla)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">Documentación de hardware y lista de materiales (BOM)</a>
+      </div>
     </div>
   </div>
 </details>
@@ -170,10 +181,10 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>Aplicaciones</h4>
       <div className="learning-steps">
         <a className="step-card" href="/es/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 y NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/es/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Entrenamiento de Doble Brazo SO-ARM</b></div></a>
+        <a className="step-card" href="/es/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Entrenamiento de SO-ARM de Doble Brazo</b></div></a>
         <a className="step-card" href="/es/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM con Mano Destreza Amazing Hand</b></div></a>
         <a className="step-card" href="/es/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>Simulación LeIsaac</b></div></a>
-        <a className="step-card" href="/es/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizaje por Refuerzo con Isaac Lab</b></div></a>
+        <a className="step-card" href="/es/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizaje por Refuerzo en Isaac Lab</b></div></a>
         <a className="step-card" href="/es/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 con Isaac Sim</b></div></a>
         <a className="step-card optional" href="/es/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
@@ -188,7 +199,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   </summary>
   <div className="product-body">
     <div className="learning-steps">
-      <a className="step-card" href="/es/hand_amazinghand/"><span className="step-index">1</span><div><b>Inicio Rápido AmazingHand</b></div></a>
+      <a className="step-card" href="/es/hand_amazinghand/"><span className="step-index">1</span><div><b>Inicio Rápido de AmazingHand</b></div></a>
       <a className="step-card" href="/es/soarm_amazinghand_teleop/"><span className="step-index">2</span><div><b>SO-ARM con AmazingHand</b></div></a>
     </div>
   </div>
@@ -203,8 +214,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="reachy-path-grid">
       <div className="mini-track">
         <h4>Inicio Rápido</h4>
-        <a href="/es/reachymini_platforms_reachy_mini_get_started/">Inicio Rápido Reachy Mini (Inalámbrico)</a>
-        <a href="/es/reachymini_platforms_reachy_mini_lite_get_started/">Inicio Rápido Reachy Mini Lite</a>
+        <a href="/es/reachymini_platforms_reachy_mini_get_started/">Inicio Rápido de Reachy Mini (Inalámbrico)</a>
+        <a href="/es/reachymini_platforms_reachy_mini_lite_get_started/">Inicio Rápido de Reachy Mini Lite</a>
       </div>
       <div className="mini-track">
         <h4>Casos de Desarrollo</h4>
@@ -232,11 +243,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="stackforce" className="product-card stackforce product-card--cover">
   <summary className="product-head">
-    <h3>Robot Mini StackForce con Ruedas y Patas</h3>
+    <h3>Robot Mini con Ruedas y Patas StackForce</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
-    <a className="step-card" href="/es/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>Inicio Rápido StackForce Mini</b></div></a>
+    <a className="step-card" href="/es/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>Inicio Rápido de StackForce Mini</b></div></a>
   </div>
   </div>
 </details>
@@ -304,14 +315,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </a>
       <a className="step-card" href="/es/robotics/soarm_sim2real_vla_course/">
         <span className="step-index">🚀</span>
-        <div><b>Curso VLA de Simulación a Realidad</b></div>
+        <div><b>Curso VLA de Sim-a-Real</b></div>
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">SO101</span>
         </span>
       </a>
       <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer">
         <span className="step-index">📘</span>
-        <div><b>De Simulación a Realidad con NVIDIA Isaac</b></div>
+        <div><b>Sim-a-Real con NVIDIA Isaac</b></div>
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">reBot-rs</span>
         </span>
@@ -333,21 +344,21 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="resource-columns">
       <div>
         <h4>Motores de Articulación reBot</h4>
-        <a href="/es/damiao_series/">Serie Damiao DM43</a>
-        <a href="/es/robstride_control/">Control RobStride</a>
+        <a href="/es/damiao_series/">Damiao DM43 Serie</a>
+        <a href="/es/robstride_control/">RobStride Control</a>
       </div>
       <div>
         <h4>Otros Motores de Articulación</h4>
-        <a href="/es/myactuator_series/">Serie MyActuator X</a>
-        <a href="/es/hightorque_series/">Serie HighTorque / SDK</a>
-        <a href="/es/hightorque_getting_started/">Inicio Rápido HighTorque</a>
+        <a href="/es/myactuator_series/">MyActuator X Serie</a>
+        <a href="/es/hightorque_series/">HighTorque Serie / SDK</a>
+        <a href="/es/hightorque_getting_started/">Introducción a HighTorque</a>
         <a href="/es/hightorque_control/">Control de Motor HighTorque</a>
-        <a href="/es/stackforce_series/">Serie Stackforce</a>
+        <a href="/es/stackforce_series/">Stackforce Serie</a>
       </div>
       <div>
         <h4>Servos</h4>
         <a href="/es/feetech_servo/">Servo Feetech STS3215</a>
-        <a href="/es/fashionstar_servo/">Serie Fashionstar</a>
+        <a href="/es/fashionstar_servo/">Fashionstar Serie</a>
       </div>
     </div>
   </section>
@@ -361,7 +372,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <p>Para agarre visual, SLAM, interacción por voz y percepción del estado del robot.</p>
     </div>
     <div className="resource-columns">
-      <div><h4>LiDAR</h4><a href="/es/robosense_lidar/">RoboSense</a><a href="/es/mid360/">Livox MID360</a><a href="/es/a_loam/">Algoritmo A-LOAM</a><a href="/es/slamtec/">Serie Slamtec</a></div>
+      <div><h4>LiDAR</h4><a href="/es/robosense_lidar/">RoboSense</a><a href="/es/mid360/">Livox MID360</a><a href="/es/a_loam/">Algoritmo A-LOAM</a><a href="/es/slamtec/">Slamtec Serie</a></div>
       <div><h4>Cámaras</h4><a href="/es/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/es/orbbec_gemini_335lg/">Cámara de Profundidad Gemini 335Lg</a><a href="/es/orbbec_gemini336">Cámara de Profundidad Gemini 336</a><a href="/es/sensing_gmsl_cameras">Cámara SENSING GMSL2</a><a href="/es/ac1">RoboSense AC1</a><a href="/es/orbbec_depth_camera_on_ros/">Orbbec y ROS</a><a href="/es/orb_slam3_orbbec_gemini2/">ORB-SLAM3 y Gemini2</a><a href="/es/csi_camera_on_ros/">Cámara CSI en Jetson</a><a href="/es/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
       <div><h4>Voz</h4><a href="/es/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/es/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a></div>
       <div><h4>IMU</h4><a href="/es/hexfellow_y200/">HEXFELLOW Y200</a><a href="/es/wheeltec_imu/">WHEELTEC IMU</a></div>

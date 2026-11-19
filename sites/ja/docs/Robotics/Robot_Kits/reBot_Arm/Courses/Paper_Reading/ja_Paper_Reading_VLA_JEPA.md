@@ -17,6 +17,7 @@ translation:
   skip: [zh-CN]
 last_update:
   date: 2026-11-04
+  author: liujunjie
 createdAt: '2026-11-03'
 updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/ja/robotics/paper_reading_vla_jepa/

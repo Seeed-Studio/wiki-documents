@@ -6,14 +6,18 @@ keywords:
   - reBot
   - T701 HT
   - Pinocchio
-  - Kinematics
-  - Gravity Compensation
+  - Cinemática
+  - Compensación de gravedad
 slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm T701 HT con Pinocchio
 
@@ -23,18 +27,25 @@ import '/src/css/rebot-wiki-style.css';
   <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
 </div>
 
-El SDK del T701-HT usa Pinocchio para cargar el modelo URDF y calcular las poses del efector final y los pares articulares debidos a la gravedad. Usa los ejemplos de cinemática directa (FK) y cinemática inversa (IK) para comprobar la retroalimentación articular del robot antes de ejecutar los ejemplos de compensación de gravedad, trayectoria cartesiana y control por teclado.
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-Arm-T701-SDK"
+  fallbackCount={0}
+  ariaLabel="Star T701-HT SDK on GitHub"
+/>
+
+El SDK T701-HT usa Pinocchio para cargar el modelo URDF y calcular las poses del efector final y los pares articulares debidos a la gravedad. Usa los ejemplos de cinemática directa (FK) e inversa (IK) para comprobar la retroalimentación articular del robot antes de ejecutar los ejemplos de compensación de gravedad, trayectoria cartesiana y control por teclado.
 
 <section className="section-card">
 
 ## Preparar el robot
 
-Instala el SDK y sus dependencias usando las [instrucciones de instalación de inicio rápido del T701 HT](/es/rebot_t701_ht_getting_started/#instalar-el-sdk). Luego sigue los pasos restantes del Inicio Rápido para comprobar el mapeo del puerto serie, leer la retroalimentación de las articulaciones y del efector final, y verificar las posiciones cero.
+Instala el SDK y sus dependencias usando las [instrucciones de instalación de inicio rápido de T701 HT](https://wiki.seeedstudio.com/es/rebot_t701_ht_getting_started/#instalar-el-sdk). Luego sigue los pasos restantes del Inicio Rápido para comprobar el mapeo del puerto serie, leer la retroalimentación de las articulaciones y la pinza, y verificar las posiciones cero.
 
 :::warning[Antes de ejecutar los ejemplos en el robot]
 
-- Asegúrate de que los brazos estén firmemente montados y retira cualquier carga. Usa un solo brazo en la primera ejecución.
-- Los brazos pueden empezar a moverse tan pronto como los selecciones en un ejemplo de movimiento. Despeja todo el rango de movimiento, incluido el espacio por encima y la trayectoria de regreso a cero. Permanece junto al robot durante toda la ejecución y mantente alejado de los puntos de pellizco en las articulaciones y los efectores finales.
+- Asegúrate de que los brazos estén firmemente montados y retira cualquier carga. Usa un solo brazo para la primera ejecución.
+- Los brazos pueden empezar a moverse tan pronto como los selecciones en un ejemplo de movimiento. Despeja todo el rango de movimiento, incluido el espacio por encima y la trayectoria de regreso a cero. Permanece junto al robot durante toda la ejecución y mantente alejado de los puntos de pellizco en las articulaciones y las pinzas.
 - Sujeta los brazos antes de iniciar o detener un ejemplo de compensación de gravedad para que no caigan cuando se retire el par de compensación.
 - En los ejemplos que regresan automáticamente a cero, la primera pulsación de `Ctrl+C` inicia el retorno. Pulsa `Ctrl+C` de nuevo durante el retorno para interrumpir el movimiento y enviar un comando de parada.
 
@@ -55,7 +66,7 @@ Cuando se te solicite después de lanzar un ejemplo, introduce `1` para el brazo
 
 ## Verificar la cinemática directa e inversa
 
-La cinemática directa calcula la pose del efector final a partir de los ángulos articulares actuales. La comprobación de cinemática inversa resuelve los ángulos articulares que producen esa pose y los compara con las lecturas actuales. Ambos ejemplos usan solo la retroalimentación articular para sus cálculos y envían un comando de parada de motor cuando sales con `Ctrl+C`.
+La cinemática directa calcula la pose del efector final a partir de los ángulos articulares actuales. La comprobación de cinemática inversa resuelve los ángulos articulares que producen esa pose y los compara con las lecturas actuales. Ambos ejemplos usan solo la retroalimentación articular para sus cálculos y envían un comando de parada del motor cuando sales con `Ctrl+C`.
 
 | Ejemplo | Comando | Salida esperada |
 | --- | --- | --- |
@@ -68,14 +79,14 @@ La cinemática directa calcula la pose del efector final a partir de los ángulo
 
 ## Compensación de gravedad e impedancia articular
 
-`G(q)` es el par de gravedad que el modelo calcula a partir de los ángulos articulares `q`. La compensación de gravedad facilita mover los brazos a mano. Los ejemplos de impedancia articular mueven activamente los brazos a una postura predefinida y la mantienen.
+`G(q)` es el par de gravedad que el modelo calcula a partir de los ángulos articulares `q`. La compensación de gravedad facilita mover los brazos a mano. Los ejemplos de impedancia articular mueven activamente los brazos a una postura preestablecida y la mantienen.
 
 | Ejemplo | Comando | Comportamiento esperado |
 | --- | --- | --- |
 | Compensación de gravedad | `python t701_ht_gravity_compensation.py` | Aplica `0.8 × G(q)` sujeto a los límites de par e imprime el par de compensación. |
 | Compensación de gravedad con salida de FK | `python t701_ht_gravity_compensation_with_fk.py` | Aplica `G(q)` sujeto a los límites de par e imprime los ángulos articulares, el par de compensación y la pose del efector final. |
-| Impedancia articular con avance de gravedad | `python t701_ht_joint_impedance_with_gravity.py` | Se mueve y mantiene una postura articular predefinida, añade compensación de gravedad e imprime el par total. |
-| Impedancia articular con avance de gravedad y fricción | `python t701_ht_joint_impedance_with_gravity_friction.py` | Se mueve y mantiene una postura articular predefinida, añade compensación de gravedad y fricción, e imprime el par total. |
+| Impedancia articular con avance de gravedad | `python t701_ht_joint_impedance_with_gravity.py` | Se mueve y mantiene una postura articular preestablecida, añade compensación de gravedad e imprime el par total. |
+| Impedancia articular con avance de gravedad y fricción | `python t701_ht_joint_impedance_with_gravity_friction.py` | Se mueve y mantiene una postura articular preestablecida, añade compensación de gravedad y fricción, e imprime el par total. |
 
 Cuando pulses `Ctrl+C`, ambos ejemplos de compensación de gravedad detienen los motores directamente. Ambos ejemplos de impedancia articular regresan a cero antes de detenerse.
 
@@ -100,7 +111,7 @@ Ambos ejemplos MoveL comienzan moviéndose a la pose VR inicial. Cada trayectori
 
 ## Control por teclado
 
-Ejecuta estos ejemplos en una terminal local interactiva o en una sesión SSH. Después de seleccionar los brazos, se mueven automáticamente a la pose VR inicial antes de aceptar la entrada por teclado.
+Ejecuta estos ejemplos en una terminal local interactiva o sesión SSH. Después de seleccionar los brazos, se mueven automáticamente a la pose VR inicial antes de aceptar la entrada del teclado.
 
 | Ejemplo | Comando | Comportamiento esperado |
 | --- | --- | --- |
@@ -117,7 +128,7 @@ Ejecuta estos ejemplos en una terminal local interactiva o en una sesión SSH. D
 
 :::warning[Alcance de la predicción de colisión]
 
-Una vez que los brazos alcanzan la pose VR inicial, el ejemplo de velocidad del efector final con predicción de colisión comprueba colisiones y violaciones de límites articulares durante los siguientes 0.20 segundos. Las comprobaciones de colisión usan las mallas STL en `T701-HT_URDF/meshes/` e incluyen colisiones entre los brazos en modo de doble brazo. Deja espacio libre durante el arranque y el retorno a cero, y permite espacio adicional para los efectores finales y la distancia real de parada.
+Una vez que los brazos alcanzan la pose VR inicial, el ejemplo de velocidad del efector final con predicción de colisión comprueba colisiones y violaciones de límites articulares durante los siguientes 0,20 segundos. Las comprobaciones de colisión usan las mallas STL en `T701-HT_URDF/meshes/` e incluyen colisiones entre los brazos en modo de doble brazo. Deja holgura durante el arranque y el retorno a cero, y permite espacio adicional para las pinzas y la distancia real de parada.
 
 :::
 
