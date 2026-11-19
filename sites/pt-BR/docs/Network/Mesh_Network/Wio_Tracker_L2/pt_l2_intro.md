@@ -197,7 +197,7 @@ Descreva sua ideia em poucas palavras, e o assistente de codificação com IA Co
 
 **Consumo de energia**
 
-Para dados detalhados de consumo de energia e estimativa de vida útil da bateria sob diferentes configurações (modo de tela, faixa de frequência LoRa e modem preset, uso de GPS, etc.), consulte a [Tabela de Consumo de Energia do Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
+Para dados detalhados de consumo de energia e estimativa de vida útil da bateria sob diferentes configurações (modo de tela, faixa de frequência LoRa e modem preset, uso de GPS, etc.), consulte a [Tabela de Consumo de Energia do Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx).
 
 ## Lista de Pinos
 
