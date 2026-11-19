@@ -223,8 +223,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60FDA2 传感器收�
 2. **创建新配置**：点击设备以打开其配置。在这里，您可以调整传感器的灵敏度、报告间隔和输出格式等设置。ESPHome 使用 YAML 配置格式，这种格式用户友好，允许您定义各种参数。您可以使用以下模板 YAML 文件作为配置的起点，该文件专为 MR60FDA2 传感器设计：
 
     ```yaml showLineNumbers title=example/mr60fda2.yaml
-    # template from https://github.com/limengdu/MR60FDA2_ESPHome_external_components/blob/main/example/mr60fda2.yaml
-    
+    # template from https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-mr60fda2-kit
     substitutions:
       name: "seeedstudio-mr60fda2-kit"
       friendly_name: "Seeed Studio MR60FDA2 Kit"
@@ -235,9 +234,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60FDA2 传感器收�
       name_add_mac_suffix: true
       project:
         name: "seeedstudio.mr60fda2_kit"
-        version: "1.0"
-      platformio_options:
-        board_upload.maximum_size: 4194304
+        version: "2.1"
       min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
 
     esp32:
@@ -246,24 +243,22 @@ Home Assistant 强大的自动化功能允许您基于从 MR60FDA2 传感器收�
       flash_size: 4MB # upload.flash_size
       framework:
         type: esp-idf
-        platform_version: 6.5.0 # Need at least 6.4 for ESP32-C6
-
-        # Tasmota's release of 5.1.3 works, first-party release does not LOL
-        version: 5.1.3
-        source: https://github.com/tasmota/esp-idf/releases/download/v5.1.3.240325/esp-idf-v5.1.3.zip
-
-        # Fix flash size by ensuring IDF flash size is also set (was defaulting to 2MB?!?)
-        # See https://github.com/esphome/issues/issues/5404
         sdkconfig_options:
-          CONFIG_ESPTOOLPY_FLASHSIZE_4MB: y
+          CONFIG_FREERTOS_UNICORE: y
+          CONFIG_FREERTOS_HZ: '1000'
+          CONFIG_PM_USE_RTC_TIMER_REF: y
+          CONFIG_XTAL_FREQ_40: y
+          CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ: '80000000'
+          CONFIG_PM_DFS_INIT_AUTO: n
+          CONFIG_FREERTOS_USE_TICKLESS_IDLE: y
+          CONFIG_PM_ENABLE: y
+          CONFIG_PM_SLP_IRAM_OPT: y
+          CONFIG_PM_RTOS_IDLE_OPT: y
+          CONFIG_ESP_WIFI_SLP_IRAM_OPT: y
+          CONFIG_PM_POWER_DOWN_CPU_IN_LIGHT_SLEEP: y
+          CONFIG_PM_PROFILING: y
 
     external_components:
-      - source:
-          type: git
-          url: https://github.com/ssieb/esphome
-          ref: adc
-        components: [ adc ]
-        refresh: 1min
       - source:
           type: git
           url: https://github.com/limengdu/MR60FDA2_ESPHome_external_components
@@ -301,8 +296,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60FDA2 传感器收�
         name: "Seeed MR60FDA2 RGB Light"
         pin: GPIO1
         num_leds: 1
-        rmt_channel: 0
-        rgb_order: GRB
+        channel_colors: GRB
         chipset: ws2812
 
     i2c:
@@ -365,7 +359,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60FDA2 传感器收�
 
 - [ESPHome — ESPHome](https://esphome.io/)
 - [Installation - Home Assistant](https://www.home-assistant.io/installation/)
-- [limengdu/MR60FDA2_ESPHome_external_components](https://limengdu.github.io/MR60FDA2_ESPHome_external_components)
+- [MR60FDA2 ESPHome 项目源码](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-mr60fda2-kit)
 
 ## 技术支持与产品讨论
 

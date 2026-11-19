@@ -211,12 +211,15 @@ source `/opt/ros/humble/setup.bash`.
 
 ### Step 3. Clone the Code Repository
 
-Use the Seeed-Projects official repository by default:
+This tutorial uses `~/rebotarm_ros2` as the workspace directory and the official Seeed-Projects repository:
 
 ```bash
+cd ~
 git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm_ros2
-cd rebotarm_ros2
+cd ~/rebotarm_ros2
 ```
+
+If you cloned into another directory, replace every `~/rebotarm_ros2` below with its absolute path. Relative paths such as `third_party`, `src`, and `install` are relative to the workspace root.
 
 ### Step 4. Install motorbridge
 
@@ -229,13 +232,19 @@ python3 -m pip install --user --break-system-packages --index-url https://pypi.o
 ### Step 5. Get the Low-level SDK
 
 ```bash
+cd ~/rebotarm_ros2
 mkdir -p third_party
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
 
 ### Step 6. Build the Workspace
 
+:::note Code version
+The status heartbeat, gravity-compensation exit detection, and rectangle trace described here correspond to [ROS2 controller PR #7](https://github.com/Seeed-Projects/reBotArmController_ROS2/pull/7). Before using these behaviors, make sure your checkout includes those changes, then rebuild and restart the control node.
+:::
+
 ```bash
+cd ~/rebotarm_ros2
 source /opt/ros/jazzy/setup.bash
 colcon build --symlink-install
 source install/setup.bash
@@ -265,6 +274,8 @@ Before using the robot, note the following: **The arm controller has a high degr
 
 ### Start the Full System
 
+In each new terminal, enter the workspace and source both ROS2 and the workspace environment. Commands below use `/opt/ros/jazzy/setup.bash`; for ROS2 Humble, use `/opt/ros/humble/setup.bash` instead.
+
 The full bringup launches:
 
 - `reBotArmController` control node
@@ -272,16 +283,18 @@ The full bringup launches:
 - Optional RViz
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0  #Do not open the RViz visualization interface when starting communication
+ros2 launch rebotarm_bringup bringup.launch.py model:=dm channel:=/dev/ttyACM0  #Do not open the RViz visualization interface when starting communication
 ```
 
 :::tip
-Every time you open a new terminal, you need to run the following two commands first
+Every time you open a new terminal, you need to run the following commands first
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ```
 :::
@@ -289,13 +302,13 @@ source install/setup.bash
 If your serial port is not `/dev/ttyACM0`, replace it with the actual device name:
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
+ros2 launch rebotarm_bringup bringup.launch.py model:=dm channel:=/dev/ttyACM1
 ```
 
 ### Start RViz Visualization
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true   #Open the RViz visualization interface when starting communication
+ros2 launch rebotarm_bringup bringup.launch.py model:=dm channel:=/dev/ttyACM0 use_rviz:=true   #Open the RViz visualization interface when starting communication
 ```
 
 If the model appears too small in RViz, adjust the view from the `Views` panel on the left:
@@ -310,7 +323,7 @@ If the model appears too small in RViz, adjust the view from the `Views` panel o
 If URDF and RViz are not needed:
 
 ```bash
-ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup driver.launch.py model:=dm channel:=/dev/ttyACM0
 ```
 
 You can also run the node directly:
@@ -342,7 +355,7 @@ Therefore, all topics, services, and actions are prefixed with `/rebotarm`, for 
 If you need multiple robot arms or want to run alongside other ROS2 systems, you can change the namespace at launch time:
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm
+ros2 launch rebotarm_bringup bringup.launch.py model:=dm arm_namespace:=left_arm
 ```
 
 In this case, `/rebotarm/joint_states` becomes `/left_arm/joint_states`.
@@ -364,6 +377,8 @@ Examples:
 ros2 topic echo /rebotarm/joint_states --once
 ros2 topic echo /rebotarm/arm_status --once
 ```
+
+`--once` exits after receiving one message. The control node publishes `arm_status` every second and on startup or state changes, so no extra QoS options are needed. After rebuilding changed source, restart the control node. If no output arrives, press `Ctrl+C` to stop the check and confirm that the control node in terminal A is running.
 
 ### Services
 
@@ -389,10 +404,36 @@ ros2 topic echo /rebotarm/arm_status --once
 
 ## Basic Control Examples
 
-### 1. Enable the Robot Arm
+### 1. Start the Control Node and Check Its State
+
+**Terminal A: start the control node and keep it running.** It handles topic, service, and action requests continuously. If `bringup.launch.py` or `driver.launch.py` is already running from Quick Start, keep that terminal open; do not start a second driver for the same arm.
 
 ```bash
-ros2 service call /rebotarm/enable std_srvs/srv/Trigger
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 launch rebotarm_bringup driver.launch.py model:=dm channel:=/dev/ttyACM0
+```
+
+After `reBotArmController started` appears, keep terminal A running and use another terminal for subsequent commands.
+
+**Terminal B: load the environment and check that state messages arrive.**
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 topic echo /rebotarm/joint_states --once
+ros2 topic echo /rebotarm/arm_status --once
+```
+
+Each `--once` command exits after one message. Continue with steps 2–5 in terminal B. To monitor continuously, load the same environment in an additional terminal and run `ros2 topic echo /rebotarm/joint_states`. A continuous topic listener is not required to send commands; the driver in terminal A must remain running.
+
+The control node automatically enables the arm and starts its control loop after connecting. Normally, `enabled` and `control_loop_active` in `arm_status` are both `true`, so no manual `/rebotarm/enable` call is needed. If you previously disabled the arm, first confirm that no trajectory, homing, or gravity-compensation task is active, then re-enable it:
+
+```bash
+# Only needed to resume control after the arm was disabled
+ros2 service call /rebotarm/enable std_srvs/srv/Trigger "{}"
 ```
 
 ### 2. Move to an End-effector Pose
@@ -420,13 +461,15 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 
 ## Demo Examples
 
-All examples assume that `reBotArmController` is already running:
+Keep the control node in terminal A running and use terminal B for the examples below. Do not repeat the launch command when a driver is already running. In each new terminal, load the environment first:
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
+
+`MoveTo` and `MoveToPose` can run directly after the control node starts. `GravityCompensation` and `GripperControl` call `/rebotarm/enable` internally; do not manually enable the arm before starting them. Run examples one at a time, waiting for each to finish before starting another.
 
 ### Joint Motion Example
 
@@ -456,18 +499,13 @@ ros2 run rebotarmcontroller MoveToPose -- --x 0.30 --y 0.0 --z 0.30 --qw 1.0 --d
 ros2 run rebotarmcontroller GravityCompensation
 ```
 
-The script first calls `/rebotarm/enable`, then starts gravity compensation. When you press `Ctrl+C`, the script calls the following services in order:
+The script first calls `/rebotarm/enable`, then starts gravity compensation. On `Ctrl+C`, it calls `/rebotarm/safe_home` followed by `/rebotarm/disable`. `safe_home` handles leaving gravity compensation before moving to the safe home position.
 
-1. `/rebotarm/gravity_compensation/stop`
-2. `/rebotarm/safe_home`
-3. `/rebotarm/disable`
+If the control node in terminal A closes, the gravity-compensation program in terminal B also exits automatically. It also exits if the status heartbeat is missing for about 3 seconds, without sending duplicate homing or disable requests. When RS is already in its default MIT mode, entering gravity compensation preserves the enabled state. DM retains its existing mode-switch procedure when changing from position/velocity mode to MIT.
 
-This stops gravity compensation first, then moves the arm back to the safe home position and disables it.
-
-You can also call the services manually:
+Alternatively, call the services manually; do not run this sequence alongside the script. A normally started control node does not need another enable request. If it was disabled, follow Basic Control Examples to re-enable it first.
 
 ```bash
-ros2 service call /rebotarm/enable std_srvs/srv/Trigger
 ros2 service call /rebotarm/gravity_compensation/start std_srvs/srv/Trigger
 ros2 service call /rebotarm/gravity_compensation/stop std_srvs/srv/Trigger
 ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger
@@ -479,6 +517,8 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 ```bash
 ros2 run rebotarmcontroller GripperControl
 ```
+
+On exit, the script closes the gripper and calls `/rebotarm/disable`. Re-enable the arm before sending further manual gripper commands. Running this script again enables the arm internally.
 
 After launch, enter:
 
@@ -569,7 +609,8 @@ sudo apt install -y \
 The MoveIt config and demos are included in this workspace. After installing dependencies, rebuild the workspace:
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 colcon build --symlink-install
 source install/setup.bash
 ```
@@ -597,9 +638,10 @@ MoveIt planning can be used through the RViz GUI or through ROS nodes, in both s
 MoveIt uses the ros2_control virtual hardware interface for RViz simulation:
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch rebotarm_moveit_config demo.launch.py
+ros2 launch rebotarm_moveit_config demo.launch.py model:=dm
 ```
 
 By default this starts:
@@ -617,7 +659,7 @@ RViz opens automatically and loads the robot URDF model. You can control motion 
 To run the MoveIt environment without RViz:
 
 ```bash
-ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
+ros2 launch rebotarm_moveit_config demo.launch.py model:=dm use_rviz:=false
 ```
 
 #### Use MoveIt with reBotArm hardware
@@ -625,31 +667,73 @@ ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
 For the real robot, first start the controller with the hardware interface instead of the virtual controller, then start the hardware MoveIt environment:
 
 ```bash
-ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
+ros2 launch rebotarm_bringup driver.launch.py model:=dm channel:=/dev/ttyACM0
 ```
 
 In another terminal:
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch rebotarm_moveit_config hardware.launch.py
+ros2 launch rebotarm_moveit_config hardware.launch.py model:=dm
 ```
 
 To repeat: before running any demo on real hardware, make sure the workspace is clear of people and obstacles, verify the planned path in RViz, and be ready to stop the controller at any time.
 
-### Run the draw-square demo
+#### Set a Goal and Execute in RViz
 
-Start the MoveIt environment first, then run in another terminal:
+1. In `MotionPlanning` → `Planning`, set `Start State` to `<current>` to plan from current joint feedback. If it already shows `<current>`, select `home`, then switch back to `<current>` and wait for the state to update.
+2. Set `Goal State` to `home`, then open `Joints` to adjust the target. If `home` is already selected, choose another option and select `home` again. **Confirm that the table heading says `Group joints of goal state` before editing.** If it says `Group joints of start state`, you are editing the start; return to `Planning` and select `Goal State` again.
+3. For an initial simulation check, set only goal `joint1` to about `10°` and leave the other joints at zero. Rotational joint values in the `Joints` editor use degrees; ROS joint states and trajectories use radians.
+4. Click `Plan`, inspect the preview, then click `Execute`. If the arm state changes after planning, plan again from the current state.
+
+In the ROS2 Humble RViz plugin, `Joints` edits whichever start or goal state was most recently updated. After setting `Start State` or finishing execution, confirm `Group joints of goal state` before editing again.
+
+The cyan sphere and red, green, and blue rings are end-effector interaction controls for manual planning. In the lower-left `Displays` panel, expand `MotionPlanning` → `Planning Request`:
+
+- **Drag the end effector manually:** disable `Query Start State` and enable `Query Goal State` to edit the goal.
+- **Run rectangle or pick-place scripts:** disable both `Query Start State` and `Query Goal State` to hide the sphere and rings. Enable `Query Goal State` again to resume manual dragging.
+- **Keep the robot and trace visible:** keep `PlanningScene` and `RectangleTrace` enabled. Set the `RectangleTrace` topic to `/draw_square/markers`. If an older RViz window has no trace display, choose `Add` → `By display type` → `MarkerArray` and set its `Topic` to `/draw_square/markers`, or restart MoveIt to load the updated RViz configuration.
+
+If execution reports `Invalid Trajectory: start point deviates from current robot state more than 0.05`, followed by `failed or timeout reached`, the trajectory start does not match current joint feedback. In this error, `expected` is the trajectory start and `current` is the feedback, rather than the final goal. Reset the start, confirm you are editing the goal, and replan. Increasing execution timeouts or relaxing the start tolerance does not fix this mismatch.
+
+Use `demo.launch.py` for simulation, or the hardware driver plus `hardware.launch.py` for the real arm. Do not run both MoveIt environments together. To inspect joint-state publishers, run:
 
 ```bash
-cd your/path/to/rebotarm_ros2
-source install/setup.bash
-ros2 launch rebotarm_moveit_demos draw_square.launch.py
+ros2 topic info /joint_states --verbose
+ros2 topic info /rebotarm/joint_states --verbose
 ```
 
-`draw_square` moves `gripper_tcp` through the four corners of a coplanar rectangle.
-Default parameters:
+### Run the Draw-square Demo
+
+This example uses **mock simulation**: a simulated `ros2_control` hardware interface displays the robot and its motion in RViz without simulating physical contact. The demo connects to the running MoveIt environment. `model:=dm` selects the robot model; it does not select simulation or real hardware.
+
+**1. Terminal A: start simulation and keep it running.** If this simulation is already running, do not launch it again:
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 launch rebotarm_moveit_config demo.launch.py model:=dm
+```
+
+For ROS2 Humble, replace `jazzy` with `humble` in these and subsequent commands. The demo drives the real arm only when you started the hardware driver and `hardware.launch.py` as described above. Do not run both environments together.
+
+**2. Terminal B: run the rectangle demo.** After changing demo code, run `colcon build --symlink-install --packages-select rebotarm_moveit_demos rebotarm_moveit_config` from the workspace and source the environment again. You do not need to click `Plan` or `Execute` in RViz:
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 launch rebotarm_moveit_demos draw_square.launch.py model:=dm
+```
+
+`draw_square` first closes the gripper. After confirming success, it resets the arm, moves through the four corners of a coplanar rectangle, and returns to the first corner. If the gripper interface is unavailable or closing fails, the demo stops.
+
+In RViz, **the thin cyan line is the reference rectangle; the yellow line is the actual `gripper_tcp` motion sampled from TF**. Recording starts after the first corner is reached, excluding the reset and approach motions. Running the demo again clears the previous trace. The demo uses joint-space planning between corners, so the actual motion is not guaranteed to follow the four straight reference edges.
+
+Default parameters are in:
 
 ```text
 src/rebotarm_moveit_demos/config/draw_square.yaml
@@ -660,22 +744,27 @@ Common parameters:
 | Parameter | Description |
 |---|---|
 | `start_point` | Joint reset position before the demo starts |
+| `closed_gripper_position` | Simulated single-side gripper joint position when closed, default `0.0` |
+| `hardware_closed_gripper_position` | Hardware gripper motor position when closed, default `0.0`; verify hardware limits before use |
 | `rectangle_center` | Rectangle center in `base_link` |
 | `rectangle_width` / `rectangle_height` | Rectangle dimensions in meters |
 | `tcp_rpy` | TCP orientation, defaulting to a downward-facing gripper |
 | `tcp_yaw_offsets` | Alternative IK yaw values used to avoid large joint6 wraps |
 
-### Run the pick-place demo
+### Run the Pick-place Demo
 
-Start the MoveIt environment first, then run in another terminal:
+Keep the mock simulation in terminal A running. After the rectangle demo finishes, run the following in terminal B. Keep both `Query Goal State` and `Query Start State` disabled in RViz; do not click `Plan` or `Execute`.
+
+If you started the hardware driver and `hardware.launch.py` instead, the same command drives the real arm. The pick-place demo does not start or switch between simulation and hardware environments:
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch rebotarm_moveit_demos pick_place.launch.py
+ros2 launch rebotarm_moveit_demos pick_place.launch.py model:=dm
 ```
 
-Default parameters:
+Default parameters are in:
 
 ```text
 src/rebotarm_moveit_demos/config/pick_place.yaml
@@ -693,6 +782,10 @@ Common parameters:
 | `open_gripper_position` / `closed_gripper_position` | Simulated single-side gripper joint open/close positions |
 | `hardware_open_gripper_position` / `hardware_closed_gripper_position` | Hardware gripper motor open/close positions |
 | `grasp_gripper_to_object_width` | Compute the grasp position from object width |
+
+In mock simulation, `pick_place` adds a virtual object to the planning scene. Scene attachment and detachment make the object follow the gripper; this does not simulate physical contact or grasping force.
+
+`pick_place` opens the gripper, moves to the pick pose, closes the gripper, moves to the place pose, and releases the object. Simulated gripper joint positions and real hardware gripper motor positions are different parameters. Before running on real hardware, confirm the gripper open/close direction and limits.
 
 ### MoveIt configuration files
 
@@ -721,7 +814,7 @@ ls /dev/ttyACM*
 Then specify it with `channel`:
 
 ```bash
-ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
+ros2 launch rebotarm_bringup bringup.launch.py model:=dm channel:=/dev/ttyACM1
 ```
 
 ### 2. `Device or resource busy` appears at startup

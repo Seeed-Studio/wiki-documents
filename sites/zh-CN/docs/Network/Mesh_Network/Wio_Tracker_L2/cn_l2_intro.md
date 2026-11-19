@@ -197,7 +197,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 
 **功耗**
 
-关于在不同配置（屏幕模式、LoRa 频段和调制解调器预设、GPS 使用情况等）下的详细功耗数据和预估电池续航，请参考 [Wio Tracker L2 功耗表](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)。
+关于在不同配置（屏幕模式、LoRa 频段和调制解调器预设、GPS 使用情况等）下的详细功耗数据和预估电池续航，请参考 [Wio Tracker L2 功耗表](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)。
 
 ## 引脚列表
 

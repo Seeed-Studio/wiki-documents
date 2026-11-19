@@ -638,7 +638,7 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 ## 资源
 
-- [功耗计算](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+- [功耗计算](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
 
 ## 技术支持与产品讨论
 

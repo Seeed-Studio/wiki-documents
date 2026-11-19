@@ -64,6 +64,10 @@ wrc_demo 是 [reBot Arm B601-RS](https://wiki.seeedstudio.com/cn/rebot_b601_rs_g
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_agent/agent3.PNG" alt="wrc_demo 在 reBot Arm 上的视觉抓取演示" />
 </p>
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV1FxsM6REYV&autoplay=0&muted=1" title="reBot Arm B601-RS 具身 Agent 设计框架" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 ## 0. 速查表
 
 ### 系统要求
