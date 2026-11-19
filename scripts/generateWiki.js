@@ -26,6 +26,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'Courses', 'Paper_Reading'), // 10.22 排除 Paper_Reading 目录
   path.join(docsDirectory, 'Contribution', 'Fusion'), // 10.21 排除 Fusion 目录
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'SO_ARM101', 'Courses', 'SO_ARM_Tutorial'), // 10.19 排除 SO_ARM_Tutorial 目录
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'SO_ARM101', 'Courses'), // 11.16 排除 SO_ARM101 课程目录
 
   // 排除指定文档
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Boot_Log_Analysis.md'), //11.2

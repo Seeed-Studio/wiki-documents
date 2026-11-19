@@ -235,6 +235,11 @@ const sidebars = {
               label: 'LingBot-VA — 未来画像からロボット行動への因果的ワールドモデル',
             },
             { type: 'doc', id: `${P}/ja_Paper_Reading_GR00T_2`, label: 'GR00T 2 — 統合世界-アクションモデリング' },
+            {
+              "type": "doc",
+              "id": `${P}/ja_Paper_Reading_LAWAM`,
+              "label": "LaWAM — シーン変化の予測とロボットアクションの生成"
+            }
           ],
         },
         {
@@ -295,6 +300,7 @@ const sidebars = {
       collapsible: false,
       items: [
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS とビジュアルグラスピング' },
+        { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS と手首追従' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS と ROS2' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS と Isaac Sim' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web 制御システム：実機と MuJoCo' },

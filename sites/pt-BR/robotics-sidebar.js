@@ -300,6 +300,8 @@ const sidebars = {
   T701HtSidebar: [
     backToRobotics(),
     `${K}/reBot_Arm/T701_HT/pt_reBot_Arm_T701_HT_Getting_Started`,
+    `${K}/reBot_Arm/T701_HT/pt_reBot_Arm_T701_HT_control_mit`,
+    `${K}/reBot_Arm/T701_HT/pt_reBot_Arm_T701_HT_pinocchio`,
   ],
 
   StackForceSidebar: [
