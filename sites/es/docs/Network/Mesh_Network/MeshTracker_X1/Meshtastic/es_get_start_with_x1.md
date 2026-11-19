@@ -385,7 +385,7 @@ Ve a `Settings` -> `Ringtone Config`, luego introduce la cadena de tono RTTTL qu
 ```
 </TabItem>
 
-<TabItem value="18" label="Morse Code CQ">
+<TabItem value="17" label="Mario Power-Up">
 
 ```plain
 powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7

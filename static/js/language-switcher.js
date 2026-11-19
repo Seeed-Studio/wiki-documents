@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-16 17:09:34 (北京时间)
-// 多语言页面: 2696 个
+// 生成时间: 2026-11-19 18:23:00 (北京时间)
+// 多语言页面: 2706 个
 
 (function() {
   'use strict';
@@ -1556,6 +1556,13 @@
     "ja",
     "pt"
   ],
+  "/jetpack5_uefi_boot_failure_fix": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/jetpack72_ax210_ax200_wifi_setup_guide": [
     "cn",
     "en",
@@ -2144,6 +2151,13 @@
     "ja",
     "pt"
   ],
+  "/ai_robotics_recomputer_j501_robotics_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recomputer_robotics_j401_getting_started": [
     "cn",
     "en",
@@ -2152,20 +2166,6 @@
     "pt"
   ],
   "/recomputer_robotics_j401_hardware_interfaces_usage": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ai_robotics_recomputer_j501_robotics_getting_started": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recomputer_robotics_j50_mini_getting_started": [
     "cn",
     "en",
     "es",
@@ -5483,6 +5483,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_ai_image_transmission_p1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
@@ -5687,6 +5694,13 @@
     "pt"
   ],
   "/meshtastic_wio_tracker_l2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_audio_development_l2": [
     "cn",
     "en",
     "es",
@@ -7030,6 +7044,10 @@
     "ja",
     "pt"
   ],
+  "/rebot_arm_b601_dm_bimanual": [
+    "cn",
+    "en"
+  ],
   "/rebot_b601_dm_getting_started": [
     "cn",
     "en",
@@ -7080,6 +7098,17 @@
     "pt"
   ],
   "/wrc_demo_tutorial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_bimanual": [
+    "cn",
+    "en"
+  ],
+  "/rebot_arm_b601_rs_camera_follow": [
     "cn",
     "en",
     "es",
@@ -7241,6 +7270,13 @@
     "pt"
   ],
   "/robotics/paper_reading_gr00t_n1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lawam": [
     "cn",
     "en",
     "es",
@@ -7597,7 +7633,28 @@
     "ja",
     "pt"
   ],
+  "/rebot_t701_ht_control_mit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_t701_ht_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_t701_ht_pinocchio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_t701_ht_vr": [
     "cn",
     "en",
     "es",
@@ -7933,6 +7990,13 @@
     "pt"
   ],
   "/orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/orbbec_gemini305": [
     "cn",
     "en",
     "es",
