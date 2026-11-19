@@ -11,9 +11,13 @@ keywords:
 slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm T701 HT com Pinocchio
 
@@ -23,19 +27,26 @@ import '/src/css/rebot-wiki-style.css';
   <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
 </div>
 
-O SDK do T701-HT usa o Pinocchio para carregar o modelo URDF e calcular as poses do efetuador final e os torques das juntas devido à gravidade. Use os exemplos de cinemática direta (FK) e cinemática inversa (IK) para verificar o retorno das juntas do robô antes de executar os exemplos de compensação de gravidade, trajetória cartesiana e controle por teclado.
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-Arm-T701-SDK"
+  fallbackCount={0}
+  ariaLabel="Star T701-HT SDK on GitHub"
+/>
+
+O SDK T701-HT usa o Pinocchio para carregar o modelo URDF e calcular as poses do efetuador final e os torques das juntas devido à gravidade. Use os exemplos de cinemática direta (FK) e cinemática inversa (IK) para verificar o retorno das juntas do robô antes de executar os exemplos de compensação de gravidade, trajetória cartesiana e controle por teclado.
 
 <section className="section-card">
 
 ## Preparar o robô
 
-Instale o SDK e suas dependências usando as [instruções de instalação do T701 HT Quick Start](/pt-br/rebot_t701_ht_getting_started/#instalar-o-sdk). Em seguida, siga as etapas restantes do Quick Start para verificar o mapeamento da porta serial, ler o retorno das juntas e do gripper e verificar as posições de zero.
+Instale o SDK e suas dependências usando as [instruções de instalação do T701 HT Quick Start](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_getting_started/#instalar-o-sdk). Em seguida, siga as etapas restantes do Quick Start para verificar o mapeamento da porta serial, ler o retorno das juntas e do gripper e verificar as posições de zero.
 
 :::warning[Antes de executar os exemplos no robô]
 
 - Certifique-se de que os braços estejam firmemente montados e remova qualquer carga. Use um braço na primeira execução.
 - Os braços podem começar a se mover assim que você os selecionar em um exemplo de movimento. Desobstrua toda a faixa de movimento, incluindo o espaço acima da cabeça e o caminho de volta ao zero. Permaneça junto ao robô durante toda a execução e mantenha-se afastado de pontos de beliscão nas juntas e nos grippers.
-- Sustente os braços antes de iniciar ou parar um exemplo de compensação de gravidade para que eles não caiam quando o torque de compensação for removido.
+- Apoie os braços antes de iniciar ou parar um exemplo de compensação de gravidade para que eles não caiam quando o torque de compensação for removido.
 - Em exemplos que retornam automaticamente ao zero, o primeiro `Ctrl+C` inicia o retorno. Pressione `Ctrl+C` novamente durante o retorno para interromper o movimento e enviar um comando de parada.
 
 :::
@@ -88,11 +99,11 @@ Quando você pressiona `Ctrl+C`, ambos os exemplos de compensação de gravidade
 | Exemplo | Comando | Sequência de movimento |
 | --- | --- | --- |
 | Mover para um alvo usando IK | `python t701_ht_inv_posvel_control.py` | Primeiro retorna as juntas ao zero. Se a solução de IK para a pose alvo passar na verificação de erro, o braço se move para o alvo usando `moveJ`. |
-| Cinemática inversa por programação quadrática (QP) | `python t701_ht_qp_ik.py` | Move para a pose inicial de RV, depois levanta o braço e traça um círculo acima da cabeça. |
+| Cinemática inversa por programação quadrática (QP) | `python t701_ht_qp_ik.py` | Move para a pose inicial de VR, depois levanta o braço e traça um círculo acima da cabeça. |
 | Translação MoveL | `python t701_ht_moveL_pos_control.py` | Mantém a orientação alvo do efetuador final enquanto segue, em sequência, trajetórias em linha reta, diagonais e quadradas. |
 | Rotação MoveL | `python t701_ht_moveL_rotate_control.py` | Mantém a posição alvo do efetuador final enquanto gira em torno dos eixos locais do efetuador final e executa um movimento cônico. |
 
-Ambos os exemplos MoveL começam movendo para a pose inicial de RV. Cada trajetória é executada por 5 segundos, excluindo o posicionamento inicial e o retorno ao zero. Todos os quatro exemplos desta seção retornam ao zero e param ao final.
+Ambos os exemplos MoveL começam movendo para a pose inicial de VR. Cada trajetória é executada por 5 segundos, excluindo o posicionamento inicial e o retorno ao zero. Todos os quatro exemplos desta seção retornam ao zero e param ao final.
 
 </section>
 
@@ -100,7 +111,7 @@ Ambos os exemplos MoveL começam movendo para a pose inicial de RV. Cada trajet�
 
 ## Controle por teclado
 
-Execute estes exemplos em um terminal local interativo ou sessão SSH. Depois que você selecionar os braços, eles se movem automaticamente para a pose inicial de RV antes de aceitar a entrada pelo teclado.
+Execute estes exemplos em um terminal local interativo ou sessão SSH. Depois que você selecionar os braços, eles se movem automaticamente para a pose inicial de VR antes de aceitar a entrada pelo teclado.
 
 | Exemplo | Comando | Comportamento esperado |
 | --- | --- | --- |
@@ -117,7 +128,7 @@ Execute estes exemplos em um terminal local interativo ou sessão SSH. Depois qu
 
 :::warning[Escopo da previsão de colisão]
 
-Depois que os braços atingem a pose inicial de RV, o exemplo de velocidade do efetuador final com previsão de colisão verifica colisões e violações de limite de junta nos próximos 0,20 segundos. As verificações de colisão usam as malhas STL em `T701-HT_URDF/meshes/` e incluem colisões entre os braços no modo de dois braços. Deixe folga durante a inicialização e o retorno ao zero e permita espaço extra para os grippers e a distância real de parada.
+Depois que os braços atingem a pose inicial de VR, o exemplo de velocidade do efetuador final com previsão de colisão verifica colisões e violações de limite de junta nos próximos 0,20 segundos. As verificações de colisão usam as malhas STL em `T701-HT_URDF/meshes/` e incluem colisões entre os braços no modo de dois braços. Deixe folga durante a inicialização e o retorno ao zero e permita espaço extra para os grippers e a distância real de parada.
 
 :::
 
