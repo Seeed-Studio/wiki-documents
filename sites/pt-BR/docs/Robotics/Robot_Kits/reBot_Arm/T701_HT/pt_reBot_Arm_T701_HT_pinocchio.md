@@ -40,12 +40,12 @@ O SDK T701-HT usa o Pinocchio para carregar o modelo URDF e calcular as poses do
 
 ## Preparar o robô
 
-Instale o SDK e suas dependências usando as [instruções de instalação do T701 HT Quick Start](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_getting_started/#instalar-o-sdk). Em seguida, siga as etapas restantes do Quick Start para verificar o mapeamento da porta serial, ler o retorno das juntas e do gripper e verificar as posições de zero.
+Instale o SDK e suas dependências usando as [instruções de instalação do T701 HT Quick Start](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_getting_started/#install-the-sdk). Em seguida, siga as etapas restantes do Quick Start para verificar o mapeamento da porta serial, ler o retorno das juntas e do gripper e verificar as posições de zero.
 
 :::warning[Antes de executar os exemplos no robô]
 
 - Certifique-se de que os braços estejam firmemente montados e remova qualquer carga. Use um braço na primeira execução.
-- Os braços podem começar a se mover assim que você os selecionar em um exemplo de movimento. Desobstrua toda a faixa de movimento, incluindo o espaço acima da cabeça e o caminho de volta ao zero. Permaneça junto ao robô durante toda a execução e mantenha-se afastado de pontos de beliscão nas juntas e nos grippers.
+- Os braços podem começar a se mover assim que você os selecionar em um exemplo de movimento. Desobstrua toda a faixa de movimento, incluindo o espaço acima e o caminho de volta ao zero. Permaneça junto ao robô durante toda a execução e mantenha-se afastado de pontos de beliscão nas juntas e nos grippers.
 - Apoie os braços antes de iniciar ou parar um exemplo de compensação de gravidade para que eles não caiam quando o torque de compensação for removido.
 - Em exemplos que retornam automaticamente ao zero, o primeiro `Ctrl+C` inicia o retorno. Pressione `Ctrl+C` novamente durante o retorno para interromper o movimento e enviar um comando de parada.
 
@@ -71,7 +71,7 @@ A cinemática direta calcula a pose do efetuador final a partir dos ângulos atu
 | Exemplo | Comando | Saída esperada |
 | --- | --- | --- |
 | Cinemática direta (FK) em tempo real | `python t701_ht_forward_kinematics_test.py` | Imprime a posição do efetuador final em metros e roll, pitch e yaw (RPY) em graus aproximadamente uma vez por segundo. |
-| Verificação de FK para IK na pose atual | `python t701_ht_inverse_kinematics_test.py` | Imprime os ângulos atuais das juntas e a posição do efetuador final. Se a IK for bem-sucedida, também imprime o erro máximo do ângulo da junta em radianos. |
+| Verificação de FK para IK na pose atual | `python t701_ht_inverse_kinematics_test.py` | Imprime os ângulos atuais das juntas e a posição do efetuador final. Se a IK for bem-sucedida, também imprime o erro máximo do ângulo das juntas em radianos. |
 
 </section>
 
@@ -98,7 +98,7 @@ Quando você pressiona `Ctrl+C`, ambos os exemplos de compensação de gravidade
 
 | Exemplo | Comando | Sequência de movimento |
 | --- | --- | --- |
-| Mover para um alvo usando IK | `python t701_ht_inv_posvel_control.py` | Primeiro retorna as juntas ao zero. Se a solução de IK para a pose alvo passar na verificação de erro, o braço se move para o alvo usando `moveJ`. |
+| Mover para um alvo usando IK | `python t701_ht_inv_posvel_control.py` | Primeiro retorna as juntas para zero. Se a solução de IK para a pose alvo passar na verificação de erro, o braço se move para o alvo usando `moveJ`. |
 | Cinemática inversa por programação quadrática (QP) | `python t701_ht_qp_ik.py` | Move para a pose inicial de VR, depois levanta o braço e traça um círculo acima da cabeça. |
 | Translação MoveL | `python t701_ht_moveL_pos_control.py` | Mantém a orientação alvo do efetuador final enquanto segue, em sequência, trajetórias em linha reta, diagonais e quadradas. |
 | Rotação MoveL | `python t701_ht_moveL_rotate_control.py` | Mantém a posição alvo do efetuador final enquanto gira em torno dos eixos locais do efetuador final e executa um movimento cônico. |
@@ -116,9 +116,8 @@ Execute estes exemplos em um terminal local interativo ou sessão SSH. Depois qu
 | Exemplo | Comando | Comportamento esperado |
 | --- | --- | --- |
 | Pose do efetuador final | `python t701_ht_keyboard_cartesian_pos_control.py` | Cada pressionamento de tecla altera a pose alvo do efetuador final em um passo. Se a IK falhar, o exemplo mantém o alvo anterior das juntas. |
-| Velocidade do efetuador final | `python t701_ht_keyboard_cartesian_vel_control.py` | Mantenha uma tecla pressionada para transladar ou girar continuamente o efetuador final. Solte-a para reduzir a velocidade comandada até zero. |
+| Velocidade do efetuador final | `python t701_ht_keyboard_cartesian_vel_control.py` | Mantenha uma tecla pressionada para transladar ou girar continuamente o efetuador final. Solte-a para reduzir gradualmente a velocidade comandada até zero. |
 | Velocidade do efetuador final com previsão de colisão | `python t701_ht_keyboard_cartesian_vel_collision_control.py` | Use as teclas para controlar a velocidade do efetuador final. Se o exemplo prever uma colisão ou violação de limite de junta, ele comanda velocidade zero e exibe uma mensagem. |
-| Impedância cartesiana | `python t701_ht_keyboard_cartesian_impedance_control.py` | Use as teclas para ajustar a pose alvo do efetuador final. O braço a acompanha de forma complacente usando controle de torque de junta com compensação de gravidade. |
 | Travamento de postura em espaço nulo | `python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py` | Acompanha a pose alvo do efetuador final enquanto mantém a postura das juntas o mais próxima possível da postura de referência. |
 
 - **Transladar.** Use `W` / `S`, `A` / `D` e `Q` / `E` para se mover ao longo dos eixos X, Y e Z, respectivamente.
@@ -128,7 +127,7 @@ Execute estes exemplos em um terminal local interativo ou sessão SSH. Depois qu
 
 :::warning[Escopo da previsão de colisão]
 
-Depois que os braços atingem a pose inicial de VR, o exemplo de velocidade do efetuador final com previsão de colisão verifica colisões e violações de limite de junta nos próximos 0,20 segundos. As verificações de colisão usam as malhas STL em `T701-HT_URDF/meshes/` e incluem colisões entre os braços no modo de dois braços. Deixe folga durante a inicialização e o retorno ao zero e permita espaço extra para os grippers e a distância real de parada.
+Depois que os braços atingem a pose inicial de VR, o exemplo de velocidade do efetuador final com previsão de colisão verifica colisões e violações de limite de junta nos próximos 0,20 segundos. As verificações de colisão usam as malhas STL em `T701-HT_URDF/meshes/` e incluem colisões entre os braços no modo de dois braços. Deixe folga durante a inicialização e o retorno ao zero e reserve espaço extra para os grippers e para a distância real de parada.
 
 :::
 
