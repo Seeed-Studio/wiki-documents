@@ -57,7 +57,7 @@ export const BootloaderProductSelect = () => {
   return <ProductSelect options={affectedProductOptions} lang="en" />;
 };
 
-![Correção de falha de boot UEFI do JetPack 5.1.3](https://files.seeedstudio.com/wiki/other/JetPack-513-UEFI.png)
+![JetPack 5.1.3 UEFI boot failure fix](https://files.seeedstudio.com/wiki/other/JetPack-513-UEFI.png)
 
 ## Problema
 
@@ -70,13 +70,13 @@ Nos produtos listados abaixo, o JetPack 5.1.3 (Jetson Linux 35.5.0) pode parar d
 - [Orin NX fails to boot: corrupted OP-TEE partition](https://forums.developer.nvidia.com/t/orin-nx-fail-to-boot-corrupted-op-tee-partition/344068/6)
 - [Orin on JetPack 5.1.3](https://forums.developer.nvidia.com/t/orin-5-1-3/293414)
 
-Esse problema se aplica às seguintes famílias de produtos executando L4T 35.5.0:
+Este problema se aplica a estas famílias de produtos executando L4T 35.5.0:
 
 - reComputer Classic J40/J30, incluindo variantes B
 - reComputer Industrial J40/J30
 - reServer Industrial J40/J30
 
-Escolha uma das correções a seguir. Se o dispositivo não conseguir inicializar no Ubuntu, use a **Opção 1**. Se ele conseguir inicializar no espaço de usuário do Ubuntu, a **Opção 2** evita o flash a partir de um PC host.
+Escolha uma das seguintes correções. Se o dispositivo não conseguir inicializar no Ubuntu, use a **Opção 1**. Se ele conseguir inicializar no espaço de usuário do Ubuntu, a **Opção 2** evita o flash a partir de um PC host.
 
 ## Opção 1: Regravar o pacote QSPI MFI corrigido
 
@@ -109,14 +109,12 @@ Todos os pacotes abaixo são para **JetPack 5.1.3 / L4T 35.5.0**. Combine tanto 
   </TabItem>
   <TabItem value="reserver" label="reServer Industrial J40/J30">
 
-Os links de download do QSPI MFI corrigido para o reServer Industrial estão pendentes. Esta opção estará disponível para estes modelos assim que os links forem adicionados:
-
 | Produto | Módulo Jetson | Pacote QSPI MFI corrigido |
 | --- | --- | --- |
-| reServer Industrial J3010 | Orin Nano 4GB | Link de download pendente |
-| reServer Industrial J3011 | Orin Nano 8GB | Link de download pendente |
-| reServer Industrial J4011 | Orin NX 8GB | Link de download pendente |
-| reServer Industrial J4012 | Orin NX 16GB | Link de download pendente |
+| reServer Industrial J3010 | Orin Nano 4GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAD6PRbbdtTK3_1j-PLbudAdxV0NQqzkoZ6tfSQHkFfiE) |
+| reServer Industrial J3011 | Orin Nano 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAnMqViu7CmSKL4JbsKob2YAfZ-gboKbE_mIEQ4vznB9F4) |
+| reServer Industrial J4011 | Orin NX 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCS0GsZnpHkQ4P5gXNuDlGqAb7q1ntBmiG9xzNNPrxgrns) |
+| reServer Industrial J4012 | Orin NX 16GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8fzLJ3G_PSLU2U2RbfwbqAXGZBp_e1F2kPnQ1gqXneso) |
 
   </TabItem>
 </Tabs>
@@ -136,7 +134,7 @@ Selecione abaixo o produto exato e **R35.5.0 (JetPack 5.1.3)** para exibir seus 
 
 ### Extrair e gravar
 
-No PC host, extraia o arquivo QSPI MFI corrigido baixado. Substitua `<patched-qspi-mfi-archive>` pelo nome real do arquivo e `<extracted-mfi-directory>` pelo diretório extraído que contém `tools/kernel_flash/l4t_initrd_flash.sh`.
+No PC host, extraia o arquivo compactado QSPI MFI corrigido baixado. Substitua `<patched-qspi-mfi-archive>` pelo nome real do arquivo e `<extracted-mfi-directory>` pelo diretório extraído que contém `tools/kernel_flash/l4t_initrd_flash.sh`.
 
 ```bash
 sudo tar xpf <patched-qspi-mfi-archive>
@@ -151,7 +149,7 @@ Aguarde a conclusão bem-sucedida da gravação, depois reinicie o Jetson e conf
 Use esta opção quando o Jetson ainda inicializa no Ubuntu. Ela instala o pacote de bootloader fornecido no dispositivo e não requer regravação do sistema.
 
 1. Baixe o [pacote de bootloader reComputer Orin](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDDc4wU3676Qp3FC4MmwLwjAShNzdHT0PjqdNQnBMZ64OA?e=miBcQj) no Jetson.
-2. Em um terminal, mude para o diretório que contém o arquivo baixado e instale-o:
+2. Em um terminal, vá para o diretório que contém o arquivo baixado e instale-o:
 
    ```bash
    sudo dpkg -i ./nvidia-l4t-bootloader-recomputer-orin_35.5.0-recomputer20261110.1_arm64.deb
@@ -173,7 +171,7 @@ Use esta opção quando o Jetson ainda inicializa no Ubuntu. Ela instala o pacot
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -26,6 +26,18 @@ When the device is in the states below, please don't manually reboot or turn it 
 
 ## Get Started
 
+### Quick View
+
+<div className="table-center">
+  <video width="730" height="500" autoPlay muted playsInline controls>
+    <source
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/x1-open-box.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
 ### Power on the device
 
