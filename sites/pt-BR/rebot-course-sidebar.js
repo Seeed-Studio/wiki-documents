@@ -301,6 +301,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS com Pega Visual' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS com Seguimento de Muque' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS com Colaboração Bimanual' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS com ROS2' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS com Isaac Sim' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-RS: Robô Real e MuJoCo' },
@@ -353,6 +354,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Grasping_Demo`, label: 'Pega Visual reBot-DM' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM com ROS2' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM com Colaboração Bimanual' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM com Isaac Sim' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-DM: Robô Real e MuJoCo' },
       ],
