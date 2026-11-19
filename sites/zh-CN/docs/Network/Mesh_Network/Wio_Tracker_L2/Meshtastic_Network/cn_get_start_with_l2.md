@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
 
 1. 尚未完成消息传输过程
-2. 正在配置中
+2. 正在被配置
 :::
 
 ## 烧录固件
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-对于 Wio tracker `Wio Tracker L2 Pro` 和 `Wio Tracker L2` 的固件烧录，选择目标设备为 `Seeed Wio Tracker L2` 并选择最新固件，然后点击 `Flash`。
+对于 Wio tracker `Wio Tracker L2 Pro` 和 `Wio Tracker L2` 的固件烧录，选择目标设备为 `Seeed Wio Tracker L2`，并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/Flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -57,7 +57,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MUIToBaseUI.png" alt="pir" width={900} height="auto" /></p>
 
 :::tip
-当你 `long-press` 蓝牙图标时，会弹出 BaseUI 切换弹窗。
+当你 `长按` 蓝牙图标时，会弹出 BaseUI 切换窗口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/LongPress.gif" alt="pir" width={250} height="auto" /></p>
 
@@ -80,7 +80,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 查找 Node ID**
 
-在设备贴纸上找到 MAC 地址。Node ID 基于 MAC 地址的最后四位数字。最后一位应为 `-2`。例如，如果设备为 29CA，则实际的节点应为 29c8。
+在设备贴纸上找到 MAC 地址。Node ID 基于 MAC 地址的最后四位数字。最后一位应为 `-2`。例如，如果设备为 29CA，则实际节点应为 29c8。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
 
@@ -158,10 +158,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更完整的列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
+更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到该限制，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
 :::
 
 <Tabs>
@@ -176,7 +176,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="8" label="Configure on BaseUI">
 
-进入 `LoRa Info` 页面，点击 `Region`，选择区域后点击 `OK`。
+进入 `LoRa Info` 页面，点击 `Region`，选择区域，然后点击 `OK`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BaseUILoRa.png" alt="pir" width={900} height="auto" /></p>
 
@@ -212,7 +212,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。这可以通过 `long pressing the position icon` 在设备上直接配置。 
+你需要启用 GPS 才能获取位置。这可以通过 `长按位置图标` 在设备上直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -220,7 +220,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. SD 卡准备**
 
-你需要在 SD 卡中进行格式化并安装地图。有关 SD 卡使用的详细教程，请[点击这里](/cn/l2_sd_card)查看。
+你需要在 SD 卡中进行格式化并安装地图。关于 SD 卡使用的详细教程，请[点击这里](/cn/l2_sd_card)查看。
 
 **步骤 3. 安装 SD 卡**
 
@@ -228,7 +228,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 4. 查看地图**
 
-等待地图加载。成功连接 Wi-Fi 并获取位置信息后，设备会显示离线地图。
+等待地图加载。成功连接 Wi-Fi 并获取位置后，设备会显示离线地图。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/OfflineMapL2.png" alt="pir" width={450} height="auto" /></p>
 
@@ -238,7 +238,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置信息。这可以通过 `long pressing the position icon` 在设备上直接配置。 
+你需要启用 GPS 才能获取位置。这可以通过 `长按位置图标` 在设备上直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -250,7 +250,7 @@ import TabItem from '@theme/TabItem';
 
 :::tip
 
-连接的 Wifi 必须为 2.4G。5G Wifi 无法被设备使用。
+连接的 Wifi 需要为 2.4G。5G Wifi 无法被设备使用。
 
 :::
 
@@ -268,7 +268,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 3. 查看地图**
 
-等待地图加载。成功连接 Wi-Fi 并获取位置信息后，设备会显示在线地图。
+等待地图加载。成功连接 Wi-Fi 并获取位置后，设备会显示在线地图。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/OfflineMapL2.png" alt="pir" width={300} height="auto" /></p>
 
@@ -291,7 +291,7 @@ import TabItem from '@theme/TabItem';
 
   **步骤 3**：添加新设备
 
-    点击 "+ New Connection"。 
+    点击 "+ New Connection"。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -343,7 +343,7 @@ import TabItem from '@theme/TabItem';
   </tr>
   <tr>
     <td rowspan="2">其他</td>
-    <td>心率和血氧饱和度 SpO₂</td>
+    <td>心率和血氧饱和度（SpO₂）</td>
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
@@ -399,7 +399,7 @@ import TabItem from '@theme/TabItem';
 | 长按 LoRa 图标| LoRa 发射 关闭/开启|
 | 长按通知图标| 通知 启用/禁用|
 | 点击通知图标| 声音/横幅/声音与横幅 切换|
-| 长按 GPS 图标| GPS 开启/关闭|
+| Llong press GPS icon| GPS 开启/关闭|
 | 长按 WiFi 图标| WiFi 开启/关闭|
 | 长按 MQTT 图标| MQTT 开启/关闭|
 | 点击二维码图标| 显示设备二维码 |
@@ -409,19 +409,19 @@ import TabItem from '@theme/TabItem';
 <TabItem value="16" label="节点页面">
 | 交互方式 | 效果 |
 |---|---|
-| 点击某个节点| 显示详细信息|
-| 长按某个节点| 进入私聊|
-| 查看某个节点位置| 在地图中显示该节点位置|
+| 点击一个节点| 显示详细信息|
+| 长按一个节点| 进入私聊|
+| 查看一个节点位置| 在地图中显示该节点位置|
 
 </TabItem>
 
 <TabItem value="17" label="频道页面">
-长按某个频道以禁用/启用通知。选择并点击某个频道进入聊天窗口。
+长按某个频道以禁用/启用通知。选择并点击一个频道进入聊天窗口。
 
 </TabItem>
 
 <TabItem value="18" label="消息页面">
-长按某个聊天以删除它。选择并点击某个聊天进入聊天窗口。
+长按某个聊天以删除它。选择并点击一个聊天进入聊天窗口。
 
 </TabItem>
 
@@ -431,8 +431,8 @@ import TabItem from '@theme/TabItem';
 |---|---|
 | 用户短名称 | 修改设备短名称|
 | 用户长名称 | 修改设备长名称|
-| 屏幕密码 | 为设备启动设置密码 |
-| 配置密码 | 为配置更改设置密码 |
+| 屏幕 PIN | 为设备启动设置密码 |
+| 配置 PIN | 为配置更改设置密码 |
 | 区域 | 配置 LoRa 区域|
 | 调制解调器预设| 配置 LoRa 预设 |
 | 频道 | 编辑频道|
@@ -443,18 +443,18 @@ import TabItem from '@theme/TabItem';
 | 主题| 在深色和浅色背景之间切换主题 |
 | 屏幕校准 | 校准屏幕|
 | 语言| 切换显示语言|
-| 恢复出厂设置 | 配置恢复为默认值 |
+| 恢复出厂设置 | 将配置恢复为默认值 |
 | NodeDB 重置 | 清除节点数据 |
-| 清除聊天记录 | 清除聊天记录 |
+| 清除聊天记录 | 清除聊天历史 |
 | 重启（绿色图标） | 设备重启 |
-| 关机（红色图标） | 设备关机 |
+| 关机（红色图标） | 设备断电关机 |
 
 </TabItem>
 
 <TabItem value="20" label="工具">
 | 交互方式 | 效果 |
 |---|---|
-| Mesh 探测器| 显示检测到的活动节点 |
+| Mesh 检测器| 显示检测到的活动节点 |
 | 信号扫描器| 显示所选节点的 RSSI 和 SNR |
 | 路由跟踪| 显示所选节点的路由路径 |
 | 统计 | 显示数据包解码信息 |
@@ -483,8 +483,8 @@ import TabItem from '@theme/TabItem';
 
 | 交互方式 | 效果 |
 |---|---|
-| 选择 "Favorite" | 将所选节点标记为收藏|
-| 选择 "Trace Route" | 对所选节点执行路由跟踪 |
+| 选择 "Favorite" | 将选中的节点标记为收藏|
+| 选择 "Trace Route" | 对选中的节点执行路由跟踪 |
 
 </TabItem>
 
@@ -524,11 +524,11 @@ import TabItem from '@theme/TabItem';
 
 ### 设备无法通过 BLE 与手机配对
 
-- 使用 MUI 时，请先切换到 Bluetooth 配对模式，再与手机进行配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
+- 使用 MUI 时，请先切换到 Bluetooth Pairing 模式，再与手机配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-- 使用 BaseUI 时，在设置并启用 Wifi 之后，你只能通过网络将设备与手机 APP 连接。 
+- 使用 BaseUI 时，在设置并启用 Wifi 之后，你只能通过网络将设备与手机 APP 连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -536,9 +536,9 @@ import TabItem from '@theme/TabItem';
 
 - 请确保你连接的是 `2.4g Wifi`。该设备无法与 5G Wifi 配对。通常手机热点可以在手机设置中调整为 2.4g，因此你可以先测试手机热点。
 
-- 在设置 Wifi 名称和 Wifi 密码后，请启用 Wifi。
+- 请在设置好 Wifi 名称和 Wifi 密码后再启用 Wifi。
 
-当 Wifi IP 为空且 Wifi 图标为灰色时，表示 Wifi 已禁用。当显示 Wifi IP 且 Wifi 图标为白色时，表示 Wifi 已启用。 
+当 wifi IP 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。当显示 wifi IP 且 wifi 图标为白色时，表示 Wifi 已启用。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
@@ -549,15 +549,15 @@ import TabItem from '@theme/TabItem';
 - 设备开机后，过一段时间会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中等……
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中等……
 
-**故障排查**
+**排查方法**
 
-你需要执行一次 flash 擦除，然后重新烧录最新固件。
+你需要执行 flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方式进行恢复出厂设置。
 
 <Tabs>
 
@@ -584,7 +584,7 @@ import TabItem from '@theme/TabItem';
 
 #### NodeDB 重置
 
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过期信息，你需要对其进行更新。
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过时信息，你需要对其进行更新。
 
 <Tabs>
 
@@ -636,9 +636,15 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
       为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
 
+### 电池映射
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
+
 ## 资源
 
-- [功耗计算](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+- [功耗计算](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
 
 ## 技术支持与产品讨论
 

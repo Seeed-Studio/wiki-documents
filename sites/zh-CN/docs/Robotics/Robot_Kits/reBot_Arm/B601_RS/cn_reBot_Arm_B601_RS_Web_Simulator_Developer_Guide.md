@@ -73,6 +73,10 @@ reBot Arm B601-RS 数字孪生与控制系统集成了 Three.js 网页控制台�
   ariaLabel="在 GitHub 上为 ReBot_Arm_DigitalTwin_RS 点亮 Star"
 />
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV1ob4E6JEsV&autoplay=0&muted=1" title="reBot Arm B601-RS 数字孪生与 Web 控制教程" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 ## 项目特点
 
 1. **RS 独立机械模型**

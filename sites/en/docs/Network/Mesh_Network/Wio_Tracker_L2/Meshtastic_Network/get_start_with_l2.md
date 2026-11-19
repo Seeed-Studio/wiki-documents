@@ -644,7 +644,7 @@ After the key regeneration, other device needs to reconnect with the node. So it
 
 ## Resource
 
-- [Power Consumption Calcultion](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+- [Power Consumption Calcultion](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
 
 ## Tech Support & Product Discussion
 

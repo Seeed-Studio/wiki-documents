@@ -63,6 +63,10 @@ import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS 视觉夹取 Demo" />
 </p>
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV1PKsw65EXB&autoplay=0&muted=1" title="reBot Arm B601-RS 视觉夹取 Demo" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 ## 两种抓取方式有什么区别？
 
 本页包含两种不同逻辑的视觉夹取 Demo。先了解开发框架、标定方式与启动流程的区别，再选择下方标签查看对应教程。
@@ -1021,6 +1025,10 @@ python -c "import torch; print(torch.cuda.is_available())"
 ### 1. 项目介绍
 
 本方案基于 **ROS 2** 与 **YOLOE**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
+
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV11Psw6yEtg&autoplay=0&muted=1" title="reBot Arm B601-RS ROS 2 与 YOLOE 视觉抓取教程" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
 
 当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405 / D435i**。本方案使用模型中预设的相机安装外参，不要求通过标定板采集手眼标定数据。请使用对应相机的指定支架和安装位置；安装和打印件公差会带来误差，需要先检查 TF 和目标位姿，再微调偏移参数。
 

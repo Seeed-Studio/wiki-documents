@@ -11,6 +11,9 @@ keywords:
 slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/19/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -41,10 +44,10 @@ El reBot Arm T701 es una plataforma robótica bimanual de código abierto de See
 
 <div className="rebot-disclaimer-gallery">
   <figure className="rebot-disclaimer-gallery-item">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm safety disclaimer and risk notice in Chinese" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="Descargo de responsabilidad de seguridad y aviso de riesgos del reBot Arm en chino" />
   </figure>
   <figure className="rebot-disclaimer-gallery-item">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm safety disclaimer and risk notice in English" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="Descargo de responsabilidad de seguridad y aviso de riesgos del reBot Arm en inglés" />
   </figure>
 </div>
 
@@ -56,17 +59,30 @@ El reBot Arm T701 es una plataforma robótica bimanual de código abierto de See
 
 ## Desempaqueta y ensambla el robot
 
+<div className="rebot-step-flow" role="list">
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
 ### Comprueba el contenido del paquete
 
-Abre el estuche de transporte y compara las piezas del robot y los elementos de fijación con la lista de empaque.
+Abre el maletín de transporte y compara las piezas del robot y los sujetadores con la lista de empaque.
 
-:::note[The Basic version does not include cameras]
+:::note[La versión Basic no incluye cámaras]
 Consulta la lista de empaque para conocer el contenido de tu envío.
 :::
 
 <div align="center">
-  <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="Open carrying case showing both arms, the torso column, the covers, and the cameras in the pictured configuration" loading="lazy" />
+  <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="Maletín de transporte abierto que muestra ambos brazos, la columna del torso, las cubiertas y las cámaras en la configuración mostrada" loading="lazy" />
 </div>
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### Monta ambos brazos en la columna del torso
 
@@ -76,11 +92,11 @@ Consulta la lista de empaque para conocer el contenido de tu envío.
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
     <figcaption>Orificios de montaje en la columna del torso</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-torso-holes.webp" alt="Four mounting holes circled in red on the side of the torso column" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-torso-holes.webp" alt="Cuatro orificios de montaje marcados en rojo en el lateral de la columna del torso" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>Orificios correspondientes en la placa de montaje del brazo derecho</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-arm-holes.webp" alt="Four mounting holes circled in red on the right arm's metal mounting plate" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-arm-holes.webp" alt="Cuatro orificios de montaje marcados en rojo en la placa metálica de montaje del brazo derecho" loading="lazy" />
   </figure>
 </div>
 
@@ -89,19 +105,26 @@ Una vez fijado el brazo derecho, comprueba cómo se apoya contra la columna desd
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
     <figcaption>Brazo derecho montado, vista superior</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-top.webp" alt="Top view of the right arm mounting plate and upper screws" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-top.webp" alt="Vista superior de la placa de montaje del brazo derecho y los tornillos superiores" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>Brazo derecho montado, vista lateral</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-side.webp" alt="Side view of the right arm mounting plate and lower screws" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-side.webp" alt="Vista lateral de la placa de montaje del brazo derecho y los tornillos inferiores" loading="lazy" />
   </figure>
 </div>
 
-Con la alimentación desconectada, enchufa el **arnés de cable XT30 2+2** que sale del lateral de la columna del torso en el conector del brazo derecho que se muestra a continuación. Monta y conecta el brazo izquierdo de la misma manera en el otro lado de la columna.
+Con la alimentación desconectada, enchufa el **arnés de cables XT30 2+2** que sale del lateral de la columna del torso en el conector del brazo derecho que se muestra a continuación. Monta y conecta el brazo izquierdo de la misma manera en el otro lado de la columna.
 
 <div align="center">
-  <img width={680} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-arm-connector.webp" alt="Routing of the XT30 2+2 cable harness from the torso column to the arm connector" loading="lazy" />
+  <img width={680} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-arm-connector.webp" alt="Enrutamiento del arnés de cables XT30 2+2 desde la columna del torso hasta el conector del brazo" loading="lazy" />
 </div>
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
 ### Instala las cubiertas de los hombros
 
@@ -111,42 +134,54 @@ Con la alimentación desconectada, enchufa el **arnés de cable XT30 2+2** que s
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
     <figcaption>Mitades superior e inferior de una cubierta de hombro</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-shoulder-cover-parts.webp" alt="Two green semicircular shoulder cover pieces" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-shoulder-cover-parts.webp" alt="Dos piezas semicirculares verdes de la cubierta del hombro" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>Cubierta de hombro instalada</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/14-shoulder-cover-fit.webp" alt="Red box marking the position of the assembled green shoulder cover" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/14-shoulder-cover-fit.webp" alt="Recuadro rojo que marca la posición de la cubierta de hombro verde ensamblada" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>Posiciones de los tornillos de la cubierta de hombro, vista superior</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-top.webp" alt="Two shoulder cover screws circled in red in the top view" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-top.webp" alt="Dos tornillos de la cubierta de hombro marcados en rojo en la vista superior" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>Posición del tornillo de la cubierta de hombro, vista lateral</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-side.webp" alt="Shoulder cover screw circled in red in the side view" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-side.webp" alt="Tornillo de la cubierta de hombro marcado en rojo en la vista lateral" loading="lazy" />
   </figure>
 </div>
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### Instala la cubierta del torso
 
-1. Una vez fijadas ambas cubiertas de hombro, coloca la cubierta del torso y guía los cables laterales a través de las aberturas correspondientes. Si tu robot tiene la cámara **RealSense D435i** que se muestra a continuación, alinéala con la abertura en la cubierta frontal. **La versión Basic no incluye cámaras.**
+1. Una vez fijadas ambas cubiertas de hombro, coloca la cubierta del torso y enruta los cables laterales a través de las aberturas correspondientes. Si tu robot tiene la cámara **RealSense D435i** que se muestra a continuación, alinéala con la abertura en la cubierta frontal. **La versión Basic no incluye cámaras.**
 
    <div className="rebot-power-gallery">
      <figure className="rebot-power-gallery-item">
-       <figcaption>Abertura de la cámara en la cubierta frontal (la versión Basic no incluye cámaras)</figcaption>
-       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-front.webp" alt="Red box marking where the D435i aligns with the opening in the front cover" loading="lazy" />
+       <figcaption>Abertura para la cámara en la cubierta frontal (la versión Basic no incluye cámaras)</figcaption>
+       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-front.webp" alt="Recuadro rojo que marca dónde se alinea la D435i con la abertura en la cubierta frontal" loading="lazy" />
      </figure>
      <figure className="rebot-power-gallery-item">
        <figcaption>Abertura lateral para el cable</figcaption>
-       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-cable.webp" alt="Red circle marking the cable cutout on the side of the torso cover" loading="lazy" />
+       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-cable.webp" alt="Círculo rojo que marca la abertura para el cable en el lateral de la cubierta del torso" loading="lazy" />
      </figure>
    </div>
 
 2. Fija la cubierta del torso insertando los cuatro **tornillos M3 más largos suministrados** en los orificios marcados en rojo en la parte posterior.
 
    <div align="center">
-     <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/17-torso-cover-screws-repaired.webp" alt="Four screw positions circled in red on the rear torso cover" loading="lazy" />
+     <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/17-torso-cover-screws-repaired.webp" alt="Cuatro posiciones de tornillos marcadas en rojo en la cubierta trasera del torso" loading="lazy" />
    </div>
+
+  </div>
+</div>
+
+</div>
 
 {/* - **TODO** Add instructions for securing the base and installing the grippers separately. */}
 
@@ -163,32 +198,45 @@ Desconecta la alimentación antes de cablear. Antes de encender el robot, asegú
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
     <figcaption>Conexión de alimentación</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-power-connection.jpg" alt="Power connector and cable at the base of the T701 HT" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-power-connection.jpg" alt="Conector de alimentación y cable en la base del T701 HT" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>Botón de encendido redondo y puerto USB-C de la placa principal</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-type-c-mainboard.jpg" alt="Round power button next to the mainboard and a USB data cable plugged into the USB-C port" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-type-c-mainboard.jpg" alt="Botón de encendido redondo junto a la placa principal y un cable de datos USB conectado al puerto USB-C" loading="lazy" />
   </figure>
 </div>
 
 ## Calibra y ejecuta el robot con el SDK T701-HT
 
-### Instala el SDK
+<div className="rebot-step-flow" role="list">
 
-:::info[Supported Platforms for the Motor Library]
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
 
-The SDK includes the following prebuilt `hightorque_robot` wheels in `motor_whl/`.
+### Instalar el SDK
 
-| Platform | Motor library version | CPython versions |
+:::info[Plataformas compatibles para la biblioteca del motor]
+
+El SDK incluye las siguientes ruedas `hightorque_robot` precompiladas en `motor_whl/`.
+
+| Plataforma | Versión de la biblioteca del motor | Versiones de CPython |
 | --- | --- | --- |
 | Linux x86_64 | 1.2.0 | 3.9, 3.10, 3.11, 3.12 |
 | Linux aarch64 (ARM64) | 1.0.0 | 3.9, 3.10, 3.11, 3.12 |
 
-The installation example below uses **Ubuntu 22.04 (x86_64) and Python 3.10**. For another combination in the table, choose the `.whl` file that matches your architecture and Python version, then run the environment check below.
+El ejemplo de instalación siguiente usa **Ubuntu 22.04 (x86_64) y Python 3.10**. Para otra combinación de la tabla, elige el archivo `.whl` que coincida con tu arquitectura y versión de Python, y luego ejecuta la comprobación de entorno que aparece a continuación.
 
 :::
 
-Abre una terminal en el directorio raíz del SDK, que contiene `motor_whl/`, `requirements.txt` y `scripts/`. Ejecuta los comandos del SDK que aparecen a continuación desde este directorio.
+Clona el [repositorio del SDK T701-HT](https://github.com/Seeed-Projects/reBot-Arm-T701-SDK) y entra en el directorio raíz del SDK.
+
+```bash
+git clone https://github.com/Seeed-Projects/reBot-Arm-T701-SDK.git
+cd reBot-Arm-T701-SDK
+```
+
+Ejecuta los siguientes comandos del SDK desde este directorio, salvo que se indique lo contrario.
 
 Si no tienes Conda, instala Miniforge.
 
@@ -206,106 +254,104 @@ python -I -m pip install ./motor_whl/hightorque_robot-1.2.0-cp310-cp310-linux_x8
 python -I -m pip install -r requirements.txt
 ```
 
-Ejecuta el siguiente comando para comprobar que Python puede importar las dependencias y cargar el modelo URDF. Puedes realizar esta comprobación con el robot desconectado.
+Ejecuta el siguiente comando para comprobar que Python puede importar las dependencias y cargar el modelo URDF. Puedes ejecutar esta comprobación con el robot desconectado.
 
 ```bash
-python -I -c "import hightorque_robot, numpy, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
+python -I -c "import hightorque_robot, numpy, osqp, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### Comprobar la conexión serie
 
-1. **Lista los puertos serie.** Conecta el robot y luego ejecuta el siguiente comando en una terminal.
+El brazo izquierdo se conecta a CAN1 y el brazo derecho a CAN2. Establece `board_serial` en `T701-HT_robot_param/serial_binding.yaml` del SDK con el número de serie USB de tu placa de comunicación. El SDK utiliza la identidad USB de la placa para encontrar los dispositivos serie actuales al inicio.
 
-   ```bash
-   ls -l /dev/ttyACM*
-   ```
-
-2. **Comprueba los puertos serie de ambos brazos.** Ejecuta el script de comprobación.
-
-   ```bash
-   python scripts/t701_ht_read_state.py --arm both --check
-   ```
-
-   El script comprueba lo siguiente.
-
-   - Orden de enumeración de los puertos serie
-   - Identificadores USB de la placa de comunicación
-   - Permisos de lectura y escritura del puerto serie
-
-:::tip[Comprobar un solo brazo]
-
-Sustituye `--arm both` por el argumento del brazo que quieras comprobar.
-
-| Brazo | Argumento | Puerto serie predeterminado | ID serie del SDK |
-| --- | --- | --- | --- |
-| Brazo izquierdo | `--arm left` | `/dev/ttyACM0` | `serial_id=1` |
-| Brazo derecho | `--arm right` | `/dev/ttyACM1` | `serial_id=2` |
-
-:::
-
-**Errores de permisos del puerto serie**
-
-Si el script informa de un error de permisos, el siguiente comando de la guía del SDK concede temporalmente a todos los usuarios locales acceso de lectura y escritura a los puertos serie especificados. Al comprobar un solo brazo, especifica solo su puerto.
+Ejecuta los siguientes comandos para comprobar la asignación de ambos brazos sin abrir los puertos serie. Para comprobar un solo brazo, pasa solo su archivo YAML.
 
 ```bash
-sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1
+ls -l /dev/serial/by-id/
+python scripts/t701_ht_can_serial_adapter.py T701-HT_robot_param/T701-HT_left.yaml T701-HT_robot_param/T701-HT_right.yaml
 ```
 
-Vuelve a ejecutar la comprobación del puerto serie después de conceder el acceso. Al reconectar el dispositivo o reiniciar el sistema, estos permisos se restablecen.
+  </div>
+</div>
 
-### Leer el estado de las articulaciones y del efector de agarre
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
-Después de que la comprobación serie se complete correctamente, lee una muestra de ambos brazos. Verifica que las siete articulaciones y el efector de agarre de cada brazo devuelven retroalimentación. El script informa de la posición de la articulación (rad), la velocidad (rad/s) y el par (N·m), y de la posición (rad) y velocidad (rad/s) del efector de agarre.
+### Leer el estado de las articulaciones y la pinza
 
-```bash
-python scripts/t701_ht_read_state.py --arm both --once
-```
-
-Para lecturas continuas, ejecuta el siguiente comando e introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos. Pulsa `Ctrl+C` para salir.
+Ejecuta el script e introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos. Confirma que las siete articulaciones y la pinza de cada brazo seleccionado informan retroalimentación. Pulsa `Ctrl+C` para salir.
 
 ```bash
 python scripts/t701_ht_read_state.py
 ```
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### Establecer las posiciones cero
 
-- **TODO** Añadir las posiciones cero estándar y los diagramas de calibración para las articulaciones y los efectores de agarre de ambos brazos. Aclarar si los robots calibrados de fábrica necesitan ser recalibrados.
+<div align="center">
+  <img width={520} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-zero-pose.png" alt="T701-HT zero pose" loading="lazy" />
+</div>
 
-Después de confirmar las posiciones cero estándar, mueve las articulaciones y el efector de agarre del brazo seleccionado a esas posiciones. El siguiente comando selecciona el brazo izquierdo. Sustituye `left` por `right` o `both` para seleccionar el brazo derecho o ambos brazos. Introducir `yes` escribe las posiciones actuales como las nuevas posiciones cero y sobrescribe los valores almacenados.
+Inicia el script y selecciona el brazo. Mueve las articulaciones y la pinza a sus posiciones cero previstas y luego selecciona `3` en el menú de operaciones para reemplazar las posiciones cero almacenadas del brazo seleccionado con la pose actual. Selecciona `4` para moverte a la posición cero guardada o `0` para salir.
 
 ```bash
-python scripts/t701_ht_set_zero.py --arm left
+python scripts/t701_ht_set_zero.py
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
 
 ### Ejecutar las demostraciones
 
-:::warning
-Antes de ejecutar una demostración, verifica las posiciones cero de las articulaciones, retira cualquier carga y despeja el rango de movimiento de los brazos. Comienza con un solo brazo y sujétalo al iniciar y detener la demostración. En las demostraciones de impedancia articular, el brazo seleccionado se mueve hacia la pose objetivo establecida en el script.
+:::warning[Antes de ejecutar las demostraciones]
+Verifica las posiciones cero de las articulaciones, retira cualquier carga y despeja el rango de movimiento de los brazos. Empieza con un solo brazo en la primera ejecución. Sujeta el brazo al iniciar y detener la demostración de compensación de gravedad.
 :::
 
-En cualquiera de las tres demostraciones, introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos. También puedes especificar `--arm left`, `--arm right` o `--arm both` en la línea de comandos. Pulsa `Ctrl+C` para salir y enviar comandos de parada a los brazos y efectores de agarre seleccionados.
+Entra en el directorio `scripts`. Después de iniciar una demostración, introduce `1` para el brazo izquierdo, `2` para el brazo derecho o `3` para ambos.
+
+```bash
+cd scripts
+```
 
 #### Compensación de gravedad
 
-La demostración aplica 0,8 veces el par de gravedad calculado para la pose actual como par de avance, lo que facilita mover el brazo a mano.
+La demostración aplica `0.8 × G(q)` como par de avance MIT para que el brazo sea más fácil de mover a mano. Las ganancias `Kp` y `Kd` de las articulaciones y el par de la pinza son cero.
 
 ```bash
-python scripts/t701_ht_gravity_compensation.py
+python t701_ht_gravity_compensation.py
 ```
 
-#### Impedancia articular con avance de gravedad
+La demostración aplica los límites de par de articulación configurados. Pulsa `Ctrl+C` para detener los motores.
 
-```bash
-python scripts/t701_ht_joint_impedance_with_gravity.py
-```
+Para control de cinco parámetros de un solo motor, retroalimentación de estado y apagado de retorno a cero, consulta el [MIT Control SDK](https://wiki.seeedstudio.com/es/rebot_t701_ht_control_mit/).
 
-#### Impedancia articular con avance de gravedad y compensación de fricción
+Consulta [T701 HT con Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/) para comprobaciones de cinemática directa e inversa, trayectorias cartesianas y ejemplos de control por teclado.
 
-```bash
-python scripts/t701_ht_joint_impedance_with_gravity_friction.py
-```
+  </div>
+</div>
+
+</div>
 
 ## Solución de problemas
 
-- **No se encontró ningún puerto serie.** Comprueba que el robot esté encendido y que el cable de datos USB esté conectado al puerto USB-C de la placa principal. Ejecuta `ls -l /dev/ttyACM*` de nuevo.
-- **La enumeración del puerto serie no coincide con la configuración.** Comprueba la ruta de dispositivo predeterminada para el brazo seleccionado y si hay otros dispositivos serie USB conectados.
+- **No se encontró ningún puerto serie.** Confirma que el robot está encendido y que el cable de datos USB está conectado al puerto USB-C de la placa base, y luego ejecuta de nuevo `ls -l /dev/serial/by-id/`.
+- **Falta la interfaz USB coincidente.** Comprueba que `board_serial` coincida con la placa conectada y que el brazo izquierdo use CAN1 y el brazo derecho use CAN2.
+- **Permiso denegado.** En Ubuntu, comprueba que tu usuario tenga acceso de lectura y escritura al dispositivo serie a través del grupo `dialout`.

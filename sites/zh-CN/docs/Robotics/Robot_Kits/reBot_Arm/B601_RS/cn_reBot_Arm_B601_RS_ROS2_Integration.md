@@ -171,12 +171,15 @@ python3 -c "import pinocchio; print('pinocchio', pinocchio.__version__)"
 
 ### 步骤 3. 克隆代码仓库
 
-优先使用 Seeed-Projects 官方仓库：
+本文统一将工作空间放在 `~/rebotarm_ros2`，使用 Seeed-Projects 官方仓库：
 
 ```bash
+cd ~
 git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm_ros2
-cd rebotarm_ros2
+cd ~/rebotarm_ros2
 ```
+
+如果已经克隆到其他目录，请将后文所有 `~/rebotarm_ros2` 替换为实际工作空间的绝对路径。`third_party`、`src` 和 `install` 等相对路径均以工作空间根目录为基准。
 
 
 
@@ -197,13 +200,19 @@ python3 -m pip install --user --index-url https://pypi.org/simple motorbridge
 ### 步骤 5. 获取底层 SDK
 
 ```bash
+cd ~/rebotarm_ros2
 mkdir -p third_party
 git clone https://github.com/Seeed-Projects/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
 
 ### 步骤 6. 构建工作空间
 
+:::note 代码版本
+本文中的状态心跳、重力补偿退出检测和矩形轨迹显示对应 [ROS2 控制仓库 PR #7](https://github.com/Seeed-Projects/reBotArmController_ROS2/pull/7)。使用这些行为前，请确认已包含该 PR 的改动，并重新构建、重启控制节点。
+:::
+
 ```bash
+cd ~/rebotarm_ros2
 source /opt/ros/${ROS_DISTRO}/setup.bash
 colcon build --symlink-install
 source install/setup.bash
@@ -233,6 +242,8 @@ rebotarmcontroller MoveToPose
 
 ### 启动完整系统
 
+每个新终端都需要先进入工作空间并加载 ROS2 和工作空间环境。后文以 `source /opt/ros/jazzy/setup.bash` 为例；使用 ROS2 Humble 时，请替换为 `source /opt/ros/humble/setup.bash`。
+
 先确认 CAN 接口已经启动：
 
 ```bash
@@ -246,7 +257,8 @@ ip -details link show can0
 - 可选 RViz
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0
 ```
@@ -322,6 +334,8 @@ ros2 topic echo /rebotarm/joint_states --once
 ros2 topic echo /rebotarm/arm_status --once
 ```
 
+`--once` 表示收到一条消息后退出。控制节点每秒发布一次 `arm_status`，同时在启动和状态变化时发布，因此无需额外指定 QoS 参数。修改源码并重新构建后，需要重启控制节点才能生效；若一直没有输出，可按 `Ctrl+C` 结束当前检查命令，并检查终端 A 的控制节点是否正常运行。
+
 ### Service
 
 | API | 类型 | 说明 |
@@ -347,10 +361,36 @@ ros2 topic echo /rebotarm/arm_status --once
 
 ## 基础控制示例
 
-### 1. 使能机械臂
+### 1. 启动控制节点并检查状态
+
+**终端 A：启动控制节点并保持运行。** 该节点持续处理话题、服务和 action 请求。若已在“快速启动”中运行 `bringup.launch.py` 或 `driver.launch.py`，直接保留原终端，不要再启动第二个驱动节点连接同一机械臂。
 
 ```bash
-ros2 service call /rebotarm/enable std_srvs/srv/Trigger
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 launch rebotarm_bringup driver.launch.py model:=rs channel:=can0
+```
+
+看到 `reBotArmController started` 后，保持终端 A 运行，在另一个终端执行后续命令。
+
+**终端 B：加载环境，确认能收到状态。**
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 topic echo /rebotarm/joint_states --once
+ros2 topic echo /rebotarm/arm_status --once
+```
+
+`--once` 在收到一条消息后退出，随后可在终端 B 继续执行第 2～5 步。需要持续观察关节状态时，可在额外终端加载相同环境，运行 `ros2 topic echo /rebotarm/joint_states`；持续监听不是发送控制命令的前置条件，终端 A 的驱动节点才需要一直运行。
+
+控制节点连接成功后会自动使能并启动控制循环，正常启动时 `arm_status` 中的 `enabled` 和 `control_loop_active` 应为 `true`，无需再手动调用 `/rebotarm/enable`。如果之前主动失能，确认当前没有轨迹、回零或重力补偿任务，再恢复使能：
+
+```bash
+# 仅在之前已失能、需要恢复控制时执行
+ros2 service call /rebotarm/enable std_srvs/srv/Trigger "{}"
 ```
 
 ### 2. 移动到末端 Pose
@@ -393,13 +433,15 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 
 ## 演示示例
 
-所有示例都假设已经启动 `reBotArmController`：
+保持终端 A 的控制节点运行，在终端 B 执行下列示例；已启动驱动时无需重复运行 launch。若新开终端，先加载环境：
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch rebotarm_bringup bringup.launch.py model:=rs channel:=can0
 ```
+
+`MoveTo` 和 `MoveToPose` 可以在控制节点正常启动后直接运行。`GravityCompensation` 和 `GripperControl` 脚本内部会调用 `/rebotarm/enable`，无需在运行脚本前额外手动使能。各示例应逐个运行，待上一个结束后再运行下一个。
 
 ### 关节移动示例
 
@@ -429,18 +471,13 @@ ros2 run rebotarmcontroller MoveToPose -- --x 0.30 --y 0.0 --z 0.30 --qw 1.0 --d
 ros2 run rebotarmcontroller GravityCompensation
 ```
 
-脚本启动时会先调用 `/rebotarm/enable`，再启动重力补偿。按 `Ctrl+C` 退出时，脚本会依次调用：
+脚本启动时会先调用 `/rebotarm/enable`，再启动重力补偿。按 `Ctrl+C` 退出时，当前脚本依次调用 `/rebotarm/safe_home` 和 `/rebotarm/disable`；`safe_home` 内部会处理重力补偿的退出，再完成安全回零。
 
-1. `/rebotarm/gravity_compensation/stop`
-2. `/rebotarm/safe_home`
-3. `/rebotarm/disable`
+如果终端 A 的控制节点关闭，终端 B 的重力补偿程序也会自动退出；状态心跳中断超过约 3 秒时同样退出，此时不再重复发送回零和失能请求。RS 默认已处于 MIT 模式时，进入重力补偿会保持使能；DM 从位置/速度模式切换到 MIT 时保留原有模式切换流程。
 
-这样可以让机械臂先停止重力补偿，再回到安全零位并失能。
-
-也可以手动调用对应服务：
+也可以选择手动调用服务完成相同流程，不要与上述脚本同时运行。控制节点正常启动后无需重复使能；若之前已经失能，请先按“基础控制示例”恢复使能。
 
 ```bash
-ros2 service call /rebotarm/enable std_srvs/srv/Trigger
 ros2 service call /rebotarm/gravity_compensation/start std_srvs/srv/Trigger
 ros2 service call /rebotarm/gravity_compensation/stop std_srvs/srv/Trigger
 ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger
@@ -452,6 +489,8 @@ ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 ```bash
 ros2 run rebotarmcontroller GripperControl
 ```
+
+脚本退出时会先关闭夹爪，再调用 `/rebotarm/disable`。若随后继续发送手动夹爪命令，请先恢复使能；重新运行此脚本时由脚本自行使能。
 
 运行后输入：
 
@@ -558,7 +597,7 @@ sudo apt install -y \
 MoveIt 相关包和 demo 已包含在本工作空间中，安装依赖后重新构建：
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
 colcon build --symlink-install
 source install/setup.bash
 ```
@@ -586,7 +625,8 @@ MoveIt 的规划功能需要基于 RViz GUI 或者通过节点调用，可以适
 MoveIt 通过 ros2_control 虚拟硬件接口实现 RViz 中的仿真，首先启用：
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch rebotarm_moveit_config demo.launch.py model:=rs
 ```
@@ -622,7 +662,8 @@ ros2 launch rebotarm_bringup driver.launch.py model:=rs channel:=can0
 另开终端：
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch rebotarm_moveit_config hardware.launch.py model:=rs
 ```
@@ -631,17 +672,59 @@ ros2 launch rebotarm_moveit_config hardware.launch.py model:=rs
 再次重申，在真实硬件上运行任何 demo 前，请确保机械臂工作空间内无人和障碍物，先在 RViz 中确认规划路径，并随时准备停止控制器。
 :::
 
-### 运行画矩形 demo
+#### 在 RViz 中设置目标并执行
 
-先启动 MoveIt 环境，再另开一个终端运行：
+1. 打开 `MotionPlanning` 面板的 `Planning` 页，将 `Start State` 设为 `<current>`，使用当前关节反馈作为规划起点。如果已经显示 `<current>`，可先选择 `home`，再切回 `<current>`，等待状态更新。
+2. 将 `Goal State` 选择为 `home`，再进入 `Joints` 页调整目标。若已经选择 `home`，先切换到其他选项，再选回。**确认关节表上方显示 `Group joints of goal state` 后再修改数值**；如果显示 `Group joints of start state`，修改的是规划起点，需要返回 `Planning` 页重新选择 `Goal State`。
+3. 仿真首次验证时，可只将目标 `joint1` 调整到约 `10°`，其他关节保持零位。`Joints` 页旋转关节的编辑值使用度，ROS 关节状态和轨迹使用 rad。
+4. 点击 `Plan`，检查预览路径后再点击 `Execute`。规划完成后如果机械臂状态发生变化，需要重新使用当前状态规划。
+
+在 ROS 2 Humble 的 RViz 插件中，`Joints` 页会跟随最近更新的起点或目标切换编辑对象。设置 `Start State` 或执行结束后，再次编辑关节前都应确认表格标题为 `Group joints of goal state`。
+
+青色球和红绿蓝圆环是手动规划用的末端交互控件。在左下角 `Displays` 展开 `MotionPlanning` → `Planning Request`，根据操作方式设置：
+
+- **手动拖动末端规划**：关闭 `Query Start State`，开启 `Query Goal State`，编辑目标状态。
+- **运行矩形或抓放脚本 Demo**：同时关闭 `Query Start State` 和 `Query Goal State`，隐藏交互球和圆环；恢复手动拖动时，再开启 `Query Goal State`。
+- **保留机器人和轨迹显示**：保持 `PlanningScene` 和 `RectangleTrace` 勾选，`RectangleTrace` 的话题为 `/draw_square/markers`。旧 RViz 窗口没有此项时，点击 `Add` → `By display type` → `MarkerArray`，将新显示项的 `Topic` 设为 `/draw_square/markers`；也可以重启 MoveIt 环境，加载更新后的 RViz 配置。
+
+如果执行时出现 `Invalid Trajectory: start point deviates from current robot state more than 0.05`，随后提示 `failed or timeout reached`，表示轨迹起点与当前关节状态不一致。日志中的 `expected` 是轨迹起点，`current` 是当前反馈，并非规划的最终目标。请先重置起点、确认正在编辑目标，再重新规划；不要通过增加执行超时或放宽起点容差处理这个问题。
+
+仿真使用 `demo.launch.py`，实机使用硬件驱动加 `hardware.launch.py`。不要同时运行两套 MoveIt 环境；排查状态来源时可运行：
 
 ```bash
-cd your/path/to/rebotarm_ros2
+ros2 topic info /joint_states --verbose
+ros2 topic info /rebotarm/joint_states --verbose
+```
+
+### 运行画矩形 demo
+
+下面以 **mock 仿真**为例。Demo 会连接已启动的 MoveIt，`model:=rs` 只选择机器人型号，不选择仿真或实机。仿真没有真实接触物理，机械臂和轨迹在 RViz 中显示。
+
+**1. 在终端 A 启动仿真，并保持运行。** 如果前面已经启动同一套仿真，不要重复启动：
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+ros2 launch rebotarm_moveit_config demo.launch.py model:=rs
+```
+
+使用 ROS 2 Humble 时，把以上及下方命令中的 `jazzy` 换成 `humble`。只有按前面的实机步骤启动硬件驱动和 `hardware.launch.py` 后，Demo 才会驱动真实机械臂；两套环境不能同时运行。
+
+**2. 在终端 B 运行矩形 Demo。** 修改 Demo 代码后，应先在工作空间执行 `colcon build --symlink-install --packages-select rebotarm_moveit_demos rebotarm_moveit_config`，再重新加载环境。运行时不需要点击 RViz 的 `Plan` 或 `Execute`：
+
+```bash
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch rebotarm_moveit_demos draw_square.launch.py model:=rs
 ```
 
-`draw_square` 会控制 `gripper_tcp` 遍历同一平面矩形的四个角点。默认参数在：
+`draw_square` 先闭合夹爪，确认动作成功后再复位并遍历同一平面矩形的四个角点，最后返回第一个角点。夹爪接口不可用或闭合失败时，Demo 会终止。
+
+RViz 中，**青色细线是矩形参考框，黄色线是根据 TF 采样的 `gripper_tcp` 实际运动轨迹**。黄色轨迹从到达第一个角点后开始记录，不包含复位和接近第一个角点的过程；重新运行 Demo 会清除上一轮轨迹。当前使用角点之间的关节空间规划，实际轨迹不保证沿参考框的四条直线运动。
+
+默认参数在：
 
 ```text
 src/rebotarm_moveit_demos/config/draw_square_rs.yaml
@@ -652,6 +735,8 @@ src/rebotarm_moveit_demos/config/draw_square_rs.yaml
 | 参数 | 说明 |
 |---|---|
 | `start_point` | demo 开始前复位到的关节位置 |
+| `closed_gripper_position` | 仿真夹爪闭合时的单侧关节位置，默认 `0.0` |
+| `hardware_closed_gripper_position` | 实机夹爪闭合时的电机位置，默认 `0.0`，使用前核对硬件限位 |
 | `rectangle_center` | 矩形中心点，坐标系为 `base_link` |
 | `rectangle_width` / `rectangle_height` | 矩形宽高，单位 m |
 | `tcp_rpy` | 末端姿态，默认让夹爪竖直朝下 |
@@ -661,10 +746,13 @@ src/rebotarm_moveit_demos/config/draw_square_rs.yaml
 
 ### 运行抓取放置 demo
 
-先启动 MoveIt 环境，再另开一个终端运行：
+保持上一步终端 A 的 mock 仿真运行，等待矩形 Demo 结束后，在终端 B 运行以下命令。RViz 中继续保持 `Query Goal State` 和 `Query Start State` 关闭，不需要点击 `Plan` 或 `Execute`。
+
+如果选择了前文的硬件驱动加 `hardware.launch.py`，同一条命令就会驱动真机。抓放 Demo 本身不会启动或切换仿真与实机环境：
 
 ```bash
-cd your/path/to/rebotarm_ros2
+cd ~/rebotarm_ros2
+source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch rebotarm_moveit_demos pick_place.launch.py model:=rs
 ```
@@ -687,7 +775,9 @@ src/rebotarm_moveit_demos/config/pick_place_rs.yaml
 | `open_gripper_position` / `grasp_gripper_position` / `closed_gripper_position` | 仿真夹爪单侧关节位置 |
 | `hardware_open_gripper_position` / `hardware_closed_gripper_position` | 硬件夹爪电机开闭位置 |
 
-`pick_place` 会在规划场景中添加一个待抓取物体，控制夹爪打开、移动到抓取位、闭合夹爪、移动到放置位并释放物体。仿真夹爪关节位置和真实硬件夹爪电机位置是两个不同参数，真实硬件运行前请先确认夹爪开闭方向和限位。
+在 mock 仿真中，`pick_place` 会在规划场景中添加一个虚拟待抓取物体，通过场景的附着和解除附着显示物体随夹爪移动，不模拟真实接触或抓取力。
+
+`pick_place` 会控制夹爪打开、移动到抓取位、闭合夹爪、移动到放置位并释放物体。仿真夹爪关节位置和真实硬件夹爪电机位置是两个不同参数，真实硬件运行前请先确认夹爪开闭方向和限位。
 
 ### MoveIt 配置文件
 

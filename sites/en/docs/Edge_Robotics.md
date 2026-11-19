@@ -68,10 +68,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>Applications</h4>
       <div className="learning-steps">
         <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS with Visual Grasping</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS with ROS2</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS with Isaac Sim</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web Control System: Real Robot & MuJoCo</b></div></a>
-        <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS with Agent Claw</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS Wrist Following</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">3</span><div><b>reBot-RS with ROS2</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">4</span><div><b>reBot-RS with Isaac Sim</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-RS Web Control System: Real Robot & MuJoCo</b></div></a>
+        <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">6</span><div><b>reBot-RS with Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -144,8 +145,20 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <h3>reBot Arm T701 HT</h3>
   </summary>
   <div className="product-body">
-    <div className="learning-steps">
-      <a className="step-card" href="/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Quick Start</b></a>
+    <div className="learning-group">
+      <h4>Quick Start &amp; SDK</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Quick Start</b></a>
+        <a className="step-card" href="/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT Control SDK</b></a>
+        <a className="step-card" href="/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>Common Resources</h4>
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">Description and simulation models (URDF / Mesh)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">Hardware documentation and bill of materials (BOM)</a>
+      </div>
     </div>
   </div>
 </details>
@@ -359,10 +372,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <p>For visual grasping, SLAM, voice interaction, and robot state perception.</p>
     </div>
     <div className="resource-columns">
-      <div><h4>LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a></div>
-      <div><h4>Cameras</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini_335lg/">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras">SENSING GMSL2 Camera</a><a href="/ac1">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec and ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 and Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
-      <div><h4>Voice</h4><a href="/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a></div>
-      <div><h4>IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a><h4>Voice</h4><a href="/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>Cameras</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini305/">Orbbec Gemini 305</a><a href="/orbbec_gemini_335lg/">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras">SENSING GMSL2 Camera</a><a href="/ac1">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec and ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 and Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
     </div>
   </section>
 

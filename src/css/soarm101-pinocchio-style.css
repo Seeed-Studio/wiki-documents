@@ -1,0 +1,251 @@
+/* SO-ARM100 / SO-ARM101 quick-start layout */
+
+/* Learning path heading follows the surrounding page theme. */
+.soarm-pino-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 4.5rem;
+  margin: 1.5rem 0 1rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #eff6ff, #f0fdfa);
+  border: 1px solid var(--rb-border);
+  color: var(--rb-text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+.soarm-pino-step-header > p {
+  margin: 0;
+}
+
+html[data-theme='dark'] .soarm-pino-step-header {
+  background: linear-gradient(135deg, #1b1f27, #161329);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* Safety notices retain their warning hierarchy in dark mode. */
+html[data-theme='dark'] .soarm-guide .safety-alert {
+  background: linear-gradient(135deg, #3c2027, #302329);
+  border-color: rgba(248, 113, 113, 0.45);
+  color: #fee2e2;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme='dark'] .soarm-guide .safety-alert-icon {
+  background: rgba(248, 113, 113, 0.16);
+  color: #fca5a5;
+}
+
+html[data-theme='dark'] .soarm-guide .safety-alert-content strong {
+  color: #fecaca;
+}
+
+html[data-theme='dark'] .soarm-guide .safety-alert-content p,
+html[data-theme='dark'] .soarm-guide .safety-alert-content ul {
+  color: #fee2e2;
+}
+
+.soarm-tool-button {
+  max-width: 100%;
+}
+
+.soarm-tool-button .rebot-buy-button {
+  max-width: 100%;
+  text-align: center;
+  white-space: normal;
+}
+
+/* Learning path: direct links keep the long guide easy to navigate. */
+.soarm-learning-path {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.soarm-learning-path .soarm-pino-step-header {
+  grid-column: 1 / -1;
+  margin: 0 0 0.25rem;
+}
+
+.soarm-learning-path .rebot-step-item,
+.soarm-learning-path .rebot-step-item:last-child {
+  padding: 1.15rem 1.1rem 1.15rem 4.3rem;
+  border: 1px solid var(--rb-border);
+  border-radius: 16px;
+  background: var(--rb-surface-soft);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+@media (hover: hover) {
+  .soarm-learning-path .rebot-step-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(37, 99, 235, 0.42);
+    box-shadow: 0 16px 32px rgba(37, 99, 235, 0.10);
+  }
+}
+
+.soarm-learning-path .rebot-step-item:focus-within {
+  border-color: var(--rb-primary);
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.10);
+}
+
+.soarm-learning-path .rebot-step-item::after {
+  display: none;
+}
+
+.soarm-learning-path .rebot-step-number {
+  top: 1.15rem;
+  left: 1.1rem;
+  border-color: var(--rb-primary);
+  color: var(--rb-primary);
+  background: var(--rb-surface);
+}
+
+.soarm-learning-path .rebot-step-content > h4 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.soarm-learning-path .rebot-step-content > h4 a {
+  color: var(--rb-text);
+  text-decoration: none;
+}
+
+.soarm-learning-path .rebot-step-content > h4 a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.soarm-learning-path .rebot-step-content > h4 a:hover {
+  color: var(--rb-primary);
+  text-decoration: underline;
+}
+
+.soarm-learning-path .rebot-step-label {
+  margin: 0.2rem 0 0.55rem;
+  color: var(--rb-primary);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.soarm-learning-path .rebot-step-content > p:last-child {
+  margin-bottom: 0;
+  color: var(--rb-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.soarm-learning-path a:focus-visible,
+.soarm-sensecraft a:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+/* Disclosure headers respond without moving expanded content. */
+.soarm-guide .rebot-demo-details > summary {
+  border-radius: 13px;
+  transition: color 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+@media (hover: hover) {
+  .soarm-guide .rebot-demo-details > summary:hover {
+    color: var(--rb-primary);
+    background-color: var(--rb-primary-soft);
+    box-shadow: inset 0 0 0 1px var(--rb-primary);
+  }
+}
+
+.soarm-guide .rebot-demo-details > summary:focus-visible {
+  color: var(--rb-primary);
+  background-color: var(--rb-primary-soft);
+}
+
+@media (max-width: 600px) {
+  .soarm-learning-path {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .soarm-learning-path .rebot-step-item,
+  .soarm-learning-path .rebot-step-item:hover {
+    transition: none;
+    transform: none;
+  }
+
+  .soarm-guide .rebot-demo-details > summary {
+    transition: none;
+  }
+
+  .soarm-sensecraft .sensecraft-banner__cta,
+  .soarm-sensecraft .sensecraft-banner__cta:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* The documentation sidebars leave less room for the banner on laptops. */
+@media (min-width: 721px) and (max-width: 1200px) {
+  .soarm-sensecraft {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .soarm-sensecraft .sensecraft-banner__actions {
+    min-width: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Keep notice titles and descriptions distinct throughout the guide. */
+.soarm-guide .notice-card > strong,
+.soarm-guide .notice-card > span {
+  display: block;
+}
+
+.soarm-guide .notice-card > strong {
+  margin-bottom: 0.45rem;
+}
+
+.soarm-guide .notice-card > span {
+  line-height: 1.65;
+}
+
+/* Keep information cards legible and separate them from the next section. */
+.soarm-guide .feature-grid,
+.soarm-guide .tips-grid {
+  margin-bottom: 1.5rem;
+}
+
+.soarm-guide .feature-grid > div,
+.soarm-guide .tips-grid > div {
+  min-width: 0;
+}
+
+.soarm-guide .feature-grid > div > strong,
+.soarm-guide .feature-grid > div > span,
+.soarm-guide .tips-grid > div > strong,
+.soarm-guide .tips-grid > div > span {
+  display: block;
+}
+
+.soarm-guide .feature-grid > div > strong,
+.soarm-guide .tips-grid > div > strong {
+  margin-bottom: 0.45rem;
+}
+
+.soarm-guide .feature-grid code,
+.soarm-guide .tips-grid code {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
