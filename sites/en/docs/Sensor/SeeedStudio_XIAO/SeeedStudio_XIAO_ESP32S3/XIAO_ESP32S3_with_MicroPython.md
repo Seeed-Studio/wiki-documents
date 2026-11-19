@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/esp32s3_micropython/title.png
 slug: /xiao_esp32s3_with_micropython
 last_update:
-  date: 08/14/2024
+  date: 11/05/2026
   author: Evelyn Chen
 createdAt: '2024-08-14'
 updatedAt: '2025-09-11'
@@ -31,12 +31,12 @@ pip install esptool
 
 #### Download the XIAO ESP32S3 MicroPython firmware
 
-You need to download the firmware binary file from [micropython.org](https://micropython.org/download/ESP32_GENERIC_S3/)
+You need to download the firmware binary file from [micropython.org](https://micropython.org/download/SEEED_XIAO_ESP32S3/)
 After downloading correct bin file, navigate to the folder, and open a cmd terminal there.
 As of the final draft, the latest version of bin file is:
 
 ```
-ESP32_GENERIC_S3-20230602-v1.23.0.bin
+SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 ```
 
 #### Connect the XIAO ESP32S3 on your PC
@@ -93,6 +93,7 @@ kill -9 <PID>
 ```
 
 Replace *PID* with the actual process ID found.
+:::
 
 #### Erase flash
 
@@ -107,10 +108,10 @@ Replace '/dev/cu.usbmodem11301' with the correct port name from your system(e.g.
 Flash the firmware onto XIAO ESP32S3:
 
 ```linux
-esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 ESP32_GENERIC_S3-20240602-v1.23.0.bin
+esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 ```
 
-Again, replace '/dev/cu.usbmodem11301' with the correct port name, and 'ESP32_GENERIC_S3-20240602-v1.23.0.bin' with the path to your blank firmware file.
+Again, replace '/dev/cu.usbmodem11301' with the correct port name, and 'SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin' with the path to your blank firmware file.
 Don't forget to Hard resetting via RTS pin.
 Then can start to compile script using your prefer tool to ESP32!
 
