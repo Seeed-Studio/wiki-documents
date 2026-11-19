@@ -9,6 +9,9 @@ keywords:
   - 机器人视觉
 image: https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp
 slug: /orbbec_gemini305
+last_update:
+  date: 11/19/2026
+  author: Yang-Ci
 ---
 
 <div align="center">
