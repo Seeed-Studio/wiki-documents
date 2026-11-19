@@ -55,17 +55,17 @@ Before you start, get one XIAO nRF54LM20B and a USB-C data cable. The Grove modu
 
 The board ships with the USB DFU boot chain, so flashing the MicroPython application goes over USB — a normal update needs no J-Link. This firmware build produces only one signed application image written to the fixed slot0 partition; it does not rebuild or overwrite MCUboot.
 
-Seeed has released the v1.0.0 MicroPython firmware package on GitHub. It contains the signed `firmware/zephyr.signed.bin`, cross-platform USB DFU flash scripts, a portable Windows nrfutil, and an on-board test console. Download the package, extract it, enter DFU mode and run the flash script to program the firmware.
+Seeed ships the MicroPython firmware and flash tooling in the `14_micropython` directory of the [XIAO_nRF54LM20B_wiki_examples](https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples) repository. It contains the signed `firmware/zephyr.signed.bin`, cross-platform USB DFU flash scripts, a portable Windows nrfutil, and an on-board test console. Clone the repository (or download the `14_micropython` directory), enter DFU mode, and run the flash script to program the firmware.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/releases/tag/xiao-nrf54lm20b-v1.0.0" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the M20B MicroPython firmware package v1.0.0</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_nRF54LM20B_wiki_examples/tree/main/14_micropython" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> View the 14_micropython directory</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-**Step 1.** Download **`xiao-nrf54lm20b-micropython-v1.0.0.zip`** from the Release page above and extract it to any folder.
+**Step 1.** Clone the `XIAO_nRF54LM20B_wiki_examples` repository (or download the `14_micropython` directory as a ZIP from the link above) and open the `14_micropython` folder.
 
-After extraction the folder holds several files, but the only firmware this tutorial flashes is **`firmware/zephyr.signed.bin`** — the MicroPython v1.27.0 runtime image. Stick to that path; do not flash anything under `tools/` or `test/`.
+The directory holds several files, but the only firmware this tutorial flashes is **`firmware/zephyr.signed.bin`** — the MicroPython v1.27.0 runtime image. Stick to that path; do not flash anything under `tools/` or `test/`.
 
 You will also see the flash scripts under `flash/`, the portable Windows tool under `tools/nrfutil/`, and `test/xiao_nrf54lm20b_full_test.py`.
 
@@ -76,7 +76,7 @@ You will also see the flash scripts under `flash/`, the portable Windows tool un
 
 **Step 3.** Run the flash script to upload the firmware.
 
-Windows is easiest — the firmware package bundles a portable nrfutil with the mcu-manager plugin, so no Python or Nordic tools are needed. In the extracted folder double-click `flash\flash_usb_dfu.cmd`, or in PowerShell run:
+Windows is easiest — the firmware package bundles a portable nrfutil with the mcu-manager plugin, so no Python or Nordic tools are needed. In the `14_micropython` folder double-click `flash\flash_usb_dfu.cmd`, or in PowerShell run:
 
 ```powershell
 .\flash\flash_usb_dfu.cmd
