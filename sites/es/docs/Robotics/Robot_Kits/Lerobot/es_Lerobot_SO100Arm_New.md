@@ -863,7 +863,7 @@ Ejecuta en orden (los comandos te pedirán de forma interactiva que selecciones 
 
 <CodeBlock language="bash">
 {`python -m src.tools.servo_center_test`}
-</CodeBlock]
+</CodeBlock>
 
 Después de la calibración de posición central, vuelve a los pasos de `lerobot-calibrate` anteriores y repite la calibración de todo el brazo.
 
@@ -2093,7 +2093,7 @@ Después de instalar LeRobot con las dependencias opcionales de `peft`, puedes u
 
 <CodeBlock language="bash">
 {`pip install -e ".[peft]"`}
-</CodeBlock]
+</CodeBlock>
 
 <CodeBlock language="bash">
 {`pip install "lerobot[peft]"`}
