@@ -10,6 +10,7 @@ translation:
   skip: [zh-CN]
 last_update:
   date: 2026-11-09
+  author: liujunjie
 createdAt: '2026-11-09'
 updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/cn/robotics/paper_reading_dm05/

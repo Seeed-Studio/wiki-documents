@@ -85,6 +85,10 @@ import TabItem from '@theme/TabItem';
   ariaLabel="在 GitHub 上为 LeRobot 点亮 Star"
 />
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV1guxD68E2B&autoplay=0&muted=1" title="reBot Arm B601-RS LeRobot 模仿学习实战教程" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 
 本维基提供了 reBot-DevArm 调试教程，并在 Lerobot 框架内实现数据收集和训练。
 
