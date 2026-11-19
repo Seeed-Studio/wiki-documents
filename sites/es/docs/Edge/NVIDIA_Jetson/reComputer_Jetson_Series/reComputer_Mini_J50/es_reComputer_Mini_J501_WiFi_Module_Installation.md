@@ -11,7 +11,7 @@ keywords:
   - M.2 Key M
   - AGX Orin
   - Jetson AGX Orin
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /recomputer_mini_j501_wifi_module_installation
 last_update:
   date: 06/17/2026
@@ -24,9 +24,11 @@ url: https://wiki.seeedstudio.com/es/recomputer_mini_j501_wifi_module_installati
 
 ## Introducción
 
+Para la visión general del sistema completo, la configuración y el flujo de trabajo de flasheo, consulta [reComputer Robotics J50 Mini Getting Started](https://wiki.seeedstudio.com/es/recomputer_robotics_j50_mini_getting_started/).
+
 En este documento, aprenderás cómo desmontar el **reComputer Mini J501** e instalar o reemplazar un **módulo Wi‑Fi** (M.2 Key E).
 
-La ranura Wi‑Fi se encuentra en la parte inferior de la **placa carrier reComputer Mini J501**. La **placa de expansión trasera** cubre la ranura **M.2 Key E** y debe retirarse para el servicio de Wi‑Fi. La **placa de expansión superior** tiene recortes que dejan expuestos los tornillos de montaje de la placa carrier, por lo que no es necesario retirarla durante el servicio. Los mismos pasos de desmontaje mediante la extracción de la placa carrier también se aplican al reemplazar la **SSD NVMe** (M.2 Key M): la placa de expansión trasera no cubre esa ranura.
+La ranura Wi‑Fi está en la parte inferior de la **placa carrier reComputer Mini J501**. La **placa de expansión trasera** cubre la ranura **M.2 Key E** y debe retirarse para el servicio de Wi‑Fi. La **placa de expansión superior** tiene recortes que dejan expuestos los tornillos de montaje de la placa carrier, por lo que no es necesario retirarla durante el servicio. Los mismos pasos de desmontaje hasta la extracción de la placa carrier también se aplican al reemplazar la **SSD NVMe** (M.2 Key M): la placa de expansión trasera no cubre esa ranura.
 
 :::warning
 Apaga el dispositivo y desconecta todos los cables (incluidos la entrada de CC y el Ethernet) antes de desmontarlo. Utiliza un manejo seguro frente a ESD al tocar la placa carrier y los módulos M.2.
@@ -49,11 +51,11 @@ El **reComputer Mini J501** utiliza la **placa carrier Robotics J501 Mini** con 
 </div>
 <br />
 
-Para especificaciones del dispositivo, flasheo de JetPack y uso de interfaces, consulta [Robotics J501 Mini carrier board Hardware and Getting Started](https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/).
+Para las especificaciones del dispositivo, el flasheo de JetPack y el uso de interfaces, consulta [Robotics J501 Mini carrier board Hardware and Getting Started](https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/).
 
 ## Módulo Wi‑Fi
 
-Recomendamos utilizar un módulo Realtek M.2 Key E Wi‑Fi/BT que sea compatible con Jetson (por ejemplo, RTL8852BE).
+Recomendamos utilizar un módulo Wi‑Fi/BT Realtek M.2 Key E que sea compatible con Jetson (por ejemplo, RTL8852BE).
 
 <div align="center">
   <img width ="600" alt="Realtek M.2 Key E WiFi and Bluetooth module for Jetson" src="https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_07.png"/>
@@ -99,7 +101,7 @@ Retira los **cuatro tornillos de montaje de las esquinas** de la placa carrier (
 
 **Paso 4.** Retira la placa de expansión **trasera** *(solo para instalación de Wi‑Fi)*.
 
-Gira la placa carrier de modo que la **parte inferior** quede hacia arriba. Una **placa de expansión trasera** está unida a la parte posterior mediante conectores placa a placa y bloquea el acceso a la ranura **M.2 Key E**. Omite este paso si solo estás reemplazando la SSD NVMe en la ranura **M.2 Key M**.
+Da la vuelta a la placa carrier de modo que el **lado inferior** quede hacia arriba. Una **placa de expansión trasera** está unida a la parte posterior mediante conectores placa a placa y bloquea el acceso a la ranura **M.2 Key E**. Omite este paso si solo estás reemplazando la SSD NVMe en la ranura **M.2 Key M**.
 
 <div align="center"><img width ="800" alt="J501 carrier board flipped over with rear expansion board still attached via board-to-board connectors" src="https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_04.png"/></div>
 
@@ -114,7 +116,7 @@ La ranura **M.2 Key E** (WiFi/BT) ahora está accesible. Los pasos siguientes cu
 
 **Paso 5.** Inserta el módulo inalámbrico en el puerto **M.2 Key E** con el ángulo correcto (normalmente 30°), luego presiónalo hacia abajo y fíjalo con el tornillo de montaje.
 
-**Paso 6.** Conecta el **cable (o cables) de antena IPEX** al módulo. Encamina los cables lejos de blindajes metálicos y orificios de tornillos para que no queden atrapados durante el reensamblaje.
+**Paso 6.** Conecta el **cable (o cables) de antena IPEX** al módulo. Encamina los cables lejos de las cubiertas metálicas y de los orificios de los tornillos para que no queden pellizcados durante el reensamblaje.
 
 <div align="center">
   <img width ="1000" alt="WiFi module installed in M.2 Key E slot with IPEX antenna cable connected on the J501 carrier board" src="https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_06.png"/>
@@ -125,7 +127,7 @@ La ranura **M.2 Key E** (WiFi/BT) ahora está accesible. Los pasos siguientes cu
 **Paso 7.** Vuelve a montar el dispositivo en orden inverso:
 
 1. Si la retiraste, vuelve a acoplar la placa de expansión trasera a la parte posterior de la placa carrier.
-2. Coloca la placa carrier de nuevo en el chasis y aprieta los cuatro tornillos de las esquinas.
+2. Coloca de nuevo la placa carrier en el chasis y aprieta los cuatro tornillos de las esquinas.
 3. Vuelve a colocar la tapa superior de la carcasa.
 
 ## Configuración de software (instalación del controlador)
