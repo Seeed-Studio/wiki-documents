@@ -11,6 +11,9 @@ keywords:
 slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -19,21 +22,21 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 # reBot Arm T701 HT クイックスタート
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT 両腕ロボット" />
+  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
 </div>
 
 <GitHubStarButton
   owner="Seeed-Projects"
   repo="reBot-Arm-T701"
   fallbackCount={35}
-  ariaLabel="GitHub で reBot Arm T701 にスターを付ける"
+  ariaLabel="Star reBot Arm T701 on GitHub"
 />
 
 ## プロジェクト概要
 
-reBot Arm T701 は、Seeed Studio が提供する Physical AI、ロボット学習、実環境でのデータ収集向けのオープンソース両腕ロボットプラットフォームです。オープンソース設計の reBot Arm B601 をベースとしており、開発者は 1 つのプラットフォームでデータ収集と協調的な両腕タスクの研究を行うことができます。
+reBot Arm T701 は、Seeed Studio が提供する Physical AI、ロボット学習、実環境でのデータ収集向けのオープンソース双腕ロボットプラットフォームです。オープンソース設計の reBot Arm B601 をベースとしており、開発者は 1 つのプラットフォームでデータ収集と協調的な両腕タスクの研究を行うことができます。
 
-- **両腕構成。** 2 本の 7 自由度アームが 1 つの胴体コラムに取り付けられています。CAN バスモーターが関節を駆動し、各アームにはそれぞれグリッパーが搭載されています。
+- **双腕構成。** 2 本の 7 自由度アームが 1 つの胴体コラムに取り付けられています。CAN バスモーターが各関節を駆動し、それぞれのアームにグリッパーが 1 つずつ搭載されています。
 - **ビジョンとエッジコンピューティング。** プラットフォームには、RealSense D405 手首カメラ、D435 ヘッドカメラ、および NVIDIA Jetson Orin コンピュートモジュール用のマウントポイントがあります。**Basic バージョンにはカメラは含まれません。**
 - **オープンソースリソース。** CAD ファイル、部品表 (BOM)、組立ガイド、ソフトウェアは、プロジェクトロードマップに従って段階的に公開されます。
 
@@ -41,10 +44,10 @@ reBot Arm T701 は、Seeed Studio が提供する Physical AI、ロボット学�
 
 <div className="rebot-disclaimer-gallery">
   <figure className="rebot-disclaimer-gallery-item">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm の安全に関する免責事項およびリスクに関する注意（中国語）" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/Chinese%20version%20statement.png" alt="reBot Arm safety disclaimer and risk notice in Chinese" />
   </figure>
   <figure className="rebot-disclaimer-gallery-item">
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm の安全に関する免責事項およびリスクに関する注意（英語）" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/English%20Version%20Statement.png" alt="reBot Arm safety disclaimer and risk notice in English" />
   </figure>
 </div>
 
@@ -56,6 +59,12 @@ reBot Arm T701 は、Seeed Studio が提供する Physical AI、ロボット学�
 
 ## ロボットの開封と組み立て
 
+<div className="rebot-step-flow" role="list">
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
 ### 梱包内容を確認する
 
 キャリングケースを開け、梱包明細書と照らし合わせてロボットの部品とファスナーを確認します。
@@ -65,88 +74,114 @@ reBot Arm T701 は、Seeed Studio が提供する Physical AI、ロボット学�
 :::
 
 <div align="center">
-  <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="両腕、胴体コラム、カバー、およびカメラが同梱された状態でキャリングケースを開いた様子" loading="lazy" />
+  <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="Open carrying case showing both arms, the torso column, the covers, and the cameras in the pictured configuration" loading="lazy" />
 </div>
 
-### 両腕を胴体コラムに取り付ける
+  </div>
+</div>
 
-1. 胴体コラムと右腕を取り出します。両方の写真で赤丸で示されている 4 つの取付穴の位置を合わせます。
-2. 付属の **M6 ネジ** 4 本を使用して、右腕をコラムに固定します。
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+
+### 両方のアームを胴体コラムに取り付ける
+
+1. 胴体コラムと右アームを取り出します。両方の写真で赤丸で示されている 4 つの取付穴の位置を合わせます。
+2. 付属の **M6 ネジ** 4 本を使用して、右アームをコラムに固定します。
 
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
     <figcaption>胴体コラム側の取付穴</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-torso-holes.webp" alt="胴体コラム側面に赤丸で示された 4 つの取付穴" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-torso-holes.webp" alt="Four mounting holes circled in red on the side of the torso column" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
-    <figcaption>右腕の取付プレート側の対応する穴</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-arm-holes.webp" alt="右腕の金属製取付プレートに赤丸で示された 4 つの取付穴" loading="lazy" />
+    <figcaption>右アーム取付プレート側の対応する穴</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/11-arm-holes.webp" alt="Four mounting holes circled in red on the right arm's metal mounting plate" loading="lazy" />
   </figure>
 </div>
 
-右腕を固定したら、上からと横から見てコラムに対してどのように収まっているかを確認します。
+右アームを固定したら、上からと横から見てコラムに対してどのように収まっているかを確認します。
 
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
-    <figcaption>右腕を取り付けた状態（上面図）</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-top.webp" alt="右腕の取付プレートと上側のネジを上から見た様子" loading="lazy" />
+    <figcaption>右アーム取付後（上面図）</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-top.webp" alt="Top view of the right arm mounting plate and upper screws" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
-    <figcaption>右腕を取り付けた状態（側面図）</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-side.webp" alt="右腕の取付プレートと下側のネジを横から見た様子" loading="lazy" />
+    <figcaption>右アーム取付後（側面図）</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/12-arm-mounted-side.webp" alt="Side view of the right arm mounting plate and lower screws" loading="lazy" />
   </figure>
 </div>
 
-電源が切れている状態で、胴体コラム側面から伸びている **XT30 2+2 ケーブルハーネス** を、下図に示す右腕のコネクタに接続します。左腕も同様に、コラムの反対側に取り付けて接続します。
+電源が切れている状態で、胴体コラム側面から伸びている **XT30 2+2 ケーブルハーネス** を、下図に示す右アームのコネクタに接続します。左アームも、コラムの反対側で同じ手順で取り付けて接続します。
 
 <div align="center">
-  <img width={680} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-arm-connector.webp" alt="胴体コラムから腕のコネクタまでの XT30 2+2 ケーブルハーネスの配線" loading="lazy" />
+  <img width={680} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-arm-connector.webp" alt="Routing of the XT30 2+2 cable harness from the torso column to the arm connector" loading="lazy" />
 </div>
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
 ### ショルダーカバーを取り付ける
 
-1. 各ショルダーカバーの上下の緑色カバーを肩の周りで組み合わせます。
+1. 各ショルダーの周りに、緑色カバーの上半分と下半分を組み合わせてはめ込みます。
 2. 赤丸で示された位置に、付属の **中短 M3 ネジ** を挿入します。片側 4 本、合計 8 本使用します。
 
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
-    <figcaption>ショルダーカバーの上下パーツ</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-shoulder-cover-parts.webp" alt="緑色の半円形ショルダーカバー 2 つ" loading="lazy" />
+    <figcaption>ショルダーカバーの上半分と下半分</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-shoulder-cover-parts.webp" alt="Two green semicircular shoulder cover pieces" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
-    <figcaption>ショルダーカバーを取り付けた状態</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/14-shoulder-cover-fit.webp" alt="組み立て済みの緑色ショルダーカバーの位置を赤枠で示した様子" loading="lazy" />
+    <figcaption>ショルダーカバー取付後</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/14-shoulder-cover-fit.webp" alt="Red box marking the position of the assembled green shoulder cover" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>ショルダーカバーのネジ位置（上面図）</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-top.webp" alt="上面図で赤丸で示された 2 本のショルダーカバーネジ" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-top.webp" alt="Two shoulder cover screws circled in red in the top view" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>ショルダーカバーのネジ位置（側面図）</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-side.webp" alt="側面図で赤丸で示されたショルダーカバーのネジ" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/15-shoulder-cover-screws-side.webp" alt="Shoulder cover screw circled in red in the side view" loading="lazy" />
   </figure>
 </div>
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### 胴体カバーを取り付ける
 
-1. 両方のショルダーカバーを固定したら、胴体カバーを合わせ、側面のケーブルを対応する切り欠きに通します。お使いのロボットに、下図のような **RealSense D435i** カメラが搭載されている場合は、前面カバーの開口部と位置を合わせてください。**Basic バージョンにはカメラは含まれません。**
+1. 両方のショルダーカバーを固定したら、胴体カバーをはめ込み、側面のケーブルを対応する切り欠きに通します。お使いのロボットに、下図のような **RealSense D435i** カメラが搭載されている場合は、前面カバーの開口部と位置を合わせてください。**Basic バージョンにはカメラは含まれません。**
 
    <div className="rebot-power-gallery">
      <figure className="rebot-power-gallery-item">
        <figcaption>前面カバーのカメラ開口部（Basic バージョンにはカメラは含まれません）</figcaption>
-       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-front.webp" alt="前面カバーの開口部に D435i を合わせた位置を赤枠で示した様子" loading="lazy" />
+       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-front.webp" alt="Red box marking where the D435i aligns with the opening in the front cover" loading="lazy" />
      </figure>
      <figure className="rebot-power-gallery-item">
-       <figcaption>側面ケーブル用の切り欠き</figcaption>
-       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-cable.webp" alt="胴体カバー側面のケーブル用切り欠きを赤丸で示した様子" loading="lazy" />
+       <figcaption>側面のケーブル用切り欠き</figcaption>
+       <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/16-torso-cover-cable.webp" alt="Red circle marking the cable cutout on the side of the torso cover" loading="lazy" />
      </figure>
    </div>
 
 2. 胴体カバー背面の赤丸で示された穴に、付属の **最も長い M3 ネジ** 4 本を挿入して固定します。
 
    <div align="center">
-     <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/17-torso-cover-screws-repaired.webp" alt="胴体カバー背面で赤丸で示された 4 つのネジ位置" loading="lazy" />
+     <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/17-torso-cover-screws-repaired.webp" alt="Four screw positions circled in red on the rear torso cover" loading="lazy" />
    </div>
+
+  </div>
+</div>
+
+</div>
 
 {/* - **TODO** Add instructions for securing the base and installing the grippers separately. */}
 
@@ -163,41 +198,54 @@ reBot Arm T701 は、Seeed Studio が提供する Physical AI、ロボット学�
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
     <figcaption>電源接続</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-power-connection.jpg" alt="T701 HT のベース部にある電源コネクタとケーブル" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-power-connection.jpg" alt="Power connector and cable at the base of the T701 HT" loading="lazy" />
   </figure>
   <figure className="rebot-power-gallery-item">
     <figcaption>丸い電源ボタンとメインボードの USB-C ポート</figcaption>
-    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-type-c-mainboard.jpg" alt="メインボード横の丸い電源ボタンと、USB-C ポートに接続された USB データケーブル" loading="lazy" />
+    <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-type-c-mainboard.jpg" alt="Round power button next to the mainboard and a USB data cable plugged into the USB-C port" loading="lazy" />
   </figure>
 </div>
 
 ## T701-HT SDK を使ってロボットをキャリブレーションして動かす
 
+<div className="rebot-step-flow" role="list">
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
 ### SDK をインストールする
 
-:::info[モーターライブラリの対応プラットフォーム]
+:::info[モータライブラリの対応プラットフォーム]
 
-SDK には、`motor_whl/` 内に次のビルド済み `hightorque_robot` ホイールが含まれています。
+SDK には、`motor_whl/` 内に以下の事前ビルド済み `hightorque_robot` ホイールが含まれています。
 
-| プラットフォーム | モーターライブラリのバージョン | CPython バージョン |
+| プラットフォーム | モータライブラリのバージョン | CPython のバージョン |
 | --- | --- | --- |
 | Linux x86_64 | 1.2.0 | 3.9, 3.10, 3.11, 3.12 |
 | Linux aarch64 (ARM64) | 1.0.0 | 3.9, 3.10, 3.11, 3.12 |
 
-以下のインストール例では、**Ubuntu 22.04 (x86_64) と Python 3.10** を使用します。表の他の組み合わせを使用する場合は、自分のアーキテクチャと Python バージョンに合った `.whl` ファイルを選択し、その後で以下の環境チェックを実行してください。
+以下のインストール例では、**Ubuntu 22.04 (x86_64) と Python 3.10** を使用します。表の他の組み合わせを使用する場合は、自分のアーキテクチャと Python バージョンに一致する `.whl` ファイルを選択し、その後で以下の環境チェックを実行してください。
 
 :::
 
-SDK のルートディレクトリ（`motor_whl/`、`requirements.txt`、`scripts/` が含まれているディレクトリ）でターミナルを開きます。以下の SDK コマンドはこのディレクトリから実行します。
+[T701-HT SDK リポジトリ](https://github.com/Seeed-Projects/reBot-Arm-T701-SDK) をクローンし、SDK のルートディレクトリに移動します。
 
-Conda をまだお持ちでない場合は、Miniforge をインストールします。
+```bash
+git clone https://github.com/Seeed-Projects/reBot-Arm-T701-SDK.git
+cd reBot-Arm-T701-SDK
+```
+
+特に指示がない限り、このディレクトリから以下の SDK コマンドを実行します。
+
+Conda をまだお持ちでない場合は、Miniforge をインストールしてください。
 
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-プロンプトに従って Conda を初期化します。新しいターミナルを開き、SDK のルートディレクトリに戻ります。環境を作成し、その後 SDK とその依存関係をインストールします。
+プロンプトに従って Conda を初期化します。新しいターミナルを開いて SDK のルートディレクトリに戻り、環境を作成してから SDK とその依存関係をインストールします。
 
 ```bash
 conda create -n t701-ht python=3.10 pip
@@ -206,106 +254,124 @@ python -I -m pip install ./motor_whl/hightorque_robot-1.2.0-cp310-cp310-linux_x8
 python -I -m pip install -r requirements.txt
 ```
 
-次のコマンドを実行して、Python が依存関係をインポートし、URDF モデルを読み込めることを確認します。このチェックはロボットを接続していなくても実行できます。
+Python が依存関係をインポートし、URDF モデルを読み込めることを確認するため、次のコマンドを実行します。このチェックはロボットを接続していなくても実行できます。
 
 ```bash
-python -I -c "import hightorque_robot, numpy, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
+python -I -c "import hightorque_robot, numpy, osqp, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT environment check passed')"
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### シリアル接続を確認する
 
-1. **シリアルポートを一覧表示します。** ロボットを接続し、ターミナルで次のコマンドを実行します。
+左腕は CAN1、右腕は CAN2 に接続します。SDK の `T701-HT_robot_param/serial_binding.yaml` 内の `board_serial` を、使用している通信ボードの USB シリアル番号に設定します。SDK は起動時に、ボードの USB 識別情報を使って現在のシリアルデバイスを検出します。
 
-   ```bash
-   ls -l /dev/ttyACM*
-   ```
-
-2. **両アームのシリアルポートを確認します。** チェックスクリプトを実行します。
-
-   ```bash
-   python scripts/t701_ht_read_state.py --arm both --check
-   ```
-
-   スクリプトは次の項目をチェックします。
-
-   - シリアルポートの列挙順序
-   - 通信ボードの USB 識別子
-   - シリアルポートの読み書き権限
-
-:::tip[片方のアームだけをチェックする]
-
-確認したいアームに対する引数に `--arm both` を置き換えます。
-
-| アーム | 引数 | デフォルトのシリアルポート | SDK シリアル ID |
-| --- | --- | --- | --- |
-| 左アーム | `--arm left` | `/dev/ttyACM0` | `serial_id=1` |
-| 右アーム | `--arm right` | `/dev/ttyACM1` | `serial_id=2` |
-
-:::
-
-**シリアルポートの権限エラー**
-
-スクリプトが権限エラーを報告した場合、SDK ガイドにある次のコマンドにより、指定したシリアルポートに対して、すべてのローカルユーザーに一時的に読み書きアクセス権を付与します。片方のアームだけをチェックする場合は、そのアームのポートのみを指定します。
+シリアルポートを開かずに両腕のマッピングを確認するには、次のコマンドを実行します。片方の腕だけを確認する場合は、その腕の YAML ファイルだけを指定します。
 
 ```bash
-sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1
+ls -l /dev/serial/by-id/
+python scripts/t701_ht_can_serial_adapter.py T701-HT_robot_param/T701-HT_left.yaml T701-HT_robot_param/T701-HT_right.yaml
 ```
 
-アクセス権を付与した後、再度シリアルポートチェックを実行します。デバイスの再接続や再起動を行うと、これらの権限はリセットされます。
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
 ### 関節およびグリッパの状態を読み取る
 
-シリアルチェックが通ったら、両アームから 1 サンプルを読み取ります。各アームの 7 つの関節とグリッパすべてがフィードバックを返すことを確認します。スクリプトは、関節位置（rad）、速度（rad/s）、トルク（N·m）、およびグリッパ位置（rad）と速度（rad/s）を報告します。
-
-```bash
-python scripts/t701_ht_read_state.py --arm both --once
-```
-
-連続的に読み取るには、次のコマンドを実行し、左アームには `1`、右アームには `2`、両方には `3` を入力します。`Ctrl+C` を押して終了します。
+スクリプトを実行し、左腕には `1`、右腕には `2`、両腕には `3` を入力します。選択した各腕について、7 つすべての関節とグリッパがフィードバックを返すことを確認してください。終了するには `Ctrl+C` を押します。
 
 ```bash
 python scripts/t701_ht_read_state.py
 ```
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### ゼロ位置を設定する
 
-- **TODO** 両アームの関節およびグリッパの標準ゼロ位置とキャリブレーション図を追加する。工場出荷時にキャリブレーション済みのロボットが再キャリブレーションを必要とするかどうかを明確にする。
+<div align="center">
+  <img width={520} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-zero-pose.png" alt="T701-HT zero pose" loading="lazy" />
+</div>
 
-標準ゼロ位置を確認したら、選択したアームの関節とグリッパをその位置に動かします。以下のコマンドは左アームを選択します。右アームまたは両アームを選択するには、`left` を `right` または `both` に置き換えます。`yes` を入力すると、現在位置が新しいゼロ位置として書き込まれ、保存されている値が上書きされます。
+スクリプトを起動して腕を選択します。関節とグリッパを意図したゼロ位置に動かし、操作メニューで `3` を選択して、選択した腕に保存されているゼロ位置を現在の姿勢で置き換えます。保存済みのゼロ位置へ移動するには `4` を、終了するには `0` を選択します。
 
 ```bash
-python scripts/t701_ht_set_zero.py --arm left
+python scripts/t701_ht_set_zero.py
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
 
 ### デモを実行する
 
-:::warning
-デモを実行する前に、関節のゼロ位置を確認し、ペイロードを取り外し、アームの可動範囲を確保してください。まずは片方のアームから始め、デモの開始と停止時にはアームを支えてください。関節インピーダンスのデモでは、選択したアームはスクリプトで設定された目標姿勢に向かって動きます。
+:::warning[デモを実行する前に]
+関節のゼロ位置を確認し、ペイロードをすべて取り外し、腕の可動範囲内を片付けてください。最初の実行では片方の腕だけから始めてください。重力補償デモの開始と停止時には、腕を手で支えてください。
 :::
 
-3 つのデモのいずれでも、左アームには `1`、右アームには `2`、両方には `3` を入力します。コマンドラインで `--arm left`、`--arm right`、`--arm both` を指定することもできます。`Ctrl+C` を押して終了し、選択したアームとグリッパに停止コマンドを送信します。
+`scripts` ディレクトリに入ります。デモを起動したら、左腕には `1`、右腕には `2`、両腕には `3` を入力します。
+
+```bash
+cd scripts
+```
 
 #### 重力補償
 
-このデモでは、現在の姿勢に対して計算された重力トルクの 0.8 倍をフィードフォワードトルクとして適用し、アームを手で動かしやすくします。
+このデモでは、MIT トルクフィードフォワードとして `0.8 × G(q)` を適用し、腕を手で動かしやすくします。関節の `Kp` および `Kd` ゲインとグリッパトルクはゼロです。
 
 ```bash
-python scripts/t701_ht_gravity_compensation.py
+python t701_ht_gravity_compensation.py
 ```
 
-#### 重力フィードフォワード付き関節インピーダンス
+#### 関節インピーダンス
+
+:::warning[関節インピーダンスデモを開始する前に]
+**いずれかのデモを開始する前に、ロボットの周囲および腕の可動範囲内に人や壊れやすい物がないことを必ず確認してください。** デモが開始されると、選択した腕はすぐに固定姿勢へ向けて動き始めます。
+:::
+
+左腕の目標姿勢は、おおよそ `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad です。右腕の目標姿勢は、各関節角度の符号を反転させたものになります。
+
+**重力フィードフォワード付き関節インピーダンス**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity.py
+python t701_ht_joint_impedance_with_gravity.py
 ```
 
-#### 重力フィードフォワードおよび摩擦補償付き関節インピーダンス
+**重力フィードフォワードおよび摩擦補償付き関節インピーダンス**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity_friction.py
+python t701_ht_joint_impedance_with_gravity_friction.py
 ```
+
+3 つすべてのデモで、設定された関節トルク制限が適用されます。重力補償を停止する場合、または関節インピーダンスデモを停止する前に腕をゼロ位置へ戻す場合は、`Ctrl+C` を押します。戻り動作の最中に再度 `Ctrl+C` を押すと、腕の動作が停止します。
+
+単一モータの 5 パラメータ制御、状態フィードバック、およびゼロ位置への復帰を伴うシャットダウンについては、[MIT Control SDK](https://wiki.seeedstudio.com/ja/rebot_t701_ht_control_mit/) を参照してください。
+
+順運動学および逆運動学のチェック、デカルト軌道、キーボード操作の例については、[T701 HT with Pinocchio](https://wiki.seeedstudio.com/ja/rebot_t701_ht_pinocchio/) を参照してください。
+
+  </div>
+</div>
+
+</div>
 
 ## トラブルシューティング
 
-- **シリアルポートが見つかりません。** ロボットの電源が入っていること、USB データケーブルがメインボードの USB-C ポートに接続されていることを確認します。再度 `ls -l /dev/ttyACM*` を実行します。
-- **シリアルポートの列挙が設定と一致しません。** 選択したアームのデフォルトデバイスパスと、他の USB シリアルデバイスが接続されていないかを確認します。
+- **シリアルポートが見つかりません。** ロボットの電源が入っていること、USB データケーブルがメインボードの USB-C ポートに接続されていることを確認し、再度 `ls -l /dev/serial/by-id/` を実行してください。
+- **一致する USB インターフェースがありません。** `board_serial` が接続されているボードと一致していること、左腕が CAN1、右腕が CAN2 を使用していることを確認してください。
+- **Permission denied（許可がありません）。** Ubuntu では、ユーザーが `dialout` グループを通じてシリアルデバイスへの読み書き権限を持っているか確認してください。

@@ -67,10 +67,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>应用</h4>
       <div className="learning-steps">
         <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">2</span><div><b>reBot-RS 与 ROS2</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">3</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
-        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">5</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS 腕部跟随</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">3</span><div><b>reBot-RS 与 ROS2</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">4</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
+        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">6</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -143,8 +144,20 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <h3>reBot Arm T701 HT</h3>
   </summary>
   <div className="product-body">
-    <div className="learning-steps">
-      <a className="step-card" href="/cn/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>快速开始</b></a>
+    <div className="learning-group">
+      <h4>快速上手与 SDK</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>快速开始</b></a>
+        <a className="step-card" href="/cn/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT 控制 SDK</b></a>
+        <a className="step-card" href="/cn/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>常用资源</h4>
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">机械臂描述与仿真模型（URDF / Mesh）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">硬件资料与物料清单（BOM）</a>
+      </div>
     </div>
   </div>
 </details>

@@ -614,8 +614,7 @@ html[data-theme='dark'] .robotics-quicklinks {
   background: #000;
 }
 #rebot-t701-ht .product-head::before {
-  background: linear-gradient(0deg, rgba(8, 15, 30, 0.8), transparent 58%);
-  opacity: 1;
+  content: none;
 }
 .t701-ht-cover {
   position: absolute;

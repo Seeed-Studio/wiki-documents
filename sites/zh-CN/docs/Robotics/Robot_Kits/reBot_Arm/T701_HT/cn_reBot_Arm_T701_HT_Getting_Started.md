@@ -9,6 +9,9 @@ keywords:
   - 双臂机器人
   - Python SDK
 slug: /rebot_t701_ht_getting_started
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -54,17 +57,30 @@ reBot Arm T701 是 Seeed Studio 推出的开源双臂机器人平台，面向物
 
 ## 开箱与组装机械臂
 
+<div className="rebot-step-flow" role="list">
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
 ### 开箱检查
 
 打开行李箱，对照随箱发货清单核对机械臂部件和紧固件。
 
-:::note Basic 版不附带摄像头
+:::note[Basic 版不附带摄像头]
 随箱物料以发货清单为准。
 :::
 
 <div align="center">
   <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/10-unpacking.webp" alt="打开行李箱后可见双臂、躯干立柱和外壳，示例包含摄像头" loading="lazy" />
 </div>
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### 将双臂固定到躯干立柱
 
@@ -101,6 +117,13 @@ reBot Arm T701 是 Seeed Studio 推出的开源双臂机器人平台，面向物
   <img width={680} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/13-arm-connector.webp" alt="立柱侧面的 XT30 2+2 线束接入手臂接口后的走线" loading="lazy" />
 </div>
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+
 ### 安装肩部外壳
 
 1. 取出绿色肩部外壳件，把上下两片合拢装到肩部。
@@ -125,6 +148,13 @@ reBot Arm T701 是 Seeed Studio 推出的开源双臂机器人平台，面向物
   </figure>
 </div>
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### 安装躯干外壳
 
 1. 两侧肩部外壳都固定后，装上躯干外壳，将侧边线束放在对应的走线缺口。若设备装有图示 **RealSense D435i** 摄像头，确认摄像头与前壳开口对齐。**Basic 版不附带摄像头。**
@@ -145,6 +175,11 @@ reBot Arm T701 是 Seeed Studio 推出的开源双臂机器人平台，面向物
    <div align="center">
      <img width={760} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/17-torso-cover-screws-repaired.webp" alt="躯干外壳背面红圈标出的四处螺丝位置" loading="lazy" />
    </div>
+
+  </div>
+</div>
+
+</div>
 
 {/* - **TODO** 补充底座固定和夹爪单独安装说明。 */}
 
@@ -171,6 +206,12 @@ reBot Arm T701 是 Seeed Studio 推出的开源双臂机器人平台，面向物
 
 ## 使用 T701-HT SDK 校准机械臂并完成首次运行
 
+<div className="rebot-step-flow" role="list">
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
 ### 安装 SDK
 
 :::info[底层库支持范围]
@@ -186,7 +227,14 @@ SDK 的 `motor_whl/` 目录提供以下 `hightorque_robot` 预编译安装包。
 
 :::
 
-取得 SDK 后，在终端进入包含 `motor_whl/`、`requirements.txt` 和 `scripts/` 的项目根目录。以下 SDK 命令均在该目录执行。
+克隆 [T701-HT SDK 仓库](https://github.com/Seeed-Projects/reBot-Arm-T701-SDK)，然后进入 SDK 根目录。
+
+```bash
+git clone https://github.com/Seeed-Projects/reBot-Arm-T701-SDK.git
+cd reBot-Arm-T701-SDK
+```
+
+除非另有说明，以下 SDK 命令都在该目录执行。
 
 电脑上尚未安装 Conda 时，先安装 Miniforge。
 
@@ -207,103 +255,121 @@ python -I -m pip install -r requirements.txt
 执行以下命令，检查依赖能否导入、URDF 模型能否加载。此步骤可离线验证。
 
 ```bash
-python -I -c "import hightorque_robot, numpy, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT 环境检查通过')"
+python -I -c "import hightorque_robot, numpy, osqp, pinocchio, scipy, yaml; pinocchio.buildModelFromUrdf('T701-HT_URDF/urdf/T701-HT.urdf'); print('T701-HT 环境检查通过')"
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### 检查串口连接
 
-1. **列出串口**。连接机械臂后，在终端执行以下命令。
+左臂接 CAN1，右臂接 CAN2。将 SDK 中 `T701-HT_robot_param/serial_binding.yaml` 里的 `board_serial` 填为通信板的 USB 序列号。SDK 启动时按 USB 标识查找对应的串口。
 
-   ```bash
-   ls -l /dev/ttyACM*
-   ```
-
-2. **检查双臂串口**。运行检查脚本。
-
-   ```bash
-   python scripts/t701_ht_read_state.py --arm both --check
-   ```
-
-   脚本会检查以下三项。
-
-   - 串口枚举顺序
-   - 通信板的 USB 标识
-   - 串口读写权限
-
-:::tip 只检查一侧机械臂
-
-将命令中的 `--arm both` 改为对应参数。
-
-| 机械臂 | 参数 | 默认串口 | SDK 串口编号 |
-| --- | --- | --- | --- |
-| 左臂 | `--arm left` | `/dev/ttyACM0` | `serial_id=1` |
-| 右臂 | `--arm right` | `/dev/ttyACM1` | `serial_id=2` |
-
-:::
-
-**串口读写权限不足**
-
-如果脚本提示权限不足，可执行 SDK 提供的临时授权命令，允许所有本机用户读写指定串口。只检查单臂时，仅填写对应的串口。
+执行以下命令检查双臂映射。这一步不打开串口。只检查单臂时，仅传入对应的 YAML 文件。
 
 ```bash
-sudo chmod 666 /dev/ttyACM0 /dev/ttyACM1
+ls -l /dev/serial/by-id/
+python scripts/t701_ht_can_serial_adapter.py T701-HT_robot_param/T701-HT_left.yaml T701-HT_robot_param/T701-HT_right.yaml
 ```
 
-授权后重新执行串口检查。拔插设备或重启后需重新授权。
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
 ### 读取关节和夹爪状态
 
-串口检查通过后，读取一轮双臂反馈。核对左右臂各自的 7 个关节和夹爪是否有反馈。关节输出位置（rad）、速度（rad/s）和力矩（N·m），夹爪输出位置（rad）和速度（rad/s）。
-
-```bash
-python scripts/t701_ht_read_state.py --arm both --once
-```
-
-如需持续读取，运行以下命令并按 `1`、`2` 或 `3` 选择左臂、右臂或双臂。按 `Ctrl+C` 退出。
+运行脚本，输入 `1`、`2` 或 `3` 选择左臂、右臂或双臂。确认所选机械臂的 7 个关节和夹爪都有反馈，按 `Ctrl+C` 退出。
 
 ```bash
 python scripts/t701_ht_read_state.py
 ```
 
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+
 ### 设置零点
 
-- **TODO** 补充左右臂各关节和夹爪的标准零位姿态、校准图示及出厂已设零的设备是否需要重新校准。
+<div align="center">
+  <img width={520} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-zero-pose.png" alt="T701-HT 零点姿态" loading="lazy" />
+</div>
 
-确认标准零位后，将所选机械臂的关节和夹爪摆到对应零位。以下命令以左臂为例，将 `left` 改为 `right` 或 `both` 可选择右臂或双臂。输入 `yes` 会将当前位置写为零点，覆盖原有设置。
+启动脚本并选择机械臂。将关节和夹爪摆到预定零位，在操作菜单选 `3` 将当前姿态保存为零位，此操作会覆盖所选机械臂原有的零位。选 `4` 回到已保存的零位，选 `0` 退出。
 
 ```bash
-python scripts/t701_ht_set_zero.py --arm left
+python scripts/t701_ht_set_zero.py
 ```
+
+  </div>
+</div>
+
+<div className="rebot-step-item" role="listitem">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
 
 ### 运行示例
 
-:::warning
-运行前确认关节零点，取下负载并清空机械臂的活动范围。首次运行时选择单臂，在启动和退出时托住机械臂。关节阻抗示例启动后会向脚本设定的目标姿态移动。
+:::warning[运行前]
+确认关节零点，取下负载并清空机械臂的活动范围。首次运行时选择单臂。启动和退出重力补偿示例时托住机械臂。
 :::
 
-三个示例均可按 `1`、`2` 或 `3` 选择左臂、右臂或双臂，也可通过 `--arm left`、`--arm right` 或 `--arm both` 指定。按 `Ctrl+C` 退出，脚本会向所选机械臂和夹爪发送停止命令。
+先进入 `scripts` 目录。运行示例后，输入 `1`、`2` 或 `3` 选择左臂、右臂或双臂。
+
+```bash
+cd scripts
+```
 
 #### 重力补偿
 
-以当前姿态计算的重力力矩乘以 0.8 作为前馈，减轻手动移动机械臂时的负担。
+示例通过 MIT 力矩前馈施加 `0.8 × G(q)`，减轻手动移动机械臂时的负担。关节 `Kp`、`Kd` 和夹爪力矩均为零。
 
 ```bash
-python scripts/t701_ht_gravity_compensation.py
+python t701_ht_gravity_compensation.py
 ```
 
-#### 关节阻抗与重力前馈
+#### 关节阻抗
+
+:::warning[启动关节阻抗示例前]
+**启动前请确认机器人周围及机械臂活动范围内无人、无易碎品，再运行下方示例。** 机械臂启动后会向固定目标姿态移动。
+:::
+
+左臂目标约为 `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad，右臂逐关节取反。
+
+**关节阻抗 + 重力前馈**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity.py
+python t701_ht_joint_impedance_with_gravity.py
 ```
 
-#### 关节阻抗、重力前馈与摩擦补偿
+**关节阻抗 + 重力前馈 + 摩擦补偿**
 
 ```bash
-python scripts/t701_ht_joint_impedance_with_gravity_friction.py
+python t701_ht_joint_impedance_with_gravity_friction.py
 ```
+
+三个示例均按配置限制关节力矩。按 `Ctrl+C` 后，重力补偿示例停止，关节阻抗示例回零再停止。回零期间再次按 `Ctrl+C` 可停止机械臂。
+
+单电机五参数控制、状态反馈和回零退出说明见 [MIT 控制 SDK](https://wiki.seeedstudio.com/cn/rebot_t701_ht_control_mit/)。
+
+正逆运动学验证、笛卡尔轨迹和键盘控制示例见 [T701 HT 与 Pinocchio](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/)。
+
+  </div>
+</div>
+
+</div>
 
 ## 常见问题
 
-- **找不到串口**。确认设备已开机，USB 数据线已接入主板的 Type-C 接口，再执行 `ls -l /dev/ttyACM*`。
-- **提示串口枚举与配置不符**。核对所选机械臂对应的默认设备路径，以及系统中是否同时连接了其他 USB 串口设备。
+- **找不到串口**。确认设备已开机，USB 数据线已接入主板的 Type-C 接口，再执行 `ls -l /dev/serial/by-id/`。
+- **找不到对应的 USB 接口**。核对 `board_serial` 是否与连接的通信板一致，并检查左臂是否接 CAN1、右臂是否接 CAN2。
+- **串口读写权限不足**。在 Ubuntu 上，检查当前用户是否通过 `dialout` 组获得该串口的读写权限。

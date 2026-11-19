@@ -298,21 +298,36 @@
 .cardSpecs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 4px 12px;
   margin: 0 0 8px;
+}
+
+.specItem {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-width: 0;
 }
 
 .specItem dt {
   font-size: 10.72px;
   color: var(--acc-muted);
   font-weight: 400;
+  white-space: nowrap;
+}
+
+.specItem dt::after {
+  content: ":";
 }
 
 .specItem dd {
   font-size: 12.48px;
   color: var(--acc-ink);
   font-weight: 650;
-  margin-top: 2px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cardKeyFact {
