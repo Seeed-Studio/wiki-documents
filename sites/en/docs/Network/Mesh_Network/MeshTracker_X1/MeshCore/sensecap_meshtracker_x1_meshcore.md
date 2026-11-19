@@ -273,6 +273,36 @@ The X1 Companion firmware (v1.18.0+) supports multi-press shortcuts on the butto
 - For details on the long-press behavior (reboot and DFU mode), see [How to reboot the device](#how-to-reboot-the-device).
 :::
 
+### Alert & Notification Behavior
+
+When a message arrives, the device vibrates **whether or not the app is connected**. The buzzer melody for incoming messages only plays when the **app is NOT connected**, so you won't get double-notified on both the app and the device.
+
+- Alert mode changes are saved automatically and persist across reboots.
+- After switching to `Alerts: Silent` (triple press), there is no beep or vibration confirmation. Triple press once more to switch back to `Alerts: Buzz+Vibe` and you will hear the beep and feel the vibration again.
+
+### Status LED Indicators
+
+The RGB status LED uses different colors to indicate the device state:
+
+| LED Effect | Meaning |
+| --- | --- |
+| Rainbow sweep (~1.2 s) | Powering on |
+| Rainbow sweep (~0.8 s) | New message received |
+| Green short blink (every 4 s) | Normal heartbeat — everything OK, no unread messages |
+| Blue short blink | App connected |
+| Amber blink (every 4 s) | Unread messages |
+| Red short blink | Low battery (below 3.5 V) |
+| Amber breathing | Charging (when there are no unread messages) |
+| Dim green solid | Charge complete |
+
+Priority when several conditions apply: **Red (low battery) > Amber (unread) > Blue (connected) > Green (heartbeat)**. Charging indicators (breathing / solid green) are only shown when there are no unread messages, so they never mask an unread reminder.
+
+### Battery & Charging
+
+- The battery percentage shown in the app is mapped linearly from 3.0 V (0%) to 4.2 V (100%).
+- When the battery voltage drops below **3.5 V**, the status LED starts blinking red. Charge the device when you see the red blink.
+- While charging, the LED breathes amber; when fully charged it stays dim green (as long as there are no unread messages).
+
 ### How to check the device ID
 
 The `last four digits` of the MAC address is the device ID
@@ -296,6 +326,15 @@ For example, the device ID of the device below would be `A0D4`
    If you want to get out of DFU mode, just press and hold the button, then connect the charging cable, release the button immediately.
 
  :::
+
+### Why am I not receiving messages?
+
+If your device seems connected but you are not receiving messages, check the following in order:
+
+1. **Same channel**: Make sure both devices have selected the same channel (for group channels, the channel name and preshared key must match exactly).
+2. **Same LoRa region / frequency**: Both devices must be set to the same region, and therefore the same frequency. See [Configure the LoRa](#configure-the-lora).
+3. **Within range**: MeshCore uses line-of-sight friendly LoRa transmission. Outdoor open areas reach much farther than indoors; walls, buildings and terrain significantly reduce range. Move both devices to an open location and try again.
+4. **Radio conditions**: Check the signal quality reports on both devices, see [Signal Quality](#signal-quality). If the signal is poor, increase the distance to the nearest node or add a repeater between the two ends.
 
 ## Troubleshooting
 
