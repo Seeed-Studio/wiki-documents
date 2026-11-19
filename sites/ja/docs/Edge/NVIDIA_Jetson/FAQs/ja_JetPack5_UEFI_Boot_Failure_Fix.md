@@ -61,8 +61,8 @@ export const BootloaderProductSelect = () => {
 
 ## 問題
 
-:::info アップストリームの NVIDIA UEFI 問題
-**このブート失敗は、JetPack 5.1.3 以前のリリースに影響する、アップストリームの NVIDIA UEFI ファームウェアのバグによって引き起こされています。** Seeed 製品のハードウェアやキャリアボード設計が原因ではありません。この FAQ では、以下に示す影響を受ける Seeed デバイス向けの修正方法を提供します。
+:::info 上流の NVIDIA UEFI 問題
+**このブート失敗は、JetPack 5.1.3 以前のリリースに影響する、上流の NVIDIA UEFI ファームウェアのバグによって引き起こされています。** Seeed 製品のハードウェアやキャリアボード設計が原因ではありません。この FAQ では、以下に示す影響を受ける Seeed デバイス向けの修正方法を提供します。
 :::
 
 以下に示す製品では、JetPack 5.1.3（Jetson Linux 35.5.0）が、起動サイクルを繰り返した後にブートしなくなる場合があります。NVIDIA フォーラムのディスカッションでは、関連する Orin のブート失敗と OP-TEE パーティションの破損が報告されています：
@@ -76,15 +76,15 @@ export const BootloaderProductSelect = () => {
 - reComputer Industrial J40/J30
 - reServer Industrial J40/J30
 
-次のいずれかの修正方法を選択してください。デバイスが Ubuntu をブートできない場合は **オプション 1** を使用します。Ubuntu ユーザースペースまでブートできる場合は、**オプション 2** を使用するとホスト PC からのフラッシュを回避できます。
+次のいずれかの修正方法を選択してください。デバイスが Ubuntu をブートできない場合は **オプション 1** を使用します。Ubuntu のユーザ空間までブートできる場合は、**オプション 2** を使用するとホスト PC からのフラッシュを回避できます。
 
 ## オプション 1: パッチ適用済み QSPI MFI パッケージを再フラッシュする
 
-これにより、QSPI 内のパッチ適用済みブートローダーが更新され、SSD に保存されているユーザーデータは保持されます。以下のタブから、お使いのデバイスに完全に一致する **パッチ適用済み QSPI 専用 MFI パッケージ** をダウンロードしてください。ホストのセットアップ、リカバリーモードへの手順、およびフラッシュコマンドは、[Flash JetPack summary](/ja/flash/jetpack_to_selected_product) に従います。
+これにより、QSPI 内のパッチ適用済み bootloader が更新され、SSD に保存されているユーザーデータは保持されます。以下のタブから、お使いのデバイスに正確に対応する **パッチ適用済み QSPI 専用 MFI パッケージ** をダウンロードしてください。ホストのセットアップ、リカバリモードへの移行手順、およびフラッシュコマンドは、[Flash JetPack summary](/ja/flash/jetpack_to_selected_product) に従います。
 
 ### パッチ適用済み QSPI MFI パッケージをダウンロードする
 
-以下のすべてのパッケージは **JetPack 5.1.3 / L4T 35.5.0** 用です。ダウンロード前に、製品ファミリと Jetson モジュールの両方が一致していることを確認してください。Classic 用パッケージは、対応する B バリアントもサポートします。
+以下のすべてのパッケージは **JetPack 5.1.3 / L4T 35.5.0** 用です。ダウンロード前に、製品ファミリと Jetson モジュールの両方が一致していることを確認してください。Classic パッケージは、対応する B バリアントもサポートします。
 
 <Tabs groupId="jetpack5-uefi-boot-fix">
   <TabItem value="classic" label="reComputer Classic J40/J30 (B)">
@@ -109,21 +109,19 @@ export const BootloaderProductSelect = () => {
   </TabItem>
   <TabItem value="reserver" label="reServer Industrial J40/J30">
 
-reServer Industrial 用のパッチ適用済み QSPI MFI ダウンロードリンクは現在準備中です。リンクが追加され次第、以下のモデルでこのオプションが利用可能になります：
-
 | 製品 | Jetson モジュール | パッチ適用済み QSPI MFI パッケージ |
 | --- | --- | --- |
-| reServer Industrial J3010 | Orin Nano 4GB | ダウンロードリンク準備中 |
-| reServer Industrial J3011 | Orin Nano 8GB | ダウンロードリンク準備中 |
-| reServer Industrial J4011 | Orin NX 8GB | ダウンロードリンク準備中 |
-| reServer Industrial J4012 | Orin NX 16GB | ダウンロードリンク準備中 |
+| reServer Industrial J3010 | Orin Nano 4GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAD6PRbbdtTK3_1j-PLbudAdxV0NQqzkoZ6tfSQHkFfiE) |
+| reServer Industrial J3011 | Orin Nano 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAnMqViu7CmSKL4JbsKob2YAfZ-gboKbE_mIEQ4vznB9F4) |
+| reServer Industrial J4011 | Orin NX 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCS0GsZnpHkQ4P5gXNuDlGqAb7q1ntBmiG9xzNNPrxgrns) |
+| reServer Industrial J4012 | Orin NX 16GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8fzLJ3G_PSLU2U2RbfwbqAXGZBp_e1F2kPnQ1gqXneso) |
 
   </TabItem>
 </Tabs>
 
-### ホストを準備し、リカバリーモードに入る
+### ホストを準備し、リカバリモードに入る
 
-以下から正確な製品と **R35.5.0 (JetPack 5.1.3)** を選択して、[Flash JetPack summary](/ja/flash/jetpack_to_selected_product) から再利用されたホスト要件とリカバリーモード手順を表示します。フラッシュ前に、そのガイドに記載されているホスト依存パッケージをインストールしてください。フラッシュ手順では、上でダウンロードしたパッチ適用済み QSPI 専用パッケージを使用します。
+以下から正確な製品と **R35.5.0 (JetPack 5.1.3)** を選択して、[Flash JetPack summary](/ja/flash/jetpack_to_selected_product) から再利用されたホスト要件とリカバリモード手順を表示します。フラッシュ前に、そのガイドに記載されているホスト依存パッケージをインストールしてください。フラッシュ手順では、上でダウンロードしたパッチ適用済み QSPI 専用パッケージを使用します。
 
 <BootloaderProductSelect />
 
@@ -134,9 +132,9 @@ reServer Industrial 用のパッチ適用済み QSPI MFI ダウンロードリ�
 <RecoveryIndustrial lang="en" />
 <RecoveryReserver lang="en" />
 
-### 展開してフラッシュする
+### 展開とフラッシュ
 
-ホスト PC 上で、ダウンロードしたパッチ適用済み QSPI MFI アーカイブを展開します。`<patched-qspi-mfi-archive>` は実際のファイル名に、`<extracted-mfi-directory>` は `tools/kernel_flash/l4t_initrd_flash.sh` を含む展開済みディレクトリに置き換えてください。
+ホスト PC 上で、ダウンロードしたパッチ適用済み QSPI MFI アーカイブを展開します。`<patched-qspi-mfi-archive>` を実際のファイル名に、`<extracted-mfi-directory>` を `tools/kernel_flash/l4t_initrd_flash.sh` を含む展開済みディレクトリに置き換えてください。
 
 ```bash
 sudo tar xpf <patched-qspi-mfi-archive>
@@ -146,18 +144,18 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 フラッシュが正常に完了するまで待機し、その後 Jetson を再起動して、既存の SSD からブートすることを確認します。
 
-## オプション 2: Ubuntu ユーザースペースからブートローダーを更新する
+## オプション 2: Ubuntu ユーザ空間から bootloader を更新する
 
-Jetson がまだ Ubuntu までブートできる場合は、このオプションを使用します。これにより、提供されたブートローダーパッケージがデバイス上にインストールされ、システム全体の再フラッシュは不要です。
+Jetson がまだ Ubuntu までブートできる場合は、このオプションを使用します。これにより、提供された bootloader パッケージがデバイス上にインストールされ、システム全体の再フラッシュは不要です。
 
-1. Jetson 上に [reComputer Orin bootloader package](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDDc4wU3676Qp3FC4MmwLwjAShNzdHT0PjqdNQnBMZ64OA?e=miBcQj) をダウンロードします。
+1. [reComputer Orin bootloader パッケージ](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDDc4wU3676Qp3FC4MmwLwjAShNzdHT0PjqdNQnBMZ64OA?e=miBcQj) を Jetson 上にダウンロードします。
 2. ターミナルで、ダウンロードしたファイルを含むディレクトリに移動し、次を実行してインストールします：
 
    ```bash
    sudo dpkg -i ./nvidia-l4t-bootloader-recomputer-orin_35.5.0-recomputer20261110.1_arm64.deb
    ```
 
-3. 期待されるブートローダーパッケージのバージョンがインストールされていることを確認します：
+3. 期待される bootloader パッケージのバージョンがインストールされていることを確認します：
 
    ```bash
    sudo dpkg -l | grep nvidia-l4t-bootloader
@@ -173,7 +171,7 @@ Jetson がまだ Ubuntu までブートできる場合は、このオプショ�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、お客様が製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、お客様が製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
