@@ -733,6 +733,20 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .step-card > div { grid-area: title / title / desc / desc; display: contents; }
 .step-card b { grid-area: title; color: var(--rp-text); font-size: 0.95rem; line-height: 1.35; }
+/* These application links contain only a title; avoid empty description/tag rows. */
+.rebot-rs-applications .step-card {
+  grid-template-areas: "index title";
+  grid-template-rows: 32px;
+  align-items: center;
+}
+.rebot-rs-applications .step-card b {
+  font-size: 0.85rem;
+  line-height: 1.15;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 .step-card small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.45; font-size: 0.82rem; }
 .step-card em {
   grid-area: tag;
