@@ -65,13 +65,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     </div>
     <div className="learning-group">
       <h4>应用</h4>
-      <div className="learning-steps">
+      <div className="learning-steps rebot-rs-applications">
         <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS 腕部跟随</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">3</span><div><b>reBot-RS 与 ROS2</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">4</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
-        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">6</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_bimanual/"><span className="step-index">3</span><div><b>reBot-RS双臂协作</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">4</span><div><b>reBot-RS 与 ROS2</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">5</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
+        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">7</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -113,8 +114,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM 与 ROS2</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web控制系统：真机与 MuJoCo</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>reBot-DM双臂协作</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-DM Web控制系统：真机与 MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -179,9 +181,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>拓展应用</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 与 NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/cn/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>双臂 SO-ARM 训练</b></div></a>
-        <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM结合Amazing Hand灵巧手</b></div></a>
+        <a className="step-card" href="/cn/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>双臂 SO-ARM 训练</b></div></a>
+        <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM结合Amazing Hand灵巧手</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>拓展应用</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">6</span><div><b>SO101 与 NVIDIA GR00T</b></div></a>
         <a className="step-card" href="/cn/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac 仿真</b></div></a>
         <a className="step-card" href="/cn/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 强化学习</b></div></a>
         <a className="step-card" href="/cn/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 与 Isaac Sim</b></div></a>
