@@ -67,6 +67,7 @@ const sensorCategory = {
       items: [
         'Robotics/Robot_Sensor/Camera/pt_Getting_Start_with_AC1',
         'Robotics/Robot_Sensor/Camera/pt_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+        'Robotics/Robot_Sensor/Camera/pt_Getting_Start_with_Orbbec_Gemini_305',
         'Robotics/Robot_Sensor/Camera/pt_Getting_Start_with_Orbbec_Gemini_336',
         'Robotics/Robot_Sensor/Camera/pt_Orbbec_Depth_Camera',
         'Robotics/Robot_Sensor/Camera/pt_realsense_3D_seg',
