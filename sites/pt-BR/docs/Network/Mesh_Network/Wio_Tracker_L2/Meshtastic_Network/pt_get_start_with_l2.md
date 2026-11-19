@@ -638,7 +638,7 @@ Após a regeneração da chave, outro dispositivo precisa se reconectar ao nó. 
 
 ## Fonte
 
-- [Cálculo de consumo de energia](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+- [Cálculo de consumo de energia](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
 
 ## Suporte técnico e discussão sobre o produto
 

@@ -638,7 +638,7 @@ NodeDB は、現在のメッシュネットワーク内で検出されたノー�
 
 ## 参考資料
 
-- [消費電力計算](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)
+- [消費電力計算](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
 
 ## 技術サポート & 製品ディスカッション
 
