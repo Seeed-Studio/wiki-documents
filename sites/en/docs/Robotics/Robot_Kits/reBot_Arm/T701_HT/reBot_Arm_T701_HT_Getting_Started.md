@@ -12,7 +12,7 @@ slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -339,27 +339,7 @@ The demo applies `0.8 × G(q)` as MIT torque feedforward to make the arm easier 
 python t701_ht_gravity_compensation.py
 ```
 
-#### Joint Impedance
-
-:::warning[Before starting a joint impedance demo]
-**Make sure the area around the robot and within the arms' range of motion is clear of people and fragile objects before starting either demo.** The selected arm moves toward a fixed pose as soon as the demo starts.
-:::
-
-The left-arm target is approximately `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad. The right-arm target reverses the sign of each joint angle.
-
-**Joint impedance with gravity feedforward**
-
-```bash
-python t701_ht_joint_impedance_with_gravity.py
-```
-
-**Joint impedance with gravity feedforward and friction compensation**
-
-```bash
-python t701_ht_joint_impedance_with_gravity_friction.py
-```
-
-All three demos apply the configured joint torque limits. Press `Ctrl+C` to stop gravity compensation or to return the arms to zero before stopping a joint impedance demo. During the return, press `Ctrl+C` again to stop the arms.
+The demo applies the configured joint torque limits. Press `Ctrl+C` to stop the motors.
 
 For single-motor five-parameter control, state feedback, and return-to-zero shutdown, see [MIT Control SDK](https://wiki.seeedstudio.com/rebot_t701_ht_control_mit/).
 

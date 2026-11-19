@@ -1,5 +1,5 @@
 ---
-description: Comienza con Ripple UI en el Wio Tracker L2 Pro. Aprende cómo flashear firmware, configurar redes MeshCore, enviar mensajes, usar mapas y rutas GPS, y desbloquear funciones premium.
+description: Comienza con Ripple UI en el Wio Tracker L2 Pro. Aprende a flashear firmware, configurar redes MeshCore, enviar mensajes, usar mapas y rutas GPS, y desbloquear funciones premium.
 title: Primeros pasos con Ripple
 keywords:
   - Ripple
@@ -24,11 +24,11 @@ Ripple UI es un firmware con pantalla táctil para el L2 Pro. Te permite añadir
 
 ### ¿Cómo se relaciona Ripple con MeshCore?
 
-MeshCore se encarga de la comunicación mesh. Ripple UI te permite usarlo directamente en la pantalla táctil del L2 Pro.
+MeshCore gestiona la comunicación en malla. Ripple UI te permite usarla directamente en la pantalla táctil del L2 Pro.
 
 | Nombre | Propósito |
 | --- | --- |
-| MeshCore | Comunicación mesh LoRa |
+| MeshCore | Comunicación LoRa en malla |
 | Firmware Ripple UI | Funcionamiento autónomo con pantalla táctil |
 | Firmware MeshCore Companion | Funcionamiento a través de un teléfono u otro cliente |
 
@@ -96,7 +96,7 @@ Haz clic en `Flash!`, selecciona tu dispositivo en el cuadro de diálogo de puer
 
 :::warning
 
-La opción `Erase device` mostrada arriba borra los datos y ajustes en la memoria flash interna, incluido el estado de desbloqueo. Haz copia de seguridad de los datos importantes y conserva tu Unlock Code antes de borrar.
+La opción `Erase device` mostrada arriba borra los datos y ajustes de la memoria flash interna, incluido el estado de desbloqueo. Haz copia de seguridad de los datos importantes y conserva tu Unlock Code antes de borrar.
 
 :::
 
@@ -129,13 +129,13 @@ Ripple UI combina la entrada táctil con dos botones de hardware:
 
 1. Completa los tutoriales de pantalla táctil y del botón Select que se muestran en el primer arranque.
 
-2. Elige un preset de radio apropiado para tu región o introduce la frecuencia, el factor de dispersión (SF) y otros parámetros usados por tu red local.
+2. Elige un ajuste preestablecido de radio apropiado para tu región o introduce la frecuencia, el factor de dispersión (SF) y otros parámetros usados por tu red local.
 
-3. Nombra el perfil usando letras y números, sin espacios.
+3. Pon nombre al perfil usando letras y números, sin espacios.
 
 4. Guarda el perfil. Si se te solicita, reinicia el dispositivo para aplicar los ajustes.
 
-Para una prueba con dos dispositivos, usa ajustes de radio coincidentes en ambos dispositivos. Seleccionar el mismo preset es la opción más sencilla. Con ajustes personalizados, comprueba también el ancho de banda, la tasa de codificación y otros parámetros, en lugar de hacer coincidir solo la frecuencia y el SF.
+Para una prueba con dos dispositivos, usa ajustes de radio coincidentes en ambos dispositivos. Seleccionar el mismo ajuste preestablecido es la opción más sencilla. Con ajustes personalizados, comprueba también el ancho de banda, la tasa de codificación y otros parámetros, en lugar de hacer coincidir solo la frecuencia y el SF.
 
 ### Configura tu nombre
 
@@ -213,7 +213,7 @@ Abre el menú de la pantalla de inicio en la esquina inferior izquierda para acc
 
 | Área | Función |
 | --- | --- |
-| Tocar el lado izquierdo de la barra de título | Abre `Switch To` para cambiar perfiles de red |
+| Tocar el lado izquierdo de la barra de título | Abre `Switch To` para cambiar de perfil de red |
 | Mantener pulsada la esquina superior izquierda | Captura una captura de pantalla |
 | Centro de la barra de título | Abre los interruptores rápidos |
 | Lado derecho de la barra de título | Abre la información de GPS |
@@ -283,7 +283,7 @@ Los mensajes directos esperan un acuse de recibo (ACK) del destinatario. Si el e
 
 1. Prepara una tarjeta microSD con formato FAT32 de 32 GB o menos.
 
-2. Guarda mosaicos de mapa ráster usando esta estructura de carpetas en la tarjeta:
+2. Guarda teselas de mapa ráster usando esta estructura de carpetas en la tarjeta:
 
 ```text
 
@@ -293,9 +293,9 @@ Los mensajes directos esperan un acuse de recibo (ACK) del destinatario. Si el e
 
 3. Inserta la tarjeta, enciende el dispositivo y abre `M`. El dispositivo necesitará un reinicio si la tarjeta SD se monta o desmonta.
 
-4. Desplázate hasta un área cubierta por tus mosaicos y selecciona un nivel de zoom disponible.
+4. Desplázate hasta un área cubierta por tus teselas y selecciona un nivel de zoom disponible.
 
-`zoom` es el nivel de zoom; `x` e `y` son las coordenadas del mosaico. Los dispositivos bloqueados solo representan **niveles de zoom 1–9**. Los niveles de zoom más detallados requieren un código de desbloqueo.
+`zoom` es el nivel de zoom; `x` e `y` son las coordenadas de la tesela. Los dispositivos bloqueados solo representan **niveles de zoom 1–9**. Los niveles de zoom más detallados requieren un código de desbloqueo.
 
 ### Descargar mapas por Wi‑Fi (requiere desbloqueo)
 
@@ -305,11 +305,11 @@ Los mensajes directos esperan un acuse de recibo (ACK) del destinatario. Si el e
 
 3. Introduce el nombre y la contraseña de tu red y habilita la descarga de mapas.
 
-4. Pulsa `ENTER` para guardar y reinicia cuando se te indique.
+4. Pulsa `ENTER` para guardar y reinicia cuando se te solicite.
 
 5. Confirma que el menú de Wi‑Fi muestra un indicador de conexión naranja.
 
-6. Abre el mapa y desplázate o haz zoom hasta el área requerida. Los mosaicos se descargan bajo demanda y se almacenan en caché en la tarjeta SD.
+6. Abre el mapa y desplázate o haz zoom hasta el área requerida. Las teselas se descargan bajo demanda y se almacenan en caché en la tarjeta SD.
 
 ### Establecer la ubicación usada en los anuncios
 
@@ -332,7 +332,7 @@ Busca y abre `Unlock` en los menús del dispositivo. Anota el **número de serie
 
 Abre la [página de código de desbloqueo de Ripple Ultra de Scott](https://buymeacoffee.com/ripplebiz/e/249834), sigue las instrucciones de compra y proporciona el número de serie que se muestra en tu dispositivo. Las licencias se emiten por dispositivo; introduce solo un número de serie de dispositivo por cada licencia.
 
-Si tu dispositivo venía con un código de desbloqueo aplicable, continúa con el siguiente paso.
+Si tu dispositivo vino con un código de desbloqueo aplicable, continúa con el siguiente paso.
 
 ### Introducir el código en tu dispositivo
 
@@ -356,9 +356,9 @@ Guarda el código junto con el número de serie de su dispositivo. En nuestra pr
 
 - **Administrador de sensor:** Accede a comandos de sensor, telemetría y gestión de permisos.
 
-- **Zoom de mapa más detallado:** Muestra mosaicos de mapa por encima del nivel de zoom 9.
+- **Zoom de mapa más detallado:** Muestra teselas de mapa por encima del nivel de zoom 9.
 
-- **Descarga por Wi‑Fi:** Descarga mosaicos de mapa bajo demanda y guárdalos en caché en la tarjeta SD.
+- **Descarga por Wi‑Fi:** Descarga teselas de mapa bajo demanda y guárdalas en caché en la tarjeta SD.
 
 - **Rutas GPS más largas:** Registra más de los 64 puntos GPS permitidos en dispositivos bloqueados.
 
@@ -370,13 +370,13 @@ Guarda el código junto con el número de serie de su dispositivo. En nuestra pr
 
 2. Selecciona `New Network`, configura los ajustes de radio y nombra el perfil.
 
-3. Guarda y reinicia si se te indica.
+3. Guarda y reinicia si se te solicita.
 
 4. Toca el lado izquierdo de la barra de título y selecciona un perfil en `Switch To`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_new_network.jpg" alt="Creación de un perfil de red MeshCore en Networks" width={500} height="auto" /></p>
 
-Cada perfil tiene su propia identidad, contactos y preferencias. Abrir un contacto que pertenezca a otro perfil puede pedirte que cambies de perfil. Este aviso no indica que el dispositivo haya detectado qué red está usando actualmente el otro nodo.
+Cada perfil tiene su propia identidad, contactos y preferencias. Abrir un contacto perteneciente a otro perfil puede pedirte que cambies de perfil. Este aviso no indica que el dispositivo haya detectado qué red está usando actualmente el otro nodo.
 
 ## Preguntas frecuentes
 
@@ -394,11 +394,17 @@ Esta pantalla muestra el código de retorno de RadioLib de la inicialización de
 
 - Empieza con una prueba a corta distancia en un área abierta.
 
-- `Scan Local` solo muestra los nodos que responden a las solicitudes de descubrimiento; no sustituye los anuncios de identidad de todos los dispositivos.
+- `Scan Local` solo muestra nodos que responden a solicitudes de descubrimiento; no sustituye los anuncios de identidad de todos los dispositivos.
 
 ### Por qué el mapa está en blanco
 
-Comprueba el formato de la tarjeta SD, las rutas de los mosaicos y si existen mosaicos para el área mostrada. En un dispositivo bloqueado, comprueba también que el nivel de zoom esté entre 1 y 9. Una posición GPS válida no significa que se hayan descargado mosaicos de mapa.
+Comprueba el formato de la tarjeta SD, las rutas de las teselas y si existen teselas para el área mostrada. En un dispositivo bloqueado, comprueba también que el nivel de zoom esté entre 1 y 9. Una posición GPS válida no significa que se hayan descargado las teselas del mapa.
+
+### Mapeo de batería
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
 
 ## Recursos
 
