@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 Ripple UI 是用于 L2 Pro 的触摸屏固件。它让你可以直接在设备上添加联系人、收发消息、查看地图并记录你的 GPS 轨迹，而无需使用手机来完成这些任务。
 
-### Ripple 与 MeshCore 的关系？
+### Ripple 与 MeshCore 的关系是什么？
 
 MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触摸屏上使用它。
 
@@ -72,15 +72,15 @@ MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触�
 
 提供两种固件变体：
 
-- **Ripple GUI：数据存储在 SD 卡（-SD）：** 将配置和数据存储在 microSD 卡上。使用前插入容量不超过 32 GB、FAT32 格式的存储卡。
+- **Ripple GUI：数据存储在 SD 卡（-SD）：** 将配置和数据存储在 microSD 卡上。使用前插入一张容量不超过 32 GB、FAT32 格式化的卡。
 
 - **Ripple GUI（内部存储）：** 将配置和数据存储在设备的内部闪存中。
 
 **步骤 1：打开网页烧录工具**
 
-访问 [Wio Tracker L2 Web Flasher](https://flasher.meshcore.io/wio-tracker-l2/)，并为 L2 选择 Ripple UI 固件和存储变体。请使用支持串口访问的桌面浏览器，例如 Chrome 或 Edge。
+访问 [Wio Tracker L2 Web Flasher](https://flasher.meshcore.io/wio-tracker-l2/)，并为 L2 选择 Ripple UI 固件和存储变体。使用支持串口访问的桌面浏览器，例如 Chrome 或 Edge。
 
-选择 `Seeed Studio Wio Tracker L2 Pro`，选择一个 Ripple GUI 变体，并选择固件版本。下图示例为 v12.3。
+选择 `Seeed Studio Wio Tracker L2 Pro`，选择一个 Ripple GUI 变体，并选择固件版本。下图显示的是 v12.3。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_flasher.png" alt="在网页烧录工具中选择 L2 Pro、Ripple GUI 变体和固件版本" width={1000} height="auto" /></p>
 
@@ -96,7 +96,7 @@ MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触�
 
 :::warning
 
-上方所示的 `Erase device` 选项会清除内部闪存中的数据和设置，包括解锁状态。擦除前请备份重要数据并妥善保存你的 Unlock Code。
+上图中的 `Erase device` 选项会清除内部闪存中的数据和设置，包括解锁状态。在擦除前请备份重要数据并妥善保存你的 Unlock Code。
 
 :::
 
@@ -135,7 +135,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 4. 保存配置文件。如果出现提示，请重启设备以应用设置。
 
-对于两台设备的测试，请在两台设备上使用匹配的无线电设置。选择相同的预设是最简单的方式。如果使用自定义设置，请同时检查带宽、编码率和其他参数，而不仅仅是频率和 SF。
+对于两台设备的测试，请在两台设备上使用匹配的无线电设置。选择相同的预设是最简单的方式。如果使用自定义设置，请同时检查带宽、编码率和其他参数，而不仅仅是匹配频率和 SF。
 
 ### 设置你的名称
 
@@ -151,9 +151,9 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 <Tabs>
 
-<TabItem value="grid" label="G: Grid" default>
+<TabItem value="grid" label="G: 网格" default>
 
-`G` 是一个可自定义的主屏幕，包含 3 × 4 的网格。
+`G` 是一个 3 × 4 网格的可自定义主屏幕。
 
 - 长按空白单元格以添加联系人、群组频道或设置的快捷方式。
 
@@ -163,9 +163,9 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 </TabItem>
 
-<TabItem value="list" label="L: List">
+<TabItem value="list" label="L: 列表">
 
-`L` 列出你的网络配置文件、联系人、群组频道以及 `Discover`。使用此页面添加联系人、编辑你的 Identity，并打开会话。
+`L` 会列出你的网络配置文件、联系人、群组频道以及 `Discover`。使用此页面添加联系人、编辑你的 Identity，并打开会话。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Ripple UI 列表页面" width={500} height="auto" /></p>
 
@@ -173,7 +173,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 </TabItem>
 
-<TabItem value="map" label="M: Map">
+<TabItem value="map" label="M: 地图">
 
 `M` 显示地图、位置以及任何已加载的 GPS 轨迹。
 
@@ -181,7 +181,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 - 点击 `+` 或 `−` 进行缩放。不支持双指缩放。
 
-- 点击位置跟随按钮以让地图始终以你的位置为中心。启用时按钮会变为橙色，并且屏幕保持常亮。
+- 点击跟随位置按钮以让地图始终以你的位置为中心。启用时按钮会变为橙色，并且屏幕保持常亮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_M.jpg" alt="Ripple UI 地图和缩放控件" width={500} height="auto" /></p>
 
@@ -189,7 +189,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 <TabItem value="extra" label="Extra">
 
-打开主屏幕左下角的菜单以进入 `Extra`，其中包含设备设置和工具。
+打开主屏幕左下角菜单进入 `Extra`，其中包含设备设置和工具。
 
 - **Display：** 调整字体大小、主题、动画和强调色。
 
@@ -219,11 +219,11 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 | 标题栏右侧 | 打开 GPS 信息 |
 | 主屏幕左下角菜单 | 打开系统设置，包括 Display、Wi-Fi、Networks 和 Timezone |
 
-### 截取屏幕截图
+### 截图
 
 **长按屏幕左上角** 以捕获当前界面。你可以使用截图分享设置或报告问题。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_screenshot.gif" alt="长按左上角以截取屏幕截图" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_screenshot.gif" alt="长按左上角进行截图" width={500} height="auto" /></p>
 
 捕获的截图为 BMP 文件，文件名包含日期和时间，如下所示。
 
@@ -239,19 +239,19 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 3. 将 `Advert` 设置为 `On` 以允许身份广播。
 
-4. 从 `L` 页面打开 `Discover`，并等待附近节点出现。
+4. 在 `L` 页面打开 `Discover`，等待附近节点出现。
 
 要立即发送身份广播，请打开 `Discover` 菜单：
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="Discover 菜单，包含 Scan Local、Send ID Local 和 Send ID Broadcast" width={400} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="包含 Scan Local、Send ID Local 和 Send ID Broadcast 的 Discover 菜单" width={400} height="auto" /></p>
 
 | 选项 | 功能 |
 | --- | --- |
-| `Send ID Local` | 向附近设备发送零跳数的身份广播 |
+| `Send ID Local` | 向附近设备发送零跳数身份广播 |
 | `Send ID Broadcast` | 向网状网络广播你的身份 |
 | `Scan Local` | 请求附近支持发现响应的节点回复；常用于发现中继节点 |
 
-`Scan Local` 不会列出所有设备。节点必须在通信范围内并配置为响应。
+`Scan Local` 不会列出所有设备。节点必须在范围内并配置为响应。
 
 ### 添加联系人
 
@@ -299,13 +299,13 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 ### 通过 Wi-Fi 下载地图（需要解锁）
 
-1. 按照下文说明解锁设备。
+1. 按照下方说明解锁设备。
 
 2. 从主屏幕系统菜单中打开 `Wi-Fi`。
 
 3. 输入你的网络名称和密码，并启用地图下载。
 
-4. 按 `ENTER` 保存，并在提示时重启。
+4. 按 `ENTER` 保存并在提示时重启。
 
 5. 确认 Wi-Fi 菜单显示橙色连接指示。
 
@@ -316,13 +316,13 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 | Advert Location 设置 | 使用的位置 |
 | --- | --- |
 | `GPS` | 设备 GPS 获取的位置 |
-| `Manual` | 在地图上通过 `Advert Loc` 选择的固定位置 |
+| `Manual` | 在地图上使用 `Advert Loc` 选择的固定位置 |
 
 要使用在地图上选择的点，先将 `Advert Location` 设置为 `Manual`。在 GPS 模式下，广告会继续使用 GPS 位置。
 
 ## 解锁高级功能
 
-你可以在购买解锁码前先试用基础消息功能。当你需要详细地图、Wi-Fi 地图下载、更长轨迹或高级管理功能时，再解锁设备。
+你可以在购买解锁码前试用基础消息功能。当你需要详细地图、Wi-Fi 地图下载、更长轨迹或高级管理功能时，再解锁设备。
 
 ### 查找设备序列号
 
@@ -344,19 +344,19 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 4. 打开你想使用的高级功能并确认其已可用。
 
-请将解锁码与其对应的设备序列号妥善保存。在我们的测试中，使用 `erase_flash` 擦除闪存并重新安装固件后，需要再次输入设备的解锁码。
+将解锁码与其对应的设备序列号妥善保存。在我们的测试中，使用 `erase_flash` 擦除闪存并重新安装固件后，需要再次输入设备的解锁码。
 
 ### 高级功能
 
 - **自动遥测：** 当你打开具有直接路径的会话时请求遥测。如果对端节点允许 GPS 遥测，则显示位置、方向和距离。
 
-- **房间管理员 CLI：** 使用管理员密码访问 Room Server 命令行。
+- **Room 管理 CLI：** 使用管理员密码访问 Room Server 命令行。
 
-- **中继管理员：** 检查中继状态并远程管理节点。
+- **中继管理：** 检查中继状态并远程管理节点。
 
-- **传感器管理员：** 访问传感器命令、遥测和权限管理。
+- **传感器管理：** 访问传感器命令、遥测和权限管理。
 
-- **更高的地图缩放级别：** 显示高于缩放级别 9 的地图瓦片。
+- **更详细的地图缩放：** 显示高于缩放级别 9 的地图瓦片。
 
 - **Wi-Fi 下载：** 按需下载地图瓦片并缓存在 SD 卡上。
 
@@ -372,7 +372,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 3. 保存并在提示时重启。
 
-4. 点击标题栏左侧，并在 `Switch To` 中选择一个配置文件。
+4. 点击标题栏左侧并在 `Switch To` 中选择一个配置文件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_new_network.jpg" alt="在 Networks 中创建 MeshCore 网络配置文件" width={500} height="auto" /></p>
 
@@ -388,17 +388,23 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 ### 发现其他设备
 
-- 确认两台设备使用兼容的 MeshCore 配置文件，并且无线电设置匹配。
+- 确认两台设备使用兼容的 MeshCore 配置文件且无线电设置匹配。
 
 - 在另一台设备上启用 Advert，或让它发送 `Send ID Local`。
 
 - 先在开阔区域进行短距离测试。
 
-- `Scan Local` 只列出对发现请求作出响应的节点；它不会替代所有设备的身份广播。
+- `Scan Local` 只列出对发现请求有响应的节点；它不能替代所有设备的身份广播。
 
 ### 为什么地图是空白的
 
 检查 SD 卡格式、瓦片路径以及显示区域是否存在瓦片。在锁定设备上，还要检查缩放级别是否在 1–9 范围内。有效的 GPS 位置并不意味着地图瓦片已经下载。
+
+### 电池映射
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
 
 ## 资源
 

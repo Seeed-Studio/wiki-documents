@@ -10,7 +10,7 @@ keywords:
   - 重力补偿
 slug: /rebot_t701_ht_pinocchio
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -44,8 +44,6 @@ T701-HT SDK 使用 Pinocchio 加载 URDF 模型，计算机械臂末端位姿和
 
 - 确认机械臂固定牢靠，取下负载。首次运行时选择单臂。
 - 选臂后，动作示例可能立即移动。清空整个运动范围，包括头顶和回零路径。全程现场看护，避开关节和夹爪夹点。
-- 启动和退出重力补偿示例时，先托住机械臂，避免补偿力矩撤除后下坠。
-- 带自动回零的示例在收到 `Ctrl+C` 后会先回零。回零期间再按 `Ctrl+C` 可中断回零并发送停止命令。
 
 :::
 
@@ -75,18 +73,16 @@ cd scripts
 
 <section className="section-card">
 
-## 重力补偿与关节阻抗
+## 重力补偿
 
-`G(q)` 表示模型根据关节角 `q` 计算的重力矩。重力补偿便于手动移动机械臂，关节阻抗示例会主动移向并保持预设姿态。
+`G(q)` 表示模型根据关节角 `q` 计算的重力矩。重力补偿便于手动移动机械臂。
 
 | 示例 | 运行命令 | 预期行为 |
 | --- | --- | --- |
 | 重力补偿 | `python t701_ht_gravity_compensation.py` | 施加限幅后的 `0.8 × G(q)`，输出补偿力矩。 |
 | 重力补偿并输出 FK | `python t701_ht_gravity_compensation_with_fk.py` | 施加限幅后的 `G(q)`，输出关节角、补偿力矩和末端位姿。 |
-| 关节阻抗与重力前馈 | `python t701_ht_joint_impedance_with_gravity.py` | 移向预设关节姿态并保持，叠加重力补偿，输出总力矩。 |
-| 关节阻抗、重力与摩擦前馈 | `python t701_ht_joint_impedance_with_gravity_friction.py` | 移向预设关节姿态并保持，叠加重力与摩擦补偿，输出总力矩。 |
 
-按 `Ctrl+C` 退出时，两个重力补偿示例直接停止电机，两个关节阻抗示例先回零再停止。
+按 `Ctrl+C` 退出时，两个重力补偿示例直接停止电机。
 
 </section>
 
@@ -94,12 +90,76 @@ cd scripts
 
 ## 笛卡尔控制
 
-| 示例 | 运行命令 | 运动过程 |
-| --- | --- | --- |
-| IK 到点 | `python t701_ht_inv_posvel_control.py` | 先回关节零位。目标位姿逆解通过误差检查后，用 `moveJ` 到点。 |
-| QP 逆运动学 | `python t701_ht_qp_ik.py` | 先到 VR 初始姿态，再举臂并在头顶画圆。 |
-| MoveL 平移 | `python t701_ht_moveL_pos_control.py` | 保持末端目标朝向，连续走直线、对角线和正方形路径。 |
-| MoveL 旋转 | `python t701_ht_moveL_rotate_control.py` | 保持末端目标位置，连续绕末端局部轴旋转并做圆锥运动。 |
+### IK 到点
+
+<div className="row row--align-top">
+<div className="col col--8" style={{minWidth: 0}}>
+
+先回关节零位。目标位姿逆解通过误差检查后，用 `moveJ` 到点。
+
+```bash
+python t701_ht_inv_posvel_control.py
+```
+
+</div>
+<div className="col col--4">
+<div className="image-frame" style={{marginTop: 0}}>
+
+![IK 到点（MOVEJ）演示](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-ik-movej.gif)
+
+</div>
+</div>
+</div>
+
+### QP 逆运动学
+
+<div className="row row--align-top">
+<div className="col col--8" style={{minWidth: 0}}>
+
+先到 VR 初始姿态，再举臂并在头顶画圆。
+
+```bash
+python t701_ht_qp_ik.py
+```
+
+</div>
+<div className="col col--4">
+<div className="image-frame" style={{marginTop: 0}}>
+
+![QP 逆运动学画圆演示](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-qp-ik-circle.gif)
+
+</div>
+</div>
+</div>
+
+### MoveL 平移
+
+<div className="row row--align-top">
+<div className="col col--8" style={{minWidth: 0}}>
+
+保持末端目标朝向，连续走直线、对角线和正方形路径。
+
+```bash
+python t701_ht_moveL_pos_control.py
+```
+
+</div>
+<div className="col col--4">
+<div className="image-frame" style={{marginTop: 0}}>
+
+![MoveL 平移演示](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-movel-translation.gif)
+
+</div>
+</div>
+</div>
+
+### MoveL 旋转
+
+保持末端目标位置，连续绕末端局部轴旋转并做圆锥运动。
+
+```bash
+python t701_ht_moveL_rotate_control.py
+```
 
 两个 MoveL 示例先到 VR 初始姿态，轨迹演示各持续 5 秒。初始定位和回零另计。本节的四个示例结束时均会回零并停止。
 
@@ -109,20 +169,59 @@ cd scripts
 
 ## 键盘控制
 
-在本地交互式终端或 SSH 会话中运行。选臂后，机械臂先自动移动到 VR 初始姿态，再接收按键指令。
-
-| 示例 | 运行命令 | 预期行为 |
-| --- | --- | --- |
-| 末端位姿 | `python t701_ht_keyboard_cartesian_pos_control.py` | 按键逐步改变末端目标位姿。逆解失败时保持上一关节目标。 |
-| 末端速度 | `python t701_ht_keyboard_cartesian_vel_control.py` | 按住键时末端持续平移或旋转，松开后速度指令逐步降至零。 |
-| 末端速度与碰撞预测 | `python t701_ht_keyboard_cartesian_vel_collision_control.py` | 按键控制末端速度。预测到碰撞或关节越限时下发零速度并提示。 |
-| 笛卡尔阻抗 | `python t701_ht_keyboard_cartesian_impedance_control.py` | 按键调整末端目标位姿，通过关节力矩和重力补偿柔顺跟踪。 |
-| 零空间姿态锁定 | `python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py` | 跟踪末端目标位姿，同时尽量保持参考关节姿态。 |
-
 - **平移**。`W` / `S`、`A` / `D`、`Q` / `E` 分别沿 X、Y、Z 轴移动。
 - **旋转**。`1` / `2`、`3` / `4`、`5` / `6` 分别绕 X、Y、Z 轴旋转。
 - **重新锁定**。在零空间姿态锁定示例中，按 `R` 将当前关节姿态设为参考姿态。
 - **退出**。按 `Esc` 或 `Ctrl+C` 回零并停止。
+
+<div className="row row--align-top">
+<div className="col col--8" style={{minWidth: 0}}>
+
+在本地交互式终端或 SSH 会话中运行。选臂后，机械臂先自动移动到 VR 初始姿态，再接收按键指令。
+
+**末端位姿**
+
+按键逐步改变末端目标位姿。逆解失败时保持上一关节目标。
+
+```bash
+python t701_ht_keyboard_cartesian_pos_control.py
+```
+
+**末端速度**
+
+按住键时末端持续平移或旋转，松开后速度指令逐步降至零。
+
+```bash
+python t701_ht_keyboard_cartesian_vel_control.py
+```
+
+**末端速度与碰撞预测**
+
+按键控制末端速度。预测到碰撞或关节越限时下发零速度并提示。
+
+```bash
+python t701_ht_keyboard_cartesian_vel_collision_control.py
+```
+
+**零空间姿态锁定**
+
+跟踪末端目标位姿，同时尽量保持参考关节姿态。
+
+```bash
+python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py
+```
+
+
+
+</div>
+<div className="col col--4">
+<div className="image-frame" style={{marginTop: 0}}>
+
+![键盘控制各示例演示](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-keyboard-control.gif)
+
+</div>
+</div>
+</div>
 
 :::warning[碰撞预测的检查范围]
 
