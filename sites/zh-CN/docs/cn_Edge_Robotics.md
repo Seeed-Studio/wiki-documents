@@ -150,6 +150,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/cn/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>快速开始</b></a>
         <a className="step-card" href="/cn/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT 控制 SDK</b></a>
         <a className="step-card" href="/cn/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+        <a className="step-card" href="/cn/rebot_t701_ht_vr/"><span className="step-index" aria-hidden="true">→</span><b>VR 遥操作</b></a>
       </div>
     </div>
     <div className="learning-group">

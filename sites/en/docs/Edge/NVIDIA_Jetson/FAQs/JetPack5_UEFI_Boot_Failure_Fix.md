@@ -109,14 +109,12 @@ All packages below are for **JetPack 5.1.3 / L4T 35.5.0**. Match both the produc
   </TabItem>
   <TabItem value="reserver" label="reServer Industrial J40/J30">
 
-The patched QSPI MFI download links for reServer Industrial are pending. This option will be available for these models once the links are added:
-
 | Product | Jetson module | Patched QSPI MFI package |
 | --- | --- | --- |
-| reServer Industrial J3010 | Orin Nano 4GB | Download link pending |
-| reServer Industrial J3011 | Orin Nano 8GB | Download link pending |
-| reServer Industrial J4011 | Orin NX 8GB | Download link pending |
-| reServer Industrial J4012 | Orin NX 16GB | Download link pending |
+| reServer Industrial J3010 | Orin Nano 4GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAD6PRbbdtTK3_1j-PLbudAdxV0NQqzkoZ6tfSQHkFfiE) |
+| reServer Industrial J3011 | Orin Nano 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAnMqViu7CmSKL4JbsKob2YAfZ-gboKbE_mIEQ4vznB9F4) |
+| reServer Industrial J4011 | Orin NX 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCS0GsZnpHkQ4P5gXNuDlGqAb7q1ntBmiG9xzNNPrxgrns) |
+| reServer Industrial J4012 | Orin NX 16GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8fzLJ3G_PSLU2U2RbfwbqAXGZBp_e1F2kPnQ1gqXneso) |
 
   </TabItem>
 </Tabs>
