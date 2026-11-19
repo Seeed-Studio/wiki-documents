@@ -270,7 +270,7 @@ esphome:
   name_add_mac_suffix: True
 
 esp32:
-  board: esp32-c3-devkitm-1
+  board: seeed_xiao_esp32c3
   framework:
     type: arduino
 
@@ -371,6 +371,7 @@ binary_sensor:
     id: reset_button
     pin:
       number: GPIO9 # Strapping Pin!
+      ignore_strapping_warning: True
       mode: INPUT_PULLUP
     filters:
       - invert
@@ -407,7 +408,7 @@ switch:
 
 light:
   - platform: esp32_rmt_led_strip
-    rgb_order: GRB
+    channel_colors: GRB
     pin: GPIO7
     num_leds: 1
     rmt_symbols: 48

@@ -9,9 +9,13 @@ keywords:
   - 运动学
   - 重力补偿
 slug: /rebot_t701_ht_pinocchio
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm T701 HT 与 Pinocchio
 
@@ -21,13 +25,20 @@ import '/src/css/rebot-wiki-style.css';
   <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT 双臂机器人" />
 </div>
 
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-Arm-T701-SDK"
+  fallbackCount={0}
+  ariaLabel="在 GitHub 上为 T701-HT SDK 点亮 Star"
+/>
+
 T701-HT SDK 使用 Pinocchio 加载 URDF 模型，计算机械臂末端位姿和关节重力矩。你可以先用正运动学（FK）和逆运动学（IK）示例检查实机关节反馈，再运行重力补偿、笛卡尔轨迹和键盘控制示例。
 
 <section className="section-card">
 
 ## 实机准备
 
-按 [T701 HT 快速开始的 SDK 安装步骤](/cn/rebot_t701_ht_getting_started/#安装-sdk) 获取 SDK 并安装依赖。然后按快速开始的后续步骤检查串口映射、读取关节和夹爪反馈，并确认零点。
+按 [T701 HT 快速开始的 SDK 安装步骤](https://wiki.seeedstudio.com/cn/rebot_t701_ht_getting_started/#安装-sdk) 获取 SDK 并安装依赖。然后按快速开始的后续步骤检查串口映射、读取关节和夹爪反馈，并确认零点。
 
 :::warning[启动实机示例前]
 
@@ -105,7 +116,6 @@ cd scripts
 | 末端位姿 | `python t701_ht_keyboard_cartesian_pos_control.py` | 按键逐步改变末端目标位姿。逆解失败时保持上一关节目标。 |
 | 末端速度 | `python t701_ht_keyboard_cartesian_vel_control.py` | 按住键时末端持续平移或旋转，松开后速度指令逐步降至零。 |
 | 末端速度与碰撞预测 | `python t701_ht_keyboard_cartesian_vel_collision_control.py` | 按键控制末端速度。预测到碰撞或关节越限时下发零速度并提示。 |
-| 笛卡尔阻抗 | `python t701_ht_keyboard_cartesian_impedance_control.py` | 按键调整末端目标位姿，通过关节力矩和重力补偿柔顺跟踪。 |
 | 零空间姿态锁定 | `python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py` | 跟踪末端目标位姿，同时尽量保持参考关节姿态。 |
 
 - **平移**。`W` / `S`、`A` / `D`、`Q` / `E` 分别沿 X、Y、Z 轴移动。

@@ -11,9 +11,13 @@ keywords:
 slug: /rebot_t701_ht_pinocchio
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # reBot Arm T701 HT with Pinocchio
 
@@ -23,13 +27,20 @@ import '/src/css/rebot-wiki-style.css';
   <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
 </div>
 
+<GitHubStarButton
+  owner="Seeed-Projects"
+  repo="reBot-Arm-T701-SDK"
+  fallbackCount={0}
+  ariaLabel="Star T701-HT SDK on GitHub"
+/>
+
 The T701-HT SDK uses Pinocchio to load the URDF model and compute end-effector poses and joint torques due to gravity. Use the forward kinematics (FK) and inverse kinematics (IK) examples to check joint feedback from the robot before running the gravity compensation, Cartesian trajectory, and keyboard control examples.
 
 <section className="section-card">
 
 ## Prepare the Robot
 
-Install the SDK and its dependencies using the [T701 HT Quick Start installation instructions](/rebot_t701_ht_getting_started/#install-the-sdk). Then follow the remaining Quick Start steps to check the serial port mapping, read joint and gripper feedback, and verify the zero positions.
+Install the SDK and its dependencies using the [T701 HT Quick Start installation instructions](https://wiki.seeedstudio.com/rebot_t701_ht_getting_started/#install-the-sdk). Then follow the remaining Quick Start steps to check the serial port mapping, read joint and gripper feedback, and verify the zero positions.
 
 :::warning[Before running the examples on the robot]
 
@@ -107,7 +118,6 @@ Run these examples in an interactive local terminal or SSH session. After you se
 | End-effector pose | `python t701_ht_keyboard_cartesian_pos_control.py` | Each key press changes the target end-effector pose by one step. If IK fails, the example retains the previous joint target. |
 | End-effector velocity | `python t701_ht_keyboard_cartesian_vel_control.py` | Hold a key to translate or rotate the end effector continuously. Release it to ramp the commanded velocity down to zero. |
 | End-effector velocity with collision prediction | `python t701_ht_keyboard_cartesian_vel_collision_control.py` | Use the keys to control end-effector velocity. If the example predicts a collision or joint limit violation, it commands zero velocity and displays a message. |
-| Cartesian impedance | `python t701_ht_keyboard_cartesian_impedance_control.py` | Use the keys to adjust the target end-effector pose. The arm tracks it compliantly using joint torque control with gravity compensation. |
 | Null-space posture lock | `python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py` | Tracks the target end-effector pose while keeping the joint posture as close as possible to the reference posture. |
 
 - **Translate.** Use `W` / `S`, `A` / `D`, and `Q` / `E` to move along the X, Y, and Z axes, respectively.

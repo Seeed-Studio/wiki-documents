@@ -11,6 +11,9 @@ keywords:
 slug: /rebot_t701_ht_getting_started
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/18/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -358,7 +361,9 @@ python t701_ht_joint_impedance_with_gravity_friction.py
 
 All three demos apply the configured joint torque limits. Press `Ctrl+C` to stop gravity compensation or to return the arms to zero before stopping a joint impedance demo. During the return, press `Ctrl+C` again to stop the arms.
 
-See [T701 HT with Pinocchio](/rebot_t701_ht_pinocchio/) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
+For single-motor five-parameter control, state feedback, and return-to-zero shutdown, see [MIT Control SDK](https://wiki.seeedstudio.com/rebot_t701_ht_control_mit/).
+
+See [T701 HT with Pinocchio](https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
 
   </div>
 </div>

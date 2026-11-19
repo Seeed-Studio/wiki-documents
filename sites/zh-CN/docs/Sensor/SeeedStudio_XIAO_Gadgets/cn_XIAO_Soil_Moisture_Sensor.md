@@ -232,7 +232,6 @@ Home Assistant Green 是自动化家居最简单、最注重隐私的方式。�
 
 ```yaml
 # ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
-
 substitutions:
   name: "xiao-soil-moisture"
   friendly_name: "XIAO Soil Moisture Monitor"
@@ -553,6 +552,7 @@ sensor:
   - platform: adc
     pin: GPIO0
     name: "Battery measurement"
+    device_class: "battery"
     attenuation: 12db
     # internal: true
     filters:                     # When the battery drops below 1V, it is dead.
@@ -569,7 +569,7 @@ sensor:
     force_update: True
 
   - platform: wifi_signal
-    name: "wifi singnal strength"
+    name: "wifi signal strength"
     update_interval: 10s
 
 # text_sensor:
@@ -611,11 +611,6 @@ text_sensor:
 interval:
   - interval: 5s
     then:
-      - text_sensor.template.publish:
-          id: soil_status
-          state: !lambda |-
-            return "";
-      - delay: 10ms
       - text_sensor.template.publish:
           id: soil_status
           state: !lambda |-
@@ -714,7 +709,7 @@ captive_portal:
 `deep_sleep` – 管理省电睡眠周期。
 
 - **输入参数**：无。
-- **操作**：运行 120 秒，然后睡眠最多 180 分钟；在按钮按压或间隔时唤醒。
+- **操作**：正常情况下，设备唤醒后运行约 120 秒，再根据入睡前最后一次湿度判断休眠 15 分钟（干燥）、60 分钟（接近干燥）或 8 小时（湿度正常）。
 
 `sensor (ADC)` – 从土壤传感器和电池读取模拟值。
 
@@ -746,7 +741,7 @@ captive_portal:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-打开此网站，我们将在此上传固件到 ePaper 面板。
+打开此网站，我们将在此上传固件到 XIAO 土壤湿度传感器。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -758,7 +753,7 @@ captive_portal:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-使用 USB 线缆**将 ePaper 面板连接到您的计算机**并点击 **CONNECT**。
+使用 USB 线缆**将 XIAO 土壤湿度传感器连接到您的计算机**并点击 **CONNECT**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
@@ -800,12 +795,12 @@ captive_portal:
 <TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
-这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper 面板。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
+这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 XIAO 土壤湿度传感器。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
-通过这种方式，您不需要将 ePaper 面板连接到任何设备，只需确保它在线即可。
+通过这种方式，您不需要将 XIAO 土壤湿度传感器连接到任何设备，只需确保它在线即可。
 
-点击选项，然后固件将自动安装到 ePaper 面板。
+点击选项，然后固件将自动安装到 XIAO 土壤湿度传感器。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
@@ -828,7 +823,7 @@ captive_portal:
 
 - **[PDF]** [XIAO 土壤湿度传感器原理图](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/SCH.pdf)
 - **[Kicad]** [XIAO 土壤湿度传感器 PCB](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/Kicad.kicad_pcb)
-- **[Yaml]** [XIAO 土壤湿度传感器 HA Yaml](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/HomeAssistanceYaml.yaml)
+- **[Yaml]** [XIAO 土壤湿度传感器 HA Yaml](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao-soil-moisture-monitor)
 - **[Bin]** [XIAO 土壤湿度传感器 HA 出厂固件](https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/res/factory.bin)
 - **[链接]** [XIAO 土壤湿度传感器 3D 文件 Printtables](https://www.printables.com/model/1260595-3d-enclosure-for-seeed-studio-xiao-75-epaper-panel/edit)
 - **[链接]** [XIAO 土壤湿度传感器 3D 文件 Thingiverse](https://www.thingiverse.com/thing:7039325)

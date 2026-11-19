@@ -1,7 +1,7 @@
 ---
-title: Sensor de Respiración-Latido MR60BHA2 con Home Assistant
+title: Sensor de respiración y latidos MR60BHA2 con Home Assistant
 description: |
-  Sensor mmWave de Latido MR60BHA2 con Home Assistant
+  Sensor de latidos MR60BHA2 mmWave con Home Assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ha_with_mr60bha2
 keywords:
@@ -10,7 +10,7 @@ sidebar_position: 1
 last_update:
   date: 09/23/2024
   author: Spencer
-createdAt: '2025-09-03'
+createdAt: '2024-10-08'
 updatedAt: '2025-10-20'
 url: https://wiki.seeedstudio.com/es/ha_with_mr60bha2/
 ---
@@ -18,26 +18,26 @@ url: https://wiki.seeedstudio.com/es/ha_with_mr60bha2/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-:::danger Sobre el alcance del uso de radar en Home Assistant
-Las actualizaciones de firmware del RADAR y las actualizaciones YAML de ESPHome son 2 piezas de software diferentes. El YAML de ESPHome puede actualizarse OTA, mientras que la placa RADAR SOLO puede actualizarse vía USB dentro de la carcasa, con software especializado que SEEED proporciona. Puedes personalizar el software ESPHome, [NO puedes personalizar el firmware del RADAR](https://wiki.seeedstudio.com/es/getting_started_with_mr60bha2_mmwave_kit/#module-firmware-upgrade). Seeed Studio solo permite personalización del RADAR si estás haciendo una aplicación comercial.
+:::danger Sobre el alcance del uso del radar en Home Assistant
+Las actualizaciones del firmware del RADAR y las actualizaciones del YAML de ESPHome son 2 piezas de software diferentes. El YAML de ESPHome se puede actualizar por OTA, mientras que la placa RADAR SOLO se puede actualizar por USB dentro de la carcasa, con software especializado que proporciona SEEED. Puedes personalizar el software ESPHome, [NO puedes personalizar el firmware del RADAR](https://wiki.seeedstudio.com/es/getting_started_with_mr60bha2_mmwave_kit/#module-firmware-upgrade). Seeed Studio solo permite la personalización del RADAR si estás realizando una aplicación empresarial.
 :::
 
-## Introducción {#introducción}
+## Introducción {#introduction}
 
-El MR60BHA2 es un módulo sensor de detección de respiración y latido mmWave de 60GHz diseñado para integración con el microcontrolador XIAO ESP32C6. Este sensor avanzado utiliza tecnología de ondas milimétricas para proporcionar monitoreo no invasivo de signos vitales y detección de presencia.
+El MR60BHA2 es un módulo sensor de detección de respiración y latidos cardíacos mmWave de 60 GHz diseñado para integrarse con el microcontrolador XIAO ESP32C6. Este sensor avanzado utiliza tecnología de ondas milimétricas para proporcionar monitorización no invasiva de signos vitales y detección de presencia.
 
-Esta guía tiene como objetivo proporcionar un recorrido claro y completo para integrar el Sensor mmWave MR60BHA2 con Home Assistant usando el microcontrolador XIAO ESP32C6. Siguiendo esta guía, los usuarios aprenderán cómo configurar el sensor para detección de latidos, conectarlo a su entorno Home Assistant, y utilizar ESPHome para gestionar y monitorear el dispositivo de manera efectiva.
+Esta guía tiene como objetivo proporcionar un recorrido claro y completo para integrar el sensor MR60BHA2 mmWave con Home Assistant utilizando el microcontrolador XIAO ESP32C6. Siguiendo esta guía, los usuarios aprenderán a configurar el sensor para la detección de latidos, conectarlo a su entorno de Home Assistant y utilizar ESPHome para gestionar y monitorizar el dispositivo de forma eficaz.
 
-Esta integración permite a los usuarios mejorar sus sistemas de hogar inteligente con capacidades de detección avanzadas, habilitando respuestas automatizadas y monitoreo en tiempo real para varias aplicaciones.
+Esta integración permite a los usuarios mejorar sus sistemas de hogar inteligente con capacidades de detección avanzadas, habilitando respuestas automatizadas y monitorización en tiempo real para diversas aplicaciones.
 
 <div><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-light-on.png" style={{"border-radius": '6px'}}/></div>
 
-## Descripción del Producto
+## Descripción del producto
 
 <div class="table-center">
    <table align="center">
       <tr>
-         <th>Sensor mmWave MR60BHA2</th>
+         <th>Sensor MR60BHA2 mmWave</th>
       </tr>
       <tr>
          <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
@@ -45,111 +45,111 @@ Esta integración permite a los usuarios mejorar sus sistemas de hogar inteligen
       <tr>
          <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
-               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong></a>
+               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong></a>
             </div>
          </td>
       </tr>
    </table>
 </div>
 
-### Sensor mmWave MR60BHA2 con XIAO ESP32C6
+### Sensor MR60BHA2 mmWave con XIAO ESP32C6
 
-Para integrar efectivamente el Sensor mmWave MR60BHA2 con Home Assistant usando el XIAO ESP32C6, sigue estos pasos esenciales:
+Para integrar de forma eficaz el sensor MR60BHA2 mmWave con Home Assistant utilizando el XIAO ESP32C6, sigue estos pasos esenciales:
 
 :::caution
-Por favor asegúrate de haber [actualizado el firmware](/es/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade) del módulo MR60BHA2 a la versión más reciente.  
-El firmware más reciente añade detección de presencia humana y función de detección de personal.
+Asegúrate de haber [actualizado el firmware](/es/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade) del módulo MR60BHA2 a la última versión.  
+El firmware más reciente añade la función de detección de presencia humana y detección de personal.
 :::
 
-1. **[Configurar Home Assistant](#configurar-home-assistant)**: Comienza instalando y configurando Home Assistant para gestionar tus dispositivos de hogar inteligente, asegurando una conexión perfecta con el sensor.
-2. **[Conectar el Sensor MR60BHA2](#descubrir-y-añadir-el-dispositivo-en-home-assistant)**: Aprende cómo descubrir y añadir el Sensor MR60BHA2 a tu configuración de Home Assistant, habilitando monitoreo en tiempo real de signos vitales.
-3. **[Monitorear Datos del Sensor](#monitoreo-de-datos-del-sensor)**: Una vez integrado, puedes monitorear los datos del sensor de manera efectiva, permitiendo obtener información sobre patrones de frecuencia cardíaca y respiración.
-4. **[Implementar Automatización](#implementar-automatización-en-home-assistant)**: Explora las poderosas características de automatización de Home Assistant para crear acciones responsivas basadas en los datos del sensor, mejorando tu entorno de hogar inteligente.
-5. **[Modificar Firmware con ESPHome](#modificar-el-firmware-con-esphome)**: Utiliza ESPHome para personalizar la funcionalidad del sensor, adaptándolo para satisfacer tus necesidades específicas para mayor flexibilidad y control.
+1. **[Configurar Home Assistant](#setting-up-home-assistant)**: Comienza instalando y configurando Home Assistant para gestionar tus dispositivos de hogar inteligente, garantizando una conexión fluida con el sensor.
+2. **[Conectar el sensor MR60BHA2](#discovering-and-adding-the-device-in-home-assistant)**: Aprende cómo descubrir y añadir el sensor MR60BHA2 a tu configuración de Home Assistant, habilitando la monitorización en tiempo real de los signos vitales.
+3. **[Monitorizar los datos del sensor](#sensor-data-monitoring)**: Una vez integrado, podrás monitorizar los datos del sensor de forma eficaz, lo que permitirá obtener información sobre el ritmo cardíaco y los patrones de respiración.
+4. **[Implementar automatizaciones](#implementing-automation-in-home-assistant)**: Explora las potentes funciones de automatización de Home Assistant para crear acciones de respuesta basadas en los datos del sensor, mejorando tu entorno de hogar inteligente.
+5. **[Modificar el firmware con ESPHome](#modifying-the-firmware-with-esphome)**: Utiliza ESPHome para personalizar la funcionalidad del sensor, adaptándolo a tus necesidades específicas para una mayor flexibilidad y control.
 
-Estos pasos te guiarán a través del proceso de integración, ayudándote a aprovechar al máximo tu configuración del Sensor mmWave MR60BHA2 y XIAO ESP32C6.
+Estos pasos te guiarán a través del proceso de integración, ayudándote a sacar el máximo partido a tu sensor MR60BHA2 mmWave y a la configuración con XIAO ESP32C6.
 
-## Comenzando {#comenzando}
+## Primeros pasos {#getting-started}
 
 :::note Atención
-Por favor nota que cuando nos referimos a actualizaciones o modificaciones de firmware, estamos específicamente abordando el firmware en el XIAO ESP32C6.
+Ten en cuenta que cuando nos referimos a actualizaciones o modificaciones de firmware, nos referimos específicamente al firmware del XIAO ESP32C6.
 :::
 
-Para integrar exitosamente el Sensor mmWave MR60BHA2 con Home Assistant, necesitarás los siguientes componentes:
+Para integrar correctamente el sensor MR60BHA2 mmWave con Home Assistant, necesitarás los siguientes componentes:
 
 - **Home Assistant**: Una plataforma de hogar inteligente que gestionará los datos del sensor.
-- **Complemento ESPHome**: Firmware que permite configuración y gestión fácil de dispositivos ESP32.
+- **Complemento ESPHome**: Firmware que permite una configuración y gestión sencillas de dispositivos ESP32.
 
-### Paso 1: Configurar Home Assistant {#configurar-home-assistant}
+### Paso 1: Configurar Home Assistant {#setting-up-home-assistant}
 
-1. **Instalación**: Para rendimiento óptimo, se recomienda instalar [Home Assistant OS](https://www.home-assistant.io/installation/) en una Máquina Virtual o Raspberry Pi. Sigue la guía de instalación oficial en el sitio web de Home Assistant.
-2. **Habilitar el Complemento ESPHome**:
+1. **Instalación**: Para un rendimiento óptimo, se recomienda instalar [Home Assistant OS](https://www.home-assistant.io/installation/) en una máquina virtual o Raspberry Pi. Sigue la guía de instalación oficial en el sitio web de Home Assistant.
+2. **Habilitar el complemento ESPHome**:
    - Accede al panel de Home Assistant.
-   - Navega a la sección "Complementos" y busca el complemento ESPHome.
-   - Haz clic en "Instalar" y luego "Iniciar" para habilitarlo.
-   - Una vez instalado, configura el complemento para asegurar comunicación adecuada con el XIAO ESP32C6.
+   - Navega a la sección "Add-ons" y busca el complemento ESPHome.
+   - Haz clic en "Install" y luego en "Start" para habilitarlo.
+   - Una vez instalado, configura el complemento para garantizar una comunicación adecuada con el XIAO ESP32C6.
 
 :::caution Atención
-Debido a los nuevos iconos, por favor instala la versión 2024.12.0 y superior del plugin ESPHome.
+Debido a los nuevos iconos, instala la versión 2024.12.0 o superior del plugin ESPHome.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-enabling_ESPHome_Add-on.png" style={{width:1000, height:'auto'}}/></div>
 
-Al reunir los componentes necesarios y configurar Home Assistant con el complemento ESPHome, estarás listo para proceder con la integración del Sensor mmWave MR60BHA2.
+Al reunir los componentes necesarios y configurar Home Assistant con el complemento ESPHome, estarás listo para continuar con la integración del sensor MR60BHA2 mmWave.
 
-:::tip instalar Home Assistant
+:::tip install Home Assistant
 También hemos escrito cómo instalar Home Assistant para algunos productos de Seeed Studio, por favor consúltalos.
 
-- [Comenzando con Home Assistant en ODYSSEY-X86](/es/ODYSSEY-X86-Home-Assistant)
-- [Comenzando con Home Assistant en reTerminal](/es/reTerminal_Home_Assistant)
-- [Comenzando con Home Assistant en LinkStar H68K/reRouter CM4](/es/h68k-ha-esphome)
+- [Primeros pasos con Home Assistant en ODYSSEY-X86](/es/ODYSSEY-X86-Home-Assistant)
+- [Primeros pasos con Home Assistant en reTerminal](/es/reTerminal_Home_Assistant)
+- [Primeros pasos con Home Assistant en LinkStar H68K/reRouter CM4](/es/h68k-ha-esphome)
 :::
 
-### Paso 2: Preparar el Kit
+### Paso 2: Preparar el kit
 
-Por defecto, tu dispositivo (XIAO ESP32C6) viene pre-cargado con firmware para detección de respiración y frecuencia cardíaca. Sin embargo, hay dos escenarios donde podrías necesitar actualizar el firmware:
+De forma predeterminada, tu dispositivo (XIAO ESP32C6) viene pregrabado con firmware para la detección de respiración y ritmo cardíaco. Sin embargo, hay dos escenarios en los que puede que necesites actualizar el firmware:
 
-1. **Re-flashear el Firmware**: Si el firmware existente está corrupto o necesitas empezar de nuevo.
-2. **Actualizar el Firmware**: Si hay una versión más nueva del firmware con funcionalidad mejorada.
+1. **Volver a grabar el firmware**: Si el firmware existente está dañado o necesitas empezar desde cero.
+2. **Actualizar el firmware**: Si hay una versión más reciente del firmware con funcionalidad mejorada.
 
-Hay dos métodos simples para flashear el firmware:
+Hay dos métodos sencillos para grabar el firmware:
 
 :::caution
-Firefox no soporta flashear firmware en dispositivos ESP. Por favor usa Google Chrome o Microsoft Edge en su lugar.
+Firefox no admite la grabación de firmware en dispositivos ESP. Utiliza Google Chrome o Microsoft Edge en su lugar.
 :::
 
 <Tabs>
-<TabItem value='Herramienta Web'>
+<TabItem value='Web Tool'>
 
-Puedes usar esta [Herramienta Web](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) para un método fácil y directo de flashear tu firmware. Simplemente sigue las instrucciones en pantalla.
+Puedes usar esta [Web Tool](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) para un método fácil y directo de grabar tu firmware. Simplemente sigue las instrucciones en pantalla.
 
-- Haz clic en el botón `CONECTAR` para iniciar la conexión. La herramienta actualizará automáticamente el firmware.
+- Haz clic en el botón `CONNECT` para iniciar la conexión. La herramienta actualizará el firmware automáticamente.
 
 Si algo sale mal, sigue los pasos de solución de problemas en pantalla o cambia al método `ESPHome Web` para completar el proceso.
 
 </TabItem>
 <TabItem value='ESPHome Web'>
 
-Para este método, necesitarás descargar el archivo de firmware `bin` desde [aquí](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/releases)(necesitarás descomprimir el archivo descargado).
+Para este método, tendrás que descargar el archivo de firmware `bin` desde [aquí](https://github.com/limengdu/MR60BHA2_ESPHome_external_components/releases) (tendrás que descomprimir el archivo descargado).
 
-1. Conecta el kit sensor a tu PC.
-2. Visita la página [ESPHome Web](https://web.esphome.io/).
+1. Conecta el kit del sensor a tu PC.
+2. Visita la página de [ESPHome Web](https://web.esphome.io/).
 3. Selecciona el archivo de firmware con el sufijo `*.factory.bin`.
 
-Mira el siguiente video para un recorrido detallado de flashear el firmware vía ESPHome Web:
+Mira el siguiente vídeo para un recorrido detallado de cómo grabar el firmware mediante ESPHome Web:
 
 <div class="video-container">
-<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Instalar firmware vía ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 </TabItem>
 </Tabs>
 
-Con cualquier método, tendrás tu firmware actualizado y listo para integración con Home Assistant.
+Con cualquiera de los métodos, tendrás tu firmware actualizado y listo para la integración con Home Assistant.
 
-#### Conectar al punto de acceso del kit
+#### Conectarse al punto de acceso del kit
 
-Con el firmware, podrías encender el kit sensor, y aparecerá un punto de acceso Wi-Fi: `seeedstudio-mr60bha2`.
+Con el firmware, puedes encender el kit del sensor y aparecerá un punto de acceso Wi‑Fi: `seeedstudio-mr60bha2`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/hotspot-name.png" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -159,17 +159,17 @@ Navega a `192.168.4.1` para configurar los ajustes de red local de tu servidor H
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-enter-psw.JPEG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
-### Paso 3: Descubrir y Añadir el Dispositivo en Home Assistant {#descubrir-y-añadir-el-dispositivo-en-home-assistant}
+### Paso 3: Descubrir y añadir el dispositivo en Home Assistant {#discovering-and-adding-the-device-in-home-assistant}
 
-En esta sección, repasaremos el proceso usando la aplicación Home Assistant, donde la lógica es la misma que en la web.
+En esta sección, veremos el proceso utilizando la app de Home Assistant, donde la lógica es la misma que en la web.
 
-1. **Abrir la Aplicación**: Una vez que inicies la aplicación, selecciona tu servidor Home Assistant. La aplicación encontrará automáticamente tu servidor.
+1. **Abrir la app**: Una vez que inicies la app, selecciona tu servidor de Home Assistant. La app encontrará tu servidor automáticamente.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-server-option.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
-2. **Crear una Cuenta**: Si no has creado una cuenta, necesitarás hacerlo. Después de eso, inicia sesión con tus credenciales.
+2. **Crear una cuenta**: Si no has creado una cuenta, tendrás que hacerlo. Después, inicia sesión con tus credenciales.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
-3. **Navegar a la Página de Integración**: Una vez que hayas iniciado sesión, ve a la página "Integraciones" en Home Assistant. Si has instalado el complemento ESPHome y tanto el XIAO ESP32C6 como tu servidor Home Assistant están en la misma red, deberías ver el dispositivo `Seeed Studio MR60BHA2 Kit {device-mac-address}` aparecer bajo dispositivos descubiertos.
-4. **Añadir el Dispositivo**: Haz clic para añadir el dispositivo a tu configuración de Home Assistant.
+3. **Navegar a la página de Integraciones**: Una vez que hayas iniciado sesión, ve a la página "Integrations" en Home Assistant. Si has instalado el complemento ESPHome y tanto el XIAO ESP32C6 como tu servidor Home Assistant están en la misma red, deberías ver el dispositivo `Seeed Studio MR60BHA2 Kit {device-mac-address}` aparecer bajo dispositivos descubiertos.
+4. **Añadir el dispositivo**: Haz clic para añadir el dispositivo a tu configuración de Home Assistant.
   <div class="img-container" align="center">
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-find.JPG" alt="find device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-submit.JPG" alt="submit a device"/>
@@ -177,15 +177,15 @@ En esta sección, repasaremos el proceso usando la aplicación Home Assistant, d
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-addon-device.JPG" alt="addon"/>
   </div>
 
-  Haz clic en el botón `CONFIGURE`, confirma presionando el botón `SUBMIT`, y asigna el dispositivo a tu área preferida (por ejemplo, Dormitorio). Después de esto, el dispositivo será gestionado a través de tu integración ESPHome, habilitando control y monitoreo completo en Home Assistant.
+  Haz clic en el botón `CONFIGURE`, confirma presionando el botón `SUBMIT` y asigna el dispositivo a tu área preferida (por ejemplo, Dormitorio). Después de esto, el dispositivo será gestionado a través de tu integración ESPHome, lo que permitirá un control y monitoreo completos en Home Assistant.
 
-## Monitoreo y Control {#monitoreo-y-control}
+## Supervisión y control {#monitoring-and-control}
 
-Siguiendo los pasos anteriores, habrás descubierto y agregado exitosamente el Sensor MR60BHA2 a tu Home Assistant, habilitando monitoreo y control en tiempo real.
+Siguiendo los pasos anteriores, habrás descubierto y añadido correctamente el sensor MR60BHA2 a tu Home Assistant, habilitando la supervisión y el control en tiempo real.
 
-### Monitoreo de datos del Sensor
+### Supervisión de datos del sensor
 
-Ahora que el sensor está agregado al "Dormitorio", navega a la pestaña "Overview". Verás la tarjeta mmWave mostrada en la sección del Dormitorio.
+Ahora que el sensor se ha añadido al "Bedroom", navega a la pestaña "Overview". Verás la tarjeta mmWave mostrada en la sección Bedroom.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-data-with-person-detection.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -198,43 +198,42 @@ En esta sección, exploraremos cómo controlar una luz RGB.
    <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/light-on.jpg" style={{"border-radius": '6px'}}/>
 </div>
 
-Haz clic en la caja correspondiente para controlar directamente la luz RGB:
+Haz clic en el recuadro correspondiente para controlar directamente la luz RGB:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-light-panel.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
 <iframe class="video-mp4" src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-control-light.mp4" title="Home Assistant Control RGB Light" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
 
-### Próximos Pasos {#próximos-pasos}
+### Próximos pasos {#next-steps}
 
-Ahora que has integrado exitosamente el Sensor mmWave MR60BHA2 con el XIAO ESP32C6 y Home Assistant, puedes explorar mejoras adicionales para aprovechar al máximo tu configuración. Aquí hay dos vías esenciales a considerar:
+Ahora que has integrado correctamente el sensor MR60BHA2 mmWave con el XIAO ESP32C6 y Home Assistant, puedes explorar mejoras adicionales para sacar el máximo partido a tu configuración. Aquí tienes dos vías esenciales a considerar:
 
-#### Implementando Automatización en Home Assistant
+#### Implementar automatizaciones en Home Assistant
 
-Las poderosas características de automatización de Home Assistant te permiten crear un entorno de hogar inteligente más receptivo basado en los datos recopilados de tu Sensor MR60BHA2. Esto significa que puedes configurar acciones que ocurran automáticamente basadas en disparadores específicos relacionados con la detección de movimiento o latidos del corazón.
+Las potentes funciones de automatización de Home Assistant te permiten crear un entorno de hogar inteligente más receptivo basado en los datos recopilados por tu sensor MR60BHA2. Esto significa que puedes configurar acciones que se ejecuten automáticamente en función de disparadores específicos relacionados con la detección de movimiento o de latidos.
 
-Aquí te mostramos cómo implementar automatizaciones paso a paso:
+A continuación se explica cómo implementar automatizaciones paso a paso:
 
-1. **Navega a la Sección de Automatizaciones**: En tu panel de Home Assistant, encuentra y haz clic en la pestaña "Automations". Esta área está dedicada a crear y gestionar acciones automatizadas dentro de tu hogar.
-2. **Crea una Nueva Automatización**: Haz clic en el botón "Add Automation". Home Assistant ofrece un asistente fácil de usar que te guía a través del proceso de configurar una automatización.
-3. **Define el Disparador**: Elige un disparador basado en los datos del Sensor MR60BHA2. Por ejemplo, puedes configurar la automatización para que se dispare cuando el sensor detecte movimiento o un patrón específico de latidos del corazón. Esto significa que tu automatización puede responder inmediatamente a las lecturas del sensor.
-4. **Establece Condiciones (Opcional)**: Las condiciones te permiten refinar cuándo debe ejecutarse la automatización. Por ejemplo, podrías querer que las luces se enciendan solo cuando esté oscuro afuera o si un usuario específico está en casa.
-5. **Determina la Acción**: Especifica qué acción debe ocurrir cuando se cumplan las condiciones del disparador. Las acciones pueden incluir encender luces, enviar notificaciones, o incluso ajustar configuraciones del termostato. Por ejemplo, podrías crear una acción que encienda una luz RGB cuando se detecte movimiento, mejorando tanto la seguridad como la comodidad.
-6. **Guarda y Prueba**: Después de configurar tu automatización, guárdala y prueba su funcionalidad. Camina frente al sensor para ver si las luces se encienden como se espera. Si surgen problemas, puedes regresar a la configuración de automatización para solucionar problemas y ajustar.
+1. **Navega a la sección de Automatizaciones**: En tu panel de Home Assistant, busca y haz clic en la pestaña "Automations". Esta área está dedicada a crear y gestionar acciones automatizadas dentro de tu hogar.
+2. **Crea una nueva automatización**: Haz clic en el botón "Add Automation". Home Assistant ofrece un asistente fácil de usar que te guía durante el proceso de configuración de una automatización.
+3. **Define el disparador (Trigger)**: Elige un disparador basado en los datos del sensor MR60BHA2. Por ejemplo, puedes hacer que la automatización se active cuando el sensor detecte movimiento o un patrón específico de latidos. Esto significa que tu automatización puede responder inmediatamente a las lecturas del sensor.
+4. **Establece condiciones (opcional)**: Las condiciones te permiten refinar cuándo debe ejecutarse la automatización. Por ejemplo, podrías querer que las luces se enciendan solo cuando esté oscuro en el exterior o si un usuario específico está en casa.
+5. **Determina la acción**: Especifica qué acción debe ocurrir cuando se cumplan las condiciones del disparador. Las acciones pueden incluir encender luces, enviar notificaciones o incluso ajustar la configuración del termostato. Por ejemplo, podrías crear una acción que encienda una luz RGB cuando se detecte movimiento, mejorando tanto la seguridad como la comodidad.
+6. **Guarda y prueba**: Después de configurar tu automatización, guárdala y prueba su funcionamiento. Pasa caminando frente al sensor para ver si las luces se encienden como se espera. Si surge algún problema, puedes volver a la configuración de la automatización para solucionar y ajustar.
 
-Al aprovechar las capacidades de automatización de Home Assistant, puedes crear un entorno verdaderamente inteligente que responda a tus movimientos y métricas de salud, asegurando que tu espacio de vida se adapte a tu estilo de vida sin problemas.
+Al aprovechar las capacidades de automatización de Home Assistant, puedes crear un entorno verdaderamente inteligente que responda a tus movimientos y métricas de salud, garantizando que tu espacio vital se adapte a tu estilo de vida de forma fluida.
 
-## Modificando el Firmware con ESPHome
+## Modificar el firmware con ESPHome
 
-Una de las ventajas significativas de usar el XIAO ESP32C6 es su compatibilidad con ESPHome, una herramienta poderosa para gestionar y personalizar el firmware de tu microcontrolador. Con ESPHome, puedes modificar directamente el firmware para adaptar la funcionalidad del Sensor mmWave MR60BHA2 a tus necesidades específicas.
+Una de las ventajas más importantes de usar el XIAO ESP32C6 es su compatibilidad con ESPHome, una potente herramienta para gestionar y personalizar el firmware de tu microcontrolador. Con ESPHome, puedes modificar directamente el firmware para adaptar la funcionalidad del sensor MR60BHA2 mmWave a tus necesidades específicas.
 
 Para comenzar con ESPHome, sigue estos pasos:
 
-1. **Accede al Panel de ESPHome**: En Home Assistant, navega al complemento ESPHome. Deberías ver tu XIAO ESP32C6 listado entre los dispositivos.
+1. **Accede al panel de ESPHome**: En Home Assistant, navega al complemento ESPHome. Deberías ver tu XIAO ESP32C6 listado entre los dispositivos.
 
-2. **Crea una Nueva Configuración**: Haz clic en el dispositivo para abrir su configuración. Aquí, puedes ajustar configuraciones como la sensibilidad del sensor, intervalos de reporte y formatos de salida. ESPHome usa un formato de configuración YAML, que es fácil de usar y te permite definir varios parámetros. Puedes usar el siguiente archivo YAML de plantilla como punto de partida para tu configuración, que está diseñado específicamente para el Sensor MR60BHA2:
+2. **Crea una nueva configuración**: Haz clic en el dispositivo para abrir su configuración. Aquí puedes ajustar parámetros como la sensibilidad del sensor, los intervalos de reporte y los formatos de salida. ESPHome utiliza un formato de configuración YAML, que es fácil de usar y te permite definir varios parámetros. Puedes usar la siguiente plantilla de archivo YAML como punto de partida para tu configuración, la cual está diseñada específicamente para el sensor MR60BHA2:
 
   ```yaml showLineNumbers title=example/mr60bha2.yaml
-    # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
     substitutions:
       name: "seeedstudio-mr60bha2-kit"
       friendly_name: "seeedstudio-mr60bha2-kit"
@@ -245,10 +244,10 @@ Para comenzar con ESPHome, sigue estos pasos:
       name_add_mac_suffix: true
       project:
         name: "seeedstudio.mr60bha2_kit"
-        version: "3.5"
+        version: "3.6"
       platformio_options:
         board_upload.maximum_size: 4194304
-      min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
+      min_version: "2026.8.0"
 
 
     esp32:
@@ -257,15 +256,6 @@ Para comenzar con ESPHome, sigue estos pasos:
       flash_size: 4MB # upload.flash_size
       framework:
         type: esp-idf
-
-    # If you want to experience the latest components, you can remove this comment.
-    # external_components:
-    #   - source:
-    #       type: git
-    #       url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
-    #       ref: main
-    #     components: [ seeed_mr60bha2 ]
-    #     refresh: 0s
 
     # Enable logging
     logger:
@@ -279,9 +269,9 @@ Para comenzar con ESPHome, sigue estos pasos:
       - platform: esphome
 
     # It is highly recommended to use secrets
-  wifi:
-    ssid: !secret wifi_ssid
-    password: !secret wifi_password
+    wifi:
+      ssid: !secret wifi_ssid
+      password: !secret wifi_password
 
       ap:
         ssid: "seeedstudio-mr60bha2"
@@ -302,7 +292,7 @@ Para comenzar con ESPHome, sigue estos pasos:
         name: "Seeed MR60BHA2 RGB Light"
         pin: GPIO1
         num_leds: 1
-        rgb_order: GRB
+        channel_colors: GRB
         chipset: ws2812
 
     i2c:
@@ -343,100 +333,100 @@ Para comenzar con ESPHome, sigue estos pasos:
           name: "Target number"
   ```
 
-3. **Personaliza la Funcionalidad**: Puedes mejorar las capacidades del sensor explorando varias características disponibles en ESPHome, permitiendo ajustes flexibles para adaptarse a tus necesidades específicas.
+3. **Personaliza la funcionalidad**: Puedes mejorar las capacidades del sensor explorando las diversas funciones disponibles en ESPHome, lo que permite ajustes flexibles para adaptarse a tus necesidades específicas.
 
-4. **Sube el Firmware Actualizado**: Después de hacer tus modificaciones, guarda la configuración. El panel de ESPHome te permite subir el firmware directamente por aire. Simplemente haz clic en el botón `Upload`, y sigue las indicaciones para completar el proceso. Este método simplificado hace que sea fácil mantener tu firmware actualizado.
+4. **Sube el firmware actualizado**: Después de realizar tus modificaciones, guarda la configuración. El panel de ESPHome te permite subir el firmware directamente por aire. Simplemente haz clic en el botón `Upload` y sigue las indicaciones para completar el proceso. Este método simplificado facilita mantener tu firmware actualizado.
 
-5. **Prueba e Itera**: Una vez que la subida esté completa, prueba tus cambios en tiempo real. Monitorea el rendimiento del sensor para asegurar que opere como se espera. Si encuentras algún problema, vuelve al panel de ESPHome para refinar tus configuraciones. Este enfoque iterativo te permite mejorar continuamente tu firmware, asegurando que cumpla con tus requisitos de manera efectiva.
+5. **Prueba e itera**: Una vez que la carga se haya completado, prueba tus cambios en tiempo real. Supervisa el rendimiento del sensor para asegurarte de que funciona como se espera. Si encuentras algún problema, vuelve al panel de ESPHome para refinar tus ajustes. Este enfoque iterativo te permite mejorar continuamente tu firmware, garantizando que cumpla eficazmente con tus requisitos.
 
-Al utilizar ESPHome, te empoderas para hacer mejoras continuas a tu configuración de sensor, adaptándola para satisfacer tus necesidades en evolución. Esta capacidad no solo mejora la funcionalidad de tu proyecto, sino que también proporciona una plataforma para aprender y experimentar con el desarrollo de IoT.
+Al utilizar ESPHome, te capacitas para realizar mejoras continuas en la configuración de tu sensor, adaptándola a tus necesidades en evolución. Esta capacidad no solo mejora la funcionalidad de tu proyecto, sino que también proporciona una plataforma para el aprendizaje y la experimentación con el desarrollo de IoT.
 
-A través de estos pasos, puedes maximizar la funcionalidad de tu configuración del Sensor mmWave MR60BHA2 y XIAO ESP32C6, transformándola en un sistema de hogar inteligente altamente personalizado y receptivo adaptado a tus preferencias y necesidades.
+A través de estos pasos, puedes maximizar la funcionalidad de tu configuración con el sensor MR60BHA2 mmWave y el XIAO ESP32C6, transformándola en un sistema de hogar inteligente altamente personalizado y receptivo, adaptado a tus preferencias y necesidades.
 
 ## Recursos
 
 - [ESPHome — ESPHome](https://esphome.io/)
 - [Installation - Home Assistant](https://www.home-assistant.io/installation/)
-- [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
+- [MR60BHA2 ESPHome project source](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-mr60bha2-kit)
 
-## Solución de Problemas
+## Solución de problemas
 
-### Explicación del Mecanismo de Reporte de Datos del Sensor de Radar (Para v1.6.12 y posteriores)
+### Explicación del mecanismo de reporte de datos del sensor de radar (para v1.6.12 y posteriores)
 
-Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos reportados por las diversas funciones de detección del sensor de radar. Está destinada a ayudar a los usuarios a comprender y utilizar mejor los datos del sensor
+Esta parte detalla el tiempo, la precisión y las condiciones requeridas para los datos reportados por las diversas funciones de detección del sensor de radar. Su objetivo es ayudar a los usuarios a comprender y utilizar mejor los datos del sensor.
 
 ---
 
-### 1. Presencia Estática Humana
+### 1. Presencia humana estática
 
-- **Descripción de la Función**:
+- **Descripción de la función**:
     Detecta la presencia de un objetivo humano estacionario dentro de un área específica.
-- **Parámetro Clave**:
-  - **Rango de Detección Efectivo**: Hasta **4 metros**.
-- **Lógica de Reporte de Datos**:
-  - Reporta un estado de "Presencia" cuando se detecta un objetivo humano en el área.
-  - Reporta un estado de "Sin Presencia" cuando el área está libre de objetivos humanos.
-  - **Nota**: El rango de detección de 4 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
+- **Parámetro clave**:
+  - **Rango efectivo de detección**: Hasta **4 metros**.
+- **Lógica de reporte de datos**:
+  - Reporta un estado de "Presence" cuando se detecta un objetivo humano en el área.
+  - Reporta un estado de "No Presence" cuando el área está libre de objetivos humanos.
+  - **Nota**: El rango de detección de 4 metros es exclusivo de la función de Presencia Humana Estática. No se aplica a otras funciones como Detección de Respiración y Latidos o Detección de Distancia al Objetivo, que tienen sus propios rangos efectivos, más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
 
 ---
 
-### 2. Detección de Respiración y Latidos
+### 2. Detección de respiración y latidos del corazón
 
-- **Descripción de la Función**:
-    Realiza detección de signos vitales sin contacto en un solo objetivo humano estacionario.
-- **Parámetros Clave**:
-  - **Rango de Detección Efectivo**: Aproximadamente **1.5 metros**.
-  - **Objetivo de Detección**: Un solo humano estacionario.
-- **Condiciones de Operación Necesarias**:
-  - **Quietud del Objetivo**: La persona siendo monitoreada debe permanecer completamente quieta.
-  - **Estabilidad del Dispositivo**: El dispositivo radar debe estar montado de forma segura, sin sacudidas o vibraciones.
-  - **Objetivo Único**: Solo una persona debe estar dentro del rango de detección.
-- **Lógica de Reporte de Datos**:
-  - **Reporte Normal**: Cuando se cumplen todas las condiciones anteriores, el radar reporta valores de respiración y frecuencia cardíaca en tiempo real.
-  - **Escenarios de Reporte Anormal**:
-    - **Objetivo Más Allá de 1.5m**: Cuando un objetivo detectado está más allá del rango efectivo de 1.5 metros, los datos de respiración y frecuencia cardíaca **dejarán de actualizarse** y se mantendrán en la última medición válida.
-    - **Sin Objetivo en Zona Central**: Cuando no se detecta ningún objetivo dentro de la zona central de detección de 0.5 a 1.5 metros, los valores de respiración y frecuencia cardíaca se reportarán activamente como **0**.
-- **Nota**: Por favor, tenga en cuenta las interferencias ambientales. Los micro-movimientos de fuentes como ventiladores, aires acondicionados o cortinas que se balancean a veces pueden ser malinterpretados por el sensor. En tales casos, el radar podría reportar un valor de **frecuencia cardíaca** distinto de cero incluso cuando no se detecta ningún objetivo humano (y la frecuencia respiratoria se reporta como 0).
+- **Descripción de la función**:
+    Realiza la detección de signos vitales sin contacto sobre un único objetivo humano estacionario.
+- **Parámetros clave**:
+  - **Rango efectivo de detección**: Aproximadamente **1,5 metros**.
+  - **Objetivo de detección**: Una sola persona inmóvil.
+- **Condiciones necesarias de funcionamiento**:
+  - **Inmovilidad del objetivo**: La persona monitorizada debe permanecer completamente quieta.
+  - **Estabilidad del dispositivo**: El dispositivo de radar debe estar firmemente montado, sin sacudidas ni vibraciones.
+  - **Objetivo único**: Solo debe haber una persona dentro del rango de detección.
+- **Lógica de reporte de datos**:
+  - **Reporte normal**: Cuando se cumplen todas las condiciones anteriores, el radar informa en tiempo real los valores de respiración y frecuencia cardíaca.
+  - **Escenarios de reporte anormal**:
+    - **Objetivo más allá de 1,5 m**: Cuando un objetivo detectado está más allá del rango efectivo de 1,5 metros, los datos de respiración y frecuencia cardíaca **dejan de actualizarse** y se mantienen en la última medición válida.
+    - **Sin objetivo en la zona central**: Cuando no se detecta ningún objetivo dentro de la zona central de detección de 0,5 a 1,5 metros, los valores de respiración y frecuencia cardíaca se informan activamente como **0**.
+- **Nota**: Ten en cuenta las interferencias ambientales. Micro-movimientos de fuentes como ventiladores, aires acondicionados o cortinas que se balancean pueden ser interpretados erróneamente por el sensor. En tales casos, el radar podría informar un valor de **frecuencia cardíaca** distinto de cero incluso cuando no se detecta ningún objetivo humano (y la frecuencia respiratoria se informa como 0).
 
 ---
 
-### 3. Detección de Distancia del Objetivo
+### 3. Detección de distancia al objetivo
 
-- **Firmware Aplicable**: `1.6.10` y más reciente.
-- **Descripción de la Función**:
-    Detecta y reporta la distancia en línea recta entre el radar y un objetivo.
-- **Parámetro Clave**:
-  - **Rango Máximo de Detección Efectivo**: **5 metros**.
-- **Lógica de Reporte de Datos y Limitaciones**:
-  - **Estado Sin Objetivo**: Cuando no se detectan objetivos, el valor de distancia se reporta como **0**.
-  - **Objetivo(s) Detectado(s)**: Cuando se detectan uno o más objetivos dentro del rango de 5 metros, el radar reporta la distancia del objetivo **más cercano** al sensor.
-  - **Datos No Actualizados (Mantiene Último Valor)**: El valor de distancia dejará de actualizarse si el objetivo más cercano está en o se mueve más allá del rango de detección efectivo de 5 metros. En este caso, el valor se mantendrá en la última medición válida.
-- **Rendimiento de Seguimiento**:
-    Para asegurar la estabilidad de objetivos estacionarios a corta distancia, la estrategia de seguimiento del radar está optimizada para diferentes distancias. El rendimiento se detalla en la tabla a continuación:
+- **Firmware aplicable**: `1.6.10` y versiones posteriores.
+- **Descripción de la función**:
+    Detecta e informa la distancia en línea recta entre el radar y un objetivo.
+- **Parámetro clave**:
+  - **Rango máximo efectivo de detección**: **5 metros**.
+- **Lógica de reporte de datos y limitaciones**:
+  - **Estado sin objetivo**: Cuando no se detectan objetivos, el valor de distancia se informa como **0**.
+  - **Objetivo(s) detectado(s)**: Cuando se detecta uno o más objetivos dentro del rango de 5 metros, el radar informa la distancia del objetivo **más cercano** al sensor.
+  - **Datos no actualizados (mantiene el último valor)**: El valor de distancia dejará de actualizarse si el objetivo más cercano está o se mueve más allá del rango efectivo de detección de 5 metros. En este caso, el valor se mantendrá en la última medición válida.
+- **Rendimiento de seguimiento**:
+    Para garantizar la estabilidad de los objetivos estacionarios a corta distancia, la estrategia de seguimiento del radar está optimizada para diferentes distancias. El rendimiento se detalla en la siguiente tabla:
 
-| Rango de Distancia | Estado del Objetivo | Rendimiento de Seguimiento y Notas |
+| Rango de distancia | Estado del objetivo | Rendimiento de seguimiento y notas |
 | :--- | :--- | :--- |
-| **0.5m ~ 1.5m** | Estacionario | **Tasa de Éxito de Seguimiento > 96%**. El rendimiento es muy estable. |
-| **1.5m ~ 3m** | Estacionario | **Tasa de Éxito de Seguimiento > 90%**. El rendimiento es estable. |
-| **3m ~ 5m** | Estacionario | La estabilidad de seguimiento disminuye, con pérdida ocasional del objetivo. La versión 1.6.12 muestra una mejora del 80% sobre versiones anteriores. |
-| **Acercándose** | En Movimiento | Cuando un objetivo se mueve hacia el radar desde la distancia, el seguimiento estable típicamente comienza cuando la persona alcanza aproximadamente **3 metros**. |
-| **Alejándose** | En Movimiento | Cuando un objetivo se aleja del radar, el seguimiento puede extenderse **más allá de 5 metros**. |
+| **0,5 m ~ 1,5 m** | Estacionario | **Tasa de éxito de seguimiento > 96%**. El rendimiento es muy estable. |
+| **1,5 m ~ 3 m** | Estacionario | **Tasa de éxito de seguimiento > 90%**. El rendimiento es estable. |
+| **3 m ~ 5 m** | Estacionario | La estabilidad del seguimiento disminuye, con pérdidas ocasionales del objetivo. La versión 1.6.12 muestra una mejora del 80% respecto a versiones anteriores. |
+| **Acercándose** | En movimiento | Cuando un objetivo se mueve hacia el radar desde la distancia, el seguimiento estable normalmente comienza cuando la persona alcanza aproximadamente **3 metros**. |
+| **Alejándose** | En movimiento | Cuando un objetivo se aleja del radar, el seguimiento puede extenderse **más allá de 5 metros**. |
 
 ---
 
-### 4. Conteo de Ocupantes del Entorno
+### 4. Conteo de ocupantes en el entorno
 
-- **Descripción de la Función**:
-    Proporciona un conteo preliminar estimado de individuos dentro del área de detección.
-- **Explicación de Datos**:
-  - Esta función está actualmente en una etapa de desarrollo y debe considerarse experimental. El valor devuelto es una estimación aproximada derivada de análisis de señales complejas.
-  - Su precisión está fuertemente influenciada por factores como la superposición de señales de múltiples personas, posturas individuales y patrones de movimiento.
-  - En consecuencia, **esta característica no es adecuada para aplicaciones que dependen de números precisos de ocupantes**.
-  - Estamos trabajando activamente en refinar el algoritmo subyacente y esperamos entregar mejoras sustanciales de precisión en futuras versiones de firmware.
+- **Descripción de la función**:
+    Proporciona un conteo preliminar y estimado de individuos dentro del área de detección.
+- **Explicación de los datos**:
+  - Esta función se encuentra actualmente en una etapa de desarrollo y debe considerarse experimental. El valor devuelto es una estimación aproximada derivada de un análisis complejo de señales.
+  - Su precisión está fuertemente influenciada por factores como la superposición de señales de múltiples personas, las posturas individuales y los patrones de movimiento.
+  - En consecuencia, **esta función no es adecuada para aplicaciones que dependen de un número preciso de ocupantes**.
+  - Estamos trabajando activamente en perfeccionar el algoritmo subyacente y esperamos ofrecer mejoras sustanciales de precisión en futuras versiones de firmware.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
