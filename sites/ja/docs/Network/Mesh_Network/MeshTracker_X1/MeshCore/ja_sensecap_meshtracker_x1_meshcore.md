@@ -37,7 +37,7 @@ USB ケーブルでデバイスをコンピュータに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/ScreenShot_2026-08-17_144406_980.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/X1Selection.png" alt="pir" width={800} height="auto" /></p>
 
@@ -49,7 +49,7 @@ USB ケーブルでデバイスをコンピュータに接続します。
 
 `Erase Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから `Erase Flash` をクリックし、DFU モードに正常に入ったことを確認してください。
 
-"Flashing erase firmware:100%" と表示されれば、デバイスの消去は正常に完了しています。
+"Flashing erase firmware:100%" と表示されたら、デバイスは正常に消去されています。
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
@@ -61,7 +61,7 @@ USB ケーブルでデバイスをコンピュータに接続します。
 
 `Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから `Flash` をクリックし、DFU モードに正常に入ったことを確認してください。
 
-進行バーが最後まで埋まったら、フラッシュが完了したことを示します。その後、デバイスは自動的に再起動します。
+進行バーが最後まで埋まったら、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -80,7 +80,7 @@ USB ケーブルでデバイスをコンピュータに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/ScreenShot_2026-08-17_144406_980.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、[click here](https://docs.meshcore.io/) をクリックしてチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -90,7 +90,7 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-DFU モードに手動で入ることを試します：デバイスのボタンを押し続け、その後 **素早く** USB ケーブルでデバイスをコンピュータに接続し、白い ⚪️ LED が点灯するまでボタンを押し続けます。
+DFU モードに手動で入ることを試します：デバイスのボタンを押し続け、そのまま **素早く** USB ケーブルでデバイスをコンピュータに接続し、白い ⚪️ LED が点灯するまでボタンを押し続けます。
 
 :::warning
 DFU モードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
@@ -106,7 +106,7 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/EraseDragDisk.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
+ファームウェアが正常に書き込まれるとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
 **ステップ2 ファームウェア書き込み**
 
@@ -118,7 +118,7 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Firmwareuf2.png" alt="pir" width={500} height="auto" /></p>
 
-DFU モードに手動で入ることを試します：デバイスのボタンを押し続け、その後 **素早く** USB ケーブルでデバイスをコンピュータに接続し、白い ⚪️ LED が点灯するまでボタンを押し続けます。
+DFU モードに手動で入ることを試します：デバイスのボタンを押し続け、そのまま **素早く** USB ケーブルでデバイスをコンピュータに接続し、白い ⚪️ LED が点灯するまでボタンを押し続けます。
 
 :::warning
 DFU モードに正常に入るには、この操作を素早く行う必要があります。複数回試す必要があるかもしれません。
@@ -134,7 +134,7 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/UF2FirmwareDrag.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的に再起動します。
+ファームウェアが正常に書き込まれるとディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的に再起動します。
 
 </TabItem>
 
@@ -144,17 +144,17 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 ### デバイスの電源を入れる
 
-ボタンを押して電源を入れます。LED が点灯し、上昇するメロディー音が鳴ります。
+ボタンを押して電源を入れます。LED が点灯し、音程が上がるメロディーが鳴ります。
 
 ### デバイスの電源を切る
 
-ボタンを 3 秒間押し続けて電源を切ります。LED が消灯し、下降するメロディー音が鳴ります。
+ボタンを 3 秒間押し続けて電源を切ります。LED が消灯し、音程が下がるメロディーが鳴ります。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
 :::
 
-### APP への接続
+### APP 接続
 
 Google Store または Apple Store からダウンロードします。または [click here](https://meshcore.io/#download) をクリックして Meshcore APP を入手します。
 
@@ -174,7 +174,7 @@ Google Store または Apple Store からダウンロードします。または
 
 ### LoRa の設定
 
-メッシュ経由で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分の地域に合わせて設定する必要があります。
+メッシュ通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分の地域に合わせて設定する必要があります。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -189,7 +189,7 @@ Google Store または Apple Store からダウンロードします。または
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868 MHz|869.4 - 869.65|10|27|
 
-これでデバイス上の LoRa リージョンを設定できたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-一般)の設定を続けることができます。
+これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の [LoRa parameter](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-一般) を引き続き設定できます。
 
 
 ## 詳細設定
@@ -226,15 +226,15 @@ APP の `Position Settings` に移動して GPS を有効にできます。
 
 ## メッセージ送信
 
-対応デバイスを 2 台お持ちで、近くに MeshCore ユーザーがあまりいない場合は、両方を BLE Companion ファームウェアに書き換えることで、近くの友人や家族と通信するためにデバイスを使用できます。
+対応デバイスを 2 台お持ちで、近くに MeshCore ユーザーがあまりいない場合は、両方を BLE Companion ファームウェアに書き換えることで、近くの友人や家族との通信に自分のデバイスを使用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/MeshCoreFramework.png" alt="pir" width={800} height="auto" /></p>
 
 ### アドバタイズ
 
-MeshCore では、なりすまし防止のために署名された、名前・位置情報・公開暗号鍵を手動でブロードキャストできます。アドバタイズボタンをクリックすると、そのデータが LoRa 経由でブロードキャストされます。MeshCore ではこれを Advert と呼びます。アドバタイズには「ゼロホップ」と「フラッド」の 2 つの方法があります。
+MeshCore では、自分の名前、位置情報、および公開暗号鍵を手動でブロードキャストできます。これらはなりすましを防ぐために署名されています。アドバタイズボタンをクリックすると、そのデータが LoRa 経由でブロードキャストされます。MeshCore ではこれを Advert と呼びます。アドバタイズには「ゼロホップ」と「フラッド」の 2 つの方法があります。
 
-- **Zero hop** は、アドバタイズが届く範囲のすべての相手に一度だけ送信され、それで終了することを意味します。
+- **Zero hop** は、あなたのアドバタイズが届く範囲の相手に一度だけ送信され、それで終了することを意味します。
 - **Flooded** は、一度送信された後、それを受信したすべてのリピーターによって繰り返し送信されることを意味します。
 
 APP からアドバタイズを送信できます。また、デバイスのアドバタイズページから直接送信することもできます。
@@ -257,7 +257,7 @@ import TabItem from '@theme/TabItem';
 
 ### ボタンショートカット
 
-X1 Companion ファームウェア (v1.18.0+) は、ボタンのマルチプレスショートカットをサポートしています。各クリックは前のクリックから 0.5 秒以内である必要があります。
+X1 Companion ファームウェア（v1.18.0 以降）は、ボタンのマルチプレスショートカットをサポートしています。各クリックは前のクリックから 0.5 秒以内である必要があります。
 
 | ボタン操作 | 機能 | 画面上のフィードバック |
 | --- | --- | --- |
@@ -265,12 +265,12 @@ X1 Companion ファームウェア (v1.18.0+) は、ボタンのマルチプレ�
 | ダブルプレス | Advert を送信 | `Advert sent!` |
 | トリプルプレス | アラートモードを切り替え：Buzz+Vibe → Buzz のみ → Vibe のみ → サイレント | `Alerts: ...` |
 | クアドラプルプレス | GPS のオン / オフを切り替え | `GPS: Enabled` / `GPS: Disabled` |
-| 長押し 3 秒（充電ケーブル接続時） | 強制リセット / DFU モードに入る | — |
+| 3 秒長押し（充電ケーブル接続時） | 強制リセット / DFU モードに入る | — |
 
 :::note
 - トリプルプレス時には、新しいアラートモードがビープ音および／またはバイブレーションで確認されるため、画面を見ずにモードを切り替えることができます。
 - ボタンを 4 回以上押した場合は、常にクアドラプルプレスとして扱われます。
-- 長押し動作（再起動と DFU モード）の詳細については、[How to reboot the device](#How-to-reboot-the-device) を参照してください。
+- 長押し動作（再起動と DFU モード）の詳細については、[How to reboot the device](#how-to-reboot-the-device) を参照してください。
 :::
 
 ### デバイス ID の確認方法
@@ -301,21 +301,21 @@ MAC アドレスの `last four digits` がデバイス ID です。
 
 ### ファームウェア更新の失敗 / OTA リカバリ
 
-SenseCAP MeshTracker X1 が起動に失敗する、反応しなくなる、またはファームウェア更新後に白い ⚪️ LED が点灯したままになる場合、デバイスが DFU モードで停止している可能性があります。次の手順を試してください。
+SenseCAP MeshTracker X1 が起動に失敗する、反応しなくなる、またはファームウェア更新後に白い ⚪️ LED が点灯したままになる場合、デバイスが DFU モードでフリーズしている可能性があります。次の手順を試してください。
 
 1. DFU モードから抜けるために強制再起動します：USB 充電ケーブルを抜き、デバイスのボタンを押し続けたまま USB 充電ケーブルを接続し、すぐにボタンを離します。ボタンを押し続けないでください。ケーブル接続後 3 秒以上押し続けると、デバイスは再び DFU モードに入ってしまいます。
-2. デバイスが正常に起動するか確認します。起動しない場合は、USB データケーブルでデバイスをコンピュータに接続し、[Firmware Flashing](#Firmware-Flashing) ガイドに従って DFU モードに入り、フラッシュを消去して MeshCore ファームウェアを再インストールします。
-3. それでもデバイスを復旧できない場合は、[Bootloader Installation](#Bootloader-Installation) に従ってブートローダーを書き込み直し、その後アプリケーションファームウェアを再インストールしてください。
+2. デバイスが正常に起動するか確認します。起動しない場合は、USB データケーブルでデバイスをコンピュータに接続し、[Firmware Flashing](#firmware-flashing) ガイドに従って DFU モードに入り、フラッシュを消去して MeshCore ファームウェアを再インストールします。
+3. それでもデバイスを復旧できない場合は、[Bootloader Installation](#bootloader-installation) に従ってブートローダーを書き込み直し、その後アプリケーションファームウェアを再インストールしてください。
 
-ファームウェアの消去または書き込み中に、強制再起動を行ったり USB ケーブルを抜いたりしないでください。デバイスが DFU モードに入れない、またはコンピュータに認識されない場合は、テクニカルサポートにお問い合わせください。
+ファームウェアの消去や書き込み中に、強制再起動を行ったり USB ケーブルを抜いたりしないでください。デバイスが DFU モードに入れない、またはコンピュータに認識されない場合は、テクニカルサポートにお問い合わせください。
 
 ### デバイスの電源が入らない
 
-- 動作確認済みの USB ケーブルを使用して、バッテリーがシステムを起動できるだけの電力を確保できるよう、1〜2 時間連続して `charge the device` してください。
+- 動作確認済みの USB ケーブルを使用して、バッテリーがシステムを起動できるだけの電力を蓄えられるよう、1〜2 時間連続して `charge the device` してください。
 
 - 充電後もデバイスが反応しない場合は、次の手順で `perform a hard reset` を行ってください。USB ケーブルを抜きます。ボタンを押し続けたまま USB ケーブルを接続し、すぐにボタンを離します。これによりシステムが強制リセットされます。
 
- - それでも改善しない場合は、USB ケーブルをコンピュータに接続します。デバイスのボタンを押し続けたまま、デバイスをコンピュータに接続し、PC にディスクがポップアップ表示されるかどうかを確認します。表示される場合は、ブートローダーを再インストールしてください。
+ - それでも改善しない場合は、USB ケーブルをコンピュータに接続します。デバイスのボタンを押し続けたまま、デバイスをコンピュータに接続し、PC にディスクがポップアップ表示されるかどうか確認します。表示される場合は、ブートローダーを再インストールしてください。
 
 ### デバイスがブートループに陥る
 
@@ -345,14 +345,14 @@ DFU モードへの移行を成功させるには、この操作を素早く行�
 - [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/Bootloader.zip)
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理中に **絶対に** 取り外さないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
 :::
 
 **ステップ 1：Adafruit-nrfutil のインストール**
 
-Windows ユーザーは、「Win」キーと「r」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。
+Windows ユーザーは、「Win」キーと「r」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」をクリックします。これでコマンドラインを開くことができます。
 
-MAC ユーザーは、「Command」キーと「Space」キーを押して Spotlight を開きます。その後「termial」と入力し、「Return」を押します。これでコマンドラインを開くことができます。
+Mac ユーザーは、「Command」キーと「Space」キーを押して Spotlight を開きます。その後「termial」と入力し、「Return」をクリックします。これでコマンドラインを開くことができます。
 
 **前提条件**
 
@@ -383,7 +383,7 @@ pip3 install --user adafruit-nrfutil
 python -m pip show adafruit-nrfutil
 ```
 
-こちらがインストール場所です。
+これはインストール場所です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
@@ -413,7 +413,7 @@ Windows ユーザーの場合の例：
 adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-COMXX をお使いの COM 番号に変更してください。例えば、デバイスが com6 の場合、コマンドを次のように変更します。
+COMXX を自分の COM 番号に変更してください。例えば、デバイスが com6 の場合、コマンドを次のように変更します。
 
 `adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
@@ -437,38 +437,43 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 - ボーレートを `1200` に設定します。
 
 - デバイスを接続します。
-   接続するとライトが一瞬点滅します。ライトが点灯したままになるまでこれを繰り返してください。ライトが点灯したままになれば、デバイスがDFUモードに戻れることを意味します。その後、[ブートローダーを書き込み](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ブートローダーインストール) -> [フラッシュを消去](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェア書き込み) -> [ファームウェアを書き込み](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェア書き込み)を行います。
+   接続するとライトが一瞬点滅します。ライトが点灯したままになるまでこれを繰り返してください。ライトが点灯したままになれば、デバイスがDFUモードに戻れることを意味します。その後、[ブートローダーの書き込み](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ブートローダーインストール) -> [フラッシュの消去](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェア書き込み) -> [ファームウェアの書き込み](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェア書き込み)を行います。
 
 **3) デバイスがDFUモードに入れず、シリアルポートも表示されない場合**
 
-- デバイスのボタンを押し続けたまま充電ケーブルを接続し、その直後にボタンを離します。PC上にディスクがポップアップ表示された後、シリアルポートが表示される場合があります。
+- デバイスのボタンを押し続けたまま充電ケーブルを接続し、その直後にボタンを離します。PC上にディスクがポップアップ表示されたら、シリアルポートが見える場合があります。
 
 - それでもうまくいかない場合は、充電ケーブルを外し、バッテリーが完全に放電するまで数日間デバイスを放置してから、再度充電ケーブルを接続し、ペアリングを試してください。
 
-**4) 上記のいずれの手順でも解決しない場合は、テクニカルサポート support@sensecapmx.com までご連絡ください**
+**4) 上記のいずれの手順でも解決しない場合は、テクニカルサポート（support@sensecapmx.com）までご連絡ください。**
 
  ### デバイスが自動的に電源オフになる
 
 - **現象の説明**
 
  - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
- - シリアルポートログがしばらく動作した後に停止します。
+ - シリアルポートログはしばらく動作した後、停止します。
 
- これは、デバイスが次の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因である可能性があります：メッセージ送信プロセスが完了していない、設定中である など……
+ これは、メッセージ送信プロセスが完了していない、設定中である、などの状態のときに、手動で強制的にデバイスを再起動または電源オフしたことが原因の可能性があります。
 
 - **トラブルシューティング**
 
- [ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェア書き込み)してフラッシュ消去を実行します。 
+ [ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_meshtracker_x1_meshcore/#ファームウェア書き込み)してフラッシュの消去を実行します。 
 
 
 ### 信号品質
 
-  - **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
+  - **SNR** は通信リンクの品質を反映します。通常のデバイスは、一般的に -7 dB より高い値で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-  - **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。 
+  - **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは、一般的に -110 dBm より高い値で動作します。RSSI が -115 dBm 未満のデバイスは、性能が低いと見なされます。 
 
-      最良の信号効果を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
+      最良の信号状態を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
+### バッテリーマッピング
+
+```bash
+#define OCV_ARRAY 4290, 4118, 4002, 3889, 3798, 3728, 3677, 3643, 3594, 3500, 3100
+```
 
 ## テクニカルサポート & 製品ディスカッション
 

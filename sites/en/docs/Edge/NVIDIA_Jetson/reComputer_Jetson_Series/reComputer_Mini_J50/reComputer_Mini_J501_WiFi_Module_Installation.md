@@ -24,6 +24,8 @@ url: https://wiki.seeedstudio.com/recomputer_mini_j501_wifi_module_installation/
 
 ## Introduction
 
+For the complete-system overview, setup, and flashing workflow, see [reComputer Robotics J50 Mini Getting Started](https://wiki.seeedstudio.com/recomputer_robotics_j50_mini_getting_started/).
+
 In this document, you will learn how to disassemble the **reComputer Mini J501** and install or replace a **Wi-Fi module** (M.2 Key E).
 
 The Wi-Fi slot is on the underside of the **reComputer Mini J501 Carrier Board**. The **rear expansion board** covers the **M.2 Key E** slot and must be detached for Wi-Fi service. The **top expansion board** has cutouts that expose the carrier board mounting screws, so it does not need to be removed during service. The same disassembly steps through carrier board removal also apply when replacing the **NVMe SSD** (M.2 Key M) — the rear expansion board does not cover that slot.

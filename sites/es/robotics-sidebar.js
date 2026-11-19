@@ -67,6 +67,7 @@ const sensorCategory = {
       items: [
         'Robotics/Robot_Sensor/Camera/es_Getting_Start_with_AC1',
         'Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+        'Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini_305',
         'Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini_336',
         'Robotics/Robot_Sensor/Camera/es_Orbbec_Depth_Camera',
         'Robotics/Robot_Sensor/Camera/es_realsense_3D_seg',
@@ -302,6 +303,7 @@ const sidebars = {
     `${K}/reBot_Arm/T701_HT/es_reBot_Arm_T701_HT_Getting_Started`,
     `${K}/reBot_Arm/T701_HT/es_reBot_Arm_T701_HT_control_mit`,
     `${K}/reBot_Arm/T701_HT/es_reBot_Arm_T701_HT_pinocchio`,
+    `${K}/reBot_Arm/T701_HT/es_reBot_Arm_T701_HT_vr`,
   ],
 
   StackForceSidebar: [

@@ -26,6 +26,18 @@ When the device is in the states below, please don't manually reboot or turn it 
 
 ## Get Started
 
+### Quick View
+
+<div className="table-center">
+  <video width="730" height="500" autoPlay muted playsInline controls>
+    <source
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/x1-open-box.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
 ### Power on the device
 
@@ -690,6 +702,11 @@ After the key regeneration, other devices need to reconnect with the node. So it
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
+### Battery Mapping
+
+```bash
+#define OCV_ARRAY 4290, 4118, 4002, 3889, 3798, 3728, 3677, 3643, 3594, 3500, 3100
+```
 
 ## Tech Support & Product Discussion
 

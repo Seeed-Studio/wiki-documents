@@ -928,6 +928,8 @@ reBot Arm B601-RS 的大多数示例使用 MIT 模式运行。
 
 ## 常见问题
 
+<div className="rebot-rs-faq">
+
 
 ### 购买与选型
 
@@ -1235,5 +1237,7 @@ DM-Tools 上位机（Windows/Linux 版）从达妙官方渠道获取；Ubuntu �
 依次排查：USB/ CAN 线是否松动（DM 版 4-5 号电机连接线是高发点）→ 是否 USB HUB 供电/带宽不足（相机不要接扩展坞）→ 驱动是否安装（PCAN/PCAN 驱动）→ 电源电压是否跌落。故障复现时拍视频/截图报给官方技术支持。
 
 </details>
+
+</div>
 
 </div>

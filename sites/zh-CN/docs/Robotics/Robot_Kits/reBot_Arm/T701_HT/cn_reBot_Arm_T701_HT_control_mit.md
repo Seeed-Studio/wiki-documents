@@ -10,7 +10,7 @@ keywords:
   - 电机控制
 slug: /rebot_t701_ht_control_mit
 last_update:
-  date: 11/18/2026
+  date: 11/19/2026
   author: liujunjie
 ---
 
@@ -32,7 +32,7 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="在 GitHub 上为 T701-HT SDK 点亮 Star"
 />
 
-T701-HT SDK 的 MIT 接口同时设置目标位置、目标速度、前馈力矩、位置增益 `Kp` 和速度增益 `Kd`。本页从单电机正弦跟踪示例开始，说明参数、反馈和退出流程。整臂重力补偿、关节阻抗和笛卡尔控制示例见 [T701 HT 与 Pinocchio](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/)。
+T701-HT SDK 的 MIT 接口同时设置目标位置、目标速度、前馈力矩、位置增益 `Kp` 和速度增益 `Kd`。本页从单电机正弦跟踪示例开始，说明参数、反馈和退出流程。整臂重力补偿和笛卡尔控制示例见 [T701 HT 与 Pinocchio](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/)。
 
 <section className="section-card">
 
@@ -155,7 +155,7 @@ robot.motor_send_cmd()
 | `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | 5 个长度为 7 的关节向量，不包含夹爪。检查配置中的关节目标位置范围，通过后发送；越限时返回 `False`。 |
 | `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | 夹爪的 5 个标量参数。检查夹爪目标位置范围，通过后默认发送；`send=False` 时只缓存，供同周期关节命令统一发送。越限时返回 `False`。 |
 
-整臂 MIT 接口的目标位置检查不替代轨迹设计和力矩限幅。需要重力前馈、关节阻抗或自动收尾时，参考 [Pinocchio 页](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/) 对应的完整示例。
+整臂 MIT 接口的目标位置检查不替代轨迹设计和力矩限幅。需要重力前馈或自动收尾时，参考 [Pinocchio 页](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/) 对应的完整示例。
 
 </section>
 
