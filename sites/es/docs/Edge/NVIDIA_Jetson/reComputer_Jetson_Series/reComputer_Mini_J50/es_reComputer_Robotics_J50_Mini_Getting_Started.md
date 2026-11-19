@@ -7,7 +7,7 @@ keywords:
   - Jetson
   - Primeros pasos
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-100020407-recomputer-mini-j5011-with-gmsl-64g_1.jpg
-slug: /ai_robotics_recomputer_j501_robotics_getting_started
+slug: /ai_robotics_recomputer_robotics_j50_mini_getting_started
 sku: 100085113
 last_update:
   date: 11/16/2026
