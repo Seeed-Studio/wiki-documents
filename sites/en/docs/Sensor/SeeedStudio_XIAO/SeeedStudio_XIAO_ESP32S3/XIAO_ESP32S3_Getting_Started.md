@@ -595,11 +595,7 @@ Navigate to **Tools > Board > Boards Manager...**, type the keyword **esp32** in
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-:::caution
-The on-board package for XIAO ESP32-S3 requires version **2.0.8** and above to be available.
-:::
-
-- **Step 4.** Select your board and port.
+- **Step 4.** Select your board as shown below, then select its port.
 
 On top of the Arduino IDE, you can select the port directly. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports).
 
@@ -625,11 +621,7 @@ Navigate to **Tools > Board > Boards Manager...**, type the keyword **esp32** in
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-:::caution
-The on-board package for XIAO ESP32-S3 requires version **2.0.8** and above to be available.
-:::
-
-- **Step 4.** Select your board and port.
+- **Step 4.** Select your board as shown below, then select its port.
 
 At the top of the Arduino IDE you can directly select the port. This will probably be the one with "usbmodem" or "usbserial" in the name. If you're unsure, unplug and plug again to see which port is missing.
 
@@ -677,14 +669,14 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 <Tabs>
 <TabItem value="(Sense)" label="for XIAO ESP32-S3 (Sense)" default>
 
-Also, search for **xiao** in the development board on the left. select **XIAO_ESP32S3**.
+In **Tools > Board > esp32**, select `XIAO_ESP32S3` for the XIAO ESP32-S3 or Sense. This entry is available in **esp32 by Espressif Systems** version **2.0.8** or later.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="Plus" label="for XIAO ESP32-S3 Plus" default>
 
-It will be released soon; keep tuned for future updates.
+In **Tools > Board > esp32**, select `XIAO_ESP32S3_PLUS`. This entry is available in **esp32 by Espressif Systems** version **3.1.2** or later.
 
 </TabItem>
 </Tabs>
@@ -721,7 +713,7 @@ By now, I believe you have a good understanding of the features and hardware of 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
-- **Step 3.** Select the board model to **XIAO ESP32-S3**, and select the correct port number to upload the program.
+- **Step 3.** Follow [Software Preparation](#software-preparation) to select your board and port, then upload the sketch.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/12.png" style={{width:1000, height:'auto'}}/></div>
 
