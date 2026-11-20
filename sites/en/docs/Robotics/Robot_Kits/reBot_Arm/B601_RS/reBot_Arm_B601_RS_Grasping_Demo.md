@@ -1054,10 +1054,10 @@ Expect `ROS_DISTRO` to report `humble`. If the workspace already contains any of
 
 #### Step 2. Install the camera
 
-Expand the setup instructions for your camera.
+Select your camera tab and follow the installation instructions.
 
-<details className="content-details">
-<summary>Click to expand Gemini 2 setup</summary>
+<Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2">
 
 Clone the Orbbec ROS 2 SDK into the workspace and switch to the `v2-main` branch.
 
@@ -1083,10 +1083,8 @@ sudo bash install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-</details>
-
-<details className="content-details">
-<summary>Click to expand D405 / D435i setup</summary>
+</TabItem>
+<TabItem value="realsense" label="RealSense D405 / D435i">
 
 1. Install the build dependencies, then clone the RealSense SDK and switch to `v2.58.1`.
 
@@ -1140,7 +1138,8 @@ git clone https://github.com/xiehuangbao888/realsense-ros.git
 
 Install the camera driver's ROS dependencies in step 3 and build the workspace in step 4. Reconnect the camera and run `lsusb -t` to verify that it is connected over USB 3.x. The speed should typically be `5000M` or higher.
 
-</details>
+</TabItem>
+</Tabs>
 
 </div>
 </section>
@@ -1199,18 +1198,20 @@ cd ~/rebotarm_ros2
 source /opt/ros/humble/setup.bash
 ```
 
-<Tabs groupId="rebot-ros2-camera-build" defaultValue="realsense">
+<Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2">
+
+First install the Orbbec ROS 2 driver using the Gemini 2 instructions in step 2, then build:
+
+```bash
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+</TabItem>
 <TabItem value="realsense" label="RealSense D405 / D435i">
 
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DUSE_LIFECYCLE_NODE=OFF
-```
-
-</TabItem>
-<TabItem value="orbbec" label="Orbbec Gemini 2">
-
-```bash
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
 </TabItem>
@@ -1450,7 +1451,7 @@ Start terminals A, B, C, and D in that order, leaving the earlier terminals runn
 
 #### Terminal A — Start the arm and RViz
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand Gemini 2</summary>
 
 ```bash
@@ -1462,7 +1463,7 @@ ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand D405</summary>
 
 ```bash
@@ -1474,7 +1475,7 @@ ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=ca
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand D435i</summary>
 
 ```bash
@@ -1494,7 +1495,7 @@ ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=c
 
 #### Terminal B — Start the camera
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand Gemini 2</summary>
 
 ```bash
@@ -1506,7 +1507,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand D405</summary>
 
 ```bash
@@ -1521,7 +1522,7 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand D435i</summary>
 
 ```bash
@@ -1546,7 +1547,7 @@ ros2 launch realsense2_camera rs_launch.py \
 
 Run `conda activate yolo` first, or activate the environment by its actual name. The `python` command uses the active environment and works with either Miniconda or Miniforge. The examples use `yolo_device:=cpu` by default. For GPU inference, pass the CUDA check in step 5, then set `yolo_device:=0`.
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand Gemini 2</summary>
 
 ```bash
@@ -1569,7 +1570,7 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand D405</summary>
 
 ```bash
@@ -1596,7 +1597,7 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Click to expand D435i</summary>
 
 ```bash
