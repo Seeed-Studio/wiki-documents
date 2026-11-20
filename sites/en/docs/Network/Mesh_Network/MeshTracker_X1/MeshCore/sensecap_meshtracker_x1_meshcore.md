@@ -300,6 +300,7 @@ Priority when several conditions apply: **Red (low battery) > Amber (unread) > B
 ### Battery & Charging
 
 - The battery percentage shown in the app is mapped linearly from 3.0 V (0%) to 4.2 V (100%).
+  - This applies to the MeshCore Companion firmware. The Meshtastic firmware instead uses the OCV lookup table shown in [Battery Mapping](#battery-mapping).
 - When the battery voltage drops below **3.5 V**, the status LED starts blinking red. Charge the device when you see the red blink.
 - While charging, the LED breathes amber; when fully charged it stays dim green (as long as there are no unread messages).
 
