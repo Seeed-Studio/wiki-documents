@@ -20,16 +20,28 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 :::danger note
 当设备处于以下状态时，请不要手动重启或关闭电源。否则设备可能会损坏。
 1. 尚未完成消息传输过程
-2. 正在配置中
+2. 正在被配置
 :::
 
 
 ## 入门指南
 
+### 快速预览
+
+<div className="table-center">
+  <video width="730" height="500" autoPlay muted playsInline controls>
+    <source
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/x1-open-box.mp4"
+      type="video/mp4"
+    />
+    您的浏览器不支持 video 标签。
+  </video>
+</div>
+
 
 ### 打开设备电源
 
-短按一次按键即可打开设备电源。会有一个上升的提示音，并且绿色 🟢 LED 指示灯会常亮约 1 秒。
+短按一次按键即可打开设备电源。会有一个上升的提示音，并且绿色 🟢 指示灯会常亮约 1 秒。
 
 :::tip
 如果按下按键后设备没有响应，请先为其充电。不要使用快充充电器。
@@ -78,7 +90,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置 LoRa
 
-为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始通过 Mesh 进行通信，您必须先设置所在区域。该设置控制设备使用的频率范围，应根据您所在的地区进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -104,10 +116,10 @@ import TabItem from '@theme/TabItem';
 更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，您的设备将停止发射，直到再次被允许。
 :::
 
-现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
+现在您已经在设备上设置了 LoRa 区域，可以继续配置任意适合您需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
 
 ### 设备状态
 
@@ -153,7 +165,7 @@ import TabItem from '@theme/TabItem';
     <th colspan="1">设备响应</th>
   </tr>
   <tr>
-   <td>短按一次（关机状态）</td>
+   <td>单击一次（关机状态）</td>
     <td>设备开机</td>
   </tr>
   <tr>
@@ -192,7 +204,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/SelectX1111.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，此时会出现一个名为 `X1 xxx` 的串口。点击并连接它。 
+点击 `Enter DFU Mode`，此时会显示一个名为 `X1 xxx` 的串口。点击并连接它。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/SerialSelectionX111.png" alt="pir" width={800} height="auto" /></p>
 
@@ -200,10 +212,10 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="method2" label="手动进入">
 
-尝试手动进入 DFU 模式：按住设备按键不放，然后**迅速**通过 USB 线将设备连接到电脑，保持按键按下，直到白色 ⚪️ LED 亮起。
+尝试手动进入 DFU 模式：按住设备按键不放，然后**迅速**通过 USB 线将设备连接到电脑，持续按住按键直到白色 ⚪️ 指示灯亮起。
 
 :::warning
-要成功进入 DFU 模式，你需要快速完成上述操作，可能需要多次尝试。
+要成功进入 DFU 模式，需要快速完成上述操作。您可能需要多次尝试。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
@@ -211,7 +223,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-当 X1 处于 DFU 模式时，白色 ⚪️ LED 会常亮。同时，你的电脑上应显示一个名为 `X1` 的驱动器。
+当 X1 处于 DFU 模式时，白色 ⚪️ 指示灯会常亮。同时，您的电脑上会显示一个名为 `X1` 的驱动器。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/X1DriveMAC.png" alt="pir" width={300} height="auto" /></p>
 
 #### 步骤 2：擦除 Flash
@@ -240,7 +252,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置 GPS
 
-请将 GPS 设置为启用状态。你可以调整更新间隔和广播间隔，以获取更实时的位置数据。
+请将 GPS 设置为启用状态。您可以调整更新间隔和广播间隔，以获取更及时的位置信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
@@ -251,7 +263,7 @@ import TabItem from '@theme/TabItem';
 
 ### 通过网页连接
 
-如果你想在网页端发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic 网站](https://client.meshtastic.org/messages/broadcast/0)。 
+如果您想在网页中发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic 网站](https://client.meshtastic.org/messages/broadcast/0)。 
 
   步骤 1：打开网页
 
@@ -259,11 +271,11 @@ import TabItem from '@theme/TabItem';
 
   步骤 2：添加新设备 
 
-    点击 "+ New Connection"。 
+    点击 “+ New Connection”。 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    有两种连接方式，你可以选择自己偏好的方式。
+    有两种连接方式，您可以选择自己偏好的方式。
 
 <Tabs>
 
@@ -277,13 +289,13 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="12" label="Serial">
 
-    选择 Serial 方式。打开设备管理器查看设备连接的是哪个端口，然后在弹出的窗口中选择该端口。
+    选择串口方式。打开设备管理器查看设备连接到哪个端口，然后在弹出的窗口中选择该端口。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
-  你的设备会显示在列表中。点击进行连接。如果连接成功，你可以在网页上直接查看设备状态。
+  您的设备会显示在列表中。点击进行连接。如果连接成功，您可以在网页上直接查看设备状态。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/Websitestatus.png" alt="pir" width={300} height="auto" /></p>
 
@@ -292,19 +304,19 @@ import TabItem from '@theme/TabItem';
 |传感器|描述|
 |-|-|
 |气压|✅|
-|6 轴传感器（后续版本）|✅|
-|3 轴传感器（后续版本）|✅|
+|6 轴传感器（未来版本）|✅|
+|3 轴传感器（未来版本）|✅|
 
 **蜂鸣器和 LED 配置**
 
-||类型|输出 PIN|
+||类型|输出引脚|
 |-|-|-|
 |蜂鸣器|PWM 蜂鸣器|25|
 |LED|RGB|R:03<br/>G:24<br/>B:28|
-|振动马达|-|05|
+|振动|-|05|
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 进入 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -312,7 +324,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 
 进入 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -332,13 +344,13 @@ import TabItem from '@theme/TabItem';
 进入 `Settings` -> `Ringtone Config`，然后输入你想用于外部通知的 RTTTL 铃声字符串。
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/ringtonex1.png" alt="pir" width={900} height="auto" /></p>
 
 </TabItem>
@@ -391,7 +403,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### 配置蜂鸣器
 
-蜂鸣器默认启用。如果你想禁用蜂鸣器，请将 `Alert Message buzzer`、`Alert bell buzzer` 和 `Use PWM buzzer` 设置为如下截图所示。
+蜂鸣器默认启用。如果你想禁用蜂鸣器，请按下图所示设置 `Alert Message buzzer`、`Alert bell buzzer` 和 `Use PWM buzzer`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/buzzer.png" alt="pir" width={200} height="auto" /></p>
 
@@ -443,7 +455,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 <Tabs>
 <TabItem value="23" label="查看设备背面">
-MAC 地址的 `后四位数字` 即为设备 ID
+MAC 地址的 `最后四位` 即为设备 ID
 
 例如，下方设备的设备 ID 为 `A0D4`
 
@@ -470,11 +482,11 @@ MAC 地址的 `后四位数字` 即为设备 ID
 
 ### 温度读数精度
 
-温度数据是从气压计中读取的，而不是从独立的温度传感器中读取。设备在运行时会产生热量，因此测得的温度会高于实际温度。
+温度数据是从气压计中读取的，而不是从独立的温度传感器读取。设备在运行时会产生热量，因此测得的温度会高于实际温度。
 
 ### 功耗
 
-你可以通过[功耗表](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK)计算功耗。该设备配备了高电压电池。当电池电量较低时，会加速放电过程。该设备配备了高电压电池。当电池电量较低时，会加速放电过程。因此你会注意到，当电池电量较低时，设备的耗电速度会非常快。
+你可以通过[功耗表](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK)计算功耗。该设备配备了高电压电池。当电池电量较低时，会加速放电过程。该设备配备了高电压电池。当电池电量较低时，会加速放电过程。因此你会注意到，当电量较低时，设备的耗电速度会非常快。
 
 ## 故障排查
 
@@ -483,22 +495,22 @@ MAC 地址的 `后四位数字` 即为设备 ID
 如果你的 SenseCAP MeshTracker X1 无法启动、无响应，或者在固件更新后白色 ⚪️ LED 一直常亮，设备可能卡在 DFU 模式。请尝试以下操作：
 
 1. 强制重启以退出 DFU 模式：断开 USB 充电线，按住设备按键，连接 USB 充电线，并立即松开按键。不要一直按住按键——在连接线缆后继续按住超过 3 秒会使设备再次进入 DFU 模式。
-2. 检查设备是否能正常启动。如果仍然不行，用 USB 数据线将设备连接到电脑，并按照 [Step 1: Enter DFU mode](#Step-1-进入-DFU-模式) 操作，然后执行 [Step 2: Flash Erase](#Step-2-Flash-擦除) 和 [Step 3: Flash Firmware](#Step-3-烧录固件) 重新安装 Meshtastic 固件。
+2. 检查设备是否能正常启动。如果仍然不能，使用 USB 数据线将设备连接到电脑，并按照 [Step 1: Enter DFU mode](#Step-1-进入-DFU-模式) 操作，然后执行 [Step 2: Flash Erase](#Step-2-擦除-Flash) 和 [Step 3: Flash Firmware](#Step-3-烧录固件) 重新安装 Meshtastic 固件。
 3. 如果设备仍然无法恢复，请按照 [Bootloader Installation](#Bootloader-安装) 重新烧录 bootloader，然后重新安装应用固件。
 
 在擦除或烧录固件过程中，请不要强制重启或拔掉 USB 线。如果设备无法进入 DFU 模式或无法被电脑识别，请联系技术支持。
 
 ### 设备无法开机
 
-- 当 LED 指示灯和蜂鸣器未激活时，设备可能看起来像是关机状态。在执行上述步骤之前，建议先 `check the following parameters`：
+- 当 LED 指示灯和蜂鸣器未激活时，设备可能看起来像是关机状态。在执行上述步骤之前，建议先 `检查以下参数`：
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={600} height="auto" /></p>
 
-- 使用已知正常的 USB 线持续 `charge the device` 1–2 小时，以确保电池有足够电量唤醒系统。
+- 使用已知正常的 USB 线持续 `为设备充电` 1–2 小时，以确保电池有足够电量唤醒系统。
 
-- 如果设备在充电后仍无响应，请按如下方式 `perform a hard reset`：拔下 USB 线。按住按键，然后插入 USB 线，并立即松开按键。 
+- 如果设备在充电后仍无响应，请按如下步骤 `执行硬重置`：拔下 USB 线。按住按键，然后插入 USB 线，并立即松开按键。 
 
- - 如果仍然无效，将 USB 线连接到电脑。按住设备按键，然后将设备连接到电脑，再松开按键，查看电脑中是否弹出一个磁盘。如果有，请重新安装 bootloader
+ - 如果仍然无效，将 USB 线连接到电脑。按住设备按键，然后将设备连接到电脑，再松开按键，查看电脑中是否弹出一个磁盘。如果有，请重新安装 bootloader。
 
 ### 设备卡在启动循环中
 
@@ -511,16 +523,16 @@ MAC 地址的 `后四位数字` 即为设备 ID
 - 步骤 1：尝试手动进入 DFU 模式：按住设备按键，然后**迅速**通过 USB 线将设备连接到电脑，保持按住按键直到白色 ⚪️ LED 亮起。
 
 :::warning
-要成功进入 DFU 模式，你需要快速完成这一操作。可能需要多次尝试。
+要成功进入 DFU 模式，你需要快速完成这一操作，可能需要多次尝试。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
 如果白灯常亮，则表示设备处于 DFU 模式。
 
-- 步骤 2：[Erase Flash](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#step-2-flash-erase)
+- 步骤 2：[擦除 Flash](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#step-2-擦除-Flash)
 
-- 步骤 3：[Flash Firmware](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#step-3-flash-firmware)
+- 步骤 3：[烧录固件](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#step-3-烧录固件)
 
 ### Bootloader 安装
 
@@ -533,16 +545,16 @@ MAC 地址的 `后四位数字` 即为设备 ID
 
 **步骤 1：安装 Adafruit-nrfutil**
 
-对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，再按下 "Enter"。这样可以打开命令行。 
+对于 Windows 用户，按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，再按下 "Enter" 键。这样可以打开命令行。 
 
-对于 MAC 用户，同时按下 "Command" 键和 "Space" 键即可打开 Spotlight。然后输入 "termial"，点击 "Return"。这样就可以打开命令行。 
+对于 Mac 用户，按下 "Command" 键和 "Space" 键，即可打开 Spotlight。然后输入 "termial"，点击 "Return"。这样可以打开命令行。 
 
 **前置条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-在命令行中检查 Python 和 pip 是否已成功安装。
+在命令行中检查 Python 和 pip 是否安装成功。
 
 ```
 python --version
@@ -574,11 +586,11 @@ python -m pip show adafruit-nrfutil
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
-**步骤 2：检查端口号**
+**步骤 2：检查你的端口号**
 
 将设备连接到电脑，并检查端口号。
 
-对于 Windows 用户，打开设备管理器，进入 `port`，设备连接后新弹出的端口号就是设备的端口号。
+对于 Windows 用户，打开设备管理器，进入 `port`，设备连接后新出现的端口号就是设备的端口号。
 
 对于 Mac 用户，例如：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
@@ -590,7 +602,7 @@ python -m pip show adafruit-nrfutil
 
 在终端或命令提示符中，进入你下载 bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
 
-- **Windows 平台**：
+- **对于 Windows**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p COMxx -b 115200 --singlebank --touch 1200
@@ -602,7 +614,7 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
 
  部分设备在你输入此命令后会改变端口号。因此如果安装失败，请再次检查端口号。
 
-- **其他平台**：
+- **对于其他系统**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.0-13.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -610,11 +622,11 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-完成以上步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#flash-firmware)烧录应用固件。
+完成以上步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#flash-firmware)来烧录应用固件。
 
 
 
-**2) 设备无法进入 DFU 模式，但可以检测到串口**
+**2) 设备无法进入 DFU 模式，但可以检测到串口**。
 
 - 打开串口工具
 
@@ -645,11 +657,11 @@ adafruit-nrfutil --verbose dfu serial --package mesh_tracker_x1_bootloader-0.10.
  [点击这里](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#step-2-flash-erase) 执行 flash 擦除。 
 
  ### 恢复出厂设置
-如果你想恢复到默认设置，可以执行恢复出厂设置。这里有两种方法可以进行恢复出厂设置。
+如果你想恢复默认设置，可以执行恢复出厂设置。这里有两种方法可以进行恢复出厂设置。
 
 - [点击这里](https://wiki.seeedstudio.com/cn/x1_get_started_for_meshtastic/#step-2-flash-erase) 擦除设备 flash，然后重新烧录最新固件。
 
-- 在应用中点击 `Factory Reset` 按钮。设备会自动以出厂配置重启。 
+- 在应用中点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### 私信发送失败
@@ -666,13 +678,13 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 #### 交换用户信息
 
-每个节点会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要互相交换各自的节点信息，才能彼此通信。如果你无法与列表中的某个节点收发私信，可以在应用中手动触发它们交换信息。
+每个节点会定期发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点发送或接收私信，可以在应用中手动提示它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-每个节点都会保留自己的私钥且从不共享。要进行私密通信，两个节点会在 Mesh 网络中互相交换各自的公钥。如果某个节点在私信传输中总是失败，可以尝试为其重新生成私钥——这会轮换其密钥对，因此其他节点需要重新与它的新公钥进行同步。
+每个节点都会保留自己的私钥且从不共享。要进行私密通信，两个节点会在 Mesh 网络中互相交换公钥。如果某个节点在私信传输中总是失败，可以尝试为其重新生成私钥——这会轮换其密钥对，因此其他节点需要重新与它的新公钥进行同步。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
@@ -690,7 +702,7 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
       为获得最佳信号效果，请在开阔、无遮挡且干扰较少的环境中使用设备。
 
-### 电量映射
+### 电池映射
 
 ```bash
 #define OCV_ARRAY 4290, 4118, 4002, 3889, 3798, 3728, 3677, 3643, 3594, 3500, 3100

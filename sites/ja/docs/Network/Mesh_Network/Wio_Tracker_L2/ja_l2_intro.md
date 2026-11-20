@@ -25,11 +25,11 @@ url: https://wiki.seeedstudio.com/ja/meshtastic_wio_tracker_l2_intro/
     </a>
 </div>
 
-Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードであり、LoRa（862–930 MHz）、高効率な処理を行う ESP32S3、そして高精度な位置追跡を実現する L76K GPS モジュールを搭載しています。柔軟性を重視した設計により、QSPI タッチスクリーン、E-Ink ディスプレイ、TF カードに加え、ソーラーパネルおよびバッテリー電源をサポートし、幅広い IoT やオフグリッド用途に最適です。
+Wio Tracker L2 シリーズは、高い拡張性を備えた [Meshtastic®](https://meshtastic.org/) ノードで、LoRa（862–930 MHz）、高効率な処理を行う ESP32S3、そして高精度な位置情報取得のための L76K GPS モジュールを搭載しています。柔軟性を重視した設計により、QSPI タッチスクリーン、E-Ink ディスプレイ、TF カードに加え、ソーラーパネルおよびバッテリー電源にも対応しており、幅広い IoT やオフグリッド用途に最適です。
 
-## L2 シリーズモデル
+## L2 シリーズのモデル
 
-Wio Tracker L2 シリーズには、カスタム構成向けの Wio Tracker L2 と、筐体および内蔵バッテリーを備えた Wio Tracker L2 Pro が含まれます。
+Wio Tracker L2 シリーズには、カスタム構築向けの Wio Tracker L2 と、筐体および内蔵バッテリーを備えた Wio Tracker L2 Pro が含まれます。
 
 ### バージョン比較
 
@@ -43,40 +43,40 @@ Wio Tracker L2 シリーズには、カスタム構成向けの Wio Tracker L2 �
 |画面|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |MicroSD カードスロット|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |ソーラー入力|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|バッテリー|<p style={{textAlign: 'center'}}>コネクタ経由の外部 Li-ion バッテリー</p>|<p style={{textAlign: 'center'}}>内蔵 3000mAh バッテリー</p>|
+|バッテリー|<p style={{textAlign: 'center'}}>コネクタ経由の外付け Li-ion バッテリー</p>|<p style={{textAlign: 'center'}}>内蔵 3000mAh バッテリー</p>|
 |筐体|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
 
 ## 特長
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **1つのハードウェアで無限の可能性** 独自のインターフェース、ダッシュボード、ゲーム、マップツール、インタラクティブな体験など、思いのままに作成できます。L2 Pro は、あなたが作りたいものに対応できるよう準備されています。
+- **1 つのハードウェアで無限の可能性** 自分だけのインターフェース、ダッシュボード、ゲーム、マップツール、インタラクティブな体験などを構築できます。L2 Pro は、あなたが作りたいものにいつでも対応できるよう設計されています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
 
-- **3.2インチ高品質タッチスクリーン**: 320×240 の高精細ディスプレイを採用し、MUI と Base UI を切り替え可能です。スマートフォンなしでも、メッセージング、マッピング、制御などのスムーズなオンデバイス操作を実現します。
+- **3.2 インチ高品質タッチスクリーン**：320×240 の高精細ディスプレイを搭載し、MUI と Base UI を切り替え可能です。スマートフォンなしでも、メッセージング、マッピング、制御などのスムーズなオンデバイス操作を実現します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
 
-- **ESP32S3 搭載で、開発に最適**: デュアルコア ESP32-S3（Wi-Fi および Bluetooth LE 搭載）を採用し、UI カスタマイズ、機能拡張、オープンソースアプリケーション開発のための柔軟なプラットフォームを提供します。
+- **ESP32S3 搭載で、開発に最適**：Wi-Fi と Bluetooth LE を備えたデュアルコア ESP32-S3 を搭載し、UI カスタマイズ、機能拡張、オープンソースアプリケーション開発のための柔軟なプラットフォームを提供します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **GNSS 位置情報対応オフラインマップ**: オフラインマップを事前に MicroSD カードへダウンロードしておけば、携帯電話回線やインターネット接続がなくても、デバイス上でリアルタイムの GNSS 位置を直接確認できます。
+- **GNSS 位置情報対応オフラインマップ**：オフラインマップを事前に MicroSD カードへダウンロードしておけば、携帯電話回線やインターネット接続がなくても、デバイス上でリアルタイムの GNSS 位置を確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **3000mAh の長時間駆動バッテリー**: 充電頻度を抑えつつ、長時間のデイリーユースをサポートします。動作温度範囲は -10°C ～ 55°C です。
+- **3000mAh の長時間駆動バッテリー**：充電頻度を抑えつつ、日常的な長時間使用をサポートします。動作温度範囲は -10°C ～ 55°C です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **持ち運びやすく、柔軟な設置が可能**: 折りたたみ式アンテナにより携帯性が向上し、1/4インチマウントインターフェースにより、対応アクセサリを用いた柔軟な設置が可能です。
+- **持ち運びやすく、柔軟な設置が可能**：折りたたみ式アンテナにより携帯性が向上し、1/4 インチマウントインターフェースにより、対応アクセサリを用いた柔軟な設置が可能です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (6).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **CodeCraft でプロトタイピングを加速**
+- **CodeCraft でプロトタイピングを高速化**
 
-アイデアを数行で説明するだけで、Seeed Studio の CodeCraft AI コーディングアシスタントが、数分でコードの初稿を生成します。それを確認して Wio Tracker L2 に書き込み、ボード上でテストできます。
+アイデアを数行のテキストで記述するだけで、Seeed Studio の CodeCraft AI コーディングアシスタントが、数分でコードの初稿を生成します。それを確認して Wio Tracker L2 に書き込み、ボード上でテストできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -93,7 +93,7 @@ Wio Tracker L2 シリーズには、カスタム構成向けの Wio Tracker L2 �
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
-    <td colspan="1">863-928 MHz<br/>最大送信電力: 20dBm@US915,14dBm@EU868</td>
+    <td colspan="1">863-928 MHz<br/>最大送信電力: 22dBm@US915,14dBm@EU868</td>
   </tr>
     <tr>
     <td colspan="1">**GNSS**</td>
@@ -121,7 +121,7 @@ Wio Tracker L2 シリーズには、カスタム構成向けの Wio Tracker L2 �
     <td colspan="1">MicroSD カードスロット</td>
   </tr>
   <tr>
-    <td colspan="1">1/4インチねじ穴</td>
+    <td colspan="1">1/4 インチねじ穴</td>
   </tr>
    <tr>
     <td colspan="1">**QSPI インターフェース**</td>
@@ -157,7 +157,7 @@ Wio Tracker L2 シリーズには、カスタム構成向けの Wio Tracker L2 �
     <td colspan="1">I2S コーデック</td>
   </tr>
   <tr>
-    <td colspan="1">マイク</td>
+    <td colspan="1">マイク (MIC)</td>
   </tr>
     <tr>
     <td colspan="1">スピーカー: 6Ω 0.8W</td>
@@ -189,7 +189,7 @@ Wio Tracker L2 シリーズには、カスタム構成向けの Wio Tracker L2 �
 |項目|パラメータ|
 | :- | :- |
 |**バッテリー容量**|充電式 Li-ion バッテリー, 3000mAh|
-|**バッテリー寿命モニタリング**|バッテリーレベルの定期アップリンク|
+|**バッテリー寿命モニタリング**|バッテリーレベルを定期的にアップリンク|
 |**充電プロトコル**|USB Type-C|
 |**デバイス電源入力**|5V, 1A|
 |**満充電カットオフ電圧**|4.2V|

@@ -62,10 +62,10 @@ export const BootloaderProductSelect = () => {
 ## Problema
 
 :::info Problema de UEFI de NVIDIA upstream
-**Este fallo de arranque está causado por un bug de firmware UEFI de NVIDIA upstream que afecta a JetPack 5.1.3 y versiones anteriores.** No está causado por el hardware del producto de Seeed ni por el diseño de la carrier board. Este FAQ proporciona soluciones para los dispositivos Seeed afectados que se enumeran a continuación.
+**Este fallo de arranque está causado por un error de firmware UEFI de NVIDIA upstream que afecta a JetPack 5.1.3 y versiones anteriores.** No está causado por el hardware del producto de Seeed ni por el diseño de la carrier board. Este FAQ proporciona soluciones para los dispositivos Seeed afectados que se enumeran a continuación.
 :::
 
-En los productos que se indican a continuación, JetPack 5.1.3 (Jetson Linux 35.5.0) puede dejar de arrancar tras ciclos de inicio repetidos. En los foros de NVIDIA se informan fallos de arranque relacionados en Orin y corrupción de la partición OP-TEE:
+En los productos que se indican a continuación, JetPack 5.1.3 (Jetson Linux 35.5.0) puede dejar de arrancar tras ciclos de inicio repetidos. En los debates del foro de NVIDIA se notifican fallos de arranque relacionados en Orin y corrupción de la partición OP-TEE:
 
 - [Orin NX fails to boot: corrupted OP-TEE partition](https://forums.developer.nvidia.com/t/orin-nx-fail-to-boot-corrupted-op-tee-partition/344068/6)
 - [Orin on JetPack 5.1.3](https://forums.developer.nvidia.com/t/orin-5-1-3/293414)
@@ -76,7 +76,7 @@ Este problema se aplica a estas familias de productos que ejecutan L4T 35.5.0:
 - reComputer Industrial J40/J30
 - reServer Industrial J40/J30
 
-Elige una de las siguientes soluciones. Si el dispositivo no puede arrancar en Ubuntu, usa la **Opción 1**. Si puede arrancar en el espacio de usuario de Ubuntu, la **Opción 2** evita el flasheo desde un PC host.
+Elige una de las siguientes soluciones. Si el dispositivo no puede arrancar en Ubuntu, utiliza la **Opción 1**. Si puede arrancar en el espacio de usuario de Ubuntu, la **Opción 2** evita el flasheo desde un PC host.
 
 ## Opción 1: Volver a flashear el paquete QSPI MFI parcheado
 
@@ -109,21 +109,19 @@ Todos los paquetes siguientes son para **JetPack 5.1.3 / L4T 35.5.0**. Haz coinc
   </TabItem>
   <TabItem value="reserver" label="reServer Industrial J40/J30">
 
-Los enlaces de descarga del paquete QSPI MFI parcheado para reServer Industrial están pendientes. Esta opción estará disponible para estos modelos una vez que se añadan los enlaces:
-
 | Producto | Módulo Jetson | Paquete QSPI MFI parcheado |
 | --- | --- | --- |
-| reServer Industrial J3010 | Orin Nano 4GB | Enlace de descarga pendiente |
-| reServer Industrial J3011 | Orin Nano 8GB | Enlace de descarga pendiente |
-| reServer Industrial J4011 | Orin NX 8GB | Enlace de descarga pendiente |
-| reServer Industrial J4012 | Orin NX 16GB | Enlace de descarga pendiente |
+| reServer Industrial J3010 | Orin Nano 4GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAD6PRbbdtTK3_1j-PLbudAdxV0NQqzkoZ6tfSQHkFfiE) |
+| reServer Industrial J3011 | Orin Nano 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAnMqViu7CmSKL4JbsKob2YAfZ-gboKbE_mIEQ4vznB9F4) |
+| reServer Industrial J4011 | Orin NX 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCS0GsZnpHkQ4P5gXNuDlGqAb7q1ntBmiG9xzNNPrxgrns) |
+| reServer Industrial J4012 | Orin NX 16GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8fzLJ3G_PSLU2U2RbfwbqAXGZBp_e1F2kPnQ1gqXneso) |
 
   </TabItem>
 </Tabs>
 
 ### Prepara el host y entra en modo de recuperación
 
-Selecciona a continuación el producto exacto y **R35.5.0 (JetPack 5.1.3)** para mostrar sus requisitos del host y las instrucciones de modo de recuperación, reutilizadas del [resumen de flasheo de JetPack](/es/flash/jetpack_to_selected_product). Instala las dependencias del host indicadas en esa guía antes de flashear. Usa el paquete QSPI-only parcheado descargado arriba para el paso de flasheo.
+Selecciona a continuación el producto exacto y **R35.5.0 (JetPack 5.1.3)** para mostrar sus requisitos de host y las instrucciones de modo de recuperación, reutilizadas del [resumen de flasheo de JetPack](/es/flash/jetpack_to_selected_product). Instala las dependencias del host indicadas en esa guía antes de flashear. Utiliza el paquete QSPI-only parcheado descargado arriba para el paso de flasheo.
 
 <BootloaderProductSelect />
 
@@ -136,7 +134,7 @@ Selecciona a continuación el producto exacto y **R35.5.0 (JetPack 5.1.3)** para
 
 ### Extraer y flashear
 
-En el PC host, extrae el archivo QSPI MFI parcheado que descargaste. Sustituye `<patched-qspi-mfi-archive>` por su nombre de archivo real y `<extracted-mfi-directory>` por el directorio extraído que contiene `tools/kernel_flash/l4t_initrd_flash.sh`.
+En el PC host, extrae el archivo QSPI MFI parcheado descargado. Sustituye `<patched-qspi-mfi-archive>` por su nombre de archivo real y `<extracted-mfi-directory>` por el directorio extraído que contiene `tools/kernel_flash/l4t_initrd_flash.sh`.
 
 ```bash
 sudo tar xpf <patched-qspi-mfi-archive>
@@ -148,7 +146,7 @@ Espera a que el flasheo se complete correctamente, luego reinicia el Jetson y co
 
 ## Opción 2: Actualizar el bootloader desde el espacio de usuario de Ubuntu
 
-Usa esta opción cuando el Jetson todavía arranca en Ubuntu. Instala el paquete de bootloader proporcionado en el dispositivo y no requiere reflashear el sistema.
+Utiliza esta opción cuando el Jetson todavía arranca en Ubuntu. Instala el paquete de bootloader proporcionado en el dispositivo y no requiere volver a flashear el sistema.
 
 1. Descarga el [paquete de bootloader reComputer Orin](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDDc4wU3676Qp3FC4MmwLwjAShNzdHT0PjqdNQnBMZ64OA?e=miBcQj) en el Jetson.
 2. En una terminal, cambia al directorio que contiene el archivo descargado e instálalo:
@@ -163,7 +161,7 @@ Usa esta opción cuando el Jetson todavía arranca en Ubuntu. Instala el paquete
    sudo dpkg -l | grep nvidia-l4t-bootloader
    ```
 
-   La salida debería incluir este paquete y versión:
+   La salida debe incluir este paquete y versión:
 
    ```text
    nvidia-l4t-bootloader-recomputer-orin  35.5.0-recomputer20261110.1  arm64
@@ -173,7 +171,7 @@ Usa esta opción cuando el Jetson todavía arranca en Ubuntu. Instala el paquete
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

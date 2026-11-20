@@ -298,6 +298,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS 视觉夹取' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS 腕部跟随' },
+        { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS双臂协作' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS 与 ROS2' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS 与 Isaac Sim' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web控制系统：真机与 MuJoCo' },
@@ -350,6 +351,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Grasping_Demo`, label: 'reBot-DM 视觉夹取' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM 与 ROS2' },
+        { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM双臂协作' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM 与 Isaac Sim' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web控制系统：真机与 MuJoCo' },
       ],

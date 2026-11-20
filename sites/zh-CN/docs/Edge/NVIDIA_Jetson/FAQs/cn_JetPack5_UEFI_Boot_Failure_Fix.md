@@ -62,7 +62,7 @@ export const BootloaderProductSelect = () => {
 ## 问题
 
 :::info 上游 NVIDIA UEFI 问题
-**此启动失败是由上游 NVIDIA UEFI 固件缺陷导致的，影响 JetPack 5.1.3 及更早版本。** 该问题并非由 Seeed 产品硬件或载板设计引起。本 FAQ 为下方列出的受影响 Seeed 设备提供修复方案。
+**此启动失败是由上游 NVIDIA UEFI 固件缺陷导致的，影响 JetPack 5.1.3 及更早版本。** 这不是由 Seeed 产品硬件或载板设计引起的。本 FAQ 为下方列出的受影响 Seeed 设备提供修复方案。
 :::
 
 在下列产品上，JetPack 5.1.3（Jetson Linux 35.5.0）在多次启动循环后可能会停止启动。NVIDIA 论坛讨论中报告了相关的 Orin 启动失败和 OP-TEE 分区损坏问题：
@@ -80,7 +80,7 @@ export const BootloaderProductSelect = () => {
 
 ## 方案 1：重新刷写已打补丁的 QSPI MFI 包
 
-此操作会在 QSPI 中更新已打补丁的 bootloader，并保留 SSD 上存储的用户数据。从下方选项卡中为你的具体设备下载**已打补丁的仅 QSPI MFI 包**。主机环境准备、恢复模式操作和刷机命令与 [Flash JetPack summary](/cn/flash/jetpack_to_selected_product) 中的内容一致。
+这会在 QSPI 中更新已打补丁的 bootloader，并保留 SSD 上存储的用户数据。从下方选项卡中为你的具体设备下载**已打补丁的仅 QSPI MFI 包**。主机环境准备、恢复模式操作和刷机命令与 [Flash JetPack summary](/cn/flash/jetpack_to_selected_product) 中的内容相同。
 
 ### 下载已打补丁的 QSPI MFI 包
 
@@ -109,21 +109,19 @@ export const BootloaderProductSelect = () => {
   </TabItem>
   <TabItem value="reserver" label="reServer Industrial J40/J30">
 
-reServer Industrial 的已打补丁 QSPI MFI 下载链接正在准备中。一旦添加链接，本选项将适用于以下型号：
-
 | 产品 | Jetson 模组 | 已打补丁的 QSPI MFI 包 |
 | --- | --- | --- |
-| reServer Industrial J3010 | Orin Nano 4GB | 下载链接待定 |
-| reServer Industrial J3011 | Orin Nano 8GB | 下载链接待定 |
-| reServer Industrial J4011 | Orin NX 8GB | 下载链接待定 |
-| reServer Industrial J4012 | Orin NX 16GB | 下载链接待定 |
+| reServer Industrial J3010 | Orin Nano 4GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAD6PRbbdtTK3_1j-PLbudAdxV0NQqzkoZ6tfSQHkFfiE) |
+| reServer Industrial J3011 | Orin Nano 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAnMqViu7CmSKL4JbsKob2YAfZ-gboKbE_mIEQ4vznB9F4) |
+| reServer Industrial J4011 | Orin NX 8GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCS0GsZnpHkQ4P5gXNuDlGqAb7q1ntBmiG9xzNNPrxgrns) |
+| reServer Industrial J4012 | Orin NX 16GB | [Download](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQB8fzLJ3G_PSLU2U2RbfwbqAXGZBp_e1F2kPnQ1gqXneso) |
 
   </TabItem>
 </Tabs>
 
 ### 准备主机并进入恢复模式
 
-在下方选择准确的产品和 **R35.5.0 (JetPack 5.1.3)**，以显示其主机要求和恢复模式操作说明，这些内容复用自 [Flash JetPack summary](/cn/flash/jetpack_to_selected_product)。在刷机前，请先安装该指南中列出的主机依赖。刷机步骤中请使用上面下载的已打补丁仅 QSPI 包。
+在下方选择准确的产品和 **R35.5.0 (JetPack 5.1.3)**，以显示其主机要求和恢复模式操作说明，这些内容复用自 [Flash JetPack summary](/cn/flash/jetpack_to_selected_product)。在刷机前，请先安装该指南中列出的主机依赖。刷机步骤中请使用上面下载的已打补丁的仅 QSPI 包。
 
 <BootloaderProductSelect />
 
@@ -148,7 +146,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 方案 2：在 Ubuntu 用户空间更新 bootloader
 
-当 Jetson 仍然可以启动进入 Ubuntu 时使用此方案。它会在设备上安装提供的 bootloader 软件包，而无需重新刷写系统。
+当 Jetson 仍然可以启动进入 Ubuntu 时使用此方案。它会在设备上安装提供的 bootloader 软件包，而不需要重新刷写系统。
 
 1. 将 [reComputer Orin bootloader 软件包](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDDc4wU3676Qp3FC4MmwLwjAShNzdHT0PjqdNQnBMZ64OA?e=miBcQj) 下载到 Jetson 上。
 2. 在终端中切换到包含已下载文件的目录并安装它：
@@ -157,13 +155,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
    sudo dpkg -i ./nvidia-l4t-bootloader-recomputer-orin_35.5.0-recomputer20261110.1_arm64.deb
    ```
 
-3. 确认已安装预期版本的 bootloader 软件包：
+3. 确认已安装预期的 bootloader 软件包版本：
 
    ```bash
    sudo dpkg -l | grep nvidia-l4t-bootloader
    ```
 
-   输出中应包含以下软件包及其版本：
+   输出中应包含以下软件包及版本：
 
    ```text
    nvidia-l4t-bootloader-recomputer-orin  35.5.0-recomputer20261110.1  arm64
