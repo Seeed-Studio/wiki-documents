@@ -14,10 +14,10 @@ image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
 slug: /respeaker_clip_rtc_streaming
 sku: 100020126
 last_update:
-  date: 08/24/2026
+  date: 11/20/2026
   author: Ray
 createdAt: '2026-08-24'
-updatedAt: '2026-08-27'
+updatedAt: '2026-11-20'
 url: https://wiki.seeedstudio.com/respeaker_clip_rtc_streaming/
 ---
 
@@ -89,30 +89,32 @@ This is the key difference from file download: do not think of an RTC session as
 ### 3.1 Requirements
 
 - a reSpeaker Clip;
-- firmware that supports RTC streaming (the `feat/rtc-live-streaming` development line);
+- firmware **v0.1.5 or later**, the first official release with `AT+START=rtc` (check it with `AT+VERSION` or `clip.firmware_version()`; if your Clip runs an earlier build, update it with the [Firmware Update Guide](/respeaker_clip#firmware-update-guide));
 - Python 3.10+;
 - a working BLE environment on the host;
-- the reSpeaker Clip Python SDK checked out from source.
+- the reSpeaker Clip Python SDK checked out from the official [`Seeed-Studio/reSpeaker_Clip`](https://github.com/Seeed-Studio/reSpeaker_Clip) repository.
 
 ### 3.2 Install the SDK
 
-RTC streaming ships on the development branch, so check it out and install the SDK with the BLE and examples extras:
+RTC streaming ships in the official v0.1.5 release. Clone the official repository, check out that tag, and install the SDK with the BLE and examples extras:
 
 ```bash
-git clone https://github.com/rayheto/reSpeaker_Clip.git
+git clone https://github.com/Seeed-Studio/reSpeaker_Clip.git
 cd reSpeaker_Clip
-git checkout feat/rtc-live-streaming
+git checkout v0.1.5
 
 cd sdk
 python -m pip install -e '.[ble,examples]'
 ```
+
+The tag pins the release this tutorial targets; `main` tracks the same RTC API and receives later fixes.
 
 The two extras matter for this tutorial:
 
 - `ble` installs the BLE transport (Bleak);
 - `examples` installs the dependencies the FFT demo needs (Opus decoder and NumPy).
 
-The Wi-Fi/UDP transport needs no extra dependency, but RTC streaming in this tutorial runs over BLE.
+RTC live streaming is BLE-only in this release: it is carried on the BLE file-data notifications, not over the Wi-Fi/UDP transport.
 
 ## 4. Run the RTC FFT Demo
 
@@ -120,10 +122,10 @@ This section is your real entry point: run the demo first, understand it last.
 
 ### 4.1 Start the Demo
 
-From the repository root, run the example against your device address:
+From the `sdk` directory where the install step left you, run the example against your device address:
 
 ```bash
-python sdk/examples/demo_stream_fft_display.py \
+python examples/demo_stream_fft_display.py \
   --address AA:BB:CC:DD:EE:FF \
   --duration 30
 ```
@@ -131,8 +133,16 @@ python sdk/examples/demo_stream_fft_display.py \
 Omit `--address` to scan for a BLE device named "Clip" automatically, and omit `--duration` to stream until Ctrl-C:
 
 ```bash
-python sdk/examples/demo_stream_fft_display.py
+python examples/demo_stream_fft_display.py
 ```
+
+If you only want to prove that the released firmware streams before reading any code, the SDK also installs `clip.stream`, which captures the same live frames to `rtc-<session>.bin` and prints stream diagnostics:
+
+```bash
+clip.stream --transport ble --address AA:BB:CC:DD:EE:FF --duration 10
+```
+
+The demo also accepts `--depth-frames` to change the jitter buffer depth (default 5 frames; `0` disables buffering).
 
 ### 4.2 What Happens When the Demo Starts?
 
@@ -155,14 +165,14 @@ Streaming for 50s ...
 frames received : 2503
 bytes received  : 191846
 seq discontin.  : 0
-avg inter-frame : 20.0 ms (max 35 ms)
+avg inter-frame : 20.0 ms (max 120 ms)
 ```
 
 - **frames received / bytes received** — how many Opus packets arrived and their total size.
 - **avg inter-frame** — the average gap between packet arrivals. RTC produces one Opus frame about every 20 ms, so while the stream runs you should see roughly 50 packets per second and an average near 20 ms.
-- **seq discontin.** — observed sequence discontinuities; on a healthy BLE link this stays 0.
+- **seq discontin.** — observed sequence-discontinuity events. The firmware advances the sequence number only after a frame has been handed to the BLE link, so device-side queue and pause drops do not consume numbers; treat a nonzero value as a protocol or link anomaly rather than a direct packet-loss count.
 
-Below these, the demo also prints JitterBuffer statistics (underruns, catch-up drops, queue depth distribution) and a latency breakdown (queue / decode / FFT). Section 7 explains what they mean.
+Exact numbers vary with the BLE link and how long you stream. Below these, the demo also prints JitterBuffer statistics (underruns, catch-up drops, queue depth distribution) and a latency breakdown (queue / decode / FFT). Section 7 explains what they mean.
 
 ## 5. Build a Minimal RTC Streaming Application
 
@@ -225,6 +235,8 @@ await receiver.wait_start(timeout=10)
 
 `stream_rtc()` attaches your receiver to the transport's frame path and issues `AT+DOWNLOAD=<session>`; from now on the device pushes `STREAM_START`, then `STREAM_DATA` frames, into `receiver`. `wait_start()` returns once `STREAM_START` has arrived — that is the moment the live data channel is truly established.
 
+Before sending `STREAM_START`, the firmware waits for tight BLE connection parameters (up to about 5 seconds), so a brief delay here is normal and `timeout=10` leaves headroom.
+
 The returned `token` is a lease on the transport's frame handler slot; you will release it when the stream is over (Section 5.6).
 
 ### 5.5 Receive Opus Packets
@@ -243,10 +255,14 @@ This is your application's entry point. Whatever you build — FFT, VAD, streami
 Stopping mirrors the recording API: `stop_recording()` sends `AT+STOP`, the device answers with `STREAM_END`, and you release the handler lease:
 
 ```python
-await clip.stop_recording()
-await receiver.wait_end(timeout=5)
-transport.detach_file_frame_handler(token)
+try:
+    await clip.stop_recording()
+    await receiver.wait_end(timeout=5)
+finally:
+    transport.detach_file_frame_handler(token)
 ```
+
+Releasing the lease in `finally` keeps the transport's frame-handler slot clean when the stream fails or the script is interrupted.
 
 The complete minimal application, assembled:
 
@@ -264,13 +280,15 @@ async def main() -> None:
 
         session = await clip.start_rtc()
         token = await clip.stream_rtc(session, receiver)
-        await receiver.wait_start(timeout=10)
+        try:
+            await receiver.wait_start(timeout=10)
 
-        await asyncio.sleep(10)          # consume the live stream for 10 s
+            await asyncio.sleep(10)      # consume the live stream for 10 s
 
-        await clip.stop_recording()
-        await receiver.wait_end(timeout=5)
-        transport.detach_file_frame_handler(token)
+            await clip.stop_recording()
+            await receiver.wait_end(timeout=5)
+        finally:
+            transport.detach_file_frame_handler(token)
 
         print("frames:", receiver.frames_received, "bytes:", receiver.bytes_received)
 
@@ -296,6 +314,8 @@ BLE STREAM_DATA -> SDK parses the frame -> StreamReceiver -> Opus payload (bytes
 ```
 
 The receiver also keeps live statistics you can read at any time: `frames_received`, `bytes_received`, `sequence_gaps`, `avg_inter_frame_ms`, `max_inter_frame_ms`, and `first_frame_delay_s`. After `STREAM_END`, `receiver.end_reason` tells you why the stream ended (stopped, timed out, or disconnected).
+
+One receiver can feed more than one consumer: `receiver.add_sink(sink)` registers an additional raw-frame tap that runs before `on_frame`. The SDK ships two ready-made sinks — `StreamCapture` writes the same Opus packets to a length-prefixed `.bin` log, and `StreamConsumer` pushes bounded chunks and stacks to async callbacks for forwarding or streaming ASR. The `clip.stream` command from Section 4.1 is built on `StreamCapture`.
 
 ### 6.2 RTC Audio Format
 
