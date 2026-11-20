@@ -1259,6 +1259,55 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO nRF54LM20B Series',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/XIAO_nRF54LM20B_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/XIAO_nRF54LM20B_NCS',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/XIAO_nRF54LM20B_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/XIAO_nRF54LM20B_Built-in-Sensor',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/XIAO_nRF54LM20B_Low_Power',
+            {
+              type: 'category',
+              label: 'Edge AI Tutorial for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/Application/Edge_AI_Lab_with_XIAO/XIAO_nRF54LM20B_AI_Gesture_Recognition',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/Application/Edge_AI_Lab_with_XIAO/XIAO_nRF54LM20B_AI_Wake_Word',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/Wireless_Connection/XIAO_nRF54LM20B_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/Wireless_Connection/XIAO_nRF54LM20B_Matter_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/Wireless_Connection/XIAO_nRF54LM20B_NFC_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/Application/XIAO_nRF54LM20B_with_epaper_and_sdcard',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/XIAO_nRF54LM20B_with_MicroPython',
+              ],
+            },
+            // {
+            //   type: 'category',
+            //   label: 'Platform',
+            //   items: [
+            //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20B/XIAO_nRF54LM20B_with_Arduino',
+            //   ],
+            // },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C3',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
