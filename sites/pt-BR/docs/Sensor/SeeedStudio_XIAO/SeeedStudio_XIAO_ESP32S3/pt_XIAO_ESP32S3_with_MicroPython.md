@@ -6,10 +6,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/esp32s3_micropython/title.png
 slug: /xiao_esp32s3_with_micropython
 last_update:
-  date: 08/14/2024
+  date: 11/05/2026
   author: Evelyn Chen
 createdAt: '2024-08-14'
-updatedAt: '2026-03-20'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_with_micropython/
 ---
 
@@ -19,9 +19,9 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_with_micropython/
 
 [MicroPython](https://github.com/micropython/micropython/wiki) é um interpretador Python com um recurso parcial de compilação de código nativo. Ele fornece um subconjunto dos recursos do Python 3.5, implementado para processadores embarcados e sistemas com recursos limitados. Ele é diferente do CPython e você pode ler mais sobre as diferenças [aqui](https://github.com/micropython/micropython/wiki/Differences).
 
-## Instalando MicroPython
+## Instalando o MicroPython
 
-#### Instalar Esptool
+#### Instalar o Esptool
 
 Se você ainda não instalou o esptool.py, pode fazê-lo usando pip no seu PC:
 
@@ -31,12 +31,12 @@ pip install esptool
 
 #### Baixar o firmware MicroPython para o XIAO ESP32S3
 
-Você precisa baixar o arquivo binário do firmware em [micropython.org](https://micropython.org/download/ESP32_GENERIC_S3/)
-Depois de baixar o arquivo bin correto, navegue até a pasta e abra um terminal cmd lá.
+Você precisa baixar o arquivo binário de firmware em [micropython.org](https://micropython.org/download/SEEED_XIAO_ESP32S3/)
+Após baixar o arquivo bin correto, navegue até a pasta e abra um terminal cmd ali.
 Na versão final deste documento, a versão mais recente do arquivo bin é:
 
 ```
-ESP32_GENERIC_S3-20230602-v1.23.0.bin
+SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 ```
 
 #### Conectar o XIAO ESP32S3 ao seu PC
@@ -45,7 +45,7 @@ Você precisa pressionar e manter pressionado o botão BOOT na sua placa XIAO ES
 
 #### Verificar porta
 
-Encontre todos os dispositivos seriais no seu PC.
+Descubra todos os dispositivos seriais no seu PC.
 
 - Linux
 
@@ -55,7 +55,7 @@ No Linux, você pode usar o comando *dmesg* para ver os dispositivos conectados:
 dmesg | grep tty
 ```
 
-Como alternativa, você pode listar dispositivos seriais usando *ls*:
+Como alternativa, você pode listar os dispositivos seriais usando *ls*:
 
 ```
 ls /dev/ttyS* /dev/ttyUSB*
@@ -78,21 +78,22 @@ Isso mostrará todos os dispositivos de porta serial.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/1.png" /></div>
 
 :::tip
-Se a porta estiver ocupada, você pode usar o seguinte comando para encontrar e matar qualquer processo que esteja usando a porta (no macOS):
-Identifique processos usando a porta:
+Se a porta estiver ocupada, você pode usar o seguinte comando para encontrar e encerrar processos que estejam usando a porta (no macOS):
+Identifique os processos que estão usando a porta:
 
 ```
 lsof | grep port
 ```
 
-Este comando lista arquivos abertos e procura qualquer processo usando a porta especificada.
-Encontre o ID do processo (PID) na saída e finalize o processo:
+Este comando lista arquivos abertos e procura por qualquer processo usando a porta especificada.
+Encontre o ID do processo (PID) na saída e encerre o processo:
 
 ```
 kill -9 <PID>
 ```
 
 Substitua *PID* pelo ID de processo real encontrado.
+:::
 
 #### Apagar flash
 
@@ -100,17 +101,17 @@ Substitua *PID* pelo ID de processo real encontrado.
 esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 erase_flash
 ```
 
-Substitua '/dev/cu.usbmodem11301' pelo nome de porta correto do seu sistema (por exemplo, `COM3` no Windows, `/dev/ttyUSB0` no Linux).
+Substitua '/dev/cu.usbmodem11301' pelo nome correto da porta do seu sistema (por exemplo, `COM3` no Windows, `/dev/ttyUSB0` no Linux).
 
 #### Gravar flash
 
 Grave o firmware no XIAO ESP32S3:
 
 ```linux
-esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 ESP32_GENERIC_S3-20240602-v1.23.0.bin
+esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 ```
 
-Novamente, substitua '/dev/cu.usbmodem11301' pelo nome de porta correto e 'ESP32_GENERIC_S3-20240602-v1.23.0.bin' pelo caminho para o seu arquivo de firmware.
+Novamente, substitua '/dev/cu.usbmodem11301' pelo nome correto da porta e 'SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin' pelo caminho para o seu arquivo de firmware em branco.
 Não se esqueça de fazer o hard reset via pino RTS.
 Depois você pode começar a compilar scripts usando sua ferramenta preferida para o ESP32!
 
@@ -136,7 +137,7 @@ thonny
 Vá em Run-->Configure Interpreter e certifique-se de que a aba Interpreter nas opções do Thonny esteja como mostrado abaixo, selecione "CircuitPython (generic)" e a porta:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/4.png" /></div>
 
-Clique em "OK" na caixa de diálogo e você deverá ver o shell Micropython na parte inferior da janela do Thonny, como mostrado na figura abaixo.
+Clique em "OK" na janela de diálogo e você deverá ver o shell do Micropython na parte inferior da janela do Thonny, como mostrado na figura abaixo.
 Digite o script linha por linha no Shell para obter o tamanho da flash e da SRAM:
 
 ```python
@@ -148,9 +149,9 @@ esp.flash_size()
 
 Parabéns por configurar com sucesso o MicroPython no seu XIAO ESP32S3 com o Thonny!
 
-### 2. Arduino Lab para MicroPython
+### 2. Arduino Lab for MicroPython
 
-Baixe o Arduino Lab para MicroPython e conecte o dispositivo ao seu PC.
+Baixe o Arduino Lab for MicroPython e conecte o dispositivo ao seu PC.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/7.png" /></div>
 
 Codifique assim:
@@ -174,7 +175,7 @@ while True:
 
 ### 3. Pymakr no Visual Studio Code
 
-- Instalar Pymakr
+- Instalar o Pymakr
 Siga as [instruções de instalação](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/) para instalar o Pymakr.
 - Conecte seu XIAO ESP32S3 ao computador.
 
@@ -195,22 +196,22 @@ Crie um novo arquivo Python dentro do seu projeto.
 - [Windows](PChttps://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)
 - [Linux](https://randomnerdtutorials.com/install-upycraft-ide-linux-ubuntu-instructions/)
 
-## Informações de Pinout/Porta
+## Informações de pinagem/porta
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/10.png" /></div>
 
 - Para mais informações, consulte a [visão geral de hardware](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_getting_started/#visão-geral-de-hardware)
 - [Esquemático do Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 
-## Primeiros passos com MicroPython no XIAO ESP32S3
+## Introdução ao MicroPython no XIAO ESP32S3
 
 Aqui está [uma referência rápida para operação do ESP32 com micropython](https://docs.micropython.org/en/latest/esp32/quickref.html#installing-micropython).
 Para mais conhecimento sobre [bibliotecas micropython](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries).
 
 ### Controle geral da placa
 
-O REPL (*R*ead-*E*val-*P*rint-*L*oop) do MicroPython está na UART0 (GPIO1=TX, GPIO3=RX) a 115200 baud. A conclusão por tab é útil para descobrir quais métodos um objeto possui. O modo de colagem (ctrl-E) é útil para colar um grande bloco de código Python no REPL.
-Pode-se usar a função *dir()* no MicroPython (similar ao Python) para listar os atributos e métodos de um objeto.
+O REPL (*R*ead-*E*val-*P*rint-*L*oop) do MicroPython está na UART0 (GPIO1=TX, GPIO3=RX) na taxa de baud 115200. A conclusão com Tab é útil para descobrir quais métodos um objeto possui. O modo de colagem (ctrl-E) é útil para colar um grande bloco de código Python no REPL.
+Você pode usar a função *dir()* no MicroPython (semelhante ao Python) para listar os atributos e métodos de um objeto.
 Por exemplo, digite *dir(machine)* no shell:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/11.png" /></div>
 
@@ -240,7 +241,7 @@ esp.flash_read(byte_offset, buffer)
 ```
 
 O módulo *esp32*:
-ESP32C3, ESP32S2 e ESP32S3 têm um sensor de temperatura interno disponível e retornam a temperatura em Celsius:
+ESP32C3, ESP32S2 e ESP32S3 possuem um sensor de temperatura interno disponível e retornam a temperatura em Celsius:
 
 ```python
 import esp32
@@ -313,7 +314,7 @@ tim1.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(1))
 ```
 
 O período é em milissegundos.
-Timers virtuais não são atualmente suportados nesta porta.
+Temporizadores virtuais não são suportados atualmente nesta porta.
 
 ### Pinos e GPIO
 
@@ -336,9 +337,9 @@ p6 = Pin(6, Pin.OUT, drive=Pin.DRIVE_3) # set maximum drive strength
 
 ```
 
-Os pinos disponíveis estão nos seguintes intervalos (inclusive): 1,2,3,4,5,6,7,8,9,43,44. Eles correspondem aos números reais de pinos GPIO do chip ESP32S3.
+Os pinos disponíveis estão nos seguintes intervalos (inclusive): 1,2,3,4,5,6,7,8,9,43,44. Eles correspondem aos números reais dos pinos GPIO do chip ESP32S3.
 
-### UART(barramento serial)
+### UART (barramento serial)
 
 A classe *machine.UART*:
 
@@ -357,9 +358,9 @@ O ESP32C3 possui uma UART de hardware. Os pinos são listados abaixo:
 | TX   | 43  |
 | RX   | 44  |
 
-### PWM(modulação por largura de pulso)
+### PWM (modulação por largura de pulso)
 
-PWM pode ser habilitado em todos os pinos com capacidade de saída. A frequência base pode variar de 1Hz a 40MHz, mas há um compromisso: à medida que a frequência base aumenta, a resolução do duty diminui.
+O PWM pode ser habilitado em todos os pinos com capacidade de saída. A frequência base pode variar de 1Hz a 40MHz, mas há um compromisso: à medida que a frequência base aumenta, a resolução do duty diminui.
 A classe *machine.PWM*:
 
 ```python
@@ -384,7 +385,7 @@ pwm3 = PWM(Pin(3), freq=20000, duty=512)  # create and configure in one go
 print(pwm3)                               # view PWM settings
 ```
 
-### ADC(conversão analógica para digital)
+### ADC (conversão analógico-digital)
 
 No XIAO ESP32S3, a funcionalidade de ADC está disponível nos pinos 1,2,3,4,5,6,7,8,9.
 A classe *machine.ADC*:
@@ -401,7 +402,7 @@ val = adc.read_uv()   # read an analog value in microvolts
 
 #### Barramento SPI por software
 
-SPI por software (usando bit-banging) funciona em todos os pinos e é acessado pela classe *machine.SoftSPI*:
+O SPI por software (usando bit-banging) funciona em todos os pinos e é acessado por meio da classe *machine.SoftSPI*:
 
 ```python
 from machine import Pin, SoftSPI
@@ -429,7 +430,7 @@ spi.write_readinto(buf, buf) # write buf to MOSI and read MISO back into buf
 
 #### Barramento SPI por hardware
 
-O SPI por hardware é acessado pela classe machine.SPI e possui os mesmos métodos do SPI por software acima:
+O SPI por hardware é acessado por meio da classe machine.SPI e possui os mesmos métodos do SPI por software acima:
 
 ```python
 from machine import Pin, SPI
@@ -448,7 +449,7 @@ hspi = SPI(1, 10000000, sck=Pin(7), mosi=Pin(9), miso=Pin(8))
 
 #### Barramento I2C por software
 
-I2C por software (usando bit-banging) funciona em todos os pinos com capacidade de saída e é acessado pela classe *machine.SoftI2C*:
+O I2C por software (usando bit-banging) funciona em todos os pinos com capacidade de saída e é acessado por meio da classe *machine.SoftI2C*:
 
 ```python
 from machine import Pin, SoftI2C
@@ -466,7 +467,7 @@ i2c.writeto(0x3a, buf)  # write the given buffer to the peripheral
 
 #### Barramento I2C por hardware
 
-O driver é acessado pela classe *machine.I2C* e possui os mesmos métodos do I2C por software acima:
+O driver é acessado por meio da classe *machine.I2C* e possui os mesmos métodos do I2C por software acima:
 
 ```python
 from machine import Pin, I2C
@@ -479,7 +480,7 @@ i2c = I2C(0, scl=Pin(6), sda=Pin(5), freq=400000)
 
 <table align="center">
   <tbody><tr>
-      <th>XIAO ESP32S3<br /> com cabeçalho soldado</th>
+      <th>XIAO ESP32S3<br /> com header soldado</th>
       <th>Expension Board Base para XIAO</th>
       <th>Sensor de luz Grove</th>
     </tr>
@@ -541,7 +542,7 @@ while True:
 #### Acender a tela OLED
 
 Conecte seu XIAO ESP32S3, abra o Thonny e clique no canto inferior direito para configurar o interpretador
-Selecione o interpretador - Micropython (ESP32) e **Porta >>> Clique em OK**
+Selecione o interpretador - Micropython (ESP32) e **Port >>> Clique em OK**
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/14.png" /></div>
 
 Se tudo correr bem, você verá a saída no shell
@@ -551,7 +552,7 @@ Clique em "Tools" >>> Clique em "Management Packages" >>> Digite o nome da bibli
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/15.png" /></div>
 
 Execute o script e grave-o na placa.
-Depois de terminar a codificação, clique no botão verde para executar o script.
+Depois de terminar de programar, clique no botão verde para executar o script.
 
 ```python
 import time
@@ -576,7 +577,7 @@ oled.show()  # Show the text
 
 #### Teste de streaming da câmera
 
-O teste de streaming da câmera também é fornecido para o ESP32S3 sense (com câmera), por favor consulte [aqui](https://wiki.seeedstudio.com/pt-br/XIAO_ESP32S3_Micropython/#Step-3-Testing-the-streaming-example).
+O teste de streaming da câmera também é fornecido para o ESP32S3 sense (com câmera), consulte [aqui](https://wiki.seeedstudio.com/pt-br/XIAO_ESP32S3_Micropython/#etapa-3-testando-o-exemplo-de-streaming).
 
 Obrigado por ler este artigo! Sinta-se à vontade para compartilhar suas ideias nos comentários.
 
@@ -584,9 +585,9 @@ Obrigado por ler este artigo! Sinta-se à vontade para compartilhar suas ideias 
 
 - [O arquivo binário do firmware](https://micropython.org/download/ESP32_GENERIC_S3/) para XIAO ESP32S3 com MicroPython
 
-## Suporte Técnico e Discussão de Produto
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe fornecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
