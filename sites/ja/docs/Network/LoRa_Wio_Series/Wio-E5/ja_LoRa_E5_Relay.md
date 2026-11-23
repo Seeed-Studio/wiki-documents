@@ -4,6 +4,7 @@ title: Wio-E5 リレー機能
 keywords:
   - wio
   - docusaurus
+image: https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg
 slug: /lora-e5_relay
 sku: 317990687,317990829
 last_update:
@@ -28,52 +29,52 @@ url: https://wiki.seeedstudio.com/ja/lora-e5_relay/
 
 <br />
 
-> LoRaWAN® は LoRa Alliance® からライセンスを受けて使用されている商標です。
+> LoRaWAN® は LoRa Alliance® からライセンス供与を受けて使用されている商標です。
 LoRa® マークは Semtech Corporation またはその子会社の商標です。
 
-**対象ハードウェア**: Wio-E5 LoRa® モジュール
+**適用ハードウェア**: Wio-E5 LoRa® モジュール
 
-**ファームウェア**: カスタムファームウェア（注文前にお問い合わせください）
+**ファームウェア**: カスタムファームウェア（ご注文前にお問い合わせください）
 
 **ドキュメントバージョン**: V1.0
 
-**サーバー対応**: ChirpStack / The Things Network (TTN) 
+**対応サーバー**: ChirpStack / The Things Network (TTN) 
 
-> [ここ](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/rhf0m055-v5.1.2-20250319.ebin.bin)をクリックして、Wio-E5 LoRaWAN リレー機能ファームウェアをダウンロードしてください。
+> Wio-E5 LoRaWAN リレー機能ファームウェアは [Here](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/e5_relay-v5.1.2.bin) からダウンロードできます。
 
 ## 1. 概要
 
-Wio-E5 リレー機能は [LoRaWAN Relay Specification](https://resources.lora-alliance.org/technical-specifications/ts011-1-0-0-relay) に基づいており、ゲートウェイの電波が直接届かないエリアのデバイスが、**リレーマスター** デバイスを介して LoRaWAN ネットワークへアクセスできるようにします。
+Wio-E5 リレー機能は [LoRaWAN Relay Specification](https://resources.lora-alliance.org/technical-specifications/ts011-1-0-0-relay) に基づいており、ゲートウェイの直接カバレッジがないエリアのデバイスが、**Relay Master** デバイスを介して LoRaWAN ネットワークへアクセスできるようにします。
 
-### 基本概念
+### コアコンセプト
 
 | 役割 | 説明 | ネットワーク接続 |
 |:---:|:---|:---|
 | **Relay Master** | ブリッジデバイスとして動作し、`Slave` からのパケットを受信して実際のゲートウェイへ転送します | LoRaWAN ネットワークへ直接接続（OTAA） |
-| **Relay Slave** | 電波の死角に配置され、`Master` を介して間接的にネットワークへアクセスします | `Master` 経由の間接接続 |
-| **WOR** <br /> (Wake-on-Radio) | `Slave` が周期的にウェイクアップフレームを送信し、`Master` がそれを受信して応答します | - |
+| **Relay Slave** | 電波の届かない場所に設置され、`Master` を介して間接的にネットワークへアクセスします | `Master` を介した間接接続 |
+| **WOR** <br /> (Wake-on-Radio) | `Slave` が定期的にウェイクアップフレームを送信し、`Master` がそれを受信して応答します | - |
 
-### ワークフローの要点
-- **CAD 検出**: マスターは 1 秒ごとに Channel Activity Detection ウィンドウを開き、スレーブをリッスンします
-- **時刻同期**: 初回通信後、スレーブはマスターと時刻を同期し、プリアンブルシンボル数を **259 から 15** に削減して、消費電力とチャネル占有率を大幅に低減します
-- **RXR ウィンドウ**: スレーブは 3 番目の受信ウィンドウ（RX Window 3）を使用して下りデータを受信します
+### ワークフローのポイント
+- **CAD 検出**: Master は 1 秒ごとに Channel Activity Detection ウィンドウを開き、Slave をリッスンします
+- **時刻同期**: 初回通信後、Slave は Master と時刻同期を行い、プレアンブルシンボル数を **259 から 15** に削減し、消費電力とチャネル占有率を大幅に低減します
+- **RXR ウィンドウ**: Slave は 3 番目の受信ウィンドウ（RX Window 3）を使用して下りデータを受信します
 
 ---
 
 ## 2. 事前準備
 
 ### 2.1 ハードウェア一覧
-- **Wio-E5 モジュール** × 2（1 台をマスター、1 台をスレーブとして使用）
+- **Wio-E5 モジュール** × 2（1 台を Master、もう 1 台を Slave として使用）
 - **LoRaWAN ゲートウェイ**（例: SenseCAP M2 Multi-Platform）
-- **USB–シリアル変換ツール**（ボーレート: **9600**）
-- シリアルデバッグツールをインストールした **PC**（例: XCOM, Putty）
+- **USB-シリアル変換ツール**（ボーレート: **9600**）
+- シリアルデバッグツールをインストールした **コンピュータ**（例: XCOM, Putty）
 
 ### 2.2 サーバー環境の選択
 
 | フェーズ | 推奨プラットフォーム | 備考 |
 |:---|:---|:---|
-| **テスト** | **ChirpStack** | リレーをネイティブサポート、デバイスバインド用の Web UI を提供 |
-| **本番運用** | **TTN** | TTN CLI ツールによる設定が必要。TTN は現在リレーメッセージを受信可能だが、リレー管理用の完全な UI は未実装 |
+| **テスト** | **ChirpStack** | リレーをネイティブサポートし、デバイスのバインド用 Web UI を提供 |
+| **本番運用** | **TTN** | TTN CLI ツールによる設定が必要。TTN は現在リレーメッセージを受信できますが、リレー管理用の完全な UI は未提供 |
 
 ---
 
@@ -83,7 +84,7 @@ Wio-E5 リレー機能は [LoRaWAN Relay Specification](https://resources.lora-a
 すべての AT コマンドは、ボーレートを **9600** に設定したシリアルツールから入力し、キャリッジリターン（`<CR><LF>`）で終端する必要があります。
 :::
 
-### 3.1 リレスレーブの設定
+### 3.1 Relay Slave の設定
 
 ```bash
 # 1. Set to OTAA mode
@@ -105,7 +106,7 @@ AT+ID
 AT+KEY=APPKEY,"your_app_key_here"
 ```
 
-### 3.2 リレーマスターの設定
+### 3.2 Relay Master の設定
 
 ```bash
 # 1. Basic network settings (same as Slave)
@@ -127,13 +128,13 @@ AT+LOG=DEBUG
 
 ### 4.1 ゲートウェイとアプリケーションの登録
 
-1. ゲートウェイの登録: Gateways → Add gateway → Gateway EUI を入力
-2. アプリケーションの作成: Applications → Add application → 名前を入力（例: relay-app）
+1. ゲートウェイ登録: Gateways → Add gateway → Gateway EUI を入力
+2. アプリケーション作成: Applications → Add application → 名前を入力（例: relay-app）
 
 ### 4.2 デバイスプロファイルの作成
 
-#### スレーブプロファイル
-- General: Region（EU868）を選択、LoRaWAN 1.0.4
+#### Slave プロファイル
+- General: Region（EU868）を選択し、LoRaWAN 1.0.4 を指定
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-profile-relay-slave-1.png" alt="pir" width={600} height="auto" /></p>
 
 
@@ -146,7 +147,7 @@ AT+LOG=DEBUG
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-profile-relay-slave-2.png" alt="pir" width={600} height="auto" /></p>
 
 
-#### マスタープロファイル
+#### Master プロファイル
 
 - General: 上記と同じ
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-profile-relay-master-1.png" alt="pir" width={600} height="auto" /></p>
@@ -161,23 +162,23 @@ AT+LOG=DEBUG
 
 ### 4.3 デバイス登録とバインド
 
-**ステップ 1: スレーブデバイスの登録**
-- relay-app → Devices → Add へ移動
+**ステップ 1: Slave デバイスの登録**
+- relay-app → Devices → Add に進む
 - Device EUI、Join EUI を入力し、Slave Device Profile を選択
-- OTAA Keys の AppKey を入力
+- OTAA Keys に AppKey を入力
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-relay-tx-1.png" alt="pir" width={600} height="auto" /></p>
 
-**ステップ 2: マスターデバイスの登録**
+**ステップ 2: Master デバイスの登録**
 - 上記と同様に実施し、Master Device Profile を選択
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-relay-rx-1.png" alt="pir" width={600} height="auto" /></p>
 
 **ステップ 3: 関係のバインド（重要）**
 1. relay-app 内のデバイス一覧に入る
-2. スレーブデバイスを選択 → Selected devices をクリック → Add to relay
-3. ポップアップで、該当するマスターデバイスをリレーホストとして選択
-4. 検証: Relays タブへ移動し、マスターの下にスレーブが表示されていることを確認
+2. Slave デバイスを選択 → Selected devices をクリック → Add to relay を選択
+3. ポップアップで対応する Master デバイスをリレーホストとして選択
+4. 検証: Relays タブに移動し、Master の下に Slave が表示されていることを確認
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/add-relay-tx-to-relay-1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -188,17 +189,17 @@ AT+LOG=DEBUG
 ## 5. サーバー設定（TTN）
 
 :::note
-TTN でのリレー設定には **Command Line Interface (CLI)** が必要です。Web UI は基本的なデバイス登録のみをサポートしています。
+TTN ではリレー設定に **Command Line Interface (CLI)** が必要です。Web UI は基本的なデバイス登録のみサポートします。
 :::
 
 ### 5.1 基本登録
 1. ゲートウェイ登録: `Gateways` → `Register gateway` → EUI と Frequency Plan を入力
-2.  アプリケーション作成: `Applications` → `Add application` → ID（**relay-app**）を設定
+2.  アプリケーション: `Applications` → `Add application` → ID（**relay-app**）を設定
 3. デバイス登録:
-    - スレーブ: ID（**relay-tx**）を設定し、`DevEUI` / `JoinEUI` / `AppKey` を入力
-    - マスター: ID（**relay-rx**）を設定し、`DevEUI` / `JoinEUI` / `AppKey` を入力
+    - Slave: ID（**relay-tx**）を設定し、`DevEUI`/`JoinEUI`/`AppKey` を入力
+    - Master: ID（**relay-rx**）を設定し、`DevEUI`/`JoinEUI`/`AppKey` を入力
 
-### 5.2 CLI 設定（Windows の例）
+### 5.2 CLI 設定（Windows 例）
 
 ```bash
 # 1. Download and configure CLI (version 3.32.2+)
@@ -219,12 +220,12 @@ ttn-lw-cli.exe relays create relay-app relay-tx \
 ttn-lw-cli.exe relays uplink-forwarding-rules create relay-app relay-rx 0 --device-id relay-tx
 ```
 
-> 詳細については、[TTN 公式ドキュメント](https://www.thethingsindustries.com/docs/concepts/features/cli/installing-cli/)を参照してください。
+> 詳細については、[TTN 公式ドキュメント](https://www.thethingsindustries.com/docs/concepts/features/cli/installing-cli/) を参照してください。
 
 
 ## 6. 検証テスト
 
-### 6.1 リレーマスターの起動
+### 6.1 Relay Master の起動
 
 シリアルポートツールを開き、対応するシリアルポートを選択してボーレートを **9600** に設定し、ログを監視します。
 
@@ -250,9 +251,9 @@ AT+MSG
 # +LOG: DEBUG 211708 LORA   CAD, 865100000, SF9, 125KHz
 ```
 
-この時点で、`Relay Master` は Relay Slave を用いたウェイクアップおよびフォワーディングを行う準備ができています。
+この時点で、`Relay Master` は Relay Slave を使用してウェイクアップおよびフォワードする準備が整っています。
 
-### 6.2 リレスレーブの起動
+### 6.2 Relay Slave の起動
 
 ```bash
 # 1. Ensure Slave mode is set
@@ -295,13 +296,13 @@ AT+CMSGHEX=AA
 
 ### 7. 重要な注意事項
 
-1. サーバーの選択: 現時点で TTN は CLI 経由でのみリレー設定をサポートしています。ChirpStack は Web UI による完全なサポートを提供しているため、テスト用途には ChirpStack の使用を推奨します。
+1. サーバー選択: 現在、TTN は CLI 経由でのみ Relay 設定をサポートしています。ChirpStack は完全な Web UI を提供します。テストには ChirpStack の使用を推奨します。
 
-2. 電力最適化：時刻同期後、Slave の WOR フレームのプレアンブルは 259 から 15 に削減され、消費電力が大幅に低減します。安定した運用環境での導入を推奨します。
+2. 電力最適化：時刻同期後、Slave の WOR フレームのプレアンブルは 259 から 15 に減少し、消費電力が大幅に低下します。安定した運用環境での使用を推奨します。
 
 3. ファームウェア要件：Wio-E5 のファームウェアが AT+STDRELAY コマンドセットをサポートしていることを確認してください。
 
-4. 通信距離テスト：リレー転送の有効性を確認するため、テスト中は Slave と Master の距離を（例：50〜500 メートル）に保ってください。
+4. 通信距離テスト：リレー転送の有効性を検証するため、テスト中は Slave と Master 間の距離（例：50〜500 メートル）を維持してください。
 
 ## リソース
 

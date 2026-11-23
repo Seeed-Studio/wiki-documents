@@ -259,16 +259,15 @@ import TabItem from '@theme/TabItem';
 
 The X1 Companion firmware (v1.18.0+) supports multi-press shortcuts on the button. Each click must be within 0.5 seconds of the previous one.
 
-| Button Action | Function | Screen Feedback |
-| --- | --- | --- |
-| Single press | Wake up / refresh the display | — |
-| Double press | Send an Advert | `Advert sent!` |
-| Triple press | Cycle alert mode: Buzz+Vibe → Buzz only → Vibe only → Silent | `Alerts: ...` |
-| Quadruple press | Toggle GPS on / off | `GPS: Enabled` / `GPS: Disabled` |
-| Long press 3 s (with charging cable) | Force reset / enter DFU mode | — |
+| Button Action | Function |
+| --- | --- |
+| Double press | Send an Advert |
+| Triple press | Cycle alert mode: Buzz+Vibe → Buzz only → Vibe only → Silent |
+| Quadruple press | Toggle GPS on / off |
+| Long press 3 s (with charging cable) | Force reset / enter DFU mode |
 
 :::note
-- On a triple press, the new alert mode is confirmed with a beep and/or a vibration, so you can switch modes without looking at the screen.
+- On a triple press, the new alert mode is confirmed with a beep and/or a vibration, so you can switch modes without opening the app.
 - Pressing the button 4 or more times is always treated as a quadruple press.
 - For details on the long-press behavior (reboot and DFU mode), see [How to reboot the device](#how-to-reboot-the-device).
 :::
