@@ -519,7 +519,7 @@ RealSense D405 は短距離用のステレオ深度カメラで、テーブル�
 **RealSense D435i**
 
 <div align="center">
-    <img width={420]
+    <img width={420}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
 </div>
 <div className="rebot-buy-button-group">
