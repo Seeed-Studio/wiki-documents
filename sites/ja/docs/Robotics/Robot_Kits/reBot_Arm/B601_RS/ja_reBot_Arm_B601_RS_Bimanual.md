@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 <div className="rebot-buy-button-group">
   <span className="rebot-buy-button-glow" aria-hidden="true"></span>
-  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/catalog/product/view/id/7046" target="_blank" rel="noopener noreferrer">
     <span>今すぐ入手</span>
     <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
       <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
