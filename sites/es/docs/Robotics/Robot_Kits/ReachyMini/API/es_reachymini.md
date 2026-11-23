@@ -1,5 +1,6 @@
 ---
 description: Referencia completa de la API para la clase principal ReachyMini, incluidos métodos para control de motores, movimiento y gestión de estado.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Referencia de la API de ReachyMini
 slug: /reachymini_api_reachymini
 keywords:

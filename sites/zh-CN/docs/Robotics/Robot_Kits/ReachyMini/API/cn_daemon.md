@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini 守护进程 API 参考，涵盖核心守护进程类、机器人应用锁、后端类及所有路由端点。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 守护进程 API
 slug: /reachymini_api_daemon
 keywords:

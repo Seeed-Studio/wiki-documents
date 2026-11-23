@@ -268,7 +268,7 @@ GraspNet is a point-cloud-based robot grasping method—more precisely, a 6-DoF 
 
 Input: RGB-D data -> point cloud -> GraspNet -> grasp pose
 
-Output: a 6-DoF grasp pose $G=(x,y,z,R)$, including:
+Output: a 6-DoF grasp pose `G=(x,y,z,R)`, including:
 
 - Position, where the arm gripper should go:
 

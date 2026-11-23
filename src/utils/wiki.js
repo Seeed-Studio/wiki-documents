@@ -1,134 +1,134 @@
 const docList = [
   [
     {
-      "path": "/respeaker_xvf3800_i2s_usb_bridge",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp",
-      "title": "reSpeaker XVF3800 USB Audio Bridge with XIAO ESP32S3",
-      "date": "2026-10-12",
-      "title_cn": "reSpeaker XVF3800 搭配 XIAO ESP32S3 的 USB 音频桥",
-      "title_ja": "reSpeaker XVF3800 USB オーディオブリッジ with XIAO ESP32S3",
-      "title_es": "Puente de audio USB reSpeaker XVF3800 con XIAO ESP32S3",
-      "title_pt": "Ponte de Áudio USB reSpeaker XVF3800 com XIAO ESP32S3"
+      "path": "/soarm101_isaac_sim_dli",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/isaac%20sim/isaac_sim_dli.gif",
+      "title": "SO-ARM101 Data Collection with Isaac Sim 6.1",
+      "date": "2026-11-16",
+      "title_cn": "SO-ARM101 Isaac Sim 6.1 数据采集教程",
+      "title_ja": "Isaac Sim 6.1 を使った SO-ARM101 のデータ収集",
+      "title_es": "Recopilación de datos con SO-ARM101 en Isaac Sim 6.1",
+      "title_pt": "Coleta de Dados do SO-ARM101 com Isaac Sim 6.1"
     },
     {
-      "path": "/solutions/clip-private-transcription",
-      "image": "https://files.seeedstudio.com/wiki/reference-design/clip_private_transcription/panel-transcript-detail-zh-20261009-a9a0f4d1.jpg",
-      "title": "Private On-Premise Transcription for reSpeaker Clip — Selection, Deployment and Measured Data",
-      "date": "2026-10-09",
-      "title_cn": "reSpeaker Clip 本地私有化转写方案：选型、部署与实测数据",
-      "title_ja": "reSpeaker Clip ローカル文字起こし：選定・導入・実測データ",
-      "title_es": "Transcripción privada local para reSpeaker Clip — Selección, despliegue y datos medidos",
-      "title_pt": "Transcrição privada local para reSpeaker Clip — seleção, implantação e dados medidos"
+      "path": "/jetson-orin-industrial-vision-benchmark",
+      "image": "https://files.seeedstudio.com/wiki/other/rugged-benchmark-front.png",
+      "title": "4K Industrial Vision Benchmark on Jetson Orin Nano and Orin NX",
+      "date": "2026-11-13",
+      "title_cn": "基于 Jetson Orin Nano 和 Orin NX 的 4K 工业视觉基准测试",
+      "title_ja": "Jetson Orin Nano と Orin NX による 4K 産業用ビジョンベンチマーク",
+      "title_es": "Benchmark de visión industrial 4K en Jetson Orin Nano y Orin NX",
+      "title_pt": "Benchmark de Visão Industrial 4K no Jetson Orin Nano e Orin NX"
     }
   ],
   [
     {
-      "path": "/solutions/home-assistant-local-voice",
-      "image": "https://files.seeedstudio.com/wiki/reference-design/home_assistant_whole_home/voice-light-on-zh-20261008-a03bf773.jpg",
-      "title": "Home Assistant Local Voice Control — Selection, Deployment and Measured Data",
-      "date": "2026-10-09",
-      "title_cn": "Home Assistant 本地语音控制方案：选型、部署与实测数据",
-      "title_ja": "Home Assistant ローカル音声操作：選定・導入・実測データ",
-      "title_es": "Control de voz local en Home Assistant — Selección, despliegue y datos medidos",
-      "title_pt": "Controle de Voz Local no Home Assistant — Seleção, Implantação e Dados Medidos"
+      "path": "/usb_kvm_capture_kit_getting_start",
+      "image": "https://files.seeedstudio.com/wiki/reComputer/usb-kvm-capture-kit/product.png",
+      "title": "Getting Started with USB KVM Capture Kit",
+      "date": "2026-11-13",
+      "title_cn": "USB KVM 采集套件快速上手",
+      "title_ja": "USB KVM Capture Kit 入門ガイド",
+      "title_es": "Introducción al USB KVM Capture Kit",
+      "title_pt": "Introdução ao Kit de Captura USB KVM"
     },
     {
-      "path": "/solutions/edge-license-plate-recognition",
-      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_plate_recognition/panel-plate-1-jetson-blue-oblique-20261009-2e5b3792.jpg",
-      "title": "Edge License Plate Recognition — Selection, Deployment and Measured Data",
-      "date": "2026-10-09",
-      "title_cn": "边缘车牌识别方案：选型、部署与实测数据",
-      "title_ja": "エッジ ナンバープレート認識：選定・導入・実測データ",
-      "title_es": "Reconocimiento de matrículas en el borde — Selección, despliegue y datos medidos",
-      "title_pt": "Reconhecimento de Placas na Borda — Seleção, Implantação e Dados Medidos"
+      "path": "/easyskymesh_x1",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/easyskymeshx1.png",
+      "title": "EasySkyMesh IoT Firmware for MeshTracker X1",
+      "date": "2026-11-13T00:00:00.000Z",
+      "title_cn": "MeshTracker X1 的 EasySkyMesh IoT 固件",
+      "title_ja": "MeshTracker X1 向け EasySkyMesh IoT ファームウェア",
+      "title_es": "Firmware IoT EasySkyMesh para MeshTracker X1",
+      "title_pt": "Firmware EasySkyMesh IoT para MeshTracker X1"
     }
   ],
   [
     {
-      "path": "/solutions/edge-parking-counting",
-      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_parking_counting/panel-counting-2-after-20261009-fd76361b.jpg",
-      "title": "Parking Entry/Exit Vehicle Counting — Selection, Deployment and Measured Data",
-      "date": "2026-10-09",
-      "title_cn": "停车场车辆进出计数方案：选型、部署与实测数据",
-      "title_ja": "駐車場 入出庫カウント：選定・導入・実測データ",
-      "title_es": "Conteo de vehículos en entradas/salidas de aparcamientos — Selección, despliegue y datos medidos",
-      "title_pt": "Contagem de Veículos em Entradas/Saídas de Estacionamento — Seleção, Implantação e Dados Medidos"
+      "path": "/easyskymesh_t1000e",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/easyskymesht1000e.png",
+      "title": "EasySkyMesh IoT Firmware for SenseCAP T1000-E",
+      "date": "2026-11-13T00:00:00.000Z",
+      "title_cn": "SenseCAP T1000-E 的 EasySkyMesh IoT 固件",
+      "title_ja": "SenseCAP T1000-E 向け EasySkyMesh IoT ファームウェア",
+      "title_es": "Firmware IoT EasySkyMesh para SenseCAP T1000-E",
+      "title_pt": "Firmware EasySkyMesh IoT para SenseCAP T1000-E"
     },
     {
-      "path": "/solutions/edge-parking-occupancy",
-      "image": "https://files.seeedstudio.com/wiki/reference-design/edge_parking_occupancy/panel-occupancy-1-mixed-20261009-5635c9d1.jpg",
-      "title": "Camera-Based Parking Occupancy Detection — Selection, Deployment and Measured Data",
-      "date": "2026-10-09",
-      "title_cn": "视频车位占用检测方案：选型、部署与实测数据",
-      "title_ja": "カメラによる駐車スペース検知：選定・導入・実測データ",
-      "title_es": "Detección de ocupación de aparcamiento basada en cámara — Selección, despliegue y datos medidos",
-      "title_pt": "Detecção de Ocupação de Estacionamento Baseada em Câmera — Seleção, Implantação e Dados Medidos"
+      "path": "/sensecraft_robotics/applications/so-arm-pi05",
+      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/applications/so-arm-pi05/training-scene-en.webp",
+      "title": "Train and Run π0.5 with SO-ARM",
+      "date": "11/10/2026",
+      "title_cn": "使用 SO-ARM 训练与运行 π0.5",
+      "title_ja": "SO-ARM を使って π0.5 をトレーニングして実行する",
+      "title_es": "Entrenar y ejecutar π0.5 con SO-ARM",
+      "title_pt": "Treinar e Executar π0.5 com SO-ARM"
     }
   ],
   [
     {
-      "path": "/sensecraft_robotics_rebot_arm_102_b601_dm",
-      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-dm/00-task-overview-dm-en.webp",
-      "title": "reBot Arm 102 + B601 DM Training Guide",
-      "date": "2026-09-24",
-      "title_cn": "reBot Arm 102 + B601 DM 训练指南",
-      "title_ja": "reBot Arm 102 + B601 DM トレーニングガイド",
-      "title_es": "Guía de entrenamiento reBot Arm 102 + B601 DM",
-      "title_pt": "Guia de Treinamento reBot Arm 102 + B601 DM"
+      "path": "/get_started_with_ripple_l2_pro",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_boot.png",
+      "title": "Get Started with Ripple",
+      "date": "11/10/2026",
+      "title_cn": "Ripple 入门",
+      "title_ja": "Ripple を使い始める",
+      "title_es": "Primeros pasos con Ripple",
+      "title_pt": "Introdução ao Ripple"
     },
     {
-      "path": "/sensecraft_robotics_rebot_arm_102_b601_rs",
-      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/00-task-overview-rs-en.webp",
-      "title": "reBot Arm 102 + B601 RS Training Guide",
-      "date": "2026-09-24",
-      "title_cn": "reBot Arm 102 + B601 RS 训练指南",
-      "title_ja": "reBot Arm 102 + B601 RS トレーニングガイド",
-      "title_es": "Guía de entrenamiento de reBot Arm 102 + B601 RS",
-      "title_pt": "Guia de Treinamento reBot Arm 102 + B601 RS"
+      "path": "/reterminal_e10xx_tesserae",
+      "image": "https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/cover.webp",
+      "title": "Work with Tesserae",
+      "date": "2026-11-09",
+      "title_cn": "使用 Tesserae",
+      "title_ja": "Tesserae を使う",
+      "title_es": "Trabajar con Tesserae",
+      "title_pt": "Trabalhar com Tesserae"
     }
   ],
   [
     {
-      "path": "/sensecraft_robotics_so_arm101",
-      "image": "https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/soarm/00-task-overview-soarm-en.webp",
-      "title": "SO-ARM101 Training Guide",
-      "date": "2026-09-24",
-      "title_cn": "SO-ARM101 训练指南",
-      "title_ja": "SO-ARM101 トレーニングガイド",
-      "title_es": "Guía de entrenamiento SO-ARM101",
-      "title_pt": "Guia de Treinamento SO-ARM101"
+      "path": "/respeaker_xvf3800_muse_gadget",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
+      "title": "Muse Gadget on reSpeaker XVF3800",
+      "date": "2026-11-09",
+      "title_cn": "在 reSpeaker XVF3800 上使用 Muse Gadget",
+      "title_ja": "reSpeaker XVF3800 上の Muse Gadget",
+      "title_es": "Muse Gadget en reSpeaker XVF3800",
+      "title_pt": "Muse Gadget no reSpeaker XVF3800"
     },
     {
-      "path": "/ai_robotics_deploy_tensorrt_model_connect_on_jetson",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/100003716-gallery_img_1_1.jpg",
-      "title": "Deploy TensorRT-Model-Connect on Jetson AGX Orin",
-      "date": "2026-09-20",
-      "title_cn": "在 Jetson AGX Orin 上部署 TensorRT-Model-Connect",
-      "title_ja": "Jetson AGX Orin に TensorRT-Model-Connect をデプロイする",
-      "title_es": "Implementar TensorRT-Model-Connect en Jetson AGX Orin",
-      "title_pt": "Implantar TensorRT-Model-Connect no Jetson AGX Orin"
+      "path": "/halowlink2_media_gateway",
+      "image": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
+      "title": "Wi-Fi HaLow Media Gateway",
+      "date": "2026-11-06",
+      "title_cn": "Wi-Fi HaLow 媒体网关",
+      "title_ja": "Wi-Fi HaLow メディアゲートウェイ",
+      "title_es": "Wi-Fi HaLow Media Gateway",
+      "title_pt": "Wi-Fi HaLow Media Gateway"
     }
   ],
   [
     {
-      "path": "/jetson/recomputer_rugged_j401/industrial_vision",
-      "image": "https://files.seeedstudio.com/wiki/rugged/rugged_banner.png",
-      "title": "reComputer Rugged J401 for Industrial Vision",
-      "date": "2026-09-20",
-      "title_cn": "面向工业视觉的 reComputer Rugged J401",
-      "title_ja": "産業用ビジョン向け reComputer Rugged J401",
-      "title_es": "reComputer Rugged J401 para Visión Industrial",
-      "title_pt": "reComputer Rugged J401 para Visão Industrial"
+      "path": "/halowlink2_getting_started",
+      "image": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
+      "title": "Getting Started with HaLowLink 2",
+      "date": "2026-11-06",
+      "title_cn": "HaLowLink 2 入门指南",
+      "title_ja": "HaLowLink 2 入門ガイド",
+      "title_es": "Introducción a HaLowLink 2",
+      "title_pt": "Primeiros Passos com o HaLowLink 2"
     },
     {
-      "path": "/meshcore_ai_image_transmission_x1",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png",
-      "title": "AI Image Transmission over MeshCore with MeshTracker X1",
-      "date": "2026-09-19T00:00:00.000Z",
-      "title_cn": "使用 MeshTracker X1 在 MeshCore 上进行 AI 图像传输",
-      "title_ja": "MeshTracker X1 を用いた MeshCore 上での AI 画像伝送",
-      "title_es": "Transmisión de Imágenes con IA sobre MeshCore con MeshTracker X1",
-      "title_pt": "Transmissão de Imagem com IA via MeshCore com MeshTracker X1"
+      "path": "/halowlink2_introduction",
+      "image": "https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png",
+      "title": "HaLowLink 2 Wi-Fi HaLow Gateway",
+      "date": "2026-11-06",
+      "title_cn": "HaLowLink 2 Wi-Fi HaLow 网关",
+      "title_ja": "HaLowLink 2 Wi-Fi HaLow Gateway",
+      "title_es": "HaLowLink 2 Wi-Fi HaLow Gateway",
+      "title_pt": "HaLowLink 2 Wi-Fi HaLow Gateway"
     }
   ]
 ];

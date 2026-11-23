@@ -1,5 +1,6 @@
 ---
 description: Guía para desarrolladores para instalar el daemon de Reachy Mini desde una rama específica de GitHub para probar nuevas funciones y correcciones de errores.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Instalar el Daemon desde una Rama Específica
 slug: /reachymini_platforms_reachy_mini_install_daemon_from_branch
 keywords:

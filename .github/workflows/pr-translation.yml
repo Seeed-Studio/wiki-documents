@@ -409,7 +409,7 @@ jobs:
             echo "❌ 缺少 TRANSLATION_API_KEY"
             translation_exit=1
           else
-            node _trusted/.github/scripts/translate.js || translation_exit=$?
+            node _trusted/.github/scripts/translation/translate.js || translation_exit=$?
           fi
 
           {

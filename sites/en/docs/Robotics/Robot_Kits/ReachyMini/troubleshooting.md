@@ -1,5 +1,6 @@
 ﻿---
 description: Comprehensive troubleshooting guide and FAQ for Reachy Mini covering frequent issues, assembly, connection, hardware, SDK, and error messages.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Troubleshooting & FAQ
 slug: /reachymini_troubleshooting
 keywords:
@@ -315,6 +316,19 @@ If you need to reset the robot's Wi-Fi hotspot (for example, if you can't connec
 </details>
 
 <details>
+<summary><strong>The Bluetooth PIN from the serial number label doesn't work</strong></summary>
+
+The PIN is the last 5 digits of the serial number. If hardware was replaced, the label may no longer match. Read the real serial number on the robot over SSH:
+
+```bash
+dfu-util -l
+```
+
+Use the `serial` field of the `Reachy Mini Audio DFU` lines, e.g. `serial="xxxxxxxx12345"` gives the PIN `12345`.
+
+</details>
+
+<details>
 <summary><strong>Does the robot have a Web API?</strong></summary>
 
 Yes. The daemon provides a REST API (FastAPI) and WebSocket support.
@@ -394,6 +408,48 @@ export HF_ENDPOINT=https://hf-mirror.com/
 ```
 
 Note that you may also need to use mirrors to reach services like PyPI and GitHub.
+
+</details>
+
+<details>
+<summary><strong>How to use Reachy Mini behind an HTTP proxy?</strong></summary>
+
+Reachy Mini honours the standard proxy environment variables for all of its outgoing HTTP(S) traffic — Hugging Face authentication, the app store listing, app installs and updates, and the WebRTC signaling server:
+
+```bash
+export HTTP_PROXY=http://proxy.example.com:3128
+export HTTPS_PROXY=http://proxy.example.com:3128
+export NO_PROXY=localhost,127.0.0.1,reachy-mini.local
+```
+
+Keep local addresses in `NO_PROXY` so the daemon API (used by Reachy Mini Control) and mDNS discovery stay reachable without going through the proxy.
+
+For the Wireless version the variables must be visible to the daemon service, not just to your shell. Add them to the unit and restart it:
+
+```bash
+sudo systemctl edit reachy-mini-daemon
+```
+
+Add the following, then save:
+
+```ini
+[Service]
+Environment="HTTP_PROXY=http://proxy.example.com:3128"
+Environment="HTTPS_PROXY=http://proxy.example.com:3128"
+Environment="NO_PROXY=localhost,127.0.0.1,reachy-mini.local"
+```
+
+```bash
+sudo systemctl restart reachy-mini-daemon
+```
+
+Known limitations:
+
+- Only unauthenticated HTTP proxies are covered by our tests. A proxy needing credentials (`http://user:password@host:port`) is passed straight through to the underlying client and is not exercised in CI.
+- SOCKS proxies are not supported, and proxy URLs must be plain `http://` (HTTPS is tunnelled through them); an `https://` proxy URL is ignored with a warning.
+- `ALL_PROXY` is not honoured — set `HTTP_PROXY` and `HTTPS_PROXY` explicitly.
+- `~/.netrc` is never consulted for these calls: the proxy is resolved explicitly per request.
+- Apps run in their own processes and inherit the daemon environment, but an app making its own network calls is responsible for honouring the proxy itself.
 
 </details>
 
@@ -752,6 +808,33 @@ If the period is much higher than 20ms, it means the control loop is not running
 
 
 
+<details>
+<summary><strong>My robot doesn't move and no error is reported</strong></summary>
+
+If motion commands are accepted but nothing happens, the motors are most likely disabled. With torque off the daemon still accepts every command, reports success, and keeps its control loop running at 50Hz with no errors, so nothing indicates that the robot is not moving.
+
+Two common situations leave the motors disabled:
+- The robot is asleep and limp after an app has stopped, or after the daemon has just started.
+- `wake_up()` was called on its own. It plays the wake up pose, emote and sound, but it does not enable torque.
+
+Check the current mode:
+
+```python
+mini = ReachyMini()
+print(mini.client.get_status().backend_status.motor_control_mode)
+```
+
+If it reads `MotorControlMode.Disabled`, enable the motors before moving the robot:
+
+```python
+mini.enable_motors()
+mini.wake_up()
+```
+
+Note that a limp robot keeps its head down in the sleep position, close to the body. The camera then faces the inside of the shell and returns a dark, almost uniform image with exposure and gain at their maximum, which is easy to mistake for a broken camera. Check that the head is really up before investigating the camera.
+
+</details>
+
 ## 👁️ Vision & Audio
 
 <details>
@@ -769,6 +852,13 @@ sudo alsactl store "$CARD"
 ```
 
 This is a [known issue](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/02_setting_up_the_hardware.html#low-volume-of-playback-audio-on-linux-for-project-ua) of the XVF3800 based sound card.
+
+</details>
+
+<details>
+<summary><strong>The sound quality is not great / the speaker sounds "boxy".</strong></summary>
+
+The daemon already applies a default equalizer to compensate for the head shell's acoustic coloration. If the sound still isn't to your liking, the per-band gains can be tuned — or the EQ disabled — via the `speaker_eq_gains` entry in the daemon config file.
 
 </details>
 
@@ -799,6 +889,13 @@ mini.media.push_audio_sample(numpy_chunk)
 </details>
 
 <details>
+<summary><strong>Can I get the raw microphone output?</strong></summary>
+
+Yes — install the [6-channel firmware](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/assets/firmware).
+
+</details>
+
+<details>
 <summary><strong>How do I make Reachy look at something?</strong></summary>
 
 * **2D (Image):** `mini.look_at_image(x, y)` - (0,0 is top-left).
@@ -810,6 +907,35 @@ mini.media.push_audio_sample(numpy_chunk)
 <summary><strong>Face tracking feels slow.</strong></summary>
 
 Performance relies heavily on lighting conditions. Ensure the face is well-lit. The LOCAL backend (GStreamer IPC) provides the lowest latency for on-device applications.
+
+</details>
+
+<details>
+<summary><strong>The camera can't focus.</strong></summary>
+
+When running the look_at example, it's easy to see whether the camera is focusing by putting your hand in front of it. If it isn't, the camera may be physically blocked. It is held to the black part by 4 screws — loosen them very slightly, about 1/8 of a turn.
+
+![camera_focus](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/troubleshooting_screw_focus_camera.png)
+
+</details>
+
+<details>
+<summary><strong>The camera is not detected (and every app fails to start)</strong></summary>
+
+Head and body movements work, but every app fails to start, often with a refused connection rather than any error mentioning the camera. The daemon needs the camera at startup, so a camera that is not seen takes the whole media stack down with it.
+
+Check the camera ribbon cable first: that it is fully seated at both ends, and that it is the right way up. Same rule as the microphone cable — the blue side up, or the side with "Main Board" written on it up. Power the robot off before reseating it, then power it back on.
+
+To confirm on a Wireless:
+
+```bash
+rpicam-hello --list-cameras     # lists imx708_wide when the camera is seen
+dmesg | grep "camera module ID" # one line per detected sensor
+```
+
+A healthy robot prints something like `imx708 0-001a: camera module ID 0x0302`. If neither command reports a sensor, the camera is really not seen and the cable is the first suspect.
+
+> **Note:** A `failed to read chip id 708, with error -5` line in `dmesg` is normal and not a symptom. The CM4 exposes two CSI ports and Reachy Mini only uses one, so the unused port always fails to probe at boot. Only the absence of a `camera module ID` line means the camera is missing.
 
 </details>
 

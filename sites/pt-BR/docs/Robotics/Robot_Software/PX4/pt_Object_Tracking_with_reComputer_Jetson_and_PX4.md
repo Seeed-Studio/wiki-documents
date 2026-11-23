@@ -1,5 +1,5 @@
 ---
-description: O reComputer Mini, com tecnologia NVIDIA Jetson Orin Nano/Orin NX, é um computador de IA compacto projetado para drones realizarem rastreamento de alvos em tempo real, integrando o controlador de voo PX4, ROS 2 e a câmera 3D Orbbec Gemini 2. Esta configuração envolve a configuração da comunicação ROS2 para o PX4, a instalação do SDK Python do Gemini 2 para capturar dados RGB‑D sincronizados e o uso de um modelo YOLOv11n exportado com TensorRT para detecção otimizada. O pacote ROS2 combina a detecção YOLO com o algoritmo ByteTrack para rastreamento preciso de múltiplos objetos, enquanto os dados de profundidade estimam a distância entre o drone e o alvo, permitindo um rastreamento de drone preciso e em tempo real durante o voo.
+description: "Rastreie objetos em um reComputer Jetson e envie a posição para o PX4 via ROS 2: entrada de profundidade do Gemini 2, detecção YOLO e saída MAVROS."
 title: Rastreamento de Objetos com reComputer Jetson e PX4
 keywords:
   - NVIDIA
@@ -7,8 +7,8 @@ keywords:
   - ROS
   - Jetson
   - reComputer
-  - rastreamento de objetos
-  - medição de distância
+  - object tracking
+  - distance measure
   - drone
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
 slug: /object_tracking_with_reComputer_jetson_and_pX4
@@ -17,19 +17,18 @@ last_update:
   date: 8/08/2025
   author: Zibo
 createdAt: '2025-08-08'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/object_tracking_with_reComputer_jetson_and_pX4/
 ---
 
 ## Introdução
 
 <div style={{ textAlign: "justify" }}>
-reComputer Mini é um minicomputador de IA com tecnologia do módulo NVIDIA Jetson Orin Nano/Orin NX, oferecendo até 100 TOPS de desempenho em IA.
-Graças ao seu design compacto, ele é altamente adequado para ser instalado em drones para lidar com algumas tarefas de IA. Este Wiki mostrará como usar o reComputer e o px4 para obter rastreamento de alvo em tempo real no drone.
+reComputer Mini traz um módulo Jetson Orin Nano ou Orin NX e oferece até 100 TOPS em um gabinete pequeno o suficiente para ser montado em uma aeronave. A montagem o conecta ao PX4 via ROS 2, executa detecção YOLO com ByteTrack no fluxo de cor do Gemini 2 e usa o quadro de profundidade para medir a distância entre o alvo rastreado e o drone.
 </div>
 
 <div align="center">
-  <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
+  <img alt="Two reComputer Mini units with Wi-Fi antennas, badged NVIDIA Jetson Orin Nano / Orin NX" width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -39,9 +38,9 @@ Graças ao seu design compacto, ele é altamente adequado para ser instalado em 
 
 ## Pré-requisitos
 
-- série de produtos reComputer
+- Série de produtos reComputer
 - Controlador de voo PX4
-- Jetson Pack 6.2 e [ROS 2 Humble](https://wiki.seeedstudio.com/pt-br/install_ros2_humble/) já instalados
+- JetPack 6.2 e [ROS 2 Humble](https://wiki.seeedstudio.com/pt-br/install_ros2_humble/) instalados
 - [Câmera 3D Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
 
 ## Configurar o ambiente de comunicação PX4 do ROS2
@@ -50,7 +49,7 @@ Para implementar o monitoramento de estado do drone no Jetson, primeiro consulte
 
 ## Configurar o SDK Python do Gemini 2
 
-O Orbbec Gemini 2 é uma câmera 3D RGB‑D de alta precisão que captura dados sincronizados de profundidade e cor para aplicações como robótica, digitalização 3D e visão computacional.
+A Orbbec Gemini 2 é uma câmera 3D RGB-D de alta precisão que captura dados sincronizados de profundidade e cor para aplicações como robótica, digitalização 3D e visão computacional.
 
 **Passo 1.** Instale as dependências e clone o repositório:
 
@@ -93,7 +92,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 Conecte o controlador PX4 à porta serial UART1 do Jetson
 
 <div align="center">
-    <img width={1000}
+    <img alt="PX4 controller wired to the UART1 serial port on the Jetson for the Micro-XRCE-DDS link" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_mini.jpg" />
 </div>
 
@@ -111,7 +110,7 @@ ros2 topic list | grep "/fmu/out/"
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="ros2 topic list filtered on /fmu/out/ showing the PX4 status topics" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_topic.png" />
 </div>
 
@@ -121,7 +120,7 @@ Lendo o conteúdo dos seguintes tópicos, você pode obter as informações bás
 - /fmu/out/failsafe_flags -> Indicadores das condições atuais de failsafe.
 - /fmu/out/sensor_combined -> Dados brutos sincronizados de IMU, magnetômetro e barômetro.
 - /fmu/out/timesync_status -> Status da sincronização de tempo com fontes externas.
-- /fmu/out/vehicle_attitude -> Orientação atual da aeronave como um quaternión.
+- /fmu/out/vehicle_attitude -> Orientação atual da aeronave como um quaternio.
 - /fmu/out/vehicle_control_mode -> Modos atuais de controle e navegação ativos.
 - /fmu/out/vehicle_local_position -> Posição e velocidade no referencial local NED.
 - /fmu/out/vehicle_odometry -> Dados completos de pose e velocidade em 6 DoF.
@@ -197,12 +196,33 @@ ros2 run detect detect
 </div>
 
 <div style={{ textAlign: "justify" }}>
-O vídeo acima apresenta um exemplo de obtenção de rastreamento de alvos em um drone. Ele localiza o alvo por meio de detecção de alvos e usa o algoritmo de rastreamento de alvos ByteTrack para rastrear com precisão o alvo específico. Ao mesmo tempo, imagens de profundidade são usadas para estimar a distância entre o drone e o alvo.
+O vídeo acima apresenta um exemplo de como alcançar o rastreamento de alvos em um drone. Ele localiza o alvo por meio de detecção de alvos e usa o algoritmo de rastreamento ByteTrack para rastrear com precisão o alvo específico. Ao mesmo tempo, imagens de profundidade são usadas para estimar a distância entre o drone e o alvo.
 </div>
 
-## Suporte Técnico & Discussão de Produto
+## FAQ
 
-Obrigado por escolher nossos produtos! Estamos aqui para lhe fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+**O que o Jetson faz e o que o PX4 faz?**
+O Jetson executa a detecção YOLO com ByteTrack e lê a distância a partir do quadro de profundidade do Gemini 2, depois envia a posição do alvo para o PX4 via ROS 2. O PX4 continua pilotando a aeronave; esta montagem não substitui o controlador de voo.
+
+**Qual porta serial carrega o link ROS 2 para o PX4?**
+`/dev/ttyTHS1` a 921600 baud, através do Micro-XRCE-DDS Agent: `./MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600`. Execute o agent primeiro e depois inicie o nó de detecção em um segundo terminal.
+
+**Como sei que o link está ativo?**
+`ros2 topic list | grep "/fmu/out/"` deve listar `vehicle_status`, `vehicle_local_position`, `vehicle_attitude` e o restante dos tópicos de status do PX4. Nenhum tópico significa que o agent ou a fiação está incorreta, não o detector.
+
+**Qual versão do JetPack esta montagem usa?**
+JetPack 6.2 com ROS 2 Humble, além da Orbbec Gemini 2 e das regras udev de `./scripts/install_udev_rules.sh`. O nó de detecção é compilado em um workspace ROS 2 e precisa que o `PYTHONPATH` seja estendido para `install/lib/`.
+
+## Recursos Relacionados
+
+- [Câmera 3D Orbbec Gemini 2 no ROS 2](/pt-br/orbbec_gemini2/)
+- [Combine a Gemini 2 com YOLOv11 para medição de distância](/pt-br/yolov11_with_depth_camera/)
+- [Instalar ROS 2 Humble no reComputer](/pt-br/install_ros2_humble/)
+- [Página do produto Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
+
+## Suporte Técnico e Discussão de Produtos
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

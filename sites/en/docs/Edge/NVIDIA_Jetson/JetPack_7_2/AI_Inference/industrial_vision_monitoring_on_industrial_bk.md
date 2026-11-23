@@ -17,6 +17,13 @@ updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/industrial_vision_monitoring_on_industrial_bk/
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Industrial Vision Monitoring on Industrial
 
 ## Introduction

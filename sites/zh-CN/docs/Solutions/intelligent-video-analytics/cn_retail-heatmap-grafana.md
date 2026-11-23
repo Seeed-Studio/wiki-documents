@@ -1,6 +1,7 @@
 ---
 description: 在门店、展厅这类室内空间搭一套本地人流热力图：需要哪些设备、怎么部署、有哪些接口，以及三台设备上的实测帧率
 title: 零售人流热力图方案：搭建、部署与实测数据
+sidebar_label: '零售人流热力图'
 keywords:
   - 人流热力图
   - 客流分析
@@ -24,7 +25,7 @@ last_update:
   date: 09/17/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/retail-heatmap-grafana/
 generated_from: sensecraft-solutions@recamera_heatmap_grafana
 ---
@@ -114,7 +115,7 @@ generated_from: sensecraft-solutions@recamera_heatmap_grafana
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>摄像头与算力一体，4K | 检测 + 跟踪 + 计数 | 离得远、范围大，远处的人仍要够大能被框出来 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>同一套餐也支持 reComputer RK3576 系列 | 检测主机 | 已经在用瑞芯微板卡；视频解码走硬件 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrial-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer R2000 系列（R2035-12，Hailo-8）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | 检测主机 | 要装进机柜或弱电井的无风扇工业机 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 系列（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>及 reComputer J50 系列 | 检测主机 | 一台主机接多路摄像头 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>及 reComputer J50 系列 | 检测主机 | 一台主机接多路摄像头 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-113991334--recomputer-r1125-10-45font.jpg" alt="reComputer R1100" width="110" /> | [reComputer R1100 系列（R1124-10）](https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html) | 看板后端 | 现场没有常开的电脑跑看板 |
 
 其它前置条件：后端所在机器装好 Docker、留出至少 2 GB 磁盘、空出 1883、3000、8080、8086 端口；摄像头与后端在同一网段，摄像头自动发现（ONVIF）才能生效。

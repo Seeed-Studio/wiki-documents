@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-10-14 17:51:30 (北京时间)
-// 多语言页面: 2571 个
+// 生成时间: 2026-11-19 18:23:00 (北京时间)
+// 多语言页面: 2706 个
 
 (function() {
   'use strict';
@@ -353,6 +353,13 @@
     "ja",
     "pt"
   ],
+  "/sensecraft_robotics/applications/so-arm-pi05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/sensecraft_robotics_common_issues": [
     "cn",
     "en",
@@ -437,7 +444,49 @@
     "ja",
     "pt"
   ],
+  "/service_for_fusion_light_customization": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_manufacturing_documents": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_one_stop": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Service_for_Fusion_PCB": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_pcba_functional_test": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_pcba_testing_solutions": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/service_for_fusion_sample_validation": [
     "cn",
     "en",
     "es",
@@ -648,6 +697,13 @@
     "pt"
   ],
   "/How_to_Train_and_Deploy_YOLOv8_on_reComputer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson-orin-industrial-vision-benchmark": [
     "cn",
     "en",
     "es",
@@ -927,6 +983,20 @@
     "pt"
   ],
   "/vnc_for_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/accelerate_llm_inference_mtp": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson/local_decision_model_laya": [
     "cn",
     "en",
     "es",
@@ -1360,14 +1430,14 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started": [
+  "/jetson/recomputer_robotics_j601/getting_started": [
     "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
-  "/recomputer_jetson_robotics_j601_interfaces_usage": [
+  "/jetson/recomputer_robotics_j601/hardware_and_interface_usage": [
     "cn",
     "en",
     "es",
@@ -1480,6 +1550,13 @@
     "pt"
   ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetpack5_uefi_boot_failure_fix": [
     "cn",
     "en",
     "es",
@@ -1710,6 +1787,13 @@
     "ja",
     "pt"
   ],
+  "/jetson/accessories-selection-guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/jetson/camera-selection-guide": [
     "cn",
     "en",
@@ -1892,6 +1976,13 @@
     "ja",
     "pt"
   ],
+  "/usb_kvm_capture_kit_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/NVIDIA_Jetson": [
     "cn",
     "en",
@@ -2060,6 +2151,13 @@
     "ja",
     "pt"
   ],
+  "/ai_robotics_recomputer_j501_robotics_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recomputer_robotics_j401_getting_started": [
     "cn",
     "en",
@@ -2068,20 +2166,6 @@
     "pt"
   ],
   "/recomputer_robotics_j401_hardware_interfaces_usage": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ai_robotics_recomputer_j501_robotics_getting_started": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recomputer_robotics_j50_mini_getting_started": [
     "cn",
     "en",
     "es",
@@ -2173,6 +2257,41 @@
     "pt"
   ],
   "/reServer_J2032_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_jetpack_l4t_ubuntu_kernel_uefi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_boot_log_analysis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_camera_data_chain": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_device_tree": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_usb": [
     "cn",
     "en",
     "es",
@@ -3887,6 +4006,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_firgate": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_2002_series_hardware_and_specs": [
     "cn",
     "en",
@@ -4272,6 +4398,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_qr_code_barcode": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_sdk_setup": [
     "cn",
     "en",
@@ -4315,6 +4448,13 @@
     "pt"
   ],
   "/recamera_pro_wifi_access": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_frigate": [
     "cn",
     "en",
     "es",
@@ -4588,6 +4728,69 @@
     "pt"
   ],
   "/use_a_CM4_witout_eMMC": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_ai_r2000_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_industrial_r2x_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_industrial_rk_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_pi_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_r1000_r1100_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_rk_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_rk_module_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_faq": [
     "cn",
     "en",
     "es",
@@ -4958,6 +5161,27 @@
     "ja",
     "pt"
   ],
+  "/wio_lr2021_dev_kit_command_reference": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_lr2021_dev_kit_factory_firmware_user_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_lr2021_dev_kit_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/wio-s3_wireless_module_command_list": [
     "cn",
     "en",
@@ -5161,6 +5385,27 @@
     "ja",
     "pt"
   ],
+  "/x2_get_started_for_meshtastic": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshpager_x2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/easyskymesh_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_node_map_meshtracker_x1": [
     "cn",
     "en",
@@ -5238,6 +5483,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_ai_image_transmission_p1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
@@ -5280,6 +5532,13 @@
     "ja",
     "pt"
   ],
+  "/easyskymesh_t1000e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_node_map_t1000e": [
     "cn",
     "en",
@@ -5288,6 +5547,13 @@
     "pt"
   ],
   "/meshcore_ai_image_transmission_t1000e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/t1000e_meshcore_contact_sharing_companion_repeat": [
     "cn",
     "en",
     "es",
@@ -5434,7 +5700,21 @@
     "ja",
     "pt"
   ],
+  "/meshcore_audio_development_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_ai_image_transmission_l2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_ripple_l2_pro": [
     "cn",
     "en",
     "es",
@@ -6120,6 +6400,27 @@
     "ja",
     "pt"
   ],
+  "/halowlink2_media_gateway": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/halowlink2_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/halowlink2_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_wifi_halow_mini_pcie_module": [
     "cn",
     "en",
@@ -6282,6 +6583,13 @@
     "pt"
   ],
   "/lerobot_starai_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/soarm101_isaac_sim_dli": [
     "cn",
     "en",
     "es",
@@ -6736,6 +7044,10 @@
     "ja",
     "pt"
   ],
+  "/rebot_arm_b601_dm_bimanual": [
+    "cn",
+    "en"
+  ],
   "/rebot_b601_dm_getting_started": [
     "cn",
     "en",
@@ -6792,6 +7104,17 @@
     "ja",
     "pt"
   ],
+  "/rebot_arm_b601_rs_bimanual": [
+    "cn",
+    "en"
+  ],
+  "/rebot_arm_b601_rs_camera_follow": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_arm_b601_rs_mit_control": [
     "cn",
     "en",
@@ -6842,6 +7165,188 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_web_simulator_developer_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_hardware_and_teleoperation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_task_design": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_camera_recording": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_dataset_quality": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_act_training": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_act_deployment": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_algorithm_switching": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_act": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_dm05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_eo1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_evo1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_g05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_gr00t_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_gr00t_n1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lawam": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_va": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_lingbot_vla2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_multi_task_dit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_pi0": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_pi05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_pi0_fast": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_smolvla": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/hands_on_so101_algorithm_switching": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_vla_jepa": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_wall_oss": [
     "cn",
     "en",
     "es",
@@ -7128,6 +7633,335 @@
     "ja",
     "pt"
   ],
+  "/rebot_t701_ht_control_mit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_t701_ht_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_t701_ht_pinocchio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_t701_ht_vr": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_4": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_5": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_6": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_7": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_8": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_9": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_10": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_11": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_12": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_13": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_14": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_15": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_16": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_17": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_18": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_chapter_19": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_sim2real_vla_course": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_4": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_5": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_6": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_7": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_8": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_9": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_10": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_11": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_12": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_13": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_14": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_15": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_16": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_17": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_18": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_19": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_20": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_21": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_chapter_22": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/soarm_physical_ai_course_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/stackforce_giant_bipedal_wheeled_robot": [
     "en",
     "es",
@@ -7156,6 +7990,13 @@
     "pt"
   ],
   "/orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/orbbec_gemini305": [
     "cn",
     "en",
     "es",
@@ -9290,6 +10131,13 @@
     "ja",
     "pt"
   ],
+  "/reterminal_e10xx_tesserae": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/reterminal_e10xx_trmnl": [
     "cn",
     "en",
@@ -9375,6 +10223,20 @@
     "pt"
   ],
   "/epaper_en05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_426_mono_kit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/opendisplay_73_color_kit": [
     "cn",
     "en",
     "es",
@@ -12327,6 +13189,62 @@
     "ja",
     "pt"
   ],
+  "/respeaker_44mm_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_i2s_test": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_led_effects": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_udp_streaming": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_44mm_xiao_volume_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_clip_basic_sdk_guide": [
     "cn",
     "en",
@@ -12741,6 +13659,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_muse_gadget": [
     "cn",
     "en",
     "es",
@@ -16477,6 +17402,13 @@
     "ja",
     "pt"
   ],
+  "/solutions/crayfish-behavior-recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/crowd-flow-monitoring": [
     "cn",
     "en",
@@ -16555,6 +17487,13 @@
     "pt"
   ],
   "/solutions/jetson-crowd-tracking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/solutions/rehab-posture-analysis": [
     "cn",
     "en",
     "es",

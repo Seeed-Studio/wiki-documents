@@ -1,13 +1,13 @@
 ---
-description: Grove - Sensor de Ángulo Rotatorio
-title: Grove - Sensor de Ángulo Rotatorio
+description: Grove - Sensor de ángulo rotatorio
+title: Grove - Sensor de ángulo rotatorio
 keywords:
   - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Rotary_Angle_Sensor
 sku: 101020048, 101020017
 last_update:
-  date: 1/19/2023
+  date: 11/17/2026
   author: jianjing Huang
 createdAt: '2023-01-19'
 updatedAt: '2026-01-07'
@@ -15,13 +15,14 @@ url: https://wiki.seeedstudio.com/es/Grove-Rotary_Angle_Sensor/
 ---
 
 
+
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rotary.jpg)
 
-El sensor de ángulo rotatorio produce una salida analógica entre 0 y Vcc (5V DC con Seeeduino) en su conector D1. El conector D2 no se utiliza. El rango angular es de 300 grados con un cambio lineal en el valor. El valor de resistencia es de 10k ohmios, perfecto para uso con Arduino. Esto también puede ser conocido como un "potenciómetro".
+El sensor de ángulo rotatorio produce una salida analógica entre 0 y Vcc (5V CC con Seeeduino) en su conector D1. El conector D2 no se utiliza. El rango angular es de 300 grados con un cambio lineal en el valor. El valor de resistencia es de 10k ohmios, perfecto para usar con Arduino. Esto también puede conocerse como un “potenciómetro”.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
 
-Hay otro producto, Grove - Rotary Angle Sensor(P). ¿Qué significa "P"? "P" significa "panel mount" (montaje en panel) en este producto. Es la versión hermana del Grove - Sensor de Ángulo Rotatorio. Son idénticos excepto que el conector Grove se mueve hacia atrás para que puedas usarlo fácilmente como un dispositivo de interfaz humana limpio y sin cables.
+Hay otro producto, Grove - Rotary Angle Sensor(P). ¿Qué significa “P”? “P” es por “panel mount” en este producto. Es la versión hermana de Grove - Rotary Angle Sensor. Son idénticos excepto que el conector Grove se ha movido a la parte posterior para que puedas usarlo fácilmente como un dispositivo de interfaz humana ordenado y sin cables.
 
 <table>
   <tbody><tr>
@@ -34,11 +35,11 @@ Hay otro producto, Grove - Rotary Angle Sensor(P). ¿Qué significa "P"? "P" sig
     </tr>
   </tbody></table>
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/depot/grove-rotary-angle-sensorp-p-1242.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-P.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
 
 ## Versión
 
-| Versión del Producto              | Cambios                              | Fecha de Lanzamiento |
+| Versión del producto              | Cambios                             | Fecha de lanzamiento |
 |-----------------------------------|--------------------------------------|----------------------|
 |Grove-Rotary Angle Sensor(P) V1.1  | Inicial                              | Ene 2013    |
 |Grove-Rotary Angle Sensor V1.2     | Inicial                              | May 2014    |
@@ -46,69 +47,69 @@ Hay otro producto, Grove - Rotary Angle Sensor(P). ¿Qué significa "P"? "P" sig
 ## Características
 
 - Interfaz Grove
-- Fácil de Usar
-- Módulo Base Grove
+- Fácil de usar
+- Módulo base Grove
 
 :::tip
-Para más detalles sobre los módulos Grove, consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
+Para más detalles sobre los módulos Grove, consulta [Grove System](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
 
 ## Especificaciones
 
 |Elemento|Mín|Típico|Máx|Unidad|
 |----|----|----|----|----|
-|Voltaje|4.75|5.0|5.25|VDC|
-|Ángulo Rotatorio|0|/|300|Grados|
-|Dimensión|/|19x19x30.1|/|mm|
+|Voltaje|4.75|5.0|5.25|VCC|
+|Ángulo de giro|0|/|300|Grados|
+|Dimensiones|/|19x19x30.1|/|mm|
 
-## Plataformas Compatibles
+## Plataformas compatibles
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
 
 :::caution
-Las plataformas mencionadas anteriormente como compatibles son una indicación de la compatibilidad de software o teórica del módulo. Solo proporcionamos biblioteca de software o ejemplos de código para la plataforma Arduino en la mayoría de los casos. No es posible proporcionar biblioteca de software / código de demostración para todas las plataformas MCU posibles. Por lo tanto, los usuarios tienen que escribir su propia biblioteca de software.
+Las plataformas mencionadas arriba como compatibles son una indicación de la compatibilidad teórica o del software del módulo. En la mayoría de los casos solo proporcionamos librerías de software o ejemplos de código para la plataforma Arduino. No es posible proporcionar librerías de software / código de demostración para todas las posibles plataformas de MCU. Por lo tanto, los usuarios tienen que escribir sus propias librerías de software.
 :::
 
-## Primeros Pasos
+## Primeros pasos
 
 :::note
-Si esta es la primera vez que trabajas con Arduino, te recomendamos firmemente que veas [Primeros Pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/) antes de comenzar.
+Si es la primera vez que trabajas con Arduino, te recomendamos encarecidamente que veas [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/) antes de empezar.
 :::
 
-### Jugar Con Arduino
+### Jugar con Arduino
 
 **Hardware**
 
-- **Paso 1.** Prepara los siguientes elementos:
+- **Paso 1.** Prepara lo siguiente:
 
 | Seeeduino V4.2 | Base Shield|  Grove-Rotary Angle Sensor |Grove-LED|
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rorary_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/grove_led.jpg)|
-|[Obtener Uno Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-LED-p-767.html)|
+|[Consigue uno ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Consigue uno ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Consigue uno ahora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[Consigue uno ahora](https://www.seeedstudio.com/Grove-LED-p-767.html)|
 
-- **Paso 2.** Conecta el Sensor de Ángulo Rotatorio Grove al puerto **A0** del Escudo Base Grove.
-- **Paso 3.** Conecta el LED Grove al puerto **D3** del Escudo Base Grove.
-- **Paso 4.** Conecta el Escudo Base Grove al Seeeduino.
-- **Paso 5.** Conecta el Seeeduino a la PC mediante un cable USB.
+- **Paso 2.** Conecta el Grove-Rotary Angle Sensor al puerto **A0** del Grove-Base Shield.
+- **Paso 3.** Conecta el Grove-LED al puerto **D3** del Grove-Base Shield.
+- **Paso 4.** Inserta el Grove - Base Shield en el Seeeduino.
+- **Paso 5.** Conecta el Seeeduino al PC mediante un cable USB.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/seeeduino_rotary.jpg)
 
 :::note
-Si no tenemos el Escudo Base Grove, también podemos conectar directamente el Sensor de Ángulo Rotatorio Grove y el LED Grove al Seeeduino como se muestra a continuación. El LED Grove debe conectarse a un puerto PWM. Para Seeeduino, estos son D3,5,6,9,10,11.
+Si no tenemos Grove Base Shield, también podemos conectar directamente el Grove-Rotary Angle Sensor y el Grove-Led al Seeeduino como se muestra a continuación. El Grove-Led debe conectarse a un puerto PWM. Para Seeeduino, estos son D3,5,6,9,10,11.
 :::
 
-| Seeeduino | Sensor de Ángulo Rotatorio Grove | Seeeduino | LED Grove |
+| Seeeduino | Grove-Rotary Angle Sensor | Seeeduino | Grove-LED |
 |-----------|---------------------------|-----------|-----------|
-| 5V        | Rojo                      | 5V        | Rojo      |
-| GND       | Negro                     | GND       | Negro     |
-| NC        | Blanco                    | NC        | Blanco    |
-| A0        | Amarillo                  | D3        | Amarillo  |
+| 5V        | Red                       | 5V        | Red       |
+| GND       | Black                     | GND       | Black     |
+| NC        | White                     | NC        | White     |
+| A0        | Yellow                    | D3        | Yellow    |
 
 **Software**
 
-- **Paso 1.** Por favor copia el código de abajo al IDE de Arduino y súbelo al arduino. Si no sabes cómo subir el código, por favor revisa [cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
+- **Paso 1.** Copia el siguiente código en el IDE de Arduino y súbelo al Arduino. Si no sabes cómo subir el código, consulta [how to upload code](https://wiki.seeedstudio.com/es/Upload_Code/).
 
 ```cpp
 /*macro definitions of Rotary angle sensor and LED pin*/
@@ -144,27 +145,27 @@ void loop()
 
 ```
 
-- **Paso 2.** Ajusta el Sensor de Ángulo Rotatorio Grove y veremos que el LED Grove cambia el brillo.
+- **Paso 2.** Ajusta el Grove-Rotary Angle Sensor y veremos que el Grove-LED cambia el brillo.
 
 ### Jugar con Codecraft
 
 #### Hardware
 
-**Paso 1.** Conecta un Sensor de Ángulo Rotatorio Grove al puerto A0, y conecta un LED Rojo Grove al puerto D3 de un Base Shield.
+**Paso 1.** Conecta un Grove - Rotary Angle Sensor al puerto A0 y conecta un Grove - Red LED al puerto D3 de un Base Shield.
 
-**Paso 2.** Conecta el Base Shield a tu Seeeduino/Arduino.
+**Paso 2.** Inserta el Base Shield en tu Seeeduino/Arduino.
 
-**Paso 3.** Conecta Seeeduino/Arduino a tu PC mediante un cable USB.
+**Paso 3.** Conecta el Seeeduino/Arduino a tu PC mediante un cable USB.
 
 #### Software
 
-**Paso 1.** Abre [Codecraft](https://ide.chmakered.com/), añade soporte para Arduino, y arrastra un procedimiento principal al área de trabajo.
+**Paso 1.** Abre [Codecraft](https://ide.chmakered.com/), añade compatibilidad con Arduino y arrastra un procedimiento principal al área de trabajo.
 
 :::note
-Si esta es tu primera vez usando Codecraft, consulta también [Guía para Codecraft usando Arduino](https://wiki.seeedstudio.com/es/Guide_for_Codecraft_using_Arduino/).
+Si es la primera vez que usas Codecraft, consulta también [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/es/Guide_for_Codecraft_using_Arduino/).
 :::
 
-**Paso 2.** Arrastra bloques como en la imagen de abajo o abre el archivo cdc que se puede descargar al final de esta página.
+**Paso 2.** Arrastra los bloques como en la imagen de abajo o abre el archivo cdc que se puede descargar al final de esta página.
 
 ![cc](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/cc_Rotary_Angle_Sensor.png)
 
@@ -174,25 +175,25 @@ Sube el programa a tu Arduino/Seeeduino.
 Cuando el código termine de subirse, el brillo del LED variará dependiendo del ángulo del sensor, y el valor del ángulo se mostrará en el Monitor Serie.
 :::
 
-### Jugar Con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
+### Jugar con Raspberry Pi (con Grove Base Hat para Raspberry Pi)
 
 #### Hardware
 
 - **Paso 1**. Elementos utilizados en este proyecto:
 
-| Raspberry pi | Grove Base Hat para RasPi| Sensor de Ángulo Rotatorio Grove |
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Rotary Angle Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rorary_s.jpg)|
-|[Consigue UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html)|
+|[Consigue uno ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue uno ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Consigue uno ahora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html)|
 
-- **Paso 2**. Conecta el Grove Base Hat al Raspberry.
+- **Paso 2**. Inserta el Grove Base Hat en la Raspberry.
 - **Paso 3**. Conecta el sensor rotatorio al puerto A0 del Base Hat.
-- **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
+- **Paso 4**. Conecta la Raspberry Pi al PC mediante un cable USB.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/Rotary_Hat.jpg)
 
 :::note
-Para el paso 3 puedes conectar el sensor de ángulo rotatorio a **cualquier Puerto Analógico** pero asegúrate de cambiar el comando con el número de puerto correspondiente.
+En el paso 3 puedes conectar el sensor de ángulo rotatorio a **cualquier puerto analógico**, pero asegúrate de cambiar el comando con el número de puerto correspondiente.
 :::
 
 #### Software
@@ -202,7 +203,7 @@ Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usa
 :::
 
 - **Paso 1**. Sigue [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la librería grove.py.
+- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py.
 
 ```
 cd ~
@@ -210,7 +211,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **Paso 3**. Ejecuta los siguientes comandos para ejecutar el código.
+- **Paso 3**. Ejecuta los siguientes comandos para correr el código.
 
 ```
 cd grove.py/grove
@@ -218,7 +219,7 @@ python3 grove_rotary_angle_sensor.py 0
 
 ```
 
-A continuación se muestra el código de grove_rotary_angle_sensor.py.
+A continuación se muestra el código grove_rotary_angle_sensor.py.
 
 ```python
 
@@ -232,7 +233,7 @@ class GroveRotaryAngleSensor(ADC):
     def __init__(self, channel):
         self.channel = channel
         self.adc = ADC()
-    
+
     @property
     def value(self):
         return self.adc.read(self.channel)
@@ -304,24 +305,24 @@ KeyboardInterrupt
 Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 :::note
-Es posible que hayas notado que para el puerto analógico, el número de pin en la serigrafía es algo como **A0, A1**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que el puerto digital. Así que por favor asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
+Puede que hayas notado que para el puerto analógico, el número de pin serigrafiado es algo como **A0, A1**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que para el puerto digital. Así que asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
 :::
 
-### Jugar Con Raspberry Pi (con GrovePi_Plus)
+### Jugar con Raspberry Pi (con GrovePi_Plus)
 
 **Hardware**
 
-- **Paso 1.** Prepara las siguientes cosas:
+- **Paso 1.** Prepara los siguientes elementos:
 
 | Raspberry pi | GrovePi_Plus |  Grove-Rotary Angle Sensor |Grove-LED|
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rorary_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/grove_led.jpg)|
-|[Consigue UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Consigue Uno Ahora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[Consigue Uno Ahora](https://www.seeedstudio.com/Grove-LED-p-767.html)|
+|[Consigue uno ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue uno ahora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Consigue uno ahora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html)|[Consigue uno ahora](https://www.seeedstudio.com/Grove-LED-p-767.html)|
 
-- **Paso 2.** Conecta el GrovePi_Plus al Raspberry.
-- **Paso 3.** Conecta el Grove-Rotary Angle Sensor al puerto **A0** del GrovePi_Plus.
-- **Paso 4.** Conecta el Grove-LED al puerto **D5** del GrovePi_Plus.
-- **Paso 5.** Conecta el Raspberry a la PC a través del cable USB.
+- **Paso 2.** Conecta el GrovePi_Plus a la Raspberry.
+- **Paso 3.** Conecta el Grove-Rotary Angle Sensor al puerto **A0** de GrovePi_Plus.
+- **Paso 4.** Conecta el Grove-LED al puerto **D5** de GrovePi_Plus.
+- **Paso 5.** Conecta la Raspberry al PC mediante un cable USB.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rpi_rotary.jpg)
 
@@ -332,7 +333,7 @@ Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usa
 :::
 
 - **Paso 1.** Sigue [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) para configurar el entorno de desarrollo.
-- **Paso 2.** Clona el repositorio de Github con Git.
+- **Paso 2.** Haz git clone del repositorio de Github.
 
 ```
 cd ~
@@ -340,14 +341,14 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
-- **Paso 3.** Ejecuta los siguientes comandos para monitorear el volumen.
+- **Paso 3.** Ejecuta los siguientes comandos para monitorizar el nivel de ruido.
 
 ```python
 cd ~/GrovePi/Software/Python
 python3 grove_rotary_angle_sensor.py
 ```
 
-Aquí está el código de grove_rotary_angle_sensor.py.
+Aquí está el código grove_rotary_angle_sensor.py.
 
 ```python
 import time
@@ -400,13 +401,13 @@ while True:
 
 ```
 
-- **Paso 4.** Ajusta el Sensor de Ángulo Rotatorio Grove y veremos que el LED Grove cambia el brillo.
+- **Paso 4.** Ajusta el Grove-Rotary Angle Sensor y veremos que el Grove-LED cambia el brillo.
 
 ### Jugar con TI LaunchPad
 
-**Leyendo el Potenciómetro (Sensor de Ángulo Rotatorio)**
+**Lectura del potenciómetro (Rotary Angle Sensor)**
 
-Este ejemplo muestra cómo leer la salida analógica proveniente del módulo potenciómetro Grove. ¡Estaremos combinando algunos módulos Grove en este ejemplo! Al girar la perilla del potenciómetro, mostraremos el valor de lectura analógica en la pantalla digital de 4 dígitos Grove.
+Este ejemplo muestra cómo leer la salida analógica que proviene del módulo potenciómetro Grove. ¡Combinaremos algunos módulos Grove en este ejemplo! Girando la perilla del potenciómetro, mostraremos el valor de lectura analógica en la pantalla digital de 4 dígitos Grove.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/Angle_sensor.jpg)
 
@@ -468,30 +469,30 @@ void loop() {
 }
 ```
 
-# Grove - Archivo Esquemático del Sensor de Ángulo Rotatorio(P) v1.1
+# Grove - Rotary Angle Sensor(P) v1.1 Archivo de esquema
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20%20-%20Rotary%20Angle%20Sensor(P)%20v1.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-# Grove-Archivo Esquemático del Sensor de Ángulo Rotatorio v1.2
+# Grove-Rotary Angle Sensor v1.2 Archivo de esquema
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20-%20Rotary%20Angle%20Sensor%20v1.2.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 ## Recursos
 
-- **[Eagle&PDF]** [Grove-Archivo Esquemático del Sensor de Ángulo Rotatorio v1.2](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20-%20Rotary%20Angle%20Sensor%20v1.2.zip)
-- **[Eagle&PDF]** [Grove - Archivo Esquemático del Sensor de Ángulo Rotatorio(P) v1.1](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20%20-%20Rotary%20Angle%20Sensor(P)%20v1.1.zip)
-- **[Biblioteca]** [Repositorio de Github para el Sensor de Ángulo Rotatorio](https://github.com/Seeed-Studio/Grove_Rotary_Angle_Sensor)
+- **[Eagle&PDF]** [Grove-Rotary Angle Sensor v1.2 Archivo de esquema](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20-%20Rotary%20Angle%20Sensor%20v1.2.zip)
+- **[Eagle&PDF]** [Grove - Rotary Angle Sensor(P) v1.1 Archivo de esquema](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove%20%20-%20Rotary%20Angle%20Sensor(P)%20v1.1.zip)
+- **[Library]** [Repositorio de Github para Rotary Angle Sensor](https://github.com/Seeed-Studio/Grove_Rotary_Angle_Sensor)
 - **[Codecraft]** [Archivo CDC](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/res/Grove_Rotary_Angle_Sensor_CDC_File.zip)
 
 ## Proyectos
 
-**Usando Grove-Sensor de Ángulo Rotatorio(P) para Controlar Grove LED**: Usando Arduino/Genuino 101 para controlar el brillo de un LED a través del Grove-Sensor de Ángulo Rotatorio(P).
+**Usar Grove-Rotary Angle Sensor(P) para controlar Grove LED**: Usar Arduino/Genuino 101 para controlar el brillo de un LED mediante Grove-Rotary Angle Sensor(P).
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/user50338573/using-grove-rotary-angle-sensor-p-to-control-grove-led-725e32/embed' width='350'></iframe>
 
-**Módulo Grove de Ángulo Rotatorio**:
+**Módulo Grove de ángulo rotatorio**:
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/31RaX7JGv5s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -501,16 +502,16 @@ void loop() {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xx7hMoFQohY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

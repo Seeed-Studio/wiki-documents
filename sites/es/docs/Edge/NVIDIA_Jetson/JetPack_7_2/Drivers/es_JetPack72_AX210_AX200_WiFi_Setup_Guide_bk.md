@@ -16,9 +16,16 @@ last_update:
   date: 07/15/2026
   author: Dayu
 createdAt: '2026-07-14'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-15'
 url: https://wiki.seeedstudio.com/es/jetpack72_ax210_ax200_wifi_setup_guide_bk/
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
 
 # Guía de configuración de módulos inalámbricos en JetPack 7.2
 
@@ -26,13 +33,13 @@ Después de actualizar un dispositivo Seeed Jetson a JetPack 7.2, algunos usuari
 
 Esta guía cubre el flujo de reparación de JetPack 7.2 para los siguientes módulos:
 
-- Intel AX210 / AX200, usando `iwlwifi` e `iwlmvm`.
+- Intel AX210 / AX200, usando `iwlwifi` y `iwlmvm`.
 - Realtek RTL8852BE / 8852BE, usando la pila de controladores `rtw89`.
 
-La solución normalmente requiere dos partes: instalar los módulos del kernel que coincidan con el kernel de JetPack 7.2 `6.8.12-1021-tegra`, y descomprimir los archivos de firmware correspondientes en `/lib/firmware`.
+La solución normalmente requiere dos partes: instalar los módulos de kernel que coincidan con el kernel `6.8.12-1021-tegra` de JetPack 7.2, y descomprimir los archivos de firmware correspondientes en `/lib/firmware`.
 
 :::note
-Esta guía está pensada para sistemas JetPack 7.2 que usan el kernel `6.8.12-1021-tegra`. Los módulos de controladores de reparación están compilados para este kernel. Si `uname -r` muestra un kernel diferente, usa el paquete de controladores para esa versión exacta de kernel.
+Esta guía está pensada para sistemas JetPack 7.2 que usan el kernel `6.8.12-1021-tegra`. Los módulos de controlador de reparación están compilados para este kernel. Si `uname -r` muestra un kernel diferente, usa el paquete de controladores para esa versión exacta de kernel.
 :::
 
 ## Síntomas
@@ -52,14 +59,14 @@ Después de actualizar a JetPack 7.2, puedes ver uno o más de los siguientes s�
 - Acceso temporal a Internet mediante Ethernet, red USB u otro adaptador de red.
 - Permiso de `sudo` en el dispositivo Jetson.
 
-Comprueba primero la versión del kernel y el dispositivo PCIe:
+Primero comprueba la versión del kernel y el dispositivo PCIe:
 
 ```bash
 uname -r
 lspci -nnk | grep -A3 -i network
 ```
 
-Los ID de PCI más comunes incluyen:
+Los ID de PCI comunes incluyen:
 
 | Módulo | ID de PCI de ejemplo |
 | --- | --- |
@@ -71,7 +78,7 @@ Los ID de PCI más comunes incluyen:
 
 Usa esta opción si el Jetson puede acceder a Internet mediante Ethernet u otro adaptador de red.
 
-El script descarga los módulos de controladores reparados de JetPack 7.2 desde las carpetas públicas de OneDrive, los almacena en `/tmp/jp72_wifi_fix/driver/`, instala el conjunto de módulos seleccionado en el directorio de módulos del kernel actual, descomprime los archivos de firmware necesarios y habilita la carga automática al arrancar.
+El script descarga los módulos de controlador reparados de JetPack 7.2 desde las carpetas públicas de OneDrive, los almacena en `/tmp/jp72_wifi_fix/driver/`, instala el conjunto de módulos seleccionado en el directorio de módulos del kernel actual, descomprime los archivos de firmware necesarios y habilita la carga automática al arrancar.
 
 :::tip
 El enlace web de OneDrive no se usa directamente como URL de descarga de `curl`. El script primero abre la página compartida de OneDrive para obtener una cookie anónima de SharePoint y luego descarga cada archivo a través del endpoint REST `%24value` de SharePoint.
@@ -379,7 +386,7 @@ Utiliza esta opción si prefieres descargar e instalar los archivos manualmente.
 
 Descarga el paquete de controladores Intel para JetPack 7.2 desde la carpeta de OneDrive a continuación:
 
-- [Módulos de controlador AX210/AX200 para JetPack 7.2](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC5g_yzXQ26Sb-yYWtaWU8qATu9387mvrXAvPLhJNuBtxw?e=PvK037)
+- [Módulos de controladores AX210/AX200 para JetPack 7.2](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC5g_yzXQ26Sb-yYWtaWU8qATu9387mvrXAvPLhJNuBtxw?e=PvK037)
 
 La carpeta contiene:
 
@@ -410,7 +417,7 @@ sudo apt update
 sudo apt install -y zstd
 ```
 
-Para AX210, descomprime el firmware `ty-a0-gf-a0` y los archivos PNVM:
+Para AX210, descomprime el firmware y los archivos PNVM `ty-a0-gf-a0`:
 
 ```bash
 cd /lib/firmware
@@ -437,7 +444,7 @@ sudo modprobe iwlwifi
 
 Descarga el paquete de controladores Realtek 8852BE para JetPack 7.2 desde la carpeta de OneDrive a continuación:
 
-- [Módulos de controlador Realtek 8852BE para JetPack 7.2](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgAxZzXdPP_STosySy14oTGgAZMFt4qQ0IFsKt0oXeAi5KE?e=W84g0E)
+- [Módulos de controladores Realtek 8852BE para JetPack 7.2](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgAxZzXdPP_STosySy14oTGgAZMFt4qQ0IFsKt0oXeAi5KE?e=W84g0E)
 
 La ruta de carpeta verificada es `8852be/jp7.2/8852be-6.8.12-1021-tegra/`, y contiene:
 
@@ -520,11 +527,11 @@ El siguiente resultado de AX210 muestra el estado final con Wi-Fi habilitado des
 
 | Síntoma | Comprobación |
 | --- | --- |
-| `lspci` no puede detectar el módulo Wi-Fi | Comprueba la instalación en la ranura M.2 Key E y confirma que la línea PCIe está habilitada por el device tree de la placa portadora. |
+| `lspci` no puede detectar el módulo Wi-Fi | Comprueba la instalación en la ranura M.2 Key E y confirma que la línea PCIe está habilitada por el device tree de la carrier board. |
 | `dmesg` de Intel informa errores al cargar el firmware | Confirma que los archivos `.ucode` correspondientes y, para AX210, los archivos `.pnvm` se descomprimieron en `/lib/firmware/`. |
 | `dmesg` de Realtek informa errores al cargar el firmware | Confirma que los archivos `rtw885*.zst` se descomprimieron en `/lib/firmware/rtw89/`, especialmente los archivos de firmware `rtw8852b`. |
 | `modprobe iwlwifi` informa `Invalid argument` | Comprueba si `rfkill.ko` existe con `find /lib/modules/$(uname -r) -name "rfkill.ko"`. Si falta, utiliza la imagen BSP correcta o recompila los módulos del kernel. |
-| `modprobe rtw89_8852be` informa que no se encuentra el módulo | Confirma que los cuatro archivos `rtw89*.ko` se copiaron a `/lib/modules/$(uname -r)/kernel/drivers/net/wireless/realtek/rtw89/`, luego ejecuta `sudo depmod -a`. |
+| `modprobe rtw89_8852be` informa que no se encuentra el módulo | Confirma que los cuatro archivos `rtw89*.ko` se copiaron a `/lib/modules/$(uname -r)/kernel/drivers/net/wireless/realtek/rtw89/`, y luego ejecuta `sudo depmod -a`. |
 | `modprobe 8852be` falla | Utiliza `sudo modprobe rtw89_8852be`; `8852be` no es el nombre del módulo. |
 | El Wi-Fi desaparece después de reiniciar | Confirma que existen `/etc/modules-load.d/iwlwifi.conf` o `/etc/modules-load.d/rtw89_8852be.conf` y ejecuta `sudo depmod -a` de nuevo. |
 | AX210 se carga pero no puede escanear redes de 6 GHz | Confirma que `iwlwifi-ty-a0-gf-a0.pnvm` existe y comprueba si el dominio regulatorio configurado admite 6 GHz con `iw reg get`. |
@@ -533,12 +540,12 @@ El siguiente resultado de AX210 muestra el estado final con Wi-Fi habilitado des
 
 - Los archivos de firmware de AX210 y AX200 no son intercambiables. AX210 usa `ty-a0-gf-a0`; AX200 usa `cc-a0`.
 - Realtek RTL8852BE utiliza la pila de controladores `rtw89` y el firmware bajo `/lib/firmware/rtw89/`.
-- Estos paquetes de reparación están construidos para el kernel `6.8.12-1021-tegra` de JetPack 7.2.
-- Evita usar `apt upgrade` como solución alternativa en placas portadoras Jetson personalizadas. En su lugar, utiliza una imagen BSP o un paquete de controladores validado para el kernel de destino.
+- Estos paquetes de reparación están compilados para el kernel `6.8.12-1021-tegra` de JetPack 7.2.
+- Evita usar `apt upgrade` como solución temporal en carrier boards Jetson personalizadas. En su lugar, utiliza una imagen BSP o un paquete de controladores validado para el kernel de destino.
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

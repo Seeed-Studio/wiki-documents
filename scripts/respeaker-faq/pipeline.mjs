@@ -93,8 +93,10 @@ export const PRODUCTS = {
     file: 'xvf3000_faq.md',
     title: 'reSpeaker XVF3000 FAQ',
     description:
-      'Frequently asked questions about DSP tuning and parameter control for the reSpeaker Mic Array v2.0 with XVF3000.',
+      'Frequently asked questions about DSP tuning, parameter control, and device identification for the reSpeaker Mic Array v2.0 with XVF3000.',
     keywords: ['reSpeaker XVF3000 FAQ', 'reSpeaker XVF3000 DSP tuning', 'reSpeaker Mic Array tuning', 'tuning.py'],
+    lastUpdateDate: '11/02/2026',
+    introLastVerifiedAt: '2026-11-02',
   },
   respeaker_2_mics_pi_hat: {
     key: 'respeaker_2_mics_pi_hat',
@@ -111,8 +113,15 @@ export const PRODUCTS = {
     file: 'respeaker_clip_faq.md',
     title: 'reSpeaker Clip FAQ',
     description:
-      'Frequently asked questions about official documentation, live transcription prototyping and mechanical resources for the reSpeaker Clip.',
-    keywords: ['reSpeaker Clip FAQ', 'reSpeaker Clip documentation', 'live transcription', 'mechanical drawing'],
+      'Frequently asked questions about official documentation, transcription language support, recordings and export, and mechanical resources for the reSpeaker Clip.',
+    keywords: [
+      'reSpeaker Clip FAQ',
+      'reSpeaker Clip documentation',
+      'transcription language support',
+      'recordings export',
+      'mechanical drawing',
+    ],
+    lastUpdateDate: '11/12/2026',
   },
 };
 
@@ -309,8 +318,8 @@ export function renderProductPage(productKey, entries) {
   lines.push(`description: ${product.description}`);
   lines.push(`slug: ${slug}`);
   lines.push('last_update:');
-  lines.push('  date: 9/2/2026');
-  lines.push('  author: ray');
+  lines.push(`  date: ${product.lastUpdateDate ?? '9/2/2026'}`);
+  lines.push(`  author: ${product.lastUpdateAuthor ?? 'ray'}`);
   lines.push('keywords:');
   for (const kw of product.keywords) lines.push(`  - ${kw}`);
   lines.push('---');
@@ -327,7 +336,7 @@ export function renderProductPage(productKey, entries) {
   lines.push('');
   lines.push('- Confirm the exact product variant and the firmware mode (USB or I2S) the device is running.');
   lines.push('- Check the current firmware version before applying version-specific steps.');
-  lines.push(`- Answers on this page were last verified on ${entries[0].lastVerifiedAt}; re-check the linked official sources if you are reading this later.`);
+  lines.push(`- Answers on this page were last verified on ${product.introLastVerifiedAt ?? entries[0].lastVerifiedAt}; re-check the linked official sources if you are reading this later.`);
   lines.push('');
   lines.push(FAQ_AUTO_START_MARKER);
   lines.push(managed);

@@ -1,5 +1,5 @@
 ---
-description: reComputer Rugged J401 を使用して、ターゲット追跡、後方エリア警告、ドライバー監視、ビデオ録画を含む、産業用フォークリフト向けの 4 つのコンピュータビジョンアプリケーションを紹介します。
+description: "reComputer Rugged J401 上で動作する 4 つのフォークリフト向けビジョンアプリケーション：前方トラッキング、後方警告、ドライバー監視、マルチカメラ録画。"
 title: 産業用ビジョン向け reComputer Rugged J401
 keywords:
   - reComputer Rugged J401
@@ -32,14 +32,14 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 ## はじめに
 
-産業用フォークリフトは、荷積み場、倉庫、屋外ヤード、冷蔵倉庫、洗浄エリアなどで稼働します。粉じん、水、振動、温度変化、不安定なネットワーク接続などにより、これらの環境は一般的なコンピュータにとって過酷です。車載ビジョンシステムには、防塵防水筐体、安全なコネクタ、安定したカメラ電源、そして車両上で映像を処理できる十分なローカル演算能力が必要です。
+産業用フォークリフトは、荷捌き場、倉庫、屋外ヤード、冷蔵倉庫、洗浄エリアなどで稼働します。粉じん、水、振動、温度変化、不安定なネットワーク接続などにより、これらは一般的なコンピュータにとって過酷な環境です。車載ビジョンシステムには、防塵防水筐体、安全なコネクタ、安定したカメラ電源、そして車両上で映像を処理できる十分なローカル演算能力が必要です。
 
-この wiki では、産業用フォークリフトにおけるコンピュータビジョンの活用方法をいくつか紹介します。サンプルでは reComputer Rugged J401 をエッジコントローラとして使用します。IP66 エンクロージャ、M12 コネクタ、耐振動性、4 つの PoE ポート、Jetson Orin NX により、カメラの近くに設置してビジョンワークロードをローカルで実行できます。
+産業用フォークリフトは粉じん、洗浄、冷蔵倉庫といった環境で稼働するため、ビジョンシステムはラックではなく車両に搭載する必要があります。reComputer Rugged J401 は、IP66 エンクロージャ、M12 コネクタ、4 つの PoE ポート、Jetson Orin NX をフォークリフトに搭載します。IP66 エンクロージャ、M12 コネクタ、耐振動性、4 つの PoE ポート、Jetson Orin NX により、カメラの近くに設置してビジョンワークロードをローカルで実行できます。
 
-このサンプルは 4 つの実用的な作業をカバーします：フォークリフト前方で選択した物体の追跡、後方死角の監視、ドライバーの疲労とヘルメット着用状況の確認、そして後から確認できるよう映像を録画することです。これら 4 つはすべて 1 つの Web コンソールから管理されます。
+このサンプルでは、実用的な 4 つのタスクを扱います。フォークリフト前方で選択した物体の追跡、後方死角の監視、ドライバーの疲労とヘルメット着用状況の確認、そして後から確認できるよう映像を録画することです。これら 4 つすべてを 1 つの Web コンソールから管理します。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/rugged_banner.png" alt="reComputer Rugged バナー：フォークリフトの横にある倉庫内のユニット。Driver Monitoring、Collision Warning、Object Perception、IP66 Protection、Real-Time Edge AI のラベル付き" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -50,7 +50,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 
 :::warning
-このプロジェクトは支援用プロトタイプであり、機能安全システムではありません。安全認証は取得しておらず、オペレーター自身の安全確認を置き換えることはできません。カメラまたは推論パイプラインに障害が発生した場合、後方警告ビューは `SYSTEM ERROR` を報告します。
+このプロジェクトは支援用プロトタイプであり、機能安全システムではありません。安全認証は取得しておらず、オペレーター自身の安全確認を置き換えることはできません。カメラまたは推論パイプラインが故障した場合、後方警告ビューは `SYSTEM ERROR` を報告します。
 :::
 
 ## 前提条件
@@ -66,38 +66,38 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 このケースでは、2 台の 48V POE カメラと 1 台の USB カメラを使用します。シナリオに応じて、これらのカメラは自由に入れ替えることができます。
 ### ハードウェア接続
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="application banner" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/poe_connection.png" alt="2 台の PoE カメラが Ethernet 経由で Rugged J401 に接続されており、M12 コネクタと Wi-Fi アンテナが見える" />
 </div>
 
-### 前方ビューのターゲット追跡
+### 前方ビューのターゲットトラッキング
 
-パレットの取り扱い中、フォークリフトが移動しても、オペレーターは特定の荷物や作業エリアを視界に入れておく必要がある場合があります。前方アプリケーションでは、EfficientTAM を使用してクリックによるセグメント追跡を行います。オペレーターが映像内でターゲットを選択すると、システムは後続フレームにわたってその輪郭を追跡します。
+パレットの取り扱い中、フォークリフトが移動しても、オペレーターは特定の荷物や作業エリアを視界に入れておく必要がある場合があります。前方アプリケーションでは、EfficientTAM を用いたクリック・トゥ・セグメント方式のトラッキングを行います。オペレーターが映像内でターゲットを選択すると、システムは後続フレームにわたってその輪郭を追跡します。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/seg_demo.jpg" alt="前方セグメンテーションタイル：クリックされたターゲットが緑でマスクされ、Clear target コントロールと USB カメラセレクタが表示されている" />
 </div>
 
 
-これは自動物体認識ではなく、インタラクティブな追跡です。ターゲットが作業ごとに変わり、オペレーターが直接選択できる場合に有用です。
+これはインタラクティブなトラッキングであり、自動物体認識ではありません。ターゲットがタスクごとに変化し、オペレーターが直接選択できる場合に有用です。
 
 ### 後方エリア警告
 
 カウンターウェイトとマストにより、フォークリフトの周囲には大きな死角が生じます。後方向きの PoE カメラは Depth Anything V2 を使用してシーンの奥行きを推定し、人検出器で車両後方の作業エリアを監視します。インターフェースは、設定された距離しきい値に応じて `SAFE`、`WARNING`、`DANGER` を報告します。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/depth_demo.jpg" alt="後方警告タイル：奥行きインセット、危険フレーム、NEAREST 0.6 m と表示された STOP ステータス" />
 </div>
 
 :::note
-単眼深度推定には制約があります。実際の距離は信頼できません。現場の状況と要件に基づいて、警報しきい値を調整する必要があります！
+単眼深度推定には限界があります。実際の距離は信頼できません。現場の状況と要件に基づいて、警報しきい値を調整する必要があります！
 :::
 
 ### ドライバーおよび PPE 監視
 
-キャビン内カメラは、外部からは見えない状況を確認できます。MediaPipe の顔ランドマークは疲労に関連する信号を提供し、別のモデルがヘルメットの着用状態を確認します。モデルアルゴリズムが運転中のドライバーの疲労を検出すると、警告灯を作動させてドライバーに注意を促し、疲労運転による重大な安全事故を防ぎます。
+キャビン内カメラは、外部からは見えない状態を確認できます。MediaPipe の顔ランドマークは疲労に関連する信号を提供し、別のモデルがヘルメットの着用状況を確認します。モデルアルゴリズムが運転中のドライバーの疲労を検出すると、警告灯を点灯させてドライバーに注意を促し、疲労運転による重大な安全事故を防止します。
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="" />
+  <img width="1000" src="https://files.seeedstudio.com/wiki/rugged/detect_demo.jpg" alt="キャビン検出タイル：ドライバーが PERSON 1 | HELMET: NOT WORN のラベル付きバウンディングボックスで囲まれている" />
 </div>
 
 
@@ -106,7 +106,7 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 異なる視点からの監視映像を 1 つのダッシュボードに表示できるため、状況をリアルタイムで監視しやすくなります。
 
 <div align="center">
-  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="Industrial forklift vision dashboard" />
+  <img width="1000" src="https://raw.githubusercontent.com/zibochen6/rugged_cv_demo/main/docs/images/dashboard.png" alt="Front segmentation、Rear warning、Cabin detection タイル、後方距離しきい値、統合イベントストリームを備えた Forklift Vision Control ダッシュボード" />
 </div>
 
 
@@ -114,9 +114,9 @@ import {ruggedJ401DocNav} from '@site/src/data/jetson/productDocNavigation';
 
 | アプリケーション | カメラ | ビジョン手法 |
 | --- | --- | --- |
-| 前方 | PoE RTSP | EfficientTAM によるクリック・トゥ・セグメント追跡 |
-| 後方 | PoE RTSP | Depth Anything V2 によるメートル単位の深度警告（`SAFE`、`WARNING`、`DANGER`、`SYSTEM ERROR` 状態） |
-| キャビン | USB UVC | MediaPipe による疲労検出とヘルメット状態の確認 |
+| 前方 | PoE RTSP | EfficientTAM によるクリック・トゥ・セグメントトラッキング |
+| 後方 | PoE RTSP | Depth Anything V2 による `SAFE`、`WARNING`、`DANGER`、`SYSTEM ERROR` 状態付きメートル単位深度警告 |
+| キャビン | USB UVC | MediaPipe による疲労検出とヘルメット状態判定 |
 | 録画 | 任意の設定済みカメラ | AI 推論なしの 1080p H.264 MP4 録画 |
 
 FastAPI サーバーは各アプリケーションの開始と停止を行い、2 つのアプリケーションが同じカメラを開かないようにし、ビデオストリームをブラウザへ送信します。モデルとカメラは要求されるまでアイドル状態のままなので、未使用のアプリケーションが GPU メモリを占有することはありません。
@@ -132,7 +132,7 @@ sudo apt-get install -y python3.8-venv python3-opencv libopenblas-base logrotate
 python3 -c "import cv2; print([line.strip() for line in cv2.getBuildInformation().splitlines() if 'GStreamer' in line])"
 ```
 
-出力に `GStreamer: YES` と表示されている必要があります。システムの OpenCV を PyPI の `opencv-python` ホイールに置き換えないでください。このホイールには、本セットアップで RTSP キャプチャに使用している GStreamer サポートが含まれていません。
+出力に `GStreamer: YES` と表示されている必要があります。システムの OpenCV を PyPI の `opencv-python` ホイールに置き換えないでください。そのホイールには、このセットアップで RTSP キャプチャに使用している GStreamer サポートが含まれていません。
 
 ### ステップ 2. プロジェクトをクローンして環境を作成する
 
@@ -154,7 +154,7 @@ MAX_JOBS=4 /home/seeed/workspace/seg_demo/.venv/bin/python setup.py install
 cd /home/seeed/workspace/seg_demo
 ```
 
-仮想環境を JetPack の OpenCV および TensorRT パッケージを参照するように設定し、その後プロジェクトの依存関係をインストールします：
+仮想環境を JetPack の OpenCV と TensorRT パッケージを指すように設定し、その後プロジェクトの依存関係をインストールします：
 
 ```bash
 SP="$(.venv/bin/python -c 'import site; print(site.getsitepackages()[0])')"
@@ -240,7 +240,7 @@ torch.onnx.export(
 print("ONNX written:", output)
 ```
 
-深度モデルと人物モデルをエクスポートし、その後、実験的なヘルメットモデルをダウンロードします：
+depth モデルと person モデルを書き出し、その後 experimental helmet モデルをダウンロードします：
 
 ```bash
 .venv/bin/python export_depth_onnx.py
@@ -259,7 +259,7 @@ curl -fL --retry 3 -o models/onnx/ppe_hard_hat.experimental.onnx \
   https://raw.githubusercontent.com/Sanaurrehmanarain/object-detection-yolov8/main/best.onnx
 ```
 
-J401 上で 3 つすべてのエンジンをビルドします。TensorRT エンジンは GPU アーキテクチャと TensorRT バージョンに結び付けられているため、別のコンピュータでビルドしたエンジンをコピーしないでください。
+3 つすべてのエンジンを J401 上でビルドします。TensorRT エンジンは GPU アーキテクチャと TensorRT バージョンに依存するため、別のコンピュータでビルドしたエンジンをコピーしないでください。
 
 ```bash
 TRTEXEC=/usr/src/tensorrt/bin/trtexec
@@ -311,28 +311,28 @@ curl -s http://127.0.0.1:8000/api/health
 http://<Jetson-LAN-IP>:8000/
 ```
 
-各カードのカメラセレクタを使用して、フロント、リア、キャビンのソースを確認します。すでに使用中のカメラは、そのアプリケーションが停止するまで他のアプリケーションでは利用できません。**Start All** を使用する前に、各アプリケーションを個別にテストしてください。
+各カードのカメラセレクタを使って、前方、後方、キャビンのソースを確認します。すでに使用中のカメラは、そのアプリケーションが停止するまで他のアプリケーションでは利用できません。**Start All** を使う前に、各アプリケーションを個別にテストしてください。
 
 ### フォークリフト前方の物体を追跡する
 
-1. 前方を向いた PoE カメラを選択し、フロントアプリケーションを開始します。
-2. 追跡すべき物体または荷物をクリックします。
-3. マスクに背景の一部が含まれている場合は、ネガティブポイントを追加します。
+1. 前方を向いた PoE カメラを選択し、front アプリケーションを開始します。
+2. 追跡すべき物体または荷をクリックします。
+3. マスクに背景の一部が含まれている場合は、負のポイントを追加します。
 4. 別のターゲットを選ぶ前に選択をクリアします。
 
-最初のモデル読み込みには数秒かかります。ターゲットが選択されると、マスクは後続フレームでもそれに追従し、一時的に視界から外れても再度ロックしようとします。
+最初のモデル読み込みには数秒かかります。ターゲットが選択されると、マスクは後続フレームでもそれに追従し、一時的に視界から外れても再びロックしようとします。
 
 ### 後方の作業エリアを確認する
 
-後方を向いた PoE カメラを選択し、リアアプリケーションを開始します。推定距離が設定されたしきい値をまたぐと、ステータスパネルは `SAFE`、`WARNING`、`DANGER` の間で変化します。
+後方を向いた PoE カメラを選択し、rear アプリケーションを開始します。推定距離が設定したしきい値をまたぐと、ステータスパネルは `SAFE`、`WARNING`、`DANGER` の間で変化します。
 
 表示される距離を使用する前に、`configs/warning.yaml` でカメラ内部パラメータ、取り付け高さ、ピッチ、距離補正を設定してください。カメラや取り付け位置が変わると、新しいキャリブレーションが必要です。
 
-### キャビンモニタリングを有効にする
+### キャビン監視を有効にする
 
-キャビンの USB カメラを選択し、キャビンアプリケーションを開始します。疲労とヘルメットのチェックにはそれぞれ個別のスイッチがあります。不要な経路はオフにしてください。そのモデルは読み込まれません。
+キャビンの USB カメラを選択し、cabin アプリケーションを開始します。疲労とヘルメットのチェックにはそれぞれ個別のスイッチがあります。不要な経路はオフにしてください。そのモデルは読み込まれません。
 
-オペレータの視界を妨げないようにしつつ、運転者の顔が見える位置にカメラを設置します。通常のシフト時と同じ照明条件でテストしてください。
+オペレータの視界を妨げることなく、ドライバーの顔が見える位置にカメラを設置します。通常のシフト時と同じ照明条件でテストしてください。
 
 
 便利なサービスコマンド：
@@ -346,26 +346,26 @@ journalctl -u visual-hub -f
 
 ## 実測パフォーマンス
 
-これらの数値は、Jetson Orin NX 16GB を搭載した reComputer Rugged J401 上で 4 つのアプリケーションを同時実行した状態で測定したものです。結果を比較する前に `sudo nvpmodel -m 0 && sudo jetson_clocks` を実行してください。
+これらの数値は、4 つのアプリケーションを reComputer Rugged J401（Jetson Orin NX 16GB 搭載）上で動作させた状態で測定したものです。結果を比較する前に `sudo nvpmodel -m 0 && sudo jetson_clocks` を実行してください。
 
 | アプリケーション | 構成 | 測定結果 |
 | --- | --- | --- |
-| フロントセグメンテーション | EfficientTAM-Ti, 512, PyTorch bf16 | 約 13.2 FPS、初回ロードに 7～8 秒 |
-| リア警告 | Depth Anything V2 Metric Small, TensorRT FP16 | 深度処理は約 21 FPS |
-| キャビンモニタリング | 1280x720 USB カメラ | 疲労とヘルメットチェック有効時で約 5.4 FPS |
-| 録画 | 3 ストリーム, `nvv4l2h264enc` | 3 x 1920x1080、15 FPS、H.264 |
+| Front segmentation | EfficientTAM-Ti, 512, PyTorch bf16 | 約 13.2 FPS、初回ロードに 7〜8 秒 |
+| Rear warning | Depth Anything V2 Metric Small, TensorRT FP16 | depth 処理は約 21 FPS |
+| Cabin monitoring | 1280x720 USB camera | 疲労およびヘルメットチェック有効時で約 5.4 FPS |
+| Recording | Three streams, `nvv4l2h264enc` | 3 x 1920x1080、15 FPS、H.264 |
 
-実際のスループットは、カメラ解像度、電源モード、温度、およびアクティブなアプリケーション数に依存します。
+実際のスループットは、カメラ解像度、電源モード、温度、アクティブなアプリケーション数によって変化します。
 
 ## トラブルシューティング
 
 | 症状 | 確認 | 対処 |
 | --- | --- | --- |
 | ポート 8000 が使用できない | `systemctl status visual-hub` | サービスを再起動し、`journalctl -u visual-hub` を確認する |
-| アプリケーションが `CAMERA_BUSY` を報告する | `curl -s http://127.0.0.1:8000/api/hub/status` | カメラを占有しているアプリケーションまたは録画ジョブを停止する |
-| USB カメラが開かない | `sudo dmesg \| grep -i "not enough bandwidth"` | USB 3 に移すか、他の USB ストリームを停止する |
+| アプリケーションが `CAMERA_BUSY` を報告する | `curl -s http://127.0.0.1:8000/api/hub/status` | カメラを保持しているアプリケーションまたは録画ジョブを停止する |
+| USB カメラが開けない | `sudo dmesg \| grep -i "not enough bandwidth"` | USB 3 に移すか、他の USB ストリームを停止する |
 | RTSP ストリームがフリーズする | アプリケーションステータスの `frame_age_s` を確認する | カメラ電源、PoE 予算、ネットワーク経路、RTSP 認証情報を確認する |
-| フロントビューの表示に数秒かかる | `journalctl -u visual-hub` | 最初の EfficientTAM モデル読み込みには通常 7～8 秒かかります |
+| 前方ビューの表示に数秒かかる | `journalctl -u visual-hub` | 最初の EfficientTAM モデル読み込みには通常 7〜8 秒かかります |
 
 セレクタに表示されないカメラについては、まずインベントリを確認します：
 
@@ -377,10 +377,10 @@ curl -s http://127.0.0.1:8000/api/hub/cameras
 
 ## 安全性とアプリケーションの限界
 
-- 後方エリア警告は単眼深度を使用しており、物理的な距離センサではありません。低照度、反射、透明な物体、レンズの汚れ、激しい振動などにより、誤った推定値が生じる可能性があります。
-- キャビンモニタリングは RGB 画像と固定のタイミングルールを使用します。ドライバーごとのキャリブレーションや暗視機能はありません。
-- フロントトラッキングは、ユーザーが選択した 1 つのターゲットを追跡します。対象物を識別したり、それを動かして安全かどうかを判断したりはしません。
-- ヘルメットモデルは実験的なものです。運用で使用する前に、その精度、学習データ、ライセンスを確認してください。
+- 後方エリア警告は単眼 depth を使用しており、物理的な距離センサではありません。低照度、反射、透明な物体、レンズの汚れ、激しい振動などにより、誤った推定値が生じる可能性があります。
+- キャビン監視は RGB 画像と固定のタイミングルールを使用します。ドライバーごとのキャリブレーションや暗視機能はありません。
+- 前方トラッキングは、ユーザーが選択した 1 つのターゲットを追跡します。対象物を識別したり、それを移動して安全かどうかを判断したりはしません。
+- ヘルメットモデルは experimental です。運用で使用する前に、その精度、学習データ、ライセンスを確認してください。
 ## デモ動画
 
 <div class="video-container">
@@ -398,11 +398,18 @@ curl -s http://127.0.0.1:8000/api/hub/cameras
 - [EfficientTAM](https://github.com/yformer/EfficientTAM)
 - [Depth Anything V2 Metric Indoor Small](https://huggingface.co/depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf)
 - [MediaPipe Face Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker)
-- [Getting Started with reComputer Rugged J40](/jetson/recomputer_rugged_j401/getting_started/)
+- [Getting Started with reComputer Rugged J40](https://wiki.seeedstudio.com/ja/jetson/recomputer_rugged_j401/getting_started/)
+
+## 関連リソース
+
+- [reComputer Robotics J401 インターフェースとピン配置](/ja/recomputer_jetson_robotics_j401_getting_started/)
+- [reComputer で EtherCAT 通信を実装する](/ja/recomputer_ethercat_communication/)
+- [reComputer 上の PyCuVSLAM](/ja/pycuvslam_recomputer_robotics/)
+- [reComputer Rugged J401 製品ページ](https://www.seeedstudio.com/reComputer-Rugged-J401-p-6509.html)
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -12,15 +12,15 @@ last_update:
   date: 9/17/2025
   author: Kasun Thushara
 createdAt: '2025-07-31'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-12'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_home_assistant/
 ---
 
 ## 概述
 
-与智能空间对话，使用全新的 **ReSpeaker XMOS XVF3800 搭配 XIAO ESP32S3**，通过语音来切换灯光、调高音乐音量，甚至询问天气。
+与智能空间对话，使用全新的 **ReSpeaker XMOS XVF3800 搭配 XIAO ESP32S3**，通过语音即可切换灯光、调高音乐音量，甚至询问天气。
 
-本章节中，我们将使用 ReSpeaker XMOS XVF3800 搭配 XIAO ESP32S3 的 HA 语音助手连接 Sonoff 智能开关，实现对灯光开关的语音控制。
+本章节中，我们将使用搭载 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800 和 HA Voice Assistant 连接 Sonoff 智能开关，实现对灯光开关的语音控制。
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -67,8 +67,8 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_home_assistant/
 
 ## 固件更新
 
-为了获得最佳播放体验，我们需要将 XMOS 固件更新到最新版本。
-从这里下载固件。在你的电脑上插入 ReSpeaker XMOS XVF3800 搭配 XIAO ESP32S3，并按照我们的指南运行更新程序：
+为了获得最佳的播放体验，我们需要将 XMOS 固件更新到最新版本。
+从这里下载固件。在电脑上插入搭载 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800，并按照我们的指南运行相应步骤：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -79,43 +79,36 @@ XVF3800 麦克风阵列需要 12.288 MHz 的 MCLK 才能工作，但 ESPHome（�
 
 你可以从[这里](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)下载固件
 
-安装指南在[这里](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
+安装指南在[这里](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#更新固件)
 
 ## 准备 ReSpeaker XMOS XVF3800 搭配 XIAO ESP32S3
 
-进入 **Home Assistant > Settings > Add-ons**。
+进入 **Home Assistant > Settings > Apps**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-点击 **Add-on Store**（通常在右下角）
+点击 **Install app**（通常在右下角）
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-在 **Official add-ons** 下搜索并安装 **ESPHome Device Builder**。
+在 **App Store** 中搜索并安装 **ESPHome Device Builder**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-安装完成后，点击 **Start** 运行 ESPHome 插件。
+点击 **Install** 安装 ESPHome 插件。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-启用 **Start on Boot、Watchdog 和 Show in Sidebar** 以便更轻松地访问。
 
 在 Home Assistant 侧边栏中进入 **ESPHome Builder**。
 
 点击 **+ NEW DEVICE**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_newdevice_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
+选择你新建的设备条目并点击 **Import from file**。
 
-在提示时，点击 **SKIP** —— 我们将手动创建配置。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
-
-选择你新建的设备条目并点击 **EDIT**。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 将内容替换为你的自定义 **YAML 配置**
 
@@ -125,23 +118,23 @@ XVF3800 麦克风阵列需要 12.288 MHz 的 MCLK 才能工作，但 ESPHome（�
 
 保存 YAML 后，点击 **INSTALL**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-选择 **Manual Download**
+选择 **Advanced opinions** 和 **Download firmware binary**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 等待固件编译完成。
 
 将生成的 .bin 固件文件下载到你的电脑。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-使用 **USB Type-C 线缆**将 **ESP32-S3** 开发板（已连接 XVF3800）连接到你的电脑。
+使用 **USB Type-C 线缆**将 **ESP32-S3** 开发板（已连接 XVF3800）连接到电脑。
 
 在 Chrome 或 Edge 中打开 [**Web-ESPHome**](https://web.esphome.io/?dashboard_wizard)。
 
-点击 **CONNECT** 并选择对应的串口
+点击 **CONNECT** 并选择合适的串口
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/connect-port.png" alt="pir" width={800} height="auto" /></p>
 
@@ -161,7 +154,7 @@ XVF3800 麦克风阵列需要 12.288 MHz 的 MCLK 才能工作，但 ESPHome（�
 
 返回 **Home Assistant > Settings > Devices & Services**。
 
-你应该会看到 **ESPHome** 被列为已发现的集成。
+你应该能看到 **ESPHome** 被列为已发现的集成。
 
 点击 **CONFIGURE**，然后点击 **Submit** 完成设置。
 
@@ -185,7 +178,7 @@ XVF3800 麦克风阵列需要 12.288 MHz 的 MCLK 才能工作，但 ESPHome（�
 
 ### Sonoff
 
-导航到 **Settings → Devices & Services**。
+进入 **Settings → Devices & Services**。
 点击 **Add Integration**。
 搜索并选择 **Sonoff**。
 
@@ -202,18 +195,18 @@ XVF3800 麦克风阵列需要 12.288 MHz 的 MCLK 才能工作，但 ESPHome（�
 
 ## 使用 Nabu Cloud 的语音助手
 
-在本演示中，我们展示如何通过语音连接到 **Home Assistant Cloud（Nabu Casa）**。整个设置非常简单，你可以利用 **一个月的免费试用期** 来体验其全部功能。
+在本演示中，我们展示如何通过语音连接 **Home Assistant Cloud（Nabu Casa）**。整个配置非常简单，你可以利用 **一个月的免费试用期** 来体验其完整功能。
 借助内置的 **唤醒词**：“Okay Nabu”，你可以轻松触发语音指令，并与各类设备和服务 **无缝集成**，实现 **随时随地** 的控制——而无需复杂配置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice.PNG" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice_nabu.PNG" alt="pir" width={800} height="auto" /></p>
 
-## YAML 描述
+## YAML 说明
 
 ### WiFi
 
-本节用于设置设备如何连接到 Wi-Fi。
+本节用于配置设备如何连接到 Wi-Fi。
 
 ```yml
 wifi:
@@ -221,8 +214,8 @@ wifi:
   password: !secret wifi_password
 ```
 
-- **ssid 和 password**：从你的 secrets.yaml 文件中获取，这样密码就不会以明文形式显示。
-- **Events**：在 Wi-Fi 连接或断开时运行操作：
+- **ssid & password**: 从你的 secrets.yaml 文件中读取，这样密码就不会以明文形式显示。
+- **事件**：在 Wi-Fi 连接或断开时运行动作：
   - on_connect:
     - 停止 BLE improv 设置。
     - 运行 control_leds 脚本（Wi-Fi 已连接时的 LED 效果）。
@@ -232,7 +225,7 @@ wifi:
 
 ### I²C 总线
 
-I²C 是一条通信总线，让你的 ESP32 可以与其他芯片（如麦克风或音频编解码器）进行通信。
+I²C 是一条通信线路，让你的 ESP32 可以与其他芯片（如麦克风或音频编解码器）进行通信。
 
 ```yml
 i2c:
@@ -325,7 +318,7 @@ switch:
 
 </details>
 
-开关是在 Home Assistant 中由软件控制的“按钮”。它们控制诸如声音、计时器或闹钟等功能。
+开关是 Home Assistant 中由软件控制的“按钮”。它们控制诸如声音、计时器或闹钟等功能。
 
 **唤醒词声音开关**：控制唤醒词音频。
 
@@ -452,7 +445,7 @@ sensor:
 - 显示下一个计时器的剩余时间。
 - 仅在计时器变化时更新（节省资源）。
 
-**闹钟时间和设备时间**
+**闹钟时间与设备时间**
 
 ```yml
 text_sensor:
@@ -497,7 +490,7 @@ interval:
           }
 ```
 
-- 定时间隔会在后台反复运行代码。
+- interval 会在后台反复运行代码。
 - 50ms：每秒运行 20 次代码。
 - 根据系统状态或所选效果控制 LED 动画。
 
@@ -1327,7 +1320,7 @@ script:
 | 语音助手正在聆听       | 明亮紫色光束          |
 | 语音助手正在思考       | 紫色呼吸              |
 | 语音助手正在回复       | 紫色彗星              |
-| 语音助手出错           | 红色呼吸              |
+| 语音助手错误           | 红色呼吸              |
 | 语音助手空闲           | LED 关闭              |
 | 计时器响铃             | 紫色快速呼吸          |
 | 音量变化               | 临时显示              |
@@ -1336,14 +1329,14 @@ script:
 
 1. **触发一个效果**
 
-   - 当发生某些事情时（例如启动失败、语音助手正在聆听、计时器响铃），会运行一个脚本。
+   - 当某些事情发生时（例如启动失败、语音助手正在聆听、计时器响铃），会运行一个脚本。
    - 该脚本调用**中央 LED 控制器**（`led_set_effect`），并告诉它：
 
      - **运行哪种效果**（例如呼吸、彩虹、彗星）
      - **什么颜色**（R、G、B 值）
      - **多快**（速度）。
 
-   如果启动失败 → 调用 `led_set_effect`，effect = *breathe*，color = 红色。
+   如果启动失败 → 调用 `led_set_effect`，effect = *breathe*，color = red。
 
 2. **中央控制器（interval 循环）**
 
@@ -1352,7 +1345,7 @@ script:
 
      - 如果 effect = *breathe* → 运行 `update_breathe_effect`。
      - 如果 effect = *rainbow* → 运行 `update_rainbow_effect`。
-     - 以此类推，用于 twinkle、comet、timer tick、LED beam 等。
+     - 以此类推，用于闪烁、彗星、计时器跳动、LED 光束等。
 
 这个循环就像一个**调度器**：它决定*下一步运行哪个动画脚本*。
 
@@ -1390,7 +1383,7 @@ interval:
 
 3. **效果更新脚本**
 
-   - 每个效果都有自己的脚本，用于逐帧计算 LED 颜色。
+   - 每种效果都有自己的脚本，用于逐帧计算 LED 颜色。
    - 示例：**呼吸效果**
 
      - 使用正弦波让亮度平滑地渐亮和渐暗。
@@ -1465,7 +1458,7 @@ i2s_audio:
 **麦克风**
 
 - 从 I²S 麦克风阵列 / 编解码器采集音频。
-- GPIO43：麦克风音频数据进入的引脚。
+- GPIO43：麦克风音频数据输入的引脚。
 - 采样率 48 kHz、32 位：高质量录音（立体声，2 通道）。
 - adc_type: external：使用外部编解码器（而不是 ESP32 内置 ADC）。
 - i2s_mode: secondary：ESP32 跟随编解码器时钟（从模式）。
@@ -1636,7 +1629,7 @@ micro_wake_word:
 
 **检测到时（如果麦克风未静音）**
 
-- 如果计时器、播报或语音助手处于活动状态，则停止它们。
+- 如果计时器、播报或语音助手处于活动状态，则将其停止。
 - 播放唤醒音（如果已启用）。
 - 启动语音助手以接收指令。
 
@@ -1659,7 +1652,7 @@ voice_assistant:
 控制你的语音助手（VA）的行为和交互。
 
 - **麦克风和媒体**：使用 i2s_mics 和外部媒体播放器。
-- **唤醒词**：与 mww 关联，但不要求唤醒词（use_wake_word: false）。
+- **唤醒词**：关联到 mww，但不要求唤醒词（use_wake_word: false）。
 - **音频设置**：噪声抑制关闭，自动增益 0 dB，音量正常。
 
 #### 事件 / 会发生什么
@@ -1668,8 +1661,8 @@ voice_assistant:
 - **on_client_disconnected**：停止 VA，重置 LED。
 - **on_error：在 LED 上显示错误状态**；如果云端认证失败则播放本地声音。
 - **on_start**：当 VA 启动时降低媒体音量（ducking）。
-- **on_listening / on_stt_vad_start / on_stt_vad_end**：在监听和思考期间更新 VA 阶段和 LED。
-- **on_intent_progress / on_tts_start / on_tts_end**：处理说话，更新 LED，可触发停止词脚本。
+- **on_listening / on_stt_vad_start / on_stt_vad_end**：在监听和思考过程中更新 VA 阶段和 LED。
+- **on_intent_progress / on_tts_start / on_tts_end**：处理说话过程，更新 LED，可触发停止词脚本。
 - **on_stt_end**：发送识别文本事件。
 - **on_end**：停止 VA，重置 LED，结束 ducking。
 

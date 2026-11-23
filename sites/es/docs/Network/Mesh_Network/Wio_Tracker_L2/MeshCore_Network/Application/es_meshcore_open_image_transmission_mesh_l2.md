@@ -17,7 +17,7 @@ last_update:
   date: 9/19/2026
   author: Michelle Huang
 createdAt: 2026-09-19T00:00:00.000Z
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/es/meshcore_ai_image_transmission_l2/
 ---
 
@@ -32,14 +32,14 @@ import TabItem from '@theme/TabItem';
 
 </div>
 
-[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión de imágenes tradicional es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes con tasa de bits ultra baja** sobre MeshCore combinando:
+[MeshCore](https://meshcore.io/) está diseñado para comunicación LoRa mesh de bajo ancho de banda. La transmisión tradicional de imágenes es difícil porque las fotos normales suelen requerir cientos de kilobytes o más de datos. [MeshCore Open](https://meshcoreopen.org/) habilita la **transmisión de imágenes con tasa de bits ultra baja** sobre MeshCore combinando:
 
 - App MeshCore Open
 - Compresión de imágenes basada en IA
 - Paquetes `GRP_DATA` de MeshCore
 
 
-Esta función de transmisión de imágenes es adecuada para usuarios que necesitan compartir información visual en lugares sin Internet confiable o redes celulares.
+Esta función de transmisión de imágenes es adecuada para usuarios que necesitan compartir información visual en lugares sin Internet confiable ni redes celulares.
 
 - **Exploradores al aire libre**: Senderistas, escaladores y equipos de expedición pueden compartir el estado de los senderos, enviar imágenes de paisajes remotos y proporcionar información visual cuando el texto no es suficiente.
 - **Equipos de respuesta a emergencias y desastres**: El equipo puede compartir las condiciones en el terreno, proporcionar actualizaciones visuales rápidas y mejorar la conciencia del equipo mediante imágenes.
@@ -89,7 +89,7 @@ Habilita la transmisión de imágenes y descarga los archivos del modelo de ML e
 
 ### Transmisión de imágenes
 
-Elige una imagen desde tu teléfono. 
+Elige una imagen de tu teléfono. 
 
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshOpen_PhotoSelection.png" style={{width:300, height:'auto'}}/>
@@ -104,9 +104,31 @@ Cuando el nodo receptor recibe los datos comprimidos, el decodificador realiza e
 
 ## Comprender las imágenes reconstruidas por IA
 
-La imagen de salida no es una copia perfecta píxel a píxel de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y uso compartido de información visual. No es adecuada para recopilación de pruebas, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran reproducción exacta de la imagen.
+La imagen de salida no es una copia perfecta píxel a píxel de la imagen original. El decodificador puede generar detalles adicionales que no fueron transmitidos. Por lo tanto, esta función es adecuada para conocimiento de la escena, comunicación al aire libre, monitoreo remoto y uso compartido de información visual. No es adecuada para recopilación de pruebas, verificación de identidad, análisis científico de imágenes ni aplicaciones que requieran una reproducción exacta de la imagen.
 
 ## Recursos
 
 - [Documentación de MeshCore Open](https://meshcoreopen.org/docs/getting-started/)
 - [Códec de imágenes de tasa de bits ultra baja AEIC-SE](https://huggingface.co/zjs81/aeic-se-onnx)
+
+## Soporte técnico y debate sobre el producto
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank">
+    <img 
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg" 
+      border="0" 
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} 
+    />
+  </a>
+</p>
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -1,5 +1,6 @@
 ---
 description: 示例演示如何停用内置媒体管理器并使用OpenCV和sounddevice直接访问摄像头和麦克风，以实现自定义管道。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 自定义媒体管理器
 slug: /reachymini_examples_custom_media_manager
 keywords:

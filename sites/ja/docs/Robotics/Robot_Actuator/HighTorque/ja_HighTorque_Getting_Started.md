@@ -1,5 +1,5 @@
 ---
-description: HighTorque モーター入門ガイド
+description: "HighTorque ロボットアクチュエータを始める方法：ハードウェアのセットアップ、配線、CAN 接続、最初の動作コマンド。"
 title: HighTorque ソフトウェア
 keywords:
   - アクチュエータ

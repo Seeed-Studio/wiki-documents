@@ -4,7 +4,7 @@ title: XIAO 1.47'' IPS Display (ESP32-S3) 入门指南
 keywords:
   - XIAO
   - ESP32-S3
-  - IPS 显示屏
+  - IPS Display
   - LCD
 image: https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/logo_esp32s3.webp
 slug: /getting_started_1.47_inch_touch_display_esp32s3
@@ -13,10 +13,10 @@ sidebar_label: 入门指南
 sidebar_position: 1
 type: gettingstarted
 last_update:
-  date: 09/07/2026
+  date: 11/04/2026
   author: FaiyuetCik
 createdAt: '2026-08-11'
-updatedAt: '2026-09-09'
+updatedAt: '2026-09-08'
 url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_esp32s3/
 ---
 
@@ -38,7 +38,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_esp
 
 1.47'' IPS Display 是一款为 XIAO 系列设计的扩展板，由 XIAO ESP32-S3 Plus 提供算力。它配备 172×320 彩色 LCD 电容触摸屏、板载 PDM 麦克风、6 轴 IMU（LSM6DS3）、MicroSD 卡槽以及电池电压测量功能——所有这些都集成在一个紧凑的外形中。
 
-这种组合使其成为便携式 HMI 应用、IoT 仪表盘、可穿戴设备和交互式原型开发的理想平台。借助 ESP32-S3 的双核处理器、Wi-Fi 和 Bluetooth 能力，它可以将仪表盘扩展为一个无线连接的枢纽。
+这种组合使其成为便携式 HMI 应用、IoT 仪表盘、可穿戴设备和交互式原型开发的理想平台。借助 ESP32-S3 的双核处理器、Wi-Fi 和 Bluetooth 能力，它可以将仪表盘扩展为一个无线连接的中枢。
 
 <div class="table-center">
   <table align="center">
@@ -58,7 +58,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_esp
     <tr><td>MicroSD 卡槽</td><td>有</td></tr>
     <tr><td>Grove I2C 接口</td><td>无</td></tr>
     <tr><td>用户按键</td><td>2</td></tr>
-    <tr><td>电池连接器</td><td>2 针 JST，3.7 V 锂电池</td></tr>
+    <tr><td>电池连接器</td><td>2 针 JST（2.0 mm 间距），3.7 V 锂电池</td></tr>
     <tr><td>电池监测</td><td>通过 D16 ADC 进行电池电压监测；可根据测得电压估算电池电量。不支持电池状态检测。</td></tr>
     <tr><td>扩展接口</td><td>1x I2C 接口，1x I2S 接口，1x JTAG 接口，2x 用户按键接口</td></tr>
     <tr><td>板卡尺寸</td><td>26.4 × 51.4 × 12.6 mm</td></tr>
@@ -67,7 +67,7 @@ url: https://wiki.seeedstudio.com/cn/getting_started_1.47_inch_touch_display_esp
 </div>
 
 :::note
-ESP32-S3 Plus 使用 D16 进行电压测量。电压示例不会显示电池百分比，也没有将充电状态信号连接到任何 ESP32-S3 GPIO。
+ESP32-S3 Plus 使用 D16 进行电压测量。电压示例程序不会显示电池百分比，也没有将充电状态信号连接到任何 ESP32-S3 GPIO。
 :::
 
 ## 硬件概览
@@ -107,9 +107,9 @@ ESP32-S3 Plus 使用 D16 进行电压测量。电压示例不会显示电池百�
 </div>
 
 
-## 入门
+## 入门指南
 
-本指南会向显示板上传一个最小的 **“Hello, XIAO”** 示例：屏幕点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **“Hello,”** 和 **“XIAO”**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
+本指南会向显示板上传一个最小的 **“Hello, XIAO”** 示例：屏幕会点亮背光、填充为黑色背景，并以两行居中的大号绿色文字打印 **“Hello,”** 和 **“XIAO”**。这是在深入各个外设示例之前，最快确认屏幕和开发环境是否正常工作的方式。
 
 ### 软件准备
 
@@ -121,7 +121,7 @@ ESP32-S3 Plus 使用 D16 进行电压测量。电压示例不会显示电池百�
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong></a>
 </div><br />
 
-- **Espressif 提供的 esp32 开发板包 (3.3.11)** —— 在 **File > Preferences > Additional Boards Manager URLs** 中添加以下 URL：
+- **Espressif 提供的 esp32 开发板包 (3.3.11)** — 在 **File > Preferences > Additional Boards Manager URLs** 中添加以下 URL：
 
 ```
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
@@ -129,7 +129,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 然后进入 **Tools > Board > Boards Manager**，搜索 **esp32** 并安装 **3.3.11** 版本。
 
-- **Seeed_GFX2（手动安装）** —— 此库在 Library Manager 中不可用，必须手动安装：
+- **Seeed_GFX2（手动安装）** — 此库在 Library Manager 中不可用，必须手动安装：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX2/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noopener noreferrer">
@@ -145,8 +145,8 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 **步骤 3.** 重启 Arduino IDE，使新库被检测到。
 
 :::tip
-- **Seeed_GFX2** 是 Seeed Studio 基于分层 `Board` + `Panel Config` 架构构建的图形库。每个示例只需一次 `display.begin<Board_..., Config_...>()` 调用即可初始化显示屏——**Board** 模板负责引脚映射（CS/DC/SCK/MOSI/RST/BL），而 **Panel Config** 预设了 172×320 分辨率、颜色顺序（BGR）和方向。无需 `driver.h` 或手动引脚配置。
-- 在这块板子上，示例程序使用 `Board_XIAO_1inch47_Touch_Display<13, 12>`（RST=13，BL=12）以及 `Config_Seeed_1inch47_Touch_JD9853A`。
+- **Seeed_GFX2** 是 Seeed Studio 基于分层 `Board` + `Panel Config` 架构构建的图形库。每个示例都通过一次 `display.begin<Board_..., Config_...>()` 调用来初始化显示屏——**Board** 模板负责引脚映射（CS/DC/SCK/MOSI/RST/BL），而 **Panel Config** 预设了 172×320 分辨率、颜色顺序（BGR）和方向。无需 `driver.h` 或手动引脚配置。
+- 在这块板子上，示例程序使用 `Board_XIAO_1inch47_Touch_Display<13, 12>`（RST=13，BL=12）和 `Config_Seeed_1inch47_Touch_JD9853A`。
 :::
 
 ### 下载代码
@@ -170,11 +170,11 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 **步骤 3.** 在 **Tools > Port** 中选择正确的 **端口（Port）**。
 
-**步骤 4.** 点击 **Upload** 按钮（→）。示例程序会被编译并上传到开发板。
+**步骤 4.** 点击 **Upload** 按钮（→）。示例程序将被编译并上传到开发板。
 
 ### 预期效果
 
-上传完成后，屏幕会点亮为黑色背景，并在中央显示两行大的绿色文字——第一行是 **"Hello,"**，第二行是 **"XIAO"**。问候语会保持在屏幕上，不会重复重绘。
+上传完成后，屏幕会点亮为黑色背景，并显示两行居中的大号绿色文字——第一行是 **"Hello,"**，第二行是 **"XIAO"**。问候语会保持在屏幕上，不会重复重绘。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Display_Gadgets/imgs/147_ESP32S3Plus_display_hello.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -190,9 +190,9 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
     <tr><td>屏幕</td><td>[GraphicTest](/cn/function_1.47_inch_touch_display_esp32s3#screen-display--graphictest) — 十种图形基本元素及其耗时基准测试</td></tr>
     <tr><td>触摸</td><td>[Touch Circle](/cn/function_1.47_inch_touch_display_esp32s3#touch--touch-circle) — 轻触绘制持久圆圈；点击 CLEAR 清除它们</td></tr>
     <tr><td>SD 卡</td><td>[BMP Reader](/cn/function_1.47_inch_touch_display_esp32s3#sd-card--bmp-reader) — 从 MicroSD 卡显示一张 BMP 图片</td></tr>
-    <tr><td>麦克风和扬声器</td><td>[Volume Bar + SD Recorder](/cn/function_1.47_inch_touch_display_esp32s3#microphone--speaker) — 实时 PDM 电平条和录音到 SD 卡</td></tr>
+    <tr><td>麦克风和扬声器</td><td>[Volume Bar + SD Recorder](/cn/function_1.47_inch_touch_display_esp32s3#microphone--speaker) — 实时 PDM 电平指示和录音到 SD 卡</td></tr>
     <tr><td>IMU</td><td>[Electronic Quicksand + Raise to Wake](/cn/function_1.47_inch_touch_display_esp32s3#imu) — 六轴运动特效和抬手唤醒</td></tr>
-    <tr><td>按键</td><td>[User Button](/cn/function_1.47_inch_touch_display_esp32s3#user-button) — 读取按键并通过中断进行去抖</td></tr>
+    <tr><td>按键</td><td>[User Button](/cn/function_1.47_inch_touch_display_esp32s3#user-button) — 读取按键并使用中断进行去抖</td></tr>
     <tr><td>电池</td><td>[Battery Voltage Detection](/cn/function_1.47_inch_touch_display_esp32s3#battery-voltage-detection) — 测量分压电压</td></tr>
   </table>
 </div>

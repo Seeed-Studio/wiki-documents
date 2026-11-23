@@ -1,5 +1,6 @@
 ---
 description: 专家指南，使用rpiboot和bmaptool在Linux、macOS和Windows上为Reachy Mini的CM4重新刷写ReachyMiniOS镜像。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 重新刷写Raspberry Pi OS镜像
 slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:

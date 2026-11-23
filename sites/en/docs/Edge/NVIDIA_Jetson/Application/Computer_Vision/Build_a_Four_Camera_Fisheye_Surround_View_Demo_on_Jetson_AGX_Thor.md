@@ -127,7 +127,7 @@ Connect four Sensing GMSL2 fisheye cameras to **one Mini-Fakra GMSL port** on **
 5. Mount the cameras around the chassis so they face **front, back, left, and right**.
 6. Optionally connect an HDMI display if you want to watch the live BEV window on the board.
 
-For GMSL bring-up on J601, see [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/).
+For GMSL bring-up on J601, see [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/hardware_and_interface_usage/).
 
 <div align="center">
   <img width={900}
@@ -314,8 +314,8 @@ The result is still a **ground-plane approximation**. It is not a 6-DoF grasp po
 ## Resources
 
 - [Demo video](https://www.youtube.com/watch?v=o0NTeeLV4Vk)
-- [Getting Started with reComputer Robotics J601](https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/)
-- [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j601_interfaces_usage/)
+- [Getting Started with reComputer Robotics J601](https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/getting_started/)
+- [Robotics J601 Hardware Interfaces Usage](https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/hardware_and_interface_usage/)
 - [GitHub](https://github.com/xbs0325/j601-surround-demo)
 
 ## Tech Support & Product Discussion

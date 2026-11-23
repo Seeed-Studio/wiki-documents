@@ -22,90 +22,137 @@ url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import '/src/css/soarm101-pinocchio-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # Getting Started with SO-ARM100 and SO-ARM101 Robotic Arms in LeRobot
 
-<div className="rebot-page">
-
-<section className="doc-hero">
-  <div>
-    <span className="eyebrow">SO-ARM10x × LeRobot</span>
-    <h2>From assembly and calibration to dataset collection, training, and real-robot deployment</h2>
-    <p>
-      This wiki walks you through the complete SO-ARM100 / SO-ARM101 workflow in LeRobot:
-      hardware setup, servo configuration, arm calibration, teleoperation, camera integration,
-      dataset recording, visualization, replay, policy training, evaluation, and deployment tips.
-    </p>
-    <div className="hero-actions">
-      <a href="#quick-path">View learning path</a>
-      <a href="#install-lerobot">Install LeRobot</a>
-      <a href="#record-dataset">Record a dataset</a>
-    </div>
-  </div>
-  <div className="hero-card">
-    <strong>Recommended reading path</strong>
-    <span>New users: start with specifications, power rules, and servo setup.</span>
-    <span>Pre-assembled arm users: jump to full-arm calibration and teleoperation.</span>
-    <span>Existing LeRobot users: jump directly to cameras, dataset recording, training, or FAQ.</span>
-  </div>
-</section>
-
-<div className="safety-alert">
-  <div className="safety-alert-icon">⚠️</div>
-  <div className="safety-alert-content">
-    <strong>Safety warning: clear the robotic arm workspace before running motion programs</strong>
-    <p>
-      Before running any program that can move the robotic arm, clear valuable items, fragile objects,
-      tools, cables, and unrelated objects within 1 meter of the workspace. During debugging and operation,
-      keep people away from the arm’s motion range.
-    </p>
-    <ul>
-      <li>Do not touch joints, motors, links, the gripper, or end tools after the arm is powered on.</li>
-      <li>Before servo setup, calibration, teleoperation, dataset recording, replay, or policy evaluation, make sure the arm is firmly fixed.</li>
-      <li>Keep at least 1 meter of safety distance and make sure nearby people understand that the arm may move suddenly.</li>
-      <li>If abnormal motion, noise, shaking, loose cables, poor power contact, or communication loss occurs, stop the program immediately and power off before inspection.</li>
-      <li>Power off before plugging or unplugging servo cables, USB cables, power connectors, or motor control board cables.</li>
+<div className="sensecraft-banner soarm-sensecraft">
+  <div className="sensecraft-banner__copy">
+    <span className="sensecraft-banner__badge">⚡ No-code · No environment setup</span>
+    <p className="sensecraft-banner__title">Skip the setup — run the reBot Arm and LeRobot from one app</p>
+    <p className="sensecraft-banner__lead">SenseCraft Robotics is Seeed's no-code platform for the SO-ARM101, reBot Arm 102 + B601-RS and B601-DM. Connect the arms, calibrate, collect demonstrations, train and run inference from a guided interface — no Python environment, no terminal.</p>
+    <ul className="sensecraft-banner__points">
+      <li>✅ 6-step guided workflow</li>
+      <li>✅ Cloud training — no local GPU</li>
+      <li>✅ Windows / macOS client</li>
+      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
     </ul>
+  </div>
+  <div className="sensecraft-banner__actions">
+    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en/download?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Go to SenseCraft Robotics ↗</a>
+    <a className="sensecraft-banner__link" href="/sensecraft_robotics/">Software guide</a>
   </div>
 </div>
 
-{/* Markdown headings are intentionally kept outside visual cards so Docusaurus can generate the right-side table of contents. */}
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp" alt="SO-ARM100 and SO-ARM101 robotic arm kits" />
+</div>
 
-<nav className="doc-nav" aria-label="SO-ARM10x LeRobot quick navigation">
-  <a href="#quick-path">Learning Path</a>
-  <a href="#overview">Overview</a>
-  <a href="#specifications">Specs</a>
-  <a href="#install-lerobot">Install</a>
-  <a href="#setup-motors-assembly">Motors</a>
-  <a href="#calibration">Calibration</a>
-  <a href="#teleoperation">Teleop</a>
-  <a href="#camera">Cameras</a>
-  <a href="#record-dataset">Dataset</a>
-  <a href="#training">Training</a>
-  <a href="#faq">FAQ</a>
-</nav>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Platform-Ubuntu%20%7C%20Jetson-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Framework-LeRobot-yellow.svg" alt="Framework" />
+</p>
+
+<p align="center">
+  <strong>Low-cost open-source arm · LeRobot ecosystem · Imitation learning · Real-robot deployment</strong>
+</p>
+
+This wiki walks you through the complete SO-ARM100 / SO-ARM101 workflow in LeRobot: hardware setup, servo configuration, arm calibration, teleoperation, camera integration, dataset recording, visualization, replay, policy training, evaluation, and deployment tips.
+
+<GitHubStarButton owner="Seeed-Projects" repo="lerobot" />
+
+:::caution Safety warning — clear the workspace before running motion programs
+Before running any program that can move the robotic arm, clear valuable items, fragile objects, tools, cables, and unrelated objects within 1 meter of the workspace. During debugging and operation, keep people away from the arm’s motion range.
+
+- Do not touch joints, motors, links, the gripper, or end tools after the arm is powered on.
+- Before servo setup, calibration, teleoperation, dataset recording, replay, or policy evaluation, make sure the arm is firmly fixed.
+- Keep at least 1 meter of safety distance and make sure nearby people understand that the arm may move suddenly.
+- If abnormal motion, noise, shaking, loose cables, poor power contact, or communication loss occurs, stop the program immediately and power off before inspection.
+- Power off before plugging or unplugging servo cables, USB cables, power connectors, or motor control board cables.
+:::
+
+<div className="rebot-page soarm-guide">
 
 ## Recommended Learning Path
 
-<section id="quick-path" className="section-card course-path-section">
-  <div className="section-title">
-    <span>Step Overview</span>
-    <h2>Follow the real debugging workflow step by step</h2>
-    <p>For a first-time SO-ARM10x setup, complete hardware preparation, environment setup, and calibration before moving to teleoperation, cameras, datasets, training, and evaluation.</p>
-  </div>
+For a first-time SO-ARM10x setup, complete hardware preparation, environment setup, and calibration before moving to teleoperation, cameras, datasets, training, and evaluation.
 
-  <div className="course-path-grid">
-    <div className="course-path-item"><span className="course-index">1</span><div className="course-path-copy"><strong>Understand the kit</strong><p>Confirm your SO-ARM100 / SO-ARM101 version, motor type, voltage, and BOM.</p></div><span className="course-tag">Prepare</span></div>
-    <div className="course-path-item"><span className="course-index">2</span><div className="course-path-copy"><strong>Install LeRobot</strong><p>Set up Miniforge, the verified Seeed LeRobot repository, ffmpeg, PyTorch, and camera dependencies.</p></div><span className="course-tag">Environment</span></div>
-    <div className="course-path-item"><span className="course-index">3</span><div className="course-path-copy"><strong>Configure motors and assemble</strong><p>Set servo IDs and baud rates, then assemble the leader and follower arms.</p></div><span className="course-tag">Hardware</span></div>
-    <div className="course-path-item"><span className="course-index">4</span><div className="course-path-copy"><strong>Calibrate and teleoperate</strong><p>Calibrate both arms and verify that the leader-to-follower control chain is stable.</p></div><span className="course-tag">Control</span></div>
-    <div className="course-path-item"><span className="course-index">5</span><div className="course-path-copy"><strong>Add cameras and record data</strong><p>Connect OpenCV, RealSense, or Orbbec cameras and record clean, repeatable episodes.</p></div><span className="course-tag">Data</span></div>
-    <div className="course-path-item"><span className="course-index">6</span><div className="course-path-copy"><strong>Train and evaluate policies</strong><p>Start with ACT, then explore SmolVLA, Pi0, Pi0.5, GR00T, PEFT, and asynchronous inference.</p></div><span className="course-tag">AI</span></div>
-  </div>
+<div className="rebot-step-flow soarm-learning-path">
+<div className="soarm-pino-step-header">
+  Your path from setup to deployment
+</div>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4><a href="#overview">Understand the kit</a></h4>
+<p className="rebot-step-label">Prepare</p>
+<p>Confirm your SO-ARM100 / SO-ARM101 version, motor type, voltage, and BOM.</p>
+</div>
 </section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4><a href="#install-lerobot">Install LeRobot</a></h4>
+<p className="rebot-step-label">Environment</p>
+<p>Set up Miniforge, the verified Seeed LeRobot repository, ffmpeg, PyTorch, and camera dependencies.</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4><a href="#setup-motors-assembly">Configure motors and assemble</a></h4>
+<p className="rebot-step-label">Hardware</p>
+<p>Set servo IDs and baud rates, then assemble the leader and follower arms.</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4><a href="#calibration">Calibrate and teleoperate</a></h4>
+<p className="rebot-step-label">Control</p>
+<p>Calibrate both arms and verify that the leader-to-follower control chain is stable.</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4><a href="#camera">Add cameras and record data</a></h4>
+<p className="rebot-step-label">Data</p>
+<p>Connect OpenCV, RealSense, or Orbbec cameras and record clean, repeatable episodes.</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4><a href="#training">Train and evaluate policies</a></h4>
+<p className="rebot-step-label">AI</p>
+<p>Start with ACT, then explore SmolVLA, Pi0, Pi0.5, GR00T, PEFT, and asynchronous inference.</p>
+</div>
+</section>
+</div>
 
 ## Overview
 
@@ -117,18 +164,8 @@ import TabItem from '@theme/TabItem';
   </div>
 
 :::tip
-This tutorial has been updated for the latest [LeRobot](https://huggingface.co/docs/lerobot/index).
+This guide follows the Seeed-verified LeRobot setup. Before using a newer version, check the [dependency requirements](https://github.com/Seeed-Projects/lerobot/blob/main/pyproject.toml).
 :::
-
-<div className="image-frame">
-  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM10x kit" />
-</div>
-
-<div className="get-one-now-panel">
-  <a className="get-one-now-button" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank" rel="noopener noreferrer">
-    Get One Now 🖱️
-  </a>
-</div>
 
 :::caution
 Seeed Studio is responsible for the hardware quality of the kit. The software tutorial follows the official LeRobot documentation as closely as possible. If you encounter unresolved software or dependency issues, check the FAQ at the end of this page and report issues to the [LeRobot GitHub repository](https://github.com/huggingface/lerobot) or the [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU).
@@ -142,76 +179,30 @@ Seeed Studio is responsible for the hardware quality of the kit. The software tu
   <div className="section-title">
     <span>3D Printing</span>
     <h2>3D Printing Guide</h2>
-    <p>Choose the right STL files and print settings before assembling a kit version of the arm.</p>
+    <p>Print settings and the STL download for the kit version of the arm.</p>
   </div>
 
-<details className="content-details">
-<summary>View 3D printing parameters</summary>
+<details className="rebot-demo-details">
+<summary>View print settings and download</summary>
 
-:::caution
-Following the official update of SO101, SO100 will no longer support it and the source files will be deleted as per the official, but the source files can still be found in our [Makerworld](https://makerworld.com/zh/models/908660). However, for users who have previously purchased SO100, the tutorials and installation methods remain compatible. The print of SO101 is fully compatible with the motor kit installation of SO100.
-:::
-
-**Step 1: Choose a printer**
-
-The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
+**Recommended print settings** (tested on common FDM printers):
 
 - Material: PLA+
-- Nozzle Diameter and Precision: 0.4mm nozzle diameter at 0.2mm layer height or 0.6mm nozzle at 0.4mm layer height.
-- Infill Density: 15%
+- Nozzle / layer height: 0.4mm nozzle at 0.2mm layer height, or 0.6mm nozzle at 0.4mm layer height
+- Infill: 15%
+- Supports: everywhere, ignoring slopes steeper than 45°; no supports in horizontal screw holes
 
-**Step 2: Set up the printer**
+**Download and print:**
 
-- Ensure that the printer is calibrated and the bed level is correctly set using the printer specific instructions.
-- Clean the print bed, making sure it is free from dust, or grease. If cleaning the bed using water, or other liquid, dry the bed.
-- If your printer recommends it, use a standard glue stick and apply a thin, even layer of glue across the print area of the bed. Avoid clumping or uneven application.
-- Load the printer filament using printer specific instructions.
-- Ensure the printer settings match the ones suggested above (most printers have multiple settings so choose the ones that most closely match).
-- Set for supports everywhere but ignore slopes greater than 45 degrees to the horizontal.
-- There should be no supports in the screw holes with horizontal axes.
+All Leader and Follower parts are packed in a single STL file, already oriented to minimize supports — just download and print:
 
-**Step 3: Print the parts**
+[Download the SO-ARM101 print file (soarm101.stl)](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/soarm101.stl)
 
-All the parts for the leader or follower are for easy 3D printing already contained in a single file, correctly orientated for z upwards to minimize supports.
-
-- For printer bed sizes of 220mmx220mm (such as the Ender), print these files:
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Ender_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Ender_Leader_SO101.stl)
-
-- For printer bed sizes of 205mm x 250mm (such as the Prusa/Up):
-  - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
-  - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
-
-**Step 4: Print the Soft Gripper and Camera Mount Bracket Insert (Optional)**
-
-If you want the robotic arm to be able to grasp soft, fragile, or irregularly shaped objects, you can print a soft gripper to replace the default rigid gripper. You can also print the camera mount bracket insert if you need to mount a camera. The print files are available in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
-
-Printing material instructions:
-
-- Two gripper fingers: print with **TPU** material
-- Other parts: print with **PLA** material
+**Optional:** print a soft gripper (TPU fingers) or the camera mount insert — files in the [soarm_soft_gripper](https://github.com/xiehuangbao888/soarm_soft_gripper.git) repository.
 
 </details>
 
 </section>
-
-<div className="sensecraft-banner">
-  <div className="sensecraft-banner__copy">
-    <span className="sensecraft-banner__badge">⚡ No-code · No environment setup</span>
-    <p className="sensecraft-banner__title">Skip the setup — run the reBot Arm and LeRobot from one app</p>
-    <p className="sensecraft-banner__lead">SenseCraft Robotics is Seeed's no-code platform for the SO-ARM101, reBot Arm 102 + B601-RS and B601-DM. Connect the arms, calibrate, collect demonstrations, train and run inference from a guided interface — no Python environment, no terminal.</p>
-    <ul className="sensecraft-banner__points">
-      <li>✅ 6-step guided workflow</li>
-      <li>✅ Cloud training — no local GPU</li>
-      <li>✅ Windows / macOS client</li>
-      <li>✅ SO-ARM101 · B601-RS · B601-DM</li>
-    </ul>
-  </div>
-  <div className="sensecraft-banner__actions">
-    <a className="sensecraft-banner__cta" href="https://sensecraft.seeed.cc/en?utm_source=rebot_wiki&utm_medium=wiki&utm_campaign=sensecraft_banner" target="_blank" rel="noopener noreferrer">Go to SenseCraft Robotics ↗</a>
-    <a className="sensecraft-banner__link" href="/sensecraft_robotics/">Software guide</a>
-  </div>
-</div>
 
 ## Initial System Environment
 
@@ -251,8 +242,12 @@ Environments such as pytorch and torchvision need to be installed based on your 
 <Tabs defaultValue="Jetson">
 
 <TabItem value="Jetson" label="Jetson">
-
-1. Install Miniforge:
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>Install Miniforge</h4>
+<p className="rebot-step-label">Step 1</p>
 
 <CodeBlock language="bash">
 {`wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
@@ -262,19 +257,37 @@ chmod +x Miniforge3-Linux-aarch64.sh
 source ~/.bashrc`}
 </CodeBlock>
 
-2. Create and activate a fresh conda environment for lerobot
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>Create and activate the conda environment</h4>
+<p className="rebot-step-label">Step 2</p>
 
 <CodeBlock language="bash">
 {`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
-3. Clone Lerobot:
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4>Clone the LeRobot repository</h4>
+<p className="rebot-step-label">Step 3</p>
 
 <CodeBlock language="bash">
 {`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
 </CodeBlock>
 
-4. When using miniforge, install ffmpeg in your environment:
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4>Install ffmpeg</h4>
+<p className="rebot-step-label">Step 4</p>
 
 <CodeBlock language="bash">
 {`conda install ffmpeg -c conda-forge`}
@@ -295,21 +308,35 @@ If you encounter an error like this, you can use this command too.
 
 <div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="No valid stream error" />
 </div>
 
 :::
 
-5. Install LeRobot with dependencies for the feetech motors:
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4>Install LeRobot and motor dependencies</h4>
+<p className="rebot-step-label">Step 5</p>
 
 <CodeBlock language="bash">
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
 </CodeBlock>
 
-6. For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4>Install Jetson dependencies</h4>
+<p className="rebot-step-label">Step 6</p>
+
+For Jetson JetPack 6.0 and 6.1 devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
 
 <CodeBlock language="bash">
-{`conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
+{`conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson JetPack 6.0 and 6.1
 conda remove opencv   # Uninstall OpenCV
 pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
 conda install -y -c conda-forge ffmpeg
@@ -317,7 +344,13 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision`}
 </CodeBlock>
 
-7. Check Pytorch and Torchvision
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">7</span>
+<div className="rebot-step-content">
+<h4>Check PyTorch and Torchvision</h4>
+<p className="rebot-step-label">Step 7</p>
 
 Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions of Pytorch and Torchvision, you need to perform a check in Python.
 
@@ -330,11 +363,19 @@ exit()   # Exit Python`}
 
 If the printed result is `False`, the current environment is using the CPU version of PyTorch. If you need GPU-enabled PyTorch and Torchvision on Jetson, install them according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson). For environments that need GPU training or inference, the final check result should be `True`.
 
+</div>
+</section>
+</div>
+
 </TabItem>
 
 <TabItem value="X86" label="X86 Ubuntu 22.04">
-
-1. Install Miniforge:
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>Install Miniforge</h4>
+<p className="rebot-step-label">Step 1</p>
 
 <CodeBlock language="bash">
 {`wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
@@ -346,19 +387,37 @@ source ~/.bashrc
 conda init --all`}
 </CodeBlock>
 
-2. Create and activate a fresh conda environment for lerobot
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>Create and activate the conda environment</h4>
+<p className="rebot-step-label">Step 2</p>
 
 <CodeBlock language="bash">
 {`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
-3. Clone Lerobot:
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4>Clone the LeRobot repository</h4>
+<p className="rebot-step-label">Step 3</p>
 
 <CodeBlock language="bash">
 {`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
 </CodeBlock>
 
-4. When using miniforge, install ffmpeg in your environment:
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4>Install ffmpeg</h4>
+<p className="rebot-step-label">Step 4</p>
 
 <CodeBlock language="bash">
 {`conda install ffmpeg -c conda-forge`}
@@ -379,12 +438,18 @@ If you encounter an error like this, you can use this command too.
 
 <div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" alt="No valid stream error" />
 </div>
 
 :::
 
-5. Install LeRobot with dependencies for the feetech motors:
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4>Install LeRobot and motor dependencies</h4>
+<p className="rebot-step-label">Step 5</p>
 
 :::tip
 On a newly configured Ubuntu 22.04 VM, especially a minimal installation, `gcc` and other C build tools may not be installed by default. In that case, installing LeRobot with feetech dependencies can fail because the `evdev` Python package cannot be built.
@@ -403,7 +468,13 @@ After installation, rerun the LeRobot installation command.
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
 </CodeBlock>
 
-6. Check Pytorch and Torchvision
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4>Check PyTorch and Torchvision</h4>
+<p className="rebot-step-label">Step 6</p>
 
 Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions of Pytorch and Torchvision, you need to perform a check in Python.
 
@@ -428,6 +499,10 @@ The download command is as follows:
 
 :::
 
+</div>
+</section>
+</div>
+
 </TabItem>
 
 </Tabs>
@@ -443,21 +518,10 @@ The download command is as follows:
     <p>Set servo IDs and baud rates, verify wiring and power, then assemble the leader and follower arms.</p>
   </div>
 
-  <div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>Safety check before running</strong>
-      <p>
-        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
-        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
-      </p>
-    </div>
-  </div>
-
 :::tip
-If you purchased a pre-assembled robotic arm, please skip to the Calibrate section.
+Using a pre-assembled SO-ARM101? Skip motor assembly and proceed directly to the [arm calibration section](#calibration).
 :::
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary> For kit version, please follow the steps below </summary>
 
@@ -479,7 +543,7 @@ You now should plug the 5V or 12V power supply to the motor bus. 5V for the STS3
 
 <div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" alt="" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" alt="SO-ARM101 leader and follower servos labeled L1 to L6 and F1 to F6 with gear ratios" />
 </div>
 
 ***The following are the code calibration steps, please calibrate with the reference wiring servo in the picture above***
@@ -531,13 +595,13 @@ When connecting the arms, the first device plugged in will be assigned to ttyACM
 
 | **Leader Arm Joint 6 Calibration** | **Leader Arm Joint 5 Calibration** | **Leader Arm Joint 4 Calibration** | **Leader Arm Joint 3 Calibration** | **Leader Arm Joint 2 Calibration** | **Leader Arm Joint 1 Calibration** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
+| ![SO-ARM101 leader arm servo L6 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![SO-ARM101 leader arm servo L5 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![SO-ARM101 leader arm servo L4 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![SO-ARM101 leader arm servo L3 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![SO-ARM101 leader arm servo L2 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![SO-ARM101 leader arm servo L1 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
 
 **Follower servo calibration reference images**
 
 | **Follower Arm Joint 6 Calibration** | **Follower Arm Joint 5 Calibration** | **Follower Arm Joint 4 Calibration** | **Follower Arm Joint 3 Calibration** | **Follower Arm Joint 2 Calibration** | **Follower Arm Joint 1 Calibration** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
+| ![SO-ARM101 follower arm servo F6 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![SO-ARM101 follower arm servo F5 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![SO-ARM101 follower arm servo F4 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) |![SO-ARM101 follower arm servo F3 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) |![SO-ARM101 follower arm servo F2 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) |![SO-ARM101 follower arm servo F1 connected to the motor bus adapter](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
 
 :::tip
 Again, please make sure that the servo joint IDs and gear ratios strictly correspond to those of the SO-ARM101.
@@ -613,7 +677,7 @@ Do the same steps for the leader arm.
 
 | **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Step 5** | **Step 6** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L3.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L4.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L5.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L6.jpg) |
+| ![SO-ARM101 leader arm assembly step 1 showing a servo attached to the 3D-printed bracket](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L1.jpg) | ![SO-ARM101 leader arm assembly step 2 showing servo cable routing through the bracket](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L3.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L4.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L5.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L6.jpg) |
 | **Step 7** | **Step 8** | **Step 9** | **Step 10** | **Step 11** | **Step 12** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L7.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L8.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L9.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L10.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L12.jpg) |
 | **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** | **Step 18** |
@@ -650,30 +714,88 @@ Do the same steps for the leader arm.
     <p>Calibrate the follower and leader arms so their physical positions match their software state.</p>
   </div>
 
-  <div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>Safety check before running</strong>
-      <p>
-        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
-        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
-      </p>
-    </div>
-  </div>
+**Before running:** Clear valuable items and unrelated people within 1 meter of the workspace. Confirm that the arm is firmly mounted and that power and cables are connected properly.
 
-:::tip
-The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
-:::
+SO100 and SO101 code is compatible; SO100 users can use SO101 parameters and code. Calibration aligns the leader and follower position values at the same physical positions, enabling trained policies to transfer between robots of the same model.
 
 :::danger
 If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 5V. If you purchased the **SO101 Arm Kit Pro Edition**, the Leader Arm should be calibrated and operated at every step using a 5V power supply, while the Follower Arm should be calibrated and operated at every step using a 12V power supply.
 :::
 
-Next, you need to connect the power supply and data cable to your SO-10x robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one SO-10x robot to work on another.
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+<h3>Connect the arms and check ports</h3>
+
+<p className="rebot-step-label">Step 1</p>
+
+Connect the six servos via their 3-pin interfaces, connect the base servo to the driver board, and connect the arm’s power and data cables.
+
+Linux PCs and Jetson devices typically map the first and second connected USB devices to `ttyACM0` and `ttyACM1`. Check the actual leader and follower ports before running the commands.
+
+Grant access to the serial ports:
+
+<CodeBlock language="bash">
+{`sudo chmod 666 /dev/ttyACM*`}
+</CodeBlock>
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+### Calibrate the follower arm
+
+<p className="rebot-step-label">Step 2</p>
+
+Run the following command to calibrate the follower arm:
+
+<CodeBlock language="bash">
+{`lerobot-calibrate \\
+    --robot.type=so101_follower \\
+    --robot.port=/dev/ttyACM0 # <- The port of your robot
+    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name`}
+</CodeBlock>
+
+Move all joints to the middle of their ranges. After pressing Enter, move each joint through its full range of motion.
+
+Due to a LeRobot repository update, the terminal may not receive a signal from servo 5 during leader and follower calibration; this is described as normal in this guide.
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+### Calibrate the leader arm
+
+<p className="rebot-step-label">Step 3</p>
+
+Repeat the same procedure for the leader arm using the following command:
+
+<CodeBlock language="bash">
+{`lerobot-calibrate \\
+    --teleop.type=so101_leader \\
+    --teleop.port=/dev/ttyACM1 # <- The port of your robot
+    --teleop.id=my_awesome_leader_arm  # <- Give the robot a unique name`}
+</CodeBlock>
+
+If a serial connection fails, check the port mapping and permissions. See the FAQ for troubleshooting.
+
+</div>
+</section>
+
+</div>
 
 ### Recalibrate the robotic arm
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>View recalibration options</summary>
 
 If you need to re-calibrate the robotic arms, there are two options available:
@@ -693,53 +815,6 @@ Run the calibration command directly in the terminal. If the arm has been calibr
 Type `c` and press **Enter** to start recalibration. Press **Enter** directly to keep and use the existing calibration data.
 
 </details>
-
-Connect the 6 robot servos via the 3-pin interfaces and connect the chassis servo to the servo driver board. Then, run the following command or API example to calibrate the arm:
-
-:::tip
-On PC (Linux) and Jetson devices, the first USB device you plug in typically maps to `ttyACM0`, and the second maps to `ttyACM1`. Double-check which port is mapped to the leader and follower before running commands.
-:::
-
-**Manual calibration of follower arm**
-
-Please connect the interfaces of the 6 robot servos via a 3-pin cable and connect the chassis servo to the servo drive plate, then run the following command or API example to calibrate the robot arm:
-
-***Interface permissions are given first***
-
-<CodeBlock language="bash">
-{`sudo chmod 666 /dev/ttyACM*`}
-</CodeBlock>
-
-***Then calibrate the follower arm***
-
-<CodeBlock language="bash">
-{`lerobot-calibrate \\
-    --robot.type=so101_follower \\
-    --robot.port=/dev/ttyACM0 # <- The port of your robot
-    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name`}
-</CodeBlock>
-
-The video below shows how to perform the calibration. First you need to move the robot to the position where all joints are in the middle of their ranges. Then after pressing enter you have to move each joint through its full range of motion.
-
-:::tip
-Due to the update of the lerobot repository, it is normal that the terminal does not receive a signal from servo 5 when performing master-slave arm calibration. You can continue with the operation.
-:::
-
-**Manual calibration of leader arm**
-
-Do the same steps to calibrate the leader arm, run the following command or API example:
-
-<CodeBlock language="bash">
-{`lerobot-calibrate \\
-    --teleop.type=so101_leader \\
-    --teleop.port=/dev/ttyACM1 # <- The port of your robot
-    --teleop.id=my_awesome_leader_arm  # <- Give the robot a unique name`}
-</CodeBlock>
-
-:::tip
-
-If you encounter the error “Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port., Try running lerobot-find-port” while calibrating the Leader or Follower arms, you need to grant the necessary permissions by running:`sudo chmod 666 /dev/ttyACM*`
-:::
 
 <div className="video-container">
 <iframe
@@ -794,10 +869,16 @@ After the middle-position calibration, return to the `lerobot-calibrate` steps a
 
 If you encounter the above errors, you can use the Steering Gear Debugging Tool for debugging. It supports Windows, Ubuntu, and Mac.
 
-<div className="hero-actions">
-    <a href="/lerobot_steering_gear_debugging_tool">▶ Open Steering Gear Debugging Tool Tutorial</a>
+<div className="rebot-buy-button-group soarm-tool-button">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="/lerobot_steering_gear_debugging_tool">
+    <span>Open Steering Gear Debugging Tool Tutorial</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
 </div>
-
 </section>
 
 ## Teleoperation
@@ -860,7 +941,7 @@ The teleoperate command will automatically:
     <p>Add OpenCV, RealSense, or Orbbec cameras and verify image streams before recording datasets.</p>
   </div>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary> If using RealSense D435i/D405 </summary>
 
 RealSense depth cameras can provide RGB-D perception for LeRobot and are suitable for tasks such as object recognition, point cloud reconstruction, and tabletop manipulation. The recommended models here are **RealSense D405** and **RealSense D435i**.
@@ -869,7 +950,7 @@ RealSense depth cameras can provide RGB-D perception for LeRobot and are suitabl
 
 <div className="image-frame">
     <img width={420}
-    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" alt="" />
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" alt="Intel RealSense D405 close-range depth camera" />
 </div>
 
 The RealSense D405 is a short-range stereo depth camera designed for high-precision close-range tasks such as tabletop robotic manipulation, with a typical working range of **7 cm to 50 cm**.
@@ -1001,7 +1082,7 @@ Dual RealSense test:
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary> If using Orbbec Gemini2/Gemini336 cameras </summary>
 
 
@@ -1009,9 +1090,14 @@ Dual RealSense test:
     <img width={800}
     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" alt="" />
 </div>
-<div className="get-one-now-panel">
-  <a className="get-one-now-button" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer">
-    Get One Now 🖱️
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
   </a>
 </div>
 
@@ -1189,10 +1275,9 @@ For camera-related errors, see the FAQ section at the end of this page.
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary> If using a regular camera </summary>
-
 
 
 :::tip
@@ -1292,6 +1377,32 @@ You can downgrade the rerun version to resolve the issue.
 
 </details>
 
+<details className="rebot-demo-details">
+
+<summary>Camera Mount Installation and Usage</summary>
+
+**Camera Mount Installation**
+
+Fix the camera position for clean data collection. It supports free multi-angle adjustment, including top-down + wrist and top-down + side views. It works with regular USB cameras and depth cameras such as D435i, D405, and Gemini 2. Compatible with SO-ARM101 and reBot robotic arms. It can be used with the data collection experiment box, and you can reuse downloaded datasets and models out of the box.
+
+<div class="video-container">
+<iframe
+  loading="lazy" width="900" height="600" src="https://www.youtube.com/embed/2r3tvA7oJ_c" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Robot-Arm-Camera-Mount-for-LeRobot-SO-10&reBot-B601-p-7003.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+</details>
+
 </section>
 
 ## Record Dataset
@@ -1303,18 +1414,7 @@ You can downgrade the rerun version to resolve the issue.
     <p>Record local datasets or upload them to Hugging Face Hub, then keep the dataset clean and consistent.</p>
   </div>
 
-  <div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>Safety check before running</strong>
-      <p>
-        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
-        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
-      </p>
-    </div>
-  </div>
-
-- If you want to save the dataset locally, you can run it directly:
+  - If you want to save the dataset locally, you can run it directly:
 
 <CodeBlock language="bash">
 {`lerobot-record \\
@@ -1485,7 +1585,7 @@ If you upload with `--dataset.push_to_hub=false`, you can also visualize it loca
 
 <div className="image-frame">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" alt="" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" alt="LeRobot dataset viewer showing camera recordings and robot joint state and action plots" />
 </div>
 
 </section>
@@ -1499,18 +1599,7 @@ If you upload with `--dataset.push_to_hub=false`, you can also visualize it loca
     <p>Replay a recorded episode on the real arm to check action consistency.</p>
   </div>
 
-  <div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>Safety check before running</strong>
-      <p>
-        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
-        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
-      </p>
-    </div>
-  </div>
-
-:::tip
+  :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
 
@@ -1543,18 +1632,7 @@ In this command, `dataset.root` specifies the physical path to the dataset, and 
     <p>Train and evaluate policies such as ACT, SmolVLA, Pi0, Pi0.5, GR00T, PEFT, and asynchronous inference.</p>
   </div>
 
-  <div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>Safety check before running</strong>
-      <p>
-        Clear valuable items and unrelated people within 1 meter of the robotic arm workspace.
-        Make sure the arm is firmly mounted and that power and cables are connected properly before running this section.
-      </p>
-    </div>
-  </div>
-
-<details className="content-details">
+  <details className="rebot-demo-details">
 
 <summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
 
@@ -1665,7 +1743,7 @@ such as:
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary> SmolVLA </summary>
 
 [SmolVLA](https://huggingface.co/docs/lerobot/smolvla) is Hugging Face’s lightweight foundation model for robotics. Designed for easy fine-tuning on LeRobot datasets, it helps accelerate your development!
@@ -1729,7 +1807,7 @@ Depending on your evaluation setup, you can configure the duration and the numbe
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary> LIBERO </summary>
 
 [LIBERO](https://huggingface.co/docs/lerobot/libero) is a benchmark designed to study lifelong robot learning. The idea is that robots won’t just be pretrained once in a factory, they’ll need to keep learning and adapting with their human users over time. This ongoing adaptation is called lifelong learning in decision making (LLDM), and it’s a key step toward building robots that become truly personalized helpers.
@@ -1804,7 +1882,7 @@ LeRobot uses MuJoCo for simulation. You need to set the rendering backend before
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
 
 Refer to [Pi0](https://huggingface.co/docs/lerobot/pi0)
@@ -1849,7 +1927,7 @@ Refer to [Pi0](https://huggingface.co/docs/lerobot/pi0)
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
 
 Refer to [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
@@ -1895,7 +1973,7 @@ Refer to [Pi0.5](https://huggingface.co/docs/lerobot/pi05)
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
 
 Refer to the official documentation: [GR00T N1.5](https://huggingface.co/docs/lerobot/groot).
@@ -2004,7 +2082,7 @@ License: Apache 2.0 (same as the original GR00T repository).
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>(Optional) Parameter-Efficient Fine-Tuning (PEFT)</summary>
 
 PEFT (Parameter-Efficient Fine-Tuning) is a family of methods and tools that help a large pretrained model adapt to new tasks **without updating all parameters**. For pretrained LeRobot policies (e.g., SmolVLA, Pi0), you can often train only a small set of “adapter” parameters (e.g., LoRA) to reduce VRAM usage and training cost, while still achieving performance close to full fine-tuning.
@@ -2081,7 +2159,7 @@ LoRA learning rates are often ~10× higher than full fine-tuning. For example, i
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>(Optional) Multi-GPU training with Accelerate</summary>
 
 **Training steps**
@@ -2208,7 +2286,7 @@ For advanced configuration and troubleshooting, see the Accelerate documentation
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary>(Optional) Asynchronous Inference</summary>
 
@@ -2588,7 +2666,7 @@ huggingface-cli upload \${HF_USER}/act_so101_test\${CKPT} \\
     <p>Centralized troubleshooting for ports, servo IDs, ffmpeg, cameras, datasets, evaluation, and training.</p>
   </div>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Which LeRobot repository should I use?</summary>
 
 Use the repository recommended in this wiki:
@@ -2601,7 +2679,7 @@ This version has been verified with SO-ARM10x. The upstream LeRobot repository c
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`Motor 'gripper' was not found` during servo ID setup</summary>
 
 If you see the following error:
@@ -2614,7 +2692,7 @@ check whether the communication cable is connected correctly and whether the ser
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`Could not connect on port "/dev/ttyACM0"`</summary>
 
 If `/dev/ttyACM0` exists but LeRobot cannot connect to it, the serial port permissions are usually missing. Run:
@@ -2627,7 +2705,7 @@ Also double-check whether the leader and follower arms are mapped to the expecte
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`No valid stream found in input file`</summary>
 
 If you see:
@@ -2648,7 +2726,7 @@ install ffmpeg 7.1.1:
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`Present_Position` sync read failed</summary>
 
 If you see:
@@ -2661,7 +2739,7 @@ check whether the corresponding arm is powered on and whether the bus-servo data
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`Magnitude 30841 exceeds 2047` during calibration</summary>
 
 If you see:
@@ -2674,7 +2752,7 @@ power off and restart the arm, then calibrate again. If the issue persists, use 
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>How do I recalibrate after repair or part replacement?</summary>
 
 Delete the old calibration files and recalibrate:
@@ -2688,7 +2766,7 @@ Calibration information is stored as JSON files in these directories. If the har
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Keyboard shortcuts do not work during recording</summary>
 
 If the right arrow, left arrow, or ESC key does not respond during dataset recording, first check that the `$DISPLAY` environment variable is set. You can also try downgrading `pynput`:
@@ -2699,14 +2777,14 @@ If the right arrow, left arrow, or ESC key does not respond during dataset recor
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>How should I handle failed episodes during recording?</summary>
 
 If the object falls, the gripper misses, or the episode quality is poor, move the arm back to a safe rest pose and press the left arrow key to discard and re-record the episode. If the task finishes early and the robot has returned to rest, press the right arrow key to move to the next episode without waiting for the full remaining time.
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>What should I pay attention to during dataset collection?</summary>
 
 Keep camera position, camera angle, and ambient lighting stable. Avoid unstable backgrounds or pedestrians in the camera view, because large differences between the recording and deployment environment may cause the policy to fail.
@@ -2715,7 +2793,7 @@ Set `--dataset.num_episodes` high enough before starting. Do not manually stop t
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>How do I delete or modify recorded datasets?</summary>
 
 For deleting or editing recorded datasets, refer to the dataset tool tutorial:
@@ -2724,14 +2802,14 @@ For deleting or editing recorded datasets, refer to the dataset tool tutorial:
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>USB camera image data cannot be read</summary>
 
 Avoid connecting the USB camera through a USB hub. Connect it directly to the device, preferably through a USB 3.0 port, to ensure sufficient image transmission bandwidth.
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>Orbbec camera timeout or serial-number mismatch</summary>
 
 If you see a timeout while waiting for frames, unplug and reconnect the camera. If you see:
@@ -2748,7 +2826,7 @@ run the camera detection command and update `serial_number_or_name` with the act
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`File exists` during evaluation</summary>
 
 If evaluation reports that an `eval_` directory already exists, delete the existing evaluation folder first and run the program again.
@@ -2759,7 +2837,7 @@ If evaluation reports that an `eval_` directory already exists, delete the exist
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`mean is infinity` during evaluation</summary>
 
 If you see:
@@ -2772,7 +2850,7 @@ make sure the camera keys in `--robot.cameras`, such as `front` and `side`, exac
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`TypeError: stack(): argument 'tensors' must be tuple of Tensors`</summary>
 
 If you see:
@@ -2789,7 +2867,7 @@ try installing the compatible datasets version:
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>`rerun` has no attribute `scalar`</summary>
 
 If you see:
@@ -2806,7 +2884,7 @@ downgrade the rerun SDK:
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>How long does ACT training usually take?</summary>
 
 As a rough reference, training ACT on 50 episodes takes about 6 hours on a laptop RTX 3060 8GB, and about 2–3 hours on an RTX 4090 or A100. Actual time depends on dataset size, image resolution, batch size, and hardware.

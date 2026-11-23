@@ -1,5 +1,6 @@
 ---
 description: Controles avançados de mídia para o Reachy Mini Lite, incluindo configurações de câmera via OpenCV e GStreamer v4l2src, além de configuração de microfone e alto-falante.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Controles Avançados de Mídia
 slug: /reachymini_platforms_reachy_mini_lite_media_advanced_controls
 keywords:

@@ -1,6 +1,6 @@
 ---
 description: SD Card Tutorial for Wio Tracker L2 Series. Including formatting, map generating and map installation
-title: SD Card Usage
+title: Use SD Card for Map
 keywords:
   - Meshtastic
   - Wio Tracker L2

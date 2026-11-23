@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra a detecção da Direção de Chegada (DoA) usando o arranjo de microfones do Reachy Mini para olhar automaticamente na direção do locutor.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Direção de Chegada do Som
 slug: /reachymini_examples_sound_doa
 keywords:

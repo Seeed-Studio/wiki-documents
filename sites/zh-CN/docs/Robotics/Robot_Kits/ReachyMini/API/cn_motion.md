@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini 运动 API 参考，涵盖移动基础类、goto 移动和录制移动。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 运动 API
 slug: /reachymini_api_motion
 keywords:

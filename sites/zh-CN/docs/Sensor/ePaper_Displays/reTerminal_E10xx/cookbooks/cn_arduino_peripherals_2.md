@@ -294,7 +294,7 @@ CR1220 电池座位于 **PCB 背面**。不同型号的拆机步骤略有差异�
 
 ### 完整示例：RTC_PCF8563
 
-完整示例可在代码仓库中获取：[`examples/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/RTC_PCF8563/RTC_PCF8563.ino)。
+完整示例可在代码仓库中获取：[`examples/base/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/RTC_PCF8563/RTC_PCF8563.ino)。
 
 <details>
 <summary>点击展开完整的 RTC_PCF8563.ino 代码</summary>
@@ -821,7 +821,7 @@ ESP32-S3 支持多种电源状态。对于电池供电的电子纸应用，最�
 
 ### 完整示例：LowPower_DeepSleep
 
-完整示例可在仓库中获取：[`examples/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/LowPower_DeepSleep/LowPower_DeepSleep.ino)。
+完整示例可在仓库中获取：[`examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/LowPower_DeepSleep/LowPower_DeepSleep.ino)。
 
 <details>
 <summary>点击展开完整的 LowPower_DeepSleep.ino 代码</summary>
@@ -1018,7 +1018,7 @@ reTerminal E1001 / E1002 / E1003 集成了板载 **PDM（脉冲密度调制）**
 
 ### 完整示例：MicRecordToSD
 
-完整示例可在代码仓库中获取：[`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino)。
+完整示例可在代码仓库中获取：[`examples/base/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/base/MicRecordToSD/MicRecordToSD.ino)。
 
 <details>
 <summary>点击展开完整的 MicRecordToSD.ino 代码</summary>
@@ -1540,7 +1540,7 @@ reTerminal E1003 配备了通过 I2C 连接的 **GT911** 电容触摸控制器�
 
 ### 完整示例：E1003_TouchDraw
 
-完整示例可在代码仓库中获取：[`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw)。
+完整示例可在代码仓库中获取：[`examples/base/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/base/E1003_TouchDraw)。
 
 <details>
 <summary>点击展开完整的 E1003_TouchDraw.ino 代码</summary>

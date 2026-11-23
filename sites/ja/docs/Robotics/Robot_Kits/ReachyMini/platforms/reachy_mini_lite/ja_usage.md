@@ -1,5 +1,6 @@
 ---
 description: デスクトップアプリケーションのダッシュボード、クイックアクションのデモ、アプリのインストール、および Python SDK クイックスタートを網羅した Reachy Mini Lite の使用ガイドです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Lite の使い方
 slug: /reachymini_platforms_reachy_mini_lite_usage
 keywords:

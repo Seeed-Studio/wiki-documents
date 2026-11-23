@@ -1,5 +1,6 @@
 ---
 description: Guía de desarrollo profesional del robot gigante bípedo con ruedas StackForce, que incluye funciones avanzadas, tutoriales de desarrollo en profundidad, documentación de la API y casos de aplicación práctica
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/LargeWheelLeg/en_version/picture/M_01.png
 title: Inicio rápido del robot gigante con ruedas
 keywords:
   - StackForce

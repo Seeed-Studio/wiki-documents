@@ -1,5 +1,6 @@
 ---
 description: 使用Reachy Mini Control应用、Web Bluetooth或nRF Connect通过蓝牙重置Wi-Fi热点或守护进程的指南。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 通过蓝牙重置
 slug: /reachymini_platforms_reachy_mini_reset
 keywords:

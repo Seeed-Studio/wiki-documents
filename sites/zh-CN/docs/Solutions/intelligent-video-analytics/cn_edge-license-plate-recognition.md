@@ -1,6 +1,7 @@
 ---
 description: 用现有出入口摄像头加一台边缘主机做车牌识别与白名单自动抬杆：需要哪些设备、怎么部署、有哪些接口，以及 Jetson 与 RK 主机上的实测数据
 title: 边缘车牌识别方案：选型、部署与实测数据
+sidebar_label: '边缘车牌识别'
 keywords:
   - 车牌识别
   - 停车场车牌识别
@@ -21,7 +22,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-license-plate-recognition/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -102,8 +103,8 @@ generated_from: sensecraft-solutions@76f6c0f
 
 | | 识别主机 | 实测（1080p 输入） | 什么时候选它 |
 |---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 系列（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin Nano，JetPack 6.2 | 每秒 30 帧 | 默认选择 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 系列（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX，JetPack 6.2 | 与 J30 同一应用包 | 这台主机还要跑别的模型 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin Nano，JetPack 6.2 | 每秒 30 帧 | 默认选择 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Jetson Orin NX，JetPack 6.2 | 与 J30 同一应用包 | 这台主机还要跑别的模型 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>板载 NPU | 部署与输出已实测 | 现场统一用瑞芯微平台 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 系列](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>板载 NPU | 每秒 29–30 帧 | 成本优先 |
 

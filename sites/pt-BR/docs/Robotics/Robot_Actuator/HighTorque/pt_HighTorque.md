@@ -1,5 +1,5 @@
 ---
-description: Este documento apresentará como começar rapidamente a usar os motores da série HighTorque.
+description: "Primeiros passos com os atuadores HighTorque para braços robóticos: desembalagem, fiação, requisitos de alimentação, primeira ligação e testes rápidos."
 title: HighTorque SDK
 keywords:
   - Módulo de Junta

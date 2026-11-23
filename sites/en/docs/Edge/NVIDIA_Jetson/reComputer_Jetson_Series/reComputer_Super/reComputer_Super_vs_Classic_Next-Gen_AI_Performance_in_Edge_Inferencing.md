@@ -1,5 +1,5 @@
 ---
-description: This article highlights the superior AI performance of the reComputer Super compared to the reComputer Classic, demonstrating up to a 1.7x boost in AI compute power with the NVIDIA Jetson Orin NX 16GB. Through practical benchmarks in AI text generation using the DeepSeek-R1:7B model with Ollama, and AI video processing using the YOLOv11 object detection model, the results show that the reComputer Super delivers significantly faster inference speeds and higher GPU frequencies. Notably, it processes approximately 2.37 times more images per second than the Classic. The article also explains the importance of evaluating performance based on terminal-reported FPS rather than on-screen FPS, which can be limited by display and system factors.
+description: "Benchmark reComputer Super against Classic on Orin NX: llama.cpp token rates, video decode and TensorRT inference at matched power modes."
 title: reComputer Super vs Classic Next-Gen AI Performance in Edge Inferencing
 tags:
   - reComputer Super
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/recomputer_jetson_super_performance/
 
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super.png"/>  
+  <img alt="reComputer board with the fan fitted next to the assembled unit used in this comparison" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super.png"/>  
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -37,7 +37,7 @@ The reComputer Super Series supercharges the reComputer Classic, delivering up t
 ## AI Text Generation
 
 <div style={{ textAlign: "justify" }}>
-In this section, we use Ollama to load the deepseek-r1:7b model and compare the inference speed of the model in different devices. It is evident that the reComputer Super has a improvement in inference speed and GPU frequency to the reComputer Classic.
+In this section, we use Ollama to load the deepseek-r1:7b model and compare the inference speed of the model in different devices. The reComputer Super shows an improvement in inference speed and GPU clock over the reComputer Classic.
 </div>
 
 :::info
@@ -97,6 +97,13 @@ The Average FPS shown in the terminal reflects the pure inference speed of the m
 - https://www.seeedstudio.com/edge-ai/generative-ai
 - https://github.com/ultralytics/ultralytics
 - https://github.com/wang-xinyu/tensorrtx?tab=readme-ov-file
+
+## Related Resources
+
+- [reComputer Super hardware and interfaces usage](/recomputer_jetson_super_hardware_interfaces_usage/)
+- [Install PyTorch for reComputer Jetson](/install_torch_on_recomputer/)
+- [Speed up llama.cpp on Jetson with MTP](/jetson/accelerate_llm_inference_mtp/)
+- [reComputer Super product page](https://www.seeedstudio.com/reComputer-Super-p-6617.html)
 
 ## Tech Support & Product Discussion
 

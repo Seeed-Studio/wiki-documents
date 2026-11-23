@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini の座標系、安全リミット、モーターモード、ソフトウェアアーキテクチャを網羅したコアコンセプトとアーキテクチャのドキュメントです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: コアコンセプト & アーキテクチャ
 slug: /reachymini_sdk_core-concept
 keywords:

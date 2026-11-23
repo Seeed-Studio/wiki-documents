@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini无线版设置指南，包括组装说明、首次启动、Wi-Fi配置、系统更新和SSH访问。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini无线版设置指南
 slug: /reachymini_platforms_reachy_mini_get_started
 keywords:

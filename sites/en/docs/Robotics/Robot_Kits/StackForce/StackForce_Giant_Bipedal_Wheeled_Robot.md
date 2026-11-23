@@ -1,5 +1,6 @@
 ---
 description: StackForce Giant Bipedal Wheeled Robot Professional Development Guide, including advanced features, in-depth development tutorials, API documentation, and practical application cases
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/LargeWheelLeg/en_version/picture/M_01.png
 title: Giant Wheeled Robot Quick Start
 keywords:
   - StackForce

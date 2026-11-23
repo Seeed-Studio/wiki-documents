@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini is an open-source, expressive robot made for hackers and AI builders. Features app store, Python SDK, and multiple platform options.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini
 slug: /reachymini_intro
 keywords:

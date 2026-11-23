@@ -113,6 +113,13 @@ url: https://wiki.seeedstudio.com/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOW5tcK2vPTagiGOFw9oMcAYITLgRqj_dXQJMchlUeGOk?e=8ar0lu" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+
+    <tr>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC6VvNqTyoXTb4M2m7wsjmvATyd9KFbfTsTKZTJk8myBhY?e=DvQOVl" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -485,6 +492,164 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 ```
 
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+ここでは **NVIDIA L4T 39.2.1** を使用して、Jetson AGX Orin 32GB H01 Kit に **JetPack 7.2.1** をインストールします。
+
+### ハードウェア要件
+
+- インターネットに接続された Ubuntu 20.04 または Ubuntu 22.04 ホスト PC
+- Type-C データケーブル（データ転送に対応している必要があります）
+- Jetson AGX Orin 32GB H01 Kit（Orin モジュール搭載の A605 キャリアボード）
+- 電源アダプタ
+- NVMe SSD
+- フラッシュに使用するホスト PC には `wget`、`tar`、`sudo` がインストールされている必要があります
+
+### フラッシュ用ファイルの準備
+
+**ステップ 1：** Ubuntu ホスト PC に作業ディレクトリを作成します。
+
+```bash
+mkdir -p ~/a605_flash
+cd ~/a605_flash
+```
+
+**ステップ 2：** 次の 2 つのファイルをダウンロードし、同じディレクトリに配置します（例：[このフォルダ](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC6VvNqTyoXTb4M2m7wsjmvATyd9KFbfTsTKZTJk8myBhY?e=DvQOVl) から）：
+
+- `605_jp721.sh`
+- `605_jp721.tbz2`
+
+:::note
+`605_jp721.tbz2` を手動で展開 **しない** でください。スクリプトがドライバパッケージを自動的に展開します。
+:::
+
+**ステップ 3：** スクリプトを実行します：
+
+```bash
+./605_jp721.sh
+```
+
+:::caution
+`sudo ./605_jp721.sh` や `sudo bash 605_jp721.sh` を実行 **しない** でください。管理者権限が必要な場合は、スクリプトが sudo パスワードを要求します。スクリプト全体を `sudo` で実行すると、生成されたディレクトリが `root:root` になり、後続の手順で権限の問題が発生します。
+:::
+
+**ステップ 4：** スクリプトは、公式の JetPack 7.2.1 パッケージを自動的にダウンロードし、rootfs を展開してから、ドライバパッケージを展開して A605 ドライバファイルを上書きします。ダウンロード時間はネットワーク速度によって異なります。処理を中断しないでください。
+
+**ステップ 5：** 次のメッセージが表示されたら、フラッシュディレクトリの準備は完了です：
+
+```
+605_jp721 package applied successfully.
+```
+
+組み立てられたフラッシュディレクトリは次のとおりです：
+
+```
+~/a605_flash/605_jp721_flash/Linux_for_Tegra
+```
+
+### デバイスをリカバリーモードにする
+
+1. A605 キャリアボードの電源を切ります。
+2. キャリアボード上の RECOVERY ピンと GND ピンをショートさせます。
+3. キャリアボードを Type-C データケーブルでホスト PC に接続します。
+4. ボードの電源を入れます。
+5. ホスト PC 上で `lsusb` を実行します。プロダクト ID が `7023` または `7223` の場合、デバイスはリカバリーモードになっています。
+
+### システムをフラッシュする
+
+1. デバイスがまだリカバリーモードであることを確認します。
+2. フラッシュディレクトリに入ります：
+
+```bash
+cd ~/a605_flash/605_jp721_flash/Linux_for_Tegra
+```
+
+3. eMMC にフラッシュします。モジュールの容量に応じてコマンドを選択してください：
+
+   - Orin 32GB モジュール（Super モード）：
+
+     ```bash
+     sudo ./l4t_initrd_flash.sh --erase-all jetson-agx-orin-devkit-super internal
+     ```
+
+   - Orin 64GB モジュール：
+
+     ```bash
+     sudo ./l4t_initrd_flash.sh --erase-all jetson-agx-orin-devkit internal
+     ```
+
+4. NVMe SSD にフラッシュします。モジュールの容量に応じてコマンドを選択してください：
+
+   - Orin 32GB モジュール（Super モード）：
+
+     ```bash
+     sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+       -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+       --showlogs --network usb0 jetson-agx-orin-devkit-super external
+     ```
+
+   - Orin 64GB モジュール：
+
+     ```bash
+     sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+       -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+       --showlogs --network usb0 jetson-agx-orin-devkit external
+     ```
+
+5. コマンドが完了するまで待ちます。フラッシュ中に Type-C ケーブルを抜いたり、ホスト PC をシャットダウンしたり、キャリアボードの電源を切ったりしないでください。
+6. フラッシュが成功したら、RECOVERY-GND 間のショート用ジャンパを取り外し、デバイスの電源を再度入れます。
+
+### システムのバックアップと復元
+
+次の操作は、デバイスがリカバリーモードになっている必要があり、`Linux_for_Tegra` ディレクトリ内で実行する必要があります。
+
+1. **システムイメージをバックアップします：**
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e <device> -b jetson-agx-orin-devkit
+   ```
+
+   `<device>` は次に置き換えます：
+   - `mmcblk0`：システムが eMMC 内蔵ストレージにある場合
+   - `nvme0n1`：システムが NVMe SSD にある場合
+
+   例えば、NVMe SSD 上のシステムをバックアップします：
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-agx-orin-devkit
+   ```
+
+2. **バックアップイメージからシステムを復元します：**
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e <device> -r jetson-agx-orin-devkit
+   ```
+
+   `<device>` はバックアップ時と同じものを指定する必要があります。例えば、NVMe SSD に復元します：
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-agx-orin-devkit
+   ```
+
+### よくある質問
+
+1. **`Required path is missing: .../605_jp721.tbz2`**
+   - 原因：ドライバパッケージがスクリプトと同じディレクトリにありません。
+   - 修正：`605_jp721.sh` と `605_jp721.tbz2` が同じディレクトリにあることを確認し、スクリプトを再度実行します。
+
+2. **`Required path is missing: .../bootloader` または類似のメッセージ**
+   - 原因：ドライバパッケージが正しく展開されていないか、パッケージファイルが不完全です。
+   - 修正：`605_jp721.tbz2` を使用し、完全なドライバパッケージを再ダウンロードしてから、スクリプトを再度実行します。
+
+3. **ディレクトリが `root:root` またはパーミッション `777` と表示される**
+   - 原因：組み立てスクリプトが `sudo` で実行されました。
+   - 修正：生成された `605_jp721_flash` ディレクトリを削除し、通常ユーザーとして `./605_jp721.sh` を実行して再組み立てします。
+
+4. **`lsusb` にデバイスが表示されない**
+   - 修正：RECOVERY と GND がショートされているか、Type-C ケーブルがデータ転送に対応しているか、ボードの電源が入っているかを確認します。その後、Type-C ケーブルを再接続して `lsusb` を再度実行します。
 
 </TabItem>
 

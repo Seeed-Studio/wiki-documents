@@ -4,6 +4,9 @@
 
 const K = 'Robotics/Robot_Kits';
 
+// SO-ARM101 製品サイドバーの入門コース用ジャンプグループ。
+const soArmCourseLink = require('./soarm-course-sidebar').courseLink();
+
 const backToRobotics = () => ({
   type: 'ref',
   id: 'ja_Edge_Robotics',
@@ -64,6 +67,7 @@ const sensorCategory = {
       items: [
         'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_AC1',
         'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+        'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_305',
         'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_336',
         'Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
         'Robotics/Robot_Sensor/Camera/ja_realsense_3D_seg',
@@ -152,6 +156,7 @@ const sidebars = {
         { type: 'ref', id: `${K}/Lerobot/ja_Lerobot_SO100Arm_New`, label: 'SO-ARM101', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Getting_Started`, label: 'reBot-DM', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Getting_Started`, label: 'reBot-RS', className: 'sideboard_calss' },
+        { type: 'ref', id: `${K}/reBot_Arm/T701_HT/ja_reBot_Arm_T701_HT_Getting_Started`, label: 'reBot Arm T701 HT', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/ja_Lerobot_Starai_Arm`, label: 'Star AI Arm', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Hand/ja_AmazingHand`, label: 'AmazingHand', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Lerobot/ja_Lerobot_Lekiwi`, label: 'Lekiwi', className: 'sideboard_calss' },
@@ -159,6 +164,19 @@ const sidebars = {
         { type: 'ref', id: `${K}/StackForce/ja_StackForce_Giant_Bipedal_Wheeled_Robot`, label: '車輪型ロボット', className: 'sideboard_calss' },
         { type: 'ref', id: `${K}/Humanoid/Atom-S/ja_Atom-S`, label: 'ヒューマノイドロボット', className: 'sideboard_calss' },
       ]
+    },
+    {
+      type: 'category',
+      label: 'コース',
+      className: 'robotics-section-title',
+      collapsed: false,
+      collapsible: false,
+      items: [
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/reBot_Arm_Tutorial/ja_Arm_Tutorial_Introduction`, label: '初心者向けコース' },
+        { type: 'ref', id: `${K}/reBot_Arm/Courses/Paper_Reading/ja_Paper_Reading_Getting_Started`, label: '論文ディープダイブ' },
+        { type: 'ref', id: `${K}/SO_ARM101/Courses/SO_ARM_Sim2Real_VLA/ja_Sim2Real_VLA_Introduction`, label: 'Sim-to-Real VLA' },
+        { type: 'link', label: 'NVIDIA Isaac による Sim-to-Real', href: 'https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac' },
+      ],
     },
     asReferences(actuatorCategory),
     asReferences(sensorCategory),
@@ -199,6 +217,7 @@ const sidebars = {
 
   SoArm101Sidebar: [
     backToRobotics(),
+    soArmCourseLink,
     {
       type: 'category',
       label: 'クイックスタートとツール',
@@ -217,10 +236,11 @@ const sidebars = {
       collapsible: false,
       collapsed: false,
       items: [
-        `${K}/Lerobot/ja_Complete_Guide_to_Double-Arm_SO-ARM_Training`,
+        `${K}/Lerobot/ja_Complete_Guide_to_Bimanual_SO-ARM_Training`,
         `${K}/Lerobot/ja_SOARM101_XIAO_MicroROS_Wireless_Teleoperation`,
         `${K}/Lerobot/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor`,
         `${K}/Lerobot/ja_Lerobot_SO_ARM101_DAMO`,
+        `${K}/Lerobot/ja_SOARM101_Isaac_Sim_DLI`,
       ],
     },
   ],
@@ -275,6 +295,14 @@ const sidebars = {
         { type: 'doc', id: `${K}/ReachyMini/platforms/reachy_mini_lite/ja_get_started`, label: 'はじめに' },
       ],
     },
+  ],
+
+  T701HtSidebar: [
+    backToRobotics(),
+    `${K}/reBot_Arm/T701_HT/ja_reBot_Arm_T701_HT_Getting_Started`,
+    `${K}/reBot_Arm/T701_HT/ja_reBot_Arm_T701_HT_control_mit`,
+    `${K}/reBot_Arm/T701_HT/ja_reBot_Arm_T701_HT_pinocchio`,
+    `${K}/reBot_Arm/T701_HT/ja_reBot_Arm_T701_HT_vr`,
   ],
 
   StackForceSidebar: [

@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker Lite 是一款由 XMOS XU316 驱动的 USB/I2S 语音接口开发板，配备双麦克风阵列，可实现远场语音采集。其板载 AI 音频前端算法包括声学回声消除、噪声抑制、干扰消除和自动增益控制。通过本指南，你可以开始进行固件烧录、接线以及开箱即用体验。
+description: ReSpeaker Lite 是一款由 XMOS XU316 驱动的 USB/I2S 语音接口开发板，配备双麦克风阵列，可实现远场语音采集。其板载 AI 音频前端算法包括声学回声消除、噪声抑制、干扰消除和自动增益控制。通过本文可了解固件烧录、接线方式以及开箱即用的使用方法。
 title: reSpeaker Lite 入门指南
 keywords:
   - ReSpeaker
@@ -9,8 +9,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
-  date: 6/28/2024
-  author: Jessie
+  date: 11/09/2026
+  author: Ray
 createdAt: '2024-07-03'
 updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/
@@ -21,8 +21,8 @@ url: https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/
 
 <table align="center">
   <tr>
-    <th>reSpeaker Lite 2-Mic Array 搭配 XIAO ESP32-S3 </th>
-    <th>reSpeaker Lite 2-Mic Array </th>
+    <th>reSpeaker Lite 2-Mic 阵列（搭配 XIAO ESP32-S3）</th>
+    <th>reSpeaker Lite 2-Mic 阵列</th>
 
   </tr>
   <tr>
@@ -53,11 +53,11 @@ url: https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/
 ## 特性
 
 - **用于远场语音采集的双麦克风阵列**：2 个高性能数字麦克风可在嘈杂环境中捕获并提取远场语音和声音（最远可达 3 米），并通过双麦克风输入抵消点噪声。
-- **板载 AI ASR 算法**：由 XMOS XU-316 AI 声音与音频芯片驱动，套件内置自然语言理解算法，用于干扰消除（IC）、声学回声消除、噪声抑制、语音与噪声比（VNR）以及自动增益控制（AGC），实现高质量语音采集。
-- **拥抱开源**：该开发板通过 I2S 兼容主流硬件平台（XIAO ESP32S3 (Sense)、Adafruit QT Py），并通过 USB（Audio Class 2.0 (UAC2)）兼容 Raspberry Pi、PC。
-- **板载 RGB LED**：开发板配备可编程 WS2812 RGB LED，支持自定义效果，为你的应用提供可视化界面。
-- **支持外部电源供电**：该开发板支持外部 5V 电源供电，可灵活应用于不同场景。
-- **支持 DFU 自定义开发**：该开发板支持通过 DFU-Util 进行自定义固件更新。
+- **板载 AI ASR 算法**：由 XMOS XU-316 AI 声音与音频芯片驱动，套件内置自然语言理解算法，可实现干扰消除（IC）、声学回声消除、噪声抑制、语音与噪声比（VNR）以及自动增益控制（AGC），从而实现高质量语音采集。
+- **拥抱开源**：该板通过 I2S 兼容主流硬件平台（XIAO ESP32S3 (Sense)、Adafruit QT Py），并通过 USB（Audio Class 2.0 (UAC2)）兼容 Raspberry Pi 和 PC。
+- **板载 RGB LED**：板载可编程 WS2812 RGB LED，支持自定义灯效，为你的应用提供可视化界面。
+- **支持外部电源供电**：该板支持外部 5V 电源供电，可灵活应用于不同场景。
+- **支持 DFU 自定义开发**：该板支持通过 DFU-Util 进行自定义固件更新。
 
 ## 规格参数
 
@@ -89,7 +89,7 @@ url: https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/
 |**3**|**RGB 灯**|可编程 WS2812，提供可视化界面|
 |**4**|**静音指示灯**|按下静音按钮时会亮红灯。|
 |**5**|**USR 按钮**|用户自定义按钮。|
-|**6**|**静音按钮**|按下时会静音音频输入。|
+|**6**|**静音按钮**|按下时会将音频输入静音。|
 |**7**|[XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) **（可选）**|用于进一步开发和集成。|
 |**8**|**XU316 核心处理器**|负责音频处理和传输。|
 |**9**|**外部电源焊盘**|支持外部 5V 电源供电。|
@@ -104,7 +104,7 @@ url: https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/
 
 ### 开箱即用
 
-ReSpeaker Lite 是一款即插即用的模块化语音接口，无需驱动，只需将其插入你的 PC，你就会看到一个名为“ReSpeaker Lite”的语音设备。
+ReSpeaker Lite 是一款即插即用的模块化语音接口，无需安装驱动，只需将其插入电脑，你就会看到一个名为“ReSpeaker Lite”的语音设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pc.png" alt="pir" width={500} height="auto" /></p>
 
@@ -113,19 +113,19 @@ ReSpeaker Lite 是一款即插即用的模块化语音接口，无需驱动，�
 #### [固件下载](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
 :::tip note
-ReSpeaker Lite 开发板有 2 个版本：
+ReSpeaker Lite 板有 2 个版本：
 
 如果要将其用作 USB 声卡设备，请烧录 USB 版本固件（默认固件）。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/usb_firmware.png" alt="pir" width={900} height="auto" /></p>
 
-如果要与 XIAO ESP32S3 搭配使用，请烧录 I2S 版本固件。
+如果要搭配 XIAO ESP32S3 使用，请烧录 I2S 版本固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/lite_newss/i2s_firmware.png" alt="pir" width={900} height="auto" /></p>
 :::
 
 #### 接线
 
-通过 USB 线将 ReSpeaker Lite 开发板连接到你的 PC。
+通过 USB 线将 ReSpeaker Lite 板连接到你的电脑。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-connect.png" alt="pir" width={500} height="auto" /></p>
 
@@ -149,7 +149,7 @@ import TabItem from '@theme/TabItem';
  请注意，Path 变量中的各个路径由分号 ; 分隔。
  这样就可以在命令提示符中全局执行 dfu-util。
 
-- 打开开始菜单并输入 cmd，按回车键。在弹出的终端中，通过 dfu-util -V 命令检查是否已设置 dfu-util.exe 的路径：
+- 打开开始菜单并输入 cmd，按回车键。在弹出的终端中，通过 dfu-util -V 命令检查是否已正确设置 dfu-util.exe 的路径：
 
 ```
 C:\Users\yiping>dfu-util -V
@@ -195,7 +195,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 - 安装 [Zadig](https://zadig.akeo.ie/) 并打开。点击 `Options` -> `List All Devices`。
 
-- 在设备列表中找到 `ReSpeaker 2 Mics Array` 或 `ReSpeaker Lite` 或 DFU `FACTORY (Interface 3)`，安装 `WINUSB v6.x.xxxx.xxxxx` 驱动。
+- 在设备列表中找到 `ReSpeaker 2 Mics Array` 或 `ReSpeaker Lite` 或 DFU `FACTORY (Interface 3)`，然后安装 `WINUSB v6.x.xxxx.xxxxx` 驱动。
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-2mic.png" alt="pir" width={500} height="auto" /></p>
 
@@ -302,6 +302,19 @@ dfu-util -l
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
 
+### 使用 Home Assistant 构建语音助手
+
+将 reSpeaker Lite 与 [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) 配对，并烧录 ESPHome 固件，将其变成 Home Assistant 的语音助手卫星设备。配置完成后，你可以说 “Okay Nabu” 来通过语音控制和自动化家用电器。
+
+专门的教程会引导你完成整个设置过程：
+
+- 烧录 ESPHome 集成所需的 I2S 固件。
+- 安装 ESPHome Builder，并在 Home Assistant 中将 reSpeaker Lite 添加为新设备。
+- 上传 YAML 配置并端到端验证语音命令。
+- 将 USR 和静音按钮焊接到 D2 和 D3 以启用按键支持。
+
+[为 Home Assistant 构建语音助手系统](/cn/respeaker_lite_ha)
+
 ## 录音与回放 
 
 ### 设置 Audacity 
@@ -336,11 +349,11 @@ dfu-util -l
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
- 如果不是 USB 版本，请按照[此步骤](https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/#flash-firmware)烧录固件。
+ 如果不是 USB 版本，请按照[此步骤](https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/#flash-firmware)来烧录固件。
 
 - **在烧录 USB 固件后，Windows 上仍无法检测到 ReSpeaker Lite USB 声音设备？**
 
-- 打开开始菜单并输入 `Device manager`。找到 `ReSpeaker Lite` 设备，右键点击并选择 `Uninstall device`。勾选 `Delete the driver software for this device` 并点击 `Uninstall`。之后重启设备，Windows 会为其重新安装正确的声卡驱动。
+- 打开开始菜单并输入 `Device manager`。找到 `ReSpeaker Lite` 设备，右键点击并选择 `Uninstall device`。勾选 `Delete the driver software for this device` 并点击 `Uninstall`。之后，重启设备，Windows 会为其重新安装正确的声卡驱动。
 
  <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/delete-driver.png" alt="pir" width={600} height="auto" /></p>
 

@@ -1,5 +1,5 @@
 ---
-description: 本文档提供了安装 Isaac Lab 的分步指南。
+description: "在 Jetson 与 Ubuntu 上安装 NVIDIA Isaac Lab 的分步指南：环境准备、conda 配置、安装，以及面向机器人学习的验证。"
 title: 安装 Isaac Lab
 keywords:
   - NVIDIA

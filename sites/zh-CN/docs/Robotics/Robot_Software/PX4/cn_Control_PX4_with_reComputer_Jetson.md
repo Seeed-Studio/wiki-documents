@@ -1,5 +1,5 @@
 ---
-description: 使用 reComputer Jetson 控制 PX4
+description: "如何用 reComputer Jetson 控制 PX4 飞控：接线、MAVLink 配置，以及面向无人机与机器人的 Offboard 控制示例。"
 title: 使用 reComputer Jetson 控制 PX4
 keywords:
   - NVIDIA

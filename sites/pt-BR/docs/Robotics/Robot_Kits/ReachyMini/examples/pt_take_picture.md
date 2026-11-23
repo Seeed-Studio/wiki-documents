@@ -1,5 +1,6 @@
 ---
 description: Exemplo que demonstra como capturar um único quadro da câmera do Reachy Mini e salvá-lo como um arquivo de imagem.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Tirar foto
 slug: /reachymini_examples_take_picture
 keywords:

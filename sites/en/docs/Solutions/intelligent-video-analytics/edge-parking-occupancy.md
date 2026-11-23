@@ -1,6 +1,7 @@
 ---
 description: Report each parking bay as occupied or free with the IP cameras already in your car park — hardware, deployment, interfaces and multi-stream measured data on Jetson and RK hosts
 title: Camera-Based Parking Occupancy Detection — Selection, Deployment and Measured Data
+sidebar_label: 'Parking Occupancy Detection'
 keywords:
   - parking occupancy detection
   - camera parking bay detection
@@ -18,7 +19,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/solutions/edge-parking-occupancy/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -95,8 +96,8 @@ Three things on site: the car-park IP cameras, one edge host and an MQTT broker 
 
 | | Edge host | Measured | Choose it when |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 Series (J3011)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin Nano, JetPack 6.2 | 6 streams, no drops; p50 6.5 ms per frame | Several cameras on one host; default choice |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 Series (J4012)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX, JetPack 6.2 | Same package as J30 | The host also runs other models |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin Nano, JetPack 6.2 | 6 streams, no drops; p50 6.5 ms per frame | Several cameras on one host; default choice |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Jetson Orin NX, JetPack 6.2 | Same package as J30 | The host also runs other models |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 Series](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>On-board NPU | One stream; p50 36.6 ms per frame | The site standardises on Rockchip |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 Series](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>On-board NPU | One stream at 1 fps, no drops | Few cameras, cost comes first |
 

@@ -13,9 +13,16 @@ last_update:
   date: 07/14/2026
   author: HaoChen
 createdAt: '2026-07-13'
-updatedAt: '2026-07-31'
+updatedAt: '2026-07-16'
 url: https://wiki.seeedstudio.com/pt-br/industrial_vision_monitoring_on_industrial_bk/
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
 
 # Monitoramento de Visão Industrial em Ambiente Industrial
 
@@ -23,7 +30,7 @@ url: https://wiki.seeedstudio.com/pt-br/industrial_vision_monitoring_on_industri
 
 A segurança industrial e em locais de trabalho depende de saber o que está acontecendo no chão de fábrica — em tempo real, não apenas depois de um incidente. Câmeras estão em todos os lugares, mas a maioria das configurações ainda depende de revisão manual. A **IA de visão industrial** fecha essa lacuna: detecta se há trabalhadores presentes, se os EPIs obrigatórios estão sendo usados e se comportamentos inseguros aparecem na cena, então gera alertas imediatamente na borda.
 
-Este wiki implanta uma demonstração de referência de **monitoramento de segurança industrial** em dispositivos Seeed Industrial Jetson. Uma câmera USB faz streaming para o navegador; o **YOLO** cuida da detecção de pessoas e de EPI, e um **VLM** analisa riscos de comportamento. Ambas as famílias de modelos são intercambiáveis — o repositório é um ponto de partida, não está preso a um único checkpoint.
+Este wiki implanta uma **demonstração de monitoramento de segurança industrial** de referência em dispositivos Seeed Industrial Jetson. Uma câmera USB faz streaming para o navegador; o **YOLO** cuida da detecção de pessoas e de EPI, e um **VLM** analisa riscos de comportamento. Ambas as famílias de modelos são intercambiáveis — o repositório é um ponto de partida, não está preso a um único checkpoint.
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -71,7 +78,7 @@ Verificado em **reComputer Industrial J4012** e **reServer Industrial J4011** co
 | YOLO | Detecção de pessoas (caixas verdes) e violações de EPI, como ausência de capacete ou colete (caixas vermelhas) |
 | VLM | Alertas de comportamento em nível de cena — uso de telefone, fumo, quedas, fogo/fumaça e mais |
 
-Abra `http://<jetson-ip>:8080` em um navegador para vídeo ao vivo via WebRTC, sobreposições de detecção e um feed de alertas.
+Abra `http://<jetson-ip>:8080` em um navegador para vídeo WebRTC ao vivo, sobreposições de detecção e um feed de alertas.
 
 ## Hardware compatível
 
@@ -79,12 +86,12 @@ Abra `http://<jetson-ip>:8080` em um navegador para vídeo ao vivo via WebRTC, s
 | --- | --- |
 | **Dispositivos** | [reComputer Industrial](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html), [reServer Industrial](https://www.seeedstudio.com/reServer-industrial-J4011-p-5748.html) |
 | **Verificado** | reComputer Industrial J4012, reServer Industrial J4011 · **JetPack 7.2** (L4T 39.2.0) |
-| **JetPack** | **7.2** verificado · **6.2** esperado como compatível · abaixo de 6.2 requer wheels de PyTorch manuais |
-| **RAM / Disco** | Mínimo de 8 GB de RAM · 8 GB de disco livre |
+| **JetPack** | **7.2** verificado · **6.2** esperado como compatível · abaixo de 6.2 requer wheels PyTorch manuais |
+| **RAM / Disco** | Mínimo de 8 GB de RAM · 8 GB de espaço livre em disco |
 | **Câmera** | USB UVC / V4L2 (`/dev/video*`) |
 
 :::note
-Testado em **reComputer Industrial J4012** e **reServer Industrial J4011** com **JetPack 7.2**. Os mesmos passos se aplicam a outros dispositivos Seeed Industrial Jetson com uma versão correspondente do JetPack.
+Testado em **reComputer Industrial J4012** e **reServer Industrial J4011** com **JetPack 7.2**. As mesmas etapas se aplicam a outros dispositivos Seeed Industrial Jetson com uma versão de JetPack correspondente.
 :::
 
 ## Instalação
@@ -116,7 +123,7 @@ O aplicativo é executado inteiramente em Docker — nenhuma configuração manu
 | JetPack | PyTorch |
 | --- | --- |
 | **7.2** | Instalado automaticamente durante a criação da imagem Docker (`TORCH_INDEX_URL=cu130`) |
-| **6.2** | Defina `TORCH_INDEX_URL` para o índice da sua CUDA 12.x ou coloque wheels correspondentes em `wheels/` |
+| **6.2** | Defina `TORCH_INDEX_URL` para o índice CUDA 12.x correspondente, ou coloque wheels compatíveis em `wheels/` |
 | **Abaixo de 6.2** | Coloque `torch-*.whl` / `torchvision-*.whl` compatíveis com Jetson em `wheels/` antes de `./run.sh` |
 
 Após alterar arquivos relacionados ao JetPack, recrie a imagem no dispositivo de destino:
@@ -143,7 +150,7 @@ CAMERA_PIPELINE=sw    # sw (default) or hw
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_ui_en.png" style={{width:900, height:'auto'}}/></div>
 
-Interface ociosa antes de a transmissão da câmera iniciar.
+Interface ociosa antes de o fluxo da câmera iniciar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/industrial/industrial_vision_monitoring_phone.png" style={{width:900, height:'auto'}}/></div>
 
@@ -163,7 +170,7 @@ A versão padrão é fornecida com os checkpoints abaixo. Você pode substituí-
 | Detecção de EPI | YOLOv8 PPE | `models/ppe-yolov8n.pt` |
 | Análise de comportamento | SmolVLM-500M-Instruct | `models/SmolVLM-500M-Instruct/` |
 
-Os modelos são baixados automaticamente na primeira execução de `./run.sh` ou manualmente via `./scripts/download_models.sh`.
+Os modelos são baixados automaticamente na primeira execução de `./run.sh`, ou manualmente via `./scripts/download_models.sh`.
 
 ## Parar e limpar
 
@@ -179,7 +186,7 @@ Os modelos são baixados automaticamente na primeira execução de `./run.sh` ou
 | Permissão negada do Docker | Adicione o usuário ao grupo `docker` ou use `sudo docker` |
 | Primeira criação lenta | Normal (15–30 min). No JetPack 6.2 ou anterior, coloque wheels em `wheels/` |
 | Incompatibilidade entre PyTorch / CUDA | Recrie a imagem no Jetson de destino; não reutilize imagens de outro JetPack |
-| Câmera não está no contêiner | Confirme `/dev/video*` no host; `./run.sh` monta automaticamente as câmeras detectadas |
+| Câmera não aparece no contêiner | Confirme `/dev/video*` no host; `./run.sh` monta automaticamente as câmeras detectadas |
 | Sem vídeo no navegador | Verifique `docker ps` para `industrial-go2rtc`; a porta `1984` deve estar acessível |
 
 ## Recursos

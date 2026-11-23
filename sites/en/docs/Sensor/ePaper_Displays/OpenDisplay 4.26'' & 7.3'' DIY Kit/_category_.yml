@@ -1,0 +1,5 @@
+position: 6 # float position is supported
+label: 'OpenDisplay 4.26" & 7.3" DIY Kit' # label for the category
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: OpenDisplay_4_26inch_7_3inch_DiyKit

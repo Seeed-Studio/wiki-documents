@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini 向けの統合およびアプリガイド。アプリ構築、JavaScript SDK、HTTP/WebSocket API、AI 実験のヒントをカバーします。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 統合 & アプリ
 slug: /reachymini_sdk_integration
 keywords:

@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf380
 slug: /respeaker_xvf3800_introduction
 sku: 101991441,114993701
 last_update:
-  date: 11/10/2025
-  author: Kasun Thushara
+  date: 11/16/2026
+  author: ray
 createdAt: '2025-08-20'
-updatedAt: '2026-08-31'
+updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/
 ---
 
@@ -57,6 +57,7 @@ The ReSpeaker XVF3800 USB 4-Mic Array is a professional 4-mic circular array wit
 | **Main Audio Processor**      | **XMOS XVF3800**, handles audio processing including AEC, beamforming, noise suppression, etc.       |
 | **Microphone Array**          | **Quad PDM MEMS microphones** in circular pattern, supporting **360° far-field voice capture (5m)**. |
 | **Audio Codec**               | **TLV320AIC3104**, handles audio conversion and output.                                              |
+| **Amplifier**               | **LM48511**, Class D amplifier                                              |
 | **RGB LEDs**                  | **12x WS2812** individually-addressable RGB LEDs for visual feedback (e.g., status, voice activity). |
 | **Mute Button**               | Press to **mute/unmute** the microphone input.                                                       |
 | **Mute Indicator LED**        | Lights up (typically red) to show that audio is muted.                                               |
@@ -199,7 +200,7 @@ Each type of firmware on the ReSpeaker XVF3800 supports different update methods
 
 ### Update Firmware
 
-Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
+USB and I2S firmware images are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
 :::note
 Do **NOT** use "save as" to download the firmware files from GitHub as they will get corrupt. Clone the repository or use "Download as ZIP" to download the whole repository (and all included files) as ZIP file.
@@ -226,26 +227,24 @@ Choose the image whose labeled profile matches your application. For 48 kHz, two
 The firmware directory and changelog do not publish a USB Audio Class descriptor dump for these binaries. After flashing, verify the formats reported by the host before configuring the recording application. Do not state a USB sample width or any additional sample-rate/channel combinations without device-descriptor evidence.
 </TabItem>
 
- <TabItem value="I2S" label="I2S">
+ <TabItem value="I2S" label="I2S / HA">
 
-The I2S firmware is intended for use when the device is connected to a microcontroller host such as the **XIAO ESP32S3**. In this configuration, voice data is transmitted using the I2S protocol.
+### I2S firmware and Home Assistant integration
 
-The firmware file **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** is available in [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s). This firmware supports **2-channel** audio with a **32-bit** depth.
+The I2S firmware is intended for use when the device is connected to a microcontroller host such as the **XIAO ESP32S3**. Choose the XMOS firmware whose sample rate and I2S clock role match your ESP32 or other connected device.
 
-| Firmware | Channels | Notes |
-|---------|----------|-------|
-| respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
+| Firmware | Sample rate | XVF3800 role | Required connected-device role |
+| --- | --- | --- | --- |
+| [`respeaker_xvf3800_i2s_master_v1.0.9_48k.bin`](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/i2s/respeaker_xvf3800_i2s_master_v1.0.9_48k.bin) | 48 kHz | Master | Slave |
+| [`respeaker_xvf3800_i2s_slave_v1.0.9_16k.bin`](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/xmos_firmwares/i2s/respeaker_xvf3800_i2s_slave_v1.0.9_16k.bin) | 16 kHz | Slave | Master |
 
-</TabItem>
+For Home Assistant / ESPHome configurations that require the XVF3800 to provide 48 kHz I2S clocks, use **respeaker_xvf3800_i2s_master_v1.0.9_48k.bin** and configure the ESP32 as an I2S slave.
 
-<TabItem value="HA" label="HA">
+"Master" and "slave" describe who provides BCLK and WS/LRCLK, independently of audio transmit or receive direction.
 
-The Home Assistant firmware is another I2S-based firmware specifically designed for integration with Home Assistant. This optimized firmware uses 2-channel audio with a 48 kHz sampling rate, providing better compatibility and performance within the Home Assistant environment.
-You can view the firmware from [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)
+These images run on the XMOS XVF3800. The ESP32 requires its own matching application firmware.
 
-| Firmware | Channels | Notes |
-|---------|----------|-------|
-| respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Processed 2-channel output <br /> Channel 0: ASR <br /> Channel 1: Wake word |
+See the [I2S firmware directory and changelog](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s) for current files and version-specific changes. Historical images are stored in `old_firmwares`.
 
 </TabItem>
 </Tabs>

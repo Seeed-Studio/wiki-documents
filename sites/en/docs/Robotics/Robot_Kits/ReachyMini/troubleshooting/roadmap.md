@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini roadmap showing recent updates, upcoming features, and future development focus areas including mobile app and vibe coding space.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini Roadmap
 slug: /reachymini_troubleshooting_roadmap
 keywords:

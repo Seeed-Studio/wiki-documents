@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona una guía completa de control de motor HighTorque
+description: "Guía completa de control de actuadores HighTorque: modo MIT, modos de posición/velocidad, comandos CAN y ejemplos del SDK de Python para articulaciones de brazos robóticos."
 title: SDK de motor HighTorque
 keywords:
   - actuator

@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini Control アプリ、Web Bluetooth、または nRF Connect を使用して Reachy Mini wireless の Wi-Fi ホットスポットやデーモンをリセットするためのガイドです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Bluetooth 経由で Reachy Mini をリセットする
 slug: /reachymini_platforms_reachy_mini_reset
 keywords:

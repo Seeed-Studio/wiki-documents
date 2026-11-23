@@ -1,5 +1,5 @@
 ---
-description: 本篇wiki提供如何上手HEXFELLOW Y200 IMU传感器
+description: "如何使用 HEXFELLOW Y200 IMU 传感器：接线、驱动配置、数据读取，以及面向机器人导航与平衡的校准。"
 title: 使用Y200 IMU传感器
 keywords:
   - IMU

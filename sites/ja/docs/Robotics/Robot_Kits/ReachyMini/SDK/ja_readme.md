@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini SDK の概要、クイックスタートガイド、コード例、インストール、Python SDK ドキュメント、コミュニティリソースへのリンクをまとめています。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini SDK
 slug: /reachymini_sdk_readme
 keywords:

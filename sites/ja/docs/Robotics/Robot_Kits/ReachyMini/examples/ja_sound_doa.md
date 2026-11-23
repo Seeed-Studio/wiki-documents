@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini のマイクアレイを使用して到来方向 (DoA) を検出し、自動的に話者の方向を見る例です。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 音の到来方向
 slug: /reachymini_examples_sound_doa
 keywords:

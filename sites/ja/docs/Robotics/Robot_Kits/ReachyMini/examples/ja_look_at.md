@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini からのビデオストリームを表示し、フレーム上でクリックした位置を見るようにロボットを動かす方法を示すサンプルです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 画像を見る
 slug: /reachymini_examples_look_at
 keywords:

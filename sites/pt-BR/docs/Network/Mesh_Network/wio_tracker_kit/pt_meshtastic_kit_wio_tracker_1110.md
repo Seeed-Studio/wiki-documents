@@ -91,7 +91,7 @@ Conecte o `Grove-GPS module` à porta `UART`, e o `Grove-OLED Display` à porta 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-grove.png" alt="pir" width={800} height="auto" /></p>
 
-[LINE_93>Ligue a placa.
+Ligue a placa.
 
 ### Configuração
 

@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini守护进程完整REST API参考，涵盖用于应用、守护进程、状态、运动、电机、运动学、音量和Hugging Face认证的HTTP和WebSocket端点。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: REST API参考
 slug: /reachymini_api_rest-api
 keywords:

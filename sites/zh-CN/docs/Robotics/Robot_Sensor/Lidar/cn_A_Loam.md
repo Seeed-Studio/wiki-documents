@@ -1,5 +1,5 @@
 ---
-description: 本文档提供了在 reComputer Jetson 上使用 RoboSense RS32 LiDAR 传感器设置并运行 A-LOAM 算法的详细步骤。
+description: "如何在 Jetson 上运行 A-LOAM 激光 SLAM：从源码编译、播放 rosbag 数据，并生成用于机器人导航的点云地图。"
 title: 运行 A-LOAM 3D SLAM
 keywords:
   - A-LOAM

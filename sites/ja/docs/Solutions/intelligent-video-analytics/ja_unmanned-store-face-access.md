@@ -1,6 +1,7 @@
 ---
 description: 人が常駐しないドアの顔認証入退室管理——必要なハードウェア、導入手順、利用できるインターフェース、顔ライブラリ有効化・解錠時間・拒否の実測データ
 title: '無人店舗の顔認証アクセス：ハードウェア、顔ライブラリ配布、実測範囲'
+sidebar_label: '無人店舗顔認証アクセス'
 keywords:
   - 無人店舗の顔認証アクセス制御
   - 顔認証ドアアクセス
@@ -19,7 +20,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/unmanned-store-face-access/
 generated_from: sensecraft-solutions@e1864ef
 ---
@@ -30,9 +31,12 @@ generated_from: sensecraft-solutions@e1864ef
 
 ## このソリューションが行うこと
 
-人が常駐しないドアのカメラが顔を認識し、パッシブ・ライブネス検査の通過を確認したうえで、現在の顔ライブラリ、スケジュール、ブロックリストと照合します。すべての条件を満たした場合だけ、独立した 12/24 V 電源で動くロックを切り替えるリレーにパルスを送ります。許可・拒否を問わず、すべての判定は MQTT に公開され、コンソールで検証できるハッシュチェーン監査ログに追記されます。
+人が常駐しないドアのカメラが顔を認識し、パッシブ・ライブネス検査の通過を確認したうえで、現在の顔ライブラリ、
+スケジュール、ブロックリストと照合します。すべての条件を満たした場合だけ、独立した 12/24 V 電源で動くロックを切り替える
+リレーにパルスを送ります。許可・拒否を問わず、すべての判定は MQTT に公開され、コンソールで検証できるハッシュチェーン監査ログに追記されます。
 
-無人または少人数運営の店舗の従業員入口・倉庫・裏口、名簿が毎週変わり登録をセルフサービスにしたい共有オフィス、スループットより通過者の記録が重要な機器室、既設の RTSP カメラを交換したくない現場に向いています。
+無人または少人数運営の店舗の従業員入口・倉庫・裏口、名簿が毎週変わり登録をセルフサービスにしたい共有オフィス、
+スループットより通過者の記録が重要な機器室、既設の RTSP カメラを交換したくない現場に向いています。
 
 - 選定と導入：[すぐに導入できるソリューションページ](https://www.seeed.co.jp/solutions/reference-designs/unmanned_store_access)
 - 上流リポジトリ：未公開です。コードは現在内部リポジトリにあります。
@@ -102,10 +106,12 @@ reCamera Pro の認識画面では、顔枠に一致した person id とその�
 |---|---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/0/100021896main_4.jpg" alt="reCamera Pro" width="110" /> | [reCamera Pro (RV1126B)](https://www.seeedstudio.com/reCamera-Pro-p-5984.html)<br/>高性能スマートカメラ | カメラ上で既存の顔認識アプリと並行して実行 | カメラ本体に導入、コンテナなし（Buildroot のため Docker なし） | ドア側にカメラ未設置、高速なオンデバイス生体検知・照合が必要 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002 (SG2002)](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>エントリースマートカメラ | カメラ上の 1 つのネイティブプロセスで検出、埋め込み、ライブネス、照合を実行 | 小さなデーモンをコピー、コンテナなし | 高コスパなスタンドアロン単一ドア |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin エッジホスト | コンテナ内、既存の RTSP ストリームに対して | SSH 経由のコンテナ | 既存 RTSP カメラ流用、1台で複数ドアを集約管理 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 / Super J4012](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin エッジホスト | コンテナ内、既存の RTSP ストリームに対して | SSH 経由のコンテナ | 既存 RTSP カメラ流用、1台で複数ドアを集約管理 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>産業用ファンレスコントローラー | コンテナ内、既存の RTSP ストリームに対して | SSH 経由のコンテナ | 配電盤・制御盤設置、多チャンネル絶縁IO・リレー連携 |
 
-**③ リレー。** ロックは必ずリレーまたは無電圧接点の後段に置き、演算ボードとは分離した専用の 12/24 V 電源で動かします。ロックは 300 mA 〜 1 A を消費しますが、GPIO ピンとフォトカプラ絶縁デジタル出力が扱えるのは mA 単位です。4 つの設定 — `active_high`、`pulse_ms`、`relay_contact`、`fail_mode` — は設置ごとに設定し、既定値はありません。フェイルセーフ電磁ロックを常開接点に配線するとドアが開いたままになり、実際に試験するまで気付けないためです。
+**③ リレー。** ロックは必ずリレーまたは無電圧接点の後段に置き、演算ボードとは分離した専用の 12/24 V 電源で動かします。ロックは 300 mA
+〜 1 A を消費しますが、GPIO ピンとフォトカプラ絶縁デジタル出力が扱えるのは mA 単位です。4 つの設定 —
+`active_high`、`pulse_ms`、`relay_contact`、`fail_mode` — は設置ごとに設定し、既定値はありません。フェイルセーフ電磁ロックを常開接点に配線するとドアが開いたままになり、実際に試験するまで気付けないためです。
 
 **④ クラウドまたはオンプレミスのホスト。** Docker を備えた amd64 または arm64 の Linux マシンで、GPU は不要です。顔ライブラリサービス、管理コンソール、MQTT ブローカーを実行します。すべてのドア側デバイスから到達でき、時計も正確である必要があります。RTC のないデバイスは HTTP の `Date` ヘッダーから時刻補正を得ます。
 
@@ -122,7 +128,7 @@ reCamera Pro の認識画面では、顔枠に一致した person id とその�
 
 LED で極性とパルス幅を確認し、リレーで接点が作動する音を確認してからロックを接続します。フェイルセーフ電磁ロックは COM と NC、フェイルセキュアの電気錠は COM と NO に通します。逆にするとドアが開いたままになるため、`relay_contact` に既定値はありません。
 
-**GPIO ピンが空いているか先に確認します。** 調査した reCamera Pro の 1 台では、`gpio131` がすでに export され、別のアプリケーションに駆動されていました。アクチュエータは現在状態が設定したアイドル状態と異なるピンでは起動せず、明示的に指示されない限りピンを奪いません。reCamera 2002 HQ PoE のベースボードの 6 ピンヘッダーには 3 本の IO ライン — D1 = sysfs 490（多重化されていない唯一の線）、CLK = 487、SMD = 488 — がありますが、ヘッダーのレベル極性と供給可能な電流はベンダー文書に記載がありません。メーターと LED で確認するまで、そこにロックを接続しないでください。J20 では設計仕様上 DO1–DO4 が sysfs 463/464/465/462 ですが、対象イメージがそれらをこの方法で公開するか `Jetson.GPIO` 経由で公開するかは、実機でまだ確認していません。
+**GPIO ピンが空いているか先に確認します。** 調査した reCamera Pro の 1 台では、`gpio131` がすでに export され、別のアプリケーションに駆動されていました。アクチュエータは現在状態が設定したアイドル状態と異なるピンでは起動せず、明示的に指示されない限りピンを奪いません。reCamera 2002 HQ PoE のベースボードの 6 ピンヘッダーには 3 本の IO ライン — D1 = sysfs 490（多重化されていない唯一の線）、CLK = 487、SMD = 488 — がありますが、ヘッダーのレベル極性と供給可能な電流はベンダー文書に記載がありません。メーターと LED で確認するまで、そこにロックを接続しないでください。
 
 ### 2：クラウド側を起動し、その後デバイス側を起動する
 

@@ -20,12 +20,12 @@ url: https://wiki.seeedstudio.com/recomputer_ethercat_communication/
 ---
 
 <div align="center">
-    <img width={600}
+    <img alt="reComputer unit with the NVIDIA Jetson Orin Nano / Orin NX badge, the EtherCAT master used in this walkthrough" width={600}
     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" />
 </div>
 
 <div style={{ textAlign: "justify" }}>
-EtherCAT (Ethernet for Control Automation Technology) is a high-performance, open-source industrial Ethernet protocol designed for real-time automation control in automation, robotics, and motion systems. This wiki will show you how to conduct EtherCat communication on the reComputer Jetson Series.
+EtherCAT (Ethernet for Control Automation Technology) is an open industrial Ethernet protocol built for real-time control in automation, robotics and motion systems. On reComputer Jetson the master runs in user space through the SOEM library over a standard Ethernet port; the sections below verify cycle timing first, then build SOEM, wire a slave, and run a basic exchange.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -59,7 +59,7 @@ sudo cyclictest -t 6 -p 80
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="cyclictest with 6 threads before jetson_clocks, showing a high worst-case latency on some threads" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/cyc1.png" />
 </div>
 
@@ -70,7 +70,7 @@ sudo jetson_clocks
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="cyclictest after jetson_clocks, with latency stable between 9 and 34 microseconds" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/cyc2.png" />
 </div>
 :::info
@@ -106,7 +106,7 @@ Connect your EtherCAT network using the following setup:
 2. **Connect reComputer (Master)** to **EtherCAT Slave Device**
 
 <div align="center">
-    <img width={1000}
+    <img alt="Servo drive wired to the reComputer with the Ethernet and power cables for the EtherCAT test" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/hc.jpg" />
 </div>
 
@@ -147,7 +147,7 @@ ifconfig
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="ifconfig output listing the Ethernet interface name used for EtherCAT" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/ifname.png" />
 </div>
 
@@ -162,7 +162,7 @@ sudo ./slaveinfo enP8p1s0
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="slaveinfo output detecting the connected EtherCAT slave and printing its station details" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/slaver_info.png" />
 </div>
 
@@ -619,12 +619,12 @@ sudo ./ethercat_simple_test
 ```
 
 <div align="center">
-    <img width={1000}
+    <img alt="C example output reading the slave status and switching its drive mode" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/conmunicate.png" />
 </div>
 
 <div align="center">
-    <img width={1000}
+    <img alt="Servo drive, power supply and the reComputer wired together, filmed during the EtherCAT test" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/conmunicate.gif" />
 </div>
 
@@ -778,7 +778,7 @@ print("EtherCAT communication test completed")
 </details>
 
 <div align="center">
-    <img width={1000}
+    <img alt="Python example using pysoem, reading the slave status in the terminal" width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/python.png" />
 </div>
 
@@ -793,6 +793,14 @@ sudo python3 ethercat_python.py
 ```
 
 :::
+
+## Related Resources
+
+- [reComputer Robotics J401 interfaces and pinouts](/recomputer_jetson_robotics_j401_getting_started/)
+- [reComputer Rugged J401 for industrial vision](/jetson/recomputer_rugged_j401/industrial_vision/)
+- [Object tracking with reComputer and PX4](/object_tracking_with_reComputer_jetson_and_pX4/)
+- [reComputer J3011 product page](https://www.seeedstudio.com/reComputer-J3011B-p-6405.html)
+- [SOEM repository](https://github.com/OpenEtherCATsociety/SOEM)
 
 ## Tech Support & Product Discussion
 

@@ -1,5 +1,5 @@
 ---
-description: 本 wiki 提供高擎电机控制完整指南
+description: "高擎执行器控制完整指南：MIT 模式、位置/速度模式、CAN 指令，以及机械臂关节的 Python SDK 示例。"
 title: 高擎电机控制完整指南
 keywords:
   - actuator

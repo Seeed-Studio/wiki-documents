@@ -1,5 +1,5 @@
 ---
-description: 本维基提供了 Stackforce 系列电机的教程。
+description: "StackForce 机器人执行器完整指南：系列概览、接线、CAN 通信，以及轮式与足式机器人的控制示例。"
 title: Stackforce系列电机
 keywords:
   - actuator

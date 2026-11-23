@@ -1,6 +1,7 @@
 ---
 description: Construindo um mapa de calor local de fluxo de pessoas para lojas e espaços de exposição — quais dispositivos você precisa, como implantá-lo, quais interfaces ele expõe e taxas de quadros medidas em três dispositivos
-title: 'Mapa de Calor de Fluxo de Pessoas no Varejo: Construção, Implantação e Resultados Medidos'
+title: 'Mapa de Calor de Fluxo de Pessoas em Varejo: Construção, Implantação e Resultados Medidos'
+sidebar_label: 'Mapa de Calor de Fluxo de Pessoas em Varejo'
 keywords:
   - mapa de calor de fluxo de pessoas
   - análise de fluxo de pessoas
@@ -24,18 +25,18 @@ last_update:
   date: 09/17/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-17'
-updatedAt: '2026-09-17'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/pt-br/solutions/retail-heatmap-grafana/
 generated_from: sensecraft-solutions@recamera_heatmap_grafana
 ---
 
 :::caution[Aviso de uso]
-O mapa de calor registra apenas **onde as pessoas estão**. Ele não identifica ninguém e não faz correspondência de rostos. A precisão da detecção não foi avaliada; consulte [Desempenho e dados medidos](#appendix-measured-data).
+O mapa de calor registra apenas **onde as pessoas estão**. Ele não identifica ninguém e não faz correspondência de rostos. A precisão da detecção não foi avaliada; consulte [Desempenho e dados medidos](#apêndice-dados-medidos).
 :::
 
 ## O que esta solução faz
 
-Uma câmera olha para o chão, localiza cada pessoa no quadro e continua rastreando-as, depois grava onde as pessoas param, quanto tempo ficam e quantas entram e saem em um banco de dados local, mostrado em um dashboard Grafana e em um mapa de calor. Feito para lojas de varejo, pilotos de redes de lojas, pavilhões de exposição e qualquer espaço interno onde decisões de layout dependam de onde as pessoas caminham.
+Uma câmera olha para o chão, localiza cada pessoa no quadro e continua rastreando-as, depois grava onde as pessoas param, quanto tempo ficam e quantas entram e saem em um banco de dados local, mostrado em um dashboard Grafana e em um mapa de calor. Feito para lojas de varejo, pilotos de redes de lojas, pavilhões de exposição e qualquer espaço interno onde decisões de layout dependam de por onde as pessoas caminham.
 
 Locais que já têm câmeras IP as mantêm e adicionam um host de IA que faz a detecção. Locais sem câmeras usam uma reCamera, onde a detecção roda dentro da câmera. O vídeo é processado no local e o backend armazena apenas números. Em um stream RTSP ao vivo, reComputer série R2000 (Hailo-8) mediu 14,3 FPS (fonte de 15 FPS), e reComputer séries RK3588 / RK3576 mediram 13,2 / 13,3 FPS.
 
@@ -60,7 +61,7 @@ Locais que já têm câmeras IP as mantêm e adicionam um host de IA que faz a d
             </div>
             <div class="info-content">
                 <h3>Use as câmeras que você já tem</h3>
-                <p>Qualquer câmera IP com stream RTSP funciona, seja qual for a marca; nada na parede precisa ser substituído. Sem câmeras, uma reCamera com o app de analytics para varejo instalado começa a produzir dados.</p>
+                <p>Qualquer câmera IP com stream RTSP funciona, seja qual for a marca; nada na parede precisa ser substituído. Sem câmeras, uma reCamera com o app de analytics de varejo instalado começa a produzir dados.</p>
             </div>
         </li>
         <li class="info-item">
@@ -69,7 +70,7 @@ Locais que já têm câmeras IP as mantêm e adicionam um host de IA que faz a d
             </div>
             <div class="info-content">
                 <h3>Cinco caminhos de hardware, um dashboard</h3>
-                <p>reCamera 2002, reCamera Pro, Rockchip, Hailo-8 e Jetson publicam todos o mesmo formato de mensagem. Várias lojas podem misturar hardware e ainda assim reportar para um único backend.</p>
+                <p>reCamera 2002, reCamera Pro, Rockchip, Hailo-8 e Jetson publicam todos o mesmo formato de mensagem. Várias lojas podem misturar hardware e ainda assim reportar para um backend.</p>
             </div>
         </li>
         <li class="info-item">
@@ -102,7 +103,7 @@ Os mesmos dados de posição também desenham um mapa de calor. Áreas mais escu
 
 Três coisas: uma câmera que veja o chão, algo que detecte pessoas e um backend que armazene os dados e os desenhe. O backend é compartilhado por todas as rotas.
 
-**① Câmera** — se você já tem câmeras IP com stream RTSP, mantenha-as; qualquer marca funciona e nada na parede muda. Se você não tiver nenhuma, reCamera 2002 / reCamera Pro colocam a câmera e o processamento em uma unidade, executando detecção, rastreamento, estados de permanência e contagem de entradas/saídas dentro da câmera.
+**① Câmera** — se você já tem câmeras IP com stream RTSP, mantenha-as; qualquer marca funciona e nada na parede muda. Se você não tiver nenhuma, reCamera 2002 / reCamera Pro colocam a câmera e o processamento em uma unidade, executando detecção, rastreamento, estados de permanência e contagem de entrada/saída dentro da câmera.
 
 **② Host de detecção** — necessário apenas nas rotas com câmera IP. Cada host executa a mesma lógica de rastreamento e permanência; a diferença é o acelerador.
 
@@ -110,20 +111,20 @@ Três coisas: uma câmera que veja o chão, algo que detecte pessoas e um backen
 
 | | Dispositivo | O que faz | Quando escolhê-lo |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002](https://www.seeedstudio.com/reCamera-2002-64GB-p-6252.html)<br/>câmera e processamento em um só, 1080P | Detecção + rastreamento + contagem | Perto da área contada, cobertura pequena, forma mais rápida de colocar um stream em funcionamento |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>câmera e processamento em um só, 4K | Detecção + rastreamento + contagem | Mais distante, cobertura grande, quando pessoas distantes ainda precisam de pixels suficientes para serem enquadradas |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002](https://www.seeedstudio.com/reCamera-2002-64GB-p-6252.html)<br/>câmera e processamento em um só, 1080P | Detecção + rastreamento + contagem | Perto da área contada, pequena cobertura, maneira mais rápida de colocar um stream em funcionamento |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>câmera e processamento em um só, 4K | Detecção + rastreamento + contagem | Mais distante, grande cobertura, onde pessoas distantes ainda precisam de pixels suficientes para serem enquadradas |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer série RK3588](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>o mesmo preset também suporta a série reComputer RK3576 | Host de detecção | Você já utiliza placas Rockchip; a decodificação de vídeo roda em hardware |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrial-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer série R2000 (R2035-12, Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | Host de detecção | Um box industrial fanless para um rack ou armário técnico |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer série J40 (J4012)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>e série reComputer J50 | Host de detecção | Várias câmeras em um único host |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrial-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer série R2000 (R2035-12, Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | Host de detecção | Um box industrial sem ventoinha para um rack ou armário técnico |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>e série reComputer J50 | Host de detecção | Várias câmeras em um único host |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-113991334--recomputer-r1125-10-45font.jpg" alt="reComputer R1100" width="110" /> | [reComputer série R1100 (R1124-10)](https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html) | Backend do dashboard | Nenhum computador sempre ligado no local para executar o dashboard |
 
-Outros pré-requisitos: Docker na máquina de backend, pelo menos 2 GB de disco livre, portas 1883, 3000, 8080 e 8086 livres, e câmeras e backend no mesmo segmento de rede para que a descoberta de câmeras ONVIF funcione.
+Outros pré-requisitos: Docker na máquina backend, pelo menos 2 GB de disco livre, portas 1883, 3000, 8080 e 8086 livres, e câmeras e backend no mesmo segmento de rede para que a descoberta de câmeras ONVIF funcione.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/ReferenceDesign/landpage_asset/recamera_heatmap_grafana/architecture-en-0432d229.png" alt="Composição de dispositivos do mapa de calor de fluxo de pessoas: câmeras IP enviam RTSP para um host de IA reComputer, o host e reCamera 2002 / Pro publicam MQTT para um backend reComputer R1100, e o dashboard Grafana abre via HTTP"/>
 </div>
 
-Layout dos dispositivos: câmeras IP entregam vídeo RTSP ao host de IA, enquanto uma reCamera executa a detecção dentro da câmera; detectores geram apenas porcentagens de posição e contagens, sem imagens; cada detector reporta para um backend (broker MQTT, InfluxDB, Grafana, gateway de vídeo go2rtc), então um dashboard cobre todas as câmeras. A visualização ao vivo é o navegador puxando da câmera através do gateway de vídeo local, não pelo banco de dados do backend.
+Layout dos dispositivos: câmeras IP entregam vídeo RTSP ao host de IA, enquanto uma reCamera executa a detecção dentro da câmera; detectores geram apenas porcentagens de posição e contagens, sem imagens; cada detector reporta para um backend (broker MQTT, InfluxDB, Grafana, gateway de vídeo go2rtc), então um dashboard cobre todas as câmeras. A visualização ao vivo é o navegador puxando da câmera através do gateway de vídeo local, não através do banco de dados backend.
 
 ### Limites de Seleção Negativa
 
@@ -137,12 +138,12 @@ Duas partes: montar a câmera corretamente e depois instalar o software.
 ### 1. Montando a câmera
 
 :::tip[Requisitos de posicionamento]
-Monte a câmera em um ponto alto, olhando para baixo para a área a ser contada, a 3–5 m do alvo. As pessoas devem ocupar pelo menos cerca de 30 × 30 pixels no quadro, caso contrário não poderão ser enquadradas. Vistas ao nível dos olhos, ângulos com forte oclusão mútua e tomadas distantes em que as pessoas ficam muito pequenas causam detecções perdidas.
+Instale a câmera em um ponto alto, olhando para baixo para a área a ser contada, a 3–5 m do alvo. As pessoas devem ocupar pelo menos cerca de 30 × 30 pixels no quadro, caso contrário não poderão ser enquadradas. Vistas ao nível dos olhos, ângulos com forte oclusão mútua e tomadas distantes em que as pessoas ficam muito pequenas causam detecções perdidas.
 :::
 
 ### 2. Instalando o software — três a quatro etapas
 
-As instruções por dispositivo estão na página do reference design, onde você responde a algumas perguntas sobre o local e faz o download do pacote de aplicativo correspondente.
+As instruções por dispositivo estão na página do design de referência, onde você responde a algumas perguntas sobre o local e faz o download do pacote de aplicativo correspondente.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/recamera_heatmap_grafana" target="_blank">
@@ -150,20 +151,20 @@ As instruções por dispositivo estão na página do reference design, onde voc�
     </a>
 </div><br />
 
-1. **Coloque o backend em funcionamento** — inicie o broker, o InfluxDB, o Grafana e o video gateway na máquina sempre ligada. Esta etapa descobre câmeras ONVIF no mesmo segmento; para câmeras em outro segmento, insira as URLs RTSP no formulário de implantação.
-2. **Faça o detector publicar** — nas rotas com reCamera, instale o app de análise de varejo na câmera; nas rotas com câmera IP, faça o deploy do detector no host de IA. Ambos pedem três coisas: o endereço do broker MQTT (a máquina da etapa 1), um **nome de instalação** e um **ID de câmera**. Use um nome de instalação por loja e um ID por câmera; é assim que o dashboard diferencia os dispositivos.
-3. **Calibre a planta baixa (opcional)** — abra o heatmap na porta 8080, envie uma captura da câmera e a planta da loja e clique em quatro pontos correspondentes em cada uma. Escolha pontos de referência bem espaçados, como pilares, portas e cantos de parede. A calibração é salva no servidor, e várias câmeras podem compartilhar uma planta. Pule esta etapa se a visão da câmera for tudo de que você precisa.
-4. **Abra o dashboard** — Grafana na porta 3000, o heatmap ao vivo em 8080, o video gateway em 1984.
+1. **Colocar o backend em funcionamento** — inicie o broker, o InfluxDB, o Grafana e o gateway de vídeo na máquina sempre ligada. Esta etapa descobre câmeras ONVIF no mesmo segmento; para câmeras em outro segmento, insira as URLs RTSP no formulário de implantação.
+2. **Fazer o detector publicar** — nas rotas com reCamera, instale o app de análise de varejo na câmera; nas rotas com câmera IP, faça o deploy do detector no host de IA. Ambos pedem três coisas: o endereço do broker MQTT (a máquina da etapa 1), um **nome de instalação** e um **ID de câmera**. Use um nome de instalação por loja e um ID por câmera; é assim que o dashboard diferencia os dispositivos.
+3. **Calibrar a planta baixa (opcional)** — abra o heatmap na porta 8080, envie uma captura da câmera e a planta da loja e clique em quatro pontos correspondentes em cada uma. Escolha pontos de referência bem espaçados, como pilares, portas e cantos de parede. A calibração é salva no servidor, e várias câmeras podem compartilhar uma planta. Pule esta etapa se a visão da câmera for tudo de que você precisa.
+4. **Abrir o dashboard** — Grafana na porta 3000, o heatmap ao vivo em 8080, o gateway de vídeo em 1984.
 
 A documentação upstream indica **15 minutos** de ponta a ponta. A rota Jetson é a exceção: a primeira implantação gera um mecanismo TensorRT no dispositivo, o que leva de 2 a 5 minutos e é reutilizado depois.
 
 ## Quais interfaces ele expõe
 
-Todo detector publica o mesmo formato de mensagem no broker backend. Três formas de entrada, dependendo do que você já executa:
+Todo detector publica o mesmo formato de mensagem para o broker de backend. Três formas de entrada, dependendo do que você já executa:
 
-- **O dashboard integrado é suficiente** — nada a integrar. Os painéis Grafana já cobrem tendências de fluxo de pessoas por hora, dia e semana, além de permanência e contagens de entrada/saída, e os dados dos painéis podem ser exportados diretamente.
-- **Um sistema de BI ou analytics existente** — assine o tópico de resultados MQTT para dados em tempo real ou consulte o InfluxDB no backend para histórico.
-- **Seu próprio sistema ou API** — assine como acima; o payload traz contagens por zona mais a posição e o tempo de permanência de cada pessoa rastreada, o suficiente para você desenhar seus próprios painéis. Quadros ao vivo vêm do video gateway local na porta 1984.
+- **O dashboard integrado é suficiente** — nada para integrar. Os painéis do Grafana já cobrem tendências de fluxo de pessoas por hora, dia e semana, além de permanência e contagens de entrada/saída, e os dados dos painéis podem ser exportados diretamente.
+- **Um sistema de BI ou analytics existente** — assine o tópico de resultados MQTT para dados em tempo real ou faça consultas ao InfluxDB no backend para histórico.
+- **Seu próprio sistema ou API** — assine como acima; o payload carrega contagens por zona mais a posição e o tempo de permanência de cada pessoa rastreada, o suficiente para você desenhar seus próprios painéis. Quadros ao vivo vêm do gateway de vídeo local na porta 1984.
 
 ### Referência completa de tópicos e payload
 
@@ -172,13 +173,13 @@ Todo detector publica o mesmo formato de mensagem no broker backend. Três forma
 | `<site>/retail-vision/results/<camera-id>` | Um JSON em lote por segundo: contagens por zona (ocupação, navegando, engajado, precisa de assistência, entradas, saídas, permanência média) mais o `track_id`, posição e tempo de permanência de cada pessoa rastreada | Não |
 | `<site>/retail-vision/status` | `online` / `offline` | Sim |
 | Broker MQTT 1883 | Resultados de cada detector | — |
-| Grafana 3000 | Tendências de fluxo de pessoas por hora, dia e semana; contagens de permanência e entrada/saída | — |
+| Grafana 3000 | Tendências de fluxo de pessoas por hora, dia e semana; contagens de permanência e de entrada/saída | — |
 | Heatmap ao vivo 8080 | Sobreposição de calor na visão da câmera ou na sua planta; o ícone de engrenagem abre a calibração | — |
-| Video gateway 1984 | Descoberta de câmeras e visualização ao vivo | — |
+| Gateway de vídeo 1984 | Descoberta de câmeras e pré-visualização ao vivo | — |
 
 `<site>` e `<camera-id>` são definidos no formulário de implantação e aceitam apenas letras, dígitos, hifens e sublinhados.
 
-**As posições são publicadas como porcentagens do quadro.** Cada detector converte o centro da caixa rastreada em uma porcentagem antes de publicar, de modo que uma calibração de planta valha para qualquer resolução de câmera; substituir por uma câmera de resolução mais alta não exige recalibração.
+**Posições são publicadas como porcentagens do quadro.** Cada detector converte o centro da caixa rastreada em uma porcentagem antes de publicar, de modo que uma calibração de planta única funcione em qualquer resolução de câmera; substituir por uma câmera de resolução mais alta não exige recalibração.
 
 **As mensagens são agrupadas uma vez por segundo.** Na reCamera isso é `--mqtt-interval-ms 1000`; sem isso o app publica por quadro (cerca de 10 mensagens por segundo por câmera). Nas rotas com host de IA é `publish_hz: 1.0` na configuração do detector. Com várias câmeras em um mesmo local, se o broker acompanha ou não depende desse parâmetro.
 
@@ -200,71 +201,71 @@ O que segue são dados medidos de dispositivo para throughput e taxa de mensagen
 
 | Dispositivo | Acelerador | Modelo entregue | Status de verificação |
 |---|---|---|---|
-| reComputer série RK3588 | NPU RK3588 | YOLO11n rawhead FP16 | ✅ Fluxo ao vivo no hardware |
-| reComputer série RK3576 | NPU RK3576 | YOLO11n rawhead FP16 | ✅ Fluxo ao vivo no hardware |
-| reComputer série R2000 (R2135-12, Hailo-8) | Hailo-8 | YOLOv8n INT8 | ✅ Fluxo ao vivo no hardware |
+| reComputer RK3588 series | NPU RK3588 | YOLO11n rawhead FP16 | ✅ Fluxo ao vivo no hardware |
+| reComputer RK3576 series | NPU RK3576 | YOLO11n rawhead FP16 | ✅ Fluxo ao vivo no hardware |
+| reComputer R2000 series (R2135-12, Hailo-8) | Hailo-8 | YOLOv8n INT8 | ✅ Fluxo ao vivo no hardware |
 | reCamera 2002 | NPU SG2002 | YOLO11n INT8 | Implantação verificada |
 
 ### Detalhes de desempenho {#performance-detail}
 
-#### Taxa de quadros de ponta a ponta em um fluxo ao vivo
+#### Taxa de quadros ponta a ponta em um fluxo ao vivo
 
 A entrada é filmagem RTSP real. A medição cobre **todo o caminho desde o quadro da câmera até os resultados chegarem ao backend**: decodificação + detecção + rastreamento + lógica de permanência + publicação MQTT, um fluxo por host.
 
 | Host de detecção | Modelo | Taxa de rastreamento | Taxa de mensagens MQTT | Fonte |
 |---|---|---:|---:|---|
-| reComputer série R2000 (R2135-12, Hailo-8) | YOLOv8n INT8 | **14,3 FPS** | 0,94 msg/s | Medido (440 quadros / 30,7 s) |
-| reComputer série RK3588 | YOLO11n FP16 | **13,2 FPS** | 1,00 msg/s | Medido |
-| reComputer série RK3576 | YOLO11n FP16 | **13,3 FPS** | 1,00 msg/s | Medido |
+| reComputer R2000 series (R2135-12, Hailo-8) | YOLOv8n INT8 | **14,3 FPS** | 0,94 msg/s | Medido (440 quadros / 30,7 s) |
+| reComputer RK3588 series | YOLO11n FP16 | **13,2 FPS** | 1,00 msg/s | Medido |
+| reComputer RK3576 series | YOLO11n FP16 | **13,3 FPS** | 1,00 msg/s | Medido |
 
 - **As duas placas RK**: a decodificação por hardware MPP estava ativa e a taxa de mensagens foi de 1,00 msg/s.
 - **Os 14,3 FPS do Hailo são limitados pela taxa de quadros da fonte.** Sem limitação, o mesmo pipeline atingiu **234 FPS**, cerca de 15× a fonte de 15 FPS.
 - **A diferença entre 0,94 e 1,00 msg/s vem de como foi feita a média**: ambas visam uma mensagem por segundo, e 0,94 é a média em uma janela de 30,7 s.
-- **Reprodução**: benchmarks de inferência de ponta a ponta e autônoma estão no repositório `benchmarks/run_heatmap_bench.sh`; execute `./run_heatmap_bench.sh --profile rk3588`.
+- **Reprodução**: benchmarks ponta a ponta e de inferência isolada estão localizados no repositório `benchmarks/run_heatmap_bench.sh`; execute `./run_heatmap_bench.sh --profile rk3588`.
 
-#### Velocidade de inferência autônoma
+#### Velocidade de inferência isolada
 
 | Host de detecção | Modelo | Por inferência | Fonte |
 |---|---|---:|---|
-| reComputer série J40 / J50 | YOLO11n FP16 (TensorRT) | 9,7 ms | Valor de inferência autônoma fornecido upstream |
+| reComputer J40 / J50 series | YOLO11n FP16 (TensorRT) | 9,7 ms | Número de inferência isolada fornecido upstream |
 | reCamera 2002 | YOLO11n INT8 | cerca de 10 FPS | Taxa na câmera indicada nas notas do app upstream |
 
-Essas duas linhas não se comparam diretamente com a tabela de ponta a ponta acima: 9,7 ms excluem decodificação, rastreamento e publicação, e cerca de 10 FPS é a taxa de processamento na câmera, não a taxa em que os resultados chegam ao backend.
+Essas duas linhas não se comparam diretamente com a tabela ponta a ponta acima: 9,7 ms excluem decodificação, rastreamento e publicação, e cerca de 10 FPS é a taxa de processamento na câmera, não a taxa em que os resultados chegam ao backend.
 
-#### Múltiplos fluxos
+#### Multi-stream
 
-Cada número acima veio de um host observando uma câmera. "Várias câmeras em um host" é a divisão de trabalho entre presets (a rota Jetson assume esse papel). Um backend pode aceitar qualquer número de detectores no nível de protocolo, separados por nome de instalação e ID de câmera; o limite está no lado do host de IA.
+Cada número acima veio de um host observando uma câmera. “Várias câmeras em um host” é a divisão de trabalho entre presets (a rota Jetson assume esse papel). Um backend pode aceitar qualquer número de detectores no nível de protocolo, separados por nome de instalação e ID de câmera; o limite está no lado do host de IA.
 
-### Tempos de execução e parâmetros principais
+### Runtimes e parâmetros principais
 
 | Host de detecção | Modelo de detecção | Precisão | Runtime | Como o modelo é entregue |
 |---|---|---|---|---|
 | reCamera 2002 | YOLO11n (`yolo11n_detection_cv181x_int8.cvimodel`) | INT8 | NPU da câmera SG2002 | Enviado com `retail-vision_1.5.1_riscv64.deb`, verificado por sha256 |
 | reCamera Pro | Empacotado com o app `retail-vision` do App Center | Definida pelo app | NPU da câmera | **Não incluído no pacote**; instale-o primeiro a partir do App Center do dispositivo |
-| reComputer série RK3576 / RK3588 | `yolo11n_pose_rawhead_fp16.<board>.rknn` | FP16 | RKNN | Entregue por placa e verificado por sha256; o modelo da placa errada não será carregado |
-| reComputer série R2000 (R2135-12, Hailo-8) | YOLOv8n (`yolov8n.hef`) | INT8 | HailoRT 4.21 + GStreamer | Obtido do Hailo Model Zoo v2.15.0 diretório hailo8, fixado por sha256 |
-| reComputer série J40 / J50 | YOLO11n (`yolo11n.engine`) | FP16 | TensorRT | O engine é **gerado no dispositivo** (export `ultralytics`, `half=True`, `imgsz=640`): 2–5 minutos na primeira vez, reutilizado depois |
+| reComputer RK3576 / RK3588 series | `yolo11n_pose_rawhead_fp16.<board>.rknn` | FP16 | RKNN | Entregue por placa e verificado por sha256; o modelo da placa errada não será carregado |
+| reComputer R2000 series (R2135-12, Hailo-8) | YOLOv8n (`yolov8n.hef`) | INT8 | HailoRT 4.21 + GStreamer | Obtido do diretório hailo8 do Hailo Model Zoo v2.15.0, fixado por sha256 |
+| reComputer J40 / J50 series | YOLO11n (`yolo11n.engine`) | FP16 | TensorRT | O engine é **gerado no dispositivo** (`ultralytics` export, `half=True`, `imgsz=640`): 2–5 minutos na primeira vez, reutilizado depois |
 
-- **Hailo está travado na HailoRT 4.21.** A implantação verifica as bibliotecas na placa e interrompe, imprimindo a versão instalada, se não corresponderem. Um Hailo-8 executa um aplicativo por vez; se outro app Hailo estiver usando o acelerador, o detector não iniciará.
+- **Hailo está travado na HailoRT 4.21.** A implantação verifica as bibliotecas na placa e interrompe, imprimindo a versão instalada, se não corresponderem. Um Hailo-8 executa um aplicativo por vez; se outro app Hailo estiver usando o acelerador, o detector não será iniciado.
 - **As placas RK precisam do driver NPU presente** (`/usr/lib/librknnrt.so`).
-- **Na reCamera, o aplicativo de analytics assume o controle exclusivo da câmera**: ao instalá-lo, o autostart do Node-RED é desativado, e os dois não podem ser executados ao mesmo tempo.
+- **Na reCamera, o app de analytics assume o controle exclusivo da câmera**: ao instalá-lo, o autostart do Node-RED é desativado, e os dois não podem ser executados juntos.
 
-Parâmetros que alteram o comportamento da implantação (valores fornecidos nas rotas RK e Jetson):
+Parâmetros que alteram o comportamento da implantação (valores enviados nas rotas RK e Jetson):
 
-- `dwell_min_duration` (1,5 s) — uma pessoa só é considerada em permanência depois de se mover mais devagar que `dwell_speed_threshold` (10.0) por esse tempo, de modo que virar de costas em frente a uma prateleira não conta.
+- `dwell_min_duration` (1,5 s) — uma pessoa só passa a contar como em permanência depois de se mover mais devagar que `dwell_speed_threshold` (10,0) por esse tempo, de modo que virar de costas em frente a uma prateleira não conta.
 - `dwell_assistance_threshold` (20,0 s) — o tempo de permanência além disso entra no estado de necessidade de assistência.
-- `avg_person_height_m` (1,7) — converte o limite de velocidade de pixels para distância real. Quando a altura média das pessoas na câmera difere substancialmente de 1,7 m, a detecção de permanência se torna mais frouxa ou mais rígida em todo o sistema.
+- `avg_person_height_m` (1,7) — converte o limite de velocidade de pixels para distância real. Quando a altura média das pessoas na câmera difere substancialmente de 1,7 m, a detecção de permanência fica mais frouxa ou mais rígida em todo o conjunto.
 
-### Degradações conhecidas
+### Degradação conhecida
 
-- **Posicionamento.** A câmera deve ser montada em altura, de 3 a 5 m do alvo, com pessoas ocupando pelo menos cerca de 30 × 30 pixels no quadro. Vistas ao nível dos olhos, tomadas muito distantes e forte oclusão impedem que as pessoas sejam enquadradas, e uma pessoa que não é detectada deixa o mapa de calor em branco sem gerar erro.
+- **Posicionamento.** A câmera deve ser montada em altura, de 3 a 5 m do alvo, com as pessoas ocupando pelo menos cerca de 30 × 30 pixels no quadro. Vistas ao nível dos olhos, tomadas distantes e forte oclusão impedem que as pessoas sejam enquadradas, e uma pessoa que não é detectada deixa o mapa de calor em branco sem que nenhum erro seja gerado.
 - **A calibração da planta baixa é feita com quatro pontos clicados manualmente.** Pontos de referência muito próximos entre si ou colineares amplificam o erro de posição. Mover ou redirecionar a câmera invalida a calibração e ela precisa ser refeita — **uma calibração incorreta não gera erro**, ela apenas desenha o calor em outro lugar.
-- **O Avg Dwell da reCamera Pro fica sempre vazio**, porque o aplicativo não gera esse campo.
-- **Em RK, a decodificação por hardware volta para decodificação por software quando não está ativa.** Uma taxa de quadros claramente baixa junto com uma CPU saturada é o sintoma; a rota Jetson não faz fallback (`fallback: none`).
+- **O Avg Dwell da reCamera Pro fica sempre vazio**, porque o app não gera esse campo.
+- **No RK, a decodificação por hardware recai para decodificação por software quando não está ativa.** Uma taxa de quadros claramente baixa junto com uma CPU saturada é o sintoma; a rota Jetson não faz fallback (`fallback: none`).
 
 ## Fontes e licenças
 
-- **Modelos de detecção** — a rota Hailo usa `yolov8n.hef` do [Hailo Model Zoo](https://github.com/hailo-ai/hailo_model_zoo) diretório hailo8 da versão v2.15.0, fixado por digest em vez de ser re-hospedado. A rota RK reutiliza `yolo11n_pose_rawhead_fp16.<board>.rknn` já publicado por fall_detection. A rota Jetson exporta `yolo11n.engine` no dispositivo com `ultralytics`.
+- **Modelos de detecção** — a rota Hailo usa `yolov8n.hef` do [Hailo Model Zoo](https://github.com/hailo-ai/hailo_model_zoo) diretório hailo8 da v2.15.0, fixado por digest em vez de re-hospedado. A rota RK reutiliza `yolo11n_pose_rawhead_fp16.<board>.rknn` já publicado por fall_detection. A rota Jetson exporta `yolo11n.engine` no dispositivo com `ultralytics`.
 - **Licenciamento de modelos** — os detectores usam modelos da família YOLO (YOLO11n, YOLOv8n). Os modelos Ultralytics YOLO são AGPL-3.0, a menos que licenciados comercialmente, portanto confirme as licenças dos modelos, ou substitua por um modelo com licença compatível, antes de enviar um produto.
-- **Componentes de backend** — o broker MQTT, o InfluxDB, o Grafana e o gateway de vídeo go2rtc são implantados a partir de suas imagens oficiais. As credenciais padrão do Grafana são `admin` / `admin`; altere-as logo após a colocação em serviço.
+- **Componentes de backend** — o broker MQTT, o InfluxDB, o Grafana e o gateway de vídeo go2rtc são implantados a partir de suas imagens oficiais. As credenciais padrão do Grafana são `admin` / `admin`; altere-as logo após a colocação em operação.
 - **Imagens** — o dashboard do Grafana e as capturas de tela do mapa de calor vêm da biblioteca de ativos da solução upstream; o diagrama de arquitetura é desenhado internamente. Nenhuma pessoa identificável aparece nas imagens de demonstração.

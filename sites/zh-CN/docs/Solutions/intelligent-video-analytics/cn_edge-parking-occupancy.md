@@ -1,6 +1,7 @@
 ---
 description: 用停车场现有 IP 摄像头逐个车位判断占用或空闲：需要哪些设备、怎么部署、有哪些接口，以及 Jetson 与 RK 主机上的多路实测数据
 title: 视频车位占用检测方案：选型、部署与实测数据
+sidebar_label: '视频车位占用检测'
 keywords:
   - 车位占用检测
   - 视频车位检测
@@ -19,7 +20,7 @@ last_update:
   date: 10/09/2026
   author: seeed-solutions-hub
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/edge-parking-occupancy/
 generated_from: sensecraft-solutions@76f6c0f
 ---
@@ -96,8 +97,8 @@ generated_from: sensecraft-solutions@76f6c0f
 
 | | 边缘主机 | 实测 | 什么时候选它 |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J30 系列（J3011）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Jetson Orin Nano，JetPack 6.2 | 6 路无丢帧，单帧 p50 6.5 ms | 一台接多路，默认选择 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J40 系列（J4012）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Jetson Orin NX，JetPack 6.2 | 与 J30 同一应用包 | 这台主机还要跑别的模型 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Jetson Orin Nano，JetPack 6.2 | 6 路无丢帧，单帧 p50 6.5 ms | 一台接多路，默认选择 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Jetson Orin NX，JetPack 6.2 | 与 J30 同一应用包 | 这台主机还要跑别的模型 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 系列](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>板载 NPU | 单路，单帧 p50 36.6 ms | 现场统一用瑞芯微平台 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576 系列](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>板载 NPU | 单路，每秒 1 帧，无丢帧 | 路数少、成本优先 |
 

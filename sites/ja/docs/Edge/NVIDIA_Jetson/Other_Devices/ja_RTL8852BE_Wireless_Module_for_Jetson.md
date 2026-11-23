@@ -1,5 +1,5 @@
 ---
-description: この Wiki では、Wi-Fi 6 および Bluetooth に対応し、NVIDIA Jetson デバイスと互換性のある RTL8852BE 無線モジュールの機能と仕様を紹介します。この記事では、その技術仕様、JetPack 5 および JetPack 6 向けのドライバインストール方法、無線ネットワークおよび Bluetooth の設定方法について詳しく説明します。
+description: "RTL8852BE M.2 モジュールで Jetson に Wi-Fi 6 を追加：JetPack 5 および 6 向けドライバのインストール、モジュール検出とネットワーク設定。"
 title: Jetson 向け RTL8852BE 無線モジュール
 keywords:
   - Edge
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/ja/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">
-  <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/8852be.png"/>
+  <img alt="RTL8852BE Wi-Fi 6 and Bluetooth M.2 module, product photo" width ="600" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/8852be.png"/>
 </div>
 
 
@@ -34,7 +34,7 @@ url: https://wiki.seeedstudio.com/ja/rtl8852be_wireless_module_for_jetson/
 
 
 
-RTL8852BE は、Realtek チップセットをベースとした Wi-Fi 6 (802.11ax) 対応の M.2 無線モジュールです。WLAN 用の PCIe インターフェースと Bluetooth 用の USB インターフェースを統合しており、従来世代の Wi-Fi 5 モジュールと比べて大幅に高いスループットと低レイテンシを実現します。高性能な無線接続を必要とする [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) のような組み込み機器に最適です。
+RTL8852BE は Realtek チップセットをベースにした Wi-Fi 6 (802.11ax) M.2 無線モジュールです。WLAN 用の PCIe インターフェースと Bluetooth 用の USB インターフェースを統合しており、従来世代の Wi-Fi 5 モジュールと比べて大幅に高いスループットと低レイテンシを実現します。高性能な無線接続を必要とする [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) のような組み込み機器に最適です。
 
 ## 特長
 
@@ -63,7 +63,7 @@ RTL8852BE は、Realtek チップセットをベースとした Wi-Fi 6 (802.11a
     </tr>
     <tr>
       <td>ホストインターフェース</td>
-      <td>WLAN 用 PCIe 2.1/2.0 & Bluetooth 用 USB 2.0</td>
+      <td>WLAN 用 PCIe 2.1/2.0 および Bluetooth 用 USB 2.0</td>
     </tr>
     <tr>
       <td>アンテナ</td>
@@ -106,7 +106,7 @@ RTL8852BE モジュールは、Jetson によって PCIe デバイスとして検
 lspci | grep -i network
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/lspci.PNG"/>
+  <img alt="lspci output listing the RTL8852BE network controller" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/lspci.PNG"/>
 </div>
 
 
@@ -122,7 +122,7 @@ sudo apt-get update
 sudo apt-get install make gcc linux-headers-$(uname -r) build-essential git
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp5_install.png"/>
+  <img alt="make output building the rtw89 modules for the RTL8852BE, ending with modprobe 8852be" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp5_install.png"/>
 </div>
 
 ```bash
@@ -140,7 +140,7 @@ git clone https://github.com/a5a5aa555oo/rtw89
 cd rtw89
 ```
 
-`Makefile` を編集して、正しいカーネルヘッダのパスを設定します：
+`Makefile` を編集して、正しいカーネルヘッダーのパスを設定します：
 
 ```diff
 # JP 6.2
@@ -150,7 +150,7 @@ KDIR ?= /usr/src/linux-headers-5.15.148-tegra-ubuntu22.04_aarch64/3rdparty/canon
 KDIR ?= /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/makefile.png"/>
+  <img alt="Makefile edited to point at the kernel source from the installed headers" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/makefile.png"/>
 </div>
 
 その後、ビルドしてインストールします：
@@ -161,7 +161,7 @@ sudo make install
 sudo modprobe rtw89_8852be
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp6_install.png"/>
+  <img alt="make install copying the rtw89 .ko files into /lib/modules/5.15.136-tegra" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/jp6_install.png"/>
 </div>
 ## 無線モジュールの確認
 :::info
@@ -175,7 +175,7 @@ sudo modprobe rtw89_8852be
 ifconfig
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/interface.png"/>
+  <img alt="ifconfig output showing the new wlan0 interface" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/interface.png"/>
 </div>
 
 :::
@@ -197,7 +197,7 @@ sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 ```
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
+  <img alt="nmcli connecting wlan0 to the access point" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/link_wifi.png"/>
 </div>
 
 ### WiFi 6 接続を確認する
@@ -208,13 +208,13 @@ sudo nmcli device wifi connect "YOUR_SSID" password "YOUR_PASSWORD" ifname wlan0
 iw dev wlan0 link
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
+  <img alt="iw dev wlan0 link output confirming the Wi-Fi 6 connection" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/veryfiy_wifi6.PNG"/>
 </div>
 
 出力には次のような情報が表示されます：
 
 - **freq**：動作周波数（例：5180 MHz は 5 GHz 帯に相当）
-- **HE-MCS**：Wi-Fi 6 の変調および符号化方式（例：MCS 9 は最高の符号化効率を表します）
+- **HE-MCS**：Wi-Fi 6 の変調および符号化方式（例：MCS 9 は最高の符号化効率を表す）
 - **TX/RX rate**：現在の送信および受信速度
 
 ## Bluetooth の設定
@@ -225,11 +225,17 @@ RTL8852BE モジュールの Bluetooth 機能は、`bluetoothctl` を使用し�
 bluetoothctl
 ```
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/bluetooth.png"/>
+  <img alt="bluetoothctl showing the controller registered with its MAC address and Paired: yes" width ="1000" src="https://files.seeedstudio.com/wiki/reComputer/rtl8852be/bluetooth.png"/>
 </div>
-## 技術サポート & 製品ディスカッション
+## 関連リソース
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+- [reComputer Super ハードウェアおよびインターフェースの使用方法](/ja/recomputer_jetson_super_hardware_interfaces_usage/)
+- [reComputer Robotics J401 のインターフェースとピン配置](/ja/recomputer_jetson_robotics_j401_getting_started/)
+- [wiki-documents リポジトリとディスカッション](https://github.com/Seeed-Studio/wiki-documents/discussions/69)
+
+## 技術サポートと製品ディスカッション
+
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,6 +1,6 @@
 ---
-description: Rainbowduino_LED_driver_platform-ATmega328
-title: Plataforma controladora LED Rainbowduino-ATmega328
+description: Plataforma controladora de LED Rainbowduino-ATmega328
+title: Plataforma controladora de LED Rainbowduino-ATmega328
 keywords:
   - Rainbowduino_LED_driver_platform-ATmega328
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -8,161 +8,161 @@ slug: /Rainbowduino_LED_driver_platform-ATmega328
 last_update:
   date: 01/20/2023
   author: Matthew
-createdAt: '2025-09-03'
-updatedAt: '2025-09-03'
+createdAt: '2023-02-16'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/es/Rainbowduino_LED_driver_platform-ATmega328/
 ---
 
 |![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-Rainbowduino_LRG.jpg) |![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-Rainbowduino_01_LRG.jpg)
 |---|---|
 
-La placa Rainbowduino es una placa controladora compatible con Arduino con capacidad profesional de control de LEDs. Controlará una matriz LED RGB de 8x8 (ánodo común).
+La placa Rainbowduino es una placa controladora compatible con Arduino con capacidad profesional de control de LED. Controlará una matriz de LED RGB de 8x8 (ánodo común).
 
-* ¡No se requiere circuito externo, conecta y brilla!
+* No se requiere circuito externo, ¡conecta y brilla!
 
 * 24 canales de corriente constante de 120mA cada uno
 
-* 8 canales de controlador súper fuente de 500mA cada uno
+* 8 canales de super driver de 500mA cada uno
 
 * Amplia adaptación de voltaje de salida de 6.5V-12VDC
 
 * GPIO y ADC dedicados
 
-* Comunicación UART e I2C por hardware
+* Comunicación UART y I2C por hardware
 
-* Cascada fácil
+* Encadenamiento sencillo
 
-* Forma pequeña y peso ligero
+* Tamaño reducido y peso ligero
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
 
-## Modo Independiente (conecta y brilla)
+## Modo autónomo (plug and shine)
 
 ---
-Hardware Necesario:
+Hardware necesario:
 
 * 1 x Rainbowduino
 
-* 1 x Matriz LED RGB
+* 1 x Matriz de LED RGB
 
-El modo de trabajo más simple, no se necesitan sistemas externos (solo un adaptador serie ttl para cargar el firmware). El contenido de la matriz LED es generado por el propio Rainbowduino.
+El modo de funcionamiento más simple, no se necesitan sistemas externos (solo un adaptador serie TTL para cargar el firmware). El contenido de la matriz de LED es generado por el propio Rainbowduino.
 
-Caso de Uso:
+Caso de uso:
 
 * Animaciones simples en tiempo real calculadas por el Rainbowduino
 
-* Mostrar animaciones pre-almacenadas, limitadas debido a los 32kb ROM del Rainbowduino
+* Mostrar animaciones prealmacenadas, limitado por la ROM de 32kb del Rainbowduino
 
 ## Modo UART
 
 ---
-Hardware Necesario:
+Hardware necesario:
 
 * 1x Rainbowduino
 
-* 1x Matriz LED RGB
+* 1x Matriz de LED RGB
 
 * 1x Convertidor de nivel TTL
 
 * 1x Unidad emisora UART (Arduino, PC...)
 
-Envía datos (contenido de matriz LED) desde tu computadora a un Rainbowduino. Como el Rainbowduino no tiene un conector USB sino una conexión serie TTL necesitas un convertidor de nivel serie TTL (BusPirate, UartSBee, Arduino...).
+Envía datos (contenido de la matriz de LED) desde tu ordenador a un Rainbowduino. Como el Rainbowduino no tiene un conector USB sino una conexión serie TTL, necesitas un convertidor de nivel serie TTL (BusPirate, UartSBee, Arduino...).
 
-**Caso de Uso:**
+**Caso de uso:**
 
-Marcos generados por PC o Arduino mostrados en UNA Matriz Led
+Tramas generadas por PC o Arduino mostradas en UNA matriz de LED
 
 ## Modo I2C
 
 ---
-Hardware Necesario:
+Hardware necesario:
 
 * 1..n x Rainbowduino
 
-* 1..n x Matriz LED RGB
+* 1..n x Matriz de LED RGB
 
 * 1 x Dispositivo maestro I2C (por ejemplo un Arduino)
 
 * Algunos cables
 
-Envía datos (contenido de matriz LED) desde tu computadora a múltiples Rainbowduino's. Una nota al margen si usas un Arduino con un adaptador USB a Serie FTDI (Duemillanove, Diecimila...) - hay una Latencia de ~16ms para enviar datos desde tu computadora al Arduino. Los nuevos Arduino UNO tienen una latencia mucho menor ~4ms.
+Envía datos (contenido de la matriz de LED) desde tu ordenador a múltiples Rainbowduino. Una nota adicional si usas un Arduino con un adaptador FTDI USB a serie (Duemillanove, Diecimila...) - hay una latencia de ~16ms para enviar datos desde tu ordenador al Arduino. El nuevo Arduino UNO tiene una latencia mucho menor, ~4ms.
 
-Caso de Uso:
+Caso de uso:
 
-Marcos generados por PC o Arduino mostrados en **múltiples** Matrices Led
+Tramas generadas por PC o Arduino mostradas en **múltiples** matrices de LED
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-i2c-cabling.png)
 
-## Cascada I2C
+## Encadenamiento I2C
 
 ---
-Rainbowduino está diseñado para cascada fácil. Después de conectarse físicamente, la energía se transmite, y puedes controlar la cadena por I2C. Ten en cuenta que cada Rainbowduino debe ser asignado con una dirección única para comunicación I2C.
+Rainbowduino está diseñado para un encadenamiento sencillo. Después de conectarlos físicamente, la alimentación se transmite y puedes controlar la cadena mediante I2C. Ten en cuenta que a cada Rainbowduino se le debe asignar una dirección única para la comunicación I2C.
 
-Prepara la conexión de energía:
+Prepara la conexión de alimentación:
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-chain-prepare.png)
 
-Rainbowduino en cascada:
+Rainbowduino encadenados:
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-chained.png)
 
 ## Especificación
 
 ---
-* Microprocesador：Atmega 328
+* Microprocesador: Atmega 328
 
-* Tamaño de PCB：60mm *60mm* 1.6mm
+* Tamaño de PCB: 60mm *60mm* 1.6mm
 
-* Indicadores：Reset, Alimentación, LED Pin 13
+* Indicadores: Reset, alimentación, LED del pin 13
 
-* Fuente de alimentación：6.5-12 VDC (9 VDC recomendado)
+* Fuente de alimentación: 6.5-12 VDC (9 VDC recomendado)
 
-* Conector de alimentación：Bloques de terminales JST de 2 pines, Jacks DC de 3mm
+* Conector de alimentación: bloques de terminales JST de 2 pines, conectores DC de 3mm
 
-* Conector de alimentación en cascada：Bloques de terminales
+* Conector de alimentación para encadenamiento: bloques de terminales
 
-* Interfaz de programación：UART / ISP
+* Interfaz de programación: UART / ISP
 
-* Conectores de matriz de puntos LED：32
+* Zócalos de matriz de puntos LED: 32
 
-* Conector de expansión：Par de cabezales de pines doblados de 2.54mm
+* Zócalo de expansión: par de pines acodados de 2.54mm
 
-* Protocolos de comunicación：I2C / UART
+* Protocolos de comunicación: I2C / UART
 
-* RHOS：Sí
+* RHOS: Sí
 
-* Voltaje de entrada：6.5~12V
+* Voltaje de entrada: 6.5~12V
 
-* Consumo de corriente global：600~2000mA
+* Consumo global de corriente: 600~2000mA
 
-* Canales de corriente constante (Cátodo)：24
+* Canales de corriente constante (cátodo): 24
 
-* Corriente constante por canal (Cátodo)：20~120mA
+* Corriente constante por canal (cátodo): 20~120mA
 
-* Corriente del controlador de fuente por canal (Ánodo común)：500mA
+* Corriente del driver de fuente por canal (ánodo común): 500mA
 
-* Voltaje del controlador de fuente por canal (Ánodo común)：9~12V
+* Voltaje del driver de fuente por canal (ánodo común): 9~12V
 
-* Canales de controlador de fuente：8
+* Canales del driver de fuente: 8
 
-* Cantidad de LEDs controlados：192
+* Número de LED controlados: 192
 
-* Tiempo de respuesta del circuito：10ns
+* Tiempo de respuesta del circuito: 10ns
 
-* Resolución de color de matriz LED RGB por punto：4096：Velocidad de baudios Uart：115200baud
+* Resolución de color de la matriz de LED RGB por punto: 4096: Velocidad en baudios Uart: 115200baud
 
 ## Compatibilidad de dispositivos LED
 
 ---
-Antes de conectar directamente en los cabezales de pines hembra, por favor verifique si las matrices de puntos RGB son compatibles comprobadas. La preocupación principal está en la distribución de pines, donde los LEDs del mismo color están en grupo, aquí adjuntamos el esquema y demostración fotográfica. La secuencia de colores podría cambiar, ya que la lógica de control es de código abierto y fácilmente reprogramable.
+Antes de conectar directamente a los pines hembra, verifica si la matriz de puntos RGB es compatible. La preocupación principal es el pinout, donde los LED del mismo color están agrupados; aquí adjuntamos el esquema y una demostración fotográfica. La secuencia de colores puede cambiar, ya que la lógica de control es de código abierto y fácilmente reprogramable.
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-ledmatrix-schema.png)
 
-El poder de Rainbowduino va mucho más allá de controlar una matriz de puntos RGB. Con 192 salidas y hasta 120mA de capacidad de corriente constante, puedes fácilmente poblar configuraciones masivas de LEDs.
+La potencia de Rainbowduino va mucho más allá de controlar una matriz de puntos RGB. Con 192 salidas y hasta 120mA de corriente constante, puedes montar fácilmente configuraciones masivas de LED.
 
-La corriente de salida de cada canal (IOUT) se establece por una resistencia externa, Rext. La relación entre Iout y Rext se muestra en la siguiente figura. Por favor consulte la hoja de datos de MBI5168 para más detalles. Ajustar el potenciómetro de 1k en sentido horario para reducir la corriente de salida (mínimo predeterminado 20mA para matriz de puntos RGB), rotar en sentido antihorario para aumentar la corriente de salida. Los potenciómetros son de círculo único, por favor NOTA que la fuerza excesiva los romperá en rotación ilimitada, entonces necesitarías un multímetro para ajustar. :)
+La corriente de salida de cada canal (IOUT) se ajusta mediante una resistencia externa, Rext. La relación entre Iout y Rext se muestra en la siguiente figura. Consulta la hoja de datos del MBI5168 para más detalles. Ajusta el potenciómetro de 1k en el sentido de las agujas del reloj para reducir la corriente de salida (mínimo predeterminado 20mA para la matriz de puntos RGB), gíralo en sentido antihorario para aumentar la corriente de salida. Los potenciómetros son de una sola vuelta, TEN EN CUENTA que una fuerza excesiva lo romperá y lo hará girar sin tope, entonces necesitarás un multímetro para ajustarlo. :)
 
-Esto significa que puedes construir tu propia matriz LED sin resistencias adicionales.
+Esto significa que puedes construir tu propia matriz de LED sin resistencias adicionales.
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-ledmatrix-voltage.png)
 
@@ -173,20 +173,20 @@ Esto significa que puedes construir tu propia matriz LED sin resistencias adicio
 
 * Placa Rainbowduino
 
-* Una Matriz RGB de ánodo común
+* Una matriz RGB de ánodo común
 
-* Una placa Arduino (Opcional)
+* Una placa Arduino (opcional)
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-connected-matrix.png)
 
-<big>Preparar el hardware Rainbowduino </big>
+<big>Preparar el hardware de Rainbowduino </big>
 
-Conecta la matriz LED RGB al Rainbowduino y conecta "Pin 1" al bloque de conexión rojo. Pin1 está marcado por un punto de soldadura cuadrado, mientras que los otros pines usan un punto de soldadura redondo.
+Conecta la matriz de LED RGB al Rainbowduino y conecta el "Pin 1" al bloque de conexión rojo. El Pin1 está marcado por un punto de soldadura cuadrado, mientras que los otros pines usan un punto de soldadura redondo.
 
 <big>Cargar firmware  </big>
 
-1.Cargar un fragmento de código a Arduino primero:
-Para usar el Arduino para cargar el firmware al Rainbowduino, asegúrate de que el Arduino esté limpio - necesitamos cargar un sketch de firmware vacío como se muestra a continuación.
+1.Carga primero un fragmento de código en el Arduino:
+Para poder usar el Arduino para cargar el firmware en el Rainbowduino, asegúrate de que el Arduino esté limpio: necesitamos cargarle un sketch de firmware vacío como se muestra a continuación.
 
 ```
 void setup() {}
@@ -194,15 +194,15 @@ void setup() {}
 void loop() {}
 ```
 
-2. Subir Firmware al Rainbowduino
+2. Cargar firmware en Rainbowduino
 
-Abre el firmware del Rainbowduino, **selecciona la placa correcta** (Tools--&gt;board--&gt; Arduino Duemilanove or Nano w/ ATmega328) y sube el Firmware. Al menos esa es la teoría ;)
-Para tu placer visual, aquí está el esquema de conexión:
+Abre el firmware de Rainbowduino, **selecciona la placa correcta** (Tools--&gt;board--&gt; Arduino Duemilanove or Nano w/ ATmega328) y carga el firmware. Al menos esa es la teoría ;)
+ Para tu disfrute visual, aquí está el esquema de conexión:
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-fritz-uploadfw.png)
 
 Usamos una fuente de alimentación externa, sin embargo también podrías usar los 5V del Arduino.
 
-**NOTA:** Si posees una placa Rainbowduino v1, necesitas seleccionar "Arduino Diecimila, Duemilanove, or Nano w/ ATmega168"!
+**NOTA:** Si tienes una placa Rainbowduino v1, ¡debes seleccionar "Arduino Diecimila, Duemilanove, or Nano w/ ATmega168"!
 
 <table >
 <tr>
@@ -219,40 +219,40 @@ Usamos una fuente de alimentación externa, sin embargo también podrías usar l
 </tr>
 </table>
 
-3.Usar UartSB para Cargar firmware
+3.Usar UartSB para cargar firmware
 
 Estas capturas de pantalla muestran cómo conectar el UartSBee al Rainbowduino:
 
 | ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-beeONE.jpg)|![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-beeTWO.jpg)
 |---|---|
 
-Si conectas el UartSBee al bus USB, debería registrar un nuevo puerto serie. Ahora simplemente carga tu firmware usando el nuevo puerto serie.
+Si conectas el UartSBee al bus USB, debería registrarse un nuevo puerto serie. Ahora simplemente carga tu firmware usando el nuevo puerto serie.
 
-4.Usar un Buspirate para Cargar firmware / bootloader
+4.Usar un Buspirate para cargar firmware / bootloader
 
-Estoy explicando tres métodos de programación (todos usando el buspirate):
+Voy a explicar tres métodos de programación (todos usando el buspirate):
 
 * programación a través del ISP.
-* programación usando avrdude y reinicio manual (no es necesario parchear)
+* programación usando avrdude y reinicio manual (no se necesita parcheo)
 * programación a través de avrdude con un pequeño parche.
 
-DESCONECTA EL RAINBOWDUINO DE LA PANTALLA Y LA ALIMENTACIÓN.
+DESCONECTA EL RAINBOWDUINO DE LA PANTALLA Y DE LA ALIMENTACIÓN.
 
-PASO 1: Para usar el Buspirate necesitas una nueva versión de avrdude [[1]](http://download.savannah.gnu.org/releases/avrdude/). Estoy usando la versión 5.10 y esa reconoce la opción de programador '-c buspirate'. Puedes probar esto con
+PASO 1: Para usar el Buspirate necesitas una nueva versión de avrdude [[1]](http://download.savannah.gnu.org/releases/avrdude/). Yo uso la versión 5.10 y esta reconoce la opción de programador '-c buspirate'. Puedes probarlo con
 
 ```
 ./avrdude -c buspirate -C ./avrdude.conf
 ```
 
-Si esto se queja del programador, entonces necesitas una versión más nueva del buspirate.
+Si esto se queja sobre el programador, entonces necesitas una versión más reciente del buspirate.
 
-PASO 2: conecta el buspirate al conector ISP del rainbowduino de esta manera:
+PASO 2: conecta el buspirate al conector ISP del rainbowduino de esta forma:
 
 <table >
 <tr>
 <th> Buspirate</th>
 <th> ISP</th>
-<th> Pin ISP</th>
+<th> ISP pin</th>
 </tr>
 <tr>
 <td width="80px"> GND</td>
@@ -286,8 +286,7 @@ PASO 2: conecta el buspirate al conector ISP del rainbowduino de esta manera:
 </tr>
 </table>
 
-
-PASO 3: encuentra el bootloader correcto (estoy usando el firmware tiny optiboot). Copia este archivo a tu directorio avrdude recién compilado.
+PASO 3: encuentra el bootloader correcto (yo uso el firmware tiny optiboot). Copia este archivo a tu directorio recién compilado de avrdude.
 
 PASO 4: programa el atmega 328p con
 
@@ -295,11 +294,11 @@ PASO 4: programa el atmega 328p con
 ./avrdude -v -c buspirate -p m328p -C ./avrdude.conf -P /dev/ttyUSB0 -U flash:w:optiboot_atmega328.hex
 ```
 
-Esto toma mucho tiempo...
+Esto tarda muchísimo tiempo...
 
-Comencé subiendo firmwares sin el bootloader y eso funciona bien. El truco es obtener los archivos HEX del IDE de Arduino. En la versión 0.22-Linux se almacenan en /tmp/buildXXXXXXXXXXXX y NO en el directorio de sketches. Solo ejecuta el comando 'Upload' sin ningún programador conectado (presiona &lt;shift&gt; mientras presionas el botón 'upload' para obtener mucha información de depuración del IDE de Arduino).
+Empecé cargando firmwares sin el bootloader y eso funciona bien. El truco es obtener los archivos HEX desde el IDE de Arduino. En la versión 0.22-Linux se almacenan en /tmp/buildXXXXXXXXXXXX y NO en el directorio de los sketches. Simplemente ejecuta el comando 'Upload' sin ningún programador conectado (pulsa &lt;shift&gt; mientras presionas el botón 'upload' para obtener mucha información de depuración del IDE de Arduino).
 
-Después de que tengas el bootloader en el rainbowduino puedes usar la interfaz serie transparente del buspirate. Establece la velocidad de baudios a 115200 e ingresa la macro '(3)' para activar el modo transparente. El buspirate ahora actúa como un convertidor USB-serie (cualquier otro convertidor usb-serie tipo FTDI podría ser usado). El problema con el buspirate es que no hay DTR para reiniciar el arduino. Ahora tienes que cronometrar el reinicio y la subida manualmente. Presionar reset después de iniciar la subida parece funcionar mejor.
+Después de tener el bootloader en el rainbowduino puedes usar la interfaz serie transparente del buspirate. Ajusta la velocidad en baudios a 115200 y entra en la macro '(3)' para activar el modo transparente. El buspirate ahora actúa como un convertidor USB-serie (se podría usar cualquier otro convertidor USB-serie tipo FTDI). El problema con el buspirate es que no hay DTR para reiniciar el Arduino. Ahora tienes que sincronizar el reinicio y la carga manualmente. Parece que lo mejor es pulsar reset después de iniciar la carga.
 
 ```
 HiZ>m
@@ -351,13 +350,13 @@ UART bridge. Space continues, anything else exits.
 Reset to exit.
 ```
 
-Después de eso puedes programar el arduino con el bootloader:
+Después de eso puedes programar el Arduino con el bootloader:
 
 ```
 ./avrdude -v -c stk500v1 -p m328p -b 115200 -F -C ./avrdude.conf -P /dev/ttyUSB0 -U flash:w:Rainbow_Plasma.cpp.hex
 ```
 
-Un paso más es parchear avrdude en el archivo 'arduino.c'. El buspirate envía la señal 'rts' con la polaridad incorrecta al arduino, pero intercambiando 1 por 0 y 0 por 1 eso se soluciona. A partir de entonces tienes que elegir 'arduino' como programador en lugar de 'stk500v1'.
+Un paso más es parchear avrdude en el archivo 'arduino.c'. El Bus Pirate envía la señal 'rts' con la polaridad incorrecta al Arduino, pero intercambiando 1 por 0 y 0 por 1 eso se corrige. A partir de entonces tienes que elegir 'arduino' como programador en lugar de 'stk500v1'.
 
 ```
 static int arduino_open(PROGRAMMER * pgm, char * port)
@@ -386,51 +385,51 @@ static int arduino_open(PROGRAMMER * pgm, char * port)
 }
 ```
 
-_Nota: cambia el tipo de programador usado por el arduino ide en el archivo 'boards.txt'._
+_Nota: cambia el tipo de programador usado por el Arduino IDE en el archivo 'boards.txt'._
 
 Fuente: buspirate-avr-programming [[2]](http://hintshop.ludvig.co.nz/show/buspirate-avr-programming/), Bus_Pirate_AVR_Programming [[3]](http://dangerousprototypes.com/docs/Bus_Pirate_AVR_Programming), Optiboot [[4]](http://code.google.com/p/optiboot/)
 
-## Firmware Rainbowdunio
+## Firmware de Rainbowdunio
 
-<big>Firmware Neorainbowduino</big>
+<big>Firmware de Neorainbowduino</big>
 
-Este paquete de firmware viene con dos firmwares (uno para Arduino, uno para el Rainbowduino) y una biblioteca de Processing. Puedes enviar datos desde cualquier aplicación a través de la línea serie al Arduino - el Arduino luego envía las imágenes al dispositivo Rainbowduino correspondiente. Creé una biblioteca de Processing fácil de usar para comenzar.
+Este paquete de firmware viene con dos firmwares (uno para un Arduino, otro para el Rainbowduino) y una biblioteca de Processing. Puedes enviar datos desde cualquier aplicación a través de la línea serie al Arduino; el Arduino luego envía las imágenes al dispositivo Rainbowduino correspondiente. Creé una biblioteca de Processing fácil de usar para comenzar.
 
 Fuente: [http://code.google.com/p/neorainbowduino/](http://code.google.com/p/neorainbowduino/)
 
 **Características:**
 
-* Firmware habilitado para I2C (soporta múltiples Rainbowduino's)
+* Firmware habilitado para I2C (soporta múltiples Rainbowduino)
 
-* Biblioteca de Processing, ¡así puedes controlar fácilmente tu Rainbowduino desde Processing!
+* Biblioteca de Processing, ¡para que puedas controlar fácilmente tu Rainbowduino desde Processing!
 
-* Envía marcos completos desde Processing a Rainbowduino
+* Envía fotogramas completos desde Processing a Rainbowduino
 
-* Envía marcos desde Processing a tu matriz RGB, cada marco tiene un tamaño de 8x8 píxeles, resolución de color de 12 bits (4096 colores). La conversión de color es manejada por la biblioteca
+* Envía fotogramas desde Processing a tu matriz RGB, cada fotograma tiene un tamaño de 8x8 píxeles, resolución de color de 12 bits (4096 colores). La conversión de color es manejada por la biblioteca
 
-* Biblioteca de processing optimizada - envía marcos a Rainbowduino solo si es necesario (ahorra ~50% del tráfico - por supuesto depende de tus marcos)
+* Biblioteca de Processing optimizada: envía fotogramas a Rainbowduino solo si es necesario (ahorra ~50% de tráfico; por supuesto depende de tus fotogramas)
 
-* Intercambio de buffer corregido (no más parpadeo)
+* Intercambio de búfer corregido (no más parpadeos)
 
-* Agregado escáner de bus i2c, encuentra tus Rainbowduinos si olvidas sus direcciones
+* Se añadió un escáner de bus I2C, encuentra tus Rainbowduino si olvidas sus direcciones
 
-Modos de Trabajo Soportados: I2C
+Modos de trabajo soportados: I2C
 
 <big>Requisitos </big>
 
-Este firmware te permite usar Processing para controlar el rainbowduino, así que es obvio que necesitas:
+Este firmware te permite usar Processing para controlar el Rainbowduino, así que es obvio que necesitas:
 
-* Software Processing, obténlo de [http://processing.org/](http://processing.org/)
+* Software Processing, consíguelo en [http://processing.org/](http://processing.org/)
 
 <big>Parches para Arduino IDE</big>
 
-Debido a que el firmware neorainbowduino envía marcos completos vía I2c (92 bytes) necesitamos parchear el tamaño del buffer I2c para el arduino (para optimizar la velocidad de transferencia). Espero que Arduino soporte tamaño de buffer variable en el futuro cercano. ¡Asegúrate de que tu **Arduino IDE esté cerrado** si parcheas los archivos!
+Debido a que el firmware neorainbowduino envía fotogramas completos vía I2C (92 bytes) necesitamos parchear el tamaño del búfer I2C para el Arduino (para optimizar la velocidad de transferencia). Espero que Arduino soporte tamaños de búfer variables en un futuro cercano. ¡Asegúrate de que tu **Arduino IDE esté cerrado** si parcheas los archivos!
 
 **Archivo a parchear:** Java/libraries/Wire/utility/twi.h
 
-**Razón:** Aumentar la velocidad I2C de 100kHz a 400kHz, aumentar el tamaño del buffer I2C de 32 bytes a 98 bytes
+**Motivo:** Aumentar la velocidad I2C de 100kHz a 400kHz, aumentar el tamaño del búfer I2C de 32 bytes a 98 bytes
 
-<big>Archivo Original</big>
+<big>Archivo original</big>
 
 ```c
 #ifndef TWI_FREQ
@@ -442,7 +441,7 @@ Debido a que el firmware neorainbowduino envía marcos completos vía I2c (92 by
 #endif
 ```
 
-<big>Archivo Parcheado</big>
+<big>Archivo parcheado</big>
 
 ```c
 #ifndef TWI_FREQ
@@ -455,14 +454,16 @@ Debido a que el firmware neorainbowduino envía marcos completos vía I2c (92 by
 
 ```
 
+x
+
 **Archivo a parchear:** Java/libraries/Wire/Wire.h
 
-**Razón:** Aumentar el tamaño del buffer Serial de 32 bytes a 98 bytes
+**Motivo:** Aumentar el tamaño del búfer serie de 32 bytes a 98 bytes
 
 <table>
 <tr>
-<th>Archivo Original</th>
-<th>Archivo Parcheado</th>
+<th>Archivo original</th>
+<th>Archivo parcheado</th>
 </tr>
 <tr>
 <td width="300px"></td>
@@ -470,26 +471,25 @@ Debido a que el firmware neorainbowduino envía marcos completos vía I2c (92 by
 </tr>
 </table>
 
-
 <pre>#define BUFFER_LENGTH 32</pre>
 
 <pre>#define BUFFER_LENGTH **98**</pre>
 
-<big>Subir Firmware a Rainbowduino</big>
+<big>Subir firmware a Rainbowduino</big>
 
-Sube el firmware (ver Subir Firmware), el archivo de firmware que necesitas es **rainbowduinoFw/Rainbow_V2_71/Rainbow_V2_71.pde**.
+Sube el firmware (ver Upload Firmware), el archivo de firmware que necesitas es **rainbowduinoFw/Rainbow_V2_71/Rainbow_V2_71.pde**.
 
-**Nota:** Este firmware usa el protocolo I2C para comunicarse - cada Rainbowduino necesita una dirección I2C única. La dirección puede configurarse editando el archivo Rainbowduino.h (`#define I2C_DEVICE_ADDRESS 0x06`). ¡Así que no olvides cambiar la dirección si subes este firmware a más de un rainbowduino!
+**Nota:** Este firmware usa el protocolo I2C para comunicarse; cada Rainbowduino necesita una dirección I2C única. La dirección se puede configurar editando el archivo Rainbowduino.h (`#define I2C_DEVICE_ADDRESS 0x06`). ¡Así que no olvides cambiar la dirección si subes este firmware a más de un Rainbowduino!
 
-<big>Subir Firmware a Arduino</big>
+<big>Subir firmware a Arduino</big>
 
 Desconecta las líneas RX/TX entre Rainbowduino y Arduino. Sube el firmware de Arduino **arduinoFw/neoLed/neoLed.pde** al Arduino.
 
 <big>Interactuar con Rainbowduino</big>
 
-Este capítulo te mostrará una **forma simple de comunicarte** con tu Rainbowduino. Necesitas un Arduino (funcionando como puerta de enlace serial a I2C) y un Rainbowduino con una dirección I2C de 0x06.
+Este capítulo te mostrará una **forma sencilla de comunicarte** con tu Rainbowduino. Necesitas un Arduino (funcionando como pasarela de serie a I2C) y un Rainbowduino con una dirección I2C de 0x06.
 
-La conexión entre el Rainbowduino y Arduino debería verse así:
+La conexión entre el Rainbowduino y el Arduino debería verse así:
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-neorainbow.png)
 
 Usamos una fuente de alimentación externa, sin embargo también podrías usar los 5V del Arduino.
@@ -517,17 +517,17 @@ Usamos una fuente de alimentación externa, sin embargo también podrías usar l
 </tr>
 </table>
 
-<big>Instalar Librerías de Processing </big>
+<big>Instalar bibliotecas de Processing </big>
 
-Después de instalar el Software de Processing, necesitarás instalar la librería neorainbowduino. Puedes encontrar la librería de processing en el directorio **processingLib\distribution\neorainbowduino-x.y\download**. Descomprime el archivo zip en tu carpeta home de Processing (hay un archivo README.TXT dentro con instrucciones detalladas sobre cómo instalar).
+Después de instalar el software Processing, necesitarás instalar la biblioteca neorainbowduino. Puedes encontrar la biblioteca de Processing en el directorio **processingLib\distribution\neorainbowduino-x.y\download**. Descomprime el archivo zip en tu carpeta de inicio de Processing (hay un archivo README.TXT dentro con instrucciones detalladas sobre cómo instalarla).
 
-Cuando inicies Processing deberías poder importar la librería neorainbowduino):
+Cuando inicies Processing deberías poder importar la biblioteca neorainbowduino):
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-processing-lib.png)
 
-**Ejemplo Simple**
+**Ejemplo sencillo**
 
-Aquí hay un sketch muy simple de Processing para enviar algunos rectángulos aleatorios al rainbowduino.
+Aquí hay un sketch de Processing muy sencillo para enviar algunos rectángulos aleatorios al Rainbowduino.
 
 ```c
 import processing.serial.*;
@@ -571,11 +571,11 @@ void draw() {
 }
 ```
 
-TODO agregar algunas capturas de pantalla
+POR HACER: añadir algunas capturas de pantalla
 
-**Cómo funciona el redimensionamiento de imágenes**
+**Cómo funciona el cambio de tamaño de imagen**
 
-La imagen será redimensionada usando un Filtro de Promediado de Área. Por lo tanto, es importante saber que la imagen debe estar correctamente alineada. Alineada significa que el resultado se ve bien si la imagen puede ser dividida por 8. Aquí hay un ejemplo bueno y malo:
+La imagen se redimensionará usando un filtro de promedio de área. Así que es importante saber que la imagen debe estar correctamente alineada. Alineada significa que el resultado se ve bien si la imagen se puede dividir por 8. Aquí hay un buen y un mal ejemplo:
 
 |Buen ejemplo (alineado)|Mal ejemplo (no alineado)
 |---|---|
@@ -588,9 +588,9 @@ Fuente: [http://www.rngtng.com/mtxcontrol/](http://www.rngtng.com/mtxcontrol/)
 
 **Características:**
 
-* mtXcontrol es un editor escrito en Processing para crear fácilmente secuencias de imágenes para varios dispositivos de salida que contienen matriz LED multicolor.
+* mtXcontrol es un editor escrito en Processing para crear fácilmente secuencias de imágenes para varios dispositivos de salida que contienen una matriz de LED multicolor.
 
-Modos de Trabajo Soportados: ???
+Modos de trabajo soportados: ???
 
 ## Firmware 3
 
@@ -598,19 +598,19 @@ Fuente: [http://code.google.com/p/rainbowduino-firmware/](http://code.google.com
 
 **Características:**
 
-* doble búfer sincronizado con la tasa de refresco
+* doble búfer sincronizado con la frecuencia de refresco
 
 * 4 búferes auxiliares
 
 * conjunto de instrucciones de alto nivel
 
-* múltiple hardware controlado
+* hardware múltiple controlado
 
 * protocolo de comunicación I2C
 
-* almacenamiento permanente de datos en Eeprom
+* almacenamiento de datos permanente en EEPROM
 
-Modos de Trabajo Soportados: I2C
+Modos de trabajo soportados: I2C
 
 ## RainbowDashboard
 
@@ -620,25 +620,47 @@ Fuente: [http://code.google.com/p/rainbowdash/](http://code.google.com/p/rainbow
 
 * Base de código limpia y mantenible.
 
-* Compatible con firmware estándar.
+* Compatible con el firmware estándar.
 
-* Soporta modo UART (no se necesita host Arduino - habla directamente con Rainbowduino).
+* Soporta modo UART (no se necesita host Arduino: se comunica directamente con Rainbowduino).
 
 * Operaciones gráficas con doble búfer.
 
-* Reloj en tiempo real por software.
+* Reloj de tiempo real por software.
 
-* Animación impulsada por el propio Rainbowduino.
+* Animación controlada por el propio Rainbowduino.
 
 * Conjunto completo de caracteres Windows ANSI (CP1252).
 
 * Conjunto de comandos de alto nivel.
 
-Modos de Trabajo Soportados: UART
+Modos de trabajo soportados: UART
 
-Puede cambiarse fácilmente para usar I2C; solo un archivo (RainbowDash.pde) necesita ser cambiado.
+Se puede cambiar fácilmente para usar I2C; solo es necesario cambiar un archivo (RainbowDash.pde).
 
-## Cómo funciona el Firmware
+## rainbowduino-rs
+
+> **Nota:** `rainbowduino-rs` es un proyecto de firmware independiente desarrollado por la comunidad, creado por [jecaro](https://github.com/jecaro) para Rainbowduino v2.0. No es mantenido ni soportado oficialmente por Seeed Studio. Los usuarios deben verificar la compatibilidad del hardware antes de flashear el firmware y usarlo bajo su propia responsabilidad.
+
+![Plasma on a 16x16 square of four boards](https://raw.githubusercontent.com/jecaro/rainbowduino-rs/284b365f7b7f1e9db90c1e7e6695163262a58217/plasma.webp)
+
+Fuente: [https://github.com/jecaro/rainbowduino-rs](https://github.com/jecaro/rainbowduino-rs)
+
+**Características:**
+
+* Firmware escrito en Rust
+
+* Recibe un framebuffer completo por I2C y lo muestra continuamente
+
+* 16 niveles de brillo (4 bits) por color
+
+* Biblioteca maestra para controlar varias placas encadenadas como una sola pantalla, en cualquier disposición (por ejemplo, una tira de 32x8 o un cuadrado de 16x16, con placas al revés)
+
+* Firmware maestro de ejemplo para un Arduino Uno
+
+Modos de trabajo compatibles: I2C
+
+## Cómo funciona el firmware
 
 <big>Microprocesador - Atmega 168/328</big>
 
@@ -692,87 +714,87 @@ Puede cambiarse fácilmente para usar I2C; solo un archivo (RainbowDash.pde) nec
 </tr>
 </table>
 
-**PORTB** se mapea a los pines digitales 8 a 13 de Arduino. Los dos bits altos (6 y 7) se mapean a los pines del cristal y no son utilizables.
+**PORTB** se asigna a los pines digitales 8 a 13 de Arduino. Los dos bits altos (6 y 7) se asignan a los pines del cristal y no se pueden usar.
 
-**PORTC** se mapea a los pines analógicos 0 a 5 de Arduino. Los pines 6 y 7 solo son accesibles en el Arduino Mini.
+**PORTC** se asigna a los pines analógicos 0 a 5 de Arduino. Los pines 6 y 7 solo son accesibles en el Arduino Mini.
 
-**PORTD** se mapea a los pines digitales 0 a 7 de Arduino.
+**PORTD** se asigna a los pines digitales 0 a 7 de Arduino.
 
-<big>Controlador LED de corriente constante</big>
+<big>Controlador de LED de corriente constante</big>
 
-Este controlador utiliza el MBI5168. El MBI5168 es un [registro de desplazamiento](https://en.wikipedia.org/wiki/Shift_register) de 8 bits. Convierte los datos serie a datos paralelos. Los 3 MBI5168 comparten las entradas LE, CLK y OE.
+Este controlador utiliza el MBI5168. El MBI5168 es un [registro de desplazamiento](https://en.wikipedia.org/wiki/Shift_register) de 8 bits. Convierte los datos en serie en datos en paralelo. Los 3 MBI5168 comparten las entradas LE, CLK y OE.
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-Mbi-schema.png)
 
 <table>
 <tr>
-<th> Nombre</th>
-<th> Descripción</th>
+<th> Name</th>
+<th> Desc</th>
 </tr>
 <tr>
 <td width="50px">OE</td>
-<td width="950px">Salida Habilitada, cuando está (activo) bajo, los controladores de salida están habilitados; cuando está alto, todos los controladores de salida están APAGADOS (en blanco).</td>
+<td width="950px">Salida habilitada; cuando está (activa) en bajo, los controladores de salida están habilitados; cuando está en alto, todos los controladores de salida se apagan (en blanco).</td>
 </tr>
 <tr>
 <td>LE</td>
-<td>Terminal de entrada de strobe de datos, los datos serie se transfieren al latch respectivo cuando LE está alto. Los datos se almacenan cuando LE pasa a bajo.</td>
+<td>Terminal de entrada de estroboscopio de datos; los datos en serie se transfieren al latch correspondiente cuando LE está en alto. Los datos se bloquean cuando LE pasa a bajo.</td>
 </tr>
 <tr>
 <td>SDI</td>
-<td>Entrada de datos serie al registro de desplazamiento.</td>
+<td>Entrada de datos en serie al registro de desplazamiento.</td>
 </tr>
 <tr>
 <td>SDO</td>
-<td>Salida de datos serie al siguiente SDI del siguiente IC controlador.</td>
+<td>Salida de datos en serie hacia la siguiente SDI del siguiente CI controlador.</td>
 </tr>
 <tr>
 <td>R-EXT</td>
-<td>Terminal de entrada utilizado para conectar una resistencia externa para configurar la corriente de salida para todos los canales de salida.</td>
+<td>Terminal de entrada usado para conectar una resistencia externa para configurar la corriente de salida de todos los canales de salida.</td>
 </tr>
 <tr>
 <td>CLK</td>
-<td>Terminal de entrada de reloj para el desplazamiento de datos en el flanco ascendente</td>
+<td>Terminal de entrada de reloj para el desplazamiento de datos en el flanco de subida</td>
 </tr>
 </table>
 
-<big>Controlador Super Source</big>
+<big>Super Source Driver</big>
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-schema-M5456.png)
 
 <big>Desplazar datos de salida</big>
 
-Para mostrar un fotograma completo en la Matriz LED, el método de interrupción de Rainbowduino necesita ser llamado 128 veces. Hay 8 líneas y 16 niveles de brillo. Cada vez que se llama al método displayNextLine(), una línea se actualiza por el nivel de brillo actual. Después de que todas las 8 líneas se actualizan, el nivel de brillo se actualiza. Por eso esta función necesita 128 ciclos hasta que un fotograma completo se puebla en la Matriz LED.
+Para mostrar un fotograma completo en la matriz de LED, es necesario llamar 128 veces al método de interrupción de Rainbowduino. Hay 8 líneas y 16 niveles de brillo. Cada vez que se llama al método displayNextLine(), se actualiza una línea con el nivel de brillo actual. Después de que se actualizan las 8 líneas, se actualiza el nivel de brillo. Por eso esta función necesita 128 ciclos hasta que un fotograma completo se rellena en la matriz de LED.
 
-A continuación puedes ver la pantalla de la Matriz LED después de 32, 64, 96 y 128 ciclos. Notas cómo se incrementa el brillo.
+A continuación se muestra la pantalla de la matriz de LED después de 32, 64, 96 y 128 ciclos. Se puede notar cómo aumenta el brillo.
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-fw.1.png)
 
-<big>Soportar más de 4096 colores (12bit)</big>
+<big>Soporta más de 4096 colores (12bit)</big>
 
-El firmware de serie (y la mayoría de firmwares de terceros) soportan resolución de color de 12bit. Es posible incrementar esto:
+El firmware de serie (y la mayoría de los firmwares de terceros) admite una resolución de color de 12 bits. Es posible aumentarla:
 
 <table>
 <tr>
-<th> Resolución de Color</th>
-<th> Carga Útil</th>
-<th> Nivel de Brillo</th>
+<th> Color Resolution</th>
+<th> Payload</th>
+<th> Brightness Level</th>
 </tr>
 <tr>
-<td width="250px">12 bit (4bit por color), 4096 Colores</td>
+<td width="250px">12 bit (4bit por color), 4096 colores</td>
 <td width="250px">96 bytes (12bit*64=768bit)</td>
 <td>16</td>
 </tr>
 <tr>
-<td>15 bit (5bit por color), 32768 Colores</td>
+<td>15 bit (5bit por color), 32768 colores</td>
 <td>120 bytes (15bit*64=960bit)</td>
 <td>32</td>
 </tr>
 </table>
 
-El beneficio de usar 4 bits por color es el almacenamiento de datos, un byte toma 2 valores de color - por lo tanto es fácil obtener el color de un buffer de bytes. Usar 5 bits por color necesita más potencia de CPU o más espacio de buffer (usar 2 bytes para 3 valores de color - desperdiciando 1 bit por color).
+El beneficio de usar 4 bits por color es el almacenamiento de datos: un byte contiene 2 valores de color, por lo tanto es fácil obtener el color desde un búfer de bytes. Usar 5 bits por color requiere más potencia de CPU o más espacio de búfer (usar 2 bytes para 3 valores de color, desperdiciando 1 bit por color).
 
 Para lograr una resolución de color de 15 bits, el firmware necesita dos cambios:
 
-* iterar sobre 32 en lugar de 16 niveles de brillo
+* iterar sobre 32 niveles de brillo en lugar de 16
 
 * cambiar la función de desplazamiento de salida
 
@@ -780,9 +802,9 @@ Para lograr una resolución de color de 15 bits, el firmware necesita dos cambio
 
 ---
 
-* [A Huge DIY LED Matrix](http://www.neophob.com/2010/11/huge-rgb-led-matrix/)
+* [Una enorme matriz de LED DIY](http://www.neophob.com/2010/11/huge-rgb-led-matrix/)
 
-* [Generic Rainbowduino information](http://www.neophob.com/2010/07/rainbowduino-fun-aka-neorainbowduino/)
+* [Información genérica de Rainbowduino](http://www.neophob.com/2010/07/rainbowduino-fun-aka-neorainbowduino/)
 
 * [File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
 
@@ -790,9 +812,9 @@ Para lograr una resolución de color de 15 bits, el firmware necesita dos cambio
 
 * [File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "File:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

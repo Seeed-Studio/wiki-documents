@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper Display Board - EN04 のはじめに
+# XIAO ePaper Display Board - EN04 入門ガイド
 
 <div class="table-center">
 <table align="center">
@@ -38,7 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**XIAO nRF52840** Plus を搭載したディスプレイボード EN04 は、**24 ピン**および **50 ピン**の ePaper ディスプレイの両方をサポートします。JST 2.0 mm バッテリーコネクタと電源スイッチ、内蔵充電 IC を備え、1 つのリセットボタンと 3 つのユーザーボタンが付属しています。デジタルサイネージ、電子ラベル、携帯型情報ボードなど、低消費電力の ePaper プロジェクトに最適です。
+**XIAO nRF52840** Plus を搭載したディスプレイボード EN04 は、**24 ピン**および**50 ピン**の ePaper ディスプレイの両方をサポートします。JST 2.0 mm バッテリーコネクタ（電源スイッチ付き）、内蔵充電 IC を備え、リセットボタン 1 個とユーザーボタン 3 個を搭載しています。デジタルサイネージ、電子ラベル、携帯型情報ボードなど、低消費電力の ePaper プロジェクトに最適です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -47,7 +47,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **XIAO nRF52840 Plus 搭載：** 対応する ePaper ディスプレイに接続するだけですぐに動作します。
 - **多用途なディスプレイ対応：** 幅広い ePaper スクリーンに対応し、24 ピンおよび 50 ピンインターフェースの両方をサポート、ジャンパキャップで簡単に切り替えできます。
 - **スイッチ付き BAT コネクタ：** シンプルなバッテリー接続を提供し、スイッチを統合することで効率的な電源管理と省エネを実現します。
-- **ユーザーフレンドリーなボタン：** 1 個のリセットボタンと 3 個のユーザープログラマブルボタンを備え、プロジェクトの開発を加速し、柔軟なカスタマイズ機能を提供します。
+- **ユーザーフレンドリーなボタン：** リセットボタン 1 個とユーザープログラマブルボタン 3 個を備え、プロジェクトの開発を加速し、柔軟なカスタマイズ機能を提供します。
 
 ### 仕様
 
@@ -144,7 +144,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 </table>
 
 
-### アプリケーション
+### 応用例
 
 - **スマートホームダッシュボード**：天気情報、カレンダーイベント、各種スマートホームデバイスからの通知など、リアルタイム情報を表示します。
 - **エネルギーモニタリング**：スマートメーターからの電力消費データを表示し、家庭でのエネルギー使用状況をより効率的に把握・管理できるようにします。
@@ -160,16 +160,16 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 #### 24 ピンコネクタ
 
-- [1.54-inch ePaper - モノクロ 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch ePaper - モノクロ 122x250](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
-- [2.13-inch ePaper - 4 色 122x250](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - モノクロ 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9-inch ePaper - 4 色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch ePaper - モノクロ 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch ePaper - モノクロ 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch ePaper - モノクロ 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch ePaper - モノクロ 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [7.5-inch ePaper - 3 色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13-inch ePaper - Monochrome 122x250](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
+- [2.13-inch ePaper - Quadruple Color 122x250](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Quadruple Color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.png" style={{width:800, height:'auto'}}/></div>
 
@@ -224,27 +224,27 @@ EN04 では、3 つのボタンは次のように XIAO nRF52840 Plus に接続�
 ユーザーボタンはプログラム可能であり、ページ切り替え、モード選択、ePaper プロジェクト内で特定のアクションをトリガーするなど、さまざまな機能に設定できます。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.png" style={{width:700, height:'auto'}}/></div>
 
 ### バッテリーコネクタ
 
 EN04 は JST 2.0 mm バッテリーコネクタと内蔵充電 IC を備えており、バッテリー駆動の低消費電力 ePaper プロジェクトに適しています。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.png" style={{width:700, height:'auto'}}/></div>
 
 ## Arduino ではじめる
 
 ### Seeed GFX2 ライブラリのインストール
 
-EN04 用のすべての ePaper サンプルは **Seeed_GFX2** Arduino ライブラリ上に構築されており、[Supported ePaper Displays](#対応-epaper-ディスプレイ) セクションに記載されているすべての ePaper ディスプレイをサポートします。以下のサンプルでは、**7.5-inch モノクロ ePaper (800 x 480)** を例として使用します。
+EN04 用のすべての ePaper サンプルは、[Supported ePaper Displays](#対応-epaper-ディスプレイ) セクションに記載されているすべての ePaper ディスプレイをサポートする **Seeed_GFX2** Arduino ライブラリ上に構築されています。以下のサンプルでは、**7.5-inch Monochrome ePaper (800 x 480)** を例として使用します。
 
-**ステップ 1. Seeed_GFX2 ライブラリをダウンロード**
+**ステップ 1. Seeed_GFX2 ライブラリをダウンロードする**
 
 [Seeed_GFX2 GitHub リポジトリ](https://github.com/Seeed-Studio/Seeed_GFX2) にアクセスし、緑色の **Code** ボタンをクリックして **Download ZIP** を選択し、ライブラリをコンピュータに保存します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/14.png" style={{width:800, height:'auto'}}/></div>
 
-**ステップ 2. ライブラリを Arduino IDE に追加**
+**ステップ 2. ライブラリを Arduino IDE に追加する**
 
 Arduino IDE を開き、**Sketch → Include Library → Add .ZIP Library...** に移動し、先ほどダウンロードした ZIP ファイルを選択します。
 
@@ -254,25 +254,25 @@ Arduino IDE を開き、**Sketch → Include Library → Add .ZIP Library...** �
 
 1. **File → Examples → Seeed_GFX2 → ePaper Displays → Expansion Board Series → nRF52840 Series → XIAO ePaper Display Board - EN04 → 7.5-inch ePaper - Monochrome 800x480 → HelloWorld** に移動します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_01.png" style={{width:800, height:'auto'}}/></div>
 
 2. **Tools → Board** で **Seeed XIAO nRF52840 Plus** を選択します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/Arduino_IDE_02.png" style={{width:400, height:'auto'}}/></div>
 
 3. ボードを USB Type-C で接続し、対応するシリアルポートを選択して **Upload** をクリックします。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.png" style={{width:300, height:'auto'}}/></div>
 
 :::note
-上記のサンプルパスでは、7.5 インチモノクロディスプレイを例として使用しています。他の対応ディスプレイの場合は、**XIAO ePaper Display Board - EN04** 配下からお使いのスクリーンモデルに一致するフォルダを選択してください。各スクリーンには **HelloWorld**、**Bitmap**、**Custom_Demo** のサンプルが同梱されています（7.5 インチ Tri-Color のみ **HelloWorld** と **Custom_Demo** が同梱されています）。
+上記のサンプルパスでは、7.5インチモノクロディスプレイを例として使用しています。他の対応ディスプレイの場合は、**XIAO ePaper Display Board - EN04** 配下からお使いのスクリーンモデルに一致するフォルダを選択してください。各スクリーンには、それぞれ **HelloWorld**、**Bitmap**、**Custom_Demo** のサンプルが同梱されています（7.5インチ Tri-Color のみ **HelloWorld** と **Custom_Demo** が同梱されています）。
 :::
 
 ## ソフトウェア概要
 
-#### 基本的なボタン読み取りの例
+#### 基本的なボタン読み取りのサンプル
 
-このサンプルでは、3 つすべてのボタン押下を検出し、その結果をシリアルモニタに出力する方法を示します。
+このサンプルでは、3つすべてのボタン押下を検出し、その結果をシリアルモニタに出力する方法を示します。
 
 ```cpp
 #include <Adafruit_TinyUSB.h> // Required for Serial on the Seeed nRF52 Boards core
@@ -330,12 +330,12 @@ void loop() {
 }
 ```
 
-#### バッテリー電圧読み取りの例
+#### バッテリー電圧読み取りのサンプル
 
-このサンプルでは、バッテリー電圧を読み取り、その値をシリアルモニタに出力する方法を示します。
+このサンプルでは、バッテリー電圧を読み取り、シリアルモニタに出力する方法を示します。
 
 :::tip
-バッテリー電圧を読み取るコードを自分で記述する場合、analogRead() 関数の前に 10ms のディレイを追加すると、より正確になります。
+バッテリー電圧を読み取るコードを自分で記述する場合は、analogRead() 関数の前に 10ms のディレイを追加すると、より正確になります。
 :::
 
 ```cpp
@@ -369,34 +369,34 @@ void loop() {
 
 ## トラブルシューティング
 
-**Q1: 電源を入れても ePaper スクリーンに何も表示されません。**
+**Q1: 電源投入後も ePaper スクリーンに何も表示されません。**
 
-- **DIY キットにはファームウェアがプリインストールされていません。** XIAO EN04 DIY キットには ePaper 用ファームウェアが書き込まれていないため、初回起動時に画面が真っ白または真っ黒であるのは正常です。
+- **DIY キットにはファームウェアがプリインストールされていません。** XIAO EN04 DIY キットには ePaper 用ファームウェアが書き込まれていないため、初回の電源投入時に画面が真っ白または真っ黒であっても正常です。
 - **FPC ケーブルの向きを確認してください。** ePaper の FPC ケーブルが正しい向きで挿入されていることを確認してください。コネクタを逆向きに接続すると、画面が表示されないだけでなく、ディスプレイを破損する可能性があります。
-- **RESET ボタンを押してください。** ファームウェアを書き込んだ後、または電源を接続した後に、RESET ボタンを一度押して画面のリフレッシュをトリガーしてください。
+- **RESET ボタンを押してください。** ファームウェアの書き込み後、または電源接続後に、RESET ボタンを一度押して画面のリフレッシュをトリガーしてください。
 
 **Q2: 表示が乱れたり、一部だけ更新されます。**
 
-- **ジャンパキャップの設定を確認してください。** EN04 は 24 ピンおよび 50 ピンの ePaper ディスプレイの両方をサポートしており、ジャンパキャップは使用するスクリーンタイプに合わせる必要があります。24 ピンのスクリーンには 24 Pin、50 ピンのスクリーンには 50 Pin に設定してください。
-- **スクリーンモデルの選択を確認してください。** Arduino のサンプル内で、スクリーンのモデル（サイズとカラータイプ）が正しく選択されていることを確認してください。誤ったモデルを選択すると、表示が正しく行われません。
-- **フルリフレッシュが完了するまで待ってください。** ePaper ディスプレイはフルリフレッシュサイクルを使用するため、更新中に一時的な乱れや残像が見えるのは正常であり、サイクル完了後に解消されます。
+- **ジャンパキャップの設定を確認してください。** EN04 は 24ピンおよび 50ピンの ePaper ディスプレイの両方をサポートしており、ジャンパキャップは使用するスクリーンタイプに合わせる必要があります。24ピンのスクリーンには 24 Pin、50ピンのスクリーンには 50 Pin に設定してください。
+- **スクリーンモデルの選択を確認してください。** Arduino のサンプルコード内で、使用しているスクリーンのモデル（サイズとカラータイプ）を正しく選択していることを確認してください。誤ったモデルを選ぶと、表示が正しく行われません。
+- **フルリフレッシュが完了するまで待ってください。** ePaper ディスプレイはフルリフレッシュサイクルを使用するため、更新中に一部表示や残像が見えるのは正常であり、サイクル完了後にクリアされます。
 
 **Q3: バッテリー使用時にボードの電源が入りません。**
 
-- **電源スイッチを確認してください。** バッテリー電源スイッチを ON 位置にスライドしてください。スイッチが OFF の場合、ボードはバッテリーから電源を取得しません。
+- **電源スイッチを確認してください。** バッテリー電源スイッチを ON の位置にスライドしてください。スイッチが OFF の場合、ボードはバッテリーから電源を取得しません。
 - **JST コネクタの極性を確認してください。** JST 2.0 mm バッテリーコネクタが正しい極性で接続されていることを確認してください。バッテリーの極性が逆になると、ハードウェアを破損する可能性があります。バッテリーを接続する前に、コネクタの +/− 表示を必ず確認してください。
 - **バッテリーを充電してください。** バッテリーが完全に放電している場合、ボードが起動しないことがあります。USB Type-C を接続してバッテリーを充電し、再度お試しください。
 
-**Q4: Seeedash Firmware Flasher がボードを検出できません。**
+**Q4: Seeedash Firmware Flasher がボードを認識しません。**
 
 - **RESET ボタンを押してください。** ボードを USB 接続した状態で RESET ボタンを押して離し、USB ポートを再認識させてから、再度検出を試してください。
-- **データ通信対応の USB ケーブルを使用してください。** 一部の USB ケーブルは電源供給のみで、データ転送に対応していません。動作確認済みのデータ通信対応ケーブルに交換してください。
+- **データ通信対応の USB ケーブルを使用してください。** 一部の USB ケーブルは電源供給のみで、データ転送に対応していません。データ通信が可能な信頼できるケーブルに交換してください。
 - **USB ポートを確認してください。** PC の別の USB ポートを試してください。一部のポートでは、電源やドライバに問題がある場合があります。
 
 **Q5: Arduino IDE での書き込みに失敗します。**
 
-- **正しいボードを選択してください。** **Tools** → **Board** に進み、**Seeed XIAO nRF52840 Plus** が選択されていることを確認してください。他の XIAO ボードバリエーションは選択しないでください。
-- **正しいポートを選択してください。** **Tools** → **Port** に進み、ボードに対応するシリアルポートを選択してください。ポートが表示されない場合は、USB ケーブルと接続状態を確認してください。
+- **正しいボードを選択してください。** **Tools** → **Board** に進み、**Seeed XIAO nRF52840 Plus** が選択されていることを確認してください。他の XIAO ボードバリアントは選択しないでください。
+- **正しいポートを選択してください。** **Tools** → **Port** に進み、使用しているボードに対応するシリアルポートを選択してください。ポートが表示されない場合は、USB ケーブルと接続状態を確認してください。
 - **必要に応じてブートローダーモードに入ってください。** 書き込みが継続的に失敗する場合は、RESET ボタンを素早く 2 回押してブートローダーモードに入り、ポートを再選択してから再度書き込みを行ってください。
 
 ## リソース
@@ -405,7 +405,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

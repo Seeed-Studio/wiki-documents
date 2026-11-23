@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating Rerun utility for real-time visualization and logging of Reachy Mini's state in compliant mode with gravity compensation.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Rerun Viewer
 slug: /reachymini_examples_rerun_viewer
 keywords:

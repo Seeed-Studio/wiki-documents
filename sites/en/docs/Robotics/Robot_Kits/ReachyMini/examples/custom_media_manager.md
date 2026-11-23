@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating how to deactivate the built-in media manager and access the camera and microphone directly using OpenCV and sounddevice for custom pipelines.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Custom Media Manager
 slug: /reachymini_examples_custom_media_manager
 keywords:

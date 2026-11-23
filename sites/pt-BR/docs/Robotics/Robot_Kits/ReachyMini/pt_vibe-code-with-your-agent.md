@@ -1,5 +1,6 @@
 ---
 description: Guia para usar agentes de codificação com IA para criar apps Reachy Mini, apontando para a documentação AGENTS.md para que os agentes de IA entendam os padrões do SDK e as melhores práticas.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini_vibe/reachymini_1.webp
 title: Vibe Code com o Seu Agente
 slug: /reachymini_vibe-code-with-your-agent
 keywords:

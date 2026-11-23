@@ -1,6 +1,7 @@
 ---
 description: エッジ廃棄物分別の構築、出力契約、実測境界と実装詳細
 title: 'エッジ廃棄物分別：素材クラス、4分類、MQTT'
+sidebar_label: 'エッジ廃棄物分別'
 keywords:
   - waste sorting
   - waste classification edge AI
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-waste-sorting/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -112,8 +113,8 @@ generated_from: sensecraft-solutions@cbbfa60
 
 | | 分類ホスト | アクセラレータ | 配備時の分類器 | オープン語彙トラック | 選択する場面 |
 |---|---|---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>エントリーAIホスト | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供なし | 投入口 1 か所、ベースライン分類器のみ |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>高性能AIホスト | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供（提供する唯一のデバイスクラス） | 再学習なしで後から品目クラスを追加したい場合 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>エントリーAIホスト | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供なし | 投入口 1 か所、ベースライン分類器のみ |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>高性能AIホスト | Orin GPU | EfficientNet-Lite0 224²、TensorRT FP16 | 提供（提供する唯一のデバイスクラス） | 再学習なしで後から品目クラスを追加したい場合 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>ファンレス産業用筐体 | Hailo-8 | EfficientNet-Lite0 224²、INT8 HEF | 提供なし | カメラが既にあり、制御盤に設置する場合。HEF はデバイス外でコンパイルし、導入時にダウンロード。Hailo ランタイムのバージョンを揃える必要があります |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588 シリーズ](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>高コスパ産業用ボード | RK3588 NPU | EfficientNet-Lite0 224²、INT8 | 提供なし | カメラが既にあり、ハードウェアコストを最小にしたい場合。ごみ箱の筐体やキオスクに設置。モデルはデバイス外で変換し、デバイス上で engine を構築しません |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002 (SG2002)](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>オールインワンAIカメラ | カメラ内蔵 TPU | EfficientNet-Lite0 224²、BF16 | 提供なし | 投入口にまだカメラがなく、ハードウェアコストを最小にしたい場合。分類器はカメラ上で動き、別途ホストは不要 |

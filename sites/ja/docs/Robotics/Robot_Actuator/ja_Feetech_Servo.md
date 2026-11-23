@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、Feetechサーボモーターのチュートリアルを提供します。
+description: "Feetech STS/SM シリアルバスサーボの完全ガイド：配線、ボーレートと ID の設定、キャリブレーション、位置フィードバック、SO-ARM と LeRobot プロジェクト向けの Python 制御。"
 title: Feetech
 keywords:
   - アクチュエータ

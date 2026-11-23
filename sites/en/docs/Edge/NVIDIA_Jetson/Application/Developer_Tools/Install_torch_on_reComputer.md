@@ -1,5 +1,5 @@
 ---
-description: This article provides a step-by-step guide for installing NVIDIA-optimized PyTorch on Jetson-based reComputer devices, tailored to different JetPack versions (5, 6, and others). It explains how to set up necessary dependencies, install cuSPARSELt for newer PyTorch releases, and verify the installation. Additionally, it covers using Miniconda to manage multiple Python environments, enabling users to easily switch between different PyTorch versions for development and deployment. Helpful resources and official links are also included for further reference.
+description: "Install NVIDIA-optimized PyTorch on reComputer for JetPack 5 and JetPack 6, with conda environments for switching torch versions."
 title: Install Pytorch for reComputer Jetson
 keywords:
   - reComputer
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/install_torch_on_recomputer/
 ---
 
 <div style={{ textAlign: "justify" }}>
-This wiki demonstrates how to install NVIDIA-optimized PyTorch on your reComputer, matching your JetPack version. It also covers how to use virtual environments (conda) to manage multiple PyTorch versions for development and deployment.
+NVIDIA publishes PyTorch wheels per JetPack release, so the install differs between JetPack 5 and JetPack 6. Pick the section that matches your module, install the matching wheel, and confirm `torch.cuda.is_available()` returns True. Conda environments keep several torch versions side by side when a project pins an older one.
 </div>
 
 ## Prerequisites
@@ -33,7 +33,7 @@ This wiki demonstrates how to install NVIDIA-optimized PyTorch on your reCompute
 
 ## Install PyTorch for reComputer
 
-Here, we will introduce how to install PyTorch with CUDA support in the two commonly used versions of Jetpack 5 and Jetpack 6.
+The two JetPack generations in most reComputer units take different wheels: JetPack 5.1.3 pairs with Python 3.8, JetPack 6.2 with Python 3.10.
 
 <!-- Code -->
 
@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="JP5.1.3" label="JP5.1.3">
 
-In reComputer, the commonly used version of Jetpack 5 is 5.1.3. Here, we will use it to introduce how to install PyTorch.
+In reComputer, the commonly used version of Jetpack 5 is 5.1.3. The steps below install PyTorch for it.
 
 **Step 1.** Update system and install dependencies:
 
@@ -72,14 +72,14 @@ print(torch.__version__)
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/torch_2.1.png"/>
+  <img alt="torch.__version__ and torch.cuda.is_available() output on JetPack 5.1.3 with torch 2.1.0" width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/torch_2.1.png"/>
 </div>
 
 </TabItem>
 
 <TabItem value="JP6.2" label="JP6.2">
 
-In reComputer, the commonly used version of Jetpack 6 is 6.2. Here, we will use it to introduce how to install PyTorch.
+In reComputer, the commonly used version of Jetpack 6 is 6.2. The steps below install PyTorch for it.
 
 **Step 1.** Update system and install dependencies:
 
@@ -97,7 +97,7 @@ cuSPARSELt is a high-performance CUDA library developed by NVIDIA specifically f
 :::
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/download_cu.png"/>
+  <img alt="cuSPARSELt download page with Linux, aarch64, Ubuntu 22.04 and native build selected" width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/download_cu.png"/>
 </div>
 
 **Step 3.** According to the version selected as shown in the above figure, you will obtain the following installation command:
@@ -129,7 +129,7 @@ print(torch.cuda.is_available())
 ```
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/torch_2.5.png"/>
+  <img alt="torch.cuda.is_available() returning True under Python 3.10 on the JetPack 6.2 setup" width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/torch_2.5.png"/>
 </div>
 
 </TabItem>
@@ -146,7 +146,7 @@ sudo apt-get install -y python3-pip libopenblas-dev
 Here is the officially provided [compiled wheel file of PyTorch](https://developer.download.nvidia.cn/compute/redist/jp/) with CUDA support by NVIDIA.
 
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/download_wheel.png"/>
+  <img alt="NVIDIA PyTorch wheel index listing builds per JetPack and Python version" width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/download_wheel.png"/>
 </div>
 
 **Step 2.** Download the appropriate wheel file based on your JetPack version and Python version.
@@ -189,7 +189,7 @@ bash Miniconda3-latest-Linux-aarch64.sh
 
 :::
 <div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/install_conda.png"/>
+  <img alt="conda init output showing /home/seeed/.bashrc modified so conda loads in new shells" width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/install_conda.png"/>
 </div>
 
 **Step 2.** Initialize and configure conda:
@@ -221,6 +221,28 @@ For more details, see the [NVIDIA PyTorch installation guide](https://docs.nvidi
 - [NVIDIA Developer Forum](https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048)
 - [NVIDIA PyTorch installation guide](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html)
 - [PyTorch for Jetson Release Notes](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform-release-notes/pytorch-jetson-rel.html#pytorch-jetson-rel)
+
+## FAQ
+
+**Which PyTorch wheel matches my JetPack version?**
+JetPack 5.1.3 uses `torch-2.1.0a0+...cp38` (Python 3.8) and JetPack 6.2 uses `torch-2.5.0a0+...cp310` (Python 3.10). Pick the wheel whose `jp/vXX` path and `cpXX` tag match both, otherwise pip installs something that runs on CPU only.
+
+**Do I need cuSPARSELt before installing torch?**
+Only on the newer wheels. PyTorch builds from 24.06 onward call cuSPARSELt for sparse matmul, so the JetPack 6.2 path installs 0.7.1 first. The JetPack 5.1.3 example with torch 2.1.0 does not need it.
+
+**How do I keep two torch versions on one machine?**
+Use conda environments: one env per Python and torch pair, for example `conda create -n torch_2.0 python=3.8`. Activate the env before installing the wheel, and keep `auto_activate_base` off so the system Python stays clean.
+
+**`torch.cuda.is_available()` returns False. What went wrong?**
+The wheel is either the CPU build from PyPI or built for a different JetPack. Reinstall the NVIDIA wheel that matches your JetPack path and confirm with `torch.__version__`, which carries the `nv` build tag for CUDA-enabled wheels.
+
+## Related Resources
+
+- [Install ROS 2 Humble on reComputer](/install_ros2_humble/)
+- [Pair the Gemini 2 with YOLOv11 for distance measurement](/yolov11_with_depth_camera/)
+- [Efficient multi-task vision inference engine on Jetson](/deploy_visual_perception_engine_recomputer/)
+- [reComputer J4012 product page](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)
+- [PyTorch for Jetson release notes](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform-release-notes/pytorch-jetson-rel.html)
 
 ## Tech Support & Product Discussion
 

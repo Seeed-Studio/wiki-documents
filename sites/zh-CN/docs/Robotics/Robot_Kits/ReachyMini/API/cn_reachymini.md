@@ -1,5 +1,6 @@
 ---
 description: ReachyMini主类完整API参考，包括电机控制、运动和状态管理的方法。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: ReachyMini API参考
 slug: /reachymini_api_reachymini
 keywords:

@@ -1,5 +1,5 @@
 ---
-description: '--'
+description: "Phospho と LeRobot でロボットアームを制御する方法：ブラウザベースのプラットフォームをセットアップし、アームを接続してテレオペレーションと模倣学習ワークフローを実行します。"
 title: Phosphoを使い始める
 keywords:
   - NVIDIA Jetson

@@ -2,6 +2,7 @@
 
 const roboticsSidebars = require('./robotics-sidebar');
 const rebotCourseSidebars = require('./rebot-course-sidebar');
+const soArmCourseSidebars = require('./soarm-course-sidebar');
 const jetsonSidebars = require('./jetson-sidebar');
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
@@ -2075,6 +2076,54 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reSpeaker 44mm',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_44mm/pt_respeaker_44mm_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker 44mm com XIAO',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: 'Reprodução e gravação',
+                  items: [
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_i2s_test',
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_record_playback',
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_volume',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Transmissão de áudio',
+                  items: [
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_udp_stream',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Controle do dispositivo',
+                  items: [
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_doa_vad',
+                    'Sensor/reSpeaker_44mm/pt_respeaker_44mm_xiao_led_effects',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
@@ -2138,7 +2187,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000 v3.0/v3.2',
           collapsed: true,
           collapsible: true,
           items: [
@@ -2304,6 +2353,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora_ten_framework',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_openclaw',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_muse_gadget',
                 'Sensor/reSpeaker_clip/pt_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/pt_respeaker_clip_python_usage_stt_llm_transcribe_memory',
                 'Sensor/reSpeaker_clip/pt_respeaker_clip_chat_architecture',
@@ -3290,10 +3340,39 @@ const sidebars = {
         'Network/pt_LoRa_Antenna_Selection_Guide',
         {
           type: 'category',
-          label: 'Dispositivos Wio-WM6108 WiFi-HaLow',
+          label: 'Dispositivos Wio-WM6108 Wi-Fi HaLow',
           items: [
             'Network/WiFi-Halow/pt_wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/pt_wifi-halow-mini-pcie-module',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Dispositivos Wi-Fi HaLow Wio-WM8108',
+          items: [
+            {
+              type: 'category',
+              label: 'HaLowLink 2 Wi-Fi HaLow Puerta de enlace',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/pt_HaLowLink2_Introduction',
+                  label: 'Introdução',
+                },
+                {
+                  type: 'doc',
+                  id: 'Network/WiFi-Halow/HaLowLink2/pt_HaLowLink2_Getting_Started',
+                  label: 'Começar',
+                },
+                {
+                  type: 'category',
+                  label: 'Aplicação',
+                  items: [
+                    'Network/WiFi-Halow/HaLowLink2/Applications/pt_Media_Gateway',
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],
@@ -3334,8 +3413,23 @@ const sidebars = {
           collapsible: true,
           items: [
             'Edge/RockChip_Devices/Application/pt_object_detection_with_yolov11_on_recomputer_rk'
-            ]
-        }
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Perguntas frequentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/pt_recomputer_faq',
+          },
+          items: [
+            'FAQ/reComputer/pt_recomputer_rk_faq',
+            'FAQ/reComputer/pt_recomputer_industrial_rk_faq',
+            'FAQ/reComputer/pt_recomputer_rk_module_faq',
+          ],
+        },
       ]
     },
     {
@@ -3544,6 +3638,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/pt_recomputer_r1100_assembly_guide',
               ],
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Perguntas frequentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/reComputer/pt_recomputer_pi_faq',
+          },
+          items: [
+            'FAQ/reComputer/pt_recomputer_r1000_faq',
+            'FAQ/reComputer/pt_recomputer_ai_r2000_faq',
+            'FAQ/reComputer/pt_recomputer_industrial_r2x_faq',
+            'FAQ/reComputer/pt_reterminal_faq',
           ],
         },
         {
@@ -4181,6 +4291,18 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Aplicações',
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Cloud_Chain/SenseCraft_Robotics/applications/pt_sensecraft_robotics_so_arm_pi05',
+              label: 'SO-ARM + π0.5',
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'Perguntas frequentes',
           collapsed: false,
           items: [
@@ -4237,6 +4359,44 @@ const sidebars = {
       collapsible: true,
       items: [
         'Contribution/Fusion/pt_Service_for_Fusion_PCB',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Personalização leve',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/pt_service_for_fusion_light_customization',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Serviços integrados',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/pt_service_for_fusion_one_stop',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Soluções de testes de PCBA',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/pt_service_for_fusion_pcba_testing_solutions',
+        'Contribution/Fusion/pt_service_for_fusion_pcba_functional_test',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Preparação para fabricação',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        'Contribution/Fusion/pt_service_for_fusion_manufacturing_documents',
+        'Contribution/Fusion/pt_service_for_fusion_sample_validation',
       ],
     },
     // END OF Fusion
@@ -4995,6 +5155,7 @@ const sidebars = {
 
   ...roboticsSidebars,
   ...rebotCourseSidebars,
+  ...soArmCourseSidebars,
   ...jetsonSidebars,
 };
 

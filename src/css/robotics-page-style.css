@@ -60,50 +60,6 @@
   animation: rpIntroReveal 0.68s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 
-.robotics-page-title {
-  --rp-title-ink: #101114;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 0 0.22em;
-  color: transparent;
-  font-family: 'Montserrat-SemiBold', 'Montserrat', 'Arial Black', sans-serif;
-  font-size: clamp(2.7rem, 6.4vw, 6.9rem);
-  font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: -0.065em;
-  text-transform: uppercase;
-  text-wrap: balance;
-  background-image: linear-gradient(
-    90deg,
-    var(--rp-title-ink) 0%,
-    var(--rp-title-ink) 38%,
-    #eb473d 53%,
-    #cb9551 69%,
-    #7668ce 84%,
-    #2563eb 100%
-  );
-  background-position: 0% 50%;
-  background-size: 250% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition:
-    background-position 0.48s cubic-bezier(0.4, 0, 0.2, 1),
-    letter-spacing 0.48s cubic-bezier(0.4, 0, 0.2, 1),
-    filter 0.48s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.48s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.robotics-page-title:hover {
-  background-position: 100% 50%;
-  letter-spacing: -0.052em;
-  filter: drop-shadow(0 12px 24px rgba(37, 99, 235, 0.12));
-  transform: translateY(-0.035em);
-}
-
-html[data-theme='dark'] .robotics-page-title {
-  --rp-title-ink: #faf9f6;
-}
-
 .robotics-quote {
   max-width: 70ch;
   margin: 0 0 0.85rem;
@@ -641,7 +597,7 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 
 #rebot-rs {
-  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png');
+  --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.webp');
 }
 #rebot-rs .product-head h3 {
   max-width: none;
@@ -653,6 +609,20 @@ html[data-theme='dark'] .robotics-quicklinks {
 #rebot-dm .product-head h3 {
   max-width: none;
   white-space: nowrap;
+}
+#rebot-t701-ht .product-head {
+  background: #000;
+}
+#rebot-t701-ht .product-head::before {
+  content: none;
+}
+.t701-ht-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
 }
 #soarm {
   --rp-cover: url('https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp');
@@ -763,6 +733,20 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .step-card > div { grid-area: title / title / desc / desc; display: contents; }
 .step-card b { grid-area: title; color: var(--rp-text); font-size: 0.95rem; line-height: 1.35; }
+/* These application links contain only a title; avoid empty description/tag rows. */
+.rebot-rs-applications .step-card {
+  grid-template-areas: "index title";
+  grid-template-rows: 32px;
+  align-items: center;
+}
+.rebot-rs-applications .step-card b {
+  font-size: 0.85rem;
+  line-height: 1.15;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 .step-card small { grid-area: desc; color: var(--rp-text-muted); line-height: 1.45; font-size: 0.82rem; }
 .step-card em {
   grid-area: tag;
@@ -797,6 +781,33 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .step-card.optional .step-index { background: #64748b; }
 .step-card.optional em { color: #475569; background: #e2e8f0; border-color: rgba(100, 116, 139, 0.28); }
+
+.robotics-page .robotics-courses .step-card {
+  border: 1.5px solid color-mix(in srgb, var(--rp-accent) 38%, var(--rp-border-strong));
+}
+.robotics-page .robotics-courses .step-card:hover,
+.robotics-page .robotics-courses .step-card:focus-visible {
+  border-color: var(--rp-accent);
+}
+
+.course-compatibility {
+  grid-area: tag;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+.course-compatibility-badge {
+  padding: 0.28rem 0.58rem;
+  border: 1px solid var(--rp-accent-border);
+  border-radius: 999px;
+  background: var(--rp-accent-soft);
+  color: var(--rp-text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
 
 /* Grouped learning lists inside reBot product cards */
 .learning-group + .learning-group { margin-top: 1.15rem; }
@@ -1139,6 +1150,14 @@ html[data-theme='dark'] .robotics-quicklinks {
 .rotating-showcase .rotating-product-card[data-active='true']:hover .product-head {
   background-size: 100% 100%, contain, cover;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .rotating-showcase:not(.is-grid-view):not(.is-expanded) .rotating-product-card[data-active='true'] .product-head {
+    animation: rpActiveCardBreathe 3.6s ease-in-out;
+  }
+}
+@keyframes rpActiveCardBreathe {
+  50% { transform: scale(1.025); }
+}
 .rotating-showcase.is-dragging .rotating-product-card {
   transition: opacity 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1163,6 +1182,28 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .rotating-showcase .rotating-product-card-inner > .rotating-product-side {
   display: none;
+}
+.rotating-product-card-inner > .robotics-courses {
+  display: none;
+  margin: 1rem 0 0;
+}
+.rotating-product-card[data-expanded='true'] .rotating-product-card-inner > .robotics-courses {
+  display: block;
+}
+.robotics-courses .section-title-row {
+  margin-bottom: 0.75rem;
+}
+.robotics-courses .section-kicker {
+  display: none;
+}
+.robotics-courses .section-title-row h2 {
+  font-size: 1.15rem;
+}
+.robotics-courses .section-title-row p {
+  font-size: 0.82rem;
+}
+.robotics-courses .learning-steps {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
 }
 .rotating-showcase .rotating-product-card[data-expanded='true'] {
   display: block;
@@ -1609,6 +1650,7 @@ html[data-theme='dark'] .rotating-showcase-arrow {
 .resource-grid a, .resource-columns a { display: block; padding: 0.75rem 0.85rem; border-radius: 13px; text-decoration: none !important; color: var(--rp-text-muted); background: var(--rp-card-bg); border: 1px solid var(--rp-border); transition: all 0.2s ease; }
 .resource-grid a:hover, .resource-columns a:hover { color: var(--rp-accent); border-color: var(--rp-accent-border); transform: translateY(-2px); box-shadow: var(--rp-shadow-accent); }
 .resource-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+#sensors .resource-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .resource-columns div { padding: 1rem; border-radius: 19px; background: var(--rp-card-bg-soft); border: 1px solid var(--rp-border); }
 .resource-columns h4 { margin: 0 0 0.75rem; color: var(--rp-text); }
 .resource-columns a { margin-bottom: 0.55rem; }
@@ -1659,7 +1701,7 @@ html[data-theme='dark'] .step-card.optional em { color: #cbd5e1; background: rgb
 
 @media (max-width: 900px) {
   .robotics-page { --rp-anchor-offset: 6.5rem; }
-  .hero-panel, .resource-columns { grid-template-columns: 1fr; }
+  .hero-panel, .resource-columns, #sensors .resource-columns { grid-template-columns: 1fr; }
   .section-title-row { display: block; }
   .section-title-row p { margin-top: 0.5rem; }
   .robotics-page .quick-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }

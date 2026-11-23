@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini是一个面向黑客和AI构建者的开源表情机器人。具有应用商店、Python SDK和多种平台选项。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reachy Mini
 slug: /reachymini_intro
 keywords:

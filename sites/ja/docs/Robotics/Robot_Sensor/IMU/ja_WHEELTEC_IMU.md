@@ -1,5 +1,5 @@
 ---
-description: このwikiはWHEELTEC IMUセンサーのチュートリアルを提供します。
+description: "WHEELTEC IMU センサーの使い方：配線、ドライバーのセットアップ、ロボットのナビゲーションと SLAM プロジェクト向けのデータ読み取り。"
 title: WHEELTEC IMUセンサー
 keywords:
   - IMU

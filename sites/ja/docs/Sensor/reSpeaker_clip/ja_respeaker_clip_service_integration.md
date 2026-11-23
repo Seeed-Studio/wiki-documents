@@ -12,10 +12,10 @@ image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
 slug: /respeaker_clip_service_integration
 sku: 100020126
 last_update:
-  date: 08/14/2026
+  date: 10/19/2026
   author: Ray
 createdAt: '2026-08-07'
-updatedAt: '2026-08-18'
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/ja/respeaker_clip_service_integration/
 ---
 
@@ -196,7 +196,7 @@ class ClipStateError(Exception):
 class ClipService:
     """Application-level adapter over a single long-lived ClipClient."""
 
-
+    def __init__(self, transport, *, command_timeout: float = 10.0):
         self._client = ClipClient(transport, command_timeout=command_timeout)
         self._connected = False
         self._active_session: str | None = None
@@ -205,7 +205,7 @@ class ClipService:
         await self._client.connect()
         self._connected = True
 
-
+    async def disconnect(self) -> None:
         if self._connected:
             await self._client.disconnect()
             self._connected = False
@@ -219,7 +219,7 @@ class ClipService:
             session_id = await self._client.start_recording(mode)
         except ClipError as exc:
             raise ClipUnavailable("Clip could not start recording") from exc
-
+        if not session_id:
             raise ClipStateError("Clip did not return a session id")
         self._active_session = session_id
         return session_id
@@ -232,7 +232,7 @@ class ClipService:
         session_id = self._active_session
         try:
             await self._client.stop_recording()
-
+        except ClipError as exc:
             raise ClipUnavailable("Clip could not stop recording") from exc
         self._active_session = None
         return session_id
@@ -365,6 +365,393 @@ curl -X POST "http://localhost:8000/clip/sessions/<session_id>/ingest"
 
 開始と停止のレスポンスには同じ `session_id` が含まれている必要があります。取り込みのレスポンスには、既存の `AudioService` パイプラインから返されるファイルが含まれている必要があります。
 
+## BLE 切断とコマンドタイムアウトからの復旧 {#ble-disconnect-and-command-timeout-recovery}
+
+上記のアダプタが扱うのは正常系だけです。長時間稼働するサービスでは、次の 2 つの障害も処理する必要があります：
+
+- **リンク喪失**: デバイスが範囲外に移動する、スリープする、ホストの Bluetooth アダプタがリセットされる、または別のアプリケーションに占有される。
+- **コマンドタイムアウト**: デバイスが期限までに応答しない。ファームウェアプロトコルにはリクエスト ID がないため、トランスポートは遅延した応答を次のコマンドと関連付けることができません。そのため、タイムアウト時には直接の再試行ではなく再接続が必要になります。
+
+このセクションでは、`clip_service.py` を直接置き換えるリファレンス実装を提供します。`connect()`、`disconnect()`、`start_recording()`、`stop_recording()`、`download_session()` のインターフェースを維持しつつ、自動復旧を追加します。
+
+### 設計
+
+- **接続ロック**: ビジネスオペレーションと切断／再接続は 1 つの `asyncio.Lock` を共有し、再接続をまたいでコマンドやダウンロードが実行されないようにします。
+- **バックグラウンドヘルスチェック**: `health_check_interval` 秒ごとにタスクが `ClipClient.is_connected` をチェックします。切断やタイムアウトを検知したビジネスオペレーションは、イベントを通じてタスクを即座に起こします。
+- **有界指数バックオフ**: 待機時間は 1 秒から開始し、試行が失敗するたびに 2 倍になり、最大 30 秒で頭打ちになります。各接続試行には、それぞれ 30 秒の制限があります。接続が成功するとバックオフはリセットされます。
+- **コマンドのリプレイなし**: 失敗した開始、停止、ダウンロードは `ClipUnavailable` を送出するだけです。デバイス側ではすでにコマンドが実行されていて、レスポンスだけが失われている可能性があるため、リプレイすると録音や転送が重複するおそれがあります。
+- **再接続後のレディネスプローブ**: アダプタは `status()` を 1 回呼び出します。デバイスがまだ録音中で `session_id` を返した場合は `_active_session` を復元し、そうでなければローカルのセッション状態をクリアします。これにより、「切断中も録音が継続していた」ケースと「停止レスポンスだけが失われた」ケースの両方をカバーします。
+- **グレースフルシャットダウン**: クライアントを閉じる前にバックグラウンドタスクをキャンセルして待機し、シャットダウン後には再接続がスケジュールされないようにします。
+- **公開 API のみを使用**: 切断検知には `ClipClient.is_connected` を使用し、復旧には `ClipClient.status()` を使用します。新しい SDK API は追加しません。
+
+> **BLE サブスクリプションのクリーンアップ。** 現在の SDK の `BleTransport.disconnect()` は、リンクがすでにダウンしている場合、基盤となる Bleak クライアントをスキップするため、BlueZ はそのクライアントの通知サブスクリプションを保持したままになります。同じトランスポートオブジェクトを再接続すると、すべての通知（コマンドレスポンスとファイルフレームの両方）が 2 回配信され、`received FILE_START before previous file ended` というエラーでダウンロードが失敗します。リファレンス実装の `_close_link()` は、トランスポートの切断後に基盤となるクライアントの公開メソッド `disconnect()` を呼び出し、サブスクリプションを解放します。UDP トランスポートには影響しません。
+
+> **起動時の競合状態。** ファームウェアは、オーディオスレッドがセッション ID を公開する前に、空の `data` を伴う `ok` で `AT+START` に応答することがあります。`start_recording()` は、録音が進行中であることを失敗とみなすのではなく、セッション ID を取得するために `status()` をポーリングします。
+
+### 設定
+
+| パラメータ | デフォルト | 目的 |
+| --- | --- | --- |
+| `command_timeout` | `10.0` | `ClipClient` に渡されるコマンドごとのレスポンスタイムアウト |
+| `health_check_interval` | `2.0` | バックグラウンドで `is_connected` をチェックする間隔（秒） |
+| `reconnect_initial_delay` | `1.0` | 最初の再接続試行前の待機時間（秒） |
+| `reconnect_max_delay` | `30.0` | バックオフの上限（秒） |
+| `reconnect_attempt_timeout` | `30.0` | 1 回の接続試行とそのレディネスプローブの制限時間（秒） |
+
+### 完全なリファレンス実装
+
+`clip_service.py` を次のバージョンに置き換えます：
+
+```python
+"""Application-level Clip adapter with BLE drop and command-timeout recovery.
+
+This module is the reference implementation referenced by the reSpeaker Clip
+Service Integration wiki page.  It keeps the small application surface used by
+the integration guide (connect, disconnect, start, stop, download) and adds:
+
+* one connection lock that serializes business operations against reconnect;
+* one background task that polls ``ClipClient.is_connected`` every
+  ``health_check_interval`` seconds;
+* a wake event so a failed command can request an immediate reconnect;
+* bounded exponential backoff (1 s .. 30 s by default);
+* a ``status()`` readiness probe after reconnect that restores or clears
+  ``_active_session``.
+
+A failed command is never replayed: the device may already have executed it and
+only the response was lost.
+"""
+
+from __future__ import annotations
+
+import asyncio
+import logging
+from pathlib import Path
+
+from clip import (
+    ClipClient,
+    ClipError,
+    CommandTimeoutError,
+    ConnectionError,
+    DownloadResult,
+    Status,
+)
+
+logger = logging.getLogger(__name__)
+
+
+class ClipUnavailable(Exception):
+    """The Clip device is not connected or could not perform an operation."""
+
+
+class ClipStateError(Exception):
+    """The device is in the wrong state for this operation."""
+
+
+class ClipService:
+    """Application-level adapter over a single long-lived ``ClipClient``."""
+
+    def __init__(
+        self,
+        transport,
+        *,
+        command_timeout: float = 10.0,
+        health_check_interval: float = 2.0,
+        reconnect_initial_delay: float = 1.0,
+        reconnect_max_delay: float = 30.0,
+        reconnect_attempt_timeout: float = 30.0,
+    ) -> None:
+        for name, value in (
+            ("command_timeout", command_timeout),
+            ("health_check_interval", health_check_interval),
+            ("reconnect_initial_delay", reconnect_initial_delay),
+            ("reconnect_max_delay", reconnect_max_delay),
+            ("reconnect_attempt_timeout", reconnect_attempt_timeout),
+        ):
+            if value <= 0:
+                raise ValueError(f"{name} must be positive")
+        if reconnect_initial_delay > reconnect_max_delay:
+            raise ValueError("reconnect_initial_delay must not exceed reconnect_max_delay")
+
+        self._client = ClipClient(transport, command_timeout=command_timeout)
+        self._connected = False
+        self._active_session: str | None = None
+
+        # Serializes business operations with connect/disconnect/reconnect.
+        self._connection_lock = asyncio.Lock()
+        # Set by a failed command; the background task wakes immediately.
+        self._wake = asyncio.Event()
+        self._closed = False
+        self._monitor_task: asyncio.Task[None] | None = None
+
+        self._health_check_interval = health_check_interval
+        self._reconnect_initial_delay = reconnect_initial_delay
+        self._reconnect_max_delay = reconnect_max_delay
+        self._reconnect_attempt_timeout = reconnect_attempt_timeout
+        self._reconnect_delay = reconnect_initial_delay
+
+    # ------------------------------------------------------------------
+    # Connection lifecycle
+    # ------------------------------------------------------------------
+
+    @property
+    def is_connected(self) -> bool:
+        """Whether the device link is currently usable (read-only)."""
+        return self._connected and self._client.is_connected
+
+    async def connect(self) -> None:
+        """Open the initial connection.
+
+        A startup failure still propagates: background recovery only covers
+        drops that happen after the service is running.
+        """
+        async with self._connection_lock:
+            if self._connected:
+                return
+            await self._client.connect()
+            self._connected = True
+            self._closed = False
+            self._reconnect_delay = self._reconnect_initial_delay
+        if self._monitor_task is None or self._monitor_task.done():
+            self._monitor_task = asyncio.create_task(
+                self._monitor_loop(), name="clip-reconnect"
+            )
+
+    async def disconnect(self) -> None:
+        """Stop recovery first, then close the client exactly once."""
+        self._closed = True
+        self._wake.set()
+
+        task, self._monitor_task = self._monitor_task, None
+        if task is not None:
+            task.cancel()
+            try:
+                await task
+            except asyncio.CancelledError:
+                pass
+
+        async with self._connection_lock:
+            await self._close_link()
+            self._connected = False
+            self._active_session = None
+
+    # ------------------------------------------------------------------
+    # Business operations
+    # ------------------------------------------------------------------
+
+    async def start_recording(self, mode: str | None = None) -> str:
+        async with self._connection_lock:
+            self._require_connection()
+            if self._active_session is not None:
+                raise ClipStateError("a recording is already in progress")
+            try:
+                session_id = await self._client.start_recording(mode)
+                if not session_id:
+                    # AT+START can answer ok before the audio thread has
+                    # published its session id.  Recover it from device state
+                    # instead of reporting a failure for a running recording.
+                    session_id = await self._probe_session_id()
+            except (ConnectionError, CommandTimeoutError) as exc:
+                await self._handle_link_failure(exc)
+                raise ClipUnavailable("Clip could not start recording") from exc
+            except ClipError as exc:
+                logger.warning("Clip start failed: %s", exc)
+                raise ClipUnavailable("Clip could not start recording") from exc
+            if not session_id:
+                raise ClipStateError("Clip did not return a session id")
+            self._active_session = session_id
+            return session_id
+
+    async def stop_recording(self) -> str | None:
+        async with self._connection_lock:
+            self._require_connection()
+            if self._active_session is None:
+                raise ClipStateError("no recording in progress")
+            session_id = self._active_session
+            try:
+                await self._client.stop_recording()
+            except (ConnectionError, CommandTimeoutError) as exc:
+                await self._handle_link_failure(exc)
+                raise ClipUnavailable("Clip could not stop recording") from exc
+            except ClipError as exc:
+                logger.warning("Clip stop failed: %s", exc)
+                raise ClipUnavailable("Clip could not stop recording") from exc
+            self._active_session = None
+            return session_id
+
+    async def download_session(
+        self, session_id: str, destination: str | Path
+    ) -> DownloadResult:
+        async with self._connection_lock:
+            self._require_connection()
+            try:
+                return await self._client.download_session(session_id, destination)
+            except (ConnectionError, CommandTimeoutError) as exc:
+                await self._handle_link_failure(exc)
+                raise ClipUnavailable("Clip could not download the recording") from exc
+            except ClipError as exc:
+                logger.warning("Clip download failed: %s", exc)
+                raise ClipUnavailable("Clip could not download the recording") from exc
+
+    # ------------------------------------------------------------------
+    # Link failure and recovery
+    # ------------------------------------------------------------------
+
+    async def _probe_session_id(
+        self, attempts: int = 5, delay: float = 0.1
+    ) -> str | None:
+        """Recover the session id published just after AT+START succeeded."""
+        for attempt in range(attempts):
+            status = await self._client.status()
+            if status.recording and status.session_id:
+                return status.session_id
+            if attempt + 1 < attempts:
+                await asyncio.sleep(delay)
+        return None
+
+    def _require_connection(self) -> None:
+        if not self.is_connected:
+            self._connected = False
+            # The monitor may still be asleep; ask it to look now.
+            self._wake.set()
+            raise ClipUnavailable("Clip is not connected")
+
+    async def _handle_link_failure(self, exc: Exception) -> None:
+        """Mark the link unusable and hand recovery to the background task."""
+        self._connected = False
+        logger.warning(
+            "Clip link failure (%s: %s); requesting reconnect without replaying the command",
+            type(exc).__name__,
+            exc,
+        )
+        # Best effort: a desynchronized transport must not be reused.
+        await self._close_link()
+        self._wake.set()
+
+    async def _close_link(self) -> None:
+        """Close the link and release a subscription left by a dead link.
+
+        ``BleTransport.disconnect()`` skips the underlying Bleak client when
+        the link is already down.  BlueZ keeps that client's notification
+        subscription, so a later connection receives every notification
+        twice.  Calling the client's public ``disconnect()`` releases it.
+        Transports without a ``_client`` (for example UDP) are unaffected.
+        """
+        stale_client = getattr(self._client.transport, "_client", None)
+        try:
+            await self._client.disconnect()
+        except Exception as exc:  # noqa: BLE001 - cleanup must not mask
+            logger.debug("Clip disconnect failed: %s", exc)
+        if stale_client is not None:
+            try:
+                await stale_client.disconnect()
+            except Exception as exc:  # noqa: BLE001 - best effort
+                logger.debug("Clip stale-client cleanup failed: %s", exc)
+
+    async def _monitor_loop(self) -> None:
+        while not self._closed:
+            try:
+                await asyncio.wait_for(
+                    self._wake.wait(), timeout=self._health_check_interval
+                )
+            except asyncio.TimeoutError:
+                pass
+            self._wake.clear()
+            if self._closed:
+                return
+            if self.is_connected:
+                self._reconnect_delay = self._reconnect_initial_delay
+                continue
+            if self._connected:
+                logger.warning("Clip link dropped; starting reconnect")
+                self._connected = False
+            await self._reconnect_until_connected()
+
+    async def _reconnect_until_connected(self) -> None:
+        attempt = 0
+        while not self._closed and not self.is_connected:
+            delay = self._reconnect_delay
+            logger.info(
+                "Clip reconnect attempt %d in %.1f s", attempt + 1, delay
+            )
+            await asyncio.sleep(delay)
+            if self._closed:
+                return
+
+            attempt += 1
+            async with self._connection_lock:
+                if self._closed:
+                    return
+                await self._close_link()
+
+                try:
+                    await asyncio.wait_for(
+                        self._client.connect(),
+                        timeout=self._reconnect_attempt_timeout,
+                    )
+                except asyncio.CancelledError:
+                    raise
+                except Exception as exc:  # noqa: BLE001 - retry any connect failure
+                    logger.warning(
+                        "Clip reconnect attempt %d failed: %s", attempt, exc
+                    )
+                    self._connected = False
+                else:
+                    try:
+                        status = await asyncio.wait_for(
+                            self._client.status(),
+                            timeout=self._reconnect_attempt_timeout,
+                        )
+                    except asyncio.CancelledError:
+                        raise
+                    except Exception as exc:  # noqa: BLE001 - probe failure = retry
+                        logger.warning(
+                            "Clip readiness probe after attempt %d failed: %s",
+                            attempt,
+                            exc,
+                        )
+                        self._connected = False
+                        await self._close_link()
+                    else:
+                        self._connected = True
+                        self._reconnect_delay = self._reconnect_initial_delay
+                        self._restore_session(status)
+                        logger.info(
+                            "Clip reconnected after %d attempt(s): recording=%s session=%s",
+                            attempt,
+                            status.recording,
+                            status.session_id,
+                        )
+                        return
+
+            self._reconnect_delay = min(
+                self._reconnect_delay * 2, self._reconnect_max_delay
+            )
+
+    def _restore_session(self, status: Status) -> None:
+        if status.recording and status.session_id:
+            if self._active_session != status.session_id:
+                logger.info("Recovered active session %s", status.session_id)
+            self._active_session = status.session_id
+        else:
+            if self._active_session is not None:
+                logger.info("Cleared stale active session %s", self._active_session)
+            self._active_session = None
+```
+
+アプリケーションコードとルートは変更されません。`ClipService(transport)` の呼び出し形は同じままです。初回接続中の失敗は引き続き伝播されます。バックグラウンドでの復旧は、サービスが正常に起動した後の切断のみを対象とします。
+
+### 検証
+
+以下の動作は、物理的な Clip を BLE 経由で接続して検証しました。
+
+- **リンク喪失**：ホスト側から強制的に BLE 切断を行うと、バックグラウンドタスクが次回のヘルスチェックサイクルでそれを検出して再接続し、復旧後はコマンドが動作します。
+- **コマンドタイムアウト**：`CommandTimeoutError` を 1 回注入すると、古いリンクがクローズされ、失敗したコマンドが 1 回実行され、アダプタが復旧します。
+- **バックオフシーケンス**：連続した接続失敗に対して、待機時間は 1、2、4、8、16、30、30 秒となり、成功すると待機時間は 1 秒にリセットされます。
+- **録音の復旧**：デバイスは切断中も録音を継続します。再接続後、`status()` から `_active_session` が復元されます。デバイスがアイドル状態の場合、ローカルのセッション状態はクリアされます。
+- **並行性**：再接続中は、ビジネスリクエストは待機するのではなく `ClipUnavailable`（`503` にマッピング）で即座に失敗します。接続ロックにより、コマンドが接続または切断処理と交差することを防ぎます。
+- **シャットダウン**：バックグラウンドタスクは終了し、それ以上の再接続試行はスケジュールされません。
+- **復旧後のダウンロード**：再接続後にダウンロードしたセッションは、長さと CRC32 のチェックに合格します。
+
 ## 長時間稼働サービスの本番運用における考慮事項
 
 連携をサービスとして実行する場合、接続、エラー、およびワークフローの状態を明示的に保ちます。
@@ -410,7 +797,7 @@ SDK 例外を `ClipService` 内でアプリケーション例外に変換し、�
 
 ### 再接続
 
-デバイスエラーが発生した場合は、デバイスを利用不可としてマークし、トランスポートを再接続または再作成します。トランスポートがレスポンスを相関付けられなくなるため、コマンドタイムアウトが発生した場合は、次のコマンドの前に再接続が必要です。失敗を `ClipUnavailable` として表面化し、その後バックグラウンドタスクまたは次のリクエストから再接続します。
+デバイスエラーが発生した場合は、デバイスを利用不可としてマークし、トランスポートを再接続または再作成します。トランスポートがレスポンスを相関付けられなくなるため、コマンドタイムアウトが発生した場合は、次のコマンドの前に再接続が必要です。失敗を `ClipUnavailable` として表面化し、その後バックグラウンドタスクまたは次のリクエストから再接続します。接続ロック、バックグラウンドヘルスチェック、指数バックオフ、セッション復旧を含む完全な実装については、[BLE 切断とコマンドタイムアウトからの復旧](#ble-disconnect-and-command-timeout-recovery) を参照してください。
 
 ### 冪等性
 

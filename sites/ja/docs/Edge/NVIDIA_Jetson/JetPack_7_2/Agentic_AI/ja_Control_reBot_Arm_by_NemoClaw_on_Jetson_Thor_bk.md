@@ -12,6 +12,13 @@ url: https://wiki.seeedstudio.com/ja/control_rebot_arm_with_nemoclaw_on_nvidia_j
 updatedAt: '2026-07-31'
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <meta name="robots" content="noindex, follow" />
+</Head>
+
+
 # Nvidia Jetson Thor 上の NemoClaw で reBot Arm B601 を制御する
 
 :::note JetPack 7.2 collection copy
@@ -20,12 +27,12 @@ updatedAt: '2026-07-31'
 
 ## 1. プロジェクト概要
 
-NVIDIA `NemoClaw` は、OpenClaw の常時稼働アシスタントをより安全かつ簡単に実行できるようにするオープンソースのリファレンススタックです。本 Wiki では、Jetson Thor 上に NemoClaw をデプロイし、`reBot Arm B601` の機能を NemoClaw エージェントワークフローに接続して、「セマンティック理解 + 画像認識 + ロボット実行」のクローズドループを構成する方法を説明します。
+NVIDIA `NemoClaw` は、OpenClaw の常時稼働アシスタントをより安全かつ簡単に実行できるようにする、オープンソースのリファレンススタックです。本 Wiki では、Jetson Thor 上に NemoClaw をデプロイし、`reBot Arm B601` の機能を NemoClaw エージェントワークフローに接続して、「セマンティック理解 + 物体検出 + ロボット実行」のクローズドループを構成する方法を説明します。
 
 - `NemoClaw`: タスクオーケストレーションとコマンドルーティングのためのローカルエージェント／制御フレームワーク。
-- `Nemotron3`: 意図理解と高レベル意思決定のためのオプションのモデル機能。
+- `Nemotron3`: インテント理解と高レベル意思決定のためのオプションのモデル機能。
 - `Nvidia Jetson Thor`: 推論、バックエンドサービス、デバイスドライバ用のローカルコンピュートプラットフォーム。
-- `reBot Arm B601`: 把持および配置用のロボットアーム。
+- `reBot Arm B601`: 把持および配置を行うロボットアーム。
 
 <div align="center">
     <img width={900}
@@ -130,7 +137,7 @@ Jetson に NemoClaw をインストールします：
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-その後、`nemoclaw onboard` を実行して新しいアプリを作成します。対話的なオンボーディングログの一例は次のとおりです：
+その後、`nemoclaw onboard` を実行して新しいアプリを作成します。対話的なオンボーディングログの一例を次に示します：
 
 <details>
 <summary> nemoclaw onboard ログ </summary>
@@ -424,7 +431,7 @@ seeed@seeed:~$
 
 </details>
 
-将来的に NeMoClaw コンテナ内からホストマシン上にデプロイされたサービスへアクセスする必要があることを考慮し、このアプリケーションのネットワークアクセスを構成するために、次のコマンドを実行してください。
+将来、NeMoClaw コンテナ内からホストマシン上にデプロイされたサービスへアクセスする必要があることを考慮し、このアプリケーションのネットワークアクセスを構成するために、次のコマンドを実行してください。
 
 ```bash
 nemoclaw my-assistant policy-add --from-file ~/rebot_arm_service/host-camera.yaml --yes
@@ -444,13 +451,13 @@ nemoclaw my-assistant connect
 </div>
 
 :::info
-NeMoClaw CLI の詳細情報：
+NemoClaw CLI の詳細はこちら：
 https://docs.nvidia.com/nemoclaw/latest/reference/cli-selection-guide.html
 :::
 
 ### 4.3 ロボットアームサービスのインストール
 
-Jetson 上で実行：
+Jetson 上で実行します：
 
 ```bash
 git clone https://github.com/yuyoujiang/rebot_arm_service.git ~
@@ -506,7 +513,7 @@ uv run rebot-arm-service
 
 ### 6.2 キーボードリスナーの起動（オプション）
 
-検出／把持をすばやくトリガーするために（エージェントの長い推論を待たずに）、F1 ホットキーリスナーを使用します。  
+検出／把持を素早くトリガーするため（エージェントの長い推論を待たずに）、F1 ホットキーリスナーを使用します。  
 F1 が押されると、自動的に把持ミッションのエンドポイントへリクエストを送信します。
 
 直接実行：
@@ -611,22 +618,22 @@ sudo journalctl -u rebot-f1-listener.service -f
 ## 8. トラブルシューティング
 
 1. シリアルがビジー（`Device or resource busy`）  
-古いプロセスを停止してから再接続します。アームを使用しているコントローラプロセスが 1 つだけであることを確認してください。
+古いプロセスを停止してから再接続してください。アームを使用しているコントローラプロセスが 1 つだけであることを確認します。
 
 2. WebUI のシーンが空  
-URDF とメッシュのリクエストが `200` を返しているか確認します。特に `/assets/urdf/...` を確認してください。
+URDF とメッシュのリクエストが `200` を返しているか確認し、特に `/assets/urdf/...` を確認してください。
 
 3. 検出が反応しない  
 `camera/status` が `running=true` であることを確認し、その後ミッションステータスのエンドポイントを確認します。
 
-4. ライブラリ不足で Torch のインポートに失敗する  
-`LD_LIBRARY_PATH` に `nvpl` と `cuda_v12` の両方のパスが含まれていることを確認します。
+4. ライブラリ不足で Torch の import に失敗する  
+`LD_LIBRARY_PATH` に `nvpl` と `cuda_v12` の両方のパスが含まれていることを確認してください。
 
 5. F1 ホットキーが効かない  
-`rebot-f1-listener.service` のログを確認し、正しいキーボードデバイスをリッスンしていることを確認します。
+`rebot-f1-listener.service` のログを確認し、正しいキーボードデバイスをリッスンしていることを確認してください。
 
 6. リスナー起動後に他のキーボードキーが動作しなくなる  
-スクリプトが `dev.grab()` を使用していないことを確認します（排他的なキーボードキャプチャは削除する必要があります）。
+スクリプトが `dev.grab()` を使用していないことを確認してください（排他的なキーボードキャプチャは削除する必要があります）。
 
 7. 2 台目のアーム接続に失敗する  
 前の接続が完全に解放されていることを確認し、再接続の前に切断を呼び出してください。
@@ -641,7 +648,7 @@ URDF とメッシュのリクエストが `200` を返しているか確認し�
 
 ## 10. 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

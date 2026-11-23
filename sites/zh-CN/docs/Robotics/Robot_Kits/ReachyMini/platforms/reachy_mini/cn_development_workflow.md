@@ -1,5 +1,6 @@
 ---
 description: 无线Reachy Mini开发工作流指南，涵盖SSH访问、跨平台选项、远程编辑和高效代码测试方法。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 无线Reachy Mini开发工作流
 slug: /reachymini_platforms_reachy_mini_development_workflow
 keywords:

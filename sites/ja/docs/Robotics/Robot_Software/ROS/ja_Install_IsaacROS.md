@@ -1,5 +1,5 @@
 ---
-description: このwikiはIsaac ROSをインストールするためのステップバイステップガイドを提供します。
+description: "Jetson に NVIDIA Isaac ROS をインストールする手順：前提条件、Docker のセットアップ、インストール、最初の推論ノードの実行。"
 title: Isaac ROSのインストール
 keywords:
   - NVIDIA

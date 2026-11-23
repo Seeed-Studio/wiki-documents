@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini Python SDK和守护进程在Linux、macOS和Windows上的全面安装指南，涵盖先决条件、虚拟环境设置和故障排除。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 安装指南
 slug: /reachymini_sdk_installation
 keywords:

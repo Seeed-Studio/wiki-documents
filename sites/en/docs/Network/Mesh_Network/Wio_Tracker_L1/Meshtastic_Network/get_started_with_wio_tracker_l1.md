@@ -8,10 +8,10 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 09/03/2026
+  date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-24'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
@@ -309,7 +309,7 @@ The OLED will show sensor data if you enable `on screen`.
 
 ### Virtual Keyboard
 
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.png" alt="pir" width={600} height="auto" /></p>
 The 2.7 version firmware now support virtual keyboard! You can type message directly on the device to communicate with other device. Follow the [Flash Firmware Tutorial](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to update firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
@@ -376,6 +376,16 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 </Tabs>
 
 ## FAQ
+
+### Firmware Update Failed / OTA Recovery
+
+If your Wio Tracker L1 becomes unresponsive after an NRF-OTA firmware update, try the following:
+
+1. Connect the device to your computer using a USB data cable and double-press the Reset button to [enter DFU mode manually](#unable-to-enter-dfu--entering-dfu-mode-manually).
+2. If the UF2 drive appears, follow the [Flash Firmware](#flash-firmware) guide to reinstall the appropriate application firmware.
+3. If the device still cannot be recovered and a DFU serial port is available, follow [Device Bricked & Bootloader Recovery](#device-bricked--bootloader-installation), then reinstall the application firmware.
+
+If the device cannot enter DFU mode or be detected by your computer, please contact technical support.
 
 ### Device Bricked & Bootloader Recovery {#device-bricked--bootloader-installation}
 

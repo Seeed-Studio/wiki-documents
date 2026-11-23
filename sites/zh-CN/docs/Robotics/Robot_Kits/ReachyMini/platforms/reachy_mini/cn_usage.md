@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini使用指南，涵盖仪表板Web界面、应用管理和Python SDK快速入门。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 使用Reachy Mini
 slug: /reachymini_platforms_reachy_mini_usage
 keywords:

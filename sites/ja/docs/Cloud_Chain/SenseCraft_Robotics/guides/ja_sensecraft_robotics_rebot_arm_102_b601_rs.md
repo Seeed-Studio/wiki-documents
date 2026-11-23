@@ -43,7 +43,7 @@ updatedAt: '2026-09-24'
 ## 1. 準備
 
 ### 1.1 ハードウェア
-![Hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/01-1-hardware-list-rs-en.webp)
+![Hardware list](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/01-1-hardware-list-rs-en.png)
 
 > アームは組み立て、固定、通電し、USB に接続されている必要があります。組み立てが完了していない場合は、[ステップ 1: アームの組み立て](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)を参照してください。
 
@@ -144,7 +144,7 @@ updatedAt: '2026-09-24'
 ---
 
 ### 2.2 B601 RS（フォロワーアーム）の取り付けと接続
-![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.webp)
+![B601 RS cable connection](https://files.seeedstudio.com/wiki/sensecraft-robotics/guide-assets/rebot-arm-102-b601-rs/02-2-follower-wiring-overview-rs-en.png)
 
 #### ステップ 4: B601 RS を取り付ける
 G クランプを使用して、B601 RS を平らなテーブルトップに固定します。アームを左右に軽く回転させ、土台が動かないことを確認します。

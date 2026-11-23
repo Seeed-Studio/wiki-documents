@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini完整的Python SDK参考，涵盖运动控制、摄像头、IMU、音频录制和播放以及媒体后端选项。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Python SDK参考
 slug: /reachymini_sdk_python-sdk
 keywords:

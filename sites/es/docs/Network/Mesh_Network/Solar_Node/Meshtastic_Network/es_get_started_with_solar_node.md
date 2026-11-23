@@ -9,26 +9,26 @@ slug: /get_started_with_meshtastic_solar_node
 sku: 114993633,114993643
 sidebar_position: 2
 last_update:
-  date: 3/10/2026
-  author: Michelle Huang
+  date: 10/26/2026
+  author: Advent Jiang
 createdAt: '2025-05-13'
-updatedAt: '2026-09-24'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/
 ---
 
 :::danger note
-Cuando el dispositivo se encuentre en cualquiera de los estados siguientes, no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo podría quedar inutilizable.
+Cuando el dispositivo se encuentre en cualquiera de los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo podría quedar inutilizado.
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
-## Comienza
+## Comenzar
 
 Antes del despliegue formal, primero prueba y configura el nodo.
 
 ### Flashear firmware
 
 :::caution note
-No uses `NRF-OTA` para actualizar el firmware, ya que podría hacer que el dispositivo deje de responder por completo.
+No utilices `NRF-OTA` para actualizar el firmware, ya que podría hacer que el dispositivo deje de responder por completo.
 Antes de flashear el firmware, ejecuta primero el paso de borrado del flash.
 :::
 
@@ -46,7 +46,7 @@ Descarga y copia el firmware de borrado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en `Enter DFU Mode`, selecciona y conéctate al puerto serie llamado `XIAO-xxx`, y debería aparecer una unidad llamada `XIAO-xxx`. Copia el firmware de borrado en la unidad.
+Haz clic en `Enter DFU Mode`, selecciona y conéctate al puerto serie llamado `XIAO-xxx`, y debería aparecer una unidad llamada `XIAO-xxx`. Copia el firmware de borrado a esa unidad.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -62,7 +62,7 @@ Descarga el archivo UF2 y entra en modo DFU. Arrastra el archivo UF2 a la unidad
 ### Instalar batería y módulo GPS (opcional)
 
 :::tip
-Cuando necesites instalar o reemplazar la batería, usa una batería 18650 (3,6 V) de `button-top`.
+Cuando necesites instalar o reemplazar la batería, utiliza una batería 18650 (3,6 V) de `button-top`.
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
 La versión P1-Pro tiene una batería y un módulo GPS integrados. Para la versión P1, los usuarios deben instalar manualmente la batería y el módulo GPS si es necesario.
 :::
@@ -96,7 +96,7 @@ El dispositivo debe activarse conectando el cable USB antes del primer uso. Si l
 </div>
 
 :::tip
-Si el dispositivo no responde cuando presionas el botón, cárgalo primero. No uses un cargador rápido.
+Si el dispositivo no responde cuando presionas el botón, cárgalo primero. No utilices un cargador rápido.
 :::
 
 ### Conectar mediante la app
@@ -132,11 +132,11 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 
-### Conectar mediante el sitio web
+### Conectar mediante la web
 
 Si quieres enviar mensajes de texto y comunicarte con otros nodos en el cliente web, ahora puedes conectar el dispositivo al [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0).
 
-  Paso 1: Abre el sitio web
+  Paso 1: Abrir el sitio web
 
 [Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
@@ -149,12 +149,12 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el cliente 
 
     Hay dos formas de conectar. Puedes elegir el método que prefieras.
 
- Method 1: Via Bluetooth
+ Método 1: Vía Bluetooth
 
     Elige el método Bluetooth. Selecciona el ID del dispositivo en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- Method 2: Via Serial
+ Método 2: Vía serie
 
     Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Selecciona ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
@@ -165,7 +165,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el cliente 
 
 ### Configurar LoRa
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias usa tu dispositivo y debe configurarse según tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse según tu ubicación regional.
 
 <Tabs>
 <TabItem value="ios" label="App para iOS">
@@ -191,10 +191,10 @@ Para empezar a comunicarte a través de la malla, debes establecer tu región. E
 Consulta [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para obtener una lista más completa.
 
 :::info
-**EU_868** debe cumplir una limitación de ciclo de trabajo horario del 10 %, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
+**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10 %, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
 :::
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para adaptarlas a tus necesidades.
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) según tus necesidades.
 
 ### Configurar GPS
 
@@ -236,13 +236,13 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 2: Conecta la rótula universal (parte 2) y el soporte (parte 3) con tornillos.
+- Paso 2: Conecta la rótula universal (pieza 2) y el soporte (pieza 3) con tornillos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 3: Conecta el cable RF (parte 4) y la antena (parte 5).
+- Paso 3: Conecta el cable RF (pieza 4) y la antena (pieza 5).
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -272,7 +272,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### Guía completa de instalación
+### Guía de instalación completa
 
 - Puedes completar todo el proceso de instalación e inicialización mediante un video.
 
@@ -288,7 +288,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- Los siguientes sensores se han verificado como compatibles con la interfaz Grove del dispositivo.
+- Los siguientes sensores han sido verificados como compatibles con la interfaz Grove del dispositivo.
 
 <table>
   <tr>
@@ -327,7 +327,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
 
 - Puedes sustituir la antena por una de fibra de vidrio viendo este video.
 
-Si necesitas una antena con mayor ganancia, recomendamos la antena de [fibra de vidrio de 860-930MHz 3dBi](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) y la antena de [fibra de vidrio de 902-928MHz 5.8dBi](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html).
+Si necesitas una antena con mayor ganancia, recomendamos la antena [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) y la antena [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html).
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -353,7 +353,7 @@ El dispositivo no responde, el LED no se enciende y no puede emparejarse con tu 
 
 **1) El dispositivo aún puede entrar en modo DFU, entonces intenta flashear el bootloader**.
 
-#### Flashear el bootloader
+#### Flashear el Bootloader
 
 - [Descarga del bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
@@ -365,7 +365,7 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 Para usuarios de Windows, presiona la tecla "Win" y la tecla "R", luego introduce "cmd" en la ventana emergente y presiona "Enter". Esto abre la línea de comandos.
 
-Para usuarios de Mac, presiona la tecla "Command" y la tecla "Espacio" para abrir Spotlight. Luego introduce "terminal" y presiona "Return". Esto abre la línea de comandos.
+Para usuarios de Mac, presiona la tecla "Command" y la tecla "Space" para abrir Spotlight. Luego introduce "terminal" y presiona "Return". Esto abre la línea de comandos.
 
 Para usuarios de Linux, abre una terminal y usa la pestaña **Linux** de abajo para instalar la herramienta con pipx.
 
@@ -416,7 +416,7 @@ Para usuarios de Windows, puede que necesites añadir la ruta manualmente. Copia
 
 <TabItem value="sou" label="Instalación desde el código fuente">
 
-Usa este método si tienes problemas instalando con PyPI o si quieres modificar la herramienta. Primero, clona este repositorio y entra en su carpeta.
+Usa este método si tienes problemas al instalar con PyPI o si quieres modificar la herramienta. Primero, clona este repositorio y entra en su carpeta.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -478,7 +478,7 @@ En Fedora, usa `sudo dnf install pipx` en lugar de apt. Vuelve a abrir tu termin
 adafruit-nrfutil version
 ```
 
-Usa `adafruit-nrfutil version`, no `adafruit-nrfutil --version`. Si no se encuentra el comando, comprueba que `pipx ensurepath` se completó y vuelve a abrir tu terminal.
+Usa `adafruit-nrfutil version`, no `adafruit-nrfutil --version`. Si no se encuentra el comando, comprueba que `pipx ensurepath` se haya completado y vuelve a abrir tu terminal.
 
 </TabItem>
 </Tabs>
@@ -501,7 +501,7 @@ Conecta el Solar Node P1 / P1-Pro con un cable de datos USB. Compara la siguient
 ls /dev/ttyACM*
 ```
 
-El dispositivo suele aparecer como `/dev/ttyACM0`; si no aparece nada, prueba también con `ls /dev/ttyUSB*`. Para entrar en modo DFU manualmente, pulsa dos veces el botón `RST` del dispositivo y luego vuelve a comprobar el puerto. Utiliza el puerto DFU actual para el flasheo.
+El dispositivo normalmente aparece como `/dev/ttyACM0`; si no se muestra nada, prueba también con `ls /dev/ttyUSB*`. Para entrar en modo DFU manualmente, pulsa dos veces el botón `RST` del dispositivo y luego vuelve a comprobar el puerto. Usa el puerto DFU actual para el flasheo.
 
 Comprueba los permisos del puerto, sustituyendo `/dev/ttyACM0` por tu puerto real:
 
@@ -515,13 +515,13 @@ En Ubuntu/Debian, los puertos serie suelen pertenecer al grupo `dialout`. Si obt
 sudo usermod -aG dialout "$USER"
 ```
 
-Cierra la sesión y vuelve a iniciarla para que el cambio surta efecto. En otras distribuciones, utiliza el grupo de acceso serie que muestre `ls -l` y sigue las instrucciones de tu distribución.
+Cierra la sesión y vuelve a iniciarla para que el cambio surta efecto. En otras distribuciones, usa el grupo de acceso serie que muestre `ls -l` y sigue las instrucciones de tu distribución.
 
 **Paso 3: Flashear el bootloader**
 
 En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto por el correcto para tu dispositivo:
 
-Mantén `xiao_nrf52840_ble_bootloader.zip` como un archivo ZIP; no lo descomprimas. Cierra cualquier monitor serie o herramienta de flasheo en el navegador conectados al dispositivo. Si el dispositivo ya está en modo DFU después de pulsar dos veces `RST`, omite `--touch 1200` y utiliza su puerto DFU actual.
+Mantén `xiao_nrf52840_ble_bootloader.zip` como un archivo ZIP; no lo descomprimas. Cierra cualquier monitor serie o herramienta de flasheo en el navegador conectados al dispositivo. Si el dispositivo ya está en modo DFU después de pulsar dos veces `RST`, omite `--touch 1200` y usa su puerto DFU actual.
 
 - **Para Windows**:
 
@@ -549,7 +549,7 @@ Si entraste en modo DFU manualmente en el Paso 2, ejecuta este comando sin `--to
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM0 -b 115200 --singlebank
 ```
 
-Si el dispositivo sigue ejecutando firmware de aplicación y tiene un puerto serie, puedes añadir `--touch 1200` para solicitar el modo DFU. Si no responde, pulsa dos veces `RST`, identifica de nuevo el puerto DFU y utiliza el comando sin `--touch 1200`.
+Si el dispositivo sigue ejecutando firmware de aplicación y tiene un puerto serie, puedes añadir `--touch 1200` para solicitar el modo DFU. Si no responde, pulsa dos veces `RST`, identifica de nuevo el puerto DFU y usa el comando sin `--touch 1200`.
 
 **Paso 4: Gestionar un cambio de puerto serie**
 
@@ -561,7 +561,7 @@ Mantén el cable USB conectado. En Linux, ejecuta de nuevo `ls /dev/ttyACM*` (o 
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/ttyACM1 -b 115200 --singlebank
 ```
 
-Utiliza el nombre real de tu puerto. Si no se puede abrir el puerto, comprueba sus permisos como se describe en el Paso 2 y asegúrate de que ninguna otra aplicación lo esté usando. Si no aparece ningún puerto DFU, pulsa dos veces `RST` y comprueba de nuevo antes de reintentarlo.
+Usa el nombre real de tu puerto. Si no se puede abrir el puerto, comprueba sus permisos como se describe en el Paso 2 y asegúrate de que ninguna otra aplicación lo esté usando. Si no aparece ningún puerto DFU, pulsa dos veces `RST` y comprueba de nuevo antes de reintentar.
 
 **Paso 5: Confirmar el resultado y reinstalar el firmware de la aplicación**
 
@@ -571,26 +571,37 @@ Espera a que termine la transferencia y a que la herramienta muestre:
 Device programmed.
 ```
 
-Este mensaje confirma que la transferencia del bootloader se completó correctamente. Mantén el cable conectado durante la transferencia. Un cambio de puerto o la aparición de una unidad USB por sí solos no confirman un flasheo correcto.
+Este mensaje confirma que la transferencia del bootloader se completó correctamente. Mantén el cable conectado durante la transferencia. Un cambio de puerto o la aparición de una unidad USB por sí solos no son confirmación de un flasheo correcto.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
 Flashear el bootloader no reinstala el firmware de la aplicación Meshtastic. Después de la transferencia correcta, sigue [Flash Firmware](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-firmware) para instalarlo antes de usar el dispositivo.
 
+### El dispositivo no responde o no se detecta por USB
+
+Si tu Solar Node P1-Pro de repente deja de responder, con solo el LED verde encendido y el dispositivo no es reconocido por USB, prueba lo siguiente:
+
+1. Desconecta el cable USB y mantén el panel solar alejado de la luz solar.
+2. Retira con cuidado la tapa trasera y las baterías, evitando cortocircuitos.
+3. Deja las baterías retiradas durante un tiempo.
+4. Vuelve a instalar las baterías y comprueba si el dispositivo se inicia y puede ser reconocido por USB.
+
+Si el problema persiste, ponte en contacto con el soporte técnico.
+
 ### No se puede comunicar en el canal primario
 
-Si el dispositivo no puede comunicarse con nodos cercanos ni enviar mensajes, primero comprueba que la región LoRa y el preset del módem coincidan con los nodos de alrededor. También debes comprobar si la **PSK** predeterminada se ha cambiado. Una PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
+Si el dispositivo no puede comunicarse con nodos cercanos ni enviar mensajes, primero comprueba que la región LoRa y el preset del módem coincidan con los de los nodos circundantes. También debes comprobar si se ha cambiado la **PSK** predeterminada. Una PSK diferente en el canal primario impedirá que el dispositivo se comunique con otros nodos en ese canal.
 
-La forma más sencilla de encontrar este problema es mediante la app móvil. Abre la app, conéctate al dispositivo de destino y luego ve a `Settings` -> `Channels`. Selecciona el canal primario y comprueba el valor de **PSK**. Si es diferente al de los nodos de alrededor, actualízalo a la misma PSK y guarda la configuración del canal.
+La forma más sencilla de encontrar este problema es a través de la app móvil. Abre la app, conéctate al dispositivo de destino y luego ve a `Settings` -> `Channels`. Selecciona el canal primario y comprueba el valor de **PSK**. Si es diferente al de los nodos circundantes, actualízalo a la misma PSK y guarda la configuración del canal.
 
 <Tabs>
-<TabItem value="ios" label="App de iOS">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problems_ios.png" alt="Comprobar la PSK del canal primario en la app de iOS" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App de Android">
+<TabItem value="android" label="Android App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/communicate_problem_and.png" alt="Comprobar la PSK del canal primario en la app de Android" width={900} height="auto" /></p>
 
@@ -599,7 +610,7 @@ La forma más sencilla de encontrar este problema es mediante la app móvil. Abr
 
 **Solución**
 
-Si no estás seguro de qué ajustes se cambiaron, restaura el dispositivo a su configuración predeterminada siguiendo la guía de [Factory Reset](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#factory-reset). Si solo se cambió la PSK, vuelve a establecerla en `AQ==`.
+Si no estás seguro de qué ajustes se cambiaron, restaura el dispositivo a su configuración predeterminada siguiendo la guía [Factory Reset](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#factory-reset). Si solo se cambió la PSK, vuelve a establecerla en `AQ==`.
 
  ### El dispositivo se apaga automáticamente
 
@@ -608,7 +619,7 @@ Si no estás seguro de qué ajustes se cambiaron, restaura el dispositivo a su c
  - Después de encender el dispositivo, se apaga o se reinicia automáticamente al cabo de un rato.
  - El registro del puerto serie funcionó durante un tiempo y luego se detuvo.
 
- Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo mientras se encuentra en uno de los siguientes estados: sin haber terminado el proceso de transmisión de mensajes o estando en configuración.
+ Esto puede deberse a reiniciar o apagar el dispositivo manualmente y a la fuerza mientras se encuentra en uno de los siguientes estados: sin haber terminado el proceso de transmisión de mensajes o mientras está siendo configurado.
 
  #### Solución de problemas
 
@@ -628,7 +639,7 @@ Si quieres restaurar la configuración predeterminada, puedes realizar un restab
 
 #### Restablecer NodeDB
 
-NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, puede deberse a que tu NodeDB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, puede deberse a que tu nodedB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
 
 NodeDB almacena detalles como:
 
@@ -636,7 +647,7 @@ NodeDB almacena detalles como:
 - **Nombre de usuario**
 - **Información de ubicación**
 - **Información de señal (SNR)**
-- **Hora de última visualización**
+- **Hora de última vez visto**
 
 Abre la app y conéctate al dispositivo de destino. Ve a **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
@@ -657,14 +668,14 @@ Cada nodo posee un par de claves pública/privada. Para intercambiar un mensaje 
 Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
 :::note
-Después de la regeneración de la clave, otro dispositivo necesita volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos del otro dispositivo.
+Después de la regeneración de la clave, otro dispositivo necesita volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos de otros dispositivos.
 :::
 
 :::tip
 Ten en cuenta la diferencia entre las siguientes opciones:
 
 - **Reset NodeDB**: Solo borra la base de datos de nodos.
-- **Factory Reset**: Restaura el dispositivo a la configuración de fábrica y elimina los datos de configuración adicionales.
+- **Restablecimiento de fábrica**: Restaura el dispositivo a la configuración de fábrica y elimina los datos de configuración adicionales.
 :::
 
 ### Consumo de energía
@@ -676,13 +687,13 @@ Las cifras siguientes son solo de referencia; el consumo real puede variar segú
 
 |Descripción|Consumo|
 |---|---|
-|Corriente de trabajo de GPS_LED|1.02 mA|
+|Corriente de funcionamiento del GPS_LED|1.02 mA|
 |Alimentado pero no activado|56.195 μA|
 |Alimentado y activado|611 μA|
 
 **Ejemplo:**
 
-|Capacidad de la batería |Vida de la batería|
+|Capacidad de la batería|Vida útil de la batería|
 |---|---|
 |3350|136.8|
 |12000|490.2|
@@ -711,8 +722,8 @@ Las cifras siguientes son solo de referencia; el consumo real puede variar segú
 
 La corriente máxima de carga de Xiao nRF-52840 Plus es de 200 mA. El chip de gestión de carga CN3165 admite 0.99 A. Por lo tanto, la corriente máxima de carga es de 1 A.
 
-## Recurso
-- [Tabla de cálculo de duración de la batería del nodo solar](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+## Recursos
+- [Tabla de cálculo de la vida útil de la batería del nodo solar](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
 ## Soporte técnico y debate sobre el producto
 

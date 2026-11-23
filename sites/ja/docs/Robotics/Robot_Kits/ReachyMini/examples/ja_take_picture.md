@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini のカメラから単一フレームを取得し、画像ファイルとして保存する方法を示すサンプルです。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: 写真を撮る
 slug: /reachymini_examples_take_picture
 keywords:

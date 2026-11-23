@@ -1,5 +1,6 @@
 ---
 description: 'Guía de operación de wrc_demo: pasos completos para la demostración de agarre visual del reBot Arm B601-RS — configuración del entorno, descarga del modelo, cambio de LLM, calibración mano-ojo, ejecución de la demo y resolución de problemas.'
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 title: B601-RS con Agent Claw
 keywords:
   - wrc_demo
@@ -34,6 +35,22 @@ url: https://wiki.seeedstudio.com/es/wrc_demo_tutorial/
   <img src="https://img.shields.io/badge/Camera-RGB--D-green.svg" alt="Cámara" />
   <img src="https://img.shields.io/badge/Brain-VLM-purple.svg" alt="Cerebro VLM" />
 </p>
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png" />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Comprar ahora</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 <p align="center">
   <strong>Configuración del entorno → Descarga de modelos → Cambio de LLM → Calibración mano-ojo → Ejecución de la demo → Resolución de problemas</strong>

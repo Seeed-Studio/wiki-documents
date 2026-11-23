@@ -1,6 +1,7 @@
 ---
-description: "Inspección de ensamblaje en el dispositivo: comparación de piezas faltantes contra una lista de elementos esperados de plantilla, medición de dimensiones calibrada con ArUco y un único veredicto OK/NG entregado al PLC mediante Modbus TCP y al MES mediante MQTT. Hardware, esquema de despliegue, contratos de salida y datos medidos."
+description: Inspección de ensamblaje en el dispositivo - comparación de piezas faltantes frente a una lista de elementos esperados de plantilla, medición de dimensiones calibrada con ArUco y un único veredicto OK/NG enviado al PLC por Modbus TCP y al MES por MQTT. Hardware, esquema de despliegue, contratos de salida y datos medidos.
 title: 'Inspección de Ensamblaje en el Borde: Piezas Faltantes, Dimensiones, Modbus y MQTT'
+sidebar_label: 'Inspección de Ensamblaje en el Borde'
 keywords:
   - inspección de ensamblaje
   - detección de piezas faltantes
@@ -21,22 +22,22 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/es/solutions/edge-assembly-inspection/
 generated_from: sensecraft-solutions@edge_inspection_assembly
 ---
 
-:::caution[Aviso de uso]
-Los resultados de dimensión son píxeles convertidos mediante una referencia de calibración y no sustituyen a un calibre calibrado en una prueba de aceptación. El detector enviado está entrenado en DeepPCB, un conjunto de datos de defectos de placas desnudas cuyas seis clases no son piezas faltantes de ensamblaje; antes de usarlo en tu producto, sustituye la lista de elementos esperados por la tuya propia y mide con tus propios datos.
+:::caution[Usage notice]
+Los resultados de dimensiones son píxeles convertidos mediante una referencia de calibración y no sustituyen a un calibre calibrado en una prueba de aceptación. El detector enviado está entrenado en DeepPCB, un conjunto de datos de defectos de placas desnudas cuyas seis clases no son piezas faltantes de ensamblaje; antes de usarlo en tu producto, sustituye la lista de elementos esperados por la tuya propia y mide con tus propios datos.
 :::
 
 ## Qué hace esta solución
 
-Una cámara fija observa una estación de inspección. Cada fotograma pasa por un detector, luego por la comparación de piezas faltantes y la medición de dimensiones, y termina como un único veredicto OK/NG al takt de línea.
+Una cámara fija observa una estación de inspección. Cada fotograma pasa por un detector, luego por la comparación de piezas faltantes y la medición de dimensiones, y termina como un único veredicto OK/NG al takt de la línea.
 
 - **Comparación de piezas faltantes**: una lista de elementos esperados de plantilla (`class` + ROI + distancia de coincidencia) se compara con las detecciones. Todo lo que la lista espera y el fotograma no contiene se convierte en `missing`; cualquier cosa encontrada fuera de la lista puede opcionalmente informarse como `extra`.
 - **Medición de dimensiones**: una referencia de calibración en el plano de la superficie medida proporciona `mm_per_pixel`; el rectángulo de área mínima del objetivo dentro de un ROI de medición se convierte a milímetros y se compara con el valor nominal ± tolerancia.
-- **Fusión de veredictos**: `defect`, `missing`, `extra` y `dimension_out_of_tolerance` cada uno por sí solo hace que el fotograma sea NG; cada uno de los cuatro se puede desactivar.
+- **Fusión de veredictos**: `defect`, `missing`, `extra` y `dimension_out_of_tolerance` hacen que el fotograma sea NG por sí solos; cada uno de los cuatro se puede desactivar.
 
 El veredicto se escribe en dos lugares: registros de retención y bobinas Modbus TCP para el PLC, y un evento JSON MQTT por fotograma para el MES o el historiador. Los registros se escriben antes que la bobina, de modo que un PLC que actúa sobre la bobina lea los datos de registro del mismo veredicto.
 
@@ -51,7 +52,7 @@ El veredicto se escribe en dos lugares: registros de retención y bobinas Modbus
             </div>
             <div class="info-content">
                 <h3>Listo para ejecutarse en el dispositivo</h3>
-                <p>Instala el paquete de la aplicación en una reComputer J30 / J40 Serie o R2000 Serie y se ejecuta; una primera instalación tarda unos 60 minutos. Captura a bobina P50 medida en la J40 Serie: 10,92 ms.</p>
+                <p>Instala el paquete de la aplicación en una reComputer J30 / serie J40 o serie R2000 y se ejecuta; una primera instalación tarda unos 60 minutos. Captura a bobina P50 medida en la serie J40: 10,92 ms.</p>
             </div>
         </li>
         <li class="info-item">
@@ -130,75 +131,75 @@ Tres cosas por estación: una cámara, un host de inspección y un sistema que r
 
 **② Host de inspección**: decide cuántas estaciones puede soportar un host.
 
-| | Host de inspección | Acelerador | Detector tal como se despliega | Flujo de vídeo medido | Cuándo elegirlo |
+| | Host de inspección | Acelerador | Detector tal como se despliega | Flujos medidos | Cuándo elegirlo |
 |---|---|---|---|---:|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>Host de estación única | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 1 flujo, 67 h de prueba de esfuerzo | Una sola estación |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Host de agregación multiestación | Orin GPU | YOLOX-Tiny 640², TensorRT FP16 | 8 estables / 12 degradando / 24 fallando | Varias estaciones en un solo host; los datos de precisión y velocidad se midieron en este módulo |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Jetson Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>Host de estación única | GPU Orin | YOLOX-Tiny 640², TensorRT FP16 | 1 flujo, prueba de esfuerzo de 67 h | Una sola estación |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Jetson Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Host de agregación multiestación | GPU Orin | YOLOX-Tiny 640², TensorRT FP16 | 8 estables / 12 degradando / 24 fallando | Varias estaciones en un solo host; los datos de precisión y velocidad se midieron en este módulo |
 
 Capacidad de flujo: 640² a 10 fps por flujo, cinco minutos por nivel, todo el barrido ejecutado dos veces, con MQTT y Modbus deshabilitados. Con ambas salidas habilitadas el recuento alcanzable es inferior a 8.
 
 Ambos modelos reComputer vienen en una carcasa industrial sin ventilador (reComputer Industrial J3011 / J4012) con el mismo módulo y tiempo de ejecución, para montaje en armario.
 
-**③ Todo lo demás**: para la comprobación de dimensiones, una referencia de calibración en el plano de la superficie medida (un marcador ArUco, `DICT_4X4_50` por defecto, o cualquier objeto de anchura conocida); Ethernet entre la cámara y el host; y un maestro Modbus TCP (el PLC) y/o un consumidor MQTT. La cadena principal no necesita acceso a internet.
+**③ Todo lo demás**: para la comprobación de dimensiones, una referencia de calibración en el plano de la superficie medida (un marcador ArUco, `DICT_4X4_50` por defecto, o cualquier objeto de anchura conocida); Ethernet entre la cámara y el host; y un maestro Modbus TCP (el PLC) y/o un consumidor MQTT. La cadena principal no necesita acceso a Internet.
 
 ### Límites de selección negativa
 
-- **Estación única vs multiestación**: J3011 está dimensionado para inspección de una sola cámara por estación. Si un host debe monitorizar múltiples estaciones (>2 cámaras simultáneas) o altas tasas de fotogramas, elige J4012.
+- **Estación única vs multiestación**: J3011 está dimensionado para inspección de una sola cámara por estación. Si un host debe supervisar varias estaciones (>2 cámaras simultáneas) o tasas de fotogramas altas, elige J4012.
 - **Actualizaciones dinámicas de modelos**: Hailo-8 requiere compilación de modelos sin conexión. Si tu flujo de trabajo requiere ajustes frecuentes en el dispositivo o ejecución directa de PyTorch/ONNX, elige la serie Jetson.
 
-## Cómo desplegar en el sitio
+## Cómo desplegar en sitio
 
-Primero fija la cámara y la óptica, luego instala el software.
+Fija primero la cámara y la óptica, luego instala el software.
 
 ### Uno: instala el hardware, primero la cámara
 
 :::tip[No muevas la cámara después de la configuración]
-Las ROI de los ítems esperados se almacenan como coordenadas de imagen. Después de mover, volver a montar o reenfocar la cámara, se debe reconstruir por completo la plantilla `assembly.expected[]`. Cualquier trabajo con la cámara en la línea implica volver a crear la plantilla de esa estación.
+Las ROI de los elementos esperados se almacenan como coordenadas de imagen. Después de mover, volver a montar o reenfocar la cámara, debe reconstruirse por completo la plantilla `assembly.expected[]`. Cualquier trabajo con la cámara en la línea implica volver a crear la plantilla de esa estación.
 :::
 
-Toda la placa o ensamblaje debe estar en el encuadre. Para la verificación de dimensiones, coloca la referencia de calibración en el mismo plano que la superficie medida; una distancia de trabajo diferente se convierte en error de medición y no genera ningún mensaje de error. Sin una referencia, la sección de dimensiones informa `uncalibrated`, Modbus HR 11 = 4, y ningún valor.
+Toda la placa o ensamblaje debe estar en el encuadre. Para la comprobación de dimensiones, coloca la referencia de calibración en el mismo plano que la superficie medida; una distancia de trabajo diferente se convierte en error de medición y no genera ningún mensaje de error. Sin una referencia, la sección de dimensiones informa `uncalibrated`, Modbus HR 11 = 4, y ningún valor.
 
 ### Dos: instala el software
 
-Los pasos por dispositivo están en la página del diseño de referencia, donde al elegir una configuración para tu sitio también obtienes el paquete de aplicación correspondiente para descargar.
+Los pasos por dispositivo están en la página del diseño de referencia, donde elegir una configuración para tu sitio también te da el paquete de aplicación correspondiente para descargar.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeed.cc/solutions/reference-designs/edge_inspection_assembly" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}>Elige una configuración y descarga 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}>Elige una configuración y descárgala 🖱️</font></span></strong>
     </a>
 </div><br />
 
 Ambos caminos siguen los mismos pasos:
 
 1. **Elige un preset y un host.** `Camera + reComputer J30 / J40 (Orin)` o `Camera + reComputer R2000 series (Hailo-8)`. Clasificado como **avanzado**; reserva unos **60 minutos** para una primera instalación.
-2. **Despliega el runtime de inspección** (obligatorio). En Orin el motor TensorRT se construye en el dispositivo en el primer despliegue, unos 5 minutos, y queda ligado a ese dispositivo y a esa versión de TensorRT. En Hailo el HEF INT8 se compila fuera del dispositivo y se descarga en el momento del despliegue, sin compilación en la placa, pero se aplican tres prerrequisitos: una versión menor de Python coincidente; HailoRT 4.21.x en la misma versión en el driver, la biblioteca de usuario y los bindings de Python; y el parámetro de kernel `hailo_pci force_desc_page_size=4096`.
+2. **Despliega el runtime de inspección** (obligatorio). En Orin el motor TensorRT se construye en el dispositivo en el primer despliegue, unos 5 minutos, y queda ligado a ese dispositivo y a esa versión de TensorRT. En Hailo el HEF INT8 se compila fuera del dispositivo y se descarga en el momento del despliegue, sin compilación en la placa, pero se aplican tres requisitos previos: una versión menor de Python coincidente; HailoRT 4.21.x en la misma versión en el driver, la biblioteca de usuario y los bindings de Python; y el parámetro de kernel `hailo_pci force_desc_page_size=4096`.
 3. **Configura la calibración de dimensiones** (opcional). Sin ella, la cadena de piezas faltantes sigue funcionando y la sección de dimensiones informa `enabled: false` o `uncalibrated`.
 4. **Comprueba los veredictos** (opcional). El panel web local en el puerto 8080 muestra contadores de estado, eventos recientes y una vista previa MJPEG con cajas de detección y ROI de ensamblaje. Confirma aquí que la cámara cubre el área correcta antes de cablear el PLC.
-5. **Genera la lista de esperados con la herramienta de anotación SAM2** (opcional). La herramienta se ejecuta en una estación de trabajo offline, no en el dispositivo de borde, y se mantiene fuera del bucle de fotogramas: una persona dibuja la caja, SAM 2.1 Hiera-Small la convierte en una máscara de píxeles, y la máscara se expande en un ROI de ensamblaje. También se incluye un backend numpy Otsu-flood que no necesita GPU.
+5. **Genera la lista de elementos esperados con la herramienta de anotación SAM2** (opcional). La herramienta se ejecuta en una estación de trabajo sin conexión, no en el dispositivo de borde, y se mantiene fuera del bucle de fotogramas: una persona dibuja la caja, SAM 2.1 Hiera-Small la convierte en una máscara de píxeles, y la máscara se expande en una ROI de ensamblaje. También se incluye un backend numpy Otsu-flood que no necesita GPU.
 
-Antes de entrar en producción, reemplaza `assembly.expected[]` con tus propios slots. La lista enviada se generó a partir de una imagen DeepPCB y solo sirve para ejercitar la cadena.
+Antes de entrar en producción, sustituye `assembly.expected[]` por tus propios huecos. La lista incluida se generó a partir de una imagen DeepPCB y solo sirve para ejercitar la cadena.
 
 ## Qué interfaces están disponibles
 
 Los datos salen del host de inspección por tres interfaces, todas servidas localmente por el host.
 
-- **Un PLC que ya actúa sobre una bobina OK/NG**: lee Modbus TCP en el puerto 502, unidad 1. HR 0–7 coinciden con el diseño del contrato de inspección de superficie v1, por lo que un programa existente sigue funcionando; la información nueva está en HR 8–11.
+- **Un PLC que ya actúa sobre una bobina OK/NG**: lee Modbus TCP en el puerto 502, unidad 1. HR 0–7 coinciden con el diseño de la interfaz del contrato de inspección de superficie v1, por lo que un programa existente sigue funcionando; la información nueva está en HR 8–11.
 - **Un MES o historiador**: suscríbete a `<device-name>/inspection/<stream-id>/results` en el puerto 1883. Un evento JSON por fotograma procesado, esquema `2.0.0`, validado contra el contrato antes de publicarse.
 - **Un operador o ingeniero de puesta en marcha**: el panel HTTP en el puerto 8080.
 
-`<device-name>` se establece en el momento del despliegue y forma el primer segmento del tópico; asígnale un nombre por línea, célula o estación para que varios hosts en un mismo broker se mantengan separados. El id de flujo también se escribe en el payload, por lo que el código aguas abajo no necesita analizar el tópico.
+`<device-name>` se establece en el momento del despliegue y forma el primer segmento del topic; asígnale un nombre por línea, célula o estación para que varios hosts en un mismo broker se mantengan separados. El id de flujo también se escribe en el payload, por lo que el código aguas abajo no necesita analizar el topic.
 
 ### Tabla completa de interfaces
 
 | Tipo | Dónde | Contenido | Notas |
 |---|---|---|---|
-| `mqtt` | 1883, `<device-name>/inspection/<stream-id>/results` | `verdict`, `verdict_reasons`, `defect_count`, `detections[]`, `assembly` (`enabled`, `expected_count`, `matched_count`, `missing_count`, `extra_count`, cada ítem faltante con su etiqueta y ROI), `dimension` (`enabled`, `calibrated`, `mm_per_pixel`, `out_of_tolerance_count`, `measurements[]` con estado por medición) | Esquema `2.0.0`; ambas secciones siempre presentes, `enabled: false` cuando el módulo está desactivado para esa fuente |
-| `modbus_tcp` | 502, unidad 1, Coil 0/1 + HR 0–11 | Coil 0 = NG, Coil 1 = OK (mutuamente excluyentes). HR 0–7 como en el contrato v1: clase primaria, conteo de defectos, bbox ×10000, latido. HR 8 = conteo de faltantes, HR 9 = conteo de extras, HR 10 = mm medidos ×100, HR 11 = código de tolerancia | Registros escritos antes de que la bobina cambie de estado, bajo un único bloqueo |
+| `mqtt` | 1883, `<device-name>/inspection/<stream-id>/results` | `verdict`, `verdict_reasons`, `defect_count`, `detections[]`, `assembly` (`enabled`, `expected_count`, `matched_count`, `missing_count`, `extra_count`, cada elemento faltante con su etiqueta y ROI), `dimension` (`enabled`, `calibrated`, `mm_per_pixel`, `out_of_tolerance_count`, `measurements[]` con estado por medición) | Esquema `2.0.0`; ambas secciones siempre presentes, `enabled: false` cuando el módulo está desactivado para esa fuente |
+| `modbus_tcp` | 502, unidad 1, Coil 0/1 + HR 0–11 | Coil 0 = NG, Coil 1 = OK (mutuamente excluyentes). HR 0–7 como en el contrato v1: clase primaria, recuento de defectos, bbox ×10000, latido. HR 8 = recuento de faltantes, HR 9 = recuento de extras, HR 10 = mm medidos ×100, HR 11 = código de tolerancia | Registros escritos antes de que cambie la bobina, bajo un único bloqueo |
 | `http` | 8080, `/healthz` `/events` `/preview.mjpg` | fps, tiempo de inferencia, contadores de fallos por faltantes y dimensiones; los eventos más recientes; vista previa MJPEG con cajas y ROI | Panel local, sin autenticación |
 
 **Código de tolerancia HR 11**: `0` ok, `1` undersize, `2` oversize, `3` not_found, `4` uncalibrated.
 
-`verdict_reasons` es una lista; las cuatro razones (`defect`, `missing`, `extra`, `dimension_out_of_tolerance`) pueden aparecer juntas. Las ROI se configuran por fuente (`sources[].assembly` y `sources[].dimension`). Una sección `assembly` generada por la herramienta de anotación lleva `roi_profile_sha256`, que identifica qué perfil de ROI se ejecuta en el sitio; con ROI escritas a mano se omite o es `null`.
+`verdict_reasons` es una lista; las cuatro razones (`defect`, `missing`, `extra`, `dimension_out_of_tolerance`) pueden aparecer juntas. Las ROI se configuran por fuente (`sources[].assembly` y `sources[].dimension`). Una sección `assembly` generada por la herramienta de anotación lleva `roi_profile_sha256`, que identifica qué perfil de ROI se ejecuta en sitio; con ROI escritas a mano se omite o es `null`.
 
 ```json
 {
@@ -232,11 +233,11 @@ Los datos salen del host de inspección por tres interfaces, todas servidas loca
 }
 ```
 
-Tres cosas a vigilar al leer campos:
+Tres cosas a tener en cuenta al leer campos:
 
 - **Cuando `HR 10 = 0`, lee primero HR 11.** `3` y `4` significan que no hay medición, no una lectura de 0 mm.
-- **En la v2, `verdict = NG` puede venir con `defect_count = 0`.** Una pieza faltante o una medición fuera de tolerancia también hace que el fotograma sea NG.
-- **Bobina y registros son solo una muestra en el lado de escritura.** Leerlos como dos peticiones Modbus puede abarcar dos veredictos a tasas altas de veredictos, observado alrededor de 20 veredictos/s. Si importa, sondea primero los registros y usa la bobina como disparador.
+- **En v2, `verdict = NG` puede venir con `defect_count = 0`.** Una pieza faltante o una medición fuera de tolerancia también hace que el fotograma sea NG.
+- **Bobina y registros son solo una muestra en el lado de escritura.** Leerlos como dos peticiones Modbus puede abarcar dos veredictos a tasas altas de veredictos, observado en torno a 20 veredictos/s. Si importa, sondea primero los registros y usa la bobina como disparador.
 
 Con varios flujos en un mismo host, los registros Modbus contienen el último veredicto de cualquier flujo que lo haya producido; los resultados por flujo vienen de MQTT. El broker MQTT empaquetado es local y anónimo; apunta una instalación de producción a un broker con credenciales.
 
@@ -250,14 +251,14 @@ Con varios flujos en un mismo host, los registros Modbus contienen el último ve
 
 ### Velocidad y latencia
 
-"Detector throughput" cubre solo la llamada de detección; "full pipeline" añade la fusión de veredictos, Modbus, MQTT y validación del contrato, sin limitación; "end-to-end" es desde la captura hasta la escritura de la bobina Modbus, limitado a una cadencia de línea de 10 fps.
+"Rendimiento del detector" cubre solo la llamada de detección; "pipeline completo" añade la fusión de veredictos, Modbus, MQTT y validación del contrato, sin limitación; "extremo a extremo" es desde la captura hasta la escritura de la bobina Modbus, limitado a una tasa de línea de 10 fps.
 
-| Dispositivo | Modelo / precisión | Detector throughput | Full pipeline | Captura de extremo a extremo → bobina Modbus |
+| Dispositivo | Modelo / precisión | Rendimiento del detector | Pipeline completo | Extremo a extremo captura → bobina Modbus |
 |---|---|---:|---:|---|
 | reComputer J40 series (J4012, Orin NX 16GB) | YOLOX-Tiny 640², TensorRT FP16 | 95.06 FPS (`detect()` P50 10.52 ms) | 89 FPS (P50 42.9 ms) | P50 10.92 ms / P99 11.18 ms; 3000 muestras, 0 perdidas. Después de un despliegue desde cero (motor construido en el dispositivo): P50 9.81 ms / P95 10.18 ms, n=300 |
 | reComputer R2000 series + Hailo-8 | YOLOX-Tiny 640², HailoRT INT8 HEF | Hardware 106.75 FPS (`hailortcli run`); aplicación 94.02 FPS (P50 10.64 ms) | 43.92 FPS | P50 11.89 ms / P99 16.08 ms |
 
-Condiciones: las cifras del detector en Orin se midieron en 500 ejecuciones sobre 60 fotogramas predecodificados; la ejecución del motor es unos 6.3 ms de eso, el resto es letterbox más NMS en CPU. La capacidad de flujo se midió en reComputer J40 series (J4012): 8 estables / 12 degradando / 24 fallando; 640² a 10 fps por flujo, cinco minutos por nivel, todo el barrido ejecutado dos veces, MQTT y Modbus desactivados. reComputer J30 series (J3011) ejecutó un flujo de 10 fps de forma continua durante 67 h, extremo a extremo P50 11.45 ms.
+Condiciones: cifras del detector Orin medidas en 500 ejecuciones sobre 60 fotogramas predecodificados; la ejecución del motor es unos 6.3 ms de eso, el resto es letterbox más NMS en CPU. Capacidad de flujo medida en reComputer J40 series (J4012): 8 estable / 12 degradando / 24 fallando; 640² a 10 fps por flujo, cinco minutos por nivel, todo el barrido ejecutado dos veces, MQTT y Modbus desactivados. reComputer J30 series (J3011) ejecutó un flujo de 10 fps de forma continua durante 67 h, extremo a extremo P50 11.45 ms.
 
 Reproducir: `solutions/edge_inspection_assembly/evaluation/` (Hailo-8: `evaluation/runs/2026-09-06-rpi-hailo/results.md`)
 
@@ -267,45 +268,45 @@ Reproducir: `solutions/edge_inspection_assembly/evaluation/` (Hailo-8: `evaluati
 |---|---:|---|
 | mAP50, reComputer J40 series, TensorRT FP16 | **0.9876** | DeepPCB6 val, 205 imágenes / 1158 cajas / 6 clases; con umbral 0.35, P 0.9284 / R 0.9741, FP 87 / FN 30, 0 fotogramas completamente perdidos |
 | mAP50-95, reComputer J40 series (desplegado desde cero) | 0.8207 | Mismo conjunto de validación; referencia en CPU 0.8213 |
-| mAP50, reComputer R2000 series + Hailo-8, INT8 HEF | **0.9858** | Mismo conjunto de validación; −0.0018 frente a la referencia en CPU |
+| mAP50, reComputer R2000 series + Hailo-8, INT8 HEF | **0.9858** | Mismo conjunto de validación; −0.0018 respecto a la referencia en CPU |
 | mAP50, emulador Hailo Dataflow Compiler, INT8 | 0.9924 | 20 imágenes de validación / 118 cajas, no directamente comparable con las filas de 205 imágenes; CPU, nativo y cuantizado dan el mismo mAP50 / P / R, por caja CPU ↔ cuantizado 119/120 coinciden |
 
-Conjunto de datos: [DeepPCB](https://github.com/tangsanli5201/DeepPCB) (MIT), seis clases (open / short / mousebite / spur / copper / pin-hole), no redistribuido con el paquete.
+Conjunto de datos: [DeepPCB](https://github.com/tangsanli5201/DeepPCB) (MIT), seis clases (abierto / cortocircuito / mordida de ratón / espolón / cobre / agujero pasante), no se redistribuye con el paquete.
 
 Reproducir: `solutions/edge_inspection_assembly/evaluation/` (emulador: `evaluation/runs/2026-09-05-m3-hef/`)
 
 ### Piezas faltantes y dimensiones
 
-| Ítem | Resultado | Condiciones |
+| Elemento | Resultado | Condiciones |
 |---|---|---|
-| Bucle de verdad de terreno de piezas faltantes | Fotograma de plantilla 6 / 6 coincidente; después de intercambiar placas 6 / 6 reportados como faltantes | Lista de esperados construida a partir de las cajas de verdad de terreno de una imagen de validación (ROI = caja GT × 1.6, 6 entradas); después del intercambio `verdict_reasons` lista `missing` junto con `defect` |
-| Error de dimensión (calibración ArUco) | Peor error relativo **0.65%**, presupuesto 1% | Escena ArUco sintética, sin error de lente ni de iluminación; lado largo 60 → 60.241 mm (+0.40%), lado corto 40 → 40.261 mm (+0.65%); tolerancia ±1.0 mm, veredicto `ok`; PNG sin comprimir y mp4v dan valores idénticos |
-| Prueba de resistencia de flujo único | 67 h de ejecución continua, 0 fotogramas perdidos | reComputer J30 series (J3011), flujo único a 10 fps; RSS de referencia inicial 256–259 MiB, temperatura de unión 61–62 °C, 0 reinicios |
+| Bucle de ground-truth de pieza faltante | Marco de plantilla 6 / 6 coincidente; después de intercambiar placas se informan 6 / 6 como faltantes | Lista esperada construida a partir de las cajas ground-truth de una imagen de validación (ROI = caja GT × 1.6, 6 entradas); después del intercambio `verdict_reasons` enumera `missing` junto con `defect` |
+| Error de dimensión (calibración ArUco) | Peor error relativo **0.65%**, margen 1% | Escena ArUco sintética, sin error de lente ni de iluminación; lado largo 60 → 60.241 mm (+0.40%), lado corto 40 → 40.261 mm (+0.65%); tolerancia ±1.0 mm, veredicto `ok`; PNG sin comprimir y mp4v dan valores idénticos |
+| Prueba de resistencia de flujo único | 67 h de ejecución continua, 0 fotogramas perdidos | reComputer J30 serie (J3011), flujo único a 10 fps; RSS de referencia inicial 256–259 MiB, temperatura de unión 61–62 °C, 0 reinicios |
 
-Reproducir: `evaluation/make_dimension_fixture.py`, `evaluation/smoke_cpu_dimension.py`; niveles de remojo en `boundary.soak.yaml`
+Reproducir: `evaluation/make_dimension_fixture.py`, `evaluation/smoke_cpu_dimension.py`; niveles de prueba de resistencia en `boundary.soak.yaml`
 
 ### Tiempos de ejecución y parámetros clave
 
 | Dispositivo | Modelo | Precisión | Tiempo de ejecución | Cómo llega el modelo al dispositivo |
 |---|---|---|---|---|
-| Serie reComputer J30 / J40 | YOLOX-Tiny 640² | FP16 | TensorRT | Motor generado en el dispositivo en el primer despliegue (unos 5 minutos), ligado a ese dispositivo y a la versión de TensorRT |
-| Serie reComputer R2000 + Hailo-8 | YOLOX-Tiny 640² | INT8 | HailoRT 4.21.x | HEF compilado fuera del dispositivo con Hailo Dataflow Compiler (nivel de optimización 1 + Bias Correction), descargado en el momento del despliegue |
+| reComputer J30 / J40 serie | YOLOX-Tiny 640² | FP16 | TensorRT | Motor construido en el dispositivo en el primer despliegue (unos 5 minutos), ligado a ese dispositivo y a la versión de TensorRT |
+| reComputer R2000 serie + Hailo-8 | YOLOX-Tiny 640² | INT8 | HailoRT 4.21.x | HEF compilado fuera del dispositivo con Hailo Dataflow Compiler (nivel de optimización 1 + Bias Correction), descargado en el momento del despliegue |
 
 - Umbral de detección: `0.35` (configuración de evaluación)
 - Objetivo de calibración: ArUco `DICT_4X4_50` (predeterminado), o cualquier objeto de referencia de anchura conocida
-- Motivos de veredicto: `defect` / `missing` / `extra` / `dimension_out_of_tolerance` se pueden desactivar uno por uno; `extra` requiere que el informe de piezas extra esté habilitado
+- Motivos del veredicto: `defect` / `missing` / `extra` / `dimension_out_of_tolerance` se pueden desactivar uno por uno; `extra` requiere que el informe de piezas extra esté habilitado
 
-### Degradaciones conocidas
+### Degradación conocida
 
 - Mover, volver a montar o reenfocar la cámara invalida la plantilla de ROI; reconstruye la lista esperada.
-- Un objetivo de calibración a una distancia de trabajo diferente de la cara medida, una pieza inclinada o un bajo contraste de borde producen error de dimensión, `not_found` o `uncalibrated`, sin que se genere ningún error.
-- La precisión proviene de defectos de placas desnudas DeepPCB: defectos sintéticos con bordes limpios, y las seis clases no son piezas de montaje faltantes. Las escenas de montaje reales son más difíciles.
-- En la serie reComputer R2000 el cuello de botella es la CPU host: toda la canalización se ejecuta a 43,92 FPS y cae aún más por debajo del rendimiento del detector que en Orin.
-- La capacidad de flujo se midió con MQTT y Modbus deshabilitados; con ambas salidas habilitadas el recuento alcanzable es inferior a 8.
+- Un objetivo de calibración a una distancia de trabajo diferente de la cara medida, una pieza inclinada o bajo contraste de borde producen error de dimensión, `not_found` o `uncalibrated`, sin que se genere error.
+- La precisión proviene de defectos de placa desnuda DeepPCB: defectos sintéticos con bordes limpios, y las seis clases no son piezas de montaje faltantes. Las escenas de montaje reales son más difíciles.
+- En reComputer R2000 serie el cuello de botella es la CPU host: la canalización completa se ejecuta a 43.92 FPS y cae aún más por debajo del rendimiento del detector que en Orin.
+- La capacidad de flujo se midió con MQTT y Modbus deshabilitados; con ambas salidas habilitadas el recuento alcanzable está por debajo de 8.
 
 ## Fuentes de datos y recursos
 
-- **DeepPCB** — [github.com/tangsanli5201/DeepPCB](https://github.com/tangsanli5201/DeepPCB), licencia MIT. Usado para entrenar el detector incluido y como conjunto de validación para todas las cifras de precisión anteriores. La licencia MIT permite la redistribución y el uso comercial y requiere que el aviso de copyright acompañe a las copias y trabajos derivados; la atribución viaja con las imágenes en `gallery/ATTRIBUTION.md` del paquete. Las imágenes son escaneos en escala de grises binarizados de capas de cobre de PCB desnudas, sin personas y sin contenido que identifique al cliente. **El conjunto de datos no se redistribuye con el paquete.**
+- **DeepPCB** — [github.com/tangsanli5201/DeepPCB](https://github.com/tangsanli5201/DeepPCB), licencia MIT. Usado para entrenar el detector incluido y como conjunto de validación para todas las cifras de precisión anteriores. La licencia MIT permite la redistribución y el uso comercial y requiere que el aviso de copyright acompañe a las copias y trabajos derivados; la atribución acompaña a las imágenes en `gallery/ATTRIBUTION.md` del paquete. Las imágenes son escaneos binarizados en escala de grises de capas de cobre de PCB desnudas, sin personas ni contenido que identifique al cliente. **El conjunto de datos no se redistribuye con el paquete.**
 - **YOLOX** — [github.com/Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX), Apache-2.0. Backbone del detector. No se utiliza código ni pesos de Ultralytics, por lo que no hay obligación de AGPL.
 - **SAM 2.1 Hiera-Small** — [github.com/facebookresearch/sam2](https://github.com/facebookresearch/sam2), código y checkpoints Apache-2.0. Usado solo por la herramienta de anotación offline.
 - **Imágenes del útil de dimensiones** — sintéticas, generadas por `evaluation/make_dimension_fixture.py` de este proyecto. Sin material de terceros, no se requiere atribución.

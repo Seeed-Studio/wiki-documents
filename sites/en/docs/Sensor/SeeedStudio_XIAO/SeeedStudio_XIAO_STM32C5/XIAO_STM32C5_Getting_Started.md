@@ -235,7 +235,7 @@ pio pkg update -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 
 # for macOS/Linux
 pio pkg uninstall -g -p "SeeedStudio" && pio pkg install -g -p "SeeedStudio=https://github.com/Seeed-Studio/platform-seeedboards.git" --force
-``` 
+```
 
 :::tip
 
@@ -251,6 +251,50 @@ board = seeed-xiao-stm32c5
 :::
 
 **Step 4.** Create New Project
+
+<details>
+
+<summary>Accelerate steps for creating a new project for the first time (Optional)</summary>
+
+In this step, you may pre-download the resource packages required for XIAO STM32C5 development to speed up the creation of your first new project.
+
+**1. Install the Zephyr framework package.**
+
+```bash
+pio pkg install --global --tool "framework-zephyr-nrf54lm20=https://dl.registry.platformio.org/download/platformio/tool/framework-zephyr/3.40400.260428/framework-zephyr-3.40400.260428.tar.gz"
+```
+
+**2. Install Zephyr modules and the STM32 HAL.**
+
+Copy the command block for your operating system into the VS Code terminal. If a multiline paste warning appears, click **Paste** to preserve the line breaks. Do not click **Paste as one line**.
+
+Windows (PowerShell):
+
+```powershell
+$env:PATH = "$HOME/.platformio/penv/Scripts;$env:PATH"
+
+python "$HOME/.platformio/packages/framework-zephyr-nrf54lm20/scripts/platformio/install-deps.py" `
+  --platform ststm32 `
+  --secondary-installation
+```
+
+macOS/Linux (Bash or Zsh):
+
+```bash
+export PATH="$HOME/.platformio/penv/bin:$PATH"
+
+python "$HOME/.platformio/packages/framework-zephyr-nrf54lm20/scripts/platformio/install-deps.py" \
+  --platform ststm32 \
+  --secondary-installation
+```
+
+:::tip
+
+The download size is large. Please wait patiently and keep your network stable.
+
+:::
+
+</details>
 
 - On the PlatformIO plugin interface, select to create a new project.
 

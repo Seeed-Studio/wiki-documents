@@ -1,5 +1,6 @@
 ---
 description: Example demonstrating audio playback through Reachy Mini's speaker using WAV files or continuous live audio with push_audio_sample API.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Sound Playback
 slug: /reachymini_examples_sound_play
 keywords:

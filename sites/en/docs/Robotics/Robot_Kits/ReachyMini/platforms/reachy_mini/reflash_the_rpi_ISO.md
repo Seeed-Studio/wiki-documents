@@ -1,5 +1,6 @@
 ---
 description: Expert guide for reflashing the ReachyMiniOS image to Reachy Mini's CM4 using rpiboot and bmaptool on Linux, macOS, and Windows.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Reflash the Raspberry Pi OS Image
 slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:

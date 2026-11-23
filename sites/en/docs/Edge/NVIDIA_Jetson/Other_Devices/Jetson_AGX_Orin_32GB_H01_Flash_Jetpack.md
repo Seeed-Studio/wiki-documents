@@ -113,6 +113,13 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAOW5tcK2vPTagiGOFw9oMcAYITLgRqj_dXQJMchlUeGOk?e=8ar0lu" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+
+    <tr>
+      <td>7.2.1</td>
+      <td>39.2.1</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC6VvNqTyoXTb4M2m7wsjmvATyd9KFbfTsTKZTJk8myBhY?e=DvQOVl" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetpack/downloads/archive-7.2#:~:text=Jetson%20Linux%2039.2%20%286%2F02%2F2026%29" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -485,6 +492,164 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 ```
 
 :::
+
+</TabItem>
+
+<TabItem value="JP7.2.1" label="JP7.2.1">
+
+Here we will use **NVIDIA L4T 39.2.1** to install **JetPack 7.2.1** on the Jetson AGX Orin 32GB H01 Kit.
+
+### Hardware Requirements
+
+- Ubuntu 20.04 or Ubuntu 22.04 host PC with internet access
+- Type-C data cable (must support data transfer)
+- Jetson AGX Orin 32GB H01 Kit (A605 carrier board with Orin module)
+- Power adapter
+- NVMe SSD
+- The flashing host must have `wget`, `tar` and `sudo` installed
+
+### Prepare the Flashing Files
+
+**Step 1:** Create a working directory on the Ubuntu host PC.
+
+```bash
+mkdir -p ~/a605_flash
+cd ~/a605_flash
+```
+
+**Step 2:** Download the following two files and put them in the same directory (for example from [this folder](https://seeedstudio88-my.sharepoint.com/:f:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IgC6VvNqTyoXTb4M2m7wsjmvATyd9KFbfTsTKZTJk8myBhY?e=DvQOVl)):
+
+- `605_jp721.sh`
+- `605_jp721.tbz2`
+
+:::note
+Do **not** extract `605_jp721.tbz2` manually — the script will extract the driver package automatically.
+:::
+
+**Step 3:** Run the script:
+
+```bash
+./605_jp721.sh
+```
+
+:::caution
+Do **not** run `sudo ./605_jp721.sh` or `sudo bash 605_jp721.sh`. The script will prompt for your sudo password when administrator rights are needed. Running the whole script with `sudo` makes the generated directory `root:root` and causes permission issues in later steps.
+:::
+
+**Step 4:** The script automatically downloads the official JetPack 7.2.1 packages, extracts the rootfs, extracts the driver package and overwrites the A605 driver files. Download time depends on your network speed — do not interrupt the process.
+
+**Step 5:** When you see the following message, the flashing directory is ready:
+
+```
+605_jp721 package applied successfully.
+```
+
+The assembled flashing directory is:
+
+```
+~/a605_flash/605_jp721_flash/Linux_for_Tegra
+```
+
+### Put the Device in Recovery Mode
+
+1. Disconnect the A605 carrier board from power.
+2. Short-circuit the RECOVERY pin and GND pin on the carrier board.
+3. Connect the carrier board to the host PC with a Type-C data cable.
+4. Power on the board.
+5. On the host PC, run `lsusb`. If the product ID is `7023` or `7223`, the device is in Recovery Mode.
+
+### Flash the System
+
+1. Make sure the device is still in Recovery Mode.
+2. Enter the flashing directory:
+
+```bash
+cd ~/a605_flash/605_jp721_flash/Linux_for_Tegra
+```
+
+3. Flash to the eMMC. Choose the command according to the module capacity:
+
+   - Orin 32GB module (Super mode):
+
+     ```bash
+     sudo ./l4t_initrd_flash.sh --erase-all jetson-agx-orin-devkit-super internal
+     ```
+
+   - Orin 64GB module:
+
+     ```bash
+     sudo ./l4t_initrd_flash.sh --erase-all jetson-agx-orin-devkit internal
+     ```
+
+4. Flash to the NVMe SSD. Choose the command according to the module capacity:
+
+   - Orin 32GB module (Super mode):
+
+     ```bash
+     sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+       -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+       --showlogs --network usb0 jetson-agx-orin-devkit-super external
+     ```
+
+   - Orin 64GB module:
+
+     ```bash
+     sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+       -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+       --showlogs --network usb0 jetson-agx-orin-devkit external
+     ```
+
+5. Wait until the command finishes. Do not unplug the Type-C cable, shut down the host PC, or cut the carrier board power during flashing.
+6. After flashing succeeds, remove the RECOVERY-to-GND shorting jumper and power on the device again.
+
+### Backup and Restore the System
+
+The following operations require the device to be in Recovery Mode and must be executed in the `Linux_for_Tegra` directory.
+
+1. **Back up the system image:**
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e <device> -b jetson-agx-orin-devkit
+   ```
+
+   Replace `<device>` with:
+   - `mmcblk0`: the system is on the eMMC internal storage
+   - `nvme0n1`: the system is on the NVMe SSD
+
+   For example, back up the system on the NVMe SSD:
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-agx-orin-devkit
+   ```
+
+2. **Restore the system from a backup image:**
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e <device> -r jetson-agx-orin-devkit
+   ```
+
+   `<device>` must be the same as the one used for the backup. For example, restore to the NVMe SSD:
+
+   ```bash
+   sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-agx-orin-devkit
+   ```
+
+### Frequently Asked Questions
+
+1. **`Required path is missing: .../605_jp721.tbz2`**
+   - Cause: the driver package is not in the same directory as the script.
+   - Fix: make sure `605_jp721.sh` and `605_jp721.tbz2` are in the same directory, then run the script again.
+
+2. **`Required path is missing: .../bootloader` or similar**
+   - Cause: the driver package was not extracted correctly, or the package file is incomplete.
+   - Fix: make sure you use `605_jp721.tbz2` and re-download the complete driver package, then run the script again.
+
+3. **The directory shows `root:root` or permissions `777`**
+   - Cause: the assembling script was run with `sudo`.
+   - Fix: delete the generated `605_jp721_flash` directory, then run `./605_jp721.sh` as a normal user to re-assemble.
+
+4. **`lsusb` does not show the device**
+   - Fix: check that RECOVERY and GND are shorted, the Type-C cable supports data transfer, and the board is powered on. Then reconnect the Type-C cable and run `lsusb` again.
 
 </TabItem>
 

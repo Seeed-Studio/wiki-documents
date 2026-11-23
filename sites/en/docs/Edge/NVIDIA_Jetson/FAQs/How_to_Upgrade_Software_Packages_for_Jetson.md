@@ -1,25 +1,107 @@
 ---
-description: This is a FAQ about Using OTA or incremental updates may lead to system instability and security risks, so it is recommended to perform full ROM updates to maintain system security and stability, avoiding partial updates.
+description: This FAQ explains how to update Jetson software without replacing Seeed carrier-board drivers, and how to repair JetPack 5.1.3 or JetPack 6.2 after a mistaken nvidia-l4t upgrade.
 title: Upgrade Software Packages for Jetson
 keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /upgrade_software_packages_for_jetson
 last_update:
-  date: 2/11/2025
-  author: Youjiang
+  date: 10/16/2026
+  author: Youjiang/Dayu
 createdAt: '2025-02-11'
-updatedAt: '2025-07-11'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/upgrade_software_packages_for_jetson/
 ---
 
 #### How can I upgrade software packages if you told me that I cannot execute apt upgrade? Will there be security risks if I don't upgrade the software?
 
-A: First, it's important to understand that **OTA (Over the Air)/Incremental updates/partial updates** can potentially harm your OS, as they allow users to update only a subset of packages. This approach can lead to dependency mismatches, system instability, and missed security patches, ultimately increasing the risk of software failures or vulnerabilities. Additionally, managing partial upgrades often requires manual intervention, which can be error-prone. On the contrary, **full ROM/full updates** ensure that all packages and dependencies are updated together, maintaining system compatibility and stability. By applying security patches and bug fixes across the entire system, full upgrades help keep the system secure and consistent, reducing the likelihood of conflicts. While full upgrades may require more time, they are generally considered safer and more reliable in the long run. For our Jetson devices, we release JetPacks after NVIDIA releases theirs (the same applies for driver releases and assemble your own JetPack), which ensures a more stable and secure system compared to upgrading using apt. If you're concerned about outdated software and want to update specific packages, here are some options:
+A: Do not run `sudo apt upgrade` or `sudo apt full-upgrade` on a Seeed Jetson image. A normal application update is fine, but an unattended NVIDIA upgrade can replace the Seeed `nvidia-l4t` kernel, device tree, and driver packages with NVIDIA stock packages. The device may then fail to boot, or carrier-board peripherals may stop working.
 
-1. If you're sure that your software package doesn't depend on system packages, run "sudo apt-get install `<Your_Package>`" to upgrade the package.
-2. For most open source software, download the source file and compile yourself.
-3. Wait for new JetPack release.
+For application packages that do not depend on `nvidia-l4t`, install only the package you need:
+
+```bash
+sudo apt update
+sudo apt-get install <your-package>
+```
+
+For most open-source software, another safe option is to download the source and build it yourself. A full Seeed BSP or JetPack image is still the preferred way to update the kernel, bootloader, and carrier-board drivers together.
+
+## Repair a mistaken nvidia-l4t upgrade
+
+Repair packages are available for the two JetPack releases that do not already contain the apt protection:
+
+| JetPack | Jetson Linux | Repair package |
+| --- | --- | --- |
+| JetPack 5.1.3 | R35.5.0 | [seeed-jetson-linux-r35.5.0-bsp_fix-bundle-1.zip](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBHzK-usznrT72e9lsjdzvnAZf8tB1ohV93_-vjlazshYQ?e=ljS4tL) |
+| JetPack 6.2 | R36.4.3 | [seeed-jetson-linux-r36.4.3-bsp_fix-bundle.zip](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCTqH9GsRQWSI-PhfPuJeycAR_oaUGvZc7jBTgcMMWS-fc?e=jV1YJF) |
+
+JetPack 7 and later Seeed firmware already holds the NVIDIA kernel and driver packages, so `apt` cannot replace them by mistake. There is no repair package for those releases. If a JetPack 7 or later system is already damaged, reflash the matching Seeed image.
+
+:::caution
+Run the repair on the Jetson itself, and use only the package that matches `cat /etc/nv_tegra_release`. The script restores Seeed kernel and driver packages. It does not install the bootloader package unless you explicitly add `--with-bootloader`.
+:::
+
+### JetPack 5.1.3 / L4T R35.5.0
+
+Confirm the release first:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+The first line must contain `R35 (release), REVISION: 5`. Download `seeed-jetson-linux-r35.5.0-bsp_fix-bundle-1.zip`, copy it to the Jetson, and run:
+
+```bash
+unzip -o seeed-jetson-linux-r35.5.0-bsp_fix-bundle-1.zip
+cd seeed-jetson-linux-r35.5.0-bsp-bundle
+sudo ./seeed-linux-bsp-repair.sh
+sudo reboot
+```
+
+Add `--with-bootloader` only when the bootloader itself must be repaired. After reboot, check the restored packages:
+
+```bash
+dpkg -l nvidia-l4t-kernel nvidia-l4t-kernel-dtbs nvidia-l4t-kernel-headers nvidia-l4t-display-kernel
+cat /etc/nv_boot_control.conf
+dpkg --audit
+```
+
+The four packages should be installed or held, and their versions should contain `+seeed1`. `dpkg --audit` should print nothing. The repair log is `/var/log/seeed-linux-bsp-r35.5.0-repair.log`.
+
+### JetPack 6.2 / L4T R36.4.3
+
+Confirm the release first:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+The output must contain `R36` and `REVISION: 4.3`. Download `seeed-jetson-linux-r36.4.3-bsp_fix-bundle.zip`, copy it to the Jetson, and run:
+
+```bash
+unzip -o seeed-jetson-linux-r36.4.3-bsp_fix-bundle.zip
+cd seeed-jetson-linux-r36.4.3-bsp-bundle
+sudo ./seeed-linux-bsp-repair.sh
+sudo reboot
+```
+
+If the script cannot identify the carrier board, stop and rerun it with the Seeed product name:
+
+```bash
+sudo ./seeed-linux-bsp-repair.sh --board recomputer-orin-super-j401
+```
+
+Replace `recomputer-orin-super-j401` with the name of the Seeed carrier or product being repaired. Use `--auto` only when the detected board name is already correct and the command must run without interaction. Add `--with-bootloader` only when firmware repair is required. The R36.4.3 repair package does not contain an Orin Super bootloader capsule, so check the module and firmware before using that option on Orin Super hardware.
+
+After reboot, check:
+
+```bash
+dpkg -l nvidia-l4t-kernel nvidia-l4t-kernel-dtbs nvidia-l4t-kernel-headers nvidia-l4t-kernel-oot-modules nvidia-l4t-display-kernel
+uname -r
+dpkg --audit
+```
+
+The package versions should contain `+seeed1`, and `uname -r` should report `5.15.148-tegra`. The repair log is `/var/log/seeed-linux-bsp-r36.4.3-repair.log`, and the script backup is `/opt/nvidia/l4t-packages/seeed-r36.4.3-repair-backup`.
 
 
 ## Tech Support & Product Discussion
@@ -35,5 +117,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

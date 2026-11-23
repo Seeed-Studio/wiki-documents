@@ -1,5 +1,6 @@
 ---
 description: Ejemplo que demuestra diferentes métodos de interpolación (linear, minjerk, ease_in_out, cartoon) para mover la cabeza y las antenas de Reachy Mini a una pose objetivo.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Zona de pruebas de interpolación Goto
 slug: /reachymini_examples_goto_interpolation_playground
 keywords:

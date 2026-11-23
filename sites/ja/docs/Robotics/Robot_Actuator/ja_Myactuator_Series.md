@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、Myactuatorシリーズモーターのチュートリアルを提供します。
+description: "MyActuator R シリーズ関節アクチュエータの完全ガイド：モデル概要、CAN 配線、制御モード、ロボットアームの調整。"
 title: MyActuator
 keywords:
   - アクチュエータ

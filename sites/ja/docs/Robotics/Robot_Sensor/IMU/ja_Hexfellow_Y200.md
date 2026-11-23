@@ -1,5 +1,5 @@
 ---
-description: このwikiはHEXFELLOW Y200 IMUセンサーのチュートリアルを提供します。
+description: "HEXFELLOW Y200 IMU センサーの使い方：配線、ドライバーのセットアップ、データ読み取り、ロボットのナビゲーションとバランス向けキャリブレーション。"
 title: HEXFELLOW Y200 IMUセンサー
 keywords:
   - IMU

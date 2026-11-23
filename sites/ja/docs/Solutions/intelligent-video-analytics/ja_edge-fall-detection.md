@@ -1,6 +1,7 @@
 ---
 description: 介護施設・在宅ケアの現場でローカル転倒通知を構築する方法——必要な機器、構築手順、利用できるインターフェース、7台のデバイスでの実測データ
 title: 'オンデバイス AI 転倒検知：構築・デプロイ・実測データ'
+sidebar_label: 'オンデバイスAI転倒検知'
 keywords:
   - 転倒検知
   - 転倒検出
@@ -22,7 +23,7 @@ last_update:
   date: 09/01/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-01'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/ja/solutions/edge-fall-detection/
 generated_from: sensecraft-solutions@cbbfa60
 ---
@@ -163,9 +164,9 @@ generated_from: sensecraft-solutions@cbbfa60
 | | 検知ホスト | 1 台あたりのストリーム数 | 選ぶべき状況 |
 |---|---|---:|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/g/a/gallery_img_1_1.png" alt="reCamera Pro" width="110" /> | [reCamera 2002 / Pro](https://www.seeedstudio.com/reCamera-Pro-2GB.html)<br/>カメラと演算能力が一体 | 1 | 1 部屋で、最速で通知を 1 本動かしたいとき |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3576 / RK3588](https://www.seeedstudio.com/reComputer-RK3588-40-p-6818.html) | 1 | すでに Rockchip ボードで統一しているとき |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26__1.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3576 / RK3588](https://www.seeedstudio.com/reComputer-RK3588-40-p-6818.html) | 1–3 / 5 | すでに Rockchip ボードで統一しているとき；RK3576 ネイティブ最適化で実測 3ch、汎用ベースライン 1ch |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12（Hailo-8）](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html) | 16 | 1 台で多数のストリームを扱いたいとき |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J3011 / J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>Orin Nano / Orin NX | 7 / 8 | 複数部屋があり、拡張の余地も欲しいとき |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J3011 / Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>Orin Nano / Orin NX | 7 / 8 | 複数部屋があり、拡張の余地も欲しいとき |
 
 ストリーム数はアクセラレータの実測スループットから換算した値です（下の「ストリーム数の換算」を参照）。
 
@@ -181,8 +182,8 @@ generated_from: sensecraft-solutions@cbbfa60
 
 | | アラームホスト | 検知器の実行場所 | 選ぶべき状況 |
 |---|---|---|---|
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>1 台の Jetson 上に検知器、アラームサービス、broker、コンソール | この筐体で初回デプロイ時に TensorRT エンジンを構築 | カメラはあり、現場にゲートウェイがまだないとき。3 パッケージで最も多くのストリームを扱う |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>同じスタックで、より大きい姿勢モデル | この筐体では YOLO11s ではなく YOLO11m | J3011 1 台では足りない部屋数、またはより大きい姿勢モデルが必要なとき。同じパッケージの別オプションとしてデプロイフォームで選ぶ |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011 (Orin Nano 8GB)](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>1 台の Jetson 上に検知器、アラームサービス、broker、コンソール | この筐体で初回デプロイ時に TensorRT エンジンを構築 | カメラはあり、現場にゲートウェイがまだないとき。3 パッケージで最も多くのストリームを扱う |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012 (Orin NX 16GB)](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>同じスタックで、より大きい姿勢モデル | この筐体では YOLO11s ではなく YOLO11m | J3011 1 台では足りない部屋数、またはより大きい姿勢モデルが必要なとき。同じパッケージの別オプションとしてデプロイフォームで選ぶ |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-recomputer-industrail-r2000.jpg" alt="reComputer Industrial R2035-12" width="110" /> | [reComputer Industrial R2035-12 (Hailo-8)](https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html)<br/>ファンレス産業用筐体 | この筐体、コンパイル済み HEF | キャビネットまたはライザーに設置。ファンレス、広い温度範囲、DIN レールまたは壁面取り付けが必要なとき |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/2/-/2-102991894.jpg" alt="reCamera 2002" width="110" /> | [reCamera 2002](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)<br/>カメラと AI を一体化。アラームサービスは既存マシンに配置 | カメラ上 | カメラがまだない、またはカメラがすでに検知しているとき。アラームサービスは手動で起動します。デプロイフォームには自前ゲートウェイ用のデバイス種別がありません |
 
@@ -440,7 +441,7 @@ RK の INT8 は 240 枚の GMDCSA フレームで較正済みで、較正セッ�
 
 #### ストリーム数の換算
 
-「推論律速ストリーム」= 集約スループット ÷ 15 FPS です。アクセラレータだけを数えた理論上の上限です。「推奨ストリーム」はそこから割り引いた値で、RK のエンドツーエンドスループットは、RTSP デコード、トラッキング、ステートマシン、MQTT も CPU とメモリ帯域を使うため、推論上限の 28%〜44% にとどまりました。他のワークロードがボード上で動く状態では、エンドツーエンド実測は RK3588 で約 8.6 FPS、RK3576 で約 4.9 FPS でした。
+「推論律速ストリーム」= 集約スループット ÷ 15 FPS です。アクセラレータだけを数えた理論上の上限です。「推奨ストリーム」はそこから割り引いた値で、汎用 Python コンテナ環境では CPU ソフトウェアリサイズ・色空間変換およびオーバーヘッドにより、エンドツーエンド実測スループットは RK3588 で約 8.6 FPS、RK3576 で約 4.9 FPS（ベースライン 1ch）にとどまりました。一方、RGA ハードウェア適応スケーリング（improcess）と C++ ネイティブ直接直通ランタイムを採用した量産ビジョン基座環境では、INT8 量子化によってこのボトルネックを打破し、**RK3576 で安定 3ch（15 FPS 連続稼働・フレーム落ちゼロ）、RK3588 で 5ch** を達成しています。
 
 **Hailo-8 の 16 チャンネル実測条件と動画デコード制約**：R2000（Hailo-8）の推奨 16 チャンネルは、入力解像度 **640×640**（各 15 FPS）の条件下で測定されたものです。reComputer R2000 シリーズにはマルチチャンネルのハードウェアビデオデコーダーがないため、CPU ソフトウェアデコードで 1080p を処理すると 2〜4 系統で CPU 負荷が上限に達します。複数の既存カメラを接続する際は、必ずカメラ側のサブストリーム（640×480 または 640×360）を解析ホストに入力し、デコード負荷によるフレーム落ちを防いでください。
 
@@ -452,7 +453,7 @@ RK の INT8 は 240 枚の GMDCSA フレームで較正済みで、較正セッ�
 |---|---|---|---|---|
 | reCamera 2002 | YOLO11n-Pose | INT8 | カメラ NPU | コンソールからカメラアプリとしてインストール |
 | reComputer J30 / J40 | YOLO11s（Orin Nano）/ YOLO11m（Orin NX） | FP16 | TensorRT | エンジンは**デバイス上でビルド**——GPU アーキテクチャと TensorRT バージョンに紐づくため事前ビルドを配布できません。Orin Nano 実測：YOLO11s で 461 秒 |
-| reComputer RK3576 / RK3588 | YOLO11n-Pose | FP16 | RKNN Lite | `.rknn` はボード単位で配布。RK3588 向けにコンパイルしたモデルは RK3576 では読み込めません |
+| reComputer RK3576 / RK3588 | YOLO11n-Pose | INT8 | vb-runtime（librknnrt） | `.rknn` はボード単位で配布。RK3588 向けにコンパイルしたモデルは RK3576 では読み込めません |
 | reComputer R2000 系列（R2035-12，Hailo-8） | YOLOv8s-Pose | INT8 | GStreamer + `hailonet` | 公式のビルド済み HEF、固定ダイジェストで検証 |
 
 Hailo のデプロイは **HailoRT 4.21** に固定されています。GStreamer プラグイン、ユーザーライブラリ、カーネルドライバは同じバージョンでなければならず、アクセラレータを他のプロセスが占有してはいけません。

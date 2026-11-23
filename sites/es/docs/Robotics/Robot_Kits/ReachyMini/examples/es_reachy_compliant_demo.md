@@ -1,5 +1,6 @@
 ---
 description: Demostración que muestra a Reachy Mini en modo complaciente con compensación de gravedad, lo que permite que el robot siga empujes suaves y permanezca en su lugar cuando se suelta.
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: Demostración del modo complaciente
 slug: /reachymini_examples_reachy_compliant_demo
 keywords:

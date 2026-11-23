@@ -1,5 +1,6 @@
 ---
 description: Reachy Mini のモーターに関する問題を検出して修復するために、Testbench アプリを使用した包括的なモーター診断およびトラブルシューティングガイド。
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini-demo/reachymini-soarm.webp
 title: モーターの診断とトラブルシューティング
 slug: /reachymini_troubleshooting_motors_diagnosis
 keywords:

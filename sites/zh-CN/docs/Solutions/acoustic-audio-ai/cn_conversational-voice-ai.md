@@ -1,6 +1,7 @@
 ---
 description: 在边缘设备上做一台可打断的语音终端：需要哪些板子和麦克风、有哪些接口、语言 × 设备支持矩阵，以及 RK3576 上的设备实测数据
 title: 端侧可打断对话式语音 AI 方案：搭建、部署与实测数据
+sidebar_label: '端侧可打断对话语音 AI'
 keywords:
   - 对话式语音 AI
   - 可打断 语音助手
@@ -21,7 +22,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-10-14'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/cn/solutions/conversational-voice-ai/
 generated_from: sensecraft-solutions@aa522af
 ---
@@ -102,8 +103,8 @@ generated_from: sensecraft-solutions@aa522af
 |---|---|---|---|
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/3/5/3576_gif_26__3_1.gif" alt="reComputer RK3576" width="110" /> | [reComputer RK3576](https://www.seeedstudio.com/reComputer-RK3576-30-p-6815.html)<br/>瑞芯微 NPU，Qwen3-ASR W8A8 + Matcha | 中文、英文 | 能跑完整本地语音链路的最低成本主机，「性能与实测数据」里的设备实测数据就在这台上测 |
 | <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/3/5/3588_26_.png" alt="reComputer RK3588" width="110" /> | [reComputer RK3588](https://www.seeedstudio.com/reComputer-RK3588-30-p-6817.html)<br/>瑞芯微 NPU，TTS 增加 Kokoro RKNN | 全部 30 种 | 需要中英以外的 28 种语言；或以后要加装 RK1828 卡做本地对话 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/1/110110147.jpg" alt="reComputer J3011" width="110" /> | [reComputer J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-J3011-p-5590.html)<br/>GPU 上跑 Qwen3-ASR int4 + Matcha | 全部 30 种 | 主机还要跑别的 AI 任务、需要 GPU 余量。不要在这台上起本地 4B 模型 |
-| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-110110145-recomputer_j4012.jpg" alt="reComputer J4012" width="110" /> | [reComputer J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)<br/>语音与 Qwen3.5-4B 同机运行 | 全部 30 种 | 对话文本不能出场地 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010-nano-8g.jpg" alt="reComputer Super J3011" width="110" /> | [reComputer Super J3011（Orin Nano 8GB）](https://www.seeedstudio.com/reComputer-Super-J3011-p-6444.html)<br/>GPU 上跑 Qwen3-ASR int4 + Matcha | 全部 30 种 | 主机还要跑别的 AI 任务、需要 GPU 余量。不要在这台上起本地 4B 模型 |
+| <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/961a49e1875f8c1f40e5990d74e68365/1/-/1-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super J4012" width="110" /> | [reComputer Super J4012（Orin NX 16GB）](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html)<br/>语音与 Qwen3.5-4B 同机运行 | 全部 30 种 | 对话文本不能出场地 |
 
 reComputer R2000 系列也能跑 CPU 语音链路（sherpa-onnx，只支持英文），可部署方案页的配置器里暂不提供。它不支持中文，ASR 与 TTS 共用四个 CPU 核。
 

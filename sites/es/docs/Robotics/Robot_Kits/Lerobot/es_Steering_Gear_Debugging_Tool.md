@@ -1,5 +1,5 @@
 ---
-description: Herramienta de depuración de engranajes de dirección para SO-ARM en Lerobot.
+description: "Cómo depurar los servos del SO-ARM con la herramienta Seeed_RoboController: detectar servos, corregir IDs, escribir valores neutros y leer el estado en Windows, Ubuntu y Mac."
 title: Herramienta de depuración de SO-Arm
 keywords:
   - Lerobot

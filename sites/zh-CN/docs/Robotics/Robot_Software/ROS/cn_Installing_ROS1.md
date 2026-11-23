@@ -1,5 +1,5 @@
 ---
-description: 本文档提供在 reComputer 上安装 ROS1 的指南。
+description: "如何在 reComputer Jetson 上安装 ROS1：软件源配置、安装步骤，以及机器人开发环境配置。"
 title: 安装 ROS1
 keywords:
   - ROS1
