@@ -51,7 +51,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="rebot-rs" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>reBot-RS Robotic Arm</h3>
+    <h3>reBot-RS Braço Robótico</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
@@ -66,26 +66,27 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     </div>
     <div className="learning-group">
       <h4>Aplicações</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS com apreensão visual</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS seguindo o pulso</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">3</span><div><b>reBot-RS com ROS2</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_isaacsim/"><span className="step-index">4</span><div><b>reBot-RS com Isaac Sim</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>Sistema de controle Web do reBot-RS: Robô real &amp; MuJoCo</b></div></a>
-        <a className="step-card" href="/pt-br/wrc_demo_tutorial/"><span className="step-index">6</span><div><b>reBot-RS com Agent Claw</b></div></a>
+      <div className="learning-steps rebot-rs-applications">
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS com Pega Visual</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS Seguimento de Pulso</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_bimanual/"><span className="step-index">3</span><div><b>Colaboração Bimanual reBot-RS</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">4</span><div><b>reBot-RS com ROS2</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_isaacsim/"><span className="step-index">5</span><div><b>reBot-RS com Isaac Sim</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>Sistema de Controle Web reBot-RS: Robô Real &amp; MuJoCo</b></div></a>
+        <a className="step-card" href="/pt-br/wrc_demo_tutorial/"><span className="step-index">7</span><div><b>reBot-RS com Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Recursos Comuns</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">Descrição e modelos de simulação do reBot-RS (URDF / MJCF / Mesh)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/RS" target="_blank" rel="noopener noreferrer">Descrição e modelos de simulação do reBot-RS (URDF / MJCF / Malha)</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">Coleção de suportes de câmera</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_RS/3D_Printed_Parts/Soft_Gripper" target="_blank" rel="noopener noreferrer">Kit de garra macia (compartilhado por RS / DM)</a>
         <a href="https://motorbridge.seeedstudio.com/" target="_blank" rel="noopener noreferrer">SDK de motor MotorBridge e guia de depuração</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/README.md" target="_blank" rel="noopener noreferrer">Documentação de hardware do reBot-RS e lista de materiais (BOM)</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_RS/reBot_B601_RS_v1.0_20260625.step" target="_blank" rel="noopener noreferrer">Modelo STEP completo do reBot-RS (v1.0)</a>
         <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS" target="_blank" rel="noopener noreferrer">Gêmeo digital / sistema de controle Web do reBot-RS</a>
-        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Cinemática e código de controle Pinocchio</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Código de cinemática e controle Pinocchio</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>
         <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador seguidor LeRobot (B601)</a>
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperação líder LeRobot (102)</a>
@@ -97,7 +98,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="rebot-dm" className="product-card rebot product-card--cover">
   <summary className="product-head">
-    <h3>reBot-DM Robotic Arm</h3>
+    <h3>reBot-DM Braço Robótico</h3>
   </summary>
   <div className="product-body">
     <div className="learning-group">
@@ -112,16 +113,17 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Aplicações</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Apreensão visual do reBot-DM</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>Pega Visual reBot-DM</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM com ROS2</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM com Isaac Sim</b></div></a>
-        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>Sistema de controle Web do reBot-DM: Robô real &amp; MuJoCo</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>Colaboração Bimanual reBot-DM</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>reBot-DM com Isaac Sim</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>Sistema de Controle Web reBot-DM: Robô Real &amp; MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Recursos Comuns</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">Descrição e modelos de simulação do reBot-DM (URDF / MJCF / Mesh)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/Rebot_Arm_description/DM" target="_blank" rel="noopener noreferrer">Descrição e modelos de simulação do reBot-DM (URDF / MJCF / Malha)</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/camera-mounts" target="_blank" rel="noopener noreferrer">Coleção de suportes de câmera</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper" target="_blank" rel="noopener noreferrer">Kit de garra macia (compartilhado por RS / DM)</a>
         <a href="https://motorbridge.seeedstudio.com/" target="_blank" rel="noopener noreferrer">SDK de motor MotorBridge e guia de depuração</a>
@@ -129,7 +131,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/reBot_B601_DM_v1.1_20260625.step" target="_blank" rel="noopener noreferrer">Modelo STEP completo do reBot-DM (v1.1)</a>
         <a href="https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/performance_testing" target="_blank" rel="noopener noreferrer">Teste de desempenho em máquina real do reBot-DM</a>
         <a href="https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_DM" target="_blank" rel="noopener noreferrer">Gêmeo digital / sistema de controle Web do reBot-DM</a>
-        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Cinemática e código de controle Pinocchio</a>
+        <a href="https://github.com/Seeed-Projects/reBotArm_control_py" target="_blank" rel="noopener noreferrer">Código de cinemática e controle Pinocchio</a>
         <a href="https://github.com/Seeed-Projects/reBotArmController_ROS2" target="_blank" rel="noopener noreferrer">Controlador ROS2</a>
         <a href="https://github.com/Seeed-Projects/lerobot-robot-seeed-b601" target="_blank" rel="noopener noreferrer">Adaptador seguidor LeRobot (B601)</a>
         <a href="https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102" target="_blank" rel="noopener noreferrer">Adaptador de teleoperação líder LeRobot (102)</a>
@@ -157,7 +159,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Recursos Comuns</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">Descrição e modelos de simulação (URDF / Mesh)</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">Descrição e modelos de simulação (URDF / Malha)</a>
         <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">Documentação de hardware e lista de materiais (BOM)</a>
       </div>
     </div>
@@ -181,9 +183,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>Aplicações</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Treinamento SO-ARM de Dois Braços</b></div></a>
-        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>Treinamento SO-ARM de Dois Braços</b></div></a>
+        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>Aplicações</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">6</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
         <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>Simulação LeIsaac</b></div></a>
         <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizado por Reforço Isaac Lab</b></div></a>
         <a className="step-card" href="/pt-br/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 com Isaac Sim</b></div></a>
@@ -196,7 +203,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="amazinghand" className="product-card amazinghand product-card--cover">
   <summary className="product-head">
-    <h3>AmazingHand Mão Hábil</h3>
+    <h3>Mão Hábil AmazingHand</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
@@ -244,11 +251,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="stackforce" className="product-card stackforce product-card--cover">
   <summary className="product-head">
-    <h3>StackForce Mini Robô com Rodas e Pernas</h3>
+    <h3>Robô Mini com Rodas e Pernas StackForce</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
-    <a className="step-card" href="/pt-br/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>StackForce Mini Início Rápido</b></div></a>
+    <a className="step-card" href="/pt-br/StackForce_Mini_Wheeled_Legged_Robot/"><span className="step-index">1</span><div><b>Início Rápido StackForce Mini</b></div></a>
   </div>
   </div>
 </details>
@@ -256,11 +263,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="starai" className="product-card starai product-card--cover">
   <summary className="product-head">
-    <h3>StarAI Braço Robótico</h3>
+    <h3>Braço Robótico StarAI</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
-    <a className="step-card" href="/pt-br/lerobot_starai_arm/"><span className="step-index">1</span><div><b>StarAI Braço Robótico Início Rápido</b></div></a>
+    <a className="step-card" href="/pt-br/lerobot_starai_arm/"><span className="step-index">1</span><div><b>Início Rápido do Braço Robótico StarAI</b></div></a>
     <a className="step-card" href="/pt-br/starai_arm_ros_moveit/"><span className="step-index">2</span><div><b>Planejamento de Movimento MoveIt 2</b></div></a>
     <a className="step-card" href="/pt-br/control_robotic_arm_via_gr00t/"><span className="step-index">3</span><div><b>StarAI e NVIDIA GR00T</b></div></a>
   </div>
@@ -270,12 +277,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="atom" className="product-card atom product-card--cover">
   <summary className="product-head">
-    <h3>Atom Robô Humanoide Compacto</h3>
+    <h3>Robô Humanoide Compacto Atom</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
-    <a className="step-card" href="/pt-br/atom_s/"><span className="step-index">1</span><div><b>Guia de Introdução ao Atom-S</b></div></a>
-    <a className="step-card" href="/pt-br/atom_x/"><span className="step-index">2</span><div><b>Guia de Introdução ao Atom-X</b></div></a>
+    <a className="step-card" href="/pt-br/atom_s/"><span className="step-index">1</span><div><b>Guia de Introdução Atom-S</b></div></a>
+    <a className="step-card" href="/pt-br/atom_x/"><span className="step-index">2</span><div><b>Guia de Introdução Atom-X</b></div></a>
   </div>
   </div>
 </details>
@@ -287,7 +294,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <span className="section-kicker">Aprendizado</span>
         <h2>Cursos</h2>
       </div>
-      <p>Uma série de cursos gratuitos escritos e compartilhados pela equipe Seeed Robotics.</p>
+      <p>Uma série de cursos gratuitos escritos e compartilhados pela equipe de Robótica da Seeed.</p>
     </div>
     <div className="learning-steps">
       <a className="step-card" href="/pt-br/robotics/rebot_physical_ai_course_introduction/">
@@ -345,12 +352,12 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="resource-columns">
       <div>
         <h4>Motores de Junta reBot</h4>
-        <a href="/pt-br/damiao_series/">Damiao Série DM43</a>
-        <a href="/pt-br/robstride_control/">RobStride Control</a>
+        <a href="/pt-br/damiao_series/">Série Damiao DM43</a>
+        <a href="/pt-br/robstride_control/">Controle RobStride</a>
       </div>
       <div>
         <h4>Outros Motores de Junta</h4>
-        <a href="/pt-br/myactuator_series/">MyActuator Série X</a>
+        <a href="/pt-br/myactuator_series/">Série MyActuator X</a>
         <a href="/pt-br/hightorque_series/">Série HighTorque / SDK</a>
         <a href="/pt-br/hightorque_getting_started/">Introdução ao HighTorque</a>
         <a href="/pt-br/hightorque_control/">Controle de Motor HighTorque</a>
@@ -358,7 +365,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </div>
       <div>
         <h4>Servos</h4>
-        <a href="/pt-br/feetech_servo/">Feetech STS3215 Servo</a>
+        <a href="/pt-br/feetech_servo/">Servo Feetech STS3215</a>
         <a href="/pt-br/fashionstar_servo/">Série Fashionstar</a>
       </div>
     </div>
