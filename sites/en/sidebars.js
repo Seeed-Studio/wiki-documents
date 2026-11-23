@@ -1378,6 +1378,7 @@ const sidebars = {
               label: 'Platform',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_with_PlatformIO',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_with_Visual_Studio',
               ],
             },
             {
