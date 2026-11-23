@@ -171,7 +171,7 @@ const accessories = [
     devices: ['classic', 'industrial', 'mini', 'robotics', 'rugged', 'super', 'reserver'],
   }),
   ssd({
-    id: 'ssd-256gb-nvme-m-2-ssd-jetpack-6-2',
+    id: 'ssd-256gb-nvme-ssd-jetpack-6-2-base',
     name: "256GB NVMe M.2 SSD (JetPack 6.2 Base Image) - Fully Compatible with Jetson Or...",
     image: `${IMG_BASE}/ssd-256gb-nvme-jetpack-6-2-base.jpg`,
     sku: '100014960',
@@ -269,7 +269,7 @@ const accessories = [
     devices: [],
   }),
   cooling({
-    id: 'cooling-aluminum-heatsink-with-fan-for',
+    id: 'cooling-heatsink-fan-reserver-j501',
     name: "Aluminum heatsink with Fan for reServer J501",
     image: `${IMG_BASE}/cooling-aluminum-heatsink-with-fan-for-reserver-.jpg`,
     sku: '114993389',
@@ -277,7 +277,7 @@ const accessories = [
     devices: [],
   }),
   cooling({
-    id: 'cooling-aluminum-heatsink-with-fan-for',
+    id: 'cooling-heatsink-fan-orin-nx-nano',
     name: "Aluminum Heatsink with Fan for Jetson Orin NX/Orin Nano/Xavier NX Module（reCo...",
     image: `${IMG_BASE}/cooling-aluminum-heatsink-with-fan-for-jetson-or.jpg`,
     sku: '110991904',
@@ -293,7 +293,7 @@ const accessories = [
     devices: [],
   }),
   cooling({
-    id: 'cooling-aluminum-heatsink-with-fan-for',
+    id: 'cooling-heatsink-fan-jetson-tx2-nx',
     name: "Aluminum Heatsink with Fan for Jetson TX2 NX Module",
     image: `${IMG_BASE}/cooling-aluminum-heatsink-with-fan-for-jetson-tx.jpg`,
     sku: '114992731',
