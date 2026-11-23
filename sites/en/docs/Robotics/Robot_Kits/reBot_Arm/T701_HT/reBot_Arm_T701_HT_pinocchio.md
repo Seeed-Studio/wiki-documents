@@ -9,6 +9,7 @@ keywords:
   - Kinematics
   - Gravity Compensation
 slug: /rebot_t701_ht_pinocchio
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
 last_update:
