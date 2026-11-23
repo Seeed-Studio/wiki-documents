@@ -309,7 +309,7 @@ La pantalla OLED mostrará los datos del sensor si activas `on screen`.
 
 ### Teclado virtual
 
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.png" alt="pir" width={600} height="auto" /></p>
 ¡La versión de firmware 2.7 ahora admite teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otro dispositivo. Sigue el [Tutorial de flasheo de firmware](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#parte-2-flasheo-de-firmware) para actualizar el firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
