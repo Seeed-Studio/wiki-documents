@@ -43,7 +43,7 @@ export const toc = [
   {
     "value": "Treinamento e Adaptação",
     "id": "training-and-adaptation",
-    [LINE[LINE_45]    "level": 2
+    "level": 2
   },
   {
     "value": "Experimentos: Capacidade e Custo de Adaptação",
