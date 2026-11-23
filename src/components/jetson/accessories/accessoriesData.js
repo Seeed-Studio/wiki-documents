@@ -29,12 +29,12 @@ const ssd = (item) => ({ category: 'ssd', categoryLabel: 'SSD', source: 'seeed',
 const wifi = (item) => ({ category: 'wifi', categoryLabel: 'WiFi', source: 'seeed', ...seeedSource, ...tested, ...item });
 const lte = (item) => ({ category: '4g', categoryLabel: '4G', source: 'seeed', ...seeedSource, ...tested, ...item });
 const fiveg = (item) => ({ category: '5g', categoryLabel: '5G', source: 'seeed', ...seeedSource, ...tested, ...item });
-const power = (item) => ({ category: 'power', categoryLabel: '电源', interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
-const antenna = (item) => ({ category: 'antenna', categoryLabel: '天线', interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
-const cooling = (item) => ({ category: 'cooling', categoryLabel: '散热', interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
-const caseBracket = (item) => ({ category: 'case', categoryLabel: '外壳/支架', interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
-const cable = (item) => ({ category: 'cable', categoryLabel: '转接/线缆', interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
-const extension = (item) => ({ category: 'extension', categoryLabel: '扩展板', interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
+const power = (item) => ({ category: 'power', ...loc('categoryLabel', '电源', 'Power', '電源', 'Energía', 'Energia'), interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
+const antenna = (item) => ({ category: 'antenna', ...loc('categoryLabel', '天线', 'Antenna', 'アンテナ', 'Antena', 'Antena'), interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
+const cooling = (item) => ({ category: 'cooling', ...loc('categoryLabel', '散热', 'Cooling', '冷却', 'Refrigeración', 'Refrigeração'), interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
+const caseBracket = (item) => ({ category: 'case', ...loc('categoryLabel', '外壳/支架', 'Case & Bracket', 'ケース/ブラケット', 'Carcasa/Soporte', 'Caixa/Suporte'), interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
+const cable = (item) => ({ category: 'cable', ...loc('categoryLabel', '转接/线缆', 'Adapter & Cable', 'アダプター/ケーブル', 'Adaptador/Cable', 'Adaptador/Cabo'), interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
+const extension = (item) => ({ category: 'extension', ...loc('categoryLabel', '扩展板', 'Extension Board', '拡張ボード', 'Placa de extensión', 'Placa de extensão'), interface: 'other', interfaceLabel: '—', source: 'seeed', ...seeedSource, ...tested, ...item });
 
 /** @type {Record<string, {label:string; devices:string[]}>} */
 const deviceSeries = {
