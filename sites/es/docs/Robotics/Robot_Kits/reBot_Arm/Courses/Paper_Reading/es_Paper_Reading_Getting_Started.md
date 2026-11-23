@@ -7,17 +7,17 @@ keywords:
   - B601-DM
   - B601-RS
   - SO101
-  - Brazo Robótico
-  - IA Física
-  - Curso
+  - Robotic Arm
+  - Physical AI
+  - Course
   - Tutorial
   - SO-ARM101
   - LeRobot
   - Hugging Face
-  - Brazo
-  - Robótica
-  - Análisis Profundo de Artículos
-  - Despliegue Práctico
+  - Arm
+  - Robotics
+  - Paper Deep-Dive
+  - Hands-on Deployment
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 slug: /robotics/paper_reading_getting_started
 displayed_sidebar: PaperReadingSidebar
@@ -41,14 +41,14 @@ import '/src/css/paper-reading-style.css';
       <strong>Cursos gratuitos, juntos en código abierto</strong>
       <p>Este curso es completamente gratuito. Para apoyar nuestro trabajo, ¡dale una estrella a nuestro brazo robótico de código abierto!</p>
     </div>
-    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Dar estrella en GitHub</a>
+    <a href="https://github.com/Seeed-Projects/reBot-DevArm/" target="_blank" rel="noopener noreferrer">⭐ Star on GitHub</a>
   </aside>
 
   <section className="paper-reading-intro" aria-labelledby="paper-reading-title">
-    <span className="paper-reading-eyebrow">SEEED STUDIO · ROBÓTICA IA</span>
+    <span className="paper-reading-eyebrow">SEEED STUDIO · AI ROBOTICS</span>
     <h1 id="paper-reading-title">Análisis Profundo de Artículos de IA Física y Reproducción Práctica</h1>
     <p className="paper-reading-lead">Explora la investigación más avanzada en IA Física, desglosa modelos y algoritmos clave con brazos robóticos de Seeed</p>
-    <p>Un <strong>curso que siempre será gratuito</strong>, cuidadosamente desarrollado por el equipo de Robótica IA de SeeedStudio, junto con el <strong>brazo robótico reBot 100% de código abierto, disponible para uso comercial y reproducción</strong>. ¡Complétalo y conviértete en la próxima persona experta en robótica!</p>
+    <p>Un <strong>curso que siempre será gratuito</strong>, cuidadosamente desarrollado por el equipo de SeeedStudio AI Robotics, junto con el <strong>brazo robótico reBot 100% de código abierto, disponible para uso comercial y reproducción</strong>. ¡Complétalo y conviértete en la próxima persona experta en robótica!</p>
     <ul className="paper-reading-badges" aria-label="Course features">
       <li>Siempre gratuito</li>
       <li>100% código abierto · Uso comercial</li>
@@ -59,7 +59,7 @@ import '/src/css/paper-reading-style.css';
 <div className="sensecraft-banner">
   <div className="sensecraft-banner__copy">
     <span className="sensecraft-banner__badge">⚡ Sin código · Sin configuración de entorno</span>
-    <p className="sensecraft-banner__title">Omite la configuración: ejecuta el brazo reBot y LeRobot desde una sola app</p>
+    <p className="sensecraft-banner__title">Sáltate la configuración: ejecuta el brazo reBot y LeRobot desde una sola app</p>
     <p className="sensecraft-banner__lead">SenseCraft Robotics es la plataforma sin código de Seeed para el SO-ARM101, reBot Arm 102 + B601-RS y B601-DM. Conecta los brazos, calibra, recopila demostraciones, entrena y ejecuta inferencias desde una interfaz guiada, sin entorno de Python ni terminal.</p>
     <ul className="sensecraft-banner__points">
       <li>✅ Flujo de trabajo guiado en 6 pasos</li>
@@ -116,13 +116,21 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/es/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Acciones entre Cuerpos y Percepción Futura</a></li>
         <li><a href="/es/robotics/paper_reading_dm05/">DM0.5 — Contexto Histórico y Alineación de Trayectorias</a></li>
         <li><a href="/es/robotics/paper_reading_g05/">G0.5 — Razonamiento y Acción en una Sola Secuencia</a></li>
+        <li><a href="/es/robotics/paper_reading_fineart_vla/">FineART-VLA — Acciones Bimanuales Guiadas por Subtareas</a></li>
+        <li><a href="/es/robotics/paper_reading_molmoact2/">MolmoAct2 — Contexto por Capas para Control Continuo</a></li>
+        <li><a href="/es/robotics/paper_reading_x_vla/">X-VLA — Prompts Suaves para Aprendizaje entre Cuerpos</a></li>
+        <li><a href="/es/robotics/paper_reading_wall_oss_05/">WALL-OSS-0.5 — Aprendizaje de Acciones con Puente de Gradientes</a></li>
       </ul>
-      <h3>Parte 5 · Modelos del Mundo y Aprendizaje Video-Acción</h3>
+      <h3>Parte 5 · Modelos de Mundo y Aprendizaje de Video-Acción</h3>
       <ul className="paper-reading-directory-list">
-        <li><a href="/es/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisión por Video y Modelos del Mundo Latentes</a></li>
+        <li><a href="/es/robotics/paper_reading_vla_jepa/">VLA-JEPA — Supervisión por Video y Modelos de Mundo Latentes</a></li>
         <li><a href="/es/robotics/paper_reading_lingbot_va/">LingBot-VA — Modelado Causal del Mundo y Control de Robots</a></li>
-        <li><a href="/es/robotics/paper_reading_gr00t_2/">GR00T 2 — Modelado Conjunto Mundo-Acción</a></li>
+        <li><a href="/es/robotics/paper_reading_gr00t_2/">GR00T 2 — Modelado Conjunto de Mundo y Acción</a></li>
         <li><a href="/es/robotics/paper_reading_lawam/">LaWAM — Predicción de Cambios de Escena Antes de Generar Acciones del Robot</a></li>
+        <li><a href="/es/robotics/paper_reading_fastwam/">Fast-WAM — Coentrenamiento de Video e Inferencia Directa de Acciones</a></li>
+        <li><a href="/es/robotics/paper_reading_long_wam/">Long-WAM — Historial, Predicción del Futuro y Control</a></li>
+        <li><a href="/es/robotics/paper_reading_flux3/">FLUX 3 Action — Predicción Conjunta y Ejecución Eficiente</a></li>
+        <li><a href="/es/robotics/paper_reading_cosmos3/">Cosmos 3 — Políticas de Mundo-Acción Omnimodales</a></li>
       </ul>
       <h3>Parte 6 · Evaluación Unificada y Resumen de Investigación</h3>
       <span className="paper-reading-update-badge">

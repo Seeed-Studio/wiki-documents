@@ -215,6 +215,10 @@ const sidebars = {
             { type: 'doc', id: `${P}/es_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — Acciones entre Distintos Cuerpos y Percepción del Futuro' },
             { type: 'doc', id: `${P}/es_Paper_Reading_DM05`, label: 'DM0.5 — Contexto Histórico y Alineación de Trayectorias' },
             { type: 'doc', id: `${P}/es_Paper_Reading_G05`, label: 'G0.5 — Razonamiento y Acción en una Secuencia' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_FINEART_VLA`, label: 'FineART-VLA — Acciones bimanuales guiadas por subtareas' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_MOLMOACT2`, label: 'MolmoAct2 — Contexto por capas para el control continuo' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_X_VLA`, label: 'X-VLA — Prompts suaves para el aprendizaje entre distintos cuerpos robóticos' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_WALL_OSS_05`, label: 'WALL-OSS-0.5 — Aprendizaje de acciones mediante conexión de gradientes' },
           ],
         },
         {
@@ -239,7 +243,11 @@ const sidebars = {
               "type": "doc",
               "id": `${P}/es_Paper_Reading_LAWAM`,
               "label": "LaWAM — Predecir cambios de escena antes de generar acciones de robot"
-            }
+            },
+            { type: 'doc', id: `${P}/es_Paper_Reading_FASTWAM`, label: 'Fast-WAM — Coentrenamiento con vídeo e inferencia directa de acciones' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_LONG_WAM`, label: 'Long-WAM — Historial, predicción futura y control' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_FLUX3`, label: 'FLUX 3 Action — Predicción conjunta y ejecución eficiente' },
+            { type: 'doc', id: `${P}/es_Paper_Reading_COSMOS3`, label: 'Cosmos 3 — Políticas omnimodales de mundo y acción' },
           ],
         },
         {
