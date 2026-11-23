@@ -538,6 +538,10 @@ Para configurar os motores, designe um adaptador de servo de barramento e 6 moto
 | ST-3215-C001(7.4V) / C018(12V) / C047(12V)             | 1:345                 | F1–F6                          |
 
 :::danger
+Na versão do SO-ARM da DAMO Academy, tanto o braço líder quanto o braço seguidor utilizam uma **fonte de alimentação de 5 V**.
+:::
+
+:::danger
 Agora você deve conectar a fonte de alimentação de 5V ou 12V ao barramento do motor. 5V para os motores STS3215 7,4V e 12V para os motores STS3215 12V. Observe que o braço líder sempre usa os motores de 7,4V, portanto, certifique-se de conectar a fonte de alimentação correta se você tiver motores de 12V e 7,4V, caso contrário, você pode queimar seus motores! Agora, conecte o barramento do motor ao seu computador via USB. Observe que o USB não fornece nenhuma alimentação, e tanto a fonte de alimentação quanto o USB precisam estar conectados.
 :::
 

@@ -2363,6 +2363,7 @@ const sidebars = {
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
                 'Sensor/reSpeaker_clip/respeaker_clip_chat_architecture',
+                'Sensor/reSpeaker_clip/respeaker_clip_for_agent',
               ],
             },
           ],
