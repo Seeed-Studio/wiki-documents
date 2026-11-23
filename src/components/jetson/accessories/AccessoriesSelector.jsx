@@ -265,11 +265,11 @@ function ProductCard({ item, t, lang, selected, onToggleCompare, compareDisabled
       <ProductImage
         src={item.image}
         alt={displayName}
-        badge={item.categoryLabel}
+        badge={L(item, 'categoryLabel', lang)}
       />
       <div className={s.cardBody}>
         <div className={s.cardMeta}>
-          <span className={s.badgeType}>{item.categoryLabel}</span>
+          <span className={s.badgeType}>{L(item, 'categoryLabel', lang)}</span>
           <span className={s.badgeIface}>{item.interfaceLabel}</span>
         </div>
         <h3 className={s.cardName}>{displayName}</h3>
@@ -323,7 +323,7 @@ function AccessoriesDialog({ dialogRef, view, detailItem, compareItems, onClose,
 
   const allSpecs = (item) => {
     const specs = [];
-    specs.push([t('category'), item.categoryLabel]);
+    specs.push([t('category'), L(item, 'categoryLabel', lang)]);
     if (item.capacity) specs.push([t('capacity'), item.capacity]);
     if (item.formFactor) specs.push([t('formFactor'), item.formFactor]);
     if (item.function) specs.push([t('function'), L(item, 'function', lang)]);
