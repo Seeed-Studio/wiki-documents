@@ -40,7 +40,7 @@ The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
 
 **Server Support**: ChirpStack / The Things Network (TTN) 
 
-> Click [Here](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/rhf0m055-v5.1.2-20250319.ebin.bin) to download the Wio-E5 LoRaWAN Relay Function Firmware.
+> Click [Here](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/e5_relay-v5.1.2.bin) to download the Wio-E5 LoRaWAN Relay Function Firmware.
 
 ## 1. Overview
 
