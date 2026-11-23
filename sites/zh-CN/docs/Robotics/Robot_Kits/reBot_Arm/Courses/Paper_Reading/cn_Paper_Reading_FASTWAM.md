@@ -1,8 +1,8 @@
 ---
-description: "深入解析 Fast-WAM：机制、训练、实验，以及 LeRobot v0.7.0 集成范围。"
-title: "Fast-WAM：在执行时不生成未来视频却从中学习"
+description: "精读 Fast-WAM 的核心机制、训练与实验，了解 LeRobot v0.7.0 接入范围。"
+title: "Fast-WAM：训练时预测未来，执行时直接生成动作"
 hide_title: true
-keywords: ["Paper Deep-Dive","Fast-WAM","World-Action Models","Video Co-Training","Direct Action Inference","LeRobot"]
+keywords: ["论文精读","Fast-WAM","世界动作模型","视频共同训练","直接动作推理","LeRobot"]
 slug: /robotics/paper_reading_fastwam
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -16,48 +16,58 @@ import '/src/css/paper-reading-style.css';
 
 export const toc = [
   {
-    "value": "前置知识：从未来中学习 vs 生成未来",
-    "id": "prerequisites-learning-from-the-future-versus-generating-it",
+    "value": "预备知识：学过未来与生成未来有什么区别",
+    "id": "预备知识学过未来与生成未来有什么区别",
     "level": 2
   },
   {
-    "value": "摘要与阅读指南",
-    "id": "abstract-and-reading-guide",
+    "value": "摘要与阅读线索",
+    "id": "摘要与阅读线索",
     "level": 2
   },
   {
-    "value": "为什么受控变体很重要",
-    "id": "why-the-controlled-variants-matter",
+    "value": "引言与相关工作：怎样把两个因素拆开比较",
+    "id": "引言与相关工作怎样把两个因素拆开比较",
     "level": 2
   },
   {
-    "value": "架构：动作只读取当前观测",
-    "id": "architecture-actions-read-only-the-current-observation",
+    "value": "核心网络：动作只能读取当前观测",
+    "id": "核心网络动作只能读取当前观测",
     "level": 2
   },
   {
-    "value": "训练与推理",
-    "id": "training-and-inference",
+    "value": "共同训练怎样保留，推理怎样删减",
+    "id": "共同训练怎样保留推理怎样删减",
     "level": 3
   },
   {
-    "value": "数据：“无具身预训练”的含义",
-    "id": "data-what-without-embodied-pretraining-means",
+    "value": "数据与训练：没有具身预训练不等于没有预训练",
+    "id": "数据与训练没有具身预训练不等于没有预训练",
     "level": 2
   },
   {
-    "value": "实验：去除未来生成的证据",
-    "id": "experiments-evidence-for-removing-future-generation",
+    "value": "实验：哪些结果支持省去执行时想象",
+    "id": "实验哪些结果支持省去执行时想象",
     "level": 2
   },
   {
-    "value": "LeRobot 集成与结果边界",
-    "id": "lerobot-integration-and-result-boundaries",
+    "value": "同框架变体比跨模型名次更能解释原因",
+    "id": "同框架变体比跨模型名次更能解释原因",
+    "level": 3
+  },
+  {
+    "value": "毛巾任务为什么还要看完成时间",
+    "id": "毛巾任务为什么还要看完成时间",
+    "level": 3
+  },
+  {
+    "value": "LeRobot 接入与论文结果的边界",
+    "id": "lerobot-接入与论文结果的边界",
     "level": 2
   },
   {
     "value": "结论",
-    "id": "conclusion",
+    "id": "结论",
     "level": 2
   }
 ];
@@ -65,110 +75,122 @@ export const toc = [
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-fastwam-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-fastwam-title">Fast-WAM: 在执行时不生成未来视频却从中学习</h1>
-  <p className="paper-reading-lead">Fast-WAM：世界动作模型在测试时需要未来想象吗？</p>
-  <ul className="paper-reading-badges" aria-label="Reading topics">
-    <li><a href="#data-what-without-embodied-pretraining-means">视频协同训练</a></li>
-    <li><a href="#architecture-actions-read-only-the-current-observation">直接动作推断</a></li>
-    <li><a href="#experiments-evidence-for-removing-future-generation">实验</a></li>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
+  <h1 id="paper-reading-fastwam-title">Fast-WAM：训练时预测未来，执行时直接生成动作</h1>
+  <p className="paper-reading-lead">Fast-WAM: Do World Action Models Need Test-time Future Imagination?</p>
+  <ul className="paper-reading-badges" aria-label="本篇内容">
+    <li><a href="#数据与训练没有具身预训练不等于没有预训练">视频共同训练</a></li>
+    <li><a href="#核心网络动作只能读取当前观测">直接动作推理</a></li>
+    <li><a href="#实验哪些结果支持省去执行时想象">实验结果</a></li>
   </ul>
   <a className="paper-reading-source-link" href="https://arxiv.org/html/2603.16666v2" target="_blank" rel="noopener noreferrer">
-    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文原文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
 
-<aside className="paper-reading-key-commands" aria-label="Integration version and parameters">
+<aside className="paper-reading-key-commands" aria-label="接入版本与关键参数">
 
 <a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/v0.7.0/en/fastwam" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="" width="24" height="24" /> Hugging Face · LeRobot Fast-WAM 文档 ↗</a>
 
-**LeRobot 参数**
+**LeRobot 关键参数**
 
-- `--policy.type=fastwam` 选择训练策略；使用 `--policy.path` 指定已训练权重。
-- `--policy.path=lerobot/fastwam_libero_uncond_2cam224` 加载文档中记录的 LIBERO 检查点。
-- `action_horizon` 控制预测长度；`n_action_steps` 控制在重新规划前消耗多少步动作，且不能超过前者。
-- 在源码检出目录中安装：`pip install -e ".[fastwam,libero]"`。完整评估命令请参见对应版本的指南。
+- `--policy.type=fastwam` 选择训练策略；从已训练权重执行则使用 `--policy.path`。
+- `--policy.path=lerobot/fastwam_libero_uncond_2cam224` 加载文档中的 LIBERO 检查点。
+- `action_horizon` 是预测长度，`n_action_steps` 是执行后重新查询的步数；后者不能超过前者。
+- 安装使用源码目录中的 `pip install -e ".[fastwam,libero]"`；完整评估命令见版本文档。
 
 </aside>
 
-一个叠毛巾的机器人可以在选择手臂动作前先生成下一次折叠的视频。这会在每次控制查询中加入视频去噪的开销。**未来预测之所以有用，是因为模型在训练中学到了物理变化，还是因为它在执行时显式地想象了未来？** Fast-WAM 将这两个因素区分开来。
+机器人要把毛巾折起来。如果它每轮都先生成毛巾接下来怎样变形的视频，再据此决定双臂怎么动，就会多出一段视频去噪计算。**未来预测的好处，究竟来自训练时学过物体变化，还是来自执行时真的生成了未来？** Fast-WAM 将这两个因素分开检验。
 
-## 前置知识：从未来中学习 vs 生成未来
+## 预备知识：学过未来与生成未来有什么区别
 
-未来视频监督在训练期间塑造模型参数。未来生成则在部署期间增加额外计算。即便跳过 RGB 解码，仍然可以预测未来潜变量；标准 Fast-WAM 更进一步，在推理时完全不实例化任何未来视频 token。
+视频预测训练给模型一个学习任务：当前画面之后应该出现什么。未来生成推理则要求模型在当前控制查询中，从噪声生成未来视频。前者塑造参数，后者消耗每次查询的计算。
 
-## 摘要与阅读指南
+“不解码视频像素”与“不预测未来潜变量”也不同。前者仍可在压缩空间里生成未来；Fast-WAM 的标准推理更进一步，不实例化未来噪声视频词元，只编码干净的当前观测。
 
-**简要摘要。** Fast-WAM 在训练时联合训练视频和动作，但在部署时直接从当前视觉表征生成动作。受控的联合去噪、先视频后动作以及无视频训练变体，将监督与推理时的想象区分开来。在测试设置下，去掉视频训练带来的性能损失更大。
+## 摘要与阅读线索
 
-**阅读提示。** 这是关于被评估模型和任务的条件性结论。它并未证明对所有动态或分布外问题都不需要未来条件信息，而且视频骨干仍然是策略的一部分。
+**摘要意译。** 作者保留训练时的视频与动作共同学习，但执行时只从当前视觉表示生成动作。通过同一框架中的联合视频动作去噪、先视频后动作，以及移除视频训练的变体，研究区分视频监督和推理想象的作用。所测任务上，移除视频共同训练造成的下降比移除执行时未来生成更明显。
 
-## 为什么受控变体很重要
+**批注。** 论文回答的是这些模型与实验条件下的取舍。它没有证明所有动态、遮挡或分布外任务都不需要未来条件；也没有把视频模型本身从策略中移除。
 
-传统的世界动作模型要么在动作之前预测视频，要么联合去噪视频和动作。两者都把训练时的视频监督与部署时的未来生成结合在一起。一个在注意力和视频监督上可控变化的统一框架，比起在不相关模型之间比较，更容易评估各自的影响。
+## 引言与相关工作：怎样把两个因素拆开比较
 
-## 架构：动作只读取当前观测
+传统世界动作模型可以先预测未来，再用逆动力学生成动作，也可以同时对视频与动作去噪。两种做法都把视频训练和推理生成绑定在一起，难以判断到底哪部分贡献了成功率。
 
-该模型复用了 Wan2.2-5B 的视频 DiT、VAE 和文本编码器，并额外加入约 10 亿参数的动作专家，总参数量约为 60 亿。一个结构化的 MoT 注意力模式连接这些分支。
+Fast-WAM 的控制变量设计更关键：保持共同的视频基础模型与动作专家，再改变注意力关系和视频损失。相比将完全不同的模型放在同一张榜单里，这样更接近回答“未来生成是否值得其计算成本”。
 
-| Token 组 | 训练时可访问内容 | 部署时保留？ |
+## 核心网络：动作只能读取当前观测
+
+模型使用 Wan2.2-5B 的视频 DiT、视频 VAE 与文本编码器，并增加约 1B 的动作专家，整体约 6B 参数。指令经过文本编码器，图像由 VAE 变成潜变量；视频和动作分支构成 MoT，通过受约束的注意力交换信息。
+
+| 词元组 | 训练时读取什么 | 执行时是否保留 |
 | --- | --- | --- |
-| 干净的当前观测 | 当前视觉锚点和语言 | 是；视觉上下文只计算一次 |
-| 带噪的未来视频 | 当前锚点和未来视频组 | 否 |
-| 带噪的动作片段 | 当前锚点、语言和动作 | 是；迭代动作去噪 |
+| 干净的当前观测 | 当前视觉锚点与语言条件 | 保留，视觉主干只计算一次 |
+| 带噪未来视频 | 当前锚点与未来视频组 | 移除 |
+| 带噪动作块 | 当前锚点、语言与动作组 | 保留，迭代生成动作 |
 
-动作不能关注未来视频 token，干净的锚点也不会读取其他组。这防止了动作训练依赖于在部署时会消失的未来信息。
+关键限制是：动作词元看不到未来视频词元，当前锚点也不从未来或动作组读取信息。否则，训练时动作可能利用真实未来携带的线索，部署移除未来后就会失去依赖条件。
 
-在毛巾示例中，视频监督教会模型移动一个角会如何改变布料。动作分支始终从当前布料和指令中学习其运动。共享参数在不把未来作为动作输入的前提下，迁移有用的结构。
+回到折毛巾，训练中的视频分支学习“拉起边角会怎样改变布面”，动作分支则始终只能从当前布面和指令学习怎么拉。视频监督通过共享参数改善表示，不必把未来画面直接喂给动作分支。
 
 <figure className="paper-reading-figure" data-reading-figure="fastwam/architecture">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fastwam/architecture.png" alt="协同训练期间的视频与动作分支" loading="lazy" />
-  <figcaption><strong>协同训练期间的视频与动作分支。</strong> 来源：Fast-WAM 论文。训练从语言和当前观测预测未来视频潜变量和动作片段。注意力掩码决定动作是否可以读取未来；同时画出两个分支本身并不意味着存在这种依赖。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fastwam/architecture.png" alt="视频与动作共同训练的双分支结构" loading="lazy" />
+  <figcaption><strong>视频与动作共同训练的双分支结构。</strong>来源：Fast-WAM 论文。训练同时预测未来视频潜变量和动作块，语言与当前画面提供条件。是否允许动作读取未来，取决于下文的注意力掩码；并列画出两条分支本身不表示未来是动作输入。</figcaption>
 </figure>
 
-### 训练与推理
+### 共同训练怎样保留，推理怎样删减
 
-目标函数同时包含视频和动作流损失：
+训练目标可概括为视频与动作流匹配损失的加权和：
 
 $$
 \mathcal L=\lambda_v\mathcal L_{\mathrm{video}}+\lambda_a\mathcal L_{\mathrm{action}}.
 $$
 
-视频去噪塑造动态表征；动作去噪重建示教。部署流程为：当前观测 → 一次视觉编码 → 动作去噪 → 部分执行 → 新观测。32 步预测视野并不要求在重新规划前执行完全部 32 步。
+这里的两个系数表示不同任务损失的权重。视频去噪教主干捕捉动态，动作去噪教专家恢复示范轨迹。执行时只对动作去噪，视觉上下文可以缓存并反复复用。
+
+教学流程为：当前毛巾图像与指令 → 一次视觉编码 → 多步动作去噪 → 执行部分动作 → 新图像。32 步动作预测长度不意味着控制器必须一次执行全部 32 步；执行段长度另行设置。
 
 <figure className="paper-reading-figure" data-reading-figure="fastwam/attention-masks">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fastwam/attention-masks.png" alt="训练与推理中的注意力依赖关系" loading="lazy" style={{maxWidth: "380px", marginInline: "auto"}} />
-  <figcaption><strong>训练与推理中的注意力依赖关系。</strong> 来源：Fast-WAM 论文。行是查询，列是可读的键。动作可以读取当前帧和动作，但不能读取未来帧。在推理时移除未来 token 仍然保留了这一路径，将视频监督与运行时视频生成区分开来。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fastwam/attention-masks.png" alt="训练与推理阶段的注意力依赖" loading="lazy" style={{maxWidth: "380px", marginInline: "auto"}} />
+  <figcaption><strong>训练与推理阶段的注意力依赖。</strong>来源：Fast-WAM 论文。按行看查询、按列看可读取的键：动作行可以读取当前帧和动作，不能读取未来帧；推理删去未来帧后，这条动作条件路径仍完整，因此可以保留视频训练而省去执行时生成。</figcaption>
 </figure>
 
-## 数据：“无具身预训练”的含义
+## 数据与训练：没有具身预训练不等于没有预训练
 
-骨干从预训练视频权重开始。论文中“无具身预训练”指的是没有额外的大规模机器人动作预训练阶段，而不是随机初始化。
+论文从预训练的视频模型初始化，动作专家再用目标机器人数据学习。其“没有具身预训练”指没有先用大规模机器人动作数据做额外具身预训练，并不意味着模型从随机参数开始。
 
-评估覆盖 LIBERO、干净和随机化的 RoboTwin 2.0，以及真实的 Galaxea R1 Lite 叠毛巾任务。真实任务使用 60 小时遥操作和每个模型 3 万步训练，同时报告成功率和完成时间。
+LIBERO 使用四组操作任务；RoboTwin 2.0 使用双臂任务的干净和随机化环境。真机折毛巾在 Galaxea R1 Lite 上收集了 60 小时遥操作数据，各模型训练 30k 步，比较最终成功和完成时间。
 
-## 实验：去除未来生成的证据
+## 实验：哪些结果支持省去执行时想象
 
-| 统一框架方法 | LIBERO 均值 | RoboTwin 均值 |
+### 同框架变体比跨模型名次更能解释原因
+
+下表均为论文报告的成功率。LIBERO 和 RoboTwin 是不同测试集，各自比较，不跨列计算统一总分。
+
+| 同框架方法 | LIBERO 平均 | RoboTwin 平均 |
 | --- | ---: | ---: |
 | Fast-WAM | 97.6% | 91.8% |
-| 联合视频/动作去噪 | 98.5% | 90.6% |
-| 先视频后动作 IDM | 98.0% | 91.3% |
-| 无视频协同训练 | 93.5% | 83.8% |
+| 联合视频动作去噪 | 98.5% | 90.6% |
+| 先视频后动作的 IDM | 98.0% | 91.3% |
+| 移除视频共同训练 | 93.5% | 83.8% |
 
-这些是论文在不同基准上的成功率。直接动作推断在 LIBERO 上略低于生成未来的变体，在 RoboTwin 上则略高。去掉视频训练带来的损失更稳定：分别为 4.1 和 8.0 个百分点。这些证据支持视频监督的重要性，而不是证明直接推断在准确率上具有普适优势。
+在 LIBERO，直接动作推理低于两种未来生成变体；在 RoboTwin，其均值略高。更一致的变化发生在移除视频训练后，分别下降 4.1 和 8.0 个百分点。这个对照支持视频监督的表示学习价值，而不支持“直接动作在所有任务上都更准”。
 
-RoboTwin 在每个干净/随机化设置下，每个任务使用 100 次试验。只有在完成任务后，试验才计为成功，而平均值可能掩盖个别困难任务。
+RoboTwin 每任务在干净与随机化设置下各评估 100 次。一次试验只有达到任务完成条件才计成功；平均成功率不能说明每项任务都同样可靠。
 
-对于折叠任务，仅看最终成功会掩盖多次抓取失败。完成时间衡量执行是否高效。文中约 190 ms 的推理延迟来自作者的测量配置；它不是电机控制频率。
+### 毛巾任务为什么还要看完成时间
 
-## LeRobot 集成与结果边界
+允许不断重试时，两个模型最终成功率相近，也可能一个动作连贯、另一个反复抓错。论文同时比较完成时间与成功率，并报告约 190 ms 的推理延迟。该延迟属于作者测量设置；动作频率、动作块覆盖时间和每次查询耗时是不同量，不能将其直接写成电机控制频率。
 
-0.7.0 版本会接收图像、状态、动作和指令。相机视角在水平方向拼接，并且必须与 `image_size` 匹配。该检查点使用外部视觉 `IDENTITY` 预处理，因为模型会在内部重新缩放图像；如果同时应用两种变换，就会进行两次归一化。
+## LeRobot 接入与论文结果的边界
 
-文档中的检查点在四个 LIBERO 套件上的得分分别为 97.6%、99.0%、95.0% 和 94.0%，在 2,000 个 episode 上的平均为 96.4%。论文中的 97.6% 均值是另一组实验结果。
+v0.7.0 的适配读取图像、状态、动作和任务指令，多相机图像水平拼接，宽度之和必须匹配 `image_size`。文档检查点使用外部视觉 `IDENTITY` 处理，模型内部再把图像映射到所需范围，不能重复归一化。
 
-评估参数片段包括：
+该版本文档报告的检查点四组 LIBERO 成绩依次为 97.6%、99.0%、95.0%、94.0%，共 2,000 次、平均 96.4%。论文的 97.6% 平均属于原始实验，不应替换成适配检查点的标签。
+
+可用于指定组评估的参数片段是：
 
 ```bash
 --policy.path=lerobot/fastwam_libero_uncond_2cam224
@@ -179,10 +201,10 @@ RoboTwin 在每个干净/随机化设置下，每个任务使用 100 次试验�
 --eval.n_episodes=50
 ```
 
-一次完整的评估会遍历所有四个套件及其任务，并在渲染、夹爪处理、随机种子和回合限制上保持一致。
+完整复测需要遍历四组及相应任务，并保持分辨率、夹爪后处理、随机种子与时长限制一致。
 
 ## 结论
 
-Fast-WAM 将有用的训练信号与重复出现的部署计算分离开来。其掩码可以防止未来的信息泄露，而在受控变体中，在测试设置下，保留视频训练比保留视频生成带来更大的收益。任务分布和时延条件限定了这一结论的适用范围。
+Fast-WAM 将训练监督与执行计算拆开：未来可以作为塑造表示的教材，而不必每次都成为动作生成的显式中间结果。注意力掩码保证训练时动作不偷看未来，变体实验则说明在所测环境里，保留视频训练比保留视频推理更重要。这一结论需要连同任务分布与延迟测量条件一起理解。
 
 </div>

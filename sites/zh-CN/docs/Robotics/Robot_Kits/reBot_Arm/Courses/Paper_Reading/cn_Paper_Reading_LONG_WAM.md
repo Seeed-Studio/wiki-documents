@@ -1,8 +1,8 @@
 ---
-description: "深入解析 Long-WAM：机制、训练、实验，以及与 LeRobot v0.7.0 的集成范围。"
-title: "Long-WAM：让视觉历史真正服务于预测与控制"
+description: "精读 Long-WAM 的核心机制、训练与实验，了解 LeRobot v0.7.0 接入范围。"
+title: "Long-WAM：让视觉历史真正参与未来预测与动作控制"
 hide_title: true
-keywords: ["Paper Deep-Dive","Long-WAM","World-Action Models","Long Context","Inverse Dynamics","Real-Time Control","LeRobot"]
+keywords: ["论文精读","Long-WAM","世界动作模型","长上下文","逆动力学","实时控制","LeRobot"]
 slug: /robotics/paper_reading_long_wam
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -16,63 +16,68 @@ import '/src/css/paper-reading-style.css';
 
 export const toc = [
   {
-    "value": "先修知识：历史、预测与执行",
-    "id": "prerequisites-history-prediction-and-execution",
+    "value": "预备知识：历史长度与动作时域分别是什么",
+    "id": "预备知识历史长度与动作时域分别是什么",
     "level": 2
   },
   {
-    "value": "摘要与阅读指引",
-    "id": "abstract-and-reading-guide",
+    "value": "摘要与阅读线索",
+    "id": "摘要与阅读线索",
     "level": 2
   },
   {
-    "value": "为什么视频初始化很重要",
-    "id": "why-video-initialization-matters",
+    "value": "引言与相关工作：为什么双向视频模型不一定会用历史",
+    "id": "引言与相关工作为什么双向视频模型不一定会用历史",
     "level": 2
   },
   {
-    "value": "视频预训练：从过去预测变化",
-    "id": "video-pretraining-predicting-change-from-the-past",
+    "value": "视频预训练：先学会由历史预测下一段变化",
+    "id": "视频预训练先学会由历史预测下一段变化",
     "level": 2
   },
   {
-    "value": "架构：过去与未来如何抵达控制器",
-    "id": "architecture-how-past-and-future-reach-the-controller",
+    "value": "核心网络：历史与未来怎样共同进入动作专家",
+    "id": "核心网络历史与未来怎样共同进入动作专家",
     "level": 2
   },
   {
-    "value": "训练中的未来与部署时的未来",
-    "id": "training-futures-and-deployment-futures",
+    "value": "训练时的未来与部署时的未来有什么不同",
+    "id": "训练时的未来与部署时的未来有什么不同",
     "level": 3
   },
   {
-    "value": "运行时：降低历史的代价",
-    "id": "runtime-reducing-the-cost-of-history",
+    "value": "实时执行：长历史的成本怎样降低",
+    "id": "实时执行长历史的成本怎样降低",
     "level": 2
   },
   {
-    "value": "实验：区分历史、未来与系统效应",
-    "id": "experiments-separating-history-future-and-systems-effects",
+    "value": "实验：历史、未来和系统各自提供什么",
+    "id": "实验历史未来和系统各自提供什么",
     "level": 2
   },
   {
-    "value": "初始化与上下文",
-    "id": "initialization-and-context",
+    "value": "历史必须配合合适的初始化",
+    "id": "历史必须配合合适的初始化",
     "level": 3
   },
   {
-    "value": "未来条件与动态任务",
-    "id": "future-conditioning-and-dynamic-tasks",
+    "value": "保留未来条件对长任务与动态任务的影响",
+    "id": "保留未来条件对长任务与动态任务的影响",
     "level": 3
   },
   {
-    "value": "LeRobot 集成与结果边界",
-    "id": "lerobot-integration-and-result-boundaries",
+    "value": "真机展示与高层规划需要分别解释",
+    "id": "真机展示与高层规划需要分别解释",
+    "level": 3
+  },
+  {
+    "value": "LeRobot 接入与论文结果的边界",
+    "id": "lerobot-接入与论文结果的边界",
     "level": 2
   },
   {
     "value": "结论",
-    "id": "conclusion",
+    "id": "结论",
     "level": 2
   }
 ];
@@ -80,135 +85,143 @@ export const toc = [
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-long_wam-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-long_wam-title">Long-WAM：让视觉历史真正服务于预测与控制</h1>
-  <p className="paper-reading-lead">Long-WAM：扩展 World-Action Models 的上下文长度</p>
-  <ul className="paper-reading-badges" aria-label="Reading topics">
-    <li><a href="#video-pretraining-predicting-change-from-the-past">视觉历史</a></li>
-    <li><a href="#architecture-how-past-and-future-reach-the-controller">预测与动作</a></li>
-    <li><a href="#runtime-reducing-the-cost-of-history">实时执行</a></li>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
+  <h1 id="paper-reading-long_wam-title">Long-WAM：让视觉历史真正参与未来预测与动作控制</h1>
+  <p className="paper-reading-lead">Long-WAM: Scaling the Context of World-Action Models</p>
+  <ul className="paper-reading-badges" aria-label="本篇内容">
+    <li><a href="#视频预训练先学会由历史预测下一段变化">视觉历史</a></li>
+    <li><a href="#核心网络历史与未来怎样共同进入动作专家">预测与动作</a></li>
+    <li><a href="#实时执行长历史的成本怎样降低">实时执行</a></li>
   </ul>
   <a className="paper-reading-source-link" href="https://arxiv.org/html/2610.10528v1" target="_blank" rel="noopener noreferrer">
-    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文原文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
 
-<aside className="paper-reading-key-commands" aria-label="Integration version and parameters">
+<aside className="paper-reading-key-commands" aria-label="接入版本与关键参数">
 
 <a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/v0.7.0/en/longwam" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="" width="24" height="24" /> Hugging Face · LeRobot Long-WAM 文档 ↗</a>
 
-**LeRobot 参数**
+**LeRobot 关键参数**
 
-- `--policy.path=Efficient-Large-Model/Long-WAM-LIBERO-IDM-LeRobot` 加载“先预测再执行”的权重。
-- `past_obs_steps=48` 统计的是过去的控制 tick 数，而不是未来动作数。
-- `inference_action_horizon=80` 和 `n_action_steps=10` 区分预测长度与执行长度。
-- 在每个控制 tick 都调用 `select_action`，包括在消费已排队动作期间。带版本的集成验证了同步推理。
+- `--policy.path=Efficient-Large-Model/Long-WAM-LIBERO-IDM-LeRobot` 加载先预测后行动的检查点。
+- `past_obs_steps=48` 表示保留的历史控制时刻数，不是未来动作长度。
+- `inference_action_horizon=80` 与 `n_action_steps=10` 分别指定预测与执行的长度。
+- 每个控制时刻都调用 `select_action`，包括动作队列尚未耗尽时，才能持续更新历史；v0.7.0 接入验证范围是同步推理。
 
 </aside>
 
-一只杯子在传送带上向左移动。单帧图像可以定位它；多帧图像才能揭示它的运动。在另一个任务中，机器人已经从柜子里取出了一只杯子，但当前视角与起始场景相似。历史信息才能识别接下来的阶段。**仅仅接收更多历史，策略就会自动利用它吗？**
+传送带上的杯子正在向左移动。单张画面只能说明它现在在哪里，几张历史画面才能说明它往哪边走、速度多快。另一个任务中，机器人刚从柜子取走杯子，当前画面又与开始时相似，但下一步应该关柜门。**给策略更长的历史，是否就能自动获得运动判断和任务记忆？**
 
-## 先修知识：历史、预测与执行
+## 预备知识：历史长度与动作时域分别是什么
 
-历史包含决策前的观测；预测覆盖未来；执行决定机器人何时重新规划。在 20 Hz 下，48 个过去控制 tick 跨越 2.4 秒，而 10 个已执行动作跨越 0.5 秒。二者都不决定预测视野长度，视频帧可以用单独的步长进行采样。
+历史是决策前已经观测到的信息，预测时域是决策后模型要生成的未来，执行长度则是重新观测前实际消费的动作数。三者可以不同。
 
-<figure className="paper-reading-figure" data-reading-figure="long_wam/teaching-history-future-feedback-en">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/teaching/long-wam-history-future-feedback-en-v2.png" alt="Observed history, predicted future, and real execution feedback" width="1536" height="1024" loading="lazy" />
-  <figcaption><strong>已观测历史、预测未来与真实执行反馈。</strong> 逆动力学建模（IDM）变体的 AI 生成教学插图。已观测的视频历史与部分去噪的未来视频潜变量共同为动作提供条件。未来视频去噪在非零噪声水平停止，无需像素解码。为清晰起见，省略了语言与机器人状态条件。只有来自真实执行的新观测会进入已观测历史；预测的未来不属于过去观测。</figcaption>
+教学例子中，20 Hz 控制下的 48 个过去控制时刻对应 2.4 秒，执行 10 步对应 0.5 秒。它们不意味着策略每次只看 10 张图，也不意味着预测长度必须是 48。视觉采样还可以按 `video_stride` 降采样。
+
+<figure className="paper-reading-figure" data-reading-figure="long_wam/teaching-history-future-feedback">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/teaching/long-wam-history-future-feedback-zh-v2.png" alt="真实历史、预测未来与执行反馈的闭环" width="1536" height="1024" loading="lazy" />
+  <figcaption><strong>真实历史、预测未来与执行反馈的闭环。</strong>AI 生成的教学示意。蓝框表示真实观测，紫色虚框表示预测；历史与预测未来共同作为动作条件。只有执行后的新相机观测进入真实历史，预测结果不作为已经发生的事实。</figcaption>
 </figure>
 
-## 摘要与阅读指引
+## 摘要与阅读线索
 
-**简要摘要。** Long-WAM 通过自回归视频预训练学习从历史到未来的依赖关系，然后在动作适配阶段保留这种因果结构。动作同时利用已观测历史和预测的未来潜变量。流式编码、异步执行与硬件优化共同降低运行时成本。
+**摘要意译。** Long-WAM 先通过自回归视频训练学习历史到未来的依赖，再保持因果结构适配机器人动作。模型结合真实历史与预测未来潜变量生成动作，系统侧通过流式编码、异步执行和硬件优化降低延迟。论文比较不同视频初始化、历史长度与生成方式，说明能接收历史和学会利用历史是两个问题。
 
-**阅读提示。** 更长的输入窗口与真正能利用历史是两回事。同样，原始部署系统与同步的 LeRobot 适配器，其经过验证的能力也并不相同。
+**批注。** 网络机制与执行系统共同构成贡献。长历史需要已学到的时间依赖；速度提升需要具体硬件和实现。论文的异步部署结果不能直接套用到只验证同步模式的 LeRobot 接入。
 
-## 为什么视频初始化很重要
+## 引言与相关工作：为什么双向视频模型不一定会用历史
 
-双向视频生成可以读取更早和更晚的帧。机器人控制必须仅从当前可用的观测中推断接下来会发生什么。只在动作微调阶段增加历史，并不一定能教会有效的时间依赖。
+视频生成可以在一段片段内双向读取帧，机器人控制却必须从已发生的观测推断未来。仅在动作微调时添加历史输入，未必能让原来的模型形成稳定的“过去影响未来”的使用方式。
 
-与标准 Fast-WAM 不同，Long-WAM 保留了预测的未来条件。与简单扩展上下文缓冲区不同，它在视频预训练期间学习时间因果性。
+与执行时不预测未来的 Fast-WAM 相比，Long-WAM 保留未来潜变量条件；与仅延长输入窗口的做法相比，它首先在视频预训练阶段学习时间因果关系。问题由“窗口能装多少帧”变成“模型是否学过用这些帧预测物理变化”。
 
-## 视频预训练：从过去预测变化
+## 视频预训练：先学会由历史预测下一段变化
 
-LongLive2.0-Robot 从一个自回归的 LongLive-2.0 检查点继续训练，使用机器人和自我视角视频，而不需要统一的动作空间。块因果注意力允许每个目标块读取其真实的早期上下文。
+LongLive2.0-Robot 从 LongLive-2.0 的自回归视频检查点继续训练，使用机器人和第一视角视频，不要求这些视频共享动作标签。训练采用块因果注意力：当前块可以读取更早的真实上下文，而不能读取之后的块。
 
-教师强制并行监督多个块。带缓冲误差的扰动教会模型从类似 rollout 条件的历史误差中恢复。历史提供条件；未来视频提供监督。干净的条件图像被排除在去噪目标之外。
+教师强制让多个目标块在同一训练中并行监督，每块都有自己的真实历史前缀。论文还对历史加入缓冲误差扰动，让预测器学习应对接近实际滚动生成时的偏差。历史提供条件，未来提供监督；干净条件图像不作为待去噪目标。
 
-## 架构：过去与未来如何抵达控制器
+## 核心网络：历史与未来怎样共同进入动作专家
 
-视频查询只读取自身及更早的视觉块，从不读取动作。动作查询读取历史、部分去噪的未来潜变量以及整个动作块。
+视频查询只能读取当前及更早的视觉块，不读取动作；动作查询可以读取已观测历史、带噪的未来和整个动作块。这种非对称接口保留视频模型的时间结构，并让控制使用预测到的变化。
 
-| IDM 阶段 | 输入 | 结果 |
+| IDM 的一步 | 输入 | 输出如何用于下一步 |
 | --- | --- | --- |
-| 预测未来潜变量 | 历史、指令与状态条件 | 预期动力学 |
-| 视觉预填充 | 已观测与预测的潜变量 | 分层视觉键与值 |
-| 动作去噪 | 视觉缓存、状态与动作噪声 | 连续动作块 |
-| 反馈 | 新观测到的执行 | 更新后的真实历史 |
+| 预测未来潜变量 | 真实视觉历史、指令和状态条件 | 得到带有未来动态的信息 |
+| 预填充视觉网络 | 历史与预测未来 | 缓存各层视觉键和值 |
+| 动作去噪 | 缓存、状态与噪声动作 | 生成连续动作块 |
+| 闭环更新 | 执行得到的新观测 | 替换历史中的真实观测部分 |
 
-IDM 在预测视觉变化之后推断动作。无需对未来 RGB 进行解码。论文的 V4 设置在 $\sigma_\star=0.9$ 停止视频去噪，并在动作生成期间复用得到的视觉缓存。
+IDM 指先预测视觉变化，再推断产生变化的动作。未来潜变量不需要解码成 RGB，且不必去噪到完全干净。论文默认 V4 在噪声水平 $\sigma_\star=0.9$ 停止，随后将视觉缓存复用于动作去噪。
 
 <figure className="paper-reading-figure" data-reading-figure="long_wam/overview">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/long_wam/overview.png" alt="From causal video pretraining to history-conditioned actions" loading="lazy" />
-  <figcaption><strong>从因果视频预训练到由历史调节的动作。</strong> 来源：Long-WAM 论文。下方流程区分了已观测历史、想象的未来与动作专家；KV 缓存保留了历史上下文。部署时仍然需要新的真实观测，而不能把预测当作已经发生的事件。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/long_wam/overview.png" alt="从因果视频预训练到历史条件动作生成" loading="lazy" />
+  <figcaption><strong>从因果视频预训练到历史条件动作生成。</strong>来源：Long-WAM 论文。下方流程区分真实观测历史、想象未来与动作专家；KV 缓存保留的是历史上下文。部署后仍需读取实际执行的新画面，不能把想象结果直接写成已经发生的历史。</figcaption>
 </figure>
 
-### 训练中的未来与部署时的未来
+### 训练时的未来与部署时的未来有什么不同
 
-训练首先优化视频流匹配，然后在前向加噪的真实未来潜变量上条件化动作训练。部署时则用预测的未来替代。动作前向过程会分离视觉缓存，在视频目标训练预测器的同时，仅更新动作专家和本体感受适配器。
+训练先优化视频流匹配，再用真实未来的加噪版本作为动作条件。部署用模型预测的未来代替。动作训练阶段将视觉缓存分离梯度，因此动作损失更新动作专家与本体状态适配器，视频分支由自己的预测损失学习。
 
-这种梯度选择不同于阻止视频读取动作的前向掩码。预测的未来信息在下一控制周期中也必须与真实观测保持区分。
+这与“视觉分支不看动作”是两件事：前者控制反向更新，后者控制前向信息。把预测未来说成真实未来，或把两种隔离混为一谈，都会误解模型的闭环。
 
-## 运行时：降低历史的代价
+## 实时执行：长历史的成本怎样降低
 
-流式 VAE 以增量方式编码新到的观测，而不是反复重算完整历史。异步执行在机器人消费当前块的同时准备下一个块。
+流式 VAE 在新观测到达时逐段编码，复用因果缓存，避免每次查询都重新处理整段历史。异步执行在机器人消费当前动作时预备下一段动作，让预测计算与运动重叠。
 
-在重叠为 $O$ 个 tick、tick 时长为 $\Delta t$ 的情况下，及时交接需要满足
+设重叠部分覆盖 $O\Delta t$ 秒，下一段动作的准备时间是 $T_{\mathrm{ready}}$，理想衔接需要：
 
 $$
 T_{\mathrm{ready}}\leq O\Delta t.
 $$
 
-偶尔错过截止时间会导致等待，即便平均推理速度很快。报告的 RTX 5090 上 107.4 ms 包含了在论文优化配置下的未来潜变量预测；它并不是通用的设备或适配器延迟。
+这是理解交接期限的关系式。即使平均推理足够快，某一轮编码超时也可能使机器人停等。论文 RTX 5090 上的 107.4 ms 来自完整优化配置，并包含未来潜变量预测，不代表所有设备、窗口和接口都有这一延迟。
 
 <figure className="paper-reading-figure" data-reading-figure="long_wam/streaming-execution">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/long_wam/streaming-execution.png" alt="Asynchronous handoff with streaming and full-window encoding" loading="lazy" />
-  <figcaption><strong>具有流式和全窗口编码的异步切换。</strong> 来源：Long-WAM 论文。流式方式对到达的观测进行编码，而全窗口编码会延迟切换。两种调度都使用相同的名义触发步长和重叠。该图示意的是调度等待时间的减少，而不是单独测量的成功率提升。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/long_wam/streaming-execution.png" alt="流式编码与整窗编码的异步交接" loading="lazy" />
+  <figcaption><strong>流式编码与整窗编码的异步交接。</strong>来源：Long-WAM 论文。上方在观测到达时编码，下方等到整窗就绪再编码；后者的等待会推迟动作交接。两组使用相同名义触发间隔与重叠，图中节省的是调度等待，不是单独测得的成功率提升。</figcaption>
 </figure>
 
-## 实验：区分历史、未来和系统效应
+## 实验：历史、未来和系统各自提供什么
 
-### 初始化与上下文
+### 历史必须配合合适的初始化
 
-论文比较了双向、通用自回归以及机器人领域自回归的视频初始化。长上下文 RoboCasa GR-1 性能达到 78.7%；自回归初始化从历史中获益更多，而双向初始化没有获得同样的净提升。有效历史长度取决于具体任务。
+作者比较双向视频初始化、通用自回归初始化和机器人领域自回归初始化。RoboCasa GR-1 的长上下文结果达到 78.7%；自回归初始化更能利用长历史，双向初始化没有同样的净收益。增加输入窗口本身不是充分条件，不同任务的最佳历史长度也不同。
 
 <figure className="paper-reading-figure" data-reading-figure="long_wam/context-scaling">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/long_wam/context-scaling.png" alt="Context scaling under different video initializations" loading="lazy" />
-  <figcaption><strong>不同视频初始化下的上下文缩放。</strong> 来源：Long-WAM 论文。离散的上下文设置以相等间距绘制。机器人因果初始化在 LIBERO-Long 上在 2.4 秒处达到峰值，在 RoboCasa 上在 19.2 秒处达到峰值。更长的窗口不会持续提升成功率，而双向初始化也没有获得同样的增益。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/long_wam/context-scaling.png" alt="不同视频初始化下的历史窗口扩展" loading="lazy" />
+  <figcaption><strong>不同视频初始化下的历史窗口扩展。</strong>来源：Long-WAM 论文。横轴为等间距绘制的离散窗口配置。机器人因果初始化在 LIBERO-Long 的 2.4 秒、RoboCasa 的 19.2 秒达到图示峰值；继续加长并不持续提高成功率，双向初始化也没有获得同等收益。</figcaption>
 </figure>
 
-### 未来条件与动态任务
+### 保留未来条件对长任务与动态任务的影响
 
-| 论文配置 | LIBERO 均值 | LIBERO-Long | RoboTwin 均值 |
+论文报告以下仿真成功率。LIBERO 四组平均与 Long 子集分别列出；RoboTwin 的干净/随机化平均是另一套任务。
+
+| 方法 | LIBERO 平均 | LIBERO-Long | RoboTwin 平均 |
 | --- | ---: | ---: | ---: |
-| 无未来预测 | 97.3% | 94.5% | 92.0% |
-| 联合协同去噪 | 97.8% | 95.8% | 93.6% |
-| IDM | 99.5% | 99.5% | 94.4% |
+| Long-WAM，不预测未来 | 97.3% | 94.5% | 92.0% |
+| Long-WAM，联合去噪 CoD | 97.8% | 95.8% | 93.6% |
+| Long-WAM，IDM | 99.5% | 99.5% | 94.4% |
 
-这些是不同基准上的成功率。在动态数据微调之后，DOMINO 的成功率为 34.9%，显著低于静态操作得分。接近饱和的 LIBERO 结果并不意味着动态控制问题已经被解决。
+动态 DOMINO 在动态数据微调后达到 34.9% 成功率，仍明显低于静态操作基准。不能因为 LIBERO 接近满分，就认为动态操作也已解决。
 
-在实际的 Unitree G1 和 YAM 平台上，论文同时研究了动态任务和长时间跨度任务。动态叠杯在 Long-WAM 的 20 次试验中成功了 19 次，而在同一设置下，π0.5 和 Fast-WAM 的成功次数为零。复合任务实验还使用了一个单独的高层规划器；它们的结果属于这一组合系统。
+### 真机展示与高层规划需要分别解释
 
-## LeRobot 集成与结果边界
+论文在 Unitree G1 与 YAM 上测试。动态叠杯中，Long-WAM 在 20 次中成功 19 次，而 π0.5 和 Fast-WAM 在该设置下均为 0 次。这个对照限定于作者的动态叠杯任务。
 
-版本 0.7.0 支持原生 IDM/CoD 检查点、微调以及同步推理。LIBERO 版本使用两个 224×224 相机、7 维动作、8 维状态和 P48 历史。在每个控制周期都提供新的观测，即使动作仍在队列中。
+组合任务还使用独立高层规划器。Long-WAM 提供带历史的执行能力，规划器负责分解复杂目标；组合系统结果不等于低层策略独自拥有同样的长程规划能力。
 
-文档中的 IDM 检查点在每个套件 500 个 episode 的设置下，得分分别为 99.4%、99.8%、97.8% 和 99.0%，总体为 99.00%。CoD 的平均值为 98.45%。这些是适配器结果，与论文中的 99.5% 是分开的。原始的 `model.pt` 包并不是原生的 LeRobot 检查点目录。
+## LeRobot 接入与论文结果的边界
 
-`reset()` 会清除历史和已排队的动作。仅仅改变 `past_obs_steps` 并不构成上下文缩放训练。通用的异步/RTC 在此适配器中尚未验证；原项目中的优化执行仍然是一个单独的能力。
+v0.7.0 支持 IDM 与 CoD 原生检查点、微调和同步动作块推理。发布的 LIBERO 设置为两路 224×224 图像、7 维动作、8 维状态和 P48 历史。每一控制时刻都需传入新观测；在队列有动作时跳过策略调用，会使历史缺帧。
 
-## 总结
+LeRobot 文档中 IDM 四组为 99.4%、99.8%、97.8%、99.0%，各 500 次，平均 99.00%；CoD 平均 98.45%。它们是发布适配检查点的测试，不能用论文 IDM 的 99.5% 替换。原项目的 `model.pt` 也不能直接当作 LeRobot 原生目录加载。
 
-Long-WAM 学会先从历史中进行预测，再将该预测与动作相连接。流式和异步执行使这一路径更加实用。其收益取决于初始化方式、任务的记忆需求、未来条件以及所使用的部署系统。
+`reset()` 同时清理历史和动作队列；新 episode 必须重置。修改 `past_obs_steps` 不等于完成了长上下文训练。通用异步与 RTC 在该适配中尚未验证，论文原项目的加速能力与这里的可用范围需要区分。
+
+## 结论
+
+Long-WAM 的核心是先学会从历史预测未来，再让动作专家读取这种预测；流式与异步系统使这条路径更适合实时运行。实验支持历史与未来条件在长程、动态任务中的作用，也表明收益依赖视频初始化、任务类型和具体部署系统。
 
 </div>

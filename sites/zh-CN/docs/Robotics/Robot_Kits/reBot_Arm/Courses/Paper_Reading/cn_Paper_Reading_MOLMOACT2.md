@@ -1,8 +1,8 @@
 ---
-description: "深入解析 MolmoAct2：机制、训练、实验，以及 LeRobot v0.7.0 集成范围。"
-title: "MolmoAct2：从离散动作学习到逐层连续控制"
+description: "精读 MolmoAct2 的核心机制、训练与实验，了解 LeRobot v0.7.0 接入范围。"
+title: "MolmoAct2：先学离散动作，再用逐层视觉语言信息生成连续控制"
 hide_title: true
-keywords: ["Paper Deep-Dive","MolmoAct2","VLA","Layer-Wise KV","Action Tokenization","Continuous Control","LeRobot"]
+keywords: ["论文精读","MolmoAct2","VLA","逐层 KV","动作分词","连续控制","LeRobot"]
 slug: /robotics/paper_reading_molmoact2
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -16,58 +16,68 @@ import '/src/css/paper-reading-style.css';
 
 export const toc = [
   {
-    "value": "先决条件：一次示教的两种表示",
-    "id": "prerequisites-two-representations-of-one-demonstration",
+    "value": "预备知识：离散动作与连续动作可以共同学习",
+    "id": "预备知识离散动作与连续动作可以共同学习",
     "level": 2
   },
   {
-    "value": "摘要与阅读指引",
-    "id": "abstract-and-reading-guide",
+    "value": "摘要与阅读线索",
+    "id": "摘要与阅读线索",
     "level": 2
   },
   {
-    "value": "为何分阶段引入动作",
-    "id": "why-introduce-actions-in-stages",
+    "value": "引言与相关工作：为什么分阶段接入动作",
+    "id": "引言与相关工作为什么分阶段接入动作",
     "level": 2
   },
   {
-    "value": "数据：共享时长，不同控制语义",
-    "id": "data-shared-duration-distinct-control-semantics",
+    "value": "数据：统一时间长度，同时保留控制语义",
+    "id": "数据统一时间长度同时保留控制语义",
     "level": 2
   },
   {
-    "value": "离散预训练：教骨干网络机器人动作",
-    "id": "discrete-pretraining-teaching-the-backbone-robot-actions",
+    "value": "第一阶段：用离散动作教主干认识机器人",
+    "id": "第一阶段用离散动作教主干认识机器人",
     "level": 2
   },
   {
-    "value": "连续后训练：在每一层读取 KV",
-    "id": "continuous-post-training-reading-kv-at-every-layer",
+    "value": "第二阶段：动作专家逐层读取主干的 KV",
+    "id": "第二阶段动作专家逐层读取主干的-kv",
     "level": 2
   },
   {
-    "value": "防止目标泄漏与控制梯度",
-    "id": "preventing-target-leakage-and-controlling-gradients",
+    "value": "为什么不能把目标动作词元交给连续专家",
+    "id": "为什么不能把目标动作词元交给连续专家",
     "level": 3
   },
   {
-    "value": "Think：只更新发生变化的深度区域",
-    "id": "think-updating-only-changed-depth-regions",
+    "value": "Think 变体：只重算发生变化的深度区域",
+    "id": "think-变体只重算发生变化的深度区域",
     "level": 2
   },
   {
-    "value": "实验：比较具有不同训练历史的检查点",
-    "id": "experiments-comparing-checkpoints-with-different-training-histories",
+    "value": "实验：原始结果与接入结果怎样对照",
+    "id": "实验原始结果与接入结果怎样对照",
     "level": 2
   },
   {
-    "value": "LeRobot 集成与结果边界",
-    "id": "lerobot-integration-and-result-boundaries",
+    "value": "同一基准下先说明检查点的训练经历",
+    "id": "同一基准下先说明检查点的训练经历",
+    "level": 3
+  },
+  {
+    "value": "语言理解、深度推理和实际动作分别评估",
+    "id": "语言理解深度推理和实际动作分别评估",
+    "level": 3
+  },
+  {
+    "value": "LeRobot 接入与论文结果的边界",
+    "id": "lerobot-接入与论文结果的边界",
     "level": 2
   },
   {
     "value": "结论",
-    "id": "conclusion",
+    "id": "结论",
     "level": 2
   }
 ];
@@ -75,126 +85,132 @@ export const toc = [
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-molmoact2-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-molmoact2-title">MolmoAct2：从离散动作学习到逐层连续控制</h1>
-  <p className="paper-reading-lead">MolmoAct2：面向真实部署的动作推理模型</p>
-  <ul className="paper-reading-badges" aria-label="Reading topics">
-    <li><a href="#discrete-pretraining-teaching-the-backbone-robot-actions">离散到连续</a></li>
-    <li><a href="#continuous-post-training-reading-kv-at-every-layer">逐层 KV</a></li>
-    <li><a href="#think-updating-only-changed-depth-regions">自适应深度</a></li>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
+  <h1 id="paper-reading-molmoact2-title">MolmoAct2：先学离散动作，再用逐层视觉语言信息生成连续控制</h1>
+  <p className="paper-reading-lead">MolmoAct2: Action Reasoning Models for Real-world Deployment</p>
+  <ul className="paper-reading-badges" aria-label="本篇内容">
+    <li><a href="#第一阶段用离散动作教主干认识机器人">离散到连续</a></li>
+    <li><a href="#第二阶段动作专家逐层读取主干的-kv">逐层 KV</a></li>
+    <li><a href="#think-变体只重算发生变化的深度区域">自适应深度</a></li>
   </ul>
   <a className="paper-reading-source-link" href="https://arxiv.org/html/2605.02881v2" target="_blank" rel="noopener noreferrer">
-    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文原文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
 
-<aside className="paper-reading-key-commands" aria-label="Integration version and parameters">
+<aside className="paper-reading-key-commands" aria-label="接入版本与关键参数">
 
 <a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/v0.7.0/en/molmoact2" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="" width="24" height="24" /> Hugging Face · LeRobot MolmoAct2 文档 ↗</a>
 
-**LeRobot 参数**
+**LeRobot 关键参数**
 
-- `--policy.type=molmoact2 --policy.checkpoint_path=allenai/MolmoAct2` 从作者的格式初始化。
-- `--policy.path=allenai/MolmoAct2-LIBERO-LeRobot` 加载已保存的 LeRobot 检查点和处理器。
-- LIBERO 使用 `--policy.chunk_size=10 --policy.n_action_steps=10`，并采用相对末端执行器控制。
-- 该适配器支持标准 MolmoAct2，不支持自适应深度的 MolmoAct2-Think 变体。
+- `--policy.type=molmoact2 --policy.checkpoint_path=allenai/MolmoAct2` 从作者发布格式初始化。
+- `--policy.path=allenai/MolmoAct2-LIBERO-LeRobot` 加载已经转换并保存处理器的 LeRobot 检查点；两种加载入口不能混用。
+- LIBERO 配置使用 `--policy.chunk_size=10 --policy.n_action_steps=10`，动作是相对末端控制。
+- v0.7.0 支持普通 MolmoAct2；论文中的自适应深度变体 MolmoAct2-Think 不在该适配范围内。
 
 </aside>
 
-机器人必须把离碗最近的杯子放进碗里。理解空间关系和产生精确运动是不同的需求。**连续控制器如何才能可靠地利用视觉语言骨干网络中已经存在的知识？**
+桌上有几个杯子，机器人被要求“把最靠近碗的杯子放进去”。模型既要理解空间关系，又要输出精确运动。只让语言模型说出“选左边那个”还不够；让新动作网络从头承担全部视觉理解也浪费了主干的知识。**怎样把视觉语言模型已经学会的信息稳定地交给连续控制？**
 
-## 先决条件：一次示教的两种表示
+## 预备知识：离散动作与连续动作可以共同学习
 
-离散动作 token 让语言模型通过下一个 token 预测来学习轨迹。连续动作保留用于流匹配的数值控制值。它们可以在不变成顺序部署控制器的前提下，对同一次示教进行监督。
+离散动作把一段轨迹压缩成可预测的词元，适合语言模型的下一词元目标；连续动作直接保留控制数值，适合流匹配生成。它们可以描述同一份示范，而不必构成两段顺序执行的控制器。
 
-注意力键和值（KV）在每一层编码上下文。贯穿整个网络读取它们，使动作专家能够访问多于一个的最终池化特征。
+键和值 KV 是注意力层对上下文的内部表示。动作专家读取这些张量，可以在各层获取视觉、指令与状态信息；这与只读取主干最后一层的单个向量不同。
 
-## 摘要与阅读指引
+## 摘要与阅读线索
 
-**简要摘要。** MolmoAct2 加强具身理解，先学习一个离散机器人接口，然后再加入连续流专家。它发布了多具身数据、动作 tokenizer、代码和模型，并研究了一种复用未变化空间区域的深度推理变体。
+**摘要意译。** MolmoAct2 先强化视觉语言主干的具身理解，再通过离散动作预训练建立机器人接口，随后接入连续流匹配专家。研究公开多本体数据、动作分词器、训练代码和模型，并研究自适应深度推理变体，以减少重复预测几何信息的成本。
 
-**阅读提示。** 标准 MolmoAct2 和 Think 是不同的推理路径。后者的中间深度生成并不是每个检查点或带版本的 LeRobot 适配器都具备的能力。
+**批注。** “动作推理模型”包含不同路径。普通模型通过主干上下文生成连续动作；Think 变体还生成深度词元。不能把后者的中间深度推理能力自动归给普通检查点或 LeRobot 接口。
 
-## 为何分阶段引入动作
+## 引言与相关工作：为什么分阶段接入动作
 
-同时拟合新的状态接口、动作编码和随机初始化的连续专家，是一个困难的优化问题。离散预训练首先用骨干网络熟悉的目标，让 VLM 具备动作感知能力。之后的专家就可以从一个具备机器人感知的骨干网络中学习连续控制。
+从预训练 VLM 直接联合训练随机动作头，模型必须同时学习新状态表示、动作编码和连续生成。MolmoAct2 先用主干熟悉的下一词元训练，使其认识机器人状态与动作，再增加连续专家，减轻同时对齐多个新接口的困难。
 
-逐层 KV 不同于最终层条件化。知识隔离也依赖于阶段：后训练和具身特定微调使用不同的梯度设置。
+与只输出离散动作的 VLA 相比，连续专家减少了部署时对动作词元解码的依赖；与只在主干末层取特征的控制器相比，逐层 KV 提供多个深度的上下文。其知识隔离也具有阶段性，后训练与目标本体微调的梯度设置并不相同。
 
-## 数据：共享时长，不同控制语义
+## 数据：统一时间长度，同时保留控制语义
 
-主要的机器人数据来源是双臂 YAM、SO-100/101 和 DROID，并辅以更小的机器人数据集和多模态样本。空间问答、指向、多视角对应和视频理解提供具身对齐。
+机器人数据主体来自双臂 YAM、SO-100/101 与 DROID，另有规模较小的机器人数据和通用多模态样本。具身理解训练包含空间问答、定位、多视角对应与视频理解，帮助主干理解选择目标所需的信息。
 
-动作块覆盖 1 秒：30 Hz 的 YAM/SO-100/101 为 30 步，DROID 为 15 步，论文中的 10 Hz LIBERO 设置为 10 步。动作被填充到宽度 32，掩码会排除人工维度和时间步。设置/控制字符串区分绝对关节与相对末端执行器位姿；填充不会让它们的物理含义可以互换。
+一段动作覆盖一秒，但不同数据频率不同：30 Hz 的 YAM/SO-100/101 有 30 步，15 Hz 的 DROID 有 15 步，论文 LIBERO 设置为 10 Hz、10 步。训练将动作宽度补到 32，并用掩码排除补齐维度与时间步。
 
-## 离散预训练：教骨干网络机器人动作
+本体和控制类型还写入提示，区分绝对关节位置与相对末端位姿。统一张量形状只是批处理接口，不能把这两种数值当成同一种物理动作。
 
-FAST 风格的 tokenizer 将轨迹变换到频域，对系数进行量化，并用 2,048 token 的动作词表执行 BPE。连续通道使用百分位统计，夹爪单独处理，离散化状态被写入提示中。
+## 第一阶段：用离散动作教主干认识机器人
 
-VLM 读取观测、指令、设置/控制描述和状态，然后预测动作 token。该阶段没有连续专家。多模态联合训练有助于保持更广泛的视觉语言能力。
+动作分词器沿用 FAST 的频域压缩思路，将一秒轨迹变换、量化，再用 BPE 编码进 2,048 个动作词元的词表。连续数值按分位数统计归一化，夹爪单独处理。状态经过离散化后进入提示。
 
-## 连续后训练：在每一层读取 KV
+主干读取图像、指令、身体描述、控制方式和状态，预测动作词元。预训练只使用自回归目标，尚未训练连续动作专家。多模态数据与机器人数据共同训练，避免把主干完全变成只识别单一机器人数据格式的网络。
 
-36 层的 DiT 专家与骨干深度一致。其模块先进行动作自注意力，再对来自对应 VLM 层的投影 KV 做交叉注意力，最后施加前馈变换。
+## 第二阶段：动作专家逐层读取主干的 KV
 
-| 路径 | 在杯子任务中的角色 |
+后训练增加与主干同为 36 层的 DiT 动作专家。每层依次处理动作自注意力、对主干的交叉注意力和前馈变换。主干同层的键和值经过投影后提供给动作专家。
+
+| 信息流 | 在杯子任务中承担什么作用 |
 | --- | --- |
-| 图像、语言、状态 → VLM | 表征目标杯子、碗和机器人 |
-| 各层 KV → 投影 → 交叉注意力 | 在动作生成过程中持续提供上下文 |
-| 含噪动作 → 流专家 | 在时间维度上协调轨迹 |
-| 动作 → 后处理器 | 恢复控制单位 |
+| 图像、语言与状态 → 主干 | 形成目标杯、碗的位置与当前机器人状态的上下文 |
+| 各层 KV → 投影 → 动作交叉注意力 | 在动作生成的不同深度持续提供条件 |
+| 噪声动作 → 动作自注意力与流匹配 | 协调同一段轨迹中的多个动作时刻 |
+| 连续动作 → 反归一化与控制器 | 恢复实际单位并执行 |
 
-对于示教块 $A$ 和噪声 $\epsilon$，
+设示范动作块为 $A$，高斯噪声为 $\epsilon$，从噪声到数据的插值为：
 
 $$
 X_t=(1-t)\epsilon+tA,\qquad u^\star=A-\epsilon.
 $$
 
-带掩码的流损失训练速度预测器。在一个教学示例中，目标为 0.6、噪声为 −0.2，中点是 0.2，目标速度是 0.8。这是沿归一化生成路径的速度，而不是电机转速指令。
+动作专家预测速度场，训练时只在有效维度和时间步上计算误差。教学例子中，某归一化坐标的示范值为 0.6、噪声值为 −0.2，则中点输入为 0.2，目标速度为 0.8。它是去噪路径上的数值，不是要求电机以 0.8 的速度运行。
 
 <figure className="paper-reading-figure" data-reading-figure="molmoact2/layerwise-kv">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/molmoact2/layerwise-kv.png" alt="动作专家的逐层骨干 KV 条件化" loading="lazy" />
-  <figcaption><strong>动作专家的逐层骨干 KV 条件化。</strong> 来源：MolmoAct2 论文。每一层专家都会读取投影后的骨干键和值。离散监督和连续流匹配承担不同角色；目标动作 token 会从连续条件路径中被掩蔽，以防止泄漏。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/molmoact2/layerwise-kv.png" alt="主干逐层 KV 与连续动作专家" loading="lazy" />
+  <figcaption><strong>主干逐层 KV 与连续动作专家。</strong>来源：MolmoAct2 论文。动作专家在每层读取主干投影后的键和值；上方离散动作监督与右侧连续流匹配各有职责。目标动作词元在连续条件路径中被遮蔽，避免训练时泄漏答案。</figcaption>
 </figure>
 
-### 防止目标泄漏与控制梯度
+### 为什么不能把目标动作词元交给连续专家
 
-后训练同时监督离散和连续输出，但会从专家的上下文中掩蔽真实动作 token。否则控制器可能会从部署时不可用的答案中学习。
+后训练同时监督离散动作与连续动作，但连续专家的上下文屏蔽了真实离散动作标签。否则，专家可以从训练答案推断连续轨迹，运行时却没有答案可读。
 
-后训练会对 KV 做梯度截断：流损失训练专家和适配器，而下一个 token 损失训练 VLM。具身特定微调则移除这种隔离，允许流梯度进入骨干。因此 VLM 在整个流水线中并不是冻结的。
+后训练将 KV 路径分离梯度，流损失更新动作专家与投影层，主干由下一词元损失更新。目标本体微调时，论文取消这条隔离，使流损失也能更新主干。不能用“知识隔离”概括所有阶段并推断主干始终冻结。
 
-## Think：只更新发生变化的深度区域
+## Think 变体：只重算发生变化的深度区域
 
-Think 在动作之前生成一个 10×10 的深度 token 网格。第一次查询填满全部 100 个位置。之后的查询会比较当前和之前的 RGB 区域，重新生成发生变化的单元格，并重放未变化单元格的缓存编码。
+Think 在动作生成前加入 10×10 的深度词元网格。第一次查询生成完整的 100 个深度位置；后续比较当前与上一幅图像的对应区域，对变化区域重新预测，未变化区域复用缓存代码。
 
-填充好的深度前缀通过 KV 对专家进行条件化。移动的杯子和夹爪可以触发更新，而静态背景会被复用。这些是预测的深度编码，而不是有保证的传感器测量，变化检测仍然可能失败。
+以杯子入碗为例，杯子和夹爪移动时，相关区域需要更新，静止背景可重用。填好的深度前缀再通过 KV 影响动作专家。这不是直接读取深度传感器，也不是因为复用了缓存就获得了真实几何保证；图像变化判定与深度预测仍可能出错。
 
 <figure className="paper-reading-figure" data-reading-figure="molmoact2/adaptive-depth">
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/molmoact2/adaptive-depth.png" alt="复用静态区域的自适应深度推理" loading="lazy" />
-  <figcaption><strong>复用静态区域的自适应深度推理。</strong> 来源：MolmoAct2 论文。在通过 KV 连接对动作进行条件化之前，会在观测发生变化的地方更新深度编码。图中展示的是 Think 变体；普通策略和 LeRobot 集成不会自动执行这种推理。</figcaption>
+  <figcaption><strong>复用静态区域的自适应深度推理。</strong>来源：MolmoAct2 论文。上方深度序列体现随画面变化进行局部更新，再通过 KV 条件影响动作。该图解释 Think 变体，不代表普通 MolmoAct2 或 LeRobot 接入默认执行同样的深度推理。</figcaption>
 </figure>
 
-## 实验：比较具有不同训练历史的检查点
+## 实验：原始结果与接入结果怎样对照
 
-带版本的 LeRobot 结果从作者的 LIBERO 检查点出发，在 8 张 H100 GPU 上以每张卡 batch 为 32 又进行了 10k 步微调。
+### 同一基准下先说明检查点的训练经历
 
-| LIBERO 套件 | 原始结果 | 额外训练的 LeRobot checkpoint |
+论文普通 MolmoAct2 的 LIBERO 四组平均为 97.20%。LeRobot 文档中的转换模型从作者 LIBERO 检查点额外微调 10k 步，使用 8 张 H100、每卡 batch 32，再进行评估。
+
+| LIBERO 组别 | 作者原始结果 | 额外微调的 LeRobot 检查点 |
 | --- | ---: | ---: |
 | Spatial | 97.8% | 98.4% |
 | Object | 100.0% | 100.0% |
 | Goal | 97.8% | 98.0% |
 | Long / 10 | 93.2% | 96.6% |
-| Mean | 97.20% | 98.25% |
+| 平均 | 97.20% | 98.25% |
 
-这些是完整任务的成功率。1.05 个百分点的差异不能仅仅归因于格式转换，因为训练发生了变化。最大的差异出现在 long 套件上。
+这些是完整任务成功率。后一列训练预算发生变化，不能据此断言“仅转换格式便提高了 1.05 个百分点”。Long 子集差异也大于其他组，均值会掩盖这种分布。
 
-具身问答、深度推理和闭环动作测试的是不同的能力。正确识别目标并不能保证抓取成功，而 Think 的几何生成开销必须与普通动作推理分开衡量。
+### 语言理解、深度推理和实际动作分别评估
 
-## LeRobot 集成与结果边界
+具身问答检验的是判断与定位，机器人评估检验的是闭环完成。答对“哪个杯子更近”不等于抓取成功；Think 的深度成本与普通动作头延迟也需要分开测量。论文覆盖多个仿真与真机场景，其结论仍对应相应数据与控制接口。
 
-版本 0.7.0 支持标准训练和评估。对原始 HF 权重使用 `checkpoint_path`，对已保存的 LeRobot 策略目录使用 `policy.path`。
+## LeRobot 接入与论文结果的边界
 
-对于 LIBERO，需要匹配发布的 `norm_stats.json`、相机顺序、增强方式、夹爪处理方式和控制模式。近似的数据集分位数与作者的统计量并不完全相同。SO-100/101 关节符号和零偏移也需要进行物理坐标系转换；padding 无法完成这一点。
+v0.7.0 支持普通 MolmoAct2 的训练与评估。原始 Hugging Face 权重使用 `checkpoint_path`；LeRobot 保存目录使用 `policy.path`，后者带有匹配的处理器。
+
+LIBERO 训练需核对作者发布的 `norm_stats.json`，不能把近似数据集分位数当作完全相同的统计；相机顺序、图像增强、夹爪归一化和末端动作模式也需对齐。SO-100/101 的关节符号与零位转换属于控制接口准备，不由 32 维补齐自动完成。
 
 ```bash
 --policy.type=molmoact2
@@ -205,10 +221,10 @@ Think 在动作之前生成一个 10×10 的深度 token 网格。第一次查�
 --policy.n_action_steps=10
 ```
 
-这些是训练片段，需要匹配的数据、统计量和图像设置。请通过作者的实现来研究 Think；普通策略名称在此版本中并不会启用它。
+以上只是 LIBERO 训练配置片段，完整命令还需要数据、作者统计文件和对应图像配置。Think 的自适应深度路径应使用作者实现研究，不能在此版本中用普通策略名启用。
 
 ## 结论
 
-MolmoAct2 首先建立一个离散的机器人接口，然后通过逐层 KV 将视觉-语言上下文迁移到连续动作。目标掩码和分阶段梯度解释了它是如何学习的。部署时必须区分标准模型与 Think 模型，以及原始与额外训练的 adapter checkpoint。
+MolmoAct2 用离散动作先建立主干的机器人接口，再通过逐层 KV 把理解能力交给连续控制。目标泄漏屏蔽与分阶段梯度设置是理解训练的关键。部署时还需区分普通与 Think 模型，以及原始论文检查点和经过额外训练的 LeRobot 检查点。
 
 </div>

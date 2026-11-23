@@ -1,8 +1,8 @@
 ---
-description: "深入解析 FineART-VLA：机制、训练、实验，以及与 LeRobot v0.7.0 的集成范围。"
-title: "FineART-VLA：通过子任务将长时程目标连接到双臂动作"
+description: "精读 FineART-VLA 的核心机制、训练与实验，了解 LeRobot v0.7.0 接入范围。"
+title: "FineART-VLA：用细粒度子任务连接长程目标与双臂动作"
 hide_title: true
-keywords: ["Paper Deep-Dive","FineART-VLA","VLA","Subtask Prediction","Bimanual Manipulation","Knowledge Insulation","LeRobot"]
+keywords: ["论文精读","FineART-VLA","VLA","子任务预测","双臂操作","知识隔离","LeRobot"]
 slug: /robotics/paper_reading_fineart_vla
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -16,68 +16,68 @@ import '/src/css/paper-reading-style.css';
 
 export const toc = [
   {
-    "value": "前置知识：三种控制时间尺度",
-    "id": "prerequisites-three-timescales-of-control",
+    "value": "预备知识：目标、子任务与动作是三个时间尺度",
+    "id": "预备知识目标子任务与动作是三个时间尺度",
     "level": 2
   },
   {
-    "value": "摘要与阅读指南",
-    "id": "abstract-and-reading-guide",
+    "value": "摘要与阅读线索",
+    "id": "摘要与阅读线索",
     "level": 2
   },
   {
-    "value": "为什么长演示需要阶段标签",
-    "id": "why-long-demonstrations-need-phase-labels",
+    "value": "引言与相关工作：长轨迹为什么需要阶段标签",
+    "id": "引言与相关工作长轨迹为什么需要阶段标签",
     "level": 2
   },
   {
-    "value": "数据：覆盖可复用技能与接触密集任务",
-    "id": "data-covering-reusable-skills-and-contact-rich-tasks",
+    "value": "数据：密集标注怎样覆盖双臂操作",
+    "id": "数据密集标注怎样覆盖双臂操作",
     "level": 2
   },
   {
-    "value": "架构：先预测子任务，再生成其动作",
-    "id": "architecture-predict-a-subtask-then-generate-its-actions",
+    "value": "核心网络：先选择当前子任务，再生成连续动作",
+    "id": "核心网络先选择当前子任务再生成连续动作",
     "level": 2
   },
   {
-    "value": "三个目标与知识隔离",
-    "id": "three-objectives-and-knowledge-insulation",
+    "value": "三种损失怎样各司其职",
+    "id": "三种损失怎样各司其职",
     "level": 3
   },
   {
-    "value": "训练与执行：对齐两个学习到的决策",
-    "id": "training-and-execution-aligning-two-learned-decisions",
+    "value": "训练与执行：为什么要同时对齐语言和动作",
+    "id": "训练与执行为什么要同时对齐语言和动作",
     "level": 2
   },
   {
-    "value": "实验：在什么条件下带来哪些提升",
-    "id": "experiments-what-improves-and-under-which-conditions",
+    "value": "实验：语言对齐改善了什么",
+    "id": "实验语言对齐改善了什么",
     "level": 2
   },
   {
-    "value": "匹配的初始条件",
-    "id": "matched-initial-conditions",
+    "value": "同样初始条件下比较子任务与知识隔离",
+    "id": "同样初始条件下比较子任务与知识隔离",
     "level": 3
   },
   {
-    "value": "空间词与长时程引导",
-    "id": "spatial-words-and-long-horizon-guidance",
+    "value": "空间词和长程任务提供不同证据",
+    "id": "空间词和长程任务提供不同证据",
     "level": 3
   },
   {
-    "value": "长尾数据与形体迁移",
-    "id": "long-tail-data-and-embodiment-transfer",
+    "value": "长尾与跨本体数据怎样影响迁移",
+    "id": "长尾与跨本体数据怎样影响迁移",
     "level": 3
   },
   {
-    "value": "LeRobot 集成：保留语言规划器",
-    "id": "lerobot-integration-preserving-the-language-planner",
+    "value": "LeRobot 接入：保留子任务能力需要什么",
+    "id": "lerobot-接入保留子任务能力需要什么",
     "level": 2
   },
   {
-    "value": "总结",
-    "id": "conclusion",
+    "value": "结论",
+    "id": "结论",
     "level": 2
   }
 ];
@@ -85,138 +85,138 @@ export const toc = [
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-fineart_vla-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-fineart_vla-title">FineART-VLA：通过子任务将长时程目标连接到双臂动作</h1>
-  <p className="paper-reading-lead">FineART：用于双臂操作的细粒度标注机器人轨迹数据集与视觉-语言-动作模型</p>
-  <ul className="paper-reading-badges" aria-label="Reading topics">
-    <li><a href="#architecture-predict-a-subtask-then-generate-its-actions">子任务预测</a></li>
-    <li><a href="#three-objectives-and-knowledge-insulation">知识隔离</a></li>
-    <li><a href="#experiments-what-improves-and-under-which-conditions">实验</a></li>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
+  <h1 id="paper-reading-fineart_vla-title">FineART-VLA：用细粒度子任务连接长程目标与双臂动作</h1>
+  <p className="paper-reading-lead">FineART: Fine-Grained Annotated Robotic Trajectory Dataset and Vision-Language-Action Model for Bimanual Manipulation</p>
+  <ul className="paper-reading-badges" aria-label="本篇内容">
+    <li><a href="#核心网络先选择当前子任务再生成连续动作">子任务预测</a></li>
+    <li><a href="#三种损失怎样各司其职">知识隔离</a></li>
+    <li><a href="#实验语言对齐改善了什么">实验结果</a></li>
   </ul>
   <a className="paper-reading-source-link" href="https://arxiv.org/html/2609.36416v3" target="_blank" rel="noopener noreferrer">
-    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+    <span className="paper-reading-source-tag">arXiv</span><span>阅读论文原文</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
 
-<aside className="paper-reading-key-commands" aria-label="Integration version and parameters">
+<aside className="paper-reading-key-commands" aria-label="接入版本与关键参数">
 
 <a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/v0.7.0/en/fineart_vla" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="" width="24" height="24" /> Hugging Face · LeRobot FineART-VLA 文档 ↗</a>
 
-**LeRobot 参数**
+**LeRobot 关键参数**
 
-- `--policy.path=lerobot/fineart_vla_base` 从 FineART 中期训练的 checkpoint 开始适配。
-- `--policy.type=fineart_vla --policy.pretrained_path=lerobot/pi05_base` 从 π0.5 权重开始另一条训练路线。
-- 语言规划需要在时间上对齐的 `subtask` 标注。仅有一条 episode 级别的任务字符串无法提供这种监督。
-- `lerobot-rollout` 管理交互式执行；`--autosteer_interval_s=3` 设置规划查询间隔。完整的硬件配置请参见对应版本的指南。
+- `--policy.path=lerobot/fineart_vla_base`：从 FineART 中训练后的检查点开始适配。
+- `--policy.type=fineart_vla --policy.pretrained_path=lerobot/pi05_base`：从 π0.5 基础权重开始另一条训练路线，不能与上一项当作等价初始化。
+- 训练语言规划需要带时间边界的 `subtask` 标注；只有普通任务字符串的数据不会自动教会模型生成子任务。
+- 交互执行由 `lerobot-rollout` 管理，`--autosteer_interval_s=3` 设置规划查询间隔；完整机器人与相机配置见版本文档。
 
 </aside>
 
-一个准备早餐的机器人必须放置杯子、摆放餐具并移动食物。整体指令在几分钟内保持不变，而所需的运动会在每个阶段完成后发生变化。**如果每一帧只携带整体目标，策略从哪里学到它现在应该执行哪一步？**
+机器人要准备早餐：取杯子、摆餐具，再把食品放到合适的位置。同一句“准备早餐”会贯穿数分钟，但每一时刻的手部运动并不相同。杯子还在桌上时应该抓杯子，杯子已经放好时应该转向下一步。**如果示范只给整段轨迹一个总目标，模型从哪里学会当前该做哪一步？**
 
-## 前置知识：三种控制时间尺度
+## 预备知识：目标、子任务与动作是三个时间尺度
 
-一个目标指定最终结果，一个子任务指定当前操作，而一个动作块在若干控制 tick 上指定数值指令。FineART 将子任务指令与演示时间线对齐。
+总目标描述最终状态，子任务描述当前一段操作，动作块给出接下来若干控制时刻的数值目标。FineART 将子任务标注对齐到示范时间线上，使每一帧除了拥有动作标签，还能找到当时正在执行的低层语言指令。
 
-| 早餐示例 | 含义 | 学习角色 |
+| 在早餐场景中 | 表示什么 | 怎样进入学习 |
 | --- | --- | --- |
-| 准备早餐 | 整体目标 | 约束子任务预测 |
-| 把杯子放到架子上 | 当前操作 | 语言目标与动作条件 |
-| 关节与夹爪目标 | 物理运动 | 连续与离散动作监督 |
+| 准备早餐 | 整段任务目标 | 作为子任务预测的条件 |
+| 将杯子放到架子上 | 当前操作阶段 | 既是语言预测标签，也是动作控制条件 |
+| 双臂关节与夹爪目标序列 | 具体运动 | 监督连续动作与离散动作分支 |
 
-一个子任务仍然包含多个动作。放置杯子包括接近、抓取、搬运和释放。标注缩小了控制问题的范围，而无需用语言描述每一个电机 tick。
+子任务并不等于单个电机命令。“放杯子”仍包含接近、抓稳、移动和释放；细粒度标注的作用是缩小当前控制问题，而不是把每个控制周期写成一句话。
 
-## 摘要与阅读指南
+## 摘要与阅读线索
 
-**简要摘要。** FineART 包含 40,543 个 episode、1,718 小时、151 个任务和 533,913 个子任务。FineART-VLA 在 π0.5 的基础上扩展了下一子任务预测和以子任务为条件的连续控制。其实验分别研究了标注粒度、子任务训练、知识隔离以及向不同形体的适配。
+**摘要意译。** FineART 提供密集子任务标注的双臂示范：40,543 个 episode、1,718 小时、151 项任务和 533,913 个子任务。FineART-VLA 在 π0.5 基础上学习预测下一子任务，并用子任务条件生成连续动作。研究把数据粒度、子任务训练、知识隔离和跨本体适配分别做对照，检验模型是否更会理解空间词、组合长程步骤和利用新机器人的少量数据。
 
-**阅读提示。** 更多演示、阶段标签和梯度路由服务于不同目的。受控对比必须固定其他因素，才能把性能提升归因到其中某一个。
+**批注。** 数据规模与策略机制要分开读。更多示范提供经验，子任务标签提供阶段监督，知识隔离控制不同损失怎样改变视觉语言主干。一个有效的比较需要保持其余条件相同，才能把结果归因于其中一项。
 
-## 为什么长演示需要阶段标签
+## 引言与相关工作：长轨迹为什么需要阶段标签
 
-相似的图像可以属于不同的任务阶段，相同的动作也可以服务于不同的目标。仅有 episode 级别的指令会把这些差异隐含起来。在时间上对齐的子任务为当前操作提供了直接监督。
+长程任务的困难不只在长度。相近画面可能对应不同阶段，同一动作也可能服务于不同目标。只标整段任务，训练样本会把这些差异压进隐含表示；标出当前子任务后，模型可以显式学习“现在该做什么”。
 
-与 π0.5 的直接动作接口相比，FineART-VLA 增加了一条语言生成路径。与将规划器和控制器分离的做法相比，它在一个策略中联合训练语言与动作，并且也接受人类指定的子任务。为整段视频写更长的描述，无法替代与单个操作对齐的标签。
+与直接预测动作的 π0.5 接口相比，FineART-VLA 增加了可生成语言的规划路径。与独立大模型规划器加低层控制器的流水线相比，它在同一个策略中训练语言与动作，并允许人工直接指定子任务。它需要的是与动作时间对齐的监督，而不只是给整段视频写一段更长的描述。
 
-## 数据：覆盖可复用技能与接触密集任务
+## 数据：密集标注怎样覆盖双臂操作
 
-FineART 将重复的抓取-放置和语义整理，与长尾的布料操作、工具装配、电缆布线和精确插入结合在一起。这些任务让策略暴露于不同的接触与精度需求。
+FineART 的主体是可复用的抓取、放置和语义整理，同时保留布料、工具装配、柔性线缆和精细插入等长尾操作。长尾数据让同样的“移动到目标”出现在接触关系、物体形变与精度要求不同的条件下。
 
-对于毛巾折叠，标签必须跟随实际的抓取、移动和放置顺序。错误的边界会把一条指令与另一操作的动作配对，直接削弱控制器的训练条件。
+以折毛巾为例，标注需要跟随真实操作阶段：抓起一侧、移向另一侧、放下，再进入下一折。边界过早会让“放下”的语言配上“仍在移动”的动作；边界过晚则会把后续动作教给前一个子任务。因此，语言标注质量直接影响低层控制的条件分布。
 
-在中期训练中，采样任务的权重与 $n_i^{0.5}$ 成正比，其中 $n_i$ 是其帧数。在一个教学示例中，帧数为 100 和 400 的任务分别获得权重 10 和 20：采样比例为 1:2，而不是原始的 1:4。
+中训练使用任务平衡采样，任务拥有 $n_i$ 帧时，其采样权重与 $n_i^{0.5}$ 成正比。这介于逐帧等权与逐任务等权之间。若两项任务分别有 100 和 400 帧，教学例子中的权重是 10 和 20，采样比例为 1:2，而非按原始帧数形成 1:4。
 
 <figure className="paper-reading-figure" data-reading-figure="fineart_vla/subtask-annotations">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fineart_vla/subtask-annotations.png" alt="任务与子任务的时间对齐" loading="lazy" />
-  <figcaption><strong>任务与子任务的时间对齐。</strong> 来源：FineART 论文。一个打包任务被划分为时长不等的阶段，说明了为什么子任务标签需要时间边界。显示的名称是示意类别，而非数据集中的逐字标注。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fineart_vla/subtask-annotations.png" alt="总目标与子任务的时间对齐" loading="lazy" />
+  <figcaption><strong>总目标与子任务的时间对齐。</strong>来源：FineART 论文。整段装袋任务被切成长度不同的操作阶段，说明阶段标签需要对齐时间边界。图中的子任务名称是示意分类，不是数据集中的逐字标注。</figcaption>
 </figure>
 
-## 架构：先预测子任务，再生成其动作
+## 核心网络：先选择当前子任务，再生成连续动作
 
-论文中的 ALOHA 配置使用俯视和两个腕部视角、14 维关节/夹爪状态，以及 50 步、每步 14 维的动作块。其视觉-语言骨干将 SigLIP 和 Gemma 结合，并配有一个独立的 Gemma 风格动作专家。
+论文中的 ALOHA 设置读取鸟瞰与两路腕部图像、14 维双臂关节和夹爪状态。动作块包含 50 步，每步 14 维。视觉语言主干结合 SigLIP 和 Gemma，另有 Gemma 风格的连续动作专家。
 
-| 路径 | 输入 | 计算 | 输出 |
+| 路径 | 输入 | 处理 | 输出 |
 | --- | --- | --- | --- |
-| 子任务规划 | 观测与整体目标 | 自回归语言生成 | 低层指令 |
-| 离散动作学习 | 观测与子任务 | FAST-token 预测 | 为骨干提供动作监督 |
-| 连续控制 | 观测、状态、子任务和带噪动作 | Flow-matching 动作专家 | 可执行的动作块 |
+| 子任务预测 | 当前观测与总目标 | 语言头逐词生成 | 当前低层指令 |
+| 离散动作学习 | 观测与子任务 | 预测 FAST 动作词元 | 训练主干理解动作的监督 |
+| 连续动作生成 | 观测、状态、子任务与噪声动作 | 动作专家进行流匹配去噪 | 可交给控制器的动作块 |
 
-规划器可能生成“put the cup on the shelf”，而多个动作调用会跟随该指令。周期性的规划查询使用新的观测和原始高层目标来推断当前激活的子任务。运行时不会检测子任务完成；查询间隔是可配置的。规划与动作生成可以以不同频率运行。
+部署时，规划查询生成“把杯子放到架子上”，控制查询在这条指令有效期间持续生成动作。运行时按可配置的间隔，结合新观测与原始总目标重新推断当前子任务；它不自动检测子任务是否完成。语言规划与动作控制可以使用不同频率；不需要每生成一个动作块就重新解释完整任务。
 
-<figure className="paper-reading-figure" data-reading-figure="fineart_vla/teaching-three-timescales-en">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/teaching/fineart-three-timescales-en-v2.png" alt="三种时间尺度：高层目标、子任务与连续动作" width="1536" height="1024" loading="lazy" />
-  <figcaption><strong>三种时间尺度：高层目标、子任务与连续动作。</strong> AI 生成的教学插图。单一策略同时支持自主子任务推断（System 2）和连续动作执行（System 1）。运行时会周期性地从高层目标和当前观测中查询子任务；它不会检测子任务完成。一个子任务可以引导多个动作块。观测还包括机器人状态，此处为清晰起见省略。命名的运动阶段展示了一条轨迹；可执行输出是连续数值。</figcaption>
+<figure className="paper-reading-figure" data-reading-figure="fineart_vla/teaching-three-timescales">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/teaching/fineart-three-timescales-zh-v1.png" alt="总目标、子任务与连续动作的三个时间尺度" width="1536" height="1024" loading="lazy" />
+  <figcaption><strong>总目标、子任务与连续动作的三个时间尺度。</strong>AI 生成的教学示意。阶段查询结合当前观测与总目标选择子任务，同一子任务可指导多个动作块；执行后用真实观测继续控制。图中动作名称用于说明轨迹阶段，实际控制输出是连续数值。</figcaption>
 </figure>
 
-### 三个目标与知识隔离
+### 三种损失怎样各司其职
 
-训练目标为
+论文将连续流匹配、FAST 动作词元预测和子任务文本预测组合起来：
 
 $$
 \mathcal L=10\mathcal L_{\mathrm{flow}}+\mathcal L_{\mathrm{FAST}}+\lambda_{\mathrm{text}}\mathcal L_{\mathrm{text}}.
 $$
 
-在启用子任务训练时，30% 的样本用于训练从目标到子任务的预测，70% 的样本用于训练以子任务为条件的动作。这些是采样比例，而不是推理时的时间分配。
+开启子任务训练时，30% 样本训练总目标到子任务的预测，70% 样本用子任务条件训练动作。上述比例是训练采样方式，不是机器人把 30% 的执行时间花在规划上。
 
-知识隔离会分离由动作专家读取的骨干网络键和值。专家仍然使用视觉-语言上下文，但连续动作损失不会通过那条路径更新骨干网络。文本和离散动作损失会继续训练它；骨干网络并不是永久冻结的。
+知识隔离使连续动作损失不沿主干的键和值反向传播。动作专家仍然读取视觉语言上下文，但主干主要通过文本与离散动作损失学习。它阻断的是一条梯度路径，并不阻断前向的信息传递，也不意味着整个主干永久冻结。
 
-## 训练与执行：对齐两个学习到的决策
+## 训练与执行：为什么要同时对齐语言和动作
 
-在训练期间，示范提供正确的子任务，而在部署时通常使用生成的子任务。控制器必须遵循子任务，规划器必须识别当前阶段。只学习其中一种能力会让另一部分问题仍未解决。
+训练时，示范提供真实子任务与真实动作；运行时，子任务通常来自模型自己的预测。低层动作训练需要学会遵循子任务，规划训练则需要学会从当前画面判断阶段。只有前者，模型可能会执行人工指令却不会自主推进；只有后者，模型可能说对下一步却做不出来。
 
-一个控制循环会读取图像和状态，查询或保留一个子任务，预测动作，执行部分计划，然后再次观测。人工子任务输入有助于区分规划失败和运动失败。50 步预测视野和运行时规划间隔是两个独立的设置。
+一次闭环依次是：读取画面与状态、查询或保留当前子任务、生成动作块、执行一段动作、接收新观测。人工也可直接给子任务，帮助区分规划错误与运动执行错误。论文中的 50 步预测长度与具体运行时的重规划间隔是不同参数。
 
-## 实验：哪些因素带来提升，以及在什么条件下
+## 实验：语言对齐改善了什么
 
-### 匹配的初始条件
+### 同样初始条件下比较子任务与知识隔离
 
-ALOHA 评估对每个任务使用 25 次 rollout，并规定初始摆放方式。成功率统计完整完成的次数；进度率衡量完成的阶段数。以一个四阶段的放杯子示例为例，只完成伸手、抓取和搬运而未成功放置，可以得到 75% 的进度和 0 的成功率。
+ALOHA 对照每项任务运行 25 次，并固定 25 组初始摆放。论文同时报告成功率 SR 和进度率 PR。以四阶段放杯任务为教学例子：完成接近、抓取和移动，最后放置失败，这次成功记 0，而进度可以记 75%。二者不能互换。
 
-一个 2×2 消融实验分别改变子任务训练和知识隔离。它们的组合支持最强的分布外泛化，但各个任务的表现不同。在简单的货架放置任务上，仅使用隔离而不进行子任务训练的表现优于同时启用两者；更含糊的任务则可能从阶段监督中获益。
+论文用 2×2 对照分别开关子任务训练和知识隔离。两者组合对分布外泛化最有利，但单项任务的变化并不一致：简单架上放杯任务中，保留知识隔离而不训练子任务的结果高于同时开启两者；更有阶段歧义的任务则可能受益于子任务监督。因此，不能把“显式规划”写成每项任务都会提高的保证。
 
 <figure className="paper-reading-figure" data-reading-figure="fineart_vla/subtask-insulation-ablation">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fineart_vla/subtask-insulation-ablation.png" alt="Subtask training and knowledge-insulation ablation" loading="lazy" />
-  <figcaption><strong>子任务训练与知识隔离消融。</strong> 来源：FineART 论文。实色柱表示成功率，浅色柱表示进度率。两种机制的结合在分布外任务组中帮助最大。每个任务有 25 次试验，每种设置有 50 次，总计 150 次；设置的平均值并不能描述每个具体任务。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/fineart_vla/subtask-insulation-ablation.png" alt="子任务训练与知识隔离的对照" loading="lazy" />
+  <figcaption><strong>子任务训练与知识隔离的对照。</strong>来源：FineART 论文。实色柱为成功率，浅色背景柱为进度率；两项机制组合在分布外组最有利。每项任务 25 次、每类 50 次，整体 150 次；类别均值不能代替单项任务结论。</figcaption>
 </figure>
 
-### 空间词汇与长视野引导
+### 空间词和长程任务提供不同证据
 
-在将甜甜圈放入左、中或右侧箱子的任务中，在两个条件下都关闭隔离，子任务训练将成功率从 32% 提升到 100%，每种条件各有 25 次试验。所有 17 次未进行子任务训练的失败都选择了错误的箱子。这专门测试空间语言是否会改变目标选择。
+“将甜甜圈放入左、中、右箱”只改变空间词。在知识隔离都关闭的对照中，子任务训练使成功率从 32% 提高到 100%，每组 25 次。无子任务训练组的 17 次失败都放错箱子，说明这个对照主要检验空间语言是否真正影响目标选择。
 
-早餐任务将熟悉的子任务重新组合成一个未见过的完整序列。逐步的人类引导将成功率从 16% 提升到 76%。该结果包含了人工引导，并未衡量完全自主的规划能力。
+准备早餐实验使用训练中出现过的子步骤，但完整顺序未出现过。论文报告逐步人工子任务指导可将该未见长程任务的成功率从 16% 提至 76%。这一结果包含人工指导条件，不能当作全自主规划的成绩。
 
-### 长尾数据与形体迁移
+### 长尾与跨本体数据怎样影响迁移
 
-在保持训练步数不变的情况下移除接触密集的长尾数据，会在该消融配置中将整体成功率从 24.7% 降低到 14.0%。这些数值属于那次受控对比实验，而不是来自其他实验中的最佳配置。
+在保持训练步数相同的长尾消融中，移除复杂接触类别使总体成功率由 24.7% 降至 14.0%。这组实验的模型设置与前面的最佳组合不同，比较的是同一消融内的数据组成。
 
-ALOHA-to-YAM 研究在适配到 YAM 之后，衡量数据效率和任务组合能力。跨形体迁移仍然需要兼容的目标控制接口和适配数据。
+跨本体部分从 ALOHA 中训练模型出发，再适配 YAM，检验新身体上的数据效率与未见任务组合。这里的迁移依然经过目标本体适配；不能将论文的跨本体能力解释为更换关节顺序后立即零样本控制。
 
-## LeRobot 集成：保留语言规划器
+## LeRobot 接入：保留子任务能力需要什么
 
-0.7.0 版本支持 FineART-VLA 训练、文本查询和动作执行。除了图像、状态、动作和任务之外，所选 recipe 还需要在 `language_persistent` 和 `language_events` 中包含其目标。默认 recipe 使用连续的子任务时间线；记忆和 VQA 需要各自的标注和运行时支持。
+v0.7.0 支持 FineART-VLA 的训练、文本查询和动作执行。数据需要图像、状态、动作、任务，以及所选配方消费的 `language_persistent`、`language_events` 语言列。默认配方使用连续的子任务时间线，额外的记忆或问答能力需要对应标注与运行控制。
 
-保留 checkpoint 的 recipe、动作 tokenizer 和处理器，然后将相机名称、动作统计量和状态维度与目标机器人对齐。仅更改一个 π0.5 策略名称并不能复现论文中的规划器。
+从中训练检查点加载时，要保留其配方、动作分词器和处理器。新数据的动作归一化、相机命名和状态维度还需与目标机器人匹配。不能只把普通 π0.5 的策略类型改名，就认为已经获得论文中的语言规划能力。
 
-下面是训练参数片段；请单独提供实际的数据集和输出配置：
+可在训练命令中使用以下参数片段，数据集名与输出路径需替换为实际值：
 
 ```bash
 --policy.path=lerobot/fineart_vla_base
@@ -225,10 +225,10 @@ ALOHA-to-YAM 研究在适配到 YAM 之后，衡量数据效率和任务组合�
 --policy.tokenizer_max_length=256
 ```
 
-这些集成设置本身并不能复现论文的评估协议。
+这些是接入参数，论文的空间与长程任务成绩来自其原始实验协议。
 
 ## 结论
 
-FineART-VLA 在一个学习流水线中连接了整体目标、阶段语言和连续动作。稠密标签解释每个动作片段完成了什么，生成的子任务提供了干预点，知识隔离有助于保持骨干网络能力。其最有力的证据来自匹配的消融实验；自主行为仍然依赖于阶段识别、精确执行以及目标形体的数据。
+FineART-VLA 将总目标、阶段语言和连续动作放进同一条学习链。密集标注让模型知道每一段动作在完成什么，子任务生成提供可干预的阶段接口，知识隔离则帮助保留主干能力。实验最有说服力的部分来自相同条件下的子任务、梯度和数据组成对照；自主执行能力仍受阶段判断、接触精度与目标本体数据的共同限制。
 
 </div>

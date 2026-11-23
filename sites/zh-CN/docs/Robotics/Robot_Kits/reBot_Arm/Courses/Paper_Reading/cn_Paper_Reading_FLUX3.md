@@ -1,8 +1,8 @@
 ---
-description: "深入解析 FLUX 3 Action：机制、训练、实验，以及 LeRobot v0.7.0 集成范围。"
-title: "FLUX 3 Action：平衡联合视频-动作预测与运行时成本"
+description: "精读 FLUX 3 Action 的核心机制、训练与实验，了解 LeRobot v0.7.0 接入范围。"
+title: "FLUX 3 Action：联合预测视频与动作，怎样兼顾控制效果和速度"
 hide_title: true
-keywords: ["Paper Deep-Dive","FLUX 3 Action","World-Action Models","Joint Video-Action Prediction","Distillation","Real-Time Control","LeRobot"]
+keywords: ["论文精读","FLUX 3 Action","世界动作模型","联合视频动作预测","蒸馏","实时控制","LeRobot"]
 slug: /robotics/paper_reading_flux3
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -16,63 +16,63 @@ import '/src/css/paper-reading-style.css';
 
 export const toc = [
   {
-    "value": "前置知识：延迟与实时因子",
-    "id": "prerequisites-latency-and-real-time-factor",
+    "value": "预备知识：延迟与实时因子为什么不是同一个量",
+    "id": "预备知识延迟与实时因子为什么不是同一个量",
     "level": 2
   },
   {
-    "value": "报告主张与阅读指引",
-    "id": "report-claims-and-reading-guide",
+    "value": "报告主张与阅读线索",
+    "id": "报告主张与阅读线索",
     "level": 2
   },
   {
-    "value": "架构：连接运动与视觉结果",
-    "id": "architecture-connecting-motion-and-visual-consequences",
+    "value": "核心网络：同一次去噪怎样联系动作与视觉结果",
+    "id": "核心网络同一次去噪怎样联系动作与视觉结果",
     "level": 2
   },
   {
-    "value": "数据与具身接口",
-    "id": "data-and-embodiment-interfaces",
+    "value": "数据与动作：视频先验怎样接到不同身体",
+    "id": "数据与动作视频先验怎样接到不同身体",
     "level": 2
   },
   {
-    "value": "训练：超越单一联合目标",
-    "id": "training-beyond-a-joint-objective",
+    "value": "训练配方：联合目标之外还要选择什么",
+    "id": "训练配方联合目标之外还要选择什么",
     "level": 2
   },
   {
-    "value": "分裂式 Guidance",
-    "id": "split-guidance",
+    "value": "为什么视频引导与动作引导分别设置",
+    "id": "为什么视频引导与动作引导分别设置",
     "level": 3
   },
   {
-    "value": "权重平均与蒸馏",
-    "id": "weight-averaging-and-distillation",
+    "value": "权重平均与蒸馏怎样影响速度和可靠性",
+    "id": "权重平均与蒸馏怎样影响速度和可靠性",
     "level": 3
   },
   {
-    "value": "实验：保持检查点与协议绑定",
-    "id": "experiments-keep-checkpoints-and-protocols-attached",
+    "value": "实验：按检查点与协议解释数字",
+    "id": "实验按检查点与协议解释数字",
     "level": 2
   },
   {
-    "value": "仿真与效率",
-    "id": "simulation-and-efficiency",
+    "value": "仿真成绩与速度不能跨变体拼接",
+    "id": "仿真成绩与速度不能跨变体拼接",
     "level": 3
   },
   {
-    "value": "物理评估",
-    "id": "physical-evaluation",
+    "value": "真机小样本测试说明什么",
+    "id": "真机小样本测试说明什么",
     "level": 3
   },
   {
-    "value": "LeRobot 集成：保留已保存条件",
-    "id": "lerobot-integration-preserve-saved-conditions",
+    "value": "LeRobot 接入：保留检查点条件与处理器",
+    "id": "lerobot-接入保留检查点条件与处理器",
     "level": 2
   },
   {
     "value": "结论",
-    "id": "conclusion",
+    "id": "结论",
     "level": 2
   }
 ];
@@ -80,113 +80,117 @@ export const toc = [
 <div className="paper-reading-page">
 
 <section className="paper-reading-intro" aria-labelledby="paper-reading-flux3-title">
-  <span className="paper-reading-eyebrow">SEEED STUDIO · PAPER DEEP-DIVE</span>
-  <h1 id="paper-reading-flux3-title">FLUX 3 Action：平衡联合视频-动作预测与运行时成本</h1>
+  <span className="paper-reading-eyebrow">SEEED STUDIO · 论文精读</span>
+  <h1 id="paper-reading-flux3-title">FLUX 3 Action：联合预测视频与动作，怎样兼顾控制效果和速度</h1>
   <p className="paper-reading-lead">FLUX 3 Action</p>
-  <ul className="paper-reading-badges" aria-label="Reading topics">
-    <li><a href="#architecture-connecting-motion-and-visual-consequences">联合视频与动作</a></li>
-    <li><a href="#training-beyond-a-joint-objective">训练与蒸馏</a></li>
-    <li><a href="#experiments-keep-checkpoints-and-protocols-attached">实验</a></li>
+  <ul className="paper-reading-badges" aria-label="本篇内容">
+    <li><a href="#核心网络同一次去噪怎样联系动作与视觉结果">联合视频动作</a></li>
+    <li><a href="#训练配方联合目标之外还要选择什么">训练与蒸馏</a></li>
+    <li><a href="#实验按检查点与协议解释数字">实验结果</a></li>
   </ul>
   <a className="paper-reading-source-link" href="https://bfl.ai/models/flux-3-action" target="_blank" rel="noopener noreferrer">
-    <span className="paper-reading-source-tag">报告</span><span>阅读报告</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
+    <span className="paper-reading-source-tag">Report</span><span>阅读技术报告</span><span className="paper-reading-source-arrow" aria-hidden="true">↗</span>
   </a>
 </section>
 
-<aside className="paper-reading-key-commands" aria-label="Integration version and parameters">
+<aside className="paper-reading-key-commands" aria-label="接入版本与关键参数">
 
 <a className="paper-reading-hf-link" href="https://huggingface.co/docs/lerobot/v0.7.0/en/flux3" target="_blank" rel="noopener noreferrer"><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/huggingface-logo.svg" alt="" width="24" height="24" /> Hugging Face · LeRobot FLUX 3 Action 文档 ↗</a>
 
-**LeRobot 参数**
+**LeRobot 关键参数**
 
-- `--policy.path=black-forest-labs/flux-3-action-so101` 加载一个适配 SO-101 的检查点。
-- `--config_path=examples/flux3/lora.json` 选择带版本的任务适配配方。
-- SO-101 版本预测 42 个动作，并使用 `scene`/`wrist` 相机以 30 Hz 执行其中 32 个。
-- 适配器支持推理和 PEFT 任务适配；对于新的具身形式和完整微调，请使用作者的独立仓库。
+- `--policy.path=black-forest-labs/flux-3-action-so101` 加载已适配 SO-101 的模型。
+- `--config_path=examples/flux3/lora.json` 使用版本内的任务适配配方；数据集与输出目录另行指定。
+- 发布 SO-101 检查点预测 42 步、执行 32 步、30 Hz，使用 `scene` 和 `wrist` 相机。
+- 该接入支持推理与 PEFT 任务适配；新身体和全量微调使用作者独立仓库。
 
 </aside>
 
-一个机器人将一个蓝色盒子放入容器中。一个联合 world-action 模型同时预测机械臂运动及其视觉结果，但视频生成会增加计算量。**训练配方和蒸馏能否在降低执行成本的同时保留有用的联合预测能力？**
+机器人把蓝色盒子放进容器。联合视频动作模型既预测手臂怎么动，也预测盒子将怎样出现在容器中，但多了一条视频生成路径，计算往往更重。**能否保留联合预测的好处，同时通过训练配方和蒸馏降低执行成本？**
 
-## 前置知识：延迟与实时因子
+## 预备知识：延迟与实时因子为什么不是同一个量
 
-延迟衡量一次查询的耗时。实时因子则将其处理成本与所预测运动进行比较：
+每次策略查询花费的时间是延迟；这次查询返回多少秒运动，则决定它是否能跟上执行。实时因子定义为：
 
 $$
-\mathrm{RTF}=\frac{\text{processing time}}{\text{predicted motion duration}}.
+\mathrm{RTF}=\frac{\text{处理时间}}{\text{预测运动时长}}.
 $$
 
-在一个教学示例中，0.4 秒的计算对应 2 秒的运动，得到 RTF 为 0.2，而 0.25 秒对应 1 秒则为 0.25。前者每单位运动的成本更好，但即时响应更慢。动态重规划依赖于这种差异。
+教学例子中，模型甲用 0.4 秒生成 2 秒动作，RTF 为 0.2；模型乙用 0.25 秒生成 1 秒动作，RTF 为 0.25。甲按每秒运动的计算成本更快，但单次响应更慢。这种差异直接影响动态扰动下的重规划。
 
-## 报告主张与阅读指引
+## 报告主张与阅读线索
 
-**报告概览。** 这个约 70 亿参数的模型从视频占比很高的多模态预训练开始，继续进行动作中期训练，并适配到目标机体。它联合预测未来视频潜变量和连续动作。报告研究了动作格式、噪声调度、分裂式 guidance、权重平均和蒸馏。
+**报告概述。** FLUX 3 Action 是约 7B 的世界动作模型，从视频占主要比例的多模态预训练出发，经动作中训练和目标本体微调，联合生成未来视频潜变量与连续动作。报告分析动作表示、噪声调度、分离引导、权重平均与蒸馏，说明模型效果与运行效率怎样受配方影响。
 
-**阅读提示。** 基础、guidance 蒸馏和单步检查点在精度与速度上各不相同。它们的最佳数值不能组合成一个单一配置。
+**批注。** 不同采样、引导和蒸馏检查点有不同成绩与速度。报告中的基础模型、引导蒸馏与单步蒸馏不可合并成一个“既最高分又最快”的模型。
 
-## 架构：连接运动与视觉结果
+## 核心网络：同一次去噪怎样联系动作与视觉结果
 
-一个冻结的视频 VAE 编码观测，一个冻结的文本编码器提供指令。Transformer 共同对视频和动作表征进行去噪。成对的未来观测/动作用于监督训练；当前观测和语言在部署时作为条件输入。
+冻结的视频 VAE 将相机画面编码到潜空间，冻结的文本编码器提供任务条件。Transformer 同时处理视觉潜变量与动作表示，学习从噪声恢复未来视频和动作块。训练时未来真实视频与动作提供配对监督，执行时从当前观测和指令开始生成。
 
-| 控制阶段 | 放置盒子的示例 |
+| 控制环的一步 | 在盒子入容器任务中发生什么 |
 | --- | --- |
-| 观测 | 定位盒子、容器和夹爪 |
-| 联合去噪 | 预测运动和预期的视觉变化 |
-| 后处理 | 恢复机体的控制约定 |
-| 执行 | 消耗部分动作块 |
-| 再次观测 | 对实际抓取和放置结果做出响应 |
+| 读取观测与状态 | 确定盒子、容器与夹爪的当前位置 |
+| 联合去噪 | 生成运动及其预期视觉变化 |
+| 动作后处理 | 恢复相应身体的动作单位与顺序 |
+| 执行部分动作 | 在真实环境中移动盒子 |
+| 重新观测 | 根据是否抓稳、是否进入容器继续查询 |
 
-跳过 RGB 解码仍然会在模型中保留未来潜变量预测。这不同于 Fast-WAM 在推理时移除未来视频 token 的做法。
+不显示预测视频只意味着省去像素解码；未来视觉潜变量仍参与联合计算。它与 Fast-WAM 完全移除执行时未来视频词元的方式不同。
 
 <figure className="paper-reading-figure" data-reading-figure="flux3/joint-architecture">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/flux3/joint-architecture.svg" alt="Joint video-action prediction in a shared backbone" loading="lazy" />
-  <figcaption><strong>共享骨干中的联合视频-动作预测。</strong> 来源：Black Forest Labs 官方报告。任务、视觉历史和状态在共享层中携带未来与动作特征，并分别解码。蒸馏在保留这种联合预测结构的同时改变采样成本。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/flux3/joint-architecture.svg" alt="共享主干中的视频与动作联合预测" loading="lazy" />
+  <figcaption><strong>共享主干中的视频与动作联合预测。</strong>来源：Black Forest Labs 官方技术报告。任务、视觉历史和状态作为条件，未来与动作特征在共享层中处理，最后分别解码。蒸馏改变采样成本，报告仍保留这一联合预测结构。</figcaption>
 </figure>
 
-## 数据与具身接口
+## 数据与动作：视频先验怎样接到不同身体
 
-视频在预训练 token 中占比超过 95%。动作中期训练在保留多模态数据的同时，加入了游戏、第一视角双手、手持夹爪和遥操作。样本比例和 token 比例代表不同的预算。
+通用预训练中超过 95% 词元来自视频。动作中训练再混合游戏、人类第一视角手部、手持夹爪与遥操作数据，并保留一部分原始多模态数据。样本比例与词元比例不同，不能把“多少条样本”直接当成相同计算量。
 
-大多数位姿数据使用 EE50：每个主/副执行器 25 个通道，包括位置、6D 旋转和手/夹爪数值，未使用的维度用填充补齐。部分数据则使用关节空间头。SO-101 适配器使用 6 个绝对关节/夹爪指令，其顺序和单位与测量状态匹配；它不会执行前 6 个 EE50 数值。
+多数位姿数据采用 EE50：左右或主次末端各 25 维，包含位置、6D 旋转和手部/夹爪通道，未使用的维度补零；另一些数据直接使用关节表示。不同动作空间对应不同输入输出头，目标本体微调可以重新训练其动作接口。
 
-## 训练：超越单一联合目标
+SO-101 发布接入使用六维绝对关节/夹爪命令，与测量状态保持相同关节顺序与单位。它不是将 EE50 的前六个数字直接发给低成本机械臂。
 
-视频和动作具有不同的信号/噪声结构。报告测量了重建行为，并调整训练时的分布，而不是假设在相同名义噪声水平下难度相同。
+## 训练配方：联合目标之外还要选择什么
 
-DROID 研究也改变了动作表示和 batch 大小。更大 batch 的联合微调最终超过末端执行器微调，而现有的末端执行器头在较小预算下仍然有帮助。训练损失下降并不保证闭环成功率提升。
+视频与动作的信号噪声结构不同，相同数值噪声时刻对两种模态的难度未必相同。报告检查各模态的重建误差，调整训练时间分布，让有效监督覆盖视频与动作各自的重要区域。
 
-### 分裂式 Guidance
+目标本体微调还比较相对末端和绝对关节动作，以及训练 batch 和步数。DROID 实验中更大 batch 的关节微调后期超过末端微调，但较小数据预算时，原有末端头仍可能更合适。训练损失继续下降也不一定带来更高闭环成功率。
 
-无分类器 guidance 会放大有条件预测与无条件预测之间的差异。视频和动作的 guidance 可以独立设置。在报告的搜索中，视频 guidance 为 4、动作 guidance 为 1 的组合优于不加区分地同时增大二者。这是该模型的经验性设置，而不是通用的 WAM 常数。
+### 为什么视频引导与动作引导分别设置
+
+无分类器引导 CFG 用条件与无条件预测的差异加强条件影响。联合模型可以分别控制视频和动作的引导强度。报告的网格比较中，视频 4、动作 1 的组合优于简单地把两边都增大。
+
+这与控制问题有关：视觉条件需要围绕目标形成合理变化，而过强的动作引导可能损害连续轨迹。它仍是该模型与实验的结果，不能推广成所有 WAM 的固定参数。
 
 <figure className="paper-reading-figure" data-reading-figure="flux3/split-guidance">
-  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/flux3/split-guidance.svg" alt="Joint sweep of video and action guidance scales" loading="lazy" />
-  <figcaption><strong>视频与动作 guidance 比例的联合搜索。</strong> 来源：Black Forest Labs 官方报告。动作 CFG 为横轴，视频 CFG 为纵轴。这个完整的 RoboLab-120 搜索在视频为 4、动作为 1 时达到 42.00% 的峰值。最大化二者并非最优，而且该搜索独立于针对蒸馏检查点的多种随机种子结果。</figcaption>
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/flux3/split-guidance.svg" alt="视频与动作引导系数的二维对照" loading="lazy" />
+  <figcaption><strong>视频与动作引导系数的二维对照。</strong>来源：Black Forest Labs 官方技术报告。横轴为动作 CFG，纵轴为视频 CFG；该组完整 RoboLab-120 扫描在视频 4、动作 1 时达到 42.00%。最优组合并非两者都最大，且不能替代其他蒸馏检查点的多种子均值。</figcaption>
 </figure>
 
-### 权重平均与蒸馏
+### 权重平均与蒸馏怎样影响速度和可靠性
 
-EMA 在训练更新过程中平滑权重。在 DROID 对比中，原始权重得分为 36.50%，而选定的在线 Power EMA 达到 42.00%。SO-101 集成报告了 EMA 效果的混合结果，需要匹配评估设置。
+EMA 对多个训练时刻的参数做平滑，减少只取最后一步权重的波动。报告 DROID 对照中原始权重为 36.50%，在线 Power EMA 设置达到 42.00%；SO-101 的接入说明则指出 EMA 收益尚不一致，需在相同试验条件下比较。
 
-Guidance 蒸馏让学生模型学习带 guidance 的教师预测，从而避免重复进行有条件/无条件计算。Step 蒸馏则在一次更新中近似多步采样，以一定精度损失换取速度提升。
+引导蒸馏让学生拟合教师经过 CFG 后的预测，减少每步条件/无条件双路计算；步数蒸馏再让学生用一次更新近似多步采样。第二步进一步提速，但伴随成功率下降。
 
-## 实验：保持检查点与协议绑定
+## 实验：按检查点与协议解释数字
 
-### 仿真与效率
+### 仿真成绩与速度不能跨变体拼接
 
-报告给出的单步检查点在 RoboLab-120 上的成功率约为 38.3%，guidance 蒸馏版本为 42.2%。更快的变体并不是得分最高的变体。相较于 π0.5 的 RTF 优势取决于精度和 GPU 等级；消费级 GPU 不会自动复现工作站/数据中心的结果。
+报告在 RoboLab-120 给出的单步检查点约 38.3%，引导蒸馏检查点约 42.2%。单步版本更快，但不是最高成功率版本。报告还区分 BF16、FP8 与具体 GPU：按 RTF 优于 π0.5 的情况出现在部分工作站和数据中心配置，消费级 GPU 并不自动具有同样优势。
 
-作者的发布文章单独列出了 42.92%。这一发表记录不会被替换为每个报告配置的结果。
+作者发布文章另列 RoboLab 总分 42.92%。这是另一处发布记录；本篇保留技术报告对应变体的数字，不用 42.92% 替换所有基础与蒸馏行。
 
-### 物理评估
+### 真机小样本测试说明什么
 
-Positronic 在 Franka 上评估了 10 个 DROID 任务，每个任务 3 次试验，240 秒上限、匹配条件以及盲测操作员。FLUX 完成了 28/30。这个小规模协议并不能在每个环境中确立约 93% 的成功率。
+Positronic 在 Franka 上测试十项 DROID 任务，每项三次，每次最多 240 秒，并使用相同设置与盲测操作。FLUX 3 Action 完成 28/30。30 次试验支持该协议下的可用性，不构成所有环境中接近 93% 成功的保证。
 
-SO-101 演示展示了变化的物体、容器和相机位置。成功片段说明了行为，但在没有试验次数和匹配协议的情况下，无法确立泛化成功率。
+SO-101 还展示不同物体、容器和相机位置的执行。演示视频说明行为例子；若没有相同协议的试验总数，不能把几段成功视频写成泛化成功率。
 
-## LeRobot 集成：保留已保存条件
+## LeRobot 接入：保留检查点条件与处理器
 
-v0.7.0 的 SO-101 检查点携带历史状态/动作条件、8 个观测 tick，以及两个分别编码的视觉快照。它在重规划前预测 42 个动作并执行 32 个，这与报告中约 2.13 秒评估变体是分开的。
+v0.7.0 的 SO-101 检查点有自己的历史条件、动作和状态归一化，使用八个观测时刻及两份独立编码的视觉快照。它预测 42 步、执行前 32 步后重规划。这个具体配置与报告中覆盖约 2.13 秒动作的评测变体不同。
 
 ```bash
 lerobot-train \
@@ -196,12 +200,12 @@ lerobot-train \
   --output_dir=outputs/so101_lora
 ```
 
-替换数据集占位符。LoRA 会调整 trunk，而动作/条件头则以完整方式训练并被保存。使用匹配的 `observation.images.scene` 和 `observation.images.wrist` 键，或者在训练和 rollout 中使用相同的重命名映射。每个控制周期都调用一次策略，以保持历史记录为最新。
+数据集名是待替换值。LoRA 适配主干，机器人动作与条件头完整训练并随检查点保存。相机键为 `observation.images.scene` 与 `observation.images.wrist`，重命名映射在训练和执行中要一致。每个控制时刻更新策略调用，保持历史与已执行动作条件新鲜。
 
-安装需要兼容的 PyTorch、CUDA 和 NATTEN 构建版本。即使策略类型保持不变，更改历史长度、引导方式、采样或蒸馏方式也会改变实验配置。
+安装需匹配 PyTorch、CUDA 与 NATTEN，按版本文档选择对应构建。改变历史快照数、引导、采样步数或换用蒸馏检查点会改变实验条件，不能仅凭同一策略类型声称结果一致。
 
 ## 结论
 
-FLUX 3 Action 在保留联合视频/动作预测能力的同时，调整了数据、动作格式、引导方式、平均方式和蒸馏方式。具有意义的评估需要同时考虑预测时长、查询时间、执行长度和检查点标识。
+FLUX 3 Action 保留联合视频动作预测，并通过数据、动作表示、引导、EMA 与蒸馏共同调整效果和成本。它的主要启示是把“预测多久、计算多久、执行多久”和“使用哪个检查点”一起评价，避免用一个最高分与另一个最快速度描述同一模型。
 
 </div>
