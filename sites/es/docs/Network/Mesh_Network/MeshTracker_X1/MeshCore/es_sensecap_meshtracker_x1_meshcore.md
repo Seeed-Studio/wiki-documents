@@ -23,7 +23,7 @@ url: https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/
 
 
 <Tabs>
-<TabItem value="111" label="Vía Web Flasher">
+<TabItem value="111" label="Via Web Flasher">
 
 Conecta tu dispositivo al ordenador con un cable USB. 
 
@@ -67,7 +67,7 @@ Cuando la barra de progreso esté completamente llena, indica que el flasheo se 
 
 </TabItem>
 
-<TabItem value="222" label="Arrastrar y soltar">
+<TabItem value="222" label="Drag and Drop">
 Conecta tu dispositivo al ordenador con un cable USB.
 
 :::warning
@@ -110,7 +110,7 @@ El disco desaparecerá después de que el firmware se haya flasheado correctamen
 
 **Paso 2 Flashear firmware**
 
-Elige la última versión de firmware.
+Elige la versión de firmware más reciente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/VersionSelection.png" alt="pir" width={500} height="auto" /></p>
 
@@ -168,13 +168,13 @@ Haz clic en `Connect` y elige el dispositivo de destino. El ID de dispositivo pr
 Introduce el código PIN predeterminado `123456` y luego haz clic en `Pair` para conectar el dispositivo.
 
 :::tip
-Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `Unpair` el dispositivo. Luego intenta conectarte de nuevo.
+Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `Unpair` el dispositivo. Luego intenta reconectar de nuevo.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
 
 ### Configurar el LoRa
 
-Para empezar a comunicarte a través de la malla, debes configurar tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe establecerse de acuerdo con tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -194,7 +194,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 
 ## Configuración avanzada
 
-### Conectar mediante la interfaz web (BLE)
+### Conectar mediante la interfaz web（BLE）
 
 1. Abre la [MeshCore Web App](https://app.meshcore.nz/) y haz clic en el icono **Settings**.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue1.png" alt="pir" width={800} height="auto" /></p>
@@ -232,7 +232,7 @@ Si tienes dos dispositivos compatibles, y no hay muchos usuarios de MeshCore cer
 
 ### Anuncio
 
-MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, difunde esos datos por LoRa. MeshCore llama a esto un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
+MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, difunde esos datos por LoRa. MeshCore llama a eso un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
 
 - **Zero hop** significa que tu anuncio se difunde a cualquiera que pueda oírlo, y eso es todo.
 - **Flooded** significa que se difunde y luego se repite por todos los repetidores que lo escuchan.
@@ -259,19 +259,49 @@ import TabItem from '@theme/TabItem';
 
 El firmware X1 Companion (v1.18.0+) admite atajos de pulsaciones múltiples en el botón. Cada clic debe realizarse dentro de 0,5 segundos del anterior.
 
-| Acción del botón | Función | Indicador en pantalla |
-| --- | --- | --- |
-| Pulsación simple | Despertar / actualizar la pantalla | — |
-| Doble pulsación | Enviar un Anuncio | `Advert sent!` |
-| Triple pulsación | Cambiar el modo de alerta: Zumbido+Vibración → Solo zumbido → Solo vibración → Silencio | `Alerts: ...` |
-| Cuádruple pulsación | Activar/desactivar GPS | `GPS: Enabled` / `GPS: Disabled` |
-| Pulsación larga 3 s (con cable de carga) | Forzar reinicio / entrar en modo DFU | — |
+| Acción del botón | Función |
+| --- | --- |
+| Doble pulsación | Enviar un Anuncio |
+| Triple pulsación | Cambiar el modo de alerta: Zumbador+Vibración → Solo zumbador → Solo vibración → Silencio |
+| Cuádruple pulsación | Activar/desactivar el GPS |
+| Pulsación larga 3 s (con cable de carga) | Forzar reinicio / entrar en modo DFU |
 
 :::note
-- Con una triple pulsación, el nuevo modo de alerta se confirma con un pitido y/o una vibración, para que puedas cambiar de modo sin mirar la pantalla.
+- Con una triple pulsación, el nuevo modo de alerta se confirma con un pitido y/o una vibración, para que puedas cambiar de modo sin abrir la app.
 - Pulsar el botón 4 o más veces siempre se trata como una cuádruple pulsación.
 - Para más detalles sobre el comportamiento de la pulsación larga (reinicio y modo DFU), consulta [How to reboot the device](#how-to-reboot-the-device).
 :::
+
+### Comportamiento de alertas y notificaciones
+
+Cuando llega un mensaje, el dispositivo vibra **esté o no conectada la app**. La melodía del zumbador para los mensajes entrantes solo suena cuando la **app NO está conectada**, para que no recibas una doble notificación en la app y en el dispositivo.
+
+- Los cambios en el modo de alerta se guardan automáticamente y persisten tras los reinicios.
+- Después de cambiar a `Alerts: Silent` (triple pulsación), no hay confirmación con pitido ni vibración. Pulsa tres veces más para volver a `Alerts: Buzz+Vibe` y volverás a oír el pitido y sentir la vibración.
+
+### Indicadores LED de estado
+
+El LED RGB de estado usa diferentes colores para indicar el estado del dispositivo:
+
+| Efecto del LED | Significado |
+| --- | --- |
+| Barrido arcoíris (~1,2 s) | Encendiendo |
+| Barrido arcoíris (~0,8 s) | Nuevo mensaje recibido |
+| Destello corto verde (cada 4 s) | Latido normal: todo OK, no hay mensajes sin leer |
+| Destello corto azul | App conectada |
+| Destello ámbar (cada 4 s) | Mensajes sin leer |
+| Destello corto rojo | Batería baja (por debajo de 3,5 V) |
+| Respiración ámbar | Cargando (cuando no hay mensajes sin leer) |
+| Verde tenue fijo | Carga completa |
+
+Prioridad cuando se aplican varias condiciones: **Rojo (batería baja) > Ámbar (sin leer) > Azul (conectado) > Verde (latido)**. Los indicadores de carga (respiración / verde fijo) solo se muestran cuando no hay mensajes sin leer, por lo que nunca ocultan un recordatorio de mensaje sin leer.
+
+### Batería y carga
+
+- El porcentaje de batería que se muestra en la app se asigna linealmente desde 3,0 V (0%) hasta 4,2 V (100%).
+  - Esto se aplica al firmware MeshCore Companion. El firmware Meshtastic en su lugar usa la tabla de consulta OCV que se muestra en [Battery Mapping](#battery-mapping).
+- Cuando el voltaje de la batería cae por debajo de **3,5 V**, el LED de estado empieza a parpadear en rojo. Carga el dispositivo cuando veas el parpadeo rojo.
+- Mientras se está cargando, el LED respira en ámbar; cuando está completamente cargado permanece en verde tenue (siempre que no haya mensajes sin leer).
 
 ### Cómo comprobar el ID del dispositivo
 
@@ -297,31 +327,40 @@ Por ejemplo, el ID del dispositivo del dispositivo de abajo sería `A0D4`
 
  :::
 
+### ¿Por qué no estoy recibiendo mensajes?
+
+Si tu dispositivo parece estar conectado pero no estás recibiendo mensajes, comprueba lo siguiente en orden:
+
+1. **Mismo canal**: Asegúrate de que ambos dispositivos hayan seleccionado el mismo canal (para canales de grupo, el nombre del canal y la clave precompartida deben coincidir exactamente).
+2. **Misma región / frecuencia LoRa**: Ambos dispositivos deben estar configurados en la misma región y, por lo tanto, en la misma frecuencia. Consulta [Configure the LoRa](#configure-the-lora).
+3. **Dentro del alcance**: MeshCore utiliza transmisión LoRa favorable a la línea de visión. Las áreas abiertas al aire libre alcanzan mucho más lejos que en interiores; las paredes, edificios y el terreno reducen significativamente el alcance. Mueve ambos dispositivos a un lugar abierto e inténtalo de nuevo.
+4. **Condiciones de radio**: Comprueba los informes de calidad de señal en ambos dispositivos, consulta [Signal Quality](#signal-quality). Si la señal es deficiente, reduce la distancia al nodo más cercano o añade un repetidor entre los dos extremos.
+
 ## Solución de problemas
 
-### Error en la actualización de firmware / Recuperación OTA
+### Fallo en la actualización de firmware / Recuperación OTA
 
-Si tu SenseCAP MeshTracker X1 no se inicia, deja de responder o el LED blanco ⚪️ permanece encendido de forma continua después de una actualización de firmware, es posible que el dispositivo esté atascado en modo DFU. Prueba lo siguiente:
+Si tu SenseCAP MeshTracker X1 no se inicia, deja de responder o el LED blanco ⚪️ permanece fijo después de una actualización de firmware, es posible que el dispositivo esté atascado en modo DFU. Prueba lo siguiente:
 
-1. Fuerza un reinicio para salir del modo DFU: desconecta el cable de carga USB, mantén pulsado el botón del dispositivo, conecta el cable de carga USB y suelta el botón inmediatamente. No sigas manteniendo pulsado el botón: mantenerlo más de 3 segundos después de conectar el cable forzará que el dispositivo vuelva al modo DFU.
-2. Comprueba si el dispositivo se inicia con normalidad. Si no, conecta el dispositivo a tu ordenador con un cable de datos USB y sigue la guía de [Firmware Flashing](#firmware-flashing) para entrar en modo DFU, borrar la memoria flash y reinstalar el firmware MeshCore.
+1. Fuerza un reinicio para salir del modo DFU: desconecta el cable de carga USB, mantén pulsado el botón del dispositivo, conecta el cable de carga USB y suelta el botón inmediatamente. No sigas manteniendo pulsado el botón: mantenerlo pulsado durante más de 3 segundos después de conectar el cable forzará que el dispositivo vuelva al modo DFU.
+2. Comprueba si el dispositivo se inicia con normalidad. Si no es así, conecta el dispositivo a tu ordenador con un cable de datos USB y sigue la guía [Firmware Flashing](#firmware-flashing) para entrar en modo DFU, borrar la memoria flash y reinstalar el firmware MeshCore.
 3. Si el dispositivo aún no puede recuperarse, sigue [Bootloader Installation](#bootloader-installation) para volver a flashear el bootloader y luego reinstalar el firmware de la aplicación.
 
-No fuerces un reinicio ni desconectes el cable USB mientras el firmware se está borrando o flasheando. Si el dispositivo no puede entrar en modo DFU o no puede ser detectado por tu ordenador, ponte en contacto con el soporte técnico.
+No fuerces un reinicio ni desconectes el cable USB mientras el firmware se está borrando o flasheando. Si el dispositivo no puede entrar en modo DFU o ser detectado por tu ordenador, ponte en contacto con el soporte técnico.
 
 ### El dispositivo nunca se enciende
 
-- Usa un cable USB que sepas que funciona para `charge the device` de forma continua durante 1–2 horas para asegurarte de que la batería tiene suficiente energía para despertar el sistema.
+- Usa un cable USB que sepas que funciona para `charge the device` de forma continua durante 1–2 horas para asegurarte de que la batería tenga suficiente energía para activar el sistema.
 
 - Si el dispositivo sigue sin responder después de la carga, `perform a hard reset` de la siguiente manera: Desconecta el cable USB. Mantén pulsado el botón, luego conecta el cable USB y suelta el botón inmediatamente. Esto fuerza un reinicio del sistema.
 
  - Si aún así no hay suerte, conecta un cable USB a un ordenador. Mantén pulsado el botón del dispositivo, luego conecta el dispositivo al ordenador y comprueba si aparece o no un disco en tu PC. Si es así, vuelve a instalar el bootloader
 
-### El dispositivo se queda atrapado en un bucle de arranque
+### El dispositivo se queda atascado en un bucle de arranque
 
 **Descripción:**
 
-El dispositivo se reiniciará repetidamente y el puerto serie se conectará y desconectará repetidamente.
+El dispositivo se reiniciará repetidamente, y el puerto serie se conectará y desconectará repetidamente.
 
 **Solución:**
 
@@ -329,10 +368,10 @@ El dispositivo se reiniciará repetidamente y el puerto serie se conectará y de
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshTrackerX1/lv_0_20260817162729.gif" alt="pir" width={300} height="auto" /></p>
 
-El dispositivo está en modo DFU si el LED blanco permanece encendido de forma continua.
+El dispositivo está en modo DFU si el LED blanco permanece fijo.
 
 :::note
-Para entrar correctamente en modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
+Para entrar correctamente en modo DFU, debes realizar esta operación rápidamente. Puede que necesites intentarlo varias veces.
 :::
 
 - Paso 2: Borrar la Flash
@@ -387,7 +426,7 @@ Esta es la ubicación de instalación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuarios de Windows, puede que necesites añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se muestra a continuación:
+Para usuarios de Windows, es posible que tengas que añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se indica a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -395,7 +434,7 @@ Para usuarios de Windows, puede que necesites añadir la ruta manualmente. Copia
 
 Conecta tu dispositivo a tu PC y comprueba el número de puerto.
 
-Para usuarios de Windows, abre el administrador de dispositivos y ve a `port`; el número de puerto que aparece tras conectar el dispositivo es el número de puerto del dispositivo.
+Para usuarios de Windows, abre el administrador de dispositivos y ve a `port`; el número de puerto que aparece de nuevo después de la conexión del dispositivo es el número de puerto del dispositivo.
 
 Para usuarios de Mac, por ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
@@ -403,7 +442,7 @@ Para usuarios de Mac, por ejemplo:
 Para usuarios de Windows, por ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-**Paso 3: Flashear el bootloader**
+**Paso 3: Flashea el bootloader**
 
 En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
 
@@ -413,7 +452,7 @@ En la terminal o símbolo del sistema, navega al directorio donde descargaste el
 adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-Por favor cambia COMXX por tu número de COM. Por ejemplo, si tu dispositivo está en com6, cambia el comando a:
+Cambia COMXX por tu número de COM. Por ejemplo, si tu dispositivo está en com6, cambia el comando a:
 
 `adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
@@ -427,7 +466,7 @@ adafruit-nrfutil --verbose dfu serial --package Bootloader.zip -p /dev/tty.SLAB_
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-de-firmware) para flashear el firmware de la aplicación.
+Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-del-firmware) para flashear el firmware de la aplicación.
 
 
 **2) El dispositivo no puede entrar en modo DFU, pero se puede detectar el puerto serie**.
@@ -437,15 +476,15 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 - Ajusta la velocidad en baudios a `1200`.
 
 - Conecta el dispositivo.
-   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego [flashea el bootloader](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#instalación-de-bootloader) -> [borra la flash](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-de-firmware) -> [flashea el firmware](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-de-firmware).
+   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego [flashea el bootloader](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#instalación-del-bootloader) -> [borra el flash](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-del-firmware) -> [flashea el firmware](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-del-firmware).
 
 **3) El dispositivo no puede entrar en modo DFU y no se muestra ningún puerto serie**
 
-- Mantén pulsado el botón del dispositivo, luego conecta el cable de carga y suelta el botón inmediatamente. Después de que aparezca un disco en tu PC, es posible que veas el puerto serie.
+- Mantén pulsado el botón del dispositivo, luego conecta el cable de carga y suelta el botón inmediatamente. Después de que aparezca un disco en tu PC, podrás ver el puerto serie.
 
-- Si aún así no hay suerte, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
+- Si aún así no funciona, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
 
-**4) Si ninguno de los pasos anteriores funciona, ponte en contacto con el soporte técnico: support@sensecapmx.com**
+**4) Si ninguno de los pasos anteriores funciona, contacta con el soporte técnico: support@sensecapmx.com**
 
  ### El dispositivo se apaga automáticamente
 
@@ -454,11 +493,11 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
  - Después de encender el dispositivo, se apagará o reiniciará automáticamente al cabo de un rato. 
  - El registro del puerto serie funcionó durante un tiempo y luego se detuvo.
 
- Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando este se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto puede deberse a reiniciar o apagar manualmente y a la fuerza el dispositivo cuando se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
 - **Solución de problemas**
 
- [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-de-firmware) para realizar un borrado por flasheo. 
+ [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_meshtracker_x1_meshcore/#flasheo-del-firmware) para realizar un borrado por flasheo. 
 
 
 ### Calidad de la señal
@@ -467,9 +506,9 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
   - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente. 
 
-      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
+      Para conseguir el mejor efecto de señal, utiliza el dispositivo en una zona abierta y sin obstáculos, con una interferencia mínima.
 
-### Mapeo de batería
+### Mapeo de la batería
 
 ```bash
 #define OCV_ARRAY 4290, 4118, 4002, 3889, 3798, 3728, 3677, 3643, 3594, 3500, 3100

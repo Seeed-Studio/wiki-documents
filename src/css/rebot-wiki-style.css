@@ -446,6 +446,14 @@
   content: '−';
 }
 
+.robotics-doc .rebot-demo-details {
+  margin-bottom: 1.25rem;
+}
+
+.robotics-doc .rebot-demo-details > summary::after {
+  display: none;
+}
+
 .rebot-demo-details > summary:focus-visible {
   outline: 2px solid var(--ifm-color-primary);
   outline-offset: -3px;

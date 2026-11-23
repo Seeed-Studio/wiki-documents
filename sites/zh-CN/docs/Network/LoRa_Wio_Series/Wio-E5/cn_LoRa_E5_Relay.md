@@ -4,6 +4,7 @@ title: Wio-E5 中继功能
 keywords:
   - wio
   - docusaurus
+image: https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg
 slug: /lora-e5_relay
 sku: 317990687,317990829
 last_update:
@@ -31,56 +32,56 @@ url: https://wiki.seeedstudio.com/cn/lora-e5_relay/
 > LoRaWAN® 是在 LoRa Alliance® 许可下使用的标志。
 LoRa® 标志是 Semtech Corporation 或其子公司的商标。
 
-**适用硬件**：Wio-E5 LoRa® 模组
+**适用硬件**：Wio-E5 LoRa® 模块
 
-**固件**：自定义固件（下单前请先咨询）
+**固件**：定制固件（下单前请先咨询）
 
 **文档版本**：V1.0
 
 **服务器支持**：ChirpStack / The Things Network (TTN) 
 
-> 点击[此处](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/rhf0m055-v5.1.2-20250319.ebin.bin)下载 Wio-E5 LoRaWAN 中继功能固件。
+> 点击[这里](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/e5_relay-v5.1.2.bin)下载 Wio-E5 LoRaWAN 中继功能固件。
 
 ## 1. 概述
 
-Wio-E5 中继功能基于 [LoRaWAN Relay Specification](https://resources.lora-alliance.org/technical-specifications/ts011-1-0-0-relay)，允许处于无网关直连覆盖区域的设备，通过一个**中继主机（Relay Master）**接入 LoRaWAN 网络。
+Wio-E5 中继功能基于 [LoRaWAN Relay Specification](https://resources.lora-alliance.org/technical-specifications/ts011-1-0-0-relay)，使处于无网关直连覆盖区域的设备可以通过**中继主站（Relay Master）**接入 LoRaWAN 网络。
 
 ### 核心概念
 
-| 角色 | 描述 | 网络连接方式 |
+| 角色 | 描述 | 网络连接 |
 |:---:|:---|:---|
-| **Relay Master** | 作为桥接设备，监听并转发来自 `Slave` 的数据包到实际网关 | 与 LoRaWAN 网络直接连接（OTAA） |
+| **Relay Master** | 作为桥接设备，监听并转发来自 `Slave` 的数据包到实际网关 | 直接连接 LoRaWAN 网络（OTAA） |
 | **Relay Slave** | 位于信号盲区，通过 `Master` 间接接入网络 | 通过 `Master` 间接连接 |
 | **WOR** <br /> (Wake-on-Radio) | `Slave` 周期性发送唤醒帧，`Master` 监听并响应 | - |
 
 ### 工作流程要点
-- **CAD 侦测**：Master 每 1 秒开启一次信道活动检测（CAD）窗口，用于监听 Slave
-- **时间同步**：初次通讯后，Slave 与 Master 进行时间同步，将前导码符号数从 **259 减少到 15**，显著降低功耗和信道占用
-- **RXR 接收窗口**：Slave 使用第三个接收窗口（RX Window 3）接收下行数据
+- **CAD 检测**：Master 每 1 秒打开一次信道活动检测（Channel Activity Detection）窗口监听 Slave
+- **时间同步**：首次通信后，Slave 与 Master 进行时间同步，将前导码符号从 **259 减少到 15**，显著降低功耗和信道占用
+- **RXR 窗口**：Slave 使用第三接收窗口（RX Window 3）接收下行数据
 
 ---
 
 ## 2. 前置条件
 
 ### 2.1 硬件清单
-- **Wio-E5 模组** × 2（一个作为 Master，一个作为 Slave）
+- **Wio-E5 模块** × 2（一个作为 Master，一个作为 Slave）
 - **LoRaWAN 网关**（例如 SenseCAP M2 Multi-Platform）
 - **USB 转串口工具**（波特率：**9600**）
-- 安装了串口调试工具的**电脑**（如 XCOM、Putty）
+- **电脑**，已安装串口调试工具（例如 XCOM、Putty）
 
 ### 2.2 服务器环境选择
 
 | 阶段 | 推荐平台 | 说明 |
 |:---|:---|:---|
-| **测试** | **ChirpStack** | 原生支持 Relay，提供 Web UI 进行设备绑定 |
-| **量产** | **TTN** | 需要使用 TTN CLI 工具进行配置。TTN 目前可接收中继消息，但尚未提供完整的中继管理 UI |
+| **测试** | **ChirpStack** | 原生支持 Relay，提供用于设备绑定的 Web UI |
+| **量产** | **TTN** | 需要使用 TTN CLI 工具配置。TTN 目前可接收中继消息，但尚无完整的 Relay 管理界面 |
 
 ---
 
 ## 3. 设备配置（AT 指令）
 
 :::note 
-所有 AT 指令必须通过串口工具输入，波特率设置为 **9600**，并以回车换行（`<CR><LF>`）结尾。
+所有 AT 指令必须通过串口工具输入，波特率设置为 **9600**，并以回车结束（`<CR><LF>`）。
 :::
 
 ### 3.1 Relay Slave 配置
@@ -128,12 +129,12 @@ AT+LOG=DEBUG
 ### 4.1 注册网关和应用
 
 1. 注册网关：Gateways → Add gateway → 输入 Gateway EUI
-2. 创建应用：Applications → Add application → 输入名称（例如：relay-app）
+2. 创建应用：Applications → Add application → 输入名称（例如 relay-app）
 
-### 4.2 创建设备配置文件（Device Profiles）
+### 4.2 创建设备配置文件
 
 #### Slave 配置文件
-- General：选择区域（EU868），LoRaWAN 1.0.4
+- General：选择 Region（EU868）、LoRaWAN 1.0.4
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-profile-relay-slave-1.png" alt="pir" width={600} height="auto" /></p>
 
 
@@ -148,7 +149,7 @@ AT+LOG=DEBUG
 
 #### Master 配置文件
 
-- General：与上述相同
+- General：与上面相同
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-profile-relay-master-1.png" alt="pir" width={600} height="auto" /></p>
 
 
@@ -163,21 +164,21 @@ AT+LOG=DEBUG
 
 **步骤 1：注册 Slave 设备**
 - 进入 relay-app → Devices → Add
-- 填写：Device EUI、Join EUI，并选择 Slave 设备配置文件
+- 填写：Device EUI、Join EUI，选择 Slave 设备配置文件
 - 在 OTAA Keys 中输入 AppKey
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-relay-tx-1.png" alt="pir" width={600} height="auto" /></p>
 
 **步骤 2：注册 Master 设备**
-- 与上述相同，选择 Master 设备配置文件
+- 与上面相同，选择 Master 设备配置文件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-relay-rx-1.png" alt="pir" width={600} height="auto" /></p>
 
 **步骤 3：绑定关系（关键）**
-1. 进入 relay-app 的设备列表
+1. 进入 relay-app 中的设备列表
 2. 选择 Slave 设备 → 点击 Selected devices → Add to relay
 3. 在弹出窗口中选择对应的 Master 设备作为中继主机
-4. 校验：进入 Relays 选项卡，应能看到 Slave 列在对应 Master 之下
+4. 验证：进入 Relays 选项卡，应能看到 Slave 列在 Master 之下
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/add-relay-tx-to-relay-1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -188,12 +189,12 @@ AT+LOG=DEBUG
 ## 5. 服务器配置（TTN）
 
 :::note
-TTN 需要使用 **命令行界面（CLI）** 进行中继配置。Web UI 仅支持基础设备注册。
+TTN 需要使用 **命令行界面（CLI）** 进行 Relay 配置。Web UI 仅支持基础设备注册。
 :::
 
 ### 5.1 基础注册
 1. 注册网关：`Gateways` → `Register gateway` → 输入 EUI 和频率计划（Frequency Plan）
-2.  创建应用：`Applications` → `Add application` → 设置 ID（**relay-app**）
+2.  应用：`Applications` → `Add application` → 设置 ID（**relay-app**）
 3. 注册设备：
     - Slave：设置 ID（**relay-tx**），输入 `DevEUI`/`JoinEUI`/`AppKey`
     - Master：设置 ID（**relay-rx**），输入 `DevEUI`/`JoinEUI`/`AppKey`
@@ -226,7 +227,7 @@ ttn-lw-cli.exe relays uplink-forwarding-rules create relay-app relay-rx 0 --devi
 
 ### 6.1 启动 Relay Master
 
-打开串口工具，选择对应的串口并将波特率设置为 **9600**，用于监控日志（Log）。
+打开串口工具，选择对应串口并将波特率设置为 **9600**，用于监控日志。
 
 ```bash
 # 1. Turn on log output:
@@ -295,13 +296,13 @@ AT+CMSGHEX=AA
 
 ### 7. 重要说明
 
-1. 服务器选择：目前 TTN 仅支持通过 CLI 进行中继配置；ChirpStack 提供完整的 Web UI 支持。建议在测试阶段使用 ChirpStack。
+1. 服务器选择：目前 TTN 仅支持通过 CLI 进行 Relay 配置。ChirpStack 提供完整的 Web UI 支持。建议在测试阶段优先使用 ChirpStack。
 
 2. 功耗优化：时间同步后，从机 WOR 帧前导码从 259 减少到 15，显著降低功耗。推荐用于稳定部署场景。
 
-3. 固件要求：请确保 Wio-E5 固件支持 AT+STDRELAY 指令集。
+3. 固件要求：确保 Wio-E5 固件支持 AT+STDRELAY 指令集。
 
-4. 测试距离：在测试过程中保持从机与主机之间的距离（如 50-500 米），以验证中继转发效果。
+4. 距离测试：在测试过程中保持从机与主机之间的距离（例如 50-500 米），以验证中继转发效果。
 
 ## 资源
 

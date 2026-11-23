@@ -504,6 +504,16 @@ RealSense 深度相机可以为 LeRobot 提供 RGB-D 感知能力，适用于目
     <img width={420}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
 </div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/RealSense-D405-3D-Camera-p-6758.html" target="_blank" rel="noopener noreferrer" aria-label="购买 RealSense D405">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 RealSense D405 是一款短距离双目深度相机，专为高精度近距离任务（如桌面机器人操作）设计，典型工作范围为 **7 cm 到 50 cm**。
 
@@ -512,6 +522,16 @@ RealSense D405 是一款短距离双目深度相机，专为高精度近距离�
 <div align="center">
     <img width={420}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
+</div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html" target="_blank" rel="noopener noreferrer" aria-label="购买 RealSense D435i">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
 </div>
 
 RealSense D435i 集成了深度感知、RGB 成像以及 IMU，适用于中近距离应用，例如 3D 重建、SLAM 以及机器人环境感知。
