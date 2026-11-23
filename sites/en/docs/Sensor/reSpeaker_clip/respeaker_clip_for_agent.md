@@ -10,7 +10,7 @@ keywords:
   - speech-to-text
   - RTC
   - BLE
-image: /img/respeaker_clip/respeaker_clip_for_agent_thumbnail.webp
+image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/respeaker_clip_render_02.png
 slug: /respeaker_clip_for_agent
 sku: 100020126
 last_update:
