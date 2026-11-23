@@ -46,7 +46,7 @@ import Link from '@docusaurus/Link';
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html" target="_blank">
+<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://detail.tmall.com/item.htm?ali_refid=a3_430582_1006%3A1275650054%3AH%3AYucC228IGpqMtf32QaDj%2BGR0sEFBfk9z%3Ae391f80d3270e0fba3f97fd66100a726&amp;ali_trackid=318_e391f80d3270e0fba3f97fd66100a726&amp;id=877820346195&amp;mi_id=0000QdaT5iMFgRPNvhyKJJ0Pvv83CID3s-w3LQcF_zT-XZ0&amp;mm_sceneid=0_0_894990015_0_0&amp;priceTId=215042e217949669376555482e0e61&amp;spm=a21n57.1.hoverItem.1&amp;utparam=%7B%22aplus_abtest%22%3A%2217b960a684dfd2c5a93d48bbf5436016%22%7D&amp;xxc=ad_ztc&amp;skuId=6321729994785" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> SO-ARM101 立即获取 🖱️</font></span></strong>
 </a></div>
 
