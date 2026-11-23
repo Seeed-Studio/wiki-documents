@@ -1,5 +1,5 @@
 ---
-description: Comece a usar o Ripple UI no Wio Tracker L2 Pro. Saiba como gravar firmware, configurar redes MeshCore, enviar mensagens, usar mapas e trilhas de GPS e desbloquear recursos premium.
+description: Comece a usar o Ripple UI no Wio Tracker L2 Pro. Saiba como gravar o firmware, configurar redes MeshCore, enviar mensagens, usar mapas e trilhas de GPS e desbloquear recursos premium.
 title: Introdução ao Ripple
 keywords:
   - Ripple
@@ -68,7 +68,7 @@ O firmware atualizado usa perfis MeshCore e não oferece mais Ripple na tela New
 
 ## Gravar o firmware
 
-Se o seu dispositivo já tiver a versão do Ripple UI descrita aqui, pule para **Configuração inicial**.
+Se o seu dispositivo já tiver a versão do Ripple UI descrita aqui, pule para **[Configuração inicial](#configuração-inicial)**.
 
 Duas variantes de firmware estão disponíveis:
 
@@ -102,7 +102,7 @@ A opção `Erase device` mostrada acima apaga dados e configurações na memóri
 
 **Etapa 4: Reinicie**
 
-Depois que a gravação terminar, pressione `RST` para iniciar o Ripple UI.
+Após a conclusão da gravação, pressione `RST` para iniciar o Ripple UI.
 
 :::tip
 
@@ -120,7 +120,7 @@ Siga os tutoriais de tela sensível ao toque e botões na primeira inicializaç�
 
 Ripple UI combina entrada por tela sensível ao toque com dois botões de hardware:
 
-- **Tela ligada/desligada (botão superior):** Pressione para ativar a tela ou desligá-la. Desligar a tela não desliga o dispositivo.
+- **Tela ligar/desligar (botão superior):** Pressione para ativar a tela ou desligá-la. Desligar a tela não desliga o dispositivo.
 - **ENTER (botão lateral U/B):** Pressione para confirmar uma seleção, salvar alterações ou enviar uma entrada quando solicitado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_Button_Indication.webp" alt="Botões de hardware do L2 Pro: botão superior para ligar/desligar a tela e botão lateral U/B para ENTER" width={700} height="auto" /></p>
@@ -135,7 +135,7 @@ Ripple UI combina entrada por tela sensível ao toque com dois botões de hardwa
 
 4. Salve o perfil. Se solicitado, reinicie o dispositivo para aplicar as configurações.
 
-Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo pré-ajuste é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas frequência e SF.
+Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo pré-ajuste é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas a frequência e o SF.
 
 ### Defina seu nome
 
@@ -177,13 +177,13 @@ A captura de tela mostra nomes usados durante os testes. Sua lista dependerá de
 
 `M` exibe o mapa, posições e qualquer trilha de GPS carregada.
 
-- Arraste a tela para mover.
+- Arraste a tela para mover o mapa.
 
 - Toque em `+` ou `−` para aplicar zoom. Pinçar para aplicar zoom não é suportado.
 
 - Toque no botão de seguir localização para manter o mapa centralizado na sua posição. O botão fica laranja quando ativado e a tela permanece ligada.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_M.jpg" alt="Mapa do Ripple UI e controles de zoom" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_M.jpg" alt="Mapa e controles de zoom do Ripple UI" width={500} height="auto" /></p>
 
 </TabItem>
 
@@ -225,9 +225,9 @@ Abra o menu da tela inicial no canto inferior esquerdo para acessar `Extra`, que
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_screenshot.gif" alt="Pressionando e segurando o canto superior esquerdo para fazer uma captura de tela" width={500} height="auto" /></p>
 
-As capturas de tela geradas são arquivos BMP com nomes de arquivo de data e hora, como mostrado abaixo.
+As capturas de tela são arquivos BMP com nomes de arquivo contendo data e hora, como mostrado abaixo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_bmp_screenshot.png" alt="Capturas de tela BMP geradas com nomes de arquivo de data e hora" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_bmp_screenshot.png" alt="Capturas de tela BMP com nomes de arquivo contendo data e hora" width={800} height="auto" /></p>
 
 ## Envie sua primeira mensagem
 
@@ -239,7 +239,7 @@ As capturas de tela geradas são arquivos BMP com nomes de arquivo de data e hor
 
 3. Defina `Advert` como `On` para permitir anúncios de identidade.
 
-4. Abra `Discover` na página `L` e aguarde os nós próximos aparecerem.
+4. Abra `Discover` a partir da página `L` e aguarde até que nós próximos apareçam.
 
 Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
@@ -263,7 +263,7 @@ Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
 4. Repita no outro dispositivo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_contact.png" alt="Descubra nós próximos, adicione um nó aos contatos e visualize-o na lista de contatos" width={1100} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_contact.png" alt="Descobrir nós próximos, adicionar um nó aos contatos e visualizá-lo na lista de contatos" width={1100} height="auto" /></p>
 
 ### Enviar uma mensagem direta
 
@@ -275,7 +275,7 @@ Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
 4. Abra a conversa no outro dispositivo e responda.
 
-Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio falhar, verifique as configurações de rádio e a distância, depois tente novamente. Se a rota anterior não puder mais ser usada, selecione `Flood (reset)` em `Path` para encontrar uma nova rota.
+Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio falhar, verifique as configurações de rádio e a distância e tente novamente. Se a rota anterior não estiver mais utilizável, selecione `Flood (reset)` em `Path` para encontrar uma nova rota.
 
 ## Mapas e trilhas de GPS
 
@@ -309,11 +309,11 @@ Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio 
 
 5. Confirme que o menu Wi-Fi mostra um indicador de conexão laranja.
 
-6. Abra o mapa e desloque ou aplique zoom até a área desejada. Os blocos são baixados sob demanda e armazenados em cache no cartão SD.
+6. Abra o mapa e desloque ou aplique zoom até a área necessária. Os blocos são baixados sob demanda e armazenados em cache no cartão SD.
 
 ### Definir a localização usada em anúncios
 
-| Configuração de localização de anúncio | Localização usada |
+| Configuração de localização do anúncio | Localização usada |
 | --- | --- |
 | `GPS` | A posição obtida pelo GPS do dispositivo |
 | `Manual` | Uma posição fixa selecionada com `Advert Loc` no mapa |
@@ -330,7 +330,7 @@ Encontre e abra `Unlock` nos menus do dispositivo. Anote o **número de série**
 
 ### Obter um código de desbloqueio
 
-Abra a [página de código de desbloqueio do Ripple Ultra do Scott](https://buymeacoffee.com/ripplebiz/e/249834), siga as instruções de compra e forneça o número de série exibido no seu dispositivo. As licenças são emitidas por dispositivo; insira apenas um número de série de dispositivo para cada licença.
+Abra a [página de código de desbloqueio Ripple Ultra do Scott](https://buymeacoffee.com/ripplebiz/e/249834), siga as instruções de compra e forneça o número de série exibido no seu dispositivo. As licenças são emitidas por dispositivo; insira apenas um número de série de dispositivo para cada licença.
 
 Se o seu dispositivo veio com um código de desbloqueio aplicável, prossiga para a próxima etapa.
 
@@ -344,13 +344,13 @@ Se o seu dispositivo veio com um código de desbloqueio aplicável, prossiga par
 
 4. Abra o recurso premium que você deseja usar e confirme que ele está disponível.
 
-Guarde o código junto com o número de série do dispositivo. Em nosso teste, apagar a flash com `erase_flash` e reinstalar o firmware exigiu inserir novamente o código de desbloqueio do dispositivo.
+Mantenha o código junto com o número de série do dispositivo. Em nosso teste, apagar a flash com `erase_flash` e reinstalar o firmware exigiu inserir novamente o código de desbloqueio do dispositivo.
 
 ### Recursos premium
 
 - **Telemetria automática:** Solicita telemetria quando você abre uma conversa com um caminho direto. Mostra localização, direção e distância se o outro nó permitir telemetria de GPS.
 
-- **Room Admin CLI:** Acesse a linha de comando do Room Server com a senha de administrador.
+- **Room Admin CLI:** Acesse a linha de comando do Room Server com sua senha de administrador.
 
 - **Repeater Admin:** Verifique o status do repetidor e gerencie o nó remotamente.
 
@@ -398,7 +398,7 @@ Esta tela mostra o código de retorno RadioLib da inicialização do rádio LoRa
 
 ### Por que o mapa está em branco
 
-Verifique o formato do cartão SD, os caminhos dos blocos e se existem blocos para a área exibida. Em um dispositivo bloqueado, verifique também se o nível de zoom está entre 1–9. Uma posição de GPS válida não significa que os blocos de mapa foram baixados.
+Verifique o formato do cartão SD, os caminhos dos blocos e se existem blocos para a área exibida. Em um dispositivo bloqueado, verifique também se o nível de zoom está entre 1 e 9. Uma posição GPS válida não significa que os blocos de mapa foram baixados.
 
 ### Mapeamento da bateria
 
