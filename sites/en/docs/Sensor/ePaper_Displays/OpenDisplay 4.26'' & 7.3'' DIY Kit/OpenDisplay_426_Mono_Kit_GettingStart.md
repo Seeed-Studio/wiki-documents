@@ -179,7 +179,9 @@ Power on the display within Bluetooth range. Home Assistant should discover it a
 
 The device page shows battery, buttons, firmware status, and display content. More detail: [Home Assistant integration](https://github.com/OpenDisplay/Home_Assistant_Integration)
 
-:::note While Home Assistant ships with an OpenDisplay Integration you may need to install the marketplace version by the OpenDisplay team above in order to access some features like "opendisplay.drawcustom".:::
+:::note
+While Home Assistant ships with an OpenDisplay Integration you may need to install the marketplace version by the OpenDisplay team above in order to access some features like "opendisplay.drawcustom".
+:::
 
 ## Going further
 
