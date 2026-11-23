@@ -301,6 +301,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS とビジュアルグラスピング' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS と手首追従' },
+        { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS とバイマンュアルコラボレーション' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS と ROS2' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS と Isaac Sim' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web 制御システム：実機と MuJoCo' },
@@ -353,6 +354,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Grasping_Demo`, label: 'reBot-DM ビジュアルグラスプ' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM と ROS2' },
+        { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM とバイマンュアルコラボレーション' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM と Isaac Sim' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web 制御システム：実機と MuJoCo' },
       ],

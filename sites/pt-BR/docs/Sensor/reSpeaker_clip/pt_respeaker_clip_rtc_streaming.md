@@ -1,27 +1,27 @@
 ---
 description: 'Transmita áudio Opus ao vivo do reSpeaker Clip via BLE com o RTC SDK: execute o demo de FFT, entenda o estabelecimento de sessão, escreva um receptor mínimo e decodifique áudio em tempo real.'
-title: Construa Streaming de Áudio em Tempo Real com o reSpeaker Clip RTC SDK
+title: Construa Streaming de Áudio em Tempo Real com reSpeaker Clip RTC SDK
 keywords:
   - reSpeaker clip
   - rtc streaming
-  - áudio em tempo real
-  - streaming de áudio ao vivo
+  - real-time audio
+  - live audio streaming
   - opus
   - ble
-  - espectro fft
+  - fft spectrum
   - python sdk
 image: https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-banner.jpg
 slug: /respeaker_clip_rtc_streaming
 sku: 100020126
 last_update:
-  date: 08/24/2026
+  date: 11/20/2026
   author: Ray
 createdAt: '2026-08-24'
-updatedAt: '2026-08-27'
+updatedAt: '2026-11-20'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_clip_rtc_streaming/
 ---
 
-# Construa Streaming de Áudio em Tempo Real com o reSpeaker Clip RTC SDK
+# Construa Streaming de Áudio em Tempo Real com reSpeaker Clip RTC SDK
 
 Este tutorial ensina como receber áudio ao vivo de um reSpeaker Clip enquanto ele está sendo capturado, em vez de gravar primeiro e baixar depois. Você executará um demo de espectro FFT em tempo real, entenderá como uma sessão RTC é estabelecida, escreverá você mesmo uma aplicação mínima de streaming e aprenderá como os dados de áudio realmente se parecem no host.
 
@@ -31,7 +31,7 @@ Este tutorial ensina como receber áudio ao vivo de um reSpeaker Clip enquanto e
 
 ### 1.1 O que é RTC Streaming no reSpeaker Clip?
 
-A gravação normal escreve o áudio no cartão SD e você o baixa depois. O streaming RTC ignora completamente o cartão SD: o áudio codificado é enviado ao seu host à medida que é produzido.
+A gravação normal escreve o áudio no cartão SD e você o baixa depois. O streaming RTC ignora completamente o cartão SD: o áudio codificado é enviado para o seu host à medida que é produzido.
 
 ```text
 Recording:
@@ -47,7 +47,7 @@ A diferença importa sempre que o "agora" importa: visores de espectro ao vivo, 
 
 Depois de concluir este tutorial você será capaz de:
 
-- conectar a um reSpeaker Clip com o Python SDK;
+- conectar a um reSpeaker Clip com o SDK em Python;
 - criar uma sessão RTC e receber pacotes Opus ao vivo;
 - explicar todo o ciclo de vida de um stream RTC;
 - executar o demo de FFT e ler sua saída;
@@ -59,15 +59,15 @@ Depois de concluir este tutorial você será capaz de:
 
 O caminho do áudio no modo RTC é um pipeline direto do microfone até a sua aplicação:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_streaming_architecture.png" alt="Arquitetura de RTC streaming: microfone passando por DSP e codificador Opus até BLE e o Python SDK" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_streaming_architecture.png" alt="Arquitetura de RTC streaming: microfone passando por DSP e codificador Opus até BLE e o SDK em Python" width={900} height="auto" /></p>
 
-No modo RTC o áudio é produzido em tempo real, nunca toca o cartão SD, e o host pode processá-lo enquanto ele chega. Nada espera uma gravação terminar, porque não há arquivo de gravação.
+No modo RTC o áudio é produzido em tempo real, nunca toca o cartão SD, e o host pode processá-lo enquanto ele chega. Nada espera uma gravação terminar, porque não existe arquivo de gravação.
 
 ### 2.2 Ciclo de vida de uma sessão RTC
 
-Um stream RTC é estabelecido em duas etapas, e então flui até que você o pare:
+Um stream RTC é estabelecido em duas etapas, depois flui até que você o pare:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_session_lifecycle.png" alt="Diagrama de sequência do ciclo de vida da sessão RTC entre o app Python e o reSpeaker Clip" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_session_lifecycle.png" alt="Diagrama de sequência do ciclo de vida da sessão RTC entre o app em Python e o reSpeaker Clip" width={900} height="auto" /></p>
 
 As duas chamadas se encaixam em um modelo mental simples:
 
@@ -80,59 +80,69 @@ Depois de `start_rtc()` o dispositivo executa o pipeline do microfone, mas ainda
 
 ### 2.3 Por que o RTC usa uma sessão?
 
-`start_rtc()` cria uma sessão de áudio em tempo real e retorna seu ID de sessão. `stream_rtc(session, receiver)` então diz ao dispositivo: o host agora quer consumir o áudio ao vivo desta sessão. Concretamente, ele emite `AT+DOWNLOAD=<session>`, e o firmware descarta tudo o que foi enfileirado antes daquele momento — RTC entrega o "agora", então o áudio produzido antes de você se inscrever nunca é enviado.
+`start_rtc()` cria uma sessão de áudio em tempo real e retorna seu ID de sessão. `stream_rtc(session, receiver)` então diz ao dispositivo: o host agora quer consumir o áudio ao vivo desta sessão. Concretamente, ele emite `AT+DOWNLOAD=<session>`, e o firmware descarta tudo o que estava enfileirado antes daquele momento — RTC entrega o "agora", então o áudio produzido antes de você se inscrever nunca é enviado.
 
 Esta é a diferença fundamental em relação ao download de arquivo: não pense em uma sessão RTC como um arquivo que cresce no dispositivo. É uma fonte ao vivo à qual você se conecta, e qualquer coisa que você perder antes de se conectar é perdida por projeto.
 
-## 3. Prepare o RTC SDK
+## 3. Preparar o RTC SDK
 
 ### 3.1 Requisitos
 
 - um reSpeaker Clip;
-- firmware que suporte RTC streaming (a linha de desenvolvimento `feat/rtc-live-streaming`);
+- firmware **v0.1.5 ou posterior**, a primeira versão oficial com `AT+START=rtc` (verifique com `AT+VERSION` ou `clip.firmware_version()`; se o seu Clip estiver executando uma build anterior, atualize-o com o [Guia de Atualização de Firmware](/pt-br/respeaker_clip#guia-de-atualização-de-firmware));
 - Python 3.10+;
 - um ambiente BLE funcional no host;
-- o reSpeaker Clip Python SDK obtido a partir do código-fonte.
+- o SDK em Python do reSpeaker Clip obtido do repositório oficial [`Seeed-Studio/reSpeaker_Clip`](https://github.com/Seeed-Studio/reSpeaker_Clip).
 
-### 3.2 Instale o SDK
+### 3.2 Instalar o SDK
 
-O RTC streaming é distribuído no branch de desenvolvimento, então faça checkout dele e instale o SDK com os extras de BLE e exemplos:
+O streaming RTC é fornecido na versão oficial v0.1.5. Clone o repositório oficial, faça checkout dessa tag e instale o SDK com os extras de BLE e exemplos:
 
 ```bash
-git clone https://github.com/rayheto/reSpeaker_Clip.git
+git clone https://github.com/Seeed-Studio/reSpeaker_Clip.git
 cd reSpeaker_Clip
-git checkout feat/rtc-live-streaming
+git checkout v0.1.5
 
 cd sdk
 python -m pip install -e '.[ble,examples]'
 ```
+
+A tag fixa a versão alvo deste tutorial; `main` acompanha a mesma API de RTC e recebe correções posteriores.
 
 Os dois extras são importantes para este tutorial:
 
 - `ble` instala o transporte BLE (Bleak);
 - `examples` instala as dependências de que o demo de FFT precisa (decodificador Opus e NumPy).
 
-O transporte Wi-Fi/UDP não precisa de dependência extra, mas o RTC streaming neste tutorial roda sobre BLE.
+O streaming RTC ao vivo é apenas via BLE nesta versão: ele é transportado nas notificações de dados de arquivo BLE, não sobre o transporte Wi-Fi/UDP.
 
-## 4. Execute o Demo de FFT do RTC
+## 4. Executar o Demo de FFT do RTC
 
 Esta seção é o seu verdadeiro ponto de entrada: execute o demo primeiro, entenda-o por último.
 
-### 4.1 Inicie o Demo
+### 4.1 Iniciar o Demo
 
-A partir da raiz do repositório, execute o exemplo usando o endereço do seu dispositivo:
+A partir do diretório `sdk` onde a etapa de instalação o deixou, execute o exemplo usando o endereço do seu dispositivo:
 
 ```bash
-python sdk/examples/demo_stream_fft_display.py \
+python examples/demo_stream_fft_display.py \
   --address AA:BB:CC:DD:EE:FF \
   --duration 30
 ```
 
-Omitir `--address` faz com que seja feita uma varredura automática por um dispositivo BLE chamado "Clip", e omitir `--duration` faz o streaming continuar até Ctrl-C:
+Omitir `--address` faz uma varredura automática por um dispositivo BLE chamado "Clip", e omitir `--duration` faz o streaming até Ctrl-C:
 
 ```bash
-python sdk/examples/demo_stream_fft_display.py
+python examples/demo_stream_fft_display.py
 ```
+
+Se você só quiser provar que o firmware lançado faz streaming antes de ler qualquer código, o SDK também instala `clip.stream`, que captura os mesmos quadros ao vivo em `rtc-<session>.bin` e imprime diagnósticos do stream:
+
+```bash
+clip.stream --transport ble --address AA:BB:CC:DD:EE:FF --duration 10
+```
+
+O demo também aceita `--depth-frames` para alterar a profundidade do buffer de jitter (padrão 5 quadros; `0` desativa o buffer).
 
 ### 4.2 O que acontece quando o Demo inicia?
 
@@ -155,20 +165,20 @@ Streaming for 50s ...
 frames received : 2503
 bytes received  : 191846
 seq discontin.  : 0
-avg inter-frame : 20.0 ms (max 35 ms)
+avg inter-frame : 20.0 ms (max 120 ms)
 ```
 
 - **frames received / bytes received** — quantos pacotes Opus chegaram e seu tamanho total.
 - **avg inter-frame** — o intervalo médio entre chegadas de pacotes. O RTC produz um quadro Opus aproximadamente a cada 20 ms, então enquanto o stream estiver em execução você deve ver cerca de 50 pacotes por segundo e uma média próxima de 20 ms.
-- **seq discontin.** — descontinuidades de sequência observadas; em um link BLE saudável isso permanece 0.
+- **seq discontin.** — eventos observados de descontinuidade de sequência. O firmware avança o número de sequência apenas depois que um quadro foi entregue ao link BLE, então descartes na fila do dispositivo e em pausas não consomem números; trate um valor diferente de zero como uma anomalia de protocolo ou de link, e não como uma contagem direta de perda de pacotes.
 
-Abaixo disso, o demo também imprime estatísticas do JitterBuffer (underruns, descartes de recuperação, distribuição da profundidade da fila) e um detalhamento de latência (fila / decodificação / FFT). A Seção 7 explica o que elas significam.
+Números exatos variam com o link BLE e com o tempo de streaming. Abaixo disso, o demo também imprime estatísticas do JitterBuffer (underruns, descartes de recuperação, distribuição de profundidade da fila) e um detalhamento de latência (fila / decodificação / FFT). A Seção 7 explica o que eles significam.
 
-## 5. Construa uma aplicação mínima de RTC Streaming
+## 5. Construir uma aplicação mínima de RTC Streaming
 
-Esta seção é o núcleo do tutorial: o mesmo estabelecimento de RTC que o demo executa, reduzido à sua essência para que você possa construir em cima dele.
+Esta seção é o núcleo do tutorial: o mesmo estabelecimento de RTC que o demo executa, reduzido à essência para que você possa construir em cima dele.
 
-### 5.1 Conecte ao reSpeaker Clip
+### 5.1 Conectar ao reSpeaker Clip
 
 Tudo começa com o transporte e o cliente, exatamente como no [Guia Básico do SDK](/pt-br/respeaker_clip_basic_sdk_guide):
 
@@ -190,9 +200,9 @@ asyncio.run(main())
 
 `BleTransport` é responsável pela comunicação BLE; `ClipClient` fornece as APIs de alto nível do Clip em cima dele.
 
-### 5.2 Crie um StreamReceiver
+### 5.2 Criar um StreamReceiver
 
-O receiver transforma quadros de stream recebidos em invocações de callback. O consumidor mais simples possível imprime o comprimento de cada pacote:
+O receiver transforma quadros de stream recebidos em invocações de callback. O consumidor mais simples possível imprime o tamanho de cada pacote:
 
 ```python
 from clip.stream import StreamReceiver
@@ -205,9 +215,9 @@ def on_frame(opus_packet: bytes) -> None:
 receiver = StreamReceiver(on_frame=on_frame)
 ```
 
-Uma invocação de callback equivale a um pacote Opus. `on_frame` roda inline no caminho de recepção, então mantenha-o não bloqueante — entregue os bytes a uma fila, uma thread ou outra tarefa, e faça o trabalho pesado em outro lugar.
+Uma invocação de callback equivale a um pacote Opus. `on_frame` é executado inline no caminho de recepção, então mantenha-o não bloqueante — entregue os bytes a uma fila, uma thread ou outra tarefa, e faça o trabalho pesado em outro lugar.
 
-### 5.3 Inicie uma sessão RTC
+### 5.3 Iniciar uma sessão RTC
 
 ```python
 session = await clip.start_rtc()
@@ -216,18 +226,20 @@ print("RTC session:", session)
 
 Isso envia `AT+START=rtc`; o dispositivo inicia seu pipeline de áudio RTC e retorna o ID da sessão. Neste ponto o dispositivo está apenas produzindo áudio — o host ainda não se inscreveu, e nada está fluindo para você.
 
-### 5.4 Comece a receber áudio RTC
+### 5.4 Começar a receber áudio RTC
 
 ```python
 token = await clip.stream_rtc(session, receiver)
 await receiver.wait_start(timeout=10)
 ```
 
-`stream_rtc()` conecta seu receiver ao caminho de quadros do transporte e emite `AT+DOWNLOAD=<session>`; a partir de agora o dispositivo envia quadros `STREAM_START` e depois `STREAM_DATA` para dentro de `receiver`. `wait_start()` retorna assim que `STREAM_START` tiver chegado — esse é o momento em que o canal de dados ao vivo está realmente estabelecido.
+`stream_rtc()` conecta o seu receiver ao caminho de quadros do transporte e emite `AT+DOWNLOAD=<session>`; a partir de agora o dispositivo envia quadros `STREAM_START` e depois `STREAM_DATA` para `receiver`. `wait_start()` retorna assim que `STREAM_START` tiver chegado — esse é o momento em que o canal de dados ao vivo está realmente estabelecido.
 
-O `token` retornado é um lease no slot de manipulador de quadros do transporte; você irá liberá-lo quando o stream terminar (Seção 5.6).
+Antes de enviar `STREAM_START`, o firmware espera por parâmetros de conexão BLE apertados (até cerca de 5 segundos), então um breve atraso aqui é normal e `timeout=10` deixa uma margem de segurança.
 
-### 5.5 Receba pacotes Opus
+O `token` retornado é uma concessão (lease) no slot do manipulador de quadros do transporte; você irá liberá-lo quando o stream terminar (Seção 5.6).
+
+### 5.5 Receber Pacotes Opus
 
 Voltando ao seu callback:
 
@@ -236,17 +248,21 @@ def on_frame(opus_packet: bytes) -> None:
     print(len(opus_packet))
 ```
 
-Este é o ponto de entrada da sua aplicação. O que quer que você construa — FFT, VAD, ASR em streaming, um relay WebSocket — começa a partir destes bytes. A próxima seção explica exatamente o que eles contêm.
+Este é o ponto de entrada da sua aplicação. Seja o que for que você construir — FFT, VAD, ASR em streaming, um relay WebSocket — começa a partir desses bytes. A próxima seção explica exatamente o que eles contêm.
 
-### 5.6 Pare o stream RTC
+### 5.6 Parar o Stream RTC
 
-Parar espelha a API de gravação: `stop_recording()` envia `AT+STOP`, o dispositivo responde com `STREAM_END`, e você libera o lease do manipulador:
+Parar espelha a API de gravação: `stop_recording()` envia `AT+STOP`, o dispositivo responde com `STREAM_END`, e você libera a concessão do handler:
 
 ```python
-await clip.stop_recording()
-await receiver.wait_end(timeout=5)
-transport.detach_file_frame_handler(token)
+try:
+    await clip.stop_recording()
+    await receiver.wait_end(timeout=5)
+finally:
+    transport.detach_file_frame_handler(token)
 ```
+
+Liberar a concessão em `finally` mantém o slot de manipulador de quadros do transporte limpo quando o stream falha ou o script é interrompido.
 
 A aplicação mínima completa, montada:
 
@@ -264,13 +280,15 @@ async def main() -> None:
 
         session = await clip.start_rtc()
         token = await clip.stream_rtc(session, receiver)
-        await receiver.wait_start(timeout=10)
+        try:
+            await receiver.wait_start(timeout=10)
 
-        await asyncio.sleep(10)          # consume the live stream for 10 s
+            await asyncio.sleep(10)      # consume the live stream for 10 s
 
-        await clip.stop_recording()
-        await receiver.wait_end(timeout=5)
-        transport.detach_file_frame_handler(token)
+            await clip.stop_recording()
+            await receiver.wait_end(timeout=5)
+        finally:
+            transport.detach_file_frame_handler(token)
 
         print("frames:", receiver.frames_received, "bytes:", receiver.bytes_received)
 
@@ -285,19 +303,21 @@ BLE connect -> start_rtc() -> stream_rtc() -> STREAM_START
 -> STREAM_DATA x N -> stop_recording() -> STREAM_END -> detach handler
 ```
 
-## 6. Entendendo os dados de áudio RTC
+## 6. Entendendo os Dados de Áudio RTC
 
-### 6.1 O que o StreamReceiver retorna?
+### 6.1 O que o StreamReceiver Retorna?
 
-Seu callback recebe `bytes` simples — um pacote de áudio codificado em Opus por chamada. Não é WAV, não é PCM e não são notificações BLE brutas: o SDK já analisou os quadros de transporte RTC (`STREAM_START` / `STREAM_DATA` / `STREAM_END`) e entrega apenas o payload.
+Seu callback recebe `bytes` simples — um pacote de áudio codificado em Opus por chamada. Não é WAV, não é PCM, e não são notificações BLE brutas: o SDK já analisou os quadros de transporte RTC (`STREAM_START` / `STREAM_DATA` / `STREAM_END`) e entrega apenas o payload.
 
 ```text
 BLE STREAM_DATA -> SDK parses the frame -> StreamReceiver -> Opus payload (bytes)
 ```
 
-O receptor também mantém estatísticas em tempo real que você pode ler a qualquer momento: `frames_received`, `bytes_received`, `sequence_gaps`, `avg_inter_frame_ms`, `max_inter_frame_ms` e `first_frame_delay_s`. Após `STREAM_END`, `receiver.end_reason` informa por que o stream terminou (parado, expirado ou desconectado).
+O receiver também mantém estatísticas em tempo real que você pode ler a qualquer momento: `frames_received`, `bytes_received`, `sequence_gaps`, `avg_inter_frame_ms`, `max_inter_frame_ms` e `first_frame_delay_s`. Após `STREAM_END`, `receiver.end_reason` informa por que o stream terminou (parado, expirado ou desconectado).
 
-### 6.2 Formato de áudio RTC
+Um receiver pode alimentar mais de um consumidor: `receiver.add_sink(sink)` registra uma derivação adicional de quadros brutos que roda antes de `on_frame`. O SDK traz dois sinks prontos — `StreamCapture` grava os mesmos pacotes Opus em um log `.bin` com prefixo de comprimento, e `StreamConsumer` envia blocos e pilhas limitados para callbacks assíncronos para encaminhamento ou ASR em streaming. O comando `clip.stream` da Seção 4.1 é construído sobre `StreamCapture`.
+
+### 6.2 Formato de Áudio RTC
 
 O stream RTC atual é:
 
@@ -308,7 +328,7 @@ Channels: mono
 Frame duration: ~20 ms (320 samples)
 ```
 
-Portanto, um quadro a cada cerca de 20 ms, ou seja, cerca de 50 quadros por segundo enquanto o stream estiver em execução — o mesmo número que você viu na saída `avg inter-frame` da demonstração.
+Portanto, um quadro aproximadamente a cada 20 ms, ou seja, cerca de 50 quadros por segundo enquanto o stream roda — o mesmo número que você viu na saída `avg inter-frame` do demo.
 
 ### 6.3 De Opus para PCM
 
@@ -320,7 +340,7 @@ import numpy as np
 samples = np.frombuffer(opus_packet, dtype=np.int16)
 ```
 
-Decodifique primeiro e, em seguida, trate o resultado como PCM:
+Decodifique primeiro, depois trate o resultado como PCM:
 
 ```python
 import opuslib
@@ -330,23 +350,23 @@ pcm = decoder.decode(opus_packet, 320)       # 320 samples = 20 ms
 samples = np.frombuffer(pcm, dtype=np.int16)
 ```
 
-Essa etapa de decodificação é a única coisa entre o seu callback e amostras de áudio reais — e é exatamente o que a demonstração de FFT adiciona em cima do aplicativo mínimo que você acabou de escrever.
+Essa etapa de decodificação é a única coisa entre o seu callback e amostras de áudio reais — e é exatamente o que o demo de FFT adiciona em cima da aplicação mínima que você acabou de escrever.
 
-## 7. Entendendo o demo_stream_fft_display.py
+## 7. Entendendo demo_stream_fft_display.py
 
-Esta seção mapeia a demonstração de volta para o que você aprendeu, para que a demonstração deixe de ser um "script mágico" e se torne "meu programa mínimo, mais um decodificador, mais uma FFT".
+Esta seção mapeia o demo de volta para o que você aprendeu, para que o demo deixe de ser um "script mágico" e se torne "meu programa mínimo, mais um decodificador, mais uma FFT".
 
-### 7.1 Estrutura da demonstração
+### 7.1 Estrutura do Demo
 
-A demonstração é a estrutura do aplicativo mínimo com uma cadeia de processamento anexada a `on_frame`:
+O demo é a estrutura da aplicação mínima com uma cadeia de processamento anexada a `on_frame`:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_fft_demo_pipeline.png" alt="Pipeline da demonstração de FFT mapeado para componentes do SDK" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/rtc/rtc_fft_demo_pipeline.png" alt="Pipeline do demo de FFT mapeado para componentes do SDK" width={900} height="auto" /></p>
 
 `on_frame` alimenta cada pacote Opus em um objeto `LiveSpectrum`; uma thread em segundo plano regula o consumo em 20 ms por quadro, decodifica, executa a FFT e redesenha uma linha do terminal.
 
-### 7.2 Estabelecimento RTC na demonstração
+### 7.2 Estabelecimento RTC no Demo
 
-A função `run()` da demonstração executa exatamente a sequência da Seção 5:
+A função `run()` do demo executa exatamente a sequência da Seção 5:
 
 ```text
 BleTransport / ClipClient          (5.1)
@@ -360,27 +380,27 @@ await receiver.wait_end(timeout=5)
 transport.detach_file_frame_handler(token)
 ```
 
-Se você entendeu a Seção 5, já entende o coração da demonstração — todo o resto é processamento de áudio.
+Se você entendeu a Seção 5, você já entende o coração do demo — todo o resto é processamento de áudio.
 
-### 7.3 Decodificar áudio RTC
+### 7.3 Decodificar Áudio RTC
 
-A demonstração decodifica exatamente como na Seção 6.3: um `opuslib.Decoder(16000, 1)` transforma cada pacote em 320 amostras int16. Você não precisa saber como o codec Opus funciona internamente; o limite que importa é "o callback fornece bytes Opus, o decodificador fornece amostras PCM".
+O demo decodifica exatamente como na Seção 6.3: um `opuslib.Decoder(16000, 1)` transforma cada pacote em 320 amostras int16. Você não precisa saber como o codec Opus funciona internamente; o limite que importa é "callback fornece bytes Opus, decodificador fornece amostras PCM".
 
-### 7.4 Por que a demonstração usa um buffer de jitter?
+### 7.4 Por que o Demo Usa um Jitter Buffer?
 
-As entregas BLE não chegam perfeitamente uniformes. Você pode ver lacunas entre quadros como:
+Entregas BLE não chegam perfeitamente uniformes. Você pode ver intervalos entre quadros como:
 
 ```text
 20 ms, 20 ms, 35 ms, 5 ms, 20 ms, ...
 ```
 
-O `clip.jitter.JitterBuffer` do SDK suaviza isso em um ritmo de consumo constante:
+O `clip.jitter.JitterBuffer` do SDK suaviza isso em um ritmo de consumo estável:
 
 ```text
 BLE packets -> JitterBuffer -> steady 20 ms audio frames
 ```
 
-A demonstração cria `JitterBuffer(depth_frames)` (padrão de 5 quadros, ou seja, 100 ms de preenchimento inicial), chama `put()` para cada pacote que chega de `on_frame` e chama `get()` para um quadro a cada tique de 20 ms da thread de processamento. `get()` retorna `None` em caso de underrun (nenhuma FFT é desenhada para o silêncio) e, se o host ficar para trás, o buffer descarta os quadros mais antigos para alcançar novamente a borda ao vivo. Isso é tudo o que um buffer de jitter é: um pequeno amortecedor entre um produtor irregular e um consumidor constante.
+O demo cria `JitterBuffer(depth_frames)` (padrão 5 quadros, ou seja, 100 ms de preenchimento inicial), chama `put()` para cada pacote que chega de `on_frame`, e chama `get()` para um quadro a cada tique de 20 ms da thread de processamento. `get()` retorna `None` em caso de underrun (nenhuma FFT é desenhada para silêncio), e se o host ficar para trás o buffer descarta os quadros mais antigos para alcançar novamente a borda ao vivo. Isso é tudo o que um jitter buffer é: um pequeno amortecedor entre um produtor irregular e um consumidor estável.
 
 ### 7.5 De PCM para FFT
 
@@ -392,9 +412,9 @@ Mic -> Clip -> BLE -> SDK -> Opus decode -> PCM -> FFT -> your eyes
 
 Quando as barras se movem enquanto você fala, cada estágio dessa cadeia — incluindo o estabelecimento RTC que você mesmo construiu na Seção 5 — está funcionando.
 
-## 8. Próximos passos
+## 8. Próximos Passos
 
-O SDK RTC entrega à sua aplicação áudio ao vivo, pronto para decodificação. Tudo o que vem depois é com você:
+O SDK RTC entrega para sua aplicação áudio ao vivo, pronto para decodificação. Tudo o que vem depois é seu:
 
 ```text
 RTC SDK -> Opus decode -> PCM
@@ -405,9 +425,9 @@ RTC SDK -> Opus decode -> PCM
     └── Voice assistant
 ```
 
-Para controle do dispositivo, gravação e download de arquivos, consulte o [reSpeaker Clip Basic SDK Guide](/pt-br/respeaker_clip_basic_sdk_guide); para configuração do produto, consulte [Getting Started](/pt-br/respeaker_clip).
+Para controle do dispositivo, gravação e download de arquivos, consulte o [Guia Básico do SDK do reSpeaker Clip](/pt-br/respeaker_clip_basic_sdk_guide); para configuração do produto, consulte [Introdução](/pt-br/respeaker_clip).
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
