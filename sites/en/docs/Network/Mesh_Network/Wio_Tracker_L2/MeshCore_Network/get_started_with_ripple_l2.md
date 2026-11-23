@@ -68,7 +68,7 @@ The updated firmware uses MeshCore profiles and no longer offers Ripple in the N
 
 ## Flash Firmware
 
-If your device already has the Ripple UI version described here, skip to **First-Time Setup**.
+If your device already has the Ripple UI version described here, skip to **[First-Time Setup](#first-time-setup)**.
 
 Two firmware variants are available:
 
