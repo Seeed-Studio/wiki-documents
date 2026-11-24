@@ -6589,13 +6589,6 @@
     "ja",
     "pt"
   ],
-  "/lerobot_soarm101_Rynnbot_Developer_Kit": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/lerobot_starai_arm": [
     "cn",
     "en",

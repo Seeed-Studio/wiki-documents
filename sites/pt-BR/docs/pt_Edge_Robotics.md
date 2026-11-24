@@ -178,22 +178,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/pt-br/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Início Rápido</b></div></a>
         <a className="step-card" href="/pt-br/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Ferramenta de Depuração de Servo</b></div></a>
         <a className="step-card" href="/pt-br/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>Ferramenta de Conjunto de Dados SO-Arm</b></div></a>
+        <a className="step-card" href="/pt-br/sensecraft_robotics_so_arm101/"><span className="step-index">4</span><div><b>VLA sem código com SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Aplicações</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>Treinamento SO-ARM de Dois Braços</b></div></a>
-        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Aplicações</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">6</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>Simulação LeIsaac</b></div></a>
-        <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Aprendizado por Reforço Isaac Lab</b></div></a>
-        <a className="step-card" href="/pt-br/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 com Isaac Sim</b></div></a>
+        <a className="step-card" href="/pt-br/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Treinamento SO-ARM de Dois Braços</b></div></a>
+        <a className="step-card" href="/pt-br/soarm101_xiao_microros_wireless_teleoperation/"><span className="step-index">6</span><div><b>Teleoperação sem fio do SO-ARM</b></div></a>
+        <a className="step-card" href="/pt-br/soarm_amazinghand_teleop/"><span className="step-index">7</span><div><b>SO-ARM com Mão Hábil Amazing Hand</b></div></a>
+        <a className="step-card" href="/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">8</span><div><b>SO101 e NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/pt-br/simulate_soarm101_by_leisaac/"><span className="step-index">9</span><div><b>Simulação LeIsaac</b></div></a>
+        <a className="step-card" href="/pt-br/training_soarm101_policy_with_isaacLab/"><span className="step-index">10</span><div><b>Aprendizado por Reforço Isaac Lab</b></div></a>
+        <a className="step-card" href="/pt-br/soarm101_isaac_sim_dli/"><span className="step-index">11</span><div><b>SO-ARM101 com Isaac Sim</b></div></a>
         <a className="step-card optional" href="/pt-br/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>

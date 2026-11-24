@@ -413,16 +413,17 @@
 }
 
 .rebot-demo-details > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  /* Keep text and inline code in one flow, with the marker positioned separately. */
+  position: relative;
+  display: block;
   margin: 0 -1rem;
   padding: 0.8rem 1rem;
+  padding-inline-end: 2.75rem;
   cursor: pointer;
   color: var(--ifm-font-color-base);
   font-weight: 700;
   list-style: none;
+  overflow-wrap: anywhere;
 }
 
 .rebot-demo-details > summary::-webkit-details-marker {
@@ -437,7 +438,11 @@
 
 .rebot-demo-details > summary::after {
   content: '+';
-  flex: 0 0 auto;
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
   font-size: 1.2rem;
   line-height: 1;
 }
@@ -448,6 +453,10 @@
 
 .robotics-doc .rebot-demo-details {
   margin-bottom: 1.25rem;
+}
+
+.robotics-doc .rebot-demo-details > summary {
+  padding-inline-end: 1rem;
 }
 
 .robotics-doc .rebot-demo-details > summary::after {
