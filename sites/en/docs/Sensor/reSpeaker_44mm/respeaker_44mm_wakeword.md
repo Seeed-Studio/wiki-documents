@@ -12,7 +12,7 @@ keywords:
   - JARVIS
   - XMOS
   - ESP32S3
-image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_pcb_xiao.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_44mm/jarvis.jpg
 slug: /respeaker_44mm_wakeword
 sku: 100066841,100065276
 last_update:
