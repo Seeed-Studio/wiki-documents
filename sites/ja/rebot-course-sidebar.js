@@ -308,6 +308,7 @@ const sidebars = {
       collapsible: false,
       items: [
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS とビジュアルグラスピング' },
+        { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Python_Visual_Grasping` },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS と手首追従' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS とバイマンュアルコラボレーション' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS と ROS2' },
