@@ -9,8 +9,12 @@ keywords:
   - Bimanual Robot
   - Python SDK
 slug: /rebot_t701_ht_getting_started
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
+last_update:
+  date: 11/19/2026
+  author: liujunjie
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -336,29 +340,11 @@ The demo applies `0.8 × G(q)` as MIT torque feedforward to make the arm easier 
 python t701_ht_gravity_compensation.py
 ```
 
-#### Joint Impedance
+The demo applies the configured joint torque limits. Press `Ctrl+C` to stop the motors.
 
-:::warning[Before starting a joint impedance demo]
-**Make sure the area around the robot and within the arms' range of motion is clear of people and fragile objects before starting either demo.** The selected arm moves toward a fixed pose as soon as the demo starts.
-:::
+For single-motor five-parameter control, state feedback, and return-to-zero shutdown, see [MIT Control SDK](https://wiki.seeedstudio.com/rebot_t701_ht_control_mit/).
 
-The left-arm target is approximately `[-0.2, -0.2, 0.2, -0.4, 0.5, 0.2, 1.4708]` rad. The right-arm target reverses the sign of each joint angle.
-
-**Joint impedance with gravity feedforward**
-
-```bash
-python t701_ht_joint_impedance_with_gravity.py
-```
-
-**Joint impedance with gravity feedforward and friction compensation**
-
-```bash
-python t701_ht_joint_impedance_with_gravity_friction.py
-```
-
-All three demos apply the configured joint torque limits. Press `Ctrl+C` to stop gravity compensation or to return the arms to zero before stopping a joint impedance demo. During the return, press `Ctrl+C` again to stop the arms.
-
-See [T701 HT with Pinocchio](./reBot_Arm_T701_HT_pinocchio.md) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
+See [T701 HT with Pinocchio](https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
 
   </div>
 </div>

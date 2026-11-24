@@ -78,6 +78,7 @@ const sensorCategory = {
       // },
       items: [
         'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_AC1',
+        'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini_305',
         'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini_336',
         'Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
         'Robotics/Robot_Sensor/Camera/cn_Orbbec_Depth_Camera',
@@ -336,7 +337,9 @@ const sidebars = {
       collapsible: false,
       items: [
         `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_Getting_Started`,
+        `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_control_mit`,
         `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_pinocchio`,
+        `${K}/reBot_Arm/T701_HT/cn_reBot_Arm_T701_HT_vr`,
       ],
     },
   ],

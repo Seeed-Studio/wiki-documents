@@ -65,13 +65,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     </div>
     <div className="learning-group">
       <h4>应用</h4>
-      <div className="learning-steps">
+      <div className="learning-steps rebot-rs-applications">
         <a className="step-card" href="/cn/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS 腕部跟随</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">3</span><div><b>reBot-RS 与 ROS2</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">4</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
-        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">6</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_bimanual/"><span className="step-index">3</span><div><b>reBot-RS双臂协作</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">4</span><div><b>reBot-RS 与 ROS2</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_isaacsim/"><span className="step-index">5</span><div><b>reBot-RS 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">6</span><div><b>reBot-RS Web控制系统：真机与 MuJoCo</b></div></a>
+        <a className="step-card" href="/cn/wrc_demo_tutorial/"><span className="step-index">7</span><div><b>reBot-RS 与 Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -113,8 +114,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/cn/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM 视觉夹取</b></div></a>
         <a className="step-card" href="/cn/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM 与 ROS2</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
-        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web控制系统：真机与 MuJoCo</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>reBot-DM双臂协作</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>reBot-DM 与 Isaac Sim</b></div></a>
+        <a className="step-card" href="/cn/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-DM Web控制系统：真机与 MuJoCo</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -148,7 +150,16 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <h4>快速上手与 SDK</h4>
       <div className="learning-steps">
         <a className="step-card" href="/cn/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>快速开始</b></a>
+        <a className="step-card" href="/cn/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT 控制 SDK</b></a>
         <a className="step-card" href="/cn/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+        <a className="step-card" href="/cn/rebot_t701_ht_vr/"><span className="step-index" aria-hidden="true">→</span><b>VR 遥操作</b></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>常用资源</h4>
+      <div className="rebot-resource-list">
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">机械臂描述与仿真模型（URDF / Mesh）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">硬件资料与物料清单（BOM）</a>
       </div>
     </div>
   </div>
@@ -171,9 +182,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>拓展应用</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 与 NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/cn/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>双臂 SO-ARM 训练</b></div></a>
-        <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM结合Amazing Hand灵巧手</b></div></a>
+        <a className="step-card" href="/cn/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>双臂 SO-ARM 训练</b></div></a>
+        <a className="step-card" href="/cn/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM结合Amazing Hand灵巧手</b></div></a>
+      </div>
+    </div>
+    <div className="learning-group">
+      <h4>拓展应用</h4>
+      <div className="learning-steps">
+        <a className="step-card" href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">6</span><div><b>SO101 与 NVIDIA GR00T</b></div></a>
         <a className="step-card" href="/cn/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac 仿真</b></div></a>
         <a className="step-card" href="/cn/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 强化学习</b></div></a>
         <a className="step-card" href="/cn/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 与 Isaac Sim</b></div></a>
@@ -355,9 +371,8 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <p>用于视觉夹取、SLAM、语音交互和机器人状态感知。</p>
     </div>
     <div className="resource-columns">
-      <div><h4>LiDAR</h4><a href="/cn/robosense_lidar/">RoboSense</a><a href="/cn/mid360/">Livox MID360</a><a href="/cn/a_loam/">A-LOAM 算法</a><a href="/cn/slamtec/">Slamtec 系列</a></div>
-      <div><h4>相机</h4><a href="/cn/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/cn/orbbec_gemini_335lg/">Gemini 335Lg 深度相机</a><a href="/cn/orbbec_gemini336">Gemini 336 深度相机</a><a href="/cn/sensing_gmsl_cameras">SENSING GMSL2 相机</a><a href="/cn/ac1">RoboSense AC1</a><a href="/cn/orbbec_depth_camera_on_ros/">Orbbec 与 ROS</a><a href="/cn/orb_slam3_orbbec_gemini2/">ORB-SLAM3 与 Gemini2</a><a href="/cn/csi_camera_on_ros/">Jetson 上的 CSI 相机</a><a href="/cn/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
-      <div><h4>语音</h4><a href="/cn/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/cn/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/cn/hexfellow_y200/">HEXFELLOW Y200</a><a href="/cn/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>LiDAR</h4><a href="/cn/robosense_lidar/">RoboSense</a><a href="/cn/mid360/">Livox MID360</a><a href="/cn/a_loam/">A-LOAM 算法</a><a href="/cn/slamtec/">Slamtec 系列</a><h4>语音</h4><a href="/cn/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/cn/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/cn/hexfellow_y200/">HEXFELLOW Y200</a><a href="/cn/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>相机</h4><a href="/cn/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/cn/orbbec_gemini305/">Orbbec Gemini 305</a><a href="/cn/orbbec_gemini_335lg/">Gemini 335Lg 深度相机</a><a href="/cn/orbbec_gemini336">Gemini 336 深度相机</a><a href="/cn/sensing_gmsl_cameras">SENSING GMSL2 相机</a><a href="/cn/ac1">RoboSense AC1</a><a href="/cn/orbbec_depth_camera_on_ros/">Orbbec 与 ROS</a><a href="/cn/orb_slam3_orbbec_gemini2/">ORB-SLAM3 与 Gemini2</a><a href="/cn/csi_camera_on_ros/">Jetson 上的 CSI 相机</a><a href="/cn/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
     </div>
   </section>
 

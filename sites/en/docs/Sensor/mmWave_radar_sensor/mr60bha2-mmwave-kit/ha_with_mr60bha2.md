@@ -234,7 +234,6 @@ To get started with ESPHome, follow these steps:
 2. **Create a New Configuration**: Click on the device to open its configuration. Here, you can adjust settings such as the sensor's sensitivity, reporting intervals, and output formats. ESPHome uses a YAML configuration format, which is user-friendly and allows you to define various parameters. You can use the following template YAML file as a starting point for your configuration, which is designed specifically for the MR60BHA2 Sensor:
 
   ```yaml showLineNumbers title=example/mr60bha2.yaml
-    # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
     substitutions:
       name: "seeedstudio-mr60bha2-kit"
       friendly_name: "seeedstudio-mr60bha2-kit"
@@ -245,10 +244,10 @@ To get started with ESPHome, follow these steps:
       name_add_mac_suffix: true
       project:
         name: "seeedstudio.mr60bha2_kit"
-        version: "3.5"
+        version: "3.6"
       platformio_options:
         board_upload.maximum_size: 4194304
-      min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
+      min_version: "2026.8.0"
 
 
     esp32:
@@ -257,15 +256,6 @@ To get started with ESPHome, follow these steps:
       flash_size: 4MB # upload.flash_size
       framework:
         type: esp-idf
-
-    # If you want to experience the latest components, you can remove this comment.
-    # external_components:
-    #   - source:
-    #       type: git
-    #       url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
-    #       ref: main
-    #     components: [ seeed_mr60bha2 ]
-    #     refresh: 0s
 
     # Enable logging
     logger:
@@ -279,9 +269,9 @@ To get started with ESPHome, follow these steps:
       - platform: esphome
 
     # It is highly recommended to use secrets
-  wifi:
-    ssid: !secret wifi_ssid
-    password: !secret wifi_password
+    wifi:
+      ssid: !secret wifi_ssid
+      password: !secret wifi_password
 
       ap:
         ssid: "seeedstudio-mr60bha2"
@@ -302,7 +292,7 @@ To get started with ESPHome, follow these steps:
         name: "Seeed MR60BHA2 RGB Light"
         pin: GPIO1
         num_leds: 1
-        rgb_order: GRB
+        channel_colors: GRB
         chipset: ws2812
 
     i2c:
@@ -357,7 +347,7 @@ Through these steps, you can maximize the functionality of your MR60BHA2 mmWave 
 
 - [ESPHome — ESPHome](https://esphome.io/)
 - [Installation - Home Assistant](https://www.home-assistant.io/installation/)
-- [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
+- [MR60BHA2 ESPHome project source](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-mr60bha2-kit)
 
 ## Troubleshooting
 

@@ -1,6 +1,6 @@
 ---
 description: Introdução à Wio Tracker L2 Series. Inclui recursos, funções, parâmetros e comparação da série.
-title: Introdução ao Wio Tracker L2
+title: Introdução à Wio Tracker L2
 keywords:
   - Meshtastic
   - Wio Tracker L2
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/pt-br/meshtastic_wio_tracker_l2_intro/
     </a>
 </div>
 
-A Wio Tracker L2 Series é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetada para flexibilidade, ela suporta tela sensível ao toque QSPI, displays E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-a ideal para uma ampla gama de aplicações de IoT e fora da rede.
+A Wio Tracker L2 Series é um nó [Meshtastic®](https://meshtastic.org/) altamente extensível, com LoRa (862–930 MHz), ESP32S3 para processamento eficiente e um módulo GPS L76K para rastreamento de localização preciso. Projetada para flexibilidade, ela oferece suporte a tela sensível ao toque QSPI, telas E-Ink, cartão TF, bem como painéis solares e alimentação por bateria, tornando-a ideal para uma ampla gama de aplicações de IoT e fora da rede.
 
 ## Modelo da Série L2
 
@@ -43,22 +43,22 @@ A Wio Tracker L2 Series inclui a Wio Tracker L2 para projetos personalizados e a
 |Tela|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |Slot para Cartão MicroSD|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |Entrada Solar|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|Bateria|<p style={{textAlign: 'center'}}>Bateria Li-ion externa via conector</p>|<p style={{textAlign: 'center'}}>Bateria integrada de 3000mAh</p>|
+|Bateria|<p style={{textAlign: 'center'}}>Bateria externa de íon de lítio via conector</p>|<p style={{textAlign: 'center'}}>Bateria integrada de 3000mAh</p>|
 |Carcaça|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
 
 ## Recursos
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **Um hardware, possibilidades infinitas** Construa sua própria interface, painel, jogo, ferramenta de mapa ou experiência interativa — o L2 Pro está pronto para o que você quiser criar.
+- **Um único hardware, possibilidades infinitas** Crie sua própria interface, painel, jogo, ferramenta de mapa ou experiência interativa — o L2 Pro está pronto para o que você quiser desenvolver.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
 
-- **Tela sensível ao toque de alta qualidade de 3,2''**: Com um display de 320×240 de alta nitidez e interfaces alternáveis MUI e Base UI, oferece interação fluida diretamente no dispositivo para mensagens, mapas e controle — sem precisar de um celular.
+- **Tela sensível ao toque de 3,2'' de alta qualidade**: Com uma tela de 320×240 de alta nitidez e interfaces MUI e Base UI comutáveis, oferece interação fluida diretamente no dispositivo para mensagens, mapeamento e controle — sem precisar de um celular.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Alimentado por ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro oferece uma plataforma flexível para personalização de UI, desenvolvimento de recursos e aplicações open source.
+- **Alimentado por ESP32S3, pronto para desenvolvimento**: Alimentado pelo ESP32-S3 dual-core com Wi-Fi e Bluetooth LE, o L2 Pro oferece uma plataforma flexível para personalização de interface, desenvolvimento de recursos e aplicações de código aberto.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -66,7 +66,7 @@ A Wio Tracker L2 Series inclui a Wio Tracker L2 para projetos personalizados e a
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **Bateria de longa duração de 3000mAh**: Suporta uso diário prolongado com menor frequência de recarga; opera em condições de -10°C a 55°C.
+- **Bateria de 3000mAh de longa duração**: Suporta uso diário prolongado com menor frequência de recarga; opera em condições de -10°C a 55°C.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -76,7 +76,7 @@ A Wio Tracker L2 Series inclui a Wio Tracker L2 para projetos personalizados e a
 
 - **Prototipe mais rápido com CodeCraft**
 
-Descreva sua ideia em poucas palavras, e o assistente de codificação com IA CodeCraft da Seeed Studio irá gerar um primeiro rascunho do código em minutos. Revise-o, grave-o no seu Wio Tracker L2 e teste-o na placa.
+Descreva sua ideia em poucas palavras e o assistente de codificação com IA CodeCraft da Seeed Studio gerará um primeiro rascunho do código em minutos. Revise-o, grave-o na sua Wio Tracker L2 e teste-o na placa.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -93,7 +93,7 @@ Descreva sua ideia em poucas palavras, e o assistente de codificação com IA Co
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
-    <td colspan="1">863-928 MHz<br/>Potência máxima de TX: 20dBm@US915,14dBm@EU868</td>
+    <td colspan="1">863-928 MHz<br/>Potência máxima de TX: 22dBm@US915,14dBm@EU868</td>
   </tr>
     <tr>
     <td colspan="1">**GNSS**</td>
@@ -128,17 +128,17 @@ Descreva sua ideia em poucas palavras, e o assistente de codificação com IA Co
     <td colspan="1">Compatível com tela IPS e tela E-INK</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">**Entrada de energia**</td>
+    <td colspan="1" rowspan="3">**Entrada de Alimentação**</td>
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
     <td colspan="1">Solar:JST-PH 2P-2.0mm, 5V ~ 13V</td>
   </tr>
   <tr>
-    <td colspan="1">Bateria Li-ion (2P-1.25mm): 3,7V</td>
+    <td colspan="1">Bateria de íon de lítio (2P-1.25mm): 3,7V</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">**Tela sensível ao toque IPS**</td>
+    <td colspan="1" rowspan="2">**Tela IPS sensível ao toque**</td>
     <td colspan="1">Tamanho: 3,2 polegadas</td>
   </tr>
   <tr>
@@ -163,7 +163,7 @@ Descreva sua ideia em poucas palavras, e o assistente de codificação com IA Co
     <td colspan="1">Alto-falante: 6Ω 0,8W</td>
   </tr>
     <tr>
-    <td colspan="1">**Distância de comunicação**</td>
+    <td colspan="1">**Distância de Comunicação**</td>
     <td colspan="1">Até 5,8 km</td>
   </tr>
     <tr>
@@ -171,11 +171,11 @@ Descreva sua ideia em poucas palavras, e o assistente de codificação com IA Co
     <td colspan="1">(Antena dobrada) C: 87,5 mm, L: 69 mm, A: 26,6 mm</td>
   </tr>
   <tr>
-    <td colspan="1">**Peso do dispositivo**</td>
+    <td colspan="1">**Peso do Dispositivo**</td>
     <td colspan="1">171,5g</td>
   </tr>
     <tr>
-    <td colspan="1">**Temperatura de operação**</td>
+    <td colspan="1">**Temperatura de Operação**</td>
     <td colspan="1">-10℃ a +55℃</td>
   </tr>
   <tr>
@@ -188,16 +188,16 @@ Descreva sua ideia em poucas palavras, e o assistente de codificação com IA Co
 
 |Item|Parâmetro|
 | :- | :- |
-|**Capacidade da bateria**|Bateria recarregável de íons de lítio, 3000mAh|
-|**Monitoramento da vida útil da bateria**|Envio periódico do nível da bateria|
-|**Protocolo de carregamento**|USB Type-C|
-|**Entrada de energia do dispositivo**|5V, 1A|
+|**Capacidade da Bateria**|Bateria recarregável de íon de lítio, 3000mAh|
+|**Monitoramento da Vida da Bateria**|Nível de bateria enviado periodicamente|
+|**Protocolo de Carregamento**|USB Type-C|
+|**Entrada de Alimentação do Dispositivo**|5V, 1A|
 |**Tensão de corte totalmente carregada**|4,2V|
-|**Limite de temperatura de carregamento**|0 a +45℃|
+|**Limite de Temperatura de Carregamento**|0 a +45℃|
 
-**Consumo de energia**
+**Consumo de Energia**
 
-Para dados detalhados de consumo de energia e estimativa de vida útil da bateria sob diferentes configurações (modo de tela, faixa de frequência LoRa e modem preset, uso de GPS, etc.), consulte a [Tabela de Consumo de Energia do Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
+Para dados detalhados de consumo de energia e estimativa de vida útil da bateria sob diferentes configurações (modo de tela, faixa de frequência LoRa e modem preset, uso de GPS, etc.), consulte a [Tabela de Consumo de Energia da Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx).
 
 ## Lista de Pinos
 
@@ -205,7 +205,7 @@ Para dados detalhados de consumo de energia e estimativa de vida útil da bateri
   <tr>
     <th>Componente</th>
     <th>Pino</th>
-    <th>Nº do pino</th>
+    <th>Nº do Pino</th>
     <th>Protocolo</th>
   </tr>
   <tr>

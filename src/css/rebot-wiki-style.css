@@ -446,6 +446,14 @@
   content: '−';
 }
 
+.robotics-doc .rebot-demo-details {
+  margin-bottom: 1.25rem;
+}
+
+.robotics-doc .rebot-demo-details > summary::after {
+  display: none;
+}
+
 .rebot-demo-details > summary:focus-visible {
   outline: 2px solid var(--ifm-color-primary);
   outline-offset: -3px;
@@ -555,6 +563,79 @@
 .content-details > summary + div > div {
   margin-top: 0;
   padding: 1rem 0;
+}
+
+/* RS FAQ: the list sits outside .rebot-page, so use theme tokens directly. */
+.robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details {
+  --docusaurus-details-decoration-color: var(--ifm-color-emphasis-300);
+  margin: 0.7rem 0;
+  padding: 0 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 -1rem;
+  padding: 0.9rem 1rem;
+  color: var(--ifm-font-color-base);
+  font-weight: 700;
+  line-height: 1.5;
+  border-radius: 13px;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary::before {
+  content: none;
+}
+
+.robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary::after {
+  content: '';
+  flex: 0 0 0.55rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.15rem) rotate(45deg);
+  transition: transform 200ms ease;
+}
+
+.robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details:is([data-collapsed='false'], [open]:not([data-collapsed])) > summary::after {
+  transform: translateY(0.15rem) rotate(225deg);
+}
+
+.robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details:focus-within {
+  border-color: var(--ifm-color-primary);
+}
+
+.robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: -3px;
+}
+
+@media (hover: hover) {
+  .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details:hover {
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary:hover {
+    color: var(--ifm-color-primary);
+    background: var(--ifm-color-emphasis-100);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details,
+  .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary,
+  .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary::after {
+    transition: none;
+  }
 }
 
 /* 安全提示 */

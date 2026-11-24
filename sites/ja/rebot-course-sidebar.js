@@ -215,6 +215,10 @@ const sidebars = {
             { type: 'doc', id: `${P}/ja_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — クロスエンボディメント行動と未来知覚' },
             { type: 'doc', id: `${P}/ja_Paper_Reading_DM05`, label: 'DM0.5 — 歴史的背景と軌道整列' },
             { type: 'doc', id: `${P}/ja_Paper_Reading_G05`, label: 'G0.5 — 推理とアクションの連続性' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_FINEART_VLA`, label: 'FineART-VLA — サブタスクに基づく双腕動作' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_MOLMOACT2`, label: 'MolmoAct2 — 層ごとの文脈情報による連続制御' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_X_VLA`, label: 'X-VLA — クロスエンボディメント学習のためのソフトプロンプト' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_WALL_OSS_05`, label: 'WALL-OSS-0.5 — 勾配の橋渡しによるアクション学習' },
           ],
         },
         {
@@ -239,7 +243,11 @@ const sidebars = {
               "type": "doc",
               "id": `${P}/ja_Paper_Reading_LAWAM`,
               "label": "LaWAM — シーン変化の予測とロボットアクションの生成"
-            }
+            },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_FASTWAM`, label: 'Fast-WAM — 動画の共同学習と直接的なアクション推論' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_LONG_WAM`, label: 'Long-WAM — 履歴・未来予測・制御' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_FLUX3`, label: 'FLUX 3 Action — 同時予測と効率的な実行' },
+            { type: 'doc', id: `${P}/ja_Paper_Reading_COSMOS3`, label: 'Cosmos 3 — オムニモーダルな世界・アクション方策' },
           ],
         },
         {
@@ -301,6 +309,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS とビジュアルグラスピング' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS と手首追従' },
+        { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS とバイマンュアルコラボレーション' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS と ROS2' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS と Isaac Sim' },
         { type: 'doc', id: `${RS}/ja_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web 制御システム：実機と MuJoCo' },
@@ -353,6 +362,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Grasping_Demo`, label: 'reBot-DM ビジュアルグラスプ' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM と ROS2' },
+        { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM とバイマンュアルコラボレーション' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM と Isaac Sim' },
         { type: 'doc', id: `${DM}/ja_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web 制御システム：実機と MuJoCo' },
       ],

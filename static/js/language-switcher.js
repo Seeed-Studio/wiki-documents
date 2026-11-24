@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-16 17:09:34 (北京时间)
-// 多语言页面: 2696 个
+// 生成时间: 2026-11-23 15:48:07 (北京时间)
+// 多语言页面: 2717 个
 
 (function() {
   'use strict';
@@ -1556,6 +1556,13 @@
     "ja",
     "pt"
   ],
+  "/jetpack5_uefi_boot_failure_fix": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/jetpack72_ax210_ax200_wifi_setup_guide": [
     "cn",
     "en",
@@ -2144,6 +2151,13 @@
     "ja",
     "pt"
   ],
+  "/ai_robotics_recomputer_robotics_j50_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recomputer_robotics_j401_getting_started": [
     "cn",
     "en",
@@ -2159,13 +2173,6 @@
     "pt"
   ],
   "/ai_robotics_recomputer_j501_robotics_getting_started": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/recomputer_robotics_j50_mini_getting_started": [
     "cn",
     "en",
     "es",
@@ -5161,6 +5168,13 @@
     "ja",
     "pt"
   ],
+  "/wio_lr2021_dev_kit_flrc_image_transmission_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/wio_lr2021_dev_kit_command_reference": [
     "cn",
     "en",
@@ -5483,6 +5497,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_ai_image_transmission_p1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
@@ -5687,6 +5708,13 @@
     "pt"
   ],
   "/meshtastic_wio_tracker_l2_intro": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_audio_development_l2": [
     "cn",
     "en",
     "es",
@@ -7030,6 +7058,13 @@
     "ja",
     "pt"
   ],
+  "/rebot_arm_b601_dm_bimanual": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_b601_dm_getting_started": [
     "cn",
     "en",
@@ -7080,6 +7115,20 @@
     "pt"
   ],
   "/wrc_demo_tutorial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_bimanual": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_camera_follow": [
     "cn",
     "en",
     "es",
@@ -7198,6 +7247,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_cosmos3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_dm05": [
     "cn",
     "en",
@@ -7213,6 +7269,27 @@
     "pt"
   ],
   "/robotics/paper_reading_evo1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_fastwam": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_fineart_vla": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_flux3": [
     "cn",
     "en",
     "es",
@@ -7247,6 +7324,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_lawam": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_lingbot_va": [
     "cn",
     "en",
@@ -7255,6 +7339,20 @@
     "pt"
   ],
   "/robotics/paper_reading_lingbot_vla2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_long_wam": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_molmoact2": [
     "cn",
     "en",
     "es",
@@ -7311,6 +7409,20 @@
     "pt"
   ],
   "/robotics/paper_reading_wall_oss": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_wall_oss_05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_x_vla": [
     "cn",
     "en",
     "es",
@@ -7597,7 +7709,28 @@
     "ja",
     "pt"
   ],
+  "/rebot_t701_ht_control_mit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_t701_ht_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_t701_ht_pinocchio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_t701_ht_vr": [
     "cn",
     "en",
     "es",
@@ -7933,6 +8066,13 @@
     "pt"
   ],
   "/orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/orbbec_gemini305": [
     "cn",
     "en",
     "es",
@@ -13210,6 +13350,13 @@
     "pt"
   ],
   "/respeaker_clip_firmware_quick_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_for_agent": [
     "cn",
     "en",
     "es",

@@ -19,13 +19,15 @@ updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 ---
 import '/src/css/rebot-wiki-style.css';
+import '/src/css/soarm101-pinocchio-style.css';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
 # 基于 LeRobot 的 SO-ARM100 / SO-ARM101 机械臂入门教程
 
-<div className="sensecraft-banner">
+<div className="sensecraft-banner soarm-sensecraft">
   <div className="sensecraft-banner__copy">
     <span className="sensecraft-banner__badge">⚡ 免代码 · 免配环境</span>
     <p className="sensecraft-banner__title">不想装环境、不想写代码？一个软件就能跑 reBot Arm 与 LeRobot</p>
@@ -43,79 +45,111 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
-<div className="rebot-page">
-
-<section className="doc-hero">
-  <div>
-    <span className="eyebrow">SO-ARM10x × LeRobot</span>
-    <h2>从组装、校准到数据采集、训练与真实机械臂部署</h2>
-    <p>
-      本 Wiki 提供 SO-ARM100 / SO-ARM101 在 LeRobot 框架内完成组装、校准、遥操作、相机接入、数据采集、训练与评估的完整流程。
-    </p>
-    <div className="hero-actions">
-      <a href="#quick-path">查看学习路线</a>
-      <a href="#install-lerobot">安装 LeRobot</a>
-      <a href="#record-dataset">进入数据采集</a>
-    </div>
-  </div>
-  <div className="hero-card">
-    <strong>推荐阅读方式</strong>
-    <span>新用户：请从规格、电源和舵机校准开始。</span>
-    <span>已有组装版：可直接跳转到整臂校准与遥操作。</span>
-    <span>已有环境：可直接进入相机、数据采集、训练或 FAQ。</span>
-  </div>
-</section>
-
-<div className="safety-alert">
-  <div className="safety-alert-icon">⚠️</div>
-  <div className="safety-alert-content">
-    <strong>安全警告：运行前请清空机械臂工作空间</strong>
-    <p>
-      在运行任何会驱动机械臂运动的程序前，请务必清空机械臂工作空间 1 米范围内的贵重物品、易碎物品、工具、线缆和其他无关物体。调试和运行过程中，人员禁止靠近机械臂运动范围。
-    </p>
-    <ul>
-      <li>机械臂上电后，请勿用手触碰关节、电机、连杆、夹爪或末端工具。</li>
-      <li>运行舵机设置、整臂校准、遥操作、数据采集、回放或策略评估前，请确保机械臂固定牢靠。</li>
-      <li>请保持至少 1 米安全距离，并确保周围人员了解机械臂可能突然运动。</li>
-      <li>如出现异常运动、异响、抖动、线缆松动、电源接触不良或通信中断，请立即停止程序并断电检查。</li>
-      <li>插拔舵机线、USB 线、电源接口或驱动板线缆前，必须先断开电源。</li>
-    </ul>
-  </div>
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp" alt="SO-ARM100 和 SO-ARM101 机械臂套件" />
 </div>
 
-{/* The following Markdown headings are intentionally kept outside the visual cards so Docusaurus can generate the right-side table of contents. */}
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=877820346195" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
-<nav className="doc-nav" aria-label="SO-ARM10x LeRobot quick navigation">
-  <a href="#quick-path">学习路线</a>
-  <a href="#overview">项目介绍</a>
-  <a href="#install-lerobot">安装环境</a>
-  <a href="#setup-motors-assembly">舵机与组装</a>
-  <a href="#calibration">校准</a>
-  <a href="#teleoperation">遥操作</a>
-  <a href="#camera">相机</a>
-  <a href="#record-dataset">数据采集</a>
-  <a href="#training">训练评估</a>
-  <a href="#faq">FAQ</a>
-</nav>
+<p align="center">
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Platform-Ubuntu%20%7C%20Jetson-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Framework-LeRobot-yellow.svg" alt="Framework" />
+</p>
+
+<p align="center">
+  <strong>低成本开源机械臂 · LeRobot 生态 · 模仿学习 · 真机部署</strong>
+</p>
+
+本 Wiki 提供 SO-ARM100 / SO-ARM101 在 LeRobot 框架内完成组装、校准、遥操作、相机接入、数据采集、训练与评估的完整流程。
+
+<GitHubStarButton owner="Seeed-Projects" repo="lerobot" ariaLabel="在 GitHub 上为 Seeed-Projects/lerobot 点亮 Star" />
+
+:::caution 安全警告 — 运行前请清空机械臂工作空间
+在运行任何会驱动机械臂运动的程序前，请务必清空机械臂工作空间 1 米范围内的贵重物品、易碎物品、工具、线缆和其他无关物体。调试和运行过程中，人员禁止靠近机械臂运动范围。
+
+- 机械臂上电后，请勿用手触碰关节、电机、连杆、夹爪或末端工具。
+- 运行舵机设置、整臂校准、遥操作、数据采集、回放或策略评估前，请确保机械臂固定牢靠。
+- 请保持至少 1 米安全距离，并确保周围人员了解机械臂可能突然运动。
+- 如出现异常运动、异响、抖动、线缆松动、电源接触不良或通信中断，请立即停止程序并断电检查。
+- 插拔舵机线、USB 线、电源接口或驱动板线缆前，必须先断开电源。
+:::
+
+<div className="rebot-page soarm-guide">
 
 ## 推荐学习路线
 
-<section id="quick-path" className="section-card course-path-section">
-  <div className="section-title">
-    <span>Step Overview</span>
-    <h2>建议按真实调试流程逐步完成</h2>
-    <p>如果你是第一次使用 SO-ARM10x，建议先完成硬件、环境和校准，再进入遥操作、相机、数据集、训练与评估。</p>
-  </div>
+如果你是第一次使用 SO-ARM10x，建议先完成硬件、环境和校准，再进入遥操作、相机、数据集、训练与评估。
 
-<div className="course-path-grid">
-    <div className="course-path-item"><span className="course-index">1</span><div className="course-path-copy"><strong>认识套件与规格</strong><p>确认 SO-ARM100 / SO-ARM101 版本、供电、电机和 BOM。</p></div><span className="course-tag">准备</span></div>
-    <div className="course-path-item"><span className="course-index">2</span><div className="course-path-copy"><strong>安装 LeRobot</strong><p>搭建 Miniforge、LeRobot、ffmpeg、PyTorch 和相机依赖。</p></div><span className="course-tag">环境</span></div>
-    <div className="course-path-item"><span className="course-index">3</span><div className="course-path-copy"><strong>舵机校准与组装</strong><p>为每个舵机设置 ID 和波特率，再按步骤完成 leader / follower 组装。</p></div><span className="course-tag">硬件</span></div>
-    <div className="course-path-item"><span className="course-index">4</span><div className="course-path-copy"><strong>整臂校准与遥操作</strong><p>完成 leader 与 follower 校准，并确认主从控制链路稳定。</p></div><span className="course-tag">控制</span></div>
-    <div className="course-path-item"><span className="course-index">5</span><div className="course-path-copy"><strong>添加相机与采集数据</strong><p>接入 OpenCV、RealSense 或 Orbbec 相机，录制高质量 episode。</p></div><span className="course-tag">数据</span></div>
-    <div className="course-path-item"><span className="course-index">6</span><div className="course-path-copy"><strong>训练与评估策略</strong><p>从 ACT 开始，再尝试 SmolVLA、Pi0、Pi0.5、GR00T 和异步推理。</p></div><span className="course-tag">AI</span></div>
-  </div>
+<div className="rebot-step-flow soarm-learning-path">
+<div className="soarm-pino-step-header">
+  从准备到部署，按步骤开始
+</div>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4><a href="#overview">认识套件与规格</a></h4>
+<p className="rebot-step-label">准备</p>
+<p>确认 SO-ARM100 / SO-ARM101 版本、供电、电机和 BOM。</p>
+</div>
 </section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4><a href="#install-lerobot">安装 LeRobot</a></h4>
+<p className="rebot-step-label">环境</p>
+<p>搭建 Miniforge、LeRobot、ffmpeg、PyTorch 和相机依赖。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4><a href="#setup-motors-assembly">舵机校准与组装</a></h4>
+<p className="rebot-step-label">硬件</p>
+<p>为每个舵机设置 ID 和波特率，再按步骤完成 leader / follower 组装。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4><a href="#calibration">整臂校准与遥操作</a></h4>
+<p className="rebot-step-label">控制</p>
+<p>完成 leader 与 follower 校准，并确认主从控制链路稳定。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4><a href="#camera">添加相机与采集数据</a></h4>
+<p className="rebot-step-label">数据</p>
+<p>接入 OpenCV、RealSense 或 Orbbec 相机，录制高质量 episode。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4><a href="#training">训练与评估策略</a></h4>
+<p className="rebot-step-label">AI</p>
+<p>从 ACT 开始，再尝试 SmolVLA、Pi0、Pi0.5、GR00T 和异步推理。</p>
+</div>
+</section>
+</div>
 
 ## 项目介绍
 
@@ -129,16 +163,6 @@ import TabItem from '@theme/TabItem';
 :::tip
 本指南基于 Seeed 验证过的 LeRobot 配置。若要使用更新版本，请先查看[依赖要求](https://github.com/Seeed-Projects/lerobot/blob/main/pyproject.toml)。
 :::
-
-<div className="image-frame">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="SO-ARM100 和 SO-ARM101 开源机械臂套件" />
-</div>
-
-<div className="get-one-now-panel">
-  <a className="get-one-now-button" href="https://detail.tmall.com/item.htm?abbucket=14&id=877820346195&pisk=hoQ-FWMreBT8ReF0HdH1ZYYHAS2GAwABO65EOLTWE23dIOgo-Q2UJ9pA13VPK9jvpt6vFaqyK2Hdh6ckAwvhJU8eR8FyykDrGCdQ-D9SRouyJzygIP4LVjTLe6buKyCqcCJXN49WAS3XOBLBOQTQMKOp_pg5deNAGKRENQgWVrgXsQMWR2gShjOpO4gBO3ajlKRBRQTCdsNvtK9BRe6CGZcWV7kbvDgZBdki4_9xWs7AmAv9dKgQCNR87dtC1DpNPtfCra-qflLFiGBdA9ri0UCCVUOGaz3v5_sDYLQ3GDZFbG1GjVZCyR_RWMIqF27Uxib5ohk7zw_RPZjNnmras795iEsjFu7GWwLGban3Akq9eGIPGxeVP5p2zGjqnmjAouOV48UTCjvJ6ERvI7EnYD-0fIpgMSnEY3O2MdV86Doeml1..&rn=c965f4e20da915a38da869c35239c54a&spm=a1z10.5-b.w4011-22390330418.114.75ed1734VACGVS" target="_blank" rel="noopener noreferrer">
-    <span>立即购买 / Get One Now 🖱️</span>
-  </a>
-</div>
 
 <div className="notice-grid">
   <div className="notice-card warning">
@@ -161,7 +185,7 @@ import TabItem from '@theme/TabItem';
     <p>套件版结构件的推荐打印参数与 STL 下载。</p>
   </div>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击查看打印参数与下载</summary>
 
 **推荐打印参数**(已在常见 FDM 打印机上测试):
@@ -235,8 +259,12 @@ Leader 与 Follower 的全部零件已合并在同一个 STL 文件中,并按最
 <Tabs defaultValue="Jetson">
 
 <TabItem value="Jetson" label="Jetson">
-
-1. 安装 Miniforge：
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>安装 Miniforge</h4>
+<p className="rebot-step-label">第 1 步</p>
 
 <CodeBlock language="bash">
 {`wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
@@ -246,19 +274,37 @@ chmod +x Miniforge3-Linux-aarch64.sh
 source ~/.bashrc`}
 </CodeBlock>
 
-2. 创建并激活一个新的 conda 环境用于 lerobot
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>创建并激活 conda 环境</h4>
+<p className="rebot-step-label">第 2 步</p>
 
 <CodeBlock language="bash">
 {`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
-3. 克隆 LeRobot 仓库：
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4>克隆 LeRobot 仓库</h4>
+<p className="rebot-step-label">第 3 步</p>
 
 <CodeBlock language="bash">
 {`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
 </CodeBlock>
 
-4. 使用 miniforge 时，在环境中安装 ffmpeg：
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4>安装 ffmpeg</h4>
+<p className="rebot-step-label">第 4 步</p>
 
 <CodeBlock language="bash">
 {`conda install ffmpeg -c conda-forge`}
@@ -279,13 +325,27 @@ ffmpeg 相关异常说明已统一整理到文末 FAQ。
 
 :::
 
-5. 安装带有 feetech 电机依赖的 LeRobot：
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4>安装 LeRobot 与电机依赖</h4>
+<p className="rebot-step-label">第 5 步</p>
 
 <CodeBlock language="bash">
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
 </CodeBlock>
 
-6. 对于 Jetson JetPack 6.0 和 6.1 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-PyTorch)的第 5 步安装了 PyTorch-gpu 和 Torchvision）：
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4>安装 Jetson 依赖</h4>
+<p className="rebot-step-label">第 6 步</p>
+
+对于 Jetson JetPack 6.0 和 6.1 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-PyTorch)的第 5 步安装了 PyTorch-gpu 和 Torchvision）：
 
 <CodeBlock language="bash">
 {`conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson JetPack 6.0 和 6.1
@@ -296,7 +356,13 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # 该版本需与 Torchvision 兼容`}
 </CodeBlock>
 
-7. 检查 PyTorch 和 Torchvision
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">7</span>
+<div className="rebot-step-content">
+<h4>检查 PyTorch 和 Torchvision</h4>
+<p className="rebot-step-label">第 7 步</p>
 
 由于通过 pip 安装 lerobot 环境时会卸载原有的 PyTorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
 
@@ -312,11 +378,19 @@ exit()   #  退出python`}
 
 如果输出结果显示为 `False`，表示当前环境中的 PyTorch 是 CPU 版本。若你需要在 Jetson 上使用 GPU 版本 PyTorch 和 Torchvision，请参考[此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-PyTorch-and-Tensorflow/README.md#installing-PyTorch-on-recomputer-nvidia-jetson)进行安装。对于需要使用 GPU 训练或推理的环境，最终检查结果应为 `True`。
 
+</div>
+</section>
+</div>
+
 </TabItem>
 
 <TabItem value="X86" label="X86 Ubuntu 22.04">
-
-1. 安装 Miniforge：
+<div className="rebot-step-flow">
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>安装 Miniforge</h4>
+<p className="rebot-step-label">第 1 步</p>
 
 <CodeBlock language="bash">
 {`wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
@@ -328,19 +402,37 @@ source ~/.bashrc
 conda init --all`}
 </CodeBlock>
 
-2. 创建并激活一个新的 conda 环境用于 lerobot
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>创建并激活 conda 环境</h4>
+<p className="rebot-step-label">第 2 步</p>
 
 <CodeBlock language="bash">
 {`conda create -y -n lerobot python=3.12 && conda activate lerobot`}
 </CodeBlock>
 
-3. 克隆 LeRobot 仓库：
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4>克隆 LeRobot 仓库</h4>
+<p className="rebot-step-label">第 3 步</p>
 
 <CodeBlock language="bash">
 {`git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot`}
 </CodeBlock>
 
-4. 使用 miniforge 时，在环境中安装 ffmpeg：
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4>安装 ffmpeg</h4>
+<p className="rebot-step-label">第 4 步</p>
 
 <CodeBlock language="bash">
 {`conda install ffmpeg -c conda-forge`}
@@ -361,7 +453,13 @@ ffmpeg 相关异常说明已统一整理到文末 FAQ。
 
 :::
 
-5. 安装带有 feetech 电机依赖的 LeRobot：
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4>安装 LeRobot 与电机依赖</h4>
+<p className="rebot-step-label">第 5 步</p>
 
 :::tip
 如果你使用的是新配置的 Ubuntu 22.04 虚拟机，尤其是最小化安装版本，系统可能默认不带 `gcc` 等 C 编译工具。此时在安装带有 feetech 电机依赖的 LeRobot 时，`evdev` Python 包可能会因为缺少 C 编译器而构建失败。
@@ -380,7 +478,13 @@ sudo apt install build-essential`}
 {`cd ~/lerobot && pip install -e ".[feetech]"`}
 </CodeBlock>
 
-6. 检查 PyTorch 和 Torchvision
+</div>
+</section>
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4>检查 PyTorch 和 Torchvision</h4>
+<p className="rebot-step-label">第 6 步</p>
 
 由于通过 pip 安装 lerobot 环境时会卸载原有的 PyTorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
 
@@ -408,6 +512,10 @@ exit()   #  退出python`}
 
 :::
 
+</div>
+</section>
+</div>
+
 </TabItem>
 
 </Tabs>
@@ -422,22 +530,11 @@ exit()   #  退出python`}
     <p>对散件舵机设置 ID、波特率和中位值，并按步骤完成机械臂组装。</p>
   </div>
 
-<div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>运行前安全确认</strong>
-      <p>
-        请清空机械臂工作空间 1 米范围内的贵重物品和无关人员。
-        确认机械臂固定牢靠、电源和线缆连接正常后，再运行本节程序。
-      </p>
-    </div>
-  </div>
-
 :::tip
 如果你购买的是已组装 SO-ARM101，请跳过电机组装，直接进入[机械臂校准部分](#calibration)。
 :::
 
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary>散件机械臂，请按步骤进行</summary>
 
@@ -459,6 +556,10 @@ SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注�
 | ST-3215-C044(7.4V)                           | 1:191  | L3             |
 | ST-3215-C046(7.4V)                           | 1:147  | L4–L6         |
 | ST-3215-C001(7.4V) / C018(12 V) / C047(12 V) | 1:345  | F1–F6         |
+
+:::danger
+注意，达摩院版本的soarm主臂和从臂均是5V的
+:::
 
 :::danger
 现在你需要将 5 V 或 12 V 电源连接到电机总线上。对于 STS3215 7.4V 电机使用 5 V 电源，对于 STS3215 12 V 电机使用 12 V 电源。请注意，Leader 机械臂始终使用 7.4V 电机，因此如果你同时有 12 V 和 7.4V 电机，一定要使用正确的电源，否则可能会烧坏电机！然后，通过 USB 将电机总线连接到你的电脑。请注意，USB 不会为电机供电，因此电源和 USB 都必须连接。
@@ -639,60 +740,46 @@ sudo chmod 666 /dev/ttyACM1`}
     <p>校准 follower 与 leader，使主从臂在相同物理位置下保持一致。</p>
   </div>
 
-<div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>运行前安全确认</strong>
-      <p>
-        请清空机械臂工作空间 1 米范围内的贵重物品和无关人员。
-        确认机械臂固定牢靠、电源和线缆连接正常后，再运行本节程序。
-      </p>
-    </div>
-  </div>
+**运行前：** 请清空机械臂工作空间 1 米范围内的贵重物品和无关人员，确认机械臂固定牢靠、电源和线缆连接正常。
 
-<div className="video-container">
-<iframe
-  loading="lazy"
-  width="900"
-  height="600"
-  src="https://player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1&autoplay=0&muted=1&mute=1&danmaku=0"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerPolicy="strict-origin-when-cross-origin"
-  allowFullScreen
-></iframe>
-</div>
-
-:::tip
-SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
-:::
+SO100 和 SO101 的代码兼容，SO100 用户可使用 SO101 的参数和代码。校准使主从臂在相同物理位置下的位置值一致，便于在同型号机械臂之间使用训练结果。
 
 :::danger
 若购买 **SO101 Arm Kit 标准版**，所有电源均为5 V。若购买 **SO101 Arm Kit Pro 版**，Leader机械臂的校准及每一步骤均使用5 V电源，Follower机械臂的校准及每一步骤均使用12 V电源。
 :::
 
-接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。
+<div className="rebot-step-flow">
 
-如需重新校准机械臂，请查看文末 FAQ 中的“如何重新校准机械臂？”条目。
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
-请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
+<h3>连接机械臂并确认端口</h3>
 
-:::tip
-以PC(linux)和jetson板卡为例，`第一个`插入usb接口会映射为`ttyACM0`，`第二个`插入usb接口会映射为`ttyACM1`。
+<p className="rebot-step-label">第 1 步</p>
 
-在运行代码前请注意leader和follower的映射接口。
-:::
+连接 6 个舵机的 3 针接口，将底座舵机连接到驱动板，再连接机械臂的电源和数据线。
 
-首先，您需要授予接口权限，运行以下命令：
+Linux PC 和 Jetson 通常将先后插入的设备映射到 `ttyACM0` 和 `ttyACM1`；运行命令前，请确认 leader 与 follower 的实际端口。
+
+授予接口权限：
 
 <CodeBlock language="bash">
 {`sudo chmod 666 /dev/ttyACM*`}
 </CodeBlock>
 
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
 ### 校准从动臂
 
-接下来，通过运行以下 Python 命令来校准从动臂：
+<p className="rebot-step-label">第 2 步</p>
+
+运行以下命令校准从动臂：
 
 <CodeBlock language="bash">
 {`lerobot-calibrate \
@@ -701,17 +788,22 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
     --robot.id=my_awesome_follower_arm`}
 </CodeBlock>
 
-下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
+先将所有关节移至活动范围中间，按下回车后，再将各关节移动到其完整活动范围。
 
-:::tip
+由于 LeRobot 仓库更新，主从臂校准时终端未收到 5 号舵机的信号属于正常现象，可继续操作。
 
-由于lerobot仓库更新，在做主从臂校准时，终端没有收到5号舵机的信号属于正常现象，继续往下进行操作即可
+</div>
+</section>
 
-:::
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
 
 ### 校准领导臂
 
-对主机械臂进行校准的步骤与上述相同，请运行以下命令或 API 示例：
+<p className="rebot-step-label">第 3 步</p>
+
+使用与从动臂相同的方法，运行以下命令校准领导臂：
 
 <CodeBlock language="bash">
 {`lerobot-calibrate \
@@ -720,9 +812,12 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
     --teleop.id=my_awesome_leader_arm`}
 </CodeBlock>
 
-:::tip
-如果校准阶段遇到串口连接异常，请先确认端口映射，并查看文末 FAQ 的串口权限说明。
-:::
+如果无法连接串口，请确认端口映射并查看文末 FAQ 的串口权限说明。如需重新校准，请查看 FAQ 中的“如何重新校准机械臂？”。
+
+</div>
+</section>
+
+</div>
 
 <div className="video-container">
 <iframe
@@ -742,8 +837,15 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 
 如果需要检查舵机 ID、写入中位值、验证舵机是否正常，或排查 `Magnitude exceeds 2047` 等校准问题，可以使用 Seeed Studio SoARM 系列快捷校准工具。具体问题与处理方案已统一整理到文末 FAQ。
 
-<div className="hero-actions">
-  <a href="/cn/lerobot_steering_gear_debugging_tool">▶ 打开舵机调试工具使用教程</a>
+<div className="rebot-buy-button-group soarm-tool-button">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="/cn/lerobot_steering_gear_debugging_tool">
+    <span>打开舵机调试工具使用教程</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
 </div>
 </section>
 
@@ -805,7 +907,7 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
     <p>接入 OpenCV、RealSense 或 Orbbec 相机，为数据采集准备视觉输入。</p>
   </div>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary>如果使用 RealSense D435i/D405</summary>
 
@@ -951,16 +1053,21 @@ git pull origin DepthCameraSupport`}
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary>如果使用 Orbbec Gemini2/Gemini336 相机</summary>
 
 <div className="image-frame">
     <img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" alt="" />
 </div>
-<div className="get-one-now-panel">
-  <a className="get-one-now-button" href="https://detail.tmall.com/item.htm?abbucket=16&id=877820346195&mi_id=0000Ou_lIzqedYPuPAA8fpFm7RLR5dXIVA-SAX_AOiJab6M&ns=1&skuId=6069820106496&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%2275f755ae980dafcddefac00fe2ec6540%22%7D&xxc=taobaoSearch" target="_blank" rel="noopener noreferrer">
-    立即购买 / Get One Now 🖱️
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?abbucket=16&id=877820346195&mi_id=0000Ou_lIzqedYPuPAA8fpFm7RLR5dXIVA-SAX_AOiJab6M&ns=1&skuId=6069820106496&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%2275f755ae980dafcddefac00fe2ec6540%22%7D&xxc=taobaoSearch" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
   </a>
 </div>
 
@@ -1136,7 +1243,7 @@ Orbbec 相机相关异常说明已统一整理到文末 FAQ。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary>如果使用普通相机</summary>
 
@@ -1208,7 +1315,7 @@ Camera #0:
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 
 <summary>摄像头支架安装与使用</summary>
 
@@ -1220,10 +1327,16 @@ Camera #0:
 <iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&bvid=BV1HzYs6bEdH&p=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" style={{width: 'auto', minWidth: '195px', height: 'auto', whiteSpace: 'nowrap', paddingLeft: '20px', paddingRight: '20px'}} href="https://e.tb.cn/h.jbKAUs3BmOBVLXr?tk=KXmMTHMHwek" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-</a></div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://e.tb.cn/h.jbKAUs3BmOBVLXr?tk=KXmMTHMHwek" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 </details>
 
@@ -1236,17 +1349,6 @@ Camera #0:
     <span>Step 6</span>
     <h2>数据集制作与采集</h2>
     <p>从一个简单、稳定、重复性高的任务开始，先完成本地录制，再根据需要上传到 Hugging Face Hub。</p>
-  </div>
-
-<div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>运行前安全确认</strong>
-      <p>
-        请清空机械臂工作空间 1 米范围内的贵重物品和无关人员。
-        确认机械臂固定牢靠、电源和线缆连接正常后，再运行本节程序。
-      </p>
-    </div>
   </div>
 
 <div className="video-container">
@@ -1274,7 +1376,7 @@ Camera #0:
     </div>
   </div>
 
-<details className="content-details" open>
+<details className="rebot-demo-details" open>
     <summary>方式一：保存数据集到本地</summary>
 
 如果你只想先在本地验证流程，可以直接运行下面的命令。`repo_id` 可按需要自定义；当 `push_to_hub=false` 时，数据集会保存在 `~/.cache/huggingface/lerobot` 下，并创建对应的 `seeedstudio123/test` 文件夹。
@@ -1297,7 +1399,7 @@ Camera #0:
 </CodeBlock>
   </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>方式二：上传数据集到 Hugging Face Hub</summary>
 
 如果你希望使用 Hugging Face Hub 管理数据集，请先使用具有写入权限的 token 登录。Token 可在 [Hugging Face 设置](https://huggingface.co/settings/tokens) 中生成。
@@ -1341,7 +1443,7 @@ echo $HF_USER`}
 <div className="feature-grid">
     <div>
       <strong>数据存储</strong>
-      <span>数据以 LeRobotDataset 格式写入磁盘。默认会在记录结束后推送到 Hugging Face；如需关闭上传，请使用 <code>--dataset.push_to_hub=false</code>。</span>
+      <span>数据以 LeRobotDataset 格式写入磁盘。默认会在记录结束后推送到 Hugging Face；如需关闭上传，请使用 <code>--dataset.push_to_hub=false</code></span>
     </div>
     <div>
       <strong>检查点与恢复</strong>
@@ -1442,17 +1544,6 @@ echo $HF_USER`}
     <p>将已录制 episode 回放到真实机械臂，检查数据与执行一致性。</p>
   </div>
 
-<div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>运行前安全确认</strong>
-      <p>
-        请清空机械臂工作空间 1 米范围内的贵重物品和无关人员。
-        确认机械臂固定牢靠、电源和线缆连接正常后，再运行本节程序。
-      </p>
-    </div>
-  </div>
-
 现在，尝试在您的机器人上重播第一个数据集（数据保存在本地）：
 
 <CodeBlock language="bash">
@@ -1480,17 +1571,6 @@ echo $HF_USER`}
     <p>使用 ACT、SmolVLA、Pi0、Pi0.5、GR00T、PEFT 和异步推理完成训练与部署。</p>
   </div>
 
-<div className="safety-alert compact">
-    <div className="safety-alert-icon">⚠️</div>
-    <div className="safety-alert-content">
-      <strong>运行前安全确认</strong>
-      <p>
-        请清空机械臂工作空间 1 米范围内的贵重物品和无关人员。
-        确认机械臂固定牢靠、电源和线缆连接正常后，再运行本节程序。
-      </p>
-    </div>
-  </div>
-
 <div className="video-container">
 <iframe
   loading="lazy"
@@ -1505,7 +1585,7 @@ echo $HF_USER`}
 ></iframe>
 </div>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[ACT](https://huggingface.co/docs/lerobot/act)</summary>
 
 参考官方教程[ACT](https://huggingface.co/docs/lerobot/act)
@@ -1588,7 +1668,7 @@ echo $HF_USER`}
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla)</summary>
 
 参考官方教程 [SmolVLA](https://huggingface.co/docs/lerobot/smolvla)。
@@ -1674,7 +1754,7 @@ SmolVLA 是“底座模型”，要在你的桌面、你的相机、你的夹爪
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[Pi0](https://huggingface.co/docs/lerobot/pi0)</summary>
 
 参考官方教程 [Pi0](https://huggingface.co/docs/lerobot/pi0)。
@@ -1742,7 +1822,7 @@ SmolVLA 是“底座模型”，要在你的桌面、你的相机、你的夹爪
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05)</summary>
 
 参考官方教程 [Pi0.5](https://huggingface.co/docs/lerobot/pi05)。
@@ -1817,7 +1897,7 @@ SmolVLA 是“底座模型”，要在你的桌面、你的相机、你的夹爪
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot)</summary>
 
 请参考官方教程 [GR00T N1.5](https://huggingface.co/docs/lerobot/groot)。
@@ -1938,7 +2018,7 @@ License：该模型遵循 Apache 2.0 许可证（与原始 GR00T 仓库一致）
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>（可选）使用 PEFT 进行高效微调</summary>
 
 PEFT（Parameter-Efficient Fine-Tuning，参数高效微调）是一套“参数高效适配”方法与工具，用于在**不更新全部模型参数**的前提下，让大型预训练模型更快适配新任务。对于 LeRobot 的预训练策略（例如 SmolVLA、π₀ 等），通常可以只训练少量“适配器”参数（例如 LoRA），在降低显存占用与训练成本的同时获得接近全量微调的效果。
@@ -2018,7 +2098,7 @@ LoRA 的学习率通常可以比全量微调更大一个量级（常见经验：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>（可选）在训练时使用多 GPU 训练</summary>
 
 ### 训练步骤
@@ -2134,7 +2214,7 @@ LeRobot 不会根据 GPU 数量自动调整学习率或训练步骤，以避免�
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>（可选）在部署时使用异步推理</summary>
 
 在不启用异步推理时，LeRobot 的控制流程可以理解为常规的顺序式 / 同步式推理：策略先预测一段动作，再执行这段动作，之后再等待下一次预测。对于较大的模型，这会导致机器人在等待新动作块时出现明显停顿。异步推理的目标，就是让机器人一边执行当前动作块，一边提前计算下一块动作，从而减少空等并提升响应性。异步推理适用于 LeRobot 支持的策略；包括 ACT、OpenVLA、Pi0、SmolVLA 这类按 chunk 输出动作的策略。由于推理和实际控制解耦，异步推理也有助于利用具有更强算力的机器来为机器人进行推理。
@@ -2451,7 +2531,7 @@ macOS：
     </div>
   </div>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>校准舵机 ID 时提示找不到 gripper motor</summary>
 
 <CodeBlock language="text">
@@ -2461,7 +2541,7 @@ macOS：
 请仔细检查通信线是否与舵机连接正常，并确认电源电压正确。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>串口存在但无法连接 /dev/ttyACM0</summary>
 
 <CodeBlock language="text">
@@ -2474,7 +2554,7 @@ macOS：
 </CodeBlock>
   </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>ffmpeg 报 No valid stream found</summary>
 
 <CodeBlock language="text">
@@ -2491,7 +2571,7 @@ macOS：
 </div>
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>读取舵机位置失败或总线无响应</summary>
 
 <CodeBlock language="text">
@@ -2501,7 +2581,7 @@ macOS：
 请检查对应端口号的机械臂是否接通电源，并检查总线舵机数据线是否松动或脱落。通常哪个舵机灯不亮，就需要优先检查它前面的连接线。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>校准时出现 Magnitude exceeds 2047</summary>
 
 <CodeBlock language="text">
@@ -2511,7 +2591,7 @@ macOS：
 先对机械臂重新断电和上电，再次尝试校准。如果校准过程中 MAX 角度达到上万，也可以使用同样方法；如果仍然无效，则需要对相应舵机重新进行中位校准和 ID 写入。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>评估阶段提示 eval 文件夹已存在</summary>
 
 <CodeBlock language="text">
@@ -2521,7 +2601,7 @@ macOS：
 请先删除 `eval_` 开头的文件夹，然后再次运行评估程序。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>评估阶段提示 mean is infinity</summary>
 
 <CodeBlock language="text">
@@ -2531,37 +2611,37 @@ macOS：
 请确认 `--robot.cameras` 参数中的 `front`、`side` 等关键词与采集数据集时完全一致。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>维修或更换零件后需要重新校准吗？</summary>
 
 如果维修或更换过机械臂零件，请完全删除 `~/.cache/huggingface/lerobot/calibration/robots` 或 `~/.cache/huggingface/lerobot/calibration/teleoperators` 下的文件，并重新校准机械臂。否则可能沿用旧校准数据导致报错或运动异常。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>训练时间大概多久？</summary>
 
 在 3060 8 GB 笔记本上训练 ACT 的 50 组数据大约需要 6 小时；在 4090 或 A100 上训练 50 组数据大约需要 2～3 小时。实际耗时会受到 batch size、显卡性能、数据集大小和视频读取速度影响。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>数据采集时有哪些稳定性要求？</summary>
 
 数据采集过程中要保持摄像头位置、角度和环境光线稳定，并减少摄像头画面中的不稳定背景和行人。部署环境变化过大时，机械臂可能无法正常抓取。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>采集命令可以中途暂停吗？</summary>
 
 不建议中途手动暂停。`num_episodes` 要确保采集数据足够，因为数据采集结束后才会计算均值和方差，这些统计量是后续训练所必需的。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>程序无法读取 USB 摄像头图像怎么办？</summary>
 
 请确认 USB 摄像头没有接在 USB Hub 上。建议将 USB 摄像头直接接入设备，并优先使用 USB 3.0 接口，以确保图像传输速率稳定。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>如何重新校准机械臂？</summary>
 
 如果需要重新校准机械臂，有两种方案。
@@ -2580,17 +2660,24 @@ macOS：
 输入 `c` 并按下 **Enter** 会重新校准；直接按下 **Enter** 会沿用之前的校准数据。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>舵机 ID 错误、识别不到舵机或需要中位校准怎么办？</summary>
 
 如果出现舵机 ID 错误、识别不到舵机、需要验证舵机是否正常，或需要将当前位置设为中位值 **2048**，可以使用 Seeed Studio SoARM 系列快捷校准工具。该工具支持 Windows、Ubuntu 和 macOS。
 
-<div className="hero-actions">
-  <a href="/cn/lerobot_steering_gear_debugging_tool">▶ 打开舵机调试工具使用教程</a>
+<div className="rebot-buy-button-group soarm-tool-button">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="/cn/lerobot_steering_gear_debugging_tool">
+    <span>打开舵机调试工具使用教程</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
 </div>
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>Orbbec 相机提示 No Orbbec camera found</summary>
 
 <CodeBlock language="text">
@@ -2605,7 +2692,7 @@ macOS：
 确认实际 `serial` 后，再更新命令中的 `serial_number_or_name`。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>Orbbec 相机等待帧超时怎么办？</summary>
 
 <CodeBlock language="text">
@@ -2615,7 +2702,7 @@ macOS：
 如果已经增大 USBFS 缓存后仍然超时，可以先重新插拔 Orbbec 相机，再重新运行相机检测或遥操作命令。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>macOS 使用 RealSense 时提示 failed to set power state</summary>
 
 <CodeBlock language="text">
@@ -2625,7 +2712,7 @@ macOS：
 可以尝试使用 `sudo` 权限运行相同命令。需要注意的是，在 macOS 中使用 Intel RealSense 摄像头并不稳定，建议优先在 Linux 环境中调试。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>数据采集时方向键或 ESC 没有反应怎么办？</summary>
 
 如果键盘按下后没有反应，可能需要降低 `pynput` 版本，例如安装 1.6.8：
@@ -2636,7 +2723,7 @@ macOS：
 如果在 Linux 记录过程中右箭头、左箭头或 ESC 仍然无响应，请确认 `$DISPLAY` 环境变量已设置，并参考 [pynput 限制说明](https://pynput.readthedocs.io/en/latest/limitations.html)。
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
     <summary>训练时报 TypeError: stack(): argument 'tensors' 怎么办？</summary>
 
 <CodeBlock language="text">
@@ -2652,7 +2739,7 @@ macOS：
 
 ### 购买与选型
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>SO-ARM101 在哪里购买？官方链接是什么？</summary>
 
 - [淘宝套件（SO-ARM100/101，含飞特舵机）](https://e.tb.cn/h.TIJ1zNXihBEKryj?tk=FZ3geR8dgOc)
@@ -2664,14 +2751,14 @@ macOS：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>SO-ARM101 的舵机是什么型号？</summary>
 
 按关节不同使用飞特 STS3215 系列舵机（如 C001/C044/C046 等不同减速比版本，夹爪为 C001 虚拟舵机）。具体每个关节对应的型号与规格参数见 [wiki 规格参数章节](/cn/lerobot_so100m_new/)。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>腕部/全局摄像头怎么选？尺寸多大？</summary>
 
 - 腕部：**32×32mm UVC 免驱摄像头模组**（淘宝搜"32*32 uvc 相机"即可）。
@@ -2681,14 +2768,14 @@ macOS：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>想组双臂，需要再买什么？</summary>
 
 再买一套同款即可，**主从臂没有左右手区别**；两台臂可以接同一台电脑（注意区分串口）。双臂协作教程：[/cn/lerobot_double_arm_so_arm_training/](/cn/lerobot_double_arm_so_arm_training/)
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>SO-ARM101  / reBot 怎么选？</summary>
 
 - SO-ARM101：成本低、生态最成熟（LeRobot 官方适配），适合入门具身智能与模仿学习；5+1 自由度做逆运动学时有较多无解/虚解情况，工业级应用受限。
@@ -2697,14 +2784,14 @@ macOS：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>一定要配 Jetson 吗？普通电脑可以吗？</summary>
 
 不必须。LeRobot 只要有满足要求的 Ubuntu 电脑 + 摄像头即可采集；Jetson 适合没有 NVIDIA 显卡/Ubuntu 环境的用户（官方会预装好环境，步骤更少），也适合做边缘部署。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>电源和海外使用问题</summary>
 
 套件电源为宽压输入 5-12V 的板子，随附多国插头，海外加转换插头即可用。注意：**主臂（leader）与从臂（follower）电源规格不同**，接反会导致电机红灯闪烁、不工作——接线前务必核对标签。
@@ -2714,7 +2801,7 @@ macOS：
 
 ### 教程与资料
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>官方教程、wiki 和视频在哪里？</summary>
 
 - [新版中文 Wiki（推荐入口）](/cn/lerobot_so100m_new/)
@@ -2726,14 +2813,14 @@ macOS：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>组装说明书/视频按什么顺序看？</summary>
 
 先校准舵机再组装（否则舵机线被压住很难插拔）→ 组装 → 机械臂校准 → 遥操作。新版教程的组装章节与原版通用；B 站"SO101 教程一站通"系列按编号顺序看即可（中位校准写 ID → 组装 → 添加摄像头 → 场景搭建与数据采集 → 训练 → 推理）。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>URDF / STEP / 三维模型在哪下载？</summary>
 
 - [URDF](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101)
@@ -2742,7 +2829,7 @@ macOS：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>仿真/Isaac Sim/Isaac Lab 怎么跑 SO-ARM101？</summary>
 
 - Isaac Lab 训练 SO-ARM101 策略：/training_soarm101_policy_with_isaacLab/
@@ -2752,7 +2839,7 @@ macOS：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>有 MoveIt2 / ROS2 的包吗？</summary>
 
 有第三方开源包（非官方维护）：
@@ -2763,28 +2850,28 @@ macOS：
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>逆运动学代码有吗？为什么解不出来？</summary>
 
 SO-ARM101 只有 5+1 自由度且无腕部俯仰，很多位姿在运动学上无解。LeRobot 的模仿学习路线不依赖逆解（直接输出关节角度）；若做 MoveIt2/IK 场景，建议用 StarAI 等 6/7 轴方案。参考实现：[Pavankv92/lerobot_ws](https://github.com/Pavankv92/lerobot_ws)
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>有 hil-serl 强化学习教程吗？</summary>
 
 官方文档：[HIL-SERL 文档](https://huggingface.co/docs/lerobot/hilserl)。群内也有人跑通，参考 B 站/群分享。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>怎么用 OpenClaw / 大模型控制 SO-ARM101？</summary>
 
 参考官方 wiki：[/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/](/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/) 。VLM/VLA 控制可行，但动作接口需要自己写。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>云服务器能训练吗？没有显卡怎么办？</summary>
 
 可以，用 [SenseCraft Robotics 云端平台](https://sensecraft.seeed.cc/zh/robotics) 训练/部署；也可租 AutoDL/Featurize 等平台，LeRobot 数据集上传 HuggingFace 或直接 scp 到训练机。
@@ -2794,21 +2881,21 @@ SO-ARM101 只有 5+1 自由度且无腕部俯仰，很多位姿在运动学上�
 
 ### 组装与硬件
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>散件组装难吗？需要哪些工具？</summary>
 
 新手可完成（约 2 小时），需要十字螺丝刀、内六角、剪刀，建议配电动螺丝刀。打印件推荐 PLA+ 打印，填充 30% 左右（不放心硬度可加到 30%+）；官方 STL 直接打印即可。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>组装/拆装后需要重新校准吗？</summary>
 
 需要。拆装、换舵机、换电脑后都要重新做**舵机中位校准 + 机械臂校准**；舵机 ID 和零点写入的是电机内部，换电脑（同一套臂）不需要重写 ID。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>舵机 ID 怎么写？写错了怎么办？</summary>
 
 - 用飞特调试工具（FD Debug）或 LeRobot 的 `lerobot-setup-motors` / 校准脚本写入；舵机按顺序逐个接线，**按对应次数回车/确认即可完成编号**。
@@ -2817,49 +2904,49 @@ SO-ARM101 只有 5+1 自由度且无腕部俯仰，很多位姿在运动学上�
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>舵机校准中位怎么操作？校准后数值回绕到 0 怎么办？</summary>
 
 断电后手动把每个关节掰到**行程中位**（组装教程图示位置），再上电执行中位校准；数值在 4095→0 之间回绕属正常现象，重新做中位校准即可消除异常。新版 LeRobot 已取消腕部（wrist_roll）校准显示，只显示 5 个电机属正常。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>通信失败、`no status packet`、ConnectionError 怎么排查？</summary>
 
 按顺序检查：① 舵机线是否松动/接触不良（尤其 4-5 号电机之间的短线，是高发点）② 电源是否正常（主从臂电源别接反）③ 串口是否选对（/dev/ttyACM0 或 1，两台臂注意区分）④ 舵机固件/ID 是否正常。重接线后仍报错，拍视频/截图给官方技术支持。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>电机/舵机发烫、有异味或声音异常怎么办？</summary>
 
 SO-ARM 外壳与齿轮为塑料件，长时间高负载工作会发热，注意环境散热别堵住电机；可用飞特 SDK 读取电机温度监控。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>能测夹持力/把从臂阻力反馈给主臂吗？</summary>
 
 可以二次开发：飞特舵机 SDK 能读取电流值，可据此做力反馈/柔性控制；原厂固件不直接提供力控接口。想加力学传感器需自行改装，并注意对 VLA 数据的影响。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>能做重力补偿吗？</summary>
 
 SO-ARM 使用舵机，不适合做真正的重力补偿/力矩控制（子豪兄建议：要重力补偿用 reBot，不要用 SO-ARM）。系统辨识也无法在舵机固件层做电机参数辨识。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>夹爪能换吗？能装三爪/柔性夹爪/灵巧手吗？</summary>
 
 可以，改末端连接件即可（网上有开源的三爪/柔性夹爪模型）。官方柔性夹爪成品：[SO-ARM Pro101 柔性夹爪](https://www.seeedstudio.com/SO-ARM-Pro101-Flexible-Gripper-3D-p-6990.html)。装灵巧手需要自己改代码适配（LeRobot 未集成 AmazingHand 等）。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>摄像头怎么装？采集时放哪里？</summary>
 
 腕部用 32×32 UVC 支架固定在夹爪侧面（打印件见 GitHub）；采集时推荐**侧方 + 正前上方 45°** 双视角，效果最佳；没有夹爪固定位可用支架/热熔胶粘在从臂上。用普通 USB 摄像头即可满足模仿学习。
@@ -2869,21 +2956,21 @@ SO-ARM 使用舵机，不适合做真正的重力补偿/力矩控制（子豪兄
 
 ### 软件与环境
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>必须用 Ubuntu 吗？Windows / 虚拟机 / WSL 可以吗？</summary>
 
 强烈建议 **Ubuntu 20.04/22.04 原生系统**（22.04 兼容性最好）。Windows 下串口/驱动问题多（"修复 bug 的时间远超过学习时间"）；虚拟机/WSL 因 USB 透传和实时性问题不建议用于真机采集；Mac 可跑部分流程（校准/遥操可行，参考子豪兄文档），ROS2 建议 Docker 并映射网络。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>环境安装和报错处理有什么建议？</summary>
 
 按新版 wiki 的安装章节一步步来（conda 创建 Python 3.10 环境 + 对应 CUDA 的 PyTorch）；报错先查 wiki 底部 FAQ，再带完整报错截图进群。常见坑：`ValueError: No valid stream found`（查 wiki FAQ / 升级固件）、`teleop.type command not found`（命令格式/空格问题）、`FileNotFoundError`（路径/URDF 未下载）。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>校准命令和校准文件在哪里？</summary>
 
 - follower：`python -m lerobot.calibrate --robot.type=so101_follower --robot.port=/dev/ttyACM0 --robot.id=my_awesome_follower_arm`
@@ -2892,7 +2979,7 @@ SO-ARM 使用舵机，不适合做真正的重力补偿/力矩控制（子豪兄
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>校准后遥操作跑偏/不动怎么办？</summary>
 
 ① 重新做中位校准（最常见原因）② 检查电压/供电 ③ 确认没有跑校准 ID 的脚本把 ID 改乱 ④ 拍跑偏视频发给技术支持定位。
@@ -2902,35 +2989,35 @@ SO-ARM 使用舵机，不适合做真正的重力补偿/力矩控制（子豪兄
 
 ### 遥操作与数据采集
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>一个 episode 怎么录？按键怎么操作？</summary>
 
 LeRobot record 时：采完一条按**右箭头**结束 episode → 出现 reset environment 提示时收拾场景（5 秒）→ 再按右箭头开始下一条；按左箭头可重录当前条，Esc 退出。所有 episode 视频会存在同一个 MP4 文件里（新版本行为）。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>数据要采多少组才够训练？</summary>
 
 经验值：简单抓取任务 **40-50 组**够用（不同位置每 10 组换一次，共 5 个位置）；训练效果差优先加数据、提多样性（位置/光照/背景变化）。50 组以内抓取成功率低，通常是数据量/质量不足。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>两个摄像头采集时 rerun 只显示一路画面？</summary>
 
 rerun 左侧栏右键 → 添加视角/添加摄像头视图即可，不是硬件问题。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>可以用手机/其他摄像头采集吗？</summary>
 
 可以，LeRobot 支持多种摄像头源（含手机 IP 摄像头），参考官方文档：[LeRobot 相机文档](https://github.com/huggingface/lerobot/blob/main/docs/source/cameras.mdx)。注意分辨率/延迟。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>想用别人的数据集训练自己的臂可以吗？</summary>
 
 不推荐直接混用：相机位置、校准、场景都不同，效果会打折；最好自己采集。做数据增强（Cosmos transfer）在 SO101 上变形/穿模明显，且算力需求大（25 秒合成数据在 Jetson 上要 3-4 小时），不建议新手尝试。
@@ -2940,42 +3027,42 @@ rerun 左侧栏右键 → 添加视角/添加摄像头视图即可，不是硬�
 
 ### 训练与部署
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>训练需要什么配置？</summary>
 
 Ubuntu + NVIDIA 显卡（建议 RTX 3080 以上；8GB 显存可跑 ACT 推理，训练建议 12GB+）。大模型（π0.5/GR00T 等）需要 24GB+ 或云端多卡。训练务必不装虚拟机、别用 WSL。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>ACT 训练多少步/多久？效果不好怎么调？</summary>
 
 简单任务约 4 万步、50 组数据可见效（社区经验：16G 显存 2-3 小时）；效果差依次排查：数据量/多样性 → 光照与场景变化 → 训练步数（loss 未明显下降则加步数）→ 推理方式（上异步推理）。训练 5 万步仍"几乎起不来"属不正常，先回查数据采集质量。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>部署 π0.5 需要先微调吗？</summary>
 
 需要。用自己机械臂/场景采集的数据微调后再部署，直接套用官方权重效果差；微调数据量参考 50-100 组。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>能用语音控制吗？能做强化学习吗？</summary>
 
 语音控制可以：VLA 路线（如 wam）或"ASR + 技能库（skills）Agent 调用"两条路。强化学习有社区实践（SO-ARM101 + HIL-SERL），参考 [B 站教程](https://www.bilibili.com/video/BV1BsMqzgExn/)。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>训练好的模型文件怎么从云服务器拿回来？</summary>
 
 用 scp 传到本地或另一台服务器，或先上传到 OSS/OBS 等对象存储再下载；checkpoint 在 `outputs/train/<task>/checkpoints/last/pretrained_model`。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>推理时机械臂抖动/一卡一卡怎么办？</summary>
 
 ① 用异步推理（async inference） ② 检查推理频率与动作序列长度 ③ diffusion policy 本身较吃算力，性能不足会卡 ④ 降低摄像头分辨率/帧率。抖动是 SO-ARM 舵机方案的常见现象，可在飞特上位机里**最小启动力设 0、I 参数设 0、P 值调小**，或在代码 robot 目录 so101 中调参。
@@ -2985,21 +3072,21 @@ Ubuntu + NVIDIA 显卡（建议 RTX 3080 以上；8GB 显存可跑 ACT 推理，
 
 ### 通信与控制
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>飞特舵机调试工具怎么用？</summary>
 
 FD Debug 下载：[Gitee 仓库](https://gitee.com/ftservo/fddebug/tree/master)（建议 1.9.8.5 版本），波特率 **1000000**，扫描即可看到所有舵机；可改 ID、方向、PID、中位。只操作某一个舵机时记得断开其他舵机连线。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>SO-ARM101 支持 ROS2/MoveIt 吗？EE link 是哪个？</summary>
 
 支持第三方 ROS2/MoveIt 包（见问题 13）。末端 link 在 MoveIt 里拖动确认：`moving_jaw` 为动爪，`fixed_gripper` 为定爪侧的末端参考。
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>夹爪开到极限位置就断开连接是什么原因？</summary>
 
 已知现象：SO-ARM101 夹爪到极限位置时可能触发保护/断连，避免长时间顶到极限或降低夹爪力矩；频繁复现可检查舵机固件与供电。

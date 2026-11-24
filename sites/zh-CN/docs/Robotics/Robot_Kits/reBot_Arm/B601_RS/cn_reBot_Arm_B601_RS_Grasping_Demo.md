@@ -63,6 +63,10 @@ import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS 视觉夹取 Demo" />
 </p>
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV1PKsw65EXB&autoplay=0&muted=1" title="reBot Arm B601-RS 视觉夹取 Demo" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 ## 两种抓取方式有什么区别？
 
 本页包含两种不同逻辑的视觉夹取 Demo。先了解开发框架、标定方式与启动流程的区别，再选择下方标签查看对应教程。
@@ -1022,6 +1026,10 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 本方案基于 **ROS 2** 与 **YOLOE**，在 reBot Arm B601-RS 上完成目标检测、抓取与放置。系统通过多终端分别启动机械臂、深度相机和抓取节点。
 
+<div className="video-container">
+  <iframe width="900" height="600" src="https://player.bilibili.com/player.html?bvid=BV11Psw6yEtg&autoplay=0&muted=1" title="reBot Arm B601-RS ROS 2 与 YOLOE 视觉抓取教程" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+
 当前深度相机支持 **Orbbec Gemini 2** 与 **RealSense D405 / D435i**。本方案使用模型中预设的相机安装外参，不要求通过标定板采集手眼标定数据。请使用对应相机的指定支架和安装位置；安装和打印件公差会带来误差，需要先检查 TF 和目标位姿，再微调偏移参数。
 
 ### 2. 环境安装
@@ -1056,10 +1064,10 @@ sudo apt install -y python3-rosdep python3-colcon-common-extensions git wget cma
 
 #### 步骤 2. 安装相机
 
-按实际使用的相机选择下面其中一套，点击展开对应安装步骤即可。
+按实际使用的相机选择对应标签，按照说明安装。
 
-<details className="content-details">
-<summary>点击展开 Gemini 2 安装步骤</summary>
+<Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2">
 
 将 Orbbec ROS 2 SDK 克隆到工作空间，并切换到 `v2-main` 分支：
 
@@ -1085,10 +1093,8 @@ sudo bash install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-</details>
-
-<details className="content-details">
-<summary>点击展开 D405、D435i 安装步骤</summary>
+</TabItem>
+<TabItem value="realsense" label="RealSense D405 / D435i">
 
 1. 安装源码编译依赖，再克隆 RealSense SDK，并切换到 `v2.58.1`：
 
@@ -1142,7 +1148,8 @@ git clone https://github.com/xiehuangbao888/realsense-ros.git
 
 相机驱动的 ROS 依赖和工作空间编译分别在步骤 3、步骤 4 中完成，此处无需提前编译。重新插拔相机后，用 `lsusb -t` 确认它连接到 USB 3.x，通常应显示 `5000M` 或更高速度。
 
-</details>
+</TabItem>
+</Tabs>
 
 </div>
 </section>
@@ -1201,18 +1208,20 @@ cd ~/rebotarm_ros2
 source /opt/ros/humble/setup.bash
 ```
 
-<Tabs groupId="rebot-ros2-camera-build" defaultValue="realsense">
+<Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2">
+
+先按步骤 2 中的 Gemini 2 安装说明安装 Orbbec ROS 2 驱动，然后编译：
+
+```bash
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+</TabItem>
 <TabItem value="realsense" label="RealSense D405 / D435i">
 
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DUSE_LIFECYCLE_NODE=OFF
-```
-
-</TabItem>
-<TabItem value="orbbec" label="Orbbec Gemini 2">
-
-```bash
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
 </TabItem>
@@ -1453,7 +1462,7 @@ sudo ip link set can0 up
 
 #### 终端 A — 启动机械臂 + RViz
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 Gemini 2</summary>
 
 ```bash
@@ -1465,7 +1474,7 @@ ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 D405</summary>
 
 ```bash
@@ -1477,7 +1486,7 @@ ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=ca
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 D435i</summary>
 
 ```bash
@@ -1497,7 +1506,7 @@ ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=c
 
 #### 终端 B — 启动相机
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 Gemini 2</summary>
 
 ```bash
@@ -1509,7 +1518,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 D405</summary>
 
 ```bash
@@ -1524,7 +1533,7 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 D435i</summary>
 
 ```bash
@@ -1550,7 +1559,7 @@ ros2 launch realsense2_camera rs_launch.py \
 
 运行前请先 `conda activate yolo`。下面的 `python` 使用当前激活的环境，无需手动填写 Miniconda 或 Miniforge 路径。如果环境名不是 `yolo`，请激活实际使用的环境。下面的启动示例默认使用 `yolo_device:=cpu`；GPU 后端请先通过步骤 5 的 CUDA 验证，再将该参数改为 `yolo_device:=0`。
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 Gemini 2</summary>
 
 ```bash
@@ -1573,7 +1582,7 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 D405</summary>
 
 ```bash
@@ -1600,7 +1609,7 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>点击展开 D435i</summary>
 
 ```bash

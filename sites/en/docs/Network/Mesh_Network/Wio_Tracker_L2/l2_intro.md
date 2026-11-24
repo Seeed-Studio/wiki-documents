@@ -93,7 +93,7 @@ Describe your idea in a few words, and Seeed Studio’s CodeCraft AI coding assi
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
-    <td colspan="1">863-928 MHz<br/>MAX TX Power: 20dBm@US915,14dBm@EU868</td>
+    <td colspan="1">863-928 MHz<br/>MAX TX Power: 22dBm@US915,14dBm@EU868</td>
   </tr>
     <tr>
     <td colspan="1">**GNSS**</td>
@@ -197,7 +197,7 @@ Describe your idea in a few words, and Seeed Studio’s CodeCraft AI coding assi
 
 **Power Consumption**
 
-For detailed power consumption data and estimated battery life under different configurations (screen mode, LoRa frequency band and modem preset, GPS usage, etc.), please refer to the [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
+For detailed power consumption data and estimated battery life under different configurations (screen mode, LoRa frequency band and modem preset, GPS usage, etc.), please refer to the [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx).
 
 ## Pin List
 

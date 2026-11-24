@@ -216,6 +216,10 @@ const sidebars = {
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LINGBOT_VLA2', label: 'LingBot-VLA 2.0 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_DM05', label: 'DM0.5 博客精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_G05', label: 'G0.5 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_FINEART_VLA', label: 'FineART-VLA 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_MOLMOACT2', label: 'MolmoAct2 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_X_VLA', label: 'X-VLA 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_WALL_OSS_05', label: 'WALL-OSS-0.5 论文精读' },
           ],
         },
         {
@@ -229,6 +233,10 @@ const sidebars = {
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LINGBOT_VA', label: 'LingBot-VA 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_GR00T_2', label: 'GR00T 2 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LAWAM', label: 'LaWAM 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_FASTWAM', label: 'Fast-WAM 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LONG_WAM', label: 'Long-WAM 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_FLUX3', label: 'FLUX 3 Action 技术报告精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_COSMOS3', label: 'Cosmos 3 技术报告精读' },
           ],
         },
         {
@@ -290,6 +298,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS 视觉夹取' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS 腕部跟随' },
+        { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS双臂协作' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS 与 ROS2' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS 与 Isaac Sim' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web控制系统：真机与 MuJoCo' },
@@ -342,6 +351,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Grasping_Demo`, label: 'reBot-DM 视觉夹取' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM 与 ROS2' },
+        { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM双臂协作' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM 与 Isaac Sim' },
         { type: 'doc', id: `${DM}/cn_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web控制系统：真机与 MuJoCo' },
       ],

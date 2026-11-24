@@ -43,7 +43,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 |屏幕|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |MicroSD 卡槽|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |太阳能输入|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|电池|<p style={{textAlign: 'center'}}>通过连接器外接锂离子电池</p>|<p style={{textAlign: 'center'}}>内置 3000mAh 电池</p>|
+|电池|<p style={{textAlign: 'center'}}>通过连接器接入外部锂电池</p>|<p style={{textAlign: 'center'}}>内置 3000mAh 电池</p>|
 |外壳|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
 
 ## 特性
@@ -54,15 +54,15 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
 
-- **3.2 英寸高品质触摸屏**：配备 320×240 高清晰度显示屏，支持 MUI 与 Base UI 切换，为消息、地图和控制等提供流畅的本机交互体验——无需手机。
+- **3.2 英寸高品质触摸屏**：配备 320×240 高清显示屏，支持 MUI 与 Base UI 切换，为消息、地图和控制等提供流畅的本机交互体验——无需手机。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
 
-- **ESP32S3 驱动，随时扩展开发**：由双核 ESP32-S3 提供算力，并集成 Wi-Fi 与 Bluetooth LE，L2 Pro 为 UI 自定义、功能开发和开源应用提供了灵活的平台。
+- **ESP32S3 驱动，随时扩展开发**：由集成 Wi-Fi 和 Bluetooth LE 的双核 ESP32-S3 提供算力，L2 Pro 为 UI 自定义、功能开发和开源应用提供灵活的平台。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **离线地图 + GNSS 定位**：预先将离线地图下载到 MicroSD 卡，即使在没有蜂窝网络或互联网接入的情况下，也能在设备上查看你的实时 GNSS 位置。
+- **GNSS 定位与离线地图**：预先将离线地图下载到 MicroSD 卡，即使在没有蜂窝网络或互联网连接的情况下，也可在设备上查看你的 GNSS 实时位置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -70,13 +70,13 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **易于携带，灵活安装**：可折叠天线提升便携性，1/4 英寸安装接口可搭配兼容配件实现灵活固定与摆放。
+- **便于携带，灵活安装**：可折叠天线提升便携性，1/4 英寸安装接口可搭配兼容配件实现灵活固定。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (6).jpg" alt="pir" width={900} height="auto"/></p>
 
 - **借助 CodeCraft 更快完成原型开发**
 
-用几句话描述你的想法，Seeed Studio 的 CodeCraft AI 编码助手即可在几分钟内生成第一版代码。你可以审阅代码，将其烧录到 Wio Tracker L2 上，并在开发板上进行测试。
+用几句话描述你的想法，Seeed Studio 的 CodeCraft AI 编码助手即可在数分钟内生成首版代码。你只需审阅、烧录到 Wio Tracker L2，并在开发板上进行测试。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -93,7 +93,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
-    <td colspan="1">863-928 MHz<br/>最大发射功率：20dBm@US915，14dBm@EU868</td>
+    <td colspan="1">863-928 MHz<br/>最大发射功率：22dBm@US915，14dBm@EU868</td>
   </tr>
     <tr>
     <td colspan="1">**GNSS**</td>
@@ -121,7 +121,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
     <td colspan="1">MicroSD 卡槽</td>
   </tr>
   <tr>
-    <td colspan="1">四分之一英寸螺纹孔</td>
+    <td colspan="1">1/4 英寸螺纹孔</td>
   </tr>
    <tr>
     <td colspan="1">**QSPI 接口**</td>
@@ -189,7 +189,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 |项目|参数|
 | :- | :- |
 |**电池容量**|可充电锂离子电池，3000mAh|
-|**电池寿命监测**|周期性上行电池电量|
+|**电池寿命监测**|周期性上报电池电量|
 |**充电协议**|USB Type-C|
 |**设备电源输入**|5V，1A|
 |**满充截止电压**|4.2V|
@@ -197,7 +197,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 
 **功耗**
 
-关于在不同配置（屏幕模式、LoRa 频段和调制解调器预设、GPS 使用情况等）下的详细功耗数据和预估电池续航，请参考 [Wio Tracker L2 功耗表](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx)。
+关于不同配置（屏幕模式、LoRa 频段和调制预设、GPS 使用情况等）下的详细功耗数据和预估电池续航，请参考 [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)。
 
 ## 引脚列表
 

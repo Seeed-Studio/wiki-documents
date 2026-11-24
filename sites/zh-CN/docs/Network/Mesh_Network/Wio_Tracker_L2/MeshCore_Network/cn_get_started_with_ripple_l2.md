@@ -1,6 +1,6 @@
 ---
 description: 在 Wio Tracker L2 Pro 上开始使用 Ripple UI。了解如何烧录固件、配置 MeshCore 网络、发送消息、使用地图和 GPS 轨迹，以及解锁高级功能。
-title: Ripple 入门
+title: Ripple 入门指南
 keywords:
   - Ripple
   - Ripple UI
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 Ripple UI 是用于 L2 Pro 的触摸屏固件。它让你可以直接在设备上添加联系人、收发消息、查看地图并记录你的 GPS 轨迹，而无需使用手机来完成这些任务。
 
-### Ripple 与 MeshCore 的关系？
+### Ripple 与 MeshCore 的关系
 
 MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触摸屏上使用它。
 
@@ -36,7 +36,7 @@ MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触�
 
 :::note
 
-更新后的固件使用 MeshCore 配置文件，并且不再在 New Network 界面中提供 Ripple 选项。
+更新后的固件使用 MeshCore 配置文件，不再在 New Network 界面中提供 Ripple 选项。
 
 :::
 
@@ -54,7 +54,7 @@ MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触�
 
 - **独立消息功能：** 通过触摸屏发送点对点和群组消息。
 
-- **多网络配置文件：** 保持独立的无线电设置、身份、联系人和偏好。
+- **多网络配置文件：** 分别保存无线电设置、身份、联系人和偏好设置。
 
 - **可自定义主屏幕：** 为联系人、频道和设置添加快捷方式。
 
@@ -68,17 +68,17 @@ MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触�
 
 ## 烧录固件
 
-如果你的设备已经安装了此处描述的 Ripple UI 版本，请跳转到 **首次设置**。
+如果你的设备已经安装了此处描述的 Ripple UI 版本，请跳转到 **[首次设置](#首次设置)**。
 
 提供两种固件变体：
 
-- **Ripple GUI：数据存储在 SD 卡（-SD）：** 将配置和数据存储在 microSD 卡上。使用前插入容量不超过 32 GB、FAT32 格式的存储卡。
+- **Ripple GUI：数据存储在 SD 卡（-SD）：** 将配置和数据存储在 microSD 卡中。使用前插入一张容量不超过 32 GB、FAT32 格式化的卡。
 
-- **Ripple GUI（内部存储）：** 将配置和数据存储在设备的内部闪存中。
+- **Ripple GUI（内部存储）：** 将配置和数据存储在设备内部闪存中。
 
 **步骤 1：打开网页烧录工具**
 
-访问 [Wio Tracker L2 Web Flasher](https://flasher.meshcore.io/wio-tracker-l2/)，并为 L2 选择 Ripple UI 固件和存储变体。请使用支持串口访问的桌面浏览器，例如 Chrome 或 Edge。
+访问 [Wio Tracker L2 Web Flasher](https://flasher.meshcore.io/wio-tracker-l2/)，为 L2 选择 Ripple UI 固件和存储变体。使用支持串口访问的桌面浏览器，例如 Chrome 或 Edge。
 
 选择 `Seeed Studio Wio Tracker L2 Pro`，选择一个 Ripple GUI 变体，并选择固件版本。下图示例为 v12.3。
 
@@ -96,13 +96,13 @@ MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触�
 
 :::warning
 
-上方所示的 `Erase device` 选项会清除内部闪存中的数据和设置，包括解锁状态。擦除前请备份重要数据并妥善保存你的 Unlock Code。
+上图中的 `Erase device` 选项会清除内部闪存中的数据和设置，包括解锁状态。在擦除前请备份重要数据并妥善保存你的 Unlock Code。
 
 :::
 
 **步骤 4：重启**
 
-烧录完成后，按下 `RST` 以启动 Ripple UI。
+烧录完成后，按下 `RST` 启动 Ripple UI。
 
 :::tip
 
@@ -121,19 +121,19 @@ MeshCore 负责网状网络通信。Ripple UI 让你可以直接在 L2 Pro 触�
 Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 - **屏幕开/关（顶部按键）：** 按下以点亮或关闭屏幕。关闭屏幕不会关闭设备电源。
-- **ENTER（侧边 U/B 按键）：** 在提示时按下以确认选择、保存更改或提交输入。
+- **ENTER（侧边 U/B 按钮）：** 在提示时按下以确认选择、保存更改或提交输入。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_Button_Indication.webp" alt="L2 Pro 硬件按键：顶部按键用于屏幕开/关，侧边 U/B 按键用于 ENTER" width={700} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/Ripple_Button_Indication.webp" alt="L2 Pro 硬件按键：顶部按键用于屏幕开/关，侧边 U/B 按钮用于 ENTER" width={700} height="auto" /></p>
 
 ### 创建网络配置文件
 
-1. 完成首次启动时显示的触摸屏和 Select 按键教程。
+1. 完成首次启动时显示的触摸屏和 Select 按钮教程。
 
 2. 选择适合你所在地区的无线电预设，或输入本地网络使用的频率、扩频因子（SF）和其他参数。
 
 3. 使用字母和数字为配置文件命名，不要包含空格。
 
-4. 保存配置文件。如果出现提示，请重启设备以应用设置。
+4. 保存配置文件。如有提示，请重启设备以应用设置。
 
 对于两台设备的测试，请在两台设备上使用匹配的无线电设置。选择相同的预设是最简单的方式。如果使用自定义设置，请同时检查带宽、编码率和其他参数，而不仅仅是频率和 SF。
 
@@ -151,9 +151,9 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 <Tabs>
 
-<TabItem value="grid" label="G: Grid" default>
+<TabItem value="grid" label="G: 网格" default>
 
-`G` 是一个可自定义的主屏幕，包含 3 × 4 的网格。
+`G` 是一个 3 × 4 网格的可自定义主屏幕。
 
 - 长按空白单元格以添加联系人、群组频道或设置的快捷方式。
 
@@ -163,9 +163,9 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 </TabItem>
 
-<TabItem value="list" label="L: List">
+<TabItem value="list" label="L: 列表">
 
-`L` 列出你的网络配置文件、联系人、群组频道以及 `Discover`。使用此页面添加联系人、编辑你的 Identity，并打开会话。
+`L` 会列出你的网络配置文件、联系人、群组频道以及 `Discover`。使用此页面添加联系人、编辑你的 Identity，并打开会话。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Ripple UI 列表页面" width={500} height="auto" /></p>
 
@@ -173,7 +173,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 </TabItem>
 
-<TabItem value="map" label="M: Map">
+<TabItem value="map" label="M: 地图">
 
 `M` 显示地图、位置以及任何已加载的 GPS 轨迹。
 
@@ -181,7 +181,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 - 点击 `+` 或 `−` 进行缩放。不支持双指缩放。
 
-- 点击位置跟随按钮以让地图始终以你的位置为中心。启用时按钮会变为橙色，并且屏幕保持常亮。
+- 点击位置跟随按钮以让地图始终以你的位置为中心。启用时按钮会变为橙色，且屏幕保持常亮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_M.jpg" alt="Ripple UI 地图和缩放控件" width={500} height="auto" /></p>
 
@@ -189,11 +189,11 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 <TabItem value="extra" label="Extra">
 
-打开主屏幕左下角的菜单以进入 `Extra`，其中包含设备设置和工具。
+打开主屏幕左下角菜单进入 `Extra`，其中包含设备设置和工具。
 
 - **Display：** 调整字体大小、主题、动画和强调色。
 
-- **Wi-Fi：** 配置你的连接和地图下载。地图下载需要解锁码。
+- **Wi-Fi：** 配置连接和地图下载。地图下载需要解锁码。
 
 - **Networks：** 创建和管理网络配置文件。
 
@@ -201,7 +201,7 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 - **Timezone：** 设置本地 UTC 偏移。
 
-- **SX1262：** 检查 LoRa 无线电初始化状态。`code=0` 表示成功。
+- **SX1262：** 检查 LoRa 射频初始化状态。`code=0` 表示成功。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_Extra.jpg" alt="Ripple UI Extra 系统设置" width={500} height="auto" /></p>
 
@@ -219,11 +219,11 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 | 标题栏右侧 | 打开 GPS 信息 |
 | 主屏幕左下角菜单 | 打开系统设置，包括 Display、Wi-Fi、Networks 和 Timezone |
 
-### 截取屏幕截图
+### 截图
 
 **长按屏幕左上角** 以捕获当前界面。你可以使用截图分享设置或报告问题。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_screenshot.gif" alt="长按左上角以截取屏幕截图" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_screenshot.gif" alt="长按左上角进行截图" width={500} height="auto" /></p>
 
 捕获的截图为 BMP 文件，文件名包含日期和时间，如下所示。
 
@@ -239,17 +239,17 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 3. 将 `Advert` 设置为 `On` 以允许身份广播。
 
-4. 从 `L` 页面打开 `Discover`，并等待附近节点出现。
+4. 在 `L` 页面打开 `Discover`，等待附近节点出现。
 
 要立即发送身份广播，请打开 `Discover` 菜单：
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="Discover 菜单，包含 Scan Local、Send ID Local 和 Send ID Broadcast" width={400} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_discover.bmp" alt="包含 Scan Local、Send ID Local 和 Send ID Broadcast 的 Discover 菜单" width={400} height="auto" /></p>
 
 | 选项 | 功能 |
 | --- | --- |
-| `Send ID Local` | 向附近设备发送零跳数的身份广播 |
-| `Send ID Broadcast` | 向网状网络广播你的身份 |
-| `Scan Local` | 请求附近支持发现响应的节点回复；常用于发现中继节点 |
+| `Send ID Local` | 向附近设备发送零跳数身份广播 |
+| `Send ID Broadcast` | 向整个 Mesh 广播你的身份 |
+| `Scan Local` | 请求附近支持发现响应的节点进行回复；常用于发现中继器 |
 
 `Scan Local` 不会列出所有设备。节点必须在通信范围内并配置为响应。
 
@@ -271,19 +271,19 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 2. 点击输入框并输入消息。
 
-3. 按 `ENTER` 发送并等待确认。
+3. 按下 `ENTER` 发送并等待确认。
 
 4. 在另一台设备上打开会话并回复。
 
-私信会等待接收方的确认（ACK）。如果发送失败，请检查无线电设置和距离，然后重试。如果之前的路由不再可用，在 `Path` 下选择 `Flood (reset)` 以寻找新路由。
+私信会等待接收方的确认（ACK）。如果发送失败，请检查无线电设置和距离，然后重试。如果之前的路径已不可用，在 `Path` 下选择 `Flood (reset)` 以寻找新路径。
 
 ## 地图和 GPS 轨迹
 
 ### 准备离线地图
 
-1. 准备一张 32 GB 或更小、FAT32 格式化的 microSD 卡。
+1. 准备一张容量不超过 32 GB、FAT32 格式的 microSD 卡。
 
-2. 使用以下文件夹结构将栅格地图瓦片保存在卡上：
+2. 按以下文件夹结构将栅格地图瓦片保存到此卡中：
 
 ```text
 
@@ -305,20 +305,20 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 3. 输入你的网络名称和密码，并启用地图下载。
 
-4. 按 `ENTER` 保存，并在提示时重启。
+4. 按下 `ENTER` 保存，并在提示时重启。
 
 5. 确认 Wi-Fi 菜单显示橙色连接指示。
 
 6. 打开地图并平移或缩放到所需区域。瓦片会按需下载并缓存在 SD 卡上。
 
-### 设置广告中使用的位置
+### 设置广播中使用的位置
 
 | Advert Location 设置 | 使用的位置 |
 | --- | --- |
 | `GPS` | 设备 GPS 获取的位置 |
 | `Manual` | 在地图上通过 `Advert Loc` 选择的固定位置 |
 
-要使用在地图上选择的点，先将 `Advert Location` 设置为 `Manual`。在 GPS 模式下，广告会继续使用 GPS 位置。
+要使用在地图上选择的点，首先将 `Advert Location` 设置为 `Manual`。在 GPS 模式下，广播会继续使用 GPS 位置。
 
 ## 解锁高级功能
 
@@ -326,11 +326,11 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 ### 查找设备序列号
 
-在设备菜单中找到并打开 `Unlock`。记录该屏幕上显示的 **Serial number**。购买时请使用这个完整的序列号，而不是 MAC 地址的最后几位或 Pair Device PIN。
+在设备菜单中找到并打开 `Unlock`。记录该界面显示的 **Serial number**。购买时请使用这个完整的序列号，而不是 MAC 地址的最后几位或 Pair Device PIN。
 
 ### 获取解锁码
 
-打开 Scott 的 [Ripple Ultra Unlock Code 页面](https://buymeacoffee.com/ripplebiz/e/249834)，按照购买说明操作，并提供设备上显示的序列号。许可证按设备发放；每个许可证只输入一个设备序列号。
+打开 Scott 的 [Ripple Ultra Unlock Code 页面](https://buymeacoffee.com/ripplebiz/e/249834)，按照购买说明操作，并提供设备上显示的序列号。授权按设备发放；每个授权仅输入一个设备序列号。
 
 如果你的设备附带了适用的解锁码，请继续下一步。
 
@@ -344,19 +344,19 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 4. 打开你想使用的高级功能并确认其已可用。
 
-请将解锁码与其对应的设备序列号妥善保存。在我们的测试中，使用 `erase_flash` 擦除闪存并重新安装固件后，需要再次输入设备的解锁码。
+请将解锁码与其对应的设备序列号妥善保存。在我们的测试中，使用 `erase_flash` 擦除 Flash 并重新安装固件后，需要再次输入设备的解锁码。
 
 ### 高级功能
 
 - **自动遥测：** 当你打开具有直接路径的会话时请求遥测。如果对端节点允许 GPS 遥测，则显示位置、方向和距离。
 
-- **房间管理员 CLI：** 使用管理员密码访问 Room Server 命令行。
+- **Room 管理 CLI：** 使用管理员密码访问 Room Server 命令行。
 
-- **中继管理员：** 检查中继状态并远程管理节点。
+- **中继器管理：** 检查中继器状态并远程管理节点。
 
-- **传感器管理员：** 访问传感器命令、遥测和权限管理。
+- **传感器管理：** 访问传感器命令、遥测和权限管理。
 
-- **更高的地图缩放级别：** 显示高于缩放级别 9 的地图瓦片。
+- **更详细的地图缩放：** 显示高于缩放级别 9 的地图瓦片。
 
 - **Wi-Fi 下载：** 按需下载地图瓦片并缓存在 SD 卡上。
 
@@ -372,41 +372,47 @@ Ripple UI 将触摸屏输入与两个硬件按键结合使用：
 
 3. 保存并在提示时重启。
 
-4. 点击标题栏左侧，并在 `Switch To` 中选择一个配置文件。
+4. 点击标题栏左侧并在 `Switch To` 中选择一个配置文件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_new_network.jpg" alt="在 Networks 中创建 MeshCore 网络配置文件" width={500} height="auto" /></p>
 
-每个配置文件都有自己的身份、联系人和偏好设置。打开属于其他配置文件的联系人时，可能会提示你切换配置文件。该提示并不表示设备已检测到对端节点当前使用的是哪个网络。
+每个配置文件都有自己的身份、联系人和偏好设置。打开属于其他配置文件的联系人时，可能会提示你切换配置文件。此提示并不表示设备已检测到对端节点当前使用的是哪个网络。
 
 ## 常见问题
 
 ### SX1262 状态码
 
-此屏幕显示 LoRa 无线电初始化时的 RadioLib 返回码。`0` 表示初始化成功。该屏幕用于无线电诊断。
+此界面显示 LoRa 无线电初始化时的 RadioLib 返回码。`0` 表示初始化成功。该界面用于无线电诊断。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_lora_normal.jpg" alt="SX1262 初始化 code=0 表示成功" width={500} height="auto" /></p>
 
 ### 发现其他设备
 
-- 确认两台设备使用兼容的 MeshCore 配置文件，并且无线电设置匹配。
+- 确认两台设备使用兼容的 MeshCore 配置文件且无线电设置匹配。
 
-- 在另一台设备上启用 Advert，或让它发送 `Send ID Local`。
+- 在另一台设备上启用 Advert，或让其发送 `Send ID Local`。
 
 - 先在开阔区域进行短距离测试。
 
-- `Scan Local` 只列出对发现请求作出响应的节点；它不会替代所有设备的身份广播。
+- `Scan Local` 只会列出响应发现请求的节点；它不能替代所有设备的身份广播。
 
 ### 为什么地图是空白的
 
-检查 SD 卡格式、瓦片路径以及显示区域是否存在瓦片。在锁定设备上，还要检查缩放级别是否在 1–9 范围内。有效的 GPS 位置并不意味着地图瓦片已经下载。
+检查 SD 卡格式、瓦片路径以及显示区域是否存在瓦片。在锁定设备上，还要检查缩放级别是否在 1–9 范围内。有效的 GPS 位置并不意味着地图瓦片已被下载。
+
+### 电池映射
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
 
 ## 资源
 
-- [Ripple 项目和开发者更新](https://buymeacoffee.com/ripplebiz)
+- [Ripple 项目与开发者更新](https://buymeacoffee.com/ripplebiz)
 
 - [Ripple Ultra 解锁码](https://buymeacoffee.com/ripplebiz/e/249834)
 
-- [MeshCore 项目和文档](https://github.com/meshcore-dev/MeshCore)
+- [MeshCore 项目与文档](https://github.com/meshcore-dev/MeshCore)
 
 ## 技术支持与产品讨论
 

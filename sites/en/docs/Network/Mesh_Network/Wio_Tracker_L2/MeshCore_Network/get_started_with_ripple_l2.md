@@ -68,7 +68,7 @@ The updated firmware uses MeshCore profiles and no longer offers Ripple in the N
 
 ## Flash Firmware
 
-If your device already has the Ripple UI version described here, skip to **First-Time Setup**.
+If your device already has the Ripple UI version described here, skip to **[First-Time Setup](#first-time-setup)**.
 
 Two firmware variants are available:
 
@@ -399,6 +399,12 @@ This screen shows the RadioLib return code from LoRa radio initialization. `0` m
 ### Why is the map blank
 
 Check the SD card format, tile paths, and whether tiles exist for the displayed area. On a locked device, also check that the zoom level is within 1–9. A valid GPS position does not mean map tiles have been downloaded.
+
+### Battery Mapping
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
 
 ## Resources
 

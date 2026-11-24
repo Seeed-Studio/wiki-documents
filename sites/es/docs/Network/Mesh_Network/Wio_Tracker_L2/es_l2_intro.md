@@ -25,11 +25,11 @@ url: https://wiki.seeedstudio.com/es/meshtastic_wio_tracker_l2_intro/
     </a>
 </div>
 
-La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altamente extensible que incorpora LoRa (862–930 MHz), el ESP32S3 para un procesamiento eficiente y un módulo GPS L76K para un seguimiento de ubicación preciso. Diseñada para ofrecer flexibilidad, es compatible con pantalla táctil QSPI, pantallas E-Ink, tarjeta TF, así como paneles solares y alimentación por batería, lo que la hace ideal para una amplia gama de aplicaciones IoT y fuera de la red.
+La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altamente extensible que incorpora LoRa (862–930 MHz), el ESP32S3 para un procesamiento eficiente y un módulo GPS L76K para un seguimiento de ubicación preciso. Diseñado para ofrecer flexibilidad, es compatible con pantalla táctil QSPI, pantallas E-Ink, tarjeta TF, así como paneles solares y alimentación por batería, lo que lo hace ideal para una amplia gama de aplicaciones IoT y fuera de la red.
 
 ## Modelo de la Serie L2
 
-La Serie Wio Tracker L2 incluye Wio Tracker L2 para montajes personalizados y Wio Tracker L2 Pro con carcasa y batería integrada.
+La Serie Wio Tracker L2 incluye Wio Tracker L2 para construcciones personalizadas y Wio Tracker L2 Pro con carcasa y batería integrada.
 
 ### Comparación de versiones
 
@@ -50,15 +50,15 @@ La Serie Wio Tracker L2 incluye Wio Tracker L2 para montajes personalizados y Wi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
 
-- **Un hardware, posibilidades infinitas** Crea tu propia interfaz, panel de control, juego, herramienta de mapas o experiencia interactiva: L2 Pro está listo para lo que quieras construir.
+- **Un solo hardware, posibilidades infinitas** Crea tu propia interfaz, panel de control, juego, herramienta de mapas o experiencia interactiva: L2 Pro está listo para lo que quieras construir.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
 
-- **Pantalla táctil de alta calidad de 3.2''**: Con una pantalla de alta claridad de 320×240 con MUI y Base UI conmutables, ofrece una interacción fluida en el dispositivo para mensajería, mapas y control, sin necesidad de un teléfono móvil.
+- **Pantalla táctil de alta calidad de 3,2''**: Con una pantalla de alta claridad de 320×240 con MUI y Base UI conmutables, ofrece una interacción fluida en el dispositivo para mensajería, mapas y control, sin necesidad de un teléfono móvil.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
 
-- **Impulsado por ESP32S3, listo para desarrollar**: Impulsado por el ESP32-S3 de doble núcleo con Wi-Fi y Bluetooth LE, L2 Pro proporciona una plataforma flexible para personalización de la interfaz, desarrollo de funciones y aplicaciones de código abierto.
+- **Impulsado por ESP32S3, listo para desarrollar**: Impulsado por el ESP32-S3 de doble núcleo con Wi-Fi y Bluetooth LE, L2 Pro proporciona una plataforma flexible para la personalización de la interfaz, el desarrollo de funciones y aplicaciones de código abierto.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -76,7 +76,7 @@ La Serie Wio Tracker L2 incluye Wio Tracker L2 para montajes personalizados y Wi
 
 - **Prototipa más rápido con CodeCraft**
 
-Describe tu idea en pocas palabras y el asistente de codificación con IA CodeCraft de Seeed Studio generará un primer borrador del código en cuestión de minutos. Revísalo, flashea tu Wio Tracker L2 y pruébalo en la placa.
+Describe tu idea en pocas palabras y el asistente de programación con IA CodeCraft de Seeed Studio generará un primer borrador del código en cuestión de minutos. Revísalo, flashea tu Wio Tracker L2 y pruébalo en la placa.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
 
@@ -93,7 +93,7 @@ Describe tu idea en pocas palabras y el asistente de codificación con IA CodeCr
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
-    <td colspan="1">863-928 MHz<br/>Potencia TX MÁX: 20dBm@US915,14dBm@EU868</td>
+    <td colspan="1">863-928 MHz<br/>Potencia TX MÁX: 22dBm@US915,14dBm@EU868</td>
   </tr>
     <tr>
     <td colspan="1">**GNSS**</td>
@@ -139,18 +139,18 @@ Describe tu idea en pocas palabras y el asistente de codificación con IA CodeCr
   </tr>
   <tr>
     <td colspan="1" rowspan="2">**Pantalla táctil IPS**</td>
-    <td colspan="1">Tamaño: 3.2 pulgadas</td>
+    <td colspan="1">Tamaño: 3,2 pulgadas</td>
   </tr>
   <tr>
     <td colspan="1">Resolución: 240 × 320 píxeles</td>
   </tr>
     <tr>
     <td colspan="1">**LED**</td>
-    <td colspan="1">Mesh LED * 1<br/>LED de carga * 1</td>
+    <td colspan="1">LED de malla * 1<br/>LED de carga * 1</td>
   </tr>
   <tr>
     <td colspan="1">**Botón**</td>
-    <td colspan="1">WAKE-UP * 1<br/>Usuario/Boot * 1<br/>RST * 1<br/>Interruptor de encendido * 1</td>
+    <td colspan="1">WAKE-UP * 1<br/>Usuario/Arranque * 1<br/>RST * 1<br/>Interruptor de encendido * 1</td>
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**Audio**</td>
@@ -164,15 +164,15 @@ Describe tu idea en pocas palabras y el asistente de codificación con IA CodeCr
   </tr>
     <tr>
     <td colspan="1">**Distancia de comunicación**</td>
-    <td colspan="1">Hasta 5.8 km</td>
+    <td colspan="1">Hasta 5,8 km</td>
   </tr>
     <tr>
     <td colspan="1">**Dimensiones**</td>
-    <td colspan="1">(Antena plegada) L: 87.5 mm, W: 69 mm, H: 26.6 mm</td>
+    <td colspan="1">(Antena plegada) L: 87,5 mm, A: 69 mm, H: 26,6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**Peso del dispositivo**</td>
-    <td colspan="1">171.5g</td>
+    <td colspan="1">171,5g</td>
   </tr>
     <tr>
     <td colspan="1">**Temperatura de funcionamiento**</td>
@@ -197,7 +197,7 @@ Describe tu idea en pocas palabras y el asistente de codificación con IA CodeCr
 
 **Consumo de energía**
 
-Para obtener datos detallados de consumo de energía y la vida útil estimada de la batería bajo diferentes configuraciones (modo de pantalla, banda de frecuencia LoRa y preset de módem, uso de GPS, etc.), consulta la [Tabla de consumo de energía de Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%202026-11-03.xlsx).
+Para obtener datos detallados de consumo de energía y la vida útil estimada de la batería bajo diferentes configuraciones (modo de pantalla, banda de frecuencia LoRa y preset de módem, uso de GPS, etc.), consulta la [Tabla de consumo de energía de Wio Tracker L2](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx).
 
 ## Lista de pines
 

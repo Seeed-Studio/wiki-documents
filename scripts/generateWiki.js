@@ -33,6 +33,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Camera_Data_Chain.md'), //11.2
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_Device_Tree.md'), //11.2
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Technical_Deep_Dives', 'Jetson_USB_Issue.md'), //11.2
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'T701_HT', 'reBot_Arm_T701_HT_control_mit.md'), //11.19
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'T701_HT', 'reBot_Arm_T701_HT_pinocchio.md'), //11.19
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'T701_HT', 'reBot_Arm_T701_HT_vr.md'), //11.19
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

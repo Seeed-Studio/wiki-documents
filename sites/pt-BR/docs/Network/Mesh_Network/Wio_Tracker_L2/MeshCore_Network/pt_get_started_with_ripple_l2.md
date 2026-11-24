@@ -54,7 +54,7 @@ O firmware atualizado usa perfis MeshCore e não oferece mais Ripple na tela New
 
 - **Mensagens autônomas:** Envie mensagens diretas e em grupo pela tela sensível ao toque.
 
-- **Vários perfis de rede:** Mantenha configurações de rádio, identidades, contatos e preferências separados.
+- **Múltiplos perfis de rede:** Mantenha configurações de rádio, identidades, contatos e preferências separados.
 
 - **Tela inicial personalizável:** Adicione atalhos para contatos, canais e configurações.
 
@@ -68,7 +68,7 @@ O firmware atualizado usa perfis MeshCore e não oferece mais Ripple na tela New
 
 ## Gravar o firmware
 
-Se o seu dispositivo já tiver a versão do Ripple UI descrita aqui, pule para **Configuração inicial**.
+Se o seu dispositivo já tiver a versão do Ripple UI descrita aqui, pule para **[Configuração inicial](#configuração-inicial)**.
 
 Duas variantes de firmware estão disponíveis:
 
@@ -129,13 +129,13 @@ Ripple UI combina entrada por tela sensível ao toque com dois botões de hardwa
 
 1. Conclua os tutoriais de tela sensível ao toque e do botão Select exibidos na primeira inicialização.
 
-2. Escolha um preset de rádio apropriado para sua região ou insira a frequência, o fator de espalhamento (SF) e outros parâmetros usados pela sua rede local.
+2. Escolha um pré-ajuste de rádio apropriado para sua região ou insira a frequência, o fator de espalhamento (SF) e outros parâmetros usados pela sua rede local.
 
 3. Dê um nome ao perfil usando letras e números, sem espaços.
 
 4. Salve o perfil. Se solicitado, reinicie o dispositivo para aplicar as configurações.
 
-Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo preset é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas frequência e SF.
+Para um teste com dois dispositivos, use configurações de rádio correspondentes em ambos os dispositivos. Selecionar o mesmo pré-ajuste é a opção mais simples. Com configurações personalizadas, verifique também a largura de banda, a taxa de codificação e outros parâmetros, em vez de corresponder apenas a frequência e o SF.
 
 ### Defina seu nome
 
@@ -151,7 +151,7 @@ Toque em `G`, `L` ou `M` no lado esquerdo da tela para alternar entre as três t
 
 <Tabs>
 
-<TabItem value="grid" label="G: Grid" default>
+<TabItem value="grid" label="G: Grade" default>
 
 `G` é uma tela inicial personalizável com uma grade de 3 × 4.
 
@@ -159,21 +159,21 @@ Toque em `G`, `L` ou `M` no lado esquerdo da tela para alternar entre as três t
 
 - Pressione e segure um atalho existente para removê-lo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_G.jpg" alt="Tela inicial Grid do Ripple UI" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_G.jpg" alt="Tela inicial em grade do Ripple UI" width={500} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="list" label="L: List">
+<TabItem value="list" label="L: Lista">
 
 `L` lista seus perfis de rede, contatos, canais de grupo e `Discover`. Use esta página para adicionar contatos, editar sua Identity e abrir conversas.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Página List do Ripple UI" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_L.png" alt="Página de lista do Ripple UI" width={500} height="auto" /></p>
 
 A captura de tela mostra nomes usados durante os testes. Sua lista dependerá de seus perfis e contatos.
 
 </TabItem>
 
-<TabItem value="map" label="M: Map">
+<TabItem value="map" label="M: Mapa">
 
 `M` exibe o mapa, posições e qualquer trilha de GPS carregada.
 
@@ -217,7 +217,7 @@ Abra o menu da tela inicial no canto inferior esquerdo para acessar `Extra`, que
 | Pressione e segure o canto superior esquerdo | Captura uma captura de tela |
 | Meio da barra de título | Abre alternâncias rápidas |
 | Lado direito da barra de título | Abre informações de GPS |
-| Menu inferior esquerdo na tela inicial | Abre as configurações do sistema, incluindo Display, Wi-Fi, Networks e Timezone |
+| Menu inferior esquerdo na tela inicial | Abre configurações do sistema, incluindo Display, Wi-Fi, Networks e Timezone |
 
 ### Fazer uma captura de tela
 
@@ -239,7 +239,7 @@ As capturas de tela são arquivos BMP com nomes de arquivo contendo data e hora,
 
 3. Defina `Advert` como `On` para permitir anúncios de identidade.
 
-4. Abra `Discover` na página `L` e aguarde os nós próximos aparecerem.
+4. Abra `Discover` a partir da página `L` e aguarde até que nós próximos apareçam.
 
 Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
@@ -263,7 +263,7 @@ Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
 4. Repita no outro dispositivo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_contact.png" alt="Descubra nós próximos, adicione um nó aos contatos e visualize-o na lista de contatos" width={1100} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_contact.png" alt="Descobrir nós próximos, adicionar um nó aos contatos e visualizá-lo na lista de contatos" width={1100} height="auto" /></p>
 
 ### Enviar uma mensagem direta
 
@@ -275,7 +275,7 @@ Para enviar um anúncio de identidade imediatamente, abra o menu `Discover`:
 
 4. Abra a conversa no outro dispositivo e responda.
 
-Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio falhar, verifique as configurações de rádio e a distância, depois tente novamente. Se a rota anterior não puder mais ser usada, selecione `Flood (reset)` em `Path` para encontrar uma nova rota.
+Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio falhar, verifique as configurações de rádio e a distância e tente novamente. Se a rota anterior não estiver mais utilizável, selecione `Flood (reset)` em `Path` para encontrar uma nova rota.
 
 ## Mapas e trilhas de GPS
 
@@ -295,7 +295,7 @@ Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio 
 
 4. Desloque o mapa até uma área coberta pelos seus blocos e selecione um nível de zoom disponível.
 
-`zoom` é o nível de zoom; `x` e `y` são coordenadas dos blocos. Dispositivos bloqueados renderizam apenas **níveis de zoom 1–9**. Níveis de zoom mais detalhados exigem um código de desbloqueio.
+`zoom` é o nível de zoom; `x` e `y` são coordenadas de blocos. Dispositivos bloqueados renderizam apenas **níveis de zoom 1–9**. Níveis de zoom mais detalhados exigem um código de desbloqueio.
 
 ### Baixar mapas via Wi-Fi (desbloqueio necessário)
 
@@ -309,7 +309,7 @@ Mensagens diretas aguardam um reconhecimento (ACK) do destinatário. Se o envio 
 
 5. Confirme que o menu Wi-Fi mostra um indicador de conexão laranja.
 
-6. Abra o mapa e desloque ou aplique zoom até a área desejada. Os blocos são baixados sob demanda e armazenados em cache no cartão SD.
+6. Abra o mapa e desloque ou aplique zoom até a área necessária. Os blocos são baixados sob demanda e armazenados em cache no cartão SD.
 
 ### Definir a localização usada em anúncios
 
@@ -326,11 +326,11 @@ Você pode testar a troca de mensagens básica antes de comprar um código de de
 
 ### Encontrar o número de série do seu dispositivo
 
-Encontre e abra `Unlock` nos menus do dispositivo. Anote o **Serial number** exibido nessa tela. Use esse número de série completo para sua compra, em vez dos últimos caracteres de um endereço MAC ou de um PIN de Pair Device.
+Encontre e abra `Unlock` nos menus do dispositivo. Anote o **número de série** exibido nessa tela. Use esse número de série completo para sua compra, em vez dos últimos caracteres de um endereço MAC ou de um PIN de Pair Device.
 
 ### Obter um código de desbloqueio
 
-Abra a [página de código de desbloqueio do Ripple Ultra do Scott](https://buymeacoffee.com/ripplebiz/e/249834), siga as instruções de compra e forneça o número de série exibido no seu dispositivo. As licenças são emitidas por dispositivo; insira apenas um número de série de dispositivo para cada licença.
+Abra a [página de código de desbloqueio Ripple Ultra do Scott](https://buymeacoffee.com/ripplebiz/e/249834), siga as instruções de compra e forneça o número de série exibido no seu dispositivo. As licenças são emitidas por dispositivo; insira apenas um número de série de dispositivo para cada licença.
 
 Se o seu dispositivo veio com um código de desbloqueio aplicável, prossiga para a próxima etapa.
 
@@ -344,7 +344,7 @@ Se o seu dispositivo veio com um código de desbloqueio aplicável, prossiga par
 
 4. Abra o recurso premium que você deseja usar e confirme que ele está disponível.
 
-Guarde o código junto com o número de série do dispositivo. Em nosso teste, apagar a flash com `erase_flash` e reinstalar o firmware exigiu inserir novamente o código de desbloqueio do dispositivo.
+Mantenha o código junto com o número de série do dispositivo. Em nosso teste, apagar a flash com `erase_flash` e reinstalar o firmware exigiu inserir novamente o código de desbloqueio do dispositivo.
 
 ### Recursos premium
 
@@ -398,7 +398,13 @@ Esta tela mostra o código de retorno RadioLib da inicialização do rádio LoRa
 
 ### Por que o mapa está em branco
 
-Verifique o formato do cartão SD, os caminhos dos blocos e se existem blocos para a área exibida. Em um dispositivo bloqueado, verifique também se o nível de zoom está entre 1–9. Uma posição de GPS válida não significa que os blocos de mapa foram baixados.
+Verifique o formato do cartão SD, os caminhos dos blocos e se existem blocos para a área exibida. Em um dispositivo bloqueado, verifique também se o nível de zoom está entre 1 e 9. Uma posição GPS válida não significa que os blocos de mapa foram baixados.
+
+### Mapeamento da bateria
+
+```bash
+#define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
+```
 
 ## Recursos
 

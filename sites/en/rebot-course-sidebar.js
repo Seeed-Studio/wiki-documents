@@ -302,6 +302,26 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_G05",
               "label": "G0.5 — Reasoning and Action in One Sequence"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_FINEART_VLA",
+              "label": "FineART-VLA — Subtask-Guided Bimanual Actions"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_MOLMOACT2",
+              "label": "MolmoAct2 — Layer-Wise Context for Continuous Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_X_VLA",
+              "label": "X-VLA — Soft Prompts for Cross-Embodiment Learning"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_WALL_OSS_05",
+              "label": "WALL-OSS-0.5 — Gradient-Bridged Action Learning"
             }
           ]
         },
@@ -331,6 +351,26 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LAWAM",
               "label": "LaWAM — Predicting Scene Changes Before Generating Robot Actions"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_FASTWAM",
+              "label": "Fast-WAM — Video Co-Training and Direct Action Inference"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LONG_WAM",
+              "label": "Long-WAM — History, Future Prediction and Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_FLUX3",
+              "label": "FLUX 3 Action — Joint Prediction and Efficient Execution"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_COSMOS3",
+              "label": "Cosmos 3 — Omnimodal World-Action Policies"
             }
           ]
         },
@@ -393,6 +433,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS with Visual Grasping' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS Wrist Following' },
+        { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS Bimanual Collaboration' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS with ROS2' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS with Isaac Sim' },
         { type: 'doc', id: `${RS}/reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'reBot-RS Web Control System: Real Robot & MuJoCo' },
@@ -445,6 +486,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Grasping_Demo`, label: 'reBot-DM Visual Grasp' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM with ROS2' },
+        { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM Bimanual Collaboration' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM with Isaac Sim' },
         { type: 'doc', id: `${DM}/reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'reBot-DM Web Control System: Real Robot & MuJoCo' },
       ],
