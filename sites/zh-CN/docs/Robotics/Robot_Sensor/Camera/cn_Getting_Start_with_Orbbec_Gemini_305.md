@@ -7,7 +7,7 @@ keywords:
   - 深度相机
   - 立体视觉
   - 机器人视觉
-image: https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp
+image: https://cdn.shopify.com/s/files/1/0704/4022/2949/files/Gemini_305_00.jpg?v=1783414174
 slug: /orbbec_gemini305
 last_update:
   date: 11/19/2026
@@ -15,7 +15,7 @@ last_update:
 ---
 
 <div align="center">
-  <img src="https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp" alt="Orbbec Gemini 305 3D 相机" width={400} />
+  <img src="https://cdn.shopify.com/s/files/1/0704/4022/2949/files/Gemini_305_00.jpg?v=1783414174" alt="Orbbec Gemini 305 3D 相机" width={400} />
 </div>
 
 Orbbec Gemini 305 是一款面向近距离机器人视觉的双目深度相机，可用于机械臂腕部安装、物体识别和抓取等场景。本文介绍 USB 版本；Gemini 305g 的接口、电源和尺寸不同，请参阅 [Orbbec 官方资料](https://doc.orbbec.com/documentation/Gemini%20305%20Documentation)。
