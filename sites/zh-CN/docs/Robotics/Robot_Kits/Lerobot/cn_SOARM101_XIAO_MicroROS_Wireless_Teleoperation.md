@@ -19,15 +19,41 @@ updatedAt: '2026-09-23'
 url: https://wiki.seeedstudio.com/cn/soarm101_xiao_microros_wireless_teleoperation/
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import '/src/css/soarm101-pinocchio-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 使用 XIAO ESP32-C3 和 micro-ROS 实现 SO-ARM101 有线与无线遥操作
 
-<div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap'}}>
-  <a className="get-one-now-button" style={{paddingLeft: '20px', paddingRight: '20px'}} href="https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84" target="_blank" rel="noopener noreferrer">
-    立即购买 SO-ARM101 套件 / Get One Now 🖱️
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp" width={800} height={600} style={{height: 'auto'}} alt="SO-ARM100 和 SO-ARM101 机械臂套件" />
+</div>
+
+<div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem 1rem', margin: '1.1rem 0 1.35rem'}}>
+
+<div className="rebot-buy-button-group" style={{margin: 0}}>
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=877820346195&mi_id=0000OU1g76NMAq5LGIUiPORgyMk3E8XbnysI4JwJCeVC1ow&skuId=6312174298846&spm=a1z10.1-b-s.w4004-26191638149.2.4789262ePdEW84" target="_blank" rel="noopener noreferrer">
+    <span>购买 SO-ARM101 套件</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
   </a>
-  <a className="get-one-now-button" style={{paddingLeft: '20px', paddingRight: '20px'}} href="https://www.seeedstudio.com/Bus-Servo-Driver-Board-for-XIAO-p-6413.html" target="_blank" rel="noopener noreferrer">
-    立即购买 XIAO 舵机驱动板 / Get One Now 🖱️
+</div>
+
+<div className="rebot-buy-button-group" style={{margin: 0}}>
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Bus-Servo-Driver-Board-for-XIAO-p-6413.html" target="_blank" rel="noopener noreferrer">
+    <span>购买 XIAO 舵机驱动板</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
   </a>
+</div>
+
 </div>
 
 :::note 社区贡献
@@ -38,8 +64,10 @@ url: https://wiki.seeedstudio.com/cn/soarm101_xiao_microros_wireless_teleoperati
 
 本教程记录两种控制 SO-ARM101 从臂的方式：
 
-1. **有线主臂 + 无线从臂：** 主臂使用标准 USB 总线舵机驱动板。
-2. **无线主臂 + 无线从臂：** 两只机械臂各使用一块 Seeed Studio XIAO ESP32-C3 Bus Servo Adapter。
+| 模式 | 主臂连接 | 从臂连接 |
+| --- | --- | --- |
+| 有线主臂 | 通过标准 USB 总线舵机驱动板连接电脑。 | XIAO 通过 Wi-Fi 连接。 |
+| 无线主臂 | XIAO 通过 Wi-Fi 连接。 | XIAO 通过 Wi-Fi 连接。 |
 
 两种模式下，从臂都通过基于 Wi-Fi UDP 的 micro-ROS 与 ROS 2 通信。无线主臂 XIAO 只读取六个主臂舵机的位置并发布只读状态，不会向主臂写入位置命令。
 
@@ -62,6 +90,60 @@ url: https://wiki.seeedstudio.com/cn/soarm101_xiao_microros_wireless_teleoperati
 本项目是为未来的机载 SO-ARM101 演示而开发的、在地面测试的原型。本指南仅涵盖机械臂通信和遥操作链路，不提供任何飞行认证的控制或安全系统。
 
 :::
+
+### 推荐学习路线
+
+<div className="rebot-page rebot-step-flow soarm-learning-path">
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4><a href="#步骤-1克隆项目">克隆项目</a></h4>
+<p>获取源码和固件。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4><a href="#步骤-2标定两台机械臂">标定主臂和从臂</a></h4>
+<p>为实际使用的两只机械臂生成标定文件。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+<h4><a href="#步骤-3配置-wi-fi-和-agent-发现">配置 Wi-Fi 与 Agent 发现</a></h4>
+<p>让电脑和 XIAO 接入同一局域网。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+<h4><a href="#步骤-4构建并烧录-xiao-固件">构建并烧录固件</a></h4>
+<p>完成测试后烧录对应的 XIAO 固件。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+<h4><a href="#步骤-5启动-micro-ros-agent-并进行预检">启动 Agent 并预检</a></h4>
+<p>确认所选模式的 ROS 2 反馈。</p>
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
+<h4><a href="#步骤-6运行有线或双无线主从遥操作">启动遥操作</a></h4>
+<p>按主臂连接方式启动并验证工作状态。</p>
+</div>
+</section>
+
+</div>
 
 ## 系统架构
 
@@ -89,15 +171,15 @@ PC 和 XIAO 必须连接到同一个本地网络。演示时可以使用手机�
 
 ## 硬件
 
-- 1 × SO-ARM101 主臂
-- 1 × SO-ARM101 从臂
-- 1 × 用于主臂标定和有线回退的标准 USB 总线舵机驱动板
-- 1 × 用于从臂的 XIAO ESP32-C3 Bus Servo Adapter
-- 1 × 用于无线主臂模式的额外 XIAO ESP32-C3 Bus Servo Adapter
-- 2 × 额定功率正确的机械臂电源
-- 1 × Ubuntu 22.04 电脑
-- 1 × 2.4 GHz Wi-Fi 网络
-- 用于标定和固件烧录的 USB 线缆
+| 设备 | 数量或要求 | 用途 |
+| --- | --- | --- |
+| SO-ARM101 主臂和从臂 | 各 1 台 | 操控端和执行端。 |
+| 标准 USB 总线舵机驱动板 | 1 块 | 标定时使用；有线模式下连接主臂。 |
+| XIAO ESP32-C3 Bus Servo Adapter | 1 块；无线主臂模式需要再加 1 块 | 从臂必需；无线主臂另用一块。 |
+| 机械臂电源 | 2 套，符合设备额定参数 | 分别为主臂和从臂供电。 |
+| 电脑 | 1 台，Ubuntu 22.04 | 运行 ROS 2 和 micro-ROS Agent。 |
+| 无线网络 | 1 个，2.4 GHz | 电脑和 XIAO 接入同一局域网。 |
+| USB 线缆 | 按需 | 标定、烧录和串口监视。 |
 
 该参考固件在标准 5 V SO-ARM101 从臂上测试，通过六个型号为 `777` 的 STS3215 舵机。
 
@@ -115,12 +197,14 @@ PC 和 XIAO 必须连接到同一个本地网络。演示时可以使用手机�
 
 已测试的主机配置为：
 
-- Ubuntu 22.04
-- ROS 2 Humble
-- 支持 Feetech 的 LeRobot
-- micro-ROS Agent
-- Python 3.12
-- PlatformIO
+| 项目 | 已测试配置 |
+| --- | --- |
+| 操作系统 | Ubuntu 22.04 |
+| ROS 2 | Humble |
+| 机器人框架 | 支持 Feetech 的 LeRobot |
+| micro-ROS 通信 | micro-ROS Agent |
+| Python | 3.12 |
+| 固件开发工具 | PlatformIO |
 
 如果尚未安装 micro-ROS Agent 和 PlatformIO，请先安装：
 
@@ -131,7 +215,15 @@ python3 -m pip install --user platformio
 
 在继续之前，请按照 [SO-ARM100/101 LeRobot 指南](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/) 安装 LeRobot 并配置舵机 ID。
 
-## 步骤 1：克隆项目
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+## 克隆项目 {#步骤-1克隆项目}
+
+<p className="rebot-step-label">第 1 步</p>
 
 ```bash
 git clone https://github.com/linao681/soarm101-drone-teleop.git
@@ -140,18 +232,27 @@ cd soarm101-drone-teleop
 
 项目中的重要路径为：
 
-```text
-firmware/xiao_soarm/          无线从臂 PlatformIO 固件
-firmware/xiao_soarm_leader/   无线主臂 PlatformIO 固件
-tools/wireless_teleoperate.py ROS 2 与 LeRobot 遥操作桥接
-tools/soarm_agent_discovery.py 两块 XIAO 共用的 Agent 发现服务
-start_soarm_demo.sh           网络、Agent、机械臂和话题预检
-cali/                         主臂和从臂标定文件
-```
+| 路径 | 用途 |
+| --- | --- |
+| `firmware/xiao_soarm/` | 无线从臂固件 |
+| `firmware/xiao_soarm_leader/` | 无线主臂固件 |
+| `tools/wireless_teleoperate.py` | ROS 2 与 LeRobot 遥操作桥接 |
+| `tools/soarm_agent_discovery.py` | 两块 XIAO 共用的 Agent 发现服务 |
+| `start_soarm_demo.sh` | 网络、Agent、机械臂和话题预检 |
+| `cali/` | 主臂和从臂的标定文件 |
 
 该仓库分别提供无线从臂和无线主臂的 PlatformIO 固件工程，并包含所需的 ESP32-C3 micro-ROS 库，因此普通用户无需交叉编译 micro-ROS。
 
-## 步骤 2：标定两台机械臂
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+## 标定主臂和从臂 {#步骤-2标定两台机械臂}
+
+<p className="rebot-step-label">第 2 步</p>
 
 首先使用标准 USB 总线舵机驱动器标定从臂。将 `/dev/ttyACM0` 替换为正确的端口：
 
@@ -233,9 +334,18 @@ for key in ("homing_offset", "range_min", "range_max"):
 PY
 ```
 
-## 步骤 3：配置 Wi-Fi 和 Agent 发现
+</div>
+</section>
 
-将 Ubuntu 电脑和两块 XIAO 连接到同一个 2.4 GHz Wi-Fi 网络。XIAO 固件只保存 Wi-Fi 名称和密码；电脑当前的 Agent 地址由启动器和发现服务在运行时广播。不要把电脑 IP 硬编码到公开固件文件中。
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+## 配置 Wi-Fi 与 Agent 发现 {#步骤-3配置-wi-fi-和-agent-发现}
+
+<p className="rebot-step-label">第 3 步</p>
+
+将 Ubuntu 电脑和当前模式使用的 XIAO 连接到同一个 2.4 GHz Wi-Fi 网络。有线主臂模式只需要从臂 XIAO；无线主臂模式则需要两块都联网。XIAO 固件只保存 Wi-Fi 名称和密码，启动器和发现服务会在运行时广播电脑当前的 Agent 地址。不要把电脑 IP 硬编码到公开固件文件中。
 
 ```bash
 ip -4 address
@@ -269,7 +379,16 @@ ESP32-C3 使用 2.4 GHz Wi-Fi。如果手机热点同时支持两个频段，请
 
 :::
 
-## 步骤 4：构建并烧录 XIAO 固件
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+## 构建并烧录固件 {#步骤-4构建并烧录-xiao-固件}
+
+<p className="rebot-step-label">第 4 步</p>
 
 一次只通过 USB 连接一块 XIAO。先运行原生测试和 ESP32-C3 编译，确认通过后再烧录：
 
@@ -305,14 +424,30 @@ Waiting for micro-ROS Agent...
 
 烧录完成后，USB 线缆只用于串口监视。请保持对应机械臂的外部舵机电源连接。主臂固件只负责关闭扭矩并发布位置/状态；真正执行位置命令的是从臂固件。
 
-## 步骤 5：启动 micro-ROS Agent 并进行预检
+</div>
+</section>
 
-在项目根目录运行启动器，它会启动 Agent 和发现服务：
+<section className="rebot-step-item">
+<span className="rebot-step-number">5</span>
+<div className="rebot-step-content">
+
+## 启动 Agent 并预检 {#步骤-5启动-micro-ros-agent-并进行预检}
+
+<p className="rebot-step-label">第 5 步</p>
+
+在项目根目录设置当前 Wi-Fi 名称和运行 LeRobot 的 Python。再执行与你的主臂模式对应的预检。
+
+```bash
+export SOARM_WIFI_SSID="YOUR_2G4_WIFI_SSID"
+export SOARM_PYTHON="$(command -v python)"
+```
 
 ```bash
 source /opt/ros/humble/setup.bash
 ./start_soarm_demo.sh --leader wireless --check
 ```
+
+上面的示例用于无线主臂。使用有线主臂时，把预检命令中的 `--leader wireless` 改为 `--leader wired`。有线预检会跳过主臂 USB 检查，该检查在正式启动时执行。
 
 启动器会启动 Agent 和发现服务，然后检查所需的 ROS 2 话题。当 XIAO 发现 Agent 后，其串口监视器应显示：
 
@@ -327,7 +462,7 @@ ROS 2 接口为：
 | `/joint_states` | `sensor_msgs/msg/JointState` | 从臂到 PC | 20 Hz |
 | `/joint_command` | `sensor_msgs/msg/JointState` | PC 到从臂 | 最高 30 Hz |
 
-验证反馈：
+Agent 运行时，可以另开一个终端验证反馈。如果 Agent 由本次预检启动，启动器会在退出时关闭它；此时可在正式启动遥操作后检查。
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -337,46 +472,47 @@ ros2 topic hz /joint_states
 
 在完成当前姿态启动握手之前，不要发送任意的关节值。
 
-## 步骤 6：运行有线或双无线主从遥操作
+</div>
+</section>
 
-选择一种主臂输入方式。有线模式下，通过常规 USB 总线舵机驱动板将主臂连接到电脑；无线模式下，使用外部电源为主臂供电，并让主臂 XIAO 保持连接到配置好的 Wi-Fi。
+<section className="rebot-step-item">
+<span className="rebot-step-number">6</span>
+<div className="rebot-step-content">
 
-查找其稳定的串口路径：
+## 启动遥操作 {#步骤-6运行有线或双无线主从遥操作}
+
+<p className="rebot-step-label">第 6 步</p>
+
+完成上一步预检后，按实际主臂连接方式选择启动命令。两种方式都使用无线从臂。
+
+<Tabs defaultValue="wired">
+
+<TabItem value="wired" label="有线主臂">
+
+通过标准 USB 总线舵机驱动板连接主臂。先查找稳定的串口路径。
 
 ```bash
 ls -l /dev/serial/by-id/
 ```
 
-在项目根目录下，导出本地配置：
+将下方的 `YOUR_USB_ADAPTER` 换成实际设备名，然后启动有线主臂模式。
 
 ```bash
-export SOARM_WIFI_SSID="YOUR_2G4_WIFI_SSID"
-export SOARM_PYTHON="$(command -v python)"
+export SOARM_LEADER_PORT="/dev/serial/by-id/YOUR_USB_ADAPTER"
+./start_soarm_demo.sh --leader wired
 ```
 
-首先运行不带运动的预飞检查：
+</TabItem>
+<TabItem value="wireless" label="无线主臂">
 
-```bash
-./start_soarm_demo.sh --leader wireless --check
-```
-
-它会检查：
-
-- Wi-Fi SSID 和 Agent IP；
-- 所选主臂输入（`wireless` 检查 `/leader/raw_state` 和 `/leader/status`，`wired` 启动时检查 USB 适配器）；
-- 主臂和从臂的标定文件；
-- micro-ROS Agent；
-- `/joint_states` 上来自从臂的实时反馈；
-- 是否有其他遥操作进程正在使用同一主臂总线。
-
-如果所有检查都通过，启动遥操作：
+使用外部电源给主臂供电，确认主臂 XIAO 已接入配置好的 Wi-Fi，再启动双无线模式。
 
 ```bash
 ./start_soarm_demo.sh --leader wireless
-
-# 有线主臂回退：
-./start_soarm_demo.sh --leader wired
 ```
+
+</TabItem>
+</Tabs>
 
 桥接程序会读取从臂的初始姿态，并在使能扭矩前反复发布相同的姿态。随后它使用相对映射，因此从臂从当前位置开始，并跟随所选主臂的变化。无线会话恢复后，桥接程序会先平滑追到主臂当前姿态，再恢复正常命令。按下 `Ctrl+C` 停止；从臂会保持最后一次下达的目标位置。
 
@@ -386,23 +522,33 @@ export SOARM_PYTHON="$(command -v python)"
 
 :::
 
+</div>
+</section>
+
+</div>
+
 ## 安全机制
 
 该参考实现包含若干检查机制，旨在让演示更加可预测：
 
-1. **舵机身份检查：** 六个舵机的 ID 和型号必须全部匹配。
-2. **EEPROM 标定检查：** 回零偏移和限位必须与编译进固件的从臂标定一致。
-3. **当前姿态握手：** 第一条命令必须在测量姿态的 `0.05 rad` 以内。
-4. **关节软限位：** 每条命令都必须保持在标定范围内。
-5. **单次命令步长限制：** 解锁后，目标在一次命令中变化不得超过 `0.25 rad`。
-6. **反馈看门狗：** 如果从臂反馈早于 `0.5 s`，PC 端桥接程序会停止发布。
-7. **Wi-Fi 恢复：** 如果 Wi-Fi 在 10 秒内无法恢复，XIAO 会干净地重启。
+| 检查项 | 条件或行为 |
+| --- | --- |
+| 舵机身份 | 六个舵机的 ID 和型号必须全部匹配。 |
+| EEPROM 标定 | 回零偏移和限位必须与编译进固件的从臂标定一致。 |
+| 当前姿态握手 | 第一条命令必须在测量姿态的 `0.05 rad` 以内。 |
+| 关节软限位 | 每条命令都必须保持在标定范围内。 |
+| 单次命令步长 | 解锁后，单次命令的目标变化不得超过 `0.25 rad`。 |
+| 反馈看门狗 | 从臂反馈超过 `0.5 s` 未更新时，PC 端桥接程序停止发布。 |
+| Wi-Fi 恢复 | Wi-Fi 在 10 秒内未恢复时，XIAO 会重启。 |
 
 这些软件检查是对物理急停的补充，但不能替代物理急停。
 
 ## 故障排查
 
-### XIAO 一直停留在 `Waiting for micro-ROS Agent`
+<div className="rebot-page soarm-guide">
+
+<details className="rebot-demo-details" id="xiao-一直停留在-waiting-for-micro-ros-agent">
+<summary>XIAO 一直停留在 <code>Waiting for micro-ROS Agent</code></summary>
 
 - 确认电脑和 XIAO 处于同一局域网（LAN）。
 - 确认启动器显示了电脑当前 Wi-Fi IPv4 地址，并已启动 Agent 发现服务。
@@ -410,7 +556,10 @@ export SOARM_PYTHON="$(command -v python)"
 - 检查热点是否启用了客户端隔离。
 - 如果防火墙处于启用状态，请允许 UDP 端口 `8888` 通行。
 
-### `servo_mask` 不是 `0x3f`
+</details>
+
+<details className="rebot-demo-details" id="servo_mask-不是-0x3f">
+<summary><code>servo_mask</code> 不是 <code>0x3f</code></summary>
 
 一个或多个舵机没有响应：
 
@@ -419,11 +568,17 @@ export SOARM_PYTHON="$(command -v python)"
 - 确认电源电压和电流额定值；
 - 将舵机总线保持在配置的 1 Mbps 波特率。
 
-### 固件报告 `calib:0`
+</details>
+
+<details className="rebot-demo-details" id="固件报告-calib0">
+<summary>固件报告 <code>calib:0</code></summary>
 
 舵机 EEPROM 与编译进 `servo_bus.cpp` 的数值不匹配。通过 USB 驱动板重新连接从动臂，重新标定，更新三个固件数组，然后再次烧录 XIAO。
 
-### 运动过程中 Wi-Fi 断开
+</details>
+
+<details className="rebot-demo-details" id="运动过程中-wi-fi-断开">
+<summary>运动过程中 Wi-Fi 断开</summary>
 
 - 将接入点移近一些；
 - 将外置天线远离舵机电源线和金属部件；
@@ -431,16 +586,26 @@ export SOARM_PYTHON="$(command -v python)"
 - 在串口诊断输出中观察 RSSI 数值；
 - 在舵机断电的情况下对比结果，以识别可能的电源或电磁干扰。
 
-### 无线主臂没有就绪
+</details>
+
+<details className="rebot-demo-details" id="无线主臂没有就绪">
+<summary>无线主臂没有就绪</summary>
 
 - 确认主臂 XIAO 发布 `/leader/raw_state` 和 `/leader/status`；
 - 确认主臂六个舵机均有响应且扭矩已关闭；
 - 确认 `cali/leader_recal.json` 与当前物理主臂匹配；
 - 暂时使用 `./start_soarm_demo.sh --leader wired` 回退到有线主臂。
 
-### 关节方向或范围不正确
+</details>
+
+<details className="rebot-demo-details" id="关节方向或范围不正确">
+<summary>关节方向或范围不正确</summary>
 
 重新标定两只机械臂，并确认两个 JSON 文件中的关节顺序。同时确认 `servo_bus.cpp` 中的从动臂数组来自当前连接到 XIAO 的同一物理从动臂。
+
+</details>
+
+</div>
 
 ## 验证范围
 
