@@ -1067,7 +1067,9 @@ sudo apt install -y python3-rosdep python3-colcon-common-extensions git wget cma
 按实际使用的相机选择对应标签，按照说明安装。
 
 <Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
-<TabItem value="orbbec" label="Orbbec Gemini 2">
+<TabItem value="orbbec" label="Orbbec Gemini 2 / Gemini 305">
+
+Gemini 2 和 Gemini 305 使用以下相同的驱动安装步骤。驱动支持 Gemini 305，但本教程未提供该相机的视觉抓取流程验证。
 
 将 Orbbec ROS 2 SDK 克隆到工作空间，并切换到 `v2-main` 分支：
 
@@ -1209,9 +1211,9 @@ source /opt/ros/humble/setup.bash
 ```
 
 <Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
-<TabItem value="orbbec" label="Orbbec Gemini 2">
+<TabItem value="orbbec" label="Orbbec Gemini 2 / Gemini 305">
 
-先按步骤 2 中的 Gemini 2 安装说明安装 Orbbec ROS 2 驱动，然后编译：
+先按步骤 2 中的 Gemini 2 / Gemini 305 安装说明安装 Orbbec ROS 2 驱动，然后编译：
 
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
@@ -1234,7 +1236,7 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 pkg prefix rebot_visual_grasp
 ```
 
-RealSense 用户再执行 `ros2 pkg prefix realsense2_camera`；Gemini 2 用户执行 `ros2 pkg prefix orbbec_camera`。预期输出当前工作空间中对应包的安装路径。
+RealSense 用户再执行 `ros2 pkg prefix realsense2_camera`；Gemini 2 或 Gemini 305 用户执行 `ros2 pkg prefix orbbec_camera`。预期输出当前工作空间中对应包的安装路径。
 
 **确认编译结果**
 

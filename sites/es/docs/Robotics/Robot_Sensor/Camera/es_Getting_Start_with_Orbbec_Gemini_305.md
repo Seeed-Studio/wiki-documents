@@ -7,7 +7,7 @@ keywords:
   - Depth Camera
   - Stereo Vision
   - Robot Vision
-image: https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp
+image: https://cdn.shopify.com/s/files/1/0704/4022/2949/files/Gemini_305_00.jpg?v=1783414174
 slug: /orbbec_gemini305
 last_update:
   date: 11/19/2026
@@ -15,14 +15,14 @@ last_update:
 ---
 
 <div align="center">
-  <img src="https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp" alt="Orbbec Gemini 305 3D camera" width={400} />
+  <img src="https://cdn.shopify.com/s/files/1/0704/4022/2949/files/Gemini_305_00.jpg?v=1783414174" alt="Orbbec Gemini 305 3D camera" width={400} />
 </div>
 
 La Orbbec Gemini 305 es una cámara de profundidad estéreo para visión robótica de corto alcance, incluyendo montaje en muñeca, reconocimiento de objetos y agarre. Esta página cubre la versión USB; la Gemini 305g tiene diferentes interfaces, requisitos de alimentación y dimensiones. Consulta la [documentación de Orbbec](https://doc.orbbec.com/documentation/Gemini%20305%20Documentation) para más detalles.
 
 ## Características
 
-- **Detección de profundidad a corta distancia:** Un rango de funcionamiento de 4–100 cm+ y un rango recomendado de 7–50 cm.
+- **Detección de profundidad a corto alcance:** Un rango de funcionamiento de 4–100 cm+ y un rango recomendado de 7–50 cm.
 - **Visión estéreo:** Las cámaras estéreo proporcionan datos de profundidad junto con imágenes en color.
 - **Cuerpo compacto:** La carcasa de 42 × 42 × 23 mm se adapta a instalaciones con limitaciones de espacio.
 - **Sincronización y disparo:** Admite sincronización multicámara y disparos por software y hardware.
@@ -40,16 +40,16 @@ Estas especificaciones se aplican a la versión USB de la Gemini 305. Consulta l
 | | Tecnología de profundidad / línea base | Visión estéreo / 18 mm |
 | Profundidad | Precisión espacial | ≤1% (1280 × 800 a 50 cm, 90% × 90% ROI) |
 | | Campo de visión de profundidad | H 88° × V 65° ±3° (1280 × 800 a 20 cm) |
-| | Resolución y frecuencia de imagen | Hasta 1280 × 800 a 30 fps; 848 × 480 a 60 fps |
+| | Resolución y frecuencia de cuadro | Hasta 1280 × 800 a 30 fps; 848 × 480 a 60 fps |
 | Color | Campo de visión de color | H 94° × V 68° ±3° |
-| | Resolución y frecuencia de imagen | Hasta 1280 × 800 a 60 fps |
+| | Resolución y frecuencia de cuadro | Hasta 1280 × 800 a 60 fps |
 | | Sensores | Color estéreo, obturador global |
 | Eléctrico | Fuente de alimentación | 5 V CC, ≥700 mA |
 | | Consumo medio de energía | Menos de 2 W |
 | Físico | Dimensiones / peso | 42 × 42 × 23 mm / 68 g ±10 g |
 | | Interfaz | USB Type-C, USB 3.0 y USB 2.0 |
 | | Grado de protección | IP54 cuando se conecta y asegura un cable USB adecuadamente protegido |
-| | Montaje | Parte inferior: un orificio roscado 1/4-20 UNC y dos M3; parte trasera: dos orificios roscados M3 |
+| | Montaje | Parte inferior: un orificio roscado 1/4-20 UNC y dos orificios roscados M3; parte trasera: dos orificios roscados M3 |
 
 ## Descripción general del hardware
 
@@ -77,21 +77,21 @@ Las siguientes imágenes de la [página oficial de producto de Orbbec](https://s
 
 ### Instalar Orbbec Viewer
 
-1. Abre la [página de lanzamientos de Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2/releases), selecciona una versión que admita la Gemini 305 y descarga el instalador o el paquete de Orbbec Viewer para el sistema operativo y la arquitectura de tu host. Los sistemas Jetson suelen usar Linux ARM64; elige el paquete x86-64 o Windows apropiado para un PC.
+1. Abre la [página de lanzamientos de Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2/releases), selecciona una versión que admita Gemini 305 y descarga el instalador o el paquete de Orbbec Viewer para el sistema operativo y la arquitectura de tu host. Los sistemas Jetson suelen usar Linux ARM64; elige el paquete x86-64 o Windows apropiado para un PC.
 2. Instala o extrae el paquete e inicia Orbbec Viewer como se describe en la página de lanzamientos. Los nombres de archivo y procedimientos pueden cambiar entre versiones; en Linux, configura los permisos USB según las instrucciones de tu versión.
 
 :::note
-Gemini 305 usa **Orbbec SDK v2**; el SDK v1 no es compatible con este modelo. La interfaz de Viewer y las funciones disponibles dependen de la versión de software, el firmware y la configuración del dispositivo. Consulta la [documentación del SDK v2](https://github.com/orbbec/OrbbecSDK_v2) para la instalación y los permisos del dispositivo.
+Gemini 305 usa **Orbbec SDK v2**; SDK v1 no es compatible con este modelo. La interfaz de Viewer y las funciones disponibles dependen de la versión de software, el firmware y la configuración del dispositivo. Consulta la [documentación de SDK v2](https://github.com/orbbec/OrbbecSDK_v2) para la instalación y los permisos del dispositivo.
 :::
 
 ### Previsualizar imágenes y nubes de puntos
 
-1. Confirma que la Gemini 305 aparece en la lista de dispositivos de Orbbec Viewer y selecciónala.
-2. Habilita los flujos de Depth y Color, elige la resolución y la frecuencia de imagen ofrecidas por el dispositivo y comprueba que ambas ventanas de vista previa muestren imágenes.
+1. Confirma que Gemini 305 aparece en la lista de dispositivos de Orbbec Viewer y selecciónala.
+2. Habilita los flujos de Depth y Color, elige la resolución y la frecuencia de cuadro ofrecidas por el dispositivo y comprueba que ambas ventanas de vista previa muestren imágenes.
 3. Coloca un objeto dentro del rango recomendado y observa la imagen de profundidad a medida que cambia su distancia. Habilita la nube de puntos para una vista previa 3D o revisa la configuración de alineación depth-to-color (D2C) al alinear imágenes de color y profundidad.
 4. Detén los flujos antes de desconectar la cámara. Para controles detallados, consulta la [guía de Orbbec Viewer](https://github.com/orbbec/OrbbecSDK_v2/blob/main/docs/tutorial/orbbecviewer.md).
 
-Las siguientes imágenes proceden de la guía de Viewer 2.6.2 de Orbbec y muestran una **Gemini 335Lg**. Ilustran la interfaz y no son resultados de prueba de la Gemini 305. La Gemini 305 no tiene IMU integrada, por lo que el panel de IMU del ejemplo no indica una función de la Gemini 305. La interfaz y las opciones disponibles dependen del dispositivo y la versión de software.
+Las siguientes imágenes proceden de la guía de Viewer 2.6.2 de Orbbec y muestran una **Gemini 335Lg**. Ilustran la interfaz y no son resultados de prueba de la Gemini 305. La Gemini 305 no tiene IMU integrada, por lo que el panel de IMU del ejemplo no indica una característica de la Gemini 305. La interfaz y las opciones disponibles dependen del dispositivo y de la versión de software.
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/orbbec/OrbbecSDK_v2/f5d59930ccb9a189f200e58fba4e2ae42664792d/docs/tutorial/images/image1.jpg" alt="Orbbec Viewer example showing the device list, stream controls, and image previews using a Gemini 335Lg" width={800} />
@@ -102,9 +102,9 @@ Las siguientes imágenes proceden de la guía de Viewer 2.6.2 de Orbbec y muestr
 
 ### Solución de problemas
 
-- **Dispositivo no listado:** Vuelve a conectar el cable, confirma que admite datos y no solo alimentación, y comprueba la fuente de alimentación del host. En Linux, revisa también los permisos USB según las instrucciones del SDK v2.
-- **Un flujo no se inicia o es inestable:** Inicia profundidad o color por separado y prueba otras resoluciones y frecuencias de imagen admitidas por el dispositivo. Comprueba el puerto USB, el cable, el firmware y la compatibilidad del SDK.
-- **Resultados de profundidad inesperados:** Mueve el sujeto al rango recomendado, comprueba que las lentes no estén obstruidas y ajusta los parámetros de Viewer admitidos por el dispositivo para la escena.
+- **El dispositivo no aparece en la lista:** Vuelve a conectar el cable, confirma que admite datos y no solo alimentación, y comprueba la fuente de alimentación del host. En Linux, revisa también los permisos USB según las instrucciones de SDK v2.
+- **Un flujo no se inicia o es inestable:** Inicia profundidad o color por separado y prueba otras resoluciones y frecuencias de cuadro admitidas por el dispositivo. Comprueba el puerto USB, el cable, el firmware y la compatibilidad del SDK.
+- **Resultados de profundidad inesperados:** Mueve el sujeto al rango recomendado, comprueba que las lentes no estén obstruidas y ajusta en Viewer los parámetros admitidos por el dispositivo para la escena.
 
 ## ROS 2
 
@@ -118,7 +118,7 @@ En otra terminal con el entorno de ROS 2 configurado, usa `ros2 topic list` para
 
 ## Recursos
 
-- [Documentación y hoja de datos de la Gemini 305](https://doc.orbbec.com/documentation/Gemini%20305%20Documentation)
+- [Documentación y hoja de datos de Gemini 305](https://doc.orbbec.com/documentation/Gemini%20305%20Documentation)
 - [Descargas de Orbbec SDK v2 y Viewer](https://github.com/orbbec/OrbbecSDK_v2/releases)
 - [Guía de Orbbec Viewer](https://github.com/orbbec/OrbbecSDK_v2/blob/main/docs/tutorial/orbbecviewer.md)
 - [Orbbec SDK ROS 2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2)
