@@ -735,7 +735,7 @@ lerobot-teleoperate \
 
 </TabItem>
 
-<TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
+<TabItem value="orbbec-gemini2" label="Orbbec Gemini 2 / 305 / 336">
 
 <div align="center">
     <img width={800}
@@ -761,6 +761,8 @@ lerobot-teleoperate \
 
 Gemini 336 是 Gemini 330 系列的新成员。它继承了 Gemini 335 强大的深度性能，并在室内反光区域、高动态场景中的暗区以及户外强光环境下进一步提升了深度成像质量。在机器人应用中，可为感知、定位和操作等任务提供更稳定、更高质量的深度数据。
 
+Gemini 305 也可以按以下 Orbbec 流程尝试接入。Orbbec Python SDK 支持该型号，但本教程尚未提供 Gemini 305 的 LeRobot 实机验证；请先检测相机并确认彩色和深度流配置，再进行遥操作或数据采集。
+
 <div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -772,6 +774,7 @@ Gemini 336 是 Gemini 330 系列的新成员。它继承了 Gemini 335 强大的
 当前相机支持位于 `DepthCameraSupport` 分支：
 
 ```bash
+cd ~/rebot_lerobot/lerobot
 git checkout DepthCameraSupport
 git pull origin DepthCameraSupport
 ```
@@ -841,7 +844,9 @@ lerobot-find-cameras orbbec
     <h4>运行 Orbbec 示例</h4>
     <p className="rebot-step-label">第 5 步</p>
 
-单 Orbbec 测试：
+单 Orbbec 测试：将两处 `YOUR_CAMERA_SERIAL` 替换为检测到的同一台相机的序列号。下面的分辨率和帧率是示例，并非 Gemini 305 的已验证配置；请根据实际相机支持的彩色和深度流修改，且两个流的帧率需一致。
+
+后续数据采集和推理示例默认使用 OpenCV 相机；使用 Gemini 305 时，请将其中的 `--robot.cameras` 替换为已验证的 Orbbec 配置，并保持采集和推理时的相机键名一致。
 
 ```bash
 lerobot-teleoperate \
@@ -849,10 +854,10 @@ lerobot-teleoperate \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
-    --robot.cameras="{
+    --robot.cameras='{
     orbbec_color: {
       type: orbbec_color,
-      serial_number_or_name: "CP9JA530003A",
+      serial_number_or_name: "YOUR_CAMERA_SERIAL",
       width: 640,
       height: 480,
       fps: 30,
@@ -862,7 +867,7 @@ lerobot-teleoperate \
     },
     orbbec_depth: {
       type: orbbec_depth,
-      serial_number_or_name: "CP9JA530003A",
+      serial_number_or_name: "YOUR_CAMERA_SERIAL",
       width: 640,
       height: 400,
       fps: 30,
@@ -870,7 +875,7 @@ lerobot-teleoperate \
       rotation: 0,
       warmup_s: 5
     }
-  }" \
+  }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
@@ -887,7 +892,7 @@ lerobot-teleoperate \
 
 * `depth_alpha` 控制深度图缩放比例，建议从 `0.2` 开始，根据显示效果微调。
 * 如果连接三台及以上深度相机，建议将 `fps` 降低至 `15` 以获得更好的稳定性。
-* 建议分辨率保持在 `640x480`，以获得更稳定的显示和数据传输。
+* 彩色流和深度流可以使用不同分辨率，但每组分辨率、帧率和格式必须受相机支持；当前驱动请求彩色 `RGB` 和深度 `Y16` 格式。检测命令输出的是默认配置，不是完整配置列表；可参考 [Orbbec Python SDK](https://github.com/orbbec/pyorbbecsdk) 查询支持的流配置。
 
 </div>
 </section>

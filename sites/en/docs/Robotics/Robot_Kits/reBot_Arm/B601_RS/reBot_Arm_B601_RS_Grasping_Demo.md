@@ -1057,7 +1057,9 @@ Expect `ROS_DISTRO` to report `humble`. If the workspace already contains any of
 Select your camera tab and follow the installation instructions.
 
 <Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
-<TabItem value="orbbec" label="Orbbec Gemini 2">
+<TabItem value="orbbec" label="Orbbec Gemini 2 / Gemini 305">
+
+Gemini 2 and Gemini 305 use the same driver installation steps below. The driver supports Gemini 305, but this tutorial does not provide validation of the visual grasping workflow with that camera.
 
 Clone the Orbbec ROS 2 SDK into the workspace and switch to the `v2-main` branch.
 
@@ -1199,9 +1201,9 @@ source /opt/ros/humble/setup.bash
 ```
 
 <Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
-<TabItem value="orbbec" label="Orbbec Gemini 2">
+<TabItem value="orbbec" label="Orbbec Gemini 2 / Gemini 305">
 
-First install the Orbbec ROS 2 driver using the Gemini 2 instructions in step 2, then build:
+First install the Orbbec ROS 2 driver using the Gemini 2 / Gemini 305 instructions in step 2, then build:
 
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
@@ -1224,7 +1226,7 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 pkg prefix rebot_visual_grasp
 ```
 
-For RealSense, also run `ros2 pkg prefix realsense2_camera`. For Gemini 2, run `ros2 pkg prefix orbbec_camera`. Expect the installation path for the selected package in the current workspace.
+For RealSense, also run `ros2 pkg prefix realsense2_camera`. For Gemini 2 or Gemini 305, run `ros2 pkg prefix orbbec_camera`. Expect the installation path for the selected package in the current workspace.
 
 **Check the build result**
 
