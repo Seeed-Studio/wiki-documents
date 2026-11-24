@@ -8,6 +8,7 @@ keywords:
   - rebot arm
   - robotics
 slug: /rebot_arm_b601_rs_bimanual
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_Bimanual/rs_bimanual.webp
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
   date: 2026-11-19
@@ -32,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 <div className="rebot-buy-button-group">
   <span className="rebot-buy-button-glow" aria-hidden="true"></span>
-  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html" target="_blank" rel="noopener noreferrer">
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/catalog/product/view/id/7046" target="_blank" rel="noopener noreferrer">
     <span>Get One Now</span>
     <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
       <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>

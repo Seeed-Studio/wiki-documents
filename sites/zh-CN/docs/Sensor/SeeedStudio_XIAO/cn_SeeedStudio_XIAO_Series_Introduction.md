@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /SeeedStudio_XIAO_Series_Introduction
 sku: 110010004,102010388,102010428,102010448,102010469,113991054,113991114,113991115,113991254,E2024042601,102010574,102010573,102010572,102010571,102010570,102010470,102010551,102010550,102010590,102010610,102010650,102010636,102010638,102010632,102010633,102010631,102010630,102010634,102010635,102010637,102010672,102010694,102010671,102010693,102010690,102010692,101991470
 last_update:
-  date: 10/13/2026
+  date: 11/24/2026
   author: Citric
 createdAt: '2023-07-10'
 updatedAt: '2026-08-27'
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
         <img src="https://files.seeedstudio.com/wiki/xiao_topicpage/main.jpg" style={{width:1000, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>Seeed Studio XIAO 系列是一组拇指大小却性能强大的微控制器单元（MCU），专为在有限空间内又需要高性能和无线连接的项目量身打造。它融合了 ESP32、RP2350、RP2040、nRF52840 和 SAMD21 等流行硬件平台的精髓，作为兼容 Arduino 的 XIAO 系列，是你在边缘侧实践微型机器学习（TinyML）的理想工具集。</font>
+        <font size={"2.1"}>Seeed Studio XIAO 系列是一组拇指大小却性能强劲的微控制器单元（MCU），专为在有限空间内又需要高性能和无线连接的项目量身打造。它融合了 ESP32、RP2350、RP2040、nRF52840 和 SAMD21 等流行硬件平台的精髓，作为兼容 Arduino 的 XIAO 系列，是你在边缘侧实践微型机器学习（TinyML）的理想工具集。</font>
     </div>
 </div>
 <br/> <br/>
@@ -86,15 +86,15 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
       <td>兼容 Raspberry Pi RP2350 生态系统</td>
       <td>超低功耗 Bluetooth 5.0，适用于消费级产品应用</td>
       <td>XIAO nRF52840 的高级版本，板载麦克风和 6 轴 IMU</td>
-      <td>具备 WiFi 和 BLE，经济实惠的 RISC-V</td>
-      <td>具备 WiFi-6、BLE、Zigbee 和 Thread，支持 Matter</td>
+      <td>具备 WiFi 和 BLE，经济实惠的 Risc-V</td>
+      <td>具备 WiFi-6、BLE、Zigbee 和 Thread for Matter</td>
       <td>具备 WiFi 和 BLE，高性能</td>
       <td>XIAO ESP32S3 的高级版本，带 OV2640 摄像头/OV3660 摄像头和麦克风</td>
       <td>瑞萨 32 位 ARM Cortex-M4 MCU，兼容 Arduino IDE</td>
-      <td>Matter、Open Thread、Zigbee、Bluetooth Low Energy（BLE 5.3）、Bluetooth Mesh、专有 2.4 GHz</td>
+      <td>Matter、Open Thread、Zigbee、Bluetooth Low Energy（BLE 5.3）、Bluetooth Mesh、自有 2.4 GHz 协议</td>
       <td>XIAO MG24 的高级版本，带六轴加速度传感器和麦克风</td>
 
-      <td>超低功耗，多协议 2.4 GHz，Bluetooth 6.0，Matter，Zigbee，适用于物联网</td>
+      <td>超低功耗，多协议 2.4 GHz，Bluetooth 6.0、Matter、Zigbee，面向物联网</td>
       <td>XIAO nRF54L15 的高级版本，板载麦克风和 6 轴 IMU</td>
       <td>紧凑、超低功耗无线板卡，具备多协议 2.4 GHz、8MB 外部 Flash、IPEX 天线和 nPM1300 PMIC</td>
       <td>紧凑、超低功耗无线板卡，带 IMU、数字麦克风、8MB 外部 Flash 和多协议 2.4 GHz</td>
@@ -129,7 +129,7 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
       <td align="center">Cortex-M4<br/>最高运行频率 64 MHz</td>
       <td align="center">Cortex-M4<br/>最高运行频率 64 MHz</td>
       <td align="center">RISC-V<br/>最高运行频率 160 MHz</td>
-      <td align="center">双 RISC-V 处理器<br/>高性能内核最高运行频率 160 MHz<br/>低功耗内核最高运行频率 20 MHz</td>
+      <td align="center">双 RISC-V 处理器<br/>高性能核最高运行频率 160 MHz<br/>低功耗核最高运行频率 20 MHz</td>
       <td align="center">双核 Xtensa LX7<br/>最高运行频率 240 MHz</td>
       <td align="center">双核 Xtensa LX7<br/>最高运行频率 240 MHz</td>
       <td align="center">Cortex-M4<br/>最高运行频率 48 MHz，带 FPU</td>
@@ -208,18 +208,18 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">IMU, Microphone</td>
+      <td align="center">IMU，麦克风</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">OV2640 camera/OV3660, Microphone</td>
+      <td align="center">OV2640 摄像头/OV3660，麦克风</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">Six-axis acceleration sensors, Microphone</td>
+      <td align="center">六轴加速度传感器，麦克风</td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">IMU, Microphone</td>
+      <td align="center">IMU，麦克风</td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">6-Axis IMU, PDM Microphone</td>
+      <td align="center">6 轴 IMU，PDM 麦克风</td>
    </tr>
    <tr>
       <th>PWM/Analog Pins</th>
@@ -398,10 +398,10 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
       <td align="center">1.95μA</td>
       <td align="center">-</td>
       <td align="center">-</td>
-      <td colspan="2" align="center">Light-Sleep: ~9.96µA<br/>Deep-Sleep (System OFF): ~4.76µA<br/>Deep-Sleep (System OFF, GRTC wake-up): ~4.92µA<br/>Ship-Mode: 0.33µA</td>
+      <td colspan="2" align="center">轻睡眠：~9.96µA<br/>深度睡眠（系统关闭）：~4.76µA<br/>深度睡眠（系统关闭，GRTC 唤醒）：~4.92µA<br/>运输模式：0.33µA</td>
    </tr>
    <tr>
-      <td colspan="17" style={{textAlign: 'center', backgroundColor: '#007bff', padding: '10px'}}><a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Compatible Project</a></td>
+      <td colspan="17" style={{textAlign: 'center', backgroundColor: '#007bff', padding: '10px'}}><a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 兼容项目</a></td>
    </tr>
    <tr>
       <th>Arduino</th>
@@ -503,7 +503,7 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 
 ## Seeed Studio XIAO 系列兼容配件
 
-作为不断成长的 Seeed Studio XIAO 生态系统的一部分，我们提供了种类丰富的扩展配件，这些配件与 Seeed Studio XIAO 开发板兼容。[点击此处探索更多](https://www.seeedstudio.com/xiao-series-page)。
+作为不断成长的 Seeed Studio XIAO 生态系统的一部分，我们提供了种类丰富的扩展配件，这些配件与 Seeed Studio XIAO 开发板兼容。[在此查看更多](https://www.seeedstudio.com/xiao-series-page)。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/xiao_topicpage/add_on_accessories.png" /></div>
 
@@ -512,10 +512,10 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 <table align="center" style={{fontSize: '0.9em'}}>
     <tr>
         <th align="center"><strong>Wikis</strong></th>
-        <th align="center"><strong>书籍</strong></th>
+        <th align="center"><strong>Book</strong></th>
         <th align="center"><strong>Fab Academy</strong></th>
-        <th align="center"><strong>视频</strong></th>
-        <th align="center"><strong>课程</strong></th>
+        <th align="center"><strong>Video</strong></th>
+        <th align="center"><strong>Courses</strong></th>
       </tr>
    <tr>
         <td><strong>入门 Wiki</strong><br/>由 Seeed Studio AE 团队与社区编写</td>
@@ -526,14 +526,14 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
       </tr>
    <tr>
         <td style={{textAlign: 'center', backgroundColor: '#007bff', padding: '5px'}}><a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Wiki</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#007bff', padding: '5px'}}><a href="https://wiki.seeedstudio.com/cn/XIAO-Kit-Courses/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 课程</a></td>
+        <td style={{textAlign: 'center', backgroundColor: '#007bff', padding: '5px'}}><a href="https://wiki.seeedstudio.com/cn/XIAO-Kit-Courses/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Courses</a></td>
         <td style={{textAlign: 'center', backgroundColor: '#007bff', padding: '5px'}}><a href="https://fabacademy.org/2020/labs/leon/students/adrian-torres/fabxiao.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Fab-Xiao</a></td>
         <td style={{textAlign: 'center', backgroundColor: '#007bff', padding: '5px'}}><a href="https://www.youtube.com/watch?v=ZsQ0-jXdnRY" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Part1</a><br/><a href="https://www.youtube.com/watch?v=-1EP3iqYYdU" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Part2</a></td>
         <td style={{textAlign: 'center', backgroundColor: '#007bff', padding: '5px'}}><a href="https://github.com/hpssjellis/maker100-eco" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 GitHub</a></td>  
     </tr>
 </table>
 
-## Seeed Studio XIAO 开源资料
+## Seeed Studio XIAO 开源资源
 
 ### Seeed 系列 Kicad 文件
 
@@ -624,7 +624,7 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 
 - **[ZIP]** [Seeed Studio XIAO Plus 底板（带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 
-- **[ZIP]** [Seeed Studio XIAO Plus 底板（无底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus 底板（不带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 
 ### Seeed Studio XIAO ESP32C3 开源资料
 
@@ -660,6 +660,8 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 
 ### Seeed Studio XIAO ESP32S3 开源资料
 
+- **[PDF]** [Seeed Studio XIAO ESP32-S3 系列数据手册](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
+
 - **[PDF]** [Seeed Studio XIAO ESP32S3 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
@@ -675,6 +677,8 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 - **[STEP]** [Seeed Studio XIAO ESP32S3 3D 模型](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
 
 ### Seeed Studio XIAO ESP32S3 Sense 开源资料
+
+- **[PDF]** [Seeed Studio XIAO ESP32-S3 系列数据手册](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 
@@ -700,6 +704,8 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 
 ### Seeed Studio XIAO ESP32S3 Plus 开源资料
 
+- **[PDF]** [Seeed Studio XIAO ESP32-S3 系列数据手册](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
+
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.0_SCH_PCB.zip)
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Plus 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.1_SCH_260115.pdf)
 
@@ -715,7 +721,7 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 
 - **[ZIP]** [Seeed Studio XIAO Plus 底板（带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 
-- **[ZIP]** [Seeed Studio XIAO Plus 底板（无底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus 底板（不带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 
 ### Seeed Studio XIAO RP2350 Sense 开源资料
 
@@ -737,7 +743,7 @@ url: https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/
 
 - **[Kicad]** [Seeed Studio XIAO MG24 Sense 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
+- **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB 与原理图](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
 
 ### Seeed Studio XIAO MG24 开源资料
 

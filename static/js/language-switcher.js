@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-19 18:23:00 (北京时间)
-// 多语言页面: 2706 个
+// 生成时间: 2026-11-23 15:48:07 (北京时间)
+// 多语言页面: 2717 个
 
 (function() {
   'use strict';
@@ -2151,7 +2151,7 @@
     "ja",
     "pt"
   ],
-  "/ai_robotics_recomputer_j501_robotics_getting_started": [
+  "/ai_robotics_recomputer_robotics_j50_mini_getting_started": [
     "cn",
     "en",
     "es",
@@ -2166,6 +2166,13 @@
     "pt"
   ],
   "/recomputer_robotics_j401_hardware_interfaces_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_j501_robotics_getting_started": [
     "cn",
     "en",
     "es",
@@ -5161,6 +5168,13 @@
     "ja",
     "pt"
   ],
+  "/wio_lr2021_dev_kit_flrc_image_transmission_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/wio_lr2021_dev_kit_command_reference": [
     "cn",
     "en",
@@ -7046,7 +7060,10 @@
   ],
   "/rebot_arm_b601_dm_bimanual": [
     "cn",
-    "en"
+    "en",
+    "es",
+    "ja",
+    "pt"
   ],
   "/rebot_b601_dm_getting_started": [
     "cn",
@@ -7106,7 +7123,10 @@
   ],
   "/rebot_arm_b601_rs_bimanual": [
     "cn",
-    "en"
+    "en",
+    "es",
+    "ja",
+    "pt"
   ],
   "/rebot_arm_b601_rs_camera_follow": [
     "cn",
@@ -7227,6 +7247,13 @@
     "ja",
     "pt"
   ],
+  "/robotics/paper_reading_cosmos3": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/robotics/paper_reading_dm05": [
     "cn",
     "en",
@@ -7242,6 +7269,27 @@
     "pt"
   ],
   "/robotics/paper_reading_evo1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_fastwam": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_fineart_vla": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_flux3": [
     "cn",
     "en",
     "es",
@@ -7291,6 +7339,20 @@
     "pt"
   ],
   "/robotics/paper_reading_lingbot_vla2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_long_wam": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_molmoact2": [
     "cn",
     "en",
     "es",
@@ -7347,6 +7409,20 @@
     "pt"
   ],
   "/robotics/paper_reading_wall_oss": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_wall_oss_05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/robotics/paper_reading_x_vla": [
     "cn",
     "en",
     "es",
@@ -13274,6 +13350,13 @@
     "pt"
   ],
   "/respeaker_clip_firmware_quick_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_for_agent": [
     "cn",
     "en",
     "es",

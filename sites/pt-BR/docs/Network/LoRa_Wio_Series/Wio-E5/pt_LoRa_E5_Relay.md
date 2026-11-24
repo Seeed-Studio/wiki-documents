@@ -4,6 +4,7 @@ title: Função de Repetidor do Wio-E5
 keywords:
   - wio
   - docusaurus
+image: https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg
 slug: /lora-e5_relay
 sku: 317990687,317990829
 last_update:
@@ -31,32 +32,32 @@ url: https://wiki.seeedstudio.com/pt-br/lora-e5_relay/
 > LoRaWAN® é uma marca usada sob licença da LoRa Alliance®.
 A marca LoRa® é uma marca registrada da Semtech Corporation ou de suas subsidiárias.
 
-**Hardware aplicável**: Módulo LoRa® Wio-E5
+**Hardware aplicável**: Módulo Wio-E5 LoRa®
 
-**Firmware**: Firmware personalizado (por favor, consulte antes de fazer o pedido)
+**Firmware**: Firmware personalizado (consulte antes de fazer o pedido)
 
 **Versão do documento**: V1.0
 
 **Suporte de servidor**: ChirpStack / The Things Network (TTN) 
 
-> Clique [Aqui](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/rhf0m055-v5.1.2-20250319.ebin.bin) para baixar o firmware da Função de Repetidor LoRaWAN do Wio-E5.
+> Clique [aqui](https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/src/e5_relay-v5.1.2.bin) para baixar o firmware da função de repetidor LoRaWAN do Wio-E5.
 
 ## 1. Visão geral
 
 A função de repetidor do Wio-E5 é baseada na [Especificação de Repetidor LoRaWAN](https://resources.lora-alliance.org/technical-specifications/ts011-1-0-0-relay), permitindo que dispositivos em áreas sem cobertura direta de gateway acessem a rede LoRaWAN por meio de um dispositivo **Relay Master**.
 
-### Conceitos principais
+### Conceitos centrais
 
 | Função | Descrição | Conexão de rede |
 |:---:|:---|:---|
-| **Relay Master** | Atua como um dispositivo de ponte, ouvindo e encaminhando pacotes do `Slave` para o gateway real | Conexão direta com a rede LoRaWAN (OTAA) |
-| **Relay Slave** | Localizado em áreas sem sinal, acessa a rede indiretamente via `Master` | Conexão indireta via `Master` |
-| **WOR** <br /> (Wake-on-Radio) | `Slave` envia periodicamente quadros de wake-up, `Master` escuta e responde | - |
+| **Relay Master** | Atua como um dispositivo de ponte, ouvindo e encaminhando pacotes do `Slave` para o gateway real | Conexão direta à rede LoRaWAN (OTAA) |
+| **Relay Slave** | Localizado em pontos cegos de sinal, acessa a rede indiretamente via `Master` | Conexão indireta via `Master` |
+| **WOR** <br /> (Wake-on-Radio) | O `Slave` envia periodicamente quadros de despertar, o `Master` escuta e responde | - |
 
 ### Destaques do fluxo de trabalho
-- **Detecção CAD**: O Master abre uma janela de detecção de atividade de canal (Channel Activity Detection) a cada 1 segundo para ouvir o Slave
-- **Sincronização de tempo**: Após a comunicação inicial, o Slave sincroniza o tempo com o Master, reduzindo os símbolos de preâmbulo de **259 para 15**, reduzindo significativamente o consumo de energia e a ocupação de canal
-- **Janela RXR**: O Slave usa a terceira janela de recepção (RX Window 3) para receber dados downstream
+- **Detecção CAD**: O Master abre uma janela de detecção de atividade de canal (Channel Activity Detection) a cada 1 segundo para escutar o Slave
+- **Sincronização de tempo**: Após a comunicação inicial, o Slave sincroniza o tempo com o Master, reduzindo os símbolos de preâmbulo de **259 para 15**, reduzindo significativamente o consumo de energia e a ocupação do canal
+- **Janela RXR**: O Slave usa a terceira janela de recepção (RX Window 3) para receber dados de downstream
 
 ---
 
@@ -73,7 +74,7 @@ A função de repetidor do Wio-E5 é baseada na [Especificação de Repetidor Lo
 | Fase | Plataforma recomendada | Observações |
 |:---|:---|:---|
 | **Teste** | **ChirpStack** | Suporte nativo a Relay, interface Web para vinculação de dispositivos |
-| **Produção** | **TTN** | Requer configuração com ferramenta TTN CLI. O TTN atualmente aceita mensagens de repetidor, mas não possui interface Web completa de gerenciamento de Relay |
+| **Produção** | **TTN** | Requer configuração com a ferramenta TTN CLI. Atualmente o TTN aceita mensagens de repetidor, mas não possui interface Web completa de gerenciamento de Relay |
 
 ---
 
@@ -127,7 +128,7 @@ AT+LOG=DEBUG
 
 ### 4.1 Registrar gateway e aplicação
 
-1. Registrar gateway: Gateways → Add gateway → Inserir o EUI do gateway
+1. Registrar gateway: Gateways → Add gateway → Inserir Gateway EUI
 2. Criar aplicação: Applications → Add application → Inserir nome (por exemplo, relay-app)
 
 ### 4.2 Criar perfis de dispositivo
@@ -162,22 +163,22 @@ AT+LOG=DEBUG
 ### 4.3 Registrar dispositivos e vincular
 
 **Passo 1: Registrar dispositivo Slave**
-- Ir para relay-app → Devices → Add
-- Preencher: Device EUI, Join EUI, selecionar o Perfil de Dispositivo Slave
-- Inserir AppKey em OTAA Keys
+- Vá para relay-app → Devices → Add
+- Preencha: Device EUI, Join EUI, selecione o perfil de dispositivo Slave
+- Insira o AppKey em OTAA Keys
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-relay-tx-1.png" alt="pir" width={600} height="auto" /></p>
 
 **Passo 2: Registrar dispositivo Master**
-- Igual ao acima, selecionar o Perfil de Dispositivo Master
+- Igual ao acima, selecione o perfil de dispositivo Master
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/device-relay-rx-1.png" alt="pir" width={600} height="auto" /></p>
 
-**Passo 3: Vincular relacionamento (Crítico)**
-1. Entrar na lista de dispositivos em relay-app
-2. Selecionar dispositivo Slave → clicar em Selected devices → Add to relay
-3. Selecionar o dispositivo Master correspondente como relay host na janela pop-up
-4. Verificar: ir para a aba Relays, o Slave deve aparecer listado sob o Master
+**Passo 3: Vincular relacionamento (crítico)**
+1. Entre na lista de dispositivos em relay-app
+2. Selecione o dispositivo Slave → Clique em Selected devices → Add to relay
+3. Selecione o dispositivo Master correspondente como host do repetidor na janela pop-up
+4. Verificação: Vá para a aba Relays, o Slave deve aparecer listado sob o Master
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-E5/LoRaWAN_Relay/img/add-relay-tx-to-relay-1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -188,17 +189,17 @@ AT+LOG=DEBUG
 ## 5. Configuração do servidor (TTN)
 
 :::note
-O TTN requer **Command Line Interface (CLI)** para configuração de Relay. A interface Web só oferece suporte ao registro básico de dispositivos.
+O TTN requer **Command Line Interface (CLI)** para configuração de Relay. A interface Web oferece apenas registro básico de dispositivos.
 :::
 
 ### 5.1 Registro básico
 1. Registrar gateway: `Gateways` → `Register gateway` → Inserir EUI e plano de frequência
-2.  Aplicação: `Applications` → `Add application` → Definir ID (**relay-app**)
+2.  Application: `Applications` → `Add application` → Definir ID (**relay-app**)
 3. Registrar dispositivos:
     - Slave: Definir ID (**relay-tx**), inserir `DevEUI`/`JoinEUI`/`AppKey`
     - Master: Definir ID (**relay-rx**), inserir `DevEUI`/`JoinEUI`/`AppKey`
 
-### 5.2 Configuração via CLI (exemplo em Windows)
+### 5.2 Configuração via CLI (exemplo no Windows)
 
 ```bash
 # 1. Download and configure CLI (version 3.32.2+)
@@ -219,7 +220,7 @@ ttn-lw-cli.exe relays create relay-app relay-tx \
 ttn-lw-cli.exe relays uplink-forwarding-rules create relay-app relay-rx 0 --device-id relay-tx
 ```
 
-> Para mais informações, consulte a [Documentação Oficial do TTN](https://www.thethingsindustries.com/docs/concepts/features/cli/installing-cli/).
+> Para mais informações, consulte a [documentação oficial do TTN](https://www.thethingsindustries.com/docs/concepts/features/cli/installing-cli/).
 
 
 ## 6. Testes de validação
@@ -295,13 +296,13 @@ AT+CMSGHEX=AA
 
 ### 7. Observações importantes
 
-1. Seleção de servidor: Atualmente o TTN só oferece suporte à configuração de Relay via CLI. O ChirpStack oferece suporte completo via interface Web. Recomenda-se usar ChirpStack para testes.
+1. Seleção de servidor: atualmente o TTN só oferece suporte à configuração de Relay via CLI. O ChirpStack oferece suporte completo via interface Web. Recomenda-se usar o ChirpStack para testes.
 
-2. Otimização de Energia: Após a sincronização de tempo, o preâmbulo do quadro WOR do Slave é reduzido de 259 para 15, reduzindo significativamente o consumo de energia. Recomendado para implantações estáveis.
+2. Otimização de energia: Após a sincronização de horário, o preâmbulo do quadro WOR do Slave é reduzido de 259 para 15, reduzindo significativamente o consumo de energia. Recomendado para implantações estáveis.
 
-3. Requisito de Firmware: Certifique-se de que o firmware do Wio-E5 oferece suporte ao conjunto de comandos AT+STDRELAY.
+3. Requisito de firmware: Certifique-se de que o firmware do Wio-E5 seja compatível com o conjunto de comandos AT+STDRELAY.
 
-4. Teste de Alcance: Mantenha uma distância entre o Slave e o Master (por exemplo, 50–500 metros) durante o teste para verificar a eficácia do encaminhamento por repetição.
+4. Teste de alcance: Mantenha uma distância entre o Slave e o Master (por exemplo, 50–500 metros) durante o teste para verificar a eficácia do encaminhamento do relay.
 
 ## Recursos
 

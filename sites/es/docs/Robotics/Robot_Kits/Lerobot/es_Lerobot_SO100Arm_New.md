@@ -538,6 +538,10 @@ Para configurar los motores, asigna un adaptador de servo de bus y 6 motores par
 | ST-3215-C001(7.4V) / C018(12V) / C047(12V)             | 1:345                  | F1–F6                            |
 
 :::danger
+En la versión de SO-ARM de DAMO Academy, tanto el brazo líder como el brazo seguidor utilizan una **fuente de alimentación de 5 V**.
+:::
+
+:::danger
 Ahora debes conectar la fuente de alimentación de 5V o 12V al bus de motores. 5V para los motores STS3215 de 7.4V y 12V para los motores STS3215 de 12V. Ten en cuenta que el brazo líder siempre utiliza los motores de 7.4V, así que asegúrate de conectar la fuente de alimentación correcta si tienes motores de 12V y 7.4V, ¡de lo contrario podrías quemar tus motores! Ahora, conecta el bus de motores a tu ordenador mediante USB. Ten en cuenta que el USB no proporciona alimentación, y tanto la fuente de alimentación como el USB deben estar conectados.
 :::
 

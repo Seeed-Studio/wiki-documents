@@ -215,6 +215,10 @@ const sidebars = {
             { type: 'doc', id: `${P}/pt_Paper_Reading_LINGBOT_VLA2`, label: 'LingBot-VLA 2.0 — Ações entre Diferentes Corpos e Percepção do Futuro' },
             { type: 'doc', id: `${P}/pt_Paper_Reading_DM05`, label: 'DM0.5 — Contexto Histórico e Alineação de Trajetórias' },
             { type: 'doc', id: `${P}/pt_Paper_Reading_G05`, label: 'G0.5 — Raciocínio e Ação em uma Sequência' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_FINEART_VLA`, label: 'FineART-VLA — Ações bimanuais guiadas por subtarefas' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_MOLMOACT2`, label: 'MolmoAct2 — Contexto por camada para controle contínuo' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_X_VLA`, label: 'X-VLA — Prompts suaves para aprendizado entre diferentes corpos robóticos' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_WALL_OSS_05`, label: 'WALL-OSS-0.5 — Aprendizado de ações com conexão de gradientes' },
           ],
         },
         {
@@ -239,7 +243,11 @@ const sidebars = {
               "type": "doc",
               "id": `${P}/pt_Paper_Reading_LAWAM`,
               "label": "LaWAM — Prever Mudanças de Cena Antes de Gerar Ações de Robô"
-            }
+            },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_FASTWAM`, label: 'Fast-WAM — Treinamento conjunto com vídeo e inferência direta de ações' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_LONG_WAM`, label: 'Long-WAM — Histórico, previsão do futuro e controle' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_FLUX3`, label: 'FLUX 3 Action — Previsão conjunta e execução eficiente' },
+            { type: 'doc', id: `${P}/pt_Paper_Reading_COSMOS3`, label: 'Cosmos 3 — Políticas omnimodais de mundo e ação' },
           ],
         },
         {
@@ -301,6 +309,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS com Pega Visual' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS com Seguimento de Muque' },
+        { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS com Colaboração Bimanual' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS com ROS2' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_isaacsim`, label: 'reBot-RS com Isaac Sim' },
         { type: 'doc', id: `${RS}/pt_reBot_Arm_B601_RS_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-RS: Robô Real e MuJoCo' },
@@ -353,6 +362,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Grasping_Demo`, label: 'Pega Visual reBot-DM' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_ROS2_Integration`, label: 'reBot-DM com ROS2' },
+        { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM com Colaboração Bimanual' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM com Isaac Sim' },
         { type: 'doc', id: `${DM}/pt_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'Sistema de Controle Web do reBot-DM: Robô Real e MuJoCo' },
       ],
