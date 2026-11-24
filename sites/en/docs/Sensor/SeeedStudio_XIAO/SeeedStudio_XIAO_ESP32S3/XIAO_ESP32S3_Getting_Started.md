@@ -9,7 +9,7 @@ slug: /xiao_esp32s3_getting_started
 sku: 113991114, 113991115, 114010001, 102010634, 102010635, 102010671
 type: gettingstarted
 last_update:
-  date: 11/04/2026
+  date: 11/24/2026
   author: Luki
 createdAt: '2023-03-22'
 updatedAt: '2026-09-11'
@@ -879,6 +879,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 ### For Seeed Studio XIAO ESP32-S3
 
 **Hardware Design**
+- **📄[Datasheet]** [Seeed Studio XIAO ESP32-S3 Series Datasheet](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
 - **📄[Schematic]** [XIAO ESP32-S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
 - **🗃️[PCB Design Files]** 
