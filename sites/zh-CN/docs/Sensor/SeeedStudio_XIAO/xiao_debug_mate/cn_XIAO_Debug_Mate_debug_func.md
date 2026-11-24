@@ -157,7 +157,7 @@ XIAO Debug Mate 面向整个 XIAO 生态设计，但 DAPLink 调试功能仅适�
 
 <td>✅</td>
 
-</tr]
+</tr>
 
 <tr>
 
