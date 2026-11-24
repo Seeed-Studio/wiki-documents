@@ -1,12 +1,12 @@
 ---
-description: "Como depurar os servos do SO-ARM com a ferramenta Seeed_RoboController: detectar servos, corrigir IDs, gravar valores neutros e ler o status no Windows, Ubuntu e Mac."
-title: Ferramenta de Depuração do SO-Arm
+description: "Como depurar servos SO-ARM com a ferramenta Seeed_RoboController: detectar servos, corrigir IDs, gravar valores neutros e ler o status no Windows, Ubuntu e Mac."
+title: Ferramenta de Depuração SO-Arm
 keywords:
   - Lerobot
   - SO-ARM
-  - Robotics
+  - Robótica
   - Servo
-  - Calibration
+  - Calibração
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_steering_gear_debugging_tool
 last_update:
@@ -14,72 +14,167 @@ last_update:
   author: ZhangJiaQuan
 url: https://wiki.seeedstudio.com/pt-br/lerobot_steering_gear_debugging_tool/
 createdAt: '2026-06-29'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-16'
 ---
 
-# Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no Lerobot
+import '/src/css/rebot-wiki-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Ferramenta de Depuração de Engrenagem de Direção para SO-ARM no LeRobot
+
+<div align="center">
+  <img
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp"
+    width={800}
+    height={600}
+    style={{height: 'auto'}}
+    alt="Kits de braço robótico SO-ARM100 e SO-ARM101"
+  />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html" target="_blank" rel="noopener noreferrer">
+    <span>Obtenha o Kit SO-ARM101</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+<p align="center"><strong>Plataformas compatíveis</strong> · Windows / Ubuntu / macOS</p>
 
 ## Introdução
 
-A Ferramenta de Depuração de Engrenagem de Direção (Seeed_RoboController) é uma ferramenta gráfica de depuração para braços robóticos Lerobot/SO-ARM. Com esta ferramenta, você pode detectar rapidamente o status dos servos, recalibrar IDs de servos, gravar valores neutros, controlar servos individuais e gerenciar arquivos de calibração do braço robótico, facilitando a montagem, depuração e manutenção dos braços líder e seguidor.
+A Ferramenta de Depuração de Engrenagem de Direção (Seeed_RoboController) é uma ferramenta gráfica de depuração para braços robóticos SO-ARM no LeRobot. Com esta ferramenta, você pode detectar rapidamente o status dos servos, recalibrar IDs de servos, gravar valores neutros, controlar servos individuais e gerenciar arquivos de calibração do braço robótico, facilitando a montagem, depuração e manutenção dos braços líder e seguidor.
 
 ## 1. Instalação
 
-Para sistemas Windows, Ubuntu e Mac.
+<div className="rebot-step-flow">
 
-1\. Primeiro, clone o repositório.
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
-```Plain
+<h4>Clone o repositório</h4>
+
+<p className="rebot-step-label">Passo 1</p>
+
+```bash
 git clone https://github.com/Seeed-Projects/Seeed_RoboController.git
 ```
 
-2\. Recomenda-se instalar a ferramenta no ambiente virtual do Lerobot. Se você preferir uma instalação independente, crie um novo ambiente virtual para evitar poluir o Python do sistema.
+</div>
+</section>
 
-```Plain
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+<h4>Instale as dependências</h4>
+
+<p className="rebot-step-label">Passo 2</p>
+
+Instale as dependências no seu ambiente virtual LeRobot existente. Para uma instalação independente, crie um novo ambiente virtual para evitar afetar o Python do sistema.
+
+```bash
 pip install -r requirements.txt
 ```
 
-3\. Verifique o ambiente. Se retornar `[OK] Environment check passed`, o projeto está pronto para ser executado.
+</div>
+</section>
 
-```Plain
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+<h4>Verifique o ambiente</h4>
+
+<p className="rebot-step-label">Passo 3</p>
+
+```bash
 python setup.py
 ```
 
-4\. Inicie a ferramenta.
+Se retornar [OK] Environment check passed, o projeto está pronto para ser executado.
 
-Execute o seguinte comando para iniciar a seleção interativa de porta.
+</div>
+</section>
 
-```Plain
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+<h4>Inicie a ferramenta</h4>
+
+<p className="rebot-step-label">Passo 4</p>
+
+<Tabs defaultValue="interactive">
+<TabItem value="interactive" label="Seleção interativa de porta">
+
+Selecione as portas seriais na interface após a inicialização.
+
+```bash
 python -m src.gui.factory_calibration_tool
 ```
 
-(Opcional) Especifique manualmente as portas se elas estiverem ocupadas.
+</TabItem>
+<TabItem value="manual" label="Especificar portas manualmente">
 
-```Plain
+Se as portas estiverem ocupadas, você pode especificá-las manualmente. O comando abaixo usa caminhos de dispositivo Linux como exemplo.
+
+```bash
 python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/ttyUSB1
 ```
 
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+
+</div>
+
 ## 2. Primeiros Passos (Aplicável ao Braço Líder e ao Braço Seguidor)
 
-### 1. Verificar se os Servos Estão Normais
+Comece verificando a detecção dos servos. Continue para os dois próximos passos apenas se você ainda suspeitar de IDs de servos duplicados após verificar a fiação e a porta serial.
 
-Primeiro, selecione o número da porta correspondente na seleção de porta serial.
+<div className="rebot-step-flow">
 
-Se os servos 1-6 forem todos detectados com sucesso, significa que os servos são reconhecidos normalmente e as funções básicas estão funcionando.
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+### Verificar se os servos estão normais {#1-verificar-se-os-servos-estão-normais}
+
+<p className="rebot-step-label">Passo 1</p>
+
+Selecione a porta no seletor de porta serial. A verificação de detecção é aprovada se a ferramenta reconhecer os servos 1–6.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/debug_tool.webp" />
 </div>
 
-Se alguns servos forem exibidos como não detectados, primeiro verifique se a fiação está correta, feche a página e reabra. Se ainda não forem detectados, os IDs dos servos podem estar duplicados (possivelmente porque o comando de calibração do braço robótico foi inserido acidentalmente como o comando de calibração dos servos). Nesse caso, os IDs desses servos precisam ser recalibrados.
+Se um servo estiver ausente, verifique sua fiação, depois feche e reabra a ferramenta. Se ele ainda não aparecer, verifique se há IDs de servos duplicados. Por exemplo, executar o comando de calibração de servo por engano pode alterar os IDs dos servos.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/02.png" />
 </div>
 
-### 2. Remover os Chicotes de Fios dos Servos
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+### Remover os chicotes de fios dos servos {#2-remover-os-chicotes-de-fios-dos-servos}
+
+<p className="rebot-step-label">Passo 2</p>
 
 Primeiro remova o chicote de fios de conexão entre o servo 6 e o servo 5.
 
@@ -123,99 +218,111 @@ Remova o chicote de fios de conexão entre o servo 1 e a placa de controle.
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/08.webp" />
 </div>
 
-### 3. Recalibrar IDs dos Servos
+</div>
+</section>
 
-Certifique-se de que apenas um servo esteja conectado ao braço robótico.
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
 
-(Ao gravar um ID em um servo, como os servos compartilham um barramento serial, se existirem IDs duplicados — por exemplo, alterar o ID 4 para 6 — todos os servos com ID 4 no barramento serão alterados para 6. Portanto, todos os servos devem ser removidos e reprogramados um por um.)
+### Recalibrar IDs dos servos {#3-recalibrar-ids-dos-servos}
 
-Por exemplo, você pode conectar o servo nº 6 à placa controladora conforme mostrado abaixo. Outros servos são conectados de forma semelhante, assim você pode evitar desmontar o braço robótico.
+<p className="rebot-step-label">Passo 3</p>
+
+:::caution Grave IDs de servos um de cada vez
+Conecte apenas um servo ao barramento serial ao gravar seu ID. Por exemplo, alterar o ID 4 para 6 altera todos os servos com ID 4 nesse barramento.
+:::
+
+Conecte o servo 6 diretamente à placa controladora, como mostrado. Use o mesmo método para outros servos sem desmontar o braço.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/09.webp" />
 </div>
 
-Conforme mostrado na figura, apenas o servo nº 4 é reconhecido, mas o servo realmente conectado é o nº 6. Isso indica que o ID do servo está errado e precisa ser alterado de volta para 6.
+Se o servo conectado for o servo 6, mas a ferramenta mostrar apenas o ID 4, altere o ID desse servo de volta para 6.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/10.png" />
 </div>
 
-Neste ponto, você pode clicar no servo nº 4 e alterar seu ID para 6. Repita a mesma operação para os outros servos.
+Selecione o ID 4 na interface e altere-o para 6. Verifique e corrija os servos restantes um de cada vez.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/11.png" />
 </div>
 
-Após a conclusão da calibração dos servos, você pode reconectar os fios um por um para finalizar.
+Reconecte os chicotes de fios dos servos um de cada vez após corrigir os IDs.
 
-### 4. Gravar o Valor Neutro no Servo
+</div>
+</section>
+
+</div>
+
+### Gravar o valor neutro no servo {#4-gravar-o-valor-neutro-no-servo}
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/12.jpg" />
 </div>
 
-1\. Clique em **Serial Port Neutral Test** para verificar se a posição neutra do braço robótico é como mostrado acima. Se for aproximadamente a mesma, o valor neutro do braço robótico está normal.
-
-2\. Caso contrário, mova o braço robótico para a posição neutra e clique em **Serial Port Neutral Calibration**. O braço robótico gravará a posição atual como o valor neutro no servo.
-
-3\. Clique em **Serial Port Disable Motors**, e o braço robótico ficará solto; você precisará sustentá-lo com a mão.
+1. Clique em **Serial Port Neutral Test** e compare a posição do braço com a imagem acima. Se elas corresponderem aproximadamente, o valor neutro está correto.
+2. Se não corresponderem, mova o braço para a posição neutra e clique em **Serial Port Neutral Calibration** para salvar a posição atual como o valor neutro do servo.
+3. Sustente o braço antes de clicar em **Serial Port Disable Motors**. Os servos perderão o torque de sustentação.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/13.png" />
 </div>
 
-### 5. Controle de Servo Único
+### Controle de servo único {#5-controle-de-servo-único}
 
-Por padrão, todos os servos na página estão em suas posições neutras, como mostrado na figura.
+A interface mostra cada servo em sua posição neutra por padrão.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/14.png" />
 </div>
 
-- 1. Primeiro habilite o torque. Você pode habilitar todos os torques com um clique ou habilitar o torque para um único servo e, em seguida, deslizar o controle deslizante para mover o servo para a posição correspondente. No entanto, certifique-se de mover lentamente. Como as peças impressas do braço robótico bloqueiam fisicamente certas posições, o braço não pode realmente alcançar as posições de borda; existem limites máximos e mínimos de movimento, portanto, não deslize o controle deslizante para 0 nem para o máximo. Após desabilitar o torque, o braço robótico ficará solto.
+#### Ajustar a posição de um servo
+
+1. Ative o torque para o servo selecionado ou use o controle que ativa o torque para todos os servos.
+2. Mova lentamente o controle deslizante do servo selecionado e observe a movimentação da junta correspondente.
+
+:::caution Atenção aos limites mecânicos
+A estrutura do braço limita o curso das juntas. Mova o controle deslizante lentamente e evite configurá-lo em 0 ou em seu valor máximo. Sustente o braço antes de desativar o torque.
+:::
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/21.png" />
 </div>
 
-Como mostrado acima, após habilitar o torque, o movimento do servo correspondente mudará.
+Você também pode calibrar a posição neutra de um servo individual ou limpar suas posições armazenadas de neutro, mínimo e máximo.
 
-- 2. Você pode realizar a calibração neutra de um único servo e limpar as posições neutra, máxima e mínima internas do servo
-- 3. A seguir estão as informações do servo
+#### Campos de status do servo
 
-Pos: Posição
+| Campo | Significado |
+| --- | --- |
+| `Pos` | Posição |
+| `V` | Tensão |
+| `T` | Temperatura |
+| `Spd` | Velocidade |
+| `Load` | Torque |
+| `Cur` | Corrente |
+| `Mov` | Status de movimento |
+| `Model` | Modelo e permissões |
+| `Status` | Normal, Overcurrent ou Overload |
 
-V: Tensão
+### Ferramentas avançadas {#6-ferramentas-avançadas}
 
-T: Temperatura
-
-Spd: Velocidade
-
-Load: Torque
-
-Cur: Corrente
-
-Mov: Status de Movimento
-
-Model: Modelo, Autoridade
-
-Status: O status mostrará Normal, Overcurrent ou Overload
-
-### 6. Ferramentas Avançadas
-
-Você pode ler os dados do endereço de registrador correspondente e gravar os dados correspondentes.
-
-A taxa de transmissão (baud rate) pode ser modificada.
-
-As configurações de fábrica podem ser restauradas.
+| Ferramenta | Finalidade |
+| --- | --- |
+| Leitura/gravação de registrador | Ler ou gravar dados em um endereço de registrador especificado. |
+| Alterar taxa de baud | Ajustar a taxa de comunicação serial do servo. |
+| Restaurar configurações de fábrica | Redefinir o servo para suas configurações de fábrica. |
 
 <div align="center">
     <img width={800}
