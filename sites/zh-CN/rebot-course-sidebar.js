@@ -216,6 +216,10 @@ const sidebars = {
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LINGBOT_VLA2', label: 'LingBot-VLA 2.0 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_DM05', label: 'DM0.5 博客精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_G05', label: 'G0.5 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_FINEART_VLA', label: 'FineART-VLA 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_MOLMOACT2', label: 'MolmoAct2 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_X_VLA', label: 'X-VLA 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_WALL_OSS_05', label: 'WALL-OSS-0.5 论文精读' },
           ],
         },
         {
@@ -229,6 +233,10 @@ const sidebars = {
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LINGBOT_VA', label: 'LingBot-VA 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_GR00T_2', label: 'GR00T 2 论文精读' },
             { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LAWAM', label: 'LaWAM 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_FASTWAM', label: 'Fast-WAM 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_LONG_WAM', label: 'Long-WAM 论文精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_FLUX3', label: 'FLUX 3 Action 技术报告精读' },
+            { type: 'doc', id: 'Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/cn_Paper_Reading_COSMOS3', label: 'Cosmos 3 技术报告精读' },
           ],
         },
         {

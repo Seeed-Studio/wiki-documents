@@ -302,6 +302,26 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_G05",
               "label": "G0.5 — Reasoning and Action in One Sequence"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_FINEART_VLA",
+              "label": "FineART-VLA — Subtask-Guided Bimanual Actions"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_MOLMOACT2",
+              "label": "MolmoAct2 — Layer-Wise Context for Continuous Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_X_VLA",
+              "label": "X-VLA — Soft Prompts for Cross-Embodiment Learning"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_WALL_OSS_05",
+              "label": "WALL-OSS-0.5 — Gradient-Bridged Action Learning"
             }
           ]
         },
@@ -331,6 +351,26 @@ const sidebars = {
               "type": "doc",
               "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LAWAM",
               "label": "LaWAM — Predicting Scene Changes Before Generating Robot Actions"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_FASTWAM",
+              "label": "Fast-WAM — Video Co-Training and Direct Action Inference"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_LONG_WAM",
+              "label": "Long-WAM — History, Future Prediction and Control"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_FLUX3",
+              "label": "FLUX 3 Action — Joint Prediction and Efficient Execution"
+            },
+            {
+              "type": "doc",
+              "id": "Robotics/Robot_Kits/reBot_Arm/Courses/Paper_Reading/Paper_Reading_COSMOS3",
+              "label": "Cosmos 3 — Omnimodal World-Action Policies"
             }
           ]
         },

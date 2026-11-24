@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/16/2026
+  date: 11/23/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-11-16'
+updatedAt: '2026-11-23'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,207 +18,155 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 16th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 23rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Train and Run π0.5 with SO-ARM](https://wiki.seeedstudio.com/sensecraft_robotics/applications/so-arm-pi05/)
+### [reBot-RS Bimanual Collaboration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_bimanual/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft-robotics/applications/so-arm-pi05/training-scene-en.webp" alt="SO-ARM desktop organization task used for π0.5 training" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This tutorial demonstrates a multi-task VLA workflow with SO-ARM and π0.5, from collecting demonstrations for three desktop organization tasks and merging datasets to cloud training and real-robot inference. It shows how to test whether the trained model can follow different task instructions on the physical arm.
-
-</div>
-
-### [GR00T 2: How World-Action Modeling Supports Generalization and Adaptation](https://wiki.seeedstudio.com/robotics/paper_reading_gr00t_2/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t-2/dexter-history.jpg" alt="GR00T 2 paper figure" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS_Bimanual/rs_bimanual.webp" alt="reBot bimanual robot arms for LeRobot training" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This paper-reading series examines three approaches to embodied intelligence: GR00T 2's joint video-action prediction and cross-embodiment transfer, DM0.5's historical context and trajectory alignment, and G0.5's unified reasoning and action sequence.
+These LeRobot tutorials guide users through bimanual calibration, leader-follower teleoperation, multi-camera dataset recording, and ACT policy training and evaluation. They cover both reBot-RS and reBot-DM setups, including the different interfaces used by their follower arms.
 
-**Read the guides:** [DM0.5: Historical Context and Trajectory Alignment for the Open World](https://wiki.seeedstudio.com/robotics/paper_reading_dm05/) · [G0.5: Reasoning and Action in One Sequence](https://wiki.seeedstudio.com/robotics/paper_reading_g05/).
-
-</div>
-
-### [SO-ARM101 Sim-to-Real VLA Course](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_course/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp" alt="SO-ARM101 robot arm used in the Sim-to-Real VLA course" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This 19-chapter hands-on curriculum follows the SO-ARM101 workflow from robot setup and real-world demonstration collection to GR00T N1.7 training, evaluation, and Jetson deployment. Optional chapters cover Isaac Sim data collection and dataset augmentation; a companion [SO-ARM101 Isaac Sim DLI Simulation and Data Collection](https://wiki.seeedstudio.com/soarm101_isaac_sim_dli/) guide provides a focused Isaac Sim 6.1 vial-sorting workflow and documents the 12 GB VRAM requirement for reliable operation.
-
-**Course chapters:** [1 - Course Overview](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_1/) · [2 - LeRobot Background and the Community](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_2/) · [3 - What is Sim-to-Real?](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_3/) · [4 - Introduction of SO-ARM101](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_4/) · [5 - Summary](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_5/) · [6 - Build Your Robot Lab](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_6/) · [7 - Prepare the Robot Arm](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_7/) · [8 - Building the Workspace](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_8/) · [9 - Collect Data from the Real Environment](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_9/) · [10 - Train the GR00T N1.7 Policy](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_10/) · [11 - Evaluate in the Real Environment](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_11/) · [12 - Collect Data from Isaac Sim](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_12/) · [13 - Datasets Augment](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_13/) · [14 - Setup Your Jetson Edge Device](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_14/) · [15 - Connect the Robot Hardware](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_15/) · [16 - Configure the GR00T Software Environment](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_16/) · [17 - Prepare the Dataset and Model Assets](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_17/) · [18 - Run GR00T N1.7 TensorRT Inference](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_18/) · [19 - Reference](https://wiki.seeedstudio.com/robotics/soarm_sim2real_vla_chapter_19/).
+**Related guide:** [reBot-DM Bimanual Collaboration](https://wiki.seeedstudio.com/rebot_arm_b601_dm_bimanual/).
 
 </div>
 
-### [reBot Arm T701 HT Quick Start](https://wiki.seeedstudio.com/rebot_t701_ht_getting_started/)
+### [reBot Arm T701 HT VR Teleoperation](https://wiki.seeedstudio.com/rebot_t701_ht_vr/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This quick-start guide covers unboxing and assembling the T701 HT bimanual robot, installing its Python SDK on Ubuntu, checking joint feedback, setting zero positions, and running the example demos.
+The new T701 HT guides extend the quick start with VR-controller teleoperation, single-motor MIT control, and Pinocchio-based kinematics. They explain the supported connection paths, feedback checks, and examples for gravity compensation, Cartesian motion, and keyboard control.
+
+**Explore the guides:** [MIT Control SDK](https://wiki.seeedstudio.com/rebot_t701_ht_control_mit/) · [T701 HT with Pinocchio](https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/).
 
 </div>
 
-### [Getting Started with reSpeaker XVF3800 44mm 4-Mic Array](https://wiki.seeedstudio.com/respeaker_44mm_introduction/)
+### [reBot-RS Wrist Camera Palm Following](https://wiki.seeedstudio.com/rebot_arm_b601_rs_camera_follow/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/respeaker_44mm_case.png" alt="reSpeaker XVF3800 44mm 4-microphone array" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/camera_follow/gemini305-level-mount.png" alt="Wrist-mounted depth camera on reBot-RS" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The 44 mm circular array is powered by XMOS XVF3800 and combines 360-degree far-field capture with AEC, AGC, DoA, beamforming, 24 RGB LEDs, and USB or I2S operation. The companion tutorials cover XIAO ESP32-S3 Plus setup, DoA and VAD, I2S testing, LED effects, recording and playback, UDP audio streaming, and volume control; a related [Muse Gadget on reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_muse_gadget/) guide demonstrates sending voice notes to a Muse VM.
-
-**Explore the guides:** [XIAO ESP32-S3 Plus Setup](https://wiki.seeedstudio.com/respeaker_44mm_xiao_getting_started/) · [DoA and VAD](https://wiki.seeedstudio.com/respeaker_44mm_xiao_doa_vad/) · [I2S Test](https://wiki.seeedstudio.com/respeaker_44mm_xiao_i2s_test/) · [LED Effects](https://wiki.seeedstudio.com/respeaker_44mm_xiao_led_effects/) · [Record and Playback](https://wiki.seeedstudio.com/respeaker_44mm_xiao_record_playback/) · [UDP Streaming](https://wiki.seeedstudio.com/respeaker_44mm_xiao_udp_streaming/) · [Volume Control](https://wiki.seeedstudio.com/respeaker_44mm_xiao_volume_control/).
+This project uses a wrist-mounted depth camera to estimate hand position and move the reBot Arm B601-RS to follow a palm. It also demonstrates pinch-gesture gripper control and a local web interface for checking camera and robot status.
 
 </div>
 
-### [SenseCAP MeshPager X2 Series Introduction](https://wiki.seeedstudio.com/meshpager_x2_intro/)
+### [Cosmos 3: From Omnimodal World Modeling to Joint Video-Action Policies](https://wiki.seeedstudio.com/robotics/paper_reading_cosmos3/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-product-angle.png" alt="SenseCAP MeshPager X2 handheld Meshtastic communicator" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/teaching/cosmos-three-conditioning-modes-en-v2.png" alt="Cosmos 3 model architecture diagram" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The MeshPager X2 is a standalone Meshtastic communicator built around ESP32-S3 and the LR2021 radio, with dual-band GNSS, a 2-inch display, physical controls, and an IP66 enclosure. The new getting-started guide explains its MUI and Base UI interfaces, Bluetooth pairing, messaging, GNSS functions, and microSD map use.
+Eleven new paper deep-dives examine how vision, history, language, and action are combined in robot-learning models. The readings compare architectures, training methods, published evaluations, and the limits of adapting these approaches to LeRobot workflows.
 
-**Read also:** [Get Started with Meshtastic](https://wiki.seeedstudio.com/x2_get_started_for_meshtastic/).
+**Read the new papers:** [LaWAM](https://wiki.seeedstudio.com/robotics/paper_reading_lawam/) · [LingBot-VA](https://wiki.seeedstudio.com/robotics/paper_reading_lingbot_va/) · [LingBot-VLA 2.0](https://wiki.seeedstudio.com/robotics/paper_reading_lingbot_vla2/) · [Fast-WAM](https://wiki.seeedstudio.com/robotics/paper_reading_fastwam/) · [FineART-VLA](https://wiki.seeedstudio.com/robotics/paper_reading_fineart_vla/) · [FLUX 3 Action](https://wiki.seeedstudio.com/robotics/paper_reading_flux3/) · [Long-WAM](https://wiki.seeedstudio.com/robotics/paper_reading_long_wam/) · [MolmoAct2](https://wiki.seeedstudio.com/robotics/paper_reading_molmoact2/) · [WALL-OSS-0.5](https://wiki.seeedstudio.com/robotics/paper_reading_wall_oss_05/) · [X-VLA](https://wiki.seeedstudio.com/robotics/paper_reading_x_vla/).
 
 </div>
 
-### [HaLowLink 2 Wi-Fi HaLow Gateway](https://wiki.seeedstudio.com/halowlink2_introduction/)
+### [Wio-LR2021 Dev Kit FLRC Image Transmission Demo](https://wiki.seeedstudio.com/wio_lr2021_dev_kit_flrc_image_transmission_demo/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-hero.png" alt="HaLowLink 2 Wi-Fi HaLow Gateway" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-LR2021_Dev_Kit/img/flrc_demo_architecture.png" alt="FLRC image transmission demo architecture" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide introduces the HaLowLink 2 sub-1 GHz Wi-Fi HaLow gateway and walks through Router, Access Point, and Extender modes, including pairing two units for a long-range link. A companion media-gateway application shows how a smartphone can upload media through a XIAO ESP32-S3 and Wio-WM6180 node to a PC over HaLow.
-
-**Explore:** [Getting Started with HaLowLink 2](https://wiki.seeedstudio.com/halowlink2_getting_started/) · [Wi-Fi HaLow Media Gateway](https://wiki.seeedstudio.com/halowlink2_media_gateway/).
+This demo sends JPEG still images between two Wio-LR2021 Dev Kits over FLRC and displays received frames in a web browser. The transmitter examples include face detection, gesture recognition, and water-meter reading; the guide distinguishes this image-transfer workflow from continuous video streaming.
 
 </div>
 
-### [Getting Started with Wio-LR2021 Dev Kit](https://wiki.seeedstudio.com/wio_lr2021_dev_kit_getting_started/)
+### [Use reSpeaker Clip for Voice Input in DSH](https://wiki.seeedstudio.com/respeaker_clip_for_agent/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-LR2021_Dev_Kit/img/1-100038329-Wio-LR2021-Dev-Kit.webp" alt="Wio-LR2021 Dev Kit" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_Clip/clip-for-dsh-1.jpg" alt="reSpeaker Clip and DeepSeek Harness setup" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The Wio-LR2021 Dev Kit combines the Semtech LR2021 radio with an ESP32-S3 for LoRa and FLRC development. Its documentation now includes the board setup guide, a factory firmware user guide, and a serial command reference for configuring and testing the kit.
-
-**Explore:** [Factory Firmware User Guide](https://wiki.seeedstudio.com/wio_lr2021_dev_kit_factory_firmware_user_guide/) · [Factory Firmware Command Reference](https://wiki.seeedstudio.com/wio_lr2021_dev_kit_command_reference/).
+This guide connects reSpeaker Clip to DeepSeek Harness (DSH) for voice input using a plugin and local SenseVoice transcription. It covers device pairing and turning either live RTC audio or recorded audio into editable chat drafts.
 
 </div>
 
-### [EasySkyMesh IoT Firmware for SenseCAP T1000-E](https://wiki.seeedstudio.com/easyskymesh_t1000e/)
+### [Orbbec Gemini 305 3D Camera](https://wiki.seeedstudio.com/orbbec_gemini305/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/easyskymesht1000e.png" alt="EasySkyMesh low-power MeshCore firmware on SenseCAP T1000-E" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp" alt="Orbbec Gemini 305 3D depth camera" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-EasySkyMesh is a MeshCore-based firmware project for low-power LoRa sensor networks. The new guides demonstrate its power-saving firmware on SenseCAP T1000-E and MeshTracker X1.
-
-**Related guide:** [EasySkyMesh on MeshTracker X1](https://wiki.seeedstudio.com/easyskymesh_x1/).
+This introduction covers the USB version of the compact Orbbec Gemini 305 stereo depth camera for close-range robot vision. It explains hardware connections, Orbbec Viewer installation, and how to inspect color, depth, and point-cloud output.
 
 </div>
 
-### [4K Industrial Vision Benchmark on Jetson Orin Nano and Orin NX](https://wiki.seeedstudio.com/jetson-orin-industrial-vision-benchmark/)
+### [Local Audio Development on Wio Tracker L2 Pro with Cairn](https://wiki.seeedstudio.com/meshcore_audio_development_l2/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/rugged-benchmark-front.png" alt="Industrial vision benchmark setup for Jetson Orin Nano and Orin NX" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Cairn/Cairn_music.jpg" alt="Cairn audio development on Wio Tracker L2 Pro" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This benchmark measures a four-stream 4K industrial video pipeline on Jetson Orin Nano 8GB and Orin NX 16GB, combining NVDEC, TensorRT YOLOv8n inference, H.264 encoding, and power and thermal monitoring. It documents a JetPack 6.2 deployment target for Orin Nano while noting that the previously recorded benchmark traces were not rerun on that target image.
+This guide explores on-device audio development for Wio Tracker L2 Pro, including firmware flashing, microSD music playback, voice-note recording, and notification sounds with Cairn. It clearly separates local audio features from unsupported voice transmission over the MeshCore radio network.
 
 </div>
 
-### [Using Tesserae with reTerminal E Series and reTerminal Sticky](https://wiki.seeedstudio.com/reterminal_e10xx_tesserae/)
+### [Fix JetPack 5.1.3 UEFI Boot Failure on Jetson](https://wiki.seeedstudio.com/jetpack5_uefi_boot_failure_fix/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_Tesserae/img/cover.webp" alt="Tesserae e-ink dashboard running on a reTerminal device" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide shows how to set up Tesserae, an open-source self-hosted e-ink dashboard server, with reTerminal E1001, E1002, E1003, E1004, and reTerminal Sticky. It explains how to deploy dashboard pages and clarifies which devices support full colour, greyscale, and touch.
-
-</div>
-
-### [Getting Started with USB KVM Capture Kit](https://wiki.seeedstudio.com/usb_kvm_capture_kit_getting_start/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/usb-kvm-capture-kit/product.png" alt="OSRBOT Link USB KVM Capture Kit" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/JetPack-513-UEFI.png" alt="JetPack 5.1.3 UEFI boot recovery guide" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to use OSRBOT Link to share a computer's keyboard and mouse with a reComputer Jetson, and how optional capture hardware adds video viewing, screenshots, and recording. It also clarifies the controller and target roles and the setup process for on-site access.
-
-</div>
-
-### [reComputer FAQ Center](https://wiki.seeedstudio.com/recomputer_faq/)
-
-<div style={{ textAlign: "justify" }}>
-
-The new interactive FAQ centers make verified troubleshooting answers easier to find with product and topic filters. The RK center covers reComputer RK, Industrial RK, and RK Module; the Pi center covers R1000 and R1100, AI and Industrial R2000, Industrial R2x, and reTerminal families.
-
-**Explore the FAQ pages:** [reComputer RK FAQ](https://wiki.seeedstudio.com/recomputer_rk_faq/) · [reComputer Industrial RK FAQ](https://wiki.seeedstudio.com/recomputer_industrial_rk_faq/) · [reComputer RK Module FAQ](https://wiki.seeedstudio.com/recomputer_rk_module_faq/) · [reComputer Pi FAQ Center](https://wiki.seeedstudio.com/recomputer_pi_faq/) · [reComputer AI R2000 FAQ](https://wiki.seeedstudio.com/recomputer_ai_r2000_faq/) · [reComputer R1000 and R1100 FAQ](https://wiki.seeedstudio.com/recomputer_r1000_r1100_faq/) · [reComputer Industrial R2x series FAQ](https://wiki.seeedstudio.com/recomputer_industrial_r2x_faq/) · [reTerminal and reTerminal DM FAQ](https://wiki.seeedstudio.com/reterminal_faq/).
+This troubleshooting guide addresses repeated boot failures on selected reComputer and reServer Orin devices running JetPack 5.1.3 (L4T 35.5.0). It documents patched QSPI flashing packages and an alternative bootloader update path, with device-specific recovery considerations.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Wio Tracker L2 Introduction](https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/)
+### [Getting Started with reComputer Robotics J50 Mini](https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j50_mini_getting_started/)
 
 <div style={{ textAlign: "justify" }}>
 
-The L2 overview now includes a side-by-side comparison of the L2 and L2 Pro models. Related guides also refine Ripple button handling and clarify Meshtastic device identity and SD-card setup behavior.
-
-**Updated guides:** [Get Started with Ripple](https://wiki.seeedstudio.com/get_started_with_ripple_l2_pro/) · [Get Started with Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l2/).
+The reComputer Robotics J50 Mini guide has been reorganized and substantially expanded from its earlier short page. It now covers J501 hardware variants, interfaces, supported Jetson modules, preparing JetPack images, and the force-recovery flashing workflow.
 
 </div>
 
-### [Jetson Product Selection Guide](https://wiki.seeedstudio.com/jetson-product-selection-guide/)
+### [SO-Arm LeRobot Tutorial](https://wiki.seeedstudio.com/lerobot_so100m_new/)
 
 <div style={{ textAlign: "justify" }}>
 
-The interactive selector now includes J601 Thor carrier boards in compute-filter tiers up to 275 TOPS, while keeping the carrier board separate from the separately purchased module and avoiding an unsupported TOPS rating for the board itself. The J601 hardware and I/O guide also replaces the photo-based heatsink installation steps with a video walkthrough.
-
-**Related guide:** [reComputer Robotics J601 Hardware & I/O](https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/hardware_and_interface_usage/).
+The SO-ARM100 and SO-ARM101 getting-started guide now has a clearer learning path and revised setup, calibration, and dataset-collection instructions. It also adds more explicit motion-safety checks while retaining the LeRobot training and evaluation workflow.
 
 </div>
 
-### [Getting Started with reSpeaker XVF3800 USB Mic Array](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/)
+### [reBot Arm B601-DM ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/)
 
 <div style={{ textAlign: "justify" }}>
 
-The firmware section now distinguishes USB and I2S images and lists the current 48 kHz master and 16 kHz slave I2S profiles. It also clarifies which device provides BCLK and WS/LRCLK for Home Assistant and ESPHome configurations.
+The reBot-RS and reBot-DM ROS2 guides now clarify workspace setup and provide more detailed RViz and MoveIt 2 procedures, including planning, visualization, and example task execution.
+
+**Related guide:** [reBot Arm B601-RS ROS2 Integration](https://wiki.seeedstudio.com/rebot_arm_b601_rs_ros2_integration/).
 
 </div>
 
-### [reSpeaker Clip FAQ](https://wiki.seeedstudio.com/respeaker_clip_faq/)
+### [Connect Seeed Studio IoT Button To Home Assistant via Zigbee](https://wiki.seeedstudio.com/seeed_iot_button_with_zigbee/)
 
 <div style={{ textAlign: "justify" }}>
 
-Two new verified answers explain how transcription language and accuracy depend on the configured external STT service, and how recordings stored on the Clip can be accessed or exported after changing phones. The update also clarifies that speech recognition is performed by the configured STT service rather than on the Clip itself.
+The ESP32-C6 Zigbee firmware example has been revised to clarify button-event reporting, buffered presses after reconnection, and connected versus disconnected idle-sleep behavior. The updated code and notes provide a more accurate starting point for custom Home Assistant button automations.
 
 </div>
 
-### [OpenDisplay 4.26-inch Mono and 7.3-inch Color Kit Guides](https://wiki.seeedstudio.com/opendisplay_426_mono_kit/)
+### [Build Real-Time Audio Streaming with reSpeaker Clip RTC SDK](https://wiki.seeedstudio.com/respeaker_clip_rtc_streaming/)
 
 <div style={{ textAlign: "justify" }}>
 
-Both getting-started guides now provide direct links to their factory UF2 firmware and 3D-printed case files. The related reTerminal E1001 and E1002 guides also clarify the expansion-header pin numbering direction and the ESP_IO46 label.
-
-**Updated guides:** [OpenDisplay 7.3-inch Color Kit](https://wiki.seeedstudio.com/opendisplay_73_color_kit/) · [reTerminal E1001](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001/) · [reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/).
+The RTC streaming tutorial now targets official reSpeaker Clip firmware v0.1.5 or later rather than an earlier development branch. It updates the Python SDK examples and explains stream sequence reporting and real-time BLE audio handling.
 
 </div>
 
-### [Seeed Studio XIAO nRF54L15(Sense)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)
+### [Get Started with MeshCore on SenseCAP MeshTracker X1](https://wiki.seeedstudio.com/sensecap_meshtracker_x1_meshcore/)
 
 <div style={{ textAlign: "justify" }}>
 
-The getting-started guide now documents the revised back pinout for boards purchased after August 2026. On the revised boards, the 3V3 and GND pins swap positions with the previous SWCLK2 and SWDIO2 pins, so check the board revision before wiring or using the SWD interface.
+The MeshTracker X1 guide now explains multi-press button shortcuts, alert and vibration behavior, status LEDs, battery and charging indications, and common message-reception issues. The additions focus on daily operation and troubleshooting.
 
 </div>
 
@@ -378,5 +326,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.10.26th](/Seeed_Elderly/weekly_wiki/2026/wiki261026)
 - [weekly wiki on 2026.11.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki261102)
 - [weekly wiki on 2026.11.09th](/Seeed_Elderly/weekly_wiki/2026/wiki261109)
+- [weekly wiki on 2026.11.16th](/Seeed_Elderly/weekly_wiki/2026/wiki261116)
 
 </details>

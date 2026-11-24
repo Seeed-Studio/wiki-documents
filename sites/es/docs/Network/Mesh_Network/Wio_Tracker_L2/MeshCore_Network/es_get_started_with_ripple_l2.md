@@ -1,5 +1,5 @@
 ---
-description: Comienza con Ripple UI en el Wio Tracker L2 Pro. Aprende a flashear firmware, configurar redes MeshCore, enviar mensajes, usar mapas y rutas GPS, y desbloquear funciones premium.
+description: Comienza con Ripple UI en el Wio Tracker L2 Pro. Aprende cómo flashear firmware, configurar redes MeshCore, enviar mensajes, usar mapas y rutas GPS, y desbloquear funciones premium.
 title: Primeros pasos con Ripple
 keywords:
   - Ripple
@@ -28,7 +28,7 @@ MeshCore gestiona la comunicación en malla. Ripple UI te permite usarla directa
 
 | Nombre | Propósito |
 | --- | --- |
-| MeshCore | Comunicación LoRa en malla |
+| MeshCore | Comunicación en malla LoRa |
 | Firmware Ripple UI | Funcionamiento autónomo con pantalla táctil |
 | Firmware MeshCore Companion | Funcionamiento a través de un teléfono u otro cliente |
 
@@ -58,7 +58,7 @@ El firmware actualizado usa perfiles MeshCore y ya no ofrece Ripple en la pantal
 
 - **Pantalla de inicio personalizable:** Añade accesos directos a contactos, canales y ajustes.
 
-- **Mapas:** Carga mapas desde una microSD, arrastra para desplazarte y toca los botones para hacer zoom.
+- **Mapas:** Carga mapas desde la microSD, arrastra para desplazarte y toca los botones para hacer zoom.
 
 - **Rutas GPS:** Registra tu posición y marcas de tiempo, y luego ve tu ruta en el mapa.
 
@@ -68,7 +68,7 @@ El firmware actualizado usa perfiles MeshCore y ya no ofrece Ripple en la pantal
 
 ## Flashear el firmware
 
-Si tu dispositivo ya tiene la versión de Ripple UI descrita aquí, salta a **Configuración inicial**.
+Si tu dispositivo ya tiene la versión de Ripple UI descrita aquí, salta a **[Configuración inicial](#configuración-inicial)**.
 
 Hay dos variantes de firmware disponibles:
 
@@ -106,7 +106,7 @@ Cuando termine el flasheo, pulsa `RST` para iniciar Ripple UI.
 
 :::tip
 
-Si no puedes continuar después de hacer clic en `Flash`, confirma que el dispositivo está en modo de descarga. Comprueba también el cable de datos USB, los permisos de serie del navegador y si otra aplicación está usando el puerto.
+Si no puedes continuar después de hacer clic en `Flash`, confirma que el dispositivo está en modo de descarga. Comprueba también el cable de datos USB, los permisos de puerto serie del navegador y si otra aplicación está usando el puerto.
 
 :::
 
@@ -199,7 +199,7 @@ Abre el menú de la pantalla de inicio en la esquina inferior izquierda para acc
 
 - **GPS Config:** Configura los ajustes de comunicación GPS; los valores predeterminados normalmente funcionan para el L2 Pro.
 
-- **Timezone:** Establece el desfase UTC local.
+- **Timezone:** Establece el desfase local de UTC.
 
 - **SX1262:** Comprueba el estado de inicialización de la radio LoRa. `code=0` significa éxito.
 
@@ -213,8 +213,8 @@ Abre el menú de la pantalla de inicio en la esquina inferior izquierda para acc
 
 | Área | Función |
 | --- | --- |
-| Tocar el lado izquierdo de la barra de título | Abre `Switch To` para cambiar de perfil de red |
-| Mantener pulsada la esquina superior izquierda | Captura una captura de pantalla |
+| Tocar el lado izquierdo de la barra de título | Abre `Switch To` para cambiar perfiles de red |
+| Mantener pulsada la esquina superior izquierda | Captura una pantalla |
 | Centro de la barra de título | Abre los interruptores rápidos |
 | Lado derecho de la barra de título | Abre la información de GPS |
 | Menú inferior izquierdo en la pantalla de inicio | Abre los ajustes del sistema, incluidos Display, Wi-Fi, Networks y Timezone |
@@ -237,7 +237,7 @@ Las capturas de pantalla se guardan como archivos BMP con nombres de archivo de 
 
 2. Asigna a cada dispositivo un nombre de `Identity` diferente.
 
-3. Ajusta `Advert` a `On` para permitir anuncios de identidad.
+3. Pon `Advert` en `On` para permitir anuncios de identidad.
 
 4. Abre `Discover` desde la página `L` y espera a que aparezcan los nodos cercanos.
 
@@ -263,7 +263,7 @@ Para enviar un anuncio de identidad inmediatamente, abre el menú `Discover`:
 
 4. Repite en el otro dispositivo.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_contact.png" alt="Descubre nodos cercanos, añade un nodo a contactos y míralo en la lista de contactos" width={1100} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_contact.png" alt="Descubrir nodos cercanos, añadir un nodo a contactos y verlo en la lista de contactos" width={1100} height="auto" /></p>
 
 ### Enviar un mensaje directo
 
@@ -271,7 +271,7 @@ Para enviar un anuncio de identidad inmediatamente, abre el menú `Discover`:
 
 2. Toca el campo de entrada y escribe un mensaje.
 
-3. Pulsa `ENTER` para enviar y espera la confirmación.
+3. Pulsa `ENTER` para enviar y espera el acuse de recibo.
 
 4. Abre la conversación en el otro dispositivo y responde.
 
@@ -291,11 +291,11 @@ Los mensajes directos esperan un acuse de recibo (ACK) del destinatario. Si el e
 
 ```
 
-3. Inserta la tarjeta, enciende el dispositivo y abre `M`. El dispositivo necesitará un reinicio si la tarjeta SD se monta o desmonta.
+3. Inserta la tarjeta, enciende el dispositivo y abre `M`. El dispositivo necesitará reiniciarse si la tarjeta SD se monta o desmonta.
 
 4. Desplázate hasta un área cubierta por tus teselas y selecciona un nivel de zoom disponible.
 
-`zoom` es el nivel de zoom; `x` e `y` son las coordenadas de la tesela. Los dispositivos bloqueados solo representan **niveles de zoom 1–9**. Los niveles de zoom más detallados requieren un código de desbloqueo.
+`zoom` es el nivel de zoom; `x` e `y` son las coordenadas de las teselas. Los dispositivos bloqueados solo representan **niveles de zoom 1–9**. Los niveles de zoom más detallados requieren un código de desbloqueo.
 
 ### Descargar mapas por Wi‑Fi (requiere desbloqueo)
 
@@ -313,7 +313,7 @@ Los mensajes directos esperan un acuse de recibo (ACK) del destinatario. Si el e
 
 ### Establecer la ubicación usada en los anuncios
 
-| Ajuste de ubicación de anuncio | Ubicación utilizada |
+| Ajuste de Advert Location | Ubicación utilizada |
 | --- | --- |
 | `GPS` | La posición obtenida por el GPS del dispositivo |
 | `Manual` | Una posición fija seleccionada con `Advert Loc` en el mapa |
@@ -326,13 +326,13 @@ Puedes probar la mensajería básica antes de comprar un código de desbloqueo. 
 
 ### Encontrar el número de serie de tu dispositivo
 
-Busca y abre `Unlock` en los menús del dispositivo. Anota el **número de serie** que se muestra en esa pantalla. Usa este número de serie completo para tu compra, en lugar de los últimos caracteres de una dirección MAC o un PIN de Pair Device.
+Busca y abre `Unlock` en los menús del dispositivo. Anota el **número de serie** que aparece en esa pantalla. Usa este número de serie completo para tu compra, en lugar de los últimos caracteres de una dirección MAC o un PIN de Pair Device.
 
 ### Obtener un código de desbloqueo
 
-Abre la [página de código de desbloqueo de Ripple Ultra de Scott](https://buymeacoffee.com/ripplebiz/e/249834), sigue las instrucciones de compra y proporciona el número de serie que se muestra en tu dispositivo. Las licencias se emiten por dispositivo; introduce solo un número de serie de dispositivo por cada licencia.
+Abre la [página de códigos de desbloqueo de Ripple Ultra de Scott](https://buymeacoffee.com/ripplebiz/e/249834), sigue las instrucciones de compra y proporciona el número de serie que aparece en tu dispositivo. Las licencias se emiten por dispositivo; introduce solo un número de serie de dispositivo por cada licencia.
 
-Si tu dispositivo vino con un código de desbloqueo aplicable, continúa con el siguiente paso.
+Si tu dispositivo viene con un código de desbloqueo aplicable, continúa con el siguiente paso.
 
 ### Introducir el código en tu dispositivo
 
@@ -350,11 +350,11 @@ Guarda el código junto con el número de serie de su dispositivo. En nuestra pr
 
 - **Telemetría automática:** Solicita telemetría cuando abres una conversación con una ruta directa. Muestra ubicación, dirección y distancia si el otro nodo permite telemetría GPS.
 
-- **CLI de administración de sala:** Accede a la línea de comandos del Room Server con su contraseña de administrador.
+- **Room Admin CLI:** Accede a la línea de comandos del Room Server con su contraseña de administrador.
 
-- **Administrador de repetidor:** Comprueba el estado del repetidor y gestiona el nodo de forma remota.
+- **Repeater Admin:** Comprueba el estado del repetidor y gestiona el nodo de forma remota.
 
-- **Administrador de sensor:** Accede a comandos de sensor, telemetría y gestión de permisos.
+- **Sensor Admin:** Accede a comandos del sensor, telemetría y gestión de permisos.
 
 - **Zoom de mapa más detallado:** Muestra teselas de mapa por encima del nivel de zoom 9.
 
@@ -368,7 +368,7 @@ Guarda el código junto con el número de serie de su dispositivo. En nuestra pr
 
 1. Abre el menú del sistema en la pantalla de inicio y selecciona `Networks`.
 
-2. Selecciona `New Network`, configura los ajustes de radio y nombra el perfil.
+2. Selecciona `New Network`, configura los ajustes de radio y pon nombre al perfil.
 
 3. Guarda y reinicia si se te solicita.
 
@@ -376,9 +376,9 @@ Guarda el código junto con el número de serie de su dispositivo. En nuestra pr
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Ripple/L2_Pro/ripple_new_network.jpg" alt="Creación de un perfil de red MeshCore en Networks" width={500} height="auto" /></p>
 
-Cada perfil tiene su propia identidad, contactos y preferencias. Abrir un contacto perteneciente a otro perfil puede pedirte que cambies de perfil. Este aviso no indica que el dispositivo haya detectado qué red está usando actualmente el otro nodo.
+Cada perfil tiene su propia identidad, contactos y preferencias. Abrir un contacto que pertenezca a otro perfil puede pedirte que cambies de perfil. Este aviso no indica que el dispositivo haya detectado qué red está usando actualmente el otro nodo.
 
-## Preguntas frecuentes
+## Preguntas frecuentes (FAQ)
 
 ### Código de estado SX1262
 
@@ -412,7 +412,7 @@ Comprueba el formato de la tarjeta SD, las rutas de las teselas y si existen tes
 
 - [Código de desbloqueo de Ripple Ultra](https://buymeacoffee.com/ripplebiz/e/249834)
 
-- [Proyecto MeshCore y documentación](https://github.com/meshcore-dev/MeshCore)
+- [Proyecto y documentación de MeshCore](https://github.com/meshcore-dev/MeshCore)
 
 ## Soporte técnico y debate sobre el producto
 

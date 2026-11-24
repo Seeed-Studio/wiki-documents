@@ -116,6 +116,10 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/cn/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 论文精读</a></li>
         <li><a href="/cn/robotics/paper_reading_dm05/">DM0.5 博客精读</a></li>
         <li><a href="/cn/robotics/paper_reading_g05/">G0.5 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_fineart_vla/">FineART-VLA 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_molmoact2/">MolmoAct2 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_x_vla/">X-VLA 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_wall_oss_05/">WALL-OSS-0.5 论文精读</a></li>
       </ul>
       <h3>第五部分：世界模型与 Video-Action</h3>
       <ul className="paper-reading-directory-list">
@@ -123,6 +127,10 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/cn/robotics/paper_reading_lingbot_va/">LingBot-VA 论文精读</a></li>
         <li><a href="/cn/robotics/paper_reading_gr00t_2/">GR00T 2 论文精读</a></li>
         <li><a href="/cn/robotics/paper_reading_lawam/">LaWAM 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_fastwam/">Fast-WAM 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_long_wam/">Long-WAM 论文精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_flux3/">FLUX 3 Action 技术报告精读</a></li>
+        <li><a href="/cn/robotics/paper_reading_cosmos3/">Cosmos 3 技术报告精读</a></li>
       </ul>
       <span className="paper-reading-update-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">

@@ -9,7 +9,7 @@ slug: /xiao_esp32s3_getting_started
 sku: 113991114, 113991115, 114010001, 102010634, 102010635, 102010671
 type: gettingstarted
 last_update:
-  date: 11/04/2026
+  date: 11/24/2026
   author: Luki
 createdAt: '2023-03-22'
 updatedAt: '2026-09-11'
@@ -595,11 +595,7 @@ Navigate to **Tools > Board > Boards Manager...**, type the keyword **esp32** in
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-:::caution
-The on-board package for XIAO ESP32-S3 requires version **2.0.8** and above to be available.
-:::
-
-- **Step 4.** Select your board and port.
+- **Step 4.** Select your board as shown below, then select its port.
 
 On top of the Arduino IDE, you can select the port directly. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports).
 
@@ -625,11 +621,7 @@ Navigate to **Tools > Board > Boards Manager...**, type the keyword **esp32** in
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-:::caution
-The on-board package for XIAO ESP32-S3 requires version **2.0.8** and above to be available.
-:::
-
-- **Step 4.** Select your board and port.
+- **Step 4.** Select your board as shown below, then select its port.
 
 At the top of the Arduino IDE you can directly select the port. This will probably be the one with "usbmodem" or "usbserial" in the name. If you're unsure, unplug and plug again to see which port is missing.
 
@@ -677,14 +669,14 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 <Tabs>
 <TabItem value="(Sense)" label="for XIAO ESP32-S3 (Sense)" default>
 
-Also, search for **xiao** in the development board on the left. select **XIAO_ESP32S3**.
+In **Tools > Board > esp32**, select `XIAO_ESP32S3` for the XIAO ESP32-S3 or Sense. This entry is available in **esp32 by Espressif Systems** version **2.0.8** or later.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="Plus" label="for XIAO ESP32-S3 Plus" default>
 
-It will be released soon; keep tuned for future updates.
+In **Tools > Board > esp32**, select `XIAO_ESP32S3_PLUS`. This entry is available in **esp32 by Espressif Systems** version **3.1.2** or later.
 
 </TabItem>
 </Tabs>
@@ -721,7 +713,7 @@ By now, I believe you have a good understanding of the features and hardware of 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
-- **Step 3.** Select the board model to **XIAO ESP32-S3**, and select the correct port number to upload the program.
+- **Step 3.** Follow [Software Preparation](#software-preparation) to select your board and port, then upload the sketch.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/12.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -887,6 +879,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 ### For Seeed Studio XIAO ESP32-S3
 
 **Hardware Design**
+- **📄[Datasheet]** [Seeed Studio XIAO ESP32-S3 Series Datasheet](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
 - **📄[Schematic]** [XIAO ESP32-S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
 - **🗃️[PCB Design Files]** 
@@ -907,6 +900,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 **Hardware Design**
+- **📄[Datasheet]** [Seeed Studio XIAO ESP32-S3 Series Datasheet](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
 - **📄[Schematic]** [XIAO ESP32-S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 - **📄[Schematic]** [XIAO ESP32-S3 ExpBoard Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Exp_Board_v1.2_SCH_PDF_260810.pdf)
@@ -930,6 +924,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 ### For Seeed Studio XIAO ESP32-S3 Plus
 
 **Hardware Design**
+- **📄[Datasheet]** [Seeed Studio XIAO ESP32-S3 Series Datasheet](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
 - **📄[Schematic]** [XIAO ESP32-S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.1_SCH_260115.pdf )
 - **🗃️[PCB Design Files]** 

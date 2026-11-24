@@ -261,6 +261,8 @@ The XIAO Debug Mate is designed for the entire XIAO ecosystem, but the DAPLink d
 
 </div>
 
+Connect a USB data cable directly to the XIAO ESP32-C6 to use its built-in USB JTAG for hardware breakpoints. For Arduino sketches in Visual Studio, see the [Visual Micro hardware breakpoint walkthrough](https://www.visualmicro.com/page/XIAO-ESP32-C6-Visual-Studio.aspx#hardware-breakpoint).
+
 ### Software Preparation
 
 Before you can start debugging, you need to set up your host computer with the necessary software.
