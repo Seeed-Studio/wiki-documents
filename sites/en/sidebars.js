@@ -2349,6 +2349,7 @@ const sidebars = {
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',                
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
+              'Sensor/reSpeaker_44mm/respeaker_44mm_wakeword',
               ],
             },
             {
