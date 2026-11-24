@@ -8,6 +8,8 @@ keywords:
   - Arduino
   - USB JTAG
 slug: /xiao_esp32c6_with_visual_studio
+last_update:
+  date: 11/23/2026
 ---
 
 This walkthrough builds on the XIAO ESP32C6 [Wi-Fi scan example](https://wiki.seeedstudio.com/xiao_wifi_usage_esp32c6/#scan-nearby-wifi-networks). You’ll upload an Arduino sketch that classifies the strongest sampled 2.4 GHz signal, then stop at the comparison and see the value change as you step through it. The XIAO’s built-in USB JTAG works through the same USB data cable you use to upload the sketch. [Espressif’s built-in USB JTAG reference](https://docs.espressif.com/projects/esp-idf/en/stable/esp32c6/api-guides/jtag-debugging/configure-builtin-jtag.html)
@@ -73,13 +75,13 @@ Choose **vMicro → Build & Upload**. Open the Visual Micro **Serial Monitor** f
 
 1. Select the **Debug** build configuration. In the Visual Micro toolbar, set the debugger mode to **Hardware** and choose **ESP32C6-USB**. Keep the board set to `XIAO_ESP32C6`. To match the board test, select **vMicro → Debugger → Disable Optimization → No Project + Libraries Optimization**.
 
-   ![Visual Micro toolbar showing XIAO_ESP32C6, the COM port, Hardware debugging and ESP32C6-USB](./visual-studio-wifi/xiao-esp32-c6-setup.png)
+   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiao-esp32-c6-setup.png" alt="Visual Micro toolbar showing XIAO_ESP32C6, the COM port, Hardware debugging and ESP32C6-USB" style={{width:450, height:'auto'}}/></div>
 
 2. Click in the left margin of the line `strongSignal = strongestDbm >= thresholdDbm;` to set a breakpoint. Press **F5** to start debugging. The sketch pauses on that line once a scan finds a network.
 3. In Visual Studio, open **Debug → Windows → Watch → Watch 1**. Add `strongestDbm`, `thresholdDbm` and `strongSignal`. At this point, `strongSignal` still holds its previous value.
 4. Press **F10** once to execute the comparison. The debugger moves to the `Serial.printf` line. In the board test shown below, `strongestDbm` was `-71`, `thresholdDbm` was `-70`, and the assignment changed `strongSignal` from `true` to `false`. Your result will depend on the networks around you. The screenshot shows the values in **Autos**.
 
-   ![After F10, execution is on the print line and Autos shows strongestDbm at -71, thresholdDbm at -70 and strongSignal as false](./visual-studio-wifi/xiao-esp32-c6-f10-result.png)
+   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiao-esp32-c6-f10-result.png" alt="After F10, execution is on the print line and Autos shows strongestDbm at -71, thresholdDbm at -70 and strongSignal as false" style={{width:700, height:'auto'}}/></div>
 
 5. Press **F5** to resume. The Serial Monitor prints the classification. The sketch then waits four seconds and starts another scan. To leave it scanning without pausing, clear the breakpoint and press **F5** again.
 
