@@ -678,6 +678,8 @@ As a growing ecosystem of Seeed Studio XIAO, we offer a wide range of add-ons, w
 
 ### Seeed Studio XIAO ESP32S3 Sense Open-Source Materials
 
+- **[PDF]** [Seeed Studio XIAO ESP32-S3 Series Datasheet](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
+
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense ExpBoard Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
@@ -701,6 +703,8 @@ As a growing ecosystem of Seeed Studio XIAO, we offer a wide range of add-ons, w
 - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip)
 
 ### Seeed Studio XIAO ESP32S3 Plus Open-Source Materials
+
+- **[PDF]** [Seeed Studio XIAO ESP32-S3 Series Datasheet](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.0_SCH_PCB.zip)
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.1_SCH_260115.pdf)
