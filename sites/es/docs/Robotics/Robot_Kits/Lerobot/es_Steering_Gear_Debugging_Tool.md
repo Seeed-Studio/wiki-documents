@@ -245,7 +245,7 @@ Si el servo conectado es el servo 6 pero la herramienta solo muestra el ID 4, ca
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/10.png" />
-</div]
+</div>
 
 Selecciona el ID 4 en la interfaz y cámbialo a 6. Comprueba y corrige los servos restantes de uno en uno.
 

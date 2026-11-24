@@ -202,7 +202,7 @@ python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/tty
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/06.webp" />
-</div]
+</div>
 
 サーボ 2 とサーボ 1 の間の接続ワイヤハーネスを取り外します。
 
