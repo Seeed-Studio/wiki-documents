@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /SeeedStudio_XIAO_Series_Introduction
 sku: 110010004,102010388,102010428,102010448,102010469,113991054,113991114,113991115,113991254,E2024042601,102010574,102010573,102010572,102010571,102010570,102010470,102010551,102010550,102010590,102010610,102010650,102010636,102010638,102010632,102010633,102010631,102010630,102010634,102010635,102010637,102010672,102010694,102010671,102010693,102010690,102010692,101991470
 last_update:
-  date: 10/13/2026
+  date: 11/24/2026
   author: Citric
 createdAt: '2023-07-10'
 updatedAt: '2026-08-27'
@@ -91,13 +91,13 @@ url: https://wiki.seeedstudio.com/es/SeeedStudio_XIAO_Series_Introduction/
       <td>Con WiFi y BLE, alto rendimiento</td>
       <td>Versión avanzada de XIAO ESP32S3 con cámara OV2640/cámara OV3660 y micrófono</td>
       <td>MCU Renesas ARM Cortex-M4 de 32 bits, compatible con Arduino IDE</td>
-      <td>Matter, Open Thread, Zigbee, Bluetooth Low Energy (BLE 5.3), Bluetooth Mesh, propietario 2.4 GHz</td>
+      <td>Matter, Open Thread, Zigbee, Bluetooth Low Energy (BLE 5.3), Bluetooth Mesh, propietario de 2,4 GHz</td>
       <td>Versión avanzada de XIAO MG24 con sensores de aceleración de seis ejes y micrófono</td>
 
-      <td>Ultrabajo consumo, multiprotocolo 2.4 GHz, Bluetooth 6.0, Matter, Zigbee, para IoT</td>
+      <td>Ultrabajo consumo, multiprotocolo 2,4 GHz, Bluetooth 6.0, Matter, Zigbee, para IoT</td>
       <td>Versión avanzada de XIAO nRF54L15 con micrófono integrado e IMU de 6 ejes</td>
-      <td>Placa inalámbrica compacta y de ultrabajo consumo con multiprotocolo 2.4 GHz, 8MB de flash externa, antena IPEX y PMIC nPM1300</td>
-      <td>Placa inalámbrica compacta y de ultrabajo consumo con IMU, micrófono digital, 8MB de flash externa y multiprotocolo 2.4 GHz</td>
+      <td>Placa inalámbrica compacta y de ultrabajo consumo con multiprotocolo de 2,4 GHz, 8 MB de flash externa, antena IPEX y PMIC nPM1300</td>
+      <td>Placa inalámbrica compacta y de ultrabajo consumo con IMU, micrófono digital, 8 MB de flash externa y multiprotocolo de 2,4 GHz</td>
    </tr>
    <tr>
       <th>Chip</th>
@@ -123,7 +123,7 @@ url: https://wiki.seeedstudio.com/es/SeeedStudio_XIAO_Series_Introduction/
    </tr>
    <tr>
       <th>Arquitectura</th>
-      <td align="center">Cortex-M0+<br/>funcionando hasta 48MHz</td>
+      <td align="center">Cortex-M0+<br/>funcionando hasta 48 MHz</td>
       <td align="center">Cortex-M0+ de doble núcleo<br/>funcionando hasta 133 MHz</td>
       <td align="center">Doble ARM Cortex-M33<br/>funcionando hasta 150 MHz con FPU<br/>RISC-V conmutables usando núcleos duales Hazard3 RISC-V</td>
       <td align="center">Cortex-M4<br/>funcionando hasta 64 MHz</td>
@@ -145,62 +145,62 @@ url: https://wiki.seeedstudio.com/es/SeeedStudio_XIAO_Series_Introduction/
       <th>RAM</th>
       <td align="center">32 KB SRAM</td>
       <td align="center">264 KB SRAM</td>
-      <td align="center">520kB SRAM<br/>2MB Flash</td>
+      <td align="center">520 kB SRAM<br/>2 MB Flash</td>
       <td align="center">256 KB RAM</td>
       <td align="center">256 KB RAM</td>
       <td align="center">400 KB SRAM</td>
-      <td align="center">512KB SRAM</td>
-      <td align="center">512 KB SRAM<br/>8MB PSRAM</td>
-      <td align="center">512 KB SRAM<br/>8MB PSRAM</td>
+      <td align="center">512 KB SRAM</td>
+      <td align="center">512 KB SRAM<br/>8 MB PSRAM</td>
+      <td align="center">512 KB SRAM<br/>8 MB PSRAM</td>
       <td align="center">32 KB SRAM</td>
-      <td align="center">256kB RAM</td>
-      <td align="center">256kB RAM</td>
+      <td align="center">256 kB RAM</td>
+      <td align="center">256 kB RAM</td>
 
-      <td align="center">256kB RAM</td>
-      <td align="center">256kB RAM</td>
-      <td align="center">512KB</td>
-      <td align="center">512KB</td>
+      <td align="center">256 kB RAM</td>
+      <td align="center">256 kB RAM</td>
+      <td align="center">512 KB</td>
+      <td align="center">512 KB</td>
 
    </tr>
    <tr>
       <th>Flash y ROM (chip)</th>
-      <td align="center">256KB</td>
+      <td align="center">256 KB</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">1MB</td>
-      <td align="center">1MB</td>
-      <td align="center">4MB</td>
-      <td align="center">4MB</td>
-      <td align="center">384KB</td>
-      <td align="center">384KB</td>
-      <td align="center">256KB</td>
-      <td align="center">1536KB+4MB</td>
-      <td align="center">1536KB+4MB</td>
+      <td align="center">1 MB</td>
+      <td align="center">1 MB</td>
+      <td align="center">4 MB</td>
+      <td align="center">4 MB</td>
+      <td align="center">384 KB</td>
+      <td align="center">384 KB</td>
+      <td align="center">256 KB</td>
+      <td align="center">1536 KB + 4 MB</td>
+      <td align="center">1536 KB + 4 MB</td>
 
-      <td align="center">1.5MB </td>
-      <td align="center">1.5MB</td>
+      <td align="center">1,5 MB </td>
+      <td align="center">1,5 MB</td>
       <td align="center">2 MB de memoria no volátil (NVM)</td>
       <td align="center">2 MB de memoria no volátil (NVM)</td>
    </tr>
    <tr>
       <th>Flash (a bordo)</th>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">2MB</td>
+      <td align="center">2 MB</td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">2MB</td>
-      <td align="center">2MB</td>
+      <td align="center">2 MB</td>
+      <td align="center">2 MB</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">8MB</td>
-      <td align="center">8MB</td>
+      <td align="center">8 MB</td>
+      <td align="center">8 MB</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
 
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">8MB</td>
-      <td align="center">8MB</td>
+      <td align="center">8 MB</td>
+      <td align="center">8 MB</td>
    </tr>
    <tr>
       <th>Sensores integrados</th>
@@ -537,8 +537,8 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 ### Archivos Kicad de la serie Seeed
 
-- **[kicad_sym]** [Símbolos Kicad](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_Series-20240814.kicad_sym)
-- **[ZIP]** [Huellas Kicad](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_Series-20240814.pretty.zip)
+- **[kicad_sym]** [Símbolos de Kicad](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_Series-20240814.kicad_sym)
+- **[ZIP]** [Huellas de Kicad](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_Series-20240814.pretty.zip)
 
 ### Materiales de código abierto de Seeed Studio XIAO SMAD21
 
@@ -552,11 +552,11 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[DXF]** [Dimensiones de Seeed Studio XIAO SAMD21 en DXF](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar)
 
-- **[LBR]** [Huella Eagle de Seeed Studio XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-footprint-eagle.lbr)
+- **[LBR]** [Huellas Eagle de Seeed Studio XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-footprint-eagle.lbr)
 
 - **[ZIP]** [Firmware de fábrica de Seeed Studio XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip)
 
-- **[XLSX]** [Hoja de pines de Seeed Studio XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx)
+- **[XLSX]** [Hoja de asignación de pines de Seeed Studio XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx)
 
 - **[STEP]** [Modelo 3D de Seeed Studio XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip)
 
@@ -572,9 +572,9 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[DXF]** [Dimensiones de Seeed Studio XIAO RP2040 en DXF](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip)
 
-- **[LBR]** [Huella Eagle de Seeed Studio XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr)
+- **[LBR]** [Huellas Eagle de Seeed Studio XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr)
 
-- **[XLSX]** [Hoja de pines de Seeed Studio XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx)
+- **[XLSX]** [Hoja de asignación de pines de Seeed Studio XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx)
 
 - **[STEP]** [Modelo 3D de Seeed Studio XIAO RP2040](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip)
 
@@ -590,9 +590,9 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[DXF]** [Dimensiones de Seeed Studio XIAO nRF52840 en DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip)
 
-- **[LBR]** [Huella Eagle de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
+- **[LBR]** [Huellas Eagle de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
 
-- **[XLSX]** [Hoja de pines de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
+- **[XLSX]** [Hoja de asignación de pines de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
 
 ### Materiales de código abierto de Seeed Studio XIAO nRF52840 Sense
 
@@ -604,11 +604,11 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[ZIP]** [Archivo Eagle de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO nRF52840 Sense en DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip)
 
 - **[LBR]** [Huella Eagle de Seeed Studio XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-footprint-eagle.lbr)
 
-- **[XLSX]** [Hoja de pinout de Seeed Studio XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx)
 
 - **[STEP]** [Modelo 3D de Seeed Studio XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip)
 
@@ -620,7 +620,7 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[ZIP]** [Archivo KiCAD de Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XlAO_nRF52840_KiCAD_file.zip)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO nRF52840 Sense en DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XlA0_nRF52840_Sense_Dimension_in_DXF.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XlA0_nRF52840_Sense_Dimension_in_DXF.dxf)
 
 - **[ZIP]** [Base Seeed Studio XIAO Plus con salida de pad inferior](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 
@@ -628,7 +628,7 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 ### Materiales de código abierto de Seeed Studio XIAO ESP32C3
 
-- **[WiKi]** [Primer vistazo a Seeed Studio XIAO ESP32C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html)
+- **[WiKi]** [Primera mirada a Seeed Studio XIAO ESP32C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html)
 
 - **[PDF]** [Hoja de datos de ESP32C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf)
 
@@ -638,13 +638,13 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[ZIP]** [Librerías Eagle de Seeed Studio XIAO ESP32C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-v1.2_SCH-PCB.zip)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32C3 en DXF](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip)
 
 - **[LBR]** [Huella Eagle de Seeed Studio XIAO ESP32C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeed-Studio-XIAO-ESP32C3-footprint-eagle.lbr)
 
 - **[ZIP]** [Firmware de fábrica de Seeed Studio XIAO ESP32C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin)
 
-- **[XLSX]** [Hoja de pinout de Seeed Studio XIAO ESP32C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO ESP32C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx)
 
 - **[STEP]** [Modelo 3D de Seeed Studio XIAO ESP32C3](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1)
 
@@ -656,25 +656,29 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[PDF]** [Esquemático de Seeed Studio XIAO ESP32C6](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
-- **[XLSX]** [Hoja de pinout de Seeed Studio XIAO ESP32C6](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO ESP32C6](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
 ### Materiales de código abierto de Seeed Studio XIAO ESP32S3
+
+- **[PDF]** [Hoja de datos de la Serie Seeed Studio XIAO ESP32-S3](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 
 - **[PDF]** [Esquemático de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 
 - **[ZIP]** [Librerías Eagle de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 en DXF](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
 
 - **[LBR]** [Huella Eagle de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
 
 - **[ZIP]** [Firmware de fábrica de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware.zip)
 
-- **[XLSX]** [Hoja de pinout de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
 - **[STEP]** [Modelo 3D de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
 
 ### Materiales de código abierto de Seeed Studio XIAO ESP32S3 Sense
+
+- **[PDF]** [Hoja de datos de la Serie Seeed Studio XIAO ESP32-S3](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
 
 - **[PDF]** [Esquemático de Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_V1.51_SCH_260611.pdf)
 
@@ -684,13 +688,13 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[ZIP]** [Librerías Eagle de Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH&PCB_230324.zip)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 Sense en DXF (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32S3 Sense (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 Sense en DXF (inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32S3 Sense (inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf)
 
 - **[ZIP]** [Firmware de fábrica de Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAOESP32S3-Sense-firmware.zip)
 
-- **[XLSX]** [Hoja de pinout de Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO ESP32S3 Sense](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
 - **[STP]** [Diseño de carcasa de XIAO ESP32S3 Sense (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp)
 
@@ -700,16 +704,18 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 ### Materiales de código abierto de Seeed Studio XIAO ESP32S3 Plus
 
+- **[PDF]** [Hoja de datos de la Serie Seeed Studio XIAO ESP32-S3](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_ESP32-S3_Series_Datasheet-26.11.3.pdf)
+
 - **[ZIP]** [Esquemático de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.0_SCH_PCB.zip)
 - **[PDF]** [Esquemático de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.1_SCH_260115.pdf)
 
 - **[ZIP]** [Librerías KiCAD de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library.zip)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 Plus en DXF (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32S3 Plus (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 Plus en DXF (inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO ESP32S3 Plus (inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf)
 
-- **[XLSX]** [Hoja de pinout de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx)
 
 - **[ZIP]** [Archivo KiCAD de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_V1.0_SCH%26PCB_KICAD.zip)
 
@@ -721,9 +727,9 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[PDF]** [Esquemático de Seeed Studio XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
 
-- **[XLSX]** [Hoja de pinout de Seeed Studio XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
+- **[XLSX]** [Hoja de distribución de pines de Seeed Studio XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
 
-- **[DXF]** [Dimensiones de Seeed Studio XIAO RP2350 en DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf)
+- **[DXF]** [Dimensiones en DXF de Seeed Studio XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf)
 
 - **[STEP]** [Archivo STEP 3D de Seeed Studio XIAO RP2350](https://grabcad.com/library/seeed-studio-xiao-rp2350-1)
 
@@ -737,25 +743,25 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 - **[Kicad]** [Huella de Seeed Studio XIAO MG24 Sense](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[ZIP]** [PCB y SCH de Seeed Studio XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
+- **[ZIP]** [PCB y esquema de Seeed Studio XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
 
 ### Materiales de código abierto de Seeed Studio XIAO MG24
 
 - **[PDF]** [Hoja de datos de Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
 
-- **[PDF]** [Esquemático de Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
+- **[PDF]** [Esquema de Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
 
 - **[PDF]** [SoC inalámbrico Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
 
 - **[Kicad]** [Huella de Seeed Studio XIAO MG24](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[ZIP]** [PCB y SCH de Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
+- **[ZIP]** [PCB y esquema de Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
 
 ### Seeed Studio XIAO nRF54LM20A
 
 **Diseño de hardware**
 - **📄[Datasheet]** [Hoja de datos Nordic nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
-- **📄[Schematic]** [Esquemático de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
+- **📄[Schematic]** [Esquema de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
 - **🗃️[PCB Design Files]** [Proyecto KiCad de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
 - **🗃️[PCB Design Libraries]** 
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
@@ -767,7 +773,7 @@ Como un ecosistema en crecimiento de Seeed Studio XIAO, ofrecemos una amplia gam
 
 **Diseño de hardware**
 - **📄[Datasheet]** [Hoja de datos Nordic nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/nRF54LM20A_nRF54LM20B_Datasheet_v1.0.pdf)
-- **📄[Schematic]** [Esquemático de XIAO nRF54LM20A Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
+- **📄[Schematic]** [Esquema de XIAO nRF54LM20A Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_Schematic.pdf )
 - **🗃️[PCB Design Files]** [Proyecto KiCad de XIAO nRF54LM20A](https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/RES/XIAO_nRF54LM20A_V1.0_SCH&PCB_260508.zip )
 - **🗃️[PCB Design Libraries]**
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
