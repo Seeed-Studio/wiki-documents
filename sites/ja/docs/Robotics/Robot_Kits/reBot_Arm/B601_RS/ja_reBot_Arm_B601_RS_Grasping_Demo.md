@@ -1323,6 +1323,7 @@ python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA b
 :::
 
 :::tip CUDA ビルドを選択する
+[公式の PyTorch バージョン一覧](https://pytorch.org/get-started/previous-versions/)を参照し、お使いの GPU、ドライバ、Python バージョンに対応するビルドを選択してください。`nvidia-smi` が表示する CUDA バージョンだけでは不十分なため、ビルドを選ぶ際はこの 3 点をすべて考慮してください。ビルド済みホイールには、標準的な YOLOE 推論に必要な CUDA ランタイムが含まれています。
 
 CUDA が利用できない場合は、ドライバ、GPU アーキテクチャ、選択したホイールを確認するか、CPU タブに切り替えて基本的なセットアップを検証してください。PyTorch のバージョンを変更する場合は、対応する torchvision と torchaudio のバージョン、および次のフェーズで使用する固定バージョンも更新してください。
 :::
@@ -1340,12 +1341,12 @@ CUDA が利用できない場合は、ドライバ、GPU アーキテクチャ�
 
 いずれか 1 つのバックエンドをインストールしたら、`yolo` をアクティブに保ったまま、画像処理および Python ランタイム依存関係をインストールします。このコマンドは対応する PyTorch バージョンを維持しつつ、NumPy と OpenCV の制約をまとめて解決します。
 
-__CODE_LINE_PLH__
 ```bash
-
+python -m pip install "ultralytics==8.4.202" "torch==2.9.1" "torchvision==0.24.1" "torchaudio==2.9.1" "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d pyyaml lark typeguard
 
 # YOLOE open-vocabulary classes require the Ultralytics CLIP package.
 python -m pip install git+https://github.com/ultralytics/CLIP.git
+```
 
 :::tip PyTorch インストール中の ROS 依存関係メッセージ
 すでに ROS 2 を source 済みの場合、pip が `generate-parameter-library-py` は `pyyaml` と `typeguard` を必要とすると報告することがあります。最後の `Successfully installed` 行に `torch`、`torchvision`、`torchaudio` が含まれていることを確認してください。足りない 2 つの依存関係はこのフェーズのコマンドでインストールし、その後 `pip check` と以下のインポートテストを実行してください。
@@ -1353,9 +1354,9 @@ python -m pip install git+https://github.com/ultralytics/CLIP.git
 
 `rebotarm_agent` をデフォルトの arm ワークスペース構成でビルドした場合は、フルワークスペースを source した後に `pip check` を通過できるよう、その宣言済み依存関係をインストールしてください。
 
-__CODE_LINE_PLH__
 ```bash
 python -m pip install fastmcp
+```
 
 `fastmcp` は Agent 機能をサポートします。ワークスペースに `rebotarm_agent` が含まれている場合にのみインストールしてください。
 
@@ -1366,30 +1367,30 @@ NumPy `1.26.4` を個別にインストールする前に `pip install -U ultral
 
 `yolo` 環境をアクティブに保ったまま、互換性のあるバージョンをインストールし、その後で以下の依存関係チェックとインポートチェックを実行してください。
 
-__CODE_LINE_PLH__
 ```bash
 conda activate yolo
 python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
+```
 
 環境内で `cv2` を提供する OpenCV パッケージは 1 つだけにしてください。`opencv-python`、`opencv-contrib-python`、あるいは対応する headless パッケージなど複数のバリアントをインストールした場合は、それらをアンインストールし、固定バージョンのパッケージを再インストールしてください。
 
-__CODE_LINE_PLH__
 ```bash
 python -m pip uninstall -y opencv-python opencv-contrib-python opencv-python-headless opencv-contrib-python-headless
 python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
 ```
+:::
 
 **依存関係をチェックし、YOLOE を検証する**
 
 システムの ROS セットアップとビルド済みワークスペースを source し、アクティブな Conda Python を使って依存関係をチェックします。
 
-__CODE_LINE_PLH__
 ```bash
 source /opt/ros/humble/setup.bash
 source ~/rebotarm_ros2/install/setup.bash
 python -m pip check
 python -c "import sys, torch, torchvision, torchaudio, cv2, numpy, yaml, lark, transforms3d, clip; from ultralytics import YOLOE; print('Python:', sys.executable); print('PyTorch:', torch.__version__); print('OpenCV:', cv2.__version__); print('NumPy:', numpy.__version__); print('CUDA available:', torch.cuda.is_available()); print('YOLOE OK')"
 python -c "import rclpy, cv_bridge, launch_ros; import rebot_visual_grasp.grasp_yolo; print('ROS grasp imports OK')"
+```
 
 :::note 期待される結果
 `pip check` は `No broken requirements found.` と報告します。Python パスはアクティブな Conda 環境内にあります。画像処理チェックでは `OpenCV: 4.11.0`、`NumPy: 1.26.4`、`YOLOE OK` が表示されます。ROS インポートチェックでは `ROS grasp imports OK` が表示されます。CPU バックエンドでは `CUDA available: False`、GPU バックエンドでは `True` が期待される結果です。これらのチェックはモジュールをインポートするだけで、アームは待機状態のままです。
@@ -1405,22 +1406,22 @@ python -c "import rclpy, cv_bridge, launch_ros; import rebot_visual_grasp.grasp_
 
 **重みを `~/rebot_visual_model` にダウンロードする**
 
-__CODE_LINE_PLH__
 ```bash
-
+mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
 
 # MobileCLIP is required by YOLOE set_classes and is about 242 MB.
-
+wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobileclip2_b.ts
 
 # The segmentation weights can download on first use. Download them here to verify the setup before launch.
 wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
+```
 
 YOLOE がモデルディレクトリから重みを読み込み、テキストクラスを設定できることを確認します。これにより、アームを起動する前に、モデルファイルや CLIP 依存関係の不足を検出できます。
 
-__CODE_LINE_PLH__
 ```bash
 cd ~/rebot_visual_model
 python -c "from ultralytics import YOLOE; model = YOLOE('yoloe-26s-seg.pt'); model.set_classes(['cube', 'box']); print('YOLOE weights and text encoder OK')"
+```
 
 `YOLOE weights and text encoder OK` と表示されることを期待してください。最初の読み込みには時間がかかる場合があります。このコマンドは画像モデルのみを読み込み、アームは接続されません。プロジェクトを実行する前に、重みや依存関係の不足を解消してください。
 
@@ -1432,7 +1433,6 @@ python -c "from ultralytics import YOLOE; model = YOLOE('yoloe-26s-seg.pt'); mod
 ### 3. プロジェクトを実行する
 
 開始する前に、アームの電源がオンになっていること、CAN インターフェースが `can0` であること、Gemini 2、D405、または D435i が USB 接続されていることを確認してください。その後、CAN を起動します。
-Before starting, confirm that the arm is powered on, the CAN interface is `can0`, and the Gemini 2, D405, or D435i is connected over USB. Then bring up CAN.
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
