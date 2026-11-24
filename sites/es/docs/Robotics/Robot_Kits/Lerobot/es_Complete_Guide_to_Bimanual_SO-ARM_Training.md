@@ -80,7 +80,7 @@ Esta guía recorre el flujo completo para entrenar un sistema robótico SO-ARM b
 <h4><a href="#3-record-dataset">Registra un conjunto de datos</a></h4>
 <p>Registra demostraciones y luego reanúdalas o repítelas según sea necesario.</p>
 </div>
-</section]
+</section>
 
 <section className="rebot-step-item">
 <span className="rebot-step-number">5</span>
