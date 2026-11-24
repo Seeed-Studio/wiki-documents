@@ -297,6 +297,7 @@ const sidebars = {
       collapsible: false,
       items: [
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Grasping_Demo`, label: 'reBot-RS 视觉夹取' },
+        { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Python_Visual_Grasping` },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Camera_Follow`, label: 'reBot-RS 腕部跟随' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_Bimanual`, label: 'reBot-RS双臂协作' },
         { type: 'doc', id: `${RS}/cn_reBot_Arm_B601_RS_ROS2_Integration`, label: 'reBot-RS 与 ROS2' },
