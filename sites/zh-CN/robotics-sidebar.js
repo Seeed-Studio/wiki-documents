@@ -250,6 +250,7 @@ const sidebars = {
     {
       type: 'category',
       label: '快速开始与工具',
+      className: 'robotics-section-title',
       collapsible: false,
       collapsed: false,
       items: [
@@ -262,13 +263,13 @@ const sidebars = {
     {
       type: 'category',
       label: '拓展应用',
+      className: 'robotics-section-title',
       collapsible: false,
       collapsed: false,
       items: [
         `${K}/Lerobot/cn_Complete_Guide_to_Bimanual_SO-ARM_Training`,
         `${K}/Lerobot/cn_SOARM101_XIAO_MicroROS_Wireless_Teleoperation`,
         `${K}/Lerobot/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor`,
-        `${K}/Lerobot/cn_Lerobot_SO_ARM101_DAMO`,
         `${K}/Lerobot/cn_SOARM101_Isaac_Sim_DLI`,
       ],
     },

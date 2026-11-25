@@ -1,7 +1,7 @@
 ---
 description: Set up tabletop visual grasping on the reBot Arm B601-RS with an Orbbec Gemini 336 and YOLOE. Preview OBB grasps, perform hand-eye calibration, and run the arm with optional AnyGrasp or GraspNet-Baseline backends.
-title: reBot Arm B601-RS Multi-Backend Visual Grasping
-sidebar_label: reBot Arm B601-RS Multi-Backend Visual Grasping
+title: reBot-RS Multi-Backend Visual Grasping
+sidebar_label: reBot-RS Multi-Backend Visual Grasping
 keywords:
   - reBot Arm B601-RS
   - RGB-D

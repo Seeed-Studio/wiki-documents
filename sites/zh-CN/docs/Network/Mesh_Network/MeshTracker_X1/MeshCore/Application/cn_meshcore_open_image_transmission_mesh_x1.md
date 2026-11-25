@@ -1,5 +1,5 @@
 ---
-description: 本指南介绍如何使用超低码率图像压缩，通过 MeshCore 发送由 AI 重建的图像。
+description: 本指南介绍如何使用超低比特率图像压缩，通过 MeshCore 发送由 AI 重建的图像。
 title: 图像传输
 keywords:
   - MeshCore
@@ -12,12 +12,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png
 slug: /meshcore_ai_image_transmission_x1
 sku: 100087698
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 9/19/2026
   author: Michelle Huang
 createdAt: 2026-09-19T00:00:00.000Z
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/cn/meshcore_ai_image_transmission_x1/
 ---
 

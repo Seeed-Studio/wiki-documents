@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de Consumo de Energía para XIAO nRF54L15 (PlatformIO)
+title: Ejemplo de consumo de energía para XIAO nRF54L15 (PlatformIO)
 description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
 slug: /xiao_nrf54l15_sense_power_consumptions
@@ -16,39 +16,43 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_power_consumptions/
 ---
 
 
-El siguiente código de ejemplo está diseñado para PlatformIO, pero también es compatible con el nRF Connect SDK.
+El siguiente código de ejemplo está diseñado para PlatformIO, pero también es compatible con nRF Connect SDK.
 
 :::tip
-Basado en VS Code, si deseas usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, agrega el archivo app.overlay y modifica el contenido en prj.conf
+Basado en VS Code, si deseas usar el siguiente caso en nRF Connect SDK, consulta la conexión proporcionada, añade el archivo app.overlay y modifica el contenido en prj.conf
 
-[XIAO nRF54L15 Agregar archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+[XIAO nRF54L15 Añadir archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/añadir-archivo-overlay-y-modificar-el-archivo-conf/).
 
 :::
 
-## Bluetooth Conectado
+:::caution
+Para las mediciones de bajo consumo de la versión V1.2, alimenta la placa a través de los pads BAT traseros con una fuente nominal de 3,7 V y desconecta el USB-C y el pin lateral de 5V/VBUS. Registra la revisión de la placa, el firmware, el punto de medición y si el IMU y el micrófono Sense están habilitados.
+:::
 
-Esta sección detalla las características de consumo de energía del dispositivo mientras está anunciándose activamente como un periférico Bluetooth Low Energy (BLE). El dispositivo implementa un servicio BLE personalizado, permitiendo que otros dispositivos centrales se conecten e interactúen con él.
+## Bluetooth conectado
 
-El siguiente gráfico ilustra el perfil típico de consumo de energía cuando el dispositivo está anunciándose continuamente:
+Esta sección detalla las características de consumo de energía del dispositivo mientras está anunciando activamente como un periférico Bluetooth Low Energy (BLE). El dispositivo implementa un servicio BLE personalizado, lo que permite que otros dispositivos centrales se conecten e interactúen con él.
+
+El siguiente gráfico ilustra el perfil típico de consumo de energía cuando el dispositivo está anunciando de forma continua:
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/7.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Consumo de Energía del Dispositivo durante el Anuncio BLE</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Consumo de energía del dispositivo durante la publicidad BLE</em></p>
 </div>
 
-Como se muestra en el gráfico, el dispositivo exhibe picos de corriente periódicos correspondientes a cada evento de anuncio, seguidos de períodos de menor consumo de corriente. El consumo promedio de energía durante el anuncio es mayor que en el modo System Off, reflejando las operaciones activas de radio requeridas para la transmisión.
+Como se muestra en el gráfico, el dispositivo presenta picos de corriente periódicos que corresponden a cada evento de publicidad, seguidos de períodos de menor consumo de corriente. El consumo medio de energía durante la publicidad es mayor que en el modo System Off, lo que refleja las operaciones activas de radio necesarias para la transmisión.
 
 ---
 
-### Ejemplo de Código de Anuncio BLE
+### Ejemplo de código de publicidad BLE
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-ble" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-A continuación se muestra el código utilizado para probar el consumo de energía durante el anuncio BLE:
+A continuación se muestra el código utilizado para probar el consumo de energía durante la publicidad BLE:
 
 ```c
 #include <stdio.h>
@@ -228,25 +232,26 @@ int main(void)
 }
 ```
 
-## Estado de Ultra-bajo Consumo
+## Estado de ultra bajo consumo
 
-Para lograr un consumo de energía extremadamente bajo para el dispositivo, realizamos pruebas de consumo de energía en modo **System Off**. El modo System Off es un modo de sueño profundo proporcionado por Zephyr OS, donde la mayoría de los periféricos y la CPU se apagan, reteniendo solo las fuentes de activación esenciales (como interrupciones GPIO) para minimizar el consumo de energía.
+Para lograr un consumo de energía extremadamente bajo para el dispositivo, realizamos pruebas de consumo de energía en el modo **System Off**. El modo System Off es un modo de sueño profundo proporcionado por Zephyr OS, en el que la mayoría de los periféricos y la CPU se apagan, conservando solo las fuentes de activación esenciales (como interrupciones GPIO) para minimizar el consumo de energía.
 
-El siguiente gráfico ilustra la curva típica de consumo de energía después de que el dispositivo entra en modo System Off:
+El siguiente gráfico ilustra la curva típica de consumo de energía después de que el dispositivo entra en el modo System Off:
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="XIAO nRF54L15 Ultra-low Power Consumption in System Off Mode" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Consumo de Energía del Dispositivo en Modo System Off</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Consumo de energía del dispositivo en modo System Off</em></p>
 </div>
-Como se muestra en el gráfico, después de entrar en el modo System Off, el consumo de energía se reduce significativamente, manteniendo solo niveles de microamperios, lo que extiende enormemente la vida útil de la batería. Cuando se presiona el botón `sw0`, el dispositivo se despertará del modo System Off y se reiniciará.
+
+Como se muestra en el gráfico, después de entrar en el modo System Off, el consumo de energía se reduce significativamente, manteniéndose solo en niveles de microamperios, lo que prolonga en gran medida la vida útil de la batería. Cuando se presiona el botón `sw0`, el dispositivo se despertará del modo System Off y se reiniciará.
 
 ---
 
-#### Ejemplo de Código de Consumo de Energía
+#### Ejemplo de código de consumo de energía
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-lowpower" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -329,9 +334,9 @@ int main(void)
 }
 ```
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

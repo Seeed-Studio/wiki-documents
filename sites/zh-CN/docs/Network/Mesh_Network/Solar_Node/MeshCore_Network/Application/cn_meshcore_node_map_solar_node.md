@@ -4,12 +4,12 @@ title: MeshCore 节点地图
 keywords:
   - MeshCore
   - MeshMap
-  - MeshCore Node Map
+  - MeshCore 节点地图
   - SenseCAP Solar Node
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_solar_node
 sku: 114993643,114993633
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang

@@ -1,5 +1,5 @@
 ---
-description: "Aplicación Wi-Fi HaLow Media Gateway: carga de contenido multimedia desde un smartphone a través de XIAO ESP32-S3 y Wio-WM6180 sobre un enlace Wi-Fi HaLow hacia una puerta de enlace HaLowLink 2 y una consola multimedia en PC"
+description: "Aplicación Wi-Fi HaLow Media Gateway: carga de contenido multimedia desde un smartphone a través de XIAO ESP32-S3 y el Wi-Fi HaLow Transceiver para Seeed Studio XIAO mediante un enlace Wi-Fi HaLow hacia una puerta de enlace HaLowLink 2 y una consola multimedia en PC"
 title: Wi-Fi HaLow Media Gateway
 keywords:
   - HaLowLink 2
@@ -7,16 +7,16 @@ keywords:
   - Wio-WM8108
   - Media Gateway
   - XIAO ESP32-S3
-  - Wio-WM6180
+  - Wi-Fi HaLow Transceiver
   - Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /halowlink2_media_gateway
 sku: 100072966
 last_update:
-  date: 11/12/2026
+  date: 11/23/2026
   author: Advent Jiang
 createdAt: '2026-11-06'
-updatedAt: '2026-11-12'
+updatedAt: '2026-11-23'
 url: https://wiki.seeedstudio.com/es/halowlink2_media_gateway/
 ---
 
@@ -31,20 +31,20 @@ Esta aplicación convierte un HaLowLink 2 más un nodo XIAO ESP32-S3 en una **me
 La ruta extremo a extremo demostrada:
 
 ```text
-Smartphone --2.4 GHz Wi-Fi--> XIAO ESP32-S3 + Wio-WM6180 --Wi-Fi HaLow--> HaLowLink 2 --Ethernet--> PC (Media Console)
+Smartphone --2.4 GHz Wi-Fi--> XIAO ESP32-S3 + HaLow Transceiver --Wi-Fi HaLow--> HaLowLink 2 --Ethernet--> PC (Media Console)
 ```
 
-El smartphone solo necesita Wi-Fi de 2,4 GHz ordinario. El nodo XIAO hace de puente entre ambos mundos: aloja un hotspot de 2,4 GHz para el teléfono y mantiene el enlace HaLow con la puerta de enlace.
+El smartphone solo necesita Wi-Fi de 2,4 GHz normal. El nodo XIAO hace de puente entre ambos mundos: aloja un punto de acceso de 2,4 GHz para el teléfono y mantiene el enlace HaLow con la puerta de enlace.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-setup.jpg" alt="HaLowLink 2 with antenna beside its retail box, and the XIAO ESP32-S3 plus Wio-WM6180 gateway node in front" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-setup.jpg" alt="HaLowLink 2 with antenna beside its retail box, and the XIAO ESP32-S3 plus HaLow transceiver gateway node in front" width={600} height="auto" /></p>
 
 ## Requisitos de hardware
 
-| Producto | SKU | Función en la demo |
+| Producto | SKU | Función en la demostración |
 |:----|:----|:----|
 | HaLowLink 2 Wi-Fi HaLow Gateway | 100072966 | Punto de acceso Wi-Fi HaLow; puente Ethernet hacia el PC |
-| Wi-Fi HaLow Transceiver for Seeed Studio XIAO (Wio-WM6180) | 109100041 | La radio HaLow en el nodo gateway |
-| Seeed Studio XIAO ESP32-S3 | 113991114 | Controlador del gateway: aloja el SoftAP de 2,4 GHz y retransmite el contenido multimedia |
+| Wi-Fi HaLow Transceiver for Seeed Studio XIAO | 109100041 | La radio HaLow en el nodo de la puerta de enlace |
+| Seeed Studio XIAO ESP32-S3 | 113991114 | Controlador de la puerta de enlace: aloja el SoftAP de 2,4 GHz y retransmite el contenido multimedia |
 
 También necesitas:
 
@@ -59,31 +59,31 @@ Cinco etapas, cada una entregando el contenido multimedia a la siguiente:
 | Etapa | Enlace | Notas |
 |:-----:|:----:|:------|
 | Smartphone → nodo XIAO | Wi-Fi de 2,4 GHz | El teléfono carga al SoftAP del nodo a través de una página del navegador |
-| XIAO ESP32-S3 → Wio-WM6180 | SPI | El controlador envía en streaming los bytes recibidos a la radio HaLow |
-| Wio-WM6180 → HaLowLink 2 | Wi-Fi HaLow (sub-1 GHz) | El salto de largo alcance; el nodo se une a la red HaLow de la puerta de enlace |
+| XIAO ESP32-S3 → transceptor HaLow | SPI | El controlador envía en streaming los bytes recibidos a la radio HaLow |
+| Transceptor HaLow → HaLowLink 2 | Wi-Fi HaLow (sub-1 GHz) | El salto de largo alcance; el nodo se une a la red HaLow de la puerta de enlace |
 | HaLowLink 2 → PC con Windows | Ethernet | La puerta de enlace entrega el tráfico a la Media Console |
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-architecture.png" alt="System architecture of the Wi-Fi HaLow Media Gateway demo: smartphone, XIAO ESP32-S3, Wio-WM6180 transceiver, HaLowLink 2, Windows PC" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-architecture.png" alt="System architecture of the Wi-Fi HaLow Media Gateway demo: smartphone, XIAO ESP32-S3, Wi-Fi HaLow transceiver, HaLowLink 2, Windows PC" width={800} height="auto" /></p>
 
 ## Configurar el lado de la puerta de enlace
 
-1. **HaLowLink 2.** Configura la puerta de enlace — antena, alimentación, conexión al ordenador — siguiendo [Preparation](/es/halowlink2_getting_started#preparation), luego inicia sesión mediante [Access the Web UI](/es/halowlink2_getting_started#access-the-web-ui). La configuración de Router de fábrica es suficiente para una demo independiente; usa [Access Point Mode](/es/halowlink2_getting_started#access-point-mode-recommended) para integrarla en una LAN existente.
-2. **Nodo XIAO.** Ensambla el XIAO ESP32-S3 con el módulo Wio-WM6180 siguiendo la guía [Wi-Fi HaLow Module for XIAO](/es/getting_started_with_wifi_halow_module_for_xiao), conecta su antena y flashea el firmware de Media Gateway proporcionado por Seeed Studio.
-3. **PC.** Conecta el PC con Windows al **puerto LAN** de la puerta de enlace mediante Ethernet (red de demostración `192.168.12.x`) y arranca el servidor Media Console.
+1. **HaLowLink 2.** Configura la puerta de enlace — antena, alimentación, conexión al ordenador — siguiendo [Preparation](/es/halowlink2_getting_started#preparation), luego inicia sesión mediante [Access the Web UI](/es/halowlink2_getting_started#access-the-web-ui). La configuración de Router de fábrica es suficiente para una demostración independiente; usa [Access Point Mode](/es/halowlink2_getting_started#access-point-mode-recommended) para integrarla en una LAN existente.
+2. **Nodo XIAO.** Ensambla el XIAO ESP32-S3 con el Wi-Fi HaLow Transceiver for Seeed Studio XIAO siguiendo la guía [Wi-Fi HaLow Module for XIAO](/es/getting_started_with_wifi_halow_module_for_xiao), conecta su antena y flashea el firmware de Media Gateway proporcionado por Seeed Studio.
+3. **PC.** Conecta el PC con Windows al **puerto LAN** de la puerta de enlace mediante Ethernet (red de demostración `192.168.12.x`) y arranca el servidor de Media Console.
 
 <!-- Pending official release (internal): XIAO firmware binary/source, flashing procedure, and the Media Console package. Do NOT fabricate download links, repository URLs, server ports, or flashing steps — insert the official ones here when the release package arrives. -->
 
-Tras encender, el nodo funciona automáticamente: el ESP32-S3 inicializa el Wio-WM6180, se asocia con el punto de acceso HaLowLink 2 a través de Wi-Fi HaLow y arranca su SoftAP de 2,4 GHz para el teléfono.
+Tras encender, el nodo funciona automáticamente: el ESP32-S3 inicializa el transceptor HaLow, se asocia con el punto de acceso HaLowLink 2 a través de Wi-Fi HaLow y arranca su SoftAP de 2,4 GHz para el teléfono.
 
-**Verifica el enlace HaLow antes de ejecutar la demo:** en la página de inicio de la puerta de enlace, abre la tarjeta **Access Point (HaLow)**: el nodo asociado aparece con nivel de señal y velocidad RX/TX, y las páginas **Local Network** / **Network → Interfaces** muestran el lado LAN que transporta el tráfico hacia el PC.
+**Verifica el enlace HaLow antes de ejecutar la demostración:** en la página de inicio de la puerta de enlace, abre la tarjeta **Access Point (HaLow)**: el nodo asociado aparece con nivel de señal y velocidad RX/TX, y las páginas **Local Network** / **Network → Interfaces** muestran el lado LAN que transporta el tráfico hacia el PC.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-ap-clients.png" alt="HaLowLink 2 web UI Access Point (HaLow) dialog listing the associated gateway node with signal level and RX/TX rate" width={800} height="auto" /></p>
-<p style={{textAlign: 'center'}}><em>Interfaz web de la puerta de enlace: la tarjeta Access Point (HaLow) lista el nodo gateway asociado con nivel de señal y velocidad RX/TX: el enlace está activo antes de que se mueva ningún contenido multimedia.</em></p>
+<p style={{textAlign: 'center'}}><em>Interfaz web de la puerta de enlace: la tarjeta Access Point (HaLow) muestra el nodo de puerta de enlace asociado con nivel de señal y velocidad RX/TX: el enlace está activo antes de que se mueva ningún contenido multimedia.</em></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-lan-interface.png" alt="HaLowLink 2 web UI Network Interfaces page showing the LAN interface used for the demo network" width={800} height="auto" /></p>
-<p style={{textAlign: 'center'}}><em>Interfaz web de la puerta de enlace, Network → Interfaces: la interfaz LAN (192.168.12.x) transporta el tráfico de la demo hacia el PC.</em></p>
+<p style={{textAlign: 'center'}}><em>Interfaz web de la puerta de enlace, Network → Interfaces: la interfaz LAN (192.168.12.x) transporta el tráfico de la demostración hacia el PC.</em></p>
 
-## Ejecutar la demo
+## Ejecutar la demostración
 
 1. **Teléfono:** conéctate al SoftAP de 2,4 GHz del nodo XIAO, abre la página web de Media Gateway en `192.168.4.1` en el navegador, elige una foto, vídeo o archivo y comienza la carga.
 2. **Nodo:** el ESP32-S3 recibe la carga y la envía en streaming a través del enlace HaLow, sin almacenamiento intermedio.
@@ -97,17 +97,17 @@ Tras encender, el nodo funciona automáticamente: el ESP32-S3 inicializa el Wio-
 
 Cómo mueve los datos el nodo:
 
-- **Gateway de doble red:** el SoftAP atiende el lado del teléfono mientras que la interfaz HaLow atiende el lado del PC; la gestión de la ruta por defecto mantiene el contenido multimedia saliente en el camino Wi-Fi HaLow.
+- **Puerta de enlace de doble red:** el SoftAP atiende el lado del teléfono mientras que la interfaz HaLow atiende el lado del PC; la gestión de la ruta por defecto mantiene el contenido multimedia saliente en el camino Wi-Fi HaLow.
 - **Relevo en streaming:** el contenido multimedia se reenvía en **bloques de 16 KB**: el ESP32-S3 nunca almacena un archivo completo en memoria y no se usa codificación Base64.
 - **Tipos de archivo:** JPG, PNG, MP4 y archivos generales.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-node.png" alt="XIAO ESP32-S3 stacked with the Wio-WM6180 Wi-Fi HaLow module and antenna cable, the gateway node of the demo" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-node.png" alt="XIAO ESP32-S3 stacked with the Wi-Fi HaLow transceiver module and antenna cable, the gateway node of the demo" width={600} height="auto" /></p>
 
-## Resultados de la demo
+## Resultados de la demostración
 
 La transferencia extremo a extremo completa fue demostrada por el equipo de ingeniería de Seeed:
 
-- **Carga de fotos**: transferencia JPG / PNG verificada
+- **Carga de fotos**: transferencia de JPG / PNG verificada
 - **Transferencia de vídeo**: carga y reproducción de MP4 verificadas
 - **Archivos genéricos**: carga y descarga compatibles
 - **PC Media Console**: archivos recibidos previsualizados, reproducidos, guardados y descargados
