@@ -14,7 +14,26 @@ import '/src/css/rebot-wiki-style.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-运行 NVIDIA 的重力补偿示例后，你可以用手引导 **reBot Arm B601-DM** 换姿态，电机根据当前关节角度补偿机械臂自身的重量。本文从 Ubuntu 环境开始，依次完成模型下载、软件验证、串口配置和实机运行。最后可用 Nsight Systems 对比绑核前后的主机控制延迟。[NVIDIA 技术博客](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM 机械臂" />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://detail.tmall.com/item.htm?id=1042412233386&skuId=6065255360559" target="_blank" rel="noopener noreferrer">
+    <span>点击立即获取</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+<p align="center">
+  <strong>目标频率 400 Hz · Pinocchio 动力学计算 · Nsight Systems 延迟分析</strong>
+</p>
+
+本教程使用 NVIDIA Holoscan 5 在同一个控制循环中读取关节反馈、计算重力补偿力矩并向电机发送指令。补偿开启后，**reBot Arm B601-DM** 能支撑自重，你可以用手调整机械臂的姿态。[NVIDIA 技术博客](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
 
 ## 准备工作
 

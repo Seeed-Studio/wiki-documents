@@ -16,7 +16,26 @@ import '/src/css/rebot-wiki-style.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-NVIDIA's gravity compensation example lets you guide the **reBot Arm B601-DM** by hand while the motors support the arm's weight based on its current joint angles. This guide walks you through setting up Ubuntu, downloading the robot model, verifying the software, configuring the serial port, and running the example on the arm. You can then use Nsight Systems to compare host-side control latency with and without CPU pinning. [NVIDIA Technical Blog](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/rebot_dm.png" alt="reBot Arm B601-DM" />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank" rel="noopener noreferrer">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+<p align="center">
+  <strong>400 Hz Target Rate · Pinocchio Dynamics · Nsight Systems Latency Analysis</strong>
+</p>
+
+This tutorial uses NVIDIA Holoscan 5 to read joint feedback, calculate gravity compensation torque, and send motor commands in a single control loop. The motors support the weight of the **reBot Arm B601-DM** so you can reposition it by hand. [NVIDIA Technical Blog](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
 
 ## Prerequisites
 
