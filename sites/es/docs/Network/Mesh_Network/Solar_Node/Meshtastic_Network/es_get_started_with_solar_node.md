@@ -307,7 +307,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
   <tr>
     <td>Temperatura y humedad</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
-  </tr]
+  </tr>
   <tr>
     <td>Temperatura, humedad y presión</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
