@@ -119,6 +119,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>reBot-DM Bimanual Collaboration</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>reBot-DM with Isaac Sim</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-DM Web Control System: Real Robot & MuJoCo</b></div></a>
+        <a className="step-card" href="/rebot_b601_dm_holoscan_gravity_compensation/"><span className="step-index">6</span><div><b>reBot-DM Holoscan5 Gravity Compensation</b></div></a>
       </div>
     </div>
     <div className="learning-group">
