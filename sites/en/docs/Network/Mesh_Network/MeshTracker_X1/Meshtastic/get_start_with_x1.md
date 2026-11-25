@@ -194,7 +194,7 @@ Please `don't use OTA` to update the firmware, it may cause the device to be com
 
 **Factory Firmware**
 
-The X1 ships with Meshtastic firmware **v2.7.23** pre-installed (`firmware-mesh-tracker-x1-2.7.23.2546839.uf2`). If you want to restore the factory firmware, you can flash this version via the Web Flasher or DFU mode.
+The X1 ships with Meshtastic firmware **v2.7.23** pre-installed ([`firmware-mesh-tracker-x1-2.7.23.2546839.uf2`](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/firmware-mesh-tracker-x1-2.7.23.2546839.uf2)). If you want to restore the factory firmware, you can download and flash this version via the Web Flasher or DFU mode.
 
 :::note
 **Why is there no v2.7.26 build for the X1?**
