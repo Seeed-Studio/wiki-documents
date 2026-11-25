@@ -1,6 +1,6 @@
 ---
-description: このガイドでは、MeshCore Node Map 上に MeshCore デバイスの位置を表示する方法を説明します。
-title: MeshCore Node Map
+description: このガイドでは、MeshCore Node Maps 上に MeshCore デバイスの位置を表示する方法を説明します。
+title: MeshCore ノードマップ
 keywords:
   - MeshCore
   - MeshMap
@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_solar_node
 sku: 114993643,114993633
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang

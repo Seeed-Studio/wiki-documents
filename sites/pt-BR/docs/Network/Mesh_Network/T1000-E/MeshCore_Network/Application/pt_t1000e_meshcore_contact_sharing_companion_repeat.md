@@ -1,17 +1,17 @@
 ---
-description: Estenda temporariamente o caminho de comunicação MeshCore com o SenseCAP Card Tracker T1000-E, compartilhando contatos pelo Canal Público e permitindo que um dispositivo Companion retransmita mensagens com o Modo Repeat.
-title: Compartilhamento de Contatos e Companion Repeat
+description: Estenda temporariamente o caminho de comunicação do seu MeshCore com o SenseCAP Card Tracker T1000-E, compartilhando contatos pelo Canal Público e permitindo que um dispositivo Companion retransmita mensagens com o modo Repeat.
+title: Compartilhamento de Contatos e Repetição com Companion
 keywords:
   - MeshCore
   - Card Tracker T1000-E
   - Companion Repeat
-  - Compartilhamento de Contatos
+  - Contact Sharing
   - Public Channel
   - LoRa Mesh
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/application/t1000e-meshcore-hero.png
 slug: /t1000e_meshcore_contact_sharing_companion_repeat
 sku: 114993369,114993649
-sidebar_position: 3
+sidebar_position: 5
 last_update:
   date: 10/16/2026
   author: Advent Jiang
