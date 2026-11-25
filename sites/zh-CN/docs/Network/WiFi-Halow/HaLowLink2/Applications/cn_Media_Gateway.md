@@ -1,5 +1,5 @@
 ---
-description: Wi-Fi HaLow 媒体网关应用——通过 XIAO ESP32-S3 和 Wio-WM6180 在 Wi-Fi HaLow 链路上向 HaLowLink 2 网关和 PC 媒体控制台上传智能手机媒体
+description: Wi-Fi HaLow 媒体网关应用——通过 XIAO ESP32-S3 和 Wi-Fi HaLow Transceiver for Seeed Studio XIAO，将智能手机媒体通过 Wi-Fi HaLow 链路上传到 HaLowLink 2 网关和 PC 媒体控制台
 title: Wi-Fi HaLow 媒体网关
 keywords:
   - HaLowLink 2
@@ -7,16 +7,16 @@ keywords:
   - Wio-WM8108
   - 媒体网关
   - XIAO ESP32-S3
-  - Wio-WM6180
+  - Wi-Fi HaLow Transceiver
   - 应用
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /halowlink2_media_gateway
 sku: 100072966
 last_update:
-  date: 11/12/2026
+  date: 11/23/2026
   author: Advent Jiang
 createdAt: '2026-11-06'
-updatedAt: '2026-11-12'
+updatedAt: '2026-11-23'
 url: https://wiki.seeedstudio.com/cn/halowlink2_media_gateway/
 ---
 
@@ -31,26 +31,26 @@ url: https://wiki.seeedstudio.com/cn/halowlink2_media_gateway/
 演示的端到端路径为：
 
 ```text
-Smartphone --2.4 GHz Wi-Fi--> XIAO ESP32-S3 + Wio-WM6180 --Wi-Fi HaLow--> HaLowLink 2 --Ethernet--> PC (Media Console)
+Smartphone --2.4 GHz Wi-Fi--> XIAO ESP32-S3 + HaLow Transceiver --Wi-Fi HaLow--> HaLowLink 2 --Ethernet--> PC (Media Console)
 ```
 
 智能手机只需要普通的 2.4 GHz Wi-Fi。XIAO 节点在两种网络之间起桥接作用：它为手机提供 2.4 GHz 热点，同时保持到网关的 HaLow 链路。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-setup.jpg" alt="HaLowLink 2 with antenna beside its retail box, and the XIAO ESP32-S3 plus Wio-WM6180 gateway node in front" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-setup.jpg" alt="HaLowLink 2 with antenna beside its retail box, and the XIAO ESP32-S3 plus HaLow transceiver gateway node in front" width={600} height="auto" /></p>
 
 ## 硬件需求
 
 | 产品 | SKU | 在演示中的角色 |
 |:----|:----|:----|
-| HaLowLink 2 Wi-Fi HaLow 网关 | 100072966 | Wi-Fi HaLow 接入点；到 PC 的以太网桥接 |
-| Wi-Fi HaLow Transceiver for Seeed Studio XIAO (Wio-WM6180) | 109100041 | 网关节点上的 HaLow 射频 |
+| HaLowLink 2 Wi-Fi HaLow Gateway | 100072966 | Wi-Fi HaLow 接入点；到 PC 的以太网桥接 |
+| Wi-Fi HaLow Transceiver for Seeed Studio XIAO | 109100041 | 网关节点上的 HaLow 射频模块 |
 | Seeed Studio XIAO ESP32-S3 | 113991114 | 网关控制器：提供 2.4 GHz SoftAP 并转发媒体 |
 
 你还需要：
 
 - 一部支持 2.4 GHz Wi-Fi 的智能手机（不需要 HaLow 支持）
 - 一台带以太网口、运行 Media Console 的 Windows PC
-- 所有设备的电源和连接线
+- 所有设备的电源和连接线缆
 
 ## 系统架构
 
@@ -59,23 +59,23 @@ Smartphone --2.4 GHz Wi-Fi--> XIAO ESP32-S3 + Wio-WM6180 --Wi-Fi HaLow--> HaLowL
 | 阶段 | 链路 | 说明 |
 |:-----:|:----:|:------|
 | 智能手机 → XIAO 节点 | 2.4 GHz Wi-Fi | 手机通过浏览器页面上传到节点的 SoftAP |
-| XIAO ESP32-S3 → Wio-WM6180 | SPI | 控制器将接收到的字节流发送到 HaLow 射频 |
-| Wio-WM6180 → HaLowLink 2 | Wi-Fi HaLow（亚 1 GHz） | 长距离跳点；节点加入网关的 HaLow 网络 |
-| HaLowLink 2 → Windows PC | 以太网 | 网关将流量传递给 Media Console |
+| XIAO ESP32-S3 → HaLow 收发器 | SPI | 控制器将接收到的字节流发送到 HaLow 射频模块 |
+| HaLow 收发器 → HaLowLink 2 | Wi-Fi HaLow（亚 1 GHz） | 长距离跳点；节点加入网关的 HaLow 网络 |
+| HaLowLink 2 → Windows PC | 以太网 | 网关将流量转发到 Media Console |
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-architecture.png" alt="System architecture of the Wi-Fi HaLow Media Gateway demo: smartphone, XIAO ESP32-S3, Wio-WM6180 transceiver, HaLowLink 2, Windows PC" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-architecture.png" alt="System architecture of the Wi-Fi HaLow Media Gateway demo: smartphone, XIAO ESP32-S3, Wi-Fi HaLow transceiver, HaLowLink 2, Windows PC" width={800} height="auto" /></p>
 
-## 配置网关端
+## 配置网关侧
 
-1. **HaLowLink 2。** 按照 [Preparation](/cn/halowlink2_getting_started#preparation) 配置网关——天线、电源、电脑连接——然后通过 [Access the Web UI](/cn/halowlink2_getting_started#access-the-web-ui) 登录。出厂默认的 Router 配置足以完成独立演示；若要集成到现有 LAN，请使用 [Access Point Mode](/cn/halowlink2_getting_started#access-point-mode-推荐)。
-2. **XIAO 节点。** 按照 [Wi-Fi HaLow Module for XIAO 指南](/cn/getting_started_with_wifi_halow_module_for_xiao)将 XIAO ESP32-S3 与 Wio-WM6180 模块组装在一起，连接天线，并烧录由 Seeed Studio 提供的 Media Gateway 固件。
+1. **HaLowLink 2。** 按照 [Preparation](/cn/halowlink2_getting_started#preparation) 完成网关的安装——天线、电源、电脑连接——然后通过 [Access the Web UI](/cn/halowlink2_getting_started#access-the-web-ui) 登录。出厂默认的 Router 配置足以完成独立演示；若要接入现有 LAN，请使用 [Access Point Mode](/cn/halowlink2_getting_started#access-point-mode-推荐)。
+2. **XIAO 节点。** 按照 [Wi-Fi HaLow Module for XIAO guide](/cn/getting_started_with_wifi_halow_module_for_xiao) 将 XIAO ESP32-S3 与 Wi-Fi HaLow Transceiver for Seeed Studio XIAO 组装在一起，连接天线，并烧录由 Seeed Studio 提供的 Media Gateway 固件。
 3. **PC。** 通过以太网将 Windows PC 连接到网关的 **LAN 口**（演示网络 `192.168.12.x`），并启动 Media Console 服务器。
 
 <!-- Pending official release (internal): XIAO firmware binary/source, flashing procedure, and the Media Console package. Do NOT fabricate download links, repository URLs, server ports, or flashing steps — insert the official ones here when the release package arrives. -->
 
-上电后节点会自动运行：ESP32-S3 初始化 Wio-WM6180，通过 Wi-Fi HaLow 关联到 HaLowLink 2 接入点，并为手机启动其 2.4 GHz SoftAP。
+上电后节点会自动运行：ESP32-S3 初始化 HaLow 收发器，通过 Wi-Fi HaLow 关联到 HaLowLink 2 接入点，并为手机启动 2.4 GHz SoftAP。
 
-**在运行演示前先验证 HaLow 链路：**在网关的 Home 页面打开 **Access Point (HaLow)** 卡片——已关联的节点会显示信号强度和 RX/TX 速率，而 **Local Network** / **Network → Interfaces** 页面会显示承载到 PC 流量的 LAN 侧。
+**在运行演示前先确认 HaLow 链路：** 在网关的 Home 页面中打开 **Access Point (HaLow)** 卡片——已关联的节点会显示信号强度和 RX/TX 速率，而 **Local Network** / **Network → Interfaces** 页面会显示承载到 PC 流量的 LAN 侧接口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-ap-clients.png" alt="HaLowLink 2 web UI Access Point (HaLow) dialog listing the associated gateway node with signal level and RX/TX rate" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><em>网关 Web UI：Access Point (HaLow) 卡片列出了已关联的网关节点及其信号强度和 RX/TX 速率——在任何媒体传输前就已建立链路。</em></p>
@@ -85,23 +85,23 @@ Smartphone --2.4 GHz Wi-Fi--> XIAO ESP32-S3 + Wio-WM6180 --Wi-Fi HaLow--> HaLowL
 
 ## 运行演示
 
-1. **手机：**连接到 XIAO 节点的 2.4 GHz SoftAP，在浏览器中打开 `192.168.4.1` 的 Media Gateway 网页，选择一张照片、一个视频或文件并开始上传。
-2. **节点：**ESP32-S3 接收上传数据并通过 HaLow 链路进行流式传输——不涉及中间存储。
-3. **PC：**Media Console 接收、存储并列出文件；在其中打开即可预览、播放、保存或下载。
+1. **手机：** 连接到 XIAO 节点的 2.4 GHz SoftAP，在浏览器中打开 `192.168.4.1` 的 Media Gateway 网页，选择一张照片、一个视频或一个文件，然后开始上传。
+2. **节点：** ESP32-S3 接收上传数据并通过 HaLow 链路进行流式传输——不涉及中间存储。
+3. **PC：** Media Console 接收、存储并列出该文件；在 PC 端可以预览、播放、保存或下载。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-phone-upload.png" alt="Smartphone browser page of the Media Gateway with a photo selected and the upload in progress" width={400} height="auto" /></p>
-<p style={{textAlign: 'center'}}><em>智能手机端：由 XIAO 节点的 SoftAP 提供的基于浏览器的上传页面，已选择一张照片并正在传输。</em></p>
+<p style={{textAlign: 'center'}}><em>手机端：由 XIAO 节点的 SoftAP 提供的基于浏览器的上传页面，已选择一张照片，传输正在进行中。</em></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-console.png" alt="PC Media Console page listing received photos, videos and files with preview and download actions" width={800} height="auto" /></p>
-<p style={{textAlign: 'center'}}><em>PC 端：Media Console 列出每一个接收的文件——照片、视频、文档——可随时预览、播放、保存或下载。</em></p>
+<p style={{textAlign: 'center'}}><em>PC 端：Media Console 列出所有已接收文件——照片、视频、文档——可随时预览、播放、保存或下载。</em></p>
 
 节点如何传输数据：
 
-- **双网络网关：**SoftAP 服务于手机侧，而 HaLow 接口服务于 PC 侧；默认路由管理确保出站媒体走 Wi-Fi HaLow 路径。
-- **流式中继：**媒体以 **16 KB 块**转发——ESP32-S3 从不会在内存中缓存完整文件，也不使用 Base64 编码。
-- **文件类型：**JPG、PNG、MP4 以及通用文件。
+- **双网络网关：** SoftAP 服务于手机侧，而 HaLow 接口服务于 PC 侧；默认路由管理确保出站媒体走 Wi-Fi HaLow 路径。
+- **流式中继：** 媒体以 **16 KB 块**进行转发——ESP32-S3 从不在内存中缓存完整文件，也不使用 Base64 编码。
+- **文件类型：** JPG、PNG、MP4 以及通用文件。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-node.png" alt="XIAO ESP32-S3 stacked with the Wio-WM6180 Wi-Fi HaLow module and antenna cable, the gateway node of the demo" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-mediagw-node.png" alt="XIAO ESP32-S3 stacked with the Wi-Fi HaLow transceiver module and antenna cable, the gateway node of the demo" width={600} height="auto" /></p>
 
 ## 演示结果
 
@@ -110,14 +110,14 @@ Smartphone --2.4 GHz Wi-Fi--> XIAO ESP32-S3 + Wio-WM6180 --Wi-Fi HaLow--> HaLowL
 - **照片上传**——已验证 JPG / PNG 传输
 - **视频传输**——已验证 MP4 上传和播放
 - **通用文件**——支持上传和下载
-- **PC Media Console**——接收的文件可被预览、播放、保存和下载
+- **PC Media Console**——已对接收文件进行预览、播放、保存和下载
 - **端到端连通性**——在手机不具备 HaLow 支持的情况下，实现智能手机到 PC 的 Wi-Fi HaLow 媒体传输
 
 <!-- Pending demo verification (internal): record the exact firmware versions, HaLow channel/bandwidth, and distance used in the demonstration once the engineering write-up is finalized; add per-stage troubleshooting entries observed in real runs. -->
 
 ## 故障排查
 
-关于网关和 HaLow 链路问题——Web UI 访问、配对、IP 地址分配、吞吐量——请参阅 [Getting Started → Troubleshooting](/cn/halowlink2_getting_started#troubleshooting)。
+关于网关和 HaLow 链路问题——Web UI 访问、配对、IP 地址分配、吞吐量等——请参阅 [Getting Started → Troubleshooting](/cn/halowlink2_getting_started#troubleshooting)。
 
 ## 资源
 

@@ -146,6 +146,15 @@ function getPanelWeight(node) {
 
 function splitBodyContent(body) {
   const bodyChildren = Children.toArray(body?.props.children).filter(isValidElement);
+  const resourceGroups = bodyChildren.filter((child) => (
+    hasPanelClass(child, 'learning-group')
+      && Children.toArray(child.props.children).some((node) => hasPanelClass(node, 'rebot-resource-list'))
+  ));
+  if (resourceGroups.length) {
+    // Keep tutorials together so adding a link cannot move Applications to the other side.
+    return [bodyChildren.filter((child) => !resourceGroups.includes(child)), resourceGroups];
+  }
+
   if (bodyChildren.length === 1 && isPanelList(bodyChildren[0])) {
     const list = bodyChildren[0];
     const items = Children.toArray(list.props.children).filter(isValidElement);

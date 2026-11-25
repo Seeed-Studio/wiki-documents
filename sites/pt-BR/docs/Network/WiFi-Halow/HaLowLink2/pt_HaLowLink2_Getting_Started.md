@@ -6,18 +6,18 @@ keywords:
   - Wi-Fi HaLow
   - Wio-WM8108
   - Primeiros Passos
-  - Access Point
-  - Extender
+  - Ponto de Acesso
+  - Extensor
   - Pareamento
   - OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /halowlink2_getting_started
 sku: 100072966
 last_update:
-  date: 11/12/2026
+  date: 11/23/2026
   author: Advent Jiang
 createdAt: '2026-11-06'
-updatedAt: '2026-11-12'
+updatedAt: '2026-11-23'
 url: https://wiki.seeedstudio.com/pt-br/halowlink2_getting_started/
 ---
 
@@ -26,7 +26,7 @@ url: https://wiki.seeedstudio.com/pt-br/halowlink2_getting_started/
 <!-- Internal note: all procedures on this page are sourced from the official Morse Micro HaLowLink User Guide, which states it applies to both HaLowLink 1 and HaLowLink 2. Items not yet re-verified on Seeed retail hardware carry internal "Requires Verification" comments — confirm them, with screenshots and the tested firmware version recorded, before publication. No simulated results anywhere on this page. -->
 <!-- Internal note (source check 2026-11-11, official HaLowLink User Guide PDF, 58 pp.): default state = "Router with a HaLow Access Point" — §1.3.1 p.9 ("This is the default mode of operation"), §2.5 p.13 ("When you first power on your HaLowLink it will be a Router with a HaLow Access Point"); factory reset returns to it — §5 p.24. USB-C carries Ethernet: §2.1.3 p.10 (initial-connection method), §6.4 p.28 ("A new Ethernet adapter should appear on your computer… DHCP Client"), §12.2.1 Table 6 p.44 (USB-C row: computer gets a 192.168.12.x IP and reaches https://192.168.12.1). Spec-table wording agreed by Seeed product page and Product Brief Rev 9 ("1x USB-C port (power and Ethernet data)"). -->
 
-Do unboxing até um link HaLow de longo alcance funcionando em quatro etapas: conecte o hardware, faça login na interface web, escolha um modo de rede e faça o pareamento de duas unidades. Especificações e recursos: [Introdução](/pt-br/halowlink2_introduction).
+Da abertura da caixa até um link HaLow de longo alcance funcionando em quatro etapas: conectar o hardware, fazer login na interface web, escolher um modo de rede e parear duas unidades. Especificações e recursos: [Introdução](/pt-br/halowlink2_introduction).
 
 As capturas de tela da interface web neste guia foram feitas no **software HaLowLink 2.11.8**; nomes de menus e layouts dos cards podem ser diferentes em outras versões de firmware.
 
@@ -38,16 +38,16 @@ As capturas de tela da interface web neste guia foram feitas no **software HaLow
 
 - **Um HaLowLink 2** (Router / Access Point), ou **duas unidades** para um link de longo alcance com um Extender ([configuração com dois dispositivos](#conectar-dois-dispositivos-halowlink-2))
 - Itens do pacote de varejo: adaptador de energia, cabo USB-C para USB-C, cabo Ethernet, antena, base
-- Um computador ou smartphone para a configuração; opcionalmente, um roteador existente como uplink de Internet
+- Um computador ou smartphone para configuração; opcionalmente, um roteador existente como uplink de Internet
 
 :::tip
-A etiqueta na parte inferior traz o **nome de usuário e senha da interface web** e o **SSID/senha padrão do Wi-Fi de 2,4 GHz** (além de um código QR). Você precisa deles para fazer login.
+A etiqueta na parte inferior traz o **nome de usuário e senha da interface web** e o **SSID/senha padrão do Wi-Fi de 2,4 GHz** (mais um código QR). Você precisa deles para fazer login.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-lan-connection.jpg" alt="HaLowLink 2 em sua base com a antena, um cabo Ethernet LAN e o cabo de alimentação USB-C conectados" width={600} height="auto" /></p>
 <p style={{textAlign: 'center'}}><em>Lado do dispositivo: antena no conector SMA, cabo Ethernet na porta LAN, cabo de alimentação USB-C. A porta WAN está vazia nesta foto; o lado do computador não é mostrado.</em></p>
 
-### Conecte o hardware
+### Conectar o hardware
 
 1. Rosqueie a **antena** no conector SMA **antes** de ligar o dispositivo.
 2. Alimente o dispositivo via **USB-C** com o **adaptador de energia fornecido**. Não use um adaptador USB-A para USB-C.
@@ -57,7 +57,7 @@ A etiqueta na parte inferior traz o **nome de usuário e senha da interface web*
    - **Cabo USB-C para USB-C** — o dispositivo aparece como um adaptador de rede no seu computador
 4. Precisa de Internet a jusante? Conecte seu roteador à porta **WAN**.
 
-**Resultado esperado:** LED de Status **verde fixo** — o dispositivo executa sua **configuração de fábrica de Router com um Wi-Fi HaLow Access Point**.
+**Resultado esperado:** LED de Status **verde fixo** — o dispositivo executa sua **configuração de Router com um Wi-Fi HaLow Access Point** de fábrica.
 
 ## Acessar a Interface Web
 
@@ -68,7 +68,7 @@ A etiqueta na parte inferior traz o **nome de usuário e senha da interface web*
    ```
 
    A interface de gerenciamento é **apenas HTTPS**; digitar `http://` redireciona automaticamente.
-2. Na primeira visita aparece um **aviso de certificado** — o dispositivo usa um certificado autoassinado. Aceite-o; a conexão ainda é criptografada.
+2. Na primeira visita aparece um **aviso de certificado** — o dispositivo usa um certificado autoassinado. Aceite-o; a conexão continua criptografada.
 3. Faça login com o **nome de usuário e senha impressos na etiqueta do dispositivo**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-login.png" alt="Página de login da interface web do HaLowLink 2 com campos de nome de usuário e senha" width={700} height="auto" /></p>
@@ -90,25 +90,25 @@ O HaLowLink 2 opera em uma de três configurações:
 
 Um LED de Status verde sozinho não diferencia Router de Access Point.
 
-| Mode | Status LED | Clientes obtêm endereços IP de | Endereço de gerenciamento | Quando usar |
+| Modo | LED de Status | Clientes obtêm endereços IP de | Endereço de gerenciamento | Quando usar |
 |:----:|:----:|:----|:----|:----|
 | **Router** (padrão de fábrica) | Verde fixo | O próprio dispositivo — `192.168.12.x`, com seu próprio servidor DHCP, NAT e firewall | `https://192.168.12.1` | Uma rede HaLow independente ou um ambiente de teste isolado |
-| **Access Point** (recomendado) | Verde fixo | O servidor DHCP do seu roteador existente — sem NAT | O IP atribuído pelo upstream, além de `https://192.168.12.1` na porta LAN | Adicionar dispositivos HaLow a uma LAN existente para que tudo possa se comunicar com tudo |
-| **Extender** | Azul-esverdeado fixo | A rede atrás do Access Point, através do link HaLow | Nenhum — gerencie-o através do Access Point | A unidade remota de uma implantação com dois dispositivos |
+| **Access Point** (recomendado) | Verde fixo | O servidor DHCP do seu roteador existente — sem NAT | O IP atribuído pelo upstream, mais `https://192.168.12.1` na porta LAN | Adicionar dispositivos HaLow a uma LAN existente para que tudo possa se comunicar com tudo |
+| **Extender** | Azul-esverdeado fixo | A rede atrás do Access Point, sobre o link HaLow | Nenhum — gerencie-o através do Access Point | A unidade remota de uma implantação com dois dispositivos |
 
 Quando o dispositivo hospeda o HaLow AP (configuração Router ou Access Point):
 
-- O **endereço de gerenciamento `192.168.12.1` permanece disponível na porta LAN** (e USB-C), mesmo depois que o dispositivo obtém um IP diferente a montante. Exceções: um Extender pareado ou a [configuração totalmente em bridge](#ip-estático-e-dhcp).
+- O **endereço de gerenciamento `192.168.12.1` permanece disponível na porta LAN** (e USB-C), mesmo depois que o dispositivo recebe um IP diferente do upstream. Exceções: um Extender pareado ou a [configuração totalmente em bridge](#ip-estático-e-dhcp).
 - O **Wizard começa a partir da configuração padrão** — executá-lo sobrescreve alterações feitas fora do Wizard.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-wizard-2.11.8.png" alt="Página Wizard do HaLowLink 2 com as opções HaLow Mode e Network Mode no software 2.11.8" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><em>Wizard (2.11.8). HaLow Mode: Access Point, EasyMesh Controller ou 802.11s Mesh. Network Mode: onde os dispositivos HaLow obtêm IPs — a captura de tela mostra a seleção padrão (rede local deste dispositivo); a opção recomendada de roteador existente é o segundo botão de opção. As alterações são aplicadas em Save &amp; Apply.</em></p>
 
-Estados transitórios do LED de Status: verde ou azul-esverdeado piscando = inicializando; amarelo piscando = reset de fábrica em andamento; amarelo fixo = bootloader ([Recuperação](#atualização-de-firmware-e-reset-de-fábrica)); **azul piscando = atualização de firmware — não desconecte a alimentação**.
+Estados transitórios do LED de Status: verde piscando ou azul-esverdeado = inicializando; amarelo piscando = reset de fábrica em andamento; amarelo fixo = bootloader ([Recuperação](#atualização-de-firmware-e-reset-de-fábrica)); **azul piscando = atualização de firmware — não desconecte a alimentação**.
 
 ### Modo Router (Padrão)
 
-Fora da caixa o dispositivo faz roteamento de tráfego: própria sub-rede `192.168.12.x`, servidor DHCP e firewall, porta **WAN** como uplink. Nada a configurar. A interface web responde apenas nas redes do próprio dispositivo (LAN, USB-C, Wi-Fi de 2,4 GHz, HaLow) — nunca pelo lado WAN.
+Fora da caixa o dispositivo roteia o tráfego: própria sub-rede `192.168.12.x`, servidor DHCP e firewall, porta **WAN** como uplink. Nada a configurar. A interface web responde apenas nas redes do próprio dispositivo (LAN, USB-C, Wi-Fi de 2,4 GHz, HaLow) — nunca pelo lado WAN.
 
 ### Modo Access Point (Recomendado)
 
@@ -117,7 +117,7 @@ Use este modo para tornar os dispositivos HaLow membros de primeira classe da su
 1. Conecte a porta **WAN** ao seu roteador. Na Home page, verifique se **Uplink (Ethernet)** mostra um IP atribuído.
 2. Abra o **Wizard**. Selecione *"Wi-Fi HaLow devices will get an IP on your existing router's network"* (marcado como *(Recommended)*).
 
-**Resultado esperado:** clientes HaLow obtêm IPs do seu roteador e alcançam todos os dispositivos na sua LAN. A interface web permanece acessível no endereço a montante e em `https://192.168.12.1` na porta LAN.
+**Resultado esperado:** clientes HaLow obtêm IPs do seu roteador e alcançam todos os dispositivos na sua LAN. A interface web permanece acessível no endereço upstream e em `https://192.168.12.1` na porta LAN.
 
 ### Modo Extender
 
@@ -131,11 +131,11 @@ O modo Extender é para a unidade *remota* de uma implantação com dois disposi
    (Soltar durante o verde lento executa um [reset de fábrica](#atualização-de-firmware-e-reset-de-fábrica) em vez disso.)
 3. Aguarde até que o LED de Status fique **azul-esverdeado fixo**.
 
-**Resultado esperado:** azul-esverdeado fixo = modo Extender. A unidade agora precisa de pareamento ([próxima seção](#conectar-dois-dispositivos-halowlink-2)). Depois de pareado, ela não tem interface web própria — gerencie-a através do Access Point. Suas portas LAN, WAN, USB-C e o Wi-Fi de 2,4 GHz servem toda a rede estendida.
+**Resultado esperado:** azul-esverdeado fixo = modo Extender. A unidade agora precisa de pareamento ([próxima seção](#conectar-dois-dispositivos-halowlink-2)). Depois de pareado, ela não tem interface web própria — gerencie-a através do Access Point. Suas portas LAN, WAN, USB-C e Wi-Fi de 2,4 GHz servem toda a rede estendida.
 
 ## Conectar Dois Dispositivos HaLowLink 2
 
-Unidade nº 1 = **HaLow Access Point** ao lado do seu roteador. Unidade nº 2 = **Extender** no local remoto. Qualquer coisa conectada ao Extender — Ethernet, USB-C ou Wi-Fi de 2,4 GHz — entra na sua rede através do link HaLow abaixo de 1 GHz. Todo cenário de aplicação é baseado neste procedimento.
+Unidade nº 1 = **HaLow Access Point** ao lado do seu roteador. Unidade nº 2 = **Extender** no local remoto. Qualquer coisa conectada ao Extender — Ethernet, USB-C ou Wi-Fi de 2,4 GHz — entra na sua rede pelo link HaLow abaixo de 1 GHz. Todo cenário de Aplicação é baseado neste procedimento.
 
 ### Topologia de Rede
 
@@ -154,11 +154,11 @@ Prepare as duas unidades:
 1. A unidade já foi configurada antes? Faça o [reset de fábrica](#atualização-de-firmware-e-reset-de-fábrica) primeiro para que ambas comecem no estado padrão.
 2. Unidade nº 1 = **Access Point** perto do seu roteador: porta WAN conectada ao roteador, Assistente executado com a opção recomendada ([etapas](#modo-access-point-recomendado)). LED de Status verde fixo.
 3. Unidade nº 2 = **Extender** no local remoto ([etapas](#modo-extender)). LED de Status azul-claro fixo.
-4. Mesmo firmware em ambas? Verifique a versão no **canto inferior esquerdo** de cada página Inicial **antes** de a unidade nº 2 entrar em modo Extender e perder sua interface web.
+4. Mesmo firmware em ambas? Verifique a versão no **canto inferior esquerdo** de cada página Inicial **antes** de a unidade nº 2 entrar no modo Extender e perder sua interface web.
 
 <!-- Requires Verification (internal): confirm whether units from different regional variants can pair, and whether HaLowLink 1 and HaLowLink 2 interoperate. Not stated in the official guide — do not publish an answer until confirmed with Morse Micro or on hardware. -->
 
-Depois, faça o pareamento — configuração por botão, sem precisar digitar credenciais:
+Em seguida, faça o pareamento — configuração por push, sem credenciais para digitar:
 
 1. No **Access Point**: pressione e **solte imediatamente** o botão Mode. O LED Wi-Fi HaLow começa a piscar lentamente.
 2. No **Extender**: pressione e **solte imediatamente** o botão Mode. O LED Wi-Fi HaLow dele começa a piscar lentamente.
@@ -167,12 +167,12 @@ Depois, faça o pareamento — configuração por botão, sem precisar digitar c
 **Resultado esperado:** o LED Wi-Fi HaLow do Extender fica **roxo fixo** — credenciais recebidas, link conectado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/WiFi_Halow/Halow_link2/halowlink2-led-indicators.jpg" alt="Front of the HaLowLink 2 showing the labelled Status, Wi-Fi HaLow and 2.4 GHz LEDs" width={400} height="auto" /></p>
-<p style={{textAlign: 'center'}}><em>Os três LEDs frontais identificados. Aqui: Status azul-claro + Wi-Fi HaLow roxo = um Extender pareado. Uma foto estática mostra apenas as cores, não o padrão de piscadas.</em></p>
+<p style={{textAlign: 'center'}}><em>Os três LEDs frontais identificados. Aqui: Status azul-claro + Wi-Fi HaLow roxo = um Extender pareado. Uma foto estática mostra apenas as cores, não o padrão de piscagem.</em></p>
 
-O pareamento falhou? Ambos os LEDs HaLow **piscam rapidamente por 120 segundos** — um atraso de nova tentativa por segurança. Espere até que a piscada pare em ambas as unidades e então repita a partir da etapa 1.
+O pareamento falhou? Ambos os LEDs HaLow **piscam rapidamente por 120 segundos** — um atraso de nova tentativa por segurança. Aguarde até que a piscagem pare em ambas as unidades e então repita a partir da etapa 1.
 
 :::note
-Se o Access Point estiver operando como um **EasyMesh Controller**, os Extenders pareados se tornam EasyMesh Agents automaticamente (mesh: **não suportado na UE ou no Reino Unido**; raramente necessário). Em vez disso, para credenciais manuais: faça o reset de fábrica do Extender e use o portal de configuração dele em `https://192.168.12.1`. Detalhes: o [HaLowLink User Guide](https://www.morsemicro.com/resources/user_guides/HaLowLink-User-Guide.pdf) oficial.
+Se o Access Point estiver operando como um **EasyMesh Controller**, os Extenders pareados se tornam EasyMesh Agents automaticamente (mesh: **não suportado na UE ou no Reino Unido**; raramente necessário). Credenciais manuais em vez disso: faça o reset de fábrica do Extender e use o portal de configuração dele em `https://192.168.12.1`. Detalhes: o [HaLowLink User Guide](https://www.morsemicro.com/resources/user_guides/HaLowLink-User-Guide.pdf) oficial.
 :::
 
 ## Verificar a conexão
@@ -195,7 +195,7 @@ Se o Access Point estiver operando como um **EasyMesh Controller**, os Extenders
 Além do Assistente: **Quick Config** (configurações comuns, mostradas ao vivo em um diagrama) e **Advanced Config** (acesso granular: interfaces, wireless, firewall, sistema, pacotes, terminal). Com Advanced Config ativado, o indicador **Unsaved Changes** antecipa os comandos `uci` exatos que cada alteração produz antes de você aplicá-la.
 
 :::caution
-Uma configuração de rede incorreta pode bloquear seu acesso à interface web. Caminho de resgate: em um computador na porta LAN ou WAN, defina um IP estático `10.22.121.110` (máscara `255.255.255.254`, ou `255.255.255.0` se o seu SO não conseguir definir /31). O dispositivo sempre responde em **`https://10.22.121.111`**. Último recurso: [reset de fábrica](#atualização-de-firmware-e-reset-de-fábrica).
+Uma configuração de rede incorreta pode bloquear seu acesso à interface web. Caminho de resgate: em um computador na porta LAN ou WAN, defina um IP estático `10.22.121.110` (máscara `255.255.255.254`, ou `255.255.255.0` se o seu sistema operacional não puder definir /31). O dispositivo sempre responde em **`https://10.22.121.111`**. Último recurso: [reset de fábrica](#atualização-de-firmware-e-reset-de-fábrica).
 :::
 
 ### Configurações de wireless
@@ -210,7 +210,7 @@ Uma configuração de rede incorreta pode bloquear seu acesso à interface web. 
 ### IP estático e DHCP
 
 - **Quick Config → Network Interfaces** define cada interface lógica para um IP estático (opcionalmente com um servidor DHCP) ou um cliente DHCP; portas na mesma rede são colocadas em bridge automaticamente. As alterações são aplicadas em **Save & Apply**.
-- **Access Point totalmente em bridge (avançado):** remova a sub-rede de gerenciamento `192.168.12.1` separada movendo as interfaces LAN, 2,4 GHz e USB da rede `lan` para `wlan`. Faça isso **a partir do endereço atribuído a montante** (não `192.168.12.1`), ou use **Apply Unchecked** — caso contrário, ele reverte automaticamente. Detalhes: o [HaLowLink User Guide](https://www.morsemicro.com/resources/user_guides/HaLowLink-User-Guide.pdf) oficial.
+- **Access Point totalmente em bridge (avançado):** remova a sub-rede de gerenciamento `192.168.12.1` separada movendo as interfaces LAN, 2,4 GHz e USB da rede `lan` para `wlan`. Faça isso **a partir do endereço atribuído pelo upstream** (não `192.168.12.1`), ou use **Apply Unchecked** — caso contrário, a alteração é revertida automaticamente. Detalhes: o [HaLowLink User Guide](https://www.morsemicro.com/resources/user_guides/HaLowLink-User-Guide.pdf) oficial.
 - CLI: `uci set … && uci commit`, depois `reload_config` (sem necessidade de reiniciar); acompanhe o log com `logread -l 100 -f`.
 
 ### SSH e diagnósticos
@@ -233,8 +233,8 @@ Os resultados de Range Test são **voláteis** — uma reinicialização os apag
 
 **Reset de fábrica.** Retorna o dispositivo à **configuração de Router com um Wi-Fi HaLow Access Point** padrão (verde fixo):
 
-1. Ligue o aparelho. Espere até que o LED de Status fique fixo (verde ou azul-claro).
-2. **Mantenha pressionado o botão Mode até o LED de Status piscar lentamente em verde e então solte.** (Segurar até ficar rapidamente azul-claro coloca em modo Extender em vez disso.)
+1. Ligue o dispositivo. Aguarde até que o LED de Status fique fixo (verde ou azul-claro).
+2. **Mantenha pressionado o botão Mode até o LED de Status piscar lentamente em verde e então solte.** (Segurar até ficar rapidamente azul-claro coloca no modo Extender em vez disso.)
 3. O LED pisca amarelo brevemente e depois fica **verde fixo** = concluído. Faça login novamente em `https://192.168.12.1` com as credenciais da etiqueta.
 
 **Recuperação.** Perda de energia durante uma atualização pode corromper o firmware: o LED de Status então permanece **amarelo fixo** e o dispositivo não inicializa normalmente. A recuperação é feita pelo bootloader — siga com atenção a seção "Recovering From Failed Updates" do [HaLowLink User Guide](https://www.morsemicro.com/resources/user_guides/HaLowLink-User-Guide.pdf) oficial e entre em contato com o suporte da Seeed antes de tentar.
@@ -245,27 +245,27 @@ Os resultados de Range Test são **voláteis** — uma reinicialização os apag
 
 ### O que é Wi-Fi HaLow?
 
-Wi-Fi HaLow (IEEE 802.11ah) é Wi-Fi na faixa sub-1 GHz, projetado para longo alcance e baixo consumo. No HaLowLink 2: até 1 km em linha de visada, melhor penetração de obstáculos que o Wi-Fi de 2,4 GHz, com taxas de dados por link mais baixas.
+Wi-Fi HaLow (IEEE 802.11ah) é Wi-Fi na faixa sub-1 GHz, criado para longo alcance e baixo consumo. No HaLowLink 2: até 1 km em linha de visada, melhor penetração de obstáculos que o Wi-Fi de 2,4 GHz, com taxas de dados por link mais baixas.
 
 ### Eu preciso de dois dispositivos HaLowLink 2?
 
-Uma unidade é suficiente para adicionar um ponto de acesso Wi‑Fi HaLow para clientes compatíveis com HaLow (por exemplo, nós baseados em Wio-WM6108 / Wio-WM6180). Duas unidades fazem a ponte de dispositivos **não HaLow** — celulares, laptops, equipamentos Ethernet — através de um link de longo alcance: um Ponto de Acesso, um Extensor.
+Uma unidade é suficiente para adicionar um ponto de acesso Wi‑Fi HaLow para clientes compatíveis com HaLow (por exemplo, o transceptor Wi‑Fi HaLow para Seeed Studio XIAO ou nós mini‑PCIe baseados em Wio‑WM6108). Duas unidades fazem a ponte de dispositivos **não HaLow** — celulares, laptops, equipamentos Ethernet — por meio de um link de longo alcance: um Access Point, um Extender.
 
 ### Qual é o endereço de gerenciamento padrão e o login?
 
-`https://192.168.12.1` (apenas HTTPS; o aviso de certificado na primeira visita é esperado), com o nome de usuário e a senha impressos na etiqueta do dispositivo. No modo Extensor o dispositivo não é acessível neste endereço.
+`https://192.168.12.1` (apenas HTTPS; o aviso de certificado na primeira visita é esperado), com o nome de usuário e a senha impressos na etiqueta do dispositivo. No modo Extender o dispositivo não é acessível neste endereço.
 
-### Qual é a diferença entre o modo Ponto de Acesso e o modo Extensor?
+### Qual é a diferença entre o modo Access Point e o modo Extender?
 
-**Ponto de Acesso** (verde sólido): hospeda a rede HaLow, conecta ao seu roteador, interface web completa. **Extensor** (aqua sólido): um cliente HaLow que estende a rede do AP via Ethernet, USB‑C e seu próprio Wi‑Fi de 2,4 GHz; não possui interface web própria depois de pareado. Mude para o modo Extensor com o botão Mode; um reset de fábrica retorna a unidade ao modo Ponto de Acesso.
+**Access Point** (verde sólido): hospeda a rede HaLow, conecta‑se ao seu roteador, interface web completa. **Extender** (aqua sólido): um cliente HaLow que estende a rede do AP via Ethernet, USB‑C e seu próprio Wi‑Fi de 2,4 GHz; não possui interface web própria depois de pareado. Altere para o modo Extender com o botão Mode; um reset de fábrica retorna a unidade ao modo Access Point.
 
 ### Um smartphone comum pode se conectar diretamente ao Wi‑Fi HaLow?
 
-Não — celulares de consumo não possuem rádio 802.11ah abaixo de 1 GHz. Use um segundo HaLowLink 2 como **Extensor**: ele retransmite o link como um hotspot Wi‑Fi comum de 2,4 GHz (credenciais em sua própria etiqueta) e em suas portas Ethernet/USB‑C.
+Não — celulares de consumo não possuem rádio 802.11ah abaixo de 1 GHz. Use um segundo HaLowLink 2 como **Extender**: ele retransmite o link como um hotspot Wi‑Fi comum de 2,4 GHz (credenciais em sua própria etiqueta) e em suas portas Ethernet/USB‑C.
 
 ### 43,3 Mbps é a taxa de transferência real?
 
-Não — é a taxa máxima de **PHY (camada física)** do rádio MM8108 em largura de banda de 8 MHz. A taxa de transferência real é menor e depende da largura de banda, distância, qualidade do sinal e interferência. Meça seu próprio link com as [ferramentas de Diagnóstico / Teste de Alcance](#ssh-e-diagnostics).
+Não — é a taxa máxima de **PHY (camada física)** do rádio MM8108 em largura de banda de 8 MHz. A taxa de transferência real é menor e depende da largura de banda, distância, qualidade do sinal e interferência. Meça seu próprio link com as [ferramentas Diagnostics / Range Test](#ssh-e-diagnostics).
 
 ### Posso alterar a região de operação?
 
@@ -273,23 +273,23 @@ Não. O dispositivo é certificado para a região em que foi vendido (EUA, Canad
 
 <!-- Requires Verification (internal): confirm with Morse Micro whether any region-selection mechanism exists in retail firmware at all before expanding this answer. -->
 
-## Solução de Problemas
+## Solução de problemas
 
 | Sintoma | Verificação | Correção |
 |:----|:----|:----|
-| **Não é possível acessar a interface web** em `https://192.168.12.1` | Cor do LED de Status? Computador na **LAN ou USB‑C** (não na WAN)? Computador possui um endereço `192.168.12.x` (cliente DHCP)? | Aqua **sólido** = modo Extensor — esperado; gerencie a rede a partir do AP ou faça um [reset de fábrica](#firmware-update-and-factory-reset) para sair do modo Extensor. Verde sólido mas inacessível: [reset de fábrica](#firmware-update-and-factory-reset). Bloqueado após uma alteração de configuração: use o [IP de diagnóstico](#advanced-settings) `10.22.121.111`. |
-| **Dispositivos não conseguem parear** (LEDs HaLow piscam rapidamente) | Ambos os botões *pressionados e imediatamente soltos* (não mantidos pressionados)? AP verde sólido, Extensor aqua sólido? Dispositivos dentro do alcance? | Piscar rápido = o **atraso de nova tentativa de 120 segundos** — espere até parar em ambas as unidades e então tente parear novamente. Modo AP alterado após o pareamento: desligue e ligue o Extensor (mudança de Network Mode) ou refaça o [pareamento](#pair-the-devices) (mudança de HaLow Mode). |
-| **Sem endereço IP** em um cliente conectado | Em qual modo o dispositivo está? Quem executa o DHCP? (Veja a [tabela de comparação](#network-configuration).) | Modo Router: o dispositivo fornece `192.168.12.x`. Modo Ponto de Acesso: seu **roteador principal** fornece IPs — verifique sua tabela de concessões; clientes *não* aparecem no cartão Local Network do dispositivo. Clientes do Extensor: atendidos pela rede do AP — desligue e ligue o Extensor se o AP tiver sido reconfigurado. |
-| **Conectado mas sem Internet** | Página inicial do AP: **Uplink (Ethernet)** mostra um IP? Porta WAN conectada ao roteador? | Corrija primeiro o uplink WAN. Se a Internet só piora enquanto um computador está conectado por cabo a um Extensor/AP: seu sistema operacional está preferindo o link cabeado — ajuste a prioridade/métrica de rota para que sua conexão usual mantenha a rota padrão. |
-| **Baixa taxa de transferência** no link HaLow | Força do sinal (cartão Connected Devices), Gráficos em Tempo Real, Análise de Canal; distância e obstáculos; configuração de largura de banda | Reposicione ou reoriente os dispositivos; escolha um canal menos congestionado; revise a configuração de largura de banda. Cada salto extra em malha reduz a taxa de transferência pela metade. Em Range Test, ~40 Mbps UDP + 900+ Mbps TCP = o tráfego passou por **Ethernet**, não por HaLow. Um LED HaLow piscando rapidamente o tempo todo = **loop de rede** — remova qualquer segundo cabo entre os dois lados. |
+| **Não é possível acessar a interface web** em `https://192.168.12.1` | Cor do LED de Status? Computador na **LAN ou USB‑C** (não na WAN)? O computador possui um endereço `192.168.12.x` (cliente DHCP)? | Aqua **sólido** = modo Extender — esperado; gerencie a rede a partir do AP ou faça um [reset de fábrica](#atualização-de-firmware-e-reset-de-fábrica) para sair do modo Extender. Verde sólido mas inacessível: [reset de fábrica](#atualização-de-firmware-e-reset-de-fábrica). Bloqueado após uma alteração de configuração: use o [IP de diagnóstico](#configurações-avançadas) `10.22.121.111`. |
+| **Dispositivos não conseguem parear** (LEDs HaLow piscam rapidamente) | Ambos os botões *pressionados e imediatamente soltos* (não mantidos pressionados)? AP verde sólido, Extender aqua sólido? Dispositivos ao alcance? | Piscando rapidamente = o **atraso de nova tentativa de 120 segundos** — aguarde até parar em ambas as unidades e então tente parear novamente. Modo AP alterado após o pareamento: desligue e ligue o Extender (alteração de Network Mode) ou refaça o [pareamento](#parear-os-dispositivos) (alteração de HaLow Mode). |
+| **Sem endereço IP** em um cliente conectado | Em qual modo o dispositivo está? Quem executa o DHCP? (Veja a [tabela de comparação](#configuração-de-rede).) | Modo Router: o dispositivo fornece `192.168.12.x`. Modo Access Point: seu **roteador principal** fornece IPs — verifique a tabela de concessões dele; os clientes *não* aparecem no cartão Local Network do dispositivo. Clientes do Extender: atendidos pela rede do AP — desligue e ligue o Extender se o AP tiver sido reconfigurado. |
+| **Conectado mas sem Internet** | Página inicial do AP: **Uplink (Ethernet)** mostra um IP? Porta WAN conectada ao roteador? | Corrija primeiro o uplink WAN. Se a Internet só piora enquanto um computador está conectado por cabo a um Extender/AP: seu sistema operacional está preferindo o link cabeado — ajuste a prioridade/métrica de rota para que sua conexão usual mantenha a rota padrão. |
+| **Baixa taxa de transferência** no link HaLow | Força do sinal (cartão Connected Devices), Realtime Graphs, Channel Analysis; distância e obstáculos; configuração de largura de banda | Reposicione ou reoriente os dispositivos; escolha um canal menos congestionado; revise a configuração de largura de banda. Cada salto extra em malha reduz a taxa de transferência pela metade. Em Range Test, ~40 Mbps UDP + 900+ Mbps TCP = o tráfego passou por **Ethernet**, não por HaLow. Um LED HaLow piscando rapidamente o tempo todo = **loop de rede** — remova qualquer segundo cabo entre os dois lados. |
 
-Para qualquer coisa não coberta aqui: atualize primeiro o firmware e depois tente um reset de fábrica. Para relatar um problema, abra **Help → Support → Create Archive** na interface web e mantenha o arquivo para o suporte. Mais detalhes: o [Guia do Usuário HaLowLink](https://www.morsemicro.com/resources/user_guides/HaLowLink-User-Guide.pdf) oficial.
+Para qualquer coisa não coberta aqui: atualize primeiro o firmware e depois tente um reset de fábrica. Para relatar um problema, abra **Help → Support → Create Archive** na interface web e mantenha o arquivo para o suporte. Mais detalhes: o [HaLowLink User Guide](https://www.morsemicro.com/resources/user_guides/HaLowLink-User-Guide.pdf) oficial.
 
 <!-- Requires Verification (internal): reproduce each troubleshooting row on retail hardware and record the firmware version. Full 11-entry Symptom/Checks/Resolution/Verification version is kept in D:\SeeedWiki\notes\halowlink2\old-drafts\ for reference. -->
 
-## Suporte Técnico e Discussão sobre o Produto
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
