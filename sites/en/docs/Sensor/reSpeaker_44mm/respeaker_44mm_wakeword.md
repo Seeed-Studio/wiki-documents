@@ -38,10 +38,7 @@ url: https://wiki.seeedstudio.com/respeaker_44mm_wakeword/
   </iframe>
 </div>
 
-Say **“Jarvis”**. The ring flashes mint, a short chime plays, and for the next
-**6.5 seconds** the XIAO listens for one of nine commands. The wake word and
-every command run **on the board** with Espressif ESP-SR; no audio is uploaded
-and no account is needed.
+Say **“Jarvis”**. The ring flashes mint, a short chime plays, and for the next **6.5 seconds** the XIAO listens for one of nine commands. The wake word and every command run **on the board** with Espressif ESP-SR; no audio is uploaded and no account is needed.
 
 What leaves the board is one readable line over UDP:
 
@@ -49,10 +46,7 @@ What leaves the board is one readable line over UDP:
 JARVIS 0042 3
 ```
 
-A small Python brain on your PC turns that line into an action — play music,
-tell a joke, read the weather, move the character's head — and drives a
-full-screen **Iron Man / JARVIS HUD** in the browser. The reply is synthesised
-on the PC and played through the reSpeaker's own speaker.
+A small Python brain on your PC turns that line into an action — play music, tell a joke, read the weather, move the character's head — and drives a full-screen **Iron Man / JARVIS HUD** in the browser. The reply is synthesised on the PC and played through the reSpeaker's own speaker.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/jarvis.jpg" alt="poster" width={700} height="auto" /></p>
 
@@ -110,21 +104,14 @@ on the PC and played through the reSpeaker's own speaker.
 | Git | 2.50+ | clone the project |
 
 :::note
-The array must be running the **16 kHz I²S firmware**
-(`respeaker_44mm_i2s_c16k2ch_v1.0.0.bin`, XVF3800 as I²S master, 2 channels).
-With the 48 kHz image the XIAO sees silence or garbage and ESP-SR never loads.
-Update it from [Update Firmware](https://wiki.seeedstudio.com/respeaker_44mm_introduction/#update-firmware)
-and confirm with the project's `firmware/audio_rms` sketch: speech should show
-RMS in the hundreds on the left channel.
+The array must be running the **16 kHz I²S firmware** (`respeaker_44mm_i2s_c16k2ch_v1.0.0.bin`, XVF3800 as I²S master, 2 channels). With the 48 kHz image the XIAO sees silence or garbage and ESP-SR never loads. Update it from [Update Firmware](https://wiki.seeedstudio.com/respeaker_44mm_introduction/#update-firmware) and confirm with the project's `firmware/audio_rms` sketch: speech should show RMS in the hundreds on the left channel.
 :::
 
-Time budget on a fresh machine: toolchain 20 min, XMOS check 10 min, keywords
-and first flash 15 min, brain and HUD 5 min, live verification 10 min.
+Time budget on a fresh machine: toolchain 20 min, XMOS check 10 min, keywords and first flash 15 min, brain and HUD 5 min, live verification 10 min.
 
 ## Set up the IDE
 
-Install the core **explicitly**; “latest” is not what this firmware was built
-against.
+Install the core **explicitly**; “latest” is not what this firmware was built against.
 
 ```powershell
 arduino-cli core update-index
@@ -132,16 +119,14 @@ arduino-cli core install esp32:esp32@3.3.11
 arduino-cli board list
 ```
 
-`board list` should show your port with the S3 core attached. Do not expect it to
-name a XIAO: the core has no such entry, so it prints something like
+`board list` should show your port with the S3 core attached. Do not expect it to name a XIAO: the core has no such entry, so it prints something like
 
 ```text
 COM9 serial Serial Port (USB) ESP32 Family Device esp32:esp32:esp32_family
                              Ozobot DRVKit        esp32:esp32:ozobot_drvkit
 ```
 
-The board name is cosmetic — the FQBN below is what decides the build. Close any
-serial monitor before you flash.
+The board name is cosmetic — the FQBN below is what decides the build. Close any serial monitor before you flash.
 
 Then clone the project:
 
@@ -150,8 +135,7 @@ git clone https://github.com/KasunThushara/reSpeaker_44_wakeword.git
 cd reSpeaker_44_wakeword
 ```
 
-The FQBN is not optional. The installed core has no `XIAO_ESP32S3_Plus` board
-entry, and only the `esp_sr_16` scheme has the model partition.
+The FQBN is not optional. The installed core has no `XIAO_ESP32S3_Plus` board entry, and only the `esp_sr_16` scheme has the model partition.
 
 ```powershell
 $cli  = "C:\Users\<you>\AppData\Local\Programs\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe"
@@ -167,9 +151,7 @@ $fqbn = "esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi,PartitionScheme=esp_sr_16,C
 | `CDCOnBoot=cdc` | `Serial` must come out of native USB, because GPIO43 (UART0 RX) is the I²S data pin |
 | `esp32s3` target | the XIAO is a plain ESP32-S3, not a Plus variant with its own board file |
 
-In the IDE, select **ESP32S3 Dev Module** and set Flash Size 16 MB, PSRAM
-**OPI PSRAM**, Partition Scheme **ESP SR 16MB**, USB CDC On Boot **Enabled** —
-these must match the FQBN exactly.
+In the IDE, select **ESP32S3 Dev Module** and set Flash Size 16 MB, PSRAM **OPI PSRAM**, Partition Scheme **ESP SR 16MB**, USB CDC On Boot **Enabled** — these must match the FQBN exactly.
 
 ## Set the keywords
 
@@ -182,36 +164,22 @@ Two different things are called “keyword” here:
 
 ### The wake word
 
-The word is in the model, not in the sketch. This build uses
-`wakenet9l_tts1h8_Jarvis_3_0.627_0.632`, measured at 4/4 at 30–50 cm and 3/3 at
-1.5–2 m. The committed packs in `build/` are:
+The word is in the model, not in the sketch. This build uses `wakenet9l_tts1h8_Jarvis_3_0.627_0.632`, measured at 4/4 at 30–50 cm and 3/3 at 1.5–2 m. The committed packs in `build/` are:
 
 | pack | size | use |
 | --- | --- | --- |
 | `srmodels_jarvis.bin` | 3,340,189 B | **the one to flash** — “Jarvis”, thresholds `0.627_0.632` |
 | `srmodels_stock_backup.bin` | 3,340,296 B | factory “Hi ESP”, last-resort rollback |
 
-A different wake word means a different WakeNet model — either another pack from
-Espressif's model zoo or one you train — and nothing in the sketch changes. The
-numbers in the model name are its detection thresholds; they live inside the
-pack, so sensitivity is tuned by repacking, not by editing the sketch.
+A different wake word means a different WakeNet model — either another pack from Espressif's model zoo or one you train — and nothing in the sketch changes. The numbers in the model name are its detection thresholds; they live inside the pack, so sensitivity is tuned by repacking, not by editing the sketch.
 
 :::note Other wake words, other keyword lists
-The same repository carries a second demo with a different wake word and its own
-eight-phrase list — see
-[`pc_brain_walle/`](https://github.com/KasunThushara/reSpeaker_44wakeword/tree/main/pc_brain_walle)
-(phrases like “go straight ahead” and “charge your battery”) and its own pack in
-`build/`. Reading it is the quickest way to see how another keyword set is wired —
-but this page stays on **Jarvis** and the nine commands below, because that pair
-is what the HUD, the brain ids and `build/srmodels_jarvis.bin` are matched to.
+The same repository carries a second demo with a different wake word and its own eight-phrase list — see [`pc_brain_walle/`](https://github.com/KasunThushara/reSpeaker_44wakeword/tree/main/pc_brain_walle) (phrases like “go straight ahead” and “charge your battery”) and its own pack in `build/`. Reading it is the quickest way to see how another keyword set is wired — but this page stays on **Jarvis** and the nine commands below, because that pair is what the HUD, the brain ids and `build/srmodels_jarvis.bin` are matched to.
 :::
 
 ### The commands
 
-Open `firmware/wake_demo/wake_demo.ino` and replace the two tables near the top
-with this block. The ids must stay identical to `COMMANDS` in
-`pc_brain/brain.py`; they are the contract between board, brain and HUD, and
-they are **not** array indices.
+Open `firmware/wake_demo/wake_demo.ino` and replace the two tables near the top with this block. The ids must stay identical to `COMMANDS` in `pc_brain/brain.py`; they are the contract between board, brain and HUD, and they are **not** array indices.
 
 ```cpp
 static const sr_cmd_t sr_commands[] = {
@@ -233,39 +201,23 @@ static const char *PHRASE_TEXT[] = {
 };
 ```
 
-The clone ships a placeholder eight-phrase table so the sketch compiles out of the
-box; replace it verbatim with the block above. Nothing else in the sketch knows
-the phrases.
+The clone ships a placeholder eight-phrase table so the sketch compiles out of the box; replace it verbatim with the block above. Nothing else in the sketch knows the phrases.
 
 Phrase rules learned the hard way:
 
-- **three or more words, one distinct verb each** — play / stop / move / tell /
-  change / show / open / shut / ask
-- avoid minimal pairs (“show me the weather” and “show me the time” steal each
-  other's matches)
-- avoid `-ing` forms and out-of-vocabulary words; “todo” cannot be pronounced by
-  MultiNet's G2P, which is why the phrase is **“open my tasks”** and not
-  “show my todo”
-- a new phrase with an id that does not exist in `brain.py` is harmless but does
-  nothing
+- **three or more words, one distinct verb each** — play / stop / move / tell / change / show / open / shut / ask
+- avoid minimal pairs (“show me the weather” and “show me the time” steal each other's matches)
+- avoid `-ing` forms and out-of-vocabulary words; “todo” cannot be pronounced by MultiNet's G2P, which is why the phrase is **“open my tasks”** and not “show my todo”
+- a new phrase with an id that does not exist in `brain.py` is harmless but does nothing
 - **9 phrases is the comfortable ceiling** for this table
 
 :::note The ring still lights, but it does not distinguish the commands
-`animForId()` in the same sketch maps animations by **id range**, a leftover from
-the demo the sketch was written for. With the nine ids above, **1–6** all
-play the “play some music” colour wheel and **7–9** play the joke rainbow;
-`A_WEATHER`, `A_SHUT` and `A_ASK` are never reached. That is cosmetic only — the
-wake flash, the chime and the packet are unaffected. If the demo needs a different
-animation per command, replace `animForId()` with a nine-entry table instead of
-the range switch.
+`animForId()` in the same sketch maps animations by **id range**, a leftover from the demo the sketch was written for. With the nine ids above, **1–6** all play the “play some music” colour wheel and **7–9** play the joke rainbow; `A_WEATHER`, `A_SHUT` and `A_ASK` are never reached. That is cosmetic only — the wake flash, the chime and the packet are unaffected. If the demo needs a different animation per command, replace `animForId()` with a nine-entry table instead of the range switch.
 :::
 
 ### Brand the log (optional)
 
-The pack and the sketch are shared with the repo's other demo, so the strings the
-board prints at boot still name that demo. Nothing functional depends on them —
-but the boot log on this page says JARVIS, and matching it makes troubleshooting
-much easier. Three places in `wake_demo.ino`:
+The pack and the sketch are shared with the repo's other demo, so the strings the board prints at boot still name that demo. Nothing functional depends on them — but the boot log on this page says JARVIS, and matching it makes troubleshooting much easier. Three places in `wake_demo.ino`:
 
 Replace the four `Serial.println` lines that open `setup()`:
 
@@ -289,16 +241,11 @@ and the wake banner:
     Serial.printf("\n[%6lu ms] *** \"HI JARVIS\" #%lu ***\n",
 ```
 
-Skip this and the board works identically — it just logs `walle`, `Hi Walle`,
-`8 voice actions` and `*** "HI WALLE" #1 ***`, which is confusing if you are
-diffing against the sample below.
+Skip this and the board works identically — it just logs `walle`, `Hi Walle`, `8 voice actions` and `*** "HI WALLE" #1 ***`, which is confusing if you are diffing against the sample below.
 
 ### Put the model into the build directory
 
-The core's post-build hook copies `srmodels.bin` only if it finds
-`{build.path}\libraries\ESP_SR` — it never does, because ESP-SR is compiled in
-place. Copy the pack in by hand before uploading, or the board boots with the
-factory “Hi ESP” pack.
+The core's post-build hook copies `srmodels.bin` only if it finds `{build.path}\libraries\ESP_SR` — it never does, because ESP-SR is compiled in place. Copy the pack in by hand before uploading, or the board boots with the factory “Hi ESP” pack.
 
 ```powershell
 Copy-Item build\srmodels_jarvis.bin build\wake_demo\srmodels.bin -Force
@@ -315,36 +262,20 @@ Edit the block above `setup()`:
 #define PC_PORT   9001
 ```
 
-The clone ships `WIFI_SSID` and `WIFI_PASS` **empty**, and an empty pair is not an
-error path you can fix later: the board boots local-only, prints
-`WiFi: no credentials - edit WIFI_SSID / WIFI_PASS`, and never sends a packet.
-Fill both in before the first flash.
+The clone ships `WIFI_SSID` and `WIFI_PASS` **empty**, and an empty pair is not an error path you can fix later: the board boots local-only, prints `WiFi: no credentials - edit WIFI_SSID / WIFI_PASS`, and never sends a packet. Fill both in before the first flash.
 
-- **2.4 GHz only**, WPA2, both devices in the same subnet, no AP/client
-  isolation.
-- Give the PC a **fixed** address (DHCP reservation). The brain learns the
-  board's address from incoming packets, but the board needs the PC's address at
-  boot.
-- There is no settings portal: changing WiFi or the PC address means rebuilding
-  and reflashing.
+- **2.4 GHz only**, WPA2, both devices in the same subnet, no AP/client isolation.
+- Give the PC a **fixed** address (DHCP reservation). The brain learns the board's address from incoming packets, but the board needs the PC's address at boot.
+- There is no settings portal: changing WiFi or the PC address means rebuilding and reflashing.
 
 :::note Do not use ping to check the link
-On a venue network with more than one access point the board can land on the
-other half of the subnet — a `/23` bridge handing out `192.168.6.x` to the 2.4 GHz
-radio and `192.168.7.x` to the 5 GHz one is normal. ICMP between two wireless
-clients is usually dropped even when UDP flows fine, so `ping` reports
-“Destination host unreachable” on a link that works.
+On a venue network with more than one access point the board can land on the other half of the subnet — a `/23` bridge handing out `192.168.6.x` to the 2.4 GHz radio and `192.168.7.x` to the 5 GHz one is normal. ICMP between two wireless clients is usually dropped even when UDP flows fine, so `ping` reports “Destination host unreachable” on a link that works.
 
-Judge the link by the board’s own log instead: `-> PC  JARVIS 0001 4` followed by
-`<- ACK 1` means both directions are up. If the ACK never arrives, then look at
-the firewall.
+Judge the link by the board’s own log instead: `-> PC  JARVIS 0001 4` followed by `<- ACK 1` means both directions are up. If the ACK never arrives, then look at the firewall.
 :::
 
 :::caution The PC address is also written as octets
-`PC_IP` is only used in the log line. The UDP target is three separate
-`IPAddress(192, 168, 7, 217)` calls — the ARP warm-up datagram, `sendCommand()`
-and `resendCommand()`. Replace the octets in all three, or the board talks to
-the wrong PC while the log prints the right address.
+`PC_IP` is only used in the log line. The UDP target is three separate `IPAddress(192, 168, 7, 217)` calls — the ARP warm-up datagram, `sendCommand()` and `resendCommand()`. Replace the octets in all three, or the board talks to the wrong PC while the log prints the right address.
 :::
 
 | direction | protocol | port | used for |
@@ -360,15 +291,11 @@ New-NetFirewallRule -DisplayName "JARVIS UDP in"  -Direction Inbound -Protocol U
 New-NetFirewallRule -DisplayName "JARVIS HTTP in" -Direction Inbound -Protocol TCP -LocalPort 8080 -Action Allow -Profile Private
 ```
 
-On a network Windows already trusts these are often redundant — the first time
-`python.exe` binds 9001 a prompt appears and “Allow” is enough. Add the rules if
-that prompt was dismissed, if the LAN profile is Public, or if the board logs
-`no ACK` while the PC shows nothing.
+On a network Windows already trusts these are often redundant — the first time `python.exe` binds 9001 a prompt appears and “Allow” is enough. Add the rules if that prompt was dismissed, if the LAN profile is Public, or if the board logs `no ACK` while the PC shows nothing.
 
 ## Flash
 
-Compile → copy the model → upload, as one sequence. Uploading against a stale
-build directory flashes a stale app *and* a stale model.
+Compile → copy the model → upload, as one sequence. Uploading against a stale build directory flashes a stale app *and* a stale model.
 
 ```powershell
 $cli  = "C:\Users\<you>\AppData\Local\Programs\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe"
@@ -379,9 +306,7 @@ Copy-Item build\srmodels_jarvis.bin build\wake_demo\srmodels.bin -Force
 & $cli upload -p COM9 --fqbn $fqbn --input-dir build\wake_demo
 ```
 
-Replace `COM9` with your port (`/dev/cu.usbmodem*` on macOS, `/dev/ttyACM*` on
-Linux). If flashing cannot connect, hold **BOOT**, tap **RESET**, release
-**BOOT** and retry.
+Replace `COM9` with your port (`/dev/cu.usbmodem*` on macOS, `/dev/ttyACM*` on Linux). If flashing cannot connect, hold **BOOT**, tap **RESET**, release **BOOT** and retry.
 
 Open the monitor at **115200**. What matters:
 
@@ -411,16 +336,11 @@ ready - say Jarvis, then a command right away
 ```
 
 - `WiFi: ip=…` — if this fails, the credentials or the band are wrong
-- the **wakenet line** must say `Jarvis` and `0.627_0.632`; if it says `Hi ESP`,
-  the model copy step was skipped
-- `ESP_SR: ok` — if it hangs or crashes here, the model is missing from the
-  build directory
-- `DOA … deg` keeps repeating about ten times a second; that is the ring
-  tracking voices, not an error. The log is chatty by design
+- the **wakenet line** must say `Jarvis` and `0.627_0.632`; if it says `Hi ESP`, the model copy step was skipped
+- `ESP_SR: ok` — if it hangs or crashes here, the model is missing from the build directory
+- `DOA … deg` keeps repeating about ten times a second; that is the ring tracking voices, not an error. The log is chatty by design
 
-Say **“Jarvis”** once. The ring flashes, the chime plays, and the log prints
-`*** "HI JARVIS" #1 ***`. Say a command immediately after and the board answers
-with the phrase it matched:
+Say **“Jarvis”** once. The ring flashes, the chime plays, and the log prints `*** "HI JARVIS" #1 ***`. Say a command immediately after and the board answers with the phrase it matched:
 
 ```text
 [197851 ms] *** "HI JARVIS" #1 ***
@@ -432,8 +352,7 @@ with the phrase it matched:
      <-     ACK 1
 ```
 
-If your log says `HI WALLE` instead, you skipped the branding step — the wake and
-the commands are fine either way.
+If your log says `HI WALLE` instead, you skipped the branding step — the wake and the commands are fine either way.
 
 | symptom | cause | fix |
 | --- | --- | --- |
@@ -455,17 +374,10 @@ cd reSpeaker_44_wakeword\pc_brain
 .\start_demo.bat
 ```
 
-`start_demo.bat` starts the brain and opens Chrome (Edge as fallback) in kiosk
-mode at **http://localhost:8080** with autoplay allowed, so the first sound does
-not need a click. Manual route: `python brain.py`, then open the same URL.
-**Alt+F4** leaves kiosk; close the minimised “JARVIS brain” window to stop UDP.
+`start_demo.bat` starts the brain and opens Chrome (Edge as fallback) in kiosk mode at **http://localhost:8080** with autoplay allowed, so the first sound does not need a click. Manual route: `python brain.py`, then open the same URL. **Alt+F4** leaves kiosk; close the minimised “JARVIS brain” window to stop UDP.
 
 :::caution Only one brain may run at a time
-The launcher does not look for an existing instance. A `brain.py` left over from
-an earlier run keeps UDP 9001 and TCP 8080, the new copy grabs whichever port is
-still free, and the HUD silently keeps serving the *old* process — the page looks
-alive, the event log never updates, and packets go to the wrong brain. Before a
-demo, close the previous “JARVIS brain” window, or:
+The launcher does not look for an existing instance. A `brain.py` left over from an earlier run keeps UDP 9001 and TCP 8080, the new copy grabs whichever port is still free, and the HUD silently keeps serving the *old* process — the page looks alive, the event log never updates, and packets go to the wrong brain. Before a demo, close the previous “JARVIS brain” window, or:
 
 ```powershell
 Get-Process python | Stop-Process -Force
@@ -477,12 +389,9 @@ Get-Process python | Stop-Process -Force
 On screen:
 
 - the **Iron Man wireframe bust** with an arc reactor that pulses with the music
-- **left**: nine command buttons labelled with the exact phrase to say; keys
-  **1–9** send the same ids, which is how you test without speaking
-- **top left**: status and the phrase the board heard; **top right**:
-  `LINKED` / `NO LINK`, the PC's address, and a clock
-- **bottom right**: event log, newest first; **bottom centre**: cards for
-  weather, tasks, jokes and model answers
+- **left**: nine command buttons labelled with the exact phrase to say; keys **1–9** send the same ids, which is how you test without speaking
+- **top left**: status and the phrase the board heard; **top right**: `LINKED` / `NO LINK`, the PC's address, and a clock
+- **bottom right**: event log, newest first; **bottom centre**: cards for weather, tasks, jokes and model answers
 
 No board at hand? The brain can be driven directly:
 
@@ -492,36 +401,21 @@ python sim.py 4        # tell a joke
 python sim.py demo     # 1 -> 2 -> 4 -> 5 with pauses
 ```
 
-`config.json` holds the venue settings: `esp_ip` (last known board address,
-refreshed automatically), `audio_sink` (`speaker` streams to the robot, `pc`
-plays locally), `default_track`, `weather_lat` / `weather_lon`, and
-`openrouter_key` — leave the key empty and jokes/answers use canned lines.
-Prefer the environment variable `OPENROUTER_API_KEY` over writing it into the
-file.
+`config.json` holds the venue settings: `esp_ip` (last known board address, refreshed automatically), `audio_sink` (`speaker` streams to the robot, `pc` plays locally), `default_track`, `weather_lat` / `weather_lon`, and `openrouter_key` — leave the key empty and jokes/answers use canned lines. Prefer the environment variable `OPENROUTER_API_KEY` over writing it into the file.
 
-The shipped model list is all `:free` routes, and those are heavily contended:
-`HTTP 429 … rate-limited upstream` in the log is normal, not a bad key. The brain
-walks `openrouter_model` → `openrouter_fallbacks` → a canned line, so **“ask the
-model” can take 15–25 s** before it answers, and sometimes answers from the
-offline list. Verify the key itself with `curl` against
-`https://openrouter.ai/api/v1/key` rather than by watching a single reply.
+The shipped model list is all `:free` routes, and those are heavily contended: `HTTP 429 … rate-limited upstream` in the log is normal, not a bad key. The brain walks `openrouter_model` → `openrouter_fallbacks` → a canned line, so **“ask the model” can take 15–25 s** before it answers, and sometimes answers from the offline list. Verify the key itself with `curl` against `https://openrouter.ai/api/v1/key` rather than by watching a single reply.
 
 :::note Spoken replies need Windows
-The brain synthesises speech with Windows **System.Speech** and streams the WAV
-to the reSpeaker. On macOS or Linux the wake word, the commands, the cards, the
-log and the music all still work — but JARVIS will not talk.
+The brain synthesises speech with Windows **System.Speech** and streams the WAV to the reSpeaker. On macOS or Linux the wake word, the commands, the cards, the log and the music all still work — but JARVIS will not talk.
 :::
 
 ## Limits
 
 - **English only** — the MultiNet model in this build is `mn7_en`.
-- **16 kHz everywhere** — about an 8 kHz audio band; fine for speech and cues,
-  not hi-fi.
+- **16 kHz everywhere** — about an 8 kHz audio band; fine for speech and cues, not hi-fi.
 - **One stream at a time** — a new sound kills the previous one.
-- **WiFi is needed at boot** for anything that reaches the PC; the board still
-  wakes and blinks offline, but no action arrives.
-- **The wake model is TTS-trained** and more pronunciation-sensitive than
-  “Hi ESP”. Recalibrate thresholds for a loud room.
+- **WiFi is needed at boot** for anything that reaches the PC; the board still wakes and blinks offline, but no action arrives.
+- **The wake model is TTS-trained** and more pronunciation-sensitive than “Hi ESP”. Recalibrate thresholds for a loud room.
 
 ## Resources
 

@@ -38,10 +38,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_44mm_wakeword/
   </iframe>
 </div>
 
-Diga **“Jarvis”**. O anel pisca em verde menta, um breve sino toca e, pelos
-**6,5 segundos** seguintes, o XIAO escuta um entre nove comandos. A palavra de ativação e
-cada comando rodam **na placa** com o Espressif ESP-SR; nenhum áudio é enviado
-e nenhuma conta é necessária.
+Diga **“Jarvis”**. O anel pisca em verde menta, um breve sino toca e, pelos **6,5 segundos** seguintes, o XIAO escuta um entre nove comandos. A palavra de ativação e cada comando rodam **na placa** com o Espressif ESP-SR; nenhum áudio é enviado e nenhuma conta é necessária.
 
 O que sai da placa é uma única linha legível via UDP:
 
@@ -49,10 +46,7 @@ O que sai da placa é uma única linha legível via UDP:
 JARVIS 0042 3
 ```
 
-Um pequeno cérebro em Python no seu PC transforma essa linha em uma ação — tocar música,
-contar uma piada, ler a previsão do tempo, mover a cabeça do personagem — e aciona um
-HUD de **Homem de Ferro / JARVIS** em tela cheia no navegador. A resposta é sintetizada
-no PC e reproduzida pelo próprio alto-falante do reSpeaker.
+Um pequeno cérebro em Python no seu PC transforma essa linha em uma ação — tocar música, contar uma piada, ler a previsão do tempo, mover a cabeça do personagem — e aciona um HUD de **Homem de Ferro / JARVIS** em tela cheia no navegador. A resposta é sintetizada no PC e reproduzida pelo próprio alto-falante do reSpeaker.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_44mm/jarvis.jpg" alt="poster" width={700} height="auto" /></p>
 
@@ -110,21 +104,14 @@ no PC e reproduzida pelo próprio alto-falante do reSpeaker.
 | Git | 2.50+ | clonar o projeto |
 
 :::note
-O array deve estar rodando o **firmware I²S de 16 kHz**
-(`respeaker_44mm_i2s_c16k2ch_v1.0.0.bin`, XVF3800 como mestre I²S, 2 canais).
-Com a imagem de 48 kHz o XIAO vê silêncio ou lixo e o ESP-SR nunca carrega.
-Atualize a partir de [Update Firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware)
-e confirme com o sketch `firmware/audio_rms` do projeto: a fala deve mostrar
-RMS nas centenas no canal esquerdo.
+O array deve estar rodando o **firmware I²S de 16 kHz** (`respeaker_44mm_i2s_c16k2ch_v1.0.0.bin`, XVF3800 como mestre I²S, 2 canais). Com a imagem de 48 kHz o XIAO vê silêncio ou lixo e o ESP-SR nunca carrega. Atualize a partir de [Atualizar Firmware](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/#atualizar-firmware) e confirme com o sketch `firmware/audio_rms` do projeto: a fala deve mostrar RMS nas centenas no canal esquerdo.
 :::
 
-Orçamento de tempo em uma máquina nova: toolchain 20 min, verificação XMOS 10 min, palavras-chave
-e primeiro flash 15 min, cérebro e HUD 5 min, verificação ao vivo 10 min.
+Orçamento de tempo em uma máquina nova: toolchain 20 min, verificação XMOS 10 min, palavras-chave e primeiro flash 15 min, cérebro e HUD 5 min, verificação ao vivo 10 min.
 
 ## Configure a IDE
 
-Instale o core **explicitamente**; “latest” não é a versão contra a qual este firmware foi
-construído.
+Instale o core **explicitamente**; “latest” não é a versão contra a qual este firmware foi construído.
 
 ```powershell
 arduino-cli core update-index
@@ -132,16 +119,14 @@ arduino-cli core install esp32:esp32@3.3.11
 arduino-cli board list
 ```
 
-`board list` deve mostrar sua porta com o core S3 anexado. Não espere que ele
-nomeie um XIAO: o core não tem essa entrada, então imprime algo como
+`board list` deve mostrar sua porta com o core S3 anexado. Não espere que ele nomeie um XIAO: o core não tem essa entrada, então imprime algo como
 
 ```text
 COM9 serial Serial Port (USB) ESP32 Family Device esp32:esp32:esp32_family
                              Ozobot DRVKit        esp32:esp32:ozobot_drvkit
 ```
 
-O nome da placa é cosmético — o FQBN abaixo é o que decide o build. Feche qualquer
-monitor serial antes de gravar.
+O nome da placa é cosmético — o FQBN abaixo é o que decide o build. Feche qualquer monitor serial antes de gravar.
 
 Em seguida, clone o projeto:
 
@@ -150,8 +135,7 @@ git clone https://github.com/KasunThushara/reSpeaker_44_wakeword.git
 cd reSpeaker_44_wakeword
 ```
 
-O FQBN não é opcional. O core instalado não tem entrada de placa `XIAO_ESP32S3_Plus`,
-e somente o esquema `esp_sr_16` tem a partição de modelo.
+O FQBN não é opcional. O core instalado não tem entrada de placa `XIAO_ESP32S3_Plus`, e somente o esquema `esp_sr_16` tem a partição de modelo.
 
 ```powershell
 $cli  = "C:\Users\<you>\AppData\Local\Programs\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe"
@@ -167,9 +151,7 @@ $fqbn = "esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi,PartitionScheme=esp_sr_16,C
 | `CDCOnBoot=cdc` | `Serial` precisa sair do USB nativo, porque o GPIO43 (UART0 RX) é o pino de dados I²S |
 | alvo `esp32s3` | o XIAO é um ESP32-S3 simples, não uma variante Plus com seu próprio arquivo de placa |
 
-Na IDE, selecione **ESP32S3 Dev Module** e defina Flash Size 16 MB, PSRAM
-**OPI PSRAM**, Partition Scheme **ESP SR 16MB**, USB CDC On Boot **Enabled** —
-estes devem corresponder exatamente ao FQBN.
+Na IDE, selecione **ESP32S3 Dev Module** e defina Flash Size 16 MB, PSRAM **OPI PSRAM**, Partition Scheme **ESP SR 16MB**, USB CDC On Boot **Enabled** — estes devem corresponder exatamente ao FQBN.
 
 ## Defina as palavras-chave
 
@@ -182,36 +164,22 @@ Duas coisas diferentes são chamadas de “keyword” aqui:
 
 ### A palavra de ativação
 
-A palavra está no modelo, não no sketch. Esta build usa
-`wakenet9l_tts1h8_Jarvis_3_0.627_0.632`, medido em 4/4 a 30–50 cm e 3/3 a
-1,5–2 m. Os pacotes commitados em `build/` são:
+A palavra está no modelo, não no sketch. Esta build usa `wakenet9l_tts1h8_Jarvis_3_0.627_0.632`, medido em 4/4 a 30–50 cm e 3/3 a 1,5–2 m. Os pacotes commitados em `build/` são:
 
 | pacote | tamanho | uso |
 | --- | --- | --- |
 | `srmodels_jarvis.bin` | 3.340.189 B | **o que deve ser gravado** — “Jarvis”, limiares `0.627_0.632` |
 | `srmodels_stock_backup.bin` | 3.340.296 B | “Hi ESP” de fábrica, rollback de último recurso |
 
-Uma palavra de ativação diferente significa um modelo WakeNet diferente — seja outro pacote do
-zoológico de modelos da Espressif ou um que você treine — e nada no sketch muda. Os
-números no nome do modelo são seus limiares de detecção; eles vivem dentro do
-pacote, então a sensibilidade é ajustada refazendo o pacote, não editando o sketch.
+Uma palavra de ativação diferente significa um modelo WakeNet diferente — seja outro pacote do zoológico de modelos da Espressif ou um que você treine — e nada no sketch muda. Os números no nome do modelo são seus limiares de detecção; eles vivem dentro do pacote, então a sensibilidade é ajustada refazendo o pacote, não editando o sketch.
 
 :::note Outras palavras de ativação, outras listas de palavras-chave
-O mesmo repositório traz um segundo demo com uma palavra de ativação diferente e sua própria
-lista de oito frases — veja
-[`pc_brain_walle/`](https://github.com/KasunThushara/reSpeaker_44wakeword/tree/main/pc_brain_walle)
-(frases como “go straight ahead” e “charge your battery”) e seu próprio pacote em
-`build/`. Ler isso é a forma mais rápida de ver como outro conjunto de palavras-chave é ligado —
-mas esta página permanece em **Jarvis** e nos nove comandos abaixo, porque esse par
-é o que o HUD, os ids do cérebro e `build/srmodels_jarvis.bin` usam em conjunto.
+O mesmo repositório traz um segundo demo com uma palavra de ativação diferente e sua própria lista de oito frases — veja [`pc_brain_walle/`](https://github.com/KasunThushara/reSpeaker_44wakeword/tree/main/pc_brain_walle) (frases como “go straight ahead” e “charge your battery”) e seu próprio pacote em `build/`. Ler isso é a forma mais rápida de ver como outro conjunto de palavras-chave é ligado — mas esta página permanece em **Jarvis** e nos nove comandos abaixo, porque esse par é o que o HUD, os ids do cérebro e `build/srmodels_jarvis.bin` usam em conjunto.
 :::
 
 ### Os comandos
 
-Abra `firmware/wake_demo/wake_demo.ino` e substitua as duas tabelas perto do topo
-por este bloco. Os ids devem permanecer idênticos a `COMMANDS` em
-`pc_brain/brain.py`; eles são o contrato entre placa, cérebro e HUD, e
-**não** são índices de array.
+Abra `firmware/wake_demo/wake_demo.ino` e substitua as duas tabelas perto do topo por este bloco. Os ids devem permanecer idênticos a `COMMANDS` em `pc_brain/brain.py`; eles são o contrato entre placa, cérebro e HUD, e **não** são índices de array.
 
 ```cpp
 static const sr_cmd_t sr_commands[] = {
@@ -233,39 +201,23 @@ static const char *PHRASE_TEXT[] = {
 };
 ```
 
-O clone traz uma tabela de oito frases de placeholder para que o sketch compile logo de
-cara; substitua-a literalmente pelo bloco acima. Nada mais no sketch conhece
-as frases.
+O clone traz uma tabela de oito frases de placeholder para que o sketch compile logo de cara; substitua-a literalmente pelo bloco acima. Nada mais no sketch conhece as frases.
 
 Regras de frases aprendidas da maneira difícil:
 
-- **três ou mais palavras, um verbo distinto em cada** — play / stop / move / tell /
-  change / show / open / shut / ask
-- evite pares mínimos (“show me the weather” e “show me the time” roubam as
-  correspondências uma da outra)
-- evite formas em `-ing` e palavras fora do vocabulário; “todo” não pode ser pronunciado pelo
-  G2P do MultiNet, e é por isso que a frase é **“open my tasks”** e não
-  “mostrar meus afazeres”
-- uma nova frase com um id que não existe em `brain.py` é inofensiva, mas
-  não faz nada
+- **três ou mais palavras, um verbo distinto em cada** — play / stop / move / tell / change / show / open / shut / ask
+- evite pares mínimos (“show me the weather” e “show me the time” roubam as correspondências uma da outra)
+- evite formas em `-ing` e palavras fora do vocabulário; “todo” não pode ser pronunciado pelo G2P do MultiNet, e é por isso que a frase é **“open my tasks”** e não “show my todo”
+- uma nova frase com um id que não existe em `brain.py` é inofensiva, mas não faz nada
 - **9 frases é o limite confortável** para esta tabela
 
 :::note O anel ainda acende, mas não diferencia os comandos
-`animForId()` no mesmo sketch mapeia animações por **intervalo de id**, um resquício
-da demo para a qual o sketch foi escrito. Com os nove ids acima, **1–6** todos
-tocam a roda de cores de “tocar alguma música” e **7–9** tocam o arco-íris da piada;
-`A_WEATHER`, `A_SHUT` e `A_ASK` nunca são alcançados. Isso é apenas cosmético — o
-flash de despertar, o sino e o pacote não são afetados. Se a demo precisar de uma
-animação diferente por comando, substitua `animForId()` por uma tabela de nove
-entradas em vez do switch por intervalo.
+`animForId()` no mesmo sketch mapeia animações por **intervalo de id**, um resquício da demo para a qual o sketch foi escrito. Com os nove ids acima, **1–6** todos tocam a roda de cores de “tocar alguma música” e **7–9** tocam o arco-íris da piada; `A_WEATHER`, `A_SHUT` e `A_ASK` nunca são alcançados. Isso é apenas cosmético — o flash de despertar, o sino e o pacote não são afetados. Se a demo precisar de uma animação diferente por comando, substitua `animForId()` por uma tabela de nove entradas em vez do switch por intervalo.
 :::
 
 ### Personalizar o log (opcional)
 
-O pacote e o sketch são compartilhados com a outra demo do repositório, então as
-strings que a placa imprime na inicialização ainda nomeiam essa demo. Nada
-funcional depende delas — mas o log de boot nesta página diz JARVIS, e combiná-lo
-torna a solução de problemas muito mais fácil. Três lugares em `wake_demo.ino`:
+O pacote e o sketch são compartilhados com a outra demo do repositório, então as strings que a placa imprime na inicialização ainda nomeiam essa demo. Nada funcional depende delas — mas o log de boot nesta página diz JARVIS, e combiná-lo torna a solução de problemas muito mais fácil. Três lugares em `wake_demo.ino`:
 
 Substitua as quatro linhas de `Serial.println` que abrem `setup()`:
 
@@ -289,16 +241,11 @@ e o banner de despertar:
     Serial.printf("\n[%6lu ms] *** \"HI JARVIS\" #%lu ***\n",
 ```
 
-Se pular isto, a placa funciona de forma idêntica — ela apenas registra `walle`,
-`Hi Walle`, `8 voice actions` e `*** "HI WALLE" #1 ***`, o que é confuso se você
-estiver fazendo diff com o exemplo abaixo.
+Se pular isto, a placa funciona de forma idêntica — ela apenas registra `walle`, `Hi Walle`, `8 voice actions` e `*** "HI WALLE" #1 ***`, o que é confuso se você estiver fazendo diff com o exemplo abaixo.
 
 ### Colocar o modelo no diretório de build
 
-O hook pós-build do core copia `srmodels.bin` apenas se encontrar
-`{build.path}\libraries\ESP_SR` — o que nunca acontece, porque o ESP-SR é
-compilado no lugar. Copie o pacote manualmente antes de fazer o upload, ou a
-placa inicializa com o pacote de fábrica “Hi ESP”.
+O hook pós-build do core copia `srmodels.bin` apenas se encontrar `{build.path}\libraries\ESP_SR` — o que nunca acontece, porque o ESP-SR é compilado no lugar. Copie o pacote manualmente antes de fazer o upload, ou a placa inicializa com o pacote de fábrica “Hi ESP”.
 
 ```powershell
 Copy-Item build\srmodels_jarvis.bin build\wake_demo\srmodels.bin -Force
@@ -315,36 +262,20 @@ Edite o bloco acima de `setup()`:
 #define PC_PORT   9001
 ```
 
-O clone vem com `WIFI_SSID` e `WIFI_PASS` **vazios**, e um par vazio não é um
-caminho de erro que você possa corrigir depois: a placa inicializa apenas local,
-imprime `WiFi: no credentials - edit WIFI_SSID / WIFI_PASS` e nunca envia um
-pacote. Preencha ambos antes do primeiro flash.
+O clone vem com `WIFI_SSID` e `WIFI_PASS` **vazios**, e um par vazio não é um caminho de erro que você possa corrigir depois: a placa inicializa apenas local, imprime `WiFi: no credentials - edit WIFI_SSID / WIFI_PASS` e nunca envia um pacote. Preencha ambos antes do primeiro flash.
 
-- **apenas 2,4 GHz**, WPA2, ambos os dispositivos na mesma sub-rede, sem
-  isolamento AP/cliente.
-- Dê ao PC um endereço **fixo** (reserva DHCP). O cérebro aprende o endereço da
-  placa a partir dos pacotes recebidos, mas a placa precisa do endereço do PC na
-  inicialização.
-- Não há portal de configurações: mudar o WiFi ou o endereço do PC significa
-  reconstruir e regravar.
+- **apenas 2,4 GHz**, WPA2, ambos os dispositivos na mesma sub-rede, sem isolamento AP/cliente.
+- Dê ao PC um endereço **fixo** (reserva DHCP). O cérebro aprende o endereço da placa a partir dos pacotes recebidos, mas a placa precisa do endereço do PC na inicialização.
+- Não há portal de configurações: mudar o WiFi ou o endereço do PC significa reconstruir e regravar.
 
 :::note Não use ping para verificar o link
-Em uma rede de local com mais de um ponto de acesso, a placa pode cair na outra
-metade da sub-rede — uma bridge `/23` distribuindo `192.168.6.x` para o rádio de
-2,4 GHz e `192.168.7.x` para o de 5 GHz é normal. ICMP entre dois clientes
-sem fio geralmente é descartado mesmo quando o UDP flui bem, então `ping` relata
-“Destination host unreachable” em um link que funciona.
+Em uma rede de local com mais de um ponto de acesso, a placa pode cair na outra metade da sub-rede — uma bridge `/23` distribuindo `192.168.6.x` para o rádio de 2,4 GHz e `192.168.7.x` para o de 5 GHz é normal. ICMP entre dois clientes sem fio geralmente é descartado mesmo quando o UDP flui bem, então `ping` relata “Destination host unreachable” em um link que funciona.
 
-Avalie o link pelo próprio log da placa: `-> PC  JARVIS 0001 4` seguido de
-`<- ACK 1` significa que ambas as direções estão ativas. Se o ACK nunca chegar,
-olhe então para o firewall.
+Avalie o link pelo próprio log da placa: `-> PC  JARVIS 0001 4` seguido de `<- ACK 1` significa que ambas as direções estão ativas. Se o ACK nunca chegar, olhe então para o firewall.
 :::
 
 :::caution O endereço do PC também é escrito como octetos
-`PC_IP` é usado apenas na linha de log. O alvo UDP são três chamadas separadas a
-`IPAddress(192, 168, 7, 217)` — o datagrama de aquecimento de ARP, `sendCommand()`
-e `resendCommand()`. Substitua os octetos em todas as três, ou a placa falará com
-o PC errado enquanto o log imprime o endereço certo.
+`PC_IP` é usado apenas na linha de log. O alvo UDP são três chamadas separadas a `IPAddress(192, 168, 7, 217)` — o datagrama de aquecimento de ARP, `sendCommand()` e `resendCommand()`. Substitua os octetos em todas as três, ou a placa falará com o PC errado enquanto o log imprime o endereço certo.
 :::
 
 | direção | protocolo | porta | usado para |
@@ -360,15 +291,11 @@ New-NetFirewallRule -DisplayName "JARVIS UDP in"  -Direction Inbound -Protocol U
 New-NetFirewallRule -DisplayName "JARVIS HTTP in" -Direction Inbound -Protocol TCP -LocalPort 8080 -Action Allow -Profile Private
 ```
 
-Em uma rede que o Windows já confia, isso muitas vezes é redundante — na primeira
-vez que `python.exe` fizer bind em 9001, aparece um prompt e “Allow” é
-suficiente. Adicione as regras se esse prompt foi dispensado, se o perfil da LAN
-for Público ou se a placa registrar `no ACK` enquanto o PC não mostra nada.
+Em uma rede que o Windows já confia, isso muitas vezes é redundante — na primeira vez que `python.exe` fizer bind em 9001, aparece um prompt e “Allow” é suficiente. Adicione as regras se esse prompt foi dispensado, se o perfil da LAN for Público ou se a placa registrar `no ACK` enquanto o PC não mostra nada.
 
 ## Gravar (Flash)
 
-Compile → copie o modelo → faça o upload, como uma sequência. Fazer upload com
-um diretório de build desatualizado grava um app *e* um modelo desatualizados.
+Compile → copie o modelo → faça o upload, como uma sequência. Fazer upload com um diretório de build desatualizado grava um app *e* um modelo desatualizados.
 
 ```powershell
 $cli  = "C:\Users\<you>\AppData\Local\Programs\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe"
@@ -379,9 +306,7 @@ Copy-Item build\srmodels_jarvis.bin build\wake_demo\srmodels.bin -Force
 & $cli upload -p COM9 --fqbn $fqbn --input-dir build\wake_demo
 ```
 
-Substitua `COM9` pela sua porta (`/dev/cu.usbmodem*` no macOS,
-Linux). Se a gravação não conseguir conectar, segure **BOOT**, toque **RESET**,
-solte **BOOT** e tente novamente.
+Substitua `COM9` pela sua porta (`/dev/cu.usbmodem*` no macOS, `/dev/ttyACM*` no Linux). Se a gravação não conseguir conectar, segure **BOOT**, toque **RESET**, solte **BOOT** e tente novamente.
 
 Abra o monitor em **115200**. O que importa:
 
@@ -411,16 +336,11 @@ ready - say Jarvis, then a command right away
 ```
 
 - `WiFi: ip=…` — se isso falhar, as credenciais ou a banda estão erradas
-- a **linha wakenet** deve dizer `Jarvis` e `0.627_0.632`; se disser `Hi ESP`,
-  a etapa de cópia do modelo foi pulada
-- `ESP_SR: ok` — se travar ou reiniciar aqui, o modelo está ausente do diretório
-  de build
-- `DOA … deg` continua se repetindo cerca de dez vezes por segundo; isso é o
-  anel rastreando vozes, não um erro. O log é verboso por projeto
+- a **linha wakenet** deve dizer `Jarvis` e `0.627_0.632`; se disser `Hi ESP`, a etapa de cópia do modelo foi pulada
+- `ESP_SR: ok` — se travar ou reiniciar aqui, o modelo está ausente do diretório de build
+- `DOA … deg` continua se repetindo cerca de dez vezes por segundo; isso é o anel rastreando vozes, não um erro. O log é verboso por projeto
 
-Diga **“Jarvis”** uma vez. O anel pisca, o sino toca e o log imprime
-`*** "HI JARVIS" #1 ***`. Diga um comando imediatamente depois e a placa responde
-com a frase que ela correspondeu:
+Diga **“Jarvis”** uma vez. O anel pisca, o sino toca e o log imprime `*** "HI JARVIS" #1 ***`. Diga um comando imediatamente depois e a placa responde com a frase que ela correspondeu:
 
 ```text
 [197851 ms] *** "HI JARVIS" #1 ***
@@ -432,8 +352,7 @@ com a frase que ela correspondeu:
      <-     ACK 1
 ```
 
-Se o seu log disser `HI WALLE` em vez disso, você pulou a etapa de branding — o
-despertar e os comandos estão corretos de qualquer forma.
+Se o seu log disser `HI WALLE` em vez disso, você pulou a etapa de branding — o despertar e os comandos estão corretos de qualquer forma.
 
 | sintoma | causa | correção |
 | --- | --- | --- |
@@ -455,22 +374,14 @@ cd reSpeaker_44_wakeword\pc_brain
 .\start_demo.bat
 ```
 
-`start_demo.bat` inicia o cérebro e abre o Chrome (Edge como fallback) em modo
-kiosk em **http://localhost:8080** com autoplay permitido, então o primeiro som
-não precisa de clique. Rota manual: `python brain.py`, depois abra a mesma URL.
-**Alt+F4** sai do modo kiosk; feche a janela minimizada “JARVIS brain” para parar o UDP.
+`start_demo.bat` inicia o cérebro e abre o Chrome (Edge como fallback) em modo kiosk em **http://localhost:8080** com autoplay permitido, então o primeiro som não precisa de clique. Rota manual: `python brain.py`, depois abra a mesma URL. **Alt+F4** sai do modo kiosk; feche a janela minimizada “JARVIS brain” para parar o UDP.
 
 :::caution Apenas um brain pode rodar por vez
-O launcher não procura por uma instância existente. Um `brain.py` deixado de uma
-execução anterior mantém o UDP 9001 e o TCP 8080, a nova cópia pega qualquer
-porta que ainda esteja livre, e o HUD continua silenciosamente servindo o
-*processo antigo* — a página parece ativa, o log de eventos nunca atualiza e os
-pacotes vão para o brain errado. Antes de uma demo, feche a janela anterior
-“JARVIS brain” ou:
+O launcher não procura por uma instância existente. Um `brain.py` deixado de uma execução anterior mantém o UDP 9001 e o TCP 8080, a nova cópia pega qualquer porta que ainda esteja livre, e o HUD continua silenciosamente servindo o *processo antigo* — a página parece ativa, o log de eventos nunca atualiza e os pacotes vão para o brain errado. Antes de uma demo, feche a janela anterior “JARVIS brain” ou:
 
+```powershell
 Get-Process python | Stop-Process -Force
 ```
-__CODE_LINE_PLH__
 :::
 
 {/* TODO(image): adicionar uma captura de tela do HUD aqui — busto do Homem de Ferro, reator arc, nove botões de comando, log de eventos. */}
@@ -478,11 +389,9 @@ __CODE_LINE_PLH__
 Na tela:
 
 - o **busto wireframe do Homem de Ferro** com um reator arc que pulsa com a música
-  - **à esquerda**: nove botões de comando rotulados com a frase exata a dizer; as
-- **canto superior esquerdo**: status e a frase que a placa ouviu; **canto superior direito**:
-  `LINKED` / `NO LINK`, o endereço do PC e um relógio
-- **canto inferior direito**: log de eventos, do mais recente para o mais antigo; **centro inferior**: cartões para
-  clima, tarefas, piadas e respostas do modelo
+- **à esquerda**: nove botões de comando rotulados com a frase exata a dizer; as teclas **1–9** enviam os mesmos ids, que é como você testa sem falar
+- **canto superior esquerdo**: status e a frase que a placa ouviu; **canto superior direito**: `LINKED` / `NO LINK`, o endereço do PC e um relógio
+- **canto inferior direito**: log de eventos, do mais recente para o mais antigo; **centro inferior**: cartões para clima, tarefas, piadas e respostas do modelo
 
 Sem placa em mãos? O cérebro pode ser acionado diretamente:
 
@@ -492,43 +401,28 @@ python sim.py 4        # tell a joke
 python sim.py demo     # 1 -> 2 -> 4 -> 5 with pauses
 ```
 
-`config.json` contém as configurações do local: `esp_ip` (último endereço conhecido da placa,
-atualizado automaticamente), `audio_sink` (`speaker` transmite para o robô, `pc`
-reproduz localmente), `default_track`, `weather_lat` / `weather_lon` e
-`openrouter_key` — deixe a chave vazia e as piadas/respostas usarão frases prontas.
-Prefira a variável de ambiente `OPENROUTER_API_KEY` em vez de escrevê-la no
-arquivo.
+`config.json` contém as configurações do local: `esp_ip` (último endereço conhecido da placa, atualizado automaticamente), `audio_sink` (`speaker` transmite para o robô, `pc` reproduz localmente), `default_track`, `weather_lat` / `weather_lon` e `openrouter_key` — deixe a chave vazia e as piadas/respostas usarão frases prontas. Prefira a variável de ambiente `OPENROUTER_API_KEY` em vez de escrevê-la no arquivo.
 
-A lista de modelos fornecida é toda de rotas `:free`, e elas são muito disputadas:
-`HTTP 429 … rate-limited upstream` no log é normal, não é uma chave inválida. O cérebro
-percorre `openrouter_model` → `openrouter_fallbacks` → uma frase pronta, então **“perguntar ao
-modelo” pode levar de 15 a 25 s** antes de responder, e às vezes responde a partir da
-lista offline. Verifique a própria chave com `curl` em
-`https://openrouter.ai/api/v1/key` em vez de observar uma única resposta.
+A lista de modelos fornecida é toda de rotas `:free`, e elas são muito disputadas: `HTTP 429 … rate-limited upstream` no log é normal, não é uma chave inválida. O cérebro percorre `openrouter_model` → `openrouter_fallbacks` → uma frase pronta, então **“perguntar ao modelo” pode levar de 15 a 25 s** antes de responder, e às vezes responde a partir da lista offline. Verifique a própria chave com `curl` em `https://openrouter.ai/api/v1/key` em vez de observar uma única resposta.
 
 :::note Respostas faladas precisam de Windows
-O cérebro sintetiza fala com o **System.Speech** do Windows e transmite o WAV
-para o reSpeaker. No macOS ou Linux, a palavra de ativação, os comandos, os cartões, o
-log e a música ainda funcionam — mas o JARVIS não falará.
+O cérebro sintetiza fala com o **System.Speech** do Windows e transmite o WAV para o reSpeaker. No macOS ou Linux, a palavra de ativação, os comandos, os cartões, o log e a música ainda funcionam — mas o JARVIS não falará.
 :::
 
 ## Limites
 
 - **Apenas inglês** — o modelo MultiNet nesta compilação é `mn7_en`.
-- **16 kHz em todos os lugares** — cerca de uma faixa de áudio de 8 kHz; adequado para fala e sinais,
-  não para hi-fi.
+- **16 kHz em todos os lugares** — cerca de uma faixa de áudio de 8 kHz; adequado para fala e sinais, não para hi-fi.
 - **Um fluxo por vez** — um novo som interrompe o anterior.
-- **WiFi é necessário na inicialização** para qualquer coisa que chegue ao PC; a placa ainda
-  acorda e pisca offline, mas nenhuma ação chega.
-- **O modelo de ativação é treinado para TTS** e é mais sensível à pronúncia do que
-  “Hi ESP”. Recalibre os limiares para um ambiente barulhento.
+- **WiFi é necessário na inicialização** para qualquer coisa que chegue ao PC; a placa ainda acorda e pisca offline, mas nenhuma ação chega.
+- **O modelo de ativação é treinado para TTS** e é mais sensível à pronúncia do que “Hi ESP”. Recalibre os limiares para um ambiente barulhento.
 
 ## Recursos
 
 - Projeto (firmware, cérebro e HUD): [KasunThushara/reSpeaker_44_wakeword](https://github.com/KasunThushara/reSpeaker_44_wakeword)
 - Introdução à placa e atualização de firmware: [reSpeaker XVF3800 44mm](https://wiki.seeedstudio.com/pt-br/respeaker_44mm_introduction/)
 - Imagens de firmware XMOS: [reSpeaker_XVF3800_4MIC_44mm](https://github.com/respeaker/reSpeaker_XVF3800_4MIC_44mm)
-- Configuração do XIAO: [XIAO ESP32-S3 Getting Started](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_getting_started/)
+- Configuração do XIAO: [Introdução ao XIAO ESP32-S3](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_getting_started/)
 - Modelos ESP-SR e API: [espressif/esp-sr](https://github.com/espressif/esp-sr)
 
 ## Suporte Técnico e Discussão de Produtos
