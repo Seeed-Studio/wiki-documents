@@ -14,10 +14,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /halowlink2_getting_started
 sku: 100072966
 last_update:
-  date: 11/12/2026
+  date: 11/23/2026
   author: Advent Jiang
 createdAt: '2026-11-06'
-updatedAt: '2026-11-12'
+updatedAt: '2026-11-23'
 url: https://wiki.seeedstudio.com/halowlink2_getting_started/
 ---
 
@@ -249,7 +249,7 @@ Wi-Fi HaLow (IEEE 802.11ah) is Wi-Fi in the sub-1 GHz band, built for long range
 
 ### Do I need two HaLowLink 2 devices?
 
-One unit is enough to add a Wi-Fi HaLow Access Point for HaLow-capable clients (e.g. Wio-WM6108 / Wio-WM6180-based nodes). Two units bridge **non-HaLow** devices — phones, laptops, Ethernet equipment — across a long-range link: one Access Point, one Extender.
+One unit is enough to add a Wi-Fi HaLow Access Point for HaLow-capable clients (e.g. the Wi-Fi HaLow Transceiver for Seeed Studio XIAO or Wio-WM6108-based mini-PCIe nodes). Two units bridge **non-HaLow** devices — phones, laptops, Ethernet equipment — across a long-range link: one Access Point, one Extender.
 
 ### What is the default management address and login?
 
