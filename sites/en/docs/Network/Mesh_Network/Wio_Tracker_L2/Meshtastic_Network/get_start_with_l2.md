@@ -371,6 +371,10 @@ You can add sensor to the device via the grove interface. The following sensors 
 </TabItem>
 </Tabs>
 
+For example, when a Grove BME280 environmental sensor (temperature, humidity and barometer) is plugged into the Grove interface, the readings can be displayed directly on the device's touchscreen:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BME280.png" alt="BME280 display effect" width={600} height="auto" /></p>
+
 ### Other Function
 
 <Tabs>
