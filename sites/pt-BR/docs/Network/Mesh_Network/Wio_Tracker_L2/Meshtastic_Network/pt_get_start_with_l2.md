@@ -559,6 +559,18 @@ O Wifi está desativado quando o IP do wifi está vazio e o ícone do wifi está
 
 Você precisa executar um apagamento da flash e, em seguida, regravar o firmware mais recente.
 
+### A tela permanece preta após a gravação do firmware
+
+**Descrição**
+
+- Após a gravação do firmware, o dispositivo não consegue iniciar normalmente e a tela permanece preta.
+
+**Solução de problemas**
+
+- Etapa 1. Pressione o botão `RST` uma vez para reiniciar o dispositivo. Na maioria dos casos, a tela acenderá após a reinicialização.
+
+- Etapa 2. Se a tela ainda não acender, tente primeiro gravar o firmware de fábrica ou o Meshtastic `2.8.2 beta` e, em seguida, regrave o firmware desejado.
+
 ### Restauração de fábrica
 
 Se você quiser restaurar as configurações padrão, pode fazer a restauração de fábrica. Há dois métodos para você fazer a restauração de fábrica.

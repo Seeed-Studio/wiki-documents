@@ -191,6 +191,17 @@ import TabItem from '@theme/TabItem';
 :::caution note
 ファームウェアの更新には `OTA を使用しないで` ください。デバイスが完全に故障する可能性があります。詳細については、[こちらをクリック](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)してください。
 :::
+
+**工場出荷時のファームウェア**
+
+X1 には、Meshtastic ファームウェア **v2.7.23**（[`firmware-mesh-tracker-x1-2.7.23.2546839.uf2`](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/firmware-mesh-tracker-x1-2.7.23.2546839.uf2)）がプリインストールされています。工場出荷時のファームウェアに戻したい場合は、このバージョンをダウンロードし、Web Flasher または DFU モードで書き込むことができます。
+
+:::note
+**X1 向けの v2.7.26 ビルドがないのはなぜですか？**
+
+Meshtastic チームは X1 の発売前に v2.7.26 を安定版としてリリースしていたため、このデバイス専用の v2.7.26 ビルドは作成されませんでした。また、公式チームは v2.8 のバグ修正を v2.7 ブランチにバックポートしないことを決定しているため、今後もこのビルドが追加されることはありません。最新の修正を利用したい場合は、Web Flasher から最新の安定版を書き込んでください。
+:::
+
 #### ステップ 1: DFU モードに入る
 
 Web Flasher 経由で DFU に入ります。これが何度も失敗する場合は、手動で DFU に入ってください。
