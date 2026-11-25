@@ -10,30 +10,26 @@ slug: /xiao_nrf54l15_nfc
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_nfc/
 ---
 
-<div className="table-center">
-  <table align="center">
-        <div className="get_one_now_container" style={{textAlign: 'center'}}>
-          <a
-            className="get_one_now_item"
-            href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>
-              <span>
-                <font color="#FFFFFF" size="4">
-                  Get One Now 🖱️
-                </font>
-              </span>
-            </strong>
-          </a>
-        </div>
-  </table>
+<div className="get_one_now_container" style={{textAlign: 'center'}}>
+  <a
+    className="get_one_now_item"
+    href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <strong>
+      <span>
+        <font color="#FFFFFF" size="4">
+          Get One Now 🖱️
+        </font>
+      </span>
+    </strong>
+  </a>
 </div>
 
 ## Introduction
 
-Near Field Communication (NFC) is a technology for wirelessly transferring small amounts of data between two devices. It uses very simple protocols, so it connects faster than Bluetooth Low Energy, but because it relies on magnetic induction the two devices must be very close — under 10 cm — to connect. The XIAO nRF54L15 exposes the nRF54L15's on-chip NFCT peripheral on two pins, letting you use the board as an NFC Type 4 Tag that a phone or reader can tap to read or write.
+Near Field Communication (NFC) is a technology for wirelessly transferring small amounts of data between two devices. It uses very simple protocols, so it connects faster than Bluetooth Low Energy, but because it relies on magnetic induction the two devices must be very close — under 10 cm — to connect. The XIAO nRF54L15 exposes the nRF54L15's on-chip NFCT peripheral on two pins, letting you use the board as an NFC tag that a phone or reader can tap to read or write. The peripheral supports both Type 2 and Type 4 tags: the text record sample below is a Type 2 read-only text tag, while the writable NDEF sample is a Type 4 read/write tag.
 
 For the Nordic NFC protocol reference, see [Near Field Communication (NFC)](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/protocols/nfc/index.html); for the specification itself, see the [NFC Forum specification overview](https://nfc-forum.org/build/specifications).
 
@@ -55,7 +51,7 @@ You need an XIAO nRF54L15 and an NFC antenna. The bare L15 board has **no on-boa
         <div className="get_one_now_container" style={{textAlign: 'center'}}>
           <a
             className="get_one_now_item"
-            href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html"
+            href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -90,7 +86,7 @@ The NFC pins do not distinguish positive and negative. Soldering fine-pitch test
 
 ## Software
 
-### NFC Records text
+### NFC Records text (Type 2 read-only text tag)
 
 This example demonstrates reading text information via NFC.
 
@@ -108,12 +104,12 @@ This example demonstrates reading text information via NFC.
 
 4. Open the project, add the XIAO nRF54L15 configuration under the corresponding extension, and compile.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/1.png" alt="XIAO nRF54L15 rear NFC pads (N1 and N2)" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/1.png" alt="Adding the XIAO nRF54L15 board configuration and compiling" style={{width:1000, height:'auto'}}/></div>
 
 
 5. Open the terminal and enter the command `west flash` to burn the firmware to the XIAO nRF54L15.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/2.png" alt="XIAO nRF54L15 rear NFC pads (N1 and N2)" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/2.png" alt="Flashing the XIAO nRF54L15 with west flash" style={{width:1000, height:'auto'}}/></div>
 
 
 #### Result
@@ -142,7 +138,7 @@ Witaj świecie!
   />
 </div>
 
-### NFC Read/Write Sample: Writable NDEF Message
+### NFC Read/Write Sample: Writable NDEF Message (Type 4 read/write tag)
 
 This is the Nordic Connect SDK **[writable NDEF message](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/samples/nfc/writable_ndef_msg/README.html)** sample, built for the XIAO nRF54L15. 
 
@@ -157,12 +153,12 @@ This is the Nordic Connect SDK **[writable NDEF message](https://docs.nordicsemi
 
 2. Build the sample.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/4.png" alt="XIAO nRF54L15 rear NFC pads (N1 and N2)" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/4.png" alt="Building the writable NDEF message sample" style={{width:1000, height:'auto'}}/></div>
 
 
 3. Flash 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/5.png" alt="XIAO nRF54L15 NFC pad close-up" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/NFC/5.png" alt="Flashing the writable NDEF message sample" style={{width:1000, height:'auto'}}/></div>
 <br/>
 
 
