@@ -7,7 +7,7 @@ keywords:
   - Depth Camera
   - Stereo Vision
   - Robot Vision
-image: https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp
+image: https://cdn.shopify.com/s/files/1/0704/4022/2949/files/Gemini_305_00.jpg?v=1783414174
 slug: /orbbec_gemini305
 last_update:
   date: 11/19/2026
@@ -15,7 +15,7 @@ last_update:
 ---
 
 <div align="center">
-  <img src="https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/01/05024657/20260105Rectangle-431.webp" alt="Orbbec Gemini 305 3D camera" width={400} />
+  <img src="https://cdn.shopify.com/s/files/1/0704/4022/2949/files/Gemini_305_00.jpg?v=1783414174" alt="Orbbec Gemini 305 3D camera" width={400} />
 </div>
 
 The Orbbec Gemini 305 is a stereo depth camera for close-range robot vision, including wrist mounting, object recognition, and grasping. This page covers the USB version; the Gemini 305g has different interfaces, power requirements, and dimensions. See the [Orbbec documentation](https://doc.orbbec.com/documentation/Gemini%20305%20Documentation) for details.

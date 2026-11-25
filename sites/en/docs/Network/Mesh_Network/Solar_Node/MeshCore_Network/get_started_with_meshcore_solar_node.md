@@ -616,6 +616,20 @@ If the issue persists, please contact technical support.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
+### Why is my P1 not receiving messages?
+
+#### 1. The antenna was disconnected
+
+Without an antenna, the P1 receives little signal. When it transmits, the open antenna port reflects most of the outgoing power back toward the radio. Repeated transmissions in this state can damage the transmit circuitry.
+
+**Power off the P1 before reconnecting the antenna.** Use an antenna matched to your LoRa band, then power on the P1 and send it a message from a nearby node.
+
+#### 2. A high-power transmitter is nearby
+
+A strong signal can overload the P1 receiver, causing it to miss LoRa messages while the other radio is transmitting. In extreme cases, the coupled RF energy can damage the receiver.
+
+**Test with the nearby transmitter idle.** If reception returns, increase the distance between the antennas and run their cables separately.
+
 ### Charging Current
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
