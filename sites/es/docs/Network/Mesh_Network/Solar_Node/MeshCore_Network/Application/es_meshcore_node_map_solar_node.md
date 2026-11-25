@@ -1,6 +1,6 @@
 ---
-description: Esta guía explica cómo mostrar las ubicaciones de los dispositivos MeshCore en los Mapas de Nodos MeshCore.
-title: Mapa de Nodos MeshCore
+description: Esta guía explica cómo mostrar las ubicaciones de los dispositivos MeshCore en los mapas de nodos MeshCore.
+title: Mapa de nodos MeshCore
 keywords:
   - MeshCore
   - MeshMap
@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_solar_node
 sku: 114993643,114993633
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang

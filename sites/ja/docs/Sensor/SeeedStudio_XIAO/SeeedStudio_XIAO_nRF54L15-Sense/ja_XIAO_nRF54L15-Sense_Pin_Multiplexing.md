@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54L15 Sense によるピン多重化
+title: Seeed Studio XIAO nRF54L15 Sense でのピン多重化
 description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_nrf54l15_sense_pin_multiplexing
@@ -27,70 +27,14 @@ VS Code をベースとして、nRF Connect SDK 上で以下のケースを使�
 
 :::
 
-## オンボードキー
-
-XIAO nRF54L15(Sense) には、デバイスの動作およびファームウェア書き込みにおいて重要な役割を果たす 2 つの物理ボタン、**Reset ボタン** と **User ボタン** が搭載されています。これらの機能を理解することは、日常的な使用やファームウェア更新のために不可欠です。
-
----
-
-## ハードウェア概要
-
-<Tabs>
-<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
-
-### XIAO nRF54L15 表面
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-### XIAO nRF54L15 裏面
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-
-</TabItem>
-<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
-
-### XIAO nRF54L15 Sense 表面
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-### XIAO nRF54L15 Sense 裏面
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-</TabItem>
-</Tabs>
-
-
-### Reset ボタン
-
-Reset ボタンは、デバイスに対してハードリセット操作を行うために使用されます。
-
-- **機能：**
-  - **強制再起動：** このボタンを押すと、現在のすべてのデバイス動作が即座に中断され、電源の入れ直しと同様に再起動が行われます。
-  - **フリーズしたプログラムの解消：** デバイス上で動作しているプログラムがクラッシュしたり、無限ループに入ったり、応答しなくなった場合、Reset ボタンを押すことが、通常動作状態に強制的に戻す最も手早い方法です。
-  - **ファームウェアへの影響なし：** リセット操作によって、すでにデバイスに書き込まれているファームウェアが消去されたり変更されたりすることはありません。現在実行中のアプリケーションを単に再起動するだけです。
-
----
-
-### User ボタン
-
-User ボタンは、多用途でプログラム可能な入力であり、アプリケーション内で柔軟な制御を提供します。
-
-**機能：**
-
-- カスタマイズ可能な入力：Reset ボタンの固定機能とは異なり、User ボタンの動作は、あなたが作成したファームウェアによって完全に定義されます。
-
-- イベントトリガ：特定のイベントをトリガしたり、さまざまな機能を制御したり、アプリケーション用の汎用入力として動作させるようにプログラムできます。
-
 ## デジタル
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
   <tr>
       <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Grove OLED 搭載 Seeed Studio Expansion Base for XIAO</th>
         <th>Grove - Relay</th>
   </tr>
   <tr>
@@ -201,11 +145,11 @@ int main(void)
 
 - 同様に、このコード行は `relay0` という名前のリレー GPIO デバイスに関する情報を取得します。
 
-**デバイス準備状態の確認**
+**デバイスの準備完了チェック**
 
 `if (!gpio_is_ready_dt(&button))` および `if (!gpio_is_ready_dt(&relay))`
 
-- プログラムが何らかの操作を開始する前に、コードはボタンとリレーのデバイスが正常に初期化され、使用可能な状態かどうかを確認します。これは Zephyr ドライバプログラミングにおけるベストプラクティスであり、デバイスが正しく設定されていない場合にプログラムがクラッシュするのを防ぎます。
+- プログラムが何らかの処理を開始する前に、コードはボタンとリレーのデバイスが正常に初期化され、使用可能な状態かどうかを確認します。これは Zephyr ドライバプログラミングにおけるベストプラクティスであり、デバイスが正しく設定されていない場合にプログラムがクラッシュするのを防ぎます。
 
 **ピン設定**
 
@@ -215,21 +159,21 @@ int main(void)
 
 `gpio_pin_configure_dt(&relay, GPIO_OUTPUT_ACTIVE);`
 
-- このコード行は、リレーの GPIO ピンを出力モードに設定します。`GPIO_OUTPUT_ACTIVE` フラグは通常、リレーを制御する準備として、設定後にピンがアクティブになることを示します。
+- このコード行は、リレーの GPIO ピンを出力モードに設定します。`GPIO_OUTPUT_ACTIVE` フラグは通常、リレーを制御する準備として、設定後にピンがアクティブ状態になることを示します。
 
-**メインループロジック**
+**メインループのロジック**
 
-`while (1):` コードは無限ループに入り、以下の動作を継続的に実行します。
+`while (1):` コードは無限ループに入り、以下の処理を継続的に実行します。
 
 `int button_state = gpio_pin_get_dt(&button);:` 各ループで、プログラムはボタンピンの現在のレベル状態を読み取ります。
 
-`if (button_state == 0):` このロジックはボタンが押されているかどうかを確認します。多くの回路設計では、ボタンが押されるとピンがグラウンド（GND）に接続され、その結果レベルが0（つまり Low）になります。
+`if (button_state == 0):` このロジックはボタンが押されているかどうかをチェックします。多くの回路設計では、ボタンが押されるとピンが GND（グラウンド）に接続され、レベル 0（すなわち Low）になります。
 
-`gpio_pin_set_dt(&relay, 1);:` ボタン状態が0（押されている）の場合、リレーピンが1（High）に設定され、リレーが閉じて接続されているデバイス（例：ランプ）の電源がオンになります。
+`gpio_pin_set_dt(&relay, 1);:` ボタン状態が 0（押されている）の場合、リレーピンを 1（High）に設定し、リレーを閉じて接続されているデバイス（例：ランプ）をオンにします。
 
-`else:` ボタンが押されていない（状態が1）場合、`perform gpio_pin_set_dt(&relay, 0);` を実行してリレーピンを0（Low）に設定し、リレーを閉じて接続されているデバイスの電源をオフにします。
+`else:` ボタンが押されていない（状態が 1）場合は、`perform gpio_pin_set_dt(&relay, 0);` を実行してリレーピンを 0（Low）に設定し、リレーを開いて接続されているデバイスの電源を切ります。
 
-`k_msleep(10);:` このコードは、CPU がビジー状態になることなどを避けるために、各ループの最後に10ミリ秒の短いディレイを追加します。これは簡単なチャタリング防止処理です。ボタンの物理的なチャタリングによる複数回のトリガーを防ぐとともに、消費電力も削減します。
+`k_msleep(10);:` コードは各ループの最後に 10 ミリ秒の短いディレイを追加し、CPU がビジー状態になることなどを避けます。これは簡単なチャタリング対策であり、ボタンの物理的な揺れによる複数回のトリガーを防ぐとともに、消費電力も削減します。
 
 ### 結果グラフ
 
@@ -398,72 +342,72 @@ int main(void)
 }
 ```
 
-**ADC（アナログ-デジタルコンバータ）および PWM（パルス幅変調）デバイス設定**
+**ADC（アナログ-デジタルコンバータ）および PWM（パルス幅変調）デバイス構成**
 
 - pot_pwm_example ログモジュール：
 
   - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): これは pot_pwm_example という名前のログモジュールを登録し、そのログレベルをシステムのデフォルト設定にします。これによりデバッグが容易になります。
 
-- ADC 設定：
+- ADC 構成：
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: このプリプロセッサディレクティブは、ADC チャンネル定義を含む有効なオーバーレイファイルが存在することを保証する Device Tree チェックです。これにより、ユーザーは特定のハードウェアに対して正しい設定を提供することが必須となります。
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: このプリプロセッサディレクティブは、ADC チャネル定義を含む有効なオーバーレイファイルが存在することを保証するための Device Tree チェックです。これにより、ユーザーは特定のハードウェアに対して正しい構成を提供することが必須となります。
 
-  - static const struct adc_dt_spec adc_channels[];: このコード部分は Zephyr の Device Tree を利用して、設定されたすべての ADC チャンネルの情報を自動的に取得します。このアプローチにより、コードは異なるハードウェア間で手動の設定変更なしに柔軟かつ移植性の高いものになります。
+  - static const struct adc_dt_spec adc_channels[];: このコード部分は Zephyr の Device Tree を利用して、構成されたすべての ADC チャネルの情報を自動的に取得します。このアプローチにより、コードは異なるハードウェア間で手動の設定変更なしに柔軟かつ移植性の高いものになります。
 
-  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: adc_channels 配列のどのチャンネルにポテンショメータが接続されているかを指定するマクロを定義します。
+  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: adc_channels 配列のどのチャネルにポテンショメータが接続されているかを指定するマクロを定義します。
 
-- PWM 設定：
+- PWM 構成：
 
-  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: この行は Device Tree からエイリアス pwm_led に対する PWM デバイス情報を取得します。これはハードウェアデバイスを検索・参照するための、Zephyr における標準的な方法です。
+  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: この行は Device Tree からエイリアス pwm_led に対応する PWM デバイス情報を取得します。これはハードウェアデバイスを検索・参照するための標準的な Zephyr の手法です。
 
-  - #define PWM_PERIOD_NS 1000000UL: これはPWM信号の周期を1ミリ秒（1,000,000ナノ秒）として定義しており、1kHzの周波数に相当します。この周波数は、LEDの調光に適しており、ちらつきが目に見えない程度に十分高くなっています。
+  - #define PWM_PERIOD_NS 1000000UL: PWM 信号の周期を 1 ミリ秒（1,000,000 ナノ秒）として定義します。これは 1 kHz の周波数に相当し、LED の調光に適した、ちらつきが目に見えない程度に十分高い周波数です。
 
 **初期化とセットアップ**
 
-- ログ情報:
+- ログ情報：
 
   - LOG_INF("Starting Zephyr Potentiometer to PWM example...");: プログラムの開始時に情報ログメッセージを出力し、このサンプルが開始されたことをユーザーに通知します。
 
-- ADC の初期化:
+- ADC 初期化：
 
-  - !adc_is_ready_dt(): ADCデバイスを使用しようとする前に、そのデバイスが使用可能かどうかを確認します。デバイスが準備できていない場合はエラーが記録され、プログラムは終了します。
+  - !adc_is_ready_dt(): ADC デバイスを使用しようとする前に、そのデバイスが使用可能かどうかを確認します。デバイスが準備できていない場合はエラーをログに記録し、プログラムを終了します。
 
-  - adc_channel_setup_dt(): この関数は、ポテンショメータに接続された特定のADCチャネルを設定し、その分解能やゲインなどを構成します。
+  - adc_channel_setup_dt(): この関数はポテンショメータに接続された特定の ADC チャネルを構成し、その分解能やゲインなどを設定します。
 
-- PWM の初期化:
+- PWM 初期化：
 
-  - !device_is_ready(led.dev): ADCと同様に、この行ではPWMデバイスが準備できているかどうかを確認します。準備できていない場合はエラーが記録され、プログラムは終了します。
+  - !device_is_ready(led.dev): ADC と同様に、この行は PWM デバイスが使用可能かどうかを確認します。使用可能でない場合はエラーをログに記録し、プログラムを終了します。
 
-  - LOG_INF(...): PWMの周期と周波数の情報を出力し、ユーザーが設定内容を確認できるようにします。
+  - LOG_INF(...): PWM の周期と周波数に関する情報を出力し、ユーザーが設定内容を確認できるようにします。
 
-- ADC シーケンスの設定:
+- ADC シーケンス構成：
 
-  - struct adc_sequence sequence: 単一のADC変換処理を記述するために adc_sequence 構造体を定義します。結果を格納するバッファ（adc_raw_value）、そのサイズ（sizeof(adc_raw_value)）、および使用するADC分解能を指定します。
+  - struct adc_sequence sequence: 単一の ADC 変換処理を記述する adc_sequence 構造体を定義します。結果を格納するバッファ（adc_raw_value）、そのサイズ（sizeof(adc_raw_value)）、および使用する ADC 分解能を指定します。
 
 **メインループ**
-コードの中核となるロジックは、無限の while (1) ループ内で実行されます:
+コードの中核となるロジックは、無限の while (1) ループ内で実行されます：
 
-- ADC 読み取り:
+- ADC 読み取り：
 
-  - adc_sequence_init_dt(): 各読み取りで正しい設定が使用されるように、ADCシーケンスを初期化します。
+  - adc_sequence_init_dt(): 各読み取りで正しい構成が使用されるように、ADC シーケンスを初期化します。
 
-  - adc_read(): ポテンショメータからアナログ値を読み取るためにADC変換をトリガーします。読み取りに失敗した場合はエラーが記録され、プログラムは100ミリ秒一時停止してから処理を続行します。
+  - adc_read(): ポテンショメータからアナログ値を読み取るために ADC 変換を開始します。読み取りに失敗した場合はエラーをログに記録し、100 ミリ秒待機してから処理を続行します。
 
-  - int sensor_value = adc_raw_value;: 生のADC値を sensor_value 変数に代入します。
+  - int sensor_value = adc_raw_value;: 生の ADC 値を sensor_value 変数に代入します。
 
-- ADC 値を PWM デューティ比にマッピング:
+- ADC 値から PWM デューティサイクルへのマッピング：
 
-  - uint32_t max_adc_raw: 取り得る生のADC値の最大値を計算します。
+  - uint32_t max_adc_raw: 取り得る生の ADC 値の最大値を計算します。
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: これがマッピング処理の中核です。生のADC値（sensor_value）をPWM周期（PWM_PERIOD_NS）の範囲に比例してスケーリングし、LEDの明るさを調整するためのデューティ比の値を算出します。
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: これはマッピング処理の中核となるロジックです。生の ADC 値（sensor_value）を PWM 周期（PWM_PERIOD_NS）の範囲に比例してスケーリングし、LED の明るさを調整するデューティサイクル値を算出します。
 
-- PWM デューティ比の設定:
+- PWM デューティサイクルの設定：
 
-  - pwm_set_dt(): この関数は、新たに計算されたデューティ比（output_duty_ns）をPWMデバイスに適用し、LEDの明るさを即座に変更します。
+  - pwm_set_dt(): この関数は新たに計算されたデューティサイクル（output_duty_ns）を PWM デバイスに適用し、LED の明るさを即座に変更します。
 
-- 遅延:
+- 遅延：
 
-  - k_msleep(100): 各ループの後にプログラムを100ミリ秒一時停止します。これによりADC読み取りとPWM更新の頻度を制御し、CPU負荷の過剰な増加を防ぐとともに、安定したユーザー体験を提供します。
+  - k_msleep(100): プログラムは各ループの後に 100 ミリ秒一時停止します。これにより ADC 読み取りと PWM 更新の頻度が制御され、CPU 負荷の過剰な増加を防ぎ、安定したユーザー体験を提供します。
 
 ### 結果グラフ
 
@@ -508,7 +452,7 @@ int main(void)
 
 <details>
 
-<summary>Software</summary>
+<summary>ソフトウェア</summary>
 
 ```c
 #include <zephyr/kernel.h>
@@ -1002,7 +946,7 @@ static Coordinates transform(Coordinates gps)
 
 - `SENTENCE_SIZE, BUFFSIZE:` これらは、NMEA センテンスやより大きなデータバッファを格納するために使用されるバッファの固定サイズを定義します。
 
-- `HOT_START, SET_NMEA_OUTPUT:`のようなマクロ：これらのマクロは、L76X GPS モジュールに送信されるさまざまな NMEA プロトコルコマンドを定義し、その動作モード、出力周波数、ボーレートなどを設定します。
+- `HOT_START, SET_NMEA_OUTPUT:` のようなマクロ：これらのマクロは、L76X GPS モジュールに送信されるさまざまな NMEA プロトコルコマンドを定義し、その動作モード、出力周波数、ボーレートなどを設定します。
 
 - 構造体定義：
 
@@ -1038,7 +982,7 @@ static Coordinates transform(Coordinates gps)
 
 - GPS モジュールの初期化：
 
-  - `L76X_Send_Command(SET_NMEA_OUTPUT):`GNRMC など、指定した NMEA センテンスのみを出力するように GPS モジュールを設定するコマンドを送信し、不要なデータトラフィックを削減します。
+  - `L76X_Send_Command(SET_NMEA_OUTPUT):`GNRMC など、指定された NMEA センテンスのみを出力するように GPS モジュールを設定するコマンドを送信し、不要なデータトラフィックを削減します。
 
  -` L76X_Send_Command(SET_POS_FIX_1S): `GPS モジュールの位置更新頻度を 1 秒に設定します。
 
@@ -1257,54 +1201,54 @@ int main(void) {
 
 **ディスプレイデバイスの設定と初期化**
 
-- `main_app` ログモジュール:
+- `main_app` ログモジュール：
 
   - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL と LOG_MODULE_REGISTER(main_app, LOG_LEVEL) によって、main_app という名前のログモジュールを登録し、そのログレベルをシステムのデフォルト設定にします。これにより、開発者は Zephyr のロギングシステムを通じて簡単にデバッグや情報出力を行うことができます。
 
-- `display_init()` 関数:
+- `display_init()` 関数：
 
   - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` この行は、Zephyr の Device Tree から選択されたディスプレイデバイスを取得します。このアプローチにより、コードはハードウェア非依存になります。
 
   - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`このコードは、ディスプレイのピクセルフォーマットを PIXEL_FORMAT_MONO10 に設定しようとします。これに失敗した場合は、PIXEL_FORMAT_MONO01 を試みます。これにより、ディスプレイがモノクロモードで動作することが保証され、OLED や e-Paper など一部のディスプレイ技術に必要となります。
 
-- `framebuffer_setup()` 関数:
+- `framebuffer_setup()` 関数：
 
-  - `cfb_framebuffer_init(dev):`これは Compact Framebuffer (CFB) を初期化します。CFB は Zephyr における軽量なグラフィックスライブラリで、ディスプレイ上にテキストや簡単なグラフィックスを描画するために使用されます。
+  - `cfb_framebuffer_init(dev):`これは Compact Framebuffer（CFB）を初期化します。CFB は Zephyr における軽量なグラフィックスライブラリで、ディスプレイ上にテキストや簡単なグラフィックスを描画するために使用されます。
 
-  - `cfb_framebuffer_clear(dev, true):`これはフレームバッファをクリアし、その内容を直ちにディスプレイへ書き込み、画面をクリーンな状態にします。
+  - `cfb_framebuffer_clear(dev, true):`これはフレームバッファをクリアし、その内容をすぐにディスプレイへ書き込み、画面をクリーンな状態にします。
 
   - `display_blanking_off(dev):`これはディスプレイのブランキング機能をオフにします。通常、これはディスプレイがデータを受信して画像を表示する準備ができたことを示す信号です。
 
-- `select_font()` 関数:
+- `select_font()` 関数：
 
   - `cfb_get_font_size():`この関数は利用可能なフォントをループし、適切なフォントを探します。
 
-  - コードは` 8x8 `ピクセルフォントを優先します。これは一般的で読みやすい小さなフォントであるためです。
+  - コードは` 8x8 `ピクセルフォントを優先します。これは一般的で読みやすい小さなフォントだからです。
 
-  - `8x8` フォントが見つからない場合は、フォールバックとして最初に見つかったサイズが 0 でないフォントを選択します。
+  - `8x8`フォントが見つからない場合は、フォールバックとして最初に見つかったサイズが 0 でないフォントを選択します。
 
   - `cfb_framebuffer_set_font(dev, chosen_font_idx):` 適切なフォントが見つかると、それがフレームバッファの現在のフォントとして設定されます。
 
-- `print_text_by_row_col()` 関数:
+- `print_text_by_row_col()` 関数：
 
  -` int pixel_x = col * font_width; `と `int pixel_y = row * font_height;:` この関数はテキストの行・列座標（文字単位）をピクセル座標に変換し、テキストの位置決めを直感的にします。
 
 - `cfb_print():` これは指定したピクセル位置にテキストを印字するために使用される、CFB ライブラリの中核となる関数です。
 
 **メインループ**
-コードの中核ロジックは、無限 `while (1)`ループ内で実行されます:
+コードの中核ロジックは、無限 `while (1)`ループ内で実行されます：
 
-- 画面のクリア: `cfb_framebuffer_clear(dev, false):` 各ループの冒頭で、ディスプレイを即座にリフレッシュすることなくフレームバッファをクリアします。これにより、複数の要素を一度に描画でき、画面のちらつきを防ぎます。
+- 画面のクリア：`cfb_framebuffer_clear(dev, false):` 各ループの冒頭で、ディスプレイをすぐにリフレッシュせずにフレームバッファをクリアします。これにより、複数の要素を一度に描画でき、画面のちらつきを防ぎます。
 
-- テキストの表示:
+- テキストの表示：
 
   - 2 つの文字列 `line1_text` と `line2_text` が定義されています。
 
   - print_text_by_row_col(): カスタム関数を使用して、これら 2 行のテキストを画面上の指定された行と列の位置に表示します。1 行目は `(1, 2)` に、2 行目は `(2, 1)` に表示されます。
 
-  - ディスプレイの更新: `cfb_framebuffer_finalize(dev)`: この関数は、フレームバッファからディスプレイへ保留中の描画コマンドを一括送信し、すべてのコンテンツを同時に表示させます。
+  - ディスプレイの更新：`cfb_framebuffer_finalize(dev)`: この関数は、フレームバッファからディスプレイへ保留中の描画コマンドを一括送信し、すべてのコンテンツを同時に表示させます。
 
-  - 遅延: `k_sleep(K_MSEC(1000)):` 各ループの後、プログラムは 1000 ミリ秒（1 秒）一時停止します。これは画面の更新頻度を制御し、時計やセンサーデータなどの静的な情報を安定して表示する用途に適しています。
+  - 遅延：`k_sleep(K_MSEC(1000)):` 各ループの後、プログラムは 1000 ミリ秒（1 秒）一時停止します。これは画面の更新頻度を制御し、時計やセンサーデータなどの静的情報を安定して表示する用途に適しています。
 
 ### 結果グラフ
 
@@ -1461,33 +1405,33 @@ int main(void)
 }
 ```
 
-**デバイス初期化:**
+**デバイス初期化：**
 
 - このコードはまず、`DEVICE_DT_GET(DT_CHOSEN(zephyr_display)).` を使用してデバイスツリーからディスプレイデバイスを取得します。
 
-- 次に `device_is_ready()` を呼び出して、デバイスが正しく初期化され、動作可能な状態かどうかを確認します。これはあらゆるハードウェアとやり取りする際の重要な最初のステップです。
+- 次に `device_is_ready()` を呼び出して、デバイスが正しく初期化され、動作可能な状態かどうかを確認します。これはあらゆるハードウェア操作における重要な最初のステップです。
 
-**LVGL の初期化:**
+**LVGL の初期化：**
 
 - `lv_init()` は LVGL グラフィックスライブラリのエントリポイントです。ライブラリの内部状態を初期化するため、LVGL オブジェクトを作成したり、何らかの操作を行ったりする前に必ず呼び出す必要があります。
 
-**画面クリア:**
+**画面クリア：**
 
-- `display_blanking_off()` 関数が呼び出されます。E-Paper ディスプレイでは、通常これは画面上の古いコンテンツを消去するためのフルリフレッシュをトリガーします。
+- `display_blanking_off()` 関数が呼び出されます。E-Paper ディスプレイでは、通常これは画面上の古いコンテンツを消去するための全画面リフレッシュをトリガーします。
 
-- さらにクリーンなキャンバスを確保するために、コードは `lv_scr_act()` を使用して現在アクティブなスクリーンを取得し、`lv_obj_set_style_bg_color()` を使ってその背景色を白に設定し、ディスプレイ領域全体を覆います。
+- さらにクリーンなキャンバスを確保するために、コードは `lv_scr_act()` を使用して現在アクティブなスクリーンを取得し、`lv_obj_set_style_bg_color()` を使ってその背景色を白に設定し、ディスプレイ全体を覆います。
 
-**画面レイアウトの準備:**
+**画面レイアウトの準備：**
 
 - `lv_disp_get_hor_res()` と `lv_disp_get_ver_res()` 関数を使用して、ディスプレイの実際の幅と高さを取得します。これは後で UI 要素を正確に配置するのに役立ちます。
 
 - また、コードはスクリーンのパディング `(lv_obj_set_style_pad_all())` とスクロールバー ` (lv_obj_set_scrollbar_mode()) ` を削除し、使用可能な描画領域を最大化します。
 
-**UI 要素の作成と設定:**
+**UI 要素の作成と設定：**
 
-- パネル: `lv_obj_create(scr)` でパネルオブジェクトを作成します。そのサイズと中央揃えは `lv_obj_set_size()` と `lv_obj_align()` を使って設定します。白い背景と黒い枠線を含むスタイルは、`lv_obj_set_style_bg_color()` や `lv_obj_set_style_border_color()` などの関数で設定されます。
+- パネル：`lv_obj_create(scr)` でパネルオブジェクトを作成します。そのサイズと中央揃えは `lv_obj_set_size()` と `lv_obj_align()` を使って設定します。白い背景と黒い枠線を含むスタイルは、`lv_obj_set_style_bg_color()` や `lv_obj_set_style_border_color().` といった関数で設定されます。
 
-- ラベル:
+- ラベル：
 
   - `lv_label_create()` を使用してテキストラベルを作成します。
 
@@ -1497,23 +1441,23 @@ int main(void)
 
 - `lv_obj_align()` 関数は、各ラベルを画面の特定の位置（中央、右上、左下、右下など）に配置します。
 
-四角形: for ループを使用して 4 つの小さな四角形オブジェクトを作成します。それぞれのサイズ、スタイル（白い塗りつぶしと黒い枠線）、位置を順番に設定し、画面左上に水平方向に並べて配置します。
+四角形：for ループを使用して 4 つの小さな四角形オブジェクトを作成します。それぞれのサイズ、スタイル（白い塗りつぶしと黒い枠線）、位置を順番に設定し、画面左上に水平方向に並べて配置します。
 
-**メインループ:**
+**メインループ：**
 
-- `while(1)` ループは、プログラムの連続実行部分です。
+- `The while(1)` ループは、プログラムの連続実行部分です。
 
-- `lv_task_handler()` は、UI 要素の更新やイベント処理など、すべての LVGL 内部タスクを処理するために、ループ内で継続的に呼び出されます。
+- `lv_task_handler()` はループ内で継続的に呼び出され、UI 要素の更新やイベント処理など、LVGL の内部タスクを処理します。
 
-- `k_sleep(K_MSEC(1000))` はスレッドを 1000 ミリ秒一時停止します。静的な d
+- `k_sleep(K_MSEC(1000))` はスレッドを 1000 ミリ秒一時停止します。静的 d
 
-### 結果グラフ
+### 結果のグラフ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_nrf54.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
