@@ -1,15 +1,22 @@
 ---
+description: "Run NVIDIA's Holoscan 5 example on Ubuntu 24.04 to verify gravity compensation on the reBot Arm B601-DM and measure its control loop with Nsight Systems."
 title: "reBot-DM Holoscan5 Gravity Compensation"
 sidebar_label: "reBot-DM Holoscan5 Gravity Compensation"
-description: "Run NVIDIA's Holoscan 5 example on Ubuntu 24.04 to verify gravity compensation on the reBot Arm B601-DM and measure its control loop with Nsight Systems."
 keywords:
   - reBot Arm B601-DM
   - NVIDIA Holoscan
   - gravity compensation
   - Pinocchio
 slug: /rebot_b601_dm_holoscan_gravity_compensation
+sku: 100065783, 100095532
+last_update:
+  date: 2026-11-25
+  author: LiJie
 translation:
   skip: [zh-CN]
+createdAt: '2026-11-25'
+updatedAt: '2026-11-25'
+url: https://wiki.seeedstudio.com/rebot_b601_dm_holoscan_gravity_compensation/
 ---
 
 import '/src/css/rebot-wiki-style.css';

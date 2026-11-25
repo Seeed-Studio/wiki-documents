@@ -1,13 +1,20 @@
 ---
+description: "在 Ubuntu 24.04 上运行 NVIDIA Holoscan 5 官方示例，验证 reBot Arm B601-DM 的重力补偿，并用 Nsight Systems 测量控制循环。"
 title: "reBot-DM Holoscan5 重力补偿"
 sidebar_label: "reBot-DM Holoscan5 重力补偿"
-description: "在 Ubuntu 24.04 上运行 NVIDIA Holoscan 5 官方示例，验证 reBot Arm B601-DM 的重力补偿，并用 Nsight Systems 测量控制循环。"
 keywords:
   - reBot Arm B601-DM
   - NVIDIA Holoscan
   - 重力补偿
   - Pinocchio
 slug: /rebot_b601_dm_holoscan_gravity_compensation
+sku: 100065783, 100095532
+last_update:
+  date: 2026-11-25
+  author: LiJie
+createdAt: '2026-11-25'
+updatedAt: '2026-11-25'
+url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_holoscan_gravity_compensation/
 ---
 
 import '/src/css/rebot-wiki-style.css';
