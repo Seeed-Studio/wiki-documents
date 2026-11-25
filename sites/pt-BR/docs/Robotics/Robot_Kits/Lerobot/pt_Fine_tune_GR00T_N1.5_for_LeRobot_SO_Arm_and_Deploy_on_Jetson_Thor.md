@@ -1,6 +1,6 @@
 ---
 description: Este wiki apresenta como começar a usar o NVIDIA Jetson Thor e fornece fluxos de trabalho de exemplo para implantar projetos de IA e robótica no Thor. Instruções detalhadas passo a passo e documentação de referência também são fornecidas.
-title: SO-Arm com Isaac Groot N1.5
+title: SO-ARM com Isaac GR00T N1.5
 keywords:
   - Thor
   - Robótica
@@ -15,25 +15,79 @@ updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import '/src/css/soarm101-pinocchio-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Ajustar Finamente GR00T N1.5 para o Braço LeRobot SO-101 e Implantar no Jetson AGX Thor
+
+<div className="rebot-page soarm-guide">
+
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/other/cover1.png" width={1000} height={562} style={{height: 'auto'}} alt="Projeto de implantação do GR00T com SO-ARM e Jetson AGX Thor" />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html" target="_blank" rel="noopener noreferrer">
+    <span>Obter um kit SO-ARM101</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 ## Introdução
 
-Este wiki explica como **ajustar finamente o NVIDIA Isaac GR00T N1.5** para o **braço LeRobot SO-101** e implantá-lo no **NVIDIA Jetson Thor**. Ele abrange:
+Colete demonstrações do SO-ARM com o LeRobot, faça o fine-tuning do Isaac GR00T N1.5 na NVIDIA Brev ou no Jetson AGX Thor e execute a inferência no Thor.
 
-- Preparação de hardware para **LeRobot SO-101** e **Jetson AGX Thor**  
-- Configuração do ambiente de software para **GR00T N1.5** no Jetson Thor  
-- Uso da **plataforma de treinamento LeRobot**: coleta de dados, formatação de conjunto de dados e ajuste fino para o braço SO-101  
-- Fluxos de trabalho de exemplo para implantar a política GR00T N1.5 treinada (LeRobot + SO-101) no Jetson Thor  
-- Dicas de solução de problemas e armadilhas comuns  
+### Roteiro de Aprendizado Recomendado
 
-<div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/other/cover1.png"/>
+<div className="rebot-step-flow soarm-learning-path">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4><a href="#primeiros-passos-com-o-kit-de-desenvolvimento-nvidia-jetson-thor">Preparar o Jetson AGX Thor</a></h4>
+    <p>Grave a imagem do sistema, se necessário.</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4><a href="#configuração-básica-do-ambiente-de-desenvolvimento-no-thor">Configurar o ambiente de desenvolvimento</a></h4>
+    <p>Instale o JetPack e consulte as dependências Python e a imagem Docker de referência.</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4><a href="#coleta-de-dados-usando-o-so-arm">Coletar dados do SO-ARM</a></h4>
+    <p>Escolha um host, calibre os braços e configure as duas câmeras.</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4><a href="#usar-nvidia-brev-para-treinar-políticas">Fazer fine-tuning na NVIDIA Brev</a></h4>
+    <p>Prepare o ambiente na nuvem, faça o fine-tuning do modelo e exporte o checkpoint.</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
+    <h4><a href="#inferência-isaac-gr00t-n15-no-thor">Implantar a inferência no Thor</a></h4>
+    <p>Inicie o serviço e o cliente de inferência e verifique a configuração física.</p>
+  </div>
+</section>
+
 </div>
-
-<p></p>
-
-**Instruções detalhadas passo a passo e documentação de referência são fornecidas para ajudar você a ir da configuração inicial até a implantação completa.**
 
 ## Primeiros Passos com o Kit de Desenvolvimento NVIDIA Jetson Thor
 
@@ -41,37 +95,71 @@ Este wiki explica como **ajustar finamente o NVIDIA Isaac GR00T N1.5** para o **
 
 O **Kit de Desenvolvimento NVIDIA® Jetson AGX Thor™** é uma potência para IA física e robótica humanoide. Ele é construído em torno da GPU NVIDIA Blackwell e inclui **128 GB de memória de alta velocidade**, fornecendo **até 2.070 FP4 TFLOPS** de computação de IA enquanto opera dentro de um envelope de energia de **40-130 W** (uso comum até 130 W).
 
-Você pode adquirir o Kit de Desenvolvimento Jetson AGX Thor na Seeed Studio aqui: [Seeed – NVIDIA Jetson AGX Thor™ Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html" target="_blank" rel="noopener noreferrer">
+    <span>Obter o Jetson AGX Thor Developer Kit</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/other/thor-post.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/other/thor-post.png" alt="Jetson AGX Thor Developer Kit" />
 </div>
 
 Os itens de hardware incluídos na caixa são uma unidade Thor e um adaptador de energia:
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/other/physical.jpeg"/>
+  <img width="800" src="https://files.seeedstudio.com/wiki/other/physical.jpeg" alt="Unidade Thor e adaptador de energia incluído" />
 </div>
 
 ### Gravando a Imagem de Sistema do Thor
 
-Em **10 de setembro de 2025**, a versão mais recente disponível da imagem de sistema para o Thor é **38.2**. Se você precisar regravar o sistema para o Thor, siga as instruções nesta seção.
-Itens Necessários para a Gravação:
+Este procedimento usa a imagem de sistema 38.2. Se precisar regravar o Thor, prepare os itens abaixo.
 
-- Um dispositivo host com mais de 25 GB de espaço livre em disco (Ubuntu ou Windows OS suportado)
-- Uma unidade USB com capacidade de pelo menos 16 GB
-- Um monitor e cabo de exibição DP/HDMI
-- Um ambiente de alimentação capaz de fornecer mais de 240 W
-- Um teclado com interface USB
+| Item | Requisito |
+| --- | --- |
+| Host | Ubuntu ou Windows com mais de 25 GB de espaço livre em disco. |
+| Unidade USB | Pelo menos 16 GB. |
+| Tela | Monitor e um cabo DisplayPort ou HDMI. |
+| Energia | Uma configuração capaz de fornecer mais de 240 W. |
+| Entrada | Teclado USB. |
+
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>Baixar a imagem do sistema</h4>
 
 Primeiro, baixe a imagem de sistema em formato ISO para o Thor a partir do site oficial da NVIDIA. Clique [aqui](https://developer.nvidia.com/embedded/jetpack/downloads) para visitar a página de download:
 
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/38.2-iso.png"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/38.2-iso.png" alt="Imagem 38.2 do Thor na página de download do JetPack" />
 </div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Instalar o Balena Etcher</h4>
 
 Instale o Balena Etcher na máquina host. Para baixar o instalador, clique [aqui](https://etcher.balena.io/#:~:text=DOWNLOAD-,Download%20Etcher,-ASSET) e selecione a versão apropriada com base no sistema operacional do host:
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/balena.jpg"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/balena.jpg" alt="Página de download do instalador do Balena Etcher" />
 </div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>Criar a unidade USB inicializável</h4>
 
 Após baixar o arquivo de imagem ISO e instalar com sucesso o **Balena Etcher**, insira a unidade USB na máquina host. Em seguida, inicie o **Balena Etcher** para criar uma unidade USB inicializável para gravar o Thor:
 :::danger
@@ -81,50 +169,77 @@ Este processo irá formatar a unidade USB. Certifique-se de fazer backup de todo
 Selecione o arquivo de imagem ISO baixado no seu armazenamento local e depois escolha o dispositivo de destino — ou seja, sua unidade USB.
 <mark>Certifique-se de verificar cuidadosamente o nome do dispositivo de destino e o diretório de montagem!</mark>  Clique em `Flash!` e aguarde até que o processo seja concluído. Quando terminar, a unidade USB para gravar o sistema no Thor estará pronta:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/step1.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/target.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/flash-U.png" width="300"/>
+  <img src="https://files.seeedstudio.com/wiki/other/step1.png" width="300" alt="Seleção da imagem ISO no Etcher" />
+  <img src="https://files.seeedstudio.com/wiki/other/target.png" width="300" alt="Verificação da unidade USB de destino no Etcher" />
+  <img src="https://files.seeedstudio.com/wiki/other/flash-U.png" width="300" alt="Início da gravação no Etcher" />
 </div>
 
-<p></p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>Conectar os periféricos</h4>
 
 Em seguida, insira a unidade USB preparada, o teclado, o cabo de exibição (DP/HDMI) e a fonte de alimentação (Type-C) na placa Thor para iniciar o processo de gravação.
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/flash-insert.jpg"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/flash-insert.jpg" alt="Periféricos conectados ao Thor para a gravação" />
 </div>
 
-<p></p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
+    <h4>Inicializar pelo USB</h4>
 
 Ligue o Thor e entre na interface de inicialização. Selecione `Boot Manager` e, em seguida, escolha a unidade USB que foi inserida no Thor (com base no nome da sua unidade USB). Pressione Esc para retornar ao menu anterior e selecione `Continue`:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/BootM.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/selectU.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/continue.png" width="300"/>
+  <img src="https://files.seeedstudio.com/wiki/other/BootM.png" width="300" alt="Boot Manager na UEFI do Thor" />
+  <img src="https://files.seeedstudio.com/wiki/other/selectU.png" width="300" alt="Seleção da unidade USB no Boot Manager" />
+  <img src="https://files.seeedstudio.com/wiki/other/continue.png" width="300" alt="Seleção de Continue no menu de inicialização" />
 </div>
 
-<p></p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">6</span>
+  <div className="rebot-step-content">
+    <h4>Gravar na NVMe</h4>
 
 Após uma breve tela preta, a seguinte interface aparecerá. Selecione `Jetson Thor options` e pressione Enter. Em seguida, escolha a opção
 `Flash Jetson AGX Thor Developer Kit on NVMe 0.2.0-r38.2` para gravar a imagem de sistema na unidade de estado sólido NVMe do Thor:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450"/>
-  <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450"/>
+  <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450" alt="Jetson Thor options no menu de inicialização" />
+  <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450" alt="Seleção da NVMe de destino para a imagem de sistema do Thor" />
 </div>
 
 Uma grande quantidade de informações de log será exibida na tela. Aguarde aproximadamente **15 minutos**. Quando esta etapa for concluída, o dispositivo será reiniciado automaticamente e avançará para a próxima interface. Aguarde até que a barra de **Update Progress** atinja 100%, o que indica que o processo de gravação foi concluído com sucesso:
-<div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450"/>
-  <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450"/>
-</div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">7</span>
+  <div className="rebot-step-content">
+    <h4>Concluir a configuração do sistema</h4>
 
 Após a gravação, você pode prosseguir com a configuração inicial do sistema:
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/ubuntu24.png"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/ubuntu24.png" alt="Configuração inicial do Ubuntu após a gravação" />
 </div>
 
 :::warning
 Esta imagem de sistema não inclui CUDA, TensorRT ou outros componentes de SDK do JetPack.
 :::
+
+  </div>
+</section>
+
+</div>
 
 ## Configuração Básica do Ambiente de Desenvolvimento no Thor
 
@@ -134,15 +249,70 @@ Observe que as dependências listadas são **apenas para referência** — insta
 
 ### Instalando Dependências Essenciais de Desenvolvimento
 
-**Instalação do JetPack SDK**
-<p></p>
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>Instalar o SDK do JetPack</h4>
+
 Abra o terminal e execute o seguinte comando. Após uma breve espera, CUDA, TensorRT e outros componentes do SDK serão instalados:
 ```bash
 sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
-**Instalação de Navegador**
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Instalar o Miniconda</h4>
+
+O Miniconda é usado para isolar ambientes de desenvolvimento. Para instalar o miniconda, consulte as instruções a seguir：
+
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+chmod +x Miniconda3-latest-Linux-aarch64.sh
+./Miniconda3-latest-Linux-aarch64.sh
+source ~/.bashrc
+conda --version
+```
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>Obter a compilação de GPU do PyTorch</h4>
+
+Compilar a versão de GPU do PyTorch a partir do código-fonte no Thor pode resultar em problemas de compatibilidade. Para conveniência, fornecemos um arquivo `.whl` pré-compilado para ajudar os desenvolvedores a configurar rapidamente um ambiente de desenvolvimento com PyTorch no Thor.
+
+Aqui, é fornecido um arquivo wheel pré-compilado para instalar o PyTorch 2.9 no Thor. Este arquivo foi compilado em um ambiente `Python 3.10 + CUDA 13`.
+
+| Pacote | Baixar |
+| --- | --- |
+| PyTorch 2.9 | [.whl](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN) |
+| torchvision 0.24 | [.whl](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr) |
+| torchvision 0.23 | [.whl](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9) |
+
+
+Outros arquivos `.whl` de dependências pré-compiladas de <mark>Python **3.12** + CUDA 13</mark> para o Thor podem ser encontrados em:
+[**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130).
+
+Se o arquivo wheel esperado não estiver disponível, o desenvolvedor precisará compilar as dependências necessárias por conta própria para concluir a configuração do ambiente de desenvolvimento.
+
+  </div>
+</section>
+
+</div>
+
+<details className="rebot-demo-details">
+<summary>Ferramentas opcionais</summary>
+
+**Instalar o Firefox**
 
 O Firefox foi testado e verificado para rodar de forma estável no Ubuntu 24.04:
 
@@ -151,7 +321,7 @@ sudo apt update
 sudo apt install firefox
 ```
 
-**Instalação do Jtop**
+**Instalar o jtop**
 
 Para instalar o jtop, consulte as instruções a seguir.
 
@@ -164,32 +334,7 @@ sudo pip3 install -U pip
 sudo pip3 install jetson-stats
 ```
 
-**Instalação do Miniconda**
-
-O Miniconda é usado para isolar ambientes de desenvolvimento. Para instalar o miniconda, consulte as instruções a seguir：
-
-```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
-source ~/.bashrc
-conda --version
-```
-
-**Instalando a Versão de GPU do PyTorch**
-
-Compilar a versão de GPU do PyTorch a partir do código-fonte no Thor pode resultar em problemas de compatibilidade. Para conveniência, fornecemos um arquivo `.whl` pré-compilado para ajudar os desenvolvedores a configurar rapidamente um ambiente de desenvolvimento com PyTorch no Thor.
-
-Aqui, é fornecido um arquivo wheel pré-compilado para instalar o PyTorch 2.9 no Thor. Este arquivo foi compilado em um ambiente `Python 3.10 + CUDA 13`.  
-clique em [**Python 3.10 + CUDA 13 pytorch2.9**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN) para baixar o arquivo `.whl`.  
-clique em [**Python 3.10 + CUDA 13 torchvision0.24**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr) para baixar o arquivo `.whl`.  
-clique em [**Python 3.10 + CUDA 13 torchvision0.23**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9) para baixar o arquivo `.whl`.
-
-
-Outros arquivos `.whl` de dependências pré-compiladas de <mark>Python **3.12** + CUDA 13</mark> para o Thor podem ser encontrados em:  
-[**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130).
-
-Se o arquivo wheel esperado não estiver disponível, o desenvolvedor precisará compilar as dependências necessárias por conta própria para concluir a configuração do ambiente de desenvolvimento.
+</details>
 
 ### Instalando Dependências Adicionais
 
@@ -202,8 +347,8 @@ Como o tamanho da imagem excede 40 GB, o download a partir do servidor é relati
 
 Esta imagem Docker pode executar de forma estável a inferência do GR00T N1.5. A saída do comando `pip list` na imagem é a seguinte:
 
-<details>
-<summary> pip.list </summary>
+<details className="rebot-demo-details">
+<summary>Ver os pacotes Python da imagem de referência (<code>pip list</code>)</summary>
 
 ```bash
 Package                   Version           Location         Installer                              Editable project location
@@ -540,16 +685,10 @@ sudo docker run --rm -it \
 
 ## Coleta de Dados Usando o SO-ARM
 
-Para um tutorial detalhado sobre coleta de dados, consulte o seguinte link:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#registrar-o-conjunto-de-dados)  
-**Este link contém um tutorial completo para o SO-ARM, cobrindo configuração, montagem, calibração, coleta de dados, treinamento e inferência.**
+Colete dados no Jetson ou em um PC com Ubuntu. Escolha o host conectado aos braços e às câmeras e siga as etapas compartilhadas.
 
-A coleta de dados para o braço robótico lerobot pode ser realizada em um PC ou diretamente em um dispositivo Jetson.
-
-- Método 1: Coletar dados usando Jetson
-- Método 2: Coletar dados usando um PC com Ubuntu
-
-Os procedimentos de coleta de dados são essencialmente os mesmos para ambos os métodos.
+<Tabs>
+<TabItem value="jetson" label="Jetson">
 
 :::warning
 **O Jetson pode não conseguir transmitir simultaneamente duas câmeras USB com os mesmos requisitos de largura de banda. Se você conectar duas câmeras USB, elas devem estar ligadas a chips de hub USB diferentes!**
@@ -558,39 +697,70 @@ Os procedimentos de coleta de dados são essencialmente os mesmos para ambos os 
 Para transmitir duas câmeras USB simultaneamente no Thor, após conectar uma câmera à porta USB-A, você também precisará usar um **hub USB externo conectado via porta USB Type-C**. Isso garante que a segunda câmera USB seja montada em um controlador de hub USB diferente dentro do Thor.
  Um exemplo de hub USB Type-C compatível é mostrado abaixo:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/hub.png" height="400"/>
+  <img src="https://files.seeedstudio.com/wiki/other/hub.png" style={{height: 'auto', maxHeight: 400}} alt="Exemplo de hub Type-C para a segunda câmera USB" />
 </div>
 
 
 A base USB Type-C deve ser conectada a portas específicas no Thor para garantir que os periféricos funcionem corretamente, como mostrado abaixo:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="400"/>
+  <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" style={{height: 'auto', maxHeight: 400}} alt="Porta Type-C do Thor para o hub USB externo" />
 </div>
 
-### Configuração do Ambiente Lerobot (opcional)
+</TabItem>
+<TabItem value="ubuntu" label="PC com Ubuntu">
 
-O processo de configuração do ambiente de desenvolvimento para o Lerobot pode ser encontrado na subseção do seguinte link:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#instalar-lerobot)
+Instale o LeRobot no PC com Ubuntu e conecte os braços e as câmeras. Use as etapas compartilhadas abaixo para calibrar e gravar.
 
+</TabItem>
+</Tabs>
 
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
+### Configuração do Ambiente Lerobot (opcional) {#configuração-do-ambiente-lerobot-opcional}
+
+Se o LeRobot não estiver no host de coleta de dados, siga as [etapas de instalação do LeRobot](/pt-br/lerobot_so100m_new/#instalar-lerobot) da sua plataforma.
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### Configurar os motores
 
 
-Os motores em cada junta do SO-ARM precisam ser configurados antes da montagem. As etapas de configuração podem ser encontradas na subseção do seguinte link:    
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#configurar-os-motores)
+Os motores em cada junta do SO-ARM precisam ser configurados antes da montagem. As etapas de configuração podem ser encontradas na subseção do seguinte link:
+[Configurar os motores](/pt-br/lerobot_so100m_new/#configurar-os-motores-e-montar-o-braço)
 
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
 ### Montagem
 
-O processo de instalação dos braços mestre e seguidor do SO-ARM pode ser encontrado na subseção do seguinte link:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#montagem)
+O processo de instalação dos braços mestre e seguidor do SO-ARM pode ser encontrado na subseção do seguinte link:
+[Montar o líder e o seguidor](/pt-br/lerobot_so100m_new/#configurar-os-motores-e-montar-o-braço)
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
 
 ### Calibração do SO-ARM
 
 
-Depois que o SO-ARM estiver totalmente montado, será necessária a calibração. Consulte a subseção do seguinte link para o procedimento de calibração:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#calibrar)
+Depois que o SO-ARM estiver totalmente montado, será necessária a calibração. Consulte a subseção do seguinte link para o procedimento de calibração:
+[Calibrar o braço robótico](/pt-br/lerobot_so100m_new/#calibrar-o-braço-robótico)
 
 
 
@@ -600,40 +770,62 @@ Depois que o SO-ARM estiver totalmente montado, será necessária a calibração
 
 **Após executar o script de calibração, mova manualmente cada junta do braço robótico para garantir que ela atinja todo o seu intervalo de movimento! Caso contrário, poderá ocorrer uma incompatibilidade entre as poses dos braços líder e seguidor durante a teleoperação.**
 
+  </div>
+</section>
 
-
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
 
 ### Adição de Câmera
 
 Geralmente é recomendável instalar uma câmera no punho/garra do braço robótico e outra câmera na superfície da mesa, para garantir cobertura adequada da postura do braço.
 <mark>A abordagem específica de instalação depende do seu cenário de aplicação; o exemplo mostrado abaixo é apenas para referência.</mark>
 
-Para mais detalhes, consulte a subseção do seguinte link:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#adicionar-câmeras)
+Para mais detalhes, consulte a subseção do seguinte link:
+[Adicionar câmeras](/pt-br/lerobot_so100m_new/#adicionar-câmeras)
 
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">6</span>
+  <div className="rebot-step-content">
 
 ### Coleta de Dados
 
-Após concluir a instalação das câmeras e a calibração do braço robótico, o procedimento de coleta do conjunto de dados pode ser encontrado na subseção do seguinte link:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#registrar-o-conjunto-de-dados)
+Após concluir a instalação das câmeras e a calibração do braço robótico, o procedimento de coleta do conjunto de dados pode ser encontrado na subseção do seguinte link:
+[Gravar o conjunto de dados](/pt-br/lerobot_so100m_new/#gravar-conjunto-de-dados)
 
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">7</span>
+  <div className="rebot-step-content">
 
 ### Visualização dos Dados Coletados
 
 
-Para visualizar os dados coletados no SO-ARM, consulte a subseção do seguinte link:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#visualizar-o-conjunto-de-dados)
+Para visualizar os dados coletados no SO-ARM, consulte a subseção do seguinte link:
+[Visualizar o conjunto de dados](/pt-br/lerobot_so100m_new/#visualizar-dataset)
 
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">8</span>
+  <div className="rebot-step-content">
 
 ### Treinamento de Política
 
-Com base nos dados coletados, o procedimento para treinar uma Policy pode ser encontrado na subseção do seguinte link:  
-[https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#treinar-uma-política)
+Com base nos dados coletados, o procedimento para treinar uma Policy pode ser encontrado na subseção do seguinte link:
+[Treinar e avaliar](/pt-br/lerobot_so100m_new/#treinar-e-avaliar)
 
+  </div>
+</section>
 
+</div>
 
 :::tip
 Nas seções a seguir, apresentaremos uma plataforma de treinamento em nuvem e demonstraremos o uso básico. Você pode optar por concluir o treinamento de forma mais eficiente no servidor remoto.
@@ -648,45 +840,77 @@ Se você optar por treinar a política na nuvem, certifique-se de que seu conjun
 O NVIDIA Brev oferece acesso simplificado a instâncias de GPU NVIDIA em plataformas de nuvem populares, configuração automática de ambiente e opções de implantação flexíveis, permitindo que desenvolvedores comecem a experimentar instantaneamente.
 
 URL de acesso à plataforma:
-[https://login.brev.nvidia.com/signin](https://login.brev.nvidia.com/signin)
+[Entrar na NVIDIA Brev](https://login.brev.nvidia.com/signin)
 
 Você precisará registrar uma conta para usar a plataforma. Esta seção apresenta o uso básico da plataforma de treinamento.
 
 ### Habilitando a Plataforma de Treinamento em Nuvem
 
-**Instruções Passo a Passo**
+<div className="rebot-step-flow">
 
-- Criar uma Instância de Servidor em Nuvem - passo 1
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>Começar a criar uma instância na nuvem</h4>
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train0.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train0.png" width="600" alt="Criação de uma instância na nuvem da NVIDIA Brev" />
 </div>
 
-- Criar uma Instância de Servidor em Nuvem - passo 2
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Configurar a instância</h4>
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train1.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train1.png" width="600" alt="Configuração de uma instância na nuvem da NVIDIA Brev" />
 </div>
 
-- Criar uma Instância de Servidor em Nuvem - passo 3
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>Revisar e iniciar a instância</h4>
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train2.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train2.png" width="600" alt="Inicialização de uma instância na nuvem da NVIDIA Brev" />
 </div>
 
-**Iniciar o Jupyter Notebook baseado na Web**：
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>Abrir o Jupyter Notebook</h4>
+
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/jnote0.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/jnote0.png" width="600" alt="Entrada do Jupyter Notebook na instância da NVIDIA Brev" />
 </div>
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/jnote1.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/jnote1.png" width="600" alt="Jupyter Notebook no navegador" />
+</div>
+
+  </div>
+</section>
+
 </div>
 
 ### Treinando o Modelo e Exportando do Servidor
 
 **Os desenvolvedores podem treinar modelos diretamente no terminal do notebook. Abaixo está um exemplo para treinar um GR00T N1.5 e exportá-lo do servidor posteriormente.**
 
-Instalar o Conda no servidor:
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>Instalar o Conda</h4>
 
 ```bash
 mkdir -p ~/miniconda3
@@ -697,13 +921,27 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-Clonar o repositório Isaac-GR00T: 
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Clonar o Isaac-GR00T</h4>
+
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T
 cd Isaac-GR00T
 ```
 
-Criar o ambiente gr00t:
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>Criar o ambiente de treinamento</h4>
+
 ```bash
 conda create -n gr00t python=3.10
 conda activate gr00t
@@ -719,8 +957,13 @@ Se você treinar ou ajustar o GR00T em uma plataforma de nuvem, deverá usar uma
 Para mais detalhes sobre ajuste fino do modelo, consulte:
 [https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File](https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File)
 
+  </div>
+</section>
 
-Ajuste fino do modelo GR00T N1.5:
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>Executar o fine-tuning</h4>
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -733,22 +976,35 @@ python scripts/gr00t_finetune.py \
 ```
 
 :::note
-As configurações padrão de ajuste fino exigem cerca de 25G de VRAM. Se você não tiver tanta VRAM, tente adicionar a flag `--no-tune_diffusion_model` ao script gr00t_finetune.py.
+As configurações padrão de fine-tuning exigem cerca de 25G de VRAM. Se você não tiver essa quantidade de VRAM, tente adicionar a flag `--no-tune_diffusion_model` ao script gr00t_finetune.py.
 :::
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train4.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train4.png" width="600" alt="Saída do terminal durante o fine-tuning do GR00T N1.5" />
 </div>
 
 :::note
-Se você quiser treinar ou ajustar o Gr00t em um servidor, pode consultar este [link](https://github.com/NVIDIA/Isaac-GR00T).
+Se quiser treinar ou fazer o fine-tuning do GR00T em um servidor, consulte este [link](https://github.com/NVIDIA/Isaac-GR00T).
 :::
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
+    <h4>Baixar o checkpoint</h4>
 
 **Após a conclusão do treinamento, talvez você queira baixar o modelo para sua máquina local. Mas a barra lateral do Jupyter Notebook não oferece suporte à navegação direta para pastas de treinamento de modelos.**
 
 A solução é: primeiro compacte a pasta de destino em um arquivo `.zip` ou `.tar.gz` e, em seguida, baixe o arquivo compactado através da interface do notebook. Consulte a figura abaixo para um exemplo.
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600" alt="Download do arquivo de checkpoint pelo Jupyter Notebook" />
+</div>
+
+  </div>
+</section>
+
 </div>
 
 ## Inferência Isaac GR00T N1.5 no Thor
@@ -759,13 +1015,28 @@ GR00T N1.5 é um sistema base de código aberto lançado pela NVIDIA Research na
 
 ### Preparação
 
-Os modelos pré-treinados do GR00T N1.5 estão disponíveis via **Hugging Faces**. Você pode baixá-los a partir do seguinte link:
+<div className="rebot-step-flow">
 
-[https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main](https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main)
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>Obter os pesos pré-treinados</h4>
+
+Os modelos pré-treinados do GR00T N1.5 estão disponíveis no **Hugging Face**. Você pode baixá-los pelo link a seguir:
+
+[GR00T-N1.5-3B (Hugging Face)](https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main)
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/gr00tD.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/gr00tD.png" width="600" alt="Pesos do GR00T N1.5 no Hugging Face" />
 </div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Iniciar o contêiner Docker</h4>
 
 Todas as dependências necessárias para a inferência do GR00T já foram pré-configuradas em uma imagem Docker dedicada.
 
@@ -784,7 +1055,15 @@ sudo docker run --rm -it \
   <image_name>:<tag>
 ```
 
-Faça o git clone do código-fonte do Gr00t e instale-o:
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>Instalar o Isaac-GR00T</h4>
+
+Faça git clone do código-fonte do GR00T e instale-o:
 
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T.git
@@ -793,7 +1072,12 @@ pip install --upgrade setuptools
 pip install -e .[thor]
 ```
 
-Gr00t é totalmente compatível com os conjuntos de dados coletados usando o framework lerobot. Consulte a seção anterior "**Data Collection**" para preparar seu conjunto de dados para o fine-tuning do modelo Gr00t.
+O GR00T é totalmente compatível com os conjuntos de dados coletados com o framework LeRobot. Consulte a seção anterior "**Coleta de Dados**" para preparar o conjunto de dados usado no fine-tuning do modelo GR00T.
+
+  </div>
+</section>
+
+</div>
 
 ### Fine-Tuning do Modelo (opcional)
 
@@ -802,6 +1086,9 @@ Se você já fez o fine-tuning do GR00T N1.5 no NVIDIA Brev, pode pular esta eta
 :::
 
 **O processo de fine-tuning pode ser executado tanto na plataforma de treinamento em nuvem fornecida quanto diretamente dentro do contêiner Docker no Thor**.
+
+<Tabs>
+<TabItem value="hub-weights" label="Hugging Face">
 
 Se você não baixou nenhum modelo GR00T pré-treinado e não pretende usar uma versão personalizada, pode usar o seguinte comando para fazer o fine-tuning com base nos pesos do Hugging Face:
 
@@ -817,6 +1104,9 @@ python scripts/gr00t_finetune.py \
 
 Esse script irá automaticamente baixar o modelo GR00T pré-treinado do Hugging Face e iniciar o processo de fine-tuning.
 
+</TabItem>
+<TabItem value="local" label="Pesos locais">
+
 Se desejar usar um modelo GR00T pré-treinado armazenado localmente, modifique o comando da seguinte forma:
 
 ```bash
@@ -830,6 +1120,9 @@ python scripts/gr00t_finetune.py \
    --base-model-path ./pretrained/GR00T-N1.5-3
 ```
 
+</TabItem>
+</Tabs>
+
 `--dataset-path` é o caminho de arquivo dos dados coletados do SO-ARM.
 
 :::note
@@ -840,8 +1133,15 @@ As configurações padrão de fine-tuning exigem cerca de 25G de VRAM. Se você 
 
 Para obter o desempenho ideal, é recomendável reproduzir o mais fielmente possível o ambiente real utilizado durante a coleta de dados ao implantar modelos GR00T com fine-tuning. Isso porque as capacidades de generalização do modelo são limitadas.
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
+  <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400" alt="Espaço de trabalho do SO-ARM para a inferência física do GR00T" />
 </div>
+
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>Iniciar o serviço de inferência</h4>
 
 Dentro do contêiner Docker, abra um terminal e inicie o serviço de inferência do GR00T:
 
@@ -855,14 +1155,30 @@ python scripts/inference_service.py --server \
 
 Após a inicialização bem-sucedida, o terminal deve exibir logs semelhantes a:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600" alt="Logs de inicialização do serviço de inferência do GR00T" />
 </div>
 
-Abra outro terminal e use o seguinte comando para entrar no mesmo contêiner a partir de outro shell:
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Abrir outro shell no mesmo contêiner</h4>
+
+Abra outro terminal e substitua `<container-id>` pelo ID do contêiner em execução.
 
 ```bash
-sudo docker exec -it <container id> /bin/bahs
+sudo docker exec -it <container-id> /bin/bash
 ```
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>Iniciar o cliente do braço</h4>
 
 Em seguida, nesse segundo shell, inicie o cliente de inferência:
 
@@ -880,7 +1196,7 @@ Substitua `index_or_path` pelo número de índice da sua câmera; você pode enc
 
 Quando o processo do cliente for iniciado com sucesso, a seguinte saída deverá aparecer:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/deploy2.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/deploy2.png" width="600" alt="Logs de inicialização do cliente de inferência do SO-ARM" />
 </div>
 
 :::tip
@@ -889,63 +1205,131 @@ Durante a primeira execução do processo do cliente, você deve calibrar os ser
 Certifique-se de que cada junta se mova por toda a sua faixa de movimento para garantir o comportamento adequado de teleoperação e inferência.
 :::
 
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>Verificar a inferência física</h4>
+
 Depois que tudo estiver configurado, o GR00T N1.5 poderá ser implantado com sucesso no Jetson AGX Thor. O sistema e o ambiente de hardware agora estão verificados para suportar a inferência completa:
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600" alt="SO-ARM executando a inferência do GR00T no Thor" />
+</div>
+
+  </div>
+</section>
+
 </div>
 
 ## FAQ
 
-**P1: A ferramenta Brev CLI não funciona na plataforma de treinamento em nuvem?**  
+<details className="rebot-demo-details">
+<summary>A ferramenta Brev CLI não funciona na plataforma de treinamento em nuvem?</summary>
+
 Isso geralmente é causado por problemas de rede.
 Você pode instalar e fazer login no Brev CLI no seu host Ubuntu local e, em seguida, tentar se conectar à sua instância em nuvem usando SSH a partir do terminal local.
 
-**P2: Como faço para enviar dados para a plataforma de treinamento?**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Como faço para enviar dados para a plataforma de treinamento?</summary>
+
 Use o seguinte comando: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`, por exemplo `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
+</details>
 
-**P3: A tela do Thor fica preta assim que a instalação começa**  
+<details className="rebot-demo-details">
+<summary>A tela do Thor fica preta quando a instalação começa</summary>
+
 Se você usar um pendrive de instalação Jetson em um Jetson AGX Thor Developer Kit que já foi usado ou configurado anteriormente, é necessário habilitar o SoC Display Hand-Off no `UEFI setup menu`.
 Na verdade, o processo de flashing continua em segundo plano durante esse período; depois de um tempo, a área de trabalho do Ubuntu aparecerá.
 
-**P4: Não tenho saída de vídeo no monitor (conectado por meio de um KVM)**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Não tenho saída de vídeo no monitor (conectado por um KVM)</summary>
+
 Sabe-se que alguns switches/dispositivos KVM não lidam bem com a saída de vídeo do Jetson AGX Thor Developer Kit. Conecte o monitor diretamente ao Jetson AGX Thor Developer Kit.
 
-**P5: Depois de fazer o flashing do Thor, o HDMI às vezes não mostra sinal em inicializações posteriores**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Depois de gravar o Thor, o HDMI às vezes não mostra sinal nas inicializações seguintes</summary>
+
 Uma solução alternativa que tem se mostrado eficaz é mudar para o conector DisplayPort (DP) para saída de vídeo.
 
-**P6: Nenhuma entrada de teclado é detectada durante o flashing da imagem do Thor**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Nenhuma entrada de teclado é detectada durante a gravação da imagem do Thor</summary>
+
 Recomendamos usar um teclado com fio durante o flashing. Teclados sem fio podem ter compatibilidade limitada durante o processo de flashing do Thor.
 
-**P7: O fine-tuning em nuvem do GR00T informa “GPU not supported”**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>O fine-tuning de GR00T na nuvem informa “GPU not supported”</summary>
+
 Não utilize GPUs mais antigas que a `Ampere architecture` para o fine-tuning em nuvem do GR00T (por exemplo, RTX A6000 ou GeForce RTX 4090). A V100 (Volta) não é suportada para treinamento ou fine-tuning do GR00T.
 
-**P8: O nome do dispositivo serial da placa controladora do braço robótico não aparece em /dev**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>O nome do dispositivo serial da placa controladora do braço robótico não aparece em <code>/dev</code></summary>
+
 O sistema Thor padrão não inclui drivers `CH34x`. Se eles estiverem ausentes, instale-os a partir de:
 https://github.com/juliagoda/CH341SER
 
-**P9: A porta Type-C do Thor não reconhece um hub externo**  
-Para usar um hub externo via Type-C do Thor, conecte-o à porta Type-C mais próxima do conector QSFP28. (Ambas as portas Type-C fornecem energia, mas apenas a especificada oferece suporte confiável ao hub.)
-<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="200"/> </div>
+</details>
 
-**P10: Ao fazer o flashing com uma placa de captura, o sistema depois diz que a senha do usuário está incorreta**  
+<details className="rebot-demo-details">
+<summary>A porta Type-C do Thor não reconhece um hub externo</summary>
+
+Para usar um hub externo via Type-C do Thor, conecte-o à porta Type-C mais próxima do conector QSFP28. (Ambas as portas Type-C fornecem energia, mas apenas a especificada oferece suporte confiável ao hub.)
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" style={{height: 'auto', maxHeight: 200}} alt="Porta Type-C do Thor para o hub USB externo" /> </div>
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>Ao gravar com uma placa de captura, o sistema depois diz que a senha do usuário está incorreta</summary>
+
 Ao usar um desktop com placa de captura durante o flashing, pode ocorrer um bug de entrada de teclado (a entrada não corresponde ao que é digitado). Verifique cuidadosamente a senha do usuário ao defini-la.
 
-**P11: Onde fica a porta de debug do Thor?**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Onde fica a porta de depuração do Thor?</summary>
+
 A porta de debug Type-C do Thor fica escondida sob a tampa magnética. Vários nós de dispositivo serial podem ser criados; use aquele com o menor índice para fazer login no Thor via serial.
 
-**P12: Não é possível executar scripts LeRobot para inferir ACT na imagem do GR00T**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Não é possível executar scripts do LeRobot para inferir ACT na imagem do GR00T</summary>
+
 Não recomendamos chamar APIs do LeRobot para inferência de `ACT` em um ambiente Python 3.12. Scripts de `Calibration` e `find port` não apresentam problema. Observe que o Ubuntu 24 usa Python 3.12 como padrão localmente.
 
-**P13: Como verificar a utilização de SM da GPU no Thor?**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Como verificar a utilização de SM da GPU no Thor?</summary>
+
 Execute:
 ```bash
 nvidia-smi dmon -s puc
 ```  
 Verifique a coluna `sm` na saída.
 
-**P14: Não é possível ler dados da porta serial do driver do braço robótico**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Não é possível ler dados da porta serial do driver do braço robótico</summary>
+
 Não conecte a câmera antes da placa driver SO-ARM; fazer isso pode causar um mapeamento incorreto de dispositivos seriais. Além disso, certifique-se de que as permissões da porta serial tenham sido concedidas.
+
+</details>
 
 ## Referências
 
@@ -964,4 +1348,6 @@ Obrigado por escolher nossos produtos! Estamos aqui para lhe oferecer diferentes
 <div class="button_tech_support_container">
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
 </div>
