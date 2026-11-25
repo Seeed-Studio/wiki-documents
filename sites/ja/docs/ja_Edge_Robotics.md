@@ -119,6 +119,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>reBot-DM 両腕協調</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>Isaac Sim と連携した reBot-DM</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-DM Web 制御システム：実機 &amp; MuJoCo</b></div></a>
+        <a className="step-card" href="/ja/rebot_b601_dm_holoscan_gravity_compensation/"><span className="step-index">6</span><div><b>reBot-DM Holoscan5 重力補償</b></div></a>
       </div>
     </div>
     <div className="learning-group">

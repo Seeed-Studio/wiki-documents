@@ -1,7 +1,7 @@
 ---
 description: Configure a preensão visual em mesa no reBot Arm B601-RS com uma Orbbec Gemini 336 e YOLOE. Visualize antecipadamente preensões OBB, faça a calibração mão‑olho e execute o braço com backends opcionais AnyGrasp ou GraspNet-Baseline.
-title: Preensão Visual Multi‑Backend com reBot Arm B601-RS
-sidebar_label: Preensão Visual Multi‑Backend com reBot Arm B601-RS
+title: Preensão Visual Multi‑Backend com reBot-RS
+sidebar_label: Preensão Visual Multi‑Backend com reBot-RS
 keywords:
   - reBot Arm B601-RS
   - RGB-D
