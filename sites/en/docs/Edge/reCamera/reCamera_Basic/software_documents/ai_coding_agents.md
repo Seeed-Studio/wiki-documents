@@ -13,7 +13,7 @@ image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 slug: /recamera_2002_development_cpp_skill
 sidebar_position: 6
 last_update:
-  date: '2026-11-20'
+  date: '2026-11-25'
   author: Go
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
@@ -89,7 +89,7 @@ Use the recamera-2002-cpp-dev skill to implement people counting in the camera v
 ```
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/2002_skill_begin.png" alt="Starting a people counting task with the recamera-2002-cpp-dev skill" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/recamera-people-counter-status-en.png" alt="Starting a people counting task with the recamera-2002-cpp-dev skill" />
   <p><em>The agent handles validation, cross-compilation, packaging, deployment, and the live viewer automatically</em></p>
 </div>
 
