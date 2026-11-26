@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /zed_x_gmsl_cameras_on_recomputer_robotics
 last_update:
-  date: 11/06/2026
+  date: 11/26/2026
   author: Dayu
 createdAt: '2026-09-27'
-updatedAt: '2026-11-06'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/cn/zed_x_gmsl_cameras_on_recomputer_robotics/
 ---
 
@@ -227,7 +227,7 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
-本指南说明如何在 Seeed Studio 机器人硬件上使用 **Stereolabs ZED X 系列 GMSL2 相机**。目前提供 **reComputer Robotics J50 Mini** 和 **reComputer Robotics J50（J501）** 的安装步骤与驱动下载；J40 和 J601 的操作流程将在后续补充。
+本指南说明如何在 Seeed Studio 机器人硬件上使用 **Stereolabs ZED X 系列 GMSL2 相机**。目前提供 **reComputer Robotics J50 Mini、J50（J501）和 J40（J401）** 的设置步骤。J601 专用驱动资源仍在准备中。
 
 ## 选择你的平台
 
@@ -277,11 +277,11 @@ import TabItem from '@theme/TabItem';
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J40"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status zed-status-soon">● 指南即将推出</span>
+        <span className="zed-status">● 指南已提供</span>
         <h3>reComputer Robotics J40</h3>
         <div className="zed-product-description">一款均衡的 Orin Nano/NX 机器人计算机，具备丰富的传感器 I/O，以及可选的四路 GMSL2 相机扩展，适用于自主机器人和实时边缘感知。</div>
         <div className="zed-actions">
-          <a className="zed-button" href="#device-specific-setup">查看状态 ↓</a>
+          <a className="zed-button" href="#device-specific-setup">打开设置 ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank" rel="noopener noreferrer">查看产品 ↗</a>
         </div>
       </div>
@@ -605,36 +605,121 @@ ZED Studio 应该会检测到已连接的相机。打开实时预览并启用 **
   </TabItem>
   <TabItem value="j50" label="J50">
 
-### reComputer Robotics J50 (J501)
+### reComputer Robotics J50（J501）
 
-本节适用于搭载 GMSL 扩展板的 **reComputer Robotics J501**，需准备支持的 ZED X 系列相机，并运行 **JetPack 6.2.1 / L4T 36.4.4** 或 **JetPack 7.2 / L4T 39.2.0**。GMSL 接口位置与载板布局请参阅 [J501 硬件与快速上手指南](/cn/ai_robotics_recomputer_j501_robotics_getting_started)。
+本节适用于搭载 GMSL 扩展板的 **reComputer Robotics J501** 和支持的 ZED X 系列相机。你可以选择两种方式：刷入已集成 ZED X GMSL 支持的 BSP，或保留当前系统并安装匹配的驱动 DEB。载板布局和完整刷机指南请参阅 [J501 硬件与快速上手指南](/cn/ai_robotics_recomputer_j501_robotics_getting_started)。
 
 #### 1. 连接相机
 
-关闭 J501 并断开直流电源。使用兼容的 Fakra/Mini-Fakra 线缆将相机连接到 GMSL2 接口，确认接头锁紧后，再接通电源并启动设备。
+关闭 J501 并断开直流电源。使用兼容的 Fakra/Mini-Fakra 线缆将相机连接到 GMSL2 接口，锁紧接头后再接通电源并启动设备。
 
-#### 2. 安装 ZED X GMSL 驱动
+#### 2. 启用 ZED X GMSL 支持
 
-确认已安装的 Jetson Linux 版本：
+选择 **一种**方式。全新安装 JetPack 7.2 时刷写 BSP；若要保留现有的 JetPack 6.2.1 或 7.2 系统，则安装 DEB。
+
+<Tabs groupId="j501-robo-zed-method">
+  <TabItem value="flash-bsp" label="选项 1 · 刷写 JetPack 7.2 BSP" default>
+
+以下 JetPack 7.2 / L4T 39.2.0 BSP 已集成 ZED X GMSL 支持。请根据 Robotics J501 中安装的 AGX Orin 模组选择镜像：
+
+| Robotics J501 型号 | Jetson 模组 | BSP |
+| --- | --- | --- |
+| J5011 | AGX Orin 32GB | [下载 J5011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDiT6oqoI86SazEp2f6L1OmAYjtbYa35KL2hYc6PpGajJY) |
+| J5012 | AGX Orin 64GB | [下载 J5012 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAtCdJqu2sT4a8v5k_V0iKAUS5oCpVjlWoALrFl6UjD8Y) |
+
+:::warning
+刷写会清除目标 NVMe SSD 中的数据。开始前请备份重要数据，并在刷写完成前保持电源和 USB 连接稳定。如果要保留当前系统，请选择选项 2。
+:::
+
+#### 准备主机和 J501
+
+准备以下设备：
+
+- 搭载匹配 AGX Orin 模组的 reComputer Robotics J501
+- 已安装在 J501 上的 NVMe SSD
+- 运行 Ubuntu 20.04、22.04 或 24.04 的物理 Ubuntu 主机
+- USB Type-C 数据线
+- 用于首次启动设置的显示器、键盘和鼠标
+
+建议使用物理 Ubuntu 主机，不要使用虚拟机。JetPack 7.2 支持使用 Ubuntu 24.04 刷机和在目标设备上安装组件；如果需要主机开发组件，请使用 Ubuntu 20.04 或 22.04。
+
+将与 J501 模组匹配的 BSP 下载到 Ubuntu 主机。固件文件较大，下载可能需要约 60 分钟；请等待下载完成后再解压。
+
+#### 进入强制恢复模式
+
+1. 关闭 J501。使用 USB Type-C 数据线将主机连接到 J501 的 **USB 2.0 DEVICE** 接口。
+2. 使用取卡针按住 **RECOVERY** 按钮。
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/flash_1.png" alt="J501 USB DEVICE 接口和恢复按钮" />
+</div>
+
+3. 保持按住 RECOVERY，同时接通 J501 电源。
+4. 松开 RECOVERY。
+5. 在 Ubuntu 主机运行 `lsusb`，确认 J501 已进入强制恢复模式：
+
+| J501 模组 | `lsusb` 预期 ID |
+| --- | --- |
+| AGX Orin 32GB（J5011） | `0955:7223 NVidia Corp.` |
+| AGX Orin 64GB（J5012） | `0955:7023 NVidia Corp.` |
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png" alt="通过 lsusb 检测到处于强制恢复模式的 AGX Orin 模组" />
+</div>
+
+如果没有出现预期 ID，请确认使用的是 USB DEVICE 接口和支持数据传输的线缆，然后重新执行恢复模式步骤。
+
+#### 解压并刷写 BSP
+
+在 Ubuntu 主机上解压下载的模组专用 BSP。请将占位符替换为实际下载的完整文件名：
+
+```bash
+cd ~/Downloads
+sudo tar xpf <下载的-J501-BSP>.tar.gz
+```
+
+进入解压后的 BSP 目录。如需确认目录名，可运行 `ls -d mfi_*`：
+
+```bash
+cd <解压后的-J501-BSP-目录>
+```
+
+保持 J501 连接在强制恢复模式下，将 JetPack 刷写到 NVMe SSD：
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+刷机命令通常需要 2–10 分钟。成功完成时会显示如下完成信息：
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Jetson 刷机成功完成" /></div>
+
+刷机完成后，断开 USB 线并给 J501 断电再上电。使用 PD 转 HDMI 适配器连接显示器，或连接支持 USB-C/PD 视频输入的显示器，然后完成 Ubuntu 初始配置：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png" alt="Jetson 刷机后的 Ubuntu 初始配置" />
+</div>
+
+按需完成 **System Configuration（系统配置）**。此 BSP 已包含 Robotics J501 的 ZED X GMSL 驱动，可直接继续执行 **3. 安装 ZED SDK**。
+
+  </TabItem>
+  <TabItem value="install-deb" label="选项 2 · 安装驱动 DEB">
+
+如果要保留当前系统，请使用此选项。先检查已安装的 Jetson Linux 版本：
 
 ```bash
 cat /etc/nv_tegra_release
 ```
 
-根据输出的 L4T 版本选择 **Robotics J501** 软件包。仅安装与载板和系统版本匹配的软件包；Mini 和 Robotics 软件包使用不同的设备树覆盖文件。
-
-以下命令按载板和 L4T 版本匹配驱动文件名。如果下载目录中有多个匹配版本，请将通配符替换为本次下载的完整文件名。
+根据 L4T 版本选择 **Robotics J501** 软件包。请勿使用 J501 Mini 软件包，因为 Robotics 和 Mini 载板使用不同的设备树覆盖文件。
 
 <Tabs groupId="j501-robo-zed-jetpack">
-  <TabItem value="jp62" label="JetPack 6.2.1" default>
-
-对于 **JetPack 6.2.1 / L4T 36.4.4**，下载以下软件包：
+  <TabItem value="jp62" label="JetPack 6.2.1 / L4T 36.4.4" default>
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">下载 JetPack 6.2.1 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">下载 J501 JetPack 6.2.1 DEB ↗</a>
 </div>
-
-使用 APT 安装，然后重启：
 
 ```bash
 cd ~/Downloads
@@ -644,15 +729,11 @@ sudo reboot
 ```
 
   </TabItem>
-  <TabItem value="jp72" label="JetPack 7.2">
-
-对于 **JetPack 7.2 / L4T 39.2.0**，下载以下软件包：
+  <TabItem value="jp72" label="JetPack 7.2 / L4T 39.2.0">
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">下载 JetPack 7.2 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">下载 J501 JetPack 7.2 DEB ↗</a>
 </div>
-
-使用 APT 安装，然后重启：
 
 ```bash
 cd ~/Downloads
@@ -664,22 +745,25 @@ sudo reboot
   </TabItem>
 </Tabs>
 
-重启后，确认 Robotics J501 软件包已安装：
+重启后确认 Robotics J501 软件包已安装：
 
 ```bash
 dpkg -l | grep stereolabs-zedx-j501-robo
 ```
 
+  </TabItem>
+</Tabs>
+
 #### 3. 安装 ZED SDK
 
-前往 [Stereolabs ZED SDK 下载页面](https://www.stereolabs.com/developers/release/)，选择与 `cat /etc/nv_tegra_release` 输出版本相匹配的 NVIDIA Jetson 安装程序：
+前往 [Stereolabs ZED SDK 下载页面](https://www.stereolabs.com/developers/release/)，选择与 `cat /etc/nv_tegra_release` 报告版本匹配的 NVIDIA Jetson 安装程序：
 
 | 已安装系统 | 在 ZED SDK 页面中选择 |
 | --- | --- |
 | JetPack 6.2.x / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
 | JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
 
-安装 `zstd`，将下载的安装程序设为可执行并运行。请将下面的占位符替换为实际下载的文件名。
+安装 `zstd`，将下载的安装程序设为可执行并运行。请将占位符替换为实际文件名。
 
 ```bash
 sudo apt update
@@ -696,7 +780,7 @@ sudo reboot
 ```
 
 :::tip
-ZED SDK 安装程序名称中的 L4T 版本必须与 reComputer 上的 L4T 版本一致。不匹配的 SDK 或摄像头 DEB 可能会导致摄像头无法被检测到。
+ZED SDK 安装程序名称中的 L4T 版本必须与 reComputer 上的 L4T 版本一致。不匹配的 SDK 或相机 DEB 可能导致相机无法被检测到。
 :::
 
 #### 4. 使用 ZED Studio 验证
@@ -707,23 +791,234 @@ ZED SDK 安装程序名称中的 L4T 版本必须与 reComputer 上的 L4T 版�
 ZED_Studio
 ```
 
-您也可以直接从 SDK 安装目录启动它：
+也可以直接从 SDK 安装目录启动：
 
 ```bash
 /usr/local/zed/tools/ZED_Studio
 ```
 
-ZED Studio 应该会检测到已连接的相机。打开实时预览并启用 **Depth**，以确认图像流和深度管线都在正常工作。
+ZED Studio 应能检测到已连接的相机。打开实时预览并启用 **Depth**，确认图像流和深度管线正常工作。
 
   </TabItem>
   <TabItem value="j40" label="J40">
 
-    <div className="zed-coming-soon">
-      <span className="zed-status zed-status-soon">ZED X GMSL 支持已适配</span>
-      <h3>reComputer Robotics J40 指南即将推出</h3>
-      <p>平台集成已就绪。针对具体设备的连接方式、驱动安装和验证步骤将发布在此处。</p>
-      <a className="zed-button zed-button-secondary" href="/cn/recomputer_robotics_j401_getting_started">探索 J40 平台</a>
-    </div>
+### reComputer Robotics J40（J401）
+
+本节适用于搭载 **J3010 / J3011（Orin Nano）** 或 **J4011 / J4012（Orin NX）** 模组的 Robotics J401 载板及 GMSL 扩展板。请准备支持的 ZED X 系列 GMSL2 相机和兼容的 Fakra/Mini-Fakra 线缆。载板布局和接口详情请参阅 [Robotics J401 载板指南](/cn/recomputer_jetson_robotics_j401_getting_started)。
+
+#### 1. 连接相机
+
+1. 关闭 reComputer 并断开直流电源。
+2. 将 ZED X 相机连接到扩展板的 GMSL2 接口，确认接头完全插入并锁紧。
+3. 重新接通电源并启动设备。
+
+:::warning
+连接或断开 GMSL 相机及线束前，请先关闭电源。
+:::
+
+#### 2. 启用 ZED X GMSL 支持
+
+选择 **一种**方式：刷入已集成 ZED X GMSL 驱动的 BSP，或安装匹配的 DEB 以保留现有系统。
+
+<Tabs groupId="j401-zed-method">
+  <TabItem value="flash-bsp" label="选项 1 · 刷写 Robotics J401 BSP" default>
+
+##### 准备主机和硬件
+
+准备以下设备：
+
+- Robotics J401 载板，搭载 Orin Nano 4GB/8GB 或 Orin NX 8GB/16GB 模组，并安装主动散热器
+- 已安装在载板上的 NVMe M.2 2280 SSD
+- Ubuntu 主机和 USB Type-C 数据线
+- 电源，以及用于首次启动配置的显示器、键盘和鼠标
+
+请使用物理 Ubuntu 主机。根据下载的 BSP 所使用的 JetPack 版本选择主机系统：
+
+| BSP 的 JetPack 版本 | Ubuntu 20.04 主机 | Ubuntu 22.04 主机 | Ubuntu 24.04 主机 |
+| --- | --- | --- | --- |
+| JetPack 6.x | 支持 | 支持 | — |
+| JetPack 7.2 | 支持 | 支持 | 支持刷机和在目标设备上安装组件 |
+
+如果需要 JetPack 7.2 的主机开发组件，请使用 Ubuntu 20.04 或 22.04。
+
+:::warning
+刷写会清除目标 NVMe SSD 中的数据。开始前请备份数据，并在刷写完成前保持电源和 USB 连接稳定。如需保留现有系统，请选择选项 2。
+:::
+
+##### 下载与模组匹配的 BSP
+
+将匹配的固件直接下载到 Ubuntu 主机。**以下四个 BSP 均已集成 ZED X GMSL 驱动。** 请根据实际安装的模组选择：
+
+| Robotics 型号 | Jetson 模组 | 含 ZED X GMSL 驱动的 BSP |
+| --- | --- | --- |
+| J3010 | Orin Nano 4GB | [下载 J3010 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA-2O74DXkSTp_gVyfbPTQsAW9Hi0l1j6KD1bFuKczJ5ic?e=AMqob0) |
+| J3011 | Orin Nano 8GB | [下载 J3011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQChCUynXPIQRanM6qJwgo4EAQUDEK76QzCxHlNPcI8cduI?e=fFkHPb) |
+| J4011 | Orin NX 8GB | [下载 J4011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcbCDN78XVR4tfWz6ci3LaAX9WAkRF0jdGru20rhITq40?e=BqDdbz) |
+| J4012 | Orin NX 16GB | [下载 J4012 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBWcZ484WLCQo7dVS9cZ1dkAaVzbZ88LyW6YhvqMW5bmVQ?e=4g2yVg) |
+
+固件文件较大，下载可能需要约 60 分钟。请等待下载完成后再解压。
+
+##### 进入强制恢复模式
+
+1. 关闭 J401 并断开电源。
+2. 将载板开关拨到 **RESET** 位置，如下图所示。
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" alt="将 Robotics J401 开关拨到 RESET 以进入强制恢复模式" />
+</div>
+
+3. 接通电源线，给载板上电。
+4. 使用数据线将载板的 **USB 2.0 Type-C 设备/调试接口**连接到 Ubuntu 主机。
+5. 在 Ubuntu 主机打开终端，运行：
+
+```bash
+lsusb
+```
+
+确认输出中包含与所安装模组对应的 USB ID：
+
+| Robotics 型号 | Jetson 模组 | 恢复模式预期 USB ID |
+| --- | --- | --- |
+| J3010 | Orin Nano 4GB | `0955:7623 NVidia Corp.` |
+| J3011 | Orin Nano 8GB | `0955:7523 NVidia Corp.` |
+| J4011 | Orin NX 8GB | `0955:7423 NVidia Corp.` |
+| J4012 | Orin NX 16GB | `0955:7323 NVidia Corp.` |
+
+下面的示例为 Orin Nano 8GB 模组：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png" alt="通过 USB ID 0955:7523 检测到恢复模式下的 Orin Nano 8GB" />
+</div>
+
+如果没有出现预期 ID，请检查开关位置、USB 接口和数据线，然后重新执行恢复模式步骤。
+
+##### 解压并刷写 BSP
+
+在 Ubuntu 主机进入下载目录并解压固件。请将占位符替换为为当前模组下载的完整文件名：
+
+```bash
+cd ~/Downloads
+sudo tar xpf <下载的-J401-BSP>.tar.gz
+```
+
+进入解压后的 BSP 目录。如需确认目录名，可运行 `ls -d mfi_*`：
+
+```bash
+cd <解压后的-J401-BSP-目录>
+```
+
+保持载板连接在强制恢复模式下，将 JetPack 刷写到 NVMe SSD：
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+刷机命令通常需要 **2–10 分钟**。请等待出现如下刷机成功信息：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Jetson 刷机成功完成" />
+</div>
+
+##### 完成首次启动配置
+
+刷机成功后，断开 USB 数据线并给载板断电。将开关从 RESET 拨回正常运行位置，然后重新上电。
+
+使用兼容的 USB-C/DP 转 HDMI 适配器，通过 USB-C DisplayPort 输出连接显示器，或直接连接支持 USB-C 视频输入的显示器。完成 Ubuntu 的 **System Configuration（系统配置）**，包括用户账号和区域设置：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png" alt="Robotics J401 刷机后的 Ubuntu 初始系统配置" />
+</div>
+
+此 BSP 已包含 ZED X GMSL 驱动，可直接继续执行 **3. 安装 ZED SDK**。
+
+  </TabItem>
+  <TabItem value="install-deb" label="选项 2 · 安装驱动 DEB">
+
+如需保留现有系统，请使用此选项。在 reComputer 上检查已安装的 Jetson Linux 版本：
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+下载与当前 JetPack 版本匹配的 Robotics J401 软件包，安装前核对下载包的 L4T 版本是否与系统一致。请将命令中的文件名占位符替换为实际下载的完整文件名。
+
+<Tabs groupId="j401-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2" default>
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDXWxvhCDeiQIagwSY9_l_hAY8lWTwaa1m--Y1g47jbMQc?e=5Auu8A" target="_blank" rel="noopener noreferrer">下载 J401 JetPack 6.2 DEB ↗</a>
+</div>
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./<下载的-J401-驱动包>.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2 / L4T 39.2.0">
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBBSCaFHDslQKGLj1GH__n4AceAFrLcGFn3ECFQs_zv4Gg?e=GdCXWH" target="_blank" rel="noopener noreferrer">下载 J401 JetPack 7.2 DEB ↗</a>
+</div>
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./<下载的-J401-驱动包>.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+重启后确认 ZED 驱动已安装：
+
+```bash
+dpkg -l | grep stereolabs-zedx
+```
+
+继续执行 **3. 安装 ZED SDK**。
+
+  </TabItem>
+</Tabs>
+
+#### 3. 安装 ZED SDK
+
+检查 `cat /etc/nv_tegra_release` 的输出，然后从 [Stereolabs ZED SDK 下载页面](https://www.stereolabs.com/developers/release/)下载匹配的 NVIDIA Jetson 安装程序：
+
+| 已安装系统 | ZED SDK 版本 |
+| --- | --- |
+| JetPack 6.2 / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+安装 `zstd`，为安装程序添加可执行权限并运行。请将安装程序占位符替换为实际下载的文件名：
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+按安装程序提示操作，并保留 ZED 工具。安装完成后重启：
+
+```bash
+sudo reboot
+```
+
+#### 4. 使用 ZED Studio 验证
+
+在 reComputer 桌面环境中启动 ZED Studio：
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+确认程序检测到已连接的相机，打开实时预览并启用 **Depth**。图像稳定且深度视图实时更新，表示 Robotics J401 的 ZED X GMSL 已正常工作。
 
   </TabItem>
   <TabItem value="j601" label="J601">
@@ -749,6 +1044,8 @@ ZED Studio 应该会检测到已连接的相机。打开实时预览并启用 **
 ## 资源
 
 - [Robotics J501 Mini 载板硬件与快速上手](/cn/recomputer_j501_mini_getting_started)
+- [Robotics J501 硬件与刷机指南](/cn/ai_robotics_recomputer_j501_robotics_getting_started)
+- [Robotics J401 载板硬件与刷机指南](/cn/recomputer_jetson_robotics_j401_getting_started)
 - [Stereolabs ZED SDK 下载](https://www.stereolabs.com/developers/release/)
 - [Stereolabs ZED SDK 文档](https://docs.stereolabs.com/docs/development/zed-sdk)
 - [Stereolabs ZED Studio 文档](https://www.stereolabs.com/docs/development/zed-tools/zed-studio)
