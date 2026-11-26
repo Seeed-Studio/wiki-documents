@@ -8,10 +8,10 @@ slug: /get_started_with_meshtastic_wio_tracker_l2
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 1
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 11/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-24'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l2/
 ---
 
@@ -22,10 +22,10 @@ import TabItem from '@theme/TabItem';
 
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭电源。否则设备可能会损坏。
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
 
 1. 尚未完成消息传输过程
-2. 正在配置中
+2. 正在被配置
 :::
 
 ## 烧录固件
@@ -90,7 +90,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="3" label="MUI">
 
-进入 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth icon`。
+进入 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth 图标`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -114,7 +114,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. 下载 Meshtastic APP**
 
-[Click here](https://meshtastic.org/downloads/) 下载 Meshtastic APP。
+[点击这里](https://meshtastic.org/downloads/) 下载 Meshtastic APP。
 
 **步骤 3. 与设备配对**
 
@@ -158,10 +158,10 @@ import TabItem from '@theme/TabItem';
 |US|United States|902.0 - 928.0|100|30|
 |EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
-更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
+更多区域信息请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到限制，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
 :::
 
 <Tabs>
@@ -212,7 +212,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置。这可以通过 `long pressing the position icon` 在设备上直接配置。 
+你需要启用 GPS 才能获取位置信息。这可以在设备上通过 `long pressing the position icon` 直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -220,7 +220,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. SD 卡准备**
 
-你需要在 SD 卡中进行格式化并安装地图。有关 SD 卡使用的详细教程，请[点击这里](/cn/l2_sd_card)查看。
+你需要在 SD 卡中进行格式化并安装地图。关于 SD 卡的详细使用教程，请[点击这里](/cn/l2_sd_card)查看。
 
 **步骤 3. 安装 SD 卡**
 
@@ -238,7 +238,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1. 启用 GPS**
 
-你需要启用 GPS 才能获取位置。这可以通过 `long pressing the position icon` 在设备上直接配置。 
+你需要启用 GPS 才能获取位置信息。这可以在设备上通过 `long pressing the position icon` 直接配置。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/GPSEnableMUI.png" alt="pir" width={900} height="auto" /></p>
 
@@ -246,11 +246,11 @@ import TabItem from '@theme/TabItem';
 
 **步骤 2. 设置并启用 Wifi**
 
-设置 Wifi 名称和密码。这可以在设备上直接操作。 
+设置 Wifi 名称和密码。这可以直接在设备上操作。 
 
 :::tip
 
-连接的 Wifi 需要为 2.4G。5G Wifi 无法被设备使用。
+连接的 Wifi 必须为 2.4G。5G Wifi 无法被设备使用。
 
 :::
 
@@ -278,15 +278,15 @@ import TabItem from '@theme/TabItem';
 
 ## 高级用法
 
-### 通过网站连接
+### 通过网页连接
 
-如果你想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+如果你想在网页上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   **步骤 1**：切换到 BaseUI
 
-  **步骤 2**：打开网站
+  **步骤 2**：打开网页
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) 进入该网站。
+[点击这里](https://client.meshtastic.org/messages/broadcast/0) 进入该网站。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   **步骤 3**：添加新设备
@@ -371,7 +371,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-例如，当一个 Grove BME280 环境传感器（温度、湿度和气压计）插入 Grove 接口时，读数可以直接显示在设备的触摸屏上：
+例如，当将 Grove BME280 环境传感器（温度、湿度和气压计）插入 Grove 接口时，读数可以直接显示在设备的触摸屏上：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BME280.png" alt="BME280 display effect" width={600} height="auto" /></p>
 
@@ -386,7 +386,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="13" label="Menu Bar">
 | 交互方式 | 效果 |
 |---|---|
-| 长按主页图标 | 重新同步 |
+| 长按 Home 图标 | 重新同步 |
 | 长按节点列表图标 | 进入节点筛选页面 |
 | 长按设置图标 | 关闭屏幕 |
 
@@ -402,10 +402,10 @@ import TabItem from '@theme/TabItem';
 | 点击时钟图标 | 实时时间/运行时间切换 |
 | 长按 LoRa 图标| LoRa 发射 关闭/开启|
 | 长按通知图标| 通知 启用/禁用|
-| 点击通知图标| 声音/横幅/声音与横幅 切换|
-| 长按 GPS 图标| GPS 开/关|
-| 长按 WiFi 图标| WiFi 开/关|
-| 长按 MQTT 图标| MQTT 开/关|
+| 点击通知图标| 声音/横幅/声音和横幅 切换|
+| 长按 GPS 图标| GPS 开启/关闭|
+| 长按 WiFi 图标| WiFi 开启/关闭|
+| 长按 MQTT 图标| MQTT 开启/关闭|
 | 点击二维码图标| 显示设备二维码 |
 
 </TabItem>
@@ -413,19 +413,19 @@ import TabItem from '@theme/TabItem';
 <TabItem value="16" label="Node Page">
 | 交互方式 | 效果 |
 |---|---|
-| 点击一个节点| 显示详细信息|
-| 长按一个节点| 进入私聊|
-| 查看一个节点位置| 在地图中显示该节点位置|
+| 点击某个节点| 显示详细信息|
+| 长按某个节点| 进入私聊|
+| 查看某个节点位置| 在地图中显示该节点位置|
 
 </TabItem>
 
 <TabItem value="17" label="Channel Page">
-长按一个频道可禁用/启用通知。选择并点击一个频道进入聊天窗口。
+长按某个频道以禁用/启用通知。选择并点击某个频道进入聊天窗口。
 
 </TabItem>
 
 <TabItem value="18" label="Message Page">
-长按一个聊天可将其删除。选择并点击一个聊天进入聊天窗口。
+长按某个聊天以删除它。选择并点击某个聊天进入聊天窗口。
 
 </TabItem>
 
@@ -441,28 +441,28 @@ import TabItem from '@theme/TabItem';
 | 调制解调器预设| 配置 LoRa 预设 |
 | 频道 | 编辑频道|
 | 设备角色 | 配置角色 |
-| WiFi | 设置 Wifi SSID 和密码 |
+| WiFi | 设置 WiFi SSID 和密码 |
 | 屏幕超时| 设置屏幕超时时间|
 | 屏幕亮度| 设置屏幕亮度|
-| 主题| 在深色和浅色背景主题之间切换 |
+| 主题| 在深色和浅色背景之间切换主题 |
 | 屏幕校准 | 校准屏幕|
 | 语言| 切换显示语言|
 | 恢复出厂设置 | 将配置恢复为默认值 |
 | NodeDB 重置 | 清除节点数据 |
 | 清除聊天记录 | 清除聊天记录 |
 | 重启（绿色图标） | 设备重启 |
-| 关机（红色图标） | 设备断电关机 |
+| 关机（红色图标） | 设备关机 |
 
 </TabItem>
 
 <TabItem value="20" label="Tool">
 | 交互方式 | 效果 |
 |---|---|
-| Mesh 检测器| 显示检测到的活动节点 |
-| 信号扫描器| 显示所选节点的 RSSI 和 SNR |
-| 路由跟踪| 显示所选节点的路由路径 |
-| 统计 | 显示数据包解码信息 |
-| 数据包日志 | 显示设备日志|
+| Mesh Detector| 显示检测到的活动节点 |
+| Signal Scanner| 显示所选节点的 RSSI 和 SNR |
+| Trace Route| 显示所选节点的路由路径 |
+| Statistic | 显示数据包解码信息 |
+| Packet Log | 显示设备日志|
 
 </TabItem>
 </Tabs>
@@ -487,17 +487,17 @@ import TabItem from '@theme/TabItem';
 
 | 交互方式 | 效果 |
 |---|---|
-| 选择 "Favorite" | 将所选节点标记为收藏|
-| 选择 "Trace Route" | 对所选节点执行路由跟踪 |
+| 选择 "Favorite" | 将选中的节点标记为收藏|
+| 选择 "Trace Route" | 对选中的节点执行路由跟踪 |
 
 </TabItem>
 
 <TabItem value="24" label="Position">
 | 交互方式 | 效果 |
 |---|---|
-| 选择 "GPS Toggle" | GPS 开/关|
+| 选择 "GPS Toggle" | GPS 开启/关闭|
 | 选择 "GPS Format" | 切换 GPS 格式|
-| 选择 "Compass Headings" | 在动态、固定和冻结指向 "N" 之间切换 |
+| 选择 "Compass Headings" | 在动态、固定和冻结北向之间切换 |
 | 选择 "Compass Calibrate" | 启动 30 秒的指南针校准流程 |
 </TabItem>
 
@@ -514,7 +514,7 @@ import TabItem from '@theme/TabItem';
 | 交互方式 | 效果 |
 |---|---|
 | 选择 "Notifications" | 启用/禁用蜂鸣声|
-| 选择 "Bluetooth Toggle" | 启用/禁用 Bluetooth|
+| 选择 "Bluetooth Toggle" | 启用/禁用蓝牙|
 | 选择 "Reboot/Shutdown" | 手动重启或关闭设备|
 
 </TabItem>
@@ -524,11 +524,11 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-## 常见问题 FAQ
+## 常见问题
 
 ### 设备无法通过 BLE 与手机配对
 
-- 使用 MUI 时，请先切换到 Bluetooth Pairing 模式，再与手机进行配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth icon`。
+- 使用 MUI 时，请先切换到蓝牙配对模式，再与手机配对。否则你的手机无法识别设备。前往 `Setting` 页面，点击 `Reboot/Shutdown`，然后点击 `Bluetooth icon`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
@@ -542,38 +542,38 @@ import TabItem from '@theme/TabItem';
 
 - 在设置好 Wifi 名称和 Wifi 密码后，请启用 Wifi。
 
-当 wifi ip 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。当 wifi ip 显示且 wifi 图标为白色时，表示 Wifi 已启用。
+当 wifi ip 为空且 wifi 图标为灰色时，表示 Wifi 已禁用。当显示 wifi ip 且 wifi 图标为白色时，表示 Wifi 已启用。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="pir" width={900} height="auto" /></p>
 
 ### 设备自动关机
 
-**现象描述**
+**现象说明**
 
-- 设备开机后，过一段时间会自动关机或重启。
+- 设备开机后，过一会儿会自动关机或重启。
 - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中等……
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中等……
 
 **故障排查**
 
-你需要执行一次 flash 擦除，然后重新烧录最新固件。
+你需要执行 flash 擦除，然后重新烧录最新固件。
 
-### 刷写固件后屏幕黑屏
+### 刷写固件后屏幕一直黑屏
 
-**现象描述**
+**现象说明**
 
-- 刷写固件后，设备无法正常启动，屏幕保持黑屏状态。
+- 刷写固件后，设备无法正常启动，屏幕一直黑屏。
 
-**排查方法**
+**故障排查**
 
-- 步骤 1. 按一次 `RST` 按键重启设备。大多数情况下，重启后屏幕会亮起。
+- 步骤 1. 按一次 `RST` 按钮以重置设备。在大多数情况下，重置后屏幕会亮起。
 
-- 步骤 2. 如果屏幕仍然没有亮起，请先尝试刷写出厂固件或 Meshtastic `2.8.2 beta` 版本，然后重新刷写所需的固件。
+- 步骤 2. 如果屏幕仍然不亮，请先尝试烧录出厂固件或 Meshtastic `2.8.2 beta`，然后再重新烧录你需要的固件。
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方法进行恢复出厂设置。
 
 <Tabs>
 
@@ -583,24 +583,24 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/FactoryResetMUI.png" alt="pir" width={900} height="auto" /></p>
 
-设备将以默认配置重新启动。
+设备将以默认配置重启。
 
 </TabItem>
 
 <TabItem value="9" label="在手机上配置">
 
-在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重新启动。 
+在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 </TabItem>
 
 </Tabs>
 
-### 私信失败
+### 私信发送失败
 
 #### NodeDB 重置
 
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中存储了该节点的过时信息，你需要更新它。
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中存储了该节点的过时信息，你需要对其进行更新。
 
 <Tabs>
 
@@ -610,13 +610,13 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/NodedbL2.png" alt="pir" width={900} height="auto" /></p>
 
-设备将重新启动。
+设备将重启。
 
 </TabItem>
 
 <TabItem value="9" label="在手机上配置">
 
-打开 App 并连接到目标设备。进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
+打开 App 并连接到目标设备。依次进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
@@ -628,13 +628,13 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 #### 交换用户信息
 
-每个节点都会周期性发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在 App 中手动触发它们交换信息。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在 App 中手动提示它们交换信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
 #### 重新生成私钥
 
-每个节点都有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，只有该接收方的私钥才能解密。因此，一旦两个节点都知道对方的公钥，就可以进行私密通信。如果某个节点在私信传输中总是失败，可以尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取新的公钥。
+每个节点都拥有一对公钥/私钥。要交换加密的私信，发送方会使用接收方的公钥对消息进行加密，只有该接收方的私钥才能解密。因此，一旦两个节点互相知道对方的公钥，就可以进行私密通信。如果某个节点在私信传输中总是失败，请尝试重新生成它的私钥。重新生成后，从其他设备的节点列表中删除该节点，以便它们重新连接并获取该节点的新公钥。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
@@ -650,13 +650,31 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较小的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
 
 ### 电池映射
 
 ```bash
 #define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
 ```
+
+### 为什么其他节点上显示的我的位置有偏移？
+
+这是预期行为，而不是 GPS 或硬件故障。每个信道都有一个 **Position precision**（位置精度）设置，默认是 **13 bits**。这会将你广播的每个位置四舍五入到约 ±2.9 km 的网格（共享信道的隐私默认设置），而你自己的设备通过蓝牙显示的是全精度定位——因此你在自己设备上看到的位置是准确的，但其他节点看到的会有偏移。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={300} height="auto" /></p>
+
+如需发送全精度位置，需要在**每一台**设备上启用：
+
+1. 在 Meshtastic App 中打开 **Channels** 并点击你的信道。
+2. 打开 **Precise location**（将精度设置为 32 = 全精度）。
+3. 在每台设备上重复上述操作——该设置在发送端生效。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={300} height="auto" /></p>
+
+CLI 方式：`meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**注意（固件 2.8+）：** 公共信道（无密钥、默认密钥或单字节密钥）被限制为 15 bits（约 729 m）。如需全精度，请使用**带随机密钥的私有信道**。
 
 ## 资源
 

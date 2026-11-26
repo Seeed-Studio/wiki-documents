@@ -7,27 +7,27 @@ keywords:
 slug: /x2_get_started_for_meshtastic
 sidebar_position: 1
 last_update:
-  date: 11/12/2026
-  author: Yves
+  date: 11/26/2026
+  author: Advent Jiang
 createdAt: '2026-08-28'
-updatedAt: '2026-11-12'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/cn/x2_get_started_for_meshtastic/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：**MUI**（带有图形页面和地图）和 **Base UI**（信息屏幕和菜单）。
+SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：带有图形页面和地图的 **MUI**，以及包含信息屏幕和菜单的 **Base UI**。
 
 有关规格、连接器和引脚分配，请参阅 [SenseCAP MeshPager X2 系列简介](/cn/meshpager_x2_intro/)。
 
 :::caution 上电前
-连接与工作频段匹配的 LoRa 天线。使用指定的 X2 电池，其额定充电电压为 **4.4 V**；额定最大充电电压为 4.2 V 的电芯不适用。
+连接与工作频段匹配的 LoRa 天线。使用指定的 X2 电池，其额定为 **4.4 V 充电**；额定最大充电电压为 4.2 V 的电芯不适用。
 :::
 
 ## 刷写固件
 
-如果已安装固件，请继续阅读 [入门指南](/cn/x2_get_started_for_meshtastic/#入门指南)。
+如果已安装固件，请继续阅读[入门指南](/cn/x2_get_started_for_meshtastic/#入门指南)。
 
 1. 使用 USB 数据线将 X2 连接到电脑。
 2. 在支持 Web Serial 的浏览器（如桌面版 Chrome 或 Edge）中打开 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -35,10 +35,10 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 4. 点击 **Flash**，并按照提示进入下载模式并选择 X2 当前的 USB 端口。在编程完成前保持 USB 连接。
 
 :::info 如果列表中没有 X2
-在编写本指南时，公共 Web Flasher 的设备列表中尚未包含 X2。如果你找不到 **Seeed MeshPager X2**，请使用 X2 出厂镜像并按照[使用 esptool 手动安装固件](/cn/x2_get_started_for_meshtastic/#使用-esptool-手动安装固件)操作。不要为 X2 选择其他设备型号。
+在编写本指南时，公共 Web Flasher 的设备列表中尚未包含 X2。如果你找不到 **Seeed MeshPager X2**，请使用 X2 工厂镜像并按照[使用 esptool 手动安装固件](/cn/x2_get_started_for_meshtastic/#使用-esptool-手动安装固件)操作。不要为 X2 选择其他设备型号。
 :::
 
-要强制 X2 进入固件刷写模式，**同时按住 Power 和 Return 键**，然后**插入 USB 线**。保持两个按键按下 **1 秒** 后再松开。
+要强制让 X2 进入固件刷写模式，**同时按住 Power 和 Return 键**，然后**插入 USB 线**。保持两个按键按下 **1 秒** 后再松开。
 
 要刷写已下载的 X2 `.factory.bin`，请参阅[使用 esptool 手动安装固件](/cn/x2_get_started_for_meshtastic/#使用-esptool-手动安装固件)。
 
@@ -50,15 +50,15 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 
 ### 开机与导航
 
-1. 将稳压的 **5 V USB 电源**连接到 USB-C 接口为电池充电。
-2. 使用 **Power** 键启动 X2。要离开仅充电界面，先松开 Power，然后再次按住约 **5 秒**。
+1. 将稳压的 **5 V USB 电源** 连接到 USB-C 接口为电池充电。
+2. 使用 **Power** 键启动 X2。要离开仅充电界面，先松开 Power，然后按住约 **5 秒**。
 3. 等待 Base UI 或 MUI 加载完成。
 
-在连接 USB 的情况下关机，可能会使 X2 返回到仅充电界面。
+在连接 USB 的情况下关机，可能会让 X2 回到仅充电界面。
 
 #### 强制重启
 
-要强制 X2 重启，**按下 Power 并同时插入已供电的 USB-C（Type-C）线缆**。
+要强制重启 X2，**同时按下 Power 并插入带电的 USB-C（Type-C）线缆**。
 
 ### 按键控制
 
@@ -71,7 +71,7 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 | 返回 | 取消输入或关闭菜单。 | 关闭键盘、列表或对话框，或返回上一级。 |
 | 电源 | 短按：熄屏/唤醒。长按约 4 秒：关机。 | 短按：熄屏/唤醒。长按约 4 秒：关机。 |
 
-在本指南中，**选择**指使用方向键高亮某个项目并按下 **Confirm**。**Confirm** 是屏幕左下方带有水平线标记的橙色按键。**Left/Right** 指方向键盘上的左右方向。
+在本指南中，**选择**指使用方向键高亮某个项目并按下 **确认**。**确认**是屏幕左下方带水平线标记的橙色按键。**左/右**指方向键。
 
 ### UI 切换
 
@@ -89,31 +89,31 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 </div>
 
 <Tabs groupId="x2-ui-switch">
-<TabItem value="base-to-mui" label="Base UI 到 MUI">
+<TabItem value="base-to-mui" label="Base UI 切换到 MUI">
 
-1. 使用 Left/Right 到达 **System**，然后按 Confirm。
+1. 使用 左/右 到达 **System**，然后按确认。
 2. 选择 **Reboot/Shutdown → Switch to MUI → Yes**。
 3. 等待 X2 重启进入 MUI。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
   <video controls playsInline muted preload="none" poster="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-to-mui-poster.jpg" width={360} height={640} style={{maxWidth: '100%', height: 'auto'}} aria-label="MeshPager X2 demonstration: select Switch to MUI in Base UI and confirm the restart">
     <source src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-to-mui.mp4" type="video/mp4" />
-    <a href="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-to-mui.mp4">下载 Base UI 到 MUI 的演示视频。</a>
+    <a href="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-to-mui.mp4">下载 Base UI 切换到 MUI 的演示视频。</a>
   </video>
-  <figcaption>Base UI 到 MUI。视频在重启过程中结束。</figcaption>
+  <figcaption>Base UI 切换到 MUI。视频在重启过程中结束。</figcaption>
 </figure>
 
 </TabItem>
-<TabItem value="mui-to-base" label="MUI 到 Base UI">
+<TabItem value="mui-to-base" label="MUI 切换到 Base UI">
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', margin: '1.5rem 0'}}>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-bluetooth-menu-portrait.jpg" alt="X2 MUI Settings and Tools screen with red outlines around the Settings icon and Reboot / Shutdown menu entry" width={900} height={1100} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>1. 打开菜单。</strong> 在导航栏中高亮 Settings 并按 Right 进入。选择 Reboot / Shutdown 并按 Confirm。</figcaption>
+    <figcaption><strong>1. 打开菜单。</strong> 在导航栏中高亮 Settings 并按右键进入。选择 Reboot / Shutdown 并按确认。</figcaption>
   </figure>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-bluetooth-select-portrait.jpg" alt="X2 reboot menu with red outlines around the Bluetooth icon and left orange Confirm key used to switch to Base UI" width={900} height={1100} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>2. 长按 Confirm 切换 UI。</strong> 使用 Left/Right 高亮 Bluetooth 图标。<strong>长按 Confirm（左侧橙色键）</strong>，直到出现 <strong>Reboot into BaseUI?</strong> 对话框，然后松开按键。</figcaption>
+    <figcaption><strong>2. 长按确认切换 UI。</strong> 使用 左/右 高亮 Bluetooth 图标。<strong>长按确认（左侧橙色键）</strong>，直到出现 <strong>Reboot into BaseUI?</strong> 对话框，然后松开按键。</figcaption>
   </figure>
 </div>
 
@@ -122,9 +122,9 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
   <video controls playsInline muted preload="none" poster="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-to-base-poster.jpg" width={360} height={640} style={{maxWidth: '100%', height: 'auto'}} aria-label="MeshPager X2 demonstration: hold Confirm on the MUI Bluetooth icon and confirm the switch to Base UI">
     <source src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-to-base.mp4" type="video/mp4" />
-    <a href="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-to-base.mp4">下载 MUI 到 Base UI 的演示视频。</a>
+    <a href="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-to-base.mp4">下载 MUI 切换到 Base UI 的演示视频。</a>
   </video>
-  <figcaption>MUI 到 Base UI。视频在重启过程中结束。</figcaption>
+  <figcaption>MUI 切换到 Base UI。视频在重启过程中结束。</figcaption>
 </figure>
 
 </TabItem>
@@ -137,7 +137,7 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 <Tabs groupId="x2-ui-mode">
 <TabItem value="base" label="Base UI">
 
-从 MUI 切换后会自动启用蓝牙。要手动启用，在 **System** 中按 Confirm，并选择 **Bluetooth Toggle**。如有重启提示，请按提示重启。如果 Wi-Fi 阻止蓝牙配对，请先关闭 Wi-Fi。
+从 MUI 切换后会自动启用蓝牙。要手动启用，在 **System** 中按确认，并选择 **Bluetooth Toggle**。如有重启提示，请重启。如果 Wi-Fi 阻止蓝牙配对，请先关闭 Wi-Fi。
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem', maxWidth: 640, margin: '1.5rem auto'}}>
   <figure style={{margin: 0}}>
@@ -146,7 +146,7 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
   </figure>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-ui-bluetooth-toggle.png" alt="X2 Base UI System Action menu with Bluetooth Toggle and the left orange Confirm key outlined in red" width={900} height={1200} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>2. 启用蓝牙。</strong> 在 System 屏幕上按 Confirm，选择 Bluetooth Toggle，并按照任何重启提示操作。</figcaption>
+    <figcaption><strong>2. 启用蓝牙。</strong> 在 System 屏幕中按确认，选择 Bluetooth Toggle，并按照任何重启提示操作。</figcaption>
   </figure>
 </div>
 
@@ -156,7 +156,7 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', margin: '1.5rem 0'}}>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-bluetooth-menu-portrait.jpg" alt="X2 MUI Settings and Tools screen with red outlines around the Settings icon and Reboot / Shutdown menu entry" width={900} height={1100} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>1. 打开菜单。</strong> 进入 Settings，选择 Reboot / Shutdown，并按 Confirm。</figcaption>
+    <figcaption><strong>1. 打开菜单。</strong> 进入 Settings，选择 Reboot / Shutdown，并按确认。</figcaption>
   </figure>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-bluetooth-select-portrait.jpg" alt="X2 reboot menu with red outlines around the Bluetooth icon and left orange Confirm key" width={900} height={1100} style={{width: '100%', height: 'auto'}} loading="lazy" />
@@ -166,7 +166,7 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
   <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/QQ20261010-145102.png" alt="MeshPager X2 MUI Bluetooth connection screen showing the Bluetooth icon, Programming mode label, and a six-digit pairing PIN" width={480} height={341} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
-  <figcaption><strong>3. 等待配对 PIN。</strong> 蓝牙连接界面会显示 Programming mode 和一个六位数 PIN。</figcaption>
+  <figcaption><strong>3. 等待配对 PIN。</strong> 蓝牙连接界面会显示 Programming 模式和一个六位数 PIN 码。</figcaption>
 </figure>
 
 :::caution 返回 MUI
@@ -176,9 +176,9 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 </TabItem>
 </Tabs>
 
-**步骤 2. 下载 Meshtastic App**
+**步骤 2. 下载 Meshtastic 应用**
 
-[Click here](https://meshtastic.org/downloads/) 下载适用于 **iOS** 或 **Android** 的 Meshtastic 应用。
+[点击此处](https://meshtastic.org/downloads/) 下载适用于 **iOS** 或 **Android** 的 Meshtastic 应用。
 
 **步骤 3. 与设备配对**
 
@@ -221,7 +221,7 @@ SenseCAP MeshPager X2 系列通过物理按键操作两个 Meshtastic 界面：*
 
 ### 配置 LoRa
 
-在通过 Mesh 通信之前，先设置你的 **区域**。该设置控制设备使用的频率范围，并且应与你所在位置、X2 的 **863–928 MHz** 射频硬件以及其天线相匹配。
+在通过 Mesh 通信之前，请先设置你的 **区域**。该设置控制设备使用的频率范围，并且应与你所在位置、X2 的 **863–928 MHz** 射频硬件以及其天线相匹配。
 
 **区域列表**
 
@@ -250,11 +250,11 @@ EU_868 具有 **10% 占空比限制**，按滚动一小时、每分钟计算。�
   </figure>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-ui-lora-info.png" alt="X2 Base UI LoRa Info screen showing the example US region, LongTurbo preset, frequency, and a BLE identifier" width={900} height={1200} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>检查当前配置。</strong> LoRa Info 显示区域、调制解调器预设和频率。本示例使用 US / LongTurbo；请使用适合你所在位置和群组的设置。</figcaption>
+    <figcaption><strong>检查当前配置。</strong> LoRa Info 显示区域、调制解调器预设和频率。此示例使用 US / LongTurbo；请使用适合你所在位置和群组的设置。</figcaption>
   </figure>
 </div>
 
-LoRa Info 中的四字符 **BLE** 标签是设备标识符，而不是蓝牙配对 PIN。配对时，请使用 X2 配对提示中显示的 PIN 或你配置的固定 PIN。
+LoRa Info 中的四字符 **BLE** 标签是设备标识符，而不是蓝牙配对 PIN。配对时，请使用 X2 配对提示中显示的 PIN，或你配置的固定 PIN。
 
 </TabItem>
 <TabItem value="mui" label="MUI">
@@ -270,7 +270,7 @@ LoRa Info 中的四字符 **BLE** 标签是设备标识符，而不是蓝牙配�
 <Tabs groupId="x2-phone-os">
 <TabItem value="ios" label="iOS">
 
-1. 如果应用在连接页面显示 **Set LoRa Region**，请点击它。否则，从 **Settings** 中的设备配置里打开 **LoRa**。
+1. 如果应用在连接页面显示 **Set LoRa Region**，请点击它。否则，在 **Settings** 中从设备配置中打开 **LoRa**。
 2. 为你所在位置设置 **Region**，然后保存配置。
 3. 如果 X2 重启，请重新连接并检查区域不再为 **UNSET**。
 
@@ -292,7 +292,7 @@ LoRa Info 中的四字符 **BLE** 标签是设备标识符，而不是蓝牙配�
 </TabItem>
 </Tabs>
 
-这些截图展示了手机应用的操作流程。请选择你已连接的 X2；菜单名称可能因应用版本而异。
+这些截图展示了手机应用的操作流程。请选择你已连接的 X2；菜单名称可能会因应用版本而异。
 
 </TabItem>
 </Tabs>
@@ -306,7 +306,7 @@ LoRa Info 中的四字符 **BLE** 标签是设备标识符，而不是蓝牙配�
 <span id="microsd-and-offline-maps"></span>
 <span id="wi-fi"></span>
 
-使用 MUI 查看地图。要显示当前位置，请启用 GPS 并在室外等待定位完成；参见 [Configure GPS](/cn/x2_get_started_for_meshtastic/#配置-gps)。
+使用 MUI 查看地图。要查看当前位置，请启用 GPS 并在室外等待定位；参见 [Configure GPS](/cn/x2_get_started_for_meshtastic/#configure-gps)。
 
 <Tabs groupId="x2-map-mode">
 <TabItem value="offline" label="Offline Map">
@@ -317,7 +317,7 @@ LoRa Info 中的四字符 **BLE** 标签是设备标识符，而不是蓝牙配�
 
 1. 在格式化前先备份存储卡；格式化会清除其内容。使用 **MBR 分区和 FAT32** 来准备存储卡。
 2. 从 [Meshtastic UI map starter kit](https://github.com/meshtastic/device-ui/tree/master/maps) 下载一个样式 ZIP，例如 `osm.zip` 或 `atlas.zip`。
-3. 将压缩包解压到存储卡根目录，保留其中的文件夹结构。检查最终路径，而不是在解压文件外再添加一层 `maps` 文件夹：
+3. 将压缩包解压到存储卡根目录，并保留其中的文件夹结构。请检查最终路径，而不是在解压文件外再添加一层 `maps` 文件夹：
 
 ```text
 microSD root/
@@ -328,9 +328,9 @@ microSD root/
                 └── <y>.png
 ```
 
-例如，名为 `osm` 的样式应位于 `/maps/osm/` 下。避免出现类似 `/maps/maps/osm/` 这样的额外文件夹层级。
+例如，一个名为 `osm` 的样式应位于 `/maps/osm/` 下。避免出现类似 `/maps/maps/osm/` 这样的额外文件夹层级。
 
-4. 复制完成后安全弹出存储卡。
+4. 复制完成后，请安全弹出存储卡。
 
 :::tip 从概览地图开始
 官方入门套件压缩包包含 **缩放级别 1–6** 的全球瓦片。将地图缩小到 6 级或更低，以检查地图是否加载。若需街道级细节，请下载覆盖你所在区域的更高缩放级别瓦片；仅靠入门套件并不包含这些细节。参见 [map download instructions](https://github.com/meshtastic/device-ui/tree/master/maps#downloading-tiles)。
@@ -346,7 +346,7 @@ microSD root/
 1. 在插入或取出卡之前，先关闭 X2 并断开 USB 连接。
 2. 完全插入 microSD 卡，然后启动 X2 并进入 MUI。
 3. 针对你当前的位置，启用 GNSS，并在室外等待定位成功。
-4. 进入 **Map** 并选择与你瓦片匹配的样式。
+4. 进入 **Map** 并选择与你瓦片样式匹配的地图风格。
 
 已下载的瓦片在没有 Wi-Fi 或蜂窝网络服务时也能使用。
 
@@ -370,11 +370,11 @@ microSD root/
 
 **步骤 1. 启用 GPS。**
 
-打开 **Home**，高亮 **location/GPS control**，长按 Confirm 以在 GNSS 被禁用时启用它。如有提示请重启，然后在室外等待定位成功。
+打开 **Home**，高亮 **location/GPS control**，长按 Confirm 以启用 GNSS（如果当前被禁用）。如有提示请重启，然后在室外等待定位成功。
 
 **步骤 2. 设置并启用 Wi-Fi。**
 
-在 MUI 中，打开 **Settings → Wi-Fi**，输入 Wi-Fi 网络名称（**WiFi SSID**）和密码（**WiFi pre-shared Key**），然后选择 **OK**。你可以直接在设备上完成这两项配置。
+在 MUI 中打开 **Settings → Wi-Fi**，输入 Wi-Fi 网络名称（**WiFi SSID**）和密码（**WiFi pre-shared Key**），然后选择 **OK**。你可以直接在设备上完成这两项配置。
 
 :::tip
 连接到 **2.4 GHz** Wi-Fi 网络。**5 GHz** Wi-Fi 不受支持。
@@ -386,15 +386,15 @@ microSD root/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="MUI Home screen comparing disabled Wi-Fi with 0.0.0.0 and connected Wi-Fi with an assigned IP address" width={900} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" /></p>
 
-长按 **Wi-Fi 图标** 可打开或关闭 Wi-Fi。在 X2 上，先用方向键高亮该图标，然后**长按 Confirm（左侧橙色按键）**来执行长按操作。
+长按 **Wi-Fi 图标** 可打开或关闭 Wi-Fi。在 X2 上，先用方向键高亮该图标，然后**长按 Confirm（左侧橙色按键）**来完成长按操作。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiSwitchMUI.png" alt="MUI Home screen with the Wi-Fi icon highlighted for a long press to change its state" width={450} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" /></p>
 
-蓝牙连接模式会禁用 Wi-Fi。如有需要，在返回 MUI 后重新启用。在线地图要求所连接的 Wi-Fi 网络具备互联网访问能力。
+蓝牙连接模式会禁用 Wi-Fi。如有需要，返回 MUI 后重新启用。在线地图要求所连接的 Wi-Fi 网络具备互联网访问能力。
 
 **步骤 3. 查看地图。**
 
-打开 **Map** 并等待地图瓦片加载。加载新区域时保持 Wi-Fi 连接到互联网。
+打开 **Map** 并等待地图瓦片加载。加载新区域时，请保持 Wi-Fi 连接到互联网。
 
 </TabItem>
 </Tabs>
@@ -409,20 +409,20 @@ microSD root/
 1. 使用 Left/Right 切换到 **Home** 信息屏幕。
 2. 按 Up 或 Down 打开消息编辑器。
 3. 选择 **[Select Destination]**，然后选择一个频道或节点。
-4. 选择一条预设消息即可发送，或选择 **[-- Free Text --]** 打开键盘。
+4. 选择一条预设消息以发送，或选择 **[-- Free Text --]** 打开键盘。
 5. 使用方向键和 Confirm 输入字符。使用键盘上的退格键删除。
-6. 选择键盘上的 **Enter** 键发送。**Return** 取消输入。
+6. 选择键盘上的 **Enter** 键发送。按 **Return** 取消输入。
 
 你也可以在 **Messages** 屏幕中打开编辑器：按 Confirm 并在 **Message Action** 菜单中选择 **New Preset Msg**。在选择预设消息或输入自由文本前，请先检查目标地址。
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem', maxWidth: 640, margin: '1.5rem auto'}}>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-ui-new-preset-message.png" alt="X2 Base UI Message Action menu with New Preset Msg and the Confirm key outlined in red" width={900} height={1200} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>打开消息编辑器。</strong> 在 Messages 中，按 Confirm 并选择 New Preset Msg。选择目标地址和一条预设消息，或选择 Free Text 打开键盘。</figcaption>
+    <figcaption><strong>打开消息编辑器。</strong>在 Messages 中，按 Confirm 并选择 New Preset Msg。选择目标和一条预设消息，或选择 Free Text 打开键盘。</figcaption>
   </figure>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-base-ui-keyboard.png" alt="X2 Base UI free-text keyboard with the character keys and ENTER outlined in red, addressed to the example LongTurbo channel" width={900} height={1200} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>输入并发送。</strong> 检查 <code>To:</code> 旁边的收件人，使用方向键和 Confirm 输入，然后选择 ENTER 发送。LongTurbo 是示例目标频道。</figcaption>
+    <figcaption><strong>输入并发送。</strong>检查 <code>To:</code> 旁边的收件人，使用方向键和 Confirm 输入，然后选择 ENTER 发送。LongTurbo 是示例目标。</figcaption>
   </figure>
 </div>
 
@@ -445,45 +445,45 @@ microSD root/
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', margin: '1.5rem 0'}}>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-node-select.png" alt="X2 node list with red outlines around the Nodes icon, selected node 9028, direction Right, and the left orange Confirm key" width={940} height={1270} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>1. 选择节点。</strong> 在导航栏上高亮 Nodes 并按 Right 进入列表。使用 Up/Down 选择一个节点，然后长按 Confirm（左侧橙色按键）直到其会话打开。</figcaption>
+    <figcaption><strong>1. 选择节点。</strong>在导航栏中高亮 Nodes 并按 Right 进入列表。使用 Up/Down 选择一个节点，然后长按 Confirm（左侧橙色按键），直到其会话打开。</figcaption>
   </figure>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-open-keyboard.png" alt="X2 conversation with red outlines around recipient Meshtastic 9028, the keyboard icon, and the orange Confirm key" width={925} height={1215} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>2. 打开键盘。</strong> 检查顶部的收件人名称。将焦点移动到文本输入框，按 Right 高亮键盘图标，然后按 Confirm 打开键盘。</figcaption>
+    <figcaption><strong>2. 打开键盘。</strong>检查顶部的收件人名称。将焦点移动到文本输入框，按 Right 高亮键盘图标，然后按 Confirm 打开键盘。</figcaption>
   </figure>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-type-send.png" alt="X2 on-screen keyboard with red outlines around the typed letter w, the keyboard, and the lower-right submit checkmark" width={825} height={1085} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>3. 输入并发送。</strong> 使用方向键选择字符并按 Confirm 输入。选择右下角的对勾并按 Confirm 发送。</figcaption>
+    <figcaption><strong>3. 输入并发送。</strong>使用方向键选择字符并按 Confirm 输入。选择右下角的对勾并按 Confirm 发送。</figcaption>
   </figure>
 </div>
 
 <figure style={{maxWidth: 320, margin: '1.5rem auto', textAlign: 'center'}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-message-sent.png" alt="X2 conversation after submission, with red outlines around recipient Meshtastic 9028 and the outgoing message w" width={770} height={1065} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>4. 查看已发出的消息。</strong> 键盘关闭，已发出的消息会显示在会话中。此示例向 Meshtastic 9028 发送了 <code>w</code>。</figcaption>
+    <figcaption><strong>4. 查看已发出的消息。</strong>键盘关闭，已发出的消息会显示在会话中。本示例向 Meshtastic 9028 发送 <code>w</code>。</figcaption>
 </figure>
 
-对于频道会话，打开 **Channels** 并选择一个频道。要返回现有会话，打开 **Messages** 并选择该聊天。
+对于频道会话，打开 **Channels** 并选择一个频道。要返回已有会话，打开 **Messages** 并选择该聊天。
 
-**Return** 会在不发送的情况下关闭键盘；再次按下可返回聊天列表。
+按 **Return** 会在不发送的情况下关闭键盘；再次按下可返回聊天列表。
 
 <h4 id="mute-and-unmute-a-channel">静音和取消静音频道</h4>
 
-1. 在导航栏上高亮 **Channels** 并按 **Right** 进入频道列表。使用 Up/Down 高亮一个已配置的频道，例如本例中的 **LongTurbo**。
-2. **长按 Confirm**（左侧橙色按键）直到铃铛图标变为**橙色的被划掉的铃铛**，然后松开按键。该频道的通知现已被静音。
+1. 在导航栏中高亮 **Channels** 并按 **Right** 进入频道列表。使用 Up/Down 高亮一个已配置的频道，例如本例中的 **LongTurbo**。
+2. **长按 Confirm**（左侧橙色按键），直到铃铛图标变为**橙色的被划掉的铃铛**，然后松开按键。该频道的通知现已被静音。
 3. 要取消静音同一频道，**再次长按 Confirm**，直到**白色铃铛**恢复，然后松开按键。
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', margin: '1.5rem 0'}}>
   <figure style={{margin: 0}}>
     <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-channel-select.png" alt="X2 Group Channels page with red outlines around the Channels icon, selected LongTurbo channel, and left orange Confirm key" width={1080} height={1680} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>1. 选择频道。</strong> 长按左侧橙色 Confirm 键以更改其静音状态。</figcaption>
+    <figcaption><strong>1. 选择频道。</strong>长按左侧橙色 Confirm 键以更改其静音状态。</figcaption>
   </figure>
   <figure style={{margin: 0}}>
-    <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-channel-muted.png" alt="Selected LongTurbo channel with an orange crossed-out bell outlined in red after holding Confirm" width={1080} height={1680} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>2. 已静音。</strong>橙色的被划掉的铃铛表示该频道通知已被静音。</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-channel-muted.png" alt="按住 Confirm 后，选中的 LongTurbo 频道旁出现一个用红色框出的橙色被划掉的铃铛图标" width={1080} height={1680} style={{width: '100%', height: 'auto'}} loading="lazy" />
+    <figcaption><strong>2. 已静音。</strong> 橙色被划掉的铃铛表示该频道通知已被静音。</figcaption>
   </figure>
   <figure style={{margin: 0}}>
-    <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-channel-unmuted.png" alt="Selected LongTurbo channel with a white bell outlined in red after holding Confirm again" width={1080} height={1680} style={{width: '100%', height: 'auto'}} loading="lazy" />
-    <figcaption><strong>3. 取消静音。</strong>再次长按 Confirm 恢复白色铃铛并启用频道通知。</figcaption>
+    <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/x2-mui-channel-unmuted.png" alt="再次按住 Confirm 后，选中的 LongTurbo 频道旁出现一个用红色框出的白色铃铛图标" width={1080} height={1680} style={{width: '100%', height: 'auto'}} loading="lazy" />
+    <figcaption><strong>3. 取消静音。</strong> 再次按住 Confirm 可恢复白色铃铛并启用频道通知。</figcaption>
   </figure>
 </div>
 
@@ -500,24 +500,24 @@ microSD root/
 
 <span id="connect-via-web-client"></span>
 
-使用 [Meshtastic Web Client](https://client.meshtastic.org/) 从浏览器读取消息、发送文本并配置你的节点。使用桌面版 **Chrome 或 Edge**，并确保固件支持所选连接方式。浏览器支持情况各不相同；请参阅 [Web Client compatibility guide](https://meshtastic.org/docs/software/web-client/)。
+使用 [Meshtastic Web Client](https://client.meshtastic.org/) 从浏览器读取消息、发送文本并配置你的节点。使用支持所选连接方式固件的桌面版 **Chrome 或 Edge**。浏览器支持情况各不相同；请参阅 [Web Client 兼容性指南](https://meshtastic.org/docs/software/web-client/)。
 
 **步骤 1. 打开 Web Client。**
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="Meshtastic Web Client landing page" width={1000} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="Meshtastic Web Client 登录页面" width={1000} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
 **步骤 2. 添加连接。** 选择 **New Connection**。截图展示的是客户端的操作流程；设备名称和端口号仅为示例。连接时请选择你自己的 X2。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="New Connection button in the Meshtastic Web Client" width={600} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="Meshtastic Web Client 中的 New Connection 按钮" width={600} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
 **步骤 3. 选择连接方式。**
 
 <Tabs groupId="x2-web-connection">
-<TabItem value="bluetooth" label="Bluetooth">
+<TabItem value="bluetooth" label="蓝牙">
 
 1. 在 X2 上启用蓝牙。在 MUI 中，进入 [Phone Connection](/cn/x2_get_started_for_meshtastic/#phone-connection) 中描述的蓝牙连接模式。
 2. 将手机应用与 X2 断开连接，以便浏览器可以连接。
@@ -525,51 +525,51 @@ microSD root/
 4. 等待节点配置加载完成，然后打开一个频道或会话。
 
 </TabItem>
-<TabItem value="serial" label="USB Serial">
+<TabItem value="serial" label="USB 串口">
 
 1. 在运行 Meshtastic 的状态下启动 X2，并使用 USB **数据**线连接。固件下载模式用于刷写固件，而不是用于 Web Client。
 2. 关闭 Web Flasher、串口监视器以及其他正在使用 X2 串口的应用程序。
-3. 在 Web Client 中选择 **Serial**，如有提示选择 **New device**，然后在浏览器的设备选择器中选择 X2 的 USB 端口。
+3. 在 Web Client 中选择 **Serial**，如有提示选择 **New device**，并在浏览器的设备选择器中选择 X2 的 USB 端口。
 4. 等待节点配置加载完成，然后打开一个频道或会话。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="Meshtastic Web Client serial connection and browser serial-port picker" width={1000} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="Meshtastic Web Client 串口连接界面和浏览器串口选择器" width={1000} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
-USB 设备可能显示为 **USB JTAG/serial debug unit**。如果你重新连接 X2 或更换 USB 接口，请再次选择其当前端口。
+USB 设备可能显示为 **USB JTAG/serial debug unit**。如果你重新连接 X2 或更换 USB 接口，请重新选择其当前端口。
 
 </TabItem>
 </Tabs>
 
-**步骤 4. 检查连接。** 如果尚未连接，选择已添加的设备以建立连接。随后客户端会显示节点状态并加载其配置。打开消息视图以选择频道或节点会话。
+**步骤 4. 检查连接。** 如果尚未连接，请选择已添加的设备进行连接。随后客户端会显示节点状态并加载其配置。打开消息视图以选择频道或节点会话。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="Example node shown as connected in the Meshtastic Web Client" width={300} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="在 Meshtastic Web Client 中显示为已连接的示例节点" width={300} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
 ### 配置 GPS
 
 <span id="gnss-positioning"></span>
 
-在户外使用 X2，并确保有开阔的天空视野，然后等待卫星定位完成。
+在户外使用 X2，并确保有开阔的天空视野，然后等待卫星定位成功。
 
 <Tabs groupId="x2-ui-mode">
 <TabItem value="base" label="Base UI">
 
-使用 左/右 键切换到 **Position**，按 Confirm，并选择 **On/Off Toggle → Enabled**。
+使用 Left/Right 到达 **Position**，按 Confirm，并选择 **On/Off Toggle → Enabled**。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/QQ20261010-151648.png" alt="MeshPager X2 Base UI Position screen showing satellite count, latitude, longitude, and altitude" width={480} height={407} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/QQ20261010-151648.png" alt="MeshPager X2 Base UI Position 界面，显示卫星数量、纬度、经度和海拔" width={480} height={407} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
   <figcaption>Base UI 位置界面。</figcaption>
 </figure>
 
 </TabItem>
 <TabItem value="mui" label="MUI">
 
-进入 **Home** 并高亮 **location/GPS control**。如果 GNSS 被禁用，长按 Confirm 以启用它。如有提示，请重启。
+进入 **Home** 并高亮 **location/GPS control**。如果 GNSS 被禁用，按住 Confirm 以启用它。如有提示，请重启。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/QQ20261010-151629.png" alt="MeshPager X2 MUI Home page with the location control selected and coordinates, satellite count, and altitude displayed" width={480} height={385} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/MeshPagerX2/QQ20261010-151629.png" alt="MeshPager X2 MUI Home 页面，选中位置控制并显示坐标、卫星数量和海拔" width={480} height={385} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
   <figcaption>MUI Home 页面上的位置状态。</figcaption>
 </figure>
 
@@ -578,33 +578,33 @@ USB 设备可能显示为 **USB JTAG/serial debug unit**。如果你重新连接
 
 **在手机上配置**
 
-将 Meshtastic 应用连接到 X2，打开设备无线电配置下的 **Position**，并调整以下设置。保存更改，如果设备重启，请重新连接。
+将 Meshtastic 应用连接到 X2，在设备的无线电配置下打开 **Position**，并调整以下设置。保存更改，如果设备重启，请重新连接。
 
-| Setting | 控制内容 |
+| 设置 | 控制内容 |
 | --- | --- |
 | GPS Mode | 启用或禁用 X2 的 GNSS 接收机。 |
 | GPS Update Interval | 设备请求新的 GNSS 位置的频率。 |
 | Position Broadcast Interval | 设备通过 mesh 广播其位置的频率。 |
-| Smart Position | 根据移动情况允许位置广播，受配置阈值限制。 |
+| Smart Position | 允许基于移动情况进行位置广播，受配置阈值限制。 |
 | Fixed Position | 使用固定位置。当你希望设备位置随其移动而变化时，请禁用此项。 |
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="Meshtastic phone app Position settings for GPS updates and position broadcasts" width={500} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="Meshtastic 手机应用中用于 GPS 更新和位置广播的 Position 设置" width={500} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
-更短的时间间隔可以提供更频繁的更新，但会增加功耗或 mesh 流量。根据设备移动的频率选择合适的间隔。参见 [Meshtastic Position configuration](https://meshtastic.org/docs/configuration/radio/position/)。
+更短的间隔可以提供更频繁的更新，但会增加功耗或 mesh 流量。根据设备移动的频率选择合适的间隔。参见 [Meshtastic Position 配置](https://meshtastic.org/docs/configuration/radio/position/)。
 
 **iOS 位置权限**
 
 如果你在 Meshtastic 应用中使用**手机的位置**或将其共享给节点，请在 iOS 设置中允许位置访问，并为 Meshtastic 启用 **Precise Location**。此权限控制手机提供的位置；X2 内置的 GNSS 接收机会独立获取自己的定位。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="iOS location permission settings with Precise Location enabled for Meshtastic" width={250} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="iOS 位置权限设置中为 Meshtastic 启用 Precise Location 的界面" width={250} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
 ### 传感器连接
 
-X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根据你想要使用的功能进行配置：
+X2 内置用于环境读数、罗盘航向和运动检测的传感器。根据你想要使用的功能进行配置：
 
 | 传感器 | 功能 | 配置 |
 | --- | --- | --- |
@@ -622,7 +622,7 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 3. 如果希望在 Base UI 上显示支持的环境读数，请启用 **Show on device screen**，然后保存设置。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="Meshtastic iOS app Telemetry settings for environmental measurements and on-screen display" width={900} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="Meshtastic iOS 应用中用于环境测量和屏幕显示的 Telemetry 设置" width={900} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
 </TabItem>
@@ -633,19 +633,19 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 3. 启用 **Environment metrics on-screen enabled** 以在 Base UI 上显示支持的环境读数，然后保存设置。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/TelemetryL2.png" alt="Meshtastic Android app Telemetry settings with environment metrics and on-screen display options" width={900} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/TelemetryL2.png" alt="Meshtastic Android 应用中带有环境指标和屏幕显示选项的 Telemetry 设置" width={900} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
 </TabItem>
 </Tabs>
 
-截图中使用的是示例节点和读数。X2 的环境遥测会显示其检测到的传感器和已安装固件所支持的读数。它不会启用罗盘校准，也不会传输原始加速度计和陀螺仪读数。要使用罗盘功能，请在 [Other Function](/cn/x2_get_started_for_meshtastic/#other-function) 下使用 **Position** 选项卡。
+截图使用的是示例节点和读数。X2 的环境遥测会显示其检测到的传感器和已安装固件所支持的读数。它不会启用罗盘校准，也不会传输原始加速度计和陀螺仪读数。要使用罗盘功能，请在 [Other Function](/cn/x2_get_started_for_meshtastic/#other-function) 下使用 **Position** 选项卡。
 
 ### Other Function
 
 <span id="sensors-display-and-audio"></span>
 
-使用方向键高亮某个控件。**按下 Confirm** 以选择它，或**长按 Confirm** 触发其长按操作。按 **Return** 关闭对话框或返回。菜单可用性取决于已安装的固件和启用的模块。
+使用方向键高亮一个控制项。**按下 Confirm** 进行选择，或**按住 Confirm** 触发其长按操作。按 **Return** 关闭对话框或返回。菜单可用性取决于已安装的固件和启用的模块。
 
 <Tabs groupId="x2-other-ui">
 <TabItem value="mui" label="MUI">
@@ -655,7 +655,7 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 
 | X2 操作 | 效果 |
 | --- | --- |
-| 在 **Home** 上长按 Confirm | 使 MUI 与节点的配置和数据重新同步。 |
+| 在 **Home** 上长按 Confirm | 重新将 MUI 与节点的配置和数据同步。 |
 | 在 **Nodes** 上长按 Confirm | 打开节点筛选器。 |
 | 在 **Settings** 上长按 Confirm | 锁定显示屏。使用 Power 唤醒，并在已配置的情况下输入屏幕 PIN。 |
 
@@ -675,7 +675,7 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 | MQTT 图标 | 长按 Confirm | 启用或禁用 MQTT 模块。如有提示，请重启。 |
 | 二维码图标 | 按 Confirm | 显示设备的二维码。 |
 
-在使用 MQTT 之前，请在手机应用中配置 MQTT 服务器以及相关通道上行/下行设置。Home 快捷方式用于打开或关闭该模块；有关设置，请参见 [Meshtastic MQTT configuration](https://meshtastic.org/docs/configuration/module/mqtt/)。
+在使用 MQTT 之前，请在手机应用中配置 MQTT 服务器以及相关通道上行/下行设置。Home 快捷方式用于打开或关闭该模块；有关设置，请参阅 [Meshtastic MQTT configuration](https://meshtastic.org/docs/configuration/module/mqtt/)。
 
 </TabItem>
 <TabItem value="node" label="Node Page">
@@ -686,17 +686,17 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 | 高亮某个节点并长按 Confirm | 打开与其的私信会话。 |
 | 选择某个节点的位置控件 | 在地图上显示其上报的位置（当有位置信息时）。 |
 
-有关带插图的 X2 键盘工作流程，请参见 [发送和读取消息](/cn/x2_get_started_for_meshtastic/#发送和读取消息)。
+有关带插图的 X2 键盘工作流程，请参阅 [发送和读取消息](/cn/x2_get_started_for_meshtastic/#send-and-read-messages)。
 
 </TabItem>
 <TabItem value="channel" label="Channel Page">
 
-选择一个通道并按 Confirm 以打开其会话。在该通道上长按 Confirm 以静音或取消静音其通知。铃铛会在**白色铃铛**和**橙色划线铃铛**之间切换；参见 [静音和取消静音通道](/cn/x2_get_started_for_meshtastic/#静音和取消静音通道)。
+选择一个通道并按 Confirm 以打开其会话。长按该通道上的 Confirm 以静音或取消静音其通知。铃铛会在**白色铃铛**和**橙色划线铃铛**之间切换；参见 [静音和取消静音通道](/cn/x2_get_started_for_meshtastic/#mute-and-unmute-a-channel)。
 
 </TabItem>
 <TabItem value="message" label="Message Page">
 
-选择一个会话并按 Confirm 打开它。要移除某个会话，请在其上**长按 Confirm** 以显示 **delete** 按钮，然后选择该按钮。这将删除本地会话历史记录。
+选择一个会话并按 Confirm 打开它。要移除一个会话，请在其上**长按 Confirm** 以显示 **delete** 按钮，然后选择该按钮。这会删除本地会话历史记录。
 
 </TabItem>
 <TabItem value="settings" label="Setting Page">
@@ -719,15 +719,15 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 | Configuration Reset → Factory Reset | 恢复默认配置。 |
 | Configuration Reset → NodeDB Reset | 清除已存储的节点信息。 |
 | Configuration Reset → Clear Chat History | 清除本地聊天记录。 |
-| Reboot / Shutdown → Green restart icon | 重启 X2。 |
-| Reboot / Shutdown → Red power icon | 关闭 X2。连接 USB 时，它可能会回到充电屏幕。 |
+| Reboot / Shutdown → 绿色重启图标 | 重启 X2。 |
+| Reboot / Shutdown → 红色电源图标 | 关闭 X2。连接 USB 时，它可能会回到充电屏幕。 |
 
-有关重置说明和截图，请参见 [出厂重置](/cn/x2_get_started_for_meshtastic/#出厂重置)和 [NodeDB 重置](/cn/x2_get_started_for_meshtastic/#NodeDB-重置)。
+有关重置说明和截图，请参阅 [出厂重置](/cn/x2_get_started_for_meshtastic/#factory-reset) 和 [NodeDB 重置](/cn/x2_get_started_for_meshtastic/#nodedb-reset)。
 
 </TabItem>
 <TabItem value="tools" label="Tool">
 
-打开 **Settings & Tools**，然后切换到 **Tools**。高亮某个工具并按 Confirm。当工具要求选择目标时，选择一个节点。
+打开 **Settings & Tools**，然后切换到 **Tools**。高亮某个工具并按 Confirm。当工具请求目标时，选择一个节点。
 
 | 工具 | 功能 |
 | --- | --- |
@@ -737,7 +737,7 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 | Statistic | 查看数据包和解码统计信息。 |
 | Packet Log | 检查 Mesh 数据包活动。 |
 
-路由或信号结果需要来自相关节点的通信。请留出时间等待回复，并在评估链路时查看 [信号质量](/cn/x2_get_started_for_meshtastic/#信号质量)。
+路由或信号结果需要来自相关节点的通信。请留出时间等待回复，并在评估链路时检查 [信号质量](/cn/x2_get_started_for_meshtastic/#signal-quality)。
 
 </TabItem>
 </Tabs>
@@ -763,7 +763,7 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 
 | 操作 | 效果 |
 | --- | --- |
-| Favorite / Unfavorite | 将节点加入或移出收藏。 |
+| Favorite / Unfavorite | 将节点添加到收藏或从收藏中移除。 |
 | Trace Route | 请求到所选节点的路由。 |
 | Mute Notifications / Unmute Notifications | 更改该节点的通知。 |
 
@@ -780,7 +780,7 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 | Compass | 选择 **Dynamic**、**Fixed Ring** 或 **Freeze Heading**。 |
 | Compass Calibrate | 启动 **30-second** 指南针校准。 |
 
-要进行校准，选择 **Compass Calibrate**，并在旋转 X2 至不同朝向的同时按照屏幕提示操作。使其远离磁铁和大型金属物体，并让倒计时完成。该校准选项要求固件检测到受支持的传感器。
+进行校准时，选择 **Compass Calibrate**，并在旋转 X2 至不同方向的同时按照屏幕提示操作。远离磁铁和大型金属物体，并让倒计时完成。该校准选项要求固件检测到受支持的传感器。
 
 </TabItem>
 <TabItem value="lora" label="LoRa">
@@ -793,7 +793,7 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 | Frequency Slot | 为所选区域和预设选择频率槽。 |
 | Transmit Enabled | 启用或禁用无线电发射。 |
 
-在你希望通信的节点之间协调预设和频率槽的更改。
+与要通信的节点协调预设和频率槽的更改。
 
 </TabItem>
 <TabItem value="system" label="System">
@@ -826,52 +826,52 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="MUI Settings, Reboot / Shutdown menu, and Bluetooth pairing mode" width={800} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
-在 X2 上，使用方向键高亮控件并按 **Confirm** 进行选择。有关 X2 按钮示意图，请参见 [手机连接](/cn/x2_get_started_for_meshtastic/#手机连接)。
+在 X2 上，使用方向键高亮控件并按 **Confirm** 进行选择。有关 X2 按钮示意图，请参阅 [手机连接](/cn/x2_get_started_for_meshtastic/#phone-connection)。
 
-- **在 Base UI 中**，启用 Wi-Fi 会禁用 Bluetooth。若要继续使用 Wi-Fi，请让手机连接到同一网络，并在 Meshtastic 应用中选择 **Network**，使用 X2 的 IP 地址。若要改为通过 BLE 配对，请禁用 Wi-Fi 并在 X2 上启用 **System → Bluetooth Toggle**。 |
+- **在 Base UI 中**，启用 Wi-Fi 会禁用 Bluetooth。若要继续使用 Wi-Fi，请将手机连接到同一网络，并在 Meshtastic 应用中选择 **Network**，使用 X2 的 IP 地址。若要改为通过 BLE 配对，请禁用 Wi-Fi 并在 X2 上启用 **System → Bluetooth Toggle**。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" alt="Meshtastic phone app Network connection settings" width={350} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
-- 在手机上启用 Bluetooth，并授予应用其 **Bluetooth / Nearby Devices** 权限。断开任何已连接到 X2 的其他手机或浏览器，然后重新扫描。 |
-- 如果配对仍然失败，请在手机的 Bluetooth 设置中忘记旧的 X2 配对记录，并从 Meshtastic 应用重新连接。输入当前屏幕上的 PIN 或你配置的固定 PIN。 |
+- 在手机上启用 Bluetooth，并授予应用其 **Bluetooth / Nearby Devices** 权限。断开任何已连接到 X2 的其他手机或浏览器，然后重新扫描。
+- 如果配对仍然失败，请在手机的 Bluetooth 设置中忘记旧的 X2 配对，并从 Meshtastic 应用重新连接。输入当前屏幕上的 PIN 或你配置的固定 PIN。
 
 ### 设备无法连接到我的 Wifi
 
 <span id="wi-fi-does-not-connect-or-turns-off"></span>
 
-1. 使用 **2.4 GHz Wi-Fi** 网络。X2 不支持 5 GHz Wi-Fi。要测试连接，可尝试使用配置为 2.4 GHz 的手机热点。 |
-2. 检查 Wi-Fi 名称和密码（包括大小写），然后在保存后启用 Wi-Fi。按照 [地图使用](/cn/x2_get_started_for_meshtastic/#地图使用)中的 **Online Map** 选项卡进行操作。 |
-3. 检查 MUI Home 页面上的 Wi-Fi 图标和 IP 地址。灰色图标和空的 IP 字段表示 Wi-Fi 被禁用或尚未连接。白色图标并显示 IP 地址表示已连接。 |
+1. 使用 **2.4 GHz Wi-Fi** 网络。X2 不支持 5 GHz Wi-Fi。要测试连接，请尝试使用配置为 2.4 GHz 的手机热点。 |
+2. 检查 Wi-Fi 名称和密码（包括大小写），然后在保存后启用 Wi-Fi。按照 [地图使用](/cn/x2_get_started_for_meshtastic/#map-usage) 中的 **Online Map** 选项卡进行操作。 |
+3. 检查 MUI Home 页面上的 Wi-Fi 图标和 IP 地址。灰色图标和空的 IP 字段表示 Wi-Fi 已禁用或尚未连接。白色图标并带有 IP 地址表示已连接。 |
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/WifiStatus.png" alt="MUI Home page showing Wi-Fi icon and IP address before and after connecting" width={900} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
-进入蓝牙连接模式会禁用 Wi-Fi。返回 MUI 后，当你需要在线地图时，请再次启用 Wi-Fi。Wi-Fi 网络还必须提供互联网访问，以便下载地图瓦片。
+进入蓝牙连接模式会禁用 Wi-Fi。返回 MUI 后，当你需要在线地图时，请再次启用 Wi-Fi。Wi-Fi 网络还必须能够访问互联网，才能下载地图瓦片。
 
 ### 设备自动关机
 
-**说明**
+**描述**
 
 - X2 在上电后不久就关机或反复重启。
 - 串口日志停止，设备无响应。
 
 **故障排查**
 
-1. 检查电池电量和 USB 供电连接。如果只是屏幕变黑，短按 **Power** 检查 X2 是否仍在运行。屏幕熄灭与关机是不同的。
+1. 检查电池电量和 USB 供电连接。如果只是屏幕变黑，短按 **Power** 检查 X2 是否仍在运行。屏幕超时与关机不同。
 2. 如果 X2 只显示充电画面，松开 Power，然后按住约 **5 秒** 以启动 Meshtastic。避免在保存设置或写入固件时中断电源。
-3. 如果设备仍然无响应，请按照 [Forced Restart](/cn/x2_get_started_for_meshtastic/#forced-restart) 操作。如果之后仍然反复重启，请抓取启动串口日志以帮助定位原因。
-4. 如果在电源稳定的情况下问题仍然存在，请对兼容的 X2 固件执行一次干净安装。按照 [Manual Firmware Installation](/cn/x2_get_started_for_meshtastic/#manual-firmware-installation) 完成全擦除出厂镜像流程。
+3. 如果设备仍然无响应，请按照[强制重启](/cn/x2_get_started_for_meshtastic/#强制重启)操作。如果之后仍然反复重启，请抓取启动串口日志以帮助定位原因。
+4. 如果在电源稳定的情况下问题仍然存在，请对兼容的 X2 固件执行一次干净安装。按照[手动安装固件](/cn/x2_get_started_for_meshtastic/#手动安装固件)中的完整擦除出厂镜像流程进行操作。
 
 :::caution 干净安装
-完全擦除会删除设置、频道、密钥和已保存的数据。继续之前请保存所有需要的内容。重新安装后，需要重新配置 LoRa 区域和频道。
+完整擦除会删除设置、信道、密钥和已保存的数据。继续之前请保存你需要的内容。重新安装后，需要重新配置 LoRa 区域和信道。
 :::
 
 ### 恢复出厂设置
 
-恢复出厂设置会还原默认配置。重置前请保存你想保留的设置和频道信息。
+恢复出厂设置会还原默认配置。重置前请保存你想保留的设置和信道信息。
 
 <Tabs groupId="x2-faq-reset-method">
 <TabItem value="mui" label="在 MUI 上配置">
@@ -896,17 +896,17 @@ X2 内置了用于环境读数、罗盘航向和运动检测的传感器。根�
 </TabItem>
 </Tabs>
 
-重启后重新连接 X2，并在使用 mesh 之前设置正确的 **LoRa 区域** 和 **频道**。
+重启后重新连接 X2，并在使用 Mesh 之前设置正确的 **LoRa 区域** 和 **信道**。
 
 ### 私信发送失败
 
 <span id="direct-messages-fail"></span>
 
-首先检查两个节点是否使用兼容的 LoRa 设置，并且在直连或通过 mesh 的有效范围内。尝试发送共享频道消息。如果频道消息正常而私信失败，请检查下面存储的节点信息和密钥。
+首先检查两个节点是否使用兼容的 LoRa 设置，并且在直连或通过 Mesh 的有效范围内。尝试发送共享信道消息。如果信道消息正常而私信失败，请检查下面存储的节点信息和密钥。
 
 #### NodeDB 重置
 
-NodeDB 存储在 mesh 上发现的节点信息。过期的条目（例如在另一节点更改密钥之前保存的条目）可能会阻止私信。重置 NodeDB 会清除本地节点数据库，使设备可以重新发现节点。
+NodeDB 存储在 Mesh 上发现的节点信息。过期的条目（例如在另一节点更改密钥之前保存的条目）可能会阻止私信。重置 NodeDB 会清除本地节点数据库，使设备可以重新发现节点。
 
 <Tabs groupId="x2-faq-reset-method">
 <TabItem value="mui" label="在 MUI 上配置">
@@ -920,7 +920,7 @@ NodeDB 存储在 mesh 上发现的节点信息。过期的条目（例如在另�
 </TabItem>
 <TabItem value="phone" label="在手机上配置">
 
-将 Meshtastic 应用连接到你想要重置数据库的节点。打开 **Settings → Device → Device Config → Reset NodeDB** 并确认。菜单名称可能会因应用版本不同而有所差异。
+将 Meshtastic 应用连接到你想要重置数据库的节点。打开 **Settings → Device → Device Config → Reset NodeDB** 并确认。菜单名称可能因应用版本而异。
 
 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem', margin: '1.5rem 0'}}>
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Meshtastic app Settings with Device selected" width={300} style={{maxWidth: '100%', height: 'auto', alignSelf: 'flex-start'}} loading="lazy" />
@@ -934,13 +934,13 @@ NodeDB 存储在 mesh 上发现的节点信息。过期的条目（例如在另�
 
 #### 交换用户信息
 
-节点会定期广播其用户信息，其中包括加密私信所需的 **public key**。如果某个节点的信息缺失或过期，在手机应用中打开该节点条目并选择 **Exchange User Info**。等待交换完成；如有需要，从另一节点重复此操作。
+节点会定期广播其用户信息，其中包括加密私信所需的 **公钥**。如果某个节点的信息缺失或过期，请在手机应用中打开其条目并选择 **Exchange User Info**。等待交换完成；如有需要，从另一节点重复此操作。
 
 <figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Meshtastic app node menu with Exchange User Info" width={300} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
 </figure>
 
-重新尝试私信并检查其投递状态。消息只出现在发送方的会话中并不能确认已被接收。
+重试私信并检查其投递状态。消息仅出现在发送方的会话中并不能确认已被接收。
 
 #### 重新生成私钥
 
@@ -951,7 +951,7 @@ NodeDB 存储在 mesh 上发现的节点信息。过期的条目（例如在另�
 </figure>
 
 :::note 重新生成密钥后
-节点的 public key 会发生变化，因此其他节点必须学习它的新信息。如有必要，从其他节点的列表中删除过期条目，然后再次交换用户信息。请对 **private key 保密**；只有 **public key** 会与其他节点共享。参见 [Meshtastic Security configuration](https://meshtastic.org/docs/configuration/radio/security/)。
+节点的公钥会发生变化，因此其他节点必须重新学习它的新信息。如有必要，从其他节点的列表中删除过期条目，然后再次交换用户信息。请对 **私钥保密**；只有 **公钥** 会与其他节点共享。参见 [Meshtastic 安全配置](https://meshtastic.org/docs/configuration/radio/security/)。
 :::
 
 ### 信号质量
@@ -959,21 +959,21 @@ NodeDB 存储在 mesh 上发现的节点信息。过期的条目（例如在另�
 - **SNR（信噪比）** 衡量接收信号相对于背景噪声的强度。数值越高通常表示链路越清晰。LoRa 可以接收 SNR 为负的信号；可用极限取决于调制解调器预设。
 - **RSSI（接收信号强度指示）** 以 dBm 为单位衡量接收信号功率。数值越不负表示信号越强：例如，**−90 dBm** 比 **−110 dBm** 更强。
 
-结合实际消息投递情况同时检查这两个数值。单次 SNR 或 RSSI 读数不足以证明设备有故障。要改善链路，请使用与工作频段匹配的天线，检查其连接，并移动到更高、更开阔、远离遮挡物和干扰的位置。
+结合实际消息投递情况同时检查这两个数值。单次 SNR 或 RSSI 读数并不能证明设备有故障。要改善链路，请使用与工作频段匹配的天线，检查其连接，并移动到更高、更开阔、远离遮挡和干扰的位置。
 
 ### 电脑找不到 X2 或无法连接其串口
 
-1. 使用 USB **数据** 线，并在连接 X2 前后检查电脑的端口列表。仅出现充电画面并不能确认已建立 USB 数据连接。
+1. 使用 USB **数据** 线，并在连接 X2 前后检查电脑的端口列表。仅显示充电画面并不能确认已建立 USB 数据连接。
 2. 在重新连接 X2、更换 USB 接口或进入下载模式后重新检查端口。在 macOS 上，`/dev/cu.usbmodem...` 的后缀可能会变化。
 3. 关闭使用该端口的其他烧录工具、串口监视器或浏览器连接。在 Linux 上，还要检查 [USB 访问权限](/cn/x2_get_started_for_meshtastic/#linux-usb-access)。
 4. 如果在端口列表中找不到该设备，请尝试另一根数据线或直接连接到电脑以检查 USB 连接。
 5. 对于固件安装，请按照 [Flash Firmware](/cn/x2_get_started_for_meshtastic/#flash-firmware) 中的说明进入烧录模式。对于 Web Client，请让 Meshtastic 正常运行。
 
-如果烧录工具报告 **No serial data received**，说明尚未与 bootloader 建立通信。仅凭这条消息无法判断是否存在 Flash 容量问题或设备缺陷。
+如果烧录工具报告 **No serial data received**，说明尚未与引导加载程序建立通信。仅凭这条消息无法判断是否存在 Flash 容量问题或设备缺陷。
 
 ### Linux USB 访问
 
-在连接 X2 前后对比串口列表：
+在连接 X2 前后对比串口：
 
 ```bash
 ls /dev/ttyACM* /dev/ttyUSB* 2>/dev/null
@@ -985,7 +985,7 @@ ls /dev/ttyACM* /dev/ttyUSB* 2>/dev/null
 ls -l /dev/ttyACM0
 ```
 
-在 Ubuntu/Debian 上，如果端口属于 `dialout`，请将你的用户加入该用户组：
+在 Ubuntu/Debian 上，如果端口属于 `dialout`，请将你的用户添加到该用户组：
 
 ```bash
 sudo usermod -aG dialout "$USER"
@@ -998,36 +998,36 @@ sudo usermod -aG dialout "$USER"
 - 使用 [Configure GPS](/cn/x2_get_started_for_meshtastic/#configure-gps) 启用 GNSS。
 - 移动到户外、确保视野开阔，并留出时间获取定位。长时间未使用后的首次定位可能比后续定位耗时更长。
 - 在期望其位置出现在地图上之前，先在 X2 上检查卫星和位置状态。
-- 如果你移动时位置仍然保持不变，请检查手机应用中的 **Fixed Position** 设置和 GNSS 更新间隔。参见 [Meshtastic Position configuration](https://meshtastic.org/docs/configuration/radio/position/)。
+- 如果你移动时位置仍然保持不变，请检查手机应用中的 **Fixed Position** 设置和 GNSS 更新间隔。参见 [Meshtastic 位置配置](https://meshtastic.org/docs/configuration/radio/position/)。
 
 ### 离线地图为空白
 
 1. 检查存储卡的 **MBR/FAT32** 格式以及 `/maps/<style>/<zoom>/<x>/<y>.png` 文件夹结构。
 2. 在 MUI 中选择与复制到存储卡相同的样式。
 3. 检查下载的瓦片是否覆盖正在查看的位置和缩放级别。仅安装官方入门套件时，将缩放级别缩小到 **6 或更低**。
-4. 对于当前位置，等待 GNSS 获取定位。如果未检测到存储卡，请先关闭 X2 并断开 USB，然后重新插入存储卡。
+4. 对于当前位置，等待 GNSS 定位。如果未检测到存储卡，请先关闭 X2 并断开 USB，然后重新插入存储卡。
 
-有关准备步骤，请参阅 [地图使用](/cn/x2_get_started_for_meshtastic/#地图使用)。
+准备步骤请参阅 [地图使用](/cn/x2_get_started_for_meshtastic/#地图使用)。
 
 ### 手动固件安装
 
-使用 [esptool](https://docs.espressif.com/projects/esptool/en/latest/esp32s3/) 在 **`0x0`** 地址烧录 X2 的 **`.factory.bin`**。该组合镜像包含引导加载程序、分区表和应用程序。仅包含应用程序的 `.bin` 文件不适用于此操作。
+使用 [esptool](https://docs.espressif.com/projects/esptool/en/latest/esp32s3/) 在 **`0x0`** 地址烧录 X2 的 **`.factory.bin`**。该组合镜像包含引导加载程序、分区表和应用程序。仅包含应用程序的 `.bin` 文件不适用于此过程。
 
 :::caution 完全擦除
-下面的烧录命令会擦除所有内部闪存，包括设置、信道和已保存的数据。继续之前请备份所有需要的数据。
+下面的烧录命令会擦除所有内部闪存，包括设置、频道和已保存的数据。继续之前请备份所有需要的内容。
 :::
 
-1. 下载 [X2 factory firmware 2.8.1.0046b50](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.0046b50.factory%20copy.bin)。将下载的文件从 **`firmware-seeed_meshpager_x2-2.8.1.0046b50.factory copy.bin`** 重命名为 **`x2.factory.bin`**，并将其放在电脑上的某个文件夹中。
+1. 下载 [X2 工厂固件 2.8.1.0046b50](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.0046b50.factory%20copy.bin)。将下载的文件从 **`firmware-seeed_meshpager_x2-2.8.1.0046b50.factory copy.bin`** 重命名为 **`x2.factory.bin`**，并将其放在电脑上的某个文件夹中。
 2. 安装 [Python 3.10 或更高版本](https://www.python.org/downloads/)。
-3. 使用 USB 数据线将 X2 连接到电脑。关闭 Web Flasher、Web Client 以及任何可能占用串口的串口监视器。
+3. 使用 USB 数据线将 X2 连接到电脑。关闭 Web Flasher、Web Client 以及任何可能占用该端口的串口监视器。
 4. 在包含 `x2.factory.bin` 的文件夹中打开终端，并根据你的系统执行相应命令。先发送 **1200 bps 复位**，然后使用带有 **`--before usb-reset`** 的 esptool。
 
-1200 bps 步骤会触发复位；esptool 负责执行固件写入。**1200 bps 不是固件传输速率。** 复位后 USB 端口可能会消失并以不同名称重新出现，因此在烧录前请重新列出端口。
+1200 bps 步骤会触发复位；esptool 负责执行固件写入。**1200 bps 不是固件传输速度。** 复位后 USB 端口可能会消失并以不同名称重新出现，因此在烧录前请重新列出端口。
 
 <Tabs groupId="x2-manual-flash-os">
 <TabItem value="windows" label="Windows">
 
-在 **PowerShell** 中，安装 esptool 并列出串口：
+在 **PowerShell** 中安装 esptool 并列出串口：
 
 ```powershell
 py -3 -m venv .venv
@@ -1035,7 +1035,7 @@ py -3 -m venv .venv
 .\.venv\Scripts\python.exe -m serial.tools.list_ports
 ```
 
-将 `COM5` 替换为 X2 当前使用的端口，并发送 **1200 bps 复位**：
+将 `COM5` 替换为 X2 当前的端口并发送 **1200 bps 复位**：
 
 ```powershell
 .\.venv\Scripts\python.exe -c "import serial,time; s=serial.Serial('COM5',1200,timeout=0.2); s.dtr=True; time.sleep(0.5); s.dtr=False; s.close(); time.sleep(2)"
@@ -1061,7 +1061,7 @@ python3 -m venv .venv
 
 在 Ubuntu/Debian 上，如果第一条命令提示缺少 `python3-venv`，请使用 `sudo apt install python3-venv` 安装。
 
-将 `/dev/ttyACM0` 替换为 X2 当前使用的端口。在 macOS 上，请使用对应的 `/dev/cu.usbmodem...` 端口。发送 **1200 bps 复位**，然后再次列出端口：
+将 `/dev/ttyACM0` 替换为 X2 当前的端口。在 macOS 上，请使用对应的 `/dev/cu.usbmodem...` 端口。发送 **1200 bps 复位**，然后再次列出端口：
 
 ```bash
 ./.venv/bin/python -c "import serial,time; s=serial.Serial('/dev/ttyACM0',1200,timeout=0.2); s.dtr=True; time.sleep(0.5); s.dtr=False; s.close(); time.sleep(2)"
@@ -1079,13 +1079,35 @@ python3 -m venv .venv
 </TabItem>
 </Tabs>
 
-保持 USB 连接，直到 esptool 显示 **`Hash of data verified`** 并完成操作。然后在松开 Power 和 Return 的情况下重启 X2，并重新配置 LoRa 区域和信道。
+保持 USB 连接，直到 esptool 显示 **`Hash of data verified`** 并完成。松开 Power 和 Return 后重新启动 X2，然后重新配置 LoRa 区域和频道。
 
-如果 esptool 报告 **No serial data received**，请检查是否有其他应用程序占用该端口，重复执行 1200 bps 复位，并选择新枚举出来的端口。仅降低传输速率并不能让 X2 进入下载模式。
+如果 esptool 显示 **No serial data received**，请检查是否有其他应用占用该端口，重复执行 1200 bps 复位，并选择新枚举出来的端口。仅降低传输速度并不能让 X2 进入下载模式。
 
 如果软件复位不可用，请使用 [烧录固件](/cn/x2_get_started_for_meshtastic/#烧录固件) 中描述的 X2 按键操作，然后重新检查端口。所需的复位行为可能取决于已安装的固件和硬件版本。
 
 如果已经建立连接但写入多次失败，请使用 `--baud 115200` 重新尝试写入命令。
+
+### 为什么其他节点上显示的位置有偏移？
+
+这是预期行为，而不是 GPS 或硬件故障。每个频道都有一个 **位置精度** 设置，默认值为 **13 位**。这会将你广播的每个位置四舍五入到约 ±2.9 km 的网格（共享频道的隐私默认设置），而你的设备会通过蓝牙显示其全精度定位——因此你自己的位置看起来是准确的，但其他节点看到的会有偏移。
+
+<figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="精确位置关闭，滑块在 ±2.9 km" width={300} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+</figure>
+
+如需发送全精度位置，请在**每一台**设备上启用：
+
+1. 在 Meshtastic 应用中打开 **Channels** 并点击你的频道。
+2. 打开 **Precise location**（将精度设置为 32 = 全精度）。
+3. 在每台设备上重复上述操作——该设置在发送端生效。
+
+<figure style={{textAlign: 'center', margin: '1.5rem 0'}}>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="精确位置开启（全精度）" width={300} style={{maxWidth: '100%', height: 'auto'}} loading="lazy" />
+</figure>
+
+CLI 方式：`meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**注意（固件 2.8+）：** 公共频道（无密钥、默认密钥或单字节密钥）被限制为 15 位（约 729 m）。如需全精度，请使用**带随机密钥的私有频道**。
 
 ## 技术支持与产品讨论
 
