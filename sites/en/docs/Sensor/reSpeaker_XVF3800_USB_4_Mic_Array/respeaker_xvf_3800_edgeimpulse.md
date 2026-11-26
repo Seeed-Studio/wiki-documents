@@ -1,5 +1,5 @@
 ---
-description: Unlock powerful voice control with the ReSpeaker XVF3800 USB 4-Mic Array and XIAO ESP32S3. Featuring 360° audio capture, noise suppression, and TinyML wake word detection via Edge Impulse—perfect for smart devices, robotics, and IoT projects.
+description: Unlock powerful voice control with the reSpeaker XVF3800 USB 4-Mic Array and XIAO ESP32S3. Featuring 360° audio capture, noise suppression, and TinyML wake word detection via Edge Impulse—perfect for smart devices, robotics, and IoT projects.
 title: TinyML Speech Recognition with Edge Impulse with reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_edge_impulse/
 ## Overview
 
 
-Unlock hands-free control with real-time voice command detection using a Keyword Spotting (KWS) system powered by TinyML. By combining the high-performance ReSpeaker XVF3800 microphone array with the efficient XIAO ESP32S3 and the Edge Impulse platform, we bring voice recognition to compact, low-power devices. Train, deploy, and listen—your device is always ready for your next command!
+Unlock hands-free control with real-time voice command detection using a Keyword Spotting (KWS) system powered by TinyML. By combining the high-performance reSpeaker XVF3800 microphone array with the efficient XIAO ESP32S3 and the Edge Impulse platform, we bring voice recognition to compact, low-power devices. Train, deploy, and listen—your device is always ready for your next command!
 
 ## Hardware Required
 
@@ -35,9 +35,9 @@ Unlock hands-free control with real-time voice command detection using a Keyword
 
 ## Data collection 
 
-### USB Firmware Installation for ReSpeaker XVF3800 with XIAO ESP32S3
+### USB Firmware Installation for reSpeaker XVF3800 with XIAO ESP32S3
 
-To begin audio data collection, ensure your ReSpeaker  is flashed with the USB firmware, enabling it to function as a USB microphone.
+To begin audio data collection, ensure your reSpeaker  is flashed with the USB firmware, enabling it to function as a USB microphone.
 
 
 [**Firmware Installation Wiki**](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
@@ -59,9 +59,9 @@ Install Required Libraries:
 pip install sounddevice scipy numpy 
 ```
 
-### Find ReSpeaker Device ID
+### Find reSpeaker Device ID
 
-To record from the correct microphone input, we need to identify the device index of the ReSpeaker mic.
+To record from the correct microphone input, we need to identify the device index of the reSpeaker mic.
 
 ```python
 import sounddevice as sd
@@ -72,7 +72,7 @@ for i, device in enumerate(devices):
 
 ```
 
-Look for the device name that corresponds to ReSpeaker (often named something like ReSpeaker XVF3800 USB 4-Mic Array) and note the index number (e.g., Device 2).
+Look for the device name that corresponds to reSpeaker (often named something like reSpeaker XVF3800 USB 4-Mic Array) and note the index number (e.g., Device 2).
 
 ### Record Audio Samples
 
@@ -162,7 +162,7 @@ Each person's folder contains labeled .wav files which will later be uploaded to
 
 ##  Uploading and Preparing Audio Data in Edge Impulse
 
-After collecting raw audio samples using the ReSpeaker XVF3800 and organizing them by label, the next step is to upload and process them in Edge Impulse Studio for training your Keyword Spotting model.
+After collecting raw audio samples using the reSpeaker XVF3800 and organizing them by label, the next step is to upload and process them in Edge Impulse Studio for training your Keyword Spotting model.
 
 ### Create a New Project in Edge Impulse
 
@@ -251,7 +251,7 @@ We’ll train the model using a learning rate of 0.005 over 100 epochs. To impro
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/accuracy.png" alt="pir" width={800} height="auto" /></p>
 
-## Deploying to ReSpeaker XVF3800 with XIAO ESP32 S3
+## Deploying to reSpeaker XVF3800 with XIAO ESP32 S3
 
 
 **Edge Impulse will automatically bundle all necessary libraries, preprocessing functions, and the trained model into a downloadable package.**
@@ -268,12 +268,12 @@ Once the download is complete:
 
 ### Switching Firmware to I2S Mode
 
-Before uploading the Arduino code, you must switch the ReSpeaker XVF3800 firmware to I2S mode to enable communication via the I2C protocol.
+Before uploading the Arduino code, you must switch the reSpeaker XVF3800 firmware to I2S mode to enable communication via the I2C protocol.
 [Firmware Installation Guide](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 ### Arduino Code Integration
 
-The Arduino code provided by Edge Impulse will require a few modifications to ensure compatibility with the ReSpeaker XVF3800 and XIAO ESP32S3 hardware:Update **GPIO pin definitions, I2S sampling rate**, and other hardware-specific parameters according to your setup.
+The Arduino code provided by Edge Impulse will require a few modifications to ensure compatibility with the reSpeaker XVF3800 and XIAO ESP32S3 hardware:Update **GPIO pin definitions, I2S sampling rate**, and other hardware-specific parameters according to your setup.
 
 ```c
 #define EIDSP_QUANTIZE_FILTERBANK   0

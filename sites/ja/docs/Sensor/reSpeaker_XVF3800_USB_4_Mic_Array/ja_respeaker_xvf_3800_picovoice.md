@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
+description: reSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
 title: reSpeaker で Pico-voice のウェイクワードと NLU を制御する
 keywords:
   - reSpeaker
@@ -222,7 +222,7 @@ Rhino は**リアルタイムのオンデバイス処理**向けに最適化さ�
 
 ### コンテキストを作成する 
 
-コンテキストは、特定のドメインに対する音声コマンド、インテント、スロットの集合を定義します。ここでは、音声コマンドを使って ReSpeaker Flex を制御するために **“Bumblebee”** コンテキストを作成します。Picovoice の Rhino Speech-to-Intent コンソールに移動し、**“Empty”** テンプレートを使用して **Bumblebee** という名前の新しいコンテキストを作成します。
+コンテキストは、特定のドメインに対する音声コマンド、インテント、スロットの集合を定義します。ここでは、音声コマンドを使って reSpeaker Flex を制御するために **“Bumblebee”** コンテキストを作成します。Picovoice の Rhino Speech-to-Intent コンソールに移動し、**“Empty”** テンプレートを使用して **Bumblebee** という名前の新しいコンテキストを作成します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic4.png" alt="pir" width={600} height="auto" /></p>
 

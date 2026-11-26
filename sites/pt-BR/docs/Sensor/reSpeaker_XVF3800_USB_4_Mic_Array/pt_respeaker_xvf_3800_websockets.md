@@ -1,5 +1,5 @@
 ---
-description: Transmita áudio do ReSpeaker XVF3800 USB 4-Mic Array via WebSocket para um servidor Python. Capture áudio PCM estéreo de 32 bits a 48 kHz no XIAO ESP32S3, armazene em buffer na PSRAM, transmita via WebSocket e salve como um arquivo WAV no seu PC.
+description: Transmita áudio do reSpeaker XVF3800 USB 4-Mic Array via WebSocket para um servidor Python. Capture áudio PCM estéreo de 32 bits a 48 kHz no XIAO ESP32S3, armazene em buffer na PSRAM, transmita via WebSocket e salve como um arquivo WAV no seu PC.
 title: reSpeaker XVF3800 USB Mic Array com streaming de áudio via WebSocket usando XIAO ESP32S3
 keywords:
   - reSpeaker

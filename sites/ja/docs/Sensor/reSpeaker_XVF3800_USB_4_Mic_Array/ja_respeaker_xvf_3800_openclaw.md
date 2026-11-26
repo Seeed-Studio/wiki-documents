@@ -1,5 +1,5 @@
 ---
-description: 'ReSpeaker + OpenClaw: Lark グループスマート位置特定とインタラクティブ会議カードプッシュ'
+description: 'reSpeaker + OpenClaw: Lark グループスマート位置特定とインタラクティブ会議カードプッシュ'
 title: 'ReSpeaker + OpenClaw: Lark グループスマート位置特定とインタラクティブ会議カードプッシュ'
 keywords:
   - reSpeaker_XVF3800_USB_4_Mic_Array
@@ -15,9 +15,9 @@ updatedAt: '2026-02-12'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf_3800_openclaw/
 ---
 
-# ReSpeaker + OpenClaw: Lark グループスマート位置特定とインタラクティブ会議カードプッシュ
+# reSpeaker + OpenClaw: Lark グループスマート位置特定とインタラクティブ会議カードプッシュ
 
-> ロボットに音声インタラクション機能を与えたいですか？Seeed Studio の ReSpeaker シリーズをお試しください！このプロジェクトの目標は、reSpeaker XVF3800 USB 4-Mic Array を OpenClaw と統合し、音声制御 AI エージェント操作を可能にすることです。reSpeaker の強力な音声キャプチャとノイズリダクション機能と、OpenClaw の柔軟な AI エージェントフレームワークを組み合わせることで、コマンドを理解し応答する音声制御スマートアシスタントを簡単に作成できます。このデモでは、reSpeaker を使用して Openclaw を制御し、Lark グループを自動的に特定してインタラクティブ会議招待カードを送信する方法を実演します。
+> ロボットに音声インタラクション機能を与えたいですか？Seeed Studio の reSpeaker シリーズをお試しください！このプロジェクトの目標は、reSpeaker XVF3800 USB 4-Mic Array を OpenClaw と統合し、音声制御 AI エージェント操作を可能にすることです。reSpeaker の強力な音声キャプチャとノイズリダクション機能と、OpenClaw の柔軟な AI エージェントフレームワークを組み合わせることで、コマンドを理解し応答する音声制御スマートアシスタントを簡単に作成できます。このデモでは、reSpeaker を使用して Openclaw を制御し、Lark グループを自動的に特定してインタラクティブ会議招待カードを送信する方法を実演します。
 > [プロジェクトソースコードリポジトリ](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
 > [reSpeaker 製品ソースコード](https://github.com/respeaker)
 > [reSpeaker 4-Mic Array | Seeed Studio 購入リンク](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)

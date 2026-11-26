@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Arrayは、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご確認ください。
+description: reSpeaker XVF3800 USB 4-Mic Arrayは、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご確認ください。
 title: reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 UDP Audio Streaming
 keywords:
   - reSpeaker
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_udp_audio_stream/
 
 ## 概要
 
-このプロジェクトでは、**ReSpeaker XVF3800**マイクロフォンアレイと**XIAO ESP32S3**ボードを使用したリアルタイム音声ストリーミングを実演します。音声はI2S経由でキャプチャされ、UDP経由でローカルマシン上で動作するサーバーに送信され、そこで.wavファイルとして保存・処理されます。
+このプロジェクトでは、**reSpeaker XVF3800**マイクロフォンアレイと**XIAO ESP32S3**ボードを使用したリアルタイム音声ストリーミングを実演します。音声はI2S経由でキャプチャされ、UDP経由でローカルマシン上で動作するサーバーに送信され、そこで.wavファイルとして保存・処理されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -33,7 +33,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_udp_audio_stream/
 
 - 指定されたWi-Fiネットワークに接続します。
 - UDPサーバー（例：ホストPC上で動作するPythonスクリプト）に接続します。
-- XIAO ESP32S3を使用してReSpeaker XVF3800からI2S経由でリアルタイム音声をキャプチャします。
+- XIAO ESP32S3を使用してreSpeaker XVF3800からI2S経由でリアルタイム音声をキャプチャします。
 - キャプチャした音声を生データとして送信します。
 
 ## Arduinoコード

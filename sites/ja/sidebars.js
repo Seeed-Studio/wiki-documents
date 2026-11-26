@@ -2121,6 +2121,13 @@ const sidebars = {
                     'Sensor/reSpeaker_44mm/ja_respeaker_44mm_xiao_led_effects',
                   ],
                 },
+                {
+                  type: 'category',
+                  label: 'XIAO GPIO',
+                  items: [
+                    'Sensor/reSpeaker_44mm/ja_respeaker_44mm_xiao_i2c_display',
+                  ],
+                },
               ],
             },
           ],

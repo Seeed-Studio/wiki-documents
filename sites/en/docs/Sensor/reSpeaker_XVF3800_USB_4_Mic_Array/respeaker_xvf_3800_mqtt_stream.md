@@ -1,5 +1,5 @@
 ---
-description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
+description: The reSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 MQTT Audio Streaming
 keywords:
   - reSpeaker
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_mqtt_audio_stream/
 
 ## Overview
 
-This project demonstrates how to stream  audio captured from the **ReSpeaker XVF3800** microphone array embedded a **XIAO ESP32S3** board and transmit it to an **MQTT broker** as a .wav file. The audio is captured via **I2S**, encoded in **WAV** format, and published over MQTT.
+This project demonstrates how to stream  audio captured from the **reSpeaker XVF3800** microphone array embedded a **XIAO ESP32S3** board and transmit it to an **MQTT broker** as a .wav file. The audio is captured via **I2S**, encoded in **WAV** format, and published over MQTT.
 
 
 
@@ -40,7 +40,7 @@ This project demonstrates how to stream  audio captured from the **ReSpeaker XVF
 This sketch does the following:
 - Connects to a specified **WiFi** network.
 - Connects to an **MQTT broker** (e.g., test.mosquitto.org).
-- Captures real-time audio using I2S from ReSpeaker  XVF3800 with XIAO ESP32S3
+- Captures real-time audio using I2S from reSpeaker  XVF3800 with XIAO ESP32S3
 - Encodes the audio into **WAV format**.
 - Publishes the audio as a single MQTT message.
 - Uses poll() to keep the MQTT connection alive.

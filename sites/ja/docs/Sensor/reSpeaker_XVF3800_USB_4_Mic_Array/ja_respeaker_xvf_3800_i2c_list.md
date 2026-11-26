@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット工学、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
+description: reSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット工学、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
 title: I2C コマンドを使用して XIAO ESP32S3 で reSpeaker XVF3800 USB Mic Array を制御する
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf_3800_i2c_list/
 
 ## はじめに 
 
-このセクションでは、ReSpeaker XVF3800 の I2C 制御コマンド一覧に加え、I2C の読み書き例および 2 つの動作モードにおけるハードウェア信号パス図を示します。I2C インターフェース経由で ReSpeaker XVF3800 を制御するアプリケーション例については、[Device Control](/ja/respeaker_xvf3800_xiao_rgb) セクションを参照してください。
+このセクションでは、reSpeaker XVF3800 の I2C 制御コマンド一覧に加え、I2C の読み書き例および 2 つの動作モードにおけるハードウェア信号パス図を示します。I2C インターフェース経由で reSpeaker XVF3800 を制御するアプリケーション例については、[Device Control](/ja/respeaker_xvf3800_xiao_rgb) セクションを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -245,7 +245,7 @@ bool xmos_read_bytes(uint8_t resid, uint8_t cmd, uint8_t *buffer, uint8_t read_l
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/read-version.png" alt="pir" width={800} height="auto" /></p>
 
 :::note
-I2C インターフェース経由で ReSpeaker XVF3800 を制御するアプリケーション例については、[Device Control](/ja/respeaker_xvf3800_xiao_rgb) セクションを参照してください。
+I2C インターフェース経由で reSpeaker XVF3800 を制御するアプリケーション例については、[Device Control](/ja/respeaker_xvf3800_xiao_rgb) セクションを参照してください。
 :::
 
 ## I2C コマンド一覧

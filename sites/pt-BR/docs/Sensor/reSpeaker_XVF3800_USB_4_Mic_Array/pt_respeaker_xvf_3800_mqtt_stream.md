@@ -1,5 +1,5 @@
 ---
-description: O ReSpeaker XVF3800 USB 4-Mic Array é uma matriz de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele permite controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade em modo duplo.
+description: O reSpeaker XVF3800 USB 4-Mic Array é uma matriz de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele permite controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade em modo duplo.
 title: reSpeaker XVF3800 USB Mic Array com XIAO ESP32S3 Transmissão de Áudio via MQTT
 keywords:
   - reSpeaker
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_mqtt_audio_stream
 
 ## Visão Geral
 
-Este projeto demonstra como transmitir o áudio capturado da matriz de microfones **ReSpeaker XVF3800** incorporando uma placa **XIAO ESP32S3** e enviá-lo para um **broker MQTT** como um arquivo .wav. O áudio é capturado via **I2S**, codificado no formato **WAV** e publicado via MQTT.
+Este projeto demonstra como transmitir o áudio capturado da matriz de microfones **reSpeaker XVF3800** incorporando uma placa **XIAO ESP32S3** e enviá-lo para um **broker MQTT** como um arquivo .wav. O áudio é capturado via **I2S**, codificado no formato **WAV** e publicado via MQTT.
 
 
 
@@ -40,7 +40,7 @@ Este projeto demonstra como transmitir o áudio capturado da matriz de microfone
 Este sketch faz o seguinte:
 - Conecta-se a uma rede **WiFi** especificada.
 - Conecta-se a um **broker MQTT** (por exemplo, test.mosquitto.org).
-- Captura áudio em tempo real usando I2S do ReSpeaker XVF3800 com XIAO ESP32S3
+- Captura áudio em tempo real usando I2S do reSpeaker XVF3800 com XIAO ESP32S3
 - Codifica o áudio em **formato WAV**.
 - Publica o áudio como uma única mensagem MQTT.
 - Usa poll() para manter a conexão MQTT ativa.

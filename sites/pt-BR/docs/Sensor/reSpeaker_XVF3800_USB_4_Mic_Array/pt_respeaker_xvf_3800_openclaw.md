@@ -1,5 +1,5 @@
 ---
-description: 'ReSpeaker + OpenClaw: Localização Inteligente de Grupos Lark e Envio Interativo de Cartão de Reunião'
+description: 'reSpeaker + OpenClaw: Localização Inteligente de Grupos Lark e Envio Interativo de Cartão de Reunião'
 title: 'reSpeaker + OpenClaw: Localização Inteligente de Grupos Lark e Envio Interativo de Cartão de Reunião'
 keywords:
   - reSpeaker_XVF3800_USB_4_Mic_Array
@@ -15,9 +15,9 @@ updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf_3800_openclaw/
 ---
 
-# ReSpeaker + OpenClaw: Localização Inteligente de Grupos Lark e Envio Interativo de Cartão de Reunião
+# reSpeaker + OpenClaw: Localização Inteligente de Grupos Lark e Envio Interativo de Cartão de Reunião
 
-> Quer dar capacidades de interação por voz ao seu robô? Experimente a série ReSpeaker da Seeed Studio! O objetivo deste projeto é integrar o reSpeaker XVF3800 USB 4-Mic Array com o OpenClaw, permitindo a operação de agentes de IA controlados por voz. Com o poderoso recurso de captura de áudio e redução de ruído do reSpeaker, combinado com a estrutura flexível de agentes de IA do OpenClaw, você pode criar facilmente um assistente inteligente controlado por voz capaz de entender e responder aos seus comandos. Esta demonstração mostra como usar o reSpeaker para controlar o Openclaw, permitindo que ele localize automaticamente grupos do Lark e envie cartões interativos de convite para reuniões.
+> Quer dar capacidades de interação por voz ao seu robô? Experimente a série reSpeaker da Seeed Studio! O objetivo deste projeto é integrar o reSpeaker XVF3800 USB 4-Mic Array com o OpenClaw, permitindo a operação de agentes de IA controlados por voz. Com o poderoso recurso de captura de áudio e redução de ruído do reSpeaker, combinado com a estrutura flexível de agentes de IA do OpenClaw, você pode criar facilmente um assistente inteligente controlado por voz capaz de entender e responder aos seus comandos. Esta demonstração mostra como usar o reSpeaker para controlar o Openclaw, permitindo que ele localize automaticamente grupos do Lark e envie cartões interativos de convite para reuniões.
 > [Repositório do Código-Fonte do Projeto](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
 > [Código-Fonte dos Produtos reSpeaker](https://github.com/respeaker)
 > [reSpeaker 4-Mic Array | Link de Compra na Seeed Studio](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)

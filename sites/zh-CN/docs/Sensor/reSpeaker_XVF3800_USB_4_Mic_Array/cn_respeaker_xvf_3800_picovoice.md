@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。与 XIAO ESP32S3 搭配使用，可为智能设备、机器人和物联网应用提供高级语音控制能力。探索其无缝集成与双模式灵活性。
+description: reSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。与 XIAO ESP32S3 搭配使用，可为智能设备、机器人和物联网应用提供高级语音控制能力。探索其无缝集成与双模式灵活性。
 title: 使用 Pico-voice 控制 reSpeaker 唤醒词和 NLU
 keywords:
   - reSpeaker
@@ -222,7 +222,7 @@ Rhino 针对**实时、本地处理**进行了优化，这意味着它可以离�
 
 ### 创建一个上下文 
 
-上下文定义了特定领域中的一组口语命令、意图和槽位；在这里，我们创建一个 **“Bumblebee”** 上下文，通过语音命令控制 ReSpeaker Flex。进入 Picovoice 中的 Rhino Speech-to-Intent 控制台，然后使用 **“Empty”** 模板创建一个名为 **Bumblebee** 的新上下文。
+上下文定义了特定领域中的一组口语命令、意图和槽位；在这里，我们创建一个 **“Bumblebee”** 上下文，通过语音命令控制 reSpeaker Flex。进入 Picovoice 中的 Rhino Speech-to-Intent 控制台，然后使用 **“Empty”** 模板创建一个名为 **Bumblebee** 的新上下文。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic4.png" alt="pir" width={600} height="auto" /></p>
 

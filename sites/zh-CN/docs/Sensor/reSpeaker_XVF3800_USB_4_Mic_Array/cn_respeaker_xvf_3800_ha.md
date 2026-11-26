@@ -1,5 +1,5 @@
 ---
-description: 体验 ReSpeaker XVF3800 USB 4-Mic Array 的强大功能——一款具备 AEC、波束成形、噪声抑制和 360° 语音采集的高级环形麦克风阵列。搭配小巧的 XIAO ESP32S3，可为智能设备、机器人和物联网应用提供高性能语音控制。加入我们，一起演示如何与 Home Assistant 无缝集成，通过语音指令控制设备。
+description: 体验 reSpeaker XVF3800 USB 4-Mic Array 的强大功能——一款具备 AEC、波束成形、噪声抑制和 360° 语音采集的高级环形麦克风阵列。搭配小巧的 XIAO ESP32S3，可为智能设备、机器人和物联网应用提供高性能语音控制。加入我们，一起演示如何与 Home Assistant 无缝集成，通过语音指令控制设备。
 title: 使用 Home Assistant 与 reSpeaker XVF3800 实现智能家居语音控制
 keywords:
   - reSpeaker
@@ -18,14 +18,14 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_home_assistant/
 
 ## 概述
 
-与智能空间对话，使用全新的 **ReSpeaker XMOS XVF3800 搭配 XIAO ESP32S3**，通过语音即可切换灯光、调高音乐音量，甚至询问天气。
+与智能空间对话，使用全新的 **reSpeaker XMOS XVF3800 搭配 XIAO ESP32S3**，通过语音即可切换灯光、调高音乐音量，甚至询问天气。
 
-本章节中，我们将使用搭载 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800 和 HA Voice Assistant 连接 Sonoff 智能开关，实现对灯光开关的语音控制。
+本章节中，我们将使用搭载 XIAO ESP32S3 的 reSpeaker XMOS XVF3800 和 HA Voice Assistant 连接 Sonoff 智能开关，实现对灯光开关的语音控制。
 
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/iqlsNezHYuE"
-          title="ReSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
+          title="reSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_home_assistant/
 
 <table align="center">
   <tr>
-      <th>ReSpeaker XVF3800 搭配 XIAO ESP32S3</th>
+      <th>reSpeaker XVF3800 搭配 XIAO ESP32S3</th>
         <th>Home Assistant 设备</th>
         <th>Sonoff BASICR2</th>
   </tr>
@@ -68,7 +68,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_home_assistant/
 ## 固件更新
 
 为了获得最佳的播放体验，我们需要将 XMOS 固件更新到最新版本。
-从这里下载固件。在电脑上插入搭载 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800，并按照我们的指南运行相应步骤：
+从这里下载固件。在电脑上插入搭载 XIAO ESP32S3 的 reSpeaker XMOS XVF3800，并按照我们的指南运行相应步骤：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -81,7 +81,7 @@ XVF3800 麦克风阵列需要 12.288 MHz 的 MCLK 才能工作，但 ESPHome（�
 
 安装指南在[这里](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#更新固件)
 
-## 准备 ReSpeaker XMOS XVF3800 搭配 XIAO ESP32S3
+## 准备 reSpeaker XMOS XVF3800 搭配 XIAO ESP32S3
 
 进入 **Home Assistant > Settings > Apps**。
 
@@ -1675,7 +1675,7 @@ voice_assistant:
 
 ## 特别鸣谢
 
-我们要感谢 FormatBCE 为 Seeed Studio ReSpeaker XVF3800 创建了这个非常棒的 YAML 文件。
+我们要感谢 FormatBCE 为 Seeed Studio reSpeaker XVF3800 创建了这个非常棒的 YAML 文件。
 在他的 [GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration) 上支持他
 
 ## 技术支持与产品讨论

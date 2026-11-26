@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボティクス、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
+description: reSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボティクス、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
 title: reSpeaker XVF3800 を Python で制御する
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_python_sdk/
 
 ## はじめに 
 
-このセクションでは、Python SDK を使用して ReSpeaker XVF-3800 を制御する方法について説明します。これは、独自のアプリケーションを構築したいユーザーにとって、開発をより便利にします。
+このセクションでは、Python SDK を使用して reSpeaker XVF-3800 を制御する方法について説明します。これは、独自のアプリケーションを構築したいユーザーにとって、開発をより便利にします。
 例えば、音声がどこから来ているかを検出したり、音声活動検出（VAD）を実行したり、LED を制御したり、その他多くのことが可能です。
 
 ## Python SDK
@@ -45,7 +45,7 @@ PARAMETERS = {
     "REBOOT":           (48,  7,  1,  "wo", "uint8"),
 }
 
-class ReSpeaker:
+class reSpeaker:
     TIMEOUT = 100000  # USB timeout
 
     def __init__(self, dev):
@@ -130,7 +130,7 @@ def find(vid=0x2886, pid=0x001A):
         dev = usb.core.find(idVendor=vid, idProduct=pid)
     if not dev:
         return
-    return ReSpeaker(dev)
+    return reSpeaker(dev)
 
 def main():
     dev = find()
@@ -161,7 +161,7 @@ if __name__ == '__main__':
 XVF_Host が何であるかを理解するには、ドキュメントを参照してください。
 このセクションでは、Python スクリプトを使用して [XVF_Host](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#how-to-control-respeaker-xvf3800) を操作します。
 
-### ReSpeaker XVF3800 用 Python サンプル
+### reSpeaker XVF3800 用 Python サンプル
 
 :::note
 python スクリプトで xvf_host を介した制御についてさらに詳しく知りたい場合は、この[記事](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)をお読みください。
@@ -182,7 +182,7 @@ cd reSpeakerXVF
 python test.py
 ```
 
-Python がインストールされており、ReSpeaker XVF3800 が USB 経由で接続されていることを確認してください。
+Python がインストールされており、reSpeaker XVF3800 が USB 経由で接続されていることを確認してください。
 
 `test.py` ファイルは次のように確認できます。これは Windows での参照用です。
 

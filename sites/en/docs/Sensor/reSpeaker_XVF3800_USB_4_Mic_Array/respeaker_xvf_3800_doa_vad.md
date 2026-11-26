@@ -1,5 +1,5 @@
 ---
-description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
+description: The reSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 DoA and VAD
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_doa_vad/
 
 ## Introduction 
 
-The ReSpeaker XVF3800 is a multi-microphone voice processing solution based on the XMOS XVF3800, designed for embedded applications requiring real-time audio intelligence. The XVF3800 internally computes Voice Activity Detection (VAD) and Direction of Arrival (DoA) to indicate when speech is present and the direction it originates from. These inference results can be accessed directly by a host MCU over I2C using resource-based commands, enabling features such as wake-on-voice, sound source localization, and direction-aware feedback without processing raw audio on the host.
+The reSpeaker XVF3800 is a multi-microphone voice processing solution based on the XMOS XVF3800, designed for embedded applications requiring real-time audio intelligence. The XVF3800 internally computes Voice Activity Detection (VAD) and Direction of Arrival (DoA) to indicate when speech is present and the direction it originates from. These inference results can be accessed directly by a host MCU over I2C using resource-based commands, enabling features such as wake-on-voice, sound source localization, and direction-aware feedback without processing raw audio on the host.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
