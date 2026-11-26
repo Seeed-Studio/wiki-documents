@@ -1,5 +1,5 @@
 ---
-description: "Pair an Orbbec Gemini 2 with reComputer on JetPack 5.1.3: SDK build, TensorRT YOLO11 detection and pixel-to-distance mapping."
+description: 'Pair an Orbbec Gemini 2 with reComputer on JetPack 5.1.3: SDK build, TensorRT YOLO11 detection and pixel-to-distance mapping.'
 title: YOLOv11 With Depth Camera on Jetson Orin For Distance Measurement
 keywords:
   - reComputer J4012
@@ -18,7 +18,7 @@ last_update:
   date: 07/04/2025
   author: Zibo
 createdAt: '2025-07-07'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/yolov11_with_depth_camera/
 ---
 

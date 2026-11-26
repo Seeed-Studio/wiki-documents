@@ -1,7 +1,7 @@
 ---
 description: Report each parking bay as occupied or free with the IP cameras already in your car park — hardware, deployment, interfaces and multi-stream measured data on Jetson and RK hosts
 title: Camera-Based Parking Occupancy Detection — Selection, Deployment and Measured Data
-sidebar_label: 'Parking Occupancy Detection'
+sidebar_label: Parking Occupancy Detection
 keywords:
   - parking occupancy detection
   - camera parking bay detection

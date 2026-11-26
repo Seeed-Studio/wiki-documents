@@ -1,8 +1,15 @@
 ---
-description: "A deep dive into Long-WAM: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "Long-WAM: Making Visual History Useful for Prediction and Control"
+description: 'A deep dive into Long-WAM: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'Long-WAM: Making Visual History Useful for Prediction and Control'
 hide_title: true
-keywords: ["Paper Deep-Dive","Long-WAM","World-Action Models","Long Context","Inverse Dynamics","Real-Time Control","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - Long-WAM
+  - World-Action Models
+  - Long Context
+  - Inverse Dynamics
+  - Real-Time Control
+  - LeRobot
 slug: /robotics/paper_reading_long_wam
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +17,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_long_wam/
 ---
 
 import '/src/css/paper-reading-style.css';

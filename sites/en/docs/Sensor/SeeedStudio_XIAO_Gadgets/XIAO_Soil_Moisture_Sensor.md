@@ -12,7 +12,7 @@ last_update:
   date: 05/26/2025
   author: Robben
 createdAt: '2025-05-26'
-updatedAt: '2026-02-24'
+updatedAt: '2026-11-14'
 url: https://wiki.seeedstudio.com/xiao_soil_moisture_sensor/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   author: Nemo
 createdAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/opendisplay_73_color_kit/
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-11'
 ---
 
 # Getting Started with OpenDisplay 7.3" Color Kit

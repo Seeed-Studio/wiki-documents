@@ -1,5 +1,5 @@
 ---
-description: "Deploy the Visual Perception Engine on reComputer Robotics with JetPack 6.2: one shared backbone for detection, segmentation and depth."
+description: 'Deploy the Visual Perception Engine on reComputer Robotics with JetPack 6.2: one shared backbone for detection, segmentation and depth.'
 title: Efficient Multi-Task Vision Inference Engine Deployment on Jetson
 keywords:
   - Visual Perception Engine
@@ -19,7 +19,7 @@ last_update:
   date: 2025-10-13
   author: Zibo
 createdAt: '2025-10-16'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/deploy_visual_perception_engine_recomputer/
 ---
 

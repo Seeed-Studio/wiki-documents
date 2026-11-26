@@ -1,6 +1,6 @@
 ---
-description: "A close reading of VLA-JEPA: latent actions, video supervision, robot control, training and inference, and robustness evidence."
-title: "VLA-JEPA: Learning Latent Actions from Video"
+description: 'A close reading of VLA-JEPA: latent actions, video supervision, robot control, training and inference, and robustness evidence.'
+title: 'VLA-JEPA: Learning Latent Actions from Video'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -19,7 +19,7 @@ last_update:
   date: 2026-11-04
   author: liujunjie
 createdAt: '2026-11-03'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_vla_jepa/
 ---
 

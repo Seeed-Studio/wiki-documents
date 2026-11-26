@@ -15,7 +15,7 @@ last_update:
   date: 11/16/2026
   author: Michelle Huang
 createdAt: 2026-09-19T00:00:00.000Z
-updatedAt: '2026-09-24'
+updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/meshcore_audio_development_l2/
 ---
 

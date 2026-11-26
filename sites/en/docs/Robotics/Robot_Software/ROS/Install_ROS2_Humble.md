@@ -1,5 +1,5 @@
 ---
-description: "Step-by-step guide to installing ROS 2 Humble on Ubuntu and Jetson: repository setup, installation, workspace creation and first nodes."
+description: 'Step-by-step guide to installing ROS 2 Humble on Ubuntu and Jetson: repository setup, installation, workspace creation and first nodes.'
 title: Install the ROS2 Humble
 keywords:
   - NVIDIA
@@ -11,7 +11,7 @@ last_update:
   date: 5/28/2025
   author: ZhuYaoHui
 createdAt: '2025-05-28'
-updatedAt: '2025-09-16'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/install_ros2_humble/
 ---
 

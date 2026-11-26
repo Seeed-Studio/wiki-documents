@@ -15,7 +15,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-02'
-updatedAt: '2026-09-16'
+updatedAt: '2026-11-24'
 url: https://wiki.seeedstudio.com/lerobot_dataset_tool/
 ---
 

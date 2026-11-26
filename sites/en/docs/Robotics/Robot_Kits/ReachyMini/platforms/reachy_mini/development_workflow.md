@@ -19,7 +19,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_development_workflow/
 ---
 

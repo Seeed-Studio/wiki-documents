@@ -1,5 +1,5 @@
 ---
-description: "How to control a robotic arm via Phospho and LeRobot: set up the browser-based platform, connect the arm, teleoperate and run imitation learning workflows."
+description: 'How to control a robotic arm via Phospho and LeRobot: set up the browser-based platform, connect the arm, teleoperate and run imitation learning workflows.'
 title: Getting Started with Phospho
 keywords:
   - NVIDIA Jetson
@@ -12,7 +12,7 @@ last_update:
   date: 7/1/2025
   author: Youjiang
 createdAt: '2025-07-01'
-updatedAt: '2025-09-12'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/control_robotic_arm_via_phospho/
 ---
 

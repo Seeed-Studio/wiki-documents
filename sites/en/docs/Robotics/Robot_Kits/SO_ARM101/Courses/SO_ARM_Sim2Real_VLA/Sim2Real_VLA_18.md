@@ -1,5 +1,5 @@
 ---
-description: "Chapter 18 of the SO-ARM101 Sim-to-Real VLA Course — run GR00T N1.7 TensorRT inference on Jetson: build the seven target-specific engines, run offline evaluation, and start the edge policy server."
+description: 'Chapter 18 of the SO-ARM101 Sim-to-Real VLA Course — run GR00T N1.7 TensorRT inference on Jetson: build the seven target-specific engines, run offline evaluation, and start the edge policy server.'
 title: Chapter 18 - Run GR00T N1.7 TensorRT Inference
 hide_title: true
 keywords:

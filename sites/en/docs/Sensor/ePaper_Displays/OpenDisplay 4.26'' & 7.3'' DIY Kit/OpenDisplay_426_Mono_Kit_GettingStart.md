@@ -10,7 +10,7 @@ last_update:
   author: Nemo
 createdAt: '2026-10-22'
 url: https://wiki.seeedstudio.com/opendisplay_426_mono_kit/
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-23'
 ---
 
 # Getting Started with OpenDisplay 4.26" Mono Kit

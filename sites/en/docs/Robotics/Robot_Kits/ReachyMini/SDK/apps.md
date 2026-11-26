@@ -17,7 +17,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-02-27'
-updatedAt: '2026-05-19'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/reachymini_sdk_apps/
 ---
 

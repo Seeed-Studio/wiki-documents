@@ -1,5 +1,5 @@
 ---
-description: "Chapter 3 of the SO-ARM101 Sim-to-Real VLA Course — what is Sim-to-Real: the definition, why it matters, and the sim-to-real gap you will learn to close."
+description: 'Chapter 3 of the SO-ARM101 Sim-to-Real VLA Course — what is Sim-to-Real: the definition, why it matters, and the sim-to-real gap you will learn to close.'
 title: Chapter 3 - What is Sim-to-Real?
 hide_title: true
 keywords:

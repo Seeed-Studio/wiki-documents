@@ -1,5 +1,5 @@
 ---
-description: "Track objects on a reComputer Jetson and send position to PX4 over ROS 2: Gemini 2 depth input, YOLO detection and MAVROS output."
+description: 'Track objects on a reComputer Jetson and send position to PX4 over ROS 2: Gemini 2 depth input, YOLO detection and MAVROS output.'
 title: Object Tracking with reComputer Jetson and PX4
 keywords:
   - NVIDIA
@@ -17,7 +17,7 @@ last_update:
   date: 8/08/2025
   author: Zibo
 createdAt: '2025-08-08'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/object_tracking_with_reComputer_jetson_and_pX4/
 ---
 

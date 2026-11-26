@@ -8,6 +8,8 @@ keywords:
   - ncs
 slug: /xiao_nrf54l15_nfc
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_nfc/
+createdAt: '2026-11-25'
+updatedAt: '2026-11-25'
 ---
 
 <div className="get_one_now_container" style={{textAlign: 'center'}}>

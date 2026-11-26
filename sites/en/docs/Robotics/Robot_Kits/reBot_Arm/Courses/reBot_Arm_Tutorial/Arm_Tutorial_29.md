@@ -1,5 +1,5 @@
 ---
-description: "Chapter 29 of the Seeed Physical AI Beginner's Course — hands-on autonomous visual grasping on the reBot Arm: installing the RGB-D camera SDK and the grasping repository, running the grasp and grasp-and-place programs, position compensation, and an optional GraspNet point-cloud grasping track."
+description: 'Chapter 29 of the Seeed Physical AI Beginner''s Course — hands-on autonomous visual grasping on the reBot Arm: installing the RGB-D camera SDK and the grasping repository, running the grasp and grasp-and-place programs, position compensation, and an optional GraspNet point-cloud grasping track.'
 title: Chapter 29 - reBot Arm Autonomous Visual Grasping
 hide_title: true
 keywords:
@@ -19,7 +19,7 @@ last_update:
   date: 2026-10-08
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-08'
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-15'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_29/
 ---
 

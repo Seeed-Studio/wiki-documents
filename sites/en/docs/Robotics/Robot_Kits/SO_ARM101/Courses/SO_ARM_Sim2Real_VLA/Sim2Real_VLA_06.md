@@ -1,5 +1,5 @@
 ---
-description: "Chapter 6 of the SO-ARM101 Sim-to-Real VLA Course — Build Your Robot Lab intro: from theory to physical execution with strict kinematic and visual consistency between twin and world."
+description: 'Chapter 6 of the SO-ARM101 Sim-to-Real VLA Course — Build Your Robot Lab intro: from theory to physical execution with strict kinematic and visual consistency between twin and world.'
 title: Chapter 6 - Build Your Robot Lab (Intro)
 hide_title: true
 keywords:

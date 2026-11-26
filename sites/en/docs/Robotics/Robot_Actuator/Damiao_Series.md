@@ -1,5 +1,5 @@
 ---
-description: "Complete guide to DM (Damiao) joint actuators for robotic arms: motor series overview, control modes, CAN communication and Python SDK usage with Seeed robotics kits."
+description: 'Complete guide to DM (Damiao) joint actuators for robotic arms: motor series overview, control modes, CAN communication and Python SDK usage with Seeed robotics kits.'
 title: Damiao
 keywords:
   - actuator
@@ -13,7 +13,7 @@ last_update:
   date: 06/1/2025
   author: ZhuYaoHui
 createdAt: '2025-06-01'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/damiao_series/
 ---
 

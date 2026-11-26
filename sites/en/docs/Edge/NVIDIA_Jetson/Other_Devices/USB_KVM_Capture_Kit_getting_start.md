@@ -1,5 +1,5 @@
 ---
-description: "Use the USB KVM Capture Kit with reComputer Jetson: connect keyboard and mouse sharing, capture HDMI or DisplayPort video, and get started with OSRBOT Link."
+description: 'Use the USB KVM Capture Kit with reComputer Jetson: connect keyboard and mouse sharing, capture HDMI or DisplayPort video, and get started with OSRBOT Link.'
 title: Getting Started with USB KVM Capture Kit
 keywords:
   - Edge

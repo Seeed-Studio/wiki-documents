@@ -1,5 +1,5 @@
 ---
-description: "J601 carrier board interfaces: GMSL, USB, CAN, M.2 and 40-pin pinouts, Linux device names and per-port checks, plus heatsink install."
+description: 'J601 carrier board interfaces: GMSL, USB, CAN, M.2 and 40-pin pinouts, Linux device names and per-port checks, plus heatsink install.'
 title: reComputer Robotics J601 Hardware & I/O
 tags:
   - J601-Robotics carrier board
@@ -18,7 +18,7 @@ last_update:
   date: 10/19/2026
   author: Zibo
 createdAt: '2026-06-18'
-updatedAt: '2026-10-19'
+updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/jetson/recomputer_robotics_j601/hardware_and_interface_usage/
 ---
 

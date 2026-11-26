@@ -17,7 +17,7 @@ last_update:
   date: 10/23/2026
   author: zibo
 createdAt: '2026-10-23'
-updatedAt: '2026-10-23'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/jetson/accelerate_llm_inference_mtp/
 ---
 

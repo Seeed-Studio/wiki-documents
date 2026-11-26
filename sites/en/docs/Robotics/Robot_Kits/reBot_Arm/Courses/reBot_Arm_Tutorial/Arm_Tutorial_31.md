@@ -1,5 +1,5 @@
 ---
-description: "Chapter 31 of the Seeed Physical AI Beginner's Course — ROS2 communication and robot software architecture: why a robot needs ROS2, nodes, the Topic / Service / Action mechanisms, message interfaces, QoS, the parameter server, launch files, the rosbag tool and why modular robot software is built this way."
+description: 'Chapter 31 of the Seeed Physical AI Beginner''s Course — ROS2 communication and robot software architecture: why a robot needs ROS2, nodes, the Topic / Service / Action mechanisms, message interfaces, QoS, the parameter server, launch files, the rosbag tool and why modular robot software is built this way.'
 title: Chapter 31 - ROS2 Communication and Robot Software Architecture
 hide_title: true
 keywords:
@@ -23,7 +23,7 @@ last_update:
   date: 2026-10-09
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-15'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_31/
 ---
 

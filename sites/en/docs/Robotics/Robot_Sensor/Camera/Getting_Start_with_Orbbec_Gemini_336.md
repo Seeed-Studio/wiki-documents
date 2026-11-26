@@ -1,5 +1,5 @@
 ---
-description: "How to get started with the Orbbec Gemini 336 3D camera: setup, SDK installation, depth and color streaming for robot vision applications."
+description: 'How to get started with the Orbbec Gemini 336 3D camera: setup, SDK installation, depth and color streaming for robot vision applications.'
 title: Orbbec Gemini336 3D Camera
 keywords:
   - Jetson
@@ -18,7 +18,7 @@ last_update:
   date: 2025-08-22
   author: Zibo
 createdAt: '2025-12-01'
-updatedAt: '2026-09-23'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/orbbec_gemini336/
 ---
 

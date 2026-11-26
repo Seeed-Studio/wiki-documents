@@ -1,8 +1,14 @@
 ---
-description: "A deep dive into Fast-WAM: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "Fast-WAM: Learning from Future Video Without Generating It at Execution"
+description: 'A deep dive into Fast-WAM: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'Fast-WAM: Learning from Future Video Without Generating It at Execution'
 hide_title: true
-keywords: ["Paper Deep-Dive","Fast-WAM","World-Action Models","Video Co-Training","Direct Action Inference","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - Fast-WAM
+  - World-Action Models
+  - Video Co-Training
+  - Direct Action Inference
+  - LeRobot
 slug: /robotics/paper_reading_fastwam
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +16,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_fastwam/
 ---
 
 import '/src/css/paper-reading-style.css';

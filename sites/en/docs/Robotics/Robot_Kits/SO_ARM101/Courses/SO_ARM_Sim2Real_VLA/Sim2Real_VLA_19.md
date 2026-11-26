@@ -1,5 +1,5 @@
 ---
-description: "Chapter 19 of the SO-ARM101 Sim-to-Real VLA Course — reference: all repositories, products, and documentation used across the course."
+description: 'Chapter 19 of the SO-ARM101 Sim-to-Real VLA Course — reference: all repositories, products, and documentation used across the course.'
 title: Chapter 19 - Reference
 hide_title: true
 keywords:

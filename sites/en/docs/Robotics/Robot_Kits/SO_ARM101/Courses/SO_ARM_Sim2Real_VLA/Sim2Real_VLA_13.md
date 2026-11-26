@@ -1,5 +1,5 @@
 ---
-description: "Chapter 13 of the SO-ARM101 Sim-to-Real VLA Course (optional) — datasets augment: generate new scenes from recorded episodes with NVIDIA Cosmos Transfer, and fold them back into co-training."
+description: 'Chapter 13 of the SO-ARM101 Sim-to-Real VLA Course (optional) — datasets augment: generate new scenes from recorded episodes with NVIDIA Cosmos Transfer, and fold them back into co-training.'
 title: Chapter 13 - Datasets Augment (Optional)
 hide_title: true
 keywords:

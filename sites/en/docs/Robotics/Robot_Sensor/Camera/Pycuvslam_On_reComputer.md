@@ -1,5 +1,5 @@
 ---
-description: "Run PyCuVSLAM visual odometry on reComputer with JetPack 6.2: monocular and RGB-D tracking, dataset setup and camera calibration."
+description: 'Run PyCuVSLAM visual odometry on reComputer with JetPack 6.2: monocular and RGB-D tracking, dataset setup and camera calibration.'
 title: PyCuVSLAM with reComputer
 keywords:
   - PyCuVSLAM
@@ -17,7 +17,7 @@ last_update:
   date: 2025-10-10
   author: Zibo
 createdAt: '2025-10-10'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/
 ---
 

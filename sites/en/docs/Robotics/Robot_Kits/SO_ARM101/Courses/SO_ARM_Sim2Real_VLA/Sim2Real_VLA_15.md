@@ -1,5 +1,5 @@
 ---
-description: "Chapter 15 of the SO-ARM101 Sim-to-Real VLA Course — connect the robot hardware to the Jetson: the SO-101 follower over USB serial, both cameras, calibration files, and the readiness checklist."
+description: 'Chapter 15 of the SO-ARM101 Sim-to-Real VLA Course — connect the robot hardware to the Jetson: the SO-101 follower over USB serial, both cameras, calibration files, and the readiness checklist.'
 title: Chapter 15 - Connect the Robot Hardware
 hide_title: true
 keywords:

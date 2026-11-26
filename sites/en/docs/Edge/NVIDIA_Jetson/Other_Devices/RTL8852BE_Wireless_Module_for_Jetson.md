@@ -1,5 +1,5 @@
 ---
-description: "Add Wi-Fi 6 to Jetson with the RTL8852BE M.2 module: driver install for JetPack 5 and 6, module detection and network configuration."
+description: 'Add Wi-Fi 6 to Jetson with the RTL8852BE M.2 module: driver install for JetPack 5 and 6, module detection and network configuration.'
 title: RTL8852BE Wireless Module for Jetson
 keywords:
   - Edge
@@ -14,7 +14,7 @@ last_update:
   date: 4/14/2026
   author: Zibo
 createdAt: '2026-04-14'
-updatedAt: '2026-09-21'
+updatedAt: '2026-11-09'
 sku: 100042928
 url: https://wiki.seeedstudio.com/rtl8852be_wireless_module_for_jetson/
 ---

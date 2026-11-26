@@ -8,6 +8,9 @@ slug: /service_for_fusion_manufacturing_documents
 last_update:
   date: 10/21/2026
   author: Xi Lin
+createdAt: '2026-10-21'
+url: https://wiki.seeedstudio.com/service_for_fusion_manufacturing_documents/
+updatedAt: '2026-10-21'
 ---
 
 Manufacturing documents describe a product''s materials, drawings, assembly, and testing requirements. They support quotations, procurement, production, and inspection. This guide is for projects based on customer designs. It explains the purpose of common manufacturing documents and how they relate to one another.

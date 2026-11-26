@@ -15,7 +15,7 @@ last_update:
   date: 10/08/2026
   author: Sizhao Zhou
 createdAt: '2026-06-29'
-updatedAt: '2026-06-30'
+updatedAt: '2026-10-08'
 url: https://wiki.seeedstudio.com/recamera_meshtastic_ha_security_system/
 ---
 

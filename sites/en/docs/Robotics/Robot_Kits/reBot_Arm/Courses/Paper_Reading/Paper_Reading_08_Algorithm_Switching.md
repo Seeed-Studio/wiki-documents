@@ -1,6 +1,6 @@
 ---
-description: "Train and deploy new policies on a reBot or SO101 platform already running ACT, switch platform commands using tabs, and learn the configuration and evaluation workflows for Diffusion, SmolVLA, and π policies."
-title: "How to Switch Policies on reBot Arm"
+description: Train and deploy new policies on a reBot or SO101 platform already running ACT, switch platform commands using tabs, and learn the configuration and evaluation workflows for Diffusion, SmolVLA, and π policies.
+title: How to Switch Policies on reBot Arm
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/hands_on_algorithm_switching/
 ---
 

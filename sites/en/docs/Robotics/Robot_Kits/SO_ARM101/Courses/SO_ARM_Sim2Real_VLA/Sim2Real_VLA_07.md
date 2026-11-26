@@ -1,5 +1,5 @@
 ---
-description: "Chapter 7 of the SO-ARM101 Sim-to-Real VLA Course — prepare the robot arm: install the LeRobot environment, write servo IDs (kit only; pre-built arms skip this), calibrate both arms, and verify teleoperation."
+description: 'Chapter 7 of the SO-ARM101 Sim-to-Real VLA Course — prepare the robot arm: install the LeRobot environment, write servo IDs (kit only; pre-built arms skip this), calibrate both arms, and verify teleoperation.'
 title: Chapter 7 - Prepare the Robot Arm
 hide_title: true
 keywords:

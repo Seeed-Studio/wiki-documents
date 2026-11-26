@@ -16,7 +16,7 @@ last_update:
   date: 11/23/2026
   author: Advent Jiang
 createdAt: '2026-11-06'
-updatedAt: '2026-11-23'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/halowlink2_introduction/
 ---
 

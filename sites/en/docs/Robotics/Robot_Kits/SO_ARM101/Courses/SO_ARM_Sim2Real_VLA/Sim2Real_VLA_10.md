@@ -1,5 +1,5 @@
 ---
-description: "Chapter 10 of the SO-ARM101 Sim-to-Real VLA Course — train the GR00T N1.7 policy: install Isaac-GR00T, convert the dataset to v2, register the SO-101 modality config, and fine-tune."
+description: 'Chapter 10 of the SO-ARM101 Sim-to-Real VLA Course — train the GR00T N1.7 policy: install Isaac-GR00T, convert the dataset to v2, register the SO-101 modality config, and fine-tune.'
 title: Chapter 10 - Train the GR00T N1.7 Policy
 hide_title: true
 keywords:
