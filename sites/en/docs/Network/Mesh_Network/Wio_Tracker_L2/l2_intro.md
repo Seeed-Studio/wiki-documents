@@ -27,24 +27,6 @@ url: https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/
 
 The Wio Tracker L2 Series is a highly extensible [Meshtastic®](https://meshtastic.org/) node featuring LoRa (862–930 MHz), the ESP32S3 for efficient processing, and an L76K GPS module for accurate location tracking. Designed for flexibility, it supports QSPI touch screen, E-Ink displays, TF Card, as well as solar panels and battery power, making it ideal for a wide range of IoT and off-grid applications.
 
-## L2 Series Model
-
-The Wio Tracker L2 Series includes Wio Tracker L2 for custom builds and Wio Tracker L2 Pro with an enclosure and built-in battery.
-
-### Version Comparison
-
-|Product Name|Wio Tracker L2|Wio Tracker L2 Pro|
-|------------------|--------------------------|-----------------------|
-|Image|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/3-100026809-Wio-Tracker-L2.jpg" alt="pir" width={900} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/3-wio-tracke-l2-pro_1.avif" alt="pir" width={900} height="auto" /></p>|
-|Purchase Link|<p style={{textAlign: 'center'}}>Coming Soon</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Wio-Tracker-L2-Pro-for-Meshtastic-p-0000.html)</p>|
-|Processor|<p style={{textAlign: 'center'}}>ESP32-S3</p>|<p style={{textAlign: 'center'}}>ESP32-S3</p>|
-|LoRa|<p style={{textAlign: 'center'}}>SX1262</p>|<p style={{textAlign: 'center'}}>SX1262</p>|
-|GPS|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|Screen|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|MicroSD Card Slot|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|Solar Input|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|Battery|<p style={{textAlign: 'center'}}>External Li-ion battery via connector</p>|<p style={{textAlign: 'center'}}>Built-in 3000mAh battery</p>|
-|Shell|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
 
 ## Features
 
@@ -79,6 +61,23 @@ The Wio Tracker L2 Series includes Wio Tracker L2 for custom builds and Wio Trac
 Describe your idea in a few words, and Seeed Studio’s CodeCraft AI coding assistant will generate a first draft of the code in minutes. Review it, flash it to your Wio Tracker L2, and test it on the board.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
+
+## L2 Series Model
+
+The Wio Tracker L2 Series includes Wio Tracker L2 for custom builds and Wio Tracker L2 Pro with an enclosure and built-in battery.
+
+|Product Name|Wio Tracker L2|Wio Tracker L2 Pro|
+|------------------|--------------------------|-----------------------|
+|Image|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/3-100026809-Wio-Tracker-L2.jpg" alt="pir" width={900} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/3-wio-tracke-l2-pro_1.avif" alt="pir" width={900} height="auto" /></p>|
+|Purchase Link|<p style={{textAlign: 'center'}}>Coming Soon</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Wio-Tracker-L2-Pro-for-Meshtastic-p-0000.html)</p>|
+|Processor|<p style={{textAlign: 'center'}}>ESP32-S3</p>|<p style={{textAlign: 'center'}}>ESP32-S3</p>|
+|LoRa|<p style={{textAlign: 'center'}}>SX1262</p>|<p style={{textAlign: 'center'}}>SX1262</p>|
+|GPS|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Screen|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|MicroSD Card Slot|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Solar Input|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+|Battery|<p style={{textAlign: 'center'}}>External Li-ion battery via connector</p>|<p style={{textAlign: 'center'}}>Built-in 3000mAh battery</p>|
+|Shell|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
 
 ## Specification
 
@@ -129,7 +128,7 @@ Describe your idea in a few words, and Seeed Studio’s CodeCraft AI coding assi
   </tr>
   <tr>
     <td colspan="1" rowspan="3">**Power Input**</td>
-    <td colspan="1">USB Type-C: 5V — 1A</td>
+    <td colspan="1">USB Type-C: 5V⎓1.5A</td>
   </tr>
   <tr>
     <td colspan="1">Solar:JST-PH 2P-2.0mm, 5V ~ 13V</td>
