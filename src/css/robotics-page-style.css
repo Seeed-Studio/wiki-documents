@@ -893,6 +893,9 @@ html[data-theme='dark'] .robotics-quicklinks {
 
 /* Circular product selector */
 .rotating-showcase {
+  container: robotics-showcase / inline-size;
+  --rp-panel-width: clamp(11rem, 17cqi, 16rem);
+  --rp-panel-gap: clamp(0.7rem, 1.2cqi, 1.15rem);
   position: relative;
   width: 100%;
   margin-top: 0.35rem;
@@ -1167,9 +1170,6 @@ html[data-theme='dark'] .robotics-quicklinks {
 .rotating-showcase-stage {
   cursor: grab;
 }
-.rotating-showcase.is-expanded .rotating-product-card[data-active='true'] {
-  width: min(68%, 58rem) !important;
-}
 .rotating-showcase.is-expanded .rotating-product-card[data-active='false'] {
   opacity: 0.08;
   filter: saturate(0.35) brightness(0.64);
@@ -1207,7 +1207,8 @@ html[data-theme='dark'] .robotics-quicklinks {
 }
 .rotating-showcase .rotating-product-card[data-expanded='true'] {
   display: block;
-  width: min(68%, 58rem) !important;
+  /* Reserve equal space for both panels and their inner and outer gutters. */
+  width: min(58rem, calc(100% - 2 * var(--rp-panel-width) - 4 * var(--rp-panel-gap))) !important;
   padding: 0;
   overflow: visible;
   background: transparent;
@@ -1227,15 +1228,15 @@ html[data-theme='dark'] .robotics-quicklinks {
   position: absolute;
   top: 0;
   z-index: 30;
-  width: calc(23.5% - 0.7rem);
+  width: var(--rp-panel-width);
   min-width: 0;
   pointer-events: auto;
 }
 .rotating-product-side--left {
-  right: calc(100% + 0.7rem);
+  right: calc(100% + var(--rp-panel-gap));
 }
 .rotating-product-side--right {
-  left: calc(100% + 0.7rem);
+  left: calc(100% + var(--rp-panel-gap));
 }
 .rotating-showcase .rotating-product-card[data-expanded='true'] .rotating-product-card-inner > .rotating-product-side {
   display: grid;
@@ -1615,7 +1616,6 @@ html[data-theme='dark'] .rotating-showcase-arrow {
       calc(-50% + var(--rp-carousel-x-mobile) + var(--rp-carousel-drag-x))
     ) scale(var(--rp-carousel-scale));
   }
-  .rotating-showcase.is-expanded .rotating-product-card[data-active='true'] { width: 100% !important; }
   .rotating-showcase-controls { gap: 0.55rem; }
   .rotating-showcase-controls button {
     width: 2.6rem;
@@ -1625,17 +1625,28 @@ html[data-theme='dark'] .rotating-showcase-arrow {
   .rotating-showcase-status { min-width: min(14rem, 58vw); }
 }
 
-@media (max-width: 1000px) {
+@container robotics-showcase (max-width: 60rem) {
   .rotating-showcase .rotating-product-card[data-expanded='true'] {
     width: 100% !important;
   }
-  .rotating-product-side {
+  .rotating-product-card[data-expanded='true'] > .rotating-product-card-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--rp-panel-gap);
+  }
+  .rotating-product-card[data-expanded='true'] > .rotating-product-card-inner > :is(.product-head, .robotics-courses) {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .rotating-product-card[data-expanded='true'] .rotating-product-side {
     position: static;
     width: auto;
-    margin: 0.9rem 1rem 0;
   }
-  .rotating-product-side:last-child {
-    margin-bottom: 1rem;
+}
+
+@container robotics-showcase (max-width: 34rem) {
+  .rotating-product-card[data-expanded='true'] > .rotating-product-card-inner {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

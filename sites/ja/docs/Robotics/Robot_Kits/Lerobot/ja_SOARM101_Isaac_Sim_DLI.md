@@ -15,21 +15,84 @@ createdAt: '2026-11-16'
 updatedAt: '2026-11-16'
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import '/src/css/soarm101-pinocchio-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Isaac Sim 6.1 を使った SO-ARM101 のデータ収集
 
-![Isaac Sim における SO-ARM101 データ収集デモ](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/isaac%20sim/isaac_sim_dli.gif)
+<div className="rebot-page soarm-guide">
+
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/isaac%20sim/isaac_sim_dli.gif" width={800} height={500} style={{height: 'auto'}} alt="Isaac Sim における SO-ARM101 データ収集デモ" />
+</div>
+
+Isaac Sim 6.1 で SO-ARM101 を使ってバイアルを仕分け、LeRobot 形式でデータを記録し、ACT の学習を検証します。キーボードを使うことも、物理リーダーを接続することも、物理フォロワーをシミュレーションにリンクすることもできます。
+
+## 推奨学習パス
+
+<div className="rebot-step-flow soarm-learning-path">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4><a href="#2-isaac-sim-61-をインストールする">環境を準備する</a></h4>
+    <p>Isaac Sim をインストールし、シーンアセットをダウンロードして LeRobot をセットアップします。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4><a href="#5-so-arm101-を接続してキャリブレーションする">アームをキャリブレーションする</a></h4>
+    <p>シリアルポートを確認し、使用する物理アームをキャリブレーションします。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4><a href="#6-テレオペレーションを開始してデータを収集する">テレオペレーションして記録する</a></h4>
+    <p>操作モードを選び、バイアル仕分けタスクを記録します。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4><a href="#7-データセットの確認可視化リプレイ">確認してリプレイする</a></h4>
+    <p>2 つのカメラ映像をアクションと照合し、エピソードをリプレイします。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
+    <h4><a href="#9-act-ポリシーを学習する">ACT を学習する</a></h4>
+    <p>記録したデータで学習ワークフローを検証します。</p>
+  </div>
+</section>
+
+</div>
 
 ## 1. 必要要件
 
-> ⚠️ **GPU 要件。** 少なくとも 12 GB の VRAM を搭載した NVIDIA RTX GPU（RTX 3080 12 GB や RTX 4070 Ti SUPER 16 GB など）と、最新のドライバーを使用してください。
-> ロボット、3 つのカメラビュー、物理シミュレーションが同時に動作します。VRAM が 8 GB の場合、デフォルトのレンダラーが数分以内にデスクトップコンポジタを圧迫することがあります。ディスプレイがフリーズしてマウスやキーボードに反応しなくなり、強制再起動が必要になる場合があります。Isaac Sim 自体は動作を続け、ログを書き出していることがあります。開発中、組み込みの緩和策と `--single-viewport` を有効にしていても、8 GB 搭載のノート PC が 2 回フリーズしました。安定した動作のために、少なくとも 12 GB の VRAM を搭載した GPU を使用してください。
-> GPU の VRAM が 8 GB の場合は、レンダリング負荷を下げる方法についてセクション 10 を参照してください。それでもシステムがフリーズする可能性があります。
+:::warning
+**GPU 要件。** 少なくとも 12 GB の VRAM を搭載した NVIDIA RTX GPU（RTX 3080 12 GB や RTX 4070 Ti SUPER 16 GB など）と、最新のドライバーを使用してください。
 
-- Ubuntu 22.04。Isaac Sim 6.1 は Ubuntu 24.04 にも対応しています。
-- **少なくとも 12 GB の VRAM** を搭載した NVIDIA RTX GPU。
-- 最新の NVIDIA ドライバー。
-- Isaac Sim 6.1 スタンドアロンパッケージ。
-- 物理テレオペレーション用に USB 接続された SO-ARM101 リーダーアーム。シミュレーションとリンクする物理フォロワーとして、SO-ARM101 フォロワーアームも接続します。
+ロボット、3 つのカメラビュー、物理シミュレーションが同時に動作します。VRAM が 8 GB の場合、デフォルトのレンダラーが数分以内にデスクトップコンポジタを圧迫することがあります。ディスプレイがフリーズしてマウスやキーボードに反応しなくなり、強制再起動が必要になる場合があります。Isaac Sim 自体は動作を続け、ログを書き出していることがあります。開発中、組み込みの緩和策と `--single-viewport` を有効にしていても、8 GB 搭載のノート PC が 2 回フリーズしました。安定した動作のために、少なくとも 12 GB の VRAM を搭載した GPU を使用してください。
+
+GPU の VRAM が 8 GB の場合は、レンダリング負荷を下げる方法についてセクション 10 を参照してください。それでもシステムがフリーズする可能性があります。
+:::
+
+| 項目 | 要件 |
+| --- | --- |
+| オペレーティングシステム | Ubuntu 22.04。Isaac Sim 6.1 は Ubuntu 24.04 にも対応しています。 |
+| GPU とドライバー | 少なくとも 12 GB の VRAM を搭載した NVIDIA RTX と、最新の NVIDIA ドライバー。 |
+| シミュレーションソフトウェア | Isaac Sim 6.1 スタンドアロンパッケージ。 |
+| Python 環境 | [uv](https://docs.astral.sh/uv/getting-started/installation/) をインストールして、Python 3.12 仮想環境を作成します。 |
+| 物理アーム | 物理テレオペレーション用に SO-ARM101 リーダーアームを USB で接続します。物理フォロワーモードを使う場合は、フォロワーアームも接続します。 |
 
 次のディレクトリ構成を使用します。
 
@@ -42,19 +105,37 @@ updatedAt: '2026-11-16'
 
 ## 2. Isaac Sim 6.1 をインストールする
 
-NVIDIA から `isaac-sim-standalone-6.1.0-linux-x86_64.zip`（約 12.4 GB）をダウンロードします。これを `~/isaacsim` に展開し、ポストインストールスクリプトを実行します。
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>展開してインストール</h4>
+
+[NVIDIA のダウンロードページ](https://docs.isaacsim.omniverse.nvidia.com/latest/installation/download.html) から `isaac-sim-standalone-6.1.0-linux-x86_64.zip`（約 12.4 GB）をダウンロードします。`~/isaacsim` に展開し、ポストインストールスクリプトを実行します。
 
 ```bash
 unzip isaac-sim-standalone-6.1.0-linux-x86_64.zip -d ~/isaacsim
 cd ~/isaacsim
 ./post_install.sh
 ```
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>互換性を確認する</h4>
 
 互換性チェッカーを実行して、システムが要件を満たしていることを確認します。
 
 ```bash
 ./isaac-sim.compatibility_check.sh     # Expected output: System checking result: PASSED
 ```
+  </div>
+</section>
+
+</div>
 
 - `./isaac-sim.sh` による初回起動時は、シェーダーコンパイルに数分かかる場合があります。
 - Isaac Sim を別の場所にインストールした場合は、シミュレーションを起動する前に `ISAACSIM_ROOT` をインストールディレクトリに設定してください。セクション 6 を参照してください。
@@ -62,7 +143,16 @@ cd ~/isaacsim
 
 ## 3. コードを取得する（Git LFS が必要）
 
-> ⚠️ ロボット、カメラマウント、作業台、バイアル、バイアルラックは、Git LFS に保存された USD アセットを使用します。クローンする前に `git-lfs` をインストールして、Isaac Sim が完全なアセットを読み込めるようにしてください。
+:::warning
+ロボット、カメラマウント、作業台、バイアル、バイアルラックは、Git LFS に保存された USD アセットを使用します。クローンする前に `git-lfs` をインストールして、Isaac Sim が完全なアセットを読み込めるようにしてください。
+:::
+
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>リポジトリをクローンしてアセットをダウンロードする</h4>
 
 ```bash
 sudo apt update
@@ -74,6 +164,13 @@ cd rebot-arm-dli-isaacsim
 git lfs install
 git lfs pull
 ```
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>USD ファイルを確認する</h4>
 
 アセットが正しくダウンロードされたことを確認します。
 
@@ -84,6 +181,10 @@ du -sh assets/
 head -c 8 assets/so101/SO-ARM101-USD-NO-CAMERA.usd
 # Expected output: PXR-USDC. If you see version, run git lfs pull again.
 ```
+  </div>
+</section>
+
+</div>
 
 ## 4. LeRobot 環境をセットアップする
 
@@ -113,6 +214,11 @@ uv pip install feetech-servo-sdk
 
 物理リーダーアームの電源を入れ、USB データケーブルを接続します。`lerobot-find-port` を実行して、リーダーとフォロワーのポートを特定します。ここでの例では、リーダーに `/dev/ttyACM1`、フォロワーに `/dev/ttyACM0` を使用しています。実際のポートパスに置き換えてください。プロジェクトのデフォルトデバイス ID に合わせるため、キャリブレーションは `so101_leader` と `so101_follower` という名前で保存します。
 
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
 ### リーダーアームをキャリブレーションする
 
 ```bash
@@ -125,7 +231,12 @@ lerobot-calibrate \
 ```
 
 プロンプトが表示されたら、各関節を可動範囲の中間位置に動かして Enter を押します。次に、各関節を可動範囲いっぱいに動かし、再度 Enter を押して保存します。[LeRobot SO-101 キャリブレーションデモ](https://huggingface.co/docs/lerobot/so101#calibrate) を参照してください。
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 ### フォロワーアームをキャリブレーションする
 
 シミュレーションとリンクする前にフォロワーをキャリブレーションします。リーダーと同じ中間位置および全可動範囲の手順を使用し、キャリブレーションを保存して終了するコマンドが表示されるまで待ちます。
@@ -138,6 +249,10 @@ lerobot-calibrate \
   --robot.port=/dev/ttyACM0 \
   --robot.id=so101_follower
 ```
+  </div>
+</section>
+
+</div>
 
 ## 6. テレオペレーションを開始してデータを収集する
 
@@ -149,17 +264,26 @@ cd ~/rebot-arm-dli-isaacsim
 
 ### テレオペレーションモードを選択する
 
+<Tabs>
+<TabItem value="leader" label="物理リーダー">
+
 物理リーダーを使ってシミュレートされたアームを操作します。`src=LEADER` ステータスは、シミュレーションがリーダーに追従していることを示します。
 
 ```bash
 ./run_so101.sh --leader-port /dev/ttyACM1 --no-follower
 ```
 
+</TabItem>
+<TabItem value="follower" label="物理フォロワー">
+
 物理フォロワーをリンクするには、まず両方の物理アームを似た姿勢に配置してから、次のコマンドを実行します。`src=FOLLOWER` ステータスは、シミュレーションがフォロワーの測定関節位置に追従していることを示します。
 
 ```bash
 ./run_so101.sh --leader-port /dev/ttyACM1 --follower-port /dev/ttyACM0
 ```
+
+</TabItem>
+<TabItem value="keyboard" label="キーボード">
 
 物理リーダーなしでシミュレートされたアームを操作するには、シミュレーションを開始し、3D ビューポートをクリックしてから `Y` を押してキーボードモードに入ります。
 
@@ -176,12 +300,50 @@ cd ~/rebot-arm-dli-isaacsim
 | `G` | グリッパーの開閉を切り替え |
 | `B` | 5 mm と 15 mm のステップを切り替え |
 
+</TabItem>
+</Tabs>
+
 ### バイアル仕分けタスクを記録する
 
-1. シミュレーションビューポートをクリックし、`R` を押して 3 本のバイアルをリセットし、シーンを再度ランダム化します。
-2. リーダーモードでは `S`、キーボードモードでは `T` を押して記録を開始します。
-3. 3 本のバイアルを 1 本ずつラックに立てて配置します。グリッパーがバイアルに近づくと、ガイドラインが把持距離の判断に役立ちます。ターミナルには `[GRASP]` と `[RELEASE]` が表示されます。
-4. 記録キーをもう一度押してエピソードを保存します。リーダーモードでは、`C` を押してエピソードを破棄することもできます。
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>シーンをリセットする</h4>
+
+シミュレーションビューポートをクリックし、`R` を押して 3 本のバイアルをリセットし、シーンを再度ランダム化します。
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>記録を開始する</h4>
+
+リーダーモードでは `S`、キーボードモードでは `T` を押して記録を開始します。
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>バイアルを仕分ける</h4>
+
+3 本のバイアルを 1 本ずつラックに立てて配置します。グリッパーがバイアルに近づくと、ガイドラインが把持距離の判断に役立ちます。ターミナルには `[GRASP]` と `[RELEASE]` が表示されます。
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>エピソードを保存する</h4>
+
+記録キーをもう一度押してエピソードを保存します。リーダーモードでは、`C` を押してエピソードを破棄することもできます。
+  </div>
+</section>
+
+</div>
 
 データセットは `~/rebot-arm-dli-isaacsim/datasets/so101_vials_front_side` に書き込まれ、ID は `local/so101_vials_front_side`、タスクテキストは `Put the three vials into the vial rack` になります。各記録には、SO-ARM101 の関節およびグリッパーデータに加え、手首カメラと俯瞰カメラからの 30 FPS 映像が含まれます。
 
@@ -193,6 +355,11 @@ cd ~/rebot-arm-dli-isaacsim
 
 ## 7. データセットの確認・可視化・リプレイ
 
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
 ### 動画とアクションの同期を確認する
 
 ```bash
@@ -206,7 +373,12 @@ lerobot-dataset-viz \
 ```
 
 2 つの動画がアクションおよび状態と同期したままになっていることを確認します。黒いフレーム、フリーズしたフレーム、視界を遮る物体がないかを確認してください。
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 ### Isaac Sim でアクションをリプレイする
 
 最初のターミナルで、シミュレーション受信側を起動します。
@@ -223,8 +395,19 @@ source ~/rebot_lerobot/.venv/bin/activate
 cd ~/rebot-arm-dli-isaacsim
 PYTHONPATH=scripts python scripts/replay_episode_so101.py --episode 0
 ```
+  </div>
+</section>
+
+</div>
 
 ## 8. ハードウェアなしで検証する
+
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>関節トラッキングと記録を確認する</h4>
 
 次のコマンドは、シミュレートされたリーダーを使用して関節トラッキングを確認します。2 つ目のコマンドでは、両方のカメラ、H.264 エンコード、および LeRobot データセット出力も確認します。
 
@@ -233,6 +416,13 @@ cd ~/rebot-arm-dli-isaacsim
 ./run_so101.sh --headless --test
 ./run_so101.sh --headless --test --test-recording
 ```
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>別のテストデータセットを生成する</h4>
 
 2 つのシミュレートされた記録を生成するには、次のコマンドを実行します。この例では、検証データを通常の記録とは別のディレクトリに書き込みます。
 
@@ -241,6 +431,10 @@ cd ~/rebot-arm-dli-isaacsim
   --dataset-root datasets/so101_vials_smoke_test \
   --repo-id local/so101_vials_smoke_test
 ```
+  </div>
+</section>
+
+</div>
 
 ## 9. ACT ポリシーを学習する
 
@@ -268,15 +462,50 @@ cd ~/rebot-arm-dli-isaacsim
 
 ## 11. トラブルシューティング
 
-- **シリアルポートにアクセスできません。** デバイスのポートとデータケーブルを確認してください。アカウントにシリアルポートの権限がない場合は、`sudo usermod -aG dialout "$USER"` を実行し、一度サインアウトして再度サインインしてから、もう一度試してください。
-- **シミュレーションアームと実機アームの姿勢が異なります。** 両方のアームについて、シリアルポートとキャリブレーション ID を確認してください。キャリブレーションの中点と、各関節の可動範囲を再確認してください。
-- **Isaac Sim Python が見つかりません。** インストールディレクトリに `python.sh` が含まれていることを確認し、そのディレクトリを `ISAACSIM_ROOT` に設定してください。
-- **シーンアセットが見つかりません。** プロジェクトディレクトリで `git lfs pull` を実行し、セクション 3 で説明しているようにアセットを確認してください。
-- **記録時に `[dataset-error]` が報告されます。** LeRobot の仮想環境と、セクション 4 の `[dataset,viz]` エクストラを確認してください。
-- **ターミナルに `[watchdog] Leader data timed out` と表示されます。** リーダー側の USB 接続とシリアルブリッジプロセスを確認してください。通信が中断されている間、シミュレーションは最後のターゲットを保持します。
+<details className="rebot-demo-details">
+<summary>シリアルポートにアクセスできません</summary>
 
-<details>
-<summary>上流 MIT ライセンス</summary>
+デバイスのポートとデータケーブルを確認してください。アカウントにシリアルポートの権限がない場合は、`sudo usermod -aG dialout "$USER"` を実行し、一度サインアウトして再度サインインしてから、もう一度試してください。
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>シミュレーションアームと実機アームの姿勢が異なります</summary>
+
+両方のアームについて、シリアルポートとキャリブレーション ID を確認してください。キャリブレーションの中点と、各関節の可動範囲を再確認してください。
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>Isaac Sim Python が見つかりません</summary>
+
+インストールディレクトリに `python.sh` が含まれていることを確認し、そのディレクトリを `ISAACSIM_ROOT` に設定してください。
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>シーンアセットが見つかりません</summary>
+
+プロジェクトディレクトリで `git lfs pull` を実行し、セクション 3 で説明しているようにアセットを確認してください。
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>記録時に <code>[dataset-error]</code> が報告されます</summary>
+
+LeRobot の仮想環境と、セクション 4 の `[dataset,viz]` エクストラを確認してください。
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>ターミナルに <code>[watchdog] Leader data timed out</code> と表示されます</summary>
+
+リーダー側の USB 接続とシリアルブリッジプロセスを確認してください。通信が中断されている間、シミュレーションは最後のターゲットを保持します。
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>上流の MIT ライセンス</summary>
 
 MIT ライセンス
 
@@ -289,3 +518,5 @@ Copyright (c) 2026 reBot Arm DLI Isaac Sim contributors
 ソフトウェアは「現状のまま」で提供され、明示であるか黙示であるかを問わず、いかなる種類の保証も行われません。ここでいう保証には、商品性、特定目的適合性、および非侵害についての保証を含みますが、これらに限定されません。いかなる場合も、著作者または著作権者は、契約行為、不法行為、またはそれ以外であれ、ソフトウェアまたはソフトウェアの使用もしくはその他の取引に起因または関連して生じるいかなる請求、損害、その他の責任についても、一切の責任を負わないものとします。
 
 </details>
+
+</div>
