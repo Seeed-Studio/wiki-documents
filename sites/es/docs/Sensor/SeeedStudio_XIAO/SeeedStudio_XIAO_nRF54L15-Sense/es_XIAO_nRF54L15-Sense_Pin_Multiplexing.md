@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_pin_multiplexing/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Para facilitar su uso, todos los siguientes ejemplos de multiplexación de pines se realizan en **PlatformIO**. Haz clic en este enlace para ver una guía de configuración y uso para la [XIAO nRF54L5](https://wiki.seeedstudio.com/es/xiao_nrf54l15_with_platform_io/)
+Para facilitar el uso, todos los siguientes ejemplos de multiplexación de pines se realizan en **PlatformIO**. Haz clic en este enlace para ver una guía de configuración y uso para la [XIAO nRF54L5](https://wiki.seeedstudio.com/es/xiao_nrf54l15_with_platform_io/)
 
 :::tip
 Basado en VS Code, si quieres usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, añade el archivo app.overlay y modifica el contenido en prj.conf
@@ -26,62 +26,6 @@ Basado en VS Code, si quieres usar el siguiente caso en el nRF Connect SDK, cons
 [XIAO nRF54L15 Añadir archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
 
 :::
-
-## Botones integrados
-
-XIAO nRF54L15(Sense) viene equipado con dos botones físicos importantes que desempeñan funciones cruciales en el funcionamiento del dispositivo y la programación del firmware: el **Botón de reinicio** y el **Botón de usuario**. Comprender sus funciones es esencial para el uso diario y las actualizaciones de firmware.
-
----
-
-## Descripción general del hardware
-
-<Tabs>
-<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
-
-### Parte frontal de XIAO nRF54L15
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-### Parte trasera de XIAO nRF54L15
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-
-</TabItem>
-<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
-
-### Parte frontal de XIAO nRF54L15 Sense
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-### Parte trasera de XIAO nRF54L15 Sense
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-</TabItem>
-</Tabs>
-
-
-### Botón de reinicio
-
-El botón de reinicio se utiliza para realizar una operación de reinicio forzado en el dispositivo.
-
-- **Funcionalidad:**
-  - **Reinicio forzado:** Al pulsar este botón se interrumpen inmediatamente todas las operaciones actuales del dispositivo y se provoca su reinicio, similar a un ciclo de encendido.
-  - **Resolución de programas bloqueados:** Cuando el programa en ejecución del dispositivo se bloquea, entra en un bucle infinito o deja de responder, pulsar el botón de reinicio es la forma más rápida de forzarlo a volver a un estado de funcionamiento normal.
-  - **Sin impacto en el firmware:** Una operación de reinicio no borra ni modifica el firmware ya programado en el dispositivo. Simplemente reinicia la aplicación que se está ejecutando.
-
----
-
-### Botón de usuario
-
-El botón de usuario es una entrada programable y versátil que ofrece un control flexible dentro de tus aplicaciones.
-
-**Funcionalidad:**
-
-- Entrada personalizable: A diferencia de la función fija del botón de reinicio, la acción del botón de usuario está totalmente definida por el firmware que programes.
-
-- Disparo de eventos: Se puede programar para activar eventos específicos, controlar diferentes funcionalidades o actuar como una entrada de propósito general para tus aplicaciones.
 
 ## Digital
 
@@ -199,19 +143,19 @@ int main(void)
 
 `static const struct gpio_dt_spec relay = GPIO_DT_SPEC_GET(DT_ALIAS(relay0), gpios);`
 
-- De nuevo, esta línea de código obtiene información sobre el dispositivo GPIO del relé llamado relay0.
+- De nuevo, esta línea de código obtiene la información sobre el dispositivo GPIO del relé llamado relay0.
 
 **Comprobación de disponibilidad del dispositivo**
 
 `if (!gpio_is_ready_dt(&button))` and `if (!gpio_is_ready_dt(&relay))`
 
-- Antes de que el programa comience a realizar cualquier operación, el código comprueba si los dispositivos del botón y del relé se han inicializado correctamente y están listos. Esta es una buena práctica en la programación de controladores en Zephyr y evita que el programa se bloquee si los dispositivos no están configurados correctamente.
+- Antes de que el programa empiece a realizar cualquier operación, el código comprueba si los dispositivos del botón y del relé se han inicializado correctamente y están listos. Esta es una buena práctica en la programación de controladores en Zephyr y evita que el programa se bloquee si los dispositivos no están configurados correctamente.
 
 **Configuración de pines**
 
 `gpio_pin_configure_dt(&button, GPIO_INPUT);`
 
-- Esta línea de código configura el pin GPIO del botón en modo de entrada. Este es un paso necesario para leer el nivel del pin, y el programa supervisará el nivel de voltaje del pin para determinar si el botón está pulsado.
+- Esta línea de código configura el pin GPIO del botón en modo de entrada. Este es un paso necesario para leer el nivel del pin, y el programa supervisará el nivel de tensión del pin para determinar si el botón está pulsado.
 
 `gpio_pin_configure_dt(&relay, GPIO_OUTPUT_ACTIVE);`
 
@@ -223,15 +167,15 @@ int main(void)
 
 `int button_state = gpio_pin_get_dt(&button);:` En cada bucle, el programa lee el estado de nivel actual de los pines del botón.
 
-`if (button_state == 0):` Esta lógica comprueba si el botón está presionado. En muchos diseños de circuitos, al presionar un botón se conecta el pin a tierra (GND), lo que da como resultado un nivel de 0 (es decir, bajo).
+`if (button_state == 0):` Esta lógica comprueba si el botón está pulsado. En muchos diseños de circuitos, al pulsar el botón se conecta el pin a tierra (GND), lo que da como resultado un nivel 0 (es decir, bajo).
 
-`gpio_pin_set_dt(&relay, 1);:` Si el estado del botón es 0 (presionado), entonces el pin del relé se establece en 1 (alto), lo que cierra el relé y enciende el dispositivo (por ejemplo, una lámpara) al que está conectado.
+`gpio_pin_set_dt(&relay, 1);:` Si el estado del botón es 0 (pulsado), entonces el pin del relé se pone a 1 (alto), lo que cierra el relé y enciende el dispositivo (por ejemplo, una lámpara) al que está conectado.
 
-`else:` Si el botón no está presionado (el estado es 1), `perform gpio_pin_set_dt(&relay, 0);` para establecer el pin del relé en 0 (bajo), lo que cierra el relé y apaga el dispositivo al que está conectado.
+`else:` Si el botón no está pulsado (el estado es 1), `perform gpio_pin_set_dt(&relay, 0);` para poner el pin del relé a 0 (bajo), lo que cierra el relé y apaga el dispositivo al que está conectado.
 
-`k_msleep(10);:` el código añade un breve retardo de 10 milisegundos al final de cada bucle para evitar que la CPU esté ocupada, etc. Este es un manejo simple de anti‑rebote. Este es un manejo simple de anti‑rebote que evita múltiples disparos debido al rebote físico de los botones y también reduce el consumo de energía.
+`k_msleep(10);:` el código añade un breve retardo de 10 milisegundos al final de cada bucle para evitar que la CPU esté ocupada, etc. Este es un sencillo tratamiento anti-rebote. Este es un sencillo tratamiento anti-rebote que evita múltiples disparos debidos al rebote físico de los botones y también reduce el consumo de energía.
 
-### Gráfico de resultado
+### Gráfico de resultados
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light2.gif" style={{width:700, height:'auto'}}/></div>
 
@@ -398,21 +342,21 @@ int main(void)
 }
 ```
 
-**Configuración de los dispositivos ADC (Convertidor Analógico‑Digital) y PWM (Modulación por Ancho de Pulso)**
+**Configuración de dispositivos ADC (Convertidor Analógico a Digital) y PWM (Modulación por Ancho de Pulso)**
 
 - Módulo de registro pot_pwm_example:
 
-  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): Esto registra un módulo de registro llamado pot_pwm_example y establece su nivel de registro en la configuración predeterminada del sistema, lo que facilita la depuración.
+  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): Esto registra un módulo de registro llamado pot_pwm_example y establece su nivel de registro al valor predeterminado del sistema, lo que facilita la depuración.
 
 - Configuración del ADC:
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta directiva del preprocesador es una comprobación del Device Tree que garantiza que exista un archivo de superposición válido que contenga las definiciones de los canales del ADC. Esto exige que el usuario proporcione la configuración correcta para el hardware específico.
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta directiva del preprocesador es una comprobación del Device Tree que garantiza que exista un archivo de superposición válido que contenga las definiciones de los canales del ADC. Esto obliga a que el usuario proporcione la configuración correcta para el hardware específico.
 
-  - static const struct adc_dt_spec adc_channels[];: Esta parte del código aprovecha el Device Tree de Zephyr para obtener automáticamente información de todos los canales de ADC configurados. Este enfoque hace que el código sea flexible y portátil entre diferentes hardware sin cambios de configuración manuales.
+  - static const struct adc_dt_spec adc_channels[];: Esta parte del código aprovecha el Device Tree de Zephyr para obtener automáticamente la información de todos los canales de ADC configurados. Este enfoque hace que el código sea flexible y portátil entre diferentes hardware sin cambios de configuración manuales.
 
   - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: Se define una macro para especificar a qué canal del arreglo adc_channels está conectado el potenciómetro.
 
-- Configuración de PWM:
+- Configuración del PWM:
 
   - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: Esta línea obtiene la información del dispositivo PWM para el alias pwm_led desde el Device Tree. Esta es una práctica estándar de Zephyr para buscar y referenciar dispositivos de hardware.
 
@@ -434,7 +378,7 @@ int main(void)
 
   - !device_is_ready(led.dev): De forma similar al ADC, esta línea comprueba si el dispositivo PWM está listo. Si no lo está, se registra un error y el programa termina.
 
-  - LOG_INF(...): Se imprimen la información del período y la frecuencia del PWM para ayudar al usuario a confirmar la configuración.
+  - LOG_INF(...): Se imprime la información del período y la frecuencia del PWM para ayudar al usuario a confirmar la configuración.
 
 - Configuración de la secuencia del ADC:
 
@@ -455,15 +399,15 @@ La lógica principal del código se ejecuta dentro de un bucle infinito while (1
 
   - uint32_t max_adc_raw: Esto calcula el valor bruto máximo posible del ADC.
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta es la lógica principal de mapeo. Escala el valor bruto del ADC (sensor_value) de forma proporcional al rango del período PWM (PWM_PERIOD_NS) para obtener un valor de ciclo de trabajo que ajusta el brillo del LED.
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta es la lógica de mapeo principal. Escala el valor bruto del ADC (sensor_value) de forma proporcional al rango del período PWM (PWM_PERIOD_NS) para obtener un valor de ciclo de trabajo que ajusta el brillo del LED.
 
-- Configuración del ciclo de trabajo del PWM:
+- Establecer el ciclo de trabajo del PWM:
 
   - pwm_set_dt(): Esta función aplica el nuevo ciclo de trabajo calculado (output_duty_ns) al dispositivo PWM, cambiando instantáneamente el brillo del LED.
 
 - Retardo:
 
-  - k_msleep(100): El programa se pausa durante 100 milisegundos después de cada bucle. Esto controla la frecuencia de las lecturas del ADC y las actualizaciones del PWM, evitando una carga excesiva de la CPU y proporcionando una experiencia de usuario estable.
+  - k_msleep(100): El programa se detiene durante 100 milisegundos después de cada bucle. Esto controla la frecuencia de las lecturas del ADC y las actualizaciones del PWM, evitando una carga excesiva de la CPU y proporcionando una experiencia de usuario estable.
 
 ### Gráfico de resultados
 
@@ -477,7 +421,7 @@ La lógica principal del código se ejecuta dentro de un bucle infinito while (1
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Módulo L76K GNSS para Seeed Studio XIAO</th>
+   <th>Módulo GNSS L76K para Seeed Studio XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -994,15 +938,15 @@ static Coordinates transform(Coordinates gps)
 
 - Módulo de registro `gps_app`:
 
- -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` Esto registra un módulo de registro llamado gps_app y establece su nivel de registro en INFO. Esto permite que el programa emita información a través del sistema de registro de Zephyr, lo cual es útil para la depuración y la monitorización.
+ -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` Esto registra un módulo de registro llamado gps_app y establece su nivel de registro en INFO. Esto permite que el programa emita información a través del sistema de registro de Zephyr, lo cual es útil para la depuración y el monitoreo.
 
 - Definiciones de tipos y macros:
 
- -`UBYTE`, `UWORD`, `UDOUBLE:`Estos son alias de tipos enteros sin signo personalizados que mejoran la legibilidad del código al aclarar el tamaño esperado de las variables.
+ -`UBYTE`, `UWORD`, `UDOUBLE:` Estos son alias de tipos enteros sin signo personalizados que mejoran la legibilidad del código al aclarar el tamaño esperado de las variables.
 
 - `SENTENCE_SIZE, BUFFSIZE:` Estos definen tamaños fijos para los búferes utilizados para almacenar sentencias NMEA y búferes de datos más grandes.
 
-- Macros como `HOT_START, SET_NMEA_OUTPUT:`Estas macros definen varios comandos del protocolo NMEA enviados al módulo GPS L76X para configurar su modo de funcionamiento, frecuencia de salida, velocidad en baudios, etc.
+- Macros como `HOT_START, SET_NMEA_OUTPUT:` Estas macros definen varios comandos del protocolo NMEA enviados al módulo GPS L76X para configurar su modo de funcionamiento, frecuencia de salida, velocidad en baudios, etc.
 
 - Definiciones de estructuras:
 
@@ -1032,13 +976,13 @@ static Coordinates transform(Coordinates gps)
 
   - `nrfx_power_constlat_mode_request():` Solicita un modo de latencia constante para garantizar que la gestión de energía no interfiera con las operaciones en tiempo real.
 
-  - `uart_dev = DEVICE_DT_GET:` Obtiene el manejador del dispositivo UART y utiliza device_is_ready() para comprobar si el dispositivo está listo.
+  - `uart_dev = DEVICE_DT_GET:` Recupera el manejador del dispositivo UART y utiliza device_is_ready() para comprobar si el dispositivo está listo.
 
-  - `uart_irq_callback_user_data_set()`and `uart_irq_rx_enable():`Estas funciones configuran y habilitan la interrupción de recepción UART, registrando la función uart_callback como el manejador de interrupciones para garantizar la recepción asíncrona de datos GPS.
+  - `uart_irq_callback_user_data_set()`and `uart_irq_rx_enable():` Estas funciones configuran y habilitan la interrupción de recepción UART, registrando la función uart_callback como el manejador de interrupciones para garantizar la recepción asíncrona de datos GPS.
 
 - Inicialización del módulo GPS:
 
-  - `L76X_Send_Command(SET_NMEA_OUTPUT):`Se envía un comando para configurar el módulo GPS a fin de que emita solo sentencias NMEA específicas como GNRMC, reduciendo el tráfico de datos innecesario.
+  - `L76X_Send_Command(SET_NMEA_OUTPUT):` Se envía un comando para configurar el módulo GPS a fin de que emita solo sentencias NMEA específicas como GNRMC, reduciendo el tráfico de datos innecesario.
 
  -` L76X_Send_Command(SET_POS_FIX_1S): `Establece la frecuencia de actualización de posición del módulo GPS en 1 segundo.
 
@@ -1075,7 +1019,7 @@ static Coordinates transform(Coordinates gps)
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Seeed Studio Expansion Board Base for XIAO</th>
+   <th>Placa base de expansión Seeed Studio para XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -1265,7 +1209,7 @@ int main(void) {
 
   - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` Esta línea obtiene el dispositivo de visualización elegido desde el Device Tree de Zephyr. Este enfoque garantiza que el código sea independiente del hardware.
 
-  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`El código intenta configurar el formato de píxel de la pantalla a PIXEL_FORMAT_MONO10. Si esto falla, entonces intenta PIXEL_FORMAT_MONO01. Esto garantiza que la pantalla funcione en modo monocromo, lo cual es necesario para algunas tecnologías de visualización (por ejemplo, OLED o e-Paper).
+  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`El código intenta configurar el formato de píxel de la pantalla a PIXEL_FORMAT_MONO10. Si esto falla, entonces intenta PIXEL_FORMAT_MONO01. Esto garantiza que la pantalla funcione en un modo monocromático, lo cual es necesario para algunas tecnologías de visualización (por ejemplo, OLED o e-Paper).
 
 - Función `framebuffer_setup()`:
 
@@ -1281,7 +1225,7 @@ int main(void) {
 
   - El código prioriza una fuente de píxeles` 8x8 `, ya que es una fuente pequeña común y fácil de leer.
 
-  - Si no se encuentra una fuente `8x8`, selecciona la primera fuente disponible de tamaño distinto de cero como respaldo.
+  - Si no se encuentra una fuente `8x8`, selecciona la primera fuente disponible con tamaño distinto de cero como alternativa.
 
   - `cfb_framebuffer_set_font(dev, chosen_font_idx):` Una vez que se encuentra una fuente adecuada, se establece como la fuente actual para el framebuffer.
 
@@ -1292,7 +1236,7 @@ int main(void) {
 - `cfb_print():` Esta es la función principal de la biblioteca CFB utilizada para imprimir texto en la ubicación de píxeles especificada.
 
 **Bucle principal**
-La lógica central del código se ejecuta dentro de un bucle infinito `while (1)`:
+La lógica principal del código se ejecuta dentro de un bucle infinito `while (1)`:
 
 - Borrado de la pantalla: `cfb_framebuffer_clear(dev, false):` Al comienzo de cada bucle, esto borra el framebuffer sin actualizar inmediatamente la pantalla. Esto permite dibujar varios elementos a la vez, evitando el parpadeo de la pantalla.
 
@@ -1469,7 +1413,7 @@ int main(void)
 
 **Inicialización de LVGL:**
 
-- `lv_init()` es el punto de entrada para la biblioteca gráfica LVGL. Debe llamarse antes de que se creen cualquier objeto LVGL o se realice cualquier operación, ya que inicializa el estado interno de la biblioteca.
+- `lv_init()` es el punto de entrada para la biblioteca gráfica LVGL. Debe llamarse antes de que se creen objetos LVGL o se realice cualquier operación, ya que inicializa el estado interno de la biblioteca.
 
 **Limpieza de la pantalla:**
 
@@ -1483,7 +1427,7 @@ int main(void)
 
 - El código también elimina el relleno de la pantalla `(lv_obj_set_style_pad_all())` y la barra de desplazamiento ` (lv_obj_set_scrollbar_mode()) ` para maximizar el área de dibujo utilizable.
 
-**Creación y configuración de elementos de la UI:**
+**Creación y configuración de elementos de la interfaz:**
 
 - Panel: Se crea un objeto panel con `lv_obj_create(scr)`. Su tamaño y alineación centrada se establecen usando `lv_obj_set_size()` y `lv_obj_align()`. Su estilo, incluido el fondo blanco y el borde negro, se configura con funciones como `lv_obj_set_style_bg_color()` y `lv_obj_set_style_border_color().`
 
@@ -1501,9 +1445,9 @@ Cuadrados: Se utiliza un bucle for para crear cuatro pequeños objetos cuadrados
 
 **Bucle principal:**
 
-- `The while(1)` loop es la parte de ejecución continua del programa.
+- El bucle `while(1)` es la parte de ejecución continua del programa.
 
-- `lv_task_handler()` se llama continuamente dentro del bucle para procesar todas las tareas internas de LVGL, como actualizar elementos de la UI y manejar eventos.
+- `lv_task_handler()` se llama continuamente dentro del bucle para procesar todas las tareas internas de LVGL, como actualizar elementos de la interfaz y manejar eventos.
 
 - `k_sleep(K_MSEC(1000))` pausa el hilo durante 1000 milisegundos. Para d estáticos
 

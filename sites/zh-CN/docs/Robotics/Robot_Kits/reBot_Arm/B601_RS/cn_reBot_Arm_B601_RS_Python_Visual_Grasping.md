@@ -1,7 +1,7 @@
 ---
 description: 使用 Orbbec Gemini 336 和 YOLOE 搭建 reBot Arm B601-RS 桌面视觉抓取，完成 OBB 预览、手眼标定和真机抓取，并可选用 AnyGrasp 或 GraspNet-Baseline。
-title: reBot Arm B601-RS 多后端视觉抓取
-sidebar_label: reBot Arm B601-RS 多后端视觉抓取
+title: reBot-RS 多后端视觉抓取
+sidebar_label: reBot-RS 多后端视觉抓取
 keywords:
   - reBot Arm B601-RS
   - RGB-D

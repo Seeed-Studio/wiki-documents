@@ -191,6 +191,17 @@ import TabItem from '@theme/TabItem';
 :::caution note
 请 `不要使用 OTA` 更新固件，这可能会导致设备完全损坏。详细信息请[点击这里](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
 :::
+
+**出厂固件**
+
+X1 出厂时预装了 Meshtastic **v2.7.23** 固件（[`firmware-mesh-tracker-x1-2.7.23.2546839.uf2`](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/firmware-mesh-tracker-x1-2.7.23.2546839.uf2)）。如果需要恢复出厂固件，可以下载此版本，并通过 Web Flasher 或 DFU 模式进行刷写。
+
+:::note
+**为什么 X1 没有 v2.7.26 固件版本？**
+
+Meshtastic 团队在 X1 发布之前就已将 v2.7.26 作为稳定版本发布，因此没有为该设备提供专用的 v2.7.26 固件。官方团队也已决定不将 v2.8 的错误修复移植到 v2.7 分支，因此后续也不会添加该固件版本。如果需要最新的错误修复，请通过 Web Flasher 刷写最新的稳定版本。
+:::
+
 #### 步骤 1：进入 DFU 模式
 
 通过 Web Flasher 进入 DFU。如果多次失败，请手动进入 DFU。

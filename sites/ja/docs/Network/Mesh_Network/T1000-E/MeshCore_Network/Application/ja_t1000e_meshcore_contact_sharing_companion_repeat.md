@@ -1,6 +1,6 @@
 ---
-description: Public Channel で連絡先を共有し、Companion デバイスに Repeat Mode でメッセージを中継させることで、SenseCAP Card Tracker T1000-E を使って MeshCore の通信経路を一時的に延長します。
-title: 連絡先共有と Companion リピート
+description: Public Channel を介して連絡先を共有し、コンパニオンデバイスにリピートモードでメッセージを中継させることで、SenseCAP Card Tracker T1000-E を使って MeshCore の通信経路を一時的に拡張します。
+title: 連絡先共有とコンパニオンリピート
 keywords:
   - MeshCore
   - Card Tracker T1000-E
@@ -11,7 +11,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/application/t1000e-meshcore-hero.png
 slug: /t1000e_meshcore_contact_sharing_companion_repeat
 sku: 114993369,114993649
-sidebar_position: 3
+sidebar_position: 5
 last_update:
   date: 10/16/2026
   author: Advent Jiang

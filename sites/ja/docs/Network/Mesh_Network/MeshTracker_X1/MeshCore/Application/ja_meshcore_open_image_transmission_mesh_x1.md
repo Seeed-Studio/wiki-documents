@@ -1,5 +1,5 @@
 ---
-description: このガイドでは、超低ビットレート画像圧縮を使用して、MeshCore 上で AI により再構成された画像を送信する方法を説明します。
+description: このガイドでは、超低ビットレート画像圧縮を使用して、MeshCore 経由で AI により再構成された画像を送信する方法を説明します。
 title: 画像伝送
 keywords:
   - MeshCore
@@ -12,12 +12,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png
 slug: /meshcore_ai_image_transmission_x1
 sku: 100087698
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 9/19/2026
   author: Michelle Huang
 createdAt: 2026-09-19T00:00:00.000Z
-updatedAt: '2026-09-21'
+updatedAt: '2026-09-24'
 url: https://wiki.seeedstudio.com/ja/meshcore_ai_image_transmission_x1/
 ---
 

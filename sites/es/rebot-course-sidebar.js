@@ -366,6 +366,7 @@ const sidebars = {
         { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_Bimanual`, label: 'reBot-DM con colaboración bimanual' },
         { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_isaacsim`, label: 'reBot-DM con Isaac Sim' },
         { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_Web_Simulator_Developer_Guide`, label: 'Sistema de control web de reBot-DM: robot real y MuJoCo' },
+        { type: 'doc', id: `${DM}/es_reBot_Arm_B601_DM_Holoscan_Gravity_Compensation` },
       ],
     },
   ],

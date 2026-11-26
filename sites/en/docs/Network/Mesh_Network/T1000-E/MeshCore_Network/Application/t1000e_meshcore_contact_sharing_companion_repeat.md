@@ -11,7 +11,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/application/t1000e-meshcore-hero.png
 slug: /t1000e_meshcore_contact_sharing_companion_repeat
 sku: 114993369,114993649
-sidebar_position: 3
+sidebar_position: 5
 last_update:
   date: 10/16/2026
   author: Advent Jiang

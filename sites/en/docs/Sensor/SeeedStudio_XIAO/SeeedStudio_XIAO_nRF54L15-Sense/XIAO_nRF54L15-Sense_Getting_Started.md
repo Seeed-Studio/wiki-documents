@@ -37,12 +37,12 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></strong>
     </a>
    </div></td>
   </tr>
@@ -53,17 +53,6 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 The **Seeed Studio XIAO nRF54L15** is a compact, high-performance development board featuring the cutting-edge Nordic nRF54L15 chip. This next-generation SoC integrates an ultra-low-power multi-protocol 2.4 GHz radio with an MCU containing a **128 MHz Arm® Cortex®-M33 processor** and a **128 MHz RISC-V coprocessor**. It offers scalable memory up to **1.5 MB NVM and 256 KB RAM**, and an internal ultra-low-power design that significantly extends battery life. Its powerful radio supports **Bluetooth® 6.0 (including Channel Sounding), Matter, Thread, Zigbee**, and high throughput 2.4 GHz proprietary modes up to **4 Mbps**. The board includes a comprehensive peripheral set, an integrated **128 MHz RISC-V coprocessor**, and advanced security features such as **TrustZone®** isolation and cryptographic engine protection. With **built-in Li-ion battery management**, the XIAO nRF54L15 is ideal for compact, secure and energy-efficient IoT solutions such as smart wearables, industrial sensors and advanced HMIs.
 
-export const Highlight = ({children, color}) => (
-  <span
-    style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>
-    {children}
-  </span>
-);
 
 ### Specification
 
@@ -178,41 +167,32 @@ export const Highlight = ({children, color}) => (
 <Tabs>
 <TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
 
-### XIAO nRF54L15 Front
+### XIAO nRF54L15 V1.2 (current)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="XIAO nRF54L15 V1.2 back pinout" style={{width:1000, height:'auto'}}/></div>
 
-### XIAO nRF54L15 Back
+Identify V1.2 by the <code>v1.2</code> silkscreen printed on the PCB back — do not rely on the purchase date. The side headers are unchanged between revisions. On the back, the <strong>3V3</strong>, <strong>RST2</strong>, <strong>SWCLK2</strong> and <strong>SWDIO2</strong> pads have moved, so jigs, pogo pins and rear-pad power designs must be checked against the version-specific image. A dedicated V1.2 front pinout image is pending approval; the side-header labels below apply to both revisions.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+### XIAO nRF54L15 Earlier hardware revision
 
-### Revised XIAO nRF54L15 Back
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" alt="XIAO nRF54L15 earlier hardware revision front pinout" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="Revised XIAO nRF54L15 back pinout" style={{width:1000, height:'auto'}}/></div>
-
-*Revised XIAO nRF54L15 boards purchased after August 2026.*
-
-Compared with the previous revision, the **3V3** and **GND** pins have swapped positions with the original **SWCLK2** and **SWDIO2** pins.
-
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" alt="XIAO nRF54L15 earlier hardware revision back pinout" style={{width:1000, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
+<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense">
 
-### XIAO nRF54L15 Sense Front
+### XIAO nRF54L15 Sense V1.2 (current)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="XIAO nRF54L15 Sense V1.2 back pinout" style={{width:1000, height:'auto'}}/></div>
 
-### XIAO nRF54L15 Sense Back
+Identify V1.2 by the <code>v1.2</code> silkscreen printed on the PCB back — do not rely on the purchase date. The side headers are unchanged between revisions. On the back, the <strong>3V3</strong>, <strong>RST2</strong>, <strong>SWCLK2</strong> and <strong>SWDIO2</strong> pads have moved, so jigs, pogo pins and rear-pad power designs must be checked against the version-specific image. A dedicated V1.2 front pinout image is pending approval; the side-header labels below apply to both revisions.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+### XIAO nRF54L15 Sense Earlier hardware revision
 
-### Revised XIAO nRF54L15 Sense Back
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" alt="XIAO nRF54L15 Sense earlier hardware revision front pinout" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="Revised XIAO nRF54L15 Sense back pinout" style={{width:1000, height:'auto'}}/></div>
-
-*Revised XIAO nRF54L15 Sense boards purchased after August 2026.*
-
-Compared with the previous revision, the **3V3** and **GND** pins have swapped positions with the original **SWCLK2** and **SWDIO2** pins.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" alt="XIAO nRF54L15 Sense earlier hardware revision back pinout" style={{width:1000, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
@@ -402,7 +382,7 @@ Our first application will be based on the Blinky example. The Blinky example is
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -635,7 +615,7 @@ If you want to have a deeper understanding of the internal principles of nRF Con
 For XIAO nRF54L15 boards, a factory reset script is provided to recover the board from a bad state (e.g., when it's can not upload due to the internal NVM write protection). This script will perform a mass erase of the flash and program a factory firmware.
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Factory Reset</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> Factory Reset</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -674,7 +654,7 @@ The following example works for both PlatformIO and nRF Connect SDK. It can be u
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-rfsw" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -945,76 +925,74 @@ At the same time, we designed a red indicator light for battery charging, throug
 Please be careful not to short-circuit the positive and negative terminals and burn the battery and equipment when soldering.
 :::
 
+### Power Supply Guide
+
+The table below summarizes which power inputs keep the onboard SAMD11 debug/UART co-processor active on the earlier hardware revision and on V1.2.
+
+| Power source | Earlier revision SAMD11 | V1.2 SAMD11 | Guidance |
+| --- | --- | --- | --- |
+| USB-C 5 V | Powered | Powered | Use for programming, USB serial, and charging a connected battery. |
+| Side <code>5V</code> / <code>VBUS</code> pin | Not actively powered | Powered | Accepts a regulated 5 V input. On V1.2 this path also powers the charger, so a connected battery can be charged. |
+| Rear <code>BAT</code> pads | Not actively powered | Not actively powered | Connect a correctly polarized, rechargeable single-cell 3.7 V Li-ion/LiPo battery. Use this input for standalone battery operation and low-power measurement. |
+
+- On V1.2, when the board is powered only through the BAT pads, the side <code>5V</code> / <code>VBUS</code> pin does not provide a usable 5 V output.
+- On the earlier hardware revision, when the board is powered only by a battery, the side 5 V pin can read close to the battery voltage, but it is not a stable 5 V output.
+- For V1.2 low-power measurements, power the board through the rear BAT pads with a nominal 3.7 V source, and disconnect USB-C, the side 5V/VBUS pin, and any other external connections on the battery charging path.
+
+The V1.2 schematic charge-current setting is 200 mA; the actual charge current depends on the charging state.
+
 ### Battery Voltage Detection
 :::tip
 
-If you encounter a situation where the XIAO nRF54L15 fails to boot when powered solely by a 3.7V lithium battery after flashing the program, please refer to the solutions below.
+On V1.2, the onboard UM3204H isolates the signals between the nRF54L15 and the SAMD11, removing the UART back-power path addressed by the workaround below. Battery-deployed V1.2 firmware does not need to disable UART solely for this historical cold-start issue. When the board is powered only through BAT, the onboard SAMD11 is not actively powered; use an external SWD debugger with RTT support if logs are required.
 
-For the current hardware version (v1.0), we recommend managing two build configurations to switch easily between **Bench Debugging** (USB connected, UART enabled) and **Battery Deployment** (Standalone, UART disabled).
+:::
 
-**Scenario A: USB Bench Debugging**
+<strong>Earlier hardware revision — historical UART workaround</strong>
 
-**When to use:** You are writing code, flashing firmware, and need to view logs via the **USB Serial Port**.
+If an earlier board starts from USB-C but fails to start after a complete power removal when only the battery is reconnected, check whether the firmware enables the onboard USB-to-serial UART. On the earlier hardware, the nRF54L15 and SAMD11 UART signals are directly connected. With BAT-only power, the unpowered SAMD11 can be back-powered through those signals and interfere with cold start. This affects the onboard USB-to-serial/debug UART only, not the side <code>D6/TX</code> and <code>D7/RX</code> user UART pins.
 
-**Configuration (`prj_uart.conf`):**
-Create a new file named `prj_uart.conf` in your project directory. This overlay file will temporarily re-enable UART for debugging purposes.
+To keep logs during USB bench debugging while still producing a battery build for the earlier hardware, manage two build configurations:
 
-```properties
-# Enable UART for USB debugging
+<strong>Scenario A: USB bench debugging (earlier hardware revision)</strong>
+
+Create a file named <code>prj_uart.conf</code> in your project directory to temporarily enable UART for debugging.
+
+```ini
+# Enable UART for USB debugging (earlier hardware revision)
 CONFIG_SERIAL=y
 CONFIG_UART_CONSOLE=y
 ```
 
-```cpp
-# Optional: Keep RTT enabled as a secondary logging backend
-CONFIG_USE_SEGGER_RTT=y
-CONFIG_RTT_CONSOLE=y
-CONFIG_LOG_BACKEND_RTT=y
-CONFIG_LOG_BACKEND_UART=y
-```
-
-**How to Build:**
-Add the overlay configuration argument when building your project.
+Build with the overlay:
 
 ```bash
-# Build with UART enabled for USB debugging
 west build -p always -d build_uart -b xiao_nrf54l15/nrf54l15/cpuapp . -DOVERLAY_CONFIG="prj_uart.conf"
 ```
 
-**Scenario B: Battery Deployment (Default)**
+<strong>Scenario B: Battery deployment (earlier hardware revision)</strong>
 
-**When to use:** You have finished debugging and intend to power the board solely via the **Battery Pads**.
+Modify the main <code>prj.conf</code> to disable UART for the battery build.
 
-**Configuration (`prj.conf`):**
-Modify your main `prj.conf` file to disable UART by default. This ensures the board can boot correctly when powered by a battery.
-
-```cpp
-# Disable UART to ensure successful boot on battery
+```ini
 CONFIG_SERIAL=n
 CONFIG_UART_CONSOLE=n
-```
 
-```cpp
-# Use RTT for low-power logging (requires J-Link)
+# Optional: view logs through an SWD debugger with RTT support
 CONFIG_USE_SEGGER_RTT=y
 CONFIG_RTT_CONSOLE=y
 CONFIG_LOG=y
 CONFIG_LOG_BACKEND_RTT=y
 ```
 
-**How to Build:**
-Build normally without the overlay argument.
+Build normally without the overlay:
 
 ```bash
-# Build default firmware (Battery Safe)
 west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
 ```
 
-**Summary**
-
-- **Plugged in via USB**  Use the **`prj_uart.conf`** overlay to enable the Serial Monitor.
-- **Running on Battery**  Use the default **`prj.conf`** to ensure the device boots without issues.
-
+:::caution
+<code>CONFIG_SERIAL=n</code> disables other UART peripherals used by the application as well. Apply this configuration only to the battery-deployment build for the earlier hardware revision. It is not required on V1.2 solely to address the historical SAMD11 back-power issue.
 :::
 
 The XIAO nRF54L15 integrates a battery voltage detection feature that centers on efficiently managing battery power measurements using the TPS22916CYFPR load switch. This guide will focus on analyzing the software implementation of the battery detection **(especially the main.c code)** and guide you on how to easily deploy and use this feature in a PlatformIO environment, avoiding the complexity of the Zephyr NCS SDK.
@@ -1040,7 +1018,7 @@ If you want to use XIAO nRF54L15 in PlatformIO, please refer to this tutorial to
 :::
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-battery" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> Download the Library</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -1436,13 +1414,44 @@ int main(void)
 }
 ```
 
+## Hardware Revision FAQ
+
+<p><strong>Q1: How do I identify V1.2?</strong></p>
+<p>Look at the <code>v1.2</code> silkscreen printed on the PCB back. Do not determine the version from the purchase date.</p>
+
+
+
+<p><strong>Q2: What changed in V1.2?</strong></p>
+<p>V1.2 adds isolation on the nRF54L15 ↔ SAMD11 UART signals, redesigns the USB/VBUS/BAT power switching, adds the NFC matching capacitors C21/C26, adjusts the charge-indication and battery-sampling circuitry, and moves the rear <code>3V3</code>, <code>RST2</code>, <code>SWCLK2</code> and <code>SWDIO2</code> pads.</p>
+
+
+
+<p><strong>Q3: Why can an earlier board fail to cold-start from a battery when UART is enabled?</strong></p>
+<p>On the earlier hardware, the onboard USB-to-serial UART signals are directly connected, and an unpowered SAMD11 can be back-powered through them during BAT-only cold start. See the earlier hardware revision workaround above. This affects the onboard USB-to-serial/debug UART only, not the side <code>D6/TX</code> and <code>D7/RX</code> user UART pins.</p>
+
+
+
+<p><strong>Q4: How should I power V1.2 for low-power measurements?</strong></p>
+<p>Power the board through the rear BAT pads with a nominal 3.7 V source, and disconnect USB-C and the side 5V/VBUS pin. On the Sense variant, record whether the IMU and microphone are enabled.</p>
+
+
+
+<p><strong>Q5: Can I reuse an earlier pinout or application?</strong></p>
+<p>The side-header signal definitions are unchanged, so earlier side-header applications usually carry over. Rear probes, fixtures, debug pads and the power path must be checked against the diagram for the corresponding revision.</p>
+
+
+
+<p><strong>Q6: Can the side 5V/VBUS pin power and charge a V1.2 board?</strong></p>
+<p>Yes, the pin accepts a regulated 5 V input. On V1.2 the charger is also fed from VBUS, so a connected battery can be charged. It is not a 5 V output in battery-only mode.</p>
+
 ## Resources
 
 ### Seeed Studio XIAO nRF54L15
 
 **Hardware Design**
 - **📄[Datasheet]** [Nordic nRF54L15 Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
-- **📄[Schematic]** [XIAO nRF54L15 Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004629_XIAO_nRF54L15_V1.2_SCH_260605.pdf.pdf )
+- **📄[Schematic]** [XIAO nRF54L15 Schematic (V1.2)](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004629_XIAO_nRF54L15_V1.2_SCH_260605.pdf.pdf )
+- 📄 [Schematic] [XIAO nRF54L15 Schematic (V0.9, legacy)](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf)
 - **🗃️[PCB Design Files]** [XIAO nRF54L15 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004629_XIAO_nRF54L15_V1.2_SCH_&PCB_260605.zip )
 - **🗃️[PCB Design Libraries]** 
   - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
@@ -1456,7 +1465,8 @@ int main(void)
 
 **Hardware Design**
 - **📄[Datasheet]** [Nordic nRF54L15 Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
-- **📄[Schematic]** [XIAO nRF54L15 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004618_XIAO_nRF54L15_Sense_V1.2_SCH_260605.pdf.pdf )
+- **📄[Schematic]** [XIAO nRF54L15 Sense Schematic (V1.2)](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004618_XIAO_nRF54L15_Sense_V1.2_SCH_260605.pdf.pdf )
+- 📄 [Schematic] [XIAO nRF54L15 Sense Schematic (V0.9, legacy)](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf)
 - **🗃️[PCB Design Files]** 
   - [XIAO nRF54L15 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/res/202004618_XIAO%20nRF54L15_Sense_V1.2_SCH_&_PCB_260605.zip )
   - [XIAO nRF54L15 Sense Flux.ai Project](https://www.flux.ai/seeedstudio/seeed-studio-xiao-nrf54l15-sense )

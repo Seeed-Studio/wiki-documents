@@ -1,7 +1,7 @@
 ---
 description: Orbbec Gemini 336 と YOLOE を使用して、reBot Arm B601-RS 上でテーブルトップのビジュアルグラスピングをセットアップします。OBB グリップのプレビュー、ハンドアイキャリブレーションの実行、任意で AnyGrasp または GraspNet-Baseline バックエンドを用いたアームの動作が可能です。
-title: reBot Arm B601-RS マルチバックエンド・ビジュアルグラスピング
-sidebar_label: reBot Arm B601-RS マルチバックエンド・ビジュアルグラスピング
+title: reBot-RS マルチバックエンド・ビジュアルグラスピング
+sidebar_label: reBot-RS マルチバックエンド・ビジュアルグラスピング
 keywords:
   - reBot Arm B601-RS
   - RGB-D

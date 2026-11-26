@@ -13,10 +13,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /halowlink2_introduction
 sku: 100072966
 last_update:
-  date: 11/12/2026
+  date: 11/23/2026
   author: Advent Jiang
 createdAt: '2026-11-06'
-updatedAt: '2026-11-12'
+updatedAt: '2026-11-23'
 url: https://wiki.seeedstudio.com/halowlink2_introduction/
 ---
 
@@ -141,7 +141,7 @@ Three LEDs — **Status**, **Wi-Fi HaLow**, and **Wi-Fi 2.4 GHz** — show the d
 
 **Related Seeed Studio Wiki tutorials:**
 
-- [Getting Started with Wi-Fi HaLow Module for XIAO](/getting_started_with_wifi_halow_module_for_xiao) (Wio-WM6180)
+- [Getting Started with Wi-Fi HaLow Module for XIAO](/getting_started_with_wifi_halow_module_for_xiao) (Wi-Fi HaLow Transceiver for Seeed Studio XIAO)
 - [Getting Started with Wi-Fi HaLow Mini PCIe Module](/getting_started_with_wifi_halow_mini_pcie_module) (Wio-WM6108 family)
 
 **Next step:** continue with [Getting Started](/halowlink2_getting_started) to set up your HaLowLink 2 for the first time.

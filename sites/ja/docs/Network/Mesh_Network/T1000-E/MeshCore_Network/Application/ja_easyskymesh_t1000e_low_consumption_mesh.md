@@ -1,5 +1,5 @@
 ---
-description: このガイドでは、MeshCore に基づいた低消費電力 IoT センサーネットワークを構築するために、SenseCAP T1000-E で EasySkyMesh を使用する方法を説明します。
+description: このガイドでは、MeshCore をベースに EasySkyMesh と SenseCAP T1000-E を使用して、低消費電力の IoT センサーネットワークを構築する方法を説明します。
 title: 省電力
 keywords:
   - EasySkyMesh
@@ -11,7 +11,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/easyskymesht1000e.png
 slug: /easyskymesh_t1000e
 sku: 114993369
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 11/13/2026
   author: Michelle Huang

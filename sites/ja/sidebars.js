@@ -1189,6 +1189,7 @@ const sidebars = {
               label: 'ワイヤレス接続',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_NFC_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Matter_Use',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Zigbee',
               ],
@@ -2344,6 +2345,7 @@ const sidebars = {
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',                
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_picovoice',
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_sensecraft',
+              'Sensor/reSpeaker_44mm/ja_respeaker_44mm_wakeword',
               ],
             },
             {

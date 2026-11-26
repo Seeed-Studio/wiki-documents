@@ -1,6 +1,6 @@
 ---
 description: この Wiki では、NVIDIA Jetson Thor の使い方を紹介し、Thor 上で AI およびロボティクスプロジェクトをデプロイするためのワークフロー例を提供します。詳細なステップバイステップの手順とリファレンスドキュメントも併せて提供します。
-title: SO-Arm と Isaac Groot N1.5
+title: SO-ARM と Isaac GR00T N1.5
 keywords:
   - Thor
   - ロボティクス
@@ -15,25 +15,79 @@ updatedAt: '2026-09-22'
 url: https://wiki.seeedstudio.com/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import '/src/css/soarm101-pinocchio-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # LeRobot SO-101 アーム用 GR00T N1.5 のファインチューニングと Jetson AGX Thor へのデプロイ
+
+<div className="rebot-page soarm-guide">
+
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/other/cover1.png" width={1000} height={562} style={{height: 'auto'}} alt="SO-ARM と Jetson AGX Thor の GR00T デプロイプロジェクト" />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html" target="_blank" rel="noopener noreferrer">
+    <span>SO-ARM101 キットを入手</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 ## はじめに
 
-このwikiでは、**LeRobot SO-101 アーム**用の**NVIDIA Isaac GR00T N1.5**を**ファインチューニング**し、**NVIDIA Jetson Thor**にデプロイする方法を説明します。以下の内容を含みます：
+LeRobot で SO-ARM の示教データを収集し、NVIDIA Brev または Jetson AGX Thor で Isaac GR00T N1.5 をファインチューニングして、Thor で推論を実行します。
 
-- **LeRobot SO-101**と**Jetson AGX Thor**のハードウェア準備
-- Jetson Thor上での**GR00T N1.5**のソフトウェア環境セットアップ
-- **LeRobotトレーニングプラットフォーム**の使用：データ収集、データセット形式設定、SO-101アーム用ファインチューニング
-- トレーニング済みGR00T N1.5ポリシー（LeRobot + SO-101）をJetson Thorにデプロイするワークフロー例
-- トラブルシューティングのヒントと一般的な落とし穴
+### 推奨学習パス
 
-<div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/other/cover1.png"/>
+<div className="rebot-step-flow soarm-learning-path">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4><a href="#nvidia-jetson-thor-developer-kit-の使い方">Jetson AGX Thor を準備する</a></h4>
+    <p>必要に応じてシステムイメージを書き込みます。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4><a href="#thor-での基本開発環境セットアップ">開発環境をセットアップする</a></h4>
+    <p>JetPack をインストールし、Python 依存関係と参考 Docker イメージを確認します。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4><a href="#so-armを使用したデータ収集">SO-ARM のデータを収集する</a></h4>
+    <p>ホストを選び、アームをキャリブレーションして両方のカメラをセットアップします。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4><a href="#ポリシートレーニングにnvidia-brevを使用">NVIDIA Brev でファインチューニングする</a></h4>
+    <p>クラウド環境を準備し、モデルをファインチューニングしてチェックポイントを書き出します。</p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
+    <h4><a href="#thorでのisaac-gr00t-n15推論">Thor で推論をデプロイする</a></h4>
+    <p>推論サービスとクライアントを起動し、実機のセットアップを確認します。</p>
+  </div>
+</section>
+
 </div>
-
-<p></p>
-
-**初期セットアップから完全なデプロイまでをサポートするため、詳細なステップバイステップの手順とリファレンスドキュメントが提供されています。**
 
 ## NVIDIA Jetson Thor Developer Kit の使い方
 
@@ -41,37 +95,71 @@ url: https://wiki.seeedstudio.com/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and
 
 **NVIDIA® Jetson AGX Thor™ Developer Kit**は、物理AIとヒューマノイドロボティクスのためのパワーハウスです。NVIDIA Blackwell GPUを中心に構築され、**128 GB高速メモリ**を搭載し、**40-130 W**（一般的な使用では最大130 W）の電力エンベロープ内で動作しながら、**最大2,070 FP4 TFLOPS**のAI計算能力を提供します。
 
-Jetson AGX Thor Developer KitはSeeed Studioから入手できます：[Seeed – NVIDIA Jetson AGX Thor™ Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html" target="_blank" rel="noopener noreferrer">
+    <span>Jetson AGX Thor Developer Kit を入手</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/other/thor-post.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/other/thor-post.png" alt="Jetson AGX Thor Developer Kit" />
 </div>
 
 ボックスに含まれるハードウェアアイテムは、Thorユニット1台と電源アダプター1個です：
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/other/physical.jpeg"/>
+  <img width="800" src="https://files.seeedstudio.com/wiki/other/physical.jpeg" alt="Thor 本体と付属の電源アダプター" />
 </div>
 
 ### Thorシステムイメージの書き込み
 
-**2025年9月10日**現在、Thorで利用可能な最新のシステムイメージバージョンは**38.2**です。Thorのシステムを再書き込みする必要がある場合は、このセクションの手順に従ってください。
-書き込みに必要なアイテム：
+この手順では 38.2 システムイメージを使用します。Thor を再書き込みする必要がある場合は、以下の項目を準備してください。
 
-- 25 GB以上の利用可能ディスク容量を持つホストデバイス（Ubuntu または Windows OS対応）
-- 最低16 GBの容量を持つUSBドライブ
-- モニターとDP/HDMIディスプレイケーブル
-- 240 W以上を供給可能な電源環境
-- USBインターフェース付きキーボード
+| 項目 | 要件 |
+| --- | --- |
+| ホスト | 空き容量が 25 GB を超える Ubuntu または Windows。 |
+| USB ドライブ | 16 GB 以上。 |
+| ディスプレイ | モニターと DisplayPort または HDMI ケーブル。 |
+| 電源 | 240 W を超えて供給できる電源環境。 |
+| 入力 | USB キーボード。 |
+
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>システムイメージをダウンロードする</h4>
 
 まず、NVIDIA公式ウェブサイトからThor用のISO形式システムイメージをダウンロードします。ダウンロードページにアクセスするには[こちら](https://developer.nvidia.com/embedded/jetpack/downloads)をクリックしてください：
 
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/38.2-iso.png"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/38.2-iso.png" alt="JetPack ダウンロードページの Thor 38.2 イメージ" />
 </div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Balena Etcher をインストールする</h4>
 
 ホストマシンにBalena Etcherをインストールします。インストーラーをダウンロードするには[こちら](https://etcher.balena.io/#:~:text=DOWNLOAD-,Download%20Etcher,-ASSET)をクリックし、ホストオペレーティングシステムに基づいて適切なバージョンを選択してください：
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/balena.jpg"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/balena.jpg" alt="Balena Etcher インストーラーのダウンロードページ" />
 </div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>起動可能な USB ドライブを作成する</h4>
 
 ISOイメージファイルをダウンロードし、**Balena Etcher**のインストールが正常に完了したら、USBドライブをホストマシンに挿入します。次に、**Balena Etcher**を起動してThor書き込み用のブータブルUSBドライブを作成します：
 :::danger
@@ -81,50 +169,77 @@ ISOイメージファイルをダウンロードし、**Balena Etcher**のイン
 ローカルストレージからダウンロードしたISOイメージファイルを選択し、次にターゲットデバイス（つまり、USBドライブ）を選択します。
 <mark>ターゲットデバイス名とマウントディレクトリを慎重に確認してください！</mark> `Flash!`をクリックして処理が完了するまで待ちます。完了すると、ThorにシステムをフラッシュするためのUSBドライブが準備完了です：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/step1.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/target.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/flash-U.png" width="300"/>
+  <img src="https://files.seeedstudio.com/wiki/other/step1.png" width="300" alt="Etcher で ISO イメージを選択する" />
+  <img src="https://files.seeedstudio.com/wiki/other/target.png" width="300" alt="Etcher で対象の USB ドライブを確認する" />
+  <img src="https://files.seeedstudio.com/wiki/other/flash-U.png" width="300" alt="Etcher で書き込みを開始する" />
 </div>
 
-<p></p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>周辺機器を接続する</h4>
 
 次に、準備したUSBドライブ、キーボード、ディスプレイケーブル（DP/HDMI）、電源（Type-C）をThorボードに挿入して書き込み処理を開始します。
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/flash-insert.jpg"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/flash-insert.jpg" alt="書き込みのために Thor に接続した周辺機器" />
 </div>
 
-<p></p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
+    <h4>USB から起動する</h4>
 
 Thorの電源を入れてブートインターフェースに入ります。`Boot Manager`を選択し、次にThorに挿入されたUSBドライブ（USBドライブ名に基づく）を選択します。Escを押して前のメニューに戻り、`Continue`を選択します：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/BootM.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/selectU.png" width="300"/>
-  <img src="https://files.seeedstudio.com/wiki/other/continue.png" width="300"/>
+  <img src="https://files.seeedstudio.com/wiki/other/BootM.png" width="300" alt="Thor UEFI の Boot Manager" />
+  <img src="https://files.seeedstudio.com/wiki/other/selectU.png" width="300" alt="Boot Manager で USB ドライブを選択する" />
+  <img src="https://files.seeedstudio.com/wiki/other/continue.png" width="300" alt="起動メニューで Continue を選択する" />
 </div>
 
-<p></p>
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">6</span>
+  <div className="rebot-step-content">
+    <h4>NVMe に書き込む</h4>
 
 短い黒い画面の後、以下のインターフェースが表示されます。`Jetson Thor options`を選択してEnterを押します。次に、
 `Flash Jetson AGX Thor Developer Kit on NVMe 0.2.0-r38.2`オプションを選択してシステムイメージをThorのNVMeソリッドステートドライブに書き込みます：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450"/>
-  <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450"/>
+  <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450" alt="起動メニューの Jetson Thor options" />
+  <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450" alt="Thor のシステムイメージの書き込み先として NVMe を選択する" />
 </div>
 
 大量のログ情報が画面に表示されます。約**15分間**お待ちください。この段階が完了すると、デバイスは自動的に再起動し、次のインターフェースに進みます。**Update Progress**バーが100%に達するまで待ちます。これで書き込み処理が正常に完了したことを示します：
-<div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450"/>
-  <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450"/>
-</div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">7</span>
+  <div className="rebot-step-content">
+    <h4>システム設定を完了する</h4>
 
 書き込み後、初期システム設定を進めることができます：
 <div align="center">
-  <img width ="700" src="https://files.seeedstudio.com/wiki/other/ubuntu24.png"/>
+  <img width="700" src="https://files.seeedstudio.com/wiki/other/ubuntu24.png" alt="書き込み後の Ubuntu 初期設定" />
 </div>
 
 :::warning
 このシステムイメージには、CUDA、TensorRT、またはJetPackの他のSDKコンポーネントは含まれていません。
 :::
+
+  </div>
+</section>
+
+</div>
 
 ## Thor での基本開発環境セットアップ
 
@@ -134,15 +249,70 @@ Thorの電源を入れてブートインターフェースに入ります。`Boo
 
 ### 必須開発依存関係のインストール
 
-**JetPack SDK インストール**
-<p></p>
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>JetPack SDK をインストールする</h4>
+
 ターミナルを開いて以下のコマンドを実行します。少し待つと、CUDA、TensorRT、その他のSDKコンポーネントがインストールされます：
 ```bash
 sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
-**ブラウザインストール**
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Miniconda をインストールする</h4>
+
+Minicondaは開発環境を分離するために使用されます。minicondaをインストールするには、以下の手順を参照してください：
+
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+chmod +x Miniconda3-latest-Linux-aarch64.sh
+./Miniconda3-latest-Linux-aarch64.sh
+source ~/.bashrc
+conda --version
+```
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>GPU 版 PyTorch を入手する</h4>
+
+Thor上でGPU版PyTorchをソースからコンパイルすると、互換性の問題が発生する可能性があります。便宜上、開発者がThor上でPyTorch対応の開発環境を迅速にセットアップできるよう、プリコンパイル済みの`.whl`ファイルを提供します。
+
+ここでは、Thor上でPyTorch 2.9をインストールするためのプリコンパイル済みwheelファイルを提供します。このファイルは`Python 3.10 + CUDA 13`環境でコンパイルされました。
+
+| パッケージ | ダウンロード |
+| --- | --- |
+| PyTorch 2.9 | [.whl](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN) |
+| torchvision 0.24 | [.whl](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr) |
+| torchvision 0.23 | [.whl](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9) |
+
+
+その他の<mark>Python **3.12** + CUDA 13</mark>プリコンパイル済み依存関係`.whl`ファイルはこちらで見つけることができます：
+[**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130)。
+
+期待されるwheelファイルが利用できない場合、開発者は開発環境のセットアップを完了するために必要な依存関係を自分でビルドする必要があります。
+
+  </div>
+</section>
+
+</div>
+
+<details className="rebot-demo-details">
+<summary>オプションのツール</summary>
+
+**Firefox をインストール**
 
 FirefoxはUbuntu 24.04で安定して動作することがテストされ確認されています：
 
@@ -151,7 +321,7 @@ sudo apt update
 sudo apt install firefox
 ```
 
-**Jtop インストール**
+**jtop をインストール**
 
 jtopをインストールするには、以下の手順を参照してください。
 
@@ -164,32 +334,7 @@ sudo pip3 install -U pip
 sudo pip3 install jetson-stats
 ```
 
-**Miniconda インストール**
-
-Minicondaは開発環境を分離するために使用されます。minicondaをインストールするには、以下の手順を参照してください：
-
-```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
-source ~/.bashrc
-conda --version
-```
-
-**GPU版PyTorchのインストール**
-
-Thor上でGPU版PyTorchをソースからコンパイルすると、互換性の問題が発生する可能性があります。便宜上、開発者がThor上でPyTorch対応の開発環境を迅速にセットアップできるよう、プリコンパイル済みの`.whl`ファイルを提供します。
-
-ここでは、Thor上でPyTorch 2.9をインストールするためのプリコンパイル済みwheelファイルを提供します。このファイルは`Python 3.10 + CUDA 13`環境でコンパイルされました。
-[**Python 3.10 + CUDA 13 pytorch2.9**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN)をクリックして`.whl`ファイルをダウンロードしてください。
-[**Python 3.10 + CUDA 13 torchvision0.24**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr)をクリックして`.whl`ファイルをダウンロードしてください。
-[**Python 3.10 + CUDA 13 torchvision0.23**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9)をクリックして`.whl`ファイルをダウンロードしてください。
-
-
-その他の<mark>Python **3.12** + CUDA 13</mark>プリコンパイル済み依存関係`.whl`ファイルはこちらで見つけることができます：
-[**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130)。
-
-期待されるwheelファイルが利用できない場合、開発者は開発環境のセットアップを完了するために必要な依存関係を自分でビルドする必要があります。
+</details>
 
 ### 追加依存関係のインストール
 
@@ -202,8 +347,8 @@ Thor上でGPU版PyTorchをソースからコンパイルすると、互換性の
 
 このDockerイメージはGR00T N1.5推論を安定して実行できます。イメージ内の`pip list`コマンドの出力は以下の通りです：
 
-<details>
-<summary> pip.list </summary>
+<details className="rebot-demo-details">
+<summary>参考イメージの Python パッケージを表示する（<code>pip list</code>）</summary>
 
 ```bash
 Package                   Version           Location         Installer                              Editable project location
@@ -540,16 +685,10 @@ sudo docker run --rm -it \
 
 ## SO-ARMを使用したデータ収集
 
-データ収集の詳細なチュートリアルについては、以下のリンクを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録)  
-**このリンクには、設定、組み立て、キャリブレーション、データ収集、トレーニング、推論をカバーするSO-ARMの完全なチュートリアルが含まれています。**
+Jetson または Ubuntu PC でデータを収集します。アームとカメラが接続されているホストを選び、共通の手順に従ってください。
 
-lerobotロボットアームのデータ収集は、PCまたはJetsonデバイス上で直接実行できます。
-
-- 方法1：Jetsonを使用してデータを収集
-- 方法2：Ubuntu PCを使用してデータを収集
-
-データ収集手順は両方の方法で基本的に同じです。
+<Tabs>
+<TabItem value="jetson" label="Jetson">
 
 :::warning
 **Jetsonは同じ帯域幅要件を持つ2つのUSBカメラを同時にストリーミングできない場合があります。2つのUSBカメラを接続する場合は、異なるUSBハブチップに接続する必要があります！**
@@ -558,39 +697,70 @@ lerobotロボットアームのデータ収集は、PCまたはJetsonデバイ�
 ThorでUSBカメラを2台同時にストリーミングするには、1台のカメラをUSB-Aポートに接続した後、**USB Type-Cポート経由で接続された外部USBハブ**も使用する必要があります。これにより、2台目のUSBカメラがThor内の異なるUSBハブコントローラーにマウントされることが保証されます。
  互換性のあるUSB Type-Cハブの例を以下に示します：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/hub.png" height="400"/>
+  <img src="https://files.seeedstudio.com/wiki/other/hub.png" style={{height: 'auto', maxHeight: 400}} alt="2 台目の USB カメラ用 Type-C ハブの例" />
 </div>
 
 
 USB Type-Cドックは、周辺機器が適切に機能するように、Thorの特定のポートに接続する必要があります。以下に示すとおりです：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="400"/>
+  <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" style={{height: 'auto', maxHeight: 400}} alt="外部 USB ハブを接続する Thor の Type-C ポート" />
 </div>
 
-### Lerobot環境セットアップ（オプション）
+</TabItem>
+<TabItem value="ubuntu" label="Ubuntu PC">
 
-Lerobotの開発環境セットアップ手順は、以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#lerobotのインストール](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#lerobotのインストール)
+Ubuntu PC に LeRobot をインストールし、アームとカメラを接続します。以下の共通手順でキャリブレーションと記録を行います。
 
+</TabItem>
+</Tabs>
 
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+
+### Lerobot環境セットアップ（オプション） {#lerobot環境セットアップオプション}
+
+データ収集ホストに LeRobot がない場合は、使用するプラットフォーム向けの [LeRobot のインストール手順](/ja/lerobot_so100m_new/#lerobot-をインストール) に従ってください。
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
 
 ### モーターの設定
 
 
-SO-ARMの各関節のモーターは、組み立て前に設定する必要があります。設定手順は以下のリンクのサブセクションで確認できます：    
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#モーターの設定](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#モーターの設定)
+SO-ARMの各関節のモーターは、組み立て前に設定する必要があります。設定手順は以下のリンクのサブセクションで確認できます：
+[モーターを設定する](/ja/lerobot_so100m_new/#モーターを設定しアームを組み立てる)
 
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
 
 ### 組み立て
 
-SO-ARMのマスターアームとフォロワーアームのインストール手順は、以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#組み立て](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#組み立て)
+SO-ARMのマスターアームとフォロワーアームのインストール手順は、以下のリンクのサブセクションで確認できます：
+[リーダーとフォロワーを組み立てる](/ja/lerobot_so100m_new/#モーターを設定しアームを組み立てる)
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
 
 ### SO-ARMキャリブレーション
 
 
-SO-ARMが完全に組み立てられた後、キャリブレーションが必要です。キャリブレーション手順については、以下のリンクのサブセクションを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#キャリブレート](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#キャリブレート)
+SO-ARMが完全に組み立てられた後、キャリブレーションが必要です。キャリブレーション手順については、以下のリンクのサブセクションを参照してください：
+[ロボットアームをキャリブレーションする](/ja/lerobot_so100m_new/#ロボットアームのキャリブレーション)
 
 
 
@@ -600,40 +770,62 @@ SO-ARMが完全に組み立てられた後、キャリブレーションが必�
 
 **キャリブレーションスクリプトを実行した後、ロボットアームの各関節を手動で動かして、完全な可動域に到達することを確認してください！これを行わないと、テレオペレーション中にリーダーアームとフォロワーアームのポーズが一致しない可能性があります。**
 
+  </div>
+</section>
 
-
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
 
 ### カメラの追加
 
 一般的に、ロボットアームの手首/グリッパーに1台のカメラを、デスクトップ表面にもう1台のカメラを設置して、アームの姿勢を適切にカバーすることが推奨されます。
 <mark>具体的な設置方法はアプリケーションシナリオによって異なります。以下に示す例は参考用です。</mark>
 
-詳細については、以下のリンクのサブセクションを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#カメラの追加](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#カメラの追加)
+詳細については、以下のリンクのサブセクションを参照してください：
+[カメラを追加する](/ja/lerobot_so100m_new/#カメラを追加する)
 
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">6</span>
+  <div className="rebot-step-content">
 
 ### データ収集
 
-カメラの設置とロボットアームのキャリブレーションの両方が完了した後、データセット収集手順は以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録)
+カメラの設置とロボットアームのキャリブレーションの両方が完了した後、データセット収集手順は以下のリンクのサブセクションで確認できます：
+[データセットを記録する](/ja/lerobot_so100m_new/#データセットの記録)
 
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">7</span>
+  <div className="rebot-step-content">
 
 ### 収集したデータの可視化
 
 
-SO-ARMで収集したデータを可視化するには、以下のリンクのサブセクションを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの可視化](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの可視化)
+SO-ARMで収集したデータを可視化するには、以下のリンクのサブセクションを参照してください：
+[データセットを可視化する](/ja/lerobot_so100m_new/#データセットの可視化)
 
+  </div>
+</section>
 
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">8</span>
+  <div className="rebot-step-content">
 
 ### ポリシートレーニング
 
-収集したデータに基づいて、ポリシーをトレーニングする手順は以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#ポリシーのトレーニング](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#ポリシーのトレーニング)
+収集したデータに基づいて、ポリシーをトレーニングする手順は以下のリンクのサブセクションで確認できます：
+[学習して評価する](/ja/lerobot_so100m_new/#学習と評価)
 
+  </div>
+</section>
 
+</div>
 
 :::tip
 以下のセクションでは、クラウドベースのトレーニングプラットフォームを紹介し、基本的な使用方法を説明します。リモートサーバーでより効率的にトレーニングを完了することを選択できます。
@@ -648,45 +840,77 @@ SO-ARMで収集したデータを可視化するには、以下のリンクの�
 NVIDIA Brevは、人気のクラウドプラットフォーム上のNVIDIA GPUインスタンスへの合理化されたアクセス、自動環境セットアップ、柔軟なデプロイメントオプションを提供し、開発者が即座に実験を開始できるようにします。
 
 プラットフォームアクセスURL：
-[https://login.brev.nvidia.com/signin](https://login.brev.nvidia.com/signin)
+[NVIDIA Brev にサインイン](https://login.brev.nvidia.com/signin)
 
 プラットフォームを使用するにはアカウントを登録する必要があります。このセクションでは、トレーニングプラットフォームの基本的な使用方法を紹介します。
 
 ### クラウドベーストレーニングプラットフォームの有効化
 
-**ステップバイステップの手順**
+<div className="rebot-step-flow">
 
-- クラウドサーバーインスタンスの作成 - ステップ1
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>クラウドインスタンスの作成を開始する</h4>
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train0.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train0.png" width="600" alt="NVIDIA Brev のクラウドインスタンス作成画面" />
 </div>
 
-- クラウドサーバーインスタンスの作成 - ステップ2
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>インスタンスを設定する</h4>
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train1.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train1.png" width="600" alt="NVIDIA Brev のクラウドインスタンス設定画面" />
 </div>
 
-- クラウドサーバーインスタンスの作成 - ステップ3
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>内容を確認してインスタンスを起動する</h4>
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train2.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train2.png" width="600" alt="NVIDIA Brev のクラウドインスタンス起動画面" />
 </div>
 
-**WebベースのJupyter Notebookの起動**：
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>Jupyter Notebook を開く</h4>
+
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/jnote0.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/jnote0.png" width="600" alt="NVIDIA Brev インスタンスの Jupyter Notebook 入口" />
 </div>
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/jnote1.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/jnote1.png" width="600" alt="ブラウザー上の Jupyter Notebook" />
+</div>
+
+  </div>
+</section>
+
 </div>
 
 ### モデルのトレーニングとサーバーからのエクスポート
 
 **開発者はノートブックターミナル内で直接モデルをトレーニングできます。以下は、GR00T N1.5をトレーニングし、その後サーバーからエクスポートする例です。**
 
-サーバーにCondaをインストール：
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>Conda をインストールする</h4>
 
 ```bash
 mkdir -p ~/miniconda3
@@ -697,13 +921,27 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-Isaac-GR00Tリポジトリのクローン： 
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Isaac-GR00T をクローンする</h4>
+
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T
 cd Isaac-GR00T
 ```
 
-gr00t環境の作成：
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>トレーニング環境を作成する</h4>
+
 ```bash
 conda create -n gr00t python=3.10
 conda activate gr00t
@@ -719,8 +957,13 @@ pip install --no-build-isolation flash-attn==2.7.1.post4
 モデルのファインチューニングの詳細については、以下を参照してください：
 [https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File](https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File)
 
+  </div>
+</section>
 
-GR00T N1.5モデルのファインチューニング：
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>ファインチューニングを実行する</h4>
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -733,22 +976,35 @@ python scripts/gr00t_finetune.py \
 ```
 
 :::note
-デフォルトのファインチューニング設定には約25GのVRAMが必要です。そのようなVRAMがない場合は、gr00t_finetune.pyスクリプトに`--no-tune_diffusion_model`フラグを追加してみてください。
+デフォルトのファインチューニング設定には約25GのVRAMが必要です。十分なVRAMがない場合は、gr00t_finetune.pyスクリプトに`--no-tune_diffusion_model`フラグを追加してみてください。
 :::
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train4.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train4.png" width="600" alt="GR00T N1.5 ファインチューニング中のターミナル出力" />
 </div>
 
 :::note
-サーバーでGr00tをトレーニングまたはファインチューニングしたい場合は、この[リンク](https://github.com/NVIDIA/Isaac-GR00T)を参照してください。
+サーバーで GR00T をトレーニングまたはファインチューニングする場合は、この[リンク](https://github.com/NVIDIA/Isaac-GR00T)を参照してください。
 :::
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">5</span>
+  <div className="rebot-step-content">
+    <h4>チェックポイントをダウンロードする</h4>
 
 **トレーニングが完了した後、モデルをローカルマシンにダウンロードしたい場合があります。しかし、Jupyter Notebookサイドバーはモデルトレーニングフォルダーへの直接ナビゲーションをサポートしていません。**
 
 解決策は次のとおりです：まず対象フォルダーを`.zip`または`.tar.gz`アーカイブに圧縮し、次にノートブックインターフェースを通じてアーカイブファイルをダウンロードします。例については以下の図を参照してください。
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600" alt="Jupyter Notebook からチェックポイントのアーカイブをダウンロードする" />
+</div>
+
+  </div>
+</section>
+
 </div>
 
 ## ThorでのIsaac GR00T N1.5推論
@@ -759,13 +1015,28 @@ GR00T N1.5は、ロボット学習分野でNVIDIA Researchがリリースした�
 
 ### 準備
 
-GR00T N1.5の事前訓練済みモデルは**Hugging Faces**経由で利用可能です。以下のリンクからダウンロードできます：
+<div className="rebot-step-flow">
 
-[https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main](https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main)
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>事前学習済みの重みを入手する</h4>
+
+GR00T N1.5 の事前学習済みモデルは **Hugging Face** から入手できます。次のリンクからダウンロードできます：
+
+[GR00T-N1.5-3B（Hugging Face）](https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main)
 
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/gr00tD.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/gr00tD.png" width="600" alt="Hugging Face 上の GR00T N1.5 の重み" />
 </div>
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>Docker コンテナを起動する</h4>
 
 GR00T推論に必要なすべての依存関係は、専用のDockerイメージに事前設定されています。
 
@@ -784,7 +1055,15 @@ sudo docker run --rm -it \
   <image_name>:<tag>
 ```
 
-Gr00tのソースコードをGitクローンし、インストールします：
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>Isaac-GR00T をインストールする</h4>
+
+GR00T のソースコードを git clone してインストールします：
 
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T.git
@@ -793,7 +1072,12 @@ pip install --upgrade setuptools
 pip install -e .[thor]
 ```
 
-Gr00tは、lerobotフレームワークを使用して収集されたデータセットと完全に互換性があります。Gr00tモデルのファインチューニング用にデータセットを準備するには、前の「**データ収集**」セクションを参照してください。
+GR00T は LeRobot フレームワークで収集したデータセットと完全に互換性があります。GR00T モデルのファインチューニング用にデータセットを準備するには、前の「**データ収集**」セクションを参照してください。
+
+  </div>
+</section>
+
+</div>
 
 ### モデルファインチューニング（オプション）
 
@@ -802,6 +1086,9 @@ NVIDIA BrevでGR00T N1.5のファインチューニングを既に実行して�
 :::
 
 **ファインチューニングプロセスは、提供されたクラウド訓練プラットフォームまたはThor上のDockerコンテナ内で直接実行できます**。
+
+<Tabs>
+<TabItem value="hub-weights" label="Hugging Face">
 
 事前訓練済みのGR00Tモデルをダウンロードしておらず、カスタムバージョンを使用する予定がない場合は、以下のコマンドを使用してHugging Faceの重みに基づいてファインチューニングを行うことができます：
 
@@ -817,6 +1104,9 @@ python scripts/gr00t_finetune.py \
 
 このスクリプトは、Hugging Faceから事前訓練済みのGR00Tモデルを自動的にダウンロードし、ファインチューニングプロセスを開始します。
 
+</TabItem>
+<TabItem value="local" label="ローカルの重み">
+
 ローカルに保存された事前訓練済みのGR00Tモデルを使用したい場合は、以下のようにコマンドを変更してください：
 
 ```bash
@@ -830,6 +1120,9 @@ python scripts/gr00t_finetune.py \
    --base-model-path ./pretrained/GR00T-N1.5-3
 ```
 
+</TabItem>
+</Tabs>
+
 `--dataset-path`は、SO-ARMから収集されたデータのファイルパスです。
 
 :::note
@@ -840,8 +1133,15 @@ python scripts/gr00t_finetune.py \
 
 最適なパフォーマンスを実現するために、ファインチューニングされたGR00Tモデルをデプロイする際は、データ収集時に使用された実世界のセットアップを可能な限り忠実に再現することを推奨します。これは、モデルの汎化能力が限定的であるためです。
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
+  <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400" alt="GR00T の実機推論に使う SO-ARM の作業環境" />
 </div>
+
+<div className="rebot-step-flow">
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">1</span>
+  <div className="rebot-step-content">
+    <h4>推論サービスを起動する</h4>
 
 Dockerコンテナ内でターミナルを開き、GR00T推論サービスを起動します：
 
@@ -855,14 +1155,30 @@ python scripts/inference_service.py --server \
 
 起動が成功すると、ターミナルに以下のようなログが表示されます：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600" alt="GR00T 推論サービスの起動ログ" />
 </div>
 
-別のターミナルを開き、以下のコマンドを使用して異なるシェルから同じコンテナに入ります：
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">2</span>
+  <div className="rebot-step-content">
+    <h4>同じコンテナでもう一つのシェルを開く</h4>
+
+別のターミナルを開き、`<container-id>` を実行中のコンテナ ID に置き換えてください。
 
 ```bash
-sudo docker exec -it <container id> /bin/bahs
+sudo docker exec -it <container-id> /bin/bash
 ```
+
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">3</span>
+  <div className="rebot-step-content">
+    <h4>アームクライアントを起動する</h4>
 
 次に、この2番目のシェルで推論クライアントを開始します：
 
@@ -880,7 +1196,7 @@ sudo docker exec -it <container id> /bin/bahs
 
 クライアントプロセスが正常に開始されると、以下の出力が表示されます：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/deploy2.png" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/deploy2.png" width="600" alt="SO-ARM 推論クライアントの起動ログ" />
 </div>
 
 :::tip
@@ -889,63 +1205,131 @@ sudo docker exec -it <container id> /bin/bahs
 適切なテレオペレーションと推論動作を確保するため、各関節が可動域全体を動くことを確認してください。
 :::
 
+  </div>
+</section>
+
+<section className="rebot-step-item">
+  <span className="rebot-step-number" aria-hidden="true">4</span>
+  <div className="rebot-step-content">
+    <h4>実機推論を確認する</h4>
+
 すべてが設定されると、GR00T N1.5をJetson AGX Thor上に正常にデプロイできます。システムとハードウェア環境は、完全な推論をサポートすることが確認されました：
 <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600"/>
+  <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600" alt="Thor 上で GR00T 推論を実行する SO-ARM" />
+</div>
+
+  </div>
+</section>
+
 </div>
 
 ## FAQ
 
-**Q1: Brev CLIツールがクラウド訓練プラットフォームで動作しない？**  
+<details className="rebot-demo-details">
+<summary>Brev CLI ツールがクラウド訓練プラットフォームで動作しない？</summary>
+
 これは多くの場合、ネットワークの問題が原因です。
 ローカルのUbuntuホストにBrev CLIをインストールしてログインし、ローカルターミナルからSSHを使用してクラウドインスタンスに接続を試みてください。
 
-**Q2: 訓練プラットフォームにデータをアップロードするには？**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>訓練プラットフォームにデータをアップロードするには？</summary>
+
 以下のコマンドを使用してください：`scp <local-file-path> <brev-instance-name>:<remote-file-path>`、例：`scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
+</details>
 
-**Q3: インストール開始後にThorの画面が黒くなる**  
+<details className="rebot-demo-details">
+<summary>インストール開始後に Thor の画面が黒くなる</summary>
+
 以前に使用またはセットアップされたJetson AGX Thor Developer KitでJetsonインストールUSBスティックを使用する場合、`UEFIセットアップメニュー`でSoC Display Hand-Offを有効にする必要があります。
 実際には、この間もバックグラウンドでフラッシュが続行されており、しばらくするとUbuntuデスクトップが表示されます。
 
-**Q4: モニターに映像出力がない（KVM経由で接続）**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>モニターに映像出力がない（KVM 経由で接続）</summary>
+
 一部のKVMスイッチ/デバイスは、Jetson AGX Thor Developer Kitからの映像出力を適切に処理できないことが知られています。モニターをJetson AGX Thor Developer Kitに直接接続してください。
 
-**Q5: Thorフラッシュ後、その後の起動でHDMIが信号なしを表示することがある**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Thor の書き込み後、その後の起動で HDMI が信号なしになることがある</summary>
+
 効果的であることが証明されている回避策は、表示出力をDisplayPort（DP）コネクタに切り替えることです。
 
-**Q6: Thorイメージフラッシュ中にキーボード入力が検出されない**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Thor イメージの書き込み中にキーボード入力が検出されない</summary>
+
 フラッシュ中は有線キーボードの使用を推奨します。ワイヤレスキーボードは、Thorフラッシュプロセス中に互換性が制限される場合があります。
 
-**Q7: GR00Tのクラウドファインチューニングで「GPU not supported」エラーが発生**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>GR00T のクラウドファインチューニングで “GPU not supported” と表示される</summary>
+
 GR00Tのクラウドファインチューニングには、`Ampereアーキテクチャ`より古いGPUを使用しないでください（例：RTX A6000またはGeForce RTX 4090）。V100（Volta）はGR00Tの訓練やファインチューニングには対応していません。
 
-**Q8: ロボットアームコントローラーボードのシリアルデバイス名が/dev下に表示されない**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>ロボットアームコントローラーボードのシリアルデバイス名が <code>/dev</code> に表示されない</summary>
+
 標準のThorシステムには`CH34x`ドライバが含まれていません。不足している場合は、以下からインストールしてください：
 https://github.com/juliagoda/CH341SER
 
-**Q9: ThorのType-Cポートが外部ハブを認識しない**  
-ThorのType-C経由で外部ハブを使用するには、QSFP28コネクタに最も近いType-Cポートに接続してください。（両方のType-Cポートが電力を供給しますが、指定されたポートのみがハブを確実にサポートします。）
-<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="200"/> </div>
+</details>
 
-**Q10: キャプチャカードでフラッシュする際、後でシステムがユーザーパスワードが間違っていると表示する**  
+<details className="rebot-demo-details">
+<summary>Thor の Type-C ポートが外部ハブを認識しない</summary>
+
+ThorのType-C経由で外部ハブを使用するには、QSFP28コネクタに最も近いType-Cポートに接続してください。（両方のType-Cポートが電力を供給しますが、指定されたポートのみがハブを確実にサポートします。）
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" style={{height: 'auto', maxHeight: 200}} alt="外部 USB ハブを接続する Thor の Type-C ポート" /> </div>
+
+</details>
+
+<details className="rebot-demo-details">
+<summary>キャプチャカードで書き込むと、後でユーザーパスワードが間違っていると表示される</summary>
+
 フラッシュ中にキャプチャカードデスクトップを使用する場合、キーボード入力のバグが発生する可能性があります（入力が入力内容と一致しない）。設定時にユーザーパスワードを再確認してください。
 
-**Q11: Thorのデバッグポートはどこにある？**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Thor のデバッグポートはどこにある？</summary>
+
 ThorのType-Cデバッグポートは磁気カバーの下に隠れています。複数のシリアルデバイスノードが作成される場合があります。シリアル経由でThorにログインするには、最小のインデックスのものを使用してください。
 
-**Q12: GR00TイメージでLeRobotスクリプトを実行してACTを推論できない**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>GR00T イメージで LeRobot スクリプトを実行して ACT を推論できない</summary>
+
 Python 3.12環境で`ACT`推論にLeRobot APIを呼び出すことは推奨しません。`Calibration`と`find port`スクリプトは問題ありません。Ubuntu 24はローカルでデフォルトでPython 3.12を使用することに注意してください。
 
-**Q13: ThorでGPU SM使用率を確認するには？**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>Thor で GPU SM 使用率を確認するには？</summary>
+
 以下を実行してください：
 ```bash
 nvidia-smi dmon -s puc
 ```  
 出力の`sm`列を確認してください。
 
-**Q14: ロボットアームドライバーのシリアルポートからデータを読み取れない**  
+</details>
+
+<details className="rebot-demo-details">
+<summary>ロボットアームドライバーのシリアルポートからデータを読み取れない</summary>
+
 SO-ARMドライバーボードの前にカメラを接続しないでください。そうすると、シリアルデバイスマッピングが正しくなくなる可能性があります。また、シリアルポートの権限が付与されていることを確認してください。
+
+</details>
 
 ## 参考文献
 
@@ -964,4 +1348,6 @@ SO-ARMドライバーボードの前にカメラを接続しないでくださ�
 <div class="button_tech_support_container">
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
 </div>
