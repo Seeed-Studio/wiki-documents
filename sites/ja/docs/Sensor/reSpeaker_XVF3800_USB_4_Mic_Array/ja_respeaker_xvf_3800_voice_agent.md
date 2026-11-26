@@ -20,13 +20,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_voice_assistant/
 
 ## 概要
 
-このプロジェクトは、スマートオフィスやスマートスペース向けに設計された完全ローカルのスマート音声アシスタントを実演します。高品質な音声キャプチャのためにReSpeaker XVF3800マイクアレイを使用し、正確な転写のためのオンデバイス音声認識（STT）と組み合わせています。ローカル大規模言語モデル（LLM）がクラウドに依存することなくユーザークエリを知的に処理し、プライバシーと低遅延を確保します。音声合成（TTS）が自然な音声応答を生成し、リアルタイムでの対話を可能にします。このシステムは、セキュアなオフライン音声制御が不可欠なオフィス、モール、キオスク、会議室などの環境に最適です。
+このプロジェクトは、スマートオフィスやスマートスペース向けに設計された完全ローカルのスマート音声アシスタントを実演します。高品質な音声キャプチャのためにreSpeaker XVF3800マイクアレイを使用し、正確な転写のためのオンデバイス音声認識（STT）と組み合わせています。ローカル大規模言語モデル（LLM）がクラウドに依存することなくユーザークエリを知的に処理し、プライバシーと低遅延を確保します。音声合成（TTS）が自然な音声応答を生成し、リアルタイムでの対話を可能にします。このシステムは、セキュアなオフライン音声制御が不可欠なオフィス、モール、キオスク、会議室などの環境に最適です。
 
 ## 必要なハードウェア
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>reSpeaker XVF3800 </th>
     <th>Jetson AGX Orin 32GB H01 Kit</th>
   </tr>
   <tr>
@@ -49,13 +49,13 @@ url: https://wiki.seeedstudio.com/ja/respeaker_voice_assistant/
 
 ## デバイスの準備
 
-#### ReSpeaker XVF3800 – USBファームウェアインストール
+#### reSpeaker XVF3800 – USBファームウェアインストール
 
-使用前にReSpeaker XVF3800 USBマイクアレイが最新のファームウェアで更新されていることを確認してください。
+使用前にreSpeaker XVF3800 USBマイクアレイが最新のファームウェアで更新されていることを確認してください。
 
 - 公式ファームウェア更新ガイドに従ってください：
 
-  - ReSpeaker XVF3800ファームウェア更新 [Seeed Studio Wiki](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェア更新)
+  - reSpeaker XVF3800ファームウェア更新 [Seeed Studio Wiki](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェア更新)
 
 この手順により、安定したUSBオーディオ入力と下流の音声処理パイプラインとの互換性が確保されます。
 

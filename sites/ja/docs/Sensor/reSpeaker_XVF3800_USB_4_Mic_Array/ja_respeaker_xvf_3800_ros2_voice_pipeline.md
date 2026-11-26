@@ -99,7 +99,7 @@ ros2 run turtlesim turtle_teleop_key
 
 ## パート 2 — デバイス用の udev ルールを作成する
 
-ReSpeaker USB Mic Array に適切な権限を与えるため、新しい udev ルールを作成します:
+reSpeaker USB Mic Array に適切な権限を与えるため、新しい udev ルールを作成します:
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
@@ -108,7 +108,7 @@ sudo nano /etc/udev/rules.d/50-respeaker.rules
 ファイルに次の行を追加します:
 
 ```bash
-# ReSpeaker USB Mic Array
+# reSpeaker USB Mic Array
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", GROUP="plugdev"
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```

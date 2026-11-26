@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array と XIAO ESP32S3 を使って、強力な音声コントロールを実現しましょう。360° オーディオキャプチャ、ノイズ抑制、Edge Impulse を用いた TinyML ウェイクワード検出に対応し、スマートデバイス、ロボティクス、IoT プロジェクトに最適です。
+description: reSpeaker XVF3800 USB 4-Mic Array と XIAO ESP32S3 を使って、強力な音声コントロールを実現しましょう。360° オーディオキャプチャ、ノイズ抑制、Edge Impulse を用いた TinyML ウェイクワード検出に対応し、スマートデバイス、ロボティクス、IoT プロジェクトに最適です。
 title: reSpeaker XVF3800 と Edge Impulse を用いた TinyML 音声認識
 keywords:
   - reSpeaker
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_edge_impulse/
 ## 概要
 
 
-TinyML を用いたキーワードスポッティング（KWS）システムにより、リアルタイムの音声コマンド検出でハンズフリー操作を実現します。高性能な ReSpeaker XVF3800 マイクアレイと高効率な XIAO ESP32S3、そして Edge Impulse プラットフォームを組み合わせることで、小型・低消費電力デバイスに音声認識機能をもたらします。学習、デプロイ、そしてリッスン——あなたのデバイスは常に次のコマンドを待ち受けます。
+TinyML を用いたキーワードスポッティング（KWS）システムにより、リアルタイムの音声コマンド検出でハンズフリー操作を実現します。高性能な reSpeaker XVF3800 マイクアレイと高効率な XIAO ESP32S3、そして Edge Impulse プラットフォームを組み合わせることで、小型・低消費電力デバイスに音声認識機能をもたらします。学習、デプロイ、そしてリッスン——あなたのデバイスは常に次のコマンドを待ち受けます。
 
 ## 必要なハードウェア
 
@@ -35,9 +35,9 @@ TinyML を用いたキーワードスポッティング（KWS）システムに�
 
 ## データ収集 
 
-### XIAO ESP32S3 搭載 ReSpeaker XVF3800 用 USB ファームウェアのインストール
+### XIAO ESP32S3 搭載 reSpeaker XVF3800 用 USB ファームウェアのインストール
 
-オーディオデータの収集を開始する前に、ReSpeaker に USB ファームウェアを書き込み、USB マイクとして動作できるようにしておきます。
+オーディオデータの収集を開始する前に、reSpeaker に USB ファームウェアを書き込み、USB マイクとして動作できるようにしておきます。
 
 
 [**Firmware Installation Wiki**](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアを更新する)
@@ -59,9 +59,9 @@ source respeaker-env/bin/activate
 pip install sounddevice scipy numpy 
 ```
 
-### ReSpeaker デバイス ID の確認
+### reSpeaker デバイス ID の確認
 
-正しいマイク入力から録音するために、ReSpeaker マイクのデバイスインデックスを特定する必要があります。
+正しいマイク入力から録音するために、reSpeaker マイクのデバイスインデックスを特定する必要があります。
 
 ```python
 import sounddevice as sd
@@ -72,7 +72,7 @@ for i, device in enumerate(devices):
 
 ```
 
-ReSpeaker に対応するデバイス名（ReSpeaker XVF3800 USB 4-Mic Array などの名称）を探し、そのインデックス番号（例：Device 2）をメモしておきます。
+reSpeaker に対応するデバイス名（reSpeaker XVF3800 USB 4-Mic Array などの名称）を探し、そのインデックス番号（例：Device 2）をメモしておきます。
 
 ### 音声サンプルの録音
 
@@ -162,7 +162,7 @@ if __name__ == "__main__":
 
 ##  Edge Impulse への音声データのアップロードと準備
 
-ReSpeaker XVF3800 を使って生の音声サンプルを収集し、ラベルごとに整理したら、次のステップとして、それらを Edge Impulse Studio にアップロードし、キーワードスポッティングモデルの学習用に処理します。
+reSpeaker XVF3800 を使って生の音声サンプルを収集し、ラベルごとに整理したら、次のステップとして、それらを Edge Impulse Studio にアップロードし、キーワードスポッティングモデルの学習用に処理します。
 
 ### Edge Impulse で新しいプロジェクトを作成
 
@@ -251,7 +251,7 @@ Impulse ウィンドウを作成したら：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/accuracy.png" alt="pir" width={800} height="auto" /></p>
 
-## XIAO ESP32 S3 搭載 ReSpeaker XVF3800 へのデプロイ
+## XIAO ESP32 S3 搭載 reSpeaker XVF3800 へのデプロイ
 
 
 **Edge Impulse は、必要なすべてのライブラリ、前処理関数、および学習済みモデルを自動的に 1 つのダウンロード可能なパッケージにまとめます。**
@@ -268,12 +268,12 @@ Impulse ウィンドウを作成したら：
 
 ### ファームウェアを I2S モードに切り替える
 
-Arduino コードを書き込む前に、I2C プロトコル経由で通信できるように、ReSpeaker XVF3800 のファームウェアを I2S モードに切り替える必要があります。
+Arduino コードを書き込む前に、I2C プロトコル経由で通信できるように、reSpeaker XVF3800 のファームウェアを I2S モードに切り替える必要があります。
 [Firmware Installation Guide](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアを更新)
 
 ### Arduino コードの統合
 
-Edge Impulse が提供する Arduino コードは、ReSpeaker XVF3800 と XIAO ESP32S3 ハードウェアとの互換性を確保するために、いくつかの修正が必要になります。セットアップに応じて、**GPIO ピン定義、I2S サンプリングレート**、その他のハードウェア固有パラメータを更新してください。
+Edge Impulse が提供する Arduino コードは、reSpeaker XVF3800 と XIAO ESP32S3 ハードウェアとの互換性を確保するために、いくつかの修正が必要になります。セットアップに応じて、**GPIO ピン定義、I2S サンプリングレート**、その他のハードウェア固有パラメータを更新してください。
 
 ```c
 #define EIDSP_QUANTIZE_FILTERBANK   0

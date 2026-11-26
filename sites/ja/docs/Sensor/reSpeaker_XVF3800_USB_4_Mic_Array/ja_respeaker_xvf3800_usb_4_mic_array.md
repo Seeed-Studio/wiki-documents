@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array の使用を開始しましょう。これは、USB または I2C を介したクロスプラットフォーム対応と音声キャプチャ機能を備えた高性能音声インターフェースモジュールです。
+description: reSpeaker XVF3800 USB 4-Mic Array の使用を開始しましょう。これは、USB または I2C を介したクロスプラットフォーム対応と音声キャプチャ機能を備えた高性能音声インターフェースモジュールです。
 title: reSpeaker XVF3800 USB Mic Array 入門ガイド
 keywords:
   - reSpeaker
@@ -8,17 +8,17 @@ slug: /respeaker_xvf3800_introduction
 sku: 101991441,114993701
 last_update:
   date: 11/16/2026
-  author: ray
+  author: Kasun Thushara
 createdAt: '2025-08-20'
 updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/
 ---
 
-# ReSpeaker XVF3800 入門ガイド
+# reSpeaker XVF3800 入門ガイド
 
 ## 概要
 
-ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェッショナル向け 4 マイク円形アレイで、AEC、AGC、DoA、ビームフォーミング、VAD、ノイズ抑制、残響除去、360° 音声キャプチャ（最大 5m）、および高度な音声アプリケーション向けの 2 つの動作モードを備えています。
+reSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェッショナル向け 4 マイク円形アレイで、AEC、AGC、DoA、ビームフォーミング、VAD、ノイズ抑制、残響除去、360° 音声キャプチャ（最大 5m）、および高度な音声アプリケーション向けの 2 つの動作モードを備えています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -77,7 +77,7 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 | **オーディオ品質**             | **従来の XVF3000 ベース設計** と同等またはそれ以上。                                         |
 
 :::note
-ReSpeaker XVF3800 には 2 つのバリエーションがあり、1 つは XIAO なし、もう 1 つは XIAO ESP32S3 をオンボード搭載したモデルです。XIAO なしバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード** 用にビルドされたファームウェアを書き込む必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started) を参照してください。
+reSpeaker XVF3800 には 2 つのバリエーションがあり、1 つは XIAO なし、もう 1 つは XIAO ESP32S3 をオンボード搭載したモデルです。XIAO なしバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード** 用にビルドされたファームウェアを書き込む必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started) を参照してください。
 :::
 
 ### XIAO ESP32S3 サポート
@@ -132,7 +132,7 @@ LED アレイが入力音声の方向に追従する様子を体験できます�
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
-          title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
+          title="reSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -144,12 +144,12 @@ LED アレイが入力音声の方向に追従する様子を体験できます�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mute.jpg" alt="pir" width={600} height="auto"/></p>
 
-ReSpeaker 上の **Mute ボタン** は、マイクアレイからの **音声キャプチャを一時的に無効化** するために使用します。
+reSpeaker 上の **Mute ボタン** は、マイクアレイからの **音声キャプチャを一時的に無効化** するために使用します。
 Mute ボタンを押すとどうなりますか？
 
 - **マイクがミュートされ**、外部の音声はキャプチャも処理もされなくなります。
 - **赤色 LED が点灯し**、**ミュートモードが有効** であることを示します。
-- つまり、ReSpeaker はコンピュータやホストデバイスに **いかなるオーディオ入力も送信しません**。
+- つまり、reSpeaker はコンピュータやホストデバイスに **いかなるオーディオ入力も送信しません**。
 
 **Audacity で試してみましょう**
 
@@ -171,10 +171,10 @@ Mute ボタンを押すとどうなりますか？
 
 #### セーフモード
 
-セーフモードは ReSpeaker XVF3800 上の特別なリカバリモードで、Raspberry Pi や ESP32 などのデバイス向けに USB DFU または I2C を介してファームウェアを書き込むことができます。以前に I2S ファームウェアを書き込んでいて USB ファームウェアに戻したい場合は、セーフモードに入って USB DFU を使用し、USB ファームウェアを書き戻すことができます。
+セーフモードは reSpeaker XVF3800 上の特別なリカバリモードで、Raspberry Pi や ESP32 などのデバイス向けに USB DFU または I2C を介してファームウェアを書き込むことができます。以前に I2S ファームウェアを書き込んでいて USB ファームウェアに戻したい場合は、セーフモードに入って USB DFU を使用し、USB ファームウェアを書き戻すことができます。
 
 :::note
-ReSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる更新方法をサポートしています：
+reSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる更新方法をサポートしています：
 
 - **USB ファームウェア** は **USB DFU** のみをサポートしており、USB 接続を使ってデバイスを更新できます。ただし、**I2C DFU には対応していません**。
 
@@ -272,7 +272,7 @@ dfu-util -V
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image.png" alt="pir" width={600} height="auto"/></p>
 
-- ReSpeaker XVF3800 を接続し、デバイスが検出されるか確認します：
+- reSpeaker XVF3800 を接続し、デバイスが検出されるか確認します：
 
 ```bash
 dfu-util -l
@@ -470,7 +470,7 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **ALSA 上で ReSpeaker XVF3800 の音量を調整する**
+3. **ALSA 上で reSpeaker XVF3800 の音量を調整する**
 
 ```bash
 alsamixer
@@ -1168,7 +1168,7 @@ brew install dfu-util
 
 ### スピーカー出力の再生音量が十分でない場合は？
 
-Linux で **ReSpeaker XVF3800** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
+Linux で **reSpeaker XVF3800** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
 
 **ステップ 1：ALSA ミキサーを開く**
 
@@ -1211,9 +1211,9 @@ sudo apt install pavucontrol -y
 
 その後、**pavucontrol** を開き、必要に応じて出力音量を 100% を超えて上げることができます。
 
-### USB ドライバを再インストールした後、ReSpeaker が録音・再生できません
+### USB ドライバを再インストールした後、reSpeaker が録音・再生できません
 
-デバイスマネージャーで ReSpeaker に関連するすべてのドライバをアンインストールしてください。これで問題が解決しました。
+デバイスマネージャーで reSpeaker に関連するすべてのドライバをアンインストールしてください。これで問題が解決しました。
 
 ### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
 
@@ -1270,10 +1270,10 @@ sudo alsactl store 1
 
 ## リソース
 
-- [ReSpeaker XVF3800 2D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
-- [ReSpeaker XVF3800 3D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
-- [ReSpeaker XVF3800 3D-Enclosure-Up ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
-- [ReSpeaker XVF3800 3D-Enclosure-Down ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
+- [reSpeaker XVF3800 2D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
+- [reSpeaker XVF3800 3D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
+- [reSpeaker XVF3800 3D-Enclosure-Up ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [reSpeaker XVF3800 3D-Enclosure-Down ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
 
 ## 参考資料
 

@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对使用，可为智能设备、机器人和物联网应用提供先进的语音控制功能。探索无缝集成和双模式灵活性。
+description: reSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对使用，可为智能设备、机器人和物联网应用提供先进的语音控制功能。探索无缝集成和双模式灵活性。
 title: reSpeaker XVF3800 USB 麦克风阵列与 XIAO ESP32S3 RGB 测试
 keywords:
   - reSpeaker
@@ -31,7 +31,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_rgb/
 
 ## 工作原理
 
-这个 Arduino 程序旨在使用 **I2C 协议**控制 ReSpeaker XVF3800 上的 **WS2812 RGB LED 环**。它使用 **Wire.h** 库与 XVF3800 的内部控制器通信，并发送特定指令来调整 **LED 效果、颜色、速度和亮度**。您可以自定义 LED 行为而无需更改 XVF3800 固件——一切都由 ESP32S3 处理！
+这个 Arduino 程序旨在使用 **I2C 协议**控制 reSpeaker XVF3800 上的 **WS2812 RGB LED 环**。它使用 **Wire.h** 库与 XVF3800 的内部控制器通信，并发送特定指令来调整 **LED 效果、颜色、速度和亮度**。您可以自定义 LED 行为而无需更改 XVF3800 固件——一切都由 ESP32S3 处理！
 
 ## 代码
 

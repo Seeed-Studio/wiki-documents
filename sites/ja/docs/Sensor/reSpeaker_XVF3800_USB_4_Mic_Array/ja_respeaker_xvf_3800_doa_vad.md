@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット工学、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
+description: reSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声キャプチャを備えたプロフェッショナルな円形マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット工学、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
 title: reSpeaker XVF3800 USB Mic Array と XIAO ESP32S3 を用いた DoA および VAD
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_doa_vad/
 
 ## はじめに 
 
-ReSpeaker XVF3800 は、XMOS XVF3800 をベースとしたマルチマイク音声処理ソリューションで、リアルタイムの音声インテリジェンスを必要とする組み込みアプリケーション向けに設計されています。XVF3800 は内部で Voice Activity Detection (VAD) と Direction of Arrival (DoA) を計算し、音声が存在するタイミングとその発生方向を示します。これらの推論結果は、リソースベースのコマンドを使用して I2C 経由でホスト MCU から直接アクセスできるため、ホスト側で生のオーディオを処理することなく、音声起動、音源位置推定、方向認識フィードバックなどの機能を実現できます。
+reSpeaker XVF3800 は、XMOS XVF3800 をベースとしたマルチマイク音声処理ソリューションで、リアルタイムの音声インテリジェンスを必要とする組み込みアプリケーション向けに設計されています。XVF3800 は内部で Voice Activity Detection (VAD) と Direction of Arrival (DoA) を計算し、音声が存在するタイミングとその発生方向を示します。これらの推論結果は、リソースベースのコマンドを使用して I2C 経由でホスト MCU から直接アクセスできるため、ホスト側で生のオーディオを処理することなく、音声起動、音源位置推定、方向認識フィードバックなどの機能を実現できます。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>

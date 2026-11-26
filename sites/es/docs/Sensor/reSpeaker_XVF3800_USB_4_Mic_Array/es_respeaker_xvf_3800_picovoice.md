@@ -1,5 +1,5 @@
 ---
-description: La ReSpeaker XVF3800 USB 4-Mic Array es una matriz de micrófonos circular profesional con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinada con la XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
+description: La reSpeaker XVF3800 USB 4-Mic Array es una matriz de micrófonos circular profesional con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinada con la XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
 title: reSpeaker Controla la palabra de activación y el NLU con Pico-voice
 keywords:
   - reSpeaker
@@ -222,7 +222,7 @@ Además, Rhino permite a los desarrolladores definir contextos personalizados co
 
 ### Crear un contexto 
 
-Un contexto define el conjunto de comandos hablados, intenciones y ranuras para un dominio específico; aquí, creamos un contexto **“Bumblebee”** para controlar ReSpeaker Flex usando comandos de voz. Ve a la consola Rhino Speech-to-Intent en Picovoice y crea un nuevo contexto llamado **Bumblebee** usando la plantilla **“Empty”**.
+Un contexto define el conjunto de comandos hablados, intenciones y ranuras para un dominio específico; aquí, creamos un contexto **“Bumblebee”** para controlar reSpeaker Flex usando comandos de voz. Ve a la consola Rhino Speech-to-Intent en Picovoice y crea un nuevo contexto llamado **Bumblebee** usando la plantilla **“Empty”**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic4.png" alt="pir" width={600} height="auto" /></p>
 
