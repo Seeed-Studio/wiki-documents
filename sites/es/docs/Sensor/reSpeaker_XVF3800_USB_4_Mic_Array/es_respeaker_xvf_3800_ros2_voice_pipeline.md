@@ -99,7 +99,7 @@ Deberías ver una ventana con una tortuga que puedes manejar con las teclas de f
 
 ## Parte 2 — Crear una regla udev para el dispositivo
 
-Crea una nueva regla udev para garantizar los permisos adecuados para la ReSpeaker USB Mic Array:
+Crea una nueva regla udev para garantizar los permisos adecuados para la reSpeaker USB Mic Array:
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
@@ -108,7 +108,7 @@ sudo nano /etc/udev/rules.d/50-respeaker.rules
 Añade las siguientes líneas al archivo:
 
 ```bash
-# ReSpeaker USB Mic Array
+# reSpeaker USB Mic Array
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", GROUP="plugdev"
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```

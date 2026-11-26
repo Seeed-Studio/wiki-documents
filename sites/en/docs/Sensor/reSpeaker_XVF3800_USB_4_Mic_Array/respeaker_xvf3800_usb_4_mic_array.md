@@ -1,5 +1,5 @@
 ---
-description: Get started with the ReSpeaker XVF3800 USB 4-Mic Array—a high-performance voice interface module featuring voice capture and cross-platform support via USB or I2C.
+description: Get started with the reSpeaker XVF3800 USB 4-Mic Array—a high-performance voice interface module featuring voice capture and cross-platform support via USB or I2C.
 title: Getting Started with reSpeaker XVF3800 USB Mic Array
 keywords:
   - reSpeaker
@@ -8,17 +8,17 @@ slug: /respeaker_xvf3800_introduction
 sku: 101991441,114993701
 last_update:
   date: 11/16/2026
-  author: ray
+  author: Kasun Thushara
 createdAt: '2025-08-20'
 updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/
 ---
 
-# Getting Started with ReSpeaker XVF3800
+# Getting Started with reSpeaker XVF3800
 
 ## Overview
 
-The ReSpeaker XVF3800 USB 4-Mic Array is a professional 4-mic circular array with XMOS XVF3800, featuring AEC, AGC, DoA, beamforming, VAD, noise suppression, de-reverberation, 360° voice capture (up to 5m), and dual operation modes for advanced voice applications.
+The reSpeaker XVF3800 USB 4-Mic Array is a professional 4-mic circular array with XMOS XVF3800, featuring AEC, AGC, DoA, beamforming, VAD, noise suppression, de-reverberation, 360° voice capture (up to 5m), and dual operation modes for advanced voice applications.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -77,7 +77,7 @@ The ReSpeaker XVF3800 USB 4-Mic Array is a professional 4-mic circular array wit
 | **Audio Quality**             | Equal or better than the **previous XVF3000-based designs**.                                         |
 
 :::note
-The ReSpeaker XVF3800 is offered in two variants—one without XIAO and another with the XIAO ESP32S3 onboard. The version without XIAO operates with default USB firmware. To use the XIAO-integrated version, you must flash firmware built for **INT-Device (I2S) mode**. For detailed setup instructions, refer to the [official wiki guide](/respeaker_xvf3800_xiao_getting_started).
+The reSpeaker XVF3800 is offered in two variants—one without XIAO and another with the XIAO ESP32S3 onboard. The version without XIAO operates with default USB firmware. To use the XIAO-integrated version, you must flash firmware built for **INT-Device (I2S) mode**. For detailed setup instructions, refer to the [official wiki guide](/respeaker_xvf3800_xiao_getting_started).
 :::
 
 ### XIAO ESP32S3 support
@@ -132,7 +132,7 @@ You can experience the LED array following the direction of the incoming voice.
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
-          title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
+          title="reSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -144,12 +144,12 @@ You can experience the LED array following the direction of the incoming voice.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mute.jpg" alt="pir" width={600} height="auto"/></p>
 
-The **Mute button** on your ReSpeaker is used to temporarily **disable voice capture** from the microphone array.
+The **Mute button** on your reSpeaker is used to temporarily **disable voice capture** from the microphone array.
 What happens when you press the Mute button?
 
 - The **microphones are muted** — external voices will no longer be captured or processed.
 - A **red LED lights up** to indicate that **mute mode is active**.
-- This means the ReSpeaker will **not send any audio input** to your computer or host device.
+- This means the reSpeaker will **not send any audio input** to your computer or host device.
 
 **Try It Yourself with Audacity**
 
@@ -171,10 +171,10 @@ Here you can see how to connect speakers using either the 3.5mm AUX headphone ja
 
 #### Safe Mode
 
-Safe Mode is a special recovery mode on the ReSpeaker XVF3800 that allows you to flash firmware via USB DFU or I2C—for devices like the Raspberry Pi and ESP32. If you've previously flashed the I2S firmware and want to switch back to the USB firmware, you can enter Safe Mode and reflash the USB firmware using USB DFU.
+Safe Mode is a special recovery mode on the reSpeaker XVF3800 that allows you to flash firmware via USB DFU or I2C—for devices like the Raspberry Pi and ESP32. If you've previously flashed the I2S firmware and want to switch back to the USB firmware, you can enter Safe Mode and reflash the USB firmware using USB DFU.
 
 :::note
-Each type of firmware on the ReSpeaker XVF3800 supports different update methods:
+Each type of firmware on the reSpeaker XVF3800 supports different update methods:
 
 - The **USB firmware** only supports **USB DFU**, which means you can update the device using a USB connection. However, it **does not support I2C DFU**.
   
@@ -272,7 +272,7 @@ dfu-util -V
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image.png" alt="pir" width={600} height="auto"/></p>
 
-- Connect the ReSpeaker XVF3800 and check device detection:
+- Connect the reSpeaker XVF3800 and check device detection:
 
 ```bash
 dfu-util -l
@@ -470,7 +470,7 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **Adjusting Volume for ReSpeaker XVF3800 on ALSA**
+3. **Adjusting Volume for reSpeaker XVF3800 on ALSA**
 
 ```bash
 alsamixer
@@ -1168,7 +1168,7 @@ Each parameter includes a description to help you understand its purpose and the
 
 ### Does playback sound from speaker output not enough ?
 
-If the speaker output volume of the **ReSpeaker XVF3800** is too low on Linux, you may need to adjust the **ALSA mixer levels** for the XVF3800 sound card. Follow the steps below to increase the output volume.
+If the speaker output volume of the **reSpeaker XVF3800** is too low on Linux, you may need to adjust the **ALSA mixer levels** for the XVF3800 sound card. Follow the steps below to increase the output volume.
 
 **Step 1: Open ALSA Mixer**
 
@@ -1211,9 +1211,9 @@ sudo apt install pavucontrol -y
 
 You can then open **pavucontrol** and increase the output volume beyond 100% if needed.
 
-### After reinstalling the USB drivers, my ReSpeaker doesn’t record and playback
+### After reinstalling the USB drivers, my reSpeaker doesn’t record and playback
 
-Uninstall all drivers associated with the ReSpeaker in Device Manager. This resolved the issue.
+Uninstall all drivers associated with the reSpeaker in Device Manager. This resolved the issue.
 
 ### Cannot use as sound devices in Windows after flashing firmware ?
 
@@ -1270,10 +1270,10 @@ We provide a detailed I2C command list and code examples. Please refer to the [U
 
 ## Resources
 
-- [ReSpeaker XVF3800 2D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
-- [ReSpeaker XVF3800 3D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
-- [ReSpeaker XVF3800 3D-Enclosure-Up File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
-- [ReSpeaker XVF3800 3D-Enclosure-Down File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
+- [reSpeaker XVF3800 2D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf3800_2d_mechanical_drawing.pdf)
+- [reSpeaker XVF3800 3D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
+- [reSpeaker XVF3800 3D-Enclosure-Up File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [reSpeaker XVF3800 3D-Enclosure-Down File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
 
 ## Reference
 

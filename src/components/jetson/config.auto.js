@@ -2575,6 +2575,39 @@ export const multimodalList = [
 export const physicalAIList = [
   {
     "name": {
+      "en": "Deploy Full-Weight GR00T N1.7 with TensorRT on JetPack 7.2 and Jetson AGX Orin",
+      "zh": "在 JetPack 7.2 和 Jetson AGX Orin 上使用 TensorRT 部署全权重 GR00T N1.7",
+      "ja": "JetPack 7.2 と Jetson AGX Orin 上で TensorRT を用いてフルウェイト GR00T N1.7 をデプロイする",
+      "es": "Implementar GR00T N1.7 de peso completo con TensorRT en JetPack 7.2 y Jetson AGX Orin",
+      "pt": "Fazer deploy do GR00T N1.7 Full-Weight com TensorRT no JetPack 7.2 e Jetson AGX Orin"
+    },
+    "img": "https://files.seeedstudio.com/wiki/other/agx-orin-gr00t-front.png",
+    "URL": {
+      "en": "https://wiki.seeedstudio.com/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin",
+      "zh": "https://wiki.seeedstudio.com/cn/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin",
+      "ja": "https://wiki.seeedstudio.com/ja/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin",
+      "es": "https://wiki.seeedstudio.com/es/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin",
+      "pt": "https://wiki.seeedstudio.com/pt-br/deploy_full_weight_gr00t_n1.7_tensorrt_jetpack7.2_agx_orin"
+    },
+    "category": {
+      "en": [],
+      "zh": [],
+      "ja": [],
+      "es": [],
+      "pt": []
+    },
+    "description": {
+      "en": "Deploy a finetuned full-weight NVIDIA Isaac GR00T N1.7 policy as a seven-engine TensorRT pipeline on Jetson AGX Orin with JetPack 7.2.",
+      "zh": "在 JetPack 7.2 的 Jetson AGX Orin 上，将微调后的全权重 NVIDIA Isaac GR00T N1.7 策略部署为由七个引擎组成的 TensorRT 推理流水线。",
+      "ja": "JetPack 7.2 を搭載した Jetson AGX Orin 上で、ファインチューニング済みのフルウェイト NVIDIA Isaac GR00T N1.7 ポリシーを 7 エンジン構成の TensorRT パイプラインとしてデプロイします。",
+      "es": "Implementa una política NVIDIA Isaac GR00T N1.7 de peso completo y ajustada con precisión como un pipeline TensorRT de siete motores en Jetson AGX Orin con JetPack 7.2.",
+      "pt": "Fazer o deploy de uma política NVIDIA Isaac GR00T N1.7 full-weight ajustada por fine-tuning como um pipeline TensorRT de sete engines no Jetson AGX Orin com JetPack 7.2."
+    },
+    "lastUpdated": "07/31/2026",
+    "author": "Dayu"
+  },
+  {
+    "name": {
       "en": "Control Rebot Arm with NemoClaw on Nvidia Jetson Thor",
       "zh": "在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm",
       "ja": "Nvidia Jetson Thor 上の NemoClaw で reBot Arm を制御する",

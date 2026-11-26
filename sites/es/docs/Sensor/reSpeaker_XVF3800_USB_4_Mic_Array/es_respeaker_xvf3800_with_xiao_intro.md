@@ -1,5 +1,5 @@
 ---
-description: La ReSpeaker XVF3800 USB 4-Mic Array es una matriz circular de 4 micrófonos de nivel profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Combinada con la XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
+description: La reSpeaker XVF3800 USB 4-Mic Array es una matriz circular de 4 micrófonos de nivel profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Combinada con la XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
 title: Primeros pasos con reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3
 keywords:
   - reSpeaker
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_getting_started/
 
 ## Descripción general
 
-**La ReSpeaker XVF3800 USB 4-Mic Array** es una matriz circular profesional de 4 micrófonos basada en el XMOS XVF3800. Incorpora AEC, AGC, DoA, formación de haz, VAD, supresión de ruido, desreverberación y captura de voz de 360° (hasta 5 metros). También admite modos de funcionamiento duales, lo que la hace ideal para aplicaciones de voz avanzadas. Cuando se combina con la Xiao ESP32S3, el control de la ReSpeaker XVF3800 USB se vuelve aún más potente, desbloqueando infinitas posibilidades.
+**La reSpeaker XVF3800 USB 4-Mic Array** es una matriz circular profesional de 4 micrófonos basada en el XMOS XVF3800. Incorpora AEC, AGC, DoA, formación de haz, VAD, supresión de ruido, desreverberación y captura de voz de 360° (hasta 5 metros). También admite modos de funcionamiento duales, lo que la hace ideal para aplicaciones de voz avanzadas. Cuando se combina con la Xiao ESP32S3, el control de la reSpeaker XVF3800 USB se vuelve aún más potente, desbloqueando infinitas posibilidades.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 

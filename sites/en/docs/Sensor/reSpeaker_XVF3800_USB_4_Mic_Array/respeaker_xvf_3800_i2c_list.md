@@ -1,5 +1,5 @@
 ---
-description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
+description: The reSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: Using I2C Commands to Control reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/respeaker_xvf_3800_i2c_list/
 
 ## Introduction 
 
-This section provides the I2C control command list for the ReSpeaker XVF3800, along with I2C read/write examples and hardware signal-path diagrams for the two operating modes. For an application example of controlling the ReSpeaker XVF3800 via the I2C interface, please refer to the [Device Control](/respeaker_xvf3800_xiao_rgb) section.
+This section provides the I2C control command list for the reSpeaker XVF3800, along with I2C read/write examples and hardware signal-path diagrams for the two operating modes. For an application example of controlling the reSpeaker XVF3800 via the I2C interface, please refer to the [Device Control](/respeaker_xvf3800_xiao_rgb) section.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -245,7 +245,7 @@ bool xmos_read_bytes(uint8_t resid, uint8_t cmd, uint8_t *buffer, uint8_t read_l
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/read-version.png" alt="pir" width={800} height="auto" /></p>
 
 :::note
-For an application example of controlling the ReSpeaker XVF3800 via the I2C interface, please refer to the [Device Control](/respeaker_xvf3800_xiao_rgb) section.
+For an application example of controlling the reSpeaker XVF3800 via the I2C interface, please refer to the [Device Control](/respeaker_xvf3800_xiao_rgb) section.
 :::
 
 ## I2C Command List

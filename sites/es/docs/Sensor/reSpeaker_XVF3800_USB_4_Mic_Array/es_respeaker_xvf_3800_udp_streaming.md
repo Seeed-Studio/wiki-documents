@@ -1,5 +1,5 @@
 ---
-description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, formación de haces, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
+description: El reSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, formación de haces, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
 title: reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3 Transmisión de Audio UDP
 keywords:
   - reSpeaker
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_udp_audio_stream/
 
 ## Descripción General
 
-Este proyecto demuestra la transmisión de audio en tiempo real usando el arreglo de micrófonos **ReSpeaker XVF3800** con una placa **XIAO ESP32S3**. El audio se captura vía I2S y se transmite por UDP a un servidor ejecutándose en una máquina local, donde puede almacenarse y procesarse como un archivo .wav.
+Este proyecto demuestra la transmisión de audio en tiempo real usando el arreglo de micrófonos **reSpeaker XVF3800** con una placa **XIAO ESP32S3**. El audio se captura vía I2S y se transmite por UDP a un servidor ejecutándose en una máquina local, donde puede almacenarse y procesarse como un archivo .wav.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -33,7 +33,7 @@ Este sketch realiza las siguientes tareas:
 
 - Se conecta a la red Wi-Fi especificada.
 - Se conecta a un servidor UDP (ej., script de Python ejecutándose en la PC host).
-- Captura audio en tiempo real vía I2S desde el ReSpeaker XVF3800 usando el XIAO ESP32S3.
+- Captura audio en tiempo real vía I2S desde el reSpeaker XVF3800 usando el XIAO ESP32S3.
 - Transmite el audio capturado como datos en bruto.
 
 ## Código Arduino

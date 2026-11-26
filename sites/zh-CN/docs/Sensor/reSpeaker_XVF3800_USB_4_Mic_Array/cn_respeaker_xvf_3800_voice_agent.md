@@ -20,13 +20,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_voice_assistant/
 
 ## 概述
 
-本项目展示了一个专为智能办公室和智能空间设计的完全本地化智能语音助手。它使用 ReSpeaker XVF3800 麦克风阵列进行高质量语音捕获，结合设备端语音转文本（STT）进行准确转录。本地大语言模型（LLM）智能处理用户查询，无需依赖云端，确保隐私和低延迟。文本转语音（TTS）生成自然的语音响应，实现实时交互。该系统非常适合办公室、商场、信息亭和会议室等需要安全离线语音控制的环境。
+本项目展示了一个专为智能办公室和智能空间设计的完全本地化智能语音助手。它使用 reSpeaker XVF3800 麦克风阵列进行高质量语音捕获，结合设备端语音转文本（STT）进行准确转录。本地大语言模型（LLM）智能处理用户查询，无需依赖云端，确保隐私和低延迟。文本转语音（TTS）生成自然的语音响应，实现实时交互。该系统非常适合办公室、商场、信息亭和会议室等需要安全离线语音控制的环境。
 
 ## 所需硬件
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>reSpeaker XVF3800 </th>
     <th>Jetson AGX Orin 32GB H01 Kit</th>
   </tr>
   <tr>
@@ -49,13 +49,13 @@ url: https://wiki.seeedstudio.com/cn/respeaker_voice_assistant/
 
 ## 准备设备
 
-#### ReSpeaker XVF3800 – USB 固件安装
+#### reSpeaker XVF3800 – USB 固件安装
 
-确保 ReSpeaker XVF3800 USB 麦克风阵列在使用前已更新至最新固件。
+确保 reSpeaker XVF3800 USB 麦克风阵列在使用前已更新至最新固件。
 
 - 遵循官方固件更新指南：
 
-  - ReSpeaker XVF3800 固件更新 [Seeed Studio Wiki](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
+  - reSpeaker XVF3800 固件更新 [Seeed Studio Wiki](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
 
 此步骤确保稳定的 USB 音频输入和与下游语音处理管道的兼容性。
 

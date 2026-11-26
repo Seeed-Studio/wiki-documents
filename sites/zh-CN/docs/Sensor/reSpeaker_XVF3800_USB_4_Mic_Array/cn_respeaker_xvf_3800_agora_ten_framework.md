@@ -124,7 +124,7 @@ Workflow:
 | 硬件 | 说明 |
 |------|------|
 | **Seeed Studio XIAO ESP32-S3** | 主控板 |
-| **ReSpeaker XVF3800** | 音频扩展板（麦克风阵列 + 扬声器接口） |
+| **reSpeaker XVF3800** | 音频扩展板（麦克风阵列 + 扬声器接口） |
 | **扬声器** | 至少一个扬声器，用于播放 AI 回复 |
 | **USB-C 数据线** | 用于烧录固件和为设备供电 |
 
@@ -190,7 +190,7 @@ Workflow:
 
 ### 更新步骤
 
-在电脑上插入 **ReSpeaker XMOS XVF3800 with XIAO ESP32S3**，运行固件升级工具，然后选择固件文件。
+在电脑上插入 **reSpeaker XMOS XVF3800 with XIAO ESP32S3**，运行固件升级工具，然后选择固件文件。
 
 详细步骤请参考[此页面](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)。
 
@@ -514,7 +514,7 @@ git apply $ADF_PATH/idf_patches/idf_v5.2_freertos.patch
 
 #### 修改 ESP-ADF 板级引脚配置（关键！）
 
-由于 ReSpeaker XVF3800 的引脚分配与默认的 Korvo-2 V3 不同，你必须修改框架中的板级配置：
+由于 reSpeaker XVF3800 的引脚分配与默认的 Korvo-2 V3 不同，你必须修改框架中的板级配置：
 
 **文件位置：**
 - Windows: `C:\Espressif\frameworks\esp-adf\components\audio_board\esp32_s3_korvo2_v3\board_pins_config.c`
@@ -531,9 +531,9 @@ git apply $ADF_PATH/idf_patches/idf_v5.2_freertos.patch
 ```c
 esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 {
-    // ReSpeaker XVF3800 I2C configuration
-    i2c_config->sda_io_num = GPIO_NUM_5;   // ReSpeaker I2C SDA
-    i2c_config->scl_io_num = GPIO_NUM_6;   // ReSpeaker I2C SCL
+    // reSpeaker XVF3800 I2C configuration
+    i2c_config->sda_io_num = GPIO_NUM_5;   // reSpeaker I2C SDA
+    i2c_config->scl_io_num = GPIO_NUM_6;   // reSpeaker I2C SCL
     return ESP_OK;
 }
 ```
@@ -543,7 +543,7 @@ esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 ```c
 esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
 {
-    // ReSpeaker XVF3800 I2S configuration
+    // reSpeaker XVF3800 I2S configuration
     i2s_config->bck_io_num   = GPIO_NUM_8;   // BCLK
     i2s_config->ws_io_num    = GPIO_NUM_7;   // WS/LRCK
     i2s_config->data_out_num = GPIO_NUM_44;  // DOUT
@@ -818,7 +818,7 @@ W (xxxx) AIC3104_NG: Found device at address 0x??
 | ESP-ADF 编程指南 | https://docs.espressif.com/projects/esp-adf/zh_CN/latest/ |
 | Agora RTC 文档 | https://docs.agora.io/en/rtc/overview/product-overview |
 | TEN Framework 文档 | https://doc.theten.ai |
-| ReSpeaker XVF3800 固件指南 | https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/ |
+| reSpeaker XVF3800 固件指南 | https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/ |
 
 ### API 服务
 

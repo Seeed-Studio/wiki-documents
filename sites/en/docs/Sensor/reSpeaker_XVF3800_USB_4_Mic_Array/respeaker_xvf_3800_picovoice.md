@@ -1,5 +1,5 @@
 ---
-description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
+description: The reSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: reSpeaker Control Wakeword and NLU with Pico-voice
 keywords:
   - reSpeaker
@@ -222,7 +222,7 @@ Additionally, Rhino allows developers to define custom contexts with intents and
 
 ### Create a context 
 
-A context defines the set of spoken commands, intents, and slots for a specific domain; here, we create a **“Bumblebee”** context to control ReSpeaker Flex using voice commands. Navigate to the Rhino Speech-to-Intent console in Picovoice, then create a new context named **Bumblebee** using the **“Empty”** template.
+A context defines the set of spoken commands, intents, and slots for a specific domain; here, we create a **“Bumblebee”** context to control reSpeaker Flex using voice commands. Navigate to the Rhino Speech-to-Intent console in Picovoice, then create a new context named **Bumblebee** using the **“Empty”** template.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic4.png" alt="pir" width={600} height="auto" /></p>
 

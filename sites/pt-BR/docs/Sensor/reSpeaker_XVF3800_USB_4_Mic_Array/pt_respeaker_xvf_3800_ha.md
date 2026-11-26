@@ -1,5 +1,5 @@
 ---
-description: Experimente o poder do ReSpeaker XVF3800 USB 4-Mic Array — uma avançada matriz circular de microfones com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Em conjunto com o compacto XIAO ESP32S3, oferece controle de voz de alto desempenho para dispositivos inteligentes, robótica e aplicações de IoT. Junte-se a nós enquanto demonstramos a integração perfeita com o Home Assistant para controlar dispositivos usando comandos de voz.
+description: Experimente o poder do reSpeaker XVF3800 USB 4-Mic Array — uma avançada matriz circular de microfones com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Em conjunto com o compacto XIAO ESP32S3, oferece controle de voz de alto desempenho para dispositivos inteligentes, robótica e aplicações de IoT. Junte-se a nós enquanto demonstramos a integração perfeita com o Home Assistant para controlar dispositivos usando comandos de voz.
 title: Controle de Voz para Casa Inteligente com Home Assistant e reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -18,14 +18,14 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_home_assistant/
 
 ## Visão geral
 
-Converse com espaços inteligentes com o novo **ReSpeaker XMOS XVF3800 com XIAO ESP32S3** para acender ou apagar as luzes, aumentar o som ou até perguntar sobre o clima usando a voz
+Converse com espaços inteligentes com o novo **reSpeaker XMOS XVF3800 com XIAO ESP32S3** para acender ou apagar as luzes, aumentar o som ou até perguntar sobre o clima usando a voz
 
-Neste capítulo usaremos o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 HA Voice Assistant para conectar o interruptor inteligente Sonoff e realizar o controle por voz do interruptor de luz.
+Neste capítulo usaremos o reSpeaker XMOS XVF3800 com XIAO ESP32S3 HA Voice Assistant para conectar o interruptor inteligente Sonoff e realizar o controle por voz do interruptor de luz.
 
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/iqlsNezHYuE"
-          title="ReSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
+          title="reSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -37,7 +37,7 @@ Neste capítulo usaremos o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 HA Voice Assi
 
 <table align="center">
   <tr>
-      <th>ReSpeaker XVF3800 com XIAO ESP32S3</th>
+      <th>reSpeaker XVF3800 com XIAO ESP32S3</th>
         <th>Dispositivo Home Assistant</th>
         <th>Sonoff BASICR2</th>
   </tr>
@@ -68,7 +68,7 @@ Neste capítulo usaremos o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 HA Voice Assi
 ## Atualização de firmware
 
 Para obter a melhor experiência de reprodução, precisamos atualizar o firmware XMOS para
-Baixe o firmware aqui. No seu computador, conecte o ReSpeaker XMOS XVF3800 com XIAO ESP32S3 e execute o procedimento em nosso guia:
+Baixe o firmware aqui. No seu computador, conecte o reSpeaker XMOS XVF3800 com XIAO ESP32S3 e execute o procedimento em nosso guia:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -81,7 +81,7 @@ Você pode baixar o firmware [aqui](https://github.com/formatBCE/Respeaker-XVF38
 
 O guia de instalação está [aqui](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#atualizar-firmware)
 
-## Preparar o ReSpeaker XMOS XVF3800 com XIAO ESP32S3
+## Preparar o reSpeaker XMOS XVF3800 com XIAO ESP32S3
 
 Vá para **Home Assistant > Settings > Apps**.
 
@@ -1675,7 +1675,7 @@ Controla o comportamento e as interações do seu assistente de voz (VA).
 
 ## Agradecimentos Especiais
 
-Gostaríamos de agradecer ao FormatBCE por criar este incrível arquivo YAML para o Seeed Studio ReSpeaker XVF3800.
+Gostaríamos de agradecer ao FormatBCE por criar este incrível arquivo YAML para o Seeed Studio reSpeaker XVF3800.
 Apoie-o no seu [GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
 ## Suporte Técnico & Discussão de Produto

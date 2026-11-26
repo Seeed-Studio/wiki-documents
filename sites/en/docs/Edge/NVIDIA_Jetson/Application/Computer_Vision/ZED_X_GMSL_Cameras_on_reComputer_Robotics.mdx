@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /zed_x_gmsl_cameras_on_recomputer_robotics
 last_update:
-  date: 11/06/2026
+  date: 11/26/2026
   author: Dayu
 createdAt: '2026-09-27'
-updatedAt: '2026-11-09'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/zed_x_gmsl_cameras_on_recomputer_robotics/
 ---
 
@@ -227,7 +227,7 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
-This guide explains how to use **Stereolabs ZED X-series GMSL2 cameras** with Seeed Studio robotics hardware. Setup instructions and driver downloads are available for **reComputer Robotics J50 Mini** and **reComputer Robotics J50 (J501)**. The J40 and J601 walkthroughs will be added later.
+This guide explains how to use **Stereolabs ZED X-series GMSL2 cameras** with Seeed Studio robotics hardware. Setup instructions are available for **reComputer Robotics J50 Mini**, **J50 (J501)**, and **J40 (J401)**. J601-specific driver resources are being prepared.
 
 ## Select Your Platform
 
@@ -277,11 +277,11 @@ Choose a platform below. The two tab groups on this page are synchronized, so yo
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J40"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status zed-status-soon">● Guide coming soon</span>
+        <span className="zed-status">● Guide available</span>
         <h3>reComputer Robotics J40</h3>
         <div className="zed-product-description">A balanced Orin Nano/NX robotics computer with rich sensor I/O and optional four-camera GMSL2 expansion for autonomous robots and real-time edge perception.</div>
         <div className="zed-actions">
-          <a className="zed-button" href="#device-specific-setup">View status ↓</a>
+          <a className="zed-button" href="#device-specific-setup">Open setup ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank" rel="noopener noreferrer">View product ↗</a>
         </div>
       </div>
@@ -607,34 +607,119 @@ The camera appears in ZED Studio, the live image is stable, and the depth view u
 
 ### reComputer Robotics J50 (J501)
 
-Use this section for **reComputer Robotics J501** with the GMSL extension board, a supported ZED X-series camera, and **JetPack 6.2.1 / L4T 36.4.4** or **JetPack 7.2 / L4T 39.2.0**. See the [J501 hardware and getting started guide](/ai_robotics_recomputer_j501_robotics_getting_started) for the GMSL connectors and board layout.
+Use this section for **reComputer Robotics J501** with the GMSL extension board and a supported ZED X-series camera. The two setup options are: flash a BSP with ZED X GMSL support, or keep your current system and install the matching driver DEB. See the [J501 hardware and getting started guide](/ai_robotics_recomputer_j501_robotics_getting_started) for the board layout and complete flashing instructions.
 
 #### 1. Connect the Camera
 
 Shut down the J501 and disconnect DC power. Connect the camera to a GMSL2 port with a compatible Fakra/Mini-Fakra cable, lock the connector, then reconnect power and boot the device.
 
-#### 2. Install the ZED X GMSL Driver
+#### 2. Enable ZED X GMSL Support
 
-Check the installed Jetson Linux release:
+Choose **one** option. Flash the BSP for a clean JetPack 7.2 installation; install the DEB to keep an existing supported JetPack 6.2.1 or 7.2 system.
+
+<Tabs groupId="j501-robo-zed-method">
+  <TabItem value="flash-bsp" label="Option 1 · Flash JetPack 7.2 BSP" default>
+
+The JetPack 7.2 / L4T 39.2.0 BSP packages below include ZED X GMSL support. Select the image that matches the AGX Orin module installed in the Robotics J501:
+
+| Robotics J501 model | Jetson module | BSP |
+| --- | --- | --- |
+| J5011 | AGX Orin 32GB | [Download J5011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDiT6oqoI86SazEp2f6L1OmAYjtbYa35KL2hYc6PpGajJY) |
+| J5012 | AGX Orin 64GB | [Download J5012 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAtCdJqu2sT4a8v5k_V0iKAUS5oCpVjlWoALrFl6UjD8Y) |
+
+:::warning
+Flashing erases data on the target NVMe SSD. Back up important data before starting, and keep power and USB connected until flashing completes. Use Option 2 if you want to retain the current system.
+:::
+
+#### Prepare the Host and J501
+
+Prepare the following equipment:
+
+- reComputer Robotics J501 with the matching AGX Orin module
+- NVMe SSD installed in the J501
+- Physical Ubuntu host PC running Ubuntu 20.04, 22.04, or 24.04
+- USB Type-C data transmission cable
+- Display, keyboard, and mouse for the first boot setup
+
+We recommend a physical Ubuntu host instead of a virtual machine. For JetPack 7.2, Ubuntu 24.04 supports flashing and target-side component installation; use Ubuntu 20.04 or 22.04 if you need host development components.
+
+Download the BSP for your J501 module to the Ubuntu host. The archive is large and may take around 60 minutes to download; wait for the download to finish before extracting it.
+
+#### Enter Force Recovery Mode
+
+1. Power off the J501. Connect a USB Type-C data cable between the host PC and the J501 **USB 2.0 DEVICE** port.
+2. Use a pin to press and hold the **RECOVERY** button.
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/flash_1.png" alt="J501 USB DEVICE port and recovery button" />
+</div>
+
+3. While holding RECOVERY, connect the J501 power supply.
+4. Release RECOVERY.
+5. On the Ubuntu host, run `lsusb` to verify that the J501 entered force recovery mode:
+
+| J501 module | Expected `lsusb` ID |
+| --- | --- |
+| AGX Orin 32GB (J5011) | `0955:7223 NVidia Corp.` |
+| AGX Orin 64GB (J5012) | `0955:7023 NVidia Corp.` |
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png" alt="AGX Orin module detected in force recovery mode with lsusb" />
+</div>
+
+If the expected ID does not appear, check that you used the USB DEVICE port and a data-capable cable, then repeat the recovery steps.
+
+#### Extract and Flash the BSP
+
+On the Ubuntu host, extract the downloaded module-specific archive. Replace the placeholder with the exact filename downloaded above:
+
+```bash
+cd ~/Downloads
+sudo tar xpf <downloaded-J501-BSP>.tar.gz
+```
+
+Change into the extracted BSP directory. Use `ls -d mfi_*` to identify its name if needed:
+
+```bash
+cd <extracted-J501-BSP-directory>
+```
+
+With the J501 still connected in force recovery mode, flash JetPack to the NVMe SSD:
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+The flash command usually takes 2–10 minutes. A successful flash ends with the completion message shown below:
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Jetson flashing completed successfully" /></div>
+
+After flashing, disconnect the USB cable and power-cycle the J501. Connect it to a display using a PD-to-HDMI adapter, or use a display that accepts USB-C/PD video directly, then complete the Ubuntu initial configuration:
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png" alt="Ubuntu initial configuration after flashing the Jetson" />
+</div>
+
+Complete **System Configuration** as needed. This BSP already includes the Robotics J501 ZED X GMSL driver, so continue directly to **3. Install the ZED SDK**.
+
+  </TabItem>
+  <TabItem value="install-deb" label="Option 2 · Install driver DEB">
+
+Use this option to retain the existing system. First check the installed Jetson Linux release:
 
 ```bash
 cat /etc/nv_tegra_release
 ```
 
-Choose the **Robotics J501** package for the reported L4T release. Install only the package for your board and system version; the Mini and Robotics packages use different device-tree overlays.
-
-The command below matches the driver filename for this board and L4T release. If your download directory contains multiple matching versions, replace the wildcard with the exact filename you downloaded.
+Choose the **Robotics J501** package for the reported L4T release. Do not use the J501 Mini package; the Robotics and Mini carrier boards use different device-tree overlays.
 
 <Tabs groupId="j501-robo-zed-jetpack">
-  <TabItem value="jp62" label="JetPack 6.2.1" default>
-
-For **JetPack 6.2.1 / L4T 36.4.4**, download the package below:
+  <TabItem value="jp62" label="JetPack 6.2.1 / L4T 36.4.4" default>
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">Download JetPack 6.2.1 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">Download J501 JetPack 6.2.1 DEB ↗</a>
 </div>
-
-Install it with APT, then reboot:
 
 ```bash
 cd ~/Downloads
@@ -644,15 +729,11 @@ sudo reboot
 ```
 
   </TabItem>
-  <TabItem value="jp72" label="JetPack 7.2">
-
-For **JetPack 7.2 / L4T 39.2.0**, download the package below:
+  <TabItem value="jp72" label="JetPack 7.2 / L4T 39.2.0">
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">Download JetPack 7.2 DEB ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">Download J501 JetPack 7.2 DEB ↗</a>
 </div>
-
-Install it with APT, then reboot:
 
 ```bash
 cd ~/Downloads
@@ -669,6 +750,9 @@ After rebooting, confirm that the Robotics J501 package is installed:
 ```bash
 dpkg -l | grep stereolabs-zedx-j501-robo
 ```
+
+  </TabItem>
+</Tabs>
 
 #### 3. Install the ZED SDK
 
@@ -718,12 +802,223 @@ ZED Studio should detect the connected camera. Open the live view and enable **D
   </TabItem>
   <TabItem value="j40" label="J40">
 
-    <div className="zed-coming-soon">
-      <span className="zed-status zed-status-soon">ZED X GMSL support adapted</span>
-      <h3>reComputer Robotics J40 guide is coming soon</h3>
-      <p>The platform integration is available. A device-specific connection, driver installation, and validation walkthrough will be published here.</p>
-      <a className="zed-button zed-button-secondary" href="/recomputer_robotics_j401_getting_started">Explore the J40 platform</a>
-    </div>
+### reComputer Robotics J40 (J401)
+
+This section covers Robotics J401 carrier boards with **J3010 / J3011 (Orin Nano)** or **J4011 / J4012 (Orin NX)** modules and the GMSL extension board. Use a supported ZED X-series GMSL2 camera and a compatible Fakra/Mini-Fakra cable. The [Robotics J401 carrier board guide](/recomputer_jetson_robotics_j401_getting_started) provides the board layout and interface details.
+
+#### 1. Connect the Camera
+
+1. Shut down the reComputer and disconnect DC power.
+2. Connect the ZED X camera to a GMSL2 port on the extension board. Fully seat and lock the connector.
+3. Reconnect power and boot the device.
+
+:::warning
+Power off before connecting or disconnecting the GMSL camera or harness.
+:::
+
+#### 2. Enable ZED X GMSL Support
+
+Choose **one** option: flash a BSP with the ZED X GMSL driver included, or install the matching DEB to keep the existing system.
+
+<Tabs groupId="j401-zed-method">
+  <TabItem value="flash-bsp" label="Option 1 · Flash Robotics J401 BSP" default>
+
+##### Prepare the Host and Hardware
+
+Prepare the following equipment:
+
+- Robotics J401 carrier board with an Orin Nano 4GB/8GB or Orin NX 8GB/16GB module and active cooling
+- NVMe M.2 2280 SSD installed in the board
+- Ubuntu host PC and a USB Type-C data transmission cable
+- Power supply, display, keyboard, and mouse for the first boot setup
+
+Use a physical Ubuntu host. Select its Ubuntu version according to the JetPack version in the downloaded BSP:
+
+| BSP JetPack version | Ubuntu 20.04 host | Ubuntu 22.04 host | Ubuntu 24.04 host |
+| --- | --- | --- | --- |
+| JetPack 6.x | Supported | Supported | — |
+| JetPack 7.2 | Supported | Supported | Supported for flashing and target-side component installation |
+
+For JetPack 7.2 host development components, use Ubuntu 20.04 or 22.04.
+
+:::warning
+Flashing erases the target NVMe SSD. Back up your data before continuing and keep power and USB connected until flashing finishes. Use Option 2 to retain your current system.
+:::
+
+##### Download the BSP for Your Module
+
+Download the matching archive directly to the Ubuntu host. **All four BSPs below include the ZED X GMSL driver.** Choose the package for the installed module:
+
+| Robotics model | Jetson module | BSP with ZED X GMSL support |
+| --- | --- | --- |
+| J3010 | Orin Nano 4GB | [Download J3010 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA-2O74DXkSTp_gVyfbPTQsAW9Hi0l1j6KD1bFuKczJ5ic?e=AMqob0) |
+| J3011 | Orin Nano 8GB | [Download J3011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQChCUynXPIQRanM6qJwgo4EAQUDEK76QzCxHlNPcI8cduI?e=fFkHPb) |
+| J4011 | Orin NX 8GB | [Download J4011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcbCDN78XVR4tfWz6ci3LaAX9WAkRF0jdGru20rhITq40?e=BqDdbz) |
+| J4012 | Orin NX 16GB | [Download J4012 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBWcZ484WLCQo7dVS9cZ1dkAaVzbZ88LyW6YhvqMW5bmVQ?e=4g2yVg) |
+
+The archives are large and may take around 60 minutes to download. Wait for the download to finish before extracting the file.
+
+##### Enter Force Recovery Mode
+
+1. Shut down the J401 and disconnect its power.
+2. Set the board's switch to **RESET**, as shown below.
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" alt="Robotics J401 switch set to RESET for force recovery mode" />
+</div>
+
+3. Connect the power cable to power up the board.
+4. Connect the board's **USB 2.0 Type-C device/debug port** to the Ubuntu host with a data cable.
+5. On the Ubuntu host, open a terminal and run:
+
+```bash
+lsusb
+```
+
+Confirm that the output includes the ID matching the installed module:
+
+| Robotics model | Jetson module | Expected recovery USB ID |
+| --- | --- | --- |
+| J3010 | Orin Nano 4GB | `0955:7623 NVidia Corp.` |
+| J3011 | Orin Nano 8GB | `0955:7523 NVidia Corp.` |
+| J4011 | Orin NX 8GB | `0955:7423 NVidia Corp.` |
+| J4012 | Orin NX 16GB | `0955:7323 NVidia Corp.` |
+
+The example below shows an Orin Nano 8GB module:
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png" alt="Orin Nano 8GB detected in recovery mode with USB ID 0955:7523" />
+</div>
+
+If the expected ID is missing, check the switch position, USB port, and data cable, then repeat the recovery steps.
+
+##### Extract and Flash the BSP
+
+On the Ubuntu host, go to the download directory and extract the archive. Replace the placeholder with the full filename downloaded for your module:
+
+```bash
+cd ~/Downloads
+sudo tar xpf <downloaded-J401-BSP>.tar.gz
+```
+
+Enter the extracted BSP directory. Use `ls -d mfi_*` to identify the directory if needed:
+
+```bash
+cd <extracted-J401-BSP-directory>
+```
+
+With the board still connected in force recovery mode, flash JetPack to the NVMe SSD:
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+The flash command normally takes **2–10 minutes**. Wait for the successful completion message shown below:
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Jetson flashing completed successfully" />
+</div>
+
+##### Complete the First Boot Setup
+
+After flashing succeeds, disconnect the USB data cable and power off the board. Return the switch from RESET to its normal operating position, then power on the board.
+
+Connect a display through the USB-C DisplayPort output using a compatible USB-C/DP-to-HDMI adapter, or connect directly to a display that supports USB-C video. Complete the Ubuntu **System Configuration**, including your user account and regional settings:
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png" alt="Ubuntu initial system configuration after flashing Robotics J401" />
+</div>
+
+The BSP already includes the ZED X GMSL driver. Continue to **3. Install the ZED SDK**.
+
+  </TabItem>
+  <TabItem value="install-deb" label="Option 2 · Install driver DEB">
+
+Use this option to keep the existing system. On the reComputer, check the installed Jetson Linux release:
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+Download the Robotics J401 package for the installed JetPack version. Check the downloaded package's L4T version against the system release before installing it. Replace the filename placeholder in the commands with the exact downloaded filename.
+
+<Tabs groupId="j401-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2" default>
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDXWxvhCDeiQIagwSY9_l_hAY8lWTwaa1m--Y1g47jbMQc?e=5Auu8A" target="_blank" rel="noopener noreferrer">Download J401 JetPack 6.2 DEB ↗</a>
+</div>
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./<downloaded-J401-driver>.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2 / L4T 39.2.0">
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBBSCaFHDslQKGLj1GH__n4AceAFrLcGFn3ECFQs_zv4Gg?e=GdCXWH" target="_blank" rel="noopener noreferrer">Download J401 JetPack 7.2 DEB ↗</a>
+</div>
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./<downloaded-J401-driver>.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+After rebooting, confirm that the ZED driver is installed:
+
+```bash
+dpkg -l | grep stereolabs-zedx
+```
+
+Continue to **3. Install the ZED SDK**.
+
+  </TabItem>
+</Tabs>
+
+#### 3. Install the ZED SDK
+
+Check `cat /etc/nv_tegra_release`, then download the matching NVIDIA Jetson installer from the [Stereolabs ZED SDK download page](https://www.stereolabs.com/developers/release/):
+
+| Installed system | ZED SDK build |
+| --- | --- |
+| JetPack 6.2 / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+Install `zstd`, make the installer executable, and run it. Replace the installer placeholder with the downloaded filename:
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+Follow the installer prompts and keep the ZED tools selected. Reboot when installation completes:
+
+```bash
+sudo reboot
+```
+
+#### 4. Validate with ZED Studio
+
+On the reComputer desktop, launch ZED Studio:
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+Confirm that the connected camera is detected, open its live view, and enable **Depth**. A stable image and a depth view that updates in real time confirm that the Robotics J401 ZED X GMSL setup is working.
 
   </TabItem>
   <TabItem value="j601" label="J601">
@@ -749,6 +1044,8 @@ ZED Studio should detect the connected camera. Open the live view and enable **D
 ## Resources
 
 - [Robotics J501 Mini carrier board hardware and getting started](/recomputer_j501_mini_getting_started)
+- [Robotics J501 hardware and flashing guide](/ai_robotics_recomputer_j501_robotics_getting_started)
+- [Robotics J401 carrier board hardware and flashing guide](/recomputer_jetson_robotics_j401_getting_started)
 - [Stereolabs ZED SDK downloads](https://www.stereolabs.com/developers/release/)
 - [Stereolabs ZED SDK documentation](https://docs.stereolabs.com/docs/development/zed-sdk)
 - [Stereolabs ZED Studio documentation](https://www.stereolabs.com/docs/development/zed-tools/zed-studio)

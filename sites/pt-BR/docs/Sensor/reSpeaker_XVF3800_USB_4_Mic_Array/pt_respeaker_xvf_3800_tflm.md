@@ -1,5 +1,5 @@
 ---
-description: Aprenda a treinar e implantar modelos de voz TensorFlow Lite Micro (TFLM) no Seeed XIAO ESP32 com o XVF3800 ReSpeaker para reconhecimento de voz em tempo real. Este tutorial aborda o treinamento do modelo, conversão TFLite para código hex e gravação para obter detecção precisa de palavras‑chave em microcontroladores.
+description: Aprenda a treinar e implantar modelos de voz TensorFlow Lite Micro (TFLM) no Seeed XIAO ESP32 com o XVF3800 reSpeaker para reconhecimento de voz em tempo real. Este tutorial aborda o treinamento do modelo, conversão TFLite para código hex e gravação para obter detecção precisa de palavras‑chave em microcontroladores.
 title: TensorFlow Lite no reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_tensorflow/
 
 ## Introdução 
 
-Neste tutorial, vamos guiá-lo na criação de um sistema personalizado de reconhecimento de voz usando TensorFlow Lite Micro (TFLM) no Seeed XIAO ESP32 com o XVF3800 ReSpeaker. Você aprenderá como coletar e rotular dados de áudio, pré-processá-los para treinamento e dividi-los em conjuntos de treinamento e validação. Em seguida, treinaremos um modelo personalizado de detecção de palavras‑chave adaptado ao seu conjunto de dados, o converteremos para o formato TFLite e, por fim, o implantaremos como um arquivo hex no ESP32 para reconhecimento de comandos de voz em tempo real. Ao final, você terá um sistema totalmente funcional baseado em microcontrolador capaz de classificar comandos falados com precisão.
+Neste tutorial, vamos guiá-lo na criação de um sistema personalizado de reconhecimento de voz usando TensorFlow Lite Micro (TFLM) no Seeed XIAO ESP32 com o XVF3800 reSpeaker. Você aprenderá como coletar e rotular dados de áudio, pré-processá-los para treinamento e dividi-los em conjuntos de treinamento e validação. Em seguida, treinaremos um modelo personalizado de detecção de palavras‑chave adaptado ao seu conjunto de dados, o converteremos para o formato TFLite e, por fim, o implantaremos como um arquivo hex no ESP32 para reconhecimento de comandos de voz em tempo real. Ao final, você terá um sistema totalmente funcional baseado em microcontrolador capaz de classificar comandos falados com precisão.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -41,7 +41,7 @@ Certifique-se de instalar essas bibliotecas na sua IDE do Arduino. Cada reposit�
 
 ## Coletar os Dados
 
-Vamos gravar pequenas amostras de voz (10 segundos cada) e dividi-las em clipes de 1 segundo. Para usar o XVF3800 ReSpeaker, talvez seja necessário instalar primeiro o firmware USB.
+Vamos gravar pequenas amostras de voz (10 segundos cada) e dividi-las em clipes de 1 segundo. Para usar o XVF3800 reSpeaker, talvez seja necessário instalar primeiro o firmware USB.
 
 **Guia de Firmware:**
 [Seeed Studio XVF3800 Firmware Flash](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#flash-firmware)
@@ -50,7 +50,7 @@ Vamos gravar pequenas amostras de voz (10 segundos cada) e dividi-las em clipes 
 
 ### Passo 1: Encontrar o ID do Dispositivo
 
-Use o seguinte script Python para listar todos os dispositivos de áudio conectados ao seu PC e encontrar o índice de dispositivo correto para o ReSpeaker:
+Use o seguinte script Python para listar todos os dispositivos de áudio conectados ao seu PC e encontrar o índice de dispositivo correto para o reSpeaker:
 
 ```python
 import sounddevice as sd
@@ -63,7 +63,7 @@ for i, device in enumerate(devices):
     print(f"Device {i}: {device['name']} (input channels: {device['max_input_channels']})")
 ```
 
-> Nota: atualize `DEVICE_INDEX` no próximo script de acordo com o número de dispositivo impresso para o ReSpeaker.
+> Nota: atualize `DEVICE_INDEX` no próximo script de acordo com o número de dispositivo impresso para o reSpeaker.
 
 
 ### Passo 2: Coletar Amostras de Áudio
@@ -77,9 +77,9 @@ from scipy.io.wavfile import write
 
 # === Settings ===
 SAMPLERATE = 16000
-CHANNELS = 1  # ReSpeaker 4-Mic Array
+CHANNELS = 1  # reSpeaker 4-Mic Array
 DURATION = 10  # seconds
-DEVICE_INDEX = 2  # Set to your ReSpeaker device index
+DEVICE_INDEX = 2  # Set to your reSpeaker device index
 
 
 def record_audio(filename, samplerate=SAMPLERATE, channels=CHANNELS, duration=DURATION, device=DEVICE_INDEX):
@@ -242,7 +242,7 @@ Instale os pacotes necessários no ambiente:
 * Abra o notebook no Jupyter e siga as instruções.
 * Ao concluir, o notebook irá gerar um **arquivo de modelo em hexadecimal** chamado `model.cc`, pronto para implantação no ESP32.
 
-> O arquivo `model.cc` pode então ser incluído no seu projeto Arduino para executar detecção de palavras‑chave em tempo real no XIAO ESP32 com o XVF3800 ReSpeaker.
+> O arquivo `model.cc` pode então ser incluído no seu projeto Arduino para executar detecção de palavras‑chave em tempo real no XIAO ESP32 com o XVF3800 reSpeaker.
 
 
 

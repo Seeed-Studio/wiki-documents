@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对使用，可为智能设备、机器人和物联网应用提供先进的语音控制功能。探索无缝集成和双模式灵活性。
+description: reSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对使用，可为智能设备、机器人和物联网应用提供先进的语音控制功能。探索无缝集成和双模式灵活性。
 title: reSpeaker XVF3800 USB 麦克风阵列与 XIAO ESP32S3 I2S 测试
 keywords:
   - reSpeaker
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_i2s/
 
 # reSpeaker XVF3800 USB 麦克风阵列与 XIAO ESP32S3 I2S 测试
 
-本项目作为测试代码，用于验证 **XIAO ESP32S3** 与 **ReSpeaker XVF3800 USB 4-Mic Array** 之间 I2S 接口的功能。目标是确认通过 I2S 总线进行的数据传输和接收工作正常。为了实现这一目标，代码生成合成方波音频信号并将其写入 I2S 接口。然后从 XVF3800 麦克风阵列读取音频数据并验证接收样本的完整性。
+本项目作为测试代码，用于验证 **XIAO ESP32S3** 与 **reSpeaker XVF3800 USB 4-Mic Array** 之间 I2S 接口的功能。目标是确认通过 I2S 总线进行的数据传输和接收工作正常。为了实现这一目标，代码生成合成方波音频信号并将其写入 I2S 接口。然后从 XVF3800 麦克风阵列读取音频数据并验证接收样本的完整性。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -29,7 +29,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_i2s/
 
 ## 目标
 
-本项目的主要目标是测试和验证 I2S 传输（TX）和接收（RX）操作。它旨在确保 ReSpeaker XVF3800 麦克风阵列能够成功通过 I2S 将音频数据发送回 ESP32S3。通过这样做，它为两个设备之间的 I2S 通信建立了可靠的基线，为更高级的音频和语音处理应用铺平了道路。
+本项目的主要目标是测试和验证 I2S 传输（TX）和接收（RX）操作。它旨在确保 reSpeaker XVF3800 麦克风阵列能够成功通过 I2S 将音频数据发送回 ESP32S3。通过这样做，它为两个设备之间的 I2S 通信建立了可靠的基线，为更高级的音频和语音处理应用铺平了道路。
 
 ## 工作原理
 

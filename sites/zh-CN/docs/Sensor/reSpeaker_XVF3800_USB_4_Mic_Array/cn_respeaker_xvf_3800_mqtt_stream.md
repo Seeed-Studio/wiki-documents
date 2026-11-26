@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
+description: reSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
 title: reSpeaker XVF3800 USB 麦克风阵列与 XIAO ESP32S3 MQTT 音频流传输
 keywords:
   - reSpeaker
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_mqtt_audio_stream/
 
 ## 概述
 
-本项目演示如何从嵌入 **XIAO ESP32S3** 开发板的 **ReSpeaker XVF3800** 麦克风阵列中流式传输音频，并将其作为 .wav 文件传输到 **MQTT 代理**。音频通过 **I2S** 捕获，编码为 **WAV** 格式，并通过 MQTT 发布。
+本项目演示如何从嵌入 **XIAO ESP32S3** 开发板的 **reSpeaker XVF3800** 麦克风阵列中流式传输音频，并将其作为 .wav 文件传输到 **MQTT 代理**。音频通过 **I2S** 捕获，编码为 **WAV** 格式，并通过 MQTT 发布。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -38,7 +38,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_mqtt_audio_stream/
 此代码执行以下操作：
 - 连接到指定的 **WiFi** 网络。
 - 连接到 **MQTT 代理**（例如 test.mosquitto.org）。
-- 使用 I2S 从 ReSpeaker XVF3800 与 XIAO ESP32S3 捕获实时音频
+- 使用 I2S 从 reSpeaker XVF3800 与 XIAO ESP32S3 捕获实时音频
 - 将音频编码为 **WAV 格式**。
 - 将音频作为单个 MQTT 消息发布。
 - 使用 poll() 保持 MQTT 连接活跃。
