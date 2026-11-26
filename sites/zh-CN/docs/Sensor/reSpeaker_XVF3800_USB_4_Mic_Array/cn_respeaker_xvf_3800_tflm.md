@@ -1,5 +1,5 @@
 ---
-description: 了解如何在搭载 XVF3800 ReSpeaker 的 Seeed XIAO ESP32 上训练和部署 TensorFlow Lite Micro (TFLM) 语音模型，实现实时语音识别。本教程涵盖模型训练、将 TFLite 转换为十六进制代码以及烧录流程，从而在微控制器上实现高精度的关键词唤醒。
+description: 了解如何在搭载 XVF3800 reSpeaker 的 Seeed XIAO ESP32 上训练和部署 TensorFlow Lite Micro (TFLM) 语音模型，实现实时语音识别。本教程涵盖模型训练、将 TFLite 转换为十六进制代码以及烧录流程，从而在微控制器上实现高精度的关键词唤醒。
 title: 在 reSpeaker XVF3800 上使用 TensorFlow Lite
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_tensorflow/
 
 ## 介绍 
 
-在本教程中，我们将指导你使用 TensorFlow Lite Micro (TFLM)，在搭载 XVF3800 ReSpeaker 的 Seeed XIAO ESP32 上创建一个自定义语音识别系统。你将学习如何采集和标注音频数据，对其进行预处理，并划分为训练集和验证集。接着，我们会基于你的数据集训练一个自定义关键词识别模型，将其转换为 TFLite 格式，最后以十六进制文件的形式部署到 ESP32 上，实现实时语音指令识别。完成后，你将拥有一个基于微控制器、能够准确分类口语指令的完整系统。
+在本教程中，我们将指导你使用 TensorFlow Lite Micro (TFLM)，在搭载 XVF3800 reSpeaker 的 Seeed XIAO ESP32 上创建一个自定义语音识别系统。你将学习如何采集和标注音频数据，对其进行预处理，并划分为训练集和验证集。接着，我们会基于你的数据集训练一个自定义关键词识别模型，将其转换为 TFLite 格式，最后以十六进制文件的形式部署到 ESP32 上，实现实时语音指令识别。完成后，你将拥有一个基于微控制器、能够准确分类口语指令的完整系统。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -41,7 +41,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_tensorflow/
 
 ## 采集数据
 
-我们将录制短语音样本（每段 10 秒），并将其拆分为 1 秒的音频片段。要使用 XVF3800 ReSpeaker，你可能需要先安装 USB 固件。
+我们将录制短语音样本（每段 10 秒），并将其拆分为 1 秒的音频片段。要使用 XVF3800 reSpeaker，你可能需要先安装 USB 固件。
 
 **固件指南：**
 [Seeed Studio XVF3800 Firmware Flash](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#flash-firmware)
@@ -50,7 +50,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_tensorflow/
 
 ### 步骤 1：查找设备 ID
 
-使用以下 Python 脚本列出连接到你电脑的所有音频设备，并找到 ReSpeaker 对应的设备索引：
+使用以下 Python 脚本列出连接到你电脑的所有音频设备，并找到 reSpeaker 对应的设备索引：
 
 ```python
 import sounddevice as sd
@@ -63,7 +63,7 @@ for i, device in enumerate(devices):
     print(f"Device {i}: {device['name']} (input channels: {device['max_input_channels']})")
 ```
 
-> 注意：在下一个脚本中，根据 ReSpeaker 打印出的设备编号更新 `DEVICE_INDEX`。
+> 注意：在下一个脚本中，根据 reSpeaker 打印出的设备编号更新 `DEVICE_INDEX`。
 
 
 ### 步骤 2：采集音频样本
@@ -77,9 +77,9 @@ from scipy.io.wavfile import write
 
 # === Settings ===
 SAMPLERATE = 16000
-CHANNELS = 1  # ReSpeaker 4-Mic Array
+CHANNELS = 1  # reSpeaker 4-Mic Array
 DURATION = 10  # seconds
-DEVICE_INDEX = 2  # Set to your ReSpeaker device index
+DEVICE_INDEX = 2  # Set to your reSpeaker device index
 
 
 def record_audio(filename, samplerate=SAMPLERATE, channels=CHANNELS, duration=DURATION, device=DEVICE_INDEX):
@@ -242,7 +242,7 @@ sudo apt-get install xxd
 * 在 Jupyter 中打开该 notebook，并按照说明操作。
 * 完成后，notebook 会生成一个名为 `model.cc` 的**十六进制模型文件**，可直接部署到 ESP32。
 
-> 然后可以在 Arduino 项目中包含 `model.cc` 文件，在搭载 XVF3800 ReSpeaker 的 XIAO ESP32 上运行实时关键词识别。
+> 然后可以在 Arduino 项目中包含 `model.cc` 文件，在搭载 XVF3800 reSpeaker 的 XIAO ESP32 上运行实时关键词识别。
 
 
 

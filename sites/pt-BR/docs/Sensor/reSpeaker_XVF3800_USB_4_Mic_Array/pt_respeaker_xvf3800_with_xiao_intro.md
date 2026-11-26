@@ -1,5 +1,5 @@
 ---
-description: O ReSpeaker XVF3800 USB 4-Mic Array é uma matriz circular de 4 microfones profissional com AEC, formação de feixe, supressão de ruído e captação de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade de modo duplo.
+description: O reSpeaker XVF3800 USB 4-Mic Array é uma matriz circular de 4 microfones profissional com AEC, formação de feixe, supressão de ruído e captação de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade de modo duplo.
 title: Introdução ao reSpeaker XVF3800 USB Mic Array com XIAO ESP32S3
 keywords:
   - reSpeaker
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_getting_started/
 
 ## Visão geral
 
-**O ReSpeaker XVF3800 USB 4-Mic Array** é uma matriz circular profissional de 4 microfones baseada no XMOS XVF3800. Ele oferece AEC, AGC, DoA, formação de feixe, VAD, supressão de ruído, desreverberação e captação de voz em 360° (até 5 metros). Também suporta modos de operação duplos, tornando-o ideal para aplicações avançadas de voz. Quando combinado com o Xiao ESP32S3, controlar o ReSpeaker XVF3800 USB se torna ainda mais poderoso, desbloqueando possibilidades infinitas.
+**O reSpeaker XVF3800 USB 4-Mic Array** é uma matriz circular profissional de 4 microfones baseada no XMOS XVF3800. Ele oferece AEC, AGC, DoA, formação de feixe, VAD, supressão de ruído, desreverberação e captação de voz em 360° (até 5 metros). Também suporta modos de operação duplos, tornando-o ideal para aplicações avançadas de voz. Quando combinado com o Xiao ESP32S3, controlar o reSpeaker XVF3800 USB se torna ainda mais poderoso, desbloqueando possibilidades infinitas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 

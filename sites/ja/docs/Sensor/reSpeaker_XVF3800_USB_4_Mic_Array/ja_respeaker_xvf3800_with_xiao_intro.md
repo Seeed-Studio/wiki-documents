@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声収音機能を備えたプロフェッショナルな円形 4 マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット、IoT アプリケーション向けに高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
+description: reSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360° 音声収音機能を備えたプロフェッショナルな円形 4 マイクアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット、IoT アプリケーション向けに高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を体験してください。
 title: reSpeaker XVF3800 USB Mic Array と XIAO ESP32S3 の入門ガイド
 keywords:
   - reSpeaker
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_getting_started/
 
 ## 概要
 
-**ReSpeaker XVF3800 USB 4-Mic Array** は、XMOS XVF3800 をベースにしたプロフェッショナルな円形 4 マイクアレイです。AEC、AGC、DoA、ビームフォーミング、VAD、ノイズ抑制、残響除去、360° 音声収音（最大 5m）などの機能を備えています。また、2 つの動作モードをサポートしており、高度な音声アプリケーションに最適です。Xiao ESP32S3 と組み合わせることで、ReSpeaker XVF3800 USB の制御はさらに強力になり、無限の可能性が広がります。
+**reSpeaker XVF3800 USB 4-Mic Array** は、XMOS XVF3800 をベースにしたプロフェッショナルな円形 4 マイクアレイです。AEC、AGC、DoA、ビームフォーミング、VAD、ノイズ抑制、残響除去、360° 音声収音（最大 5m）などの機能を備えています。また、2 つの動作モードをサポートしており、高度な音声アプリケーションに最適です。Xiao ESP32S3 と組み合わせることで、reSpeaker XVF3800 USB の制御はさらに強力になり、無限の可能性が広がります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 

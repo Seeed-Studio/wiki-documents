@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Arrayは、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご確認ください。
+description: reSpeaker XVF3800 USB 4-Mic Arrayは、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご確認ください。
 title: reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 MQTT Audio Streaming
 keywords:
   - reSpeaker
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_mqtt_audio_stream/
 
 ## 概要
 
-このプロジェクトでは、**XIAO ESP32S3**ボードに組み込まれた**ReSpeaker XVF3800**マイクロフォンアレイからキャプチャしたオーディオをストリーミングし、.wavファイルとして**MQTTブローカー**に送信する方法を実演します。オーディオは**I2S**経由でキャプチャされ、**WAV**形式でエンコードされ、MQTT経由で公開されます。
+このプロジェクトでは、**XIAO ESP32S3**ボードに組み込まれた**reSpeaker XVF3800**マイクロフォンアレイからキャプチャしたオーディオをストリーミングし、.wavファイルとして**MQTTブローカー**に送信する方法を実演します。オーディオは**I2S**経由でキャプチャされ、**WAV**形式でエンコードされ、MQTT経由で公開されます。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
@@ -39,7 +39,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_mqtt_audio_stream/
 このスケッチは以下の処理を行います：
 - 指定された**WiFi**ネットワークに接続します。
 - **MQTTブローカー**（例：test.mosquitto.org）に接続します。
-- ReSpeaker XVF3800 with XIAO ESP32S3からI2Sを使用してリアルタイムオーディオをキャプチャします
+- reSpeaker XVF3800 with XIAO ESP32S3からI2Sを使用してリアルタイムオーディオをキャプチャします
 - オーディオを**WAV形式**にエンコードします。
 - オーディオを単一のMQTTメッセージとして公開します。
 - poll()を使用してMQTT接続を維持します。

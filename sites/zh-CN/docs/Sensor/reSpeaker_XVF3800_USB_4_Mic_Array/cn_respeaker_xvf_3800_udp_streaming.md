@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4麦克风阵列是一款专业的圆形麦克风阵列，具有AEC、波束成形、噪声抑制和360°语音捕获功能。与XIAO ESP32S3配对，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
+description: reSpeaker XVF3800 USB 4麦克风阵列是一款专业的圆形麦克风阵列，具有AEC、波束成形、噪声抑制和360°语音捕获功能。与XIAO ESP32S3配对，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
 title: reSpeaker XVF3800 USB麦克风阵列与XIAO ESP32S3 UDP音频流传输
 keywords:
   - reSpeaker
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_udp_audio_stream/
 
 ## 概述
 
-本项目演示了使用**ReSpeaker XVF3800**麦克风阵列与**XIAO ESP32S3**开发板进行实时音频流传输。音频通过I2S捕获，并通过UDP传输到本地机器上运行的服务器，在那里可以存储和处理为.wav文件。
+本项目演示了使用**reSpeaker XVF3800**麦克风阵列与**XIAO ESP32S3**开发板进行实时音频流传输。音频通过I2S捕获，并通过UDP传输到本地机器上运行的服务器，在那里可以存储和处理为.wav文件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -33,7 +33,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_udp_audio_stream/
 
 - 连接到指定的Wi-Fi网络。
 - 连接到UDP服务器（例如，在主机PC上运行的Python脚本）。
-- 使用XIAO ESP32S3通过I2S从ReSpeaker XVF3800捕获实时音频。
+- 使用XIAO ESP32S3通过I2S从reSpeaker XVF3800捕获实时音频。
 - 将捕获的音频作为原始数据传输。
 
 ## Arduino代码

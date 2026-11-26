@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array のパワーを体験しましょう。AEC、ビームフォーミング、ノイズ抑制、360°ボイスキャプチャを備えた高度な円形マイクアレイです。コンパクトな XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット、IoT アプリケーション向けに高性能な音声制御を実現します。本ガイドでは、Home Assistant とシームレスに連携し、音声コマンドでデバイスを制御する方法を紹介します。
+description: reSpeaker XVF3800 USB 4-Mic Array のパワーを体験しましょう。AEC、ビームフォーミング、ノイズ抑制、360°ボイスキャプチャを備えた高度な円形マイクアレイです。コンパクトな XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボット、IoT アプリケーション向けに高性能な音声制御を実現します。本ガイドでは、Home Assistant とシームレスに連携し、音声コマンドでデバイスを制御する方法を紹介します。
 title: reSpeaker XVF3800 と Home Assistant を使ったスマートホーム音声制御
 keywords:
   - reSpeaker
@@ -18,14 +18,14 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_home_assistant/
 
 ## 概要
 
-新しい **ReSpeaker XMOS XVF3800 と XIAO ESP32S3** を使ってスマートスペースと会話し、音声で照明をオン・オフしたり、音楽の音量を上げたり、天気を尋ねたりできます。
+新しい **reSpeaker XMOS XVF3800 と XIAO ESP32S3** を使ってスマートスペースと会話し、音声で照明をオン・オフしたり、音楽の音量を上げたり、天気を尋ねたりできます。
 
-この章では、ReSpeaker XMOS XVF3800 と XIAO ESP32S3 の HA Voice Assistant を使用して Sonoff スマートスイッチを接続し、照明スイッチの音声制御を実現します。
+この章では、reSpeaker XMOS XVF3800 と XIAO ESP32S3 の HA Voice Assistant を使用して Sonoff スマートスイッチを接続し、照明スイッチの音声制御を実現します。
 
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/iqlsNezHYuE"
-          title="ReSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
+          title="reSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_home_assistant/
 
 <table align="center">
   <tr>
-      <th>ReSpeaker XVF3800 with XIAO ESP32S3</th>
+      <th>reSpeaker XVF3800 with XIAO ESP32S3</th>
         <th>Home Assistant デバイス</th>
         <th>Sonoff BASICR2</th>
   </tr>
@@ -68,7 +68,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_home_assistant/
 ## ファームウェアの更新
 
 最高の再生体験を得るために、XMOS ファームウェアを更新する必要があります。
-ここからファームウェアをダウンロードしてください。PC に ReSpeaker XMOS XVF3800 with XIAO ESP32S3 を接続し、ガイドに従って実行します。
+ここからファームウェアをダウンロードしてください。PC に reSpeaker XMOS XVF3800 with XIAO ESP32S3 を接続し、ガイドに従って実行します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -81,7 +81,7 @@ XVF3800 マイクアレイは動作に 12.288 MHz の MCLK を必要とします
 
 インストールガイドは[こちら](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#ファームウェアの更新)です。
 
-## ReSpeaker XMOS XVF3800 と XIAO ESP32S3 の準備
+## reSpeaker XMOS XVF3800 と XIAO ESP32S3 の準備
 
 **Home Assistant > Settings > Apps** に移動します。
 
@@ -1675,7 +1675,7 @@ voice_assistant:
 
 ## 謝辞
 
-Seeed Studio ReSpeaker XVF3800 用にこの素晴らしい YAML ファイルを作成してくれた FormatBCE に感謝いたします。
+Seeed Studio reSpeaker XVF3800 用にこの素晴らしい YAML ファイルを作成してくれた FormatBCE に感謝いたします。
 彼をサポートするには、[GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration) をご覧ください。
 
 ## 技術サポート & 製品ディスカッション

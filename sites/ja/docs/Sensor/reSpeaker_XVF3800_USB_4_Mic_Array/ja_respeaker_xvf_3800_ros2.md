@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 を ROS2 と統合してロボットアプリケーションに活用する方法を学びます。本チュートリアルでは、Turtlesim を用いた DOA と音声検出のシミュレーションを通して、ロボット制御と PID 制御の基礎的な理解を提供します。
+description: reSpeaker XVF3800 を ROS2 と統合してロボットアプリケーションに活用する方法を学びます。本チュートリアルでは、Turtlesim を用いた DOA と音声検出のシミュレーションを通して、ロボット制御と PID 制御の基礎的な理解を提供します。
 title: reSpeaker XVF3800 上の ROS2
 keywords:
   - reSpeaker
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_ros2/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
-このプロジェクトでは、音声検出と到来方向 (DOA) 推定に焦点を当てながら、ReSpeaker XVF3800 を ROS2 と統合してロボットアプリケーションに利用する方法を示します。Turtlesim ノードを使用して音声入力に基づくロボット制御をシミュレートし、PID 制御による精密な動作を実現します。本チュートリアルでは、ROS2 環境のセットアップ、ReSpeaker XVF3800 の設定、およびロボット制御に音声コマンドを適用する方法を取り上げます。最後まで進めることで、音声インターフェースをロボティクスに接続し、ナビゲーションのための基本的な制御アルゴリズムを使用する方法を理解できます。
+このプロジェクトでは、音声検出と到来方向 (DOA) 推定に焦点を当てながら、reSpeaker XVF3800 を ROS2 と統合してロボットアプリケーションに利用する方法を示します。Turtlesim ノードを使用して音声入力に基づくロボット制御をシミュレートし、PID 制御による精密な動作を実現します。本チュートリアルでは、ROS2 環境のセットアップ、reSpeaker XVF3800 の設定、およびロボット制御に音声コマンドを適用する方法を取り上げます。最後まで進めることで、音声インターフェースをロボティクスに接続し、ナビゲーションのための基本的な制御アルゴリズムを使用する方法を理解できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -35,9 +35,9 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_ros2/
 
 [ROS 2 Humble インストールガイド (Ubuntu)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
-## ReSpeaker USB Mic Array のセットアップ
+## reSpeaker USB Mic Array のセットアップ
 
-ロボットや音声アプリケーションに **ReSpeaker USB Mic Array** を使用する場合は、Ubuntu システム上で次の手順に従って設定してください。
+ロボットや音声アプリケーションに **reSpeaker USB Mic Array** を使用する場合は、Ubuntu システム上で次の手順に従って設定してください。
 
 ### デバイスの Vendor ID と Product ID を確認する
 
@@ -47,11 +47,11 @@ url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_ros2/
 lsusb
 ```
 
-ReSpeaker デバイス（例: `vendor 0x2886, product 0x001A`）を探します。
+reSpeaker デバイス（例: `vendor 0x2886, product 0x001A`）を探します。
 
 ### デバイス用の udev ルールを作成する
 
-ReSpeaker Mic Array に適切なパーミッションを付与するため、新しい udev ルールを作成します。
+reSpeaker Mic Array に適切なパーミッションを付与するため、新しい udev ルールを作成します。
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
@@ -60,7 +60,7 @@ sudo nano /etc/udev/rules.d/50-respeaker.rules
 ファイルに次の行を追加します。
 
 ```bash
-# ReSpeaker USB Mic Array
+# reSpeaker USB Mic Array
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", GROUP="plugdev"
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```
@@ -75,11 +75,11 @@ sudo udevadm trigger
 sudo service udev restart
 ```
 
-新しいルールを適用するために、ReSpeaker USB Mic Array を一度抜き差ししてください。
+新しいルールを適用するために、reSpeaker USB Mic Array を一度抜き差ししてください。
 
 ## ROS2 ワークスペースのセットアップと ROS2 によるロボット制御
 
-このガイドでは、ROS2 ワークスペースのセットアップ、カスタム ROS2 パッケージの作成、Python を用いたロボット制御、そして ROS2 プロジェクトで使用するための ReSpeaker USB Mic Array の設定手順を順を追って説明します。
+このガイドでは、ROS2 ワークスペースのセットアップ、カスタム ROS2 パッケージの作成、Python を用いたロボット制御、そして ROS2 プロジェクトで使用するための reSpeaker USB Mic Array の設定手順を順を追って説明します。
 
 ### 必要な依存関係のインストール
 
@@ -183,7 +183,7 @@ PARAMETERS = {
     "DOA_VALUE": (20, 18, 4 + 1, "ro", "uint16"),
 }
 
-class ReSpeaker:
+class reSpeaker:
     TIMEOUT = 100000
 
     def __init__(self, dev):
@@ -231,7 +231,7 @@ def find(vid=0x2886, pid=0x001A):
     dev = usb.core.find(idVendor=vid, idProduct=pid)
     if not dev:
         return None
-    return ReSpeaker(dev)
+    return reSpeaker(dev)
 
 
 class AngleController(Node):
@@ -286,10 +286,10 @@ def main(args=None):
     rclpy.init(args=args)
     node = AngleController()
 
-    # Setup ReSpeaker device
+    # Setup reSpeaker device
     dev = find()
     if not dev:
-        node.get_logger().error("No ReSpeaker device found")
+        node.get_logger().error("No reSpeaker device found")
         return
 
     # Function to handle publishing DOA angle when speech is detected

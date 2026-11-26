@@ -1,5 +1,5 @@
 ---
-description: O ReSpeaker XVF3800 USB 4-Mic Array é um array circular de microfones profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade em modo duplo.
+description: O reSpeaker XVF3800 USB 4-Mic Array é um array circular de microfones profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade em modo duplo.
 title: reSpeaker XVF3800 USB Mic Array com teste I2S em XIAO ESP32S3
 keywords:
   - reSpeaker
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_xiao_i2s/
 
 # reSpeaker XVF3800 USB Mic Array com teste I2S em XIAO ESP32S3
 
-Este projeto serve como um sketch de teste para verificar a funcionalidade da interface I2S entre o **XIAO ESP32S3** e o **ReSpeaker XVF3800 USB 4-Mic Array**. O objetivo é confirmar que a transmissão e recepção de dados através do barramento I2S estão funcionando corretamente. Para isso, o sketch gera um sinal de áudio sintético em onda quadrada e o escreve na interface I2S. Em seguida, ele lê os dados de áudio do array de microfones XVF3800 e verifica a integridade das amostras recebidas.
+Este projeto serve como um sketch de teste para verificar a funcionalidade da interface I2S entre o **XIAO ESP32S3** e o **reSpeaker XVF3800 USB 4-Mic Array**. O objetivo é confirmar que a transmissão e recepção de dados através do barramento I2S estão funcionando corretamente. Para isso, o sketch gera um sinal de áudio sintético em onda quadrada e o escreve na interface I2S. Em seguida, ele lê os dados de áudio do array de microfones XVF3800 e verifica a integridade das amostras recebidas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -29,7 +29,7 @@ Este projeto serve como um sketch de teste para verificar a funcionalidade da in
 
 ## Objetivo
 
-O objetivo principal deste projeto é testar e validar as operações de transmissão (TX) e recepção (RX) I2S. Ele busca garantir que o array de microfones ReSpeaker XVF3800 consiga enviar dados de áudio de volta para o ESP32S3 via I2S com sucesso. Ao fazer isso, estabelece uma base confiável para a comunicação I2S entre os dois dispositivos, abrindo caminho para aplicações mais avançadas de áudio e processamento de voz.
+O objetivo principal deste projeto é testar e validar as operações de transmissão (TX) e recepção (RX) I2S. Ele busca garantir que o array de microfones reSpeaker XVF3800 consiga enviar dados de áudio de volta para o ESP32S3 via I2S com sucesso. Ao fazer isso, estabelece uma base confiável para a comunicação I2S entre os dois dispositivos, abrindo caminho para aplicações mais avançadas de áudio e processamento de voz.
 
 ## Como Funciona
 

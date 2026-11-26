@@ -1,5 +1,5 @@
 ---
-description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
+description: The reSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: Getting Started with reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3
 keywords:
   - reSpeaker
@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/
 
 ## Overview
 
-**The ReSpeaker XVF3800 USB 4-Mic Array** is a professional circular 4-microphone array based on the XMOS XVF3800. It features AEC, AGC, DoA, beamforming, VAD, noise suppression, de-reverberation, and 360° voice capture (up to 5 meters). It also supports dual operation modes, making it ideal for advanced voice applications. When combined with the Xiao ESP32S3, controlling the ReSpeaker XVF3800 USB becomes even more powerful, unlocking endless possibilities.
+**The reSpeaker XVF3800 USB 4-Mic Array** is a professional circular 4-microphone array based on the XMOS XVF3800. It features AEC, AGC, DoA, beamforming, VAD, noise suppression, de-reverberation, and 360° voice capture (up to 5 meters). It also supports dual operation modes, making it ideal for advanced voice applications. When combined with the Xiao ESP32S3, controlling the reSpeaker XVF3800 USB becomes even more powerful, unlocking endless possibilities.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
