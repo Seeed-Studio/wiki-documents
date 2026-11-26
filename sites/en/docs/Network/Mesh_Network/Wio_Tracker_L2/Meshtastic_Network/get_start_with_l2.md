@@ -371,6 +371,10 @@ You can add sensor to the device via the grove interface. The following sensors 
 </TabItem>
 </Tabs>
 
+For example, when a Grove BME280 environmental sensor (temperature, humidity and barometer) is plugged into the Grove interface, the readings can be displayed directly on the device's touchscreen:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BME280.png" alt="BME280 display effect" width={600} height="auto" /></p>
+
 ### Other Function
 
 <Tabs>
@@ -554,6 +558,18 @@ Wifi is disabled when the wifi ip is empty and the wifi icon is grey. Wifi is en
 **Troubleshoot**
 
 You need to perform a flash erase, and the re-flash the latest firmware.
+
+### Screen stays black after flashing the firmware
+
+**Description**
+
+- After flashing the firmware, the device cannot boot normally and the screen stays black.
+
+**Troubleshoot**
+
+- Step 1. Press the `RST` button once to reset the device. In most cases, the screen will light up after the reset.
+
+- Step 2. If the screen still does not light up, try flashing the factory firmware or Meshtastic `2.8.2 beta` first, and then re-flash the firmware you need.
 
 ### Factory Reset
 

@@ -1,5 +1,5 @@
 ---
-title: XIAO nRF54L15の消費電力例 (PlatformIO)
+title: XIAO nRF54L15 の消費電力サンプル（PlatformIO）
 description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
 slug: /xiao_nrf54l15_sense_power_consumptions
@@ -16,39 +16,43 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_power_consumptions/
 ---
 
 
-以下のサンプルコードはPlatformIO用に設計されていますが、nRF Connect SDKとも互換性があります。
+以下のサンプルコードは PlatformIO 向けに設計されていますが、nRF Connect SDK とも互換性があります。
 
 :::tip
-VS Codeベースで、nRF Connect SDKで以下のケースを使用したい場合は、提供されている接続を参照し、app.overlayファイルを追加してprj.confの内容を変更してください
+VS Code をベースとして、nRF Connect SDK 上で以下のケースを使用したい場合は、提示された接続先を参照し、app.overlay ファイルを追加して prj.conf 内の内容を変更してください。
 
-[XIAO nRF54L15 オーバーレイファイルの追加とconfファイルの変更](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
+[XIAO nRF54L15 で overlay ファイルを追加し conf ファイルを変更する](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
 
 :::
 
-## Bluetooth接続
+:::caution
+V1.2 の低消費電力測定では、背面の BAT パッドから公称 3.7 V の電源でボードに給電し、USB-C と側面の 5V/VBUS ピンを切り離してください。ボードのリビジョン、ファームウェア、測定ポイント、および Sense の IMU とマイクが有効かどうかを記録してください。
+:::
 
-このセクションでは、デバイスがBluetooth Low Energy (BLE) ペリフェラルとしてアクティブにアドバタイジングしている間の消費電力特性について詳しく説明します。デバイスはカスタムBLEサービスを実装し、他のセントラルデバイスが接続して相互作用できるようにします。
+## Bluetooth 接続時
 
-以下のグラフは、デバイスが継続的にアドバタイジングしている際の典型的な消費電力プロファイルを示しています：
+このセクションでは、デバイスが Bluetooth Low Energy（BLE）ペリフェラルとしてアドバタイジングを積極的に行っている間の消費電力特性について詳しく説明します。デバイスはカスタム BLE サービスを実装しており、他のセントラルデバイスが接続して操作できるようになっています。
+
+次のグラフは、デバイスが連続してアドバタイジングしているときの典型的な消費電力プロファイルを示しています。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/7.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>BLEアドバタイジング中のデバイス消費電力</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>BLE アドバタイジング中のデバイス消費電力</em></p>
 </div>
 
-グラフに示されているように、デバイスは各アドバタイジングイベントに対応する周期的な電流ピークを示し、その後に低い電流消費期間が続きます。アドバタイジング中の平均消費電力は、システムオフモードよりも高く、ブロードキャストに必要なアクティブな無線操作を反映しています。
+グラフに示されているように、デバイスは各アドバタイジングイベントに対応する周期的な電流ピークを示し、その後に電流消費が低い期間が続きます。アドバタイジング中の平均消費電力は System Off モードよりも高く、これはブロードキャストに必要な無線動作がアクティブであることを反映しています。
 
 ---
 
-### BLEアドバタイジングコード例
+### BLE アドバタイジングのコード例
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-ble" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-以下は、BLEアドバタイジング中の消費電力をテストするために使用されたコードです：
+以下は、BLE アドバタイジング中の消費電力をテストするために使用したコードです。
 
 ```c
 #include <stdio.h>
@@ -230,27 +234,28 @@ int main(void)
 
 ## 超低消費電力状態
 
-デバイスの極めて低い消費電力を実現するため、**システムオフ**モードでの消費電力テストを実施しました。システムオフモードは、Zephyr OSが提供するディープスリープモードで、ほとんどのペリフェラルとCPUがオフになり、必要最小限のウェイクアップソース（GPIOインタラプトなど）のみを保持して消費電力を最小化します。
+デバイスの極めて低い消費電力を実現するために、**System Off** モードで消費電力テストを実施しました。System Off モードは Zephyr OS が提供するディープスリープモードであり、ほとんどのペリフェラルと CPU がオフになり、消費電力を最小限に抑えるために必要なウェイクアップソース（GPIO 割り込みなど）のみが保持されます。
 
-以下のグラフは、デバイスがシステムオフモードに入った後の典型的な消費電力カーブを示しています：
+次のグラフは、デバイスが System Off モードに入った後の典型的な消費電力カーブを示しています。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="XIAO nRF54L15 Ultra-low Power Consumption in System Off Mode" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>システムオフモードでのデバイス消費電力</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>System Off モードにおけるデバイス消費電力</em></p>
 </div>
-グラフに示されているように、System Offモードに入った後、消費電力は大幅に削減され、マイクロアンペアレベルのみを維持し、バッテリー寿命を大幅に延長します。`sw0`ボタンが押されると、デバイスはSystem Offモードから復帰し、再起動します。
+
+グラフに示されているように、System Off モードに入ると消費電力は大幅に低下し、マイクロアンペアレベルにまで抑えられるため、バッテリー寿命が大きく延びます。`sw0` ボタンが押されると、デバイスは System Off モードからウェイクアップして再起動します。
 
 ---
 
-#### 消費電力コード例
+#### 消費電力のコード例
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-lowpower" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-以下は、上記で説明したSystem Offモードでの消費電力をテストするために使用されるコードです：
+以下は、上記で説明した System Off モードにおける消費電力をテストするために使用したコードです：
 
 ```c
 /*
@@ -331,7 +336,7 @@ int main(void)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

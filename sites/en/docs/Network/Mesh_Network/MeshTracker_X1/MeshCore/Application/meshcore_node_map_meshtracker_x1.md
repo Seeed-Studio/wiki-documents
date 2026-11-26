@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg
 slug: /meshcore_node_map_meshtracker_x1
 sku: 100087698
-sidebar_position: 2
+sidebar_position: 4
 last_update:
   date: 3/19/2026
   author: Michelle Huang

@@ -119,6 +119,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>reBot-DM Bimanual Collaboration</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>reBot-DM with Isaac Sim</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-DM Web Control System: Real Robot & MuJoCo</b></div></a>
+        <a className="step-card" href="/rebot_b601_dm_holoscan_gravity_compensation/"><span className="step-index">6</span><div><b>reBot-DM Holoscan5 Gravity Compensation</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -179,22 +180,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Quick Start</b></div></a>
         <a className="step-card" href="/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b></div></a>
         <a className="step-card" href="/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm Dataset Tool</b></div></a>
+        <a className="step-card" href="/sensecraft_robotics_so_arm101/"><span className="step-index">4</span><div><b>No-Code VLA with SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Applications</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>Dual-Arm SO-ARM Training</b></div></a>
-        <a className="step-card" href="/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM with Amazing Hand Dexterous Hand</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>Applications</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">6</span><div><b>SO101 and NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac Simulation</b></div></a>
-        <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab Reinforcement Learning</b></div></a>
-        <a className="step-card" href="/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 with Isaac Sim</b></div></a>
+        <a className="step-card" href="/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Dual-Arm SO-ARM Training</b></div></a>
+        <a className="step-card" href="/soarm101_xiao_microros_wireless_teleoperation/"><span className="step-index">6</span><div><b>SO-ARM Wireless Teleoperation</b></div></a>
+        <a className="step-card" href="/soarm_amazinghand_teleop/"><span className="step-index">7</span><div><b>SO-ARM with Amazing Hand Dexterous Hand</b></div></a>
+        <a className="step-card" href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">8</span><div><b>SO101 and NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">9</span><div><b>LeIsaac Simulation</b></div></a>
+        <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">10</span><div><b>Isaac Lab Reinforcement Learning</b></div></a>
+        <a className="step-card" href="/soarm101_isaac_sim_dli/"><span className="step-index">11</span><div><b>SO-ARM101 with Isaac Sim</b></div></a>
         <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>

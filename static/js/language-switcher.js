@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-11-23 15:48:07 (北京时间)
-// 多语言页面: 2717 个
+// 生成时间: 2026-11-26 09:40:37 (北京时间)
+// 多语言页面: 2727 个
 
 (function() {
   'use strict';
@@ -4041,6 +4041,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_2002_development_cpp_skill": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/configure_static_ip_on_recamera": [
     "cn",
     "en",
@@ -4399,6 +4406,13 @@
     "pt"
   ],
   "/recamera_pro_speaker_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_python_sdk_skill": [
     "cn",
     "en",
     "es",
@@ -5434,6 +5448,13 @@
     "ja",
     "pt"
   ],
+  "/zephcore_getting_started_x1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_source_code_pratical_tutorial_meshtracker_x1": [
     "cn",
     "en",
@@ -5504,6 +5525,13 @@
     "ja",
     "pt"
   ],
+  "/zephcore_getting_started_p1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
@@ -5568,6 +5596,13 @@
     "pt"
   ],
   "/t1000e_meshcore_contact_sharing_companion_repeat": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/zephcore_getting_started_t1000e": [
     "cn",
     "en",
     "es",
@@ -5652,6 +5687,13 @@
     "pt"
   ],
   "/meshcore_ai_image_transmission_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/zephcore_getting_started": [
     "cn",
     "en",
     "es",
@@ -6589,13 +6631,6 @@
     "ja",
     "pt"
   ],
-  "/lerobot_soarm101_Rynnbot_Developer_Kit": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/lerobot_starai_arm": [
     "cn",
     "en",
@@ -7079,6 +7114,13 @@
     "ja",
     "pt"
   ],
+  "/rebot_b601_dm_holoscan_gravity_compensation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/rebot_arm_b601_dm_isaacsim": [
     "cn",
     "en",
@@ -7171,6 +7213,13 @@
     "pt"
   ],
   "/rebot_arm_b601_rs_pinocchio_meshcat": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_rs_python_visual_grasping": [
     "cn",
     "en",
     "es",
@@ -13272,6 +13321,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_44mm_wakeword": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_44mm_xiao_getting_started": [
     "cn",
     "en",
@@ -14217,6 +14273,13 @@
     "ja",
     "pt"
   ],
+  "/xiao_esp32c6_with_visual_studio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/use_cursor_create_zigbee_prj": [
     "cn",
     "en",
@@ -14743,6 +14806,13 @@
     "pt"
   ],
   "/xiao_nrf54l15_sense_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54l15_nfc": [
     "cn",
     "en",
     "es",

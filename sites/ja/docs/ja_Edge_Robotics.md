@@ -119,6 +119,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>reBot-DM 両腕協調</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>Isaac Sim と連携した reBot-DM</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-DM Web 制御システム：実機 &amp; MuJoCo</b></div></a>
+        <a className="step-card" href="/ja/rebot_b601_dm_holoscan_gravity_compensation/"><span className="step-index">6</span><div><b>reBot-DM Holoscan5 重力補償</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -179,22 +180,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 クイックスタート</b></div></a>
         <a className="step-card" href="/ja/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>サーボデバッグツール</b></div></a>
         <a className="step-card" href="/ja/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm データセットツール</b></div></a>
+        <a className="step-card" href="/ja/sensecraft_robotics_so_arm101/"><span className="step-index">4</span><div><b>ノーコード VLA：SenseCraft Robotics プラットフォーム</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>アプリケーション</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/ja/lerobot_double_arm_so_arm_training/"><span className="step-index">4</span><div><b>デュアルアーム SO-ARM トレーニング</b></div></a>
-        <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">5</span><div><b>SO-ARM と Amazing Hand デクスタラスハンド</b></div></a>
-      </div>
-    </div>
-    <div className="learning-group">
-      <h4>アプリケーション</h4>
-      <div className="learning-steps">
-        <a className="step-card" href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">6</span><div><b>SO101 と NVIDIA GR00T</b></div></a>
-        <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac シミュレーション</b></div></a>
-        <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab 強化学習</b></div></a>
-        <a className="step-card" href="/ja/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>Isaac Sim を用いた SO-ARM101</b></div></a>
+        <a className="step-card" href="/ja/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>デュアルアーム SO-ARM トレーニング</b></div></a>
+        <a className="step-card" href="/ja/soarm101_xiao_microros_wireless_teleoperation/"><span className="step-index">6</span><div><b>SO-ARM ワイヤレステレオペレーション</b></div></a>
+        <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">7</span><div><b>SO-ARM と Amazing Hand デクスタラスハンド</b></div></a>
+        <a className="step-card" href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">8</span><div><b>SO101 と NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">9</span><div><b>LeIsaac シミュレーション</b></div></a>
+        <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">10</span><div><b>Isaac Lab 強化学習</b></div></a>
+        <a className="step-card" href="/ja/soarm101_isaac_sim_dli/"><span className="step-index">11</span><div><b>Isaac Sim を用いた SO-ARM101</b></div></a>
         <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
