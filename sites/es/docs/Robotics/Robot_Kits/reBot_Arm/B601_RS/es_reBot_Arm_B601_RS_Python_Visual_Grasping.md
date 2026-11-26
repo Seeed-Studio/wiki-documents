@@ -1,7 +1,7 @@
 ---
 description: Configura el agarre visual sobre mesa en el reBot Arm B601-RS con una Orbbec Gemini 336 y YOLOE. Previsualiza agarres OBB, realiza la calibración mano-ojo y ejecuta el brazo con backends opcionales AnyGrasp o GraspNet-Baseline.
-title: reBot Arm B601-RS agarre visual multi-backend
-sidebar_label: reBot Arm B601-RS agarre visual multi-backend
+title: reBot-RS con agarre visual multi-backend
+sidebar_label: reBot-RS con agarre visual multi-backend
 keywords:
   - reBot Arm B601-RS
   - RGB-D
