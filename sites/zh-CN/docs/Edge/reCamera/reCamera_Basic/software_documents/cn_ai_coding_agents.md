@@ -89,7 +89,7 @@ Use the recamera-2002-cpp-dev skill to implement people counting in the camera v
 ```
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/2002_skill_begin.png" alt="Starting a people counting task with the recamera-2002-cpp-dev skill" />
+  <img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/recamera-people-counter-status-en.png" alt="Starting a people counting task with the recamera-2002-cpp-dev skill" />
   <p><em>代理会自动处理验证、交叉编译、打包、部署以及实时查看器</em></p>
 </div>
 
