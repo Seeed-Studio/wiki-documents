@@ -1,6 +1,6 @@
 ---
 description: Set up the B601-RS web console with the current hardware and simulation namespaces, MuJoCo visual grasping, the default DeepSeek Agent, and Arm102 Leader teleoperation with calibration and recovery steps.
-title: "reBot-RS Web Control: MuJoCo, DeepSeek & Leader Teleoperation"
+title: 'reBot-RS Web Control: MuJoCo, DeepSeek & Leader Teleoperation'
 keywords:
   - reBot Arm
   - B601-RS

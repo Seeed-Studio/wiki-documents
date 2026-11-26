@@ -8,10 +8,10 @@ slug: /get_started_with_meshtastic_wio_tracker_l2
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 1
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 11/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-24'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l2/
 ---
 
@@ -559,6 +559,18 @@ Wifi is disabled when the wifi ip is empty and the wifi icon is grey. Wifi is en
 
 You need to perform a flash erase, and the re-flash the latest firmware.
 
+### Screen stays black after flashing the firmware
+
+**Description**
+
+- After flashing the firmware, the device cannot boot normally and the screen stays black.
+
+**Troubleshoot**
+
+- Step 1. Press the `RST` button once to reset the device. In most cases, the screen will light up after the reset.
+
+- Step 2. If the screen still does not light up, try flashing the factory firmware or Meshtastic `2.8.2 beta` first, and then re-flash the firmware you need.
+
 ### Factory Reset
 
 If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
@@ -645,6 +657,24 @@ After the key regeneration, other device needs to reconnect with the node. So it
 ```bash
 #define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
 ```
+
+### Why is my position offset on other nodes?
+
+This is expected behavior, not a GPS or hardware fault. Each channel has a **Position precision** setting, defaulting to **13 bits**. That rounds every position you broadcast to a ~±2.9 km grid (a privacy default for shared channels), while your own device shows its full-precision fix over Bluetooth — so your own position looks accurate but other nodes see an offset.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={300} height="auto" /></p>
+
+To send full precision, enable it on **every** device:
+
+1. Open **Channels** in the Meshtastic app and tap your channel.
+2. Turn on **Precise location** (sets precision to 32 = full).
+3. Repeat on each device — the setting takes effect on the sender.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={300} height="auto" /></p>
+
+CLI alternative: `meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**Note (firmware 2.8+):** public channels (no key, default key, or single-byte key) are limited to 15 bits (~729 m). Use a **private channel with a random key** for full precision.
 
 ## Resource
 

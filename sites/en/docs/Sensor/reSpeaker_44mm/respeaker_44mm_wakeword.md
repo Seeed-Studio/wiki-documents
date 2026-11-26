@@ -19,7 +19,7 @@ last_update:
   date: 11/24/2026
   author: Kasun Thushara
 createdAt: '2026-11-24'
-updatedAt: '2026-11-24'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/respeaker_44mm_wakeword/
 ---
 

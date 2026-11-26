@@ -1,8 +1,15 @@
 ---
-description: "A deep dive into WALL-OSS-0.5: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "WALL-OSS-0.5: Bridging Vision-Language Learning and Continuous Actions"
+description: 'A deep dive into WALL-OSS-0.5: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'WALL-OSS-0.5: Bridging Vision-Language Learning and Continuous Actions'
 hide_title: true
-keywords: ["Paper Deep-Dive","WALL-OSS-0.5","VLA","Gradient-Bridged Co-Training","RVQ","Flow Matching","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - WALL-OSS-0.5
+  - VLA
+  - Gradient-Bridged Co-Training
+  - RVQ
+  - Flow Matching
+  - LeRobot
 slug: /robotics/paper_reading_wall_oss_05
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +17,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_wall_oss_05/
 ---
 
 import '/src/css/paper-reading-style.css';

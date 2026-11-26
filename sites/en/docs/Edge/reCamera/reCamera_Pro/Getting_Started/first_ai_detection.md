@@ -15,7 +15,7 @@ last_update:
   author: MOSS
 url: https://wiki.seeedstudio.com/recamera_pro_getting_started/
 createdAt: '2026-09-21'
-updatedAt: '2026-09-21'
+updatedAt: '2026-10-15'
 ---
 
 # Quick Start: See Your First AI Detection

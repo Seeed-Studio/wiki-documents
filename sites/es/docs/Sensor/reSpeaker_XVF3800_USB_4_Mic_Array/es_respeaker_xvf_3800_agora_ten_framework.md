@@ -124,7 +124,7 @@ Workflow:
 | Hardware | Notas |
 |------|------|
 | **Seeed Studio XIAO ESP32-S3** | Placa controladora principal |
-| **ReSpeaker XVF3800** | Placa de expansión de audio (matriz de micrófonos + interfaz de altavoz) |
+| **reSpeaker XVF3800** | Placa de expansión de audio (matriz de micrófonos + interfaz de altavoz) |
 | **Altavoz** | Al menos un altavoz para reproducir las respuestas de la IA |
 | **Cable de datos USB-C** | Para grabar el firmware y alimentar el dispositivo |
 
@@ -190,7 +190,7 @@ Puedes descargar el firmware desde [aquí](https://github.com/respeaker/reSpeake
 
 ### Pasos de Actualización
 
-En tu ordenador, conecta **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** y ejecuta la herramienta de actualización de firmware, luego selecciona el firmware.
+En tu ordenador, conecta **reSpeaker XMOS XVF3800 with XIAO ESP32S3** y ejecuta la herramienta de actualización de firmware, luego selecciona el firmware.
 
 Para una guía detallada, consulta [esta página](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)。
 
@@ -514,7 +514,7 @@ git apply $ADF_PATH/idf_patches/idf_v5.2_freertos.patch
 
 #### Modificar la configuración de pines de la placa ESP-ADF (¡Crítico!)
 
-Debido a que el pinout de ReSpeaker XVF3800 difiere del Korvo-2 V3 por defecto, debes modificar la configuración de la placa en el framework:
+Debido a que el pinout de reSpeaker XVF3800 difiere del Korvo-2 V3 por defecto, debes modificar la configuración de la placa en el framework:
 
 **Ubicación del archivo:**
 - Windows: `C:\Espressif\frameworks\esp-adf\components\audio_board\esp32_s3_korvo2_v3\board_pins_config.c`
@@ -531,9 +531,9 @@ Debido a que el pinout de ReSpeaker XVF3800 difiere del Korvo-2 V3 por defecto, 
 ```c
 esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 {
-    // ReSpeaker XVF3800 I2C configuration
-    i2c_config->sda_io_num = GPIO_NUM_5;   // ReSpeaker I2C SDA
-    i2c_config->scl_io_num = GPIO_NUM_6;   // ReSpeaker I2C SCL
+    // reSpeaker XVF3800 I2C configuration
+    i2c_config->sda_io_num = GPIO_NUM_5;   // reSpeaker I2C SDA
+    i2c_config->scl_io_num = GPIO_NUM_6;   // reSpeaker I2C SCL
     return ESP_OK;
 }
 ```
@@ -543,7 +543,7 @@ esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 ```c
 esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
 {
-    // ReSpeaker XVF3800 I2S configuration
+    // reSpeaker XVF3800 I2S configuration
     i2s_config->bck_io_num   = GPIO_NUM_8;   // BCLK
     i2s_config->ws_io_num    = GPIO_NUM_7;   // WS/LRCK
     i2s_config->data_out_num = GPIO_NUM_44;  // DOUT
@@ -818,7 +818,7 @@ Si la dirección no es `0x18`, debes cambiar `AIC3104_ADDR` en `aic3104_ng.h`.
 | Guía de programación ESP-ADF | https://docs.espressif.com/projects/esp-adf/zh_CN/latest/ |
 | Documentación de Agora RTC | https://docs.agora.io/en/rtc/overview/product-overview |
 | Documentación de TEN Framework | https://doc.theten.ai |
-| Guía de firmware de ReSpeaker XVF3800 | https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/ |
+| Guía de firmware de reSpeaker XVF3800 | https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/ |
 
 ### Servicios de API
 

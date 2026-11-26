@@ -1,5 +1,5 @@
 ---
-description: Experience the power of the ReSpeaker XVF3800 USB 4-Mic Array—an advanced circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the compact XIAO ESP32S3, it delivers high-performance voice control for smart devices, robotics, and IoT applications. Join us as we demonstrate seamless integration with Home Assistant to control devices using voice commands.
+description: Experience the power of the reSpeaker XVF3800 USB 4-Mic Array—an advanced circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the compact XIAO ESP32S3, it delivers high-performance voice control for smart devices, robotics, and IoT applications. Join us as we demonstrate seamless integration with Home Assistant to control devices using voice commands.
 title: Smart Home Voice Control with Home Assistant with reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -12,20 +12,20 @@ last_update:
   date: 9/17/2025
   author: Kasun Thushara
 createdAt: '2025-07-31'
-updatedAt: '2026-06-12'
+updatedAt: '2026-10-15'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_home_assistant/
 ---
 
 ## Overview
 
-Talk with smart spaces with new **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** switch up the lights, crank up the tunes, or even ask about the weather  using voice
+Talk with smart spaces with new **reSpeaker XMOS XVF3800 with XIAO ESP32S3** switch up the lights, crank up the tunes, or even ask about the weather  using voice
 
-This chapter we will use the ReSpeaker XMOS XVF3800 with XIAO ESP32S3  HA Voice Assistant to connect the Sonoff smart switch to realize voice control of the light switch.
+This chapter we will use the reSpeaker XMOS XVF3800 with XIAO ESP32S3  HA Voice Assistant to connect the Sonoff smart switch to realize voice control of the light switch.
 
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/iqlsNezHYuE"
-          title="ReSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
+          title="reSpeaker XVF3800 with XIAO ESP32S3 Home Assistant"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -37,7 +37,7 @@ This chapter we will use the ReSpeaker XMOS XVF3800 with XIAO ESP32S3  HA Voice 
 
 <table align="center">
   <tr>
-      <th>ReSpeaker XVF3800 with XIAO ESP32S3</th>
+      <th>reSpeaker XVF3800 with XIAO ESP32S3</th>
         <th>Home Assistant Device</th>
         <th>Sonoff BASICR2</th>
   </tr>
@@ -68,7 +68,7 @@ This chapter we will use the ReSpeaker XMOS XVF3800 with XIAO ESP32S3  HA Voice 
 ## Firmware update
 
 To get the best playback experience, we need to update XMOS firmware to
-Download the firmware from here. On your computer, plug in the ReSpeaker XMOS XVF3800 with XIAO ESP32S3 and run the in our guide:
+Download the firmware from here. On your computer, plug in the reSpeaker XMOS XVF3800 with XIAO ESP32S3 and run the in our guide:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -81,7 +81,7 @@ You can download Firmware From [Here](https://github.com/formatBCE/Respeaker-XVF
 
 The installtion guide is [Here](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
-## Prepare ReSpeaker XMOS XVF3800 with XIAO ESP32S3
+## Prepare reSpeaker XMOS XVF3800 with XIAO ESP32S3
 
 Go to **Home Assistant > Settings > Apps**.
 
@@ -1675,7 +1675,7 @@ Controls your voice assistant (VA) behavior and interactions.
 
 ## Special Thanks
 
-We would like to thank FormatBCE for creating this awesome YAML file for the Seeed Studio ReSpeaker XVF3800.
+We would like to thank FormatBCE for creating this awesome YAML file for the Seeed Studio reSpeaker XVF3800.
 Support him on his [GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
 ## Tech Support & Product Discussion

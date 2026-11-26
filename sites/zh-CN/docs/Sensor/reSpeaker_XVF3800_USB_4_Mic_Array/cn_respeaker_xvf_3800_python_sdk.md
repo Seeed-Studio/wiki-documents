@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。搭配 XIAO ESP32S3，可为智能设备、机器人和物联网应用实现高级语音控制。探索无缝集成与双模式的灵活性。
+description: reSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。搭配 XIAO ESP32S3，可为智能设备、机器人和物联网应用实现高级语音控制。探索无缝集成与双模式的灵活性。
 title: 使用 Python 控制 reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_python_sdk/
 
 ## 介绍 
 
-在本节中，我们将介绍如何使用 Python SDK 控制你的 ReSpeaker XVF-3800。它让希望构建自己应用的用户开发更加便捷。
+在本节中，我们将介绍如何使用 Python SDK 控制你的 reSpeaker XVF-3800。它让希望构建自己应用的用户开发更加便捷。
 例如，你可以检测声音来源方向、执行语音活动检测（VAD）、控制 LED 等等。
 
 ## Python SDK
@@ -45,7 +45,7 @@ PARAMETERS = {
     "REBOOT":           (48,  7,  1,  "wo", "uint8"),
 }
 
-class ReSpeaker:
+class reSpeaker:
     TIMEOUT = 100000  # USB timeout
 
     def __init__(self, dev):
@@ -130,7 +130,7 @@ def find(vid=0x2886, pid=0x001A):
         dev = usb.core.find(idVendor=vid, idProduct=pid)
     if not dev:
         return
-    return ReSpeaker(dev)
+    return reSpeaker(dev)
 
 def main():
     dev = find()
@@ -161,7 +161,7 @@ if __name__ == '__main__':
 请参考相关文档以了解 XVF_Host 是什么。
 在本节中，我们将使用 Python 脚本配合 [XVF_Host](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#how-to-control-respeaker-xvf3800) 进行操作。
 
-### ReSpeaker XVF3800 的 Python 示例
+### reSpeaker XVF3800 的 Python 示例
 
 :::note
 如果你想进一步了解如何通过 xvf_host 使用 Python 脚本进行控制，请阅读这篇[文章](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)。
@@ -182,7 +182,7 @@ cd reSpeakerXVF
 python test.py
 ```
 
-请确保已安装 Python，并且 ReSpeaker XVF3800 已通过 USB 连接。
+请确保已安装 Python，并且 reSpeaker XVF3800 已通过 USB 连接。
 
 可以按如下方式查看 `test.py` 文件。这是供你在 Windows 上参考的示例。
 

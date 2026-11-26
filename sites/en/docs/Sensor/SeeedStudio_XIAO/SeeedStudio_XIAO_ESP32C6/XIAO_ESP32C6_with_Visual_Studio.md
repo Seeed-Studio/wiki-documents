@@ -10,6 +10,9 @@ keywords:
 slug: /xiao_esp32c6_with_visual_studio
 last_update:
   date: 11/23/2026
+createdAt: '2026-11-22'
+url: https://wiki.seeedstudio.com/xiao_esp32c6_with_visual_studio/
+updatedAt: '2026-11-23'
 ---
 
 This walkthrough builds on the XIAO ESP32C6 [Wi-Fi scan example](https://wiki.seeedstudio.com/xiao_wifi_usage_esp32c6/#scan-nearby-wifi-networks). You’ll upload an Arduino sketch that classifies the strongest sampled 2.4 GHz signal, then stop at the comparison and see the value change as you step through it. The XIAO’s built-in USB JTAG works through the same USB data cable you use to upload the sketch. [Espressif’s built-in USB JTAG reference](https://docs.espressif.com/projects/esp-idf/en/stable/esp32c6/api-guides/jtag-debugging/configure-builtin-jtag.html)

@@ -1189,6 +1189,7 @@ const sidebars = {
               label: '无线连接',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_NFC_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Matter_Use',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Zigbee',
               ],
@@ -2118,6 +2119,13 @@ const sidebars = {
                   items: [
                     'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_doa_vad',
                     'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_led_effects',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'XIAO GPIO',
+                  items: [
+                    'Sensor/reSpeaker_44mm/cn_respeaker_44mm_xiao_i2c_display',
                   ],
                 },
               ],

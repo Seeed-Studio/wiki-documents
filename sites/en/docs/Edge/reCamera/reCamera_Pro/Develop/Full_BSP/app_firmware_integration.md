@@ -18,7 +18,7 @@ last_update:
   author: yylin
 url: https://wiki.seeedstudio.com/recamera_pro_bsp_app_integration/
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-10'
 ---
 
 # Integrate an Application into the Product Firmware

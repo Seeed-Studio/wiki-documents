@@ -1,5 +1,5 @@
 ---
-description: "How to run A-LOAM LiDAR SLAM on Jetson: build from source, play rosbag data and generate point cloud maps for robot navigation."
+description: 'How to run A-LOAM LiDAR SLAM on Jetson: build from source, play rosbag data and generate point cloud maps for robot navigation.'
 title: Run A-LOAM 3D SLAM
 keywords:
   - A-LOAM
@@ -13,7 +13,7 @@ last_update:
   date: 05/7/2024
   author: ZhuYaoHui
 createdAt: '2024-07-08'
-updatedAt: '2025-09-12'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/a_loam/
 ---
 # How to run A-LOAM 3D SLAM on reComputer

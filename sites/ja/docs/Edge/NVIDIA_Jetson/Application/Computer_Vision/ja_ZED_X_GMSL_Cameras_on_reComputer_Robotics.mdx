@@ -15,10 +15,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png
 slug: /zed_x_gmsl_cameras_on_recomputer_robotics
 last_update:
-  date: 11/06/2026
+  date: 11/26/2026
   author: Dayu
 createdAt: '2026-09-27'
-updatedAt: '2026-11-06'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/ja/zed_x_gmsl_cameras_on_recomputer_robotics/
 ---
 
@@ -217,7 +217,7 @@ import TabItem from '@theme/TabItem';
   <span className="zed-eyebrow">Seeed Studio × Stereolabs</span>
   <h1>ZED X デプスビジョン、reComputer Robotics ですぐに利用可能</h1>
   <div className="zed-hero-copy">
-    堅牢で長距離の GMSL2 ステレオビジョンを、コンパクトなロボット、自律機械、フィジカル AI システムにもたらします。Seeed Studio の reComputer Robotics プラットフォームは、NVIDIA Jetson コンピューティング、ロボティクス対応 I/O、スケーラブルな GMSL 接続を、導入しやすいハードウェアに統合しています。
+    堅牢で長距離の GMSL2 ステレオビジョンを、コンパクトなロボット、自律マシン、フィジカル AI システムにもたらします。Seeed Studio の reComputer Robotics プラットフォームは、NVIDIA Jetson コンピューティング、ロボティクス対応 I/O、スケーラブルな GMSL 接続を、導入しやすいハードウェアに統合しています。
   </div>
   <div className="zed-pill-row">
     <span className="zed-pill">Jetson Orin &amp; Thor</span>
@@ -227,11 +227,11 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
-このガイドでは、**Stereolabs ZED X シリーズ GMSL2 カメラ**を Seeed Studio のロボティクス向けハードウェアで使用する方法を説明します。**reComputer Robotics J50 Mini** と **reComputer Robotics J50（J501）** のセットアップ手順とドライバのダウンロードを掲載しています。J40 と J601 の手順は今後追加予定です。
+このガイドでは、**Stereolabs ZED X シリーズ GMSL2 カメラ** を Seeed Studio のロボティクス向けハードウェアで使用する方法を説明します。**reComputer Robotics J50 Mini**、**J50 (J501)**、および **J40 (J401)** 向けのセットアップ手順を用意しています。J601 固有のドライバリソースは現在準備中です。
 
 ## プラットフォームを選択する
 
-以下からプラットフォームを選択してください。このページ上の 2 つのタブグループは同期されており、選択内容は対応するデバイスガイドにも引き継がれます。
+以下からプラットフォームを選択してください。このページにある 2 つのタブグループは同期されており、選択内容は対応するデバイスガイドにも引き継がれます。
 
 <Tabs groupId="zed-robotics-platform">
   <TabItem value="j50-mini" label="J50 Mini" default>
@@ -241,7 +241,7 @@ import TabItem from '@theme/TabItem';
         <img src="https://files.seeedstudio.com/wiki/recomputer_mini_j501_wifi_module_installation/reComputer-Mini-J501_WiFi_installation_picture_08.png" alt="reComputer Robotics J50 Mini"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status">● ガイド利用可能</span>
+        <span className="zed-status">● ガイドあり</span>
         <h3>reComputer Robotics J50 Mini</h3>
         <div className="zed-product-description">最大 8 台のカメラに対応する GMSL2 拡張アーキテクチャを備えたコンパクトな AGX Orin ロボティクスコンピュータで、ヒューマノイド、AMR、スペースに制約のあるマルチカメラシステムに最適です。</div>
         <div className="zed-actions">
@@ -259,9 +259,9 @@ import TabItem from '@theme/TabItem';
         <img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="reComputer Robotics J50"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status">● ガイド利用可能</span>
+        <span className="zed-status">● ガイドあり</span>
         <h3>reComputer Robotics J50</h3>
-        <div className="zed-product-description">10GbE、複数の CAN インターフェース、柔軟なストレージ、最大 8 台の GMSL2 カメラ向け拡張を組み合わせた、高い I/O を備える AGX Orin プラットフォームで、要求の厳しいロボティクスワークロードに対応します。</div>
+        <div className="zed-product-description">10GbE、複数の CAN インターフェース、柔軟なストレージ、および最大 8 台の GMSL2 カメラ用拡張を組み合わせた、高い I/O を備える AGX Orin プラットフォームで、要求の厳しいロボティクスワークロードに対応します。</div>
         <div className="zed-actions">
           <a className="zed-button" href="#device-specific-setup">セットアップを開く ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank" rel="noopener noreferrer">製品を見る ↗</a>
@@ -277,11 +277,11 @@ import TabItem from '@theme/TabItem';
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics J40"/>
       </div>
       <div className="zed-product-copy">
-        <span className="zed-status zed-status-soon">● ガイド近日公開</span>
+        <span className="zed-status">● ガイドあり</span>
         <h3>reComputer Robotics J40</h3>
         <div className="zed-product-description">豊富なセンサー I/O と、最大 4 台のカメラに対応するオプションの GMSL2 拡張を備えたバランスの取れた Orin Nano/NX ロボティクスコンピュータで、自律ロボットやリアルタイムエッジ認識に適しています。</div>
         <div className="zed-actions">
-          <a className="zed-button" href="#device-specific-setup">ステータスを見る ↓</a>
+          <a className="zed-button" href="#device-specific-setup">セットアップを開く ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank" rel="noopener noreferrer">製品を見る ↗</a>
         </div>
       </div>
@@ -296,8 +296,8 @@ import TabItem from '@theme/TabItem';
       </div>
       <div className="zed-product-copy">
         <span className="zed-status zed-status-soon">● ガイド近日公開</span>
-        <h3>Robotics J601 Carrier Board</h3>
-        <div className="zed-product-description">次世代のフィジカル AI 向けに設計された Jetson AGX Thor キャリアボードで、高帯域幅ネットワーク、ロボティクス I/O、および最大 8 台の GMSL2 カメラ用拡張に対応します。</div>
+        <h3>Robotics J601 キャリアボード</h3>
+        <div className="zed-product-description">次世代フィジカル AI 向けに設計された Jetson AGX Thor キャリアボードで、高帯域幅ネットワーキング、ロボティクス I/O、および最大 8 台の GMSL2 カメラ用拡張を備えています。</div>
         <div className="zed-actions">
           <a className="zed-button" href="#device-specific-setup">ステータスを表示 ↓</a>
           <a className="zed-button zed-button-secondary" href="https://www.seeedstudio.com/reComputer-J601-Carrier-Board-for-Jetson-AGX-Thor-p-6937.html" target="_blank" rel="noopener noreferrer">製品を表示 ↗</a>
@@ -311,10 +311,10 @@ import TabItem from '@theme/TabItem';
 ## デバイス固有のセットアップ {#device-specific-setup}
 
 <div className="zed-flow">
-  <div className="zed-flow-step"><strong>01 · Connect</strong>電源を切り、ZED X GMSL カメラを接続します。</div>
-  <div className="zed-flow-step"><strong>02 · Enable</strong>最新の BSP をフラッシュするか、対応する DEB をインストールします。</div>
-  <div className="zed-flow-step"><strong>03 · Install</strong>L4T リリースに対応した ZED SDK をインストールします。</div>
-  <div className="zed-flow-step"><strong>04 · Validate</strong>ZED Studio を起動し、深度ストリームを確認します。</div>
+  <div className="zed-flow-step"><strong>01 · 接続</strong>電源を切り、ZED X GMSL カメラを接続します。</div>
+  <div className="zed-flow-step"><strong>02 · 有効化</strong>最新の BSP をフラッシュするか、対応する DEB をインストールします。</div>
+  <div className="zed-flow-step"><strong>03 · インストール</strong>L4T リリースに対応した ZED SDK をインストールします。</div>
+  <div className="zed-flow-step"><strong>04 · 検証</strong>ZED Studio を起動し、深度ストリームを確認します。</div>
 </div>
 
 <Tabs groupId="zed-robotics-platform">
@@ -342,12 +342,12 @@ import TabItem from '@theme/TabItem';
 4. 電源を再接続し、デバイスを起動します。
 
 :::warning
-GMSL カメラをホットプラグしないでください。カメラまたは GMSL ハーネスを接続・取り外しする前には、必ず電源を切ってください。
+GMSL カメラをホットプラグしないでください。カメラや GMSL ハーネスを接続または取り外しする前に、必ず電源を切ってください。
 :::
 
 #### 2. ZED X GMSL サポートを有効化する
 
-次のパスのうち **1 つ** を選択してください。クリーンなデプロイには最新 BSP のフラッシュを推奨しますが、既存システムを維持したい場合は DEB のインストールの方が高速です。
+次のパスのうち **1 つ** を選択します。クリーンなデプロイには最新の BSP をフラッシュすることを推奨します。既存のシステムを維持したい場合は、DEB をインストールする方が高速です。
 
 <Tabs groupId="j50-mini-zed-driver-method">
   <TabItem value="latest-bsp" label="オプション 1 · 最新 BSP をフラッシュ" default>
@@ -358,15 +358,15 @@ GMSL カメラをホットプラグしないでください。カメラまたは
 cat /etc/nv_tegra_release
 ```
 
-`DATE` フィールドを探します。BSP のビルド日が **2026 年 9 月 24 日以降** の場合、ZED X GMSL サポートはすでに含まれているため、ZED SDK のインストールに進むことができます。
+`DATE` フィールドを確認します。BSP のビルド日が **2026 年 9 月 24 日以降** の場合、ZED X GMSL サポートはすでに含まれているため、ZED SDK のインストールに進むことができます。
 
-ビルドがそれより古い場合は、以下の手順に従って、日付が **2026 年 9 月 24 日** の最新 **JetPack 7.2 / L4T 39.2.0** イメージを書き込みます。2 つのモジュールバリアントでは異なるイメージを使用するため、J50 Mini に搭載されている Jetson モジュールに一致するタブを選択してください。
+ビルドがそれより古い場合は、以下の手順に従って、日付が **2026 年 9 月 24 日** の最新 **JetPack 7.2 / L4T 39.2.0** イメージを書き込みます。モジュールには 2 つのバリアントがあり、異なるイメージを使用するため、J50 Mini に搭載されている Jetson モジュールに一致するタブを選択してください。
 
 :::warning
 フラッシュを行うと、ターゲットストレージは上書きされます。開始する前に、アプリケーションデータ、設定ファイル、認証情報をバックアップしてください。
 :::
 
-##### ホストの準備とイメージのダウンロード
+##### ホストを準備し、イメージをダウンロードする
 
 物理マシンの Ubuntu 20.04、22.04、または 24.04 ホストコンピュータ、USB Type-C データケーブル、および NVMe SSD を搭載した J50 Mini を用意します。モジュールに対応するイメージを Ubuntu ホストに直接ダウンロードします：
 
@@ -425,7 +425,7 @@ mfi_recomputer-mini-agx-orin-32g-j501-7.2.0-39.2.0-2026-09-24.tar.gz
 lsusb
 ```
 
-出力には、使用しているモジュールの USB ID が含まれている必要があります：
+出力には、モジュールの USB ID が含まれている必要があります：
 
 | Jetson モジュール | 期待される出力 |
 | --- | --- |
@@ -433,7 +433,7 @@ lsusb
 | AGX Orin 32GB | `0955:7223 NVidia Corp.` |
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png" alt="lsusb によってフォースリカバリモードで検出された Jetson デバイス" />
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png" alt="lsusb でフォースリカバリモードの Jetson デバイスが検出された状態" />
 </div>
 
 ##### イメージを展開してフラッシュする
@@ -484,7 +484,7 @@ cat /etc/nv_tegra_release
 
 報告された L4T リリースに一致するパッケージのみを使用してください。両方のパッケージをインストールしないでください。
 
-以下のコマンドは、ボードと L4T リリースに対応するドライバのファイル名に一致します。ダウンロード先に一致するバージョンが複数ある場合は、ワイルドカードを今回ダウンロードした正確なファイル名に置き換えてください。
+以下のコマンドは、このボードと L4T リリースに対応するドライバファイル名に一致します。ダウンロードディレクトリに複数の一致するバージョンがある場合は、ワイルドカードをダウンロードした正確なファイル名に置き換えてください。
 
 <Tabs groupId="j50-mini-zed-jetpack">
   <TabItem value="jp62" label="JetPack 6.2.1" default>
@@ -536,7 +536,7 @@ dpkg -l | grep stereolabs-zedx
 
 #### 3. ZED SDK をインストールする
 
-[Stereolabs ZED SDK ダウンロードページ](https://www.stereolabs.com/developers/release/) にアクセスし、`cat /etc/nv_tegra_release` で表示されたリリースに対応する NVIDIA Jetson インストーラを選択します：
+[Stereolabs ZED SDK ダウンロードページ](https://www.stereolabs.com/developers/release/) にアクセスし、`cat /etc/nv_tegra_release` で報告されたリリースに対応する NVIDIA Jetson インストーラを選択します：
 
 | インストール済みシステム | ZED SDK ページで選択する項目 |
 | --- | --- |
@@ -584,7 +584,7 @@ ZED Studio は接続されたカメラを検出するはずです。ライブビ
 
     <div className="zed-demo">
       <img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp72.gif" alt="JetPack 7.2 上で ZED X GMSL カメラと深度ビューを表示している ZED Studio"/>
-      <p className="zed-demo-caption">JetPack 7.2 上での ZED X GMSL カメラのプレビューと深度の可視化</p>
+      <p className="zed-demo-caption">JetPack 7.2 上での ZED X GMSL カメラプレビューと深度可視化</p>
     </div>
 
   </TabItem>
@@ -592,14 +592,14 @@ ZED Studio は接続されたカメラを検出するはずです。ライブビ
 
     <div className="zed-demo">
       <img src="https://files.seeedstudio.com/wiki/zed-gmsl/zed-jp62.gif" alt="JetPack 6.2 上で ZED X GMSL カメラと深度ビューを表示している ZED Studio"/>
-      <p className="zed-demo-caption">JetPack 6.2 上での ZED X GMSL カメラのプレビューと深度の可視化</p>
+      <p className="zed-demo-caption">JetPack 6.2 上での ZED X GMSL カメラプレビューと深度可視化</p>
     </div>
 
   </TabItem>
 </Tabs>
 
 :::success 期待される結果
-カメラが ZED Studio に表示され、ライブ画像が安定しており、深度ビューがリアルタイムで更新されます。これで reComputer Robotics J50 Mini は、ZED SDK アプリケーション、ROS 連携、録画、および下流の認識ワークロードを実行する準備が整いました。
+カメラが ZED Studio に表示され、ライブ画像が安定しており、深度ビューがリアルタイムに更新されます。これで reComputer Robotics J50 Mini は、ZED SDK アプリケーション、ROS 連携、録画、およびその後段の認識ワークロードを実行する準備が整いました。
 :::
 
   </TabItem>
@@ -607,34 +607,119 @@ ZED Studio は接続されたカメラを検出するはずです。ライブビ
 
 ### reComputer Robotics J50 (J501)
 
-このセクションは、GMSL 拡張ボードを搭載した **reComputer Robotics J501** を対象とします。対応する ZED X シリーズカメラと、**JetPack 6.2.1 / L4T 36.4.4** または **JetPack 7.2 / L4T 39.2.0** が必要です。GMSL コネクタとボードの配置は、[J501 ハードウェアと入門ガイド](/ja/ai_robotics_recomputer_j501_robotics_getting_started)を参照してください。
+このセクションは、GMSL 拡張ボードと対応する ZED X シリーズカメラを備えた **reComputer Robotics J501** 用です。セットアップ方法は 2 つあります：ZED X GMSL 対応の BSP をフラッシュするか、現在のシステムを維持して対応するドライバ DEB をインストールするかです。ボードレイアウトと完全なフラッシュ手順については、[J501 ハードウェアおよび入門ガイド](/ja/ai_robotics_recomputer_j501_robotics_getting_started)を参照してください。
 
 #### 1. カメラを接続する
 
-J501 をシャットダウンして DC 電源を取り外します。互換性のある Fakra/Mini-Fakra ケーブルでカメラを GMSL2 ポートに接続し、コネクタをロックしてから電源を接続し、デバイスを起動します。
+J501 の電源をシャットダウンし、DC 電源を取り外します。対応する Fakra/Mini-Fakra ケーブルでカメラを GMSL2 ポートに接続し、コネクタをロックしてから、電源を再接続してデバイスを起動します。
 
-#### 2. ZED X GMSL ドライバをインストールする
+#### 2. ZED X GMSL サポートを有効化する
 
-インストールされている Jetson Linux リリースを確認します：
+**1 つ**のオプションを選択します。クリーンな JetPack 7.2 インストールには BSP をフラッシュします。既存の JetPack 6.2.1 または 7.2 システムを維持する場合は DEB をインストールします。
+
+<Tabs groupId="j501-robo-zed-method">
+  <TabItem value="flash-bsp" label="オプション 1 · JetPack 7.2 BSP をフラッシュ" default>
+
+以下の JetPack 7.2 / L4T 39.2.0 BSP パッケージには ZED X GMSL サポートが含まれています。Robotics J501 に搭載されている AGX Orin モジュールに一致するイメージを選択してください：
+
+| Robotics J501 モデル | Jetson モジュール | BSP |
+| --- | --- | --- |
+| J5011 | AGX Orin 32GB | [Download J5011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDiT6oqoI86SazEp2f6L1OmAYjtbYa35KL2hYc6PpGajJY) |
+| J5012 | AGX Orin 64GB | [Download J5012 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDAtCdJqu2sT4a8v5k_V0iKAUS5oCpVjlWoALrFl6UjD8Y) |
+
+:::warning
+フラッシュを行うと、対象 NVMe SSD 上のデータは消去されます。開始前に重要なデータをバックアップし、フラッシュが完了するまで電源と USB を接続したままにしてください。現在のシステムを保持したい場合はオプション 2 を使用してください。
+:::
+
+#### ホストと J501 の準備
+
+次の機材を準備します：
+
+- 対応する AGX Orin モジュールを搭載した reComputer Robotics J501
+- J501 に搭載された NVMe SSD
+- Ubuntu 20.04、22.04、または 24.04 を実行している物理 Ubuntu ホスト PC
+- USB Type-C データ転送ケーブル
+- 初回起動セットアップ用のディスプレイ、キーボード、マウス
+
+仮想マシンではなく物理 Ubuntu ホストの使用を推奨します。JetPack 7.2 では、Ubuntu 24.04 がフラッシュおよびターゲット側コンポーネントのインストールをサポートします。ホスト開発コンポーネントが必要な場合は Ubuntu 20.04 または 22.04 を使用してください。
+
+Ubuntu ホストに、使用する J501 モジュール用の BSP をダウンロードします。アーカイブは大きく、ダウンロードに約 60 分かかる場合があります。展開する前にダウンロードが完了するまで待ってください。
+
+#### 強制リカバリモードに入る
+
+1. J501 の電源を切ります。USB Type-C データケーブルをホスト PC と J501 の **USB 2.0 DEVICE** ポートの間に接続します。
+2. ピンを使用して **RECOVERY** ボタンを押し続けます。
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/flash_1.png" alt="J501 の USB DEVICE ポートとリカバリボタン" />
+</div>
+
+3. RECOVERY を押したまま、J501 の電源アダプタを接続します。
+4. RECOVERY を離します。
+5. Ubuntu ホスト上で `lsusb` を実行し、J501 が強制リカバリモードに入ったことを確認します：
+
+| J501 モジュール | 期待される `lsusb` ID |
+| --- | --- |
+| AGX Orin 32GB (J5011) | `0955:7223 NVidia Corp.` |
+| AGX Orin 64GB (J5012) | `0955:7023 NVidia Corp.` |
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png" alt="lsusb によって強制リカバリモードで検出された AGX Orin モジュール" />
+</div>
+
+期待される ID が表示されない場合は、USB DEVICE ポートとデータ通信対応ケーブルを使用しているか確認し、リカバリ手順をやり直してください。
+
+#### BSP を展開してフラッシュする
+
+Ubuntu ホスト上で、ダウンロードしたモジュール固有のアーカイブを展開します。以下のプレースホルダを、上でダウンロードした正確なファイル名に置き換えてください：
+
+```bash
+cd ~/Downloads
+sudo tar xpf <downloaded-J501-BSP>.tar.gz
+```
+
+展開した BSP ディレクトリに移動します。必要に応じて `ls -d mfi_*` を使用してディレクトリ名を確認します：
+
+```bash
+cd <extracted-J501-BSP-directory>
+```
+
+J501 を強制リカバリモードで接続したまま、JetPack を NVMe SSD にフラッシュします：
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+フラッシュコマンドには通常 2〜10 分かかります。フラッシュが成功すると、以下に示す完了メッセージで終了します：
+
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Jetson のフラッシュが正常に完了した画面" /></div>
+
+フラッシュ後、USB ケーブルを取り外し、J501 の電源を入れ直します。PD-to-HDMI アダプタを使用してディスプレイに接続するか、USB-C/PD 映像入力に対応したディスプレイを使用し、Ubuntu の初期設定を完了します：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png" alt="Jetson をフラッシュした後の Ubuntu 初期設定画面" />
+</div>
+
+必要に応じて **System Configuration** を完了します。この BSP にはすでに Robotics J501 用 ZED X GMSL ドライバが含まれているため、そのまま **3. ZED SDK をインストールする** に進んでください。
+
+  </TabItem>
+  <TabItem value="install-deb" label="オプション 2 · ドライバ DEB をインストール">
+
+このオプションを使用すると、既存のシステムを保持できます。まず、インストールされている Jetson Linux リリースを確認します：
 
 ```bash
 cat /etc/nv_tegra_release
 ```
 
-表示された L4T リリースに対応する **Robotics J501** パッケージを選択してください。ボードとシステムのバージョンに合うパッケージのみをインストールします。Mini と Robotics のパッケージは異なるデバイスツリーオーバーレイを使用します。
-
-以下のコマンドは、ボードと L4T リリースに対応するドライバのファイル名に一致します。ダウンロード先に一致するバージョンが複数ある場合は、ワイルドカードを今回ダウンロードした正確なファイル名に置き換えてください。
+表示された L4T リリースに対して、**Robotics J501** パッケージを選択します。J501 Mini パッケージは使用しないでください。Robotics キャリアボードと Mini キャリアボードでは、使用するデバイスツリーオーバーレイが異なります。
 
 <Tabs groupId="j501-robo-zed-jetpack">
-  <TabItem value="jp62" label="JetPack 6.2.1" default>
-
-**JetPack 6.2.1 / L4T 36.4.4** の場合は、以下のパッケージをダウンロードします：
+  <TabItem value="jp62" label="JetPack 6.2.1 / L4T 36.4.4" default>
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">JetPack 6.2.1 DEB をダウンロード ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA91XRGr_wCT5OZ3jgKYfgbAagIoZeL0dEzwDzNzYEw0KI?e=HKuC4U" target="_blank" rel="noopener noreferrer">J501 JetPack 6.2.1 DEB をダウンロード ↗</a>
 </div>
-
-APT でインストールし、その後再起動します：
 
 ```bash
 cd ~/Downloads
@@ -644,15 +729,11 @@ sudo reboot
 ```
 
   </TabItem>
-  <TabItem value="jp72" label="JetPack 7.2">
-
-**JetPack 7.2 / L4T 39.2.0** の場合は、以下のパッケージをダウンロードします：
+  <TabItem value="jp72" label="JetPack 7.2 / L4T 39.2.0">
 
 <div className="zed-actions">
-  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">JetPack 7.2 DEB をダウンロード ↗</a>
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQCySCIz7F-aTZouAQiOovScAYXvsCA441XucMWPyICsN1Y?e=a4uLG0" target="_blank" rel="noopener noreferrer">J501 JetPack 7.2 DEB をダウンロード ↗</a>
 </div>
-
-APT でインストールし、その後再起動します：
 
 ```bash
 cd ~/Downloads
@@ -670,16 +751,19 @@ sudo reboot
 dpkg -l | grep stereolabs-zedx-j501-robo
 ```
 
+  </TabItem>
+</Tabs>
+
 #### 3. ZED SDK をインストールする
 
-[Stereolabs ZED SDK ダウンロードページ](https://www.stereolabs.com/developers/release/) にアクセスし、`cat /etc/nv_tegra_release` で表示されたリリースに対応する NVIDIA Jetson インストーラを選択します：
+[Stereolabs ZED SDK ダウンロードページ](https://www.stereolabs.com/developers/release/) にアクセスし、`cat /etc/nv_tegra_release` で表示されたリリースに一致する NVIDIA Jetson 用インストーラを選択します：
 
 | インストール済みシステム | ZED SDK ページで選択する項目 |
 | --- | --- |
 | JetPack 6.2.x / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
 | JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
 
-`zstd` をインストールし、ダウンロードしたインストーラに実行権限を付与して実行します。以下のプレースホルダは、実際にダウンロードしたファイル名に置き換えてください。
+`zstd` をインストールし、ダウンロードしたインストーラに実行権限を付与して実行します。以下のプレースホルダを実際にダウンロードしたファイル名に置き換えてください。
 
 ```bash
 sudo apt update
@@ -718,21 +802,232 @@ ZED Studio は接続されたカメラを検出するはずです。ライブビ
   </TabItem>
   <TabItem value="j40" label="J40">
 
-    <div className="zed-coming-soon">
-      <span className="zed-status zed-status-soon">ZED X GMSL サポートが適用済み</span>
-      <h3>reComputer Robotics J40 ガイドは近日公開予定です</h3>
-      <p>プラットフォーム統合は利用可能です。デバイス固有の接続、ドライバのインストール、および検証手順のウォークスルーは、ここに公開される予定です。</p>
-      <a className="zed-button zed-button-secondary" href="/ja/recomputer_robotics_j401_getting_started">J40 プラットフォームを確認する</a>
-    </div>
+### reComputer Robotics J40 (J401)
+
+このセクションでは、**J3010 / J3011 (Orin Nano)** または **J4011 / J4012 (Orin NX)** モジュールと GMSL 拡張ボードを備えた Robotics J401 キャリアボードについて説明します。対応する ZED X シリーズ GMSL2 カメラと互換性のある Fakra/Mini-Fakra ケーブルを使用してください。[Robotics J401 キャリアボードガイド](/ja/recomputer_jetson_robotics_j401_getting_started)には、ボードレイアウトとインターフェースの詳細が記載されています。
+
+#### 1. カメラを接続する
+
+1. reComputer の電源をシャットダウンし、DC 電源を取り外します。
+2. ZED X カメラを拡張ボード上の GMSL2 ポートに接続します。コネクタを奥まで差し込み、ロックします。
+3. 電源を再接続し、デバイスを起動します。
+
+:::warning
+GMSL カメラまたはハーネスを接続・取り外しする前に、必ず電源を切ってください。
+:::
+
+#### 2. ZED X GMSL サポートを有効化する
+
+次の **いずれか一つ** を選択します：ZED X GMSL ドライバを含む BSP をフラッシュするか、既存のシステムを維持するために対応する DEB をインストールします。
+
+<Tabs groupId="j401-zed-method">
+  <TabItem value="flash-bsp" label="オプション 1 · Robotics J401 BSP をフラッシュ" default>
+
+##### ホストとハードウェアの準備
+
+次の機材を準備します：
+
+- Orin Nano 4GB/8GB または Orin NX 8GB/16GB モジュールとアクティブクーリングを備えた Robotics J401 キャリアボード
+- ボードに取り付けられた NVMe M.2 2280 SSD
+- Ubuntu ホスト PC と USB Type-C データ転送ケーブル
+- 初回起動セットアップ用の電源、ディスプレイ、キーボード、マウス
+
+物理的な Ubuntu ホストを使用します。ダウンロードした BSP に含まれる JetPack バージョンに応じて Ubuntu バージョンを選択します：
+
+| BSP JetPack バージョン | Ubuntu 20.04 ホスト | Ubuntu 22.04 ホスト | Ubuntu 24.04 ホスト |
+| --- | --- | --- | --- |
+| JetPack 6.x | 対応 | 対応 | — |
+| JetPack 7.2 | 対応 | 対応 | フラッシュおよびターゲット側コンポーネントのインストールに対応 |
+
+JetPack 7.2 ホスト開発コンポーネントには、Ubuntu 20.04 または 22.04 を使用してください。
+
+:::warning
+フラッシュを行うとターゲット NVMe SSD 上のデータは消去されます。続行する前にデータをバックアップし、フラッシュが完了するまで電源と USB 接続を維持してください。現在のシステムを保持したい場合はオプション 2 を使用してください。
+:::
+
+##### モジュール用 BSP のダウンロード
+
+対応するアーカイブを Ubuntu ホストに直接ダウンロードします。**以下の 4 つの BSP にはすべて ZED X GMSL ドライバが含まれています。** 取り付けられているモジュールに対応するパッケージを選択してください：
+
+| Robotics モデル | Jetson モジュール | ZED X GMSL 対応 BSP |
+| --- | --- | --- |
+| J3010 | Orin Nano 4GB | [Download J3010 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQA-2O74DXkSTp_gVyfbPTQsAW9Hi0l1j6KD1bFuKczJ5ic?e=AMqob0) |
+| J3011 | Orin Nano 8GB | [Download J3011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQChCUynXPIQRanM6qJwgo4EAQUDEK76QzCxHlNPcI8cduI?e=fFkHPb) |
+| J4011 | Orin NX 8GB | [Download J4011 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQAcbCDN78XVR4tfWz6ci3LaAX9WAkRF0jdGru20rhITq40?e=BqDdbz) |
+| J4012 | Orin NX 16GB | [Download J4012 BSP](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBWcZ484WLCQo7dVS9cZ1dkAaVzbZ88LyW6YhvqMW5bmVQ?e=4g2yVg) |
+
+アーカイブは大容量のため、ダウンロードに約 60 分かかる場合があります。展開する前にダウンロードが完了するまで待ちます。
+
+##### フォースリカバリーモードに入る
+
+1. J401 の電源を切り、電源ケーブルを抜きます。
+2. 下図のように、ボード上のスイッチを **RESET** に設定します。
+
+<div align="center">
+  <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" alt="フォースリカバリーモード用に RESET に設定された Robotics J401 のスイッチ" />
+</div>
+
+3. 電源ケーブルを接続してボードの電源を入れます。
+4. ボードの **USB 2.0 Type-C デバイス/デバッグポート** をデータケーブルで Ubuntu ホストに接続します。
+5. Ubuntu ホストでターミナルを開き、次を実行します：
+
+```bash
+lsusb
+```
+
+出力に、取り付けられているモジュールに対応する ID が含まれていることを確認します：
+
+| Robotics モデル | Jetson モジュール | 期待されるリカバリ USB ID |
+| --- | --- | --- |
+| J3010 | Orin Nano 4GB | `0955:7623 NVidia Corp.` |
+| J3011 | Orin Nano 8GB | `0955:7523 NVidia Corp.` |
+| J4011 | Orin NX 8GB | `0955:7423 NVidia Corp.` |
+| J4012 | Orin NX 16GB | `0955:7323 NVidia Corp.` |
+
+以下の例は Orin Nano 8GB モジュールの場合です：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png" alt="USB ID 0955:7523 でリカバリーモード中に検出された Orin Nano 8GB" />
+</div>
+
+期待される ID が表示されない場合は、スイッチ位置、USB ポート、データケーブルを確認し、リカバリ手順をやり直してください。
+
+##### BSP の展開とフラッシュ
+
+Ubuntu ホストでダウンロードディレクトリに移動し、アーカイブを展開します。プレースホルダは、モジュール用にダウンロードした完全なファイル名に置き換えてください：
+
+```bash
+cd ~/Downloads
+sudo tar xpf <downloaded-J401-BSP>.tar.gz
+```
+
+展開された BSP ディレクトリに入ります。必要に応じて `ls -d mfi_*` を使用してディレクトリを特定します：
+
+```bash
+cd <extracted-J401-BSP-directory>
+```
+
+ボードをフォースリカバリーモードで接続したまま、JetPack を NVMe SSD にフラッシュします：
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+  --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+フラッシュコマンドには通常 **2〜10 分** かかります。以下のような成功メッセージが表示されるまで待ちます：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png" alt="Jetson のフラッシュが正常に完了した画面" />
+</div>
+
+##### 初回起動セットアップを完了する
+
+フラッシュが成功したら、USB データケーブルを外し、ボードの電源を切ります。スイッチを RESET から通常の動作位置に戻し、ボードの電源を入れます。
+
+USB-C/DP-to-HDMI 変換アダプタを使用して USB-C DisplayPort 出力からディスプレイに接続するか、USB-C 映像入力に対応したディスプレイに直接接続します。ユーザーアカウントや地域設定を含む Ubuntu の **システム設定** を完了します：
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png" alt="Robotics J401 をフラッシュ後の Ubuntu 初期システム設定画面" />
+</div>
+
+BSP にはすでに ZED X GMSL ドライバが含まれています。続いて **3. ZED SDK をインストールする** に進みます。
+
+  </TabItem>
+  <TabItem value="install-deb" label="オプション 2 · ドライバ DEB をインストール">
+
+このオプションを使用すると既存のシステムを維持できます。reComputer 上で、インストールされている Jetson Linux リリースを確認します：
+
+```bash
+cat /etc/nv_tegra_release
+```
+
+インストール済み JetPack バージョン用の Robotics J401 パッケージをダウンロードします。インストール前に、ダウンロードしたパッケージの L4T バージョンがシステムのリリースと一致しているか確認してください。コマンド内のファイル名プレースホルダは、ダウンロードした正確なファイル名に置き換えます。
+
+<Tabs groupId="j401-zed-jetpack">
+  <TabItem value="jp62" label="JetPack 6.2" default>
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQDXWxvhCDeiQIagwSY9_l_hAY8lWTwaa1m--Y1g47jbMQc?e=5Auu8A" target="_blank" rel="noopener noreferrer">Download J401 JetPack 6.2 DEB ↗</a>
+</div>
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./<downloaded-J401-driver>.deb
+sudo reboot
+```
+
+  </TabItem>
+  <TabItem value="jp72" label="JetPack 7.2 / L4T 39.2.0">
+
+<div className="zed-actions">
+  <a className="zed-button" href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/dayu_li_seeedstudio88_onmicrosoft_com/IQBBSCaFHDslQKGLj1GH__n4AceAFrLcGFn3ECFQs_zv4Gg?e=GdCXWH" target="_blank" rel="noopener noreferrer">Download J401 JetPack 7.2 DEB ↗</a>
+</div>
+
+```bash
+cd ~/Downloads
+sudo apt update
+sudo apt install ./<downloaded-J401-driver>.deb
+sudo reboot
+```
+
+  </TabItem>
+</Tabs>
+
+再起動後、ZED ドライバがインストールされていることを確認します：
+
+```bash
+dpkg -l | grep stereolabs-zedx
+```
+
+続いて **3. ZED SDK をインストールする** に進みます。
+
+  </TabItem>
+</Tabs>
+
+#### 3. ZED SDK をインストールする
+
+`cat /etc/nv_tegra_release` を確認し、[Stereolabs ZED SDK download page](https://www.stereolabs.com/developers/release/) から対応する NVIDIA Jetson インストーラをダウンロードします：
+
+| インストール済みシステム | ZED SDK ビルド |
+| --- | --- |
+| JetPack 6.2 / L4T 36.4.x | ZED SDK for JetPack 6.1 and 6.2 (L4T 36.4) |
+| JetPack 7.2 / L4T 39.2 | ZED SDK for JetPack 7.2 (L4T 39.2) |
+
+`zstd` をインストールし、インストーラに実行権限を付与して実行します。インストーラのプレースホルダはダウンロードしたファイル名に置き換えてください：
+
+```bash
+sudo apt update
+sudo apt install -y zstd
+cd ~/Downloads
+chmod +x ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+./ZED_SDK_Tegra_L4T<release>_v<version>.zstd.run
+```
+
+インストーラの指示に従い、ZED ツールを選択したままにします。インストール完了後に再起動します：
+
+```bash
+sudo reboot
+```
+
+#### 4. ZED Studio で検証する
+
+reComputer のデスクトップで ZED Studio を起動します：
+
+```bash
+/usr/local/zed/tools/ZED_Studio
+```
+
+接続されたカメラが検出されていることを確認し、ライブビューを開いて **Depth** を有効にします。安定した画像とリアルタイムに更新される深度ビューが表示されれば、Robotics J401 の ZED X GMSL セットアップが正常に動作していることが確認できます。
 
   </TabItem>
   <TabItem value="j601" label="J601">
 
     <div className="zed-coming-soon">
-      <span className="zed-status zed-status-soon">ZED X GMSL サポートが適用済み</span>
+      <span className="zed-status zed-status-soon">ZED X GMSL サポートを適用済み</span>
       <h3>Robotics J601 ガイドは近日公開予定です</h3>
-      <p>キャリアボードの統合は利用可能です。デバイス固有の接続、ドライバのインストール、および検証手順のウォークスルーは、ここに公開される予定です。</p>
-      <a className="zed-button zed-button-secondary" href="/ja/jetson/recomputer_robotics_j601/getting_started/">J601 キャリアボードを確認する</a>
+      <p>キャリアボードの統合は利用可能です。デバイス固有の接続、ドライバインストール、および検証手順のウォークスルーはここに公開される予定です。</p>
+      <a className="zed-button zed-button-secondary" href="/ja/jetson/recomputer_robotics_j601/getting_started/">J601 キャリアボードを詳しく見る</a>
     </div>
 
   </TabItem>
@@ -740,25 +1035,27 @@ ZED Studio は接続されたカメラを検出するはずです。ライブビ
 
 ## トラブルシューティング
 
-- **カメラが検出されない:** インストールされている L4T リリースと、DEB、BSP、ZED SDK がすべて一致していることを確認してください。その後、電源を切り、カメラケーブルを挿し直します。
-- **APT がパッケージの不一致を報告する:** インストールを強制しないでください。`cat /etc/nv_tegra_release` によって表示される L4T バージョン用のパッケージをダウンロードします。
-- **ZED Studio が起動しない:** グラフィカルデスクトップが動作していることを確認し、ターミナルから `/usr/local/zed/tools/ZED_Studio` を起動してエラー出力を確認します。
-- **画像は表示されるが深度が利用できない:** ツールを含む完全な ZED SDK をインストールしていること、および選択したカメラモデルがその SDK リリースでサポートされていることを確認してください。
-- **映像が断続的になる:** 電源を切り、再テストする前に Fakra/Mini-Fakra ケーブル、ロック位置、およびサポートされているケーブル長を確認してください。
+- **カメラが検出されない：** インストールされている L4T リリースと DEB、BSP、ZED SDK がすべて一致していることを確認します。その後、電源を切ってカメラケーブルを挿し直してください。
+- **APT がパッケージの不整合を報告する：** インストールを強制しないでください。`cat /etc/nv_tegra_release` で表示される L4T バージョン用のパッケージをダウンロードします。
+- **ZED Studio が起動しない：** グラフィカルデスクトップが動作していることを確認し、ターミナルから `/usr/local/zed/tools/ZED_Studio` を起動してエラー出力を確認します。
+- **画像は表示されるが深度が利用できない：** ツールを含む完全な ZED SDK をインストールしていること、および選択したカメラモデルがその SDK リリースでサポートされていることを確認します。
+- **映像が断続的に途切れる：** 電源を切り、Fakra/Mini-Fakra ケーブル、ロック位置、およびサポートされるケーブル長を確認してから再度テストしてください。
 
 ## リソース
 
 - [Robotics J501 Mini キャリアボードのハードウェアと入門ガイド](/ja/recomputer_j501_mini_getting_started)
+- [Robotics J501 ハードウェアおよびフラッシュガイド](/ja/ai_robotics_recomputer_j501_robotics_getting_started)
+- [Robotics J401 キャリアボードのハードウェアおよびフラッシュガイド](/ja/recomputer_jetson_robotics_j401_getting_started)
 - [Stereolabs ZED SDK ダウンロード](https://www.stereolabs.com/developers/release/)
 - [Stereolabs ZED SDK ドキュメント](https://docs.stereolabs.com/docs/development/zed-sdk)
 - [Stereolabs ZED Studio ドキュメント](https://www.stereolabs.com/docs/development/zed-tools/zed-studio)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-Seeed Studio の製品をお選びいただきありがとうございます。ZED X カメラの統合中に問題が発生した場合は、サポートを依頼する際に、reComputer モデル、`cat /etc/nv_tegra_release` の出力全体、インストールした DEB ファイル名、および ZED SDK バージョンを記載してください。
+Seeed Studio の製品をお選びいただきありがとうございます。ZED X カメラを統合する際に問題が発生した場合は、サポートを依頼する際に、使用している reComputer モデル、`cat /etc/nv_tegra_release` の完全な出力、インストールした DEB ファイル名、および ZED SDK バージョンを含めてください。
 
 <div class="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" target="_blank" rel="noopener noreferrer">
-    <button class="button_tech_support">Technical Support &amp; Product Discussion</button>
+    <button class="button_tech_support">技術サポート &amp; 製品ディスカッション</button>
   </a>
 </div>

@@ -559,6 +559,18 @@ Wifi está deshabilitado cuando la IP de wifi está vacía y el icono de wifi es
 
 Necesitas realizar un borrado de la memoria flash y luego volver a flashear el firmware más reciente.
 
+### La pantalla permanece en negro después de flashear el firmware
+
+**Descripción**
+
+- Después de flashear el firmware, el dispositivo no puede iniciarse normalmente y la pantalla permanece en negro.
+
+**Solución de problemas**
+
+- Paso 1. Pulsa una vez el botón `RST` para reiniciar el dispositivo. En la mayoría de los casos, la pantalla se encenderá después del reinicio.
+
+- Paso 2. Si la pantalla sigue sin encenderse, intenta flashear primero el firmware de fábrica o Meshtastic `2.8.2 beta` y, a continuación, vuelve a flashear el firmware que necesites.
+
 ### Restablecimiento de fábrica
 
 Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.

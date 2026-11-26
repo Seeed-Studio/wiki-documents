@@ -9,10 +9,10 @@ slug: /get_started_with_meshtastic_solar_node
 sku: 114993633,114993643
 sidebar_position: 2
 last_update:
-  date: 10/26/2026
+  date: 11/26/2026
   author: Advent Jiang
 createdAt: '2025-05-13'
-updatedAt: '2026-10-26'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/
 ---
 
@@ -735,6 +735,24 @@ A strong signal can overload the P1 receiver, causing it to miss LoRa messages w
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
 The Xiao nRF-52840 Plus maximum charging current is 200 mA. The CN3165 charging management chip supports 0.99 A. Therefore, the maximum charging current is 1 A.
+
+### Why is my position offset on other nodes?
+
+This is expected behavior, not a GPS or hardware fault. Each channel has a **Position precision** setting, defaulting to **13 bits**. That rounds every position you broadcast to a ~±2.9 km grid (a privacy default for shared channels), while your own device shows its full-precision fix over Bluetooth — so your own position looks accurate but other nodes see an offset.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={300} height="auto" /></p>
+
+To send full precision, enable it on **every** device:
+
+1. Open **Channels** in the Meshtastic app and tap your channel.
+2. Turn on **Precise location** (sets precision to 32 = full).
+3. Repeat on each device — the setting takes effect on the sender.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={300} height="auto" /></p>
+
+CLI alternative: `meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**Note (firmware 2.8+):** public channels (no key, default key, or single-byte key) are limited to 15 bits (~729 m). Use a **private channel with a random key** for full precision.
 
 ## Resource
 - [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

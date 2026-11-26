@@ -1,5 +1,5 @@
 ---
-description: "Chapter 30 of the Seeed Physical AI Beginner's Course — an elective voice and multimodal interaction project: a reSpeaker microphone array with DOA sound-source tracking plus Groq Whisper speech recognition and Llama intent understanding to voice-control the reBot Arm, from hardware wiring to the command-line reference."
+description: 'Chapter 30 of the Seeed Physical AI Beginner''s Course — an elective voice and multimodal interaction project: a reSpeaker microphone array with DOA sound-source tracking plus Groq Whisper speech recognition and Llama intent understanding to voice-control the reBot Arm, from hardware wiring to the command-line reference.'
 title: Chapter 30 - Voice and Multimodal Interaction
 hide_title: true
 keywords:
@@ -20,7 +20,7 @@ last_update:
   date: 2026-10-08
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-08'
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-10'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_30/
 ---
 

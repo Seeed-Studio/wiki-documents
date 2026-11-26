@@ -191,6 +191,17 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
 :::caution note
 Por favor, `não use OTA` para atualizar o firmware, isso pode fazer com que o dispositivo fique completamente inutilizável. Para informações detalhadas, por favor [clique aqui](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
 :::
+
+**Firmware de fábrica**
+
+O X1 vem com o firmware Meshtastic **v2.7.23** pré-instalado ([`firmware-mesh-tracker-x1-2.7.23.2546839.uf2`](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/firmware-mesh-tracker-x1-2.7.23.2546839.uf2)). Se quiser restaurar o firmware de fábrica, você pode baixar esta versão e gravá-la por meio do Web Flasher ou do modo DFU.
+
+:::note
+**Por que não existe uma compilação da v2.7.26 para o X1?**
+
+A equipe do Meshtastic lançou a v2.7.26 como uma versão estável antes do lançamento do X1, por isso não foi produzida uma compilação específica da v2.7.26 para este dispositivo. A equipe oficial também decidiu não portar as correções de bugs da v2.8 para a branch v2.7, portanto essa compilação não será adicionada posteriormente. Se quiser obter as correções mais recentes, grave a versão estável mais recente por meio do Web Flasher.
+:::
+
 #### Etapa 1: Entrar no modo DFU
 
 Entre no DFU via web flasher. Se isso falhar muitas vezes, entre no DFU manualmente.

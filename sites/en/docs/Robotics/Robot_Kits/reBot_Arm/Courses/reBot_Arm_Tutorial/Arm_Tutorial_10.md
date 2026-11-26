@@ -18,7 +18,7 @@ last_update:
   date: 2026-09-19
   author: ZhuYaoHui
 createdAt: '2026-09-19'
-updatedAt: '2026-09-25'
+updatedAt: '2026-10-09'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_10/
 ---
 

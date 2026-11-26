@@ -8,6 +8,9 @@ slug: /service_for_fusion_pcba_testing_solutions
 last_update:
   date: 10/21/2026
   author: Xi Lin
+createdAt: '2026-10-21'
+url: https://wiki.seeedstudio.com/service_for_fusion_pcba_testing_solutions/
+updatedAt: '2026-10-21'
 ---
 
 Seeed Fusion provides functional, electrical performance, and reliability testing for PCBAs, along with firmware flashing and custom test fixture development. Testing can be included in a PCBA manufacturing project or requested separately for existing boards.

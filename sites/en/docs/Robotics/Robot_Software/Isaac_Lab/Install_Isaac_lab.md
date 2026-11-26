@@ -1,5 +1,5 @@
 ---
-description: "Step-by-step guide to installing NVIDIA Isaac Lab on Jetson and Ubuntu: prerequisites, conda setup, installation and verification for robot learning."
+description: 'Step-by-step guide to installing NVIDIA Isaac Lab on Jetson and Ubuntu: prerequisites, conda setup, installation and verification for robot learning.'
 title: Install the Isaac Lab
 keywords:
   - NVIDIA
@@ -10,7 +10,7 @@ last_update:
   date: 5/28/2025
   author: ZhuYaoHui
 createdAt: '2025-05-28'
-updatedAt: '2025-06-03'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/install_isaaclab/
 ---
 

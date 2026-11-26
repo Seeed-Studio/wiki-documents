@@ -16,7 +16,7 @@ last_update:
   date: 11/13/2026
   author: Michelle Huang
 createdAt: 2026-11-13T00:00:00.000Z
-updatedAt: '2026-11-13'
+updatedAt: '2026-11-24'
 url: https://wiki.seeedstudio.com/easyskymesh_t1000e/
 ---
 

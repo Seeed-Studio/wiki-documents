@@ -21,7 +21,7 @@ last_update:
   date: 09/07/2026
   author: seeed-solutions-hub
 createdAt: '2026-09-07'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/solutions/agri-env-monitoring/
 generated_from: sensecraft-solutions@agri_env_monitor
 ---

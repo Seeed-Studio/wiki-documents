@@ -1,5 +1,5 @@
 ---
-description: "Install NVIDIA-optimized PyTorch on reComputer for JetPack 5 and JetPack 6, with conda environments for switching torch versions."
+description: Install NVIDIA-optimized PyTorch on reComputer for JetPack 5 and JetPack 6, with conda environments for switching torch versions.
 title: Install Pytorch for reComputer Jetson
 keywords:
   - reComputer
@@ -16,7 +16,7 @@ last_update:
   date: 07/25/2025
   author: Zibo
 createdAt: '2025-07-25'
-updatedAt: '2025-09-02'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/install_torch_on_recomputer/
 ---
 

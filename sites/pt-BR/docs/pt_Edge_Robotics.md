@@ -119,6 +119,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>Colaboração bimanual com reBot-DM</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>reBot-DM com Isaac Sim</b></div></a>
         <a className="step-card" href="/pt-br/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>Sistema de controle Web do reBot-DM: robô real &amp; MuJoCo</b></div></a>
+        <a className="step-card" href="/pt-br/rebot_b601_dm_holoscan_gravity_compensation/"><span className="step-index">6</span><div><b>reBot-DM Holoscan5: Compensação de gravidade</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -378,7 +379,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <p>Para apreensão visual, SLAM, interação por voz e percepção do estado do robô.</p>
     </div>
     <div className="resource-columns">
-      <div><h4>LiDAR</h4><a href="/pt-br/robosense_lidar/">RoboSense</a><a href="/pt-br/mid360/">Livox MID360</a><a href="/pt-br/a_loam/">Algoritmo A-LOAM</a><a href="/pt-br/slamtec/">Slamtec Série</a><h4>Voz</h4><a href="/pt-br/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/pt-br/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/pt-br/hexfellow_y200/">HEXFELLOW Y200</a><a href="/pt-br/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>LiDAR</h4><a href="/pt-br/robosense_lidar/">RoboSense</a><a href="/pt-br/mid360/">Livox MID360</a><a href="/pt-br/a_loam/">Algoritmo A-LOAM</a><a href="/pt-br/slamtec/">Slamtec Série</a><h4>Voz</h4><a href="/pt-br/respeaker_xvf3800_introduction/">reSpeaker XMOS XVF3800 4-mic Array</a><a href="/pt-br/respeaker_flex_introduction/">reSpeaker Flex Split-type 4-mic Array</a><h4>IMU</h4><a href="/pt-br/hexfellow_y200/">HEXFELLOW Y200</a><a href="/pt-br/wheeltec_imu/">WHEELTEC IMU</a></div>
       <div><h4>Câmeras</h4><a href="/pt-br/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/pt-br/orbbec_gemini305/">Orbbec Gemini 305</a><a href="/pt-br/orbbec_gemini_335lg/">Câmera de Profundidade Gemini 335Lg</a><a href="/pt-br/orbbec_gemini336">Câmera de Profundidade Gemini 336</a><a href="/pt-br/sensing_gmsl_cameras">Câmera SENSING GMSL2</a><a href="/pt-br/ac1">RoboSense AC1</a><a href="/pt-br/orbbec_depth_camera_on_ros/">Orbbec e ROS</a><a href="/pt-br/orb_slam3_orbbec_gemini2/">ORB-SLAM3 e Gemini2</a><a href="/pt-br/csi_camera_on_ros/">Câmera CSI no Jetson</a><a href="/pt-br/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
     </div>
   </section>

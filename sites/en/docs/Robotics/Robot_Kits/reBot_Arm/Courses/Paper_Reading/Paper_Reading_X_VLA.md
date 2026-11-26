@@ -1,8 +1,15 @@
 ---
-description: "A deep dive into X-VLA: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "X-VLA: Absorbing Embodiment Differences with Learnable Soft Prompts"
+description: 'A deep dive into X-VLA: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'X-VLA: Absorbing Embodiment Differences with Learnable Soft Prompts'
 hide_title: true
-keywords: ["Paper Deep-Dive","X-VLA","VLA","Soft Prompts","Cross-Embodiment","Flow Matching","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - X-VLA
+  - VLA
+  - Soft Prompts
+  - Cross-Embodiment
+  - Flow Matching
+  - LeRobot
 slug: /robotics/paper_reading_x_vla
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +17,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_x_vla/
 ---
 
 import '/src/css/paper-reading-style.css';

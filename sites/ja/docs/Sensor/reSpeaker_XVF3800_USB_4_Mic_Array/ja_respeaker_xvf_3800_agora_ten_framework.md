@@ -124,7 +124,7 @@ Workflow:
 | ハードウェア | 説明 |
 |------|------|
 | **Seeed Studio XIAO ESP32-S3** | メインコントローラボード |
-| **ReSpeaker XVF3800** | オーディオ拡張ボード（マイクアレイ + スピーカーインターフェース） |
+| **reSpeaker XVF3800** | オーディオ拡張ボード（マイクアレイ + スピーカーインターフェース） |
 | **スピーカー** | AI 応答を再生するためのスピーカーを少なくとも 1 つ |
 | **USB-C データケーブル** | ファームウェアの書き込みとデバイスへの給電用 |
 
@@ -190,7 +190,7 @@ Workflow:
 
 ### 更新手順
 
-PC に **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** を接続し、ファームウェアアップデートツールを実行して、ファームウェアを選択します。
+PC に **reSpeaker XMOS XVF3800 with XIAO ESP32S3** を接続し、ファームウェアアップデートツールを実行して、ファームウェアを選択します。
 
 詳しい手順については、[このページ](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)を参照してください。
 
@@ -514,7 +514,7 @@ git apply $ADF_PATH/idf_patches/idf_v5.2_freertos.patch
 
 #### ESP-ADF ボードのピン設定を変更する（重要！）
 
-ReSpeaker XVF3800 のピン配置はデフォルトの Korvo-2 V3 と異なるため、フレームワークのボード設定を変更する必要があります:
+reSpeaker XVF3800 のピン配置はデフォルトの Korvo-2 V3 と異なるため、フレームワークのボード設定を変更する必要があります:
 
 **ファイルの場所:**
 - Windows: `C:\Espressif\frameworks\esp-adf\components\audio_board\esp32_s3_korvo2_v3\board_pins_config.c`
@@ -531,9 +531,9 @@ ReSpeaker XVF3800 のピン配置はデフォルトの Korvo-2 V3 と異なる�
 ```c
 esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 {
-    // ReSpeaker XVF3800 I2C configuration
-    i2c_config->sda_io_num = GPIO_NUM_5;   // ReSpeaker I2C SDA
-    i2c_config->scl_io_num = GPIO_NUM_6;   // ReSpeaker I2C SCL
+    // reSpeaker XVF3800 I2C configuration
+    i2c_config->sda_io_num = GPIO_NUM_5;   // reSpeaker I2C SDA
+    i2c_config->scl_io_num = GPIO_NUM_6;   // reSpeaker I2C SCL
     return ESP_OK;
 }
 ```
@@ -543,7 +543,7 @@ esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 ```c
 esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
 {
-    // ReSpeaker XVF3800 I2S configuration
+    // reSpeaker XVF3800 I2S configuration
     i2s_config->bck_io_num   = GPIO_NUM_8;   // BCLK
     i2s_config->ws_io_num    = GPIO_NUM_7;   // WS/LRCK
     i2s_config->data_out_num = GPIO_NUM_44;  // DOUT
@@ -818,7 +818,7 @@ W (xxxx) AIC3104_NG: Found device at address 0x??
 | ESP-ADF プログラミングガイド | https://docs.espressif.com/projects/esp-adf/zh_CN/latest/ |
 | Agora RTC ドキュメント | https://docs.agora.io/en/rtc/overview/product-overview |
 | TEN Framework ドキュメント | https://doc.theten.ai |
-| ReSpeaker XVF3800 ファームウェアガイド | https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/ |
+| reSpeaker XVF3800 ファームウェアガイド | https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/ |
 
 ### API サービス
 

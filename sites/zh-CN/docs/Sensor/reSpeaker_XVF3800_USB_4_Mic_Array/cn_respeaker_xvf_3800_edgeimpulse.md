@@ -1,5 +1,5 @@
 ---
-description: 使用 ReSpeaker XVF3800 USB 4-Mic Array 和 XIAO ESP32S3 解锁强大的语音控制能力。具备 360° 音频采集、噪声抑制以及通过 Edge Impulse 实现的 TinyML 唤醒词检测——非常适合智能设备、机器人和物联网项目。
+description: 使用 reSpeaker XVF3800 USB 4-Mic Array 和 XIAO ESP32S3 解锁强大的语音控制能力。具备 360° 音频采集、噪声抑制以及通过 Edge Impulse 实现的 TinyML 唤醒词检测——非常适合智能设备、机器人和物联网项目。
 title: 使用 Edge Impulse 与 reSpeaker XVF3800 实现 TinyML 语音识别
 keywords:
   - reSpeaker
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_edge_impulse/
 ## 概述
 
 
-通过 TinyML 驱动的关键词检测（KWS）系统，实现实时语音命令检测与免手操作控制。将高性能的 ReSpeaker XVF3800 麦克风阵列与高效的 XIAO ESP32S3 以及 Edge Impulse 平台相结合，我们为小型、低功耗设备带来了语音识别能力。训练、部署并开始聆听——你的设备时刻准备响应你的下一条指令！
+通过 TinyML 驱动的关键词检测（KWS）系统，实现实时语音命令检测与免手操作控制。将高性能的 reSpeaker XVF3800 麦克风阵列与高效的 XIAO ESP32S3 以及 Edge Impulse 平台相结合，我们为小型、低功耗设备带来了语音识别能力。训练、部署并开始聆听——你的设备时刻准备响应你的下一条指令！
 
 ## 所需硬件
 
@@ -35,9 +35,9 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_edge_impulse/
 
 ## 数据采集 
 
-### 为带有 XIAO ESP32S3 的 ReSpeaker XVF3800 安装 USB 固件
+### 为带有 XIAO ESP32S3 的 reSpeaker XVF3800 安装 USB 固件
 
-在开始音频数据采集之前，请确保你的 ReSpeaker 已经烧录了 USB 固件，使其能够作为 USB 麦克风工作。
+在开始音频数据采集之前，请确保你的 reSpeaker 已经烧录了 USB 固件，使其能够作为 USB 麦克风工作。
 
 
 [**固件安装 Wiki**](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#更新固件)
@@ -59,9 +59,9 @@ source respeaker-env/bin/activate
 pip install sounddevice scipy numpy 
 ```
 
-### 查找 ReSpeaker 设备 ID
+### 查找 reSpeaker 设备 ID
 
-为了从正确的麦克风输入进行录音，我们需要识别 ReSpeaker 麦克风的设备索引。
+为了从正确的麦克风输入进行录音，我们需要识别 reSpeaker 麦克风的设备索引。
 
 ```python
 import sounddevice as sd
@@ -72,7 +72,7 @@ for i, device in enumerate(devices):
 
 ```
 
-查找与 ReSpeaker 对应的设备名称（通常类似 ReSpeaker XVF3800 USB 4-Mic Array），并记下其索引号（例如 Device 2）。
+查找与 reSpeaker 对应的设备名称（通常类似 reSpeaker XVF3800 USB 4-Mic Array），并记下其索引号（例如 Device 2）。
 
 ### 录制音频样本
 
@@ -162,7 +162,7 @@ if __name__ == "__main__":
 
 ##  在 Edge Impulse 中上传和准备音频数据
 
-使用 ReSpeaker XVF3800 采集原始音频样本并按标签进行整理后，下一步是在 Edge Impulse Studio 中上传和处理这些数据，以训练你的关键词检测模型。
+使用 reSpeaker XVF3800 采集原始音频样本并按标签进行整理后，下一步是在 Edge Impulse Studio 中上传和处理这些数据，以训练你的关键词检测模型。
 
 ### 在 Edge Impulse 中创建新项目
 
@@ -251,7 +251,7 @@ Edge Impulse 在处理关键词检测时，使用 1 秒音频片段效果最佳�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/edge_impuse/accuracy.png" alt="pir" width={800} height="auto" /></p>
 
-## 部署到搭载 XIAO ESP32 S3 的 ReSpeaker XVF3800
+## 部署到搭载 XIAO ESP32 S3 的 reSpeaker XVF3800
 
 
 **Edge Impulse 将自动把所有必要的库、预处理函数和训练好的模型打包成一个可下载的包。**
@@ -268,12 +268,12 @@ Edge Impulse 在处理关键词检测时，使用 1 秒音频片段效果最佳�
 
 ### 将固件切换到 I2S 模式
 
-在上传 Arduino 代码之前，你必须将 ReSpeaker XVF3800 固件切换到 I2S 模式，以启用通过 I2C 协议进行通信。
+在上传 Arduino 代码之前，你必须将 reSpeaker XVF3800 固件切换到 I2S 模式，以启用通过 I2C 协议进行通信。
 [Firmware Installation Guide](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
 
 ### Arduino 代码集成
 
-Edge Impulse 提供的 Arduino 代码需要进行一些修改，以确保与 ReSpeaker XVF3800 和 XIAO ESP32S3 硬件兼容：根据你的设置更新 **GPIO 引脚定义、I2S 采样率** 以及其他与硬件相关的参数。
+Edge Impulse 提供的 Arduino 代码需要进行一些修改，以确保与 reSpeaker XVF3800 和 XIAO ESP32S3 硬件兼容：根据你的设置更新 **GPIO 引脚定义、I2S 采样率** 以及其他与硬件相关的参数。
 
 ```c
 #define EIDSP_QUANTIZE_FILTERBANK   0

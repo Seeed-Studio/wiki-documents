@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。与 XIAO ESP32S3 搭配使用，可为智能设备、机器人和物联网应用提供高级语音控制能力。探索其无缝集成与双模式灵活性。
+description: reSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。与 XIAO ESP32S3 搭配使用，可为智能设备、机器人和物联网应用提供高级语音控制能力。探索其无缝集成与双模式灵活性。
 title: reSpeaker XVF3800 USB Mic Array 搭配 XIAO ESP32S3 的 DoA 和 VAD
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_doa_vad/
 
 ## 介绍
 
-ReSpeaker XVF3800 是一款基于 XMOS XVF3800 的多麦克风语音处理解决方案，专为需要实时音频智能的嵌入式应用而设计。XVF3800 在内部计算语音活动检测（VAD）和到达方向（DoA），用于指示语音何时出现以及其来源方向。这些推理结果可以通过 I2C 使用基于资源的命令由主 MCU 直接访问，从而在无需在主控上处理原始音频的情况下，实现语音唤醒、声源定位和方向感知反馈等功能。
+reSpeaker XVF3800 是一款基于 XMOS XVF3800 的多麦克风语音处理解决方案，专为需要实时音频智能的嵌入式应用而设计。XVF3800 在内部计算语音活动检测（VAD）和到达方向（DoA），用于指示语音何时出现以及其来源方向。这些推理结果可以通过 I2C 使用基于资源的命令由主 MCU 直接访问，从而在无需在主控上处理原始音频的情况下，实现语音唤醒、声源定位和方向感知反馈等功能。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>

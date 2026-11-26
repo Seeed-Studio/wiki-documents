@@ -11,7 +11,7 @@ last_update:
   date: 10/8/2026
   author: Nemo
 createdAt: '2025-09-25'
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-20'
 url: https://wiki.seeedstudio.com/epaper_EN04/
 ---
 import Tabs from '@theme/Tabs';

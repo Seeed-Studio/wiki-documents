@@ -1,7 +1,7 @@
 ---
 description: Supermarket product recognition on the edge — a single-class detector, an embedding gallery that registers a new SKU from photographs instead of a training run, what hardware it needs, how it is deployed, the measured per-board data, and implementation details for engineers
 title: 'Edge Product Recognition: Build, Deploy, and Measured Results'
-sidebar_label: 'Edge Product Recognition'
+sidebar_label: Edge Product Recognition
 keywords:
   - edge product recognition
   - checkout product recognition without barcode

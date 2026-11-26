@@ -1,7 +1,7 @@
 ---
 description: Multi-protocol industrial data hub on an edge gateway — OPC UA, Modbus TCP/RTU, BACnet/IP and MQTT sources unified into one point model, read and controlled through one versioned MQTT contract, with northbound store-and-forward
 title: 'Industrial Multi-Protocol Data Hub: Hardware, Deployment, and Measured Results'
-sidebar_label: 'Industrial Multi-Protocol Hub'
+sidebar_label: Industrial Multi-Protocol Hub
 keywords:
   - industrial protocol gateway
   - multi-protocol data hub

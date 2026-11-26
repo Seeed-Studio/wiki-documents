@@ -1,5 +1,5 @@
 ---
-description: "Chapter 4 of the SO-ARM101 Sim-to-Real VLA Course — introduction of the SO-ARM101: an open-source, low-cost 6-degree-of-freedom arm pair built around Feetech STS3215 bus servos."
+description: 'Chapter 4 of the SO-ARM101 Sim-to-Real VLA Course — introduction of the SO-ARM101: an open-source, low-cost 6-degree-of-freedom arm pair built around Feetech STS3215 bus servos.'
 title: Chapter 4 - Introduction of the SO-ARM101
 hide_title: true
 keywords:

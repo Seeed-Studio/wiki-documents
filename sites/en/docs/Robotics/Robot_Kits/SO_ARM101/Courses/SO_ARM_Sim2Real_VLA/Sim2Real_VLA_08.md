@@ -1,5 +1,5 @@
 ---
-description: "Chapter 8 of the SO-ARM101 Sim-to-Real VLA Course — building the workspace: the studio hardware list, lightbox, camera brackets, vial rack and prop positions, and both cameras."
+description: 'Chapter 8 of the SO-ARM101 Sim-to-Real VLA Course — building the workspace: the studio hardware list, lightbox, camera brackets, vial rack and prop positions, and both cameras.'
 title: Chapter 8 - Building the Workspace
 hide_title: true
 keywords:

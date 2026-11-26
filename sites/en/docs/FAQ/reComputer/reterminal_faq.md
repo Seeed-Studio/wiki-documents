@@ -14,6 +14,9 @@ keywords:
   - reTerminal touch screen
   - Raspberry Pi CM4
   - reTerminal flashing OS
+createdAt: '2026-11-13'
+url: https://wiki.seeedstudio.com/reterminal_faq/
+updatedAt: '2026-11-13'
 ---
 
 <div class="recomputer-faq-page">

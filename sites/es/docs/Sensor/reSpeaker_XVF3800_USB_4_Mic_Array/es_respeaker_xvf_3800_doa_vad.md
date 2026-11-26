@@ -1,5 +1,5 @@
 ---
-description: El ReSpeaker XVF3800 USB 4-Mic Array es una matriz de micrófonos circular profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Combinado con el XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
+description: El reSpeaker XVF3800 USB 4-Mic Array es una matriz de micrófonos circular profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Combinado con el XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración perfecta y flexibilidad de doble modo.
 title: reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3 DoA y VAD
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_doa_vad/
 
 ## Introducción 
 
-El ReSpeaker XVF3800 es una solución de procesamiento de voz con múltiples micrófonos basada en el XMOS XVF3800, diseñada para aplicaciones embebidas que requieren inteligencia de audio en tiempo real. El XVF3800 calcula internamente la Detección de Actividad de Voz (VAD) y la Dirección de Llegada (DoA) para indicar cuándo hay voz presente y desde qué dirección se origina. Estos resultados de inferencia pueden ser accedidos directamente por un MCU host a través de I2C usando comandos basados en recursos, lo que habilita funciones como activación por voz, localización de fuentes de sonido y retroalimentación consciente de la dirección sin procesar audio en bruto en el host.
+El reSpeaker XVF3800 es una solución de procesamiento de voz con múltiples micrófonos basada en el XMOS XVF3800, diseñada para aplicaciones embebidas que requieren inteligencia de audio en tiempo real. El XVF3800 calcula internamente la Detección de Actividad de Voz (VAD) y la Dirección de Llegada (DoA) para indicar cuándo hay voz presente y desde qué dirección se origina. Estos resultados de inferencia pueden ser accedidos directamente por un MCU host a través de I2C usando comandos basados en recursos, lo que habilita funciones como activación por voz, localización de fuentes de sonido y retroalimentación consciente de la dirección sin procesar audio en bruto en el host.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>

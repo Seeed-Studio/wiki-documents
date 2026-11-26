@@ -15,7 +15,7 @@ last_update:
   date: 11/09/2026
   author: Kasun Thushara
 createdAt: '2026-11-09'
-updatedAt: '2026-11-09'
+updatedAt: '2026-11-11'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_muse_gadget/
 ---
 

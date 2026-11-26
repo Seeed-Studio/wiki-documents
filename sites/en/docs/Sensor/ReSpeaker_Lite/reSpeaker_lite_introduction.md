@@ -12,7 +12,7 @@ last_update:
   date: 11/09/2026
   author: Ray
 createdAt: '2024-07-03'
-updatedAt: '2026-09-24'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/reSpeaker_usb_v3/
 ---
 

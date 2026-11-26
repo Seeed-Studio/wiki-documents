@@ -1,5 +1,5 @@
 ---
-description: "Chapter 25 of the Seeed Physical AI Beginner's Course — path versus trajectory, joint-space and Cartesian-space interpolation, linear, cubic and quintic polynomials, and the torque command built from feedforward (model and gravity) plus feedback error correction."
+description: Chapter 25 of the Seeed Physical AI Beginner's Course — path versus trajectory, joint-space and Cartesian-space interpolation, linear, cubic and quintic polynomials, and the torque command built from feedforward (model and gravity) plus feedback error correction.
 title: Chapter 25 - Trajectory Planning and Robot Arm Control
 hide_title: true
 keywords:
@@ -20,7 +20,7 @@ last_update:
   date: 2026-09-25
   author: Seeed Studio Robotics Team
 createdAt: '2026-09-25'
-updatedAt: '2026-09-25'
+updatedAt: '2026-10-09'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_25/
 ---
 

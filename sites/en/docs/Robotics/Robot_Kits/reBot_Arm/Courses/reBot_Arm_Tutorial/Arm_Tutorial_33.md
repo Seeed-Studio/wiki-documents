@@ -1,5 +1,5 @@
 ---
-description: "Chapter 33 of the Seeed Physical AI Beginner's Course — hands-on ROS2 integration of the reBot Arm: building the ROS2 workspace, wrapping the Python SDK in a driver node, launching and visualizing the arm in RViz, driving it through Topic / Service / Action interfaces, and safe stopping with troubleshooting."
+description: 'Chapter 33 of the Seeed Physical AI Beginner''s Course — hands-on ROS2 integration of the reBot Arm: building the ROS2 workspace, wrapping the Python SDK in a driver node, launching and visualizing the arm in RViz, driving it through Topic / Service / Action interfaces, and safe stopping with troubleshooting.'
 title: Chapter 33 - reBot Arm ROS2 Integration
 hide_title: true
 keywords:
@@ -21,7 +21,7 @@ last_update:
   date: 2026-10-09
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-10'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_33/
 ---
 

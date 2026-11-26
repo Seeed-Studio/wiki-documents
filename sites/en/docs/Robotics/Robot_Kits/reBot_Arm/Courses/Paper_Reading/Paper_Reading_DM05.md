@@ -1,8 +1,15 @@
 ---
-description: "A close reading of DM0.5: historical context fusion, embodied reasoning, dynamic action matching, Flow Matching, and the limits of the open-world evaluations."
-title: "DM0.5: Historical Context and Trajectory Alignment for the Open World"
+description: 'A close reading of DM0.5: historical context fusion, embodied reasoning, dynamic action matching, Flow Matching, and the limits of the open-world evaluations.'
+title: 'DM0.5: Historical Context and Trajectory Alignment for the Open World'
 hide_title: true
-keywords: [Technical Blog Deep-Dive, DM0.5, OpenDM, Historical Context, Trajectory Alignment, Flow Matching, LeRobot]
+keywords:
+  - Technical Blog Deep-Dive
+  - DM0.5
+  - OpenDM
+  - Historical Context
+  - Trajectory Alignment
+  - Flow Matching
+  - LeRobot
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/dm05/fig01-architecture.png
 slug: /robotics/paper_reading_dm05
 displayed_sidebar: PaperReadingSidebar
@@ -12,7 +19,7 @@ last_update:
   date: 2026-11-10
   author: liujunjie
 createdAt: '2026-11-10'
-updatedAt: '2026-11-10'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_dm05/
 ---
 

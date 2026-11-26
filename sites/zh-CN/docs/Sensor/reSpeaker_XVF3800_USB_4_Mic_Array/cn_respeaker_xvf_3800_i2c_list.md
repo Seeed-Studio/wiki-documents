@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。与 XIAO ESP32S3 搭配使用，可为智能设备、机器人和物联网应用提供高级语音控制能力。探索其无缝集成与双模式灵活性。
+description: reSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。与 XIAO ESP32S3 搭配使用，可为智能设备、机器人和物联网应用提供高级语音控制能力。探索其无缝集成与双模式灵活性。
 title: 使用 I2C 命令通过 XIAO ESP32S3 控制 reSpeaker XVF3800 USB Mic Array
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_xvf_3800_i2c_list/
 
 ## 介绍 
 
-本节提供 ReSpeaker XVF3800 的 I2C 控制命令列表，以及 I2C 读写示例和两种工作模式下的硬件信号路径图。关于通过 I2C 接口控制 ReSpeaker XVF3800 的应用示例，请参考 [Device Control](/cn/respeaker_xvf3800_xiao_rgb) 章节。
+本节提供 reSpeaker XVF3800 的 I2C 控制命令列表，以及 I2C 读写示例和两种工作模式下的硬件信号路径图。关于通过 I2C 接口控制 reSpeaker XVF3800 的应用示例，请参考 [Device Control](/cn/respeaker_xvf3800_xiao_rgb) 章节。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -245,7 +245,7 @@ bool xmos_read_bytes(uint8_t resid, uint8_t cmd, uint8_t *buffer, uint8_t read_l
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/read-version.png" alt="pir" width={800} height="auto" /></p>
 
 :::note
-关于通过 I2C 接口控制 ReSpeaker XVF3800 的应用示例，请参考 [Device Control](/cn/respeaker_xvf3800_xiao_rgb) 章节。
+关于通过 I2C 接口控制 reSpeaker XVF3800 的应用示例，请参考 [Device Control](/cn/respeaker_xvf3800_xiao_rgb) 章节。
 :::
 
 ## I2C 命令列表

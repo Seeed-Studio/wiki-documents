@@ -1,8 +1,15 @@
 ---
-description: "A deep dive into FLUX 3 Action: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "FLUX 3 Action: Balancing Joint Video-Action Prediction and Runtime Cost"
+description: 'A deep dive into FLUX 3 Action: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'FLUX 3 Action: Balancing Joint Video-Action Prediction and Runtime Cost'
 hide_title: true
-keywords: ["Paper Deep-Dive","FLUX 3 Action","World-Action Models","Joint Video-Action Prediction","Distillation","Real-Time Control","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - FLUX 3 Action
+  - World-Action Models
+  - Joint Video-Action Prediction
+  - Distillation
+  - Real-Time Control
+  - LeRobot
 slug: /robotics/paper_reading_flux3
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +17,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_flux3/
 ---
 
 import '/src/css/paper-reading-style.css';

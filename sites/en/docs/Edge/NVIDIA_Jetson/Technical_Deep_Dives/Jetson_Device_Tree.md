@@ -15,6 +15,9 @@ slug: /jetson_device_tree
 last_update:
   date: 11/02/2026
   author: youjiang
+createdAt: '2026-11-02'
+url: https://wiki.seeedstudio.com/jetson_device_tree/
+updatedAt: '2026-11-02'
 ---
 
 In the previous two articles, we walked through the complete boot process of a Jetson from power-on to Ubuntu using the UART boot log:

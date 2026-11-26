@@ -1,5 +1,5 @@
 ---
-description: "SO-ARM101 Sim-to-Real VLA Course — the Seeed × NVIDIA hands-on DLI-style curriculum migrated to the SO-ARM101: build the real lab, collect data, train Isaac GR00T N1.7, deploy to the arm and Jetson, with optional Isaac Sim and Cosmos augmentation."
+description: 'SO-ARM101 Sim-to-Real VLA Course — the Seeed × NVIDIA hands-on DLI-style curriculum migrated to the SO-ARM101: build the real lab, collect data, train Isaac GR00T N1.7, deploy to the arm and Jetson, with optional Isaac Sim and Cosmos augmentation.'
 title: SO-ARM101 Sim-to-Real VLA Course
 hide_title: true
 keywords:

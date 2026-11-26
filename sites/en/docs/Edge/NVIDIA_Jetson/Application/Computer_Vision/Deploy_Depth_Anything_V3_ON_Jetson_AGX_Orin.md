@@ -1,5 +1,5 @@
 ---
-description: "Deploy Depth Anything V3 on Jetson AGX Orin: CUDA and ROS 2 setup, ONNX to TensorRT conversion, and real-time depth from video."
+description: 'Deploy Depth Anything V3 on Jetson AGX Orin: CUDA and ROS 2 setup, ONNX to TensorRT conversion, and real-time depth from video.'
 title: Deploy Depth Anything V3 on Jetson AGX Orin
 keywords:
   - Depth Anything V3
@@ -18,7 +18,7 @@ last_update:
   date: 2026-01-09
   author: Zibo
 createdAt: '2026-01-09'
-updatedAt: '2026-01-16'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/deploy_depth_anything_v3_jetson_agx_orin/
 ---
 

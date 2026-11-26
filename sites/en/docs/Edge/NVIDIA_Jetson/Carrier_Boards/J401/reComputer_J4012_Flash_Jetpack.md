@@ -10,7 +10,7 @@ last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-09-28'
+updatedAt: '2026-11-04'
 url: https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/
 ---
 

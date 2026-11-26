@@ -1,5 +1,5 @@
 ---
-description: "Chapter 39 of the Seeed Physical AI Beginner's Course — Real-to-Sim synchronization: mapping the real arm's joint states into MuJoCo in real time, DM and RS unit conversion, communication frequencies, UDP versus ROS2, state refresh and latency, gripper state synchronization, the safety design of the sync program, and two demo workflows."
+description: 'Chapter 39 of the Seeed Physical AI Beginner''s Course — Real-to-Sim synchronization: mapping the real arm''s joint states into MuJoCo in real time, DM and RS unit conversion, communication frequencies, UDP versus ROS2, state refresh and latency, gripper state synchronization, the safety design of the sync program, and two demo workflows.'
 title: Chapter 39 - Synchronizing the Real and Simulated Arms
 hide_title: true
 keywords:
@@ -21,7 +21,7 @@ last_update:
   date: 2026-10-09
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_39/
 ---
 

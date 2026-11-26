@@ -1,5 +1,5 @@
 ---
-description: O ReSpeaker XVF3800 USB 4-Mic Array é uma matriz de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade de modo duplo.
+description: O reSpeaker XVF3800 USB 4-Mic Array é uma matriz de microfones circular profissional com AEC, formação de feixe, supressão de ruído e captura de voz em 360°. Emparelhado com o XIAO ESP32S3, ele possibilita controle de voz avançado para dispositivos inteligentes, robótica e aplicações de IoT. Descubra integração perfeita e flexibilidade de modo duplo.
 title: Usando comandos I2C para controlar o reSpeaker XVF3800 USB Mic Array com XIAO ESP32S3
 keywords:
   - reSpeaker
@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf_3800_i2c_list/
 
 ## Introdução 
 
-Esta seção fornece a lista de comandos de controle I2C para o ReSpeaker XVF3800, juntamente com exemplos de leitura/gravação I2C e diagramas de caminho de sinal de hardware para os dois modos de operação. Para um exemplo de aplicação de controle do ReSpeaker XVF3800 via interface I2C, consulte a seção [Device Control](/pt-br/respeaker_xvf3800_xiao_rgb).
+Esta seção fornece a lista de comandos de controle I2C para o reSpeaker XVF3800, juntamente com exemplos de leitura/gravação I2C e diagramas de caminho de sinal de hardware para os dois modos de operação. Para um exemplo de aplicação de controle do reSpeaker XVF3800 via interface I2C, consulte a seção [Device Control](/pt-br/respeaker_xvf3800_xiao_rgb).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -245,7 +245,7 @@ bool xmos_read_bytes(uint8_t resid, uint8_t cmd, uint8_t *buffer, uint8_t read_l
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/read-version.png" alt="pir" width={800} height="auto" /></p>
 
 :::note
-Para um exemplo de aplicação de controle do ReSpeaker XVF3800 via interface I2C, consulte a seção [Device Control](/pt-br/respeaker_xvf3800_xiao_rgb).
+Para um exemplo de aplicação de controle do reSpeaker XVF3800 via interface I2C, consulte a seção [Device Control](/pt-br/respeaker_xvf3800_xiao_rgb).
 :::
 
 ## Lista de comandos I2C

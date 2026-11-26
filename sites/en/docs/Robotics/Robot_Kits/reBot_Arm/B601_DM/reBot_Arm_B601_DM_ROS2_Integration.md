@@ -19,7 +19,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-09-23'
+updatedAt: '2026-11-19'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
 ---
 import '/src/css/rebot-wiki-style.css';

@@ -14,7 +14,7 @@ last_update:
   date: 10/08/2026
   author: QiYao Lin
 createdAt: '2026-06-15'
-updatedAt: '2026-07-08'
+updatedAt: '2026-10-08'
 url: https://wiki.seeedstudio.com/recamera_qrcode_udp/
 ---
 

@@ -1,7 +1,7 @@
 ---
 description: Supervisory setpoint control for central HVAC on an edge gateway — one point model over OPC UA, Modbus and BACnet/IP plus an SDM630 energy meter, KNN setpoint prediction, and a write path that verifies every write by reading the point back
 title: 'HVAC Setpoint Control on an Edge Gateway: Hardware, Deployment, and Measured Results'
-sidebar_label: 'Edge Gateway HVAC Control'
+sidebar_label: Edge Gateway HVAC Control
 keywords:
   - HVAC setpoint control
   - building energy retrofit

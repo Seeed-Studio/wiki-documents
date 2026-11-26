@@ -13,6 +13,9 @@ keywords:
   - Raspberry Pi CM4
   - Raspberry Pi CM5
   - industrial AI NVR
+createdAt: '2026-11-13'
+url: https://wiki.seeedstudio.com/recomputer_industrial_r2x_faq/
+updatedAt: '2026-11-13'
 ---
 
 <div class="recomputer-faq-page">

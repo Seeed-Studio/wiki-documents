@@ -1,5 +1,5 @@
 ---
-description: Aprenda a integrar o ReSpeaker XVF3800 com ROS2 para aplicações robóticas. Este tutorial aborda a simulação de DOA e detecção de fala com o Turtlesim, fornecendo uma compreensão básica de controle de robôs e controle PID.
+description: Aprenda a integrar o reSpeaker XVF3800 com ROS2 para aplicações robóticas. Este tutorial aborda a simulação de DOA e detecção de fala com o Turtlesim, fornecendo uma compreensão básica de controle de robôs e controle PID.
 title: ROS2 no reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_ros2/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
-Este projeto demonstra a integração do ReSpeaker XVF3800 com ROS2 para aplicações robóticas, com foco na detecção de fala e na estimativa da Direção de Chegada (DOA). Usando o nó Turtlesim, simulamos o controle de um robô baseado em entrada de voz, permitindo movimento preciso por meio de controle PID. O tutorial aborda a configuração do ambiente ROS2, a configuração do ReSpeaker XVF3800 e como aplicar comandos de voz para controlar um robô. Ao final, os usuários entenderão como conectar interfaces de voz à robótica e usar algoritmos de controle básicos para navegação.
+Este projeto demonstra a integração do reSpeaker XVF3800 com ROS2 para aplicações robóticas, com foco na detecção de fala e na estimativa da Direção de Chegada (DOA). Usando o nó Turtlesim, simulamos o controle de um robô baseado em entrada de voz, permitindo movimento preciso por meio de controle PID. O tutorial aborda a configuração do ambiente ROS2, a configuração do reSpeaker XVF3800 e como aplicar comandos de voz para controlar um robô. Ao final, os usuários entenderão como conectar interfaces de voz à robótica e usar algoritmos de controle básicos para navegação.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -35,9 +35,9 @@ Para este projeto, usamos o **ROS 2 Humble** como middleware. Se você estiver i
 
 [Guia de Instalação do ROS 2 Humble (Ubuntu)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
-## Configurar o ReSpeaker USB Mic Array
+## Configurar o reSpeaker USB Mic Array
 
-Se você estiver usando o **ReSpeaker USB Mic Array** para o seu robô ou aplicações de voz, siga estas etapas para configurá-lo no seu sistema Ubuntu.
+Se você estiver usando o **reSpeaker USB Mic Array** para o seu robô ou aplicações de voz, siga estas etapas para configurá-lo no seu sistema Ubuntu.
 
 ### Encontrar os IDs de fornecedor e produto do seu dispositivo
 
@@ -47,11 +47,11 @@ Para encontrar os IDs do seu dispositivo, execute:
 lsusb
 ```
 
-Procure pelo dispositivo ReSpeaker (por exemplo, `vendor 0x2886, product 0x001A`).
+Procure pelo dispositivo reSpeaker (por exemplo, `vendor 0x2886, product 0x001A`).
 
 ### Criar uma regra udev para o dispositivo
 
-Crie uma nova regra udev para garantir as permissões corretas para o ReSpeaker Mic Array:
+Crie uma nova regra udev para garantir as permissões corretas para o reSpeaker Mic Array:
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
@@ -60,7 +60,7 @@ sudo nano /etc/udev/rules.d/50-respeaker.rules
 Adicione as seguintes linhas ao arquivo:
 
 ```bash
-# ReSpeaker USB Mic Array
+# reSpeaker USB Mic Array
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", GROUP="plugdev"
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```
@@ -75,11 +75,11 @@ sudo udevadm trigger
 sudo service udev restart
 ```
 
-Desconecte e reconecte o seu ReSpeaker USB Mic Array para aplicar as novas regras.
+Desconecte e reconecte o seu reSpeaker USB Mic Array para aplicar as novas regras.
 
 ## Configurando o workspace ROS2 e controlando seu robô com ROS2
 
-Este guia conduz você pelo processo de configuração de um workspace ROS2, criação de um pacote ROS2 personalizado, controle de um robô usando Python e configuração do ReSpeaker USB Mic Array para uso em seu projeto ROS2.
+Este guia conduz você pelo processo de configuração de um workspace ROS2, criação de um pacote ROS2 personalizado, controle de um robô usando Python e configuração do reSpeaker USB Mic Array para uso em seu projeto ROS2.
 
 ### Instalar dependências necessárias
 
@@ -183,7 +183,7 @@ PARAMETERS = {
     "DOA_VALUE": (20, 18, 4 + 1, "ro", "uint16"),
 }
 
-class ReSpeaker:
+class reSpeaker:
     TIMEOUT = 100000
 
     def __init__(self, dev):
@@ -231,7 +231,7 @@ def find(vid=0x2886, pid=0x001A):
     dev = usb.core.find(idVendor=vid, idProduct=pid)
     if not dev:
         return None
-    return ReSpeaker(dev)
+    return reSpeaker(dev)
 
 
 class AngleController(Node):
@@ -286,10 +286,10 @@ def main(args=None):
     rclpy.init(args=args)
     node = AngleController()
 
-    # Setup ReSpeaker device
+    # Setup reSpeaker device
     dev = find()
     if not dev:
-        node.get_logger().error("No ReSpeaker device found")
+        node.get_logger().error("No reSpeaker device found")
         return
 
     # Function to handle publishing DOA angle when speech is detected

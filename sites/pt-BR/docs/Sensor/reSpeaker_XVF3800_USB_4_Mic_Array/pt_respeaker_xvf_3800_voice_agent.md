@@ -20,13 +20,13 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_voice_assistant/
 
 ## Visão Geral
 
-Este projeto demonstra um assistente de voz inteligente totalmente local, projetado para escritórios inteligentes e espaços inteligentes. Ele usa o array de microfones ReSpeaker XVF3800 para captura de voz de alta qualidade, combinado com speech-to-text (STT) no dispositivo para transcrição precisa. Um modelo de linguagem grande local (LLM) processa as consultas do usuário de forma inteligente sem depender da nuvem, garantindo privacidade e baixa latência. Text-to-speech (TTS) gera respostas de voz naturais, permitindo interação em tempo real. O sistema é ideal para ambientes como escritórios, shoppings, quiosques e salas de reunião, onde o controle de voz seguro e offline é essencial.
+Este projeto demonstra um assistente de voz inteligente totalmente local, projetado para escritórios inteligentes e espaços inteligentes. Ele usa o array de microfones reSpeaker XVF3800 para captura de voz de alta qualidade, combinado com speech-to-text (STT) no dispositivo para transcrição precisa. Um modelo de linguagem grande local (LLM) processa as consultas do usuário de forma inteligente sem depender da nuvem, garantindo privacidade e baixa latência. Text-to-speech (TTS) gera respostas de voz naturais, permitindo interação em tempo real. O sistema é ideal para ambientes como escritórios, shoppings, quiosques e salas de reunião, onde o controle de voz seguro e offline é essencial.
 
 ## Hardware Necessário
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>reSpeaker XVF3800 </th>
     <th>Jetson AGX Orin 32GB H01 Kit</th>
   </tr>
   <tr>
@@ -49,13 +49,13 @@ Este projeto demonstra um assistente de voz inteligente totalmente local, projet
 
 ## Prepare os Dispositivos
 
-#### ReSpeaker XVF3800 – Instalação de Firmware USB
+#### reSpeaker XVF3800 – Instalação de Firmware USB
 
-Certifique-se de que o ReSpeaker XVF3800 USB Mic Array esteja atualizado com o firmware mais recente antes do uso.
+Certifique-se de que o reSpeaker XVF3800 USB Mic Array esteja atualizado com o firmware mais recente antes do uso.
 
 - Siga o guia oficial de atualização de firmware:
 
-  - Atualização de Firmware do ReSpeaker XVF3800 [Seeed Studio Wiki](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#update-firmware)
+  - Atualização de Firmware do reSpeaker XVF3800 [Seeed Studio Wiki](https://wiki.seeedstudio.com/pt-br/respeaker_xvf3800_introduction/#update-firmware)
 
 Esta etapa garante entrada de áudio USB estável e compatibilidade com pipelines de processamento de fala posteriores.
 

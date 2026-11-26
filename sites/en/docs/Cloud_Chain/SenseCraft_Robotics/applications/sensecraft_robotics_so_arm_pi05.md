@@ -11,6 +11,9 @@ slug: /sensecraft_robotics/applications/so-arm-pi05
 last_update:
   date: 11/10/2026
   author: Seeed Studio
+createdAt: '2026-11-10'
+url: https://wiki.seeedstudio.com/sensecraft_robotics/applications/so-arm-pi05/
+updatedAt: '2026-11-10'
 ---
 
 **SenseCraft Robotics Platform Download:** [Download](https://sensecraft.seeed.cc/en/robotics?utm_source=wiki&utm_medium=referral&utm_campaign=sensecraft_wiki&utm_content=soarm_pi0.5)
