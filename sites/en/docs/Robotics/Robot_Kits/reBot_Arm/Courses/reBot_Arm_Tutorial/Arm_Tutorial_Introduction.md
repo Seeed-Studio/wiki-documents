@@ -1,5 +1,5 @@
 ---
-description: "Seeed Physical AI Beginner's Course — a free, hands-on guide to building and learning with the 100% open-source reBot robotic arm. All eight stages and 39 chapters are published, covering setup and basic control, imitation learning with LeRobot, VLA with Isaac GR00T, robot arm mathematics and motion control, robot vision with autonomous grasping, ROS2 robot system integration, and robot arm simulation in MuJoCo and Isaac Sim."
+description: Seeed Physical AI Beginner's Course — a free, hands-on guide to building and learning with the 100% open-source reBot robotic arm. All eight stages and 39 chapters are published, covering setup and basic control, imitation learning with LeRobot, VLA with Isaac GR00T, robot arm mathematics and motion control, robot vision with autonomous grasping, ROS2 robot system integration, and robot arm simulation in MuJoCo and Isaac Sim.
 title: Seeed Physical AI Beginner's Course
 hide_title: true
 keywords:
@@ -19,7 +19,7 @@ last_update:
   date: 2026-10-09
   author: ZhuYaoHui
 createdAt: '2026-09-17'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-15'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_introduction/
 ---
 

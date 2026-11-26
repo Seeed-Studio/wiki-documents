@@ -413,16 +413,17 @@
 }
 
 .rebot-demo-details > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  /* Keep text and inline code in one flow, with the marker positioned separately. */
+  position: relative;
+  display: block;
   margin: 0 -1rem;
   padding: 0.8rem 1rem;
+  padding-inline-end: 2.75rem;
   cursor: pointer;
   color: var(--ifm-font-color-base);
   font-weight: 700;
   list-style: none;
+  overflow-wrap: anywhere;
 }
 
 .rebot-demo-details > summary::-webkit-details-marker {
@@ -437,13 +438,29 @@
 
 .rebot-demo-details > summary::after {
   content: '+';
-  flex: 0 0 auto;
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
   font-size: 1.2rem;
   line-height: 1;
 }
 
 .rebot-demo-details[open]:not([data-collapsed='true']) > summary::after {
   content: '−';
+}
+
+.robotics-doc .rebot-demo-details {
+  margin-bottom: 1.25rem;
+}
+
+.robotics-doc .rebot-demo-details > summary {
+  padding-inline-end: 1rem;
+}
+
+.robotics-doc .rebot-demo-details > summary::after {
+  display: none;
 }
 
 .rebot-demo-details > summary:focus-visible {
@@ -569,16 +586,16 @@
 }
 
 .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  position: relative;
+  display: block;
   margin: 0 -1rem;
   padding: 0.9rem 1rem;
+  padding-inline-end: 2.55rem;
   color: var(--ifm-font-color-base);
   font-weight: 700;
   line-height: 1.5;
   border-radius: 13px;
+  overflow-wrap: anywhere;
   transition: color 180ms ease, background-color 180ms ease;
 }
 
@@ -588,17 +605,20 @@
 
 .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details > summary::after {
   content: '';
-  flex: 0 0 0.55rem;
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 1rem;
   width: 0.55rem;
   height: 0.55rem;
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
-  transform: translateY(-0.15rem) rotate(45deg);
+  transform: translateY(-75%) rotate(45deg);
+  pointer-events: none;
   transition: transform 200ms ease;
 }
 
 .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details:is([data-collapsed='false'], [open]:not([data-collapsed])) > summary::after {
-  transform: translateY(0.15rem) rotate(225deg);
+  transform: translateY(-25%) rotate(225deg);
 }
 
 .robotics-doc .theme-doc-markdown .rebot-rs-faq .content-details:focus-within {

@@ -1,5 +1,5 @@
 ---
-description: "Push an OTA update to an Orin reComputer over the network: build the package on a host, then move from JetPack 5.1.3 to 6.2 without USB."
+description: 'Push an OTA update to an Orin reComputer over the network: build the package on a host, then move from JetPack 5.1.3 to 6.2 without USB.'
 title: Deploy OTA on reComputer
 keywords:
   - jetson
@@ -13,7 +13,7 @@ last_update:
   date: 12/05/2025
   author: Zibo
 createdAt: '2025-12-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/deploy_ota_on_recomputer/
 ---
 

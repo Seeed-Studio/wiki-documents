@@ -1189,6 +1189,7 @@ const sidebars = {
               label: 'Conexión Inalámbrica',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_NFC_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Matter_Use',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Zigbee',
               ],
@@ -1372,6 +1373,7 @@ const sidebars = {
               label: 'Plataforma',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/es_XIAO_ESP32C6_with_PlatformIO',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/es_XIAO_ESP32C6_with_Visual_Studio',
               ],
             },
             {
@@ -2342,6 +2344,7 @@ const sidebars = {
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_edgeimpulse',                
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_picovoice',
               'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_sensecraft',
+              'Sensor/reSpeaker_44mm/es_respeaker_44mm_wakeword',
               ],
             },
             {
@@ -2357,6 +2360,7 @@ const sidebars = {
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe_memory',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_chat_architecture',
+                'Sensor/reSpeaker_clip/es_respeaker_clip_for_agent',
               ],
             },
           ],

@@ -11,7 +11,7 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2026-05-27'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
@@ -26,62 +26,6 @@ Based on VS Code, if you want to use the following case on the nRF Connect SDK, 
 [XIAO nRF54L15 Add overlay file and modify conf file](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
 
 :::
-
-## Onboard Keys
-
-XIAO nRF54L15(Sense) comes equipped with two important physical buttons that play crucial roles in device operation and firmware programming: the **Reset Button** and the **User Button**. Understanding their functions is essential for daily use and firmware updates.
-
----
-
-## Hardware Overview
-
-<Tabs>
-<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
-
-### XIAO nRF54L15 Front
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-### XIAO nRF54L15 Back
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-
-</TabItem>
-<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
-
-### XIAO nRF54L15 Sense Front
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-### XIAO nRF54L15 Sense Back
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
-
-</TabItem>
-</Tabs>
-
-
-### Reset Button
-
-The Reset button is used to perform a hard reset operation on the device.
-
-- **Functionality:**
-  - **Forced Restart:** Pressing this button immediately interrupts all current device operations and causes it to restart, similar to a power cycle.
-  - **Resolving Stuck Programs:** When the device's running program crashes, enters an infinite loop, or becomes unresponsive, pressing the Reset button is the quickest way to force it back to a normal operating state.
-  - **No Firmware Impact:** A reset operation does not erase or alter the firmware already programmed into the device. It simply restarts the currently running application.
-
----
-
-### User Button
-
-The User button is a versatile, programmable input that offers flexible control within your applications.
-
-**Functionality:**
-
-- Customizable Input：Unlike the fixed function of the Reset button, the User button's action is entirely defined by your programmed firmware.
-
-- Event Triggering： It can be programmed to trigger specific events, control different functionalities, or act as a general-purpose input for your applications.
 
 ## Digital
 

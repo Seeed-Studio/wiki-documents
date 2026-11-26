@@ -1,6 +1,6 @@
 ---
-description: "Set ACT training parameters, start training, monitor loss and GPU status, resume interrupted training, and manage checkpoints."
-title: "How to Train ACT on reBot Arm"
+description: Set ACT training parameters, start training, monitor loss and GPU status, resume interrupted training, and manage checkpoints.
+title: How to Train ACT on reBot Arm
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/hands_on_act_training/
 ---
 

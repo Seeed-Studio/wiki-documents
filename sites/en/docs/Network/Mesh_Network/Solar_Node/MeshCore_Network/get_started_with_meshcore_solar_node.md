@@ -13,7 +13,7 @@ last_update:
   author: Advent Jiang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
-updatedAt: '2026-10-26'
+updatedAt: '2026-11-24'
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -615,6 +615,20 @@ If the issue persists, please contact technical support.
 - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
+
+### Why is my P1 not receiving messages?
+
+#### 1. The antenna was disconnected
+
+Without an antenna, the P1 receives little signal. When it transmits, the open antenna port reflects most of the outgoing power back toward the radio. Repeated transmissions in this state can damage the transmit circuitry.
+
+**Power off the P1 before reconnecting the antenna.** Use an antenna matched to your LoRa band, then power on the P1 and send it a message from a nearby node.
+
+#### 2. A high-power transmitter is nearby
+
+A strong signal can overload the P1 receiver, causing it to miss LoRa messages while the other radio is transmitting. In extreme cases, the coupled RF energy can damage the receiver.
+
+**Test with the nearby transmitter idle.** If reception returns, increase the distance between the antennas and run their cables separately.
 
 ### Charging Current
 

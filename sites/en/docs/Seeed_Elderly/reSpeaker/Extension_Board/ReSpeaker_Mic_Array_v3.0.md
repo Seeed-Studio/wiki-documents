@@ -9,7 +9,7 @@ last_update:
   date: 10/30/2026
   author: ray
 createdAt: '2023-08-20'
-updatedAt: '2026-02-24'
+updatedAt: '2026-10-30'
 url: https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/
 ---
 

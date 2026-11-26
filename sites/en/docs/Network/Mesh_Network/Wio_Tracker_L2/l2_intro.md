@@ -12,7 +12,7 @@ last_update:
   date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-10-26'
+updatedAt: '2026-11-19'
 url: https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/
 ---
 
@@ -93,7 +93,7 @@ Describe your idea in a few words, and Seeed Studio’s CodeCraft AI coding assi
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
-    <td colspan="1">863-928 MHz<br/>MAX TX Power: 20dBm@US915,14dBm@EU868</td>
+    <td colspan="1">863-928 MHz<br/>MAX TX Power: 22dBm@US915,14dBm@EU868</td>
   </tr>
     <tr>
     <td colspan="1">**GNSS**</td>

@@ -309,7 +309,7 @@ import TabItem from '@theme/TabItem';
 
 ### 虚拟键盘
 
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.png" alt="pir" width={600} height="auto" /></p>
 2.7 版本固件现在已经支持虚拟键盘！你可以直接在设备上输入消息，与其他设备进行通信。请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 

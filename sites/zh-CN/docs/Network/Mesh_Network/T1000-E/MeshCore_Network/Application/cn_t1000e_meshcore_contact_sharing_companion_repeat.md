@@ -1,6 +1,6 @@
 ---
-description: 通过在公共频道中共享联系人，并让同伴设备启用重复模式中继消息，临时扩展使用 SenseCAP Card Tracker T1000-E 的 MeshCore 通信路径。
-title: 联系人共享与同伴重复中继
+description: 通过在公共频道共享联系人，并让 Companion 设备使用重复模式中继消息，临时扩展你的 MeshCore 通信路径，搭配 SenseCAP Card Tracker T1000-E 使用。
+title: 联系人共享与 Companion 重复
 keywords:
   - MeshCore
   - Card Tracker T1000-E
@@ -11,7 +11,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/application/t1000e-meshcore-hero.png
 slug: /t1000e_meshcore_contact_sharing_companion_repeat
 sku: 114993369,114993649
-sidebar_position: 3
+sidebar_position: 5
 last_update:
   date: 10/16/2026
   author: Advent Jiang

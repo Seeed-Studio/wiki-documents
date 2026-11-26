@@ -146,11 +146,18 @@ const sidebars = {
           },
           {
             type: 'category',
-            label: 'reComputer Mini',
+            label: 'reComputer Mini J50',
             items: [
-              'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/pt_reComputer_Mini_Getting_Started',
-              'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/pt_reComputer_Mini_Hardware_Interfaces_Usage',
-              'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/pt_reComputer_Mini_J501_WiFi_Module_Installation',
+              'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini_J50/pt_reComputer_Robotics_J50_Mini_Getting_Started',
+              'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini_J50/pt_reComputer_Mini_J501_WiFi_Module_Installation',
+            ],
+          },
+          {
+            type: 'category',
+            label: 'reComputer Mini J30/40',
+            items: [
+              'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini_J40_V1/pt_reComputer_Mini_Getting_Started',
+              'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini_J40_V1/pt_reComputer_Mini_Hardware_Interfaces_Usage',
             ],
           },
           {

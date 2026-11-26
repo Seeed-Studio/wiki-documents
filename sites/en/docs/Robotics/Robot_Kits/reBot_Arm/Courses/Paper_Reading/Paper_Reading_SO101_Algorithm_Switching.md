@@ -1,5 +1,5 @@
 ---
-title: "How to Switch Policies on SO-ARM101"
+title: How to Switch Policies on SO-ARM101
 keywords:
   - reBot
   - SO-ARM101
@@ -7,7 +7,7 @@ keywords:
   - Policy Switching
   - ACT
   - LeRobot
-description: "The SO101 policy-switching tutorial has been merged into the shared reBot / SO101 tutorial."
+description: The SO101 policy-switching tutorial has been merged into the shared reBot / SO101 tutorial.
 image: https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png
 hide_title: true
 unlisted: true
@@ -19,6 +19,8 @@ translation:
 last_update:
   date: 2026-10-29
   author: liujunjie
+createdAt: '2026-10-22'
+updatedAt: '2026-11-18'
 ---
 
 import {Redirect} from '@docusaurus/router';

@@ -248,7 +248,7 @@ function CompareChoice({ checked, onChange, disabled, disabledReason, label }) {
 }
 
 // ── ProductCard ──
-function ProductCard({ item, t, lang, selected, onToggleCompare, compareDisabled, compareDisabledReason }) {
+function ProductCard({ item, t, lang, selected, onToggleCompare, compareDisabled, compareDisabledReason, onOpenDetail }) {
   const specs = [];
   if (item.capacity) specs.push({ label: t('capacity'), value: item.capacity });
   if (item.formFactor) specs.push({ label: t('formFactor'), value: item.formFactor });
@@ -259,19 +259,17 @@ function ProductCard({ item, t, lang, selected, onToggleCompare, compareDisabled
 
   const displayName = L(item, 'name', lang);
   const keyFact = L(item, 'keyFact', lang);
-  const buyLabel = actionLabel(item, t);
-  const buyClass = item.buyUrl ? s.buyBtn : `${s.buyBtn} ${s.buyBtnDisabled}`;
 
   return (
     <article className={`${s.card} ${selected ? s.cardSelected : ''}`}>
       <ProductImage
         src={item.image}
         alt={displayName}
-        badge={item.categoryLabel}
+        badge={L(item, 'categoryLabel', lang)}
       />
       <div className={s.cardBody}>
         <div className={s.cardMeta}>
-          <span className={s.badgeType}>{item.categoryLabel}</span>
+          <span className={s.badgeType}>{L(item, 'categoryLabel', lang)}</span>
           <span className={s.badgeIface}>{item.interfaceLabel}</span>
         </div>
         <h3 className={s.cardName}>{displayName}</h3>
@@ -285,18 +283,9 @@ function ProductCard({ item, t, lang, selected, onToggleCompare, compareDisabled
         </dl>
         {keyFact && <p className={s.cardKeyFact}>{keyFact}</p>}
         <div className={s.cardActions}>
-          {item.buyUrl ? (
-            <a
-              href={item.buyUrl}
-              className={s.buyBtn}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {buyLabel}
-            </a>
-          ) : (
-            <span className={buyClass}>{t('noLink')}</span>
-          )}
+          <button type="button" className={s.detailBtn} onClick={() => onOpenDetail(item)}>
+            {t('detail')}
+          </button>
           <CompareChoice
             checked={selected}
             onChange={onToggleCompare}
@@ -334,6 +323,7 @@ function AccessoriesDialog({ dialogRef, view, detailItem, compareItems, onClose,
 
   const allSpecs = (item) => {
     const specs = [];
+    specs.push([t('category'), L(item, 'categoryLabel', lang)]);
     if (item.capacity) specs.push([t('capacity'), item.capacity]);
     if (item.formFactor) specs.push([t('formFactor'), item.formFactor]);
     if (item.function) specs.push([t('function'), L(item, 'function', lang)]);
@@ -342,6 +332,14 @@ function AccessoriesDialog({ dialogRef, view, detailItem, compareItems, onClose,
     specs.push([t('sourceLabel'), L(item, 'sourceLabel', lang)]);
     if (item.sku) specs.push(['SKU', item.sku]);
     if (item.evidence) specs.push([t('testStatus'), L(item, 'evidence', lang)]);
+    if (item.devices && item.devices.length > 0) {
+      specs.push([t('device'), item.devices.map(d => {
+        const opt = deviceOptions.find(o => o.value === d);
+        return opt ? L(opt, 'label', lang) : d;
+      }).join(' · ')]);
+    } else {
+      specs.push([t('device'), '—']);
+    }
     return specs;
   };
 
@@ -384,7 +382,7 @@ function AccessoriesDialog({ dialogRef, view, detailItem, compareItems, onClose,
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {actionLabel(detailItem, t)}
+                    {actionLabel(detailItem, t)} ↗
                   </a>
                 )}
               </div>
@@ -417,7 +415,7 @@ function AccessoriesDialog({ dialogRef, view, detailItem, compareItems, onClose,
                     rel="noopener noreferrer"
                     style={{ marginTop: 8, justifySelf: 'start' }}
                   >
-                    {actionLabel(item, t)}
+                    {actionLabel(item, t)} ↗
                   </a>
                 )}
               </div>
@@ -600,6 +598,7 @@ export default function AccessoriesSelector() {
                 onToggleCompare={() => handleToggleCompare(item.id)}
                 compareDisabled={compareDisabled}
                 compareDisabledReason={compareDisabledReason}
+                onOpenDetail={handleOpenDetail}
               />
             );
           })}

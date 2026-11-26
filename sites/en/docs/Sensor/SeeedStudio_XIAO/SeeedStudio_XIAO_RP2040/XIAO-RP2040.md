@@ -10,7 +10,7 @@ last_update:
   date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-08-25'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/XIAO-RP2040/
 ---
 

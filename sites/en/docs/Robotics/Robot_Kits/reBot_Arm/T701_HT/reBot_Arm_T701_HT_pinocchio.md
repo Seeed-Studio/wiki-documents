@@ -9,11 +9,15 @@ keywords:
   - Kinematics
   - Gravity Compensation
 slug: /rebot_t701_ht_pinocchio
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-17'
+url: https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';

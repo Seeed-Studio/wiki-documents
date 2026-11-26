@@ -11,7 +11,7 @@ last_update:
   date: 04/17/2023
   author: Citric
 createdAt: '2022-11-15'
-updatedAt: '2025-12-24'
+updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/
 ---
 

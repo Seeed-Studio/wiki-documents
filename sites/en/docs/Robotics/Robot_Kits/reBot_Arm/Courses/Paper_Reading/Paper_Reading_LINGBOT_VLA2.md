@@ -1,8 +1,14 @@
 ---
-description: "A close reading of LingBot-VLA 2.0: data filtering, a 55-dimensional cross-embodiment action space, MoE action experts, current/future query distillation, and the conditions and limits of hardware results."
-title: "LingBot-VLA 2.0: Cross-Embodiment Actions and Future Perception"
+description: 'A close reading of LingBot-VLA 2.0: data filtering, a 55-dimensional cross-embodiment action space, MoE action experts, current/future query distillation, and the conditions and limits of hardware results.'
+title: 'LingBot-VLA 2.0: Cross-Embodiment Actions and Future Perception'
 hide_title: true
-keywords: [Paper Deep-Dive, LingBot-VLA 2.0, MoE, Cross-Embodiment, Dual-Query Distillation, LeRobot]
+keywords:
+  - Paper Deep-Dive
+  - LingBot-VLA 2.0
+  - MoE
+  - Cross-Embodiment
+  - Dual-Query Distillation
+  - LeRobot
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-vla2/fig01-framework.png
 slug: /robotics/paper_reading_lingbot_vla2
 displayed_sidebar: PaperReadingSidebar
@@ -12,7 +18,7 @@ last_update:
   date: 2026-11-06
   author: liujunjie
 createdAt: '2026-11-05'
-updatedAt: '2026-11-06'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_lingbot_vla2/
 ---
 

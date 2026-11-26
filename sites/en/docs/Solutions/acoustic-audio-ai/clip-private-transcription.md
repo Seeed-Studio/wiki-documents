@@ -1,7 +1,7 @@
 ---
 description: Sync reSpeaker Clip recordings to your own reComputer host for speaker-labelled transcripts — hardware, deployment, interfaces and measured data on Jetson Orin NX and RK3576
 title: Private On-Premise Transcription for reSpeaker Clip — Selection, Deployment and Measured Data
-sidebar_label: 'reSpeaker Clip Transcription'
+sidebar_label: reSpeaker Clip Transcription
 keywords:
   - private transcription
   - on-premise speech to text

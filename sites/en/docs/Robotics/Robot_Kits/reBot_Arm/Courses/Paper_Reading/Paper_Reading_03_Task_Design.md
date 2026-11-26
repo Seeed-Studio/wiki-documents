@@ -1,6 +1,6 @@
 ---
-description: "Design your first imitation learning task around episodes, starting and stopping conditions, and demonstration consistency, then complete five-point sampling and pick-and-place demonstrations."
-title: "How to Design Tasks and Demos for Imitation Learning"
+description: Design your first imitation learning task around episodes, starting and stopping conditions, and demonstration consistency, then complete five-point sampling and pick-and-place demonstrations.
+title: How to Design Tasks and Demos for Imitation Learning
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/hands_on_task_design/
 ---
 

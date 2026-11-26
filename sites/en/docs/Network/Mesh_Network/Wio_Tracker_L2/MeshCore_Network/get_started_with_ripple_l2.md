@@ -12,6 +12,9 @@ sidebar_position: 2
 last_update:
   date: 11/10/2026
   author: Michelle Huang
+createdAt: '2026-11-06'
+url: https://wiki.seeedstudio.com/get_started_with_ripple_l2_pro/
+updatedAt: '2026-11-20'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -68,7 +71,7 @@ The updated firmware uses MeshCore profiles and no longer offers Ripple in the N
 
 ## Flash Firmware
 
-If your device already has the Ripple UI version described here, skip to **First-Time Setup**.
+If your device already has the Ripple UI version described here, skip to **[First-Time Setup](#first-time-setup)**.
 
 Two firmware variants are available:
 

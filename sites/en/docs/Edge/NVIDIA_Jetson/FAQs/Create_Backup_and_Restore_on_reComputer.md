@@ -1,5 +1,5 @@
 ---
-description: "Back up and restore a reComputer J3011 image on JetPack 5.1.3 and 6.2: clone the system to NVMe or USB, then write it to a new device."
+description: 'Back up and restore a reComputer J3011 image on JetPack 5.1.3 and 6.2: clone the system to NVMe or USB, then write it to a new device.'
 title: Create Backup and Restore on reComputer
 keywords:
   - jetson
@@ -13,7 +13,7 @@ last_update:
   date: 04/11/2025
   author: Zibo
 createdAt: '2025-04-14'
-updatedAt: '2026-05-08'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/create_backup_and_restore_on_recomputer/
 ---
 

@@ -1,7 +1,7 @@
 ---
 description: Face access control for an unattended door — what hardware you need, how to deploy it, which interfaces it exposes, and measured face library activation, door-open time and rejections
 title: 'Unmanned Store Face Access: Hardware, Face Library Distribution and Measured Boundaries'
-sidebar_label: 'Unmanned Store Face Access'
+sidebar_label: Unmanned Store Face Access
 keywords:
   - unmanned store face access control
   - face recognition door access

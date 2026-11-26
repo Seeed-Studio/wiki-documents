@@ -1,5 +1,5 @@
 ---
-description: "Chapter 36 of the Seeed Physical AI Beginner's Course — running the reBot Arm in MuJoCo: installing the MuJoCo development environment, reading the MJCF model structure, importing the reBot Arm model through the ROS2 packages, launching the full simulation and driving the joints from the ROS2 slider GUI."
+description: 'Chapter 36 of the Seeed Physical AI Beginner''s Course — running the reBot Arm in MuJoCo: installing the MuJoCo development environment, reading the MJCF model structure, importing the reBot Arm model through the ROS2 packages, launching the full simulation and driving the joints from the ROS2 slider GUI.'
 title: Chapter 36 - Running the reBot Arm in MuJoCo
 hide_title: true
 keywords:
@@ -20,7 +20,7 @@ last_update:
   date: 2026-10-09
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-10'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_36/
 ---
 

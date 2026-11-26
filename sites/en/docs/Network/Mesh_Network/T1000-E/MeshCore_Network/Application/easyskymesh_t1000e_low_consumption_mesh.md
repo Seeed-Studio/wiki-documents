@@ -11,12 +11,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/easyskymesht1000e.png
 slug: /easyskymesh_t1000e
 sku: 114993369
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 11/13/2026
   author: Michelle Huang
 createdAt: 2026-11-13T00:00:00.000Z
-updatedAt: '2026-11-13'
+updatedAt: '2026-11-24'
 url: https://wiki.seeedstudio.com/easyskymesh_t1000e/
 ---
 

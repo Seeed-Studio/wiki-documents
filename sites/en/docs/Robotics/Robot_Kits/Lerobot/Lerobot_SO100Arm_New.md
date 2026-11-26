@@ -15,7 +15,7 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-06-05'
-updatedAt: '2026-09-23'
+updatedAt: '2026-11-23'
 translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
@@ -536,6 +536,10 @@ To configure the motors designate one bus servo adapter and 6 motors for your le
 | ST-3215-C044(7.4V)                           | 1:191      | L3                           |
 | ST-3215-C046(7.4V)                           | 1:147      | L4–L6                        |
 | ST-3215-C001(7.4V) / C018(12V) / C047(12V)             | 1:345      | F1–F6                        |
+
+:::danger
+For the DAMO Academy version of SO-ARM, both the Leader Arm and the Follower Arm use a **5 V power supply**.
+:::
 
 :::danger
 You now should plug the 5V or 12V power supply to the motor bus. 5V for the STS3215 7.4V motors and 12V for the STS3215 12V motors. Note that the leader arm always uses the 7.4V motors, so watch out that you plug in the right power supply if you have 12V and 7.4V motors, otherwise you might burn your motors! Now, connect the motor bus to your computer via USB. Note that the USB doesn't provide any power, and both the power supply and USB have to be plugged in.

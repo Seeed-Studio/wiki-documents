@@ -11,7 +11,7 @@ last_update:
   date: 10/15/2026
   author: Zeller
 createdAt: '2025-04-22'
-updatedAt: '2026-04-24'
+updatedAt: '2026-10-15'
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_arduino/
 ---
 

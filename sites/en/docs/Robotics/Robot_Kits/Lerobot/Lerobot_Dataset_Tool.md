@@ -1,8 +1,8 @@
 ---
 description: This wiki covers LeRobot dataset utilities, including deleting episodes, merging datasets, and more.
-title: SO-Arm Dataset Tool
+title: SO-ARM Dataset Tool
 keywords:
-  - Lerobot
+  - LeRobot
   - Hugging Face
   - Arm
   - Robotics
@@ -15,56 +15,73 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-03-02'
-updatedAt: '2026-09-16'
+updatedAt: '2026-11-24'
 url: https://wiki.seeedstudio.com/lerobot_dataset_tool/
 ---
 
+import '/src/css/rebot-wiki-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# SO-ARM Dataset Tool
+
 <div align="center">
-    <img width={800} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" />
+  <img
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp"
+    width={800}
+    height={600}
+    style={{height: 'auto'}}
+    alt="SO-ARM100 and SO-ARM101 robotic arm kits"
+  />
 </div>
 
-| **Follower Arm Viola** | **Leader Arm Violin** | **Follower Arm Cello** |
-|:---------:|:---------:|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png) |
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html" target="_blank" rel="noopener noreferrer">
+    <span>Get the SO-ARM101 Kit</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 ## Overview
-In this wiki, you will learn how to:
-- 1. **Delete episodes** — remove specific episodes from a dataset
-- 2. **Split a dataset** — split a full dataset into multiple smaller datasets
-- 3. **Merge datasets** — merge multiple datasets into one larger dataset
-- 4. **Remove features** — remove specific features from a dataset
-- 5. **Convert to video** — convert an image-based dataset into video format for more efficient storage
-- 6. **Upload a dataset to the Hugging Face Hub**
-- 7. **Visualize a dataset online** — view recorded and uploaded datasets on Hugging Face
-- 8. **Visualize a dataset offline** — view recorded datasets stored locally
 
-For a step-by-step tutorial on how to record/collect a dataset with LeRobot, see: [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](/lerobot_so100m_new/).
+Use `lerobot-edit-dataset` to edit datasets and `lerobot-dataset-viz` to view episodes locally.
 
-All of the operations above can be done with `lerobot-edit-dataset` using the appropriate arguments. Below are complete commands and explanations.
+To record a dataset first, see [Getting started with SO-ARM100 and SO-ARM101](/lerobot_so100m_new/).
+
+The examples follow the [Seeed LeRobot dataset tool implementation](https://github.com/Seeed-Projects/lerobot/blob/d490e472a5d1a207cfe0255caaaf74b6d66e4656/src/lerobot/scripts/lerobot_edit_dataset.py). Other versions may use different options.
+
+| Task | Purpose |
+| --- | --- |
+| [Delete episodes](#delete-episodes) | Remove episodes by index. |
+| [Split a dataset](#split-a-dataset) | Split data by fraction or episode index. |
+| [Merge datasets](#merge-datasets) | Combine multiple datasets into a new dataset. |
+| [Remove features](#remove-features) | Remove selected features such as images from a camera. |
+| [Convert to video](#convert-to-video) | Encode image frames as video and optionally upload the result to the Hugging Face Hub. |
+| [Visualize a dataset online](#visualize-a-dataset-online) | View an uploaded dataset in your browser. |
+| [Visualize a dataset locally](#visualize-a-dataset-locally) | Use the command-line viewer with a Hub or local dataset. |
+
+### Related robotic arms
+
+| Viola follower arm | Violin leader arm | Cello follower arm |
+| --- | --- | --- |
+| <img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola.jpg" width={160} alt="Viola follower arm" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin.jpg" width={160} alt="Violin leader arm" /> | <img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png" width={160} alt="Cello follower arm" /> |
 
 ## Delete episodes
-This operation deletes unwanted episodes from a dataset.
 
-### Command 1: Delete specific episodes in a dataset
-```bash
-# Delete episodes 0, 2, and 5 (modifies original dataset)
-lerobot-edit-dataset \
-    --repo_id lerobot/pusht \
-    --operation.type delete_episodes \
-    --operation.episode_indices "[0, 2, 5]"
-```
-#### Explanation
-- `--repo_id lerobot/pusht`  
-    Specifies the dataset repository to operate on, i.e. `lerobot/pusht`, where `lerobot` is the username and `pusht` is the dataset name.
-    
-- `--operation.type delete_episodes`  
-    Sets the operation type to **delete episodes**.
-    
-- `--operation.episode_indices "[0, 2, 5]"`  
-    Specifies the episode indices to delete. Here it deletes episodes **0, 2, and 5**.
-    
-### Command 2: Delete episodes and save as a new dataset (preserve the original)
+Here, an episode is one complete recording of a robot action.
+
+<span id="command-1-delete-specific-episodes-in-a-dataset" aria-hidden="true" />
+<span id="command-2-delete-episodes-and-save-as-a-new-dataset-preserve-the-original" aria-hidden="true" />
+
+<Tabs defaultValue="new-dataset">
+<TabItem value="new-dataset" label="Save as a new dataset">
+
+Set `--new_repo_id` to save the result while keeping the original dataset. This example removes episodes 0, 2, and 5.
+
 ```bash
 # Delete episodes and save to a new dataset (preserves original dataset)
 lerobot-edit-dataset \
@@ -73,17 +90,41 @@ lerobot-edit-dataset \
     --operation.type delete_episodes \
     --operation.episode_indices "[0, 2, 5]"
 ```
-#### Explanation
-- `--repo_id lerobot/pusht`  
-    Uses the original dataset as the input.
-    
-- `--new_repo_id lerobot/pusht_after_deletion`  
-    Specifies a new dataset repo name to save the modified result.
+
+</TabItem>
+<TabItem value="in-place" label="Modify the original">
+
+:::caution
+This command modifies the original dataset. Check the dataset ID and episode indices first. Select **Save as a new dataset** to keep the original data.
+:::
+
+```bash
+# Delete episodes 0, 2, and 5 (modifies original dataset)
+lerobot-edit-dataset \
+    --repo_id lerobot/pusht \
+    --operation.type delete_episodes \
+    --operation.episode_indices "[0, 2, 5]"
+```
+
+</TabItem>
+</Tabs>
+
+| Option | Purpose |
+| --- | --- |
+| `--repo_id` | ID of the input dataset, such as `lerobot/pusht`. |
+| `--new_repo_id` | ID of the new dataset when saving a copy. |
+| `--operation.episode_indices` | List of episode indices to delete. |
 
 ## Split a dataset
 
-### Command 1: Split by fractions
-Use case: quick training/experiments
+<span id="command-1-split-by-fractions" aria-hidden="true" />
+<span id="command-2-split-by-explicit-episode-indices" aria-hidden="true" />
+
+<Tabs defaultValue="fractions">
+<TabItem value="fractions" label="Split by fraction">
+
+This example allocates about 80%, 10%, and 10% of episodes to training, test, and validation sets.
+
 ```bash
 # Split by fractions (e.g. 80% train, 10% test, 10% val)
 lerobot-edit-dataset \
@@ -91,106 +132,79 @@ lerobot-edit-dataset \
     --operation.type split \
     --operation.splits '{"train": 0.8, "test": 0.1, "val": 0.1}'
 ```
-#### Explanation
-- `--operation.type split`  
-    Sets the operation type to **split dataset**.
-    
-- `--operation.splits '{"train": 0.8, "test": 0.1, "val": 0.1}'`  
-    Splits `lerobot/pusht` into three datasets by fraction:
-    
-    - `train`: ~80% of the episodes
-        
-    - `test`: ~10% of the episodes
-        
-    - `val`: ~10% of the episodes
-  
-After splitting, the datasets stay on the Hub. The split name is appended as a suffix to the original name. For example, the command above creates `lerobot/pusht_train`, `lerobot/pusht_test`, and `lerobot/pusht_val`.
 
-### Command 2: Split by explicit episode indices
+</TabItem>
+<TabItem value="indices" label="Split by episode index">
+
+This example puts episodes 0–3 in `task1` and episodes 4–5 in `task2`.
+
 ```bash
 lerobot-edit-dataset \
     --repo_id lerobot/pusht \
     --operation.type split \
     --operation.splits '{"task1": [0, 1, 2, 3], "task2": [4, 5]}'
 ```
-#### Explanation
 
-- `--operation.type split`  
-    The operation type is still **split dataset**.
-    
-- `--operation.splits '{"task1": [0, 1, 2, 3], "task2": [4, 5]}'`  
-    Splits by **explicit episode indices**:
-    
-    - `task1`: episodes 0, 1, 2, 3
-        
-    - `task2`: episodes 4, 5
+</TabItem>
+</Tabs>
+
+Each split appends its name to the input ID, for example `lerobot/pusht_train`. These examples save the results locally. Uploading requires `--push_to_hub true`.
 
 ## Merge datasets
+
 ```bash
 lerobot-edit-dataset \
-    --repo_id lerobot/pusht_merged \
+    --new_repo_id lerobot/pusht_merged \
     --operation.type merge \
     --operation.repo_ids "['lerobot/pusht_train', 'lerobot/pusht_val']"
 ```
-#### Explanation
-- `--repo_id lerobot/pusht_merged`  
-    Specifies the **new dataset name** after merging.  
-    The merged result will be saved to this dataset repository.
-    
-- `--operation.type merge`  
-    Sets the operation type to **merge datasets**.
-    
-- `--operation.repo_ids "['lerobot/pusht_train', 'lerobot/pusht_val']"`  
-    Specifies the source datasets to merge:
-    
-    - `lerobot/pusht_train`
-        
-    - `lerobot/pusht_val`
+
+| Option | Purpose |
+| --- | --- |
+| `--new_repo_id` | ID of the new merged dataset. |
+| `--operation.repo_ids` | IDs of the source datasets to merge. |
 
 ## Remove features
 
-This operation removes features from a dataset. It is useful when you want to drop certain observation modalities. For example, if your dataset contains two cameras (one top camera and one wrist camera), but you only want to keep the wrist camera for training and deployment, you can remove the top-camera observation feature from the dataset.
-```bash
+If you only need wrist camera footage, you can remove the overhead camera feature. This example drops `observation.images.top` from the dataset.
 
+```bash
 lerobot-edit-dataset \
     --repo_id lerobot/pusht \
     --operation.type remove_feature \
     --operation.feature_names "['observation.images.top']"
 ```
-#### Explanation
-- `--operation.type remove_feature`  
-    Sets the operation type to **remove feature**.
-    
-- `--operation.feature_names "['observation.images.top']"`  
-    Specifies the feature names to remove.  
-    Here it removes the camera image feature named `observation.images.top`.
 
 ## Convert to video
 
-Convert an **image-based dataset** into **video format**, producing a new `LeRobotDataset`.  
-During conversion, camera data originally stored as individual image frames is encoded into MP4 video files.
+Encode image frames into video in a new dataset. This can reduce storage usage and improve read performance.
 
-This is mainly used to:
+<div className="rebot-step-flow">
 
-- Reduce overall storage usage
-    
-- Improve data loading and reading performance
-    
-After conversion, the new dataset is **identical in structure and content** to the original, except that:  
-image data is no longer stored as raw frames, but saved in LeRobot-compliant video format.
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+<h4>Choose an output</h4>
+<p className="rebot-step-label">Step 1</p>
 
-The conversion options can be customized and combined freely. Below are six example commands for reference.
+<Tabs defaultValue="local-folder">
+<TabItem value="local-folder" label="Save to a local folder">
 
-1. Convert an image dataset to video and save only to a local output directory (no Hub push).
+Set the output directory with `--new_root`. The result stays local.
+
 ```bash
 # Local-only: Save to a custom output directory (no hub push)
 lerobot-edit-dataset \
     --repo_id lerobot/pusht_image \
     --operation.type convert_image_to_video \
-    --operation.output_dir /path/to/output/pusht_video
+    --new_root /path/to/output/pusht_video
 ```
 
-2. Save the converted result as a new dataset with a new `repo_id`.
+</TabItem>
+<TabItem value="new-id" label="Use a new dataset ID">
+
+Set the ID for the resulting dataset with `--new_repo_id`. Files stay local.
+
 ```bash
 # Save with new repo_id (local storage)
 lerobot-edit-dataset \
@@ -199,7 +213,11 @@ lerobot-edit-dataset \
     --operation.type convert_image_to_video
 ```
 
-3. Convert and push the new dataset to the Hugging Face Hub.
+</TabItem>
+<TabItem value="hub" label="Convert and upload to the Hub">
+
+Confirm you have write access to the target repository. `--push_to_hub true` uploads the result after conversion.
+
 ```bash
 # Convert and push to Hugging Face Hub
 lerobot-edit-dataset \
@@ -209,29 +227,56 @@ lerobot-edit-dataset \
     --push_to_hub true
 ```
 
-4. Convert with a custom video codec and quality settings.
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+<h4>Check the result</h4>
+<p className="rebot-step-label">Step 2</p>
+
+Check the output `videos/` directory for the camera MP4 files and confirm the episodes, statistics, and task definitions are still present. The `.parquet` files hold metadata while the image frames are stored in the videos.
+
+</div>
+</section>
+
+</div>
+
+### Conversion options you can combine
+
+Use the following options with the output settings as needed.
+
+#### Customize encoding
+
 ```bash
 # Convert with custom video codec and quality settings
 lerobot-edit-dataset \
     --repo_id lerobot/pusht_image \
     --operation.type convert_image_to_video \
-    --operation.output_dir outputs/pusht_video \
-    --operation.vcodec libsvtav1 \
-    --operation.pix_fmt yuv420p \
-    --operation.g 2 \
-    --operation.crf 30
+    --new_root outputs/pusht_video \
+    --operation.rgb_encoder.vcodec libsvtav1 \
+    --operation.rgb_encoder.pix_fmt yuv420p \
+    --operation.rgb_encoder.g 2 \
+    --operation.rgb_encoder.crf 30
 ```
 
-5. Convert with multiple workers for faster processing.
+#### Set parallel workers
+
 ```bash
 # Convert with multiple workers for parallel processing
 lerobot-edit-dataset \
     --repo_id lerobot/pusht_image \
     --operation.type convert_image_to_video \
-    --operation.output_dir outputs/pusht_video \
+    --new_root outputs/pusht_video \
     --operation.num_workers 8
 ```
-6. For memory-constrained systems, reduce peak memory usage by limiting episodes and frames per batch.
+
+#### Limit batch size
+
 ```bash
 # For memory-constrained systems, users can now specify limits:
 lerobot-edit-dataset \
@@ -241,52 +286,32 @@ lerobot-edit-dataset \
     --operation.max_frames_per_batch 10000
 ```
 
-#### Explanation
-- **output_dir**：  
-    Custom output directory (optional).  
-    If not specified, defaults to `{repo_id}_video` or the directory corresponding to `new_repo_id`.
-    
-- **vcodec**：  
-    Video codec.  
-    Options include `h264`, `hevc`, `libsvtav1` (default: `h264`).
-    
-- **pix_fmt**：  
-    Video pixel format.  
-    Options include `yuv420p`, `yuv444p` (default: `yuv420p`).
-    
-- **g**：  
-    GOP (keyframe interval) size.  
-    Smaller values generally increase quality but also increase file size (default: 2).
-    
-- **crf**：  
-    Constant Rate Factor.  
-    Smaller values mean higher quality and larger files; `0` means lossless encoding (default: 30).
-    
-- **fast_decode**：  
-    Tuning flag for fast decoding (default: 0).
-    
-- **episode_indices**：  
-    List of episode indices to convert (default: convert all episodes).
-    
-- **num_workers**：  
-    Number of parallel worker processes (default: 4).
-    
-The resulting dataset is a **complete and standard LeRobotDataset**:
-
-- All camera data is stored as videos under `videos/`
-    
-- `.parquet` files contain only metadata and no longer contain raw images
-    
-- All episodes, statistics, and task definitions are preserved.
-
+| Option | Purpose |
+| --- | --- |
+| `--new_root` | Custom local output directory. |
+| `--operation.rgb_encoder.vcodec` | RGB video codec, such as `h264`, `hevc`, or `libsvtav1`. |
+| `--operation.rgb_encoder.pix_fmt` | RGB video pixel format, such as `yuv420p`. |
+| `--operation.rgb_encoder.g` | Keyframe interval. |
+| `--operation.rgb_encoder.crf` | Encoding quality setting. Lower values usually increase quality and file size. |
+| `--operation.rgb_encoder.fast_decode` | Fast decoding tuning. Supported values depend on the codec. |
+| `--operation.episode_indices` | Episode indices to convert. Omit to convert all episodes. |
+| `--operation.num_workers` | Number of parallel workers. Defaults to 4. |
+| `--operation.max_episodes_per_batch` | Maximum number of episodes per batch. |
+| `--operation.max_frames_per_batch` | Maximum number of frames per batch. |
 
 ## Visualize a dataset online
 
-When you record a dataset with LeRobot, it is automatically uploaded to the Hugging Face Hub unless you specify otherwise. To view the dataset online, use Hugging Face’s **LeRobot dataset visualization tool**: [https://huggingface.co/spaces/lerobot/visualize_dataset](https://huggingface.co/spaces/lerobot/visualize_dataset)
+Open an uploaded dataset in the [Hugging Face dataset visualizer](https://huggingface.co/spaces/lerobot/visualize_dataset).
 
 ## Visualize a dataset locally
 
-### Visualize a dataset from the Hub locally
+<span id="visualize-a-dataset-from-the-hub-locally" aria-hidden="true" />
+<span id="visualize-a-local-dataset" aria-hidden="true" />
+
+<Tabs defaultValue="hub-dataset">
+<TabItem value="hub-dataset" label="View a Hub dataset">
+
+Use the dataset ID from the Hub. This example opens episode 0.
 
 ```bash
 lerobot-dataset-viz \
@@ -294,7 +319,10 @@ lerobot-dataset-viz \
     --episode-index 0
 ```
 
-### Visualize a local dataset
+</TabItem>
+<TabItem value="local-dataset" label="View a local dataset">
+
+Give the local dataset directory with `--root` and select `--mode local`.
 
 ```bash
 lerobot-dataset-viz \
@@ -304,31 +332,19 @@ lerobot-dataset-viz \
     --episode-index 0
 ```
 
-#### Explanation
-- **`lerobot-dataset-viz`**  
-    Dataset visualization tool for viewing episodes in a LeRobot dataset.
-    
-- **`--repo-id lerobot/pusht`**  
-    Dataset name to visualize.
-    
-- **`--root ./my_local_data_dir`**  
-    Root directory of local datasets.  
-    In local mode, the tool looks for the dataset under this directory using the given `repo-id`.
-    
-- **`--mode local`**  
-    Use local data source mode.  
-    The dataset is loaded from the local filesystem instead of a remote repository.
-    
-- **`--episode-index 0`**  
-    Episode index to view.  
-    Here it visualizes episode 0 (the first episode in the dataset).
+</TabItem>
+</Tabs>
+
+| Option | Purpose |
+| --- | --- |
+| `--repo-id` | ID of the dataset to view. |
+| `--episode-index` | Episode index, starting at 0. |
+| `--root` | Local dataset directory. |
+| `--mode local` | Read from the local filesystem. |
 
 ## FAQ
 
-- If you are following this tutorial, please git clone the recommended repository: `https://github.com/Seeed-Projects/lerobot.git`. The repository recommended here is a verified stable version. The official LeRobot repository updates continuously, which may introduce unexpected issues (e.g., dataset version changes, different commands).
+- Get the tool used in this guide from the [Seeed LeRobot repository](https://github.com/Seeed-Projects/lerobot.git). Other versions may use different commands or dataset formats.
+- If terminal output has not refreshed for a while, press Enter to see whether there is new output. Operations on compressed datasets can take time. Watch the progress bar.
 
-- If the dataset operation appears to hang, try pressing Enter to refresh the terminal output.
-
-- Since the new dataset format is stored in a compressed way, dataset operations can take longer. You will see a progress bar in the terminal—please be patient.
-
-Reference: https://huggingface.co/docs/lerobot/using_dataset_tools
+See the [LeRobot dataset tools documentation](https://huggingface.co/docs/lerobot/using_dataset_tools).

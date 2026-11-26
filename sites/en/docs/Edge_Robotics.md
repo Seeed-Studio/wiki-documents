@@ -16,7 +16,7 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-09-29'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -66,13 +66,15 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     </div>
     <div className="learning-group">
       <h4>Applications</h4>
-      <div className="learning-steps">
+      <div className="learning-steps rebot-rs-applications">
         <a className="step-card" href="/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS with Visual Grasping</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_camera_follow/"><span className="step-index">2</span><div><b>reBot-RS Wrist Following</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">3</span><div><b>reBot-RS with ROS2</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">4</span><div><b>reBot-RS with Isaac Sim</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-RS Web Control System: Real Robot & MuJoCo</b></div></a>
-        <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">6</span><div><b>reBot-RS with Agent Claw</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_python_visual_grasping/"><span className="step-index">2</span><div><b>reBot-RS Multi-Backend Visual Grasping</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_camera_follow/"><span className="step-index">3</span><div><b>reBot-RS Wrist Following</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_bimanual/"><span className="step-index">4</span><div><b>reBot-RS Bimanual Collaboration</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>reBot-RS with ROS2</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>reBot-RS with Isaac Sim</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_rs_web_simulator_developer_guide/"><span className="step-index">7</span><div><b>reBot-RS Web Control System: Real Robot & MuJoCo</b></div></a>
+        <a className="step-card" href="/wrc_demo_tutorial/"><span className="step-index">8</span><div><b>reBot-RS with Agent Claw</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -114,8 +116,10 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/rebot_arm_b601_dm_grasping_demo/"><span className="step-index">1</span><div><b>reBot-DM Visual Grasp</b></div></a>
         <a className="step-card" href="/rebot_arm_b601_dm_ros2_integration/"><span className="step-index">2</span><div><b>reBot-DM with ROS2</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">3</span><div><b>reBot-DM with Isaac Sim</b></div></a>
-        <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">4</span><div><b>reBot-DM Web Control System: Real Robot & MuJoCo</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_bimanual/"><span className="step-index">3</span><div><b>reBot-DM Bimanual Collaboration</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_isaacsim/"><span className="step-index">4</span><div><b>reBot-DM with Isaac Sim</b></div></a>
+        <a className="step-card" href="/rebot_arm_b601_dm_web_simulator_developer_guide/"><span className="step-index">5</span><div><b>reBot-DM Web Control System: Real Robot & MuJoCo</b></div></a>
+        <a className="step-card" href="/rebot_b601_dm_holoscan_gravity_compensation/"><span className="step-index">6</span><div><b>reBot-DM Holoscan5 Gravity Compensation</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -176,17 +180,19 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 Quick Start</b></div></a>
         <a className="step-card" href="/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>Servo Debugging Tool</b></div></a>
         <a className="step-card" href="/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm Dataset Tool</b></div></a>
+        <a className="step-card" href="/sensecraft_robotics_so_arm101/"><span className="step-index">4</span><div><b>No-Code VLA with SenseCraft Robotics</b></div></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>Applications</h4>
       <div className="learning-steps">
-        <a className="step-card" href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">4</span><div><b>SO101 and NVIDIA GR00T</b></div></a>
         <a className="step-card" href="/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>Dual-Arm SO-ARM Training</b></div></a>
-        <a className="step-card" href="/soarm_amazinghand_teleop/"><span className="step-index">6</span><div><b>SO-ARM with Amazing Hand Dexterous Hand</b></div></a>
-        <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">7</span><div><b>LeIsaac Simulation</b></div></a>
-        <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">8</span><div><b>Isaac Lab Reinforcement Learning</b></div></a>
-        <a className="step-card" href="/soarm101_isaac_sim_dli/"><span className="step-index">9</span><div><b>SO-ARM101 with Isaac Sim</b></div></a>
+        <a className="step-card" href="/soarm101_xiao_microros_wireless_teleoperation/"><span className="step-index">6</span><div><b>SO-ARM Wireless Teleoperation</b></div></a>
+        <a className="step-card" href="/soarm_amazinghand_teleop/"><span className="step-index">7</span><div><b>SO-ARM with Amazing Hand Dexterous Hand</b></div></a>
+        <a className="step-card" href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">8</span><div><b>SO101 and NVIDIA GR00T</b></div></a>
+        <a className="step-card" href="/simulate_soarm101_by_leisaac/"><span className="step-index">9</span><div><b>LeIsaac Simulation</b></div></a>
+        <a className="step-card" href="/training_soarm101_policy_with_isaacLab/"><span className="step-index">10</span><div><b>Isaac Lab Reinforcement Learning</b></div></a>
+        <a className="step-card" href="/soarm101_isaac_sim_dli/"><span className="step-index">11</span><div><b>SO-ARM101 with Isaac Sim</b></div></a>
         <a className="step-card optional" href="/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
@@ -373,7 +379,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <p>For visual grasping, SLAM, voice interaction, and robot state perception.</p>
     </div>
     <div className="resource-columns">
-      <div><h4>LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a><h4>Voice</h4><a href="/ReSpeaker_Core_v2.0/">ReSpeaker Core v2.0</a><a href="/ReSpeaker_Mic_Array_v2.0/">ReSpeaker Mic Array v2.0</a><h4>IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>LiDAR</h4><a href="/robosense_lidar/">RoboSense</a><a href="/mid360/">Livox MID360</a><a href="/a_loam/">A-LOAM Algorithm</a><a href="/slamtec/">Slamtec Series</a><h4>Voice</h4><a href="/respeaker_xvf3800_introduction/">reSpeaker XMOS XVF3800 4-mic Array</a><a href="/respeaker_flex_introduction/">reSpeaker Flex Split-type 4-mic Array</a><h4>IMU</h4><a href="/hexfellow_y200/">HEXFELLOW Y200</a><a href="/wheeltec_imu/">WHEELTEC IMU</a></div>
       <div><h4>Cameras</h4><a href="/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/orbbec_gemini305/">Orbbec Gemini 305</a><a href="/orbbec_gemini_335lg/">Gemini 335Lg Depth Camera</a><a href="/orbbec_gemini336">Gemini 336 Depth Camera</a><a href="/sensing_gmsl_cameras">SENSING GMSL2 Camera</a><a href="/ac1">RoboSense AC1</a><a href="/orbbec_depth_camera_on_ros/">Orbbec and ROS</a><a href="/orb_slam3_orbbec_gemini2/">ORB-SLAM3 and Gemini2</a><a href="/csi_camera_on_ros/">CSI Camera on Jetson</a><a href="/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
     </div>
   </section>

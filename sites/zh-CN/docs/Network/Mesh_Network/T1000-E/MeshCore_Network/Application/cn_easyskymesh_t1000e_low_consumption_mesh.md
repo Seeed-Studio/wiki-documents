@@ -1,6 +1,6 @@
 ---
-description: 本指南介绍如何将 EasySkyMesh 与 SenseCAP T1000-E 搭配使用，在 MeshCore 的基础上构建低功耗 IoT 传感器网络。
-title: 省电
+description: 本指南说明如何将 EasySkyMesh 与 SenseCAP T1000-E 搭配使用，在 MeshCore 的基础上构建低功耗物联网传感器网络。
+title: 节能
 keywords:
   - EasySkyMesh
   - MeshCore
@@ -11,7 +11,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/easyskymesht1000e.png
 slug: /easyskymesh_t1000e
 sku: 114993369
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 11/13/2026
   author: Michelle Huang

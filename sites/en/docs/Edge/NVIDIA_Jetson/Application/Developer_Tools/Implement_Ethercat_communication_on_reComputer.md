@@ -15,7 +15,7 @@ last_update:
   date: 2025-09-05
   author: Zibo
 createdAt: '2025-09-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/recomputer_ethercat_communication/
 ---
 

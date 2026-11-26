@@ -1,8 +1,13 @@
 ---
-description: "A close reading of LaWAM, from latent visual subgoals and action generation to benchmark results and LeRobot integration."
-title: "LaWAM: Predicting Scene Changes Before Generating Robot Actions"
+description: A close reading of LaWAM, from latent visual subgoals and action generation to benchmark results and LeRobot integration.
+title: 'LaWAM: Predicting Scene Changes Before Generating Robot Actions'
 hide_title: true
-keywords: [Paper Deep-Dive, LaWAM, World-Action Models, Latent Actions, LeRobot]
+keywords:
+  - Paper Deep-Dive
+  - LaWAM
+  - World-Action Models
+  - Latent Actions
+  - LeRobot
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lawam/lawam_overview.png
 slug: /robotics/paper_reading_lawam
 displayed_sidebar: PaperReadingSidebar
@@ -12,7 +17,7 @@ last_update:
   date: 2026-11-16
   author: liujunjie
 createdAt: '2026-11-16'
-updatedAt: '2026-11-16'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_lawam/
 ---
 

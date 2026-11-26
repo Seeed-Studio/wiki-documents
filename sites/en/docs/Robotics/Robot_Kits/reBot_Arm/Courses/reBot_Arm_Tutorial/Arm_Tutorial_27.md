@@ -1,5 +1,5 @@
 ---
-description: "Chapter 27 of the Seeed Physical AI Beginner's Course — how a robot turns pixels into 3D: the robot vision pipeline, RGB-D sensing, depth maps, stereo / structured-light / TOF depth cameras, the pinhole camera model with intrinsics and extrinsics, pixel-to-3D conversion and point clouds."
+description: 'Chapter 27 of the Seeed Physical AI Beginner''s Course — how a robot turns pixels into 3D: the robot vision pipeline, RGB-D sensing, depth maps, stereo / structured-light / TOF depth cameras, the pinhole camera model with intrinsics and extrinsics, pixel-to-3D conversion and point clouds.'
 title: Chapter 27 - Robot Vision and 3D Perception
 hide_title: true
 keywords:
@@ -20,7 +20,7 @@ last_update:
   date: 2026-10-08
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-08'
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-15'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_27/
 ---
 

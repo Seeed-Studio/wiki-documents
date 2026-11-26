@@ -8,6 +8,9 @@ slug: /service_for_fusion_pcba_functional_test
 last_update:
   date: 10/21/2026
   author: Xi Lin
+createdAt: '2026-10-21'
+url: https://wiki.seeedstudio.com/service_for_fusion_pcba_functional_test/
+updatedAt: '2026-10-21'
 ---
 
 PCBA functional testing uses defined operations and measurements to check whether an assembled board performs as intended. Test requirements describe what to test, the conditions and procedures, and the pass/fail criteria. They provide the manufacturing team with the information needed to carry out the tests.

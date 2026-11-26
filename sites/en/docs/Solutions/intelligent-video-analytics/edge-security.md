@@ -1,7 +1,7 @@
 ---
 description: Build a local restricted-zone, line-crossing and loitering alerting system for a plant, warehouse or server-room door — what hardware you need, how to deploy it, which interfaces it exposes, and measured timing and throughput on three hosts.
-title: "Edge Security Alerting: Restricted Zones, Line Crossing and Loitering on the Edge"
-sidebar_label: 'Edge Security Alerting'
+title: 'Edge Security Alerting: Restricted Zones, Line Crossing and Loitering on the Edge'
+sidebar_label: Edge Security Alerting
 keywords:
   - edge security
   - intrusion detection

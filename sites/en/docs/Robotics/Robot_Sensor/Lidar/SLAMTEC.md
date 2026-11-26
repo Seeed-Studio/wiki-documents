@@ -1,5 +1,5 @@
 ---
-description: "Introduction to SLAMTEC LiDAR products: model comparison, wiring, and usage documentation for robot mapping and navigation."
+description: 'Introduction to SLAMTEC LiDAR products: model comparison, wiring, and usage documentation for robot mapping and navigation.'
 title: Slamtec LiDAR Series
 keywords:
   - LiDAR
@@ -13,7 +13,7 @@ last_update:
   date: 2025/06/18
   author: ZhuYaohui
 createdAt: '2025-06-19'
-updatedAt: '2025-11-27'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/slamtec/
 ---
 

@@ -11,12 +11,17 @@ keywords:
   - Dual-Arm Teleoperation
   - WebXR
 slug: /rebot_t701_ht_vr
-aliases: ["/rebot_t701_ht_quest"]
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
+aliases:
+  - /rebot_t701_ht_quest
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-19'
+url: https://wiki.seeedstudio.com/rebot_t701_ht_vr/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';

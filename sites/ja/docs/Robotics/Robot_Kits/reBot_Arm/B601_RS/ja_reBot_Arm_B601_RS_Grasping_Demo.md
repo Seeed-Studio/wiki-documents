@@ -65,7 +65,7 @@ import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css
   <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/grasp_rs.gif" alt="reBot Arm B601-RS visual grasping demo" />
 </p>
 
-## 2 つの把持方式はどう違うのか？
+## 2 つの把持方式はどう違う？
 
 このページでは、実装の異なる 2 種類のビジュアルグラスピングデモを扱います。フレームワーク、キャリブレーション要件、起動フローを比較し、下からチュートリアルを選択してください。
 
@@ -101,16 +101,16 @@ import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css
 
 ## ビジュアルグラスピング方式 1
 
-このルートでは、ROS 2 ワークスペースを使わずに **Python SDK + RGB-D カメラ + YOLO / OBB** を使用します。デフォルトルートは一般的な卓上物体に適しており、より複雑な 6D 把持が必要な場合は、下記のオプションの GraspNet モジュールを有効にしてください。
+このルートでは、**Python SDK + RGB-D カメラ + YOLO / OBB** を使用し、ROS 2 ワークスペースは不要です。デフォルトルートは一般的な卓上物体に適しており、より複雑な 6D 把持が必要な場合は、下記のオプションの GraspNet モジュールを有効にしてください。
 
 ### 1. プロジェクトの特徴
 
 1. **YOLO + OBB からの直接把持姿勢推定**
    このパイプラインでは、検出ボックスまたは OBB の最小外接矩形を直接利用し、短軸をグリッパの開閉方向として扱うことで、複雑な 3D 点群処理を回避します。
 2. **GraspNet-Baseline による 6D 把持姿勢推定（オプション）**
-   本プロジェクトは、RGB-D 点群からの 6D 把持姿勢推定のために GraspNet-Baseline（`graspnet/graspnet-baseline`）もサポートしており、YOLO のバウンディングボックスを用いてターゲット候補を選択し、より複雑な把持実験を行うことができます。
+   本プロジェクトは、RGB-D 点群からの 6D 把持姿勢推定のために GraspNet-Baseline（`graspnet/graspnet-baseline`）にも対応しており、YOLO のバウンディングボックスを用いてターゲット候補を選択し、より複雑な把持実験を行うことができます。
 3. **ロボットアームおよびグリッパドライバの統合**
-   メインの把持スクリプトは、`reBotArm_control_py` のロボットアームおよびエンドポーズコントローラに基づいており、グリッパの開閉、力制御把持、TCP 姿勢読み取りのための軽量な把持ヘルパーを備えています。
+   主要な把持スクリプトは、`reBotArm_control_py` のロボットアームおよびエンドポーズコントローラに基づいており、グリッパの開閉、力制御把持、TCP 姿勢読み取りのための軽量な把持ヘルパーを備えています。
 4. **オープンソースかつ拡張可能**
    すべてのソースコードは公開されており、ユーザーは自身のニーズに応じて制御アルゴリズムや動作をカスタマイズできます。
 
@@ -178,7 +178,7 @@ import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css
 1. 深度カメラを USB 3.0 でホストに接続します。
 2. USB2CAN アダプタをアームの CAN バスに接続します。
 3. 48V 電源、カメラ、ロボットアームがすべて確実に接続されていることを確認します。
-4. パーミッションの問題が発生した場合は、次を実行します：
+4. パーミッションの問題が発生した場合は、次を実行してください：
 
 ```bash
 sudo chmod a+rw /dev/bus/usb/*/*
@@ -194,7 +194,7 @@ sudo chmod 666 /dev/ttyUSB0
 
 ### 5. 基本環境をインストールする
 
-以下の手順を順番に実行してください。ステップ 0〜3 はデフォルトルートに必須で、ステップ 4 ではお使いのハードウェアに合わせてカメラ SDK を選択します。GraspNet のインストールと実行手順は、下の上級モジュールで別途説明します。
+以下の手順を順番に実行してください。ステップ 0〜3 はデフォルトルートに必須で、ステップ 4 では使用するハードウェアに合わせてカメラ SDK を選択します。GraspNet のインストールと実行手順は、後述の上級モジュールで別途説明します。
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -243,7 +243,7 @@ conda activate rebotarm
 ```
 
 :::note 期待される結果
-ターミナルプロンプトに `rebotarm` と表示され、環境がアクティブになっていることがわかります。PyTorch はまだインストールされていないので、続けて次の 2 フェーズを実行してください。
+ターミナルプロンプトに `rebotarm` と表示され、環境がアクティブになっていることを示します。PyTorch はまだインストールされていないので、続けて次の 2 フェーズを実行してください。
 :::
 
 別の環境名を使用する場合は、上記 2 つのコマンド内の `rebotarm` を置き換えてください。既存の環境を使う場合は、その環境を有効化してから `conda env update -n rebotarm -f environment.yml` を実行し、ベース依存関係を更新します。このコマンドは既存の pip パッケージを削除しません。
@@ -261,7 +261,7 @@ conda activate rebotarm
 <Tabs groupId="rebot-pytorch-backend" defaultValue="cpu">
 <TabItem value="cpu" label="CPU (no NVIDIA GPU)">
 
-Intel / AMD の統合グラフィックスを搭載したコンピュータ、またはまず CPU 上で基本ワークフローを検証したい場合にこのオプションを使用します。
+Intel / AMD 統合グラフィックス搭載のコンピュータ、またはまず CPU 上で基本ワークフローを検証したい場合にこのオプションを使用します。
 
 ```bash
 python -m pip install -r requirements-pytorch.txt --index-url https://download.pytorch.org/whl/cpu
@@ -269,10 +269,10 @@ python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA a
 ```
 
 :::note 期待される結果
-PyTorch のパスがアクティブな Conda 環境内を指していることを確認します。`CUDA available: False` と表示されていれば正常です。
+PyTorch のパスがアクティブな Conda 環境内を指していることを確認します。`CUDA available: False` と表示されていれば想定どおりです。
 :::
 
-`config/default.yaml` で次の設定を維持します：
+`config/default.yaml` を次の設定のままにしておきます：
 
 ```yaml
 yolo:
@@ -280,13 +280,13 @@ yolo:
 ```
 
 :::tip サポートされるワークフロー
-基本的な YOLO / OBB ワークフローは CPU 上で実行できます。推論速度はモデルと使用しているコンピュータに依存します。このプロジェクトの GraspNet CUDA オペレータには NVIDIA GPU が必要なため、以下の GraspNet 高度モジュールはスキップしてください。
+基本的な YOLO / OBB ワークフローは CPU 上で実行できます。推論速度はモデルとコンピュータの性能に依存します。このプロジェクトの GraspNet CUDA オペレータには NVIDIA GPU が必要なため、以下の GraspNet 高度モジュールはスキップしてください。
 :::
 
 </TabItem>
 <TabItem value="nvidia" label="NVIDIA GPU (CUDA)">
 
-CUDA 対応版 PyTorch をインストールする前に、ドライバが GPU を認識していることを確認します。以下の例では CUDA 12.8 ビルドを使用しており、GPU アーキテクチャとドライバの両方がこのバージョンをサポートしている必要があります：
+CUDA 対応 PyTorch をインストールする前に、ドライバが GPU を認識していることを確認します。以下の例では CUDA 12.8 ビルドを使用しており、GPU アーキテクチャとドライバの両方がこのバージョンをサポートしている必要があります：
 
 ```bash
 nvidia-smi
@@ -306,7 +306,7 @@ yolo:
 :::tip CUDA ビルドの選択
 
 
-CUDA ビルドを選択する際は、[公式の PyTorch バージョン一覧](https://pytorch.org/get-started/previous-versions/)を使用して、GPU・ドライバ・Python バージョンをサポートするビルドを選んでください。GPU シリーズ名や `nvidia-smi` に表示される CUDA の番号だけで選ばないでください。
+CUDA ビルドを選択するには、[公式の PyTorch バージョン一覧](https://pytorch.org/get-started/previous-versions/) を使用し、GPU・ドライバ・Python バージョンをすべてサポートするビルドを選びます。GPU シリーズ名や `nvidia-smi` に表示される CUDA の番号だけで選ばないでください。
 :::
 
 CUDA が利用できない場合は、ドライバ、GPU アーキテクチャ、選択したホイールを確認するか、CPU タブに従って基本ワークフローを検証してください。
@@ -331,13 +331,13 @@ python -c "import torch, torchvision, torchaudio, cv2; from ultralytics import Y
 ```
 
 :::note 期待される結果
-`pip check` が `No broken requirements found.` と表示し、検証コマンドがインポートエラーなしで `Vision dependencies OK` と出力します。ロボットアームおよびカメラ SDK をインストールする前に、これらのチェックを完了してください。
+`pip check` が `No broken requirements found.` と表示し、検証コマンドがインポートエラーなしで `Vision dependencies OK` と出力されます。ロボットアームおよびカメラ SDK をインストールする前に、これらのチェックを完了してください。
 :::
 
 :::tip インストール失敗時の対処
-`-c requirements-pytorch.txt` は互換性のある PyTorch パッケージバージョンを制約します。この引数は必ず保持し、`--upgrade` を追加しないでください。pip が失敗した場合は、最後に表示されたエラー内容を確認し、該当フェーズを再試行してください。Conda 環境をアクティブにしていても、すべての依存関係が正常にインストールされているとは限りません。
+`-c requirements-pytorch.txt` は互換性のある PyTorch パッケージバージョンを制約します。この引数は必ず保持し、`--upgrade` を追加しないでください。pip が失敗した場合は、最後に表示されたエラー内容を確認し、該当するフェーズを再試行してください。Conda 環境をアクティブにしていても、すべての依存関係が正常にインストールされているとは限りません。
 
-インストールする OpenCV パッケージは `requirements.txt` に指定された標準版のみとしてください。本プロジェクトの ArUco API はバージョン 4.7 で利用可能であり、それと並行して追加の OpenCV ホイールをインストールしないでください。CLIP は Ultralytics の Git リポジトリからインストールされるため、システム上で Git が利用可能である必要があります。YOLOE を初めて読み込む際には、モデルの重みがダウンロードされる場合があります。
+OpenCV は `requirements.txt` で指定されている標準パッケージのみをインストールしてください。本プロジェクトの ArUco API はバージョン 4.7 で利用可能であり、それと並行して追加の OpenCV ホイールをインストールしないでください。CLIP は Ultralytics の Git リポジトリからインストールされるため、システムに Git が必要です。YOLOE を初めて読み込む際には、モデルの重みがダウンロードされる場合があります。
 :::
 
 </div>
@@ -366,7 +366,7 @@ pip install -e . を実行した際に「Multiple top-level packages discovered 
 include = ["reBotArm_control_py*"]
 ```
 
-B601 DM および RS の構成は、SDK の設定ファイルを通じて選択します。B601-RS の場合は、`sdk/reBotArm_control_py/config/rebotarm.yaml` で次の内容を確認してください：
+B601 DM および RS の構成は SDK の設定ファイルで選択します。B601-RS の場合は、`sdk/reBotArm_control_py/config/rebotarm.yaml` で次の内容を確認してください：
 
 ```yaml
 hardware_yaml: rebotarm_rs.yaml
@@ -382,14 +382,14 @@ hardware_yaml: rebotarm_rs.yaml
 
 #### ステップ 4. 深度カメラ SDK をインストールする
 
-このプロジェクトは Orbbec Gemini 2 や RealSense D435i / D405 などの RGB-D 深度カメラをサポートします。使用しているカメラに対応する SDK をインストールしてください。すでに環境からカメラドライバをインポートできる場合は、このステップをスキップできます。
+このプロジェクトは Orbbec Gemini 2 や RealSense D435i / D405 などの RGB-D 深度カメラをサポートします。お使いのカメラに対応する SDK をインストールしてください。すでに環境からカメラドライバをインポートできる場合は、このステップをスキップできます。
 
 <Tabs groupId="rebot-depth-camera" defaultValue="orbbec">
 <TabItem value="orbbec" label="Orbbec Gemini 2">
 
-Orbbec Gemini 2 深度カメラは、Orbbec SDK v2 用の Python ラッパーである `pyorbbecsdk` に依存します。まずは事前ビルド済みの Python パッケージをインストールする方法を推奨します。
+Orbbec Gemini 2 深度カメラは Orbbec SDK v2 用の Python ラッパーである `pyorbbecsdk` に依存します。まずは事前ビルド済みの Python パッケージをインストールする方法を推奨します。
 
-Linux / Ubuntu では、どのインストール方法を選ぶ場合でも、初めてカメラを使用する前に udev ルールを設定してください。これにより一般ユーザーが USB デバイスへアクセスできるようになり、システム全体にインストールされるため、各マシンで一度だけ設定すれば十分です。すでにルールが設定されている場合は、該当コマンドをスキップしてください。
+Linux / Ubuntu では、どのインストール方法を選ぶ場合でも、カメラを初めて使用する前に udev ルールを設定してください。これらのルールにより一般ユーザーが USB デバイスへアクセスできるようになり、システム全体にインストールされるため、各マシンで一度だけ設定すれば十分です。すでにルールが設定されている場合は、対応するコマンドをスキップしてください。
 
 <Tabs defaultValue="pip">
 <TabItem value="pip" label="オプション 1: pip からインストール（推奨）">
@@ -398,7 +398,7 @@ Linux / Ubuntu では、どのインストール方法を選ぶ場合でも、�
 pip install pyorbbecsdk2
 ```
 
-**udev ルールを設定する（Linux / Ubuntu）**
+**udev ルールの設定（Linux / Ubuntu）**
 
 `pyorbbecsdk2` 2.1.0 以降には環境セットアップスクリプトが含まれています。conda 環境をアクティブに保ったまま、インストールされたパッケージ内からこのスクリプトを実行してください。sudo 権限を要求し、udev ルールのインストールと再読み込みを自動的に行います。
 
@@ -445,9 +445,9 @@ git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 pip install -e .
 ```
 
-**udev ルールを設定する（Linux / Ubuntu）**
+**udev ルールの設定（Linux / Ubuntu）**
 
-クローンした `pyorbbecsdk` リポジトリのルートから、次のコマンドを実行します。新しいバージョンでは環境セットアップスクリプトを使用し、古いバージョンでは `install_udev_rules.sh` を使用します：
+クローンした `pyorbbecsdk` リポジトリのルートから次を実行します。新しいバージョンでは環境セットアップスクリプトを使用し、古いバージョンでは `install_udev_rules.sh` を使用します：
 
 ```bash
 if [ -f scripts/env_setup/setup_env.py ]; then
@@ -459,7 +459,7 @@ else
 fi
 ```
 
-検証および実行ステップを続ける前に、プロジェクトルートに戻ってください：
+検証および実行ステップを続ける前に、プロジェクトルートに戻ります：
 
 ```bash
 cd ../..
@@ -561,7 +561,7 @@ rebot_grasp/
 
 完全な把持パイプラインを実行する前に、まず Eye-in-Hand 方式のハンドアイキャリブレーションを完了させてください。
 
-キャリブレーションスクリプトを実行する前に、CAN インターフェースを起動して正常に動作していることを確認します：
+キャリブレーションスクリプトを実行する前に、CAN インターフェースを起動して動作を確認します：
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -584,15 +584,15 @@ calibration:
 python scripts/collect_handeye_eih.py
 ```
 
-自動モードでは、アームはあらかじめ設定された 50 個の姿勢を走査し、ArUco マーカーが安定して検出されたタイミングでサンプルを記録します。途中で `c` または `q` で処理を中断した場合でも、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
+自動モードでは、アームはあらかじめ設定された 50 個の姿勢を走査し、ArUco マーカーが安定して検出されたときにサンプルを記録します。途中で `c` または `q` で処理を中断した場合でも、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
 
-サンプリング中にロボットアームを手動で動かしたい場合は、マニュアルモードを使用します：
+サンプル収集中にロボットアームを手動で動かしたい場合は、マニュアルモードを使用します：
 
 ```bash
 python scripts/collect_handeye_eih.py --manual
 ```
 
-マニュアルモードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視野角に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了および結果の計算を行います。
+マニュアルモードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視野角に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了して結果を計算します。
 
 :::tip
 キャリブレーション後にロボットアームの把持精度が要件を満たさない場合は、`config/default.yaml` の `calibration.hand_eye_compensation_m` 配下にある `X`（前後）、`Y`（左右）、`Z`（上下）パラメータを設定して、位置補正を行うことができます。
@@ -604,7 +604,7 @@ python scripts/collect_handeye_eih.py --manual
 config/calibration/<camera_type>/hand_eye.npz
 ```
 
-推奨サンプル数は少なくとも 5 個で、15 個以上を推奨します。
+サンプル数は少なくとも 5 個以上を推奨し、15 個以上が望ましいです。
 
 ### 8. 実行とデバッグ
 
@@ -636,9 +636,9 @@ yolo:
 
 このステップでは次の点を確認できます：
 
-- カメラが正しくオープンするか
-- YOLO モデルが正しく読み込まれるか
-- YOLO による物体検出が期待どおりに動作するか
+- カメラが正しくオープンしているか
+- YOLO モデルが正しく読み込まれているか
+- YOLO 物体検出が期待どおりに動作しているか
 
 </div>
 </section>
@@ -652,7 +652,7 @@ yolo:
 python scripts/ordinary_grasp_pipeline.py
 ```
 
-把持推論の頻度やプレグラスプ時の退避距離を調整する必要がある場合は、次を編集します：
+把持推論の頻度やプレグラスプの退避距離を調整する必要がある場合は、次を編集します：
 
 ```yaml
 grasp_pipeline:
@@ -670,9 +670,9 @@ grasp_pipeline:
 - 把持点がターゲット中心付近に位置しているかどうか
 - 短軸方向が想定するグリッパの開閉方向と一致しているかどうか
 
-主な操作キー：
+主な操作：
 
-- マウス左ボタン：選択したピクセル位置の深度を確認
+- マウス左ボタン：選択したピクセルの深度を確認
 - `G`: 現在の最良把持姿勢を出力
 - `Q` / `Esc`: 終了
 
@@ -694,7 +694,7 @@ python scripts/main.py
 python scripts/main.py --dry-run
 ```
 
-実際の把持を行う前に、`--dry-run` を使って姿勢とワークスペースを検証してください。このモードでは、スクリプトはアームを初期化し、レディ姿勢へ移動し、終了時にクリーンアップと原点復帰を行います。ビジョンのみの検証には、アームに接続しない最初の 2 つのスクリプトを使用してください。
+実際に把持を行う前に、`--dry-run` で姿勢とワークスペースを検証してください。このモードでは、スクリプトはアームを初期化し、レディ姿勢へ移動し、終了時にクリーンアップと原点復帰を行います。ビジョンのみを検証したい場合は、アームに接続しない最初の 2 つのスクリプトを使用してください。
 
 メインプログラムのフロー：
 
@@ -743,8 +743,8 @@ python scripts/set.py
 2. リアルタイムカメラプレビュー + YOLO 物体検出およびインスタンスセグメンテーション
 3. `G` を押してフレームを固定し、ハンドアイ変換を通じてアームのターゲット姿勢を計算
 4. アームがバナナを把持して持ち上げる
-5. アームがバナナを箱の中に配置し、初期姿勢に戻る
-6. `Q` を押してシステムを終了すると、アームはゼロ位置に戻る
+5. アームがバナナを箱に配置し、初期姿勢に戻る
+6. `Q` を押してシステムを終了し、アームがゼロ位置に戻る
 
 </div>
 </section>
@@ -761,7 +761,7 @@ python scripts/set.py
 
 #### ステップ 1. GraspNet と CUDA オペレータをインストール
 
-`scripts/main.py` や `scripts/ordinary_grasp_pipeline.py` を実行するだけなら GraspNet は不要です。GraspNet、CUDA 対応 PyTorch、PointNet2/knn CUDA オペレータ、および学習済みチェックポイントが必要となる `scripts/graspnet_camera_demo.py` または `scripts/grasp.py` を実行したい場合にのみ設定してください。
+`scripts/main.py` や `scripts/ordinary_grasp_pipeline.py` では GraspNet は不要です。GraspNet が必要な `scripts/graspnet_camera_demo.py` や `scripts/grasp.py` を実行したい場合にのみ設定してください。これらは GraspNet、CUDA 対応 PyTorch、PointNet2/knn CUDA オペレータ、および学習済みチェックポイントを必要とします。
 
 GraspNet の `pointnet2` / `knn` 拡張には CUDA コンパイラが必要です。開始前に、現在の環境で `nvcc` が利用可能であることを確認し、その CUDA バージョンを PyTorch のビルドに使用されたバージョンと比較してください：
 
@@ -786,18 +786,18 @@ nvidia-smi
 python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
 ```
 
-`torch.cuda.is_available()` が `True` と表示される場合は、次のステップに進みます。PyTorch が存在しない、`torch.version.cuda` が `None` である、または CUDA が利用できない場合は、基本インストールのステップ 2 に戻り、NVIDIA のインストールと検証を完了してください。CPU ビルドと CUDA ビルドを切り替える際は、再インストール前に古いビルドを削除してください。
+`torch.cuda.is_available()` が `True` を出力したら、次のステップに進みます。PyTorch が存在しない場合、`torch.version.cuda` が `None` の場合、または CUDA が利用できない場合は、基本インストールのステップ 2 に戻り、NVIDIA のインストールと検証を完了してください。CPU ビルドと CUDA ビルドを切り替える際は、再インストール前に古いビルドを削除してください。
 
 **ステップ 3: PyTorch に一致する CUDA コンパイラをインストール**
 
-`pointnet2` / `knn` はローカル CUDA 拡張です。ビルド時に `nvcc --version` が報告する CUDA バージョンは `torch.version.cuda` と一致している必要があり、一致しない場合は `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーでビルドが失敗します。まず両方のバージョンを確認してください：
+`pointnet2` / `knn` はローカル CUDA 拡張です。ビルド時に `nvcc --version` が報告する CUDA バージョンは `torch.version.cuda` と一致している必要があります。一致しない場合、`The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーでビルドが失敗します。まず両方のバージョンを確認してください：
 
 ```bash
 nvcc --version
 python -c "import torch; print(torch.version.cuda)"
 ```
 
-例として、`torch.version.cuda` が `12.8` と表示されている場合、そのバージョンに一致するコンパイラを conda 環境内にインストールします：
+例として、`torch.version.cuda` が `12.8` を示している場合、対応するコンパイラを conda 環境内にインストールします：
 
 ```bash
 conda install -c nvidia cuda-nvcc=12.8 cuda-cudart-dev=12.8
@@ -806,10 +806,10 @@ which nvcc       # should point to $CONDA_PREFIX/bin/nvcc, not /usr/bin/nvcc
 nvcc --version   # should match torch.version.cuda
 ```
 
-`cuda-nvcc` はコンパイラを提供し、`cuda-cudart-dev` は `targets/x86_64-linux/include` 配下に CUDA ヘッダを提供します。どちらも必須です。conda 環境が有効化されると `$CONDA_PREFIX/bin` がシステムパスより前に来るため、conda の `nvcc` が自動的に古いシステム側（例：Ubuntu リポジトリの CUDA 11.5）を隠蔽します。システム CUDA をアンインストールする必要はありません。
+`cuda-nvcc` はコンパイラを提供し、`cuda-cudart-dev` は `targets/x86_64-linux/include` 配下に CUDA ヘッダを提供します。どちらも必須です。conda 環境を有効化すると `$CONDA_PREFIX/bin` がシステムパスより前に来るため、conda の `nvcc` が自動的に古いシステムの `nvcc`（例：Ubuntu リポジトリの CUDA 11.5）を隠蔽します。システムの CUDA をアンインストールする必要はありません。
 
 :::warning
-古いシステムの `nvcc` に合わせるために PyTorch をダウングレードしないでください。古い CUDA リリースは GPU アーキテクチャをサポートしていない場合があります（CUDA 11.5 がサポートするのは最大 sm_86 までで、RTX 40 シリーズには CUDA 11.8+、RTX 50 シリーズには CUDA 12.8+ が必要です）。また、古い PyTorch ビルドは、最新の ultralytics リリースなど他のプロジェクト依存関係と非互換な場合があります。
+古いシステムの `nvcc` に合わせるために PyTorch をダウングレードしないでください。古い CUDA リリースはお使いの GPU アーキテクチャをサポートしていない可能性があります（CUDA 11.5 がサポートするのは最大 sm_86 までで、RTX 40 シリーズには CUDA 11.8+、RTX 50 シリーズには CUDA 12.8+ が必要です）。また、古い PyTorch ビルドは、最新の ultralytics リリースなど他のプロジェクト依存関係と互換性がない場合があります。
 :::
 
 **ステップ 4: 検証**
@@ -819,7 +819,7 @@ python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda
 nvcc --version
 ```
 
-CUDA バージョンが一致し、`torch.cuda.is_available()` が `True` を出力すれば、PyTorch のセットアップは完了で、CUDA オペレータのビルドを続行できます。
+CUDA のバージョンが一致しており、`torch.cuda.is_available()` が `True` を出力すれば、PyTorch のセットアップは完了で、CUDA オペレータのビルドを続行できます。
 
 ```bash
 cd sdk
@@ -863,7 +863,7 @@ cd ../../..
 :::
 
 :::tip
-さらに、古い GraspNet API 依存関係は、非推奨となった `sklearn` パッケージ名をまだ使用している場合があります。インストール中に `The 'sklearn' PyPI package is deprecated` を回避するために、`sed` コマンドで現在推奨されている `scikit-learn` パッケージ名に置き換えています。古い GraspNet API 依存関係も同時にアップグレードしない限り、`transforms3d==0.3.1` が依然として `np.float` のような古い NumPy エイリアスを使用しているため、その `numpy==1.23.4` 制約は維持してください。
+さらに、古い GraspNet API 依存関係は、非推奨となった `sklearn` パッケージ名を依然として使用している場合があります。`sed` コマンドは、インストール中に `The 'sklearn' PyPI package is deprecated` が発生するのを避けるために、現在推奨されている `scikit-learn` パッケージ名に置き換えます。古い GraspNet API 依存関係も同時にアップグレードしない限り、`transforms3d==0.3.1` が依然として `np.float` のような古い NumPy エイリアスを使用しているため、その `numpy==1.23.4` 制約は維持してください。
 :::
 
 **学習済みモデルの設定**
@@ -883,7 +883,7 @@ graspnet:
   checkpoint: "checkpoint-rs.tar"
 ```
 
-`checkpoint` フィールドは 3 つの形式をサポートします：ファイル名の場合は `sdk/graspnet-baseline/checkpoints/` 配下として解決されます。相対パスの場合はプロジェクトルートからのパスとして解決されます。絶対パスの場合はそのまま使用されます。
+`checkpoint` フィールドは 3 つの形式をサポートします：ファイル名の場合は `sdk/graspnet-baseline/checkpoints/` 配下として解決されます。相対パスの場合はプロジェクトルートから解決されます。絶対パスの場合はそのまま使用されます。
 
 </div>
 </section>
@@ -897,7 +897,7 @@ graspnet:
 python scripts/graspnet_camera_demo.py
 ```
 
-このスクリプトは、ロボットアームに接続せずに RGB-D カメラのみで GraspNet の 6D 把持姿勢推定を実行します。ライブカメラプレビューを維持し、YOLO のバウンディングボックスを使用してターゲット領域を選択し、ターゲットの bbox によって GraspNet のフルシーン候補のうち実行可能なものをフィルタリングします。
+このスクリプトは、ロボットアームを接続せずに RGB-D カメラのみで GraspNet の 6D 把持姿勢推定を実行します。ライブカメラプレビューを維持し、YOLO のバウンディングボックスを使用して対象領域を選択し、対象の bbox によって GraspNet のフルシーン候補のうち実行可能なものをフィルタリングします。
 
 主な操作：
 
@@ -921,9 +921,9 @@ python scripts/grasp.py --dry-run
 python scripts/grasp.py --target-class "light blue coffee cup"
 ```
 
-このスクリプトは、GraspNet の推定結果をロボットアームの実行フローに接続します。YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションがそれをロボットベース座標系に変換し、スクリプトが IK の到達可能性を確認してから、プレグラスプ、グラスプ、リトリートのモーションシーケンスを実行します。
+このスクリプトは、GraspNet の推定結果をロボットアームの実行フローに接続します。YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションがそれをロボットベース座標系に変換し、スクリプトは IK による到達可能性を確認してから、プレグラスプ、グラスプ、リトリートのモーションシーケンスを実行します。
 
-`python scripts/grasp.py` を実行すると、GraspNet によるロボット把持のフロー全体が開始され、ロボットアームが制御されます。`--dry-run` はターゲット姿勢と候補フィルタリング結果を出力し、把持動作をスキップします。現在のスクリプトはそれでもアームを初期化し、レディポーズへ移動し、終了時にクリーンアップと原点復帰を行います。`--target-class "light blue coffee cup"` は YOLO のターゲットクラスを指定し、そのクラスに対する GraspNet 候補のみをフィルタリングして把持します。
+`python scripts/grasp.py` を実行すると、GraspNet のロボット把持フロー全体が開始され、ロボットアームが制御されます。`--dry-run` はターゲット姿勢と候補フィルタリング結果を出力し、把持動作をスキップします。現在のスクリプトはそれでもアームを初期化し、レディポーズへ移動し、終了時にクリーンアップと原点復帰を行います。`--target-class "light blue coffee cup"` は YOLO のターゲットクラスを指定し、そのクラスの GraspNet 候補のみをフィルタリングして把持します。
 
 </div>
 </section>
@@ -978,7 +978,7 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-検証（`pointnet2_utils` / `knn_modules` はソースディレクトリからトップレベルモジュールとしてインポートされます。これは `models/` がそれらをインポートする方法と同じです。把持スクリプトはソースディレクトリを自動的に `sys.path` に追加します）：
+検証します（`pointnet2_utils` / `knn_modules` はソースディレクトリからトップレベルモジュールとしてインポートされます。`models/` も同様の方法でインポートします。把持スクリプトはソースディレクトリを自動的に `sys.path` に追加します）：
 
 ```bash
 cd sdk/graspnet-baseline
@@ -987,7 +987,7 @@ python -c "import sys; sys.path[:0]=['pointnet2','knn']; import pointnet2_utils,
 
 <h4>5. GraspNet 実行時に新しい GPU で CUDA アーキテクチャ互換性の問題が発生する</h4>
 
-`no kernel image is available for execution on the device` が表示されたり、PyTorch が現在の GPU CUDA ケイパビリティがサポートされていないと報告する場合、インストールされている PyTorch ホイールにその GPU アーキテクチャ向けの CUDA カーネルが含まれていない可能性が高いです。現在の CUDA / GPU アーキテクチャをサポートする PyTorch ビルドをインストールし、その後 GraspNet のローカル CUDA 拡張を再ビルドしてください。
+`no kernel image is available for execution on the device` が表示されたり、PyTorch が現在の GPU CUDA ケイパビリティがサポートされていないと報告する場合、インストールされている PyTorch ホイールにはその GPU アーキテクチャ向けの CUDA カーネルが含まれていない可能性があります。現在の CUDA / GPU アーキテクチャをサポートする PyTorch ビルドをインストールし、その後 GraspNet のローカル CUDA 拡張を再ビルドしてください。
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
@@ -999,7 +999,7 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-ビルドアーキテクチャを手動で指定する必要がある場合は、再ビルド前に `TORCH_CUDA_ARCH_LIST` を設定してください。GPU アーキテクチャと PyTorch / CUDA バージョンに応じて値を選択します。
+ビルドアーキテクチャを手動で指定する必要がある場合は、再ビルド前に `TORCH_CUDA_ARCH_LIST` を設定します。GPU アーキテクチャと PyTorch / CUDA バージョンに応じて値を選択してください。
 
 <h4>6. GraspNet 推論で <code>RuntimeError: CPU not supported</code> が報告される</h4>
 
@@ -1018,13 +1018,13 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### 1. プロジェクト概要
 
-このワークフローでは、**ROS 2** と **YOLOE** を使用して reBot Arm B601-RS 上で物体検出、把持、および配置を行います。アーム、深度カメラ、把持ノードをそれぞれ別のターミナルで起動します。
+このワークフローでは、**ROS 2** と **YOLOE** を使用して reBot Arm B601-RS 上で物体検出、把持、および配置を行います。ロボットアーム、深度カメラ、把持ノードをそれぞれ別のターミナルで起動します。
 
-対応している深度カメラは **Orbbec Gemini 2** と **RealSense D405 / D435i** です。ロボットモデルにはカメラ取り付け用の外部パラメータがプリセットされているため、キャリブレーションボードを使ったハンドアイキャリブレーションデータの収集を省略できます。カメラには指定されたブラケットと取り付け位置を使用してください。取り付けや造形部品の公差によって誤差が生じる可能性があります。オフセットを微調整する前に、TF とターゲット姿勢を確認してください。
+対応している深度カメラは **Orbbec Gemini 2** と **RealSense D405 / D435i** です。ロボットモデルにはカメラマウント用の外部パラメータがプリセットされているため、キャリブレーションボードを使ったハンドアイキャリブレーションデータの収集を省略できます。指定されたブラケットとマウント位置を使用してカメラを取り付けてください。マウントや造形部品の公差によって誤差が生じる可能性があります。オフセットを微調整する前に、TF とターゲット姿勢を確認してください。
 
 ### 2. 環境構築
 
-このワークフローでは Ubuntu 22.04、ROS 2 Humble、システムの Python 3.10、および `yolo` という名前の専用 Conda 環境を使用します。YOLOE 推論用の Conda 環境を作成する前に、システム環境内でアーム、カメラドライバ、ビジュアルグラスピングパッケージをまとめてセットアップしてビルドします。
+このワークフローでは、Ubuntu 22.04、ROS 2 Humble、システムの Python 3.10、および `yolo` という名前の専用 Conda 環境を使用します。YOLOE 推論用の Conda 環境を作成する前に、システム環境内でアーム、カメラドライバ、ビジュアルグラスピングパッケージをまとめてセットアップしてビルドします。
 
 手順 1〜4 は、Conda が無効な新しいターミナルで実行します。システムの ROS セットアップだけを source し、古いワークスペースは source しないでください。ターミナル A、B、D、E もシステム環境を使用します。ターミナル C でのみ `yolo` 環境を使用します。Python SDK / OBB ワークフローの環境ファイルとインストールコマンドは、そのワークフロー専用です。
 
@@ -1035,7 +1035,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 #### ステップ 1. ロボットアームの ROS 2 ワークスペースをインストールする
 
-[reBot Arm B601-RS ROS 2 Integration](https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_ros2_integration/) ガイドに従ってアームを準備し、ROS 2 Humble、ビルドツール、アームのワークスペース、低レベル SDK をインストールします。アームのワークスペースが正常にビルドできることを確認してください。このガイドでも同じ `~/rebotarm_ros2` ワークスペースを使い続けます。
+[reBot Arm B601-RS ROS 2 Integration](https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_ros2_integration/) ガイドに従って、アームを準備し、ROS 2 Humble、ビルドツール、アームのワークスペース、および低レベル SDK をインストールします。アームのワークスペースが正常にビルドできることを確認してください。このガイドでも同じ `~/rebotarm_ros2` ワークスペースを使い続けます。
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -1044,7 +1044,7 @@ sudo apt update
 sudo apt install -y python3-rosdep python3-colcon-common-extensions git wget cmake build-essential
 ```
 
-`ROS_DISTRO` が `humble` を返すことを確認してください。ワークスペースにすでに以下のリポジトリのいずれかが含まれている場合は、先に進む前にそのブランチと内容を確認します。各リポジトリはパスごとに 1 回だけクローンしてください。
+`ROS_DISTRO` が `humble` を返すことを確認してください。ワークスペースにすでに以下のリポジトリのいずれかが含まれている場合は、先に進む前にブランチと内容を確認してください。各リポジトリはパスごとに 1 回だけクローンします。
 
 </div>
 </section>
@@ -1054,10 +1054,12 @@ sudo apt install -y python3-rosdep python3-colcon-common-extensions git wget cma
 
 #### ステップ 2. カメラをインストールする
 
-使用するカメラのセットアップ手順を展開してください。
+使用するカメラのタブを選択し、インストール手順に従ってください。
 
-<details className="content-details">
-<summary>クリックして Gemini 2 のセットアップを展開</summary>
+<Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2 / Gemini 305">
+
+Gemini 2 と Gemini 305 は、以下の同じドライバインストール手順を使用します。ドライバは Gemini 305 をサポートしますが、このチュートリアルではそのカメラでのビジュアルグラスピングワークフローの検証は提供しません。
 
 Orbbec ROS 2 SDK をワークスペースにクローンし、`v2-main` ブランチに切り替えます。
 
@@ -1068,7 +1070,7 @@ cd OrbbecSDK_ROS2
 git checkout v2-main
 ```
 
-ドライバリポジトリに記載されているネイティブ依存関係をインストールします。ROS の依存関係はステップ 3 でまとめてインストールします。
+ドライバリポジトリに記載されているネイティブ依存関係をインストールします。ステップ 3 で ROS 依存関係をまとめてインストールします。
 
 ```bash
 sudo apt install -y libgflags-dev nlohmann-json3-dev libgoogle-glog-dev libdw-dev libssl-dev mesa-utils libgl1 \
@@ -1083,12 +1085,10 @@ sudo bash install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-</details>
+</TabItem>
+<TabItem value="realsense" label="RealSense D405 / D435i">
 
-<details className="content-details">
-<summary>クリックして D405 / D435i のセットアップを展開</summary>
-
-1. ビルド依存関係をインストールしてから RealSense SDK をクローンし、`v2.58.1` に切り替えます。
+1. ビルド依存関係をインストールし、RealSense SDK をクローンして `v2.58.1` に切り替えます。
 
 ```bash
 sudo apt update
@@ -1111,7 +1111,7 @@ cd ~/librealsense
 
 3. SDK をビルドしてインストールします。
 
-このビルドでは、カーネルの UVC モジュールにパッチを当てることを避けるために RSUSB バックエンドを使用します。サンプルと GLSL 拡張は無効化します。`BUILD_TOOLS=ON` により、`rs-enumerate-devices` などのコマンドラインツールが利用可能なままになります。`realsense-viewer` はグラフィカルなサンプルです。
+このビルドでは、カーネルの UVC モジュールにパッチを当てることを避けるために RSUSB バックエンドを使用します。サンプルと GLSL 拡張は無効化します。`BUILD_TOOLS=ON` により、`rs-enumerate-devices` などのコマンドラインツールを利用可能なままにします。`realsense-viewer` はグラフィカルなサンプルです。
 
 ```bash
 cd ~/librealsense &&
@@ -1138,9 +1138,10 @@ cd ~/rebotarm_ros2/src
 git clone https://github.com/xiehuangbao888/realsense-ros.git
 ```
 
-カメラドライバの ROS 依存関係はステップ 3 でインストールし、ワークスペースはステップ 4 でビルドします。カメラを再接続し、`lsusb -t` を実行して USB 3.x で接続されていることを確認します。速度は通常 `5000M` 以上である必要があります。
+ステップ 3 でカメラドライバの ROS 依存関係をインストールし、ステップ 4 でワークスペースをビルドします。カメラを再接続し、`lsusb -t` を実行して USB 3.x で接続されていることを確認します。速度は通常 `5000M` 以上である必要があります。
 
-</details>
+</TabItem>
+</Tabs>
 
 </div>
 </section>
@@ -1155,7 +1156,7 @@ cd ~/rebotarm_ros2/src/
 git clone https://github.com/xiehuangbao888/rebot_visual_grasp.git
 ```
 
-初回使用時に `rosdep` を初期化します。`default sources list file already exists` と表示された場合は、インデックスの更新に直接進んでください。
+初回使用時に `rosdep` を初期化します。`default sources list file already exists` と表示された場合は、そのままインデックスの更新に進んでください。
 
 ```bash
 sudo rosdep init
@@ -1167,9 +1168,9 @@ cd ~/rebotarm_ros2
 rosdep install --from-paths src --ignore-src -r -y --rosdistro humble --skip-keys="librealsense2 orbbec_description realsense2_description"
 ```
 
-このコマンドは、クローンした ROS パッケージで宣言されているシステム依存関係をインストールします。`diagnostic_updater`、`cv_bridge`、`xacro` などが含まれます。RealSense のセットアップではすでに `librealsense2` をソースからインストール済みです。残りの 2 つのキーはカメラ記述パッケージです。ステップ 2 でクローンしたソースには使用中のカメラ用の記述パッケージが含まれており、もう一方のカメラのパッケージはこのセットアップでは任意です。これらのキーを省略することで、SDK の再インストールや、もう一方のカメラ用依存関係によるブロックを避けられます。
+このコマンドは、クローンした ROS パッケージで宣言されているシステム依存関係をインストールします。`diagnostic_updater`、`cv_bridge`、`xacro` などが含まれます。RealSense のセットアップでは、すでに `librealsense2` をソースからインストール済みです。残り 2 つのキーはカメラ記述パッケージです。ステップ 2 でクローンしたソースには、使用するカメラ用の記述パッケージが含まれており、もう一方のカメラのパッケージはこのセットアップでは任意です。これらのキーをスキップすることで、SDK の再インストールや、もう一方のカメラ用依存関係によるブロックを避けられます。
 
-`All required rosdeps installed successfully` と表示されることを確認してください。ビルド前に残っている依存関係エラーをすべて解消します。インストールが正常に完了したことを確認するために、出力全体を確認してください。
+`All required rosdeps installed successfully` と表示されることを確認してください。ビルド前に、残っている依存関係エラーをすべて解決します。インストールが正常に完了したことを確認するために、出力全体を確認してください。
 
 </div>
 </section>
@@ -1182,7 +1183,7 @@ rosdep install --from-paths src --ignore-src -r -y --rosdistro humble --skip-key
 このワークスペースをビルドする際は、カメラドライバとビジュアルグラスピングパッケージを追加した後も含めて、一貫して `--symlink-install` を使用してください。
 
 :::tip 以前のビルドディレクトリとの競合
-以前に `--symlink-install` なしでビルドしていた場合、これに切り替えると `failed to create symbolic link` や `existing path cannot be removed: Is a directory` が発生することがあります。前回のビルドで作成されたディレクトリが、新しいシンボリックリンクと競合しているためです。ビルド成果物を削除してから再ビルドしてください。
+以前に `--symlink-install` なしでビルドしていた場合、これに切り替えると `failed to create symbolic link` や `existing path cannot be removed: Is a directory` が発生することがあります。以前のビルドから残っているディレクトリが、新しいシンボリックリンクと競合しているためです。ビルド成果物を削除してから再ビルドしてください。
 
 Conda が無効で、ワークスペースの `install/setup.bash` を source していない新しいターミナルを開き、次のコマンドを実行します。
 
@@ -1191,7 +1192,7 @@ cd ~/rebotarm_ros2
 rm -rf build install log
 ```
 
-これにより、ワークスペースの build、install、log ディレクトリが削除され、`src` やその他のソースファイルは保持されます。その後、使用しているカメラ用のコマンドを使ってワークスペース全体を再ビルドします。
+これにより、ワークスペースの build、install、log ディレクトリが削除され、`src` などのソースファイルは保持されます。その後、使用するカメラ用のコマンドを使ってワークスペース全体を再ビルドします。
 :::
 
 ```bash
@@ -1199,18 +1200,20 @@ cd ~/rebotarm_ros2
 source /opt/ros/humble/setup.bash
 ```
 
-<Tabs groupId="rebot-ros2-camera-build" defaultValue="realsense">
+<Tabs groupId="rebot-ros2-camera" defaultValue="orbbec">
+<TabItem value="orbbec" label="Orbbec Gemini 2 / Gemini 305">
+
+まず、ステップ 2 の Gemini 2 / Gemini 305 用の手順に従って Orbbec ROS 2 ドライバをインストールし、その後ビルドします。
+
+```bash
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+</TabItem>
 <TabItem value="realsense" label="RealSense D405 / D435i">
 
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DUSE_LIFECYCLE_NODE=OFF
-```
-
-</TabItem>
-<TabItem value="orbbec" label="Orbbec Gemini 2">
-
-```bash
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
 </TabItem>
@@ -1223,7 +1226,7 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 pkg prefix rebot_visual_grasp
 ```
 
-RealSense の場合は `ros2 pkg prefix realsense2_camera` も実行します。Gemini 2 の場合は `ros2 pkg prefix orbbec_camera` を実行します。現在のワークスペース内で、選択したパッケージのインストールパスが表示されることを確認してください。
+RealSense の場合は `ros2 pkg prefix realsense2_camera` も実行します。Gemini 2 または Gemini 305 の場合は `ros2 pkg prefix orbbec_camera` を実行します。現在のワークスペース内で、選択したパッケージのインストールパスが表示されることを確認してください。
 
 **ビルド結果を確認する**
 
@@ -1234,17 +1237,17 @@ Summary: 11 packages finished [33.8s]
   4 packages had stderr output: realsense2_camera_msgs realsense2_description rebotarm_moveit_config rebotarm_msgs
 ```
 
-パッケージ数やビルド時間は、ワークスペースやコンピュータによって異なります。`packages had stderr output` は、それらのパッケージが標準エラーに出力したことを意味します。何が起きたかを確認するためにログを確認してください。出力が以下で説明する CMake の警告だけであれば、ビルドは成功している可能性があります。
+パッケージ数やビルド時間は、ワークスペースやコンピュータによって異なります。`packages had stderr output` は、それらのパッケージが標準エラーに出力を書き込んだことを意味します。何が起きたかを確認するためにログを確認してください。出力が以下で説明する CMake の警告だけであれば、ビルドは成功している可能性があります。
 
 :::tip クリーンアップ後の古いパスと CMake の警告
-ワークスペースの `install/setup.bash` を source したターミナルで `install` を削除し、そのまま同じターミナルで再ビルドした場合、`AMENT_PREFIX_PATH` や `CMAKE_PREFIX_PATH` に存在しないパスに関する警告が表示されることがあります。ターミナルには以前のインストールパスが残っているためです。すべてのパッケージが正常にビルドできていれば、上記のように新しい `install/setup.bash` を source して続行してください。
+ワークスペースの `install/setup.bash` を source した状態で `install` を削除し、同じターミナルで再ビルドした場合、`AMENT_PREFIX_PATH` や `CMAKE_PREFIX_PATH` に存在しないパスに関する警告が表示されることがあります。ターミナルには以前のインストールパスが残っているためです。すべてのパッケージが正常にビルドできていれば、上記のように新しい `install/setup.bash` を source して続行してください。
 
-以降のビルドでは、新しいターミナルを使用し、ビルド前に `/opt/ros/humble/setup.bash` のみを source してください。`~/.bashrc` が自動的にワークスペースを source している場合は、クリーンアップ後に再ビルドする前に、その行を一時的に無効にしてください。
+2 回目以降のビルドでは、新しいターミナルを使用し、ビルド前に `/opt/ros/humble/setup.bash` のみを source してください。`~/.bashrc` が自動的にワークスペースを source している場合は、クリーンアップ後に再ビルドする前に、その行を一時的に無効にしてください。
 
-`--cmake-args -DUSE_LIFECYCLE_NODE=OFF` を指定すると、一部のパッケージで `Manually-specified variables were not used by the project: USE_LIFECYCLE_NODE` と表示される場合があります。この CMake の警告は、そのオプションを使用しているドライバ以外のパッケージでは想定されたものです。
+`--cmake-args -DUSE_LIFECYCLE_NODE=OFF` を使用すると、一部のパッケージで `Manually-specified variables were not used by the project: USE_LIFECYCLE_NODE` と表示される場合があります。これは、このオプションを使用しないドライバ外のパッケージに対して想定される CMake の警告です。
 :::
 
-ROS ワークスペースをビルドしたら、ステップ 5 で Conda 推論環境を作成します。新しいターミナルを開くたびに、ROS コマンドを実行する前に両方のセットアップファイルを source してください。
+ROS ワークスペースをビルドしたら、手順 5 で Conda 推論環境を作成します。新しいターミナルを開くたびに、ROS コマンドを実行する前に両方のセットアップファイルを source してください。
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -1257,11 +1260,11 @@ source ~/rebotarm_ros2/install/setup.bash
   <span className="rebot-step-number">5</span>
 <div className="rebot-step-content">
 
-#### ステップ 5. YOLOE 環境をセットアップする
+#### 手順 5. YOLOE 環境をセットアップする
 
-`grasp_yolo` は Python から Ultralytics YOLOE を呼び出します。このノード用に専用の Conda 環境内の Python インタプリタを使用します。
+`grasp_yolo` は Python から Ultralytics YOLOE を呼び出します。このノード専用の Conda 環境内の Python インタプリタを使用してください。
 
-このステップは、Ubuntu 22.04、ROS 2 Humble、Python 3.10 を実行している x86_64 ホストに適用されます。環境を作成し、PyTorch のバックエンドを選択してから、ビジョンおよび ROS の Python 実行時依存関係をインストールします。Conda 内では依存関係を別途確認してください。apt でインストールした Python パッケージは、Conda 環境内では利用できない場合があります。
+この手順は、Ubuntu 22.04、ROS 2 Humble、Python 3.10 を実行している x86_64 ホストに適用されます。環境を作成し、PyTorch のバックエンドを選択してから、画像処理および ROS Python ランタイム依存関係をインストールします。Conda 内では依存関係を別途確認してください。apt 経由でインストールした Python パッケージは、Conda 環境内では利用できない場合があります。
 
 <div className="rebot-step-flow rebot-step-flow--substeps">
 <section className="rebot-step-item">
@@ -1288,12 +1291,12 @@ Python パスは Conda インストール内の `envs/yolo/bin/python` で終わ
 
 ##### 5.2 ハードウェアに合わせて PyTorch をインストールする
 
-両方のタブで、PyTorch `2.9.1`、torchvision `0.24.1`、torchaudio `2.9.1` をそれぞれのパッケージインデックスからインストールします。アクティブな `yolo` 環境で、どちらか一方のバックエンドを選択してください。
+どちらのタブでも、PyTorch `2.9.1`、torchvision `0.24.1`、torchaudio `2.9.1` をそれぞれのパッケージインデックスからインストールします。アクティブな `yolo` 環境で、いずれか 1 つのバックエンドを選択してください。
 
 <Tabs groupId="rebot-ros2-pytorch-backend" defaultValue="cpu">
-<TabItem value="cpu" label="CPU (NVIDIA GPU なし)">
+<TabItem value="cpu" label="CPU (no NVIDIA GPU)">
 
-Intel または AMD の統合グラフィックスを搭載したコンピュータで使用するか、まず CPU 上でセットアップを検証する場合にこのオプションを使用します。
+Intel または AMD の統合グラフィックスを搭載したコンピュータ、あるいはまず CPU 上でセットアップを検証したい場合に、このオプションを使用します。
 
 ```bash
 python -m pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cpu
@@ -1301,13 +1304,13 @@ python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA a
 ```
 
 :::note 期待される結果
-PyTorch のパスはアクティブな Conda 環境内にあり、コマンドはランダムなテンソルを出力します。このバックエンドでは `CUDA available: False` が期待されます。`grasp_yolo` を起動するときは `-p yolo_device:=cpu` を設定します。CPU 推論のフレームレートはモデルとコンピュータに依存します。
+PyTorch のパスはアクティブな Conda 環境内にあり、コマンドはランダムなテンソルを出力します。このバックエンドでは `CUDA available: False` が期待される結果です。`grasp_yolo` を起動するときは `-p yolo_device:=cpu` を指定してください。CPU 推論のフレームレートは、モデルとコンピュータに依存します。
 :::
 
 </TabItem>
 <TabItem value="nvidia" label="NVIDIA GPU (CUDA)">
 
-PyTorch の CUDA ビルドをインストールする前に、ドライバが NVIDIA GPU を検出していることを確認してください。この例では CUDA 12.8 を使用しており、GPU アーキテクチャとドライバの両方が対応している必要があります。
+PyTorch の CUDA ビルドをインストールする前に、ドライバが NVIDIA GPU を検出していることを確認してください。ここでは CUDA 12.8 を例に使用しています。このバージョンは、GPU アーキテクチャとドライバの両方が対応している必要があります。
 
 ```bash
 nvidia-smi
@@ -1316,13 +1319,13 @@ python -c "import torch; print(torch.__version__, torch.__file__); print('CUDA b
 ```
 
 :::note 期待される結果
-`nvidia-smi` が GPU を一覧表示し、PyTorch のパスはアクティブな Conda 環境内にあり、コマンドは `CUDA available: True` と CUDA テンソルを出力します。`grasp_yolo` を起動するときは `-p yolo_device:=0` を使用して GPU 0 を選択します。
+`nvidia-smi` に GPU が表示され、PyTorch のパスはアクティブな Conda 環境内にあり、コマンドは `CUDA available: True` と CUDA テンソルを出力します。`grasp_yolo` を起動するときに `-p yolo_device:=0` を使用して GPU 0 を選択してください。
 :::
 
 :::tip CUDA ビルドを選択する
-GPU、ドライバ、Python バージョンをサポートするビルドを選択するには、[公式の PyTorch バージョン一覧](https://pytorch.org/get-started/previous-versions/) を使用してください。ビルドを選択する際は、`nvidia-smi` に表示される CUDA バージョンだけでは不十分なため、これら 3 つすべてを考慮してください。事前ビルド済みホイールは、標準的な YOLOE 推論用の CUDA ランタイムを提供します。
+[公式の PyTorch バージョン一覧](https://pytorch.org/get-started/previous-versions/)を参照し、お使いの GPU、ドライバ、Python バージョンに対応するビルドを選択してください。`nvidia-smi` が表示する CUDA バージョンだけでは不十分なため、ビルドを選ぶ際はこの 3 点をすべて考慮してください。ビルド済みホイールには、標準的な YOLOE 推論に必要な CUDA ランタイムが含まれています。
 
-CUDA が利用できない場合は、ドライバ、GPU アーキテクチャ、選択したホイールを確認するか、CPU タブに切り替えて基本的なセットアップを検証してください。PyTorch のバージョンを変更する場合は、対応する torchvision と torchaudio のバージョン、および次のフェーズで使用するピンも更新してください。
+CUDA が利用できない場合は、ドライバ、GPU アーキテクチャ、選択したホイールを確認するか、CPU タブに切り替えて基本的なセットアップを検証してください。PyTorch のバージョンを変更する場合は、対応する torchvision と torchaudio のバージョン、および次のフェーズで使用する固定バージョンも更新してください。
 :::
 
 </TabItem>
@@ -1332,11 +1335,11 @@ CUDA が利用できない場合は、ドライバ、GPU アーキテクチャ�
 </section>
 <section className="rebot-step-item">
   <span className="rebot-step-number" aria-hidden="true">5.3</span>
-<div className="rebot-step-content">
+  <div className="rebot-step-content">
 
 ##### 5.3 プロジェクト依存関係をインストールして検証する
 
-いずれか一方のバックエンドをインストールしたら、`yolo` をアクティブに保ったまま、ビジョンおよび Python 実行時の依存関係をインストールします。このコマンドは対応する PyTorch バージョンを維持しつつ、NumPy と OpenCV の制約をまとめて解決します。
+いずれか 1 つのバックエンドをインストールしたら、`yolo` をアクティブに保ったまま、画像処理および Python ランタイム依存関係をインストールします。このコマンドは対応する PyTorch バージョンを維持しつつ、NumPy と OpenCV の制約をまとめて解決します。
 
 ```bash
 python -m pip install "ultralytics==8.4.202" "torch==2.9.1" "torchvision==0.24.1" "torchaudio==2.9.1" "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d pyyaml lark typeguard
@@ -1346,7 +1349,7 @@ python -m pip install git+https://github.com/ultralytics/CLIP.git
 ```
 
 :::tip PyTorch インストール中の ROS 依存関係メッセージ
-すでに ROS 2 を source 済みの場合、pip が `generate-parameter-library-py` は `pyyaml` と `typeguard` を必要とすると報告することがあります。最後の `Successfully installed` 行に `torch`、`torchvision`、`torchaudio` が含まれていることを確認してください。欠けている 2 つの依存関係は、このフェーズのコマンドでインストールし、その後 `pip check` と以下のインポートテストを実行します。
+すでに ROS 2 を source 済みの場合、pip が `generate-parameter-library-py` は `pyyaml` と `typeguard` を必要とすると報告することがあります。最後の `Successfully installed` 行に `torch`、`torchvision`、`torchaudio` が含まれていることを確認してください。足りない 2 つの依存関係はこのフェーズのコマンドでインストールし、その後 `pip check` と以下のインポートテストを実行してください。
 :::
 
 `rebotarm_agent` をデフォルトの arm ワークスペース構成でビルドした場合は、フルワークスペースを source した後に `pip check` を通過できるよう、その宣言済み依存関係をインストールしてください。
@@ -1357,10 +1360,10 @@ python -m pip install fastmcp
 
 `fastmcp` は Agent 機能をサポートします。ワークスペースに `rebotarm_agent` が含まれている場合にのみインストールしてください。
 
-このワークフローでは、NumPy を `1.26.4`、OpenCV を `4.11.0.86` にピン留めしています。Ultralytics をインストールまたはアップグレードする際は、これらのピンと対応する PyTorch バージョンを維持してください。
+このワークフローでは、NumPy を `1.26.4`、OpenCV を `4.11.0.86` に固定しています。Ultralytics をインストールまたはアップグレードする際は、これらの固定バージョンと対応する PyTorch バージョンを維持してください。
 
-:::tip OpenCV と NumPy の依存関係の競合
-NumPy `1.26.4` を個別にインストールする前に `pip install -U ultralytics` を実行した場合、pip が `opencv-python ... requires numpy>=2` と報告することがあります。たとえば、OpenCV `5.0.0.93` は NumPy 2 を必要としますが、このワークフローでは NumPy `1.26.4` を使用します。最終的に `Successfully installed` メッセージが表示されても、依存関係が競合したまま残る可能性があります。
+:::tip OpenCV と NumPy の依存関係競合
+NumPy `1.26.4` を個別にインストールする前に `pip install -U ultralytics` を実行した場合、pip が `opencv-python ... requires numpy>=2` と報告することがあります。たとえば、OpenCV `5.0.0.93` は NumPy 2 を必要としますが、このワークフローでは NumPy `1.26.4` を使用します。最後に `Successfully installed` と表示されても、依存関係が競合したまま残る可能性があります。
 
 `yolo` 環境をアクティブに保ったまま、互換性のあるバージョンをインストールし、その後で以下の依存関係チェックとインポートチェックを実行してください。
 
@@ -1369,7 +1372,7 @@ conda activate yolo
 python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
 ```
 
-環境内で `cv2` を提供する OpenCV パッケージは 1 つだけにしてください。`opencv-python`、`opencv-contrib-python`、または対応する headless パッケージなど複数のバリアントをインストールした場合は、それらをアンインストールし、ピン留めされたパッケージを再インストールしてください。
+環境内で `cv2` を提供する OpenCV パッケージは 1 つだけにしてください。`opencv-python`、`opencv-contrib-python`、あるいは対応する headless パッケージなど複数のバリアントをインストールした場合は、それらをアンインストールし、固定バージョンのパッケージを再インストールしてください。
 
 ```bash
 python -m pip uninstall -y opencv-python opencv-contrib-python opencv-python-headless opencv-contrib-python-headless
@@ -1379,7 +1382,7 @@ python -m pip install "numpy==1.26.4" "opencv-python==4.11.0.86" transforms3d
 
 **依存関係をチェックし、YOLOE を検証する**
 
-システムの ROS セットアップとビルド済みワークスペースを source し、アクティブな Conda の Python を使用して依存関係をチェックします。
+システムの ROS セットアップとビルド済みワークスペースを source し、アクティブな Conda Python を使って依存関係をチェックします。
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -1390,10 +1393,10 @@ python -c "import rclpy, cv_bridge, launch_ros; import rebot_visual_grasp.grasp_
 ```
 
 :::note 期待される結果
-`pip check` は `No broken requirements found.` と報告します。Python パスはアクティブな Conda 環境内にあります。ビジョンチェックは `OpenCV: 4.11.0`、`NumPy: 1.26.4`、`YOLOE OK` を出力します。ROS インポートチェックは `ROS grasp imports OK` を出力します。CPU バックエンドでは `CUDA available: False`、GPU バックエンドでは `True` が期待されます。これらのチェックはモジュールをインポートするだけで、アームは待機状態のままです。
+`pip check` は `No broken requirements found.` と報告します。Python パスはアクティブな Conda 環境内にあります。画像処理チェックでは `OpenCV: 4.11.0`、`NumPy: 1.26.4`、`YOLOE OK` が表示されます。ROS インポートチェックでは `ROS grasp imports OK` が表示されます。CPU バックエンドでは `CUDA available: False`、GPU バックエンドでは `True` が期待される結果です。これらのチェックはモジュールをインポートするだけで、アームは待機状態のままです。
 :::
 
-`pip check` が `launch-ros ... requires pyyaml` と報告する場合は、上記の依存関係を `yolo` にインストールしたことを確認してください。`rebotarm-agent ... requires fastmcp` と報告する場合は、前述のとおり Agent 依存関係をインストールしてください。`rclpy`、`cv_bridge`、またはワークスペースモジュールのインポートに失敗する場合は、システムの ROS 依存関係、ワークスペースのビルド結果、2 つの `source` コマンドを確認してください。これらの ROS パッケージはシステムおよびワークスペースから使用します。
+`pip check` が `launch-ros ... requires pyyaml` と報告する場合は、上記の依存関係を `yolo` にインストールしたか確認してください。`rebotarm-agent ... requires fastmcp` と報告する場合は、前述のとおり Agent 依存関係をインストールしてください。`rclpy`、`cv_bridge`、またはワークスペースモジュールのインポートに失敗する場合は、システムの ROS 依存関係、ワークスペースのビルド結果、2 つの `source` コマンドを確認してください。これらの ROS パッケージはシステムおよびワークスペースから使用します。
 
 依存関係とインポートチェックが通過するまで待ってから、重みをダウンロードし、把持ノードを起動してください。
 
@@ -1401,7 +1404,7 @@ python -c "import rclpy, cv_bridge, launch_ros; import rebot_visual_grasp.grasp_
 </section>
 </div>
 
-**`~/rebot_visual_model` に重みをダウンロードする**
+**重みを `~/rebot_visual_model` にダウンロードする**
 
 ```bash
 mkdir -p ~/rebot_visual_model && cd ~/rebot_visual_model
@@ -1413,14 +1416,14 @@ wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/mobilecli
 wget -c https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26s-seg.pt
 ```
 
-YOLOE がモデルディレクトリから重みをロードし、テキストクラスを設定できることを確認します。これは、アームを起動する前に、モデルファイルや CLIP 依存関係の不足を検出するのに役立ちます。
+YOLOE がモデルディレクトリから重みを読み込み、テキストクラスを設定できることを確認します。これにより、アームを起動する前に、モデルファイルや CLIP 依存関係の不足を検出できます。
 
 ```bash
 cd ~/rebot_visual_model
 python -c "from ultralytics import YOLOE; model = YOLOE('yoloe-26s-seg.pt'); model.set_classes(['cube', 'box']); print('YOLOE weights and text encoder OK')"
 ```
 
-`YOLOE weights and text encoder OK` が表示されることを期待してください。最初のロードには時間がかかる場合があります。このコマンドはビジョンモデルのみをロードし、アームは接続されないままです。プロジェクトを実行する前に、重みや依存関係の不足を解消してください。
+`YOLOE weights and text encoder OK` と表示されることを期待してください。最初の読み込みには時間がかかる場合があります。このコマンドは画像モデルのみを読み込み、アームは接続されません。プロジェクトを実行する前に、重みや依存関係の不足を解消してください。
 
 </div>
 </section>
@@ -1429,7 +1432,7 @@ python -c "from ultralytics import YOLOE; model = YOLOE('yoloe-26s-seg.pt'); mod
 
 ### 3. プロジェクトを実行する
 
-開始する前に、アームの電源がオンになっていること、CAN インターフェースが `can0` であること、Gemini 2、D405、または D435i が USB 接続されていることを確認してください。その後、CAN を立ち上げます。
+開始する前に、アームの電源がオンになっていること、CAN インターフェースが `can0` であること、Gemini 2、D405、または D435i が USB 接続されていることを確認してください。その後、CAN を起動します。
 
 ```bash
 sudo ip link set can0 down 2>/dev/null
@@ -1438,10 +1441,10 @@ sudo ip link set can0 up
 ```
 
 :::warning ロボットアームが動作します
-ターミナル C では、`move_to_observation_on_start:=true` によってアームが観察姿勢に移動します。ターミナル D は把持と配置をトリガーします。開始前に、ゼロ位置、マウントブラケット、ワークスペース、およびオフセットを確認してください。動作経路から人や障害物を遠ざけ、いつでもアームを停止できるように準備しておいてください。
+ターミナル C では、`move_to_observation_on_start:=true` によってアームが観察姿勢に移動します。ターミナル D は把持と配置をトリガーします。開始前に、ゼロ位置、取付ブラケット、作業領域、およびオフセットを確認してください。人や障害物を動作経路から離し、いつでもアームを停止できるように準備しておいてください。
 :::
 
-ターミナル A、B、C、D をこの順番で起動し、前のターミナルはそのまま動かしておきます。お使いのカメラに合わせて起動コマンドを選択してください。スタックをまとめて起動するスタートアップスクリプトを作成することもできます。
+ターミナル A、B、C、D をこの順番で起動し、前のターミナルは動作させたままにします。使用するカメラに応じて起動コマンドを選択します。スタックをまとめて起動するスタートアップスクリプトを作成することもできます。
 
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -1450,7 +1453,7 @@ sudo ip link set can0 up
 
 #### ターミナル A — アームと RViz を起動
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして Gemini 2 を展開</summary>
 
 ```bash
@@ -1462,7 +1465,7 @@ ros2 launch rebot_visual_grasp bringup_with_camera.launch.py model:=rs channel:=
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして D405 を展開</summary>
 
 ```bash
@@ -1474,7 +1477,7 @@ ros2 launch rebot_visual_grasp bringup_with_d405.launch.py model:=rs channel:=ca
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして D435i を展開</summary>
 
 ```bash
@@ -1494,7 +1497,7 @@ ros2 launch rebot_visual_grasp bringup_with_d435i.launch.py model:=rs channel:=c
 
 #### ターミナル B — カメラを起動
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして Gemini 2 を展開</summary>
 
 ```bash
@@ -1506,7 +1509,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして D405 を展開</summary>
 
 ```bash
@@ -1521,7 +1524,7 @@ ros2 launch realsense2_camera rs_launch.py \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして D435i を展開</summary>
 
 ```bash
@@ -1542,11 +1545,11 @@ ros2 launch realsense2_camera rs_launch.py \
   <span className="rebot-step-number">C</span>
 <div className="rebot-step-content">
 
-#### ターミナル C — 観察姿勢へ移動し、YOLOE 検出を開始
+#### ターミナル C — 観察姿勢への移動と YOLOE 検出の開始
 
-最初に `conda activate yolo` を実行するか、実際の環境名で環境を有効化します。`python` コマンドはアクティブな環境を使用し、Miniconda と Miniforge のどちらでも動作します。サンプルではデフォルトで `yolo_device:=cpu` を使用します。GPU 推論を行うには、手順 5 で CUDA チェックを通過したあと、`yolo_device:=0` を設定します。
+最初に `conda activate yolo` を実行するか、実際の環境名で環境を有効化します。`python` コマンドはアクティブな環境を使用し、Miniconda と Miniforge のどちらでも動作します。サンプルではデフォルトで `yolo_device:=cpu` を使用します。GPU 推論を行うには、手順 5 で CUDA チェックを通過した後、`yolo_device:=0` を設定します。
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして Gemini 2 を展開</summary>
 
 ```bash
@@ -1569,7 +1572,7 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして D405 を展開</summary>
 
 ```bash
@@ -1596,7 +1599,7 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
 
 </details>
 
-<details className="content-details">
+<details className="rebot-demo-details">
 <summary>クリックして D435i を展開</summary>
 
 ```bash
@@ -1625,13 +1628,13 @@ python -m rebot_visual_grasp.grasp_yolo --ros-args \
 
 | パラメータ | 説明 |
 | ------------------ | ---------------------------------------------------------------------------- |
-| `yolo_device:=cpu` | デフォルトで CPU を使用します。CUDA を確認したあと、`yolo_device:=0` を設定すると GPU 0 を使用します。 |
+| `yolo_device:=cpu` | デフォルトで CPU を使用します。CUDA を確認した後、`yolo_device:=0` を設定して GPU 0 を使用します。 |
 | `target_class` | 把持対象物の YOLOE テキストクラス。対象物に合うように設定します。デフォルトの YOLO クラスがサポートされています。 |
-| `place_class` | 置き場所ターゲットの YOLOE テキストクラス。ターゲットに合うように設定します。デフォルトの YOLO クラスがサポートされています。 |
-| `grasp_x_offset_m` | `base_link` における前後方向のオフセット。負の値は把持位置を後方へ移動します。 |
+| `place_class` | 配置対象の YOLOE テキストクラス。ターゲットに合うように設定します。デフォルトの YOLO クラスがサポートされています。 |
+| `grasp_x_offset_m` | `base_link` における前後方向のオフセット。負の値は把持位置を後方に移動します。 |
 | `grasp_y_offset_m` | 把持の左右オフセット。`0.01` は把持位置を左に 1 cm 移動します。負の値は右に移動します。 |
 | `grasp_z_offset_m` | 把持高さの調整。デフォルトは標準グリッパーより長いフレキシブルグリッパー用です。使用するグリッパーの高さに合わせてこの値を調整してください。 |
-| `place_z_offset_m` | アームが物体を離す、設置ポイント上方の追加高さ。 |
+| `place_z_offset_m` | アームが物体を解放する、配置点より上の追加高さ。 |
 
 </div>
 </section>
@@ -1648,7 +1651,7 @@ source ~/rebotarm_ros2/install/setup.bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py
 ```
 
-遅延時間を変更するには、launch パラメータを追加します。この例では 5 秒後にトリガーされます。
+遅延時間を変更するには、起動パラメータを追加します。この例では 5 秒後にトリガーされます。
 
 ```bash
 ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
@@ -1660,9 +1663,9 @@ ros2 launch rebot_visual_grasp grasp_go.launch.py trigger_delay_s:=5.0
   <span className="rebot-step-number">E</span>
 <div className="rebot-step-content">
 
-#### ターミナル E — ホームに戻る（任意）
+#### ターミナル E — ホームに戻る（オプション）
 
-通常のシャットダウン時には、アームコントローラはアームをホームポジションに戻し、モーターを無効化しようとします。異常終了や通信障害の後は、自動での原点復帰は信頼できません。手動でホームに戻すには、ターミナル A のコントローラを動作させたままにし、動作経路に障害物がないことを確認してください。
+通常のシャットダウン時には、アームコントローラはアームをホーム位置に戻し、モーターを無効化しようとします。異常終了や通信障害の後は、自動復帰は信頼できません。手動でホームに戻すには、ターミナル A のコントローラを動作させたままにし、動作経路がクリアであることを確認してください。
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -1679,11 +1682,11 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger {}
 
 ## お問い合わせ
 
-- 技術サポート：[Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
-- プロジェクトページ：[GitHub](https://github.com/Seeed-Projects/reBot-DevArm-Grasp)
-- フォーラム：[Seeed Studio Forum](https://forum.seeedstudio.com/)
+- 技術サポート: [Submit an Issue](https://github.com/Seeed-Projects/reBot-DevArm-Grasp/issues)
+- プロジェクトページ: [GitHub](https://github.com/Seeed-Projects/reBot-DevArm-Grasp)
+- フォーラム: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
-## 参考資料
+## 参考文献
 
 - [reBot Arm B601-RS クイックスタート](https://wiki.seeedstudio.com/ja/rebot_b601_rs_getting_started/)
 - [reBot Arm B601-RS ROS2 統合](https://wiki.seeedstudio.com/ja/rebot_arm_b601_rs_ros2_integration/)

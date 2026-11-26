@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into the lightweight Evo-1 VLA backbone, cross-attention, flow-matching action expert and two-stage training."
-title: "Evo-1: How Lightweight VLA Models Preserve Semantic Alignment"
+description: A paper deep-dive into the lightweight Evo-1 VLA backbone, cross-attention, flow-matching action expert and two-stage training.
+title: 'Evo-1: How Lightweight VLA Models Preserve Semantic Alignment'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_evo1/
 ---
 

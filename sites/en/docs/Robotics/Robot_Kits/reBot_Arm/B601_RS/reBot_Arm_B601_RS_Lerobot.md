@@ -16,7 +16,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-06-17'
-updatedAt: '2026-09-23'
+updatedAt: '2026-11-20'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/
 ---
 
@@ -540,6 +540,16 @@ RealSense depth cameras can provide RGB-D perception for LeRobot and are suitabl
     <img width={420}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
 </div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/RealSense-D405-3D-Camera-p-6758.html" target="_blank" rel="noopener noreferrer" aria-label="Buy RealSense D405">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
 
 The RealSense D405 is a short-range stereo depth camera designed for high-precision close-range tasks such as tabletop robotic manipulation, with a typical working range of **7 cm to 50 cm**.
 
@@ -548,6 +558,16 @@ The RealSense D405 is a short-range stereo depth camera designed for high-precis
 <div align="center">
     <img width={420}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
+</div>
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/Intel-RealSense-Depth-Camera-D435i-p-4423.html" target="_blank" rel="noopener noreferrer" aria-label="Buy RealSense D435i">
+    <span>Get One Now</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
 </div>
 
 The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
@@ -711,7 +731,7 @@ lerobot-teleoperate \
 
 </TabItem>
 
-<TabItem value="orbbec-gemini2" label="Orbbec Gemini2">
+<TabItem value="orbbec-gemini2" label="Orbbec Gemini 2 / 305 / 336">
 
 <div align="center">
     <img width={800}
@@ -737,6 +757,8 @@ providing synchronized RGB and depth streams with precise depth-to-color alignme
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
 
+You can also try the Orbbec workflow below with Gemini 305. The Orbbec Python SDK supports this model, but this tutorial does not provide hardware validation of Gemini 305 with LeRobot. Detect the camera and confirm its color and depth stream profiles before teleoperation or data collection.
+
 <div className="rebot-step-flow">
 <div className="rebot-step-flow">
 <section className="rebot-step-item">
@@ -748,6 +770,7 @@ Gemini 336 is a new member of the Gemini 330 series. It inherits the strong dept
 Current camera support is available on the `DepthCameraSupport` branch:
 
 ```bash
+cd ~/rebot_lerobot/lerobot
 git checkout DepthCameraSupport
 git pull origin DepthCameraSupport
 ```
@@ -815,7 +838,9 @@ This step will output:
     <h4>Run the Orbbec Example</h4>
     <p className="rebot-step-label">Step 5</p>
 
-Single Orbbec test:
+Single Orbbec test: replace both instances of `YOUR_CAMERA_SERIAL` with the detected serial number of the same camera. The resolutions and frame rate below are examples, not a validated Gemini 305 configuration. Change them to profiles supported by your camera, and use the same frame rate for both streams.
+
+The later data collection and inference examples use OpenCV cameras by default. For Gemini 305, replace their `--robot.cameras` values with your verified Orbbec configuration and keep the camera keys consistent between collection and inference.
 
 ```bash
 lerobot-teleoperate \
@@ -823,10 +848,10 @@ lerobot-teleoperate \
     --robot.port=can0 \
     --robot.id=follower1 \
     --robot.can_adapter=socketcan \
-    --robot.cameras="{
+    --robot.cameras='{
     orbbec_color: {
       type: orbbec_color,
-      serial_number_or_name: "CP9JA530003A",
+      serial_number_or_name: "YOUR_CAMERA_SERIAL",
       width: 640,
       height: 480,
       fps: 30,
@@ -836,7 +861,7 @@ lerobot-teleoperate \
     },
     orbbec_depth: {
       type: orbbec_depth,
-      serial_number_or_name: "CP9JA530003A",
+      serial_number_or_name: "YOUR_CAMERA_SERIAL",
       width: 640,
       height: 400,
       fps: 30,
@@ -844,7 +869,7 @@ lerobot-teleoperate \
       rotation: 0,
       warmup_s: 5
     }
-  }" \
+  }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
@@ -861,7 +886,7 @@ lerobot-teleoperate \
 
 - `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
-- It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
+- Color and depth may use different resolutions, but each resolution, frame rate, and format must be supported by the camera. The driver requests `RGB` for color and `Y16` for depth. The detection command reports default profiles, not the full list; see the [Orbbec Python SDK](https://github.com/orbbec/pyorbbecsdk) to query supported profiles.
 
 </div>
 </section>

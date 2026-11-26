@@ -9,6 +9,9 @@ keywords:
   - hand tracking
   - depth camera
   - visual servoing
+createdAt: '2026-11-16'
+url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_camera_follow/
+updatedAt: '2026-11-16'
 ---
 
 import '/src/css/rebot-wiki-style.css';

@@ -1,5 +1,5 @@
 ---
-title:  Pin Multiplexing with XIAO STM32C5
+title: Pin Multiplexing with XIAO STM32C5
 description: ''
 keywords:
   - xiao
@@ -13,7 +13,7 @@ last_update:
   date: 08/26/2026
   author: Zeller
 createdAt: '2026-08-26'
-updatedAt: '2026-09-01'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_pin_multiplexing/
 ---
 import Tabs from '@theme/Tabs';

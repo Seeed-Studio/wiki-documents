@@ -1,6 +1,6 @@
 ---
-description: "Explore the core methods behind ACT, the π series and generalist VLA models, with LeRobot tutorials on demonstrations, training and deployment."
-title: "Physical AI Paper Deep-Dives and Hands-on Reproduction"
+description: Explore the core methods behind ACT, the π series and generalist VLA models, with LeRobot tutorials on demonstrations, training and deployment.
+title: Physical AI Paper Deep-Dives and Hands-on Reproduction
 hide_title: true
 keywords:
   - reBot
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-16'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-20'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_getting_started/
 ---
 
@@ -116,6 +116,10 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/robotics/paper_reading_lingbot_vla2/">LingBot-VLA 2.0 — Cross-Embodiment Actions &amp; Future Perception</a></li>
         <li><a href="/robotics/paper_reading_dm05/">DM0.5 — Historical Context &amp; Trajectory Alignment</a></li>
         <li><a href="/robotics/paper_reading_g05/">G0.5 — Reasoning and Action in One Sequence</a></li>
+        <li><a href="/robotics/paper_reading_fineart_vla/">FineART-VLA — Subtask-Guided Bimanual Actions</a></li>
+        <li><a href="/robotics/paper_reading_molmoact2/">MolmoAct2 — Layer-Wise Context for Continuous Control</a></li>
+        <li><a href="/robotics/paper_reading_x_vla/">X-VLA — Soft Prompts for Cross-Embodiment Learning</a></li>
+        <li><a href="/robotics/paper_reading_wall_oss_05/">WALL-OSS-0.5 — Gradient-Bridged Action Learning</a></li>
       </ul>
       <h3>Part 5 · World Models &amp; Video-Action Learning</h3>
       <ul className="paper-reading-directory-list">
@@ -123,6 +127,10 @@ import '/src/css/paper-reading-style.css';
         <li><a href="/robotics/paper_reading_lingbot_va/">LingBot-VA — Causal World Modeling &amp; Robot Control</a></li>
         <li><a href="/robotics/paper_reading_gr00t_2/">GR00T 2 — Joint World-Action Modeling</a></li>
         <li><a href="/robotics/paper_reading_lawam/">LaWAM — Predicting Scene Changes Before Generating Robot Actions</a></li>
+        <li><a href="/robotics/paper_reading_fastwam/">Fast-WAM — Video Co-Training and Direct Action Inference</a></li>
+        <li><a href="/robotics/paper_reading_long_wam/">Long-WAM — History, Future Prediction and Control</a></li>
+        <li><a href="/robotics/paper_reading_flux3/">FLUX 3 Action — Joint Prediction and Efficient Execution</a></li>
+        <li><a href="/robotics/paper_reading_cosmos3/">Cosmos 3 — Omnimodal World-Action Policies</a></li>
       </ul>
       <h3>Part 6 · Unified Evaluation &amp; Research Summary</h3>
       <span className="paper-reading-update-badge">

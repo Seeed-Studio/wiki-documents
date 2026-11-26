@@ -1,5 +1,5 @@
 ---
-description: "Benchmark reComputer Super against Classic on Orin NX: llama.cpp token rates, video decode and TensorRT inference at matched power modes."
+description: 'Benchmark reComputer Super against Classic on Orin NX: llama.cpp token rates, video decode and TensorRT inference at matched power modes.'
 title: reComputer Super vs Classic Next-Gen AI Performance in Edge Inferencing
 tags:
   - reComputer Super
@@ -14,7 +14,7 @@ last_update:
   date: 06/04/2025
   author: Zibo
 createdAt: '2025-06-09'
-updatedAt: '2025-10-11'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/recomputer_jetson_super_performance/
 ---
 

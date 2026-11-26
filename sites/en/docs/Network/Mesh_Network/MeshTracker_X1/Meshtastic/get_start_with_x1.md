@@ -12,7 +12,7 @@ last_update:
   date: 10/30/2026
   author: Advent Jiang
 createdAt: '2026-07-13'
-updatedAt: '2026-10-30'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -25,6 +25,18 @@ When the device is in the states below, please don't manually reboot or turn it 
 
 
 ## Get Started
+
+### Quick View
+
+<div className="table-center">
+  <video width="730" height="500" autoPlay muted playsInline controls>
+    <source
+      src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/x1-open-box.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 
 ### Power on the device
@@ -179,6 +191,17 @@ Now that you have set the LoRa region on your device, you can continue by config
 :::caution note
 Please `don't use OTA` to update the firmware, it may cause the device to be completely dead. For detailed information, please [click here](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/ota/)
 :::
+
+**Factory Firmware**
+
+The X1 ships with Meshtastic firmware **v2.7.23** pre-installed ([`firmware-mesh-tracker-x1-2.7.23.2546839.uf2`](https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/firmware-mesh-tracker-x1-2.7.23.2546839.uf2)). If you want to restore the factory firmware, you can download and flash this version via the Web Flasher or DFU mode.
+
+:::note
+**Why is there no v2.7.26 build for the X1?**
+
+The Meshtastic team released v2.7.26 as a stable version before the X1 launch, so no dedicated v2.7.26 build was produced for this device. The official team has also decided not to backport the v2.8 bugfixes to the v2.7 branch, so such a build will not be added later. If you want the latest fixes, please flash the latest stable release from the Web Flasher instead.
+:::
+
 #### Step 1: Enter DFU mode
 
 Enter DFU via the web flasher. If this fails many times, enter DFU manually.

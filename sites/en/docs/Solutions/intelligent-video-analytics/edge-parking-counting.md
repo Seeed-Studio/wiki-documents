@@ -1,7 +1,7 @@
 ---
 description: Count car-park entries and exits with your existing gate cameras and publish live free spaces — hardware, deployment, interfaces and measured data on Jetson and RK hosts
 title: Parking Entry/Exit Vehicle Counting — Selection, Deployment and Measured Data
-sidebar_label: 'Parking Vehicle Counting'
+sidebar_label: Parking Vehicle Counting
 keywords:
   - parking vehicle counting
   - entry exit counting

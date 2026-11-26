@@ -1,5 +1,5 @@
 ---
-description: "Get started with reComputer Robotics J401: specs, Orin Nano and NX modules, JetPack 7.2 flashing, hardware overview and first boot checks."
+description: 'Get started with reComputer Robotics J401: specs, Orin Nano and NX modules, JetPack 7.2 flashing, hardware overview and first boot checks.'
 title: Getting Started with reComputer Robotics
 tags:
   - J401-Robotics carrier board
@@ -14,7 +14,7 @@ last_update:
   date: 10/19/2026
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-10-19'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/recomputer_robotics_j401_getting_started/
 ---
 <div style={{ textAlign: "justify" }}>

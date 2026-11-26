@@ -1,5 +1,5 @@
 ---
-description: "How to debug SO-ARM servos with the Seeed_RoboController tool: detect servos, fix IDs, write neutral values and read status on Windows, Ubuntu and Mac."
+description: 'How to debug SO-ARM servos with the Seeed_RoboController tool: detect servos, fix IDs, write neutral values and read status on Windows, Ubuntu and Mac.'
 title: SO-Arm Debugging Tool
 keywords:
   - Lerobot
@@ -14,72 +14,167 @@ last_update:
   author: ZhangJiaQuan
 url: https://wiki.seeedstudio.com/lerobot_steering_gear_debugging_tool/
 createdAt: '2026-06-29'
-updatedAt: '2026-09-16'
+updatedAt: '2026-11-24'
 ---
 
-# Steering Gear Debugging Tool for SO-ARM in Lerobot
+import '/src/css/rebot-wiki-style.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Steering Gear Debugging Tool for SO-ARM in LeRobot
+
+<div align="center">
+  <img
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp"
+    width={800}
+    height={600}
+    style={{height: 'auto'}}
+    alt="SO-ARM100 and SO-ARM101 robotic arm kits"
+  />
+</div>
+
+<div className="rebot-buy-button-group">
+  <span className="rebot-buy-button-glow" aria-hidden="true"></span>
+  <a className="rebot-buy-button" href="https://www.seeedstudio.com/SO-101-Assembled-Kit-Pro-p-6691.html" target="_blank" rel="noopener noreferrer">
+    <span>Get the SO-ARM101 Kit</span>
+    <svg className="rebot-buy-button-arrow" aria-hidden="true" viewBox="0 0 10 10" width="10" height="10" fill="none">
+      <path className="rebot-buy-button-arrow-line" d="M0 5h7"></path>
+      <path className="rebot-buy-button-arrow-head" d="M1 1l4 4-4 4"></path>
+    </svg>
+  </a>
+</div>
+
+<p align="center"><strong>Supported platforms</strong> · Windows / Ubuntu / macOS</p>
 
 ## Introduction
 
-The Steering Gear Debugging Tool (Seeed_RoboController) is a graphical debugging tool for Lerobot/SO-ARM robotic arms. With this tool, you can quickly detect servo status, recalibrate servo IDs, write neutral values, control individual servos, and manage robotic arm calibration files, making it easier to assemble, debug, and maintain the leader and follower arms.
+The Steering Gear Debugging Tool (Seeed_RoboController) is a graphical debugging tool for SO-ARM robotic arms in LeRobot. With this tool, you can quickly detect servo status, recalibrate servo IDs, write neutral values, control individual servos, and manage robotic arm calibration files, making it easier to assemble, debug, and maintain the leader and follower arms.
 
 ## 1. Installation
 
-For Windows, Ubuntu, and Mac systems.
+<div className="rebot-step-flow">
 
-1\. First, clone the repository.
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
 
-```Plain
+<h4>Clone the repository</h4>
+
+<p className="rebot-step-label">Step 1</p>
+
+```bash
 git clone https://github.com/Seeed-Projects/Seeed_RoboController.git
 ```
 
-2\. It is recommended to install the tool in the Lerobot virtual environment. If you prefer a standalone installation, create a new virtual environment to avoid polluting the system Python.
+</div>
+</section>
 
-```Plain
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+<h4>Install dependencies</h4>
+
+<p className="rebot-step-label">Step 2</p>
+
+Install the dependencies in your existing LeRobot virtual environment. For a standalone installation, create a new virtual environment to avoid affecting the system Python.
+
+```bash
 pip install -r requirements.txt
 ```
 
-3\. Check the environment. If it returns `[OK] Environment check passed`, the project is ready to run.
+</div>
+</section>
 
-```Plain
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
+
+<h4>Check the environment</h4>
+
+<p className="rebot-step-label">Step 3</p>
+
+```bash
 python setup.py
 ```
 
-4\. Launch the tool.
+If it returns [OK] Environment check passed, the project is ready to run.
 
-Run the following command to start interactive port selection.
+</div>
+</section>
 
-```Plain
+<section className="rebot-step-item">
+<span className="rebot-step-number">4</span>
+<div className="rebot-step-content">
+
+<h4>Launch the tool</h4>
+
+<p className="rebot-step-label">Step 4</p>
+
+<Tabs defaultValue="interactive">
+<TabItem value="interactive" label="Interactive port selection">
+
+Select the serial ports in the interface after launch.
+
+```bash
 python -m src.gui.factory_calibration_tool
 ```
 
-(Optional) Manually specify ports if they are occupied.
+</TabItem>
+<TabItem value="manual" label="Specify ports manually">
 
-```Plain
+If the ports are occupied, you can specify them manually. The command below uses example Linux device paths.
+
+```bash
 python -m src.gui.factory_calibration_tool --port1 /dev/ttyUSB0 --port2 /dev/ttyUSB1
 ```
 
+</TabItem>
+</Tabs>
+
+</div>
+</section>
+
+</div>
+
 ## 2. Getting Started (Applicable to Leader Arm and Follower Arm)
 
-### 1. Check Whether the Servos Are Normal
+Start by checking servo detection. Continue to the next two steps only if you still suspect duplicate servo IDs after checking the wiring and serial port.
 
-First, select the corresponding port in the serial port selection.
+<div className="rebot-step-flow">
 
-If servos 1-6 are all detected successfully, it means the servos are recognized normally and the basic functions are working.
+<section className="rebot-step-item">
+<span className="rebot-step-number">1</span>
+<div className="rebot-step-content">
+
+### Check Whether the Servos Are Normal {#1-check-whether-the-servos-are-normal}
+
+<p className="rebot-step-label">Step 1</p>
+
+Select the port in the serial port picker. The detection check passes if the tool recognizes servos 1–6.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/debug_tool.webp" />
 </div>
 
-If some servos are shown as not detected, first check whether the wiring is correct, close the page and reopen it. If they are still not detected, the servo IDs may be duplicated (possibly because the command for calibrating the robotic arm was accidentally entered as the command for calibrating the servos). In this case, the IDs of these servos need to be recalibrated.
+If a servo is missing, check its wiring, then close and reopen the tool. If it still does not appear, check for duplicate servo IDs. For example, running the servo calibration command by mistake can change servo IDs.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/02.png" />
 </div>
 
-### 2. Remove the Servo Wire Harnesses
+</div>
+</section>
+
+<section className="rebot-step-item">
+<span className="rebot-step-number">2</span>
+<div className="rebot-step-content">
+
+### Remove the Servo Wire Harnesses {#2-remove-the-servo-wire-harnesses}
+
+<p className="rebot-step-label">Step 2</p>
 
 First remove the connecting wire harness between servo 6 and servo 5.
 
@@ -123,99 +218,111 @@ Remove the connecting wire harness between servo 1 and the control board.
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/08.webp" />
 </div>
 
-### 3. Recalibrate Servo IDs
+</div>
+</section>
 
-Make sure only one servo is connected to the robotic arm.
+<section className="rebot-step-item">
+<span className="rebot-step-number">3</span>
+<div className="rebot-step-content">
 
-(When flashing an ID to a servo, since the servos share a serial bus, if duplicate IDs exist—for example changing ID 4 to 6—all servos with ID 4 on the bus will be changed to 6. Therefore, all servos must be removed and reprogrammed one by one.)
+### Recalibrate Servo IDs {#3-recalibrate-servo-ids}
 
-For example, you can connect the #6 servo to the driver board as shown below. Other servos are connected in a similar way, so you can avoid disassembling the robotic arm.
+<p className="rebot-step-label">Step 3</p>
+
+:::caution Write servo IDs one at a time
+Connect only one servo to the serial bus when writing its ID. For example, changing ID 4 to 6 changes every servo with ID 4 on that bus.
+:::
+
+Connect servo 6 directly to the driver board as shown. Use the same method for other servos without disassembling the arm.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/09.webp" />
 </div>
 
-As shown in the figure, only servo #4 is recognized, but the servo actually connected is #6. This indicates that the servo ID is wrong and needs to be changed back to 6.
+If the connected servo is servo 6 but the tool only shows ID 4, change that servo's ID back to 6.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/10.png" />
 </div>
 
-At this point, you can click on servo #4 and change its ID to 6. Repeat the same operation for the other servos.
+Select ID 4 in the interface and change it to 6. Check and correct the remaining servos one at a time.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/11.png" />
 </div>
 
-After the servo calibration is complete, you can plug the wires back in one by one to finish.
+Reconnect the servo harnesses one at a time after correcting the IDs.
 
-### 4. Write the Neutral Value to the Servo
+</div>
+</section>
+
+</div>
+
+### Write the Neutral Value to the Servo {#4-write-the-neutral-value-to-the-servo}
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/12.jpg" />
 </div>
 
-1\. Click **Serial Port Neutral Test** to check whether the robotic arm neutral position is as shown above. If it is roughly the same, the neutral value of the robotic arm is normal.
-
-2\. If not, move the robotic arm to the neutral position, then click **Serial Port Neutral Calibration**. The robotic arm will write the current position as the neutral value into the servo.
-
-3\. Click **Serial Port Disable Motors**, and the robotic arm will go limp; you need to support it by hand.
+1. Click **Serial Port Neutral Test** and compare the arm's position with the image above. If they roughly match, the neutral value is correct.
+2. If they do not match, move the arm to the neutral position and click **Serial Port Neutral Calibration** to save the current position as the servo's neutral value.
+3. Support the arm before clicking **Serial Port Disable Motors**. The servos will lose their holding torque.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/13.png" />
 </div>
 
-### 5. Single Servo Control
+### Single Servo Control {#5-single-servo-control}
 
-By default, all servos on the page are at their neutral positions, as shown in the figure.
+The interface shows each servo at its neutral position by default.
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/14.png" />
 </div>
 
-- 1. First enable torque. You can enable all torques with one click or enable torque for a single servo, then slide the slider to move the servo to the corresponding position. However, be sure to move slowly. Because the printed parts of the robotic arm will physically block certain positions, the arm cannot actually reach the edge positions; there are maximum and minimum movement limits, so do not slide the slider to 0 or to the maximum. After disabling torque, the robotic arm will go limp.
+#### Adjust a servo's position
+
+1. Enable torque for the selected servo, or use the control that enables torque for all servos.
+2. Move the selected servo's slider slowly and watch the corresponding joint move.
+
+:::caution Mind the mechanical limits
+The arm's structure limits joint travel. Move the slider slowly and avoid setting it to 0 or its maximum. Support the arm before disabling torque.
+:::
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/debug_tool/21.png" />
 </div>
 
-As shown above, after enabling torque, the movement of the corresponding servo will change.
+You can also calibrate an individual servo's neutral position or clear its stored neutral, minimum, and maximum positions.
 
-- 2. You can perform neutral calibration for a single servo and clear the servo's internal neutral, maximum, and minimum positions
-- 3. The following is the servo information
+#### Servo status fields
 
-Pos: Position
+| Field | Meaning |
+| --- | --- |
+| `Pos` | Position |
+| `V` | Voltage |
+| `T` | Temperature |
+| `Spd` | Speed |
+| `Load` | Torque |
+| `Cur` | Current |
+| `Mov` | Motion status |
+| `Model` | Model and permissions |
+| `Status` | Normal, Overcurrent, or Overload |
 
-V: Voltage
+### Advanced Tools {#6-advanced-tools}
 
-T: Temperature
-
-Spd: Speed
-
-Load: Torque
-
-Cur: Current
-
-Mov: Motion Status
-
-Model: Model, Authority
-
-Status: Status will show Normal, Overcurrent, or Overload
-
-### 6. Advanced Tools
-
-You can read the corresponding register address data and write the corresponding data.
-
-Baud rate can be modified.
-
-Factory settings can be restored.
+| Tool | Purpose |
+| --- | --- |
+| Register read/write | Read or write data at a specified register address. |
+| Change baud rate | Adjust the servo's serial communication rate. |
+| Restore factory settings | Reset the servo to its factory settings. |
 
 <div align="center">
     <img width={800}

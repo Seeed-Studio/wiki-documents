@@ -15,7 +15,7 @@ last_update:
   date: 11/04/2026
   author: Kasun Thushara
 createdAt: '2026-11-04'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-12'
 url: https://wiki.seeedstudio.com/respeaker_44mm_xiao_getting_started/
 ---
 # Getting Started with reSpeaker XVF3800 44mm with XIAO ESP32-S3 Plus

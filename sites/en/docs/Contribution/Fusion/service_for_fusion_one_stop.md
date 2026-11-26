@@ -8,6 +8,9 @@ slug: /service_for_fusion_one_stop
 last_update:
   date: 10/21/2026
   author: Xi Lin
+createdAt: '2026-10-21'
+url: https://wiki.seeedstudio.com/service_for_fusion_one_stop/
+updatedAt: '2026-10-21'
 ---
 
 Seeed Fusion''s one-stop service brings together manufacturing, customization, warehousing, order fulfillment, and sales channel support. It helps hardware teams move from design files and production requirements to product delivery.

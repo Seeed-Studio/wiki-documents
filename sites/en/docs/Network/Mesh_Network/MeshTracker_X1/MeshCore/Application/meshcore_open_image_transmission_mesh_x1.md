@@ -12,12 +12,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MeshCoreOpen/MeshCoreOpen_X1.png
 slug: /meshcore_ai_image_transmission_x1
 sku: 100087698
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 9/19/2026
   author: Michelle Huang
 createdAt: 2026-09-19T00:00:00.000Z
-updatedAt: '2026-09-24'
+updatedAt: '2026-11-24'
 url: https://wiki.seeedstudio.com/meshcore_ai_image_transmission_x1/
 ---
 

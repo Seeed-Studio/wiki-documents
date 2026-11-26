@@ -1,5 +1,5 @@
 ---
-description: "How to use the WHEELTEC IMU sensor: wiring, driver setup and data reading for robot navigation and SLAM projects."
+description: 'How to use the WHEELTEC IMU sensor: wiring, driver setup and data reading for robot navigation and SLAM projects.'
 title: WHEELTEC IMU Sensor
 keywords:
   - IMU
@@ -10,7 +10,7 @@ last_update:
   date: 01/12/2025
   author: ZhuYaoHui
 createdAt: '2025-12-01'
-updatedAt: '2025-12-01'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/wheeltec_imu/
 ---
 

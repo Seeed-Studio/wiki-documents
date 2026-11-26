@@ -1,8 +1,14 @@
 ---
-description: "A close reading of LingBot-VA: video and action flow matching, causal attention, real feedback, and asynchronous correction for robot control."
-title: "LingBot-VA: A Causal World Model from Future Images to Robot Actions"
+description: 'A close reading of LingBot-VA: video and action flow matching, causal attention, real feedback, and asynchronous correction for robot control.'
+title: 'LingBot-VA: A Causal World Model from Future Images to Robot Actions'
 hide_title: true
-keywords: [Paper Deep-Dive, LingBot-VA, World Model, Video-Action Model, MoT, LeRobot]
+keywords:
+  - Paper Deep-Dive
+  - LingBot-VA
+  - World Model
+  - Video-Action Model
+  - MoT
+  - LeRobot
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/lingbot-va/fig02-framework.png
 slug: /robotics/paper_reading_lingbot_va
 displayed_sidebar: PaperReadingSidebar
@@ -12,7 +18,7 @@ last_update:
   date: 2026-11-06
   author: liujunjie
 createdAt: '2026-11-06'
-updatedAt: '2026-11-06'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_lingbot_va/
 ---
 

@@ -1,6 +1,6 @@
 ---
 description: Getting Started with reComputer Rugged J40
-title: Getting Started with reComputer Rugged Series 
+title: Getting Started with reComputer Rugged Series
 keywords:
   - reComputer Rugged
   - IP66
@@ -15,7 +15,7 @@ last_update:
   date: 10/22/2026
   author: Dayu,Dongxu Jin
 createdAt: '2026-03-04'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-05'
 url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/getting_started/
 ---
 
