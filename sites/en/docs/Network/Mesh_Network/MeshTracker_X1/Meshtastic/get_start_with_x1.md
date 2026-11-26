@@ -9,10 +9,10 @@ slug: /x1_get_started_for_meshtastic
 sku: 100087698
 sidebar_position: 1
 last_update:
-  date: 10/30/2026
+  date: 11/26/2026
   author: Advent Jiang
 createdAt: '2026-07-13'
-updatedAt: '2026-11-25'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -498,6 +498,24 @@ The temperature data is read from barometer, rather than reading from an indepen
 ### Power Consumption
 
 You can calculate the power consumption through the [Power Consumption Table](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffiles.seeedstudio.com%2Fwiki%2FSenseCAP%2FMeshTrackerX1%2FX1_for_Meshtastic_Consumption_Test_and_Battery_Life_Calculation.xlsx&wdOrigin=BROWSELINK). This device is equipped with a high-voltage battery. When the battery power is low, it will accelerate the discharge process. This device is equipped with a high-voltage battery. When the battery power is low, it will accelerate the discharge process. So you will notice that the device consumes power very rapidly when it is on low battery.
+
+### Why is my position offset on other nodes?
+
+This is expected behavior, not a GPS or hardware fault. Each channel has a **Position precision** setting, defaulting to **13 bits**. That rounds every position you broadcast to a ~±2.9 km grid (a privacy default for shared channels), while your own device shows its full-precision fix over Bluetooth — so your own position looks accurate but other nodes see an offset.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={300} height="auto" /></p>
+
+To send full precision, enable it on **every** device:
+
+1. Open **Channels** in the Meshtastic app and tap your channel.
+2. Turn on **Precise location** (sets precision to 32 = full).
+3. Repeat on each device — the setting takes effect on the sender.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={300} height="auto" /></p>
+
+CLI alternative: `meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**Note (firmware 2.8+):** public channels (no key, default key, or single-byte key) are limited to 15 bits (~729 m). Use a **private channel with a random key** for full precision.
 
 ## Troubleshooting
 

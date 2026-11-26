@@ -8,10 +8,10 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.w
 slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
-  date: 07/31/2026
+  date: 11/26/2026
   author: Advent Jiang
 createdAt: '2024-10-29'
-updatedAt: '2026-09-18'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/sensecap_indicator_meshtastic/
 ---
 
@@ -230,6 +230,24 @@ DO NOT select the `Repeater` role, which will cause the device to repeatedly reb
 If you didn't connect the GPS module, please disable the GPS function in the `Meshtastic` App, otherwise the device will keep trying to find the GPS module, which will cause the device to take a long time to boot up the screen.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>
+
+#### Why is my position offset on other nodes?
+
+This is expected behavior, not a GPS or hardware fault. Each channel has a **Position precision** setting, defaulting to **13 bits**. That rounds every position you broadcast to a ~±2.9 km grid (a privacy default for shared channels), while your own device shows its full-precision fix over Bluetooth — so your own position looks accurate but other nodes see an offset.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={600} height="auto" /></p>
+
+To send full precision, enable it on **every** device:
+
+1. Open **Channels** in the Meshtastic app and tap your channel.
+2. Turn on **Precise location** (sets precision to 32 = full).
+3. Repeat on each device — the setting takes effect on the sender.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={600} height="auto" /></p>
+
+CLI alternative: `meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**Note (firmware 2.8+):** public channels (no key, default key, or single-byte key) are limited to 15 bits (~729 m). Use a **private channel with a random key** for full precision.
 
 ## Tech Support & Product Discussion
 

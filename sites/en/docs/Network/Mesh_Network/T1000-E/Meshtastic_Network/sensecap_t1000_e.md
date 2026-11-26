@@ -8,10 +8,10 @@ slug: /sensecap_t1000_e
 sku: 114993369
 sidebar_position: 2
 last_update:
-  date: 10/26/2026
+  date: 11/26/2026
   author: Advent Jiang
 createdAt: '2024-07-24'
-updatedAt: '2026-10-26'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -403,6 +403,24 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 ### How to reboot the device
 
  Press and hold the button, then connect the charging cable.
+
+### Why is my position offset on other nodes?
+
+This is expected behavior, not a GPS or hardware fault. Each channel has a **Position precision** setting, defaulting to **13 bits**. That rounds every position you broadcast to a ~±2.9 km grid (a privacy default for shared channels), while your own device shows its full-precision fix over Bluetooth — so your own position looks accurate but other nodes see an offset.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={300} height="auto" /></p>
+
+To send full precision, enable it on **every** device:
+
+1. Open **Channels** in the Meshtastic app and tap your channel.
+2. Turn on **Precise location** (sets precision to 32 = full).
+3. Repeat on each device — the setting takes effect on the sender.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={300} height="auto" /></p>
+
+CLI alternative: `meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**Note (firmware 2.8+):** public channels (no key, default key, or single-byte key) are limited to 15 bits (~729 m). Use a **private channel with a random key** for full precision.
 
 ## Troubleshooting
 
