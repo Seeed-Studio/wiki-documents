@@ -12,7 +12,7 @@ last_update:
   date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-10-26'
+updatedAt: '2026-11-19'
 url: https://wiki.seeedstudio.com/es/meshtastic_wio_tracker_l2_intro/
 ---
 
@@ -27,11 +27,44 @@ url: https://wiki.seeedstudio.com/es/meshtastic_wio_tracker_l2_intro/
 
 La Serie Wio Tracker L2 es un nodo [Meshtastic®](https://meshtastic.org/) altamente extensible que incorpora LoRa (862–930 MHz), el ESP32S3 para un procesamiento eficiente y un módulo GPS L76K para un seguimiento de ubicación preciso. Diseñado para ofrecer flexibilidad, es compatible con pantalla táctil QSPI, pantallas E-Ink, tarjeta TF, así como paneles solares y alimentación por batería, lo que lo hace ideal para una amplia gama de aplicaciones IoT y fuera de la red.
 
+
+## Características
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **Un solo hardware, posibilidades infinitas** Crea tu propia interfaz, panel de control, juego, herramienta de mapas o experiencia interactiva: L2 Pro está listo para lo que quieras construir.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
+
+- **Pantalla táctil de alta calidad de 3,2''**: Con una pantalla de 320×240 de alta claridad con MUI y Base UI conmutables, ofrece una interacción fluida en el dispositivo para mensajería, mapas y control, sin necesidad de un teléfono móvil.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
+
+- **Impulsado por ESP32S3, listo para desarrollar**: Impulsado por el ESP32-S3 de doble núcleo con Wi-Fi y Bluetooth LE, L2 Pro proporciona una plataforma flexible para personalización de la interfaz, desarrollo de funciones y aplicaciones de código abierto.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **Mapas sin conexión con posicionamiento GNSS**: Descarga previamente mapas sin conexión en una tarjeta MicroSD y visualiza tu ubicación GNSS en tiempo real directamente en el dispositivo, incluso sin cobertura celular ni acceso a Internet.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **Batería de larga duración de 3000mAh**: Admite un uso diario prolongado con menor frecuencia de carga; funciona en condiciones de -10°C a 55°C.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **Fácil de transportar, colocación flexible**: Una antena plegable mejora la portabilidad, y la interfaz de montaje de 1/4" permite una colocación flexible con accesorios compatibles.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (6).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **Prototipa más rápido con CodeCraft**
+
+Describe tu idea en pocas palabras y el asistente de programación con IA CodeCraft de Seeed Studio generará un primer borrador del código en cuestión de minutos. Revísalo, flashea tu Wio Tracker L2 y pruébalo en la placa.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
+
 ## Modelo de la Serie L2
 
-La Serie Wio Tracker L2 incluye Wio Tracker L2 para construcciones personalizadas y Wio Tracker L2 Pro con carcasa y batería integrada.
-
-### Comparación de versiones
+La Serie Wio Tracker L2 incluye Wio Tracker L2 para desarrollos personalizados y Wio Tracker L2 Pro con carcasa y batería integrada.
 
 |Nombre del producto|Wio Tracker L2|Wio Tracker L2 Pro|
 |------------------|--------------------------|-----------------------|
@@ -45,40 +78,6 @@ La Serie Wio Tracker L2 incluye Wio Tracker L2 para construcciones personalizada
 |Entrada solar|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |Batería|<p style={{textAlign: 'center'}}>Batería de iones de litio externa mediante conector</p>|<p style={{textAlign: 'center'}}>Batería integrada de 3000mAh</p>|
 |Carcasa|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
-
-## Características
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **Un solo hardware, posibilidades infinitas** Crea tu propia interfaz, panel de control, juego, herramienta de mapas o experiencia interactiva: L2 Pro está listo para lo que quieras construir.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
-
-- **Pantalla táctil de alta calidad de 3,2''**: Con una pantalla de alta claridad de 320×240 con MUI y Base UI conmutables, ofrece una interacción fluida en el dispositivo para mensajería, mapas y control, sin necesidad de un teléfono móvil.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
-
-- **Impulsado por ESP32S3, listo para desarrollar**: Impulsado por el ESP32-S3 de doble núcleo con Wi-Fi y Bluetooth LE, L2 Pro proporciona una plataforma flexible para la personalización de la interfaz, el desarrollo de funciones y aplicaciones de código abierto.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **Mapas sin conexión con posicionamiento GNSS**: Descarga previamente mapas sin conexión en una tarjeta MicroSD y visualiza tu ubicación GNSS en tiempo real directamente en el dispositivo, incluso sin cobertura celular ni acceso a Internet.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **Batería de 3000mAh de larga duración**: Admite un uso diario prolongado con menor frecuencia de carga; funciona en condiciones de -10°C a 55°C.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **Fácil de transportar, colocación flexible**: Una antena plegable mejora la portabilidad, y la interfaz de montaje de 1/4" permite una colocación flexible con accesorios compatibles.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (6).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **Prototipa más rápido con CodeCraft**
-
-Describe tu idea en pocas palabras y el asistente de programación con IA CodeCraft de Seeed Studio generará un primer borrador del código en cuestión de minutos. Revísalo, flashea tu Wio Tracker L2 y pruébalo en la placa.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
 
 ## Especificación
 
@@ -100,7 +99,7 @@ Describe tu idea en pocas palabras y el asistente de programación con IA CodeCr
     <td colspan="1">L76K (GPS, BeiDou, GLONASS, QZSS)</td>
   </tr>
   <tr>
-    <td colspan="1">**Memoria integrada**</td>
+    <td colspan="1">**Memoria en chip**</td>
     <td colspan="1">16MB Flash / 8MB PSRAM</td>
   </tr>
   <tr>
@@ -129,7 +128,7 @@ Describe tu idea en pocas palabras y el asistente de programación con IA CodeCr
   </tr>
   <tr>
     <td colspan="1" rowspan="3">**Entrada de alimentación**</td>
-    <td colspan="1">USB Tipo-C: 5V — 1A</td>
+    <td colspan="1">USB Type-C: 5V⎓1.5A</td>
   </tr>
   <tr>
     <td colspan="1">Solar:JST-PH 2P-2.0mm, 5V ~ 13V</td>
@@ -139,18 +138,18 @@ Describe tu idea en pocas palabras y el asistente de programación con IA CodeCr
   </tr>
   <tr>
     <td colspan="1" rowspan="2">**Pantalla táctil IPS**</td>
-    <td colspan="1">Tamaño: 3,2 pulgadas</td>
+    <td colspan="1">Tamaño: 3.2 pulgadas</td>
   </tr>
   <tr>
     <td colspan="1">Resolución: 240 × 320 píxeles</td>
   </tr>
     <tr>
     <td colspan="1">**LED**</td>
-    <td colspan="1">LED de malla * 1<br/>LED de carga * 1</td>
+    <td colspan="1">Mesh LED * 1<br/>LED de carga * 1</td>
   </tr>
   <tr>
     <td colspan="1">**Botón**</td>
-    <td colspan="1">WAKE-UP * 1<br/>Usuario/Arranque * 1<br/>RST * 1<br/>Interruptor de encendido * 1</td>
+    <td colspan="1">WAKE-UP * 1<br/>Usuario/Boot * 1<br/>RST * 1<br/>Interruptor de encendido * 1</td>
   </tr>
     <tr>
     <td colspan="1" rowspan="3">**Audio**</td>
@@ -164,15 +163,15 @@ Describe tu idea en pocas palabras y el asistente de programación con IA CodeCr
   </tr>
     <tr>
     <td colspan="1">**Distancia de comunicación**</td>
-    <td colspan="1">Hasta 5,8 km</td>
+    <td colspan="1">Hasta 5.8 km</td>
   </tr>
     <tr>
     <td colspan="1">**Dimensiones**</td>
-    <td colspan="1">(Antena plegada) L: 87,5 mm, A: 69 mm, H: 26,6 mm</td>
+    <td colspan="1">(Antena plegada) L: 87.5 mm, W: 69 mm, H: 26.6 mm</td>
   </tr>
   <tr>
     <td colspan="1">**Peso del dispositivo**</td>
-    <td colspan="1">171,5g</td>
+    <td colspan="1">171.5g</td>
   </tr>
     <tr>
     <td colspan="1">**Temperatura de funcionamiento**</td>
@@ -190,7 +189,7 @@ Describe tu idea en pocas palabras y el asistente de programación con IA CodeCr
 | :- | :- |
 |**Capacidad de la batería**|Batería recargable de iones de litio, 3000mAh|
 |**Supervisión de la vida de la batería**|Nivel de batería en enlace ascendente periódico|
-|**Protocolo de carga**|USB Tipo-C|
+|**Protocolo de carga**|USB Type-C|
 |**Entrada de alimentación del dispositivo**|5V, 1A|
 |**Voltaje de corte completamente cargado**|4.2V|
 |**Límite de temperatura de carga**|0 a +45℃|
