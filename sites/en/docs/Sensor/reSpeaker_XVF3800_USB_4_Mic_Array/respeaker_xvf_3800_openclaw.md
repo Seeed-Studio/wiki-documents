@@ -1,5 +1,5 @@
 ---
-description: 'ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push'
+description: 'reSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push'
 title: 'reSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push'
 keywords:
   - reSpeaker_XVF3800_USB_4_Mic_Array
@@ -15,9 +15,9 @@ updatedAt: '2026-02-24'
 url: https://wiki.seeedstudio.com/respeaker_xvf_3800_openclaw/
 ---
 
-# ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push
+# reSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push
 
-> Want to give your robot voice interaction capabilities? Try Seeed Studio's ReSpeaker series! The target of this project is to integrate the reSpeaker XVF3800 USB 4-Mic Array with OpenClaw, enabling voice-controlled AI agent operation. With reSpeaker's powerful audio capture and noise reduction capabilities, combined with OpenClaw's flexible AI agent framework, you can easily create a voice-controlled smart assistant that can understand and respond to your commands. This demo demonstrates how to use reSpeaker to control Openclaw, enabling it to automatically locate Lark groups and send interactive meeting invitation cards.
+> Want to give your robot voice interaction capabilities? Try Seeed Studio's reSpeaker series! The target of this project is to integrate the reSpeaker XVF3800 USB 4-Mic Array with OpenClaw, enabling voice-controlled AI agent operation. With reSpeaker's powerful audio capture and noise reduction capabilities, combined with OpenClaw's flexible AI agent framework, you can easily create a voice-controlled smart assistant that can understand and respond to your commands. This demo demonstrates how to use reSpeaker to control Openclaw, enabling it to automatically locate Lark groups and send interactive meeting invitation cards.
 > [Project Source Code Repository](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
 > [reSpeaker Product Source Code](https://github.com/respeaker)
 > [reSpeaker 4-Mic Array | Seeed Studio Purchase Link](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)

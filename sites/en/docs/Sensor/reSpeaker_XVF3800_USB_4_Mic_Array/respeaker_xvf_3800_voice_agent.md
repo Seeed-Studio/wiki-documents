@@ -20,13 +20,13 @@ url: https://wiki.seeedstudio.com/respeaker_voice_assistant/
 
 ## Overview
 
-This project demonstrates a fully local smart voice assistant designed for smart offices and smart spaces. It uses the ReSpeaker XVF3800 microphone array for high-quality voice capture, combined with on-device speech-to-text (STT) for accurate transcription. A local large language model (LLM) processes user queries intelligently without relying on the cloud, ensuring privacy and low latency. Text-to-speech (TTS) generates natural voice responses, enabling real-time interaction. The system is ideal for environments such as offices, malls, kiosks, and meeting rooms where secure, offline voice control is essential.
+This project demonstrates a fully local smart voice assistant designed for smart offices and smart spaces. It uses the reSpeaker XVF3800 microphone array for high-quality voice capture, combined with on-device speech-to-text (STT) for accurate transcription. A local large language model (LLM) processes user queries intelligently without relying on the cloud, ensuring privacy and low latency. Text-to-speech (TTS) generates natural voice responses, enabling real-time interaction. The system is ideal for environments such as offices, malls, kiosks, and meeting rooms where secure, offline voice control is essential.
 
 ## Hardware Required
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>reSpeaker XVF3800 </th>
     <th>Jetson AGX Orin 32GB H01 Kit</th>
   </tr>
   <tr>
@@ -49,13 +49,13 @@ This project demonstrates a fully local smart voice assistant designed for smart
 
 ## Prepare the Devices
 
-#### ReSpeaker XVF3800 – USB Firmware Installation
+#### reSpeaker XVF3800 – USB Firmware Installation
 
-Ensure the ReSpeaker XVF3800 USB Mic Array is updated with the latest firmware before use.
+Ensure the reSpeaker XVF3800 USB Mic Array is updated with the latest firmware before use.
 
 - Follow the official firmware update guide:
 
-  - ReSpeaker XVF3800 Firmware Update [Seeed Studio Wiki](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
+  - reSpeaker XVF3800 Firmware Update [Seeed Studio Wiki](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 This step ensures stable USB audio input and compatibility with downstream speech processing pipelines.
 

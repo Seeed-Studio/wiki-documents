@@ -1,5 +1,5 @@
 ---
-description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
+description: The reSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 UDP Audio Streaming
 keywords:
   - reSpeaker
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_udp_audio_stream/
 
 ## Overview
 
-This project demonstrates real-time audio streaming using the **ReSpeaker XVF3800** microphone array with a **XIAO ESP32S3** board. The audio is captured via I2S, and transmitted over UDP to a server running on a local machine, where it can be stored and processed as a .wav file.
+This project demonstrates real-time audio streaming using the **reSpeaker XVF3800** microphone array with a **XIAO ESP32S3** board. The audio is captured via I2S, and transmitted over UDP to a server running on a local machine, where it can be stored and processed as a .wav file.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -33,7 +33,7 @@ This sketch performs the following tasks:
 
 - Connects to the specified Wi-Fi network.
 - Connects to a UDP server (e.g., Python script running on the host PC).
-- Captures real-time audio via I2S from the ReSpeaker XVF3800 using the XIAO ESP32S3.
+- Captures real-time audio via I2S from the reSpeaker XVF3800 using the XIAO ESP32S3.
 - Transmits the captured audio as raw data.
 
 ## Arduino Code

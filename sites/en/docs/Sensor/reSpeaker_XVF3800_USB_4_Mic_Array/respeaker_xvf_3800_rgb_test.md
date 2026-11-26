@@ -1,5 +1,5 @@
 ---
-description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
+description: The reSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 RGB Test
 keywords:
   - reSpeaker
@@ -31,7 +31,7 @@ This code controls the colorful LED ring on the **reSpeaker XVF3800 USB 4-Mic Ar
 
 ## How It Works
 
-This Arduino sketch is designed to control the **WS2812 RGB LED ring** on the ReSpeaker XVF3800 using the **I2C protocol**. It uses the **Wire.h** library to communicate with the XVF3800's internal controller and send specific instructions to adjust the **LED effect, color, speed, and brightness**. You can customize the LED behavior without changing the XVF3800 firmware — everything is handled from the ESP32S3!
+This Arduino sketch is designed to control the **WS2812 RGB LED ring** on the reSpeaker XVF3800 using the **I2C protocol**. It uses the **Wire.h** library to communicate with the XVF3800's internal controller and send specific instructions to adjust the **LED effect, color, speed, and brightness**. You can customize the LED behavior without changing the XVF3800 firmware — everything is handled from the ESP32S3!
 
 ## Code
 
