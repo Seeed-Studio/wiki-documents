@@ -1,7 +1,7 @@
 ---
 description: Building a local fall-alert system for elder care, assisted living and home care — what devices you need, how to deploy it, which interfaces it exposes, and measured data across seven devices
 title: 'On-Device AI Fall Detection: Build, Deploy, and Measured Results'
-sidebar_label: 'On-Device AI Fall Detection'
+sidebar_label: On-Device AI Fall Detection
 keywords:
   - fall detection system
   - fall alert

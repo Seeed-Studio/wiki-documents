@@ -1,6 +1,6 @@
 ---
-description: "A close reading of TRI's LBM paper: conditional Diffusion Transformers, multitask pretraining, and data efficiency, with a comparison to LeRobot MultiTask DiT."
-title: "LBM and MultiTask DiT: How Multitask Pretraining Helps Robots Learn"
+description: 'A close reading of TRI''s LBM paper: conditional Diffusion Transformers, multitask pretraining, and data efficiency, with a comparison to LeRobot MultiTask DiT.'
+title: 'LBM and MultiTask DiT: How Multitask Pretraining Helps Robots Learn'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -20,7 +20,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-11-03'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_multi_task_dit/
 ---
 

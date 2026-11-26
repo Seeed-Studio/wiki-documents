@@ -1,5 +1,5 @@
 ---
-description: "Complete guide to StackForce robotic actuators: series overview, wiring, CAN communication and control examples for wheeled and legged robots."
+description: 'Complete guide to StackForce robotic actuators: series overview, wiring, CAN communication and control examples for wheeled and legged robots.'
 title: Stackforce
 keywords:
   - actuator
@@ -13,7 +13,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2025-11-26'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/stackforce_series/
 ---
 

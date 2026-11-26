@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into ACT imitation learning, the ALOHA bimanual teleoperation system, action chunking, temporal ensembling and the CVAE network."
-title: "ACT: How Action Chunking Enables Low-Cost Bimanual Manipulation"
+description: A paper deep-dive into ACT imitation learning, the ALOHA bimanual teleoperation system, action chunking, temporal ensembling and the CVAE network.
+title: 'ACT: How Action Chunking Enables Low-Cost Bimanual Manipulation'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_act/
 ---
 

@@ -1,7 +1,7 @@
 ---
 description: On-device waste sorting at the drop-off point — one trigger, one image, eight material classes and the Chinese four-way disposal category over MQTT, with a GPIO callback for a flap. Hardware, deployment outline, output contracts and the full measured boundaries.
 title: 'Edge Waste Sorting: Material Classes, the Chinese Four-Way Category and MQTT'
-sidebar_label: 'Edge Waste Sorting'
+sidebar_label: Edge Waste Sorting
 keywords:
   - waste sorting
   - waste classification edge AI

@@ -18,7 +18,7 @@ last_update:
   author: yylin
 url: https://wiki.seeedstudio.com/recamera_pro_bsp_download/
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-11-05'
 ---
 
 # Download and Extract the Source Package

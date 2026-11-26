@@ -7,7 +7,7 @@ last_update:
   date: 07/15/2026
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-09-24'
+updatedAt: '2026-11-19'
 url: https://wiki.seeedstudio.com/Jetson_FAQ/
 ---
 

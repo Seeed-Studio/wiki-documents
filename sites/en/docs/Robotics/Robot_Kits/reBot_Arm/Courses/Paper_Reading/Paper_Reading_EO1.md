@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into EO-1 shared backbone, interleaved vision-text-action learning, embodied reasoning data and robot-control experiments."
-title: "EO-1: How to Unify Embodied Reasoning and Robot Control"
+description: A paper deep-dive into EO-1 shared backbone, interleaved vision-text-action learning, embodied reasoning data and robot-control experiments.
+title: 'EO-1: How to Unify Embodied Reasoning and Robot Control'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_eo1/
 ---
 

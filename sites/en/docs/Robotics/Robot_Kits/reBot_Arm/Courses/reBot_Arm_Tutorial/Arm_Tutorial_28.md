@@ -1,5 +1,5 @@
 ---
-description: "Chapter 28 of the Seeed Physical AI Beginner's Course — object detection and hand-eye calibration: the vision task taxonomy, YOLO and open-vocabulary detection, oriented bounding boxes, NMS and mAP, ArUco markers with solvePnP, AX = XB hand-eye calibration, and 6-DoF grasp pose estimation with GraspNet."
+description: 'Chapter 28 of the Seeed Physical AI Beginner''s Course — object detection and hand-eye calibration: the vision task taxonomy, YOLO and open-vocabulary detection, oriented bounding boxes, NMS and mAP, ArUco markers with solvePnP, AX = XB hand-eye calibration, and 6-DoF grasp pose estimation with GraspNet.'
 title: Chapter 28 - Object Detection and Hand-Eye Calibration
 hide_title: true
 keywords:
@@ -21,7 +21,7 @@ last_update:
   date: 2026-10-08
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-08'
-updatedAt: '2026-10-08'
+updatedAt: '2026-10-09'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_28/
 ---
 

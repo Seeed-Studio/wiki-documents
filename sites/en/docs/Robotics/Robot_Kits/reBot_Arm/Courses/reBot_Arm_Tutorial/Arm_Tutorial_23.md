@@ -1,5 +1,5 @@
 ---
-description: "Chapter 23 of the Seeed Physical AI Beginner's Course — coordinate frames and homogeneous transforms: world, base, joint, end-effector and camera frames, vectors and matrices, translation and rotation matrices, chaining transforms, and Euler angles versus quaternions."
+description: 'Chapter 23 of the Seeed Physical AI Beginner''s Course — coordinate frames and homogeneous transforms: world, base, joint, end-effector and camera frames, vectors and matrices, translation and rotation matrices, chaining transforms, and Euler angles versus quaternions.'
 title: Chapter 23 - Robot Arm Mathematical Foundations and Coordinate Systems
 hide_title: true
 keywords:
@@ -19,7 +19,7 @@ last_update:
   date: 2026-09-25
   author: Seeed Studio Robotics Team
 createdAt: '2026-09-25'
-updatedAt: '2026-09-25'
+updatedAt: '2026-10-15'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_23/
 ---
 

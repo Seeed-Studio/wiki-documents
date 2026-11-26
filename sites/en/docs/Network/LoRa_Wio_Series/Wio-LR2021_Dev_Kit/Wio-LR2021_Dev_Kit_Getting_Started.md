@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Wio-LR2021 Dev Kit
-description: 'Get started with the Wio-LR2021 Dev Kit'
+description: Get started with the Wio-LR2021 Dev Kit
 keywords:
   - Wio-LR2021
   - Semtech LR2021
@@ -16,7 +16,7 @@ last_update:
   date: 11/02/2026
   author: David Du
 createdAt: '2026-11-02'
-updatedAt: '2026-11-02'
+updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/wio_lr2021_dev_kit_getting_started/
 ---
 

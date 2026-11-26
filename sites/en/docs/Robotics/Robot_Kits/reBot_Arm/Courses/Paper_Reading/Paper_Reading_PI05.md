@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into pi0.5 multi-source joint training, hierarchical action generation, open-world generalization and differences from pi0."
-title: "π0.5: How Joint Training Supports Open-World Generalization"
+description: A paper deep-dive into pi0.5 multi-source joint training, hierarchical action generation, open-world generalization and differences from pi0.
+title: 'π0.5: How Joint Training Supports Open-World Generalization'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_pi05/
 ---
 

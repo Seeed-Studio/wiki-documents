@@ -15,6 +15,9 @@ slug: /jetson_usb
 last_update:
   date: 11/02/2026
   author: youjiang
+createdAt: '2026-11-02'
+url: https://wiki.seeedstudio.com/jetson_usb/
+updatedAt: '2026-11-02'
 ---
 
 In this article, let's talk about a very common and easy-to-get-wrong problem on Jetson: **USB.**

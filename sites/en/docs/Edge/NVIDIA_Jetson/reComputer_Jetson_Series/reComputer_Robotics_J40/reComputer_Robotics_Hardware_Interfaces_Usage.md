@@ -1,5 +1,5 @@
 ---
-description: "reComputer Robotics J401 hardware layout: board dimensions, module options, mounting holes and where each connector sits before wiring."
+description: 'reComputer Robotics J401 hardware layout: board dimensions, module options, mounting holes and where each connector sits before wiring.'
 title: reComputer Robotics Hardware and Interfaces Usage
 tags:
   - J401-Robotics carrier board
@@ -15,7 +15,7 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-03-30'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/recomputer_robotics_j401_hardware_interfaces_usage/
 ---
 

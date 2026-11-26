@@ -13,6 +13,9 @@ keywords:
   - Raspberry Pi CM4
   - RS485 Modbus RTU
   - BACnet MS/TP
+createdAt: '2026-11-13'
+url: https://wiki.seeedstudio.com/recomputer_r1000_r1100_faq/
+updatedAt: '2026-11-13'
 ---
 
 <div class="recomputer-faq-page">

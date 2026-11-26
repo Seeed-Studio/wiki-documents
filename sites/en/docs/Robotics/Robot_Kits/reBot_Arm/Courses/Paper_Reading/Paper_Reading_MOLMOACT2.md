@@ -1,8 +1,15 @@
 ---
-description: "A deep dive into MolmoAct2: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "MolmoAct2: From Discrete Action Learning to Layer-Wise Continuous Control"
+description: 'A deep dive into MolmoAct2: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'MolmoAct2: From Discrete Action Learning to Layer-Wise Continuous Control'
 hide_title: true
-keywords: ["Paper Deep-Dive","MolmoAct2","VLA","Layer-Wise KV","Action Tokenization","Continuous Control","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - MolmoAct2
+  - VLA
+  - Layer-Wise KV
+  - Action Tokenization
+  - Continuous Control
+  - LeRobot
 slug: /robotics/paper_reading_molmoact2
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +17,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_molmoact2/
 ---
 
 import '/src/css/paper-reading-style.css';

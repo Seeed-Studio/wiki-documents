@@ -1,6 +1,6 @@
 ---
-description: "Understand LeRobot's video, Parquet, and meta structure, and check time synchronization, image quality, and demonstration completeness."
-title: "How to Validate Dataset Quality for Robot Learning"
+description: Understand LeRobot's video, Parquet, and meta structure, and check time synchronization, image quality, and demonstration completeness.
+title: How to Validate Dataset Quality for Robot Learning
 hide_title: true
 keywords:
   - Hands-on Deployment
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/hands_on_dataset_quality/
 ---
 

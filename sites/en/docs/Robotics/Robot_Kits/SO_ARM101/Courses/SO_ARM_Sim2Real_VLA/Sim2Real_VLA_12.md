@@ -1,5 +1,5 @@
 ---
-description: "Chapter 12 of the SO-ARM101 Sim-to-Real VLA Course (optional) — collect data from Isaac Sim: teleoperate the white SO-ARM101 digital twin, record LeRobot v3 episodes, replay, and verify."
+description: 'Chapter 12 of the SO-ARM101 Sim-to-Real VLA Course (optional) — collect data from Isaac Sim: teleoperate the white SO-ARM101 digital twin, record LeRobot v3 episodes, replay, and verify.'
 title: Chapter 12 - Collect Data from Isaac Sim (Optional)
 hide_title: true
 keywords:

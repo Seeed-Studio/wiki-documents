@@ -1,5 +1,5 @@
 ---
-description: "SO-ARM Physical AI Beginner's Course — a free, hands-on guide to building and learning with the open-source SO-ARM100 / SO-ARM101 robotic arm. All four stages and 22 chapters are published, covering setup and assembly, imitation learning with LeRobot, double-arm training, VLA with Isaac GR00T, and no-code VLA with SenseCraft Robotics."
+description: SO-ARM Physical AI Beginner's Course — a free, hands-on guide to building and learning with the open-source SO-ARM100 / SO-ARM101 robotic arm. All four stages and 22 chapters are published, covering setup and assembly, imitation learning with LeRobot, double-arm training, VLA with Isaac GR00T, and no-code VLA with SenseCraft Robotics.
 title: SO-ARM Physical AI Beginner's Course
 hide_title: true
 keywords:
@@ -20,7 +20,7 @@ last_update:
   date: 2026-10-19
   author: ZhuYaoHui
 createdAt: '2026-10-19'
-updatedAt: '2026-10-19'
+updatedAt: '2026-10-20'
 url: https://wiki.seeedstudio.com/robotics/soarm_physical_ai_course_introduction/
 ---
 

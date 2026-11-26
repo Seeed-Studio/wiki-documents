@@ -12,8 +12,8 @@ sidebar_position: 1
 last_update:
   date: 10/18/2026
   author: yylin
-createdAt: 2026-10-18
-updatedAt: 2026-10-18
+createdAt: 2026-10-18T00:00:00.000Z
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/recamera_firgate/
 ---
 

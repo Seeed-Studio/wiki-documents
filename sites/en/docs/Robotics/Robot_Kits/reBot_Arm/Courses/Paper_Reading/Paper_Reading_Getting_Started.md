@@ -1,6 +1,6 @@
 ---
-description: "Explore the core methods behind ACT, the π series and generalist VLA models, with LeRobot tutorials on demonstrations, training and deployment."
-title: "Physical AI Paper Deep-Dives and Hands-on Reproduction"
+description: Explore the core methods behind ACT, the π series and generalist VLA models, with LeRobot tutorials on demonstrations, training and deployment.
+title: Physical AI Paper Deep-Dives and Hands-on Reproduction
 hide_title: true
 keywords:
   - reBot
@@ -28,7 +28,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-16'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-20'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_getting_started/
 ---
 

@@ -13,6 +13,9 @@ slug: /jetson_jetpack_l4t_ubuntu_kernel_uefi
 last_update:
   date: 11/02/2026
   author: youjiang
+createdAt: '2026-11-02'
+url: https://wiki.seeedstudio.com/jetson_jetpack_l4t_ubuntu_kernel_uefi/
+updatedAt: '2026-11-09'
 ---
 
 When you first start working with Jetson, there is one question almost everyone runs into: **How many "system versions" does Jetson actually have?**

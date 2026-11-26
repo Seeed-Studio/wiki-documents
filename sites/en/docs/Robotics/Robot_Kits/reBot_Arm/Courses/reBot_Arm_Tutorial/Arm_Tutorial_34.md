@@ -1,5 +1,5 @@
 ---
-description: "Chapter 34 of the Seeed Physical AI Beginner's Course — MoveIt 2 motion planning on the reBot Arm: the move_group architecture, SRDF planning groups, joint limits, the collision model and self-collision matrix, the planning scene, Cartesian paths, obstacle planning, trajectory execution and the draw_square / pick_place demos."
+description: 'Chapter 34 of the Seeed Physical AI Beginner''s Course — MoveIt 2 motion planning on the reBot Arm: the move_group architecture, SRDF planning groups, joint limits, the collision model and self-collision matrix, the planning scene, Cartesian paths, obstacle planning, trajectory execution and the draw_square / pick_place demos.'
 title: Chapter 34 - MoveIt2 Motion Planning
 hide_title: true
 keywords:
@@ -21,7 +21,7 @@ last_update:
   date: 2026-10-09
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-10'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_34/
 ---
 

@@ -1,14 +1,14 @@
 ---
-description: "Develop applications with reCamera Pro video, rockit/MPI, ISP, sensor, and RGA capabilities."
-title: "Video and ISP Development"
+description: Develop applications with reCamera Pro video, rockit/MPI, ISP, sensor, and RGA capabilities.
+title: Video and ISP Development
 keywords:
-  - "reCamera"
-  - "reCamera Pro"
-  - "RV1126B"
-  - "SDK"
-  - "C/C++"
-  - "RKNN"
-  - "Application Development"
+  - reCamera
+  - reCamera Pro
+  - RV1126B
+  - SDK
+  - C/C++
+  - RKNN
+  - Application Development
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_video_isp_development
 sku: 10003420
@@ -18,7 +18,7 @@ last_update:
   author: yylin
 url: https://wiki.seeedstudio.com/recamera_pro_video_isp_development/
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-10'
 ---
 
 # Video and ISP Development

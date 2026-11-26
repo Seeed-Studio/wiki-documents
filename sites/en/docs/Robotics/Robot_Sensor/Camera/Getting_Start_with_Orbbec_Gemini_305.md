@@ -12,6 +12,9 @@ slug: /orbbec_gemini305
 last_update:
   date: 11/19/2026
   author: Yang-Ci
+createdAt: '2026-11-17'
+url: https://wiki.seeedstudio.com/orbbec_gemini305/
+updatedAt: '2026-11-24'
 ---
 
 <div align="center">

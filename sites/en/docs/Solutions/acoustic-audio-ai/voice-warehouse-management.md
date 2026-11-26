@@ -1,7 +1,7 @@
 ---
 description: Running a warehouse management system by voice on edge hardware — which devices you need, how the MCP bridge connects speech to inventory, how to deploy each of the five tiers, and load test results measured on a reComputer R2000 series device
 title: 'Voice-Controlled Warehouse Management on Edge Hardware: Build, Deploy, and Measured Results'
-sidebar_label: 'Voice Warehouse Management'
+sidebar_label: Voice Warehouse Management
 keywords:
   - voice controlled warehouse management system
   - edge WMS

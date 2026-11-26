@@ -1,5 +1,5 @@
 ---
-description: "How to train a bimanual (dual-arm) SO-ARM policy with LeRobot: calibrate four arms, teleoperate, record datasets, train ACT and deploy on the real robots."
+description: 'How to train a bimanual (dual-arm) SO-ARM policy with LeRobot: calibrate four arms, teleoperate, record datasets, train ACT and deploy on the real robots.'
 title: SO-Arm Bimanual-Teleoperation
 keywords:
   - LeRobot
@@ -17,7 +17,7 @@ translation:
   skip: [zh-CN]
 url: https://wiki.seeedstudio.com/lerobot_double_arm_so_arm_training/
 createdAt: '2026-07-01'
-updatedAt: '2026-09-16'
+updatedAt: '2026-11-24'
 ---
 
 import '/src/css/rebot-wiki-style.css';

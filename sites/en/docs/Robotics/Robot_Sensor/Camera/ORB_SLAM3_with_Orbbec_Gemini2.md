@@ -1,5 +1,5 @@
 ---
-description: "Run ORB-SLAM3 on reComputer J30/J40 with an Orbbec Gemini2: Orbbec SDK build, camera calibration and the monocular SLAM launch."
+description: 'Run ORB-SLAM3 on reComputer J30/J40 with an Orbbec Gemini2: Orbbec SDK build, camera calibration and the monocular SLAM launch.'
 title: ORB-SLAM3 with Orbbec Gemini2
 keywords:
   - ORB-SLAM3
@@ -16,7 +16,7 @@ last_update:
   date: 2025-08-21
   author: Zibo
 createdAt: '2025-08-21'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/orb_slam3_orbbec_gemini2/
 ---
 

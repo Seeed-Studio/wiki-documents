@@ -1,5 +1,5 @@
 ---
-description: "Run 8 GMSL2 cameras on Jetson AGX Orin with the J501 carrier: camera configuration, YOLO11 TensorRT detection and VGGT 3D reconstruction."
+description: 'Run 8 GMSL2 cameras on Jetson AGX Orin with the J501 carrier: camera configuration, YOLO11 TensorRT detection and VGGT 3D reconstruction.'
 title: Multi-GMSL Cameras for Real-Time Object Detection and 3D Reconstruction on Jetson AGX Orin
 keywords:
   - j501 carrier board
@@ -16,7 +16,7 @@ last_update:
   date: 11/06/2026
   author: Zibo
 createdAt: '2025-06-27'
-updatedAt: '2026-11-06'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/multiple_cameras_with_jetson/
 ---
 

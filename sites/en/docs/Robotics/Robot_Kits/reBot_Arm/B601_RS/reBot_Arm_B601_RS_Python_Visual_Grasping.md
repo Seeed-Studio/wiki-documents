@@ -18,7 +18,7 @@ last_update:
 translation:
   skip: [zh-CN]
 createdAt: '2026-11-23'
-updatedAt: '2026-11-24'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_python_visual_grasping/
 ---
 

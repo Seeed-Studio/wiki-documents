@@ -1,7 +1,7 @@
 ---
 description: License plate recognition and whitelist barrier opening with your existing gate cameras and one edge host — hardware, deployment, interfaces and measured data on Jetson and RK hosts
 title: Edge License Plate Recognition — Selection, Deployment and Measured Data
-sidebar_label: 'Edge License Plate Recognition'
+sidebar_label: Edge License Plate Recognition
 keywords:
   - license plate recognition
   - ANPR

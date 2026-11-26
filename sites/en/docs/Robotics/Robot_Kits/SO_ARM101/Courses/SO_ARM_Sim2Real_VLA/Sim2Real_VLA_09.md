@@ -1,5 +1,5 @@
 ---
-description: "Chapter 9 of the SO-ARM101 Sim-to-Real VLA Course — collect data from the real environment: test cameras, run lerobot-record on the SO-101 pair, and verify the LeRobot v3 dataset."
+description: 'Chapter 9 of the SO-ARM101 Sim-to-Real VLA Course — collect data from the real environment: test cameras, run lerobot-record on the SO-101 pair, and verify the LeRobot v3 dataset.'
 title: Chapter 9 - Collect Data from the Real Environment
 hide_title: true
 keywords:

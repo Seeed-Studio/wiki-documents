@@ -12,7 +12,7 @@ last_update:
   date: 11/19/2026
   author: Dayu
 createdAt: '2026-11-18'
-updatedAt: '2026-11-18'
+updatedAt: '2026-11-19'
 url: https://wiki.seeedstudio.com/jetpack5_uefi_boot_failure_fix/
 ---
 

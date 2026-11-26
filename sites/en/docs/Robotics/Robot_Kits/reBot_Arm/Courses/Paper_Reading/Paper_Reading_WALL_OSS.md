@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into action-semantic pre-training, continuous-action flow matching, Uni-CoT and embodied question answering and control."
-title: "WALL-OSS: How Vision-Language Understanding Connects to Embodied Actions"
+description: A paper deep-dive into action-semantic pre-training, continuous-action flow matching, Uni-CoT and embodied question answering and control.
+title: 'WALL-OSS: How Vision-Language Understanding Connects to Embodied Actions'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_wall_oss/
 ---
 

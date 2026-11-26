@@ -1,5 +1,5 @@
 ---
-description: "J401 carrier board interfaces on reComputer Robotics: M.2 Key M/B/E, CAN, GMSL2, USB, Ethernet and 40-pin. Pinouts, commands and JetPack 7.2 notes."
+description: 'J401 carrier board interfaces on reComputer Robotics: M.2 Key M/B/E, CAN, GMSL2, USB, Ethernet and 40-pin. Pinouts, commands and JetPack 7.2 notes.'
 title: reComputer Robotics J401 Interfaces
 sidebar_label: Interfaces Usage
 tags:
@@ -16,7 +16,7 @@ last_update:
   date: 10/19/2026
   author: Zibo
 createdAt: '2025-04-29'
-updatedAt: '2026-10-19'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/
 ---
 

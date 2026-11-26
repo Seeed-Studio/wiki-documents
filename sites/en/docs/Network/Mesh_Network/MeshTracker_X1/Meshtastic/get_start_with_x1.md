@@ -12,7 +12,7 @@ last_update:
   date: 10/30/2026
   author: Advent Jiang
 createdAt: '2026-07-13'
-updatedAt: '2026-10-30'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/x1_get_started_for_meshtastic/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';

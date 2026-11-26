@@ -1,5 +1,5 @@
 ---
-description: "Chapter 11 of the SO-ARM101 Sim-to-Real VLA Course — evaluate in the real environment: run the fine-tuned GR00T N1.7 model against the physical SO-101 follower with a decoupled policy server and robot client."
+description: 'Chapter 11 of the SO-ARM101 Sim-to-Real VLA Course — evaluate in the real environment: run the fine-tuned GR00T N1.7 model against the physical SO-101 follower with a decoupled policy server and robot client.'
 title: Chapter 11 - Evaluate in the Real Environment
 hide_title: true
 keywords:

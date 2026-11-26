@@ -17,7 +17,7 @@ last_update:
   date: 2026-09-01
   author: Dayu
 createdAt: '2026-07-24'
-updatedAt: '2026-09-01'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/build_and_flash_yocto_for_seeed_jetson_carrier_boards/
 ---
 

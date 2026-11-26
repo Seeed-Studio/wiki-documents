@@ -8,6 +8,9 @@ slug: /service_for_fusion_sample_validation
 last_update:
   date: 10/21/2026
   author: Xi Lin
+createdAt: '2026-10-21'
+url: https://wiki.seeedstudio.com/service_for_fusion_sample_validation/
+updatedAt: '2026-10-21'
 ---
 
 Sample validation checks whether a product design meets its intended requirements. Pilot production validates the production process, assembly procedures, and test methods in preparation for mass production.

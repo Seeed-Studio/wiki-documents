@@ -17,7 +17,7 @@ last_update:
   author: yylin
 url: https://wiki.seeedstudio.com/recamera_pro_sdk_reference/
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-12'
 ---
 
 # Glossary, Documentation Map, and Licensing
