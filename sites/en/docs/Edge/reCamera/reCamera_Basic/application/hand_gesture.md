@@ -16,7 +16,7 @@ last_update:
   date: 10/08/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-26'
-updatedAt: '2026-06-26'
+updatedAt: '2026-10-08'
 url: https://wiki.seeedstudio.com/recamera_hand_gesture/
 ---
 

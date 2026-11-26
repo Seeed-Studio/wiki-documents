@@ -1,6 +1,6 @@
 ---
 title: Wio-LR2021 Dev Kit Factory Firmware User Guide
-description: 'Factory firmware guide for the Wio-LR2021 Dev Kit'
+description: Factory firmware guide for the Wio-LR2021 Dev Kit
 keywords:
   - Wio-LR2021
   - ESP32-S3
@@ -14,7 +14,7 @@ last_update:
   date: 11/05/2026
   author: David Du
 createdAt: '2026-11-05'
-updatedAt: '2026-11-05'
+updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/wio_lr2021_dev_kit_factory_firmware_user_guide/
 ---
 

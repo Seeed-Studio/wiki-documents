@@ -16,7 +16,7 @@ last_update:
   date: 09/30/2026
   author: Dongxu Jin
 createdAt: '2026-08-14'
-updatedAt: '2026-09-30'
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/hardware_and_interface_usage/
 ---
 

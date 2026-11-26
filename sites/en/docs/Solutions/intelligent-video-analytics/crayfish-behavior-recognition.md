@@ -1,7 +1,7 @@
 ---
 description: 'Aquaculture Crayfish Behavior & Fighting Recognition Engineering Document: 4-stage funnel pipeline, 8-frame temporal mosaic network, multi-frame sex voting, solution-cli automated deployment, runtime matrix, MQTT/WS protocols, and field benchmarks'
 title: 'Aquaculture Crayfish Behavior Recognition: 4-Stage Pipeline and Edge Benchmarks'
-sidebar_label: 'Crayfish Behavior Recognition'
+sidebar_label: Crayfish Behavior Recognition
 keywords:
   - Crayfish Fighting Recognition
   - Aquaculture Edge AI

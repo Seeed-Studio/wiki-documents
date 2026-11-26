@@ -13,6 +13,9 @@ keywords:
   - 26 TOPS
   - Raspberry Pi 5
   - Raspberry Pi CM5
+createdAt: '2026-11-13'
+url: https://wiki.seeedstudio.com/recomputer_ai_r2000_faq/
+updatedAt: '2026-11-13'
 ---
 
 <div class="recomputer-faq-page">

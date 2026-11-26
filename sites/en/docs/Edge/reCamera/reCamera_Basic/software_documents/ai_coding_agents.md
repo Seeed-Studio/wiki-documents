@@ -16,7 +16,7 @@ last_update:
   date: '2026-11-25'
   author: Go
 createdAt: '2026-11-20'
-updatedAt: '2026-11-20'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/recamera_2002_development_cpp_skill/
 ---
 

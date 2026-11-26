@@ -9,7 +9,7 @@ last_update:
   date: 11/05/2026
   author: Evelyn Chen
 createdAt: '2024-08-14'
-updatedAt: '2025-09-11'
+updatedAt: '2026-11-05'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_with_micropython/
 ---
 

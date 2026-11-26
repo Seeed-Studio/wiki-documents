@@ -11,8 +11,8 @@ sidebar_position: 1
 last_update:
   date: 10/22/2026
   author: yylin
-createdAt: 2026-10-22
-updatedAt: 2026-10-22
+createdAt: 2026-10-22T00:00:00.000Z
+updatedAt: '2026-10-23'
 url: https://wiki.seeedstudio.com/recamera_pro_frigate/
 ---
 

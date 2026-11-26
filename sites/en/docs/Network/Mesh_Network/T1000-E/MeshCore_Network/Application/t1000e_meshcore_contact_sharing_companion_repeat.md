@@ -15,6 +15,9 @@ sidebar_position: 5
 last_update:
   date: 10/16/2026
   author: Advent Jiang
+createdAt: '2026-10-16'
+url: https://wiki.seeedstudio.com/t1000e_meshcore_contact_sharing_companion_repeat/
+updatedAt: '2026-11-24'
 ---
 
 # Extend Your MeshCore Network with T1000-E: Contact Sharing and Companion Repeat

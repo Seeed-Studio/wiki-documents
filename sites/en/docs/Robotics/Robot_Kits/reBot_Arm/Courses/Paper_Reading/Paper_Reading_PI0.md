@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into the pi0 vision-language backbone, action expert, conditional flow matching and cross-embodiment pre-training."
-title: "π0: How Flow Matching Connects Vision and Language to Robot Actions"
+description: A paper deep-dive into the pi0 vision-language backbone, action expert, conditional flow matching and cross-embodiment pre-training.
+title: 'π0: How Flow Matching Connects Vision and Language to Robot Actions'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_pi0/
 ---
 

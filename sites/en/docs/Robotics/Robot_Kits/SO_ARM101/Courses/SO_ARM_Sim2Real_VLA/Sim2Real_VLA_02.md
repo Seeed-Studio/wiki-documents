@@ -1,5 +1,5 @@
 ---
-description: "Chapter 2 of the SO-ARM101 Sim-to-Real VLA Course — LeRobot background and the community: why LeRobot, the Hub ecosystem, and the collect-train-deploy-evaluate cycle."
+description: 'Chapter 2 of the SO-ARM101 Sim-to-Real VLA Course — LeRobot background and the community: why LeRobot, the Hub ecosystem, and the collect-train-deploy-evaluate cycle.'
 title: Chapter 2 - LeRobot Background and the Community
 hide_title: true
 keywords:

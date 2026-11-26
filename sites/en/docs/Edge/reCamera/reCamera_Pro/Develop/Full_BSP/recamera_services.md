@@ -1,14 +1,14 @@
 ---
-description: "Learn about the roles, build options, and startup relationships of reCamera product services in the full source package."
-title: "Product Service Architecture"
+description: Learn about the roles, build options, and startup relationships of reCamera product services in the full source package.
+title: Product Service Architecture
 keywords:
-  - "reCamera"
-  - "reCamera Pro"
-  - "RV1126B"
-  - "SDK"
-  - "BSP"
-  - "Linux"
-  - "Firmware"
+  - reCamera
+  - reCamera Pro
+  - RV1126B
+  - SDK
+  - BSP
+  - Linux
+  - Firmware
 image: https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png
 slug: /recamera_pro_bsp_services
 sku: 10003420
@@ -18,7 +18,7 @@ last_update:
   author: yylin
 url: https://wiki.seeedstudio.com/recamera_pro_bsp_services/
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-10'
 ---
 
 # Product Service Architecture

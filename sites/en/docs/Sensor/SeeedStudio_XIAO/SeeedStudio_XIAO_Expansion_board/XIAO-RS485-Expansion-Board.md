@@ -10,7 +10,7 @@ last_update:
   date: 10/20/2026
   author: Zeller
 createdAt: '2024-11-26'
-updatedAt: '2026-10-20'
+updatedAt: '2026-10-26'
 url: https://wiki.seeedstudio.com/XIAO-RS485-Expansion-Board/
 ---
 

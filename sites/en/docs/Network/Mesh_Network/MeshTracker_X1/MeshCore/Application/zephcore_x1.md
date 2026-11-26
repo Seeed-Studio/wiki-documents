@@ -6,7 +6,7 @@ keywords:
   - Zephyr RTOS
   - MeshCore
   - LoRa mesh
-image: https://files.seeedstudio.com/wiki/SenseCAP/zephcore/Zephcorephoto.png" 
+image: https://files.seeedstudio.com/wiki/SenseCAP/zephcore/Zephcorephoto.png"
 slug: /zephcore_getting_started_x1
 sku: 100087698
 sidebar_position: 3

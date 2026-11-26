@@ -1,5 +1,5 @@
 ---
-description: "Chapter 16 of the SO-ARM101 Sim-to-Real VLA Course — configure the GR00T software environment on the Jetson: workspace paths, the validated repository, platform runtimes, and Hugging Face access."
+description: 'Chapter 16 of the SO-ARM101 Sim-to-Real VLA Course — configure the GR00T software environment on the Jetson: workspace paths, the validated repository, platform runtimes, and Hugging Face access.'
 title: Chapter 16 - Configure the GR00T Software Environment
 hide_title: true
 keywords:

@@ -1,5 +1,5 @@
 ---
-description: "reComputer Super interfaces: CSI, USB, M.2 Key M and E, Mini PCIe, RTC, Ethernet, LED, fan and CAN. Pinouts, wiring and tested commands."
+description: 'reComputer Super interfaces: CSI, USB, M.2 Key M and E, Mini PCIe, RTC, Ethernet, LED, fan and CAN. Pinouts, wiring and tested commands.'
 title: reComputer Super Hardware and Interfaces Usage
 keywords:
   - reComputer Super
@@ -11,7 +11,7 @@ last_update:
   date: 11/06/2026
   author: Zibo
 createdAt: '2025-05-29'
-updatedAt: '2026-11-06'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/
 ---
 

@@ -1,7 +1,7 @@
 ---
 description: Control the lights and appliances in Home Assistant by voice with speech recognised locally — hardware, deployment, interfaces and measured data on a reComputer J40
 title: Home Assistant Local Voice Control — Selection, Deployment and Measured Data
-sidebar_label: 'Home Assistant Local Voice'
+sidebar_label: Home Assistant Local Voice
 keywords:
   - Home Assistant local voice
   - Home Assistant voice assistant

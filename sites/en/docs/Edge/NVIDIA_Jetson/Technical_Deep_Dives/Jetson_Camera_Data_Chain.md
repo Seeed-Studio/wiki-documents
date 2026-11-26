@@ -17,6 +17,9 @@ slug: /jetson_camera_data_chain
 last_update:
   date: 11/02/2026
   author: youjiang
+createdAt: '2026-11-02'
+url: https://wiki.seeedstudio.com/jetson_camera_data_chain/
+updatedAt: '2026-11-02'
 ---
 
 **Architecture analysis and real-device experiments based on reComputer Classic J3010 + Sony IMX219**

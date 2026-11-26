@@ -20,7 +20,7 @@ last_update:
   date: 11/04/2026
   author: zibo
 createdAt: '2026-11-04'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-12'
 url: https://wiki.seeedstudio.com/jetson/local_decision_model_laya/
 ---
 

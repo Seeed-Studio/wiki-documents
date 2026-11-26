@@ -1,5 +1,5 @@
 ---
-description: "HighTorque actuator control complete guide: MIT mode, position/velocity modes, CAN commands and Python SDK examples for robotic arm joints."
+description: 'HighTorque actuator control complete guide: MIT mode, position/velocity modes, CAN commands and Python SDK examples for robotic arm joints.'
 title: HighTorque Motor SDK
 keywords:
   - actuator
@@ -12,7 +12,7 @@ last_update:
   date: 11/19/2025
   author: Tienjuiwong
 createdAt: '2025-11-19'
-updatedAt: '2026-09-16'
+updatedAt: '2026-10-29'
 url: https://wiki.seeedstudio.com/hightorque_control/
 ---
 

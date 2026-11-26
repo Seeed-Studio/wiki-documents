@@ -21,7 +21,7 @@ last_update:
   date: 08/24/2026
   author: haochen
 createdAt: '2026-08-18'
-updatedAt: '2026-08-24'
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/jetson_fisheye_surround_view_demo/
 ---
 

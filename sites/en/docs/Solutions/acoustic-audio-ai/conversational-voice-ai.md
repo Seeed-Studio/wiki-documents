@@ -1,7 +1,7 @@
 ---
 description: Building an interruptible voice terminal on an edge device — which boards and microphone you need, which interfaces it exposes, the language × device support matrix, and measured RK3576 ASR/TTS results
 title: 'Interruptible Conversational Voice AI on the Edge: Build, Deploy, and Measured Results'
-sidebar_label: 'Conversational Voice AI'
+sidebar_label: Conversational Voice AI
 keywords:
   - conversational voice AI
   - barge-in voice assistant

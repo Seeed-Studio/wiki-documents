@@ -1,5 +1,5 @@
 ---
-description: "Chapter 14 of the SO-ARM101 Sim-to-Real VLA Course — setup your Jetson edge device: select the target, install SDK Manager, enter force recovery, flash JetPack 7.2, and verify the board."
+description: 'Chapter 14 of the SO-ARM101 Sim-to-Real VLA Course — setup your Jetson edge device: select the target, install SDK Manager, enter force recovery, flash JetPack 7.2, and verify the board.'
 title: Chapter 14 - Setup Your Jetson Edge Device
 hide_title: true
 keywords:

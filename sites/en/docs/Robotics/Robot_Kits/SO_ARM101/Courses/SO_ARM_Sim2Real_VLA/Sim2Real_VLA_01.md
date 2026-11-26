@@ -1,5 +1,5 @@
 ---
-description: "Chapter 1 of the SO-ARM101 Sim-to-Real VLA Course — course overview: the Seeed × NVIDIA hands-on curriculum from robot demonstrations and simulation to VLA post-training and real-world deployment."
+description: 'Chapter 1 of the SO-ARM101 Sim-to-Real VLA Course — course overview: the Seeed × NVIDIA hands-on curriculum from robot demonstrations and simulation to VLA post-training and real-world deployment.'
 title: Chapter 1 - Course Overview
 hide_title: true
 keywords:

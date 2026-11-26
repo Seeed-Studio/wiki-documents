@@ -1,8 +1,15 @@
 ---
-description: "A deep dive into FineART-VLA: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "FineART-VLA: Connecting Long-Horizon Goals to Bimanual Actions Through Subtasks"
+description: 'A deep dive into FineART-VLA: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'FineART-VLA: Connecting Long-Horizon Goals to Bimanual Actions Through Subtasks'
 hide_title: true
-keywords: ["Paper Deep-Dive","FineART-VLA","VLA","Subtask Prediction","Bimanual Manipulation","Knowledge Insulation","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - FineART-VLA
+  - VLA
+  - Subtask Prediction
+  - Bimanual Manipulation
+  - Knowledge Insulation
+  - LeRobot
 slug: /robotics/paper_reading_fineart_vla
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +17,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_fineart_vla/
 ---
 
 import '/src/css/paper-reading-style.css';

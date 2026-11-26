@@ -1,6 +1,6 @@
 ---
 title: Factory Firmware Command Reference
-description: 'Complete serial command reference for the Wio-LR2021 Dev Kit factory firmware'
+description: Complete serial command reference for the Wio-LR2021 Dev Kit factory firmware
 keywords:
   - serial command
   - factory firmware
@@ -12,7 +12,7 @@ last_update:
   date: 11/05/2026
   author: David Du
 createdAt: '2026-11-05'
-updatedAt: '2026-11-05'
+updatedAt: '2026-11-16'
 url: https://wiki.seeedstudio.com/wio_lr2021_dev_kit_command_reference/
 ---
 

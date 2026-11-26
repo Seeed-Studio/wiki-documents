@@ -1,6 +1,6 @@
 ---
-description: "Prepare for hands-on reproduction: computer and reBot Arm hardware checklists, LeRobot environment installation, camera and CAN configuration, and leader–follower teleoperation practice."
-title: "How to Set Up reBot Arm Hardware and Teleoperation"
+description: 'Prepare for hands-on reproduction: computer and reBot Arm hardware checklists, LeRobot environment installation, camera and CAN configuration, and leader–follower teleoperation practice.'
+title: How to Set Up reBot Arm Hardware and Teleoperation
 hide_title: true
 keywords:
   - reBot
@@ -29,7 +29,7 @@ last_update:
   date: 2026-10-22
   author: LiuJunJie
 createdAt: '2026-10-16'
-updatedAt: '2026-10-22'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_hardware_and_teleoperation/
 ---
 

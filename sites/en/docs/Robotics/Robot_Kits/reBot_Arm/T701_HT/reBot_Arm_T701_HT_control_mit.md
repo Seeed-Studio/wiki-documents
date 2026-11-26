@@ -15,6 +15,9 @@ translation:
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-18'
+url: https://wiki.seeedstudio.com/rebot_t701_ht_control_mit/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';

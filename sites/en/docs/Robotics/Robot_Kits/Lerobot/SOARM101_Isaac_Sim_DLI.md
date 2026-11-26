@@ -13,7 +13,7 @@ last_update:
   author: ZhuYuan
 url: https://wiki.seeedstudio.com/soarm101_isaac_sim_dli/
 createdAt: '2026-11-16'
-updatedAt: '2026-11-16'
+updatedAt: '2026-11-24'
 ---
 
 import '/src/css/rebot-wiki-style.css';

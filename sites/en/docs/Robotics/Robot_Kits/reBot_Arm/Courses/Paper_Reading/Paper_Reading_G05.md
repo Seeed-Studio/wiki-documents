@@ -1,8 +1,14 @@
 ---
-description: "A close reading of Galaxea G0.5, covering cross-embodiment action tokenization, embodied reasoning, visual memory, evaluation results, and LeRobot integration."
-title: "G0.5: Reasoning and Action in One Sequence"
+description: A close reading of Galaxea G0.5, covering cross-embodiment action tokenization, embodied reasoning, visual memory, evaluation results, and LeRobot integration.
+title: 'G0.5: Reasoning and Action in One Sequence'
 hide_title: true
-keywords: [Paper Deep-Dive, Galaxea G0.5, VLA, ActionCodec, CoT, LeRobot]
+keywords:
+  - Paper Deep-Dive
+  - Galaxea G0.5
+  - VLA
+  - ActionCodec
+  - CoT
+  - LeRobot
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/g05/teaser.png
 slug: /robotics/paper_reading_g05
 displayed_sidebar: PaperReadingSidebar
@@ -12,7 +18,7 @@ last_update:
   date: 2026-11-11
   author: liujunjie
 createdAt: '2026-11-11'
-updatedAt: '2026-11-11'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_g05/
 ---
 

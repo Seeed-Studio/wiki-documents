@@ -1,7 +1,6 @@
 ---
-# Document type: project
-description: "Use reSpeaker Clip with DeepSeek Harness (DSH) for voice input. Connect the device and prepare local SenseVoice recognition to turn RTC live audio or SD recordings into editable chat drafts."
-title: "Use reSpeaker Clip for Voice Input in DSH"
+description: Use reSpeaker Clip with DeepSeek Harness (DSH) for voice input. Connect the device and prepare local SenseVoice recognition to turn RTC live audio or SD recordings into editable chat drafts.
+title: Use reSpeaker Clip for Voice Input in DSH
 keywords:
   - reSpeaker Clip
   - DeepSeek Harness
@@ -17,7 +16,7 @@ last_update:
   date: 11/20/2026
   author: Wang Kunpeng
 createdAt: '2026-11-20'
-updatedAt: '2026-11-20'
+updatedAt: '2026-11-23'
 url: https://wiki.seeedstudio.com/respeaker_clip_for_agent/
 ---
 

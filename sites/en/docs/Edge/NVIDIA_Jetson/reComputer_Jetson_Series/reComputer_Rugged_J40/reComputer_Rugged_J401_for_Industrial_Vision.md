@@ -1,5 +1,5 @@
 ---
-description: "Four forklift vision applications on reComputer Rugged J401: front tracking, rear warning, driver monitoring and multi-camera recording."
+description: 'Four forklift vision applications on reComputer Rugged J401: front tracking, rear warning, driver monitoring and multi-camera recording.'
 title: reComputer Rugged J401 for Industrial Vision
 keywords:
   - reComputer Rugged J401
@@ -19,7 +19,7 @@ last_update:
   date: 09/30/2026
   author: Zibo
 createdAt: '2026-09-20'
-updatedAt: '2026-09-30'
+updatedAt: '2026-11-09'
 url: https://wiki.seeedstudio.com/jetson/recomputer_rugged_j401/industrial_vision/
 ---
 

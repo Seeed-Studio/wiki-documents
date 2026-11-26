@@ -20,7 +20,7 @@ last_update:
   date: 11/19/2026
   author: David Du
 createdAt: '2026-11-19'
-updatedAt: '2026-11-19'
+updatedAt: '2026-11-20'
 url: https://wiki.seeedstudio.com/wio_lr2021_dev_kit_flrc_image_transmission_demo/
 ---
 

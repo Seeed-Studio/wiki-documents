@@ -1,7 +1,7 @@
 ---
 description: On-device assembly inspection — missing-part comparison against a template expected-item list, ArUco-calibrated dimension measurement, and one OK/NG verdict delivered to the PLC over Modbus TCP and to the MES over MQTT. Hardware, deployment outline, output contracts and measured data.
 title: 'Edge Assembly Inspection: Missing Parts, Dimensions, Modbus and MQTT'
-sidebar_label: 'Edge Assembly Inspection'
+sidebar_label: Edge Assembly Inspection
 keywords:
   - assembly inspection
   - missing part detection

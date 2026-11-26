@@ -13,8 +13,8 @@ sidebar_position: 1
 last_update:
   date: 10/16/2026
   author: yylin
-createdAt: 2026-10-16
-updatedAt: 2026-10-16
+createdAt: 2026-10-16T00:00:00.000Z
+updatedAt: '2026-10-16'
 url: https://wiki.seeedstudio.com/recamera_pro_qr_code_barcode/
 ---
 

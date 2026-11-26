@@ -1,8 +1,14 @@
 ---
-description: "A deep dive into Cosmos 3: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope."
-title: "Cosmos 3: From Omnimodal World Modeling to Joint Video-Action Policies"
+description: 'A deep dive into Cosmos 3: mechanisms, training, experiments, and LeRobot v0.7.0 integration scope.'
+title: 'Cosmos 3: From Omnimodal World Modeling to Joint Video-Action Policies'
 hide_title: true
-keywords: ["Paper Deep-Dive","Cosmos 3","Omnimodal World Models","MoT","Joint Video-Action Prediction","LeRobot"]
+keywords:
+  - Paper Deep-Dive
+  - Cosmos 3
+  - Omnimodal World Models
+  - MoT
+  - Joint Video-Action Prediction
+  - LeRobot
 slug: /robotics/paper_reading_cosmos3
 displayed_sidebar: PaperReadingSidebar
 last_update:
@@ -10,6 +16,7 @@ last_update:
   author: liujunjie
 createdAt: '2026-11-20'
 updatedAt: '2026-11-20'
+url: https://wiki.seeedstudio.com/robotics/paper_reading_cosmos3/
 ---
 
 import '/src/css/paper-reading-style.css';

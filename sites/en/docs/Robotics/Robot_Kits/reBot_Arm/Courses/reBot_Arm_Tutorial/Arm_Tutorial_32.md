@@ -1,5 +1,5 @@
 ---
-description: "Chapter 32 of the Seeed Physical AI Beginner's Course — the robot model in ROS2: URDF and Xacro, links and joints, the visual / collision / inertial attributes, the TF transform tree, robot_state_publisher, camera and end-effector frames, and how the digital model tracks the real arm."
+description: 'Chapter 32 of the Seeed Physical AI Beginner''s Course — the robot model in ROS2: URDF and Xacro, links and joints, the visual / collision / inertial attributes, the TF transform tree, robot_state_publisher, camera and end-effector frames, and how the digital model tracks the real arm.'
 title: Chapter 32 - URDF, TF, and Robot Models
 hide_title: true
 keywords:
@@ -21,7 +21,7 @@ last_update:
   date: 2026-10-09
   author: Seeed Studio Robotics Team
 createdAt: '2026-10-09'
-updatedAt: '2026-10-09'
+updatedAt: '2026-10-10'
 url: https://wiki.seeedstudio.com/robotics/rebot_physical_ai_course_chapter_32/
 ---
 

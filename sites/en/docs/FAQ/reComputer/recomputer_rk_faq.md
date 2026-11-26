@@ -12,6 +12,9 @@ keywords:
   - reComputer RK3576
   - reComputer RK NPU
   - Rockchip RKNN
+createdAt: '2026-11-13'
+url: https://wiki.seeedstudio.com/recomputer_rk_faq/
+updatedAt: '2026-11-13'
 ---
 
 <div class="recomputer-faq-page">

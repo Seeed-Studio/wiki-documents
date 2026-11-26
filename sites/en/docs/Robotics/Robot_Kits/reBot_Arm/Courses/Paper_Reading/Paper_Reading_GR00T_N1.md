@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into GR00T N1 dual-system architecture, data pyramid, flow-matching action chunks and robot adaptation."
-title: "GR00T N1: How a Dual-System Architecture Supports Generalist Humanoid Control"
+description: A paper deep-dive into GR00T N1 dual-system architecture, data pyramid, flow-matching action chunks and robot adaptation.
+title: 'GR00T N1: How a Dual-System Architecture Supports Generalist Humanoid Control'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_gr00t_n1/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 09/02/2026
   author: Zeller
 createdAt: '2026-09-01'
-updatedAt: '2026-09-02'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_with_micropython/
 ---
 import Tabs from '@theme/Tabs';

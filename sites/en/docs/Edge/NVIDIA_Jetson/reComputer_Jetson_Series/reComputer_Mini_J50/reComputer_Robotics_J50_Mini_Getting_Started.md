@@ -13,7 +13,7 @@ last_update:
   date: 11/16/2026
   author: Shijun
 createdAt: '2026-11-16'
-updatedAt: '2026-11-16'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j50_mini_getting_started/
 ---
 

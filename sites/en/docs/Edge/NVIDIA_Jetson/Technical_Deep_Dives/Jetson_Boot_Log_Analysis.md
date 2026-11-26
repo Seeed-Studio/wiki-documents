@@ -15,6 +15,9 @@ slug: /jetson_boot_log_analysis
 last_update:
   date: 11/02/2026
   author: youjiang
+createdAt: '2026-11-02'
+url: https://wiki.seeedstudio.com/jetson_boot_log_analysis/
+updatedAt: '2026-11-02'
 ---
 
 In the previous article, we introduced **JetPack, Jetson Linux / L4T, Ubuntu, Kernel, and UEFI** and what each of them is.

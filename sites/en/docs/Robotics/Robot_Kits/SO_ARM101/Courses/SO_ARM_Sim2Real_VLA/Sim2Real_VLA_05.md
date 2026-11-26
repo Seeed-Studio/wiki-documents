@@ -1,5 +1,5 @@
 ---
-description: "Chapter 5 of the SO-ARM101 Sim-to-Real VLA Course — summary of the overview module and a look ahead to building your robot lab."
+description: Chapter 5 of the SO-ARM101 Sim-to-Real VLA Course — summary of the overview module and a look ahead to building your robot lab.
 title: Chapter 5 - Summary
 hide_title: true
 keywords:

@@ -1,7 +1,7 @@
 ---
 description: On-device steel surface defect inspection — six defect classes, an OK/NG verdict delivered to the PLC over Modbus TCP and to the MES over MQTT, on Jetson Orin or a reComputer R2000 series with a Hailo-8. Hardware, deployment outline, output contracts and measured data.
 title: 'Edge Surface Defect Inspection: Six Classes, Modbus and MQTT'
-sidebar_label: 'Edge Surface Defect Inspection'
+sidebar_label: Edge Surface Defect Inspection
 keywords:
   - surface defect inspection
   - steel strip defect detection

@@ -11,7 +11,7 @@ keywords:
   - reSpeaker XVF3800 firmware
 createdAt: '2026-08-31'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_faq/
-updatedAt: '2026-09-03'
+updatedAt: '2026-10-13'
 ---
 
 <div class="respeaker-faq-page">

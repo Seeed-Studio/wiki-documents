@@ -1,6 +1,6 @@
 ---
-description: "A paper deep-dive into the lightweight SmolVLA architecture, community-data pre-training, asynchronous inference and ablations."
-title: "SmolVLA: How Lightweight Models Learn Robot Actions Efficiently"
+description: A paper deep-dive into the lightweight SmolVLA architecture, community-data pre-training, asynchronous inference and ablations.
+title: 'SmolVLA: How Lightweight Models Learn Robot Actions Efficiently'
 hide_title: true
 keywords:
   - Paper Deep-Dive
@@ -29,7 +29,7 @@ last_update:
   date: 2026-11-04
   author: LiuJunJie
 createdAt: '2026-10-21'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_smolvla/
 ---
 

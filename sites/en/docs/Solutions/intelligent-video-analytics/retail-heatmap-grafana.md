@@ -1,7 +1,7 @@
 ---
 description: Building a local people-flow heatmap for stores and exhibition spaces — what devices you need, how to deploy it, which interfaces it exposes, and measured frame rates on three devices
 title: 'Retail People-Flow Heatmap: Build, Deploy, and Measured Results'
-sidebar_label: 'Retail People-Flow Heatmap'
+sidebar_label: Retail People-Flow Heatmap
 keywords:
   - people flow heatmap
   - footfall analytics

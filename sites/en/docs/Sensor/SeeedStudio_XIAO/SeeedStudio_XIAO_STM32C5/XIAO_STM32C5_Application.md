@@ -19,7 +19,7 @@ last_update:
   date: 09/14/2026
   author: Zeller
 createdAt: '2026-09-08'
-updatedAt: '2026-09-14'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_application/
 ---
 import Tabs from '@theme/Tabs';

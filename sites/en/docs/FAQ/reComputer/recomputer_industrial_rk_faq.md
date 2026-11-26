@@ -11,6 +11,9 @@ keywords:
   - reComputer RK3576 Industrial
   - industrial edge AI box
   - UPS
+createdAt: '2026-11-13'
+url: https://wiki.seeedstudio.com/recomputer_industrial_rk_faq/
+updatedAt: '2026-11-13'
 ---
 
 <div class="recomputer-faq-page">

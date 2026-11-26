@@ -1,8 +1,15 @@
 ---
-description: "A close reading of GR00T 2: joint video-action prediction, cross-embodiment skill transfer, fast adaptation, agentic control, and onboard whole-body loco-manipulation."
-title: "GR00T 2: How World-Action Modeling Supports Generalization and Adaptation"
+description: 'A close reading of GR00T 2: joint video-action prediction, cross-embodiment skill transfer, fast adaptation, agentic control, and onboard whole-body loco-manipulation.'
+title: 'GR00T 2: How World-Action Modeling Supports Generalization and Adaptation'
 hide_title: true
-keywords: [Paper Deep-Dive, GR00T 2, World-Action Model, WAM, Cross-Embodiment Transfer, Agentic Control, Whole-Body Loco-Manipulation]
+keywords:
+  - Paper Deep-Dive
+  - GR00T 2
+  - World-Action Model
+  - WAM
+  - Cross-Embodiment Transfer
+  - Agentic Control
+  - Whole-Body Loco-Manipulation
 image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/paper_reading/gr00t-2/dexter-history.jpg
 slug: /robotics/paper_reading_gr00t_2
 displayed_sidebar: PaperReadingSidebar
@@ -12,7 +19,7 @@ last_update:
   date: 2026-11-10
   author: liujunjie
 createdAt: '2026-11-10'
-updatedAt: '2026-11-10'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/robotics/paper_reading_gr00t_2/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 11/17/2026
   author: jianjing Huang
 createdAt: '2023-01-19'
-updatedAt: '2026-01-07'
+updatedAt: '2026-11-17'
 url: https://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "Chapter 17 of the SO-ARM101 Sim-to-Real VLA Course — prepare the dataset and model assets on the Jetson: the converted v2 dataset with modality.json, the fine-tuned checkpoint, and the VLM backbone."
+description: 'Chapter 17 of the SO-ARM101 Sim-to-Real VLA Course — prepare the dataset and model assets on the Jetson: the converted v2 dataset with modality.json, the fine-tuned checkpoint, and the VLM backbone.'
 title: Chapter 17 - Prepare the Dataset and Model Assets
 hide_title: true
 keywords:

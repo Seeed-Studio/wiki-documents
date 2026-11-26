@@ -1,7 +1,7 @@
 ---
 description: 'Edge AI Rehabilitation Posture Analysis Engineering Document: 33-keypoint anatomical topology retraining, hysteresis state machine, ROM angle measurement, compensation alert engine, secondary cascade hand/foot models, solution-cli automated deployment, WebSocket/EMR protocols, and edge benchmarks'
 title: 'Edge AI Rehabilitation Posture Analysis: 33-Keypoint Pose and Clinical Kinematics'
-sidebar_label: 'Rehabilitation Posture Analysis'
+sidebar_label: Rehabilitation Posture Analysis
 keywords:
   - Rehabilitation Posture Analysis
   - 33 Keypoint Detection

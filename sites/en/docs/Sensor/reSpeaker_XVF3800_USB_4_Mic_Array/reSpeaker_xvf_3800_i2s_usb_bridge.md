@@ -13,7 +13,7 @@ last_update:
   date: 10/12/2026
   author: Kasun Thushara
 createdAt: '2026-10-12'
-updatedAt: '2026-10-12'
+updatedAt: '2026-10-14'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_i2s_usb_bridge/
 ---
 

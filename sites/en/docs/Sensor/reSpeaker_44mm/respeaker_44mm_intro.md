@@ -15,7 +15,7 @@ last_update:
   date: 11/04/2026
   author: Kasun Thushara
 createdAt: '2026-11-04'
-updatedAt: '2026-11-04'
+updatedAt: '2026-11-18'
 url: https://wiki.seeedstudio.com/respeaker_44mm_introduction/
 ---
 # Getting Started with reSpeaker XVF3800 44mm 4-Mic Array

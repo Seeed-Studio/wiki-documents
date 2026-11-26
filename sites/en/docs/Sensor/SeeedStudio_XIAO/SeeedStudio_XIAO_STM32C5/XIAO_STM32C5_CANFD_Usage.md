@@ -13,7 +13,7 @@ last_update:
   date: 08/21/2026
   author: Zeller
 createdAt: '2026-08-21'
-updatedAt: '2026-08-28'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/xiao_stm32c5_canfd_usage/
 ---
 import Tabs from '@theme/Tabs';
