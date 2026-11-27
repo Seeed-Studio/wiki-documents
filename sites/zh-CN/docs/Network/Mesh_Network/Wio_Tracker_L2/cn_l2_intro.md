@@ -12,7 +12,7 @@ last_update:
   date: 10/26/2026
   author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-10-26'
+updatedAt: '2026-11-19'
 url: https://wiki.seeedstudio.com/cn/meshtastic_wio_tracker_l2_intro/
 ---
 
@@ -25,13 +25,46 @@ url: https://wiki.seeedstudio.com/cn/meshtastic_wio_tracker_l2_intro/
     </a>
 </div>
 
-Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 ESP32S3，以及用于精准定位的 L76K GPS 模块。其设计灵活，支持 QSPI 触摸屏、E-Ink 显示屏、TF 卡，以及太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
+Wio Tracker L2 系列是一款高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具备 LoRa（862–930 MHz）、用于高效处理的 ESP32S3，以及用于精准定位的 L76K GPS 模组。其设计灵活，支持 QSPI 触摸屏、E-Ink 显示屏、TF 卡，以及太阳能板和电池供电，非常适合广泛的物联网和离网应用场景。
+
+
+## 特性
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **一套硬件，无限可能** 构建你自己的界面、仪表盘、游戏、地图工具或交互体验——L2 Pro 已为你想要实现的一切做好准备。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
+
+- **3.2 英寸高品质触摸屏**：配备 320×240 高清显示屏，可在 MUI 和 Base UI 之间切换，为消息、地图和控制提供流畅的本机交互体验——无需手机。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
+
+- **ESP32S3 驱动，随时扩展开发**：由集成 Wi-Fi 和 Bluetooth LE 的双核 ESP32-S3 提供算力，L2 Pro 为 UI 自定义、功能开发和开源应用提供了灵活的平台。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **离线地图 + GNSS 定位**：可将离线地图预先下载到 MicroSD 卡中，即使在没有蜂窝网络或互联网连接的情况下，也能在设备上查看你的 GNSS 实时位置。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **3000mAh 持久电池**：支持长时间日常使用，减少充电频率；可在 -10°C 至 55°C 环境下工作。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **易于携带，灵活安装**：可折叠天线提升便携性，1/4 英寸安装接口可搭配兼容配件实现灵活固定。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (6).jpg" alt="pir" width={900} height="auto"/></p>
+
+- **借助 CodeCraft 更快完成原型开发**
+
+用几句话描述你的想法，Seeed Studio 的 CodeCraft AI 编码助手即可在几分钟内生成首版代码。你只需审阅代码，将其烧录到 Wio Tracker L2 上，并在开发板上进行测试。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
 
 ## L2 系列型号
 
-Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带外壳和内置电池的 Wio Tracker L2 Pro。
-
-### 版本对比
+Wio Tracker L2 系列包括用于自定义开发的 Wio Tracker L2，以及带外壳和内置电池的 Wio Tracker L2 Pro。
 
 |产品名称|Wio Tracker L2|Wio Tracker L2 Pro|
 |------------------|--------------------------|-----------------------|
@@ -46,40 +79,6 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 |电池|<p style={{textAlign: 'center'}}>通过连接器接入外部锂电池</p>|<p style={{textAlign: 'center'}}>内置 3000mAh 电池</p>|
 |外壳|<p style={{textAlign: 'center'}}>—</p>|<p style={{textAlign: 'center'}}>✅</p>|
 
-## 特性
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (8).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **一套硬件，无限可能** 构建你自己的界面、仪表盘、游戏、地图工具或交互式体验——L2 Pro 已为你想要创造的一切做好准备。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/100029766_2.webp" alt="pir" width={900} height="auto"/></p>
-
-- **3.2 英寸高品质触摸屏**：配备 320×240 高清显示屏，支持 MUI 与 Base UI 切换，为消息、地图和控制等提供流畅的本机交互体验——无需手机。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (1).jpg" alt="pir" width={900} height="auto" /></p>
-
-- **ESP32S3 驱动，随时扩展开发**：由集成 Wi-Fi 和 Bluetooth LE 的双核 ESP32-S3 提供算力，L2 Pro 为 UI 自定义、功能开发和开源应用提供灵活的平台。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (2).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **GNSS 定位与离线地图**：预先将离线地图下载到 MicroSD 卡，即使在没有蜂窝网络或互联网连接的情况下，也可在设备上查看你的 GNSS 实时位置。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (4).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **3000mAh 持久电池**：支持长时间日常使用，减少充电频率；可在 -10°C 至 55°C 环境下工作。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (5).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **便于携带，灵活安装**：可折叠天线提升便携性，1/4 英寸安装接口可搭配兼容配件实现灵活固定。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/01 (6).jpg" alt="pir" width={900} height="auto"/></p>
-
-- **借助 CodeCraft 更快完成原型开发**
-
-用几句话描述你的想法，Seeed Studio 的 CodeCraft AI 编码助手即可在数分钟内生成首版代码。你只需审阅、烧录到 Wio Tracker L2，并在开发板上进行测试。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/feature/08.jpg" alt="pir" width={900} height="auto"/></p>
-
 ## 规格
 
 <table>
@@ -89,7 +88,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
   </tr>
   <tr>
     <td colspan="1">**处理器**</td>
-    <td colspan="1">Wio-S3（ESP32S3 + SX1262 模块）</td>
+    <td colspan="1">Wio-S3（ESP32S3 + SX1262 模组）</td>
   </tr>
     <tr>
     <td colspan="1">**LoRa**</td>
@@ -121,7 +120,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
     <td colspan="1">MicroSD 卡槽</td>
   </tr>
   <tr>
-    <td colspan="1">1/4 英寸螺纹孔</td>
+    <td colspan="1">四分之一英寸螺纹孔</td>
   </tr>
    <tr>
     <td colspan="1">**QSPI 接口**</td>
@@ -129,13 +128,13 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
   </tr>
   <tr>
     <td colspan="1" rowspan="3">**电源输入**</td>
-    <td colspan="1">USB Type-C：5V — 1A</td>
+    <td colspan="1">USB Type-C：5V⎓1.5A</td>
   </tr>
   <tr>
     <td colspan="1">太阳能：JST-PH 2P-2.0mm，5V ~ 13V</td>
   </tr>
   <tr>
-    <td colspan="1">锂离子电池（2P-1.25mm）：3.7V</td>
+    <td colspan="1">锂电池（2P-1.25mm）：3.7V</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="2">**IPS 触摸屏**</td>
@@ -164,7 +163,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
   </tr>
     <tr>
     <td colspan="1">**通信距离**</td>
-    <td colspan="1">最长可达 5.8 km</td>
+    <td colspan="1">最远 5.8 km</td>
   </tr>
     <tr>
     <td colspan="1">**尺寸**</td>
@@ -188,7 +187,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 
 |项目|参数|
 | :- | :- |
-|**电池容量**|可充电锂离子电池，3000mAh|
+|**电池容量**|可充电锂电池，3000mAh|
 |**电池寿命监测**|周期性上报电池电量|
 |**充电协议**|USB Type-C|
 |**设备电源输入**|5V，1A|
@@ -197,7 +196,7 @@ Wio Tracker L2 系列包括用于自定义构建的 Wio Tracker L2，以及带�
 
 **功耗**
 
-关于不同配置（屏幕模式、LoRa 频段和调制预设、GPS 使用情况等）下的详细功耗数据和预估电池续航，请参考 [Wio Tracker L2 Power Consumption Table](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)。
+关于不同配置（屏幕模式、LoRa 频段和调制预设、GPS 使用情况等）下的详细功耗数据和预估电池续航，请参考 [Wio Tracker L2 功耗表](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)。
 
 ## 引脚列表
 
