@@ -8,10 +8,10 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.w
 slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
-  date: 07/31/2026
+  date: 11/26/2026
   author: Advent Jiang
 createdAt: '2024-10-29'
-updatedAt: '2026-09-18'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/cn/sensecap_indicator_meshtastic/
 ---
 
@@ -39,7 +39,7 @@ SenseCAP Indicator 是一款为 [Meshtastic®](https://meshtastic.org/) 设计�
 
 - **支持 Meshtastic：** 预装 Meshtastic 固件，上电即可使用。你也可以使用 Meshtastic Flasher 升级固件。<br/>
 - **双 MCU 与丰富 GPIO：** 搭载强大的 ESP32S3 和 RP2040 双 MCU，并提供超过 400 个兼容 Grove 的 GPIO，用于灵活扩展。<br/>
-- **本地 LoRa® 物联网连接枢纽：** 集成 Semtech SX1262 LoRa® 芯片，可通过教程将设备转换为 LoRaWAN® 单通道网关。或者，通过 Wi-Fi 将 LoRa® 设备连接到如 Matter 等流行物联网平台。<br/>
+- **本地 LoRa® 中枢实现物联网连接：** 集成 Semtech SX1262 LoRa® 芯片，可通过教程将设备转换为 LoRaWAN® 单通道网关。或者，通过 Wi-Fi 将 LoRa® 设备连接到如 Matter 等主流物联网平台。<br/>
 - **完全开源平台：** 利用庞大的 ESP32 和 Raspberry Pi 开源生态，实现无限应用可能。<br/>
 - **适用于多种应用场景：** 可作为 Meshtastic 桌面节点或车载节点，也可作为 LoRaWAN® 单通道网关。
 
@@ -49,7 +49,7 @@ SenseCAP Indicator 是一款为 [Meshtastic®](https://meshtastic.org/) 设计�
 | :- | :- |
 |**屏幕分辨率**|480 x 480 像素|
 |**电源**|5V-DC，1A|
-|**电池**|无|
+|**电池**|N/A|
 |**处理器**|<p>**ESP32-S3：** Xtensa® 双核 32 位，最高 240 MHz</p><p>**RP2040：** 双核 ARM Cortex-M0+，最高 133MHz</p>|
 |**Flash**|<p>**ESP32-S3：** 8MB</p><p>**RP2040：** 2MB</p>|
 |**外部存储**|支持最高 32GB Micro SD 卡（不包含）|
@@ -76,7 +76,7 @@ SenseCAP Indicator 是一款为 [Meshtastic®](https://meshtastic.org/) 设计�
 在烧录固件之前，请确保你购买的 Indicator 是适用于 Meshtastic 的版本。不要将 Meshtastic 固件烧录到不兼容 Meshtastic 的 Indicator 上，这可能会导致硬件损坏。请 `don't use NRF-OTA` 来更新固件，否则可能会导致设备完全损坏。
 :::
 
-**视频教程**
+**视频说明**
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -104,7 +104,7 @@ SenseCAP Indicator 是一款为 [Meshtastic®](https://meshtastic.org/) 设计�
 
 ### 烧录 GPS 固件（可选）
 
-SenseCAP Indicator 没有内置 GPS，如需获取 GPS 位置，需要一个 [Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)。<br/>
+SenseCAP Indicator 本身不带 GPS，如需获取 GPS 位置，需要一个 [Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)。<br/>
 将 GPS 模块连接到 Grove 接口，然后烧录 GPS 固件。
 
 - **[GPS 固件下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
@@ -162,7 +162,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置参数
 
-为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -222,7 +222,7 @@ RP2040 部分尚未开发完成，因此 `buzzer`/`SD card`/`map` 功能暂不�
 #### 角色选择
 
 :::caution
-请不要选择 `Repeater` 角色，否则会导致设备不断重启。
+请不要选择 `Repeater` 角色，否则会导致设备反复重启。
 :::
 
 #### GPS 模块
@@ -230,6 +230,24 @@ RP2040 部分尚未开发完成，因此 `buzzer`/`SD card`/`map` 功能暂不�
 如果你没有连接 GPS 模块，请在 `Meshtastic` App 中关闭 GPS 功能，否则设备会一直尝试寻找 GPS 模块，从而导致设备启动屏幕需要很长时间。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>
+
+#### 为什么其他节点上显示的我的位置有偏移？
+
+这是预期行为，而不是 GPS 或硬件故障。每个信道都有一个**位置精度**设置，默认是**13 位**。这会把你广播的每个位置四舍五入到约 ±2.9 km 的网格（共享信道的隐私默认设置），而你自己的设备通过蓝牙显示的是完整精度的定位——所以你自己看到的位置很准确，但其他节点看到的会有偏移。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={600} height="auto" /></p>
+
+如需发送完整精度的位置，需要在**每一台**设备上启用：
+
+1. 在 Meshtastic 应用中打开 **Channels** 并点击你的信道。
+2. 打开 **Precise location**（将精度设置为 32 = 全精度）。
+3. 在每台设备上重复上述操作——该设置在发送端生效。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={600} height="auto" /></p>
+
+CLI 方式：`meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**注意（固件 2.8+）：** 公共信道（无密钥、默认密钥或单字节密钥）被限制为 15 位（约 729 m）。如需完整精度，请使用**带随机密钥的私有信道**。
 
 ## 技术支持与产品讨论
 
