@@ -8,10 +8,10 @@ slug: /get_started_with_meshtastic_wio_tracker_l2
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 1
 last_update:
-  date: 3/13/2026
-  author: Michelle Huang
+  date: 11/26/2026
+  author: Advent Jiang
 createdAt: '2025-06-17'
-updatedAt: '2026-09-24'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l2/
 ---
 
@@ -84,7 +84,7 @@ Busca la dirección MAC en la etiqueta del dispositivo. El ID de nodo se basa en
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/MACAddress.png" alt="pir" width={300} height="auto" /></p>
 
-**Paso 2. Entrar en modo de conexión Bluetooth**
+**Paso 2. Entrar en el modo de conexión Bluetooth**
 
 <Tabs>
 
@@ -96,7 +96,7 @@ Ve a la página `Setting`, haz clic en `Reboot/Shutdown` y luego haz clic en el 
 
 :::tip
 
-Cuando uses MUI, primero cambia al modo de emparejamiento Bluetooth antes de emparejar con tu teléfono. De lo contrario, tu teléfono no podrá reconocer tu dispositivo.
+Al usar MUI, primero cambia al modo de emparejamiento Bluetooth antes de emparejar con tu teléfono. De lo contrario, tu teléfono no podrá reconocer tu dispositivo.
 :::
 
 El dispositivo se reiniciará entonces en modo Bluetooth. El código de emparejamiento Bluetooth se mostrará en la pantalla.
@@ -154,7 +154,7 @@ Para empezar a comunicarte a través de la malla, debes establecer tu región. E
 
 |**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin configurar|N/A|N/A|N/A|
+|UNSET|Sin establecer|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
@@ -202,7 +202,7 @@ Ve a la página `LoRa Info`, haz clic en `Region`, elige la región y luego haz 
 
 </Tabs>
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) según tus necesidades.
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para adaptarlas a tus necesidades.
 
 ### Uso del mapa
 
@@ -250,7 +250,7 @@ Configura el nombre y la contraseña de la red Wifi. Esto se puede hacer directa
 
 :::tip
 
-La red Wifi conectada debe ser de 2.4G. El dispositivo no puede utilizar redes Wifi de 5G.
+La red Wifi conectada debe ser de 2.4G. El Wifi de 5G no puede ser utilizado por el dispositivo.
 
 :::
 
@@ -298,7 +298,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
     Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, puedes ver el estado del dispositivo directamente en la página web.
+    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, podrás ver el estado del dispositivo directamente en la página web.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -437,11 +437,11 @@ Mantén pulsado un chat para eliminarlo. Elige y haz clic en un chat para entrar
 | Nombre largo de usuario | Cambiar el nombre largo del dispositivo|
 | PIN de pantalla | Establecer contraseña para el arranque del dispositivo |
 | PIN de configuración | Establecer contraseña para cambios de configuración |
-| Región | Configurar la región LoRa|
-| Modem Preset| Configurar el preset de LoRa |
+| Región | Configurar región LoRa|
+| Modem Preset| Configurar preajuste LoRa |
 | Canal | Editar canal|
 | Rol del dispositivo | Configurar rol |
-| WiFi | Establecer SSID y contraseña de Wifi |
+| WiFi | Establecer SSID y contraseña de WiFi |
 | Tiempo de espera de pantalla| Establecer tiempo de espera de pantalla|
 | Brillo de pantalla| Establecer brillo de pantalla|
 | Tema| Cambia el tema entre fondos oscuros y claros |
@@ -506,7 +506,7 @@ Navega a "Node Action"
 |---|---|
 | Seleccionar "LoRa Region" | Seleccionar región LoRa |
 | Seleccionar "Device Role" | Cambia entre roles de dispositivo |
-| Seleccionar "Radio Preset" | Elige entre los presets disponibles|
+| Seleccionar "Radio Preset" | Elige entre los preajustes disponibles|
 
 </TabItem>
 
@@ -532,13 +532,13 @@ Navega a "Node Action"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/BluetoothModeMUI.png" alt="pir" width={800} height="auto" /></p>
 
-- Cuando uses BaseUI, después de configurar y habilitar Wifi, solo puedes conectar tu dispositivo con la app del teléfono a través de la red. 
+- Cuando uses BaseUI, después de configurar y habilitar Wifi, solo podrás conectar tu dispositivo con la APP del teléfono a través de la red. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
 ### El dispositivo no puede conectarse a mi Wifi
 
-- Asegúrate de que te estás conectando a una `2.4g Wifi`. El dispositivo no puede emparejarse con Wifi de 5G. Normalmente el punto de acceso del teléfono puede ajustarse a 2.4g en la configuración del teléfono. Así que puedes probar primero el punto de acceso de tu teléfono.
+- Asegúrate de que te estás conectando a una `2.4g Wifi`. El dispositivo no puede emparejarse con Wifi de 5G. Normalmente el punto de acceso del teléfono puede ajustarse a 2.4g en la configuración del teléfono. Así que puedes probar primero con el punto de acceso de tu teléfono.
 
 - Habilita Wifi después de configurar el nombre y la contraseña de Wifi.
 
@@ -553,27 +553,27 @@ Wifi está deshabilitado cuando la IP de wifi está vacía y el icono de wifi es
 - Después de encender el dispositivo, se apagará o reiniciará automáticamente después de un rato.
 - El registro del puerto serie se ejecuta durante un rato y luego se detiene.
 
- Esto posiblemente se deba a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo está en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto posiblemente se deba a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
 **Solución de problemas**
 
-Necesitas realizar un borrado de la memoria flash y luego volver a flashear el firmware más reciente.
+Necesitas realizar un borrado de la memoria flash y luego volver a grabar el firmware más reciente.
 
 ### La pantalla permanece en negro después de flashear el firmware
 
 **Descripción**
 
-- Después de flashear el firmware, el dispositivo no puede iniciarse normalmente y la pantalla permanece en negro.
+- Después de flashear el firmware, el dispositivo no puede arrancar normalmente y la pantalla permanece en negro.
 
 **Solución de problemas**
 
-- Paso 1. Pulsa una vez el botón `RST` para reiniciar el dispositivo. En la mayoría de los casos, la pantalla se encenderá después del reinicio.
+- Paso 1. Pulsa el botón `RST` una vez para reiniciar el dispositivo. En la mayoría de los casos, la pantalla se encenderá después del reinicio.
 
-- Paso 2. Si la pantalla sigue sin encenderse, intenta flashear primero el firmware de fábrica o Meshtastic `2.8.2 beta` y, a continuación, vuelve a flashear el firmware que necesites.
+- Paso 2. Si la pantalla sigue sin encenderse, intenta flashear primero el firmware de fábrica o Meshtastic `2.8.2 beta`, y luego vuelve a flashear el firmware que necesites.
 
 ### Restablecimiento de fábrica
 
-Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.
+Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para realizar el restablecimiento de fábrica.
 
 <Tabs>
 
@@ -596,11 +596,11 @@ Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará a
 
 </Tabs>
 
-### Error en mensaje directo
+### Fallo en mensaje directo
 
 #### Restablecer NodeDB
 
-NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con cierto nodo, puede deberse a que tu NodeDB ha almacenado información desactualizada de ese nodo. Necesitarás actualizarla.
+NodeDB es la base de datos local que almacena información sobre los nodos descubiertos en la red Mesh actual. Si te encuentras en una situación en la que no puedes comunicarte con un determinado nodo, puede deberse a que tu nodedB haya almacenado información obsoleta de ese nodo. Necesitarás actualizarla.
 
 <Tabs>
 
@@ -641,14 +641,14 @@ Cada nodo posee un par de claves pública/privada. Para intercambiar un mensaje 
 Reinicia el dispositivo defectuoso para que la configuración surta efecto.
 
 :::note
-Después de la regeneración de la clave, el otro dispositivo necesita volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos del otro dispositivo.
+Después de la regeneración de la clave, otro dispositivo necesita volver a conectarse con el nodo. Por lo tanto, es mejor eliminar el nodo de la lista de nodos de otros dispositivos.
 :::
 
 ### Calidad de la señal
 
 - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
-- **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente.
 
       Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
 
@@ -658,9 +658,27 @@ Después de la regeneración de la clave, el otro dispositivo necesita volver a 
 #define OCV_ARRAY 4180, 4040, 3864, 3800, 3745, 3710, 3687, 3663, 3623, 3482, 3300 
 ```
 
+### ¿Por qué mi posición aparece desplazada en otros nodos?
+
+Este es un comportamiento esperado, no un fallo de GPS ni de hardware. Cada canal tiene un ajuste de **Position precision**, cuyo valor predeterminado es **13 bits**. Eso redondea cada posición que transmites a una cuadrícula de ~±2,9 km (una configuración de privacidad para canales compartidos), mientras que tu propio dispositivo muestra su posición de máxima precisión por Bluetooth, por lo que tu propia posición parece precisa pero otros nodos ven un desplazamiento.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={300} height="auto" /></p>
+
+Para enviar con máxima precisión, actívala en **cada** dispositivo:
+
+1. Abre **Channels** en la app Meshtastic y toca tu canal.
+2. Activa **Precise location** (establece la precisión en 32 = máxima).
+3. Repite en cada dispositivo: el ajuste surte efecto en el emisor.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={300} height="auto" /></p>
+
+Alternativa por CLI: `meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**Nota (firmware 2.8+):** los canales públicos (sin clave, con clave predeterminada o con clave de un solo byte) están limitados a 15 bits (~729 m). Usa un **canal privado con una clave aleatoria** para máxima precisión.
+
 ## Recursos
 
-- [Power Consumption Calcultion](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
+- [Cálculo de consumo de energía](https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/wio-tracker-l2%20power%20consumption%20.xlsx)
 
 ## Soporte técnico y debate sobre el producto
 

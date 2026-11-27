@@ -8,10 +8,10 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.w
 slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
-  date: 07/31/2026
+  date: 11/26/2026
   author: Advent Jiang
 createdAt: '2024-10-29'
-updatedAt: '2026-09-18'
+updatedAt: '2026-11-26'
 url: https://wiki.seeedstudio.com/es/sensecap_indicator_meshtastic/
 ---
 
@@ -31,35 +31,35 @@ url: https://wiki.seeedstudio.com/es/sensecap_indicator_meshtastic/
     </a>
 </div>
 
-SenseCAP Indicator es un dispositivo con pantalla táctil de 4 pulgadas diseñado para [Meshtastic®](https://meshtastic.org/), impulsado por dos MCU, el ESP32 y el RP2040, y es compatible con Wi-Fi, BLE y LoRa®. Es una potente plataforma de desarrollo IoT de código abierto.
+SenseCAP Indicator es un dispositivo con pantalla táctil de 4 pulgadas diseñado para [Meshtastic®](https://meshtastic.org/), impulsado por dos MCU, el ESP32 y el RP2040, y es compatible con Wi‑Fi, BLE y LoRa®. Es una potente plataforma de desarrollo IoT de código abierto.
 
 ## Introducción
 
 ### Características
 
-- **Compatible con Meshtastic:** Con firmware Meshtastic pregrabado, está listo para funcionar una vez encendido. También puedes actualizar el firmware usando Meshtastic Flasher.<br/>
-- **MCU duales y GPIO abundantes:** Equipado con potentes MCU duales ESP32S3 y RP2040 y más de 400 GPIO compatibles con Grove para opciones de expansión flexibles.<br/>
-- **Hub LoRa® local para conectividad IoT:** Integrado con el chip LoRa® Semtech SX1262, el dispositivo se puede convertir en una puerta de enlace LoRaWAN® de un solo canal mediante un tutorial. Alternativamente, conecta dispositivos LoRa® a plataformas IoT populares como Matter a través de Wi-Fi.<br/>
+- **Compatible con Meshtastic:** Viene pregrabado con el firmware de Meshtastic, está listo para funcionar una vez encendido. También puedes actualizar el firmware usando Meshtastic Flasher.<br/>
+- **Doble MCU y GPIOs abundantes:** Equipado con potentes MCU duales ESP32S3 y RP2040 y más de 400 GPIOs compatibles con Grove para opciones de expansión flexibles.<br/>
+- **Hub LoRa® local para conectividad IoT:** Integrado con el chip LoRa® Semtech SX1262, el dispositivo puede convertirse en una puerta de enlace LoRaWAN® de un solo canal mediante un tutorial. Alternativamente, conecta dispositivos LoRa® a plataformas IoT populares como Matter a través de Wi‑Fi.<br/>
 - **Plataforma totalmente de código abierto:** Aprovecha el amplio ecosistema de código abierto de ESP32 y Raspberry Pi para infinitas posibilidades de aplicación.<br/>
-- **Adecuado para múltiples escenarios de aplicación:** Se puede utilizar como un nodo de escritorio Meshtastic o un nodo para automóvil, así como una puerta de enlace LoRaWAN® de un solo canal.
+- **Adecuado para múltiples escenarios de aplicación:** Puede utilizarse como un nodo de escritorio Meshtastic o un nodo para automóvil, así como una puerta de enlace LoRaWAN® de un solo canal.
 
 ### Especificaciones
 
-|Pantalla|Pantalla táctil RGB capacitiva de 3,95 pulgadas|
+|Pantalla|3,95 pulgadas, pantalla táctil capacitiva RGB|
 | :- | :- |
 |**Resolución de pantalla**|480 x 480 píxeles|
 |**Alimentación**|5V-DC, 1A|
 |**Batería**|N/A|
-|**Procesador**|<p>**ESP32-S3:** Xtensa® de doble núcleo de 32 bits hasta 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ hasta 133MHz</p>|
+|**Procesador**|<p>**ESP32-S3:** Xtensa® de doble núcleo de 32 bits hasta 240 MHz</p><p>**RP2040:** ARM Cortex-M0+ doble hasta 133MHz</p>|
 |**Flash**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
-|**Almacenamiento externo**|Admite tarjeta Micro SD de hasta 32GB (no incluida)|
-|**Wi-Fi**|802.11b/g/n, 2.4GHz|
+|**Almacenamiento externo**|Soporta tarjeta Micro SD de hasta 32GB (no incluida)|
+|**Wi‑Fi**|802.11b/g/n, 2,4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
-|**LoRa(SX1262**)|Compatible con 862-930MHz|
+|**LoRa(SX1262**)|Soporta 862-930MHz|
 |**Zumbador (aún no desarrollado)**|MLT-8530, frecuencia de resonancia: 2700Hz|
 |**Certificación**|CE/FCC|
 
-### Descripción del hardware
+### Descripción general del hardware
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
@@ -70,10 +70,10 @@ Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni
 2. Está siendo configurado
 :::
 
-### Grabar el firmware de la aplicación
+### Flashear el firmware de la aplicación
 
 :::caution note
-Antes de grabar el firmware, asegúrate de que el Indicator que compraste es la versión para Meshtastic. No grabes el firmware Meshtastic en un Indicator que no sea compatible con Meshtastic. Esto puede causar daños en el hardware. Por favor, `don't use NRF-OTA` para actualizar el firmware, ya que puede hacer que el dispositivo quede completamente inutilizado.
+Antes de flashear el firmware, asegúrate de que el Indicator que compraste es la versión para Meshtastic. No flashees el firmware de Meshtastic en un Indicator que no sea compatible con Meshtastic. Esto puede causar daños en el hardware. Por favor, `don't use NRF-OTA` para actualizar el firmware, ya que puede hacer que el dispositivo quede completamente inutilizado.
 :::
 
 **Instrucciones en video**
@@ -97,17 +97,17 @@ Activa la opción `Full Erase and Install` y haz clic en `Erase Flash and Instal
 Se mostrarán 2 puertos, selecciona el `USB serial port` y haz clic en `Connect`.
 
 :::caution note
-Selecciona el `USB Serial`, no el INDICATOR RP2040.
+Por favor, selecciona el `USB Serial`, no el INDICATOR RP2040.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect11.png" alt="pir" width={800} height="auto" /></p>
 
-### Grabar firmware de GPS (opcional)
+### Flashear firmware de GPS (opcional)
 
-SenseCAP Indicator no tiene GPS integrado; para obtener la ubicación GPS, se requiere un [Módulo Grove GPS](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html).<br/>
-Conecta el módulo GPS al puerto Grove y luego graba el firmware de GPS.
+El SenseCAP Indicator no tiene GPS integrado; para obtener la ubicación GPS, se requiere un [Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html).<br/>
+Conecta el módulo GPS al puerto Grove y luego flashea el firmware de GPS.
 
-- **[Descarga del firmware GPS](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
+- **[Descarga del firmware de GPS](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -115,7 +115,7 @@ Mantén presionado este botón interno usando una aguja, luego conecta el dispos
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_56.png" alt="pir" width={600} height="auto" /></p>
 
-Descarga el archivo `UF2` y cópialo a la unidad `RPI-RP2`. El firmware debería grabarse después de que el archivo se copie y el dispositivo se reinicie.
+Descarga el archivo `UF2` y cópialo a la unidad `RPI-RP2`. El firmware debería flashearse después de que se copie el archivo y el dispositivo se reinicie.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
 
@@ -179,9 +179,9 @@ Para empezar a comunicarte a través de la malla, debes establecer tu región. E
 
 **Lista de regiones**
 
-|**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
+|**Código de región**|**Descripción**|**Rango de frecuencias (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin configurar|N/A|N/A|N/A|
+|UNSET|Sin establecer|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
@@ -196,7 +196,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 ### Teclado
 
 :::tip note
-El uso del teclado de la versión 2.5.xx (el firmware de fábrica es v2.5.11) y de las versiones posteriores a la 2.6.xx es diferente. Consulta lo siguiente según la versión de firmware actual.
+El uso del teclado en la versión 2.5.xx (el firmware de fábrica es v2.5.11) y en las versiones posteriores a la 2.6.xx es diferente. Por favor, consulta lo siguiente según la versión de firmware que tengas actualmente.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-ve.png" alt="pir" width={400} height="auto" /></p>
@@ -227,9 +227,27 @@ NO selecciones el rol `Repeater`, ya que hará que el dispositivo se reinicie re
 
 #### Módulo GPS
 
-Si no conectaste el módulo GPS, desactiva la función GPS en la App `Meshtastic`; de lo contrario, el dispositivo seguirá intentando encontrar el módulo GPS, lo que hará que tarde mucho en iniciar la pantalla.
+Si no conectaste el módulo GPS, desactiva la función GPS en la App `Meshtastic`; de lo contrario, el dispositivo seguirá intentando encontrar el módulo GPS, lo que hará que tarde mucho en encender la pantalla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>
+
+#### ¿Por qué mi posición aparece desplazada en otros nodos?
+
+Este es el comportamiento esperado, no un fallo del GPS ni del hardware. Cada canal tiene un ajuste de **precisión de posición**, cuyo valor predeterminado es **13 bits**. Eso redondea cada posición que transmites a una cuadrícula de ~±2,9 km (un valor de privacidad para canales compartidos), mientras que tu propio dispositivo muestra su posición con toda la precisión a través de Bluetooth; por eso tu propia posición parece precisa, pero otros nodos ven un desplazamiento.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-off.png" alt="Precise location off, slider at ±2.9 km" width={600} height="auto" /></p>
+
+Para enviar con máxima precisión, actívala en **cada** dispositivo:
+
+1. Abre **Channels** en la app Meshtastic y toca tu canal.
+2. Activa **Precise location** (establece la precisión en 32 = máxima).
+3. Repite en cada dispositivo: el ajuste se aplica en el emisor.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS/meshtastic-faq-precise-location-on.jpg" alt="Precise location on (full precision)" width={600} height="auto" /></p>
+
+Alternativa por CLI: `meshtastic --ch-set module_settings.position_precision 32 --ch-index 0`
+
+**Nota (firmware 2.8+):** los canales públicos (sin clave, con clave predeterminada o con clave de un solo byte) están limitados a 15 bits (~729 m). Usa un **canal privado con una clave aleatoria** para obtener la máxima precisión.
 
 ## Soporte técnico y debate sobre el producto
 
