@@ -391,6 +391,8 @@ For single-motor five-parameter control, state feedback, and return-to-zero shut
 
 See [T701 HT with Pinocchio](https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
 
+For ROS 2 topics, services, trajectory actions, RViz2, and kinematic simulation, see [ROS 2 SDK](./reBot_Arm_T701_HT_ros2.md). Install that SDK separately using its own instructions.
+
   </div>
 </div>
 

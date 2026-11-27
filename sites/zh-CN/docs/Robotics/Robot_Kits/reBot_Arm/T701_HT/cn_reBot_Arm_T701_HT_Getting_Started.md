@@ -385,6 +385,8 @@ python t701_ht_gravity_compensation.py
 
 正逆运动学验证、笛卡尔轨迹和键盘控制示例见 [T701 HT 与 Pinocchio](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/)。
 
+通过 ROS 2 话题、服务和轨迹 action 控制机械臂，以及使用 RViz2 和运动学仿真，见 [ROS 2 SDK](./cn_reBot_Arm_T701_HT_ros2.md)。该 SDK 按对应页面单独安装。
+
   </div>
 </div>
 
