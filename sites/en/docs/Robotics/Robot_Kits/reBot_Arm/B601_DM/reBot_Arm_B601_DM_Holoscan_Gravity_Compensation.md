@@ -38,11 +38,20 @@ import TabItem from '@theme/TabItem';
   </a>
 </div>
 
+<p className="text--center">
+  <img src="https://img.shields.io/badge/Holoscan-5.0.0-4C771B.svg?logo=nvidia&amp;logoColor=white" alt="NVIDIA Holoscan 5.0.0" width={115} height={20} />{' '}
+  <img src="https://img.shields.io/badge/Target%20Rate-400%20Hz-0076A8.svg" alt="400 Hz control-loop target rate" width={124} height={20} />{' '}
+  <img src="https://img.shields.io/badge/Dynamics-Pinocchio-8857A8.svg" alt="Pinocchio dynamics" width={124} height={20} />{' '}
+  <img src="https://img.shields.io/badge/Profiling-Nsight%20Systems-38556F.svg" alt="Nsight Systems latency profiling" width={152} height={20} />
+</p>
+
 <p align="center">
   <strong>400 Hz Target Rate · Pinocchio Dynamics · Nsight Systems Latency Analysis</strong>
 </p>
 
-This tutorial uses NVIDIA Holoscan 5 to read joint feedback, calculate gravity compensation torque, and send motor commands in a single control loop. The motors support the weight of the **reBot Arm B601-DM** so you can reposition it by hand. [NVIDIA Technical Blog](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
+This tutorial uses NVIDIA Holoscan 5 to run a three-stage control loop. The loop reads the current joint angles, uses Pinocchio and the robot model to calculate the torque needed to counter gravity, then sends commands to the motors. Holoscan schedules the loop at a target rate of 400 Hz and runs all three stages on one thread to reduce latency and jitter from thread handoffs.
+
+With gravity compensation enabled, the motors adjust their torque as the pose changes and support the weight of the **reBot Arm B601-DM**. As a result, it takes less force to guide the arm by hand. [NVIDIA Technical Blog](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
 
 ## Prerequisites
 
