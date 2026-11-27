@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introdução
 
-**Seeed Studio XIAO MG24** é uma placa de desenvolvimento mini baseada no MG24 da Silicon Labs. O XIAO MG24 é baseado no **núcleo ARM Cortex-M33**, arquitetura **RISC de 32 bits** com velocidade de clock máxima de 78MHz, suportando instruções DSP e operações de ponto flutuante FPU, possuindo grande poder de computação, e acelerador de hardware **AI/ML MVP** embutido, que pode processar algoritmos de IA/aprendizado de máquina de forma eficiente. Além disso, possui excelente desempenho de RF, com **potência de transmissão de até +19,5 dBm** e sensibilidade de recepção **tão baixa quanto -105,4 dBm**. Ele suporta vários protocolos de IoT e transmissão sem fio, como **Matter, Thread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh** etc.
+**Seeed Studio XIAO MG24** é uma placa de desenvolvimento mini baseada no MG24 da Silicon Labs. O XIAO MG24 é baseado no **núcleo ARM Cortex-M33**, arquitetura **RISC de 32 bits** com velocidade de clock máxima de 78MHz, suportando instruções DSP e operações de ponto flutuante FPU, possuindo forte capacidade de computação, e acelerador de hardware **AI/ML MVP** embutido, que pode processar algoritmos de IA/aprendizado de máquina de forma eficiente. Além disso, possui excelente desempenho de RF, com **potência de transmissão de até +19,5 dBm** e sensibilidade de recepção **tão baixa quanto -105,4 dBm**. Ele suporta múltiplos protocolos de IoT e transmissão sem fio, como **Matter, Thread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh** etc.
 
 ### Especificações
 
@@ -73,7 +73,7 @@ import TabItem from '@theme/TabItem';
   <tr>
     <th>Flash</th>
     <td colspan="2">1536KB + 4MB Onboard</td>
-  </tr>
+  </tr]
   <tr>
     <th>LEDs</th>
     <td colspan="2">1x LED de usuário<br/>1x LED de alimentação</td>
@@ -93,7 +93,7 @@ import TabItem from '@theme/TabItem';
   </tr>
   <tr>
     <th>Segurança</th>
-    <td colspan="2">Aceleração criptográfica por hardware, gerador de números verdadeiramente aleatórios, ARM® TrustZone®, Secure Boot, desbloqueio de depuração segura etc.</td>
+    <td colspan="2">Aceleração criptográfica por hardware, gerador de números verdadeiramente aleatórios, ARM® TrustZone®, boot seguro, desbloqueio de depuração segura etc.</td>
   </tr>
   <tr>
     <th>Baixo consumo (típ.)</th>
@@ -128,11 +128,11 @@ import TabItem from '@theme/TabItem';
 ### Recursos
 
 - **CPU poderosa**: Núcleo ARM Cortex-M33, com velocidade de clock máxima de 78MHz, suportando instruções DSP e operações de ponto flutuante FPU, arquitetura RISC de 32 bits.
-- **Ultrabaixo consumo de energia**: Corrente de RX 4,6mA/corrente de TX 5mA (0dBm), múltiplos modos de sono de baixo consumo
+- **Ultrabaixo consumo de energia**: Corrente RX 4,6mA/corrente TX 5mA (0dBm), múltiplos modos de sono de baixo consumo
 - **IA poderosa**: Acelerador de hardware AI/ML MVP integrado, capaz de processar algoritmos de IA/aprendizado de máquina de forma eficiente.
-- **Transmissão sem fio multiestilo**: Transceptor sem fio multiprotocolo de 2,4GHz integrado, suportando vários protocolos de IoT, como Matter, OpenThread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh, etc.
+- **Transmissão sem fio multiformato**: Transceptor sem fio multiprotocolo de 2,4GHz integrado, suportando múltiplos protocolos de IoT como Matter, OpenThread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh, etc.
 - **Melhor desempenho de RF**: Excelente desempenho de RF, com potência de transmissão de até +19,5 dBm e sensibilidade de recepção tão baixa quanto -105,4 dBm (250kbps DSSS)
-- **Segurança poderosa**: Recursos de segurança avançados do Secure Vault, incluindo inicialização segura, criptografia, geração de números aleatórios, à prova de violação, depuração segura etc.
+- **Segurança poderosa**: Recursos de segurança avançados do Secure Vault, incluindo boot seguro, criptografia, geração de números aleatórios, à prova de violação, depuração segura etc.
 - **Tamanho ultrapequeno**: 21 x 17,8mm.
 - **Ricos recursos on-chip**: Máximo de 1536KB de Flash e 256KB de RAM, com amplo espaço de armazenamento.
 - **Interfaces ricas**: Integrado com ADC de 12 bits 1Msps, sensor de temperatura, comparador analógico, DCDC e outros periféricos ricos, e até 22 pinos, 2 USART, 2 UART de baixo consumo, 1 IIC e outras interfaces.
@@ -141,6 +141,10 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 <TabItem value="XIAO MG24" label="XIAO MG24">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 ### Frente do XIAO MG24
 
@@ -153,6 +157,10 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24sense" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 ### Frente do XIAO MG24 Sense
 
@@ -169,7 +177,7 @@ import TabItem from '@theme/TabItem';
   A diferença entre as duas placas de desenvolvimento é que a MG24 Sense possui um sensor de microfone e um sensor de aceleração de seis eixos, enquanto a MG24 não possui.
 :::
 
-- 5V - Esta é a saída de 5V da porta USB. Você também pode usá-la como entrada de tensão, mas deve haver algum tipo de diodo (schottky, sinal, potência) entre sua fonte de alimentação externa e este pino, com o ânodo para a bateria e o cátodo para o pino de 5V.
+- 5V - Esta é a saída de 5V da porta USB. Você também pode usar isto como entrada de tensão, mas deve ter algum tipo de diodo (schottky, sinal, potência) entre sua fonte de alimentação externa e este pino, com o ânodo para a bateria e o cátodo para o pino de 5V.
 - 3V3 - Esta é a saída regulada do regulador onboard.
 - GND - Terra de alimentação/dados/sinal
 
@@ -200,7 +208,7 @@ import TabItem from '@theme/TabItem';
 | D18                     | Analógico,CS     | PD02      | Csn                | GPIO, Csn, ADC               |
 | ADC_BAT                 |                  | PD04      |                    | Ler o valor de tensão da BAT        |
 | RF Switch Port Select   |                  | PB04      |                    | Alternar entre a antena onboard e a antena UFL |
-| RF Switch Power         |                  | PB05      |                    | Alimentação de RF                   |
+| RF Switch Power         |                  | PB05      |                    | Alimentação de RF                    |
 | Reset                   |                  | RESET     |                    | RESET                                |
 | CHARGE_LED              |                  | VBUS      |                    | CHG-LED_Vermelho                     |
 | USER_LED                |                  | PA07      |                    | Luz de usuário_Amarela               |
@@ -208,21 +216,21 @@ import TabItem from '@theme/TabItem';
 
 ## Introdução
 
-Para permitir que você comece a usar o XIAO MG24 mais rapidamente, leia a preparação de hardware e software abaixo para preparar o XIAO.
+Para permitir que você comece mais rápido com o XIAO MG24, leia a preparação de hardware e software abaixo para preparar o XIAO.
 
 ### Procedimento de fábrica
 
-Nós pré-programamos cada novo XIAO MG24 e XIAO MG24 Sense com um programa de fábrica simples.
+Nós pré-programamos cada novo XIAO MG24 e XIAO MG24 Sense com um simples programa de fábrica.
 
 1. **XIAO MG24**
 
-O programa de fábrica pré-definido na versão comum é o Blink Light. Quando você ligar o XIAO, o indicador laranja do usuário acenderá.
+O programa de fábrica pré-definido na versão regular é o Blink Light. Quando você liga o XIAO, o indicador laranja do usuário acenderá.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/00.gif" style={{width:500, height:'auto'}}/></div>
 
 2. **XIAO MG24 Sense**
 
-O programa de fábrica pré-definido na versão comum é: quanto mais alto você gritar, mais brilhante a luz ficará.
+O programa de fábrica pré-definido na versão regular é: quanto mais alto você gritar, mais brilhante a luz ficará.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/99.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -235,7 +243,7 @@ Você precisa preparar o seguinte:
 - 1 x Cabo USB Tipo-C
 
 :::tip
-Alguns cabos USB podem apenas fornecer energia e não transferem dados. Se você não tiver um cabo USB ou não souber se o seu cabo USB pode transmitir dados, você pode verificar o [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Alguns cabos USB podem apenas fornecer energia e não transferir dados. Se você não tiver um cabo USB ou não souber se o seu cabo USB pode transmitir dados, você pode verificar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 
 ### Preparação de software
@@ -284,7 +292,7 @@ Se você não conseguir encontrá-lo após digitar, reabra o Arduino IDE.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/15.png" style={{width:1000, height:'auto'}}/></div>
 
-Agora aproveite a programação ✨.
+Agora aproveite para programar ✨.
 
 #### Execute seu primeiro programa Blink
 
@@ -298,13 +306,13 @@ Agora aproveite a programação ✨.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/16.png" style={{width:1000, height:'auto'}}/></div>
 
-Depois que o programa for enviado com sucesso, você verá a seguinte mensagem de saída e poderá observar que o LED laranja no lado direito do XIAO MG24 está piscando.
+Quando o programa for enviado com sucesso, você verá a seguinte mensagem de saída e poderá observar que o LED laranja no lado direito do XIAO MG24 está piscando.
 
 <div class="table-center">
  <table align="center">
   <tr>
    <th>Código Blink MG24</th>
-   <th>Exibição do LED Blink</th>
+   <th>Exibição de Piscar do LED</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/7.png" style={{width:700, height:'auto'}}/></div></td>
@@ -315,7 +323,7 @@ Depois que o programa for enviado com sucesso, você verá a seguinte mensagem d
 
 ## Uso da bateria
 
-O XIAO MG24 possui um chip de gerenciamento de energia integrado que permite que o XIAO MG24 seja alimentado de forma independente usando uma bateria ou que a bateria seja carregada pela porta USB do XIAO MG24.
+O XIAO MG24 possui um chip de gerenciamento de energia integrado que permite que o XIAO MG24 seja alimentado de forma independente usando uma bateria ou que a bateria seja carregada através da porta USB do XIAO MG24.
 
 Se você quiser conectar a bateria ao XIAO, recomendamos que você compre uma bateria de lítio recarregável de 3,7 V qualificada. Ao soldar a bateria, tenha cuidado para distinguir entre os terminais positivo e negativo. O terminal negativo da fonte de alimentação deve ser o lado mais próximo da porta USB, e o terminal positivo da fonte de alimentação é o lado mais distante da porta USB.
 
@@ -330,13 +338,13 @@ Tenha cuidado para não causar curto-circuito entre os terminais positivo e nega
 1. Use baterias qualificadas que atendam às especificações.
 2. O XIAO pode ser conectado ao seu computador por meio de cabo de dados enquanto usa a bateria; fique tranquilo, o XIAO possui um chip de proteção de circuito integrado, que é seguro.
 3. O XIAO MG24 não terá nenhum LED aceso quando estiver alimentado por bateria (a menos que você tenha escrito um programa específico), portanto, não julgue se o XIAO MG24 está funcionando ou não pela condição do LED; avalie isso de forma adequada pelo seu programa.
-4. No momento, infelizmente não temos como ajudá-lo a verificar o nível restante da bateria por software (porque não há mais pinos de chip disponíveis); você precisa carregar a bateria regularmente ou usar um multímetro para verificar o nível da bateria.
+4. Desculpe, atualmente não temos como ajudá-lo a verificar o nível restante da bateria por software (porque não há mais pinos de chip disponíveis); você precisa carregar a bateria regularmente ou usar um multímetro para verificar o nível da bateria.
 
 Ao mesmo tempo, projetamos uma luz indicadora vermelha para o carregamento da bateria, que, por meio da exibição da luz indicadora, informa ao usuário o estado atual da bateria durante o carregamento.
 
 1. Quando o XIAO MG24 não está conectado à bateria, a luz vermelha acende quando o cabo Tipo-C é conectado e apaga após 30 segundos.
 2. A luz vermelha pisca quando a bateria está conectada e o cabo Tipo-C é conectado para carregamento.
-3. Ao conectar o Tipo-C para carregar a bateria completamente, a luz vermelha se apaga.
+3. Ao conectar o Tipo-C para carregar a bateria completamente, a luz vermelha apaga.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/battery_mg24.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -553,7 +561,7 @@ void loop()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/100.png" style={{width:1000, height:'auto'}}/></div>
 
-### Prevenindo que o XIAO MG24 seja brickado durante o Deep Sleep
+### Evitando que o XIAO MG24 seja brickado durante o Deep Sleep
 
 O **XIAO MG24** é uma poderosa placa de microcontrolador da Seeed Studio, mas usuários relataram problemas em que o dispositivo se torna sem resposta ("brickado") após entrar no modo Deep Sleep. Este tutorial explica a causa do problema, fornece um método detalhado de recuperação e oferece medidas preventivas para evitar que seu XIAO MG24 seja brickado.
 
@@ -561,7 +569,7 @@ O XIAO MG24 entra em um **modo Deep Sleep** (EM4) para economizar energia, mas e
 
 #### Medidas preventivas
 
-Para evitar que seu XIAO MG24 seja brickado ao usar o modo Deep Sleep, siga estas etapas:
+Para evitar brickar seu XIAO MG24 ao usar o modo Deep Sleep, siga estes passos:
 
 1. Use o pino Escape (PC1)
 
@@ -594,18 +602,18 @@ void setup() {
 
 3. Evite colocar a flash em Sleep desnecessariamente
 
-Certifique-se de que seu sketch não coloque a memória flash em modo de suspensão (`Deep Power Down`) a menos que seja absolutamente necessário. Isso pode evitar problemas ao enviar novos sketches.
+Certifique-se de que seu sketch não coloque a memória flash em modo de suspensão (`Deep Power Down`), a menos que seja absolutamente necessário. Isso pode evitar problemas ao enviar novos sketches.
 
 #### Agradecimentos
 
 Agradecimentos especiais à **comunidade Seeed Studio** por suas valiosas contribuições e soluções para este problema. Os métodos de recuperação e as medidas preventivas discutidos neste tutorial foram desenvolvidos com base em insights de membros da comunidade como **[msfujino](https://forum.seeedstudio.com/u/msfujino)** e **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)**.  
 
-Para mais detalhes e discussões, visite o tópico original do fórum:  
+Para mais detalhes e discussões, visite o tópico original no fórum:  
 [DeepSleep bricks XIAO_MG24 - Seeed Studio Forum](https://forum.seeedstudio.com/t/deepsleep-bricks-xiao-mg24/284889)
 
 ## Desbrickando
 
-O XIAO MG24 é atualmente o único modelo XIAO equipado com um chip de porta serial. Diferente de outros modelos XIAO, ele não possui um botão BOOT nem um método de recuperação BOOT. Essa falha de projeto pode causar problemas quando o dispositivo entra em modo de suspensão ou encontra anomalias de software, tornando impossível enviar um programa pela porta serial. Para resolver isso, fornecemos um método para acordar a porta serial e restaurar a funcionalidade.
+O XIAO MG24 é atualmente o único modelo XIAO equipado com um chip de porta serial. Diferente de outros modelos XIAO, ele não possui um botão BOOT nem um método de recuperação por BOOT. Essa falha de projeto pode causar problemas quando o dispositivo entra em modo de suspensão ou encontra anomalias de software, tornando impossível enviar um programa pela porta serial. Para resolver isso, fornecemos um método para acordar a porta serial e restaurar a funcionalidade.
 
 ### Solução para Windows
 
@@ -628,7 +636,7 @@ O XIAO MG24 é atualmente o único modelo XIAO equipado com um chip de porta ser
    - O script apagará a memória flash e resetará o dispositivo.
 
 4. **Verifique a recuperação**  
-   - Após a conclusão do script, o XIAO MG24 deve estar restaurado e pronto para uso.
+   - Após a conclusão do script, o XIAO MG24 deverá estar restaurado e pronto para uso.
 
 ### Solução para macOS
 
@@ -667,7 +675,7 @@ O XIAO MG24 é atualmente o único modelo XIAO equipado com um chip de porta ser
    - O script usará o OpenOCD para apagar a memória flash e resetar o dispositivo.  
 
 5. **Verifique a recuperação**  
-   - Após a conclusão do script, o XIAO MG24 deve estar restaurado e pronto para uso.
+   - Após a conclusão do script, o XIAO MG24 deverá estar restaurado e pronto para uso.
 
 :::note
 
@@ -680,7 +688,7 @@ O XIAO MG24 é atualmente o único modelo XIAO equipado com um chip de porta ser
 
 ### Para Seeed Studio XIAO MG24
 
-**Design de hardware**
+**Projeto de hardware**
 - **📄[Datasheet]** [Silicon Labs EFR32MG24 Datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
 - **📄[Reference Manual]** [Silicon Labs EFR32MG24 Reference Manual](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
 - **📄[Schematic]** [XIAO MG24 Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
@@ -691,7 +699,7 @@ O XIAO MG24 é atualmente o único modelo XIAO equipado com um chip de porta ser
 
 ### Para Seeed Studio XIAO MG24 Sense
 
-**Design de hardware**
+**Projeto de hardware**
 - **📄[Datasheet]** [Silicon Labs EFR32MG24 Datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
 - **📄[Reference Manual]** [Silicon Labs EFR32MG24 Reference Manual](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
 - **📄[Schematic]** [XIAO MG24 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
@@ -700,9 +708,9 @@ O XIAO MG24 é atualmente o único modelo XIAO equipado com um chip de porta ser
   - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
-## Suporte técnico e discussão de produtos
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

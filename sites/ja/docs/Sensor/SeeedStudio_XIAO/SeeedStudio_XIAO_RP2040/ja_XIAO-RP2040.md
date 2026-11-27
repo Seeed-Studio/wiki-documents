@@ -1,6 +1,6 @@
 ---
 description: 概要
-title: Seeed Studio XIAO RP2040 シリーズ入門ガイド
+title: Seeed Studio XIAO RP2040 シリーズ入門
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao-rp2040-45font_1.webp
@@ -10,7 +10,7 @@ last_update:
   date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-08-25'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/ja/XIAO-RP2040/
 ---
 
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Seeed Studio XIAO RP2040 シリーズ入門ガイド
+# Seeed Studio XIAO RP2040 シリーズ入門
 
 <div class="table-center">
  <table align="center">
@@ -47,13 +47,13 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概要
 
-Seeed Studio XIAO RP2040 シリーズには、**XIAO RP2040** と **XIAO RP2040 Plus** が含まれます。両方のボードは同じ Raspberry Pi RP2040 マイクロコントローラを搭載しており、最大 133 MHz で動作するデュアルコア Arm Cortex-M0+ プロセッサと 264 KB の SRAM を備えています。各ボードには 2 MB のオンボード Flash メモリも搭載されています。その結果、同じコア処理性能を発揮し、同一の RP2040 ソフトウェアエコシステムを共有します。
+Seeed Studio XIAO RP2040 シリーズには、**XIAO RP2040** と **XIAO RP2040 Plus** が含まれます。両ボードは同じ Raspberry Pi RP2040 マイクロコントローラを搭載しており、最大 133 MHz で動作するデュアルコア Arm Cortex-M0+ プロセッサと 264 KB の SRAM を備えています。各ボードには 2 MB のオンボード Flash メモリも搭載されています。その結果、同じコア処理性能を発揮し、同一の RP2040 ソフトウェアエコシステムを共有します。
 
-2 つのボードの主な違いは、外部に引き出された GPIO の数、利用可能な周辺接続、およびオンボードの電源管理機能です。
+2 つのボードの主な違いは、外部に引き出された GPIO の数、利用可能な周辺インターフェース、およびオンボードの電源管理機能です。
 
-標準の XIAO RP2040 は一般的な 14 ピンの XIAO フットプリントを採用しており、11 本の GPIO ピンと 3 本の電源ピンで構成されています。11 本のデジタル I/O ピンはすべて PWM に対応しており、そのうち 4 本はアナログ入力もサポートします。このボードは、コンパクトな 21 × 17.8 mm のフォームファクタで I2C、UART、SPI、SWD インターフェースを提供します。
+標準の XIAO RP2040 は一般的な 14 ピン XIAO フットプリントを採用しており、11 本の GPIO ピンと 3 本の電源ピンで構成されています。11 本のデジタル I/O ピンはすべて PWM に対応し、そのうち 4 本はアナログ入力もサポートします。このボードは、コンパクトな 21 × 17.8 mm のフォームファクタで I2C、UART、SPI、SWD インターフェースを提供します。
 
-XIAO RP2040 Plus は同じ 14 ピンの XIAO レイアウトを維持しつつ、ボードの背面と側面に 15 個の GPIO はんだパッドを追加しています。これにより、外部に引き出されたデジタル I/O ピンの総数は 11 本から 26 本に増加します。また、第 2 の I2C インターフェース、専用の USB D+/D− パッド、BAT+、BAT−、BAT_EN を含むバッテリー関連の接続も追加されています。
+XIAO RP2040 Plus は、同じ一般的な 14 ピン XIAO レイアウトを維持しつつ、ボードの背面と側面に 15 個の GPIO はんだパッドを追加しています。これにより、外部に引き出されたデジタル I/O ピンの総数は 11 本から 26 本に増加します。また、第 2 の I2C インターフェース、専用の USB D+/D− パッド、BAT+、BAT−、BAT_EN を含むバッテリー関連の接続も追加されています。
 
 バッテリー駆動アプリケーション向けに、XIAO RP2040 Plus にはオンボード PMIC、充電インジケータ、および BAT から 3V3 への逆流保護が統合されています。これらの追加機能により、Plus バージョンはカスタムキャリアボード、SMD 実装、バッテリー駆動デバイス、より多くの I/O リソースを必要とするプロジェクトにより適しています。
 
@@ -70,11 +70,11 @@ Seeed Studio XIAO RP2040 は Seeed Studio XIAO 拡張ボードと互換性があ
 - **高性能 RP2040 MCU:** 最大 133 MHz で動作するデュアルコア Arm Cortex-M0+ プロセッサ
 - **豊富なメモリリソース:** 264 KB の SRAM と 2 MB のオンボード Flash メモリ
 - **幅広いソフトウェア互換性:** Arduino、PlatformIO、MicroPython、CircuitPython、TinyGo、Rust、Zephyr などをサポート
-- **共通の XIAO フットプリント:** 両バージョンとも標準の 14 ピン XIAO レイアウトを採用し、11 本の GPIO ピンと 3 本の電源ピンを備える
-- **コンパクトなフォームファクタ:** ウェアラブル機器やスペースに制約のある用途向けの親指サイズ 21 × 17.8 mm デザイン
+- **共通の XIAO フットプリント:** 両バージョンとも標準的な 14 ピン XIAO レイアウトを採用し、11 本の GPIO ピンと 3 本の電源ピンを備えています
+- **コンパクトなフォームファクタ:** ウェアラブルデバイスやスペースに制約のある用途向けの親指サイズ 21 × 17.8 mm デザイン
 - **標準 XIAO RP2040 インターフェース:** 11 本のデジタル I/O ピン、4 本のアナログ入力ピン、11 本の PWM 対応ピン、I2C、UART、SPI、SWD
 - **拡張された XIAO RP2040 Plus の I/O:** 合計 26 本のデジタル I/O ピンとなる 15 個の GPIO パッドを追加し、第 2 の I2C インターフェースと専用 USB D+/D− パッドを搭載
-- **統合バッテリー管理:** XIAO RP2040 Plus はオンボード PMIC、充電インジケータ、専用バッテリー端子、および BAT から 3V3 への逆流保護を備える
+- **統合バッテリー管理:** XIAO RP2040 Plus にはオンボード PMIC、充電インジケータ、専用バッテリー接続、および BAT から 3V3 への逆流保護を搭載
 - **柔軟な実装オプション:** ブレッドボード対応の共通ピンに加え、キャッスレーテッドエッジと SMD 対応パッドによりカスタムキャリアボードに対応
 
 ## 仕様
@@ -203,6 +203,10 @@ Seeed Studio XIAO RP2040 は Seeed Studio XIAO 拡張ボードと互換性があ
 <Tabs>
 <TabItem value="XIAO RP2040" label="XIAO RP2040" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">インタラクティブ Pinout を確認</a>
+</div>
+
 ### XIAO RP2040 表面
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO_RP2040_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -214,6 +218,10 @@ Seeed Studio XIAO RP2040 は Seeed Studio XIAO 拡張ボードと互換性があ
 </TabItem>
 
 <TabItem value="XIAO RP2040 Plus" label="XIAO RP2040 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">インタラクティブ Pinout を確認</a>
+</div>
 
 ### XIAO RP2040 Plus 表面
 
@@ -228,63 +236,63 @@ Seeed Studio XIAO RP2040 は Seeed Studio XIAO 拡張ボードと互換性があ
 
 :::caution
 一般的な I/O ピンについて：
-MCU の動作電圧は 3.3V です。一般的な I/O ピンに接続される入力電圧が 3.3V を超えると、チップが損傷する可能性があります。
+MCU の動作電圧は 3.3V です。一般 I/O ピンに接続される入力電圧が 3.3V を超えると、チップが損傷する可能性があります。
 
 電源ピンについて：
 内蔵の DC-DC コンバータ回路により 5V を 3.3V に変換できるため、VIN-PIN および 5V-PIN を介して 5V 電源でデバイスに給電できます。
 
 XIAO RP2040 は現在、バッテリー電源のみをサポートしており、バッテリー接続中に Type-C を接続することはできません。安全上のリスクとなる可能性があります。
 
-使用時には十分ご注意いただき、シールドカバーを取り外さないでください。
+使用時には十分注意し、シールドカバーを持ち上げないでください。
 :::
 
 ## **ピンマップ**
 
-| XIAO ピン | 機能                  | XIAO RP2040  | XIAO RP2040 Plus | 説明                                                           |
-| :--------- | :--------------------- | :----------- | :---------------- | :------------------------------------------------------------- |
+| XIAO ピン | 機能                   | XIAO RP2040  | XIAO RP2040 Plus | 説明                                                           |
+| :--------- | :--------------------- | :----------- | :---------------- | :----------------------------------------------------------- |
 | 5V         | VBUS                   | VBUS         | VBUS              | USB 5 V 電源入力/出力                                         |
 | GND        | GND                    | GND          | GND               | グラウンド                                                     |
 | 3V3        | 3V3_OUT                | 3V3_OUT      | 3V3_OUT           | 3.3 V 電源出力                                                |
-| D0         | A0                     | GPIO26       | GPIO26            | GPIO、ADC0                                                     |
-| D1         | A1                     | GPIO27       | GPIO27            | GPIO、ADC1                                                     |
-| D2         | A2                     | GPIO28       | GPIO28            | GPIO、ADC2                                                     |
-| D3         | A3                     | GPIO29       | GPIO29            | GPIO、ADC3                                                     |
-| D4         | SDA0                   | GPIO6        | GPIO6             | GPIO、I2C0 データ                                              |
-| D5         | SCL0                   | GPIO7        | GPIO7             | GPIO、I2C0 クロック                                            |
-| D6         | TX                     | GPIO0        | GPIO0             | GPIO、UART 送信                                                |
-| D7         | RX                     | GPIO1        | GPIO1             | GPIO、UART 受信                                                |
-| D8         | SCK                    | GPIO2        | GPIO2             | GPIO、SPI クロック                                             |
-| D9         | MISO                   | GPIO4        | GPIO4             | GPIO、SPI データ入力                                           |
-| D10        | MOSI                   | GPIO3        | GPIO3             | GPIO、SPI データ出力                                           |
+| D0         | A0                     | GPIO26       | GPIO26            | GPIO、ADC0                                                    |
+| D1         | A1                     | GPIO27       | GPIO27            | GPIO、ADC1                                                    |
+| D2         | A2                     | GPIO28       | GPIO28            | GPIO、ADC2                                                    |
+| D3         | A3                     | GPIO29       | GPIO29            | GPIO、ADC3                                                    |
+| D4         | SDA0                   | GPIO6        | GPIO6             | GPIO、I2C0 データ                                             |
+| D5         | SCL0                   | GPIO7        | GPIO7             | GPIO、I2C0 クロック                                           |
+| D6         | TX                     | GPIO0        | GPIO0             | GPIO、UART 送信                                               |
+| D7         | RX                     | GPIO1        | GPIO1             | GPIO、UART 受信                                               |
+| D8         | SCK                    | GPIO2        | GPIO2             | GPIO、SPI クロック                                            |
+| D9         | MISO                   | GPIO4        | GPIO4             | GPIO、SPI データ入力                                          |
+| D10        | MOSI                   | GPIO3        | GPIO3             | GPIO、SPI データ出力                                          |
 | D11        | —                      | —            | —                 | 外部ピンとしては使用不可                                      |
-| D12        | GPIO                   | —            | GPIO18            | Plus 専用拡張 GPIO                                             |
+| D12        | GPIO                   | —            | GPIO18            | Plus 専用拡張 GPIO                                            |
 | D13        | SCL1                   | —            | GPIO21            | Plus 専用 I2C1 クロック                                       |
 | D14        | SDA1                   | —            | GPIO20            | Plus 専用 I2C1 データ                                         |
-| D15        | GPIO                   | —            | GPIO19            | Plus 専用拡張 GPIO                                             |
-| D16        | GPIO                   | —            | GPIO22            | Plus 専用拡張 GPIO                                             |
-| D17        | GPIO                   | —            | GPIO23            | Plus 専用拡張 GPIO                                             |
+| D15        | GPIO                   | —            | GPIO19            | Plus 専用拡張 GPIO                                            |
+| D16        | GPIO                   | —            | GPIO22            | Plus 専用拡張 GPIO                                            |
+| D17        | GPIO                   | —            | GPIO23            | Plus 専用拡張 GPIO                                            |
 | D18        | —                      | —            | —                 | 外部ピンとしては使用不可                                      |
-| D19        | GPIO                   | —            | GPIO5             | Plus 専用拡張 GPIO                                             |
-| D20        | GPIO                   | —            | GPIO13            | Plus 専用拡張 GPIO                                             |
-| D21        | GPIO                   | —            | GPIO14            | Plus 専用拡張 GPIO                                             |
-| D22        | GPIO                   | —            | GPIO15            | Plus 専用拡張 GPIO                                             |
-| D23        | GPIO                   | —            | GPIO16            | Plus 専用拡張 GPIO                                             |
-| D24        | GPIO                   | —            | GPIO17            | Plus 専用拡張 GPIO                                             |
-| D25        | GPIO                   | —            | GPIO10            | Plus 専用拡張 GPIO                                             |
-| D26        | GPIO                   | —            | GPIO9             | Plus 専用拡張 GPIO                                             |
-| D27        | GPIO                   | —            | GPIO8             | Plus 専用拡張 GPIO                                             |
-| Reset      | RUN                    | RUN          | RUN               | リセット入力                                                   |
-| Boot       | RP2040_BOOT            | RP2040_BOOT  | RP2040_BOOT       | ブートローダーモードに入る                                    |
-| USER_LED_R | 赤チャンネル           | GPIO17       | —                 | XIAO RP2040 上の RGB LED 赤チャンネルを直接制御               |
-| USER_LED_G | 緑チャンネル           | GPIO16       | —                 | XIAO RP2040 上の RGB LED 緑チャンネルを直接制御               |
-| USER_LED_G | 青チャンネル           | GPIO25       | —                 | XIAO RP2040 上の RGB LED 青チャンネルを直接制御               |
+| D19        | GPIO                   | —            | GPIO5             | Plus 専用拡張 GPIO                                            |
+| D20        | GPIO                   | —            | GPIO13            | Plus 専用拡張 GPIO                                            |
+| D21        | GPIO                   | —            | GPIO14            | Plus 専用拡張 GPIO                                            |
+| D22        | GPIO                   | —            | GPIO15            | Plus 専用拡張 GPIO                                            |
+| D23        | GPIO                   | —            | GPIO16            | Plus 専用拡張 GPIO                                            |
+| D24        | GPIO                   | —            | GPIO17            | Plus 専用拡張 GPIO                                            |
+| D25        | GPIO                   | —            | GPIO10            | Plus 専用拡張 GPIO                                            |
+| D26        | GPIO                   | —            | GPIO9             | Plus 専用拡張 GPIO                                            |
+| D27        | GPIO                   | —            | GPIO8             | Plus 専用拡張 GPIO                                            |
+| Reset      | RUN                    | RUN          | RUN               | リセット入力                                                  |
+| Boot       | RP2040_BOOT            | RP2040_BOOT  | RP2040_BOOT       | ブートローダーモードに入る                                   |
+| USER_LED_R | 赤チャンネル           | GPIO17       | —                 | XIAO RP2040 上の RGB LED 赤チャンネルを直接制御              |
+| USER_LED_G | 緑チャンネル           | GPIO16       | —                 | XIAO RP2040 上の RGB LED 緑チャンネルを直接制御              |
+| USER_LED_G | 青チャンネル           | GPIO25       | —                 | XIAO RP2040 上の RGB LED 青チャンネルを直接制御              |
 | RGB_LED    | WS2812B データ         | —            | GPIO12/NEOPIX     | 単線 WS2812B カラーデータ制御                                 |
-| RGB_EN     | WS2812B 有効           | —            | GPIO11            | WS2812B 電源を有効化するピン（カラーデータピンではない）      |
-| User LED   | ユーザー制御 LED       | —            | GPIO25            | XIAO RP2040 Plus 上の独立したユーザー LED                     |
-| BAT_EN     | バッテリー有効         | —            | GPIO24            | Plus 上のバッテリー電源制御                                   |
-| CHARGE_LED | 充電インジケータ       | —            | —                 | ハードウェア制御の充電状態 LED（ユーザー GPIO ではない）      |
+| RGB_EN     | WS2812B イネーブル     | —            | GPIO11            | WS2812B 電源を有効化するピン（カラーデータピンではない）     |
+| User LED   | ユーザー制御 LED       | —            | GPIO25            | XIAO RP2040 Plus 上の独立したユーザー LED                    |
+| BAT_EN     | バッテリー有効         | —            | GPIO24            | Plus 上のバッテリー電源制御                                  |
+| CHARGE_LED | 充電インジケータ       | —            | —                 | ハードウェア制御の充電状態 LED（ユーザー GPIO ではない）     |
 | SWDIO      | SWD デバッグ           | SWDIO        | RP2040_SWDIO      | Serial Wire Debug データ                                      |
-| SWCLK      | SWD デバッグ           | SWCLK        | RP2040_SWCLK      | Serial Wire Debug クロック                                    |
+| SWCLK      | SWD デバッグ           | SWCLK        | RP2040_SWCLK      | Serial Wire Debug クロック                                   |
 | USB_D+     | USB                    | -            | USB_DP      | USB 1.1 フルスピード データ（プラス）                         |
 | USB_D-     | USB                    | -            | USB_DM      | USB 1.1 フルスピード データ（マイナス）                       |
 
@@ -296,16 +304,16 @@ XIAO RP2040 は現在、バッテリー電源のみをサポートしており�
 - Seeed Studio XIAO PR2040 をコンピュータに接続します。
 - コンピュータにディスクドライブが表示されます。
 
-この時点で、チップはブートローダーモードに入り、書き込みポートが再び表示されます。RP2040 チップには 2 つのパーティションがあり、1 つはブートローダー、もう 1 つはユーザープログラムです。製品は工場出荷時に、システムメモリ内にブートローダーコードが書き込まれています。上記の手順を実行することで、モードを切り替えることができます。
+この時点で、チップはブートローダーモードに入り、書き込みポートが再び表示されます。RP2040 チップには 2 つのパーティションがあり、1 つはブートローダー、もう 1 つはユーザープログラムです。製品は工場出荷時にシステムメモリ内にブートローダーコードを書き込んでいます。上記の手順を実行することで、モードを切り替えることができます。
 
 ### リセット
 
-Seeed Studio XIAO RP2040 をリセットしたい場合は、次の手順を実行してください。
+Seeed Studio XIAO RP2040 をリセットしたい場合は、次の手順を実行します。
 
 - Seeed Studio XIAO RP2040 をコンピュータに接続します。
 - **R** ピンを**1 回**押します。
 
-注意：内蔵のプログラマブル単色 LED（赤、青、緑）は、Arduino 上のものとは動作が逆になっています。Seeed Studio XIAO RP2040 では、そのピンを Low に引き下げることで有効になります。
+注意：内蔵のプログラマブル単色 LED（赤、青、緑）は、Arduino 上のものとは動作が逆になっています。Seeed Studio XIAO RP2040 では、ピンを Low に引き下げることで有効になります。
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.png" alt="pir" width={800} height="auto" /></p>
@@ -314,7 +322,7 @@ Seeed Studio XIAO RP2040 をリセットしたい場合は、次の手順を実�
 
 :::note
 
-背面に BAT バッテリーコネクタを備えているのは XIAO RP2040 Plus のみですので、ご注意ください。
+BAT バッテリーコネクタが背面に搭載されているのは XIAO RP2040 Plus のみですので、ご注意ください。
 
 :::
 
@@ -325,7 +333,7 @@ XIAO RP2040 Plus は、3.7V リチウムバッテリーを電源入力として�
 
 :::caution
 
-はんだ付けの際には、正極と負極を短絡させてバッテリーや機器を損傷しないよう十分注意してください。バッテリーに電力が残っている場合は、決して基板にはんだ付けしないでください。基板を焼損するおそれがあります。回路に通電した状態で短絡させることは重大なリスクを伴うため、アダプタの使用を推奨します。
+はんだ付けの際、正極と負極を短絡させてバッテリーや機器を損傷しないよう、十分注意してください。バッテリーに電力が残っている場合は、決して基板にはんだ付けしないでください。基板が焼損するおそれがあります。回路に通電した状態で短絡させることは大きなリスクを伴うため、アダプタの使用を推奨します。
 
 :::
 
@@ -333,7 +341,7 @@ XIAO RP2040 Plus は、3.7V リチウムバッテリーを電源入力として�
 
 回路図によると、XIAO RP2040 Plus は **SGM40567-4.2XG/TR** リチウムイオンバッテリーチャージャ IC を使用して、単セルリチウムイオンバッテリーに定電流・定電圧充電を行います。充電状態は点滅する **Charge_LED** によって示されます。<br/>
 
-バッテリー電圧測定回路は、**TPS22916CNYFPR** ロードスイッチを使用して測定経路を有効または無効にします。バッテリー電圧を測定する必要があるとき、MCU は **BAT_EN (GPIO24)** を介して測定経路を有効にし、スタンバイモード中のバッテリー消費を低減します。<br/>
+バッテリー電圧測定回路には **TPS22916CNYFPR** ロードスイッチが使用されており、測定経路を有効または無効にします。バッテリー電圧を測定する必要があるとき、MCU は **BAT_EN (GPIO24)** を介して測定経路を有効にし、デバイスがスタンバイモードの間のバッテリー消費を低減します。<br/>
 
 さらに、**SGM4875XXDM6G/TR** アナログスイッチを使用して ADC 入力チャネルを切り替えます。**GPIO24/BAT_EN** によって制御され、バッテリー測定信号と別のアナログ入力信号のどちらを **A3 (GPIO29) ADC** ピンに接続するかを選択し、ADC ピンを多重利用できるようにします。
 
@@ -436,11 +444,11 @@ void loop() {
 - **📄[データシート]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
 - **📄[回路図]** [XIAO RP2040 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf )
 - **🗃️[PCB 設計ファイル]** 
-  - [ XIAO RP2040 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.3_SCH&PCB_20260304.zip )
-  - [XIAO RP2040 Eagle Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
+  - [ XIAO RP2040 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.3_SCH&PCB_20260304.zip )
+  - [XIAO RP2040 Eagle プロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
 - **🗃️[PCB ライブラリ]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO RP2040 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
 
 **メカ設計**
@@ -453,11 +461,11 @@ void loop() {
 - **📄[データシート]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
 - **📄[回路図]** [XIAO RP2040 Plus Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_SCH.pdf )
 - **🗃️[PCB 設計ファイル]** 
-  - [ XIAO RP2040 Plus KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
-  - [XIAO RP2040 Plus Eagle Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
+  - [ XIAO RP2040 Plus KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
+  - [XIAO RP2040 Plus Eagle プロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040-Plus_V1.0_SCH&PCB.zip)
 - **🗃️[PCB ライブラリ]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO RP2040 Plus Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-Plus-pinout.xlsx)
 
 <JetsonLeadQuote
@@ -471,11 +479,11 @@ void loop() {
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[電子書籍]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

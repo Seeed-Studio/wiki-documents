@@ -1,6 +1,6 @@
 ---
-description: XIAO RP2040 Con Zephyr(RTOS)
-title: XIAO RP2040 Con Zephyr(RTOS)
+description: XIAO RP2040 con Zephyr(RTOS)
+title: XIAO RP2040 con Zephyr(RTOS)
 keywords:
   - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -8,61 +8,61 @@ slug: /XIAO-RP2040-Zephyr-RTOS
 last_update:
   date: 3/20/2024
   author: timo614
-createdAt: '2025-02-21'
-updatedAt: '2025-09-25'
+createdAt: '2024-04-16'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/es/XIAO-RP2040-Zephyr-RTOS/
 ---
 
-# XIAO RP2040 Con Zephyr(RTOS)
+# XIAO RP2040 con Zephyr(RTOS)
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-rp2040.png"/></div>
 
-Esta wiki cubre el soporte de [Zephyr](https://www.zephyrproject.org/) para el [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/es/xiao_rp2040_getting_started/). Con la ayuda de esta guía podrás utilizar el conjunto de características disponibles para la placa.
+Este wiki cubre la compatibilidad de [Zephyr](https://www.zephyrproject.org/) con la [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/es/xiao_rp2040_getting_started/). Con la ayuda de esta guía podrás utilizar el conjunto de funciones disponible para la placa.
 
 ## Qué es [Zephyr](https://www.zephyrproject.org/)
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
 
-El SO [**Zephyr**](https://www.zephyrproject.org/) está basado en un kernel de huella pequeña diseñado para uso en sistemas embebidos y con recursos limitados: desde simples sensores ambientales embebidos y wearables LED hasta controladores embebidos sofisticados, relojes inteligentes y aplicaciones inalámbricas IoT.
+El sistema operativo [**Zephyr**](https://www.zephyrproject.org/) se basa en un kernel de huella reducida diseñado para su uso en sistemas embebidos y con recursos limitados: desde simples sensores ambientales embebidos y wearables con LED hasta sofisticados controladores embebidos, relojes inteligentes y aplicaciones inalámbricas de IoT.
 
-Para cada dispositivo soportado Zephyr tiene un archivo [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) que describe la placa y sus características. La [página de la placa Xiao RP2040 Zephyr](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html#supported-features) describe las características soportadas actualmente disponibles que están definidas por el [archivo dts de la placa](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_rp2040/xiao_rp2040.yaml#L7).
+Para cada dispositivo compatible, Zephyr tiene un archivo [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) que describe la placa y sus características. La [página de la placa Xiao RP2040 Zephyr](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html#supported-features) describe las funciones compatibles disponibles actualmente, que se definen en el [archivo dts de la placa](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_rp2040/xiao_rp2040.yaml#L7).
 
-*Referencia: [**Proyecto Zephyr**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
+*Referencia: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
-## Primeros Pasos
+## Introducción
 
-El primer paso para trabajar con Zephyr es configurar el SDK y la cadena de herramientas para desarrollo local. La [guía de primeros pasos de Zephyr](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) debe ser referenciada para el procedimiento de configuración asociado necesario para tu entorno.
+El primer paso para trabajar con Zephyr es configurar el SDK y la toolchain para el desarrollo local. Debes consultar la [guía de introducción a Zephyr](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) para seguir el procedimiento de configuración correspondiente a tu entorno.
 
-Una vez que la cadena de herramientas de Zephyr ha sido configurada y un SDK asociado ha sido descargado puedes comenzar el desarrollo de aplicaciones.
+Una vez que la toolchain de Zephyr se haya configurado y se haya descargado un SDK asociado, puedes comenzar el desarrollo de aplicaciones.
 
-Para el Xiao RP2040 el [archivo de descripción de la placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html) puede ser referenciado para información adicional de configuración.
+Para la Xiao RP2040 se puede consultar el [archivo de descripción de la placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html) para obtener más información de configuración.
 
-Para programar el Xiao RP2040 se pueden seguir los siguientes pasos:
+Para programar la Xiao RP2040 se pueden seguir los siguientes pasos:
 
-1. Construir un ejemplo o tu aplicación
-2. Conectar el Xiao RP2040
-3. Mantener presionado el botón designado `B` (boot) y presionar `R` (reset) lo cual montará el dispositivo como un dispositivo de almacenamiento masivo
-4. Ejecutar el comando flash para flashear el dispositivo `west flash -r uf2`
+1. Compila un ejemplo o tu aplicación
+2. Conecta la Xiao RP2040
+3. Mantén pulsado el botón designado `B` (boot) y presiona `R` (reset), lo que montará el dispositivo como un dispositivo de almacenamiento masivo
+4. Ejecuta el comando de flasheo para grabar el dispositivo `west flash -r uf2`
 
-El ejemplo más simple es ejecutar la muestra "Hello World" en la placa. Después de cambiar al directorio de la instalación de Zephyr ejecuta los siguientes comandos.
+El ejemplo más sencillo es ejecutar el ejemplo "Hello World" en la placa. Después de cambiar al directorio de la instalación de Zephyr ejecuta los siguientes comandos.
 
 ```
 west build -p always -b xiao_rp2040 samples/subsys/usb/console
 ```
 
-Entra en el modo bootloader como se describió anteriormente y luego flashea el dispositivo:
+Entra en modo bootloader como se describió anteriormente y luego flashea el dispositivo:
 
 ```
 west flash -r uf2
 ```
 
-El dispositivo se reiniciará después de recibir el archivo y tu máquina ahora debería estar conectada por USB para comunicación serie.
+El dispositivo se reiniciará después de recibir el archivo y tu máquina ahora debería estar conectada por USB para la comunicación serie.
 
-Encuentra el puerto para tu dispositivo, por ejemplo en Ubuntu escribiendo `ls /dev/tty*`, y confirma qué dispositivo aparece cuando tu USB ha sido conectado.
+Encuentra el puerto de tu dispositivo, por ejemplo en Ubuntu escribiendo `ls /dev/tty*`, y confirma qué dispositivo aparece cuando se ha conectado tu USB.
 
 En mi ejemplo veo `/dev/ttyACM0` como el dispositivo recién añadido.
 
-Usando screen puedes entonces conectarte y monitorear la respuesta serie:
+Usando screen puedes conectarte y monitorizar la respuesta serie:
 
 ```
 screen /dev/ttyACM0 115200
@@ -77,13 +77,13 @@ Hello World! arm
 Hello World! arm
 ```
 
-Para ayudar con el proceso de usar Zephyr con Xiao y su placa de expansión, se ha construido un repositorio con varias superposiciones y configuraciones utilizadas aquí. Los comandos incluidos en este artículo de wiki asumen que está ubicado en `../applications/xiao-zephyr-examples` relativo a la raíz de zephyr. Se puede proporcionar una ruta alternativa a los comandos a continuación actualizándola.
+Para ayudar con el proceso de uso de Zephyr con Xiao y su placa de expansión se ha creado un repositorio con varias superposiciones (overlays) y configuraciones utilizadas aquí. Los comandos incluidos en este artículo del wiki asumen que está ubicado en `../applications/xiao-zephyr-examples` relativo a la raíz de zephyr. Se puede proporcionar una ruta alternativa a los comandos siguientes actualizándola.
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 ```
 
-## Preparación del Hardware
+## Preparación de hardware
 
 <table align="center">
   <tbody><tr>
@@ -97,45 +97,49 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
   </tbody></table>
 
-### Conocimiento del Desarrollador
+### Conocimientos para desarrolladores
 
-#### Placa de Expansión XIAO
+#### Placa de expansión XIAO
 
-  Para usar módulos Grove con Seeed Studio XIAO RP2040, utilizaremos una [Base de Expansión Seeed Studio para XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) y conectaremos XIAO RP2040 en ella.
+  Para poder usar módulos Grove con Seeed Studio XIAO RP2040, utilizaremos una [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) y conectaremos la XIAO RP2040 en ella.
 
-  Después de eso, los conectores Grove en la placa se pueden usar para conectar módulos Grove
+  Después de eso, se pueden usar los conectores Grove de la placa para conectar módulos Grove
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
 
-#### Definiciones de Pines
+#### Definiciones de pines
 
-  Necesitas seguir el gráfico a continuación para usar los números de pin internos apropiados al conectar los módulos Grove a los conectores Grove en el Shield Grove para Seeed Studio XIAO.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+  Debes seguir el gráfico siguiente para usar los números de pin internos apropiados al conectar los módulos Grove a los conectores Grove en el Grove Shield para Seeed Studio XIAO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg"style={{width:900, height:'auto'}}/></div>
 
-### Funcionalidad Principal
+### Funcionalidad principal
 
 - LED WS2812
-- PWM LED
+- LED PWM
 - Reloj
 - TFLite
 
 #### LED WS2812
 
-Para este ejemplo, el Xiao RP2040 utiliza su LED integrado y parpadea continuamente a través de rojo, verde y azul.
+En este ejemplo la Xiao RP2040 utiliza su LED integrado y cambia continuamente entre rojo, verde y azul.
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 cd ~/zephyrproject/zephyr
@@ -148,7 +152,7 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Verás el LED WS2812 integrado alternando continuamente entre rojo, azul y verde en un patrón intermitente.
+Verás el LED WS2812 integrado cambiando continuamente entre rojo, azul y verde en un patrón intermitente.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
 
@@ -191,25 +195,25 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
  };
 ```
 
-Estos elementos del árbol de dispositivos muestran el WS2812 integrado y su utilización. Dado que el WS2812 tiene su línea VCC configurada en el pin 11 del RP2040, el árbol de dispositivos utiliza la funcionalidad gpio-hog para permitir que el LED se habilite a través de variables de entorno. En este caso, el pin 12 es el que está configurado para la línea de datos del WS2812, por lo que con la variable de entorno CONFIG_GPIO_HOGS habilitada, la tira de LED puede utilizarse para el ejemplo.
+Estos elementos del devicetree muestran el WS2812 integrado y su utilización. Dado que el WS2812 tiene su línea VCC conectada al pin 11 del RP2040, el devicetree utiliza la funcionalidad gpio-hog para permitir que el LED se habilite mediante variables de entorno. En este caso el pin 12 es el que se configura para la línea de datos del WS2812, por lo que con la variable de entorno CONFIG_GPIO_HOGS habilitada la tira de LED puede utilizarse para el ejemplo.
 
-Esto funciona en parte porque el ejemplo tiene un archivo xiao_rp2040.conf como parte de su directorio boards, por lo que fusiona esa configuración con la configuración de la placa y la habilita.
+Esto funciona en parte porque el ejemplo tiene un archivo xiao_rp2040.conf como parte de su directorio de placas, por lo que fusiona esa configuración con la configuración de la placa y la habilita.
 
 ```
 CONFIG_GPIO=y
 CONFIG_GPIO_HOGS=y
 ```
 
-Si deseas utilizar el WS2812 integrado, es recomendable habilitar esta variable para permitir que reciba energía.
+Si deseas utilizar el WS2812 integrado es recomendable habilitar esta variable para permitirle tomar energía.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Cosmic-Bee/xiao-zephyr-examples/main/images/rp2040/ws2812.gif" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/ws2812.gif" style={{width:300, height:'auto'}}/></div>
 
 #### LED PWM
 
-En este ejemplo demostraremos las capacidades PWM del Xiao RP2040. Para ello utilizaremos el LED azul integrado y usaremos PWM para hacerlo desvanecer continuamente.
+En este ejemplo demostraremos las capacidades PWM de la Xiao RP2040. Para ello usaremos el LED azul integrado y utilizaremos PWM para atenuarlo continuamente.
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 cd ~/zephyrproject/zephyr
@@ -222,7 +226,7 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Verás la luz azul del LED RGB integrado desvanecerse lentamente y repetir el proceso nuevamente.
+Verás cómo la luz azul del LED RGB integrado se atenúa lentamente y repite el proceso de nuevo.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
 
@@ -233,9 +237,9 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
 };
 ```
 
-Esta lógica en el `boards/xiao_rp2040.overlay` para el ejemplo habilita la funcionalidad PWM desde el devicetree que normalmente está deshabilitada. La configuración del Xiao RP2040 tiene el LED RGB azul integrado configurado como el PWM predeterminado.
+Este fragmento de lógica en `boards/xiao_rp2040.overlay` para el ejemplo habilita la funcionalidad PWM desde el devicetree que normalmente está deshabilitada. La configuración de la Xiao RP2040 tiene el LED azul RGB integrado configurado como el PWM predeterminado.
 
-Como se puede ver en el `xiao_rp2040-pinctrl.dtsi` de los archivos de placa de zephyr, existe lo siguiente:
+Como se puede ver en el `xiao_rp2040-pinctrl.dtsi` de los archivos de la placa de zephyr, existe lo siguiente:
 
 ```
  pwm_ch4b_default: pwm_ch4b_default {
@@ -245,14 +249,14 @@ Como se puede ver en el `xiao_rp2040-pinctrl.dtsi` de los archivos de placa de z
  };
 ```
 
-En este caso, el PWM está utilizando el LED PWM del devicetree configurado que está asociado con el pin 25 (el LED azul). Los pines PWM pueden ser referenciados desde la [documentación del RP2040](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html).
+En este caso, el PWM está usando el `pwm LED` configurado en el devicetree, que está asociado de vuelta con el pin 25 (el LED azul). Los pines PWM se pueden consultar en la [documentación del RP2040](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html).
 
 <!-- <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Cosmic-Bee/xiao-zephyr-examples/main/images/rp2040/led_fade.gif" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/led_fade.gif" style={{width:300, height:'auto'}}/></div>
 
 #### Reloj
 
-Para esto usaremos una muestra existente y nuestro overlay de consola:
+Para esto usaremos un ejemplo existente y nuestro overlay de consola:
 
 ```
 cd ~/zephyrproject/zephyr
@@ -265,13 +269,13 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Conecta al monitor (después de reiniciar rápidamente tu placa para asegurar que se reinicie):
+Conéctate al monitor (después de reiniciar rápidamente tu placa para asegurarte de que se reinicia):
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-Verás una serie de temporizadores activándose después de un retraso establecido uno tras otro:
+Verás una serie de temporizadores activarse tras un retardo establecido, uno tras otro:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -292,7 +296,7 @@ Now: 30
 Set alarm in 32 sec (32000000 ticks)
 ```
 
-#### TFLite - Hola Mundo
+#### TFLite - Hello World
 
 Habilita TFLite con Zephyr y actualiza:
 
@@ -301,7 +305,7 @@ west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-Para este ejemplo vamos a usar la muestra tflite "Hello World" junto con nuestra superposición de consola y configuración para leer la respuesta a través de USB serial.
+Para este ejemplo vamos a usar el ejemplo tflite "Hello World" junto con nuestro overlay de consola y conf para leer la respuesta por serie USB.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -314,13 +318,13 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Conectar al monitor:
+Conéctate al monitor:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-Verás los resultados devueltos desde la consola:
+Verás resultados devueltos desde la consola:
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -345,21 +349,21 @@ x_value: 1.2566366*2^1, y_value: 1.0674761*2^-1
 x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 ```
 
-### Componentes Adicionales
+### Componentes adicionales
 
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Pantalla I2C
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Botón
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Zumbador
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Tarjeta SD
-- [Grove - Sensor de Temperatura y Humedad (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
-- [Módulo de Pantalla LCD de 1.69 pulgadas, Resolución 240×280, Interfaz SPI](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
+- [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
+- [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
 
 #### Grove - Expansion Board - Pantalla I2C
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/xiao_expansion_oled.jpg" style={{width:300, height:'auto'}}/></div>
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 cd ~/zephyrproject/zephyr
@@ -372,9 +376,9 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Verás una pantalla que muestra múltiples cajas negras y una caja parpadeante en la esquina dado que esta pantalla solo soporta dos colores.
+Verás una pantalla que muestra múltiples cuadros negros y un cuadro parpadeante en la esquina, dado que esta pantalla solo admite dos colores.
 
-Profundicemos en este ejemplo un poco para ver por qué funciona:
+Profundicemos un poco en este ejemplo para ver por qué funciona:
 
 ```
 / {
@@ -403,11 +407,11 @@ Profundicemos en este ejemplo un poco para ver por qué funciona:
 
 ```
 
-El archivo de superposición del shield en este ejemplo configura una pantalla OLED SSD1306 en el registro 0x3C. Se selecciona como la pantalla de zephyr en la sección chosen.
+El archivo de overlay del shield en este ejemplo configura una pantalla OLED SSD1306 en el registro 0x3C. Se selecciona como la pantalla de Zephyr en la sección `chosen`.
 
-#### Grove - Placa de Expansión - Botón
+#### Grove - Expansion Board - Botón
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr que usaremos junto con la superposición de consola USB y conf.
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr que utilizaremos junto con el overlay y conf de consola USB.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -420,15 +424,15 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Conectar al monitor:
+Conéctate al monitor:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-Presionar el botón con la muestra activará el LED integrado para que se encienda.
+Al pulsar el botón con el ejemplo se activará el LED integrado.
 
-Verás los resultados devueltos desde la consola:
+Verás resultados devueltos desde la consola:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -460,13 +464,13 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
 };
 ```
 
-El archivo de superposición de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo del botón puede utilizarse ya que la superposición permite al Zephyr configurar el botón y hacerlo disponible para el código asociado.
+El archivo de overlay de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo del botón puede utilizarse, ya que el overlay permite que Zephyr configure el botón y lo ponga a disposición del código asociado.
 
-En este caso GPIO 27 corresponde con el Pin A1/D1 en el Xiao RP2040. Se configura en esta superposición para actuar como un botón y se le asigna el alias sw0 para permitir que sea usado para la muestra que tiene código esperando esto.
+En este caso, el GPIO 27 corresponde al pin A1/D1 en la Xiao RP2040. Se configura en este overlay para actuar como un botón y se le asigna el alias `sw0` para permitir que se use en el ejemplo, cuyo código espera este nombre.
 
-#### Grove - Placa de Expansión - Zumbador
+#### Grove - Expansion Board - Zumbador
 
-Activaremos nuestro zumbador usando el ejemplo PWM parpadeante para controlar su activación a través de una señal PWM. Para esto usaremos una superposición personalizada que habilita el PWM para el pin A3.
+Activaremos nuestro zumbador usando el ejemplo blinky PWM para controlar su activación mediante una señal PWM. Para esto usaremos un overlay personalizado que habilita el PWM para el pin A3.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -479,9 +483,9 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Después de flashear el archivo uf2 deberías comenzar a escuchar una serie de zumbidos que cambian de sonido mientras la muestra ejecuta su curso.
+Después de flashear el archivo uf2 deberías empezar a oír una serie de zumbidos que cambian de sonido a medida que el ejemplo se ejecuta.
 
-Veamos por qué esto funciona:
+Veamos por qué funciona esto:
 
 ```
 /delete-node/ &pwm_led0;
@@ -518,13 +522,13 @@ Veamos por qué esto funciona:
 };
 ```
 
-La superposición en uso primero elimina el nodo `pwm_led0` existente ya que esta placa es compatible a través de una configuración de LED integrado para PWM. Luego configura el pin A3 para su uso como PWM.
+El overlay en uso primero elimina el nodo `pwm_led0` existente, ya que esta placa es compatible mediante un LED integrado configurado para PWM. Luego configura el pin A3 para usarlo como PWM.
 
-Estamos usando el canal 6B aquí para el PWM ya que el pin asociado para A3 en el Xiao RP2040 es el pin 29. Consulta la [documentación de pinctrl del RP2040](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html#a8c0c1058a626d83ba5f7e18238aba150) para más información / el mapeo de pines de otros pines.
+Aquí estamos usando el canal 6B para el PWM, ya que el pin asociado a A3 en la Xiao RP2040 es el pin 29. Consulta la [documentación de pinctrl del RP2040](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html#a8c0c1058a626d83ba5f7e18238aba150) para más información y el mapeo de otros pines.
 
-#### Grove - Placa de Expansión - Tarjeta SD
+#### Grove - Expansion Board - Tarjeta SD
 
-Usaremos aquí la muestra del sistema de archivos junto con el shield de la Placa de Expansión Xiao para intentar interfaz con el lector de tarjetas SD sobre SPI. El shield de la placa de expansión tiene el pin CS configurado para el pin `&xiao_d 2` asociado, por lo que no se necesita trabajo de tu parte para asociar esta capacidad con la placa además de agregar el shield. Para prepararlo más, estamos usando una configuración personalizada que habilita la funcionalidad de la tarjeta SD.
+Aquí usaremos el ejemplo de sistema de archivos junto con el shield Xiao Expansion Board para intentar interactuar con el lector de tarjetas SD mediante SPI. El shield de la placa de expansión tiene el pin CS configurado para el pin asociado `&xiao_d 2`, por lo que no se requiere trabajo adicional por tu parte para asociar esta capacidad con la placa, aparte de añadir el shield. Para prepararlo aún más estamos usando una configuración personalizada que habilita la funcionalidad de la tarjeta SD.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -537,7 +541,7 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Conectar al monitor:
+Conéctate al monitor:
 
 ```
 screen /dev/ttyACM0 115200
@@ -556,9 +560,9 @@ Listing dir /SD: ...
 [FILE] IMAGE2.JPG (size = 97963)
 ```
 
-En este caso mi tarjeta SD tenía dos archivos. Sus nombres y sus tamaños fueron mostrados en mi consola.
+En este caso, mi tarjeta SD tenía dos archivos. Sus nombres y tamaños se mostraron en mi consola.
 
-Veamos los elementos relevantes en juego aquí:
+Revisemos los elementos relevantes que intervienen aquí:
 
 ```
 CONFIG_SPI=y
@@ -566,9 +570,9 @@ CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
 ```
 
-En la configuración asociada estamos habilitando SPI, el controlador de disco SDMMC, y el GPIO. Sin esta configuración, la superposición llevará a un error ya que la muestra no puede encontrar la tarjeta SD.
+En la configuración asociada estamos habilitando SPI, el controlador de disco SDMMC y el GPIO. Sin esta configuración, la superposición producirá un error, ya que el ejemplo no podrá encontrar la tarjeta SD.
 
-La parte relevante del shield de la Placa de Expansión Xiao se muestra a continuación:
+La parte relevante del shield Xiao Expansion Board se muestra a continuación:
 
 ```
 &xiao_spi {
@@ -588,16 +592,16 @@ La parte relevante del shield de la Placa de Expansión Xiao se muestra a contin
 };
 ```
 
-Como se mencionó anteriormente, el mapeo de pines `&xiao_d 2` se utiliza para permitir que el pin D2 sea seleccionado para esto independientemente de la placa utilizada, siempre que soporte la configuración de pines `&xiao_d`.
+Como se mencionó anteriormente, se utiliza la asignación de pines `&xiao_d 2` para permitir que el pin D2 sea seleccionado para esto independientemente de la placa utilizada, siempre que sea compatible con la configuración de pines `&xiao_d`.
 
-#### Grove - Sensor de Temperatura y Humedad (SHT31)
+#### Grove - Sensor de temperatura y humedad (SHT31)
 
-Primero suelde los pines y conecte su Xiao RP2040 a la placa de expansión. Luego conecte un cable conector grove entre el Grove SHT31 y uno de los puertos I2C en la placa de expansión.
+Primero suelda los pines y conecta tu Xiao RP2040 a la placa de expansión. Luego conecta un cable conector Grove entre el Grove SHT31 y uno de los puertos I2C de la placa de expansión.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/xiao_sht31.jpg" style={{width:500, height:'auto'}}/></div>
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr que habilitaremos con soporte de consola USB con nuestro overlay y conf.
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr, al cual habilitaremos el soporte de consola USB con nuestra overlay y conf.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -610,13 +614,13 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Conectar al monitor:
+Conéctate al monitor:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-Verás los resultados devueltos desde la consola:
+Verás resultados devueltos desde la consola:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -641,15 +645,15 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
  };
 ```
 
-El archivo de superposición de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo SHT31 puede utilizarse ya que la superposición informa a la [lógica de muestra](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) cómo configurar el sensor para nuestra placa.
+El archivo de overlay de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo SHT31 puede utilizarse, ya que la overlay informa a la [lógica del ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) cómo configurar el sensor para nuestra placa.
 
-#### Módulo de Pantalla LCD de 1.69 pulgadas, Resolución 240×280, Interfaz SPI
+#### Módulo de pantalla LCD de 1,69 pulgadas, resolución 240×280, interfaz SPI
 
-Para este ejemplo usaremos SPI para conectar a una LCD de 1.69 pulgadas con una resolución de 240x280.
+Para este ejemplo usaremos SPI para conectar una pantalla LCD de 1,69 pulgadas con una resolución de 240x280.
 
-Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía (en este caso estamos usando el Xiao RP2040 pero el mismo diseño de pines se usa para conectar aquí).
+Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía (en este caso estamos usando el Xiao RP2040, pero se utiliza la misma distribución de pines para la conexión aquí).
 
-| Pantalla SPI LCD de 1.69 pulgadas| XIAO RP2040 |
+| Pantalla LCD SPI de 1,69 pulgadas| XIAO RP2040 |
 | ------------- | ------------------------- |
 | VCC | 3V3 |
 | GND | GND |
@@ -662,7 +666,7 @@ Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
-A continuación, con el hardware preparado, podemos construir el archivo uf2 para flashear:
+A continuación, con el hardware preparado, podemos compilar el archivo uf2 para flashear:
 
 ```
 cd ~/zephyrproject/zephyr
@@ -675,19 +679,19 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash -r uf2
 ```
 
-Con el nuevo firmware en su lugar, el dispositivo ahora muestra la misma pantalla de demostración que vimos anteriormente en la placa de expansión, solo que ahora actualizada para la pantalla LCD a color sobre SPI.
+Con el nuevo firmware instalado, el dispositivo ahora muestra la misma pantalla de demostración que vimos anteriormente en la placa de expansión, solo que ahora actualizada para la pantalla LCD en color sobre SPI.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/spi_lcd.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## ✨ Proyecto de Colaborador
 
-- Este proyecto está respaldado por el [Proyecto de Colaborador](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293558) de Seeed Studio.
+- Este proyecto está respaldado por el [Proyecto de Colaboradores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293558) de Seeed Studio.
 - Gracias a **los esfuerzos de Tim** y tu trabajo será [exhibido](https://wiki.seeedstudio.com/es/Honorary-Contributors/).
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

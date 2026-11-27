@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 # Seeed Studio XIAO nRF52840 (Sense) のピン多重化
 
-Seeed Studio XIAO nRF52840 (Sense) には豊富なインターフェースがあります。**PWM ピン**として使用できる**11 個のデジタル入出力**と、**ADC ピン**として使用できる**6 個のアナログ入力**があります。**UART、I2C、SPI** といった 3 種類の一般的なシリアル通信インターフェースすべてをサポートしています。この Wiki は、これらのインターフェースについて学び、次のプロジェクトで活用するのに役立ちます。
+Seeed Studio XIAO nRF52840 (Sense) は豊富なインターフェースを備えています。**PWM ピン**として使用できる**11 個のデジタル I/O**と、**ADC ピン**として使用できる**6 個のアナログ入力**があります。**UART、I2C、SPI** といった一般的な 3 種類のシリアル通信インターフェースすべてをサポートします。この Wiki は、これらのインターフェースについて学び、次のプロジェクトで活用するのに役立ちます。
 
 > ここで紹介する基本機能は、どちらの Seeed Studio XIAO nRF52840 Arduino ライブラリでも問題なく動作します。
 
@@ -26,6 +26,10 @@ Seeed Studio XIAO nRF52840 (Sense) には豊富なインターフェースがあ
 
 <Tabs>
 <TabItem value="nRF52840" label="XIAO nRF52840" default>
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 ### XIAO nRF52840 表面
 
@@ -37,7 +41,7 @@ Seeed Studio XIAO nRF52840 (Sense) には豊富なインターフェースがあ
 
 **ピンマップ**
 
-| XIAO ピン               | 機能             | チップピン      | 説明                                                | Arduino 名   |
+| XIAO ピン               | 機能              | チップピン      | 説明                                                | Arduino 名  |
 | :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
 | 5V                      | VBUS             |               | 電源入力/出力                                       |              |
 | GND                     |                  |               |                                                      |              |
@@ -59,13 +63,17 @@ Seeed Studio XIAO nRF52840 (Sense) には豊富なインターフェースがあ
 | ADC_BAT                 | READ_BAT_ENABLE  | P0.14         | バッテリ電圧読み取り用の有効化制御                  |              |
 | RF Switch Port Select   |                  | P2.05         | オンボードアンテナの切り替え                        |              |
 | RF Switch Power         |                  | P2.03         | 電源                                                |              |
-| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                          |              |
+| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                         |              |
 | USER_LED_R              |                  | P0.26         | ユーザー制御の赤色 RGB LED ピン                     | 11           |
 | USER_LED_B              |                  | P0.06         | ユーザー制御の青色 RGB LED ピン                     | 13/12        |
 | USER_LED_G              |                  | P0.30         | ユーザー制御の緑色 RGB LED ピン                     | 12/13        |
 
 </TabItem>
 <TabItem value="nRF52840Plus" label="XIAO nRF52840 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840plus" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 ### XIAO nRF52840 Plus 表面
 
@@ -77,42 +85,46 @@ Seeed Studio XIAO nRF52840 (Sense) には豊富なインターフェースがあ
 
 **ピンマップ**
 
-| XIAO ピン               | 機能                 | チップピン  | 代替機能             | 説明                                      | Arduino 名   |
+| XIAO ピン               | 機能                  | チップピン | 代替機能             | 説明                                      | Arduino 名  |
 | :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
 | 5V                      | VBUS                 |           |                    | 電源入力/出力                           |              |
 | GND                     |                      |           |                    |                                          |              |
 | 3V3                     | 3V3_OUT              |           |                    | 電源出力                                 |              |
-| D0                      | アナログ            | P0.02     |                    | GPIO、ADC                                | 0            |
-| D1                      | アナログ            | P0.03     |                    | GPIO、ADC                                | 1            |
-| D2                      | アナログ            | P0.28     |                    | GPIO、ADC                                | 2            |
-| D3                      | アナログ            | P0.29     |                    | GPIO、ADC                                | 3            |
+| D0                      | アナログ             | P0.02     |                    | GPIO、ADC                                | 0            |
+| D1                      | アナログ             | P0.03     |                    | GPIO、ADC                                | 1            |
+| D2                      | アナログ             | P0.28     |                    | GPIO、ADC                                | 2            |
+| D3                      | アナログ             | P0.29     |                    | GPIO、ADC                                | 3            |
 | D4                      | アナログ, SDA        | P0.04     |                    | GPIO、I2C データ、ADC                    | 4            |
 | D5                      | アナログ, SCL        | P0.05     |                    | GPIO、I2C クロック、ADC                  | 5            |
 | D6                      | TX                   | P1.11     |                    | GPIO、UART 送信                          | 7/6          |
 | D7                      | RX                   | P1.12     |                    | GPIO、UART 受信                          | 8/7          |
 | D8                      | SPI_SCK              | P1.13     |                    | GPIO、SPI クロック                        | 9/8          |
-| D9                      | SPI_MISO             | P1.14     |                    | GPIO、SPI データ                          | 10/9         |
-| D10                     | SPI_MOSI             | P1.15     |                    | GPIO、SPI データ                          | 11/10        |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO、SPI データ                         | 10/9         |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO、SPI データ                         | 11/10        |
 | D11                     | I2S_SD               | P0.15     |                    | GPIO、I2S、ADC                           |              |
 | D12                     | I2S_SCK              | P0.19     |                    | GPIO、I2S、ADC                           |              |
 | D13                     | I2S_WS               | P1.01     |                    | GPIO、I2S、ADC                           |              |
 | D14                     | RX1                  | P0.09     | NFC1               | GPIO、UART 受信、ADC                      |              |
 | D15                     | TX1                  | P0.10     | NFC2               | GPIO、UART 送信、ADC                      |              |
-| D16                     | AIN7_BAT             | P0.31     |                    | バッテリ電圧 ADC 読み取りピン             |              |
+| D16                     | AIN7_BAT             | P0.31     |                    | バッテリ電圧 ADC 読み取りピン            |              |
 | D17                     | SCK1                 | P1.03     |                    | GPIO、SPI                                |              |
 | D18                     | MISO1                | P1.05     |                    | GPIO、SPI                                |              |
 | D19                     | MOSI1                | P1.07     |                    | GPIO、SPI                                |              |
-| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | バッテリ電圧読み取り用の有効化制御         |              |
+| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | バッテリ電圧読み取り用の有効化制御        |              |
 | Reset                   |                      | P0.18     |                    | リセット                                  |              |
-| RF Switch Port Select   |                      | P2.05     |                    | オンボードアンテナの切り替え               |              |
+| RF Switch Port Select   |                      | P2.05     |                    | オンボードアンテナの切り替え              |              |
 | RF Switch Power         |                      | P2.03     |                    | 電源                                      |              |
 | CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |              |
-| USER_LED_R              |                      | P0.26     |                    | ユーザー制御の赤色 RGB LED ピン            | 11           |
-| USER_LED_B              |                      | P0.06     |                    | ユーザー制御の青色 RGB LED ピン            | 13/12        |
-| USER_LED_G              |                      | P0.30     |                    | ユーザー制御の緑色 RGB LED ピン            | 12/13        |
+| USER_LED_R              |                      | P0.26     |                    | ユーザー制御の赤色 RGB LED ピン           | 11           |
+| USER_LED_B              |                      | P0.06     |                    | ユーザー制御の青色 RGB LED ピン           | 13/12        |
+| USER_LED_G              |                      | P0.30     |                    | ユーザー制御の緑色 RGB LED ピン           | 12/13        |
 
 </TabItem>
 <TabItem value="nRF52840Sense" label="XIAO nRF52840 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">インタラクティブピン配置を確認</a>
+</div>
 
 ### XIAO nRF52840 Sense 表面
 
@@ -124,39 +136,43 @@ Seeed Studio XIAO nRF52840 (Sense) には豊富なインターフェースがあ
 
 **ピンマップ**
 
-| XIAO ピン               | 機能             | チップピン    | 説明                                                | Arduino 名  |
-| :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
-| 5V                      | VBUS             |               | 電源入力/出力                                       |              |
-| GND                     |                  |               |                                                      |              |
-| 3V3                     | 3V3_OUT          |               | 電源出力                                            |              |
-| D0                      | アナログ          | P0.02         | GPIO、AIN0                                          | 0            |
-| D1                      | アナログ          | P0.03         | GPIO、AIN1                                          | 1            |
-| D2                      | アナログ          | P0.28         | GPIO、AIN4                                          | 2            |
-| D3                      | アナログ          | P0.29         | GPIO、AIN5                                          | 3            |
-| D4                      | アナログ、SDA     | P0.04         | GPIO、I2C データ、AIN2                              | 4            |
-| D5                      | アナログ、SCL     | P0.05         | GPIO、I2C クロック、AIN3                            | 5            |
-| D6                      | TX               | P1.11         | GPIO、UART 送信                                     | 7/6          |
-| D7                      | RX               | P1.12         | GPIO、UART 受信                                     | 8/7          |
-| D8                      | SPI_SCK          | P1.13         | GPIO、SPI クロック                                  | 9/8          |
-| D9                      | SPI_MISO         | P1.14         | GPIO、SPI データ                                    | 10/9         |
-| D10                     | SPI_MOSI         | P1.15         | GPIO、SPI データ                                    | 11/10        |
-| NFC1                    |                  | P0.09         | NFC                                                  |              |
-| NFC2                    |                  | P0.10         | NFC                                                  |              |
-| Reset                   |                  | P0.18         | リセット                                             |              |
-| ADC_BAT                 | READ_BAT_ENABLE  | P0.14         | バッテリ電圧読み取り用の有効化制御                  |              |
-| 6 DOF IMU_PWR           |                  | P1.08         | 6D モジュールの電源スイッチ                         |              |
-| 6 DOF IMU__INT1         |                  | P0.11         | 6D モジュールの割り込み信号ピン                     |              |
-| PDM Microphone_DATA     |                  | P0.16         | PDM オーディオデータ入力ピン                        |              |
-| PDM Microphone_CLK      |                  | P1.00         | PDM オーディオクロック出力ピン                      |              |
-| RF Switch Port Select   |                  | P2.05         | オンボードアンテナの切り替え                        |              |
-| RF Switch Power         |                  | P2.03         | 電源                                                |              |
-| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                          |              |
-| USER_LED_R              |                  | P0.26         | ユーザー制御の赤色 RGB LED ピン                     | 11           |
-| USER_LED_B              |                  | P0.06         | ユーザー制御の青色 RGB LED ピン                     | 13/12        |
-| USER_LED_G              |                  | P0.30         | ユーザー制御の緑色 RGB LED ピン                     | 12/13        |
+| XIAO ピン               | 機能             | チップピン    | 説明                                               | Arduino 名  |
+| :---------------------: | :-------------: | :-------:     | :------------------------------------------------ | :-------:    |
+| 5V                      | VBUS             |               | 電源入力/出力                                      |              |
+| GND                     |                  |               |                                                    |              |
+| 3V3                     | 3V3_OUT          |               | 電源出力                                           |              |
+| D0                      | アナログ         | P0.02         | GPIO、AIN0                                         | 0            |
+| D1                      | アナログ         | P0.03         | GPIO、AIN1                                         | 1            |
+| D2                      | アナログ         | P0.28         | GPIO、AIN4                                         | 2            |
+| D3                      | アナログ         | P0.29         | GPIO、AIN5                                         | 3            |
+| D4                      | アナログ, SDA    | P0.04         | GPIO、I2C データ、AIN2                             | 4            |
+| D5                      | アナログ, SCL    | P0.05         | GPIO、I2C クロック、AIN3                           | 5            |
+| D6                      | TX               | P1.11         | GPIO、UART 送信                                    | 7/6          |
+| D7                      | RX               | P1.12         | GPIO、UART 受信                                    | 8/7          |
+| D8                      | SPI_SCK          | P1.13         | GPIO、SPI クロック                                 | 9/8          |
+| D9                      | SPI_MISO         | P1.14         | GPIO、SPI データ                                   | 10/9         |
+| D10                     | SPI_MOSI         | P1.15         | GPIO、SPI データ                                   | 11/10        |
+| NFC1                    |                  | P0.09         | NFC                                                |              |
+| NFC2                    |                  | P0.10         | NFC                                                |              |
+| Reset                   |                  | P0.18         | リセット                                           |              |
+| ADC_BAT                 | READ_BAT_ENABLE  | P0.14         | バッテリー電圧読み取り用の有効化制御              |              |
+| 6 DOF IMU_PWR           |                  | P1.08         | 6D モジュールの電源スイッチ                        |              |
+| 6 DOF IMU__INT1         |                  | P0.11         | 6D モジュールの割り込み信号ピン                    |              |
+| PDM Microphone_DATA     |                  | P0.16         | PDM オーディオデータ入力ピン                       |              |
+| PDM Microphone_CLK      |                  | P1.00         | PDM オーディオクロック出力ピン                     |              |
+| RF Switch Port Select   |                  | P2.05         | オンボードアンテナの切り替え                       |              |
+| RF Switch Power         |                  | P2.03         | 電源                                               |              |
+| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                        |              |
+| USER_LED_R              |                  | P0.26         | ユーザー制御の赤色 RGB LED ピン                    | 11           |
+| USER_LED_B              |                  | P0.06         | ユーザー制御の青色 RGB LED ピン                    | 13/12        |
+| USER_LED_G              |                  | P0.30         | ユーザー制御の緑色 RGB LED ピン                    | 12/13        |
 
 </TabItem>
 <TabItem value="nRF52840SensePlus" label="XIAO nRF52840 Sense Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840senseplus" target="_blank" rel="noopener noreferrer">インタラクティブピン配置を確認</a>
+</div>
 
 ### XIAO nRF52840 Sense Plus 表面
 
@@ -168,50 +184,50 @@ Seeed Studio XIAO nRF52840 (Sense) には豊富なインターフェースがあ
 
 **ピンマップ**
 
-| XIAO ピン               | 機能                 | チップピン | 代替機能           | 説明                                      | Arduino 名  |
-| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
-| 5V                      | VBUS                 |           |                    | 電源入力/出力                             |              |
-| GND                     |                      |           |                    |                                          |              |
-| 3V3                     | 3V3_OUT              |           |                    | 電源出力                                 |              |
-| D0                      | アナログ             | P0.02     |                    | GPIO、ADC                                | 0            |
-| D1                      | アナログ             | P0.03     |                    | GPIO、ADC                                | 1            |
-| D2                      | アナログ             | P0.28     |                    | GPIO、ADC                                | 2            |
-| D3                      | アナログ             | P0.29     |                    | GPIO、ADC                                | 3            |
-| D4                      | アナログ、SDA        | P0.04     |                    | GPIO、I2C データ、ADC                     | 4            |
-| D5                      | アナログ、SCL        | P0.05     |                    | GPIO、I2C クロック、ADC                   | 5            |
-| D6                      | TX                   | P1.11     |                    | GPIO、UART 送信                           | 7/6          |
-| D7                      | RX                   | P1.12     |                    | GPIO、UART 受信                           | 8/7          |
-| D8                      | SPI_SCK              | P1.13     |                    | GPIO、SPI クロック                        | 9/8          |
-| D9                      | SPI_MISO             | P1.14     |                    | GPIO、SPI データ                          | 10/9         |
-| D10                     | SPI_MOSI             | P1.15     |                    | GPIO、SPI データ                          | 11/10        |
-| D11                     | I2S_SD               | P0.15     |                    | GPIO、I2S、ADC                            |              |
-| D12                     | I2S_SCK              | P0.19     |                    | GPIO、I2S、ADC                            |              |
-| D13                     | I2S_WS               | P1.01     |                    | GPIO、I2S、ADC                            |              |
-| D14                     | RX1                  | P0.09     | NFC1               | GPIO、UART 受信、ADC                      |              |
-| D15                     | TX1                  | P0.10     | NFC2               | GPIO、UART 送信、ADC                      |              |
-| D16                     | AIN7_BAT             | P0.31     |                    | バッテリ電圧 ADC 読み取りピン             |              |
-| D17                     | SCK1                 | P1.03     |                    | GPIO、SPI                                |              |
-| D18                     | MISO1                | P1.05     |                    | GPIO、SPI                                |              |
-| D19                     | MOSI1                | P1.07     |                    | GPIO、SPI                                |              |
-| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | バッテリ電圧読み取り用の有効化制御        |              |
-| 6 DOF IMU_PWR           |                      | P1.08     |                    | 6D モジュールの電源スイッチ               |              |
-| 6 DOF IMU__INT1         |                      | P0.11     |                    | 6D モジュールの割り込み信号ピン           |              |
-| PDM Microphone_DATA     |                      | P0.16     |                    | PDM オーディオデータ入力ピン              |              |
-| PDM Microphone_CLK      |                      | P1.00     |                    | PDM オーディオクロック出力ピン            |              |
-| Reset                   |                      | P0.18     |                    | リセット                                   |              |
-| RF Switch Port Select   |                      | P2.05     |                    | オンボードアンテナの切り替え               |              |
-| RF Switch Power         |                      | P2.03     |                    | 電源                                      |              |
-| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |              |
-| USER_LED_R              |                      | P0.26     |                    | ユーザー制御の赤色 RGB LED ピン           | 11           |
-| USER_LED_B              |                      | P0.06     |                    | ユーザー制御の青色 RGB LED ピン           | 13/12        |
-| USER_LED_G              |                      | P0.30     |                    | ユーザー制御の緑色 RGB LED ピン           | 12/13        |
+| XIAO ピン               | 機能                 | チップピン | 代替機能             | 説明                                       | Arduino 名  |
+| :---------------------: | :-----------------: | :-------: | :----------------: | :---------------------------------------- | :-------:    |
+| 5V                      | VBUS                 |           |                    | 電源入力/出力                              |              |
+| GND                     |                      |           |                    |                                            |              |
+| 3V3                     | 3V3_OUT              |           |                    | 電源出力                                   |              |
+| D0                      | アナログ             | P0.02     |                    | GPIO、ADC                                  | 0            |
+| D1                      | アナログ             | P0.03     |                    | GPIO、ADC                                  | 1            |
+| D2                      | アナログ             | P0.28     |                    | GPIO、ADC                                  | 2            |
+| D3                      | アナログ             | P0.29     |                    | GPIO、ADC                                  | 3            |
+| D4                      | アナログ, SDA        | P0.04     |                    | GPIO、I2C データ、ADC                       | 4            |
+| D5                      | アナログ, SCL        | P0.05     |                    | GPIO、I2C クロック、ADC                     | 5            |
+| D6                      | TX                   | P1.11     |                    | GPIO、UART 送信                            | 7/6          |
+| D7                      | RX                   | P1.12     |                    | GPIO、UART 受信                            | 8/7          |
+| D8                      | SPI_SCK              | P1.13     |                    | GPIO、SPI クロック                         | 9/8          |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO、SPI データ                           | 10/9         |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO、SPI データ                           | 11/10        |
+| D11                     | I2S_SD               | P0.15     |                    | GPIO、I2S、ADC                             |              |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO、I2S、ADC                             |              |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO、I2S、ADC                             |              |
+| D14                     | RX1                  | P0.09     | NFC1               | GPIO、UART 受信、ADC                        |              |
+| D15                     | TX1                  | P0.10     | NFC2               | GPIO、UART 送信、ADC                        |              |
+| D16                     | AIN7_BAT             | P0.31     |                    | バッテリー電圧 ADC 読み取りピン             |              |
+| D17                     | SCK1                 | P1.03     |                    | GPIO、SPI                                  |              |
+| D18                     | MISO1                | P1.05     |                    | GPIO、SPI                                  |              |
+| D19                     | MOSI1                | P1.07     |                    | GPIO、SPI                                  |              |
+| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | バッテリー電圧読み取り用の有効化制御        |              |
+| 6 DOF IMU_PWR           |                      | P1.08     |                    | 6D モジュールの電源スイッチ                  |              |
+| 6 DOF IMU__INT1         |                      | P0.11     |                    | 6D モジュールの割り込み信号ピン              |              |
+| PDM Microphone_DATA     |                      | P0.16     |                    | PDM オーディオデータ入力ピン                 |              |
+| PDM Microphone_CLK      |                      | P1.00     |                    | PDM オーディオクロック出力ピン               |              |
+| Reset                   |                      | P0.18     |                    | リセット                                     |              |
+| RF Switch Port Select   |                      | P2.05     |                    | オンボードアンテナの切り替え                 |              |
+| RF Switch Power         |                      | P2.03     |                    | 電源                                         |              |
+| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                                |              |
+| USER_LED_R              |                      | P0.26     |                    | ユーザー制御の赤色 RGB LED ピン              | 11           |
+| USER_LED_B              |                      | P0.06     |                    | ユーザー制御の青色 RGB LED ピン              | 13/12        |
+| USER_LED_G              |                      | P0.30     |                    | ユーザー制御の緑色 RGB LED ピン              | 12/13        |
 
 </TabItem>
 </Tabs>
 
 ## デジタル
 
-プッシュボタンをピン D6 に、LED をピン D10 に接続します。次に、プッシュボタンを使って LED の ON/OFF を制御するために、以下のコードを書き込みます。
+プッシュボタンをピン D6 に、LED をピン D10 に接続します。次に、以下のコードを書き込んで、プッシュボタンを使って LED のオン／オフを制御します。
 
 ```cpp
 const int buttonPin = 6;     // pushbutton connected to digital pin 6
@@ -241,9 +257,9 @@ void loop() {
 }
 ```
 
-## デジタルをPWMとして使用
+## PWM としてのデジタル
 
-LEDをピンD10に接続します。その後、次のコードを書き込んで、LEDが徐々に明るくなったり暗くなったりする様子を確認します。
+LED をピン D10 に接続します。次に、以下のコードを書き込んで、LED が徐々に明るさを変えていく様子を確認します。
 
 ```cpp
 int ledPin = 10;    // LED connected to digital pin 10
@@ -273,7 +289,7 @@ void loop() {
 
 ## アナログ
 
-可変抵抗器をピンA5に、LEDをピンD10に接続します。その後、次のコードを書き込んで、可変抵抗器のつまみを回すことでLEDの点滅間隔を制御します。
+可変抵抗器をピン A5 に、LED をピン D10 に接続します。次に、以下のコードを書き込んで、可変抵抗器のつまみを回して LED の点滅間隔を制御します。
 
 ```cpp
 const int sensorPin = 5;
@@ -300,8 +316,8 @@ void loop() {
 
 ## シリアル
 
-USBではなくGPIO経由でUARTを使用するにはSerial1を使用します。両方を同時に使用することも可能です。
-UARTのTXピンとしてピンD6を、UARTのRXピンとしてピンD7を使用して、「Hello World!」メッセージを送信します。
+Serial1 を使用して、USB の代わりに GPIO 経由で UART を使用します。両方を同時に使用することもできます。
+ピン D6 を UART の TX ピン、ピン D7 を UART の RX ピンとして使用し、「Hello World!」メッセージを送信します。
 
 ```cpp
 void setup() {
@@ -317,7 +333,7 @@ void loop() {
 
 ## I2C
 
-- **Step 1.** [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を、以下のハードウェア接続に従って Seeed Studio XIAO nRF52840 (Sense) に接続します。
+- **Step 1.** 次のハードウェア接続に従って、[Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を Seeed Studio XIAO nRF52840 (Sense) に接続します。
 
 |  Grove - OLED Display 1.12 (SH1107) |  Seeed Studio XIAO nRF52840 (Sense) |
 |-----------|-----------|
@@ -334,7 +350,7 @@ void loop() {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 4.** 次のコードを書き込んで、OLEDディスプレイに文字列を表示します
+- **Step 4.** 以下のコードを書き込んで、OLED ディスプレイにテキスト文字列を表示します
 
 ```cpp
 #include <Arduino.h>
@@ -360,7 +376,7 @@ void loop(void) {
 
 ## SPI
 
-- **Step 1.** [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を、以下のハードウェア接続に従って Seeed Studio XIAO nRF52840 (Sense) に接続します。
+- **Step 1.** 次のハードウェア接続に従って、[Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を Seeed Studio XIAO nRF52840 (Sense) に接続します。
 
 | Grove - OLED Display 1.12 (SH1107) | Seeed Studio XIAO nRF52840 (Sense) |
 |-----------|------------|
@@ -374,11 +390,11 @@ void loop(void) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-SPI.png" alt="pir" width={1000} height="auto" /></p>
 
-- **Step 2.** このOLEDディスプレイはI2CとSPIの両方の通信をサポートしており、デフォルトのモードはI2Cです。SPIモードを使用するには、先に進む前に [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/ja/Grove-OLED-Display-1.12-SH1107_V3.0/#ソフトウェア-i2c) を参照して、OLEDディスプレイの通信方式をSPIに変更する必要があります
+- **Step 2.** この OLED ディスプレイは I2C と SPI の両方の通信をサポートしており、デフォルトのモードは I2C です。SPI モードを使用するには、先に進む前に [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/ja/Grove-OLED-Display-1.12-SH1107_V3.0/#ソフトウェア-i2c) を参照して、OLED ディスプレイの通信方式を SPI に変更する必要があります
 
-**Note:** U8g2ライブラリが前の手順でインストールされていることを確認してください。
+**Note:** U8g2 ライブラリが前の手順でインストールされていることを確認してください。
 
-- **Step 3.** 次のコードを書き込んで、OLEDディスプレイに文字列を表示します
+- **Step 3.** 以下のコードを書き込んで、OLED ディスプレイにテキスト文字列を表示します
 
 ```cpp
 #include <Arduino.h>

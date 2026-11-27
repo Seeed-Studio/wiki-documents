@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-RP2040-with-MicroPython/
 ---
 
@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/pt-br/XIAO-RP2040-with-MicroPython/
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-## Introdução
+## Primeiros passos
 
 Primeiro, vamos conectar a série Seeed Studio XIAO RP2040 ao computador e enviar um código simples em MicroPython para verificar se a placa está funcionando bem.
 
@@ -33,15 +33,15 @@ Primeiro, vamos conectar a série Seeed Studio XIAO RP2040 ao computador e envia
 
 ### Conectar a série XIAO RP2040 ao PC
 
-- **Passo 1**. Pressione e segure o botão **BOOT** e então conecte a série Seeed Studio XIAO RP2040 ao PC através do cabo Type-C. Se funcionar bem, será exibido um disco **RPI-RP2** no PC.
+- **Passo 1**. Pressione e segure o botão **BOOT** e então conecte a série Seeed Studio XIAO RP2040 ao PC através do cabo Type-C. Se tudo funcionar bem, um disco **RPI-RP2** será exibido no PC.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
 - **Passo 2**. Grave o firmware
 
-    Basta ir ao site oficial e baixar o firmware mais recente, depois arrastar e soltar o arquivo `.uf2` no disco **RPI-RP2** para concluir a gravação do firmware.
+    Basta acessar o site oficial e baixar o firmware mais recente, depois arrastar e soltar o arquivo `.uf2` no disco **RPI-RP2** para concluir a gravação do firmware.
 
-    - Firmware MicroPython da série XIAO RP2040](https://micropython.org/download/SEEED_XIAO_RP2040/)
+    - [Firmware MicroPython da série XIAO RP2040](https://micropython.org/download/SEEED_XIAO_RP2040/)
 
 ### Configuração de software
 
@@ -95,7 +95,12 @@ tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 
 ## Pinos da série XIAO RP2040
 
-| Nome do pino MicroPython | GPIO do XIAO RP2040 | GPIO do XIAO RP2040 Plus | ADC | Função |
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explorar pinout interativo do XIAO RP2040</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">Explorar pinout interativo do XIAO RP2040 Plus</a>
+</div>
+
+| Nome do pino MicroPython | GPIO XIAO RP2040 | GPIO XIAO RP2040 Plus | ADC | Função |
 | :--- | :---: | :---: | :---: | :--- |
 | D0 / A0 | GPIO26 | GPIO26 | 0 | GPIO, ADC0 |
 | D1 / A1 | GPIO27 | GPIO27 | 1 | GPIO, ADC1 |
@@ -113,24 +118,24 @@ tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 | LED_G / D23 | GPIO16 | GPIO16 | — | LED RGB verde; Plus D23 |
 | LED_R / D24 | GPIO17 | GPIO17 | — | LED RGB vermelho; Plus D24 |
 | LED_B / LED | GPIO25 | GPIO25 | — | LED RGB azul / LED de usuário |
-| D12 | — | GPIO18 | — | GPIO de expansão Plus |
-| D13 / SCL1 | — | GPIO21 | — | Plus I2C1 SCL |
-| D14 / SDA1 | — | GPIO20 | — | Plus I2C1 SDA |
-| D15 | — | GPIO19 | — | GPIO de expansão Plus |
-| D16 | — | GPIO22 | — | GPIO de expansão Plus |
-| D17 | — | GPIO23 | — | GPIO de expansão Plus |
-| D19 | — | GPIO5 | — | GPIO de expansão Plus |
-| D20 | — | GPIO13 | — | GPIO de expansão Plus |
-| D21 | — | GPIO14 | — | GPIO de expansão Plus |
-| D22 | — | GPIO15 | — | GPIO de expansão Plus |
-| D25 | — | GPIO10 | — | GPIO de expansão Plus |
-| D26 | — | GPIO9 | — | GPIO de expansão Plus |
-| D27 | — | GPIO8 | — | GPIO de expansão Plus |
-| BAT_EN | — | GPIO24 | — | Habilitar alimentação da bateria Plus |
+| D12 | — | GPIO18 | — | GPIO de expansão do Plus |
+| D13 / SCL1 | — | GPIO21 | — | I2C1 SCL do Plus |
+| D14 / SDA1 | — | GPIO20 | — | I2C1 SDA do Plus |
+| D15 | — | GPIO19 | — | GPIO de expansão do Plus |
+| D16 | — | GPIO22 | — | GPIO de expansão do Plus |
+| D17 | — | GPIO23 | — | GPIO de expansão do Plus |
+| D19 | — | GPIO5 | — | GPIO de expansão do Plus |
+| D20 | — | GPIO13 | — | GPIO de expansão do Plus |
+| D21 | — | GPIO14 | — | GPIO de expansão do Plus |
+| D22 | — | GPIO15 | — | GPIO de expansão do Plus |
+| D25 | — | GPIO10 | — | GPIO de expansão do Plus |
+| D26 | — | GPIO9 | — | GPIO de expansão do Plus |
+| D27 | — | GPIO8 | — | GPIO de expansão do Plus |
+| BAT_EN | — | GPIO24 | — | Habilitar alimentação da bateria do Plus |
 
 ## Acender o LED RGB no Seeed Studio XIAO RP2040
 
-Há um LED RGB equipado no Seeed Studio XIAO RP2040 e vamos acendê-lo com MicroPython. É necessária uma biblioteca de terceiros, então precisamos adicionar primeiro uma biblioteca adicional.
+Há um LED RGB equipado no Seeed Studio XIAO RP2040 e vamos acendê-lo usando MicroPython. É necessária uma biblioteca de terceiros, então precisamos adicionar primeiro uma biblioteca adicional.
 
 - **Passo 1**. Baixe a biblioteca [ws2812.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ws2812.py) e abra-a com o Thonny.
 
@@ -178,11 +183,11 @@ while True:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-Se funcionar bem, você verá o LED RGB mudar e piscar as luzes. E a saída do texto "Beautiful Color" também será exibida no Shell.
+Se tudo funcionar bem, você verá o LED RGB mudar e piscar as luzes. E a saída do texto "Beautiful Color" também será exibida no Shell.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_14.png" /></div>
 
-## Conectar o Seeed Studio XIAO RP2040 com Display via IIC
+## Conectar o Seeed Studio XIAO RP2040 com display via IIC
 
 Neste projeto, vamos conectar o [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) através da interface IIC para demonstrar a função IIC no Seeed Studio XIAO RP2040.
 
@@ -225,17 +230,17 @@ while True:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-Se funcionar bem, você verá o texto "Hello,World!" exibido na tela.
+Se tudo funcionar bem, você verá o texto "Hello,World!" exibido na tela.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_16.png" /></div>
 
-## Console de dispositivo MicroPython
+## Console de Dispositivo MicroPython
 
 Nosso parceiro **Neil** escreveu um programa de console de linha de comando para o XIAO usando MicroPython. Com este programa você pode facilmente enviar, baixar e excluir arquivos. Agradecemos a ele por sua contribuição ao XIAO!
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Saiba mais</font></span></strong></a></div>
 
-## Recursos adicionais
+## Recursos Adicionais
 
 Algumas bibliotecas adicionais e códigos de exemplo estão aqui:
 
@@ -243,7 +248,7 @@ Algumas bibliotecas adicionais e códigos de exemplo estão aqui:
 
 - **[ZIP]** [XIAO-RP2040-Plus-Firmware-And-Examples](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/xiao_rp2040_plus_micropython.zip)
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

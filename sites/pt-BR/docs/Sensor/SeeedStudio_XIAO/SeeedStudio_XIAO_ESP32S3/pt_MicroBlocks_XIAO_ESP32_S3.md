@@ -7,7 +7,7 @@ last_update:
   date: 09/09/2025
   author: MicroBlocks
 createdAt: '2025-09-09'
-updatedAt: '2026-03-12'
+updatedAt: '2025-11-28'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_microblocks/
 ---
 
@@ -15,9 +15,13 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_microblocks/
 
 ## MicroBlocks
 
-MicroBlocks é uma linguagem baseada em blocos que facilita para iniciantes (de 9 anos até adultos) programarem microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor que o MicroPython; capacidade de controlar pinos GPIO e se comunicar com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem o MicroBlocks para prototipagem e testes rápidos por causa de seu ciclo de desenvolvimento rápido e interativo.
+MicroBlocks é uma linguagem baseada em blocos que facilita para iniciantes (de 9 anos até adultos) programar microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor que o MicroPython; capacidade de controlar pinos GPIO e se comunicar com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem MicroBlocks para prototipagem e testes rápidos por causa de seu ciclo de desenvolvimento rápido e interativo.
 
 ## Pinagem e recursos de hardware do XIAO ESP32S3
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3sense" target="_blank" rel="noopener noreferrer">Explore a pinagem interativa</a>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32-s3-sense-overview.png" style={{width:600, height:'auto'}}/></div>
 
@@ -26,7 +30,7 @@ MicroBlocks é uma linguagem baseada em blocos que facilita para iniciantes (de 
 Esta placa oferece conectividade Wi-Fi e BLE por meio de uma antena externa (fornecida).
 
 A placa possui 11 pinos GPIO (pinos 0..10).
-A versão Sense tem dois pinos GPIO extras na placa da câmera (pinos 11..12).
+A versão Sense possui dois pinos GPIO extras na placa da câmera (pinos 11..12).
 Os pinos 0..5 e 8..10 podem ser entradas analógicas.
 
 O pino 13 é o LED amarelo de usuário (invertido).
@@ -35,11 +39,11 @@ A versão Sense inclui uma placa de extensão com uma câmera (uma câmera OV264
 
 **Observação: o suporte à câmera ainda não foi implementado no MicroBlocks, mas pode ser adicionado no futuro.**
 
-## Instalando o firmware MicroBlocks
+## Instalando o firmware do MicroBlocks
 
-O firmware MicroBlocks para esta placa pode ser instalado diretamente a partir do editor MicroBlocks.
+O firmware do MicroBlocks para esta placa pode ser instalado diretamente a partir do editor MicroBlocks.
 
-Conecte a placa ao computador com um cabo USB de dados (**não** um cabo somente para alimentação).
+Conecte a placa ao seu computador com um cabo USB de dados (**não** um cabo apenas de alimentação).
 
 Execute o [editor MicroBlocks](https://microblocks.fun/run/microblocks.html) em um navegador Chrome ou Edge.
 
@@ -59,7 +63,7 @@ Quando solicitado, use o botão "Connect" (ícone de plugue) para abrir uma cone
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/download-progress.png" style={{width:200, height:'auto'}}/></div>
 
-A instalação do firmware leva de 30 a 60 segundos. Não altere as abas do navegador até que ela seja concluída.
+A instalação do firmware leva de 30 a 60 segundos. Não alterne as abas do navegador até que ela seja concluída.
 
 Depois que o firmware estiver instalado, você poderá conectar a placa ao MicroBlocks e começar a programar!
 
@@ -71,11 +75,11 @@ Para entrar no modo bootloader, se necessário, mantenha pressionado o botão B 
 Você também pode conectar a placa ao computador enquanto mantém o botão B pressionado.
 
 **Os minúsculos botões B e R em cada lado do conector USB são difíceis de apertar;
-talvez seja necessário usar a unha ou uma pequena ferramenta para pressioná-los.**
+talvez você precise usar a unha ou uma pequena ferramenta para pressioná-los.**
 
 ## Conectando a placa ao MicroBlocks
 
-Conecte a placa ao computador com um cabo USB de dados (**não** um cabo somente para alimentação).
+Conecte a placa ao seu computador com um cabo USB de dados (**não** um cabo apenas de alimentação).
 
 Execute o [editor MicroBlocks](https://microblocks.fun/run/microblocks.html) em um navegador Chrome ou Edge.
 Clique no botão **connect** (ícone de plugue):
@@ -86,7 +90,7 @@ Selecione **connect (USB)** no menu:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:200, height:'auto'}}/></div>
 
-**Observação:** Você também pode conectar sem fio selecionando **connect (BLE)** no menu de conexão.
+**Observação:** você também pode conectar sem fio selecionando **connect (BLE)** no menu de conexão.
 
 Selecione sua placa na caixa de diálogo e clique no botão **connect**:
 
@@ -98,7 +102,7 @@ Um círculo verde e o nome da placa aparecerão quando a placa estiver conectada
 
 ## Programando no MicroBlocks
 
-MicroBlocks é um ambiente de programação **ao vivo**, então você pode testar enquanto programa.
+MicroBlocks é um ambiente de programação **ao vivo**, para que você possa testar enquanto programa.
 Clique em blocos e scripts para executá-los.
 Arraste blocos para o painel de scripts e monte-os para criar scripts.
 
@@ -107,7 +111,7 @@ Scripts sob um bloco **when started** são executados quando a placa é ligada.
 
 MicroBlocks oferece suporte a concorrência. Até dez scripts podem ser executados ao mesmo tempo.
 
-Além de seus muitos blocos internos, o MicroBlocks possui quase 200 bibliotecas
+Além de seus muitos blocos integrados, MicroBlocks possui quase 200 bibliotecas
 que oferecem suporte a recursos e periféricos adicionais.
 Clique no botão **Add Library** para adicionar bibliotecas.
 

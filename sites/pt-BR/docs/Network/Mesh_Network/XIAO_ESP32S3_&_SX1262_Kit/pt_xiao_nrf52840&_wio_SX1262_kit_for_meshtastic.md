@@ -1,6 +1,6 @@
 ---
 description: Meshtastic baseado no Kit XIAO nRF52840 & Wio-SX1262
-title: Primeiros Passos com o Kit XIAO nRF52840 & Wio-SX1262
+title: Introdução ao Kit XIAO nRF52840 & Wio-SX1262
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-kit.webp
 slug: /xiao_nrf52840&_wio_SX1262_kit_for_meshtastic
 sidebar_position: 2
@@ -49,6 +49,10 @@ Este kit combina o XIAO nRF52840 e o Wio-SX1262, oferecendo suporte a BLE5.0, Th
 
 ### Pinout
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52" target="_blank" rel="noopener noreferrer">Explorar o Pinout Interativo</a>
+</div>
+
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/imageXIAO_nRF52840-2.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image_Wio-SX1262_-1.png" alt="pir" width={800} height="auto" /></p>
@@ -63,7 +67,7 @@ O Kit XIAO nRF52840 & Wio-SX1262 vem pré-gravado com o firmware Meshtastic, per
 Por favor, `don't use NRF-OTA` para atualizar o firmware, isso pode fazer com que o dispositivo pare de funcionar completamente.
 :::
 
-**Instrução em vídeo:**
+**Instruções em vídeo:**
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -71,13 +75,13 @@ Por favor, `don't use NRF-OTA` para atualizar o firmware, isso pode fazer com qu
 
 Acesse o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
-Conecte o kit ao seu PC, selecione o dispositivo em `Seeed` → `Seeed XIAO nRF52840 Kit`, escolha o firmware mais recente e clique em `Flash`.
+Conecte o kit ao seu PC, selecione o dispositivo em `Seeed` → `Seeed XIAO nRF52840 Kit` e escolha o firmware mais recente, depois clique em `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-device.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/filw-flash.png" alt="pir" width={800} height="auto" /></p>
 
-Clique em `Enter DFU Mode`, aparecerá uma porta serial chamada `XIAO-xxx`, clique nela para conectar, e deverá ser exibida uma unidade chamada `XIAO-xxx`.
+Clique em `Enter DFU Mode`, aparecerá uma porta serial chamada `XIAO-xxx`, clique e conecte-a, e deverá ser exibida uma unidade chamada `XIAO-xxx`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -96,25 +100,25 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App iOS">
+<TabItem value="ios" label="Aplicativo iOS">
 
 - Selecione o dispositivo de destino no painel Bluetooth.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- Digite o código (o código padrão é `123456`) e clique em `OK` para conectar o dispositivo.
+- Insira o código (o código padrão é `123456`) e clique em `OK` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Aplicativo Android">
 
 - Clique em `+` e escolha o dispositivo de destino.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- Digite o código (o código padrão é `123456`) e clique em `OK` para conectar o dispositivo.
+- Insira o código (o código padrão é `123456`) e clique em `OK` para conectar o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -126,13 +130,13 @@ import TabItem from '@theme/TabItem';
 Para começar a se comunicar pela malha, você deve definir a sua região. Essa configuração controla qual faixa de frequência o seu dispositivo usa e deve ser ajustada de acordo com a sua localização regional.
 
 <Tabs>
-<TabItem value="ios" label="App iOS">
+<TabItem value="ios" label="Aplicativo iOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Aplicativo Android">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -149,27 +153,27 @@ Para começar a se comunicar pela malha, você deve definir a sua região. Essa 
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto com base em uma janela móvel de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto com base em uma janela contínua de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
 
 #### Configuração do sensor GNSS
 
-Conecte um [Módulo GNSS L76K](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) para criar um rastreador.
+Conecte um [Módulo GNSS L76K](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) para fazer um rastreador.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image_102010710.gif" alt="pir" width={600} height="auto" /></p>
 
 
 ### O SX-1262 compatível
-[Click here](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html) para obter o SX1262 vendido separadamente.
+[Click here](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html) para adquirir o SX1262 vendido separadamente.
 
 ## Recursos
 ### Arquivos de recursos
 
 - **[PDF]** [Xiao Reference Design](https://files.seeedstudio.com/wiki/XIAO/XIAO-Reference-Design.pdf)
-- **[PDF]** [Relatório de Teste de Distância de Comunicação BLE do Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
-- **[ZIP]** [Seeed Studio XIAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
+- **[PDF]** [Relatório de teste de distância de comunicação BLE do Seeed Studio XlAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
+- **[ZIP]** [Seeed Studio XlAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
 - **[PDF]** [nRF52840 datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
 - **[PDF]** [Esquemático do Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
 - **[ZIP]** [Arquivo KiCAD do Seeed Studio XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)

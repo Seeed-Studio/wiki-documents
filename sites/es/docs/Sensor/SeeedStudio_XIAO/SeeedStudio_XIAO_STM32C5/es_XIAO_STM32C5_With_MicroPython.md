@@ -13,7 +13,7 @@ last_update:
   date: 09/02/2026
   author: Zeller
 createdAt: '2026-09-01'
-updatedAt: '2026-09-02'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/es/xiao_stm32c5_with_micropython/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,7 +46,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Descripción general
 
-[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con compatibilidad para emisión de código nativo para el código crítico en rendimiento. Proporciona un subconjunto de las funciones principales de Python 3.6+, optimizado para microcontroladores y sistemas con recursos limitados. Es diferente de CPython, y puedes leer más sobre las diferencias en la página [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences).
+[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con compatibilidad para emisión de código nativo para código crítico en rendimiento. Proporciona un subconjunto de las funciones principales de Python 3.6+, optimizado para microcontroladores y sistemas con recursos limitados. Es diferente de CPython, y puedes leer más sobre las diferencias en la página [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences).
 
 ## Preparación de hardware
 
@@ -70,15 +70,15 @@ Antes de comenzar, necesitas preparar una placa de desarrollo XIAO STM32C5.
  </table>
 </div>
 
-## Despliegue del firmware MicroPython
+## Despliegue del firmware de MicroPython
 
-Actualiza el firmware MicroPython en la XIAO STM32C5 entrando en modo bootloader y copiando un archivo de firmware `.uf2` a la unidad de almacenamiento masivo USB de la placa.
+Actualiza el firmware de MicroPython en la XIAO STM32C5 entrando en modo bootloader y copiando un archivo de firmware `.uf2` a la unidad de almacenamiento masivo USB de la placa.
 
-1. Descarga y extrae el archivo comprimido del firmware MicroPython para XIAO STM32C5:
+1. Descarga y extrae el archivo comprimido del firmware de MicroPython para XIAO STM32C5:
 
-- **📄[Firmware]** [Firmware MicroPython para XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/xiao-stm32c5-micropython-firmware.zip)
+- **📄[Firmware]** [XIAO STM32C5 MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/xiao-stm32c5-micropython-firmware.zip)
 
-2. Conecta la XIAO STM32C5 a tu ordenador mediante USB. Pulsa rápidamente dos veces el botón **Reset** para entrar en modo bootloader. Debería aparecer una unidad USB llamada **XIAOC5BOOT**. Copia **micropython-xiao-stm32c5.uf2** desde el archivo extraído a esa unidad. La placa se reiniciará automáticamente después de que el firmware se haya instalado.
+2. Conecta la XIAO STM32C5 a tu ordenador por USB. Pulsa dos veces rápidamente el botón **Reset** para entrar en modo bootloader. Debería aparecer una unidad USB llamada **XIAOC5BOOT**. Copia **micropython-xiao-stm32c5.uf2** desde el archivo extraído a esa unidad. La placa se reiniciará automáticamente después de que el firmware se haya instalado.
 
 :::tip
 Si **XIAOC5BOOT** no aparece, desconecta y vuelve a conectar el cable USB y, a continuación, pulsa dos veces **Reset** de nuevo. Asegúrate de que el cable USB admite transferencia de datos.
@@ -86,7 +86,7 @@ Si **XIAOC5BOOT** no aparece, desconecta y vuelve a conectar el cable USB y, a c
 
 ## Instalar [Thonny IDE](https://thonny.org/)
 
-Elige la versión adecuada para la instalación. Aquí lo estoy instalando en un sistema Windows, así que he seleccionado la versión para Windows.
+Elige la versión adecuada para la instalación. Aquí, lo estoy instalando en un sistema Windows, así que he seleccionado la versión para Windows.
 
 Sigue las instrucciones para la versión de Python deseada.
 
@@ -100,10 +100,14 @@ Luego, simplemente sigue los pasos predeterminados para la configuración.
 - Abre Thonny IDE y configura el intérprete y el puerto serie para la XIAO STM32C5.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/mpy_1.png" style={{width:800, height:'auto'}}/></div>
-- Después de que el firmware se haya instalado y Thonny se haya conectado a la XIAO STM32C5, la información del firmware MicroPython aparecerá en el panel Shell.
+- Después de que el firmware se haya instalado y Thonny se haya conectado a la XIAO STM32C5, la información del firmware de MicroPython aparecerá en el panel Shell.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/mpy_2.png" style={{width:800, height:'auto'}}/></div>
 ## Mapa de pines
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
 
 :::tip
 
@@ -128,7 +132,7 @@ Luego, simplemente sigue los pasos predeterminados para la configuración.
 | D12 | PB9 | GPIO / FDCAN1 TX compatible | FDCAN1 no está habilitado en el firmware actual |
 | D13 | PB5 | FDCAN2 RX / GPIO | `XiaoCAN("can0", ...)` |
 | D14 | PB13 | FDCAN2 TX / GPIO | `XiaoCAN("can0", ...)` |
-| D15 / CAN_STB | PB14 | Modo de espera del transceptor CAN | Bajo: normal; alto: espera |
+| D15 / CAN_STB | PB14 | Standby del transceptor CAN | Bajo: normal; alto: standby |
 | CAN_H | — | Bus diferencial CAN FD alto | Salida del transceptor CAN integrado; no es un GPIO |
 | CAN_L | — | Bus diferencial CAN FD bajo | Salida del transceptor CAN integrado; no es un GPIO |
 | BAT_EN | PA15 | Habilitación de medición de batería | `XiaoPin("bat_en", Pin.OUT)` |
@@ -233,7 +237,7 @@ PWM es una función de salida de forma de onda temporizada implementada sobre la
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO STM32C5</th>
-        <th>Seeed Studio Grove Base for XIAO </th>
+        <th>Seeed Studio Grove Base para XIAO </th>
         <th>Grove - Servo</th>
  </tr>
  <tr>
@@ -332,7 +336,7 @@ finally:
 
 ### Resultado
 
-Después de que el script se inicie, el servo barre repetidamente desde aproximadamente 0° hasta 180° y de vuelta a 0°. El bucle avanza la orden en 1° por cada trama de control de 20 ms, lo que corresponde a una velocidad nominal de barrido de 50°/s (aproximadamente 0,87 rad/s), excluyendo la sobrecarga de ejecución y los propios límites mecánicos del servo.
+Después de que el script se inicie, el servo barre repetidamente desde aproximadamente 0° hasta 180° y de vuelta a 0°. El bucle avanza la orden en 1° por cada trama de control de 20 ms, lo que corresponde a una velocidad nominal de barrido de la orden de 50°/s (aproximadamente 0,87 rad/s), excluyendo la sobrecarga de ejecución y los propios límites mecánicos del servo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_2.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -352,14 +356,14 @@ El circuito CAN FD integrado también incluye una resistencia de terminación de
 - Ordenador y cable de datos USB tipo C
 - Fuente de alimentación de CC regulada de 24 V adecuada para el motor
 - Motor DM-J4310-2EC × 1
-- XT30 2+2 Power Separation Board
+- Placa de separación de alimentación XT30 2+2
 
 <div className="table-center">
   <table align="center">
     <tr>
       <th>Seeed Studio XIAO STM32C5</th>
    <th>DM4310</th>
-   <th>XT30 2+2 Power Separation Board</th>
+   <th>Placa de separación de alimentación XT30 2+2</th>
     </tr>
     <tr>
       <td>
@@ -452,9 +456,9 @@ El circuito CAN FD integrado también incluye una resistencia de terminación de
 El motor requiere una alimentación de 24 V. Utiliza una fuente de alimentación conforme, limitada en corriente y con una corriente nominal adecuada. Apaga la fuente antes de cambiar cualquier cableado, mantén el motor sin carga durante las pruebas iniciales y conecta la tierra del XIAO al terminal negativo de la fuente de alimentación del motor. Una alimentación o un cableado incorrectos pueden dañar el equipo y crear un riesgo para la seguridad.
 :::
 
-1. Utiliza el software de configuración Damiao para ordenador host para establecer el **CAN ID** del motor en `0x001` y el **Master ID** en `0x011`. Para más detalles, consulta [Getting Started with the Damiao 43 Series Motors](https://wiki.seeedstudio.com/es/damiao_series/).
+1. Utiliza el software de configuración de ordenador host de Damiao para establecer el **CAN ID** del motor en `0x001` y el **Master ID** en `0x011`. Para más detalles, consulta [Getting Started with the Damiao 43 Series Motors](https://wiki.seeedstudio.com/es/damiao_series/).
 
-- Conecta el motor a las almohadillas CAN_H y CAN_L traseras del XIAO STM32C5. El transceptor integrado utiliza D13/PB5 (RX), D14/PB13 (TX) y D15/PB14 (modo de espera); lleva D15 a nivel bajo para el funcionamiento normal.
+- Conecta el motor a las almohadillas CAN_H y CAN_L traseras del XIAO STM32C5. El transceptor integrado utiliza D13/PB5 (RX), D14/PB13 (TX) y D15/PB14 (standby); lleva D15 a nivel bajo para el funcionamiento normal.
 
 2. En Thonny, selecciona **File > New** para crear un archivo y luego guarda el siguiente programa como `driver_dm4310.py`:
 
@@ -729,7 +733,7 @@ if __name__ == "__main__":
 
 ### Resultado
 
-Después de que el motor esté habilitado, el DM-J4310 recorre velocidades objetivo de `0 → 3 → 6 → 10 → 6 → 3 rad/s`, cambiando el objetivo cada cinco segundos. La Shell muestra la velocidad objetivo seleccionada y los datos de retroalimentación del motor decodificados. El ejemplo no controla el LED integrado.
+Después de que el motor esté habilitado, el DM-J4310 recorre velocidades objetivo de `0 → 3 → 6 → 10 → 6 → 3 rad/s`, cambiando el objetivo cada cinco segundos. La Shell muestra la velocidad objetivo seleccionada y los datos de realimentación del motor decodificados. El ejemplo no controla el LED integrado.
 
 :::tip
 
@@ -740,7 +744,7 @@ Conecta CAN_H en la XIAO STM32C5 a CAN_H en el motor, y CAN_L a CAN_L. Conecta t
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/canfd_12.gif" style={{width:400, height:'auto'}}/></div>
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

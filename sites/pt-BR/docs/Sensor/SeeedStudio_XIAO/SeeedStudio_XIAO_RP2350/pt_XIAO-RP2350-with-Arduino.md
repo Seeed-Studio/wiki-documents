@@ -8,7 +8,7 @@ last_update:
   date: 05/27/2026
   author: Carla
 createdAt: '2024-10-30'
-updatedAt: '2026-07-15'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/pt-br/xiao_rp2350_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -27,18 +27,18 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
 - **8 novos IOs expandidos:** Em comparação com os MCUs XIAO anteriores, a adição de 8 pinos IO na parte traseira suporta aplicações mais complexas.
 - **Projeto de energia eficiente:** Consumo de energia ultrabaixo de apenas 50μA em modo de suspensão, permitindo alimentação por bateria. A medição direta da tensão da bateria via IO interno aprimora o sistema de gerenciamento de bateria (BMS).
 - **Design compacto do tamanho de um polegar:** Medindo 21 x 17,8 mm, adotando o formato clássico XIAO da Seeed Studio, ideal para aplicações com restrição de espaço.
-- **Amigável à produção:** Design SMD (Surface Mount Device) com todos os componentes na frente e furos de solda em ambos os lados, facilitando a produção em massa eficiente.
+- **Amigável à produção:** Design SMD (Surface Mount Device) com todos os componentes na frente e furos em forma de selo em ambos os lados, facilitando a produção em massa eficiente.
 
-## Especificações
+## Especificação
 
 <table>
   <tr>
-    <th>Product</th>
+    <th>Produto</th>
     <td>XIAO RP2040</td>
     <td>XIAO RP2350</td>
   </tr>
   <tr>
-    <th>Processor</th>
+    <th>Processador</th>
     <td>Raspberry Pi RP2040<br/>Dual Cortex-M0+ @ 133MHz</td>
     <td>Raspberry Pi RP2350<br/>Dual Cortex-M33 @ 150MHz, FPU</td>
   </tr>
@@ -54,42 +54,46 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
   </tr>
   <tr>
     <th>LEDs</th>
-    <td>1x user LED<br/>1x power LED<br/>1x RGB LED</td>
-    <td>1x user LED<br/>1x power LED<br/>1x RGB LED</td>
+    <td>1x LED de usuário<br/>1x LED de alimentação<br/>1x LED RGB</td>
+    <td>1x LED de usuário<br/>1x LED de alimentação<br/>1x LED RGB</td>
   </tr>
   <tr>
     <th>Interface</th>
-    <td>11 Pins (All PWM):<br/>4x Analog<br/>11x Digital<br/>1x I²C<br/>1x UART<br/>1x SPI</td>
-    <td>19 Pins (All PWM):<br/>3x Analog<br/>19x Digital<br/>2x I²C<br/>2x UART<br/>2x SPI</td>
+    <td>11 pinos (todos PWM):<br/>4x Analógico<br/>11x Digital<br/>1x I²C<br/>1x UART<br/>1x SPI</td>
+    <td>19 pinos (todos PWM):<br/>3x Analógico<br/>19x Digital<br/>2x I²C<br/>2x UART<br/>2x SPI</td>
   </tr>
   <tr>
-    <th>Button</th>
-    <td>1x RESET button<br/>1x BOOT button</td>
-    <td>1x RESET button<br/>1x BOOT button</td>
+    <th>Botão</th>
+    <td>1x botão RESET<br/>1x botão BOOT</td>
+    <td>1x botão RESET<br/>1x botão BOOT</td>
   </tr>
   <tr>
-    <th>Security</th>
+    <th>Segurança</th>
     <td>-</td>
     <td>OTP, Secure Boot, Arm TrustZone</td>
   </tr>
   <tr>
-    <th>Software compatibility</th>
-    <td>Support Micropython / Arduino / CircuitPython</td>
-    <td>Support Micropython / Arduino / C,C++</td>
+    <th>Compatibilidade de software</th>
+    <td>Suporta Micropython / Arduino / CircuitPython</td>
+    <td>Suporta Micropython / Arduino / C,C++</td>
   </tr>
   <tr>
-    <th>Working Temperature</th>
+    <th>Temperatura de trabalho</th>
     <td>-20°C-70°C</td>
     <td>-20°C-70°C</td>
   </tr>
   <tr>
     <th>Dimensões</th>
-    <td>21x17,8 mm</td>
-    <td>21x17,8 mm</td>
+    <td>21x17.8 mm</td>
+    <td>21x17.8 mm</td>
   </tr>
 </table>
 
-## Visão geral do hardware
+## Visão geral de hardware
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2350" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 ### Frente
 
@@ -99,7 +103,7 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-Precisa de mais detalhes sobre o pinout? Navegue até [Assets and Resources](#assets--resources) abaixo.
+Precisa de mais detalhes sobre os pinouts? Vá até [Assets and Resources](#assets--resources) abaixo.
 
 
 ## **Mapa de pinos**
@@ -133,24 +137,24 @@ Precisa de mais detalhes sobre o pinout? Navegue até [Assets and Resources](#as
 | Boot                    |            | RP2040_BOOT  |                    | Entrar no modo Boot                  |
 | CHARGE_LED              |            | NCHG         |                    | CHG-LED_Vermelho                     |
 | RGB LED                 |            | GPIO22       |                    | LED RGB                              |
-| USER_LED                |            | GPIO25       |                    | Luz do usuário_Amarela               |
+| USER_LED                |            | GPIO25       |                    | Luz de usuário_Amarela               |
 ## Pré-requisitos
 
 Para começar, certifique-se de ter:
 
 - Uma placa RP2350
-- A IDE Arduino
+- A Arduino IDE
 - Um cabo USB
 
 ## Configurando o software
 
-### 1. Instale a IDE Arduino
+### 1. Instale a Arduino IDE
 
-Baixe e instale a versão mais recente da IDE Arduino no site oficial: [Arduino Software](https://www.arduino.cc/en/software).
+Baixe e instale a versão mais recente da Arduino IDE no site oficial: [Arduino Software](https://www.arduino.cc/en/software).
 
 ### 2. Adicione o suporte à placa RP2350
 
-1. Abra a IDE Arduino e navegue até **File** > **Preferences**.
+1. Abra a Arduino IDE e navegue até **File** > **Preferences**.
 2. No campo **Additional Boards Manager URLs**, adicione esta URL:
 
     ```shell
@@ -181,20 +185,20 @@ Antes de enviar um sketch, coloque seu XIAO RP2350 em modo BOOT. Use um dos mét
 <Tabs>
 <TabItem value="method1" label="Método 1: Antes de conectar ao computador" default>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot-> Conecte o cabo-> Solte Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot -> Conecte o cabo -> Solte Boot</em></div></div>
 
 </TabItem>
 
 <TabItem value="method2" label="Método 2: Enquanto conectado ao computador">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot-> Clique em Reset-> Solte Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot -> Clique em Reset -> Solte Boot</em></div></div>
 
 </TabItem>
 </Tabs>
 
-1. Abra a IDE Arduino e crie um novo sketch.
+1. Abra a Arduino IDE e crie um novo sketch.
 2. Escreva seu código. Por exemplo, use o código de exemplo `Blink`.
-3. Vá em **Tools** > **Port** e selecione a porta em que seu RP2350 está conectado.
+3. Vá em **Tools** > **Port** e selecione a porta onde seu RP2350 está conectado.
 
 <div style={{ textAlign: 'center' }}>
 <img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/arduino-firmware-upload.png" style={{ width: 680, height: 'auto', "border-radius": '12.8px' }} />
@@ -214,7 +218,7 @@ O XIAO RP2350 pode ser alimentado por uma bateria de lítio de 3,7 V. Você pode
 Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento durante a soldagem.
 :::
 
-### Grave o firmware
+### Gravar o firmware
 
 Você pode usar nosso firmware pré-escrito para verificação e teste de desempenho.
 
@@ -228,7 +232,7 @@ Este firmware UF2 é compilado a partir de uma fonte de terceiros. Para o códig
 
 Este código-fonte de firmware depende do [pico-sdk](https://github.com/raspberrypi/pico-sdk). Antes de usar, você precisa baixar a cadeia de ferramentas relevante em um ambiente Linux seguindo as etapas do README do pico-sdk.
 
-Observe que, devido às rápidas atualizações do pico-sdk e da cadeia de ferramentas, você pode encontrar conflitos de parâmetros de função e outros erros de compilação (esta biblioteca de exemplo não é mantida como uma biblioteca oficial da Raspberry Pi, e pode haver diferenças de versão e de ambiente). Se você só precisa verificar a capacidade de baixo consumo de energia do XIAO RP2350, é recomendável usar diretamente o firmware UF2 para um teste rápido e conveniente.
+Observe que, devido às rápidas atualizações do pico-sdk e da cadeia de ferramentas, você pode encontrar conflitos de parâmetros de função e outros erros de compilação (esta biblioteca de exemplo não é mantida como uma biblioteca oficial da Raspberry Pi, e pode haver diferenças de versão e ambiente). Se você só precisa verificar a capacidade de baixo consumo de energia do XIAO RP2350, é recomendável usar diretamente o firmware UF2 para testes rápidos e convenientes.
 
 :::
 
@@ -278,7 +282,7 @@ Após testes e verificações com instrumentos, a corrente média do XIAO RP2350
 
 ## Suporte e discussão
 
-Obrigado por usar produtos Seeed! Oferecemos vários canais para suporte e discussão com a comunidade:
+Obrigado por usar os produtos Seeed! Oferecemos vários canais para suporte e discussão com a comunidade:
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

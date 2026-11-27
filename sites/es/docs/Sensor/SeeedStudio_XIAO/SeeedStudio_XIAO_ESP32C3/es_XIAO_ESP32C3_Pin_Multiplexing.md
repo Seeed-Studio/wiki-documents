@@ -19,7 +19,11 @@ Seeed Studio XIAO ESP32C3 tiene interfaces muy completas. Hay **11 E/S digitales
 
 ## Descripción general del hardware
 
-> *A3(GP105) - Usa ADC2, que puede dejar de funcionar debido a señales de muestreo falsas. Para lecturas analógicas fiables, utiliza ADC1(A0/A1/A2) en su lugar. Consulta la hoja de datos del ESP32-C3.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+> *A3(GP105) - Usa ADC2, que puede dejar de funcionar debido a señales de muestreo falsas. Para lecturas analógicas fiables, utiliza ADC1(A0/A1/A2). Consulta la hoja de datos del ESP32-C3.
 
 ### Parte frontal
 
@@ -135,7 +139,7 @@ Hay 2 interfaces serie en esta placa:
 
 :::note
 No hay `Serial2` para XIAO ESP32 C3.
-Además, si necesitas usar `Serial1`, debes definir los pines; de lo contrario, puede que no reciba datos. Para la serie XIAO ESP32, usa `Serial1` de la siguiente manera:
+Además, si necesitas usar `Serial1`, debes definir los pines; de lo contrario, es posible que no reciba datos. Para la serie XIAO ESP32, usa `Serial1` de la siguiente manera:
 
 ```cpp
 Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
@@ -151,7 +155,7 @@ Sin embargo, si quieres usar UART0 como puerto serie, necesitas conectar el pin 
 
 Además, necesitas configurar **USB CDC On Boot** como **Disabled** desde Arduino IDE.
 
-**NOTA: Cambia la foto cuando la placa aparezca en Arduino Board Manager**
+**NOTA: Cambia la foto cuando la placa aparezca en el Arduino Board Manager**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
 
@@ -175,7 +179,7 @@ La salida será la siguiente en el monitor serie de Arduino
 
 ### Método especial: usar el puerto serie USB y UART0/UART1 al mismo tiempo
 
-Muy a menudo, necesitamos usar sensores UART para conectarlos al puerto serie por hardware del XIAO ESP32C3 para obtener datos y, al mismo tiempo, puede que necesites usar el puerto serie USB para mostrar los datos en el monitor serie. Esto se puede lograr mediante algunos métodos especiales.
+Muy a menudo, necesitamos usar sensores UART para conectarlos al puerto serie por hardware de XIAO ESP32C3 para obtener datos y, al mismo tiempo, es posible que necesites usar el puerto serie USB para mostrar los datos en el monitor serie. Esto se puede lograr mediante algunos métodos especiales.
 
 - Programa de ejemplo:
 
@@ -209,14 +213,14 @@ void loop()
 
 Como puedes ver, el XIAO ESP32C3 en realidad tiene tres UART disponibles.
 
-A continuación, tomaremos como ejemplo el [60GHz mmWave Sensor - Human Resting Breathing and Heartbeat Module](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html), que está disponible para la venta, y explicaremos cómo usar los puertos serie por hardware D6 y D7 y el puerto serie USB.
+A continuación, tomaremos como ejemplo el [Sensor mmWave de 60GHz - Módulo de respiración y latido cardíaco en reposo humano](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html), que está disponible para la venta, y explicaremos cómo usar los puertos serie por hardware D6 y D7 y el puerto serie USB.
 
-Por favor, prepárate con lo siguiente.
+Por favor, prepara lo siguiente.
 
 <table align="center">
  <tr>
      <th>XIAO ESP32C3</th>
-        <th>Sensor mmWave de 60GHz -<br/>Módulo de respiración en reposo<br/>y latidos del corazón humanos</th>
+        <th>Sensor mmWave de 60GHz -<br/>Módulo de respiración en reposo humano<br/>y latido cardíaco</th>
  </tr>
     <tr>
         <td><div align="center"><img width = {120} src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png"/></div></td>
@@ -228,11 +232,11 @@ Por favor, prepárate con lo siguiente.
  </tr>
 </table>
 
-Descarga la biblioteca del sensor a tu ordenador y añádela al Arduino IDE.
+Descarga la biblioteca del sensor en tu ordenador y añádela al Arduino IDE.
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank"><div align="center"><img width = {300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
 
-Aquí queremos analizar la información de los datos de latidos y respiración, luego puedes reescribir tu programa de esta manera.
+Aquí queremos analizar la información de los datos de latido cardíaco y respiración, luego puedes reescribir tu programa de esta manera.
 
 ```c
 #include "Arduino.h"
@@ -333,11 +337,11 @@ Si todo va bien, verás mensajes de datos en el monitor serie.
 
 ### Uso de Serial1
 
-De acuerdo con los diagramas de pines del XIAO ESP32C3 anteriores para parámetros específicos, podemos observar que hay un pin TX y un pin RX.
+De acuerdo con los diagramas de pines anteriores del XIAO ESP32C3 para parámetros específicos, podemos observar que hay un pin TX y un pin RX.
 Esto es diferente de la comunicación serie, pero el uso también es muy similar, excepto que es necesario añadir algunos parámetros.
 Así que a continuación, utilizaremos los pines sacados por el chip para la comunicación serie.
 
-Función principal que se debe incluir:
+Función principal que debe incluirse:
 
 - `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- habilita Serial1, el prototipo de la función: `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
   - `baud`  :velocidad en baudios
@@ -345,7 +349,7 @@ Función principal que se debe incluir:
   - `rxPin` :pin de recepción
   - `txPin` :pin de envío
 
-Cabe destacar que si utilizamos el puerto de pin digital para definir, este lugar debería ser `#define RX_PIN D7`、`#define TX_PIN D6`, por favor consulta los diagramas de pines de las diferentes XIAO Serie para parámetros específicos.
+Cabe destacar que si utilizamos el puerto de pin digital para definir, este lugar debería ser `#define RX_PIN D7`, `#define TX_PIN D6`, por favor consulta los diagramas de pines de las diferentes XIAO Serie para parámetros específicos.
 
 Aquí hay un programa de ejemplo:
 
@@ -375,10 +379,10 @@ Después de subir el programa, abre el Monitor Serie en Arduino IDE y establece 
 
 ### Software Serial
 
-Para usar software serial, instala la biblioteca [EspSoftwareSerial](https://github.com/plerup/espsoftwareserial).
+Para usar software serial, instala la librería [EspSoftwareSerial](https://github.com/plerup/espsoftwareserial).
 
 :::tip
-Actualmente recomendamos la versión 7.0.0 de la biblioteca EspSoftwareSerial. Otras versiones pueden tener distintos grados de problemas que impidan que el puerto serie por software funcione correctamente.
+Actualmente recomendamos la versión 7.0.0 de la librería EspSoftwareSerial. Otras versiones pueden tener distintos grados de problemas que impidan que el puerto serie por software funcione correctamente.
 :::
 
 ```cpp
@@ -406,7 +410,7 @@ void loop() {
 }
 ```
 
-Este ejemplo configura un puerto serie por software en los pines `D7 (RX)` y `D6 (TX)` a 9600 baudios. Supervisa tanto el puerto serie por hardware (USB) como el puerto serie por software, reenviando los datos recibidos entre ellos.
+Este ejemplo configura software serial en los pines `D7 (RX)` y `D6 (TX)` a 9600 baudios. Supervisa tanto el puerto serie por hardware (USB) como el puerto serie por software, reenviando los datos recibidos entre ellos.
 
 ## I2C
 
@@ -481,7 +485,7 @@ Conecta un [Grove - High Precision Barometric Pressure Sensor (DPS310)](https://
 
 ### Configuración de software
 
-- **Paso 1**. Descarga [Seeed_Arduino_DPS310 Library](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310) como un archivo zip
+- **Paso 1**. Descarga la librería [Seeed_Arduino_DPS310](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310) como un archivo zip
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-5.png" alt="pir" width={1000} height="auto" /></div>
 
@@ -598,7 +602,7 @@ void loop() {
 
 Ahora verás los datos de temperatura y presión mostrados uno tras otro en el monitor serie como arriba.
 
-## Nota sobre la asignación de E/S del XIAO ESP32C3
+## Nota sobre la asignación de IO del XIAO ESP32C3
 
 ### D9
 
@@ -606,7 +610,7 @@ El D9 del XIAO ESP32C3 se conecta al GPIO9 (15) del ESP32-C3, a la resistencia p
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" alt="pir" width={600} height="auto" /></div>
 
-Al presionar el botón BOOT se conecta D9 a GND. **Por lo tanto, es mejor usar D9 como una entrada de interruptor**.
+Al presionar el botón BOOT se conecta D9 a GND. **Así que es mejor usar D9 como una entrada de interruptor**.
 
 ### D6
 
@@ -614,7 +618,7 @@ D6 del XIAO ESP32C3 está conectado a U0TXD (28) del ESP32-C3. El estado de func
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/11.png" alt="pir" width={400} height="auto" /></div>
 
-D6 se configura como salida UART al inicio, por lo que si usas D6 como entrada, podrías generar accidentalmente una corriente alta. **Por lo tanto, se recomienda usar el pin D6 solo en modo de salida**.
+D6 se configura como una salida UART al inicio, por lo que si usas D6 como entrada, podrías generar accidentalmente una corriente alta. **Por lo tanto, se recomienda usar el pin D6 solo en modo de salida**.
 
 Sin embargo, dado que este D6 es una salida UART, debes tener cuidado con algunas cosas: una es que está en HIGH en modo de espera cuando no está comunicando. La otra es la salida de texto del bootloader de 1ª/2ª etapa. La señal oscila entre HIGH/LOW inmediatamente después del arranque y debe contrarrestarse si es necesario.
 
@@ -626,12 +630,12 @@ D8 del Seeed Studio XIAO ESP32C3 está conectado al GPIO8 (14) del ESP32-C3.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/12.png" alt="pir" width={300} height="auto" /></div>
 
-GPIO8 se referencia cuando el modo de arranque se establece en descarga de arranque manteniendo presionado el botón BOOT y debe estar en HIGH en ese momento. ([Aquí](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf) dice: "The strapping combination of GPIO8 = 0 and GPIO9 = 0 is invalid and will trigger unexpected behaviour.")
+GPIO8 se referencia cuando el modo de arranque se establece en download boot manteniendo presionado el botón BOOT y debe estar en HIGH en ese momento. ([Aquí](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf) dice: "The strapping combination of GPIO8 = 0 and GPIO9 = 0 is invalid and will trigger unexpected behaviour.")
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/13.png" alt="pir" width={700} height="auto" /></div>
 
-Si usas descarga de arranque, **añade una resistencia pull-up para que GPIO8 esté en HIGH en el momento del arranque**.
+Si usas download boot, **añade una resistencia pull-up para que GPIO8 esté en HIGH en el momento del arranque**.
 
-Un agradecimiento especial a nuestro colega de SeeedJP **matsujirushi** por probar y contribuir a esta sección. Aquí está el enlace de referencia al artículo original.
+Un agradecimiento especial al colega de SeeedJP **matsujirushi** por probar y contribuir a esta sección. Aquí está el enlace de referencia al artículo original.
 
 - [Seeed Studio XIAO ESP32C3のI/O割り付けに注意](https://lab.seeed.co.jp/entry/2023/04/03/120000)

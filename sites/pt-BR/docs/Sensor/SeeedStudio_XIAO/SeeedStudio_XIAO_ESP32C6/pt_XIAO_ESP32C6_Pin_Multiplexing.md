@@ -37,13 +37,17 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_pin_multiplexing_esp32c6/
  </table>
 </div>
 
-O Seeed Studio XIAO ESP32C6 é alimentado pelo altamente integrado [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6), construído sobre **dois processadores RISC-V de 32 bits**, com um processador de alto desempenho (HP) **rodando até 160 MHz**, e um processador RISC-V de 32 bits de baixo consumo (LP), que pode ser clockado até 20 MHz. Há **512KB de SRAM e 4 MB de Flash no chip**, permitindo mais espaço para programação e trazendo mais possibilidades para cenários de controle de IoT.
+O Seeed Studio XIAO ESP32C6 é alimentado pelo altamente integrado [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6), construído sobre **dois processadores RISC-V de 32 bits**, com um processador de alto desempenho (HP) **rodando até 160 MHz**, e um processador RISC-V de 32 bits de baixo consumo (LP), que pode ser clockado até 20 MHz. Há **512KB de SRAM e 4 MB de Flash no chip**, permitindo mais espaço de programação e trazendo mais possibilidades para cenários de controle de IoT.
 
 ## Introdução
 
 ### Visão geral dos pinos
 
-Antes de começar, vamos revisar todos os pinos que o XIAO ESP32C6 possui e suas funções com o seguinte esquema.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c6" target="_blank" rel="noopener noreferrer">Explorar o pinout interativo</a>
+</div>
+
+Antes de começarmos, vamos revisar todos os pinos que o XIAO ESP32C6 possui e suas funções com o seguinte esquema.
 
 ### Frente
 
@@ -53,7 +57,7 @@ Antes de começar, vamos revisar todos os pinos que o XIAO ESP32C6 possui e suas
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAO_ESP32-C6_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-- 5V - Esta é a saída de 5 V da porta USB. Você também pode usar isto como entrada de tensão, mas deve ter algum tipo de diodo (schottky, sinal, potência) entre sua fonte de alimentação externa e este pino, com o ânodo para a bateria e o cátodo para o pino de 5 V.
+- 5V - Esta é a saída de 5 V da porta USB. Você também pode usar isto como entrada de tensão, mas deve ter algum tipo de diodo (Schottky, sinal, potência) entre sua fonte de alimentação externa e este pino, com o ânodo para a bateria e o cátodo para o pino de 5 V.
 - 3V3 - Esta é a saída regulada do regulador onboard. Você pode drenar 700 mA
 - GND - Terra de alimentação/dados/sinal <!-- Need to be confirmed -->
 
@@ -73,7 +77,7 @@ Existem dois métodos para comunicação serial com o XIAO ESP32C6: `software se
 Para usar software serial, instale a biblioteca [EspSoftwareSerial](https://github.com/plerup/espsoftwareserial).
 
 :::tip
-Atualmente recomendamos a versão **7.0.0** da biblioteca EspSoftwareSerial. Outras versões podem ter diferentes graus de problemas que impedem que a porta serial por software funcione corretamente.
+Atualmente recomendamos a versão **7.0.0** da biblioteca EspSoftwareSerial. Outras versões podem ter diferentes graus de problemas que impedem a porta serial por software de funcionar corretamente.
 :::
 
 ```cpp
@@ -145,10 +149,10 @@ Função principal que precisa ser incluída:
 - `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- habilita o Serial1, o protótipo da função: `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
   - `baud`  :taxa de baud
   - `config`:bit de configuração
-  - `rxPin` :Pino de recepção
-  - `txPin` :Pino de envio
+  - `rxPin` :pino de recepção
+  - `txPin` :pino de envio
 
-Vale ressaltar que, se usarmos porta de pino digital para definir, este local deve ser `#define RX_PIN D7`、`#define TX_PIN D6`, por favor, consulte os diagramas de pinos das diferentes XIAO Series para parâmetros específicos.
+Vale ressaltar que, se usarmos porta de pino digital para definir, este local deve ser `#define RX_PIN D7`、`#define TX_PIN D6`, consulte os diagramas de pinos das diferentes XIAO Series para parâmetros específicos.
 
 Aqui está um programa de exemplo:
 
@@ -172,7 +176,7 @@ void loop() {
 }
 ```
 
-Após enviar o programa, abra o Monitor Serial na Arduino IDE e defina a taxa de baud para 115200. Então, você pode enviar o conteúdo que quiser para o XIAO ESP32C6 através do monitor serial Serial, e o XIAO imprimirá cada byte do conteúdo que você enviar. Aqui, o conteúdo que inseri é "Hello Everyone", meu gráfico de resultados é o seguinte
+Após enviar o programa, abra o Serial Monitor na Arduino IDE e defina a taxa de baud para 115200. Então, você pode enviar o conteúdo que quiser para o XIAO ESP32C6 através do Serial Monitor, e o XIAO imprimirá cada byte do conteúdo que você enviar. Aqui, o conteúdo que inseri é "Hello Everyone", meu gráfico de resultados é o seguinte
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
@@ -254,27 +258,27 @@ void loop() {
 }
 ```
 
-Neste exemplo, usamos uma estrutura `Button` para armazenar os dados relacionados ao botão, incluindo o número do pino, o número de pressionamentos de tecla e um sinalizador para indicar se o botão está pressionado no momento.
+Neste exemplo, usamos uma estrutura `Button` para armazenar os dados relacionados ao botão, incluindo o número do pino, o número de pressionamentos de tecla e um sinalizador para indicar se o botão está atualmente pressionado.
 
-A função `isr` é uma Rotina de Serviço de Interrupção (ISR) que lida com os pressionamentos do botão. Ela incrementa o número de pressionamentos do botão e define o sinalizador de pressionado como verdadeiro.
+A função `isr` é uma rotina de serviço de interrupção (ISR) que lida com os pressionamentos do botão. Ela incrementa o número de pressionamentos do botão e define o sinalizador de pressionado como verdadeiro.
 
 Na função `setup`, inicializamos a comunicação serial, configuramos o pino do botão como entrada com resistor de pull-up interno e anexamos a função `isr` ao pino do botão como um manipulador de interrupção acionado na borda de descida (pressionamento do botão).
 
-Na função `loop`, verificamos se o botão está pressionado. Se estiver, imprimimos o número de pressionamentos do botão no monitor serial e redefinimos o sinalizador de pressionado. Além disso, incluímos uma seção que desanexa a interrupção do pino do botão a cada 10 segundos, presumivelmente para permitir outras operações ou para evitar interrupções indesejadas.
+Na função `loop`, verificamos se o botão foi pressionado. Se tiver sido, imprimimos o número de pressões do botão no monitor serial e redefinimos a flag de pressionado. Além disso, incluímos uma seção que desconecta a interrupção do pino do botão a cada 10 segundos, presumivelmente para permitir outras operações ou evitar interrupções indesejadas.
 
 Certo, entendido. Aqui está a versão reescrita e mais compreensível:
 
 ## ADC - Conversor Analógico para Digital
 
-O XIAO ESP32C6 possui vários pinos de entrada analógica que permitem ler tensões analógicas.
+O XIAO ESP32C6 possui vários pinos de entrada analógica que permitem a leitura de tensões analógicas.
 
 Consulte a documentação da [ADC API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/adc.html) para mais detalhes.
 
-### Configuração de hardware
+### Configuração de Hardware
 
 1. Conecte um potenciômetro ao pino A0, com uma extremidade conectada a 3,3 V e a outra ao GND.
 
-### Implementação de software
+### Implementação de Software
 
 Aqui está um sketch Arduino que lê um valor analógico:
 
@@ -302,23 +306,23 @@ void loop() {
 }
 ```
 
-Este código lê o valor analógico do pino especificado e o imprime, juntamente com o valor em milivolts, no Monitor Serial.
+Este código lê o valor analógico do pino especificado e o imprime, juntamente com o valor em milivolts, no Serial Monitor.
 
 ## Sinal PWM / Controle de LED
 
-O XIAO  ESP32-C6 possui 6 canais LEDC que podem gerar formas de onda independentes, que podem ser usados, por exemplo, para acionar dispositivos de LED RGB.
+O XIAO  ESP32-C6 possui 6 canais LEDC que podem gerar formas de onda independentes, que podem ser usadas, por exemplo, para acionar dispositivos de LED RGB.
 
 Consulte a documentação da [LEDC API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/ledc.html) para mais detalhes.
 
-### Configuração de hardware
+### Configuração de Hardware
 
 1. Conecte um LED ao pino `D2` com um resistor limitador de corrente em série.
 
-### Implementação de software
+### Implementação de Software
 
 Aqui estão sketches Arduino que demonstram a saída PWM:
 
-#### PWM geral
+#### PWM Geral
 
 ```cpp
 const int ledPin = D2;
@@ -403,14 +407,14 @@ O XIAO ESP32C6 possui uma interface I2C de hardware para comunicação com dispo
 
 Consulte a documentação da [I2C API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/i2c.html) para mais detalhes.
 
-### Preparação de hardware
+### Preparação de Hardware
 
 1. Conecte o pino SDA do dispositivo I2C ao pino SDA (`D4`) do XIAO.
 2. Conecte o pino SCL do dispositivo I2C ao pino SCL (`D5`) do XIAO.
 
-### Implementação de software
+### Implementação de Software
 
-#### Modo mestre
+#### Modo Mestre
 
 Aqui está um sketch Arduino que demonstra a leitura de um sensor I2C:
 
@@ -441,7 +445,7 @@ void loop() {
 
 Este código lê um valor de 16 bits do registrador `0x01` de um sensor I2C.
 
-#### Modo escravo
+#### Modo Escravo
 
 Aqui está um sketch Arduino que demonstra o uso do XIAO ESP32C6 como um *dispositivo escravo* I2C:
 
@@ -494,7 +498,7 @@ A placa microcontroladora XIAO ESP32C6 possui uma interface SPI integrada, facil
 - Para especificações técnicas detalhadas, consulte o [Datasheet do XIAO ESP32C6](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf).
 - Saiba mais sobre como usar a interface SPI com o XIAO ESP32C6 consultando a [Documentação da SPI API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/spi.html#).
 
-### Preparação de hardware
+### Preparação de Hardware
 
 Para conectar seu XIAO ESP32C6 a outro dispositivo SPI, siga estas etapas:
 
@@ -510,7 +514,7 @@ SCK -> D8
 CS -> D3 (as an example)
 ```
 
-### Implementação de software
+### Implementação de Software
 
 Abaixo está um sketch Arduino simplificado que demonstra a comunicação SPI básica com um dispositivo SPI usando o XIAO ESP32C6. Este sketch envia um comando para o dispositivo SPI e lê a resposta (lê dados de volta de um dispositivo SPI).
 
@@ -549,5 +553,5 @@ Certifique-se de que as atribuições de pinos no seu sketch correspondam às co
 
 - [Documentação do XIAO ESP32C6](https://wiki.seeedstudio.com/pt-br/xiao_esp32c6_getting_started/)
 - [Datasheet do ESP32-C6](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
-- [Referência do Arduino](https://www.arduino.cc/reference/en/)
-- [Referência do Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/index.html)
+- [Referência Arduino](https://www.arduino.cc/reference/en/)
+- [Referência Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/index.html)

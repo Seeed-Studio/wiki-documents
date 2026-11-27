@@ -11,21 +11,25 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2026-05-27'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Para facilitar o uso, todos os seguintes exemplos de multiplexação de pinos são em **PlatformIO**. Clique neste link para obter um guia de configuração e uso do [XIAO nRF54L5](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_with_platform_io/)
+Para facilitar o uso, todos os seguintes exemplos de multiplexação de pinos são em **PlatformIO**. Clique neste link para obter um guia de configuração e uso para o [XIAO nRF54L5](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_with_platform_io/)
 
 :::tip
 Com base no VS Code, se você quiser usar o seguinte caso no nRF Connect SDK, consulte a conexão fornecida, adicione o arquivo app.overlay e modifique o conteúdo em prj.conf
 
-[XIAO nRF54L15 Adicionar arquivo overlay e modificar arquivo conf](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_getting_started/#/adicionar-arquivo-overlay-e-modificar-o-arquivo-conf/).
+[XIAO nRF54L15 Adicionar arquivo overlay e modificar arquivo conf](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
 
 :::
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15sense" target="_blank" rel="noopener noreferrer">Explore o Pinout Interativo</a>
+</div>
 
 ## Digital
 
@@ -173,7 +177,7 @@ int main(void)
 
 `else:` Se o botão não estiver pressionado (estado é 1), `perform gpio_pin_set_dt(&relay, 0);` para definir o pino do relé como 0 (baixo), o que fecha o relé e desliga o dispositivo ao qual ele está conectado.
 
-`k_msleep(10);:` o código adiciona um pequeno atraso de 10 milissegundos ao final de cada loop para evitar que a CPU fique ocupada, etc. Este é um tratamento simples de anti-rebote. Este é um tratamento simples de anti-rebote que evita múltiplos disparos devido ao rebote físico dos botões e também reduz o consumo de energia.
+`k_msleep(10);:` o código adiciona um pequeno atraso de 10 milissegundos no final de cada loop para evitar que a CPU fique ocupada, etc. Este é um tratamento simples de anti-repique. Este é um tratamento simples de anti-repique que evita múltiplos disparos devido ao repique físico dos botões e também reduz o consumo de energia.
 
 ### Gráfico de resultado
 
@@ -342,7 +346,7 @@ int main(void)
 }
 ```
 
-**Configuração dos dispositivos ADC (Conversor Analógico-digital) e PWM (Modulação por Largura de Pulso)**
+**Configuração dos dispositivos ADC (Conversor Analógico‑Digital) e PWM (Modulação por Largura de Pulso)**
 
 - Módulo de log pot_pwm_example:
 
@@ -350,17 +354,17 @@ int main(void)
 
 - Configuração do ADC:
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta diretiva de pré-processador é uma verificação da Device Tree que garante que exista um arquivo de overlay válido contendo definições de canais de ADC. Isso exige que o usuário forneça a configuração correta para o hardware específico.
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta diretiva de pré‑processador é uma verificação da Device Tree que garante que exista um arquivo de overlay válido contendo definições de canais de ADC. Isso exige que o usuário forneça a configuração correta para o hardware específico.
 
-  - static const struct adc_dt_spec adc_channels[];: Esta parte do código aproveita a Device Tree do Zephyr para obter automaticamente informações de todos os canais de ADC configurados. Essa abordagem torna o código flexível e portátil entre diferentes hardwares sem alterações manuais de configuração.
+  - static const struct adc_dt_spec adc_channels[];: Esta parte do código aproveita a Device Tree do Zephyr para recuperar automaticamente informações de todos os canais de ADC configurados. Essa abordagem torna o código flexível e portátil entre diferentes hardwares sem alterações manuais de configuração.
 
-  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: Uma macro é definida para especificar a qual canal do array adc_channels o potenciômetro está conectado.
+  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: Uma macro é definida para especificar a qual canal no array adc_channels o potenciômetro está conectado.
 
 - Configuração do PWM:
 
   - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: Esta linha obtém as informações do dispositivo PWM para o alias pwm_led a partir da Device Tree. Esta é uma prática padrão do Zephyr para localizar e referenciar dispositivos de hardware.
 
-  - #define PWM_PERIOD_NS 1000000UL: Isso define o período do sinal PWM como 1 milissegundo (1.000.000 nanossegundos), o que corresponde a uma frequência de 1 kHz. Essa frequência é adequada para o controle de brilho de LED, pois é alta o suficiente para evitar cintilação visível.
+  - #define PWM_PERIOD_NS 1000000UL: Isso define o período do sinal PWM como 1 milissegundo (1.000.000 nanossegundos), o que corresponde a uma frequência de 1 kHz. Essa frequência é adequada para o controle de brilho de LEDs, pois é alta o suficiente para evitar cintilação visível.
 
 **Inicialização e configuração**
 
@@ -376,7 +380,7 @@ int main(void)
 
 - Inicialização do PWM:
 
-  - !device_is_ready(led.dev): De forma semelhante ao ADC, esta linha verifica se o dispositivo PWM está pronto. Caso não esteja, um erro é registrado e o programa é encerrado.
+  - !device_is_ready(led.dev): Semelhante ao ADC, esta linha verifica se o dispositivo PWM está pronto. Caso não esteja, um erro é registrado e o programa é encerrado.
 
   - LOG_INF(...): As informações de período e frequência do PWM são impressas para ajudar o usuário a confirmar a configuração.
 
@@ -391,7 +395,7 @@ A lógica central do código é executada dentro de um loop infinito while (1):
 
   - adc_sequence_init_dt(): A sequência do ADC é inicializada para garantir que a configuração correta seja usada em cada leitura.
 
-  - adc_read(): Isso dispara uma conversão do ADC para ler o valor analógico do potenciômetro. Se a leitura falhar, um erro é registrado e o programa pausa por 100 milissegundos antes de continuar.
+  - adc_read(): Isso aciona uma conversão do ADC para ler o valor analógico do potenciômetro. Se a leitura falhar, um erro é registrado e o programa faz uma pausa de 100 milissegundos antes de continuar.
 
   - int sensor_value = adc_raw_value;: O valor bruto do ADC é atribuído à variável sensor_value.
 
@@ -399,15 +403,15 @@ A lógica central do código é executada dentro de um loop infinito while (1):
 
   - uint32_t max_adc_raw: Isso calcula o valor bruto máximo possível do ADC.
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta é a lógica principal de mapeamento. Ela escala o valor bruto do ADC (sensor_value) proporcionalmente ao intervalo do período do PWM (PWM_PERIOD_NS) para obter um valor de ciclo de trabalho que ajusta o brilho do LED.
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta é a lógica principal de mapeamento. Ela escala o valor bruto do ADC (sensor_value) proporcionalmente ao intervalo do período de PWM (PWM_PERIOD_NS) para obter um valor de ciclo de trabalho que ajusta o brilho do LED.
 
-- Definindo o ciclo de trabalho do PWM:
+- Configurando o ciclo de trabalho do PWM:
 
-  - pwm_set_dt(): Esta função aplica o novo ciclo de trabalho calculado (output_duty_ns) ao dispositivo PWM, alterando instantaneamente o brilho do LED.
+  - pwm_set_dt(): Esta função aplica o ciclo de trabalho recém-calculado (output_duty_ns) ao dispositivo PWM, alterando instantaneamente o brilho do LED.
 
 - Atraso:
 
-  - k_msleep(100): O programa pausa por 100 milissegundos após cada loop. Isso controla a frequência das leituras do ADC e das atualizações de PWM, evitando carga excessiva da CPU e proporcionando uma experiência estável ao usuário.
+  - k_msleep(100): O programa faz uma pausa de 100 milissegundos após cada loop. Isso controla a frequência das leituras do ADC e das atualizações de PWM, evitando carga excessiva da CPU e proporcionando uma experiência estável ao usuário.
 
 ### Gráfico de resultado
 
@@ -938,7 +942,7 @@ static Coordinates transform(Coordinates gps)
 
 - Módulo de Log `gps_app`:
 
- -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` Registra um módulo de log chamado gps_app e define seu nível de log como INFO. Isso permite que o programa envie informações pelo sistema de log do Zephyr, o que é útil para depuração e monitoramento.
+ -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` Isso registra um módulo de log chamado gps_app e define seu nível de log como INFO. Isso permite que o programa envie informações por meio do sistema de log do Zephyr, o que é útil para depuração e monitoramento.
 
 - Definições de Tipos e Macros:
 
@@ -946,7 +950,7 @@ static Coordinates transform(Coordinates gps)
 
 - `SENTENCE_SIZE, BUFFSIZE:` Definem tamanhos fixos para buffers usados para armazenar sentenças NMEA e buffers de dados maiores.
 
-- Macros como `HOT_START, SET_NMEA_OUTPUT:`Essas macros definem vários comandos do protocolo NMEA enviados ao módulo GPS L76X para configurar seu modo de operação, frequência de saída, taxa de baud, e assim por diante.
+- Macros como `HOT_START, SET_NMEA_OUTPUT:`Essas macros definem vários comandos do protocolo NMEA enviados ao módulo GPS L76X para configurar seu modo de operação, frequência de saída, taxa de baud e assim por diante.
 
 - Definições de Struct:
 
@@ -958,7 +962,7 @@ static Coordinates transform(Coordinates gps)
 
   - `buff_t:` Um buffer global de tamanho BUFFSIZE usado para armazenar dados brutos da UART.
 
- -` GPS: `Uma instância global de struct GNRMC usada para manter os dados de GPS analisados.
+ -` GPS: `Uma instância global da struct GNRMC usada para manter os dados de GPS analisados.
 
 - `uart_dev:` Um ponteiro para a struct do dispositivo UART, usado para comunicação UART.
 
@@ -996,7 +1000,7 @@ static Coordinates transform(Coordinates gps)
 
   - Se GPS.Status for 0, imprime uma mensagem de "falha no posicionamento".
 
-  - Se nenhum dado novo estiver disponível, imprime "No new GNRMC data available."
+  - Se não houver novos dados disponíveis, imprime "No new GNRMC data available."
 
   - k_msleep(2000): O programa pausa por 2 segundos após cada loop para controlar a frequência de saída.
 
@@ -1019,7 +1023,7 @@ static Coordinates transform(Coordinates gps)
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Seeed Studio Expansion Board Base for XIAO</th>
+   <th>Placa de Expansão Base da Seeed Studio para XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -1044,7 +1048,7 @@ static Coordinates transform(Coordinates gps)
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-expansion-base-for-xiao/oled" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar a biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -1201,23 +1205,23 @@ int main(void) {
 
 **Configuração e Inicialização do Dispositivo de Exibição**
 
-- Módulo de Log `main_app`:
+- Módulo de log `main_app`:
 
-  - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL e LOG_MODULE_REGISTER(main_app, LOG_LEVEL) registram um módulo de log chamado main_app e definem seu nível de log para a configuração padrão do sistema. Isso permite que desenvolvedores depurem e exibam informações facilmente por meio do sistema de log do Zephyr.
+  - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL e LOG_MODULE_REGISTER(main_app, LOG_LEVEL) registram um módulo de log chamado main_app e definem seu nível de log para a configuração padrão do sistema. Isso permite que os desenvolvedores depurem e exibam informações facilmente por meio do sistema de log do Zephyr.
 
 - Função `display_init()`:
 
-  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` Esta linha obtém o dispositivo de exibição escolhido a partir da Device Tree do Zephyr. Essa abordagem garante que o código seja independente de hardware.
+  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` Esta linha obtém o dispositivo de exibição escolhido a partir do Device Tree do Zephyr. Essa abordagem garante que o código seja independente de hardware.
 
   - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`O código tenta definir o formato de pixel da tela para PIXEL_FORMAT_MONO10. Se isso falhar, ele tenta então PIXEL_FORMAT_MONO01. Isso garante que a tela opere em modo monocromático, o que é necessário para algumas tecnologias de exibição (por exemplo, OLED ou e-Paper).
 
 - Função `framebuffer_setup()`:
 
-  - `cfb_framebuffer_init(dev):`Isto inicializa o Compact Framebuffer (CFB). CFB é uma biblioteca gráfica leve no Zephyr usada para desenhar texto e gráficos simples em telas.
+  - `cfb_framebuffer_init(dev):`Isso inicializa o Compact Framebuffer (CFB). O CFB é uma biblioteca gráfica leve no Zephyr usada para desenhar texto e gráficos simples em telas.
 
-  - `cfb_framebuffer_clear(dev, true):`Isto limpa o framebuffer e grava imediatamente seu conteúdo na tela, garantindo uma tela limpa.
+  - `cfb_framebuffer_clear(dev, true):`Isso limpa o framebuffer e grava imediatamente seu conteúdo na tela, garantindo uma tela limpa.
 
-  - `display_blanking_off(dev):`Isto desativa o recurso de blanking da tela, que normalmente é um sinal de que a tela está pronta para receber dados e exibir uma imagem.
+  - `display_blanking_off(dev):`Isso desativa o recurso de blanking da tela, que normalmente é um sinal de que a tela está pronta para receber dados e exibir uma imagem.
 
 - Função `select_font()`:
 
@@ -1235,20 +1239,20 @@ int main(void) {
 
 - `cfb_print():` Esta é a função principal da biblioteca CFB usada para imprimir texto na posição de pixel especificada.
 
-**Loop Principal**
-A lógica central do código é executada dentro de um loop infinito `while (1)`:
+**Laço Principal**
+A lógica central do código é executada dentro de um laço infinito `while (1)`:
 
-- Limpando a Tela: `cfb_framebuffer_clear(dev, false):` No início de cada loop, isto limpa o framebuffer sem atualizar imediatamente a tela. Isso permite que vários elementos sejam desenhados de uma só vez, evitando cintilação na tela.
+- Limpeza da tela: `cfb_framebuffer_clear(dev, false):` No início de cada laço, isso limpa o framebuffer sem atualizar imediatamente a tela. Isso permite que vários elementos sejam desenhados de uma só vez, evitando cintilação na tela.
 
-- Impressão de Texto:
+- Impressão de texto:
 
   - Duas strings, `line1_text` e `line2_text`, são definidas.
 
   - print_text_by_row_col(): A função personalizada é usada para imprimir essas duas linhas de texto em posições específicas de linha e coluna na tela. A primeira linha é impressa em `(1, 2)` e a segunda linha em `(2, 1).`
 
-  - Atualizando a Tela: `cfb_framebuffer_finalize(dev)`: Esta função envia todos os comandos de desenho pendentes do framebuffer para a tela de uma só vez, fazendo com que todo o conteúdo apareça simultaneamente.
+  - Atualização da tela: `cfb_framebuffer_finalize(dev)`: Esta função envia todos os comandos de desenho pendentes do framebuffer para a tela de uma só vez, fazendo com que todo o conteúdo apareça simultaneamente.
 
-  - Atraso: `k_sleep(K_MSEC(1000)):` Após cada loop, o programa pausa por 1000 milissegundos (1 segundo). Isso controla a frequência de atualização da tela, o que é adequado para aplicações que exibem informações estáticas, como um relógio ou dados de sensores, de forma estável.
+  - Atraso: `k_sleep(K_MSEC(1000)):` Após cada laço, o programa pausa por 1000 milissegundos (1 segundo). Isso controla a frequência de atualização da tela, o que é adequado para aplicações que exibem informações estáticas, como um relógio ou dados de sensores, de forma estável.
 
 ### Gráfico de resultado
 
@@ -1256,7 +1260,7 @@ A lógica central do código é executada dentro de um loop infinito `while (1)`
 
 ## SPI
 
-### Preparação de Hardware
+### Preparação de hardware
 
 <div class="table-center">
  <table align="center">
@@ -1283,11 +1287,11 @@ A lógica central do código é executada dentro de um loop infinito `while (1)`
  </table>
 </div>
 
-### Implementação de Software
+### Implementação de software
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-epaper" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download da Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar a biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -1437,7 +1441,7 @@ int main(void)
 
   - `lv_label_set_text()` define o conteúdo de texto dos rótulos.
 
-  - `lv_obj_set_style_text_color()` e `lv_obj_set_style_text_font()` são usados para definir a cor do texto e o tamanho da fonte.
+  - `lv_obj_set_style_text_color()` e lv_obj_set_style_text_font() são usados para definir a cor do texto e o tamanho da fonte.
 
 - A função `lv_obj_align()` posiciona cada rótulo em um local específico na tela, como centro, canto superior direito, canto inferior esquerdo e canto inferior direito.
 
@@ -1455,7 +1459,7 @@ Quadrados: Um laço for é usado para criar quatro pequenos objetos quadrados. S
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_nrf54.jpg" style={{width:600, height:'auto'}}/></div>
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

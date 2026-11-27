@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 **Seeed Studio XIAO MG24** es una placa de desarrollo mini basada en el MG24 de Silicon Labs. XIAO MG24 se basa en el **núcleo ARM Cortex-M33**, arquitectura **RISC de 32 bits** con una velocidad de reloj máxima de 78MHz, compatible con instrucciones DSP y operaciones de coma flotante FPU, que posee una potente capacidad de cómputo, e incorpora un **acelerador de hardware AL/ML MVP**, que puede procesar de forma eficiente algoritmos de IA/aprendizaje automático. Además, tiene un excelente rendimiento RF, con una **potencia de transmisión de hasta +19.5 dBm** y una sensibilidad de recepción **tan baja como -105.4 dBm**. Es compatible con múltiples protocolos de IoT y transmisión inalámbrica como **Matter, Thread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh**, etc.
 
-### Especificación
+### Especificaciones
 
 <table>
   <tr>
@@ -85,11 +85,11 @@ import TabItem from '@theme/TabItem';
   </tr>
   <tr>
     <th>Interfaz</th>
-    <td colspan="2">22 pines (todos PWM):<br/>19x analógico<br/>19x digital<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
+    <td colspan="2">22 pines (todos PWM):<br/>19x analógicos<br/>19x digitales<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
   </tr>
   <tr>
     <th>Botón</th>
-    <td colspan="2">1x botón RESET</td>
+    <td colspan="2">1x botón de RESET</td>
   </tr>
   <tr>
     <th>Seguridad</th>
@@ -129,10 +129,10 @@ import TabItem from '@theme/TabItem';
 
 - **CPU potente**: Núcleo ARM Cortex-M33, con una velocidad de reloj máxima de 78MHz, compatible con instrucciones DSP y operaciones de coma flotante FPU, arquitectura RISC de 32 bits.
 - **Ultrabajo consumo**: Corriente RX 4.6mA/corriente TX 5mA (0dBm), múltiples modos de suspensión de bajo consumo
-- **IA potente**: Acelerador de hardware de IA/ML MVP integrado, capaz de procesar de forma eficiente algoritmos de IA/aprendizaje automático.
+- **Potente IA**: Acelerador de hardware de IA/ML MVP integrado, capaz de procesar de forma eficiente algoritmos de IA/aprendizaje automático.
 - **Transmisión inalámbrica multiformato**: Transceptor inalámbrico multiprotocolo integrado de 2.4GHz, compatible con múltiples protocolos de IoT como Matter, OpenThread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh, etc.
 - **Mejor rendimiento RF**: Excelente rendimiento RF, con una potencia de transmisión de hasta +19.5 dBm y una sensibilidad de recepción tan baja como -105.4 dBm (250kbps DSSS)
-- **Seguridad potente**: Potentes funciones de seguridad de Secure Vault, incluyendo arranque seguro, cifrado, generación de números aleatorios, a prueba de manipulaciones, depuración segura, etc.
+- **Seguridad potente**: Potentes funciones de seguridad de Secure Vault, incluido arranque seguro, cifrado, generación de números aleatorios, a prueba de manipulaciones, depuración segura, etc.
 - **Tamaño ultrapequeño**: 21 x 17.8mm.
 - **Ricos recursos en chip**: Hasta 1536KB de Flash y 256KB de RAM, con amplio espacio de almacenamiento.
 - **Interfaces ricas**: Integrado con ADC de 12 bits 1Msps, sensor de temperatura, comparador analógico, DCDC y otros periféricos abundantes, y hasta 22 pines, 2 USART, 2 UART de bajo consumo, 1 IIC y otras interfaces.
@@ -141,6 +141,10 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 <TabItem value="XIAO MG24" label="XIAO MG24">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
 
 ### Parte frontal de XIAO MG24
 
@@ -153,6 +157,10 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24sense" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
 
 ### Parte frontal de XIAO MG24 Sense
 
@@ -169,41 +177,41 @@ import TabItem from '@theme/TabItem';
   La diferencia entre las dos placas de desarrollo es que MG24 Sense tiene un sensor de micrófono y un sensor de aceleración de seis ejes, mientras que MG24 no los tiene.
 :::
 
-- 5V - Esta es la salida de 5V desde el puerto USB. También puedes usarla como entrada de tensión, pero debes tener algún tipo de diodo (schottky, de señal, de potencia) entre tu fuente de alimentación externa y este pin, con el ánodo a la batería y el cátodo al pin de 5V.
+- 5V - Esta es la salida de 5V desde el puerto USB. También puedes usarla como entrada de voltaje, pero debes tener algún tipo de diodo (schottky, de señal, de potencia) entre tu fuente de alimentación externa y este pin, con el ánodo a la batería y el cátodo al pin de 5V.
 - 3V3 - Esta es la salida regulada del regulador integrado.
 - GND - Tierra de alimentación/datos/señal
 
 ## **Mapa de pines**
 | Pin XIAO                 | Función         | Pin del chip  | Funciones alternativas | Descripción                          |
 | :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS             |           |                    | Entrada/salida de alimentación                   |
+| 5V                      | VBUS             |           |                    | Entrada/salida de alimentación       |
 | GND                     |                  |           |                    |                                      |
-| 3V3                     | 3V3_OUT          |           |                    | Salida de alimentación                         |
-| D0                      | Analógico          | PC00      |                    | GPIO, ADC                            |
-| D1                      | Analógico          | PC01      |                    | GPIO, ADC                            |
-| D2                      | Analógico          | PC02      |                    | GPIO, ADC                            |
-| D3                      | Analógico          | PC03      |                    | GPIO, SPI, ADC                       |
-| D4                      | Analógico,SDA       | PC04      |                    | GPIO, datos I2C, ADC                  |
-| D5                      | Analógico,SCL       | PC05      |                    | GPIO, reloj I2C, ADC                 |
-| D6                      | Analógico,TX0       | PC06      |                    | GPIO, transmisión UART, ADC             |
-| D7                      | Analógico,RX0       | PC07      |                    | GPIO, recepción UART, ADC              |
-| D8                      | Analógico,SCK0      | PA03      |                    | GPIO, reloj SPI, ADC                 |
-| D9                      | Analógico,MISO0     | PA04      |                    | GPIO, datos SPI, ADC                  |
-| D10                     | Analógico,MOSI0     | PA05      |                    | GPIO, datos SPI, ADC                  |
-| D11                     | Analógico          | PA09      | SAMD11_TX          | GPIO, recepción UART, ADC              |
-| D12                     | Analógico          | PA08      | SAMD11_RX          | GPIO, transmisión UART, ADC             |
-| D13                     | Analógico          | PB02      |                    | GPIO, reloj I2C, ADC                 |
-| D14                     | Analógico          | PB03      |                    | GPIO, datos I2C, ADC                  |
-| D15                     | Analógico,MOSI1     | PB00      |                    | GPIO, datos SPI, ADC                  |
-| D16                     | Analógico,MISO1     | PB01      |                    | GPIO, datos SPI, ADC                  |
-| D17                     | Analógico,SCK1      | PA00      |                    | GPIO, reloj SPI, ADC                 |
-| D18                     | Analógico,CS        | PD02      | Csn                | GPIO, Csn, ADC               |
-| ADC_BAT                 |                  | PD04      |                    | Leer el valor de tensión de la batería           |
-| RF Switch Port Select   |                  | PB04      |                    | Conmutar la antena integrada y la antena UFL |
-| RF Switch Power         |                  | PB05      |                    | Alimentación RF                             |
+| 3V3                     | 3V3_OUT          |           |                    | Salida de alimentación               |
+| D0                      | Analógico        | PC00      |                    | GPIO, ADC                            |
+| D1                      | Analógico        | PC01      |                    | GPIO, ADC                            |
+| D2                      | Analógico        | PC02      |                    | GPIO, ADC                            |
+| D3                      | Analógico        | PC03      |                    | GPIO, SPI, ADC                       |
+| D4                      | Analógico,SDA    | PC04      |                    | GPIO, datos I2C, ADC                 |
+| D5                      | Analógico,SCL    | PC05      |                    | GPIO, reloj I2C, ADC                 |
+| D6                      | Analógico,TX0    | PC06      |                    | GPIO, transmisión UART, ADC          |
+| D7                      | Analógico,RX0    | PC07      |                    | GPIO, recepción UART, ADC            |
+| D8                      | Analógico,SCK0   | PA03      |                    | GPIO, reloj SPI, ADC                 |
+| D9                      | Analógico,MISO0  | PA04      |                    | GPIO, datos SPI, ADC                 |
+| D10                     | Analógico,MOSI0  | PA05      |                    | GPIO, datos SPI, ADC                 |
+| D11                     | Analógico        | PA09      | SAMD11_TX          | GPIO, recepción UART, ADC            |
+| D12                     | Analógico        | PA08      | SAMD11_RX          | GPIO, transmisión UART, ADC          |
+| D13                     | Analógico        | PB02      |                    | GPIO, reloj I2C, ADC                 |
+| D14                     | Analógico        | PB03      |                    | GPIO, datos I2C, ADC                 |
+| D15                     | Analógico,MOSI1  | PB00      |                    | GPIO, datos SPI, ADC                 |
+| D16                     | Analógico,MISO1  | PB01      |                    | GPIO, datos SPI, ADC                 |
+| D17                     | Analógico,SCK1   | PA00      |                    | GPIO, reloj SPI, ADC                 |
+| D18                     | Analógico,CS     | PD02      | Csn                | GPIO, Csn, ADC               |
+| ADC_BAT                 |                  | PD04      |                    | Leer el valor de voltaje de la BAT   |
+| RF Switch Port Select   |                  | PB04      |                    | Cambiar entre la antena integrada y la antena UFL |
+| RF Switch Power         |                  | PB05      |                    | Alimentación RF                      |
 | Reset                   |                  | RESET     |                    | RESET                                |
 | CHARGE_LED              |                  | VBUS      |                    | CHG-LED_Red                          |
-| USER_LED                |                  | PA07      |                    | Luz de usuario_Amarillo                    |
+| USER_LED                |                  | PA07      |                    | Luz de usuario_Amarilla              |
 
 
 ## Primeros pasos
@@ -235,12 +243,12 @@ Necesitas preparar lo siguiente:
 - 1 x Cable USB Type-C
 
 :::tip
-Algunos cables USB solo pueden suministrar energía y no transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes consultar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Algunos cables USB solo pueden suministrar energía y no pueden transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes comprobar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 
 ### Preparación de software
 
-La herramienta de programación recomendada para la XIAO MG24 es el Arduino IDE, por lo que debes completar la instalación de Arduino como parte de la preparación de software.
+La herramienta de programación recomendada para la XIAO MG24 es el Arduino IDE, por lo que necesitas completar la instalación de Arduino como parte de la preparación de software.
 
 :::tip
 Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
@@ -328,7 +336,7 @@ Ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la 
 **Instrucciones sobre el uso de baterías:**
 
 1. Utiliza baterías cualificadas que cumplan las especificaciones.
-2. La XIAO puede conectarse a tu dispositivo informático mediante un cable de datos mientras se usa la batería; ten la seguridad de que la XIAO tiene un chip de protección de circuito integrado, lo cual es seguro.
+2. La XIAO puede conectarse a tu dispositivo informático mediante un cable de datos mientras usas la batería; ten la seguridad de que la XIAO tiene un chip de protección de circuito integrado, lo cual es seguro.
 3. La XIAO MG24 no tendrá ningún LED encendido cuando funcione con batería (a menos que hayas escrito un programa específico), por favor no juzgues si la XIAO MG24 está funcionando o no por el estado del LED, júzgalo razonablemente según tu programa.
 4. Lo sentimos, actualmente no tenemos forma de ayudarte a comprobar el nivel restante de la batería mediante software (porque no hay más pines de chip disponibles), necesitas cargar la batería regularmente o usar un multímetro para comprobar el nivel de la batería.
 
@@ -598,14 +606,14 @@ Asegúrate de que tu sketch no ponga la memoria flash en modo de suspensión (`D
 
 #### Agradecimientos
 
-Un agradecimiento especial a la **comunidad de Seeed Studio** por sus valiosas contribuciones y soluciones a este problema. Los métodos de recuperación y las medidas preventivas tratados en este tutorial se desarrollaron basándose en las aportaciones de miembros de la comunidad como **[msfujino](https://forum.seeedstudio.com/u/msfujino)** y **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)**.  
+Un agradecimiento especial a la **comunidad de Seeed Studio** por sus valiosas contribuciones y soluciones a este problema. Los métodos de recuperación y las medidas preventivas tratadas en este tutorial se desarrollaron basándose en las ideas de miembros de la comunidad como **[msfujino](https://forum.seeedstudio.com/u/msfujino)** y **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)**.  
 
 Para más detalles y debates, visita el hilo original del foro:  
 [DeepSleep bricks XIAO_MG24 - Seeed Studio Forum](https://forum.seeedstudio.com/t/deepsleep-bricks-xiao-mg24/284889)
 
 ## Desbloqueo
 
-El XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto serie. A diferencia de otros modelos XIAO, no tiene un botón BOOT ni un método de recuperación BOOT. Este fallo de diseño puede causar problemas cuando el dispositivo entra en modo de suspensión o encuentra anomalías de software, lo que hace imposible cargar un programa a través del puerto serie. Para solucionar esto, hemos proporcionado un método para activar el puerto serie y restaurar la funcionalidad.
+El XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto serie. A diferencia de otros modelos XIAO, no tiene un botón BOOT ni un método de recuperación BOOT. Este fallo de diseño puede causar problemas cuando el dispositivo entra en modo de suspensión o encuentra anomalías de software, haciendo imposible cargar un programa a través del puerto serie. Para solucionar esto, hemos proporcionado un método para activar el puerto serie y restaurar la funcionalidad.
 
 ### Solución para Windows
 
@@ -628,7 +636,7 @@ El XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
    - El script borrará la memoria flash y reiniciará el dispositivo.
 
 4. **Verifica la recuperación**  
-   - Una vez que el script termine, el XIAO MG24 debería estar restaurado y listo para usar.
+   - Después de que el script termine, el XIAO MG24 debería estar restaurado y listo para usar.
 
 ### Solución para macOS
 
@@ -664,10 +672,10 @@ El XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
      ./xiao_mg24_erase.sh
      ```  
 
-   - El script utilizará OpenOCD para borrar la memoria flash y reiniciar el dispositivo.  
+   - El script usará OpenOCD para borrar la memoria flash y reiniciar el dispositivo.  
 
 5. **Verifica la recuperación**  
-   - Una vez que el script termine, el XIAO MG24 debería estar restaurado y listo para usar.
+   - Después de que el script termine, el XIAO MG24 debería estar restaurado y listo para usar.
 
 :::note
 

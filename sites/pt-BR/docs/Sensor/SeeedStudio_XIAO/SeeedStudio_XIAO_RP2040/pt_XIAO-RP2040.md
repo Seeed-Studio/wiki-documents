@@ -10,7 +10,7 @@ last_update:
   date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-08-25'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-RP2040/
 ---
 
@@ -51,7 +51,7 @@ A série Seeed Studio XIAO RP2040 inclui o **XIAO RP2040** e o **XIAO RP2040 Plu
 
 As principais diferenças entre as duas placas são o número de GPIOs expostos, as conexões periféricas disponíveis e os recursos de gerenciamento de energia onboard.
 
-O XIAO RP2040 padrão usa o footprint XIAO comum de 14 pinos, composto por 11 pinos GPIO e três pinos de alimentação. Seus 11 pinos de E/S digitais são compatíveis com PWM, sendo que quatro também suportam entrada analógica. A placa oferece interfaces I2C, UART, SPI e SWD em um formato compacto de 21 × 17,8 mm.
+O XIAO RP2040 padrão usa o footprint XIAO comum de 14 pinos, composto por 11 pinos GPIO e três pinos de alimentação. Seus 11 pinos de E/S digitais são compatíveis com PWM, sendo que quatro também suportam entrada analógica. A placa fornece interfaces I2C, UART, SPI e SWD em um formato compacto de 21 × 17,8 mm.
 
 O XIAO RP2040 Plus mantém o mesmo layout XIAO comum de 14 pinos e adiciona 15 pads de solda GPIO na parte traseira e nas laterais da placa. Isso aumenta o número total de pinos de E/S digitais expostos de 11 para 26. Ele também adiciona uma segunda interface I2C, pads dedicados para USB D+/D− e conexões relacionadas à bateria, incluindo BAT+, BAT− e BAT_EN.
 
@@ -71,8 +71,8 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 - **Ricos recursos de memória:** 264 KB de SRAM e 2 MB de memória Flash onboard
 - **Ampla compatibilidade de software:** Suporta Arduino, PlatformIO, MicroPython, CircuitPython, TinyGo, Rust, Zephyr e mais
 - **Footprint XIAO comum:** Ambas as versões mantêm o layout XIAO padrão de 14 pinos, incluindo 11 pinos GPIO e três pinos de alimentação
-- **Formato compacto:** Design do tamanho de um polegar, 21 × 17,8 mm, para dispositivos vestíveis e aplicações com restrição de espaço
-- **Interfaces do XIAO RP2040 padrão:** 11 pinos de E/S digitais, quatro pinos de entrada analógica, 11 pinos compatíveis com PWM, I2C, UART, SPI e SWD
+- **Formato compacto:** Design do tamanho de um polegar de 21 × 17,8 mm para dispositivos vestíveis e aplicações com restrição de espaço
+- **Interfaces padrão do XIAO RP2040:** 11 pinos de E/S digitais, quatro pinos de entrada analógica, 11 pinos compatíveis com PWM, I2C, UART, SPI e SWD
 - **E/S expandida do XIAO RP2040 Plus:** Adiciona 15 pads GPIO para um total de 26 pinos de E/S digitais, juntamente com uma segunda interface I2C e pads dedicados para USB D+/D−
 - **Gerenciamento de bateria integrado:** O XIAO RP2040 Plus inclui um PMIC onboard, indicação de carregamento de bateria, conexões dedicadas de bateria e proteção contra retorno de corrente de BAT para 3V3
 - **Opções flexíveis de montagem:** Pinos comuns compatíveis com protoboard combinados com bordas metalizadas e pads compatíveis com SMD para placas-carrier personalizadas
@@ -106,8 +106,8 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
     </tr>
     <tr>
       <td><strong>Flash</strong></td>
-      <td colspan="2">2 MB de Flash onboard</td>
-    </tr>
+      <td colspan="2">2 MB Flash onboard</td>
+    </tr]
     <tr>
       <td><strong>Interface</strong></td>
       <td>
@@ -159,7 +159,7 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
     <tr>
       <td><strong>Alimentação</strong></td>
       <td colspan="2">
-        Tensão de entrada (Type-C): 5V<br/>
+        Tensão de entrada (Type-C): 5 V<br/>
         Tensão de entrada (BAT): 3,7 V ~ 4,2 V
       </td>
     </tr>
@@ -203,6 +203,10 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 <Tabs>
 <TabItem value="XIAO RP2040" label="XIAO RP2040" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explorar o pinout interativo</a>
+</div>
+
 ### XIAO RP2040 - Frente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO_RP2040_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -214,6 +218,10 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 </TabItem>
 
 <TabItem value="XIAO RP2040 Plus" label="XIAO RP2040 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">Explorar o pinout interativo</a>
+</div>
 
 ### XIAO RP2040 Plus - Frente
 
@@ -233,14 +241,14 @@ A tensão de trabalho do MCU é 3,3 V. Uma tensão de entrada conectada aos pino
 Para pinos de alimentação:
 O circuito conversor DC-DC integrado capaz de transformar 5 V em 3,3 V permite alimentar o dispositivo com uma fonte de 5 V via VIN-PIN e 5V-PIN.
 
-Atualmente, o XIAO RP2040 só suporta alimentação por bateria e não pode ser conectado ao Type-C enquanto uma bateria estiver conectada, pois isso pode representar um risco de segurança.
+O XIAO RP2040 atualmente só suporta alimentação por bateria e não pode ser conectado ao Type-C enquanto uma bateria estiver conectada, pois isso pode representar um risco de segurança.
 
 Por favor, preste atenção ao usar, não levante a tampa de blindagem.
 :::
 
 ## **Mapa de pinos**
 
-| Pino XIAO   | Função                | XIAO RP2040  | XIAO RP2040 Plus | Descrição                                                     |
+| Pino XIAO | Função                | XIAO RP2040  | XIAO RP2040 Plus | Descrição                                                     |
 | :--------- | :--------------------- | :----------- | :---------------- | :----------------------------------------------------------- |
 | 5V         | VBUS                   | VBUS         | VBUS              | Entrada/saída de alimentação USB 5 V                         |
 | GND        | GND                    | GND          | GND               | Terra                                                        |
@@ -257,22 +265,22 @@ Por favor, preste atenção ao usar, não levante a tampa de blindagem.
 | D9         | MISO                   | GPIO4        | GPIO4             | GPIO, entrada de dados SPI                                   |
 | D10        | MOSI                   | GPIO3        | GPIO3             | GPIO, saída de dados SPI                                     |
 | D11        | —                      | —            | —                 | Não disponível como pino externo                             |
-| D12        | GPIO                   | —            | GPIO18            | GPIO de expansão exclusivo da versão Plus                    |
-| D13        | SCL1                   | —            | GPIO21            | Clock I2C1 exclusivo da versão Plus                          |
-| D14        | SDA1                   | —            | GPIO20            | Dados I2C1 exclusivos da versão Plus                         |
-| D15        | GPIO                   | —            | GPIO19            | GPIO de expansão exclusivo da versão Plus                    |
-| D16        | GPIO                   | —            | GPIO22            | GPIO de expansão exclusivo da versão Plus                    |
-| D17        | GPIO                   | —            | GPIO23            | GPIO de expansão exclusivo da versão Plus                    |
+| D12        | GPIO                   | —            | GPIO18            | GPIO de expansão exclusivo da Plus                           |
+| D13        | SCL1                   | —            | GPIO21            | Clock I2C1 exclusivo da Plus                                 |
+| D14        | SDA1                   | —            | GPIO20            | Dados I2C1 exclusivos da Plus                                |
+| D15        | GPIO                   | —            | GPIO19            | GPIO de expansão exclusivo da Plus                           |
+| D16        | GPIO                   | —            | GPIO22            | GPIO de expansão exclusivo da Plus                           |
+| D17        | GPIO                   | —            | GPIO23            | GPIO de expansão exclusivo da Plus                           |
 | D18        | —                      | —            | —                 | Não disponível como pino externo                             |
-| D19        | GPIO                   | —            | GPIO5             | GPIO de expansão exclusivo da versão Plus                    |
-| D20        | GPIO                   | —            | GPIO13            | GPIO de expansão exclusivo da versão Plus                    |
-| D21        | GPIO                   | —            | GPIO14            | GPIO de expansão exclusivo da versão Plus                    |
-| D22        | GPIO                   | —            | GPIO15            | GPIO de expansão exclusivo da versão Plus                    |
-| D23        | GPIO                   | —            | GPIO16            | GPIO de expansão exclusivo da versão Plus                    |
-| D24        | GPIO                   | —            | GPIO17            | GPIO de expansão exclusivo da versão Plus                    |
-| D25        | GPIO                   | —            | GPIO10            | GPIO de expansão exclusivo da versão Plus                    |
-| D26        | GPIO                   | —            | GPIO9             | GPIO de expansão exclusivo da versão Plus                    |
-| D27        | GPIO                   | —            | GPIO8             | GPIO de expansão exclusivo da versão Plus                    |
+| D19        | GPIO                   | —            | GPIO5             | GPIO de expansão exclusivo da Plus                           |
+| D20        | GPIO                   | —            | GPIO13            | GPIO de expansão exclusivo da Plus                           |
+| D21        | GPIO                   | —            | GPIO14            | GPIO de expansão exclusivo da Plus                           |
+| D22        | GPIO                   | —            | GPIO15            | GPIO de expansão exclusivo da Plus                           |
+| D23        | GPIO                   | —            | GPIO16            | GPIO de expansão exclusivo da Plus                           |
+| D24        | GPIO                   | —            | GPIO17            | GPIO de expansão exclusivo da Plus                           |
+| D25        | GPIO                   | —            | GPIO10            | GPIO de expansão exclusivo da Plus                           |
+| D26        | GPIO                   | —            | GPIO9             | GPIO de expansão exclusivo da Plus                           |
+| D27        | GPIO                   | —            | GPIO8             | GPIO de expansão exclusivo da Plus                           |
 | Reset      | RUN                    | RUN          | RUN               | Entrada de reset                                             |
 | Boot       | RP2040_BOOT            | RP2040_BOOT  | RP2040_BOOT       | Entrar no modo bootloader                                    |
 | USER_LED_R | Canal vermelho         | GPIO17       | —                 | Controle direto do canal vermelho do LED RGB no XIAO RP2040  |
@@ -325,13 +333,13 @@ O XIAO RP2040 Plus é capaz de usar uma bateria de lítio de 3,7 V como entrada 
 
 :::caution
 
-Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento durante a soldagem. Se a bateria estiver com carga, nunca a solde diretamente na placa, pois isso pode queimar a placa de circuito. Um curto-circuito enquanto o circuito estiver energizado representa um risco significativo; é recomendável usar um adaptador.
+Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento durante a soldagem. Se a bateria estiver com carga, nunca a solde na placa, pois isso pode queimar a placa de circuito. Um curto-circuito enquanto o circuito estiver energizado representa um risco significativo; é recomendável usar um adaptador.
 
 :::
 
 ### Exemplo de leitura da tensão da bateria
 
-De acordo com o esquemático, o XIAO RP2040 Plus usa o CI carregador de bateria de íon-lítio **SGM40567-4.2XG/TR** para fornecer carregamento de corrente constante e tensão constante para uma bateria de íon-lítio de célula única. O status de carregamento é indicado pelo piscar do **Charge_LED**.<br/>
+De acordo com o esquemático, o XIAO RP2040 Plus usa o CI carregador de bateria de íon-lítio **SGM40567-4.2XG/TR** para fornecer carga de corrente constante e tensão constante para uma bateria de íon-lítio de célula única. O status de carregamento é indicado pelo piscar do **Charge_LED**.<br/>
 
 O circuito de medição da tensão da bateria usa um chaveador de carga **TPS22916CNYFPR** para habilitar ou desabilitar o caminho de medição. Quando a tensão da bateria precisa ser medida, o MCU habilita o caminho de medição por meio de **BAT_EN (GPIO24)**, reduzindo assim o consumo da bateria enquanto o dispositivo está em modo de espera.<br/>
 
@@ -339,14 +347,14 @@ Além disso, um chaveador analógico **SGM4875XXDM6G/TR** é usado para alternar
 
 :::tip
 
-Quando o pino A3 é usado como entrada ADC para medir a tensão da bateria, ele não pode ser usado como um pino de E/S de uso geral ao mesmo tempo. Certifique-se de levar isso em conta ao atribuir os pinos.
+Quando o pino A3 é usado como entrada do ADC para medir a tensão da bateria, ele não pode ser usado como um pino de E/S de uso geral ao mesmo tempo. Certifique-se de levar isso em conta ao atribuir os pinos.
 
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_battery_charge.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-A tensão da bateria é medida usando um circuito divisor de tensão resistivo. A tensão lida pelo ADC é metade da tensão real da bateria, portanto o software deve multiplicar a medição do ADC por 2 para obter a tensão real da bateria.
+A tensão da bateria é medida usando um circuito divisor resistivo. A tensão lida pelo ADC é metade da tensão real da bateria, portanto o software deve multiplicar a medição do ADC por 2 para obter a tensão real da bateria.
 
 <details>
 
@@ -418,7 +426,7 @@ Para aplicações de baixo consumo, desabilite **BAT_EN** após a conclusão da 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_detection.gif" style={{width:400, height:'auto'}}/></div>
 <br/>
 
-- Resultado da medição da tensão da bateria: A tensão medida de uma bateria de íon-lítio pode diferir do valor nominal impresso na bateria. Sempre considere o valor realmente medido.
+- Resultado da medição da tensão da bateria: A tensão medida de uma bateria de íon-lítio pode diferir do valor nominal impresso na bateria. Sempre consulte o valor realmente medido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_battery_detection.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -475,7 +483,7 @@ Para aplicações de baixo consumo, desabilite **BAT_EN** após a conclusão da 
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

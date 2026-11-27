@@ -11,7 +11,7 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2026-05-27'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
@@ -23,9 +23,13 @@ Para facilitar el uso, todos los siguientes ejemplos de multiplexación de pines
 :::tip
 Basado en VS Code, si quieres usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, añade el archivo app.overlay y modifica el contenido en prj.conf
 
-[XIAO nRF54L15 Añadir archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+[XIAO nRF54L15 Añadir archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/añadir-overlay-y-modificar-el-archivo-conf/).
 
 :::
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15sense" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
 
 ## Digital
 
@@ -147,9 +151,9 @@ int main(void)
 
 **Comprobación de disponibilidad del dispositivo**
 
-`if (!gpio_is_ready_dt(&button))` and `if (!gpio_is_ready_dt(&relay))`
+`if (!gpio_is_ready_dt(&button))` y `if (!gpio_is_ready_dt(&relay))`
 
-- Antes de que el programa empiece a realizar cualquier operación, el código comprueba si los dispositivos del botón y del relé se han inicializado correctamente y están listos. Esta es una buena práctica en la programación de controladores en Zephyr y evita que el programa se bloquee si los dispositivos no están configurados correctamente.
+- Antes de que el programa empiece a realizar cualquier operación, el código comprueba si los dispositivos del botón y del relé se han inicializado correctamente y están listos. Esta es una buena práctica en la programación de drivers en Zephyr y evita que el programa falle si los dispositivos no están configurados correctamente.
 
 **Configuración de pines**
 
@@ -173,7 +177,7 @@ int main(void)
 
 `else:` Si el botón no está pulsado (el estado es 1), `perform gpio_pin_set_dt(&relay, 0);` para poner el pin del relé a 0 (bajo), lo que cierra el relé y apaga el dispositivo al que está conectado.
 
-`k_msleep(10);:` el código añade un breve retardo de 10 milisegundos al final de cada bucle para evitar que la CPU esté ocupada, etc. Este es un sencillo tratamiento anti-rebote. Este es un sencillo tratamiento anti-rebote que evita múltiples disparos debidos al rebote físico de los botones y también reduce el consumo de energía.
+`k_msleep(10);:` el código añade un breve retardo de 10 milisegundos al final de cada bucle para evitar que la CPU esté ocupada, etc. Este es un sencillo manejo anti-rebote. Este es un sencillo manejo anti-rebote que evita múltiples disparos debidos al rebote físico de los botones y también reduce el consumo de energía.
 
 ### Gráfico de resultados
 
@@ -346,15 +350,15 @@ int main(void)
 
 - Módulo de registro pot_pwm_example:
 
-  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): Esto registra un módulo de registro llamado pot_pwm_example y establece su nivel de registro al valor predeterminado del sistema, lo que facilita la depuración.
+  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): Esto registra un módulo de registro llamado pot_pwm_example y establece su nivel de registro en la configuración predeterminada del sistema, lo que facilita la depuración.
 
 - Configuración del ADC:
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta directiva del preprocesador es una comprobación del Device Tree que garantiza que exista un archivo de superposición válido que contenga las definiciones de los canales del ADC. Esto obliga a que el usuario proporcione la configuración correcta para el hardware específico.
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta directiva del preprocesador es una comprobación del Device Tree que garantiza que exista un archivo de overlay válido que contenga las definiciones de los canales del ADC. Esto obliga a que el usuario proporcione la configuración correcta para el hardware específico.
 
   - static const struct adc_dt_spec adc_channels[];: Esta parte del código aprovecha el Device Tree de Zephyr para obtener automáticamente la información de todos los canales de ADC configurados. Este enfoque hace que el código sea flexible y portátil entre diferentes hardware sin cambios de configuración manuales.
 
-  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: Se define una macro para especificar a qué canal del arreglo adc_channels está conectado el potenciómetro.
+  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: Se define una macro para especificar a qué canal del array adc_channels está conectado el potenciómetro.
 
 - Configuración del PWM:
 
@@ -391,7 +395,7 @@ La lógica principal del código se ejecuta dentro de un bucle infinito while (1
 
   - adc_sequence_init_dt(): La secuencia del ADC se inicializa para garantizar que se use la configuración correcta en cada lectura.
 
-  - adc_read(): Esto desencadena una conversión del ADC para leer el valor analógico del potenciómetro. Si la lectura falla, se registra un error y el programa se pausa durante 100 milisegundos antes de continuar.
+  - adc_read(): Esto dispara una conversión del ADC para leer el valor analógico del potenciómetro. Si la lectura falla, se registra un error y el programa se pausa durante 100 milisegundos antes de continuar.
 
   - int sensor_value = adc_raw_value;: El valor bruto del ADC se asigna a la variable sensor_value.
 
@@ -399,15 +403,15 @@ La lógica principal del código se ejecuta dentro de un bucle infinito while (1
 
   - uint32_t max_adc_raw: Esto calcula el valor bruto máximo posible del ADC.
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta es la lógica de mapeo principal. Escala el valor bruto del ADC (sensor_value) de forma proporcional al rango del período PWM (PWM_PERIOD_NS) para obtener un valor de ciclo de trabajo que ajusta el brillo del LED.
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta es la lógica central de mapeo. Escala el valor ADC sin procesar (sensor_value) proporcionalmente al rango del período PWM (PWM_PERIOD_NS) para obtener un valor de ciclo de trabajo que ajusta el brillo del LED.
 
-- Establecer el ciclo de trabajo del PWM:
+- Configuración del ciclo de trabajo PWM:
 
   - pwm_set_dt(): Esta función aplica el nuevo ciclo de trabajo calculado (output_duty_ns) al dispositivo PWM, cambiando instantáneamente el brillo del LED.
 
 - Retardo:
 
-  - k_msleep(100): El programa se detiene durante 100 milisegundos después de cada bucle. Esto controla la frecuencia de las lecturas del ADC y las actualizaciones del PWM, evitando una carga excesiva de la CPU y proporcionando una experiencia de usuario estable.
+  - k_msleep(100): El programa se pausa durante 100 milisegundos después de cada bucle. Esto controla la frecuencia de las lecturas ADC y las actualizaciones PWM, evitando una carga excesiva de la CPU y proporcionando una experiencia de usuario estable.
 
 ### Gráfico de resultados
 
@@ -942,11 +946,11 @@ static Coordinates transform(Coordinates gps)
 
 - Definiciones de tipos y macros:
 
- -`UBYTE`, `UWORD`, `UDOUBLE:` Estos son alias de tipos enteros sin signo personalizados que mejoran la legibilidad del código al aclarar el tamaño esperado de las variables.
+ -`UBYTE`, `UWORD`, `UDOUBLE:`Estos son alias de tipos enteros sin signo personalizados que mejoran la legibilidad del código al aclarar el tamaño esperado de las variables.
 
 - `SENTENCE_SIZE, BUFFSIZE:` Estos definen tamaños fijos para los búferes utilizados para almacenar sentencias NMEA y búferes de datos más grandes.
 
-- Macros como `HOT_START, SET_NMEA_OUTPUT:` Estas macros definen varios comandos del protocolo NMEA enviados al módulo GPS L76X para configurar su modo de funcionamiento, frecuencia de salida, velocidad en baudios, etc.
+- Macros como `HOT_START, SET_NMEA_OUTPUT:`Estas macros definen varios comandos del protocolo NMEA enviados al módulo GPS L76X para configurar su modo de funcionamiento, frecuencia de salida, velocidad en baudios, etc.
 
 - Definiciones de estructuras:
 
@@ -968,7 +972,7 @@ static Coordinates transform(Coordinates gps)
 
   - Esta es una función de callback de interrupción UART que se activa cuando el UART recibe datos.
 
-  - La función lee el FIFO del UART byte a byte y procesa los datos como una sentencia completa cuando se encuentra un carácter de nueva línea \n.
+  - La función lee el FIFO del UART byte por byte y procesa los datos como una sentencia completa cuando se encuentra un carácter de nueva línea \n.
 
 **Función principal main()**
 
@@ -976,13 +980,13 @@ static Coordinates transform(Coordinates gps)
 
   - `nrfx_power_constlat_mode_request():` Solicita un modo de latencia constante para garantizar que la gestión de energía no interfiera con las operaciones en tiempo real.
 
-  - `uart_dev = DEVICE_DT_GET:` Recupera el manejador del dispositivo UART y utiliza device_is_ready() para comprobar si el dispositivo está listo.
+  - `uart_dev = DEVICE_DT_GET:` Obtiene el manejador del dispositivo UART y utiliza device_is_ready() para comprobar si el dispositivo está listo.
 
-  - `uart_irq_callback_user_data_set()`and `uart_irq_rx_enable():` Estas funciones configuran y habilitan la interrupción de recepción UART, registrando la función uart_callback como el manejador de interrupciones para garantizar la recepción asíncrona de datos GPS.
+  - `uart_irq_callback_user_data_set()`and `uart_irq_rx_enable():`Estas configuran y habilitan la interrupción de recepción UART, registrando la función uart_callback como el manejador de interrupciones para garantizar la recepción asíncrona de datos GPS.
 
 - Inicialización del módulo GPS:
 
-  - `L76X_Send_Command(SET_NMEA_OUTPUT):` Se envía un comando para configurar el módulo GPS a fin de que emita solo sentencias NMEA específicas como GNRMC, reduciendo el tráfico de datos innecesario.
+  - `L76X_Send_Command(SET_NMEA_OUTPUT):`Se envía un comando para configurar el módulo GPS para que emita solo sentencias NMEA específicas como GNRMC, reduciendo el tráfico de datos innecesario.
 
  -` L76X_Send_Command(SET_POS_FIX_1S): `Establece la frecuencia de actualización de posición del módulo GPS en 1 segundo.
 
@@ -998,7 +1002,7 @@ static Coordinates transform(Coordinates gps)
 
   - Si no hay datos nuevos disponibles, imprime "No new GNRMC data available."
 
-  - k_msleep(2000): El programa se detiene durante 2 segundos después de cada bucle para controlar la frecuencia de salida.
+  - k_msleep(2000): El programa se pausa durante 2 segundos después de cada bucle para controlar la frecuencia de salida.
 
 ### Gráfico de resultados
 
@@ -1019,7 +1023,7 @@ static Coordinates transform(Coordinates gps)
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Placa base de expansión Seeed Studio para XIAO</th>
+   <th>Seeed Studio Expansion Board Base for XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -1209,7 +1213,7 @@ int main(void) {
 
   - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` Esta línea obtiene el dispositivo de visualización elegido desde el Device Tree de Zephyr. Este enfoque garantiza que el código sea independiente del hardware.
 
-  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`El código intenta configurar el formato de píxel de la pantalla a PIXEL_FORMAT_MONO10. Si esto falla, entonces intenta PIXEL_FORMAT_MONO01. Esto garantiza que la pantalla funcione en un modo monocromático, lo cual es necesario para algunas tecnologías de visualización (por ejemplo, OLED o e-Paper).
+  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`El código intenta establecer el formato de píxel de la pantalla en PIXEL_FORMAT_MONO10. Si esto falla, entonces intenta PIXEL_FORMAT_MONO01. Esto garantiza que la pantalla funcione en modo monocromo, lo cual es necesario para algunas tecnologías de visualización (por ejemplo, OLED o e-Paper).
 
 - Función `framebuffer_setup()`:
 
@@ -1225,7 +1229,7 @@ int main(void) {
 
   - El código prioriza una fuente de píxeles` 8x8 `, ya que es una fuente pequeña común y fácil de leer.
 
-  - Si no se encuentra una fuente `8x8`, selecciona la primera fuente disponible con tamaño distinto de cero como alternativa.
+  - Si no se encuentra una fuente `8x8`, se selecciona como alternativa la primera fuente disponible con tamaño distinto de cero.
 
   - `cfb_framebuffer_set_font(dev, chosen_font_idx):` Una vez que se encuentra una fuente adecuada, se establece como la fuente actual para el framebuffer.
 
@@ -1236,7 +1240,7 @@ int main(void) {
 - `cfb_print():` Esta es la función principal de la biblioteca CFB utilizada para imprimir texto en la ubicación de píxeles especificada.
 
 **Bucle principal**
-La lógica principal del código se ejecuta dentro de un bucle infinito `while (1)`:
+La lógica central del código se ejecuta dentro de un bucle infinito `while (1)`:
 
 - Borrado de la pantalla: `cfb_framebuffer_clear(dev, false):` Al comienzo de cada bucle, esto borra el framebuffer sin actualizar inmediatamente la pantalla. Esto permite dibujar varios elementos a la vez, evitando el parpadeo de la pantalla.
 
@@ -1246,7 +1250,7 @@ La lógica principal del código se ejecuta dentro de un bucle infinito `while (
 
   - print_text_by_row_col(): La función personalizada se utiliza para imprimir estas dos líneas de texto en posiciones específicas de fila y columna en la pantalla. La primera línea se imprime en `(1, 2)` y la segunda línea en `(2, 1).`
 
-  - Actualización de la pantalla: `cfb_framebuffer_finalize(dev)`: Esta función envía todos los comandos de dibujo pendientes desde el framebuffer a la pantalla de una sola vez, haciendo que todo el contenido aparezca simultáneamente.
+  - Actualización de la pantalla: `cfb_framebuffer_finalize(dev)`: Esta función envía de una vez todos los comandos de dibujo pendientes desde el framebuffer a la pantalla, haciendo que todo el contenido aparezca simultáneamente.
 
   - Retardo: `k_sleep(K_MSEC(1000)):` Después de cada bucle, el programa se detiene durante 1000 milisegundos (1 segundo). Esto controla la frecuencia de actualización de la pantalla, lo cual es adecuado para aplicaciones que muestran información estática, como un reloj o datos de sensores, de manera estable.
 
@@ -1445,13 +1449,13 @@ Cuadrados: Se utiliza un bucle for para crear cuatro pequeños objetos cuadrados
 
 **Bucle principal:**
 
-- El bucle `while(1)` es la parte de ejecución continua del programa.
+- `The while(1)` loop es la parte de ejecución continua del programa.
 
 - `lv_task_handler()` se llama continuamente dentro del bucle para procesar todas las tareas internas de LVGL, como actualizar elementos de la interfaz y manejar eventos.
 
 - `k_sleep(K_MSEC(1000))` pausa el hilo durante 1000 milisegundos. Para d estáticos
 
-### Gráfico de resultado
+### Gráfico de resultados
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_nrf54.jpg" style={{width:600, height:'auto'}}/></div>
 

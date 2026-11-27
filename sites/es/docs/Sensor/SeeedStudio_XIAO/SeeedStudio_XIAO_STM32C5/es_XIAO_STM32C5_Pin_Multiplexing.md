@@ -1,5 +1,5 @@
 ---
-title:  Multiplexación de pines con XIAO STM32C5
+title: Multiplexación de pines con XIAO STM32C5
 description: ''
 keywords:
   - xiao
@@ -13,7 +13,7 @@ last_update:
   date: 08/26/2026
   author: Zeller
 createdAt: '2026-08-26'
-updatedAt: '2026-09-01'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/es/xiao_stm32c5_pin_multiplexing/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,12 +46,16 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Descripción general
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
 El XIAO STM32C5 cuenta con abundantes recursos de pines y admite de forma nativa el desarrollo con varias interfaces periféricas estándar, incluidas Digital, Analógica, SPI e IIC. Este artículo muestra implementaciones relevantes con casos de aplicación prácticos.
 
 :::tip
 
 Este tutorial se desarrolla sobre la base del sistema de compilación PlatformIO y Zephyr RTOS.
-Si no estás familiarizado con la creación de un proyecto para el XIAO STM32C5 en PlatformIO, puedes ir a [Primeros pasos con Seeed Studio XIAO STM32C5](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#getting-started-with-platformio)
+Si no estás familiarizado con la creación de un proyecto para el XIAO STM32C5 en PlatformIO, puedes ir a [Getting Started With Seeed Studio XIAO STM32C5](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#getting-started-with-platformio)
 
 :::
 
@@ -97,7 +101,7 @@ Según el pinout del XIAO STM32C5, se puede seleccionar D1 como pin de control p
 
 :::tip
 
-- Para el pinout del XIAO STM32C5, haz clic en [Lista de pines de XIAO STM32C5](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#hardware-overview) para ver los detalles.
+- Para el pinout del XIAO STM32C5, haz clic en [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
@@ -165,7 +169,7 @@ Abre el Monitor Serie y ajusta la velocidad en baudios a **115200**.
 
 ## PWM
 
-PWM es una función de salida de forma de onda temporizada implementada sobre la base de GPIOs de salida digital. Cambia rápidamente los niveles del pin a una frecuencia fija y ajusta dinámicamente el ciclo de trabajo del nivel alto dentro de un solo ciclo, para así entregar señales analógicas equivalentes a los periféricos. En aplicaciones de ingeniería práctica, PWM se utiliza ampliamente para el control preciso del ángulo de servomotores y el ajuste suave del brillo de los LEDs.
+PWM es una función de salida de forma de onda temporizada implementada sobre la base de GPIOs de salida digital. Cambia rápidamente los niveles de los pines a una frecuencia fija y ajusta dinámicamente el ciclo de trabajo del nivel alto dentro de un solo ciclo, para así enviar señales analógicas equivalentes a los periféricos. En aplicaciones de ingeniería práctica, PWM se utiliza ampliamente para el control preciso del ángulo de servomotores y el ajuste suave del brillo de los LEDs.
 
 ### Controlar un servomotor
 
@@ -203,11 +207,11 @@ PWM es una función de salida de forma de onda temporizada implementada sobre la
 
 #### Preparación de software
 
-Según el pinout del XIAO STM32C5, **D0** se puede seleccionar como pin de control para el **Grove-Servo**.
+Según el pinout del XIAO STM32C5, se puede seleccionar **D0** como pin de control para el **Grove-Servo**.
 
 :::tip
 
-- Para el pinout del XIAO STM32C5, haz clic en [Lista de pines de XIAO STM32C5](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#hardware-overview) para ver los detalles.
+- Para el pinout del XIAO STM32C5, haz clic en [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#visión-general-del-hardware) para ver los detalles.
 
 :::
 
@@ -352,11 +356,11 @@ La Seeed Studio Expansion Board Base for XIAO está equipada con un zumbador ele
 
 :::tip
 
-- Para el pinout del XIAO STM32C5, haz clic en [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#visión-general-del-hardware) para ver los detalles.
+- Para el pinout de la XIAO STM32C5, haz clic en [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/#hardware-overview) para ver los detalles.
 
 :::
 
-1. Modifica el archivo `app.overlay`. En el XIAO STM32C5, A3/D3 corresponde al pin PA3, que está conectado al zumbador electromagnético pasivo LET5020CS-03L integrado a través de un MOSFET 2N7002PW en la Seeed Studio Expansion Board Base for XIAO. Configurando PA3 como la función alternativa AF1 en el DeviceTree, TIM2_CH4 puede generar una señal PWM de 4 kHz con un período de 250 μs y un ciclo de trabajo del 50% para accionar el zumbador.
+1. Modifica el archivo `app.overlay`. En la XIAO STM32C5, A3/D3 corresponde al pin PA3, que está conectado al zumbador electromagnético pasivo LET5020CS-03L integrado a través de un MOSFET 2N7002PW en la Seeed Studio Expansion Board Base for XIAO. Configurando PA3 como la función alternativa AF1 en el DeviceTree, TIM2_CH4 puede generar una señal PWM de 4 kHz con un período de 250 μs y un ciclo de trabajo del 50% para accionar el zumbador.
 
 <details>
 <summary>app.overlay</summary>
@@ -530,7 +534,7 @@ La E/S analógica se basa en un convertidor analógico-digital (ADC) y se utiliz
 
 ### Preparación de software
 
-1. Modifica el archivo `app.overlay`. En el DTS a nivel de placa del XIAO STM32C5, A0 ya está completamente configurado como PA0, canal 0 de ADC1, con resolución de 12 bits. Por lo tanto, en `app.overlay`, `zephyr,user` debe hacer referencia al canal 0 de ADC1.
+1. Modifica el archivo `app.overlay`. En el DTS a nivel de placa de la XIAO STM32C5, A0 ya está completamente configurado como PA0, canal 0 de ADC1, con resolución de 12 bits. Por lo tanto, en `app.overlay`, `zephyr,user` debe hacer referencia al canal 0 de ADC1.
 
 ```dts
 / {
@@ -622,20 +626,20 @@ Tabla de lectura de referencia de voltaje
 
 :::note
 
-Los resultados de las mediciones pueden variar bajo diferentes condiciones ambientales. Consulta los valores realmente medidos.
+Los resultados de la medición pueden variar bajo diferentes condiciones ambientales. Consulta los valores realmente medidos.
 
 :::
 
 ## UART
 
-El receptor/transmisor asíncrono universal (UART) es un protocolo estándar de comunicación serie asíncrona. No requiere señales de reloj externas para la sincronización y realiza la transmisión y recepción de datos de forma asíncrona basándose en la velocidad en baudios preestablecida por ambas partes de la comunicación. En cuanto al cableado físico, se puede establecer un enlace de datos full-dúplex simplemente cruzando los pines TX y RX de los dispositivos y conectando sus tierras en común. Gracias a su coste de hardware mínimo y a la compatibilidad con el envío y la recepción simultáneos, UART se adopta ampliamente en sistemas embebidos para la salida de registros de consola, la depuración de periféricos modulares y la comunicación de datos punto a punto de bajo ancho de banda.
+El receptor/transmisor asíncrono universal (UART) es un protocolo estándar de comunicación serie asíncrona. No requiere señales de reloj externas para la sincronización y realiza la transmisión y recepción de datos de forma asíncrona basándose en la velocidad en baudios preestablecida por ambas partes de la comunicación. En cuanto al cableado físico, se puede establecer un enlace de datos full-dúplex simplemente cruzando los pines TX y RX de los dispositivos y conectando sus tierras en común. Gracias a su coste de hardware mínimo y a la compatibilidad con el envío y la recepción simultáneos, UART se adopta ampliamente en sistemas embebidos para la salida de registros de consola, depuración de periféricos modulares y comunicación de datos punto a punto de bajo ancho de banda.
 
 ### Preparación de hardware
 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO STM32C5</th>
-        <th>USB to TTL Converter</th>
+        <th>Convertidor USB a TTL</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/xiao_stm32c5.png" style={{width:400, height:'auto'}}/></div></td>
@@ -657,7 +661,7 @@ El receptor/transmisor asíncrono universal (UART) es un protocolo estándar de 
 
 ### Preparación de software
 
-1. Modifica app.overlay. En el XIAO STM32C5, D6 corresponde a PA9 / USART1_TX y D7 corresponde a PA10 / USART1_RX. El nodo correspondiente en DeviceTree es usart1. Establece la velocidad en baudios predeterminada en 115200.
+1. Modifica app.overlay. En la XIAO STM32C5, D6 corresponde a PA9 / USART1_TX y D7 corresponde a PA10 / USART1_RX. El nodo correspondiente en DeviceTree es usart1. Establece la velocidad en baudios predeterminada en 115200.
 
 ```dtsi
 / {
@@ -781,7 +785,7 @@ int main(void)
 
 ### Resultado
 
-1. Cablea de acuerdo con el orden de la tabla
+1. Cablea según el orden de la tabla
 
 | XIAO STM32C5 | CH340 |
 | --------------- | ----- |
@@ -802,7 +806,7 @@ I2C es un protocolo de comunicación de datos síncrono y half-dúplex. Permite 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO STM32C5</th>
-        <th>Seeed Studio Expansion Board Base for XIAO</th>
+        <th>Placa base de expansión Seeed Studio para XIAO</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/xiao_stm32c5.png" style={{width:400, height:'auto'}}/></div></td>
@@ -824,7 +828,7 @@ I2C es un protocolo de comunicación de datos síncrono y half-dúplex. Permite 
 
 ### Preparación de software
 
-1. En el XIAO STM32C5, D4 corresponde a PB7 / I2C1_SDA y D5 corresponde a PB6 / I2C1_SCL. Dado que I2C1 ya está habilitado en el DTS a nivel de placa, añade un nodo de pantalla SSD1306 en la dirección I2C 0x3C. Modifica app.overlay como se indica a continuación:
+1. En la XIAO STM32C5, D4 corresponde a PB7 / I2C1_SDA y D5 corresponde a PB6 / I2C1_SCL. Dado que I2C1 ya está habilitado en el DTS a nivel de placa, añade un nodo de pantalla SSD1306 en la dirección I2C 0x3C. Modifica app.overlay como se indica a continuación:
 
 ```dts
 / {
@@ -904,16 +908,16 @@ Después de que el programa se ejecute, la pantalla OLED muestra **XIAO STM32C5 
 
 ## SPI
 
-SPI es un protocolo de comunicación de alta velocidad, síncrono y full-dúplex. A diferencia de la comunicación asíncrona, SPI se basa en una línea de reloj SCLK dedicada para una sincronización precisa de los datos. Generalmente adopta la topología clásica de hardware de cuatro hilos que consta de los pines MOSI, MISO y de selección de chip CS/SS. Equipado con canales independientes de envío y recepción de datos y una alta frecuencia de reloj de bus, SPI ofrece un excelente rendimiento de transferencia de datos. Se utiliza ampliamente en escenarios de control de periféricos que exigen un gran ancho de banda, como dispositivos de almacenamiento masivo, incluidas memorias Flash y tarjetas SD, pantallas de alta resolución y alta frecuencia de actualización, y sensores de muestreo de alta frecuencia.
+SPI es un protocolo de comunicación de alta velocidad, síncrono y full-dúplex. A diferencia de la comunicación asíncrona, SPI se basa en una línea de reloj SCLK dedicada para una sincronización precisa de los datos. Generalmente adopta la topología clásica de hardware de cuatro hilos que consta de los pines MOSI, MISO y de selección de chip CS/SS. Al estar equipado con canales independientes de envío y recepción de datos y una alta frecuencia de reloj de bus, SPI ofrece un excelente rendimiento de transmisión de datos. Se utiliza ampliamente en escenarios de control de periféricos que exigen un gran ancho de banda, como dispositivos de almacenamiento masivo, incluidas memorias Flash y tarjetas SD, pantallas de alta resolución y alta frecuencia de actualización, y sensores de muestreo de alta frecuencia.
 
-A continuación, se demostrará un ejemplo con una tarjeta SD: leer el tamaño de la tarjeta SD y escribir en ella un archivo llamado `XIAOTEST.TXT`, con el contenido **Hello XIAO STM32C5**.
+A continuación, se demostrará un ejemplo con tarjeta SD: leer el tamaño de la tarjeta SD y escribir en ella un archivo llamado `XIAOTEST.TXT`, con el contenido **Hello XIAO STM32C5**.
 
 ### Preparación de hardware
 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO STM32C5</th>
-        <th>Seeed Studio Expansion Board Base for XIAO</th>
+        <th>Placa base de expansión Seeed Studio para XIAO</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/xiao_stm32c5.png" style={{width:400, height:'auto'}}/></div></td>
@@ -941,7 +945,7 @@ Además, también necesitas preparar una tarjeta SD formateada como FAT32, con u
 
 ### Preparación de software
 
-1. Los pines predeterminados del bus SPI del XIAO STM32C5 son D8 - SPI_SCK, D9 - SPI_MISO y D10 - SPI_MOSI. El nodo correspondiente en el DTS a nivel de placa es `SPI3`. Además, es necesario seleccionar un pin CS de selección de chip, y aquí se selecciona D2.
+1. Los pines predeterminados del bus SPI del XIAO STM32C5 son D8 - SPI_SCK, D9 - SPI_MISO y D10 - SPI_MOSI. El nodo correspondiente en el DTS a nivel de placa es `SPI3`. Además, es necesario seleccionar un pin de selección de chip CS, y aquí se selecciona D2.
 
 <details>
 
@@ -1194,7 +1198,7 @@ int main(void)
 
 ## RTC
 
-RTC (Real-Time Clock) es un periférico de temporización de hardware de bajo consumo que se utiliza para mantener continuamente información precisa de hora y calendario. Normalmente funciona a partir de una fuente de reloj independiente de baja frecuencia, como un oscilador de cristal de 32,768 kHz, y puede seguir funcionando a través del dominio de alimentación de respaldo cuando el sistema principal está apagado. Los periféricos RTC suelen admitir segundos, minutos, horas, fechas, días de la semana, meses y años, así como funciones de alarma, despertador periódico y marca de tiempo. El RTC se utiliza ampliamente en aplicaciones que requieren cronometraje a largo plazo, activación programada, registro de eventos y funcionamiento de bajo consumo, como registradores de datos, controladores industriales, dispositivos de hogar inteligente e instrumentos portátiles.
+RTC (Real-Time Clock) es un periférico de temporización de hardware de bajo consumo utilizado para mantener continuamente información precisa de hora y calendario. Normalmente funciona a partir de una fuente de reloj independiente de baja frecuencia, como un oscilador de cristal de 32,768 kHz, y puede seguir funcionando a través del dominio de alimentación de respaldo cuando el sistema principal está apagado. Los periféricos RTC suelen admitir segundos, minutos, horas, fechas, días de la semana, meses y años, así como funciones de alarma, despertador periódico y marca de tiempo. El RTC se utiliza ampliamente en aplicaciones que requieren cronometraje a largo plazo, activación programada, registro de eventos y funcionamiento de bajo consumo, como registradores de datos, controladores industriales, dispositivos de hogar inteligente e instrumentos portátiles.
 
 El Round Display for Seeed Studio XIAO incorpora un circuito RTC integrado. A continuación se muestra el funcionamiento de la función de reloj RTC con el XIAO STM32C5.
 
@@ -1299,7 +1303,7 @@ El Round Display for Seeed Studio XIAO incorpora un circuito RTC integrado. A co
 </details>
 <br/>
 
-2. Modifica prj.conf para habilitar las configuraciones.
+2. Modifica prj.conf para habilitar configuraciones.
 
 ```prj
 CONFIG_GPIO=y
@@ -1315,7 +1319,7 @@ CONFIG_MAIN_STACK_SIZE=4096
 CONFIG_PRINTK=y
 ```
 
-3. Escribe main.c para leer el RTC PCF8563 y mostrar la fecha, la hora y el día de la semana en la pantalla redonda.
+3. Escribe main.c para leer el PCF8563 RTC y mostrar la fecha, la hora y el día de la semana en la pantalla redonda.
 
 <details>
 
@@ -1610,14 +1614,14 @@ int main(void)
 
 ### Resultado
 
-Este ejemplo configura y lee la fecha y la hora desde el RTC PCF8563 en la pantalla redonda a través de I²C y muestra el resultado en la pantalla LCD circular. Sin una batería de respaldo para el RTC, el PCF8563 mantiene la hora mientras el sistema está alimentado, pero no se garantiza que la hora se conserve después de cortar la alimentación. Con una batería tipo moneda CR927 instalada, el RTC puede seguir funcionando mientras la alimentación principal está desconectada y conservar la hora correcta cuando el sistema se encienda de nuevo.
-Si el RTC no contiene una hora válida, el ejemplo lo inicializa a 2026-06-16 12:00:00 a modo de demostración. Configura el RTC a la hora actual por separado; este ejemplo no lo sincroniza automáticamente.
+Este ejemplo establece y lee la fecha y la hora desde el PCF8563 RTC en la pantalla redonda a través de I²C y muestra el resultado en la pantalla LCD circular. Sin una batería de respaldo para el RTC, el PCF8563 mantiene la hora mientras el sistema está alimentado, pero no se garantiza que la hora se conserve después de cortar la alimentación. Con una batería tipo moneda CR927 instalada, el RTC puede seguir funcionando mientras la alimentación principal está desconectada y conservar la hora correcta cuando el sistema se encienda de nuevo.
+Si el RTC no contiene una hora válida, el ejemplo lo inicializa a 2026-06-16 12:00:00 para demostración. Configura el RTC a la hora actual por separado; este ejemplo no lo sincroniza automáticamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_7.gif" style={{width:400, height:'auto'}}/></div>
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -22,6 +22,10 @@ O Seeed Studio XIAO RP2350 possui interfaces ricas. Existem **19 E/S digitais** 
 
 ## Visão geral de hardware
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2350" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
 ### Frente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -32,11 +36,11 @@ O Seeed Studio XIAO RP2350 possui interfaces ricas. Existem **19 E/S digitais** 
 
 ## Preparação
 
-Atualmente, há alguns problemas com o uso de pinos do XIAO RP2350 devido a problemas de compatibilidade. Nós corrigimos esse problema, e a biblioteca oficial da Raspberry Pi foi mesclada. A versão atual é 4.2.0, e a atualização será concluída na próxima versão, **4.2.1**.
+Atualmente, há alguns problemas com o uso dos pinos do XIAO RP2350 devido a questões de compatibilidade. Já corrigimos esse problema, e a biblioteca oficial da Raspberry Pi foi mesclada. A versão atual é a 4.2.0, e a atualização será concluída na próxima versão, **4.2.1**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/12.png" style={{width:500, height:'auto'}}/></div>
 
-Enquanto isso, substitua este arquivo indo para **Arduino15/packages/rp2040/hardware/rp2040/4.2.0/variants/seeed_xiao_rp2350（Seu endereço da biblioteca Arduino）** e [clicando aqui para baixar o arquivo](https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/file.zip). Depois disso, você pode aproveitar o seu trabalho!
+Enquanto isso, substitua este arquivo acessando **Arduino15/packages/rp2040/hardware/rp2040/4.2.0/variants/seeed_xiao_rp2350（Seu endereço da biblioteca Arduino）** e [clicando aqui para baixar o arquivo](https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/file.zip). Depois disso, você pode aproveitar o seu trabalho!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -74,11 +78,11 @@ Enquanto isso, substitua este arquivo indo para **Arduino15/packages/rp2040/hard
   </tr>
 </table>
 
-Instale o XIAO RP2350 na placa de expansão e conecte o Grove LED à interface **A0/D0** da placa de expansão por meio de um cabo Grove. Por fim, conecte o XIAO ao computador por meio de um cabo USB-C.
+Instale o XIAO RP2350 na placa de expansão e conecte o Grove LED à interface **A0/D0** da placa de expansão por meio de um cabo Grove. Por fim, conecte o XIAO ao computador usando um cabo USB-C.
 
 ### Implementação de software
 
-Neste exemplo, implementaremos o controle do estado ligado/desligado de um relé usando um botão conectado à placa de expansão XIAO. Quando o botão é pressionado, o relé liga, e quando o botão é solto, o relé desliga.
+Neste exemplo, vamos implementar o controle do estado ligado/desligado de um relé usando um botão conectado à placa de expansão XIAO. Quando o botão é pressionado, o relé liga, e quando o botão é solto, o relé desliga.
 
 ```c
 //define which pin you use
@@ -100,7 +104,7 @@ void loop() {
 
 ### Efeito
 
-Se tudo correr bem, após enviar o programa, você deverá ver o seguinte efeito.
+Se tudo correr bem, após o upload do programa, você deverá ver o seguinte efeito.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/1.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -140,11 +144,11 @@ Todos os pinos GPIO no XIAO RP2350 suportam saída PWM. Portanto, você pode usa
   </tr>
 </table>
 
-Instale o XIAO RP2350 na placa de expansão e conecte o Grove LED à interface **A0/D0** da placa de expansão por meio de um cabo Grove. Por fim, conecte o XIAO ao computador por meio de um cabo USB-C.
+Instale o XIAO RP2350 na placa de expansão e conecte o Grove LED à interface **A0/D0** da placa de expansão por meio de um cabo Grove. Por fim, conecte o XIAO ao computador usando um cabo USB-C.
 
 ### Implementação de software
 
-Neste exemplo, demonstraremos como usar a saída PWM para controlar o brilho de uma luz.
+Neste exemplo, vamos demonstrar como usar a saída PWM para controlar o brilho de uma luz.
 
 ```cpp
 int LED_pin = D0;    // LED connected to digital pin 10
@@ -175,13 +179,13 @@ void loop() {
 
 ### Efeito
 
-Se o programa for executado com sucesso, você verá o seguinte efeito em execução.
+Se o programa for executado com sucesso, você verá o seguinte efeito.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2.gif" style={{width:500, height:'auto'}}/></div>
 
 ## Analógico
 
-A placa de desenvolvimento XIAO MG24(Sense) possui ADC de 12 bits para leitura de alta resolução de valores de sensores analógicos, o que pode nos ajudar a ler valores mais precisos.
+A placa de desenvolvimento XIAO MG24(Sense) possui ADC de 12 bits para leitura de alta resolução de valores de sensores analógicos, o que pode nos ajudar a ler valores com mais precisão.
 
 Em seguida, escolheremos dois sensores para refletir as características do ADC.
 
@@ -191,7 +195,7 @@ Em seguida, escolheremos dois sensores para refletir as características do ADC.
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
         <th>Base de expansão Seeed Studio para XIAO com Grove OLED</th>
-        <th>Grove - Sensor de Ruído</th>
+        <th>Grove - Sensor de ruído</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102010550-xiao-rp2350.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -292,8 +296,8 @@ Se tudo correr bem, após enviar o programa, você deverá ver o seguinte efeito
 
 ### Uso de Serial1
 
-De acordo com os diagramas de pinos do XIAO RP2350 acima para parâmetros específicos, podemos observar que há pinos TX e RX (D6, D7).
-O uso também é muito semelhante, mas precisamos usar uma **ferramenta de monitoramento de porta serial** para monitorar os pinos D6 e D7 para obter dados.
+De acordo com os diagramas de pinos do XIAO RP2350 acima para parâmetros específicos, podemos observar que existem pinos TX e RX (D6, D7).
+O uso também é muito semelhante, mas precisamos usar a **ferramenta de monitoramento de porta serial** para monitorar os pinos D6 e D7 para obter dados.
 Então, a seguir, usaremos os pinos D6 e D7 para usar **serial1**.
 
 :::tip
@@ -383,7 +387,7 @@ Passo 3. Adicione a biblioteca ao Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/10.png" style={{width:800, height:'auto'}}/></div>
 
-Passo 4. Abra o demo DHTtester da biblioteca que você acabou de baixar.
+Passo 4. Abra o DHTtester Demo a partir da biblioteca que você acabou de baixar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/11.png" style={{width:800, height:'auto'}}/></div>
 
@@ -506,7 +510,7 @@ Depois de preparar o hardware conforme mencionado acima, use jumpers para conect
 
 ### Implementação de software
 
-Em seguida, tomaremos o seguinte programa como exemplo para apresentar como usar a interface SPI para controlar a exibição da tela OLED.
+Em seguida, usaremos o seguinte programa como exemplo para apresentar como usar a interface SPI para controlar a exibição da tela OLED.
 
 Instale a biblioteca u8g2.
 

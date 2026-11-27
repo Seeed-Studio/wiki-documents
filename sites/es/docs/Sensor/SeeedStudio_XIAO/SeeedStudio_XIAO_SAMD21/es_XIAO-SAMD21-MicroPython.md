@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/es/XIAO-SAMD21-MicroPython/
 ---
 
@@ -41,7 +41,7 @@ Primero, vamos a conectar el Seeed Studio XIAO SAMD21 al ordenador y subir un c�
 
 :::
 
-- **Paso 1**. Conecta el Seeed Studio XIAO SAMD21 a tu ordenador mediante un cable Type‑C y luego pulsa dos veces el botón de Reset para entrar en modo BOOT. Si todo funciona bien, aparecerá un disco **Arduino** en el PC.
+- **Paso 1**. Conecta el Seeed Studio XIAO SAMD21 a tu ordenador mediante un cable Type‑C y luego pulsa dos veces el botón Reset para entrar en modo BOOT. Si todo funciona bien, aparecerá un disco **Arduino** en el PC.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
@@ -57,7 +57,7 @@ También es posible [compilar tu propio firmware](https://wiki.seeedstudio.com/e
 
 #### Para XIAO SAMD21 Plus
 
-- **Paso 1**. Conecta el XIAO SAMD21 Plus a tu PC con un cable Type‑C y luego pulsa el botón de Reset dos veces consecutivas. Si todo funciona correctamente, aparecerá un disco **Arduino** en tu PC.
+- **Paso 1**. Conecta el XIAO SAMD21 Plus a tu PC con un cable Type‑C y luego pulsa el botón Reset dos veces consecutivas. Si todo funciona correctamente, aparecerá un disco **Arduino** en tu PC.
 
 <div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
@@ -86,7 +86,12 @@ También es posible [compilar tu propio firmware](https://wiki.seeedstudio.com/e
 
 ### Tabla de asignación de pines de la Serie SEEED XIAO SAMD21
 
-| Nombre de pin en MicroPython | GPIO XIAO SAMD21 (ID) | GPIO XIAO SAMD21 Plus (ID) | IRQ SAMD21 / Plus | ADC | Función |
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">Explorar pinout interactivo de XIAO SAMD21</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">Explorar pinout interactivo de XIAO SAMD21 Plus</a>
+</div>
+
+| Nombre de pin MicroPython | XIAO SAMD21 GPIO (ID) | XIAO SAMD21 Plus GPIO (ID) | IRQ SAMD21 / Plus | ADC | Función |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |
 | D1 / A1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO, ADC |
@@ -99,11 +104,11 @@ También es posible [compilar tu propio firmware](https://wiki.seeedstudio.com/e
 | D8 / A8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO, ADC, SPI SCK |
 | D9 / A9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO, ADC, SPI MISO |
 | D10 / A10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | GPIO, ADC, SPI MOSI |
-| USER_LED / D13 / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | LED de usuario original; en Plus D13 e I2C1 SCL |
-| RX_LED / D27 | PA18 (18) | PA18 (18) | 2 / 2 | — | LED RX original; en Plus D27 |
-| TX_LED / D19 / I2S_SD | PA19 (19) | PA19 (19) | 3 / 3 | — | LED TX original; en Plus D19 y datos I2S |
+| USER_LED / D13 / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | LED de usuario original; Plus D13 e I2C1 SCL |
+| RX_LED / D27 | PA18 (18) | PA18 (18) | 2 / 2 | — | RX LED original; Plus D27 |
+| TX_LED / D19 / I2S_SD | PA19 (19) | PA19 (19) | 3 / 3 | — | TX LED original; Plus D19 y datos I2S |
 | D12 | — | PA28 (28) | — / 8 | — | GPIO de expansión Plus |
-| D14 / SDA1 | — | PA16 (16) | — / 0 | — | I2C1 SDA en Plus |
+| D14 / SDA1 | — | PA16 (16) | — / 0 | — | Plus I2C1 SDA |
 | D15 | — | PA15 (15) | — / 15 | — | GPIO de expansión Plus |
 | D16 | — | PA14 (14) | — / 14 | — | GPIO de expansión Plus |
 | D17 | — | PA13 (13) | — / 13 | — | GPIO de expansión Plus |
@@ -132,7 +137,7 @@ Sube los códigos haciendo clic en el botón "Run current script". La primera ve
 
 Si quieres usar el programa sin conexión, debes guardar el programa en XIAO SAMD21
 
-Mantén pulsadas las teclas Ctrl + Shift + S al mismo tiempo y luego selecciona guardar en **MicroPython device**
+Pulsa y mantén Ctrl + Shift + S al mismo tiempo y luego selecciona guardar en **MicroPython device**
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/6.jpg" /></div>
 
@@ -167,7 +172,7 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
 
-2. Para XIAO SAMD21 Plus, los RX_LED y TX_LED se han eliminado. En su lugar se utiliza un LED WS2812, con su pin de datos asignado a PA27.
+2. Para XIAO SAMD21 Plus, se han eliminado los RX_LED y TX_LED. En su lugar se utiliza un LED WS2812, con su pin de datos asignado a PA27.
 <br/>
 ```py
 from machine import Pin, Timer
@@ -250,7 +255,7 @@ tim.init(period=200, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><video width={600} height={240} controls>
     <source src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/4.mp4" type="video/mp4" />
-    Tu navegador no admite la etiqueta de vídeo.
+    Your browser does not support the video tag.
   </video></div>
 
 ### Detección de personas para control automático
@@ -376,7 +381,7 @@ Nuestro socio **Neil** ha escrito un programa de consola de línea de comandos p
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

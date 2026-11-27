@@ -21,9 +21,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## はじめに
 
-**Seeed Studio XIAO ESP32C3** は、Espressif **ESP32-C3** WiFi/Bluetooth デュアルモードチップをベースとした IoT 向けミニ開発ボードで、効率的なアーキテクチャを備えた **32-bit RISC-V CPU** により高い演算性能を発揮します。**IEEE 802.11 b/g/n WiFi** および **Bluetooth 5 (BLE)** プロトコルをサポートし、優れた高周波特性を備えています。また、本ボードには外付けアンテナが付属しており、ワイヤレスアプリケーションの信号強度を高めることができます。さらに、**小型で精巧なフォームファクタ** と **片面実装可能な設計** を兼ね備えています。豊富なインターフェースを備え、**11 本のデジタル I/O** は **PWM ピン** として、**4 本のアナログ I/O** は **ADC ピン** として使用できます。**UART、I2C、SPI** など 4 種類のシリアルインターフェースをサポートしています。基板上には小型の **リセットボタン** と **ブートローダーモードボタン** も搭載されています。XIAO ESP32C3 は [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) および [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board) と完全な互換性がありますが、Seeeduino XIAO Expansion board については、基板上の SWD スプリングコンタクトが互換性を持ちません。
+**Seeed Studio XIAO ESP32C3** は、Espressif の **ESP32-C3** WiFi/Bluetooth デュアルモードチップをベースとした IoT 向けミニ開発ボードで、効率的なアーキテクチャを備えた **32-bit RISC-V CPU** により高い演算性能を発揮します。**IEEE 802.11 b/g/n WiFi** および **Bluetooth 5 (BLE)** プロトコルをサポートし、優れた高周波特性を備えています。このボードには外付けアンテナが付属しており、ワイヤレスアプリケーションの信号強度を高めることができます。また、**小型で精巧なフォームファクタ** と **片面実装可能な設計** を兼ね備えています。豊富なインターフェースを備え、**11 本のデジタル I/O** は **PWM ピン** として、**4 本のアナログ I/O** は **ADC ピン** として使用できます。**UART、I2C、SPI** など 4 種類のシリアルインターフェースをサポートします。基板上には小型の **リセットボタン** と **ブートローダーモードボタン** も搭載されています。XIAO ESP32C3 は [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) および [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board) と完全な互換性がありますが、Seeeduino XIAO Expansion board については、基板上の SWD スプリングコンタクトは互換性がありません。
 
-上記の特長から、XIAO ESP32C3 は **高性能・低消費電力・低コストの IoT ミニ開発ボード** として位置付けられ、**低消費電力 IoT アプリケーションやワイヤレスウェアラブルアプリケーション** に適しています。
+上記の特長から、XIAO ESP32C3 は **高性能・低消費電力・低コストの IoT ミニ開発ボード** として位置付けられており、**低消費電力 IoT アプリケーションやワイヤレスウェアラブルアプリケーション** に適しています。
 
 この Wiki では、XIAO ESP32C3 をすばやく使い始める方法を紹介します。
 
@@ -39,7 +39,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </tr>
   <tr>
     <td>プロセッサ</td>
-    <td>ESP32-C3 SoC<br/>4 ステージパイプラインを備え、最大 160 MHz で動作する RISC-V シングルコア 32-bit チッププロセッサ</td>
+    <td>ESP32-C3 SoC<br/>最大 160 MHz で動作する、4 ステージパイプラインを備えた RISC-V シングルコア 32-bit チッププロセッサ</td>
   </tr>
   <tr>
     <td>ワイヤレス</td>
@@ -59,7 +59,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </tr>
   <tr>
     <td>電源（代表値）</td>
-    <td>最大 3.3V 出力電流: 500mA<br/>試験条件: BAT ピン入力 @ 3.8V<br/>供給能力: 3A<br/>充電電流: 380mA（高速） / 40mA（トリクル）<br/>入力電圧 (VIN): 5V<br/>入力電圧 (BAT): 3.7V</td>
+    <td>最大 3.3V 出力電流: 500mA<br/>試験条件: BAT ピン入力 @ 3.8V<br/>供給能力: 3A<br/>充電電流: 380mA（急速） / 40mA（トリクル）<br/>入力電圧 (VIN): 5V<br/>入力電圧 (BAT): 3.7V</td>
   </tr>
   <tr>
     <td>ディープスリープ時消費電力</td>
@@ -87,14 +87,18 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 - **優れた RF 性能:** 外付け RF アンテナを同梱
 - **バッテリ充電チップ:** リチウムバッテリの充放電管理をサポート
 - **豊富なオンチップリソース:** 400KB の SRAM と 4MB のオンボードフラッシュメモリ
-- **超小型サイズ:** 親指ほどの大きさ (21x17.8mm) の XIAO シリーズのクラシックなフォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
+- **超小型サイズ:** 親指ほどの大きさ (21x17.8mm) の XIAO シリーズクラシックフォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
 - **信頼性の高いセキュリティ機能:** AES-128/256、Hash、RSA、HMAC、デジタル署名およびセキュアブートをサポートする暗号ハードウェアアクセラレータ
 - **豊富なインターフェース:** 1xI2C、1xSPI、2xUART、11xGPIO(PWM)、4xADC、1xJTAG ボンディングパッドインターフェース
-- 片面実装部品、表面実装設計
+- 片面実装コンポーネント、表面実装設計
 
 ## ハードウェア概要
 
-> *A3(GP105) - ADC2 を使用しており、誤ったサンプリング信号により動作しなくなる場合があります。信頼性の高いアナログ読み取りには、代わりに ADC1(A0/A1/A2) を使用してください。詳細は ESP32-C3 データシートを参照してください。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">インタラクティブピン配置を確認</a>
+</div>
+
+> *A3(GP105) - ADC2 を使用しており、誤ったサンプリング信号により動作しなくなる場合があります。信頼性の高いアナログ読み取りには、代わりに ADC1(A0/A1/A2) を使用してください。詳細は ESP32-C3 のデータシートを参照してください。
 
 ### 表面
 
@@ -133,17 +137,17 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ### 電源ピン
 
-- 5V - USB ポートからの 5V 出力です。電圧入力としても使用できますが、外部電源とこのピンの間には、アノードをバッテリ側、カソードを 5V ピン側にして、何らかのダイオード（ショットキー、信号用、電力用）を挿入する必要があります。
+- 5V - USB ポートからの 5V 出力です。電圧入力として使用することもできますが、外部電源とこのピンの間には、アノードをバッテリ側、カソードを 5V ピン側にしたダイオード（ショットキー、信号用、電力用のいずれか）を必ず入れてください。
 - 3V3 - オンボードレギュレータからの安定化出力です。700mA まで取り出せます。
 - GND - 電源/データ/信号のグラウンド
 
 ### ストラッピングピン
 
-ESP32C3 のチップマニュアルによると、チップ内の **GPIO2**、**GPIO8**、**GPIO9** はストラッピングピンであり、これらのピンの High/Low レベル設定によってチップが異なるブートモードに入る場合があります。そのため、これらのピンを使用する際にはこの点に注意してください。そうしないと、XIAO が常にプログラムをアップロードまたは実行できなくなる可能性があります。
+ESP32C3 のチップマニュアルによると、チップ内の **GPIO2**、**GPIO8**、**GPIO9** はストラッピングピンであり、これらのピンの High/Low レベル設定によってチップが異なるブートモードに入る場合があります。これらのピンを使用する際にはこの点に注意してください。そうしないと、XIAO が常にプログラムをアップロードできなかったり、実行できなかったりする原因となる可能性があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/20.png" style={{width:800, height:'auto'}}/></div>
 
-## はじめてみよう
+## セットアップ
 
 まず、XIAO ESP32C3 をコンピュータに接続し、ボードに LED を接続して、Arduino IDE から簡単なコードを書き込み、接続した LED を点滅させることでボードが正常に動作しているか確認します。
 
@@ -165,48 +169,48 @@ ESP32C3 のチップマニュアルによると、チップ内の **GPIO2**、**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" style={{width:120, height:'auto'}}/></div>
 
-- **Step 2.** 次のように D10 ピンに LED を接続します
+- **Step 2.** LED を次のように D10 ピンに接続します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/connect-led-2.png" style={{width:500, height:'auto'}}/></div>
 
-**Note:** LED に流れる電流を制限し、過電流による LED の破損を防ぐために、必ず約 150Ω の抵抗を直列に接続してください。
+**注意：** LED に流れる電流を制限し、過電流による LED の焼損を防ぐために、必ず LED と直列に（約 150Ω の）抵抗を接続してください
 
 ### ソフトウェアの準備
 
-- **Step 1.** お使いのオペレーティングシステムに応じて、最新バージョンの Arduino IDE をダウンロードしてインストールします
+- **ステップ 1.** お使いのオペレーティングシステムに応じて、最新版の Arduino IDE をダウンロードしてインストールします
 
 <p style={{textAlign:'center'}}><a href="https://www.arduino.cc/en/software" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" /></a></p>
 
-- **Step 2.** Arduino アプリケーションを起動します
+- **ステップ 2.** Arduino アプリケーションを起動します
 
-- **Step 3.** Arduino IDE に ESP32 ボードパッケージを追加します
+- **ステップ 3.** Arduino IDE に ESP32 ボードパッケージを追加します
 
 **File > Preferences** に移動し、**"Additional Boards Manager URLs"** に以下の URL を入力します：
 *[https://jihulab.com/esp-mirror/espressif/arduino-esp32.git](https://jihulab.com/esp-mirror/espressif/arduino-esp32.git)*
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_board.png" style={{width:550, height:'auto'}}/></div>
 
-**Tools > Board > Boards Manager...** に移動し、検索ボックスにキーワード "**esp32**" を入力して、**esp32** の最新バージョンを選択し、インストールします。
+**Tools > Board > Boards Manager...** に移動し、検索ボックスにキーワード "**esp32**" を入力し、**esp32** の最新版を選択してインストールします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_esp32c3.png" style={{width:550, height:'auto'}}/></div>
 
-- **Step 4.** ボードとポートを選択します
+- **ステップ 4.** ボードとポートを選択します
 
-**Board**
+**ボード**
 
 **Tools > Board > ESP32 Arduino** に移動し、"**XIAO_ESP32C3**" を選択します。ボードのリストは少し長いので、一番下までスクロールする必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/XIAO_ESP32_board.png" style={{width:800, height:'auto'}}/></div>
 
-**Port**
+**ポート**
 
-**Tools > Port** に移動し、接続されている XIAO ESP32C3 のシリアルポート名を選択します。これは通常 COM3 以上です（**COM1** と **COM2** は通常ハードウェアシリアルポート用に予約されています）。
+**Tools > Port** に移動し、接続されている XIAO ESP32C3 のシリアルポート名を選択します。これは通常、COM3 以上になります（**COM1** と **COM2** は通常、ハードウェアシリアルポート用に予約されています）。
 
 ### 最初の Blink プログラムを実行する
 
-- **Step 1.** 下記のコードを Arduino IDE にコピーします
+- **ステップ 1.** 下記のコードを Arduino IDE にコピーします
 
-上の図に示すように、`D10` が LED に接続されていることを確認してください。
+上の図のように、`D10` が LED に接続されていることを確認してください。
 
 ```cpp
 
@@ -226,48 +230,48 @@ void loop() {
 }
 ```
 
-- **Step 2.** **Upload** ボタンをクリックしてコードをボードに書き込みます
+- **ステップ 2.** **Upload** ボタンをクリックして、コードをボードに書き込みます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" style={{width:500, height:'auto'}}/></div>
 
-アップロードが完了すると、接続された LED が 1 秒ごとに点滅するのが確認できます。これは接続が成功したことを意味し、これで XIAO ESP32C3 を使ってさらに多くのプロジェクトを探索できます！
+書き込みが完了すると、接続された LED が 1 秒ごとに点滅するのが確認できます。これは接続が成功したことを意味し、これで XIAO ESP32C3 を使ってさらに多くのプロジェクトを探索できます！
 
 ## バッテリーの使用
 
-XIAO ESP32C3 は 3.7V リチウムバッテリーを電源入力として使用することができます。配線方法については、以下の図を参照してください。
+XIAO ESP32C3 は、3.7V リチウムバッテリーを電源入力として使用することができます。配線方法については、以下の図を参照してください。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/battery_connect.png" alt="pir" width="600" height="auto"/></div>
 
 :::caution
-はんだ付けの際に、正極と負極を短絡させてバッテリーや機器を焼損させないよう十分注意してください。
+はんだ付けの際には、プラス端子とマイナス端子を短絡させてバッテリーや機器を焼損させないよう、十分注意してください。
 :::
 
 **バッテリー使用上の注意：**
 
-1. 規格を満たした認定バッテリーを使用してください。
-2. バッテリー使用中でも、XIAO をデータケーブルでコンピュータ機器に接続することができます。XIAO には保護回路チップが内蔵されており、安全ですのでご安心ください。
-3. XIAO ESP32C3 はバッテリー駆動時には（特定のプログラムを書き込んでいない限り）LED が点灯しません。LED の状態で XIAO ESP32C3 が動作しているかどうかを判断せず、必ずご自身のプログラムの動作から適切に判断してください。
+1. 規格を満たした、認定済みのバッテリーを使用してください。
+2. バッテリー使用中でも、XIAO はデータケーブルを介してコンピュータ機器に接続できます。XIAO には保護回路チップが内蔵されており、安全ですのでご安心ください。
+3. XIAO ESP32C3 は、バッテリー駆動時には（特定のプログラムを書き込んでいない限り）いかなる LED も点灯しません。LED の状態で XIAO ESP32C3 が動作しているかどうかを判断せず、必ずご自身のプログラムに基づいて適切に判断してください。
 4. 申し訳ありませんが、現在のところソフトウェアを通じて残りのバッテリー残量を確認する方法はありません（利用可能なチップのピンが残っていないため）ので、定期的にバッテリーを充電するか、マルチメータを使用してバッテリー残量を確認する必要があります。
 
-### バッテリー電圧を確認する
+### バッテリー電圧の確認
 
-ESP32C3 のピン数の制限により、他の XIAO シリーズと同じ数の GPIO を XIAO ESP32C3 で利用できるようにするため、エンジニアはバッテリーの電圧測定用に割り当てる余分なピンを確保できませんでした。
+ESP32C3 のピン数の制約により、他の XIAO シリーズと同じ数の GPIO を XIAO ESP32C3 で利用できるようにするため、エンジニアはバッテリーの電圧測定用に割り当てる余分なピンを確保できませんでした。
 
-しかし、バッテリー電圧測定専用のピンを使用したい場合は、[msfujino](https://forum.seeedstudio.com/u/msfujino) 氏の素晴らしい工夫を参考にすることができます。XIAO ESP32C3 のために多くの経験と労力を共有してくださった [msfujino](https://forum.seeedstudio.com/u/msfujino) 氏に、ここに特別な感謝を申し上げます。
+しかし、バッテリー電圧測定専用のピンを使用したい場合は、[msfujino](https://forum.seeedstudio.com/u/msfujino) 氏の素晴らしい工夫を参考にすることができます。XIAO ESP32C3 のために経験と労力を共有してくださった [msfujino](https://forum.seeedstudio.com/u/msfujino) 氏に、ここに特別な感謝を申し上げます。
 
-基本的な動作の考え方は次のとおりです：バッテリー電圧を 200k で 1/2 に分圧し、A0 ポートに接続することで、電圧を監視できるようにしました。
+基本的な動作の考え方は次のとおりです：バッテリー電圧を 200k で 1/2 に分圧し、A0 ポートに接続することで、電圧を監視できるようにします。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/3.png" alt="pir" width="300" height="auto"/></div>
 
-データシート上では、公称 2500mV フルスケール AD 変換とされていますが、チップごとのばらつきが大きく、実際には ±10% 程度あります。私のチップではフルスケールが 2700mV でした。
+データシート上では、公称のフルスケール AD 変換電圧は 2500mV とされていますが、チップごとのばらつきが大きく、実際には ±10% 程度あります。私のチップではフルスケールが 2700mV でした。
 
-幸いなことに、各チップの較正補正値はフューズ領域に書き込まれており、`analogReadMilliVolts()` 関数を使用することで、特別なことをしなくても補正された電圧値を読み取ることができます。
+幸いなことに、各チップの較正補正値はフューズ領域に書き込まれており、`analogReadMilliVolts()` 関数を使用することで、特別な処理をしなくても補正済みの電圧値を読み取ることができます。
 
-AD 変換の結果とマルチメータで測定した電圧はよく一致しており、誤差は約 5 mV で、実用上問題ありません。
+AD 変換の結果とマルチメータで測定した電圧はよく一致しており、誤差は約 5 mV 程度で、実用上問題ありません。
 
-さらに、特に通信中にはスパイク状の誤差が発生したため、それらを除去するために 16 回の平均化を行う必要がありました。
+また、特に通信中にはスパイク状の誤差が発生するため、これを除去するには 16 回の平均化が必要でした。
 
-以下はバッテリー電圧をテストする手順です。
+以下は、バッテリー電圧をテストするための手順です。
 
 ```cpp
 void setup() {
@@ -289,12 +293,12 @@ void loop() {
 :::tip
 上記の内容は Seeed Studio フォーラムユーザー **msfujino** 氏によるもので、元の投稿はこちらです：
 [https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535).
-上記に基づいてバッテリー電圧を測定しようとする場合は、十分な実作業スキルと良好なはんだ付けスキルを身につけてから行うことをお勧めします。また、バッテリーの短絡など危険な行為には十分注意してください。
+上記に基づいてバッテリー電圧を測定しようとする場合は、十分な手先の器用さと、より高度なはんだ付けスキルを身につけてから行うことをお勧めします。また、バッテリーの短絡など危険な行為には十分注意してください。
 :::
 
 ## ディープスリープモードとウェイクアップ
 
-XIAO ESP32C3 はディープスリープモードとウェイクアップ機能をサポートするように設計されています。これら 2 つの機能の使用方法について、以下の使用例を提供します。
+XIAO ESP32C3 は、ディープスリープモードとウェイクアップ機能をサポートするように設計されています。これら 2 つの機能の使用方法について、以下の使用例を提供します。
 
 ```cpp
 #define BUTTON_PIN_BITMASK 0x200000000 // 2^33 in hex
@@ -345,15 +349,15 @@ void loop(){
 }
 ```
 
-XIAO がディープスリープに入る前に、十分に素早くシリアルモニタをオンにすることができれば、下図のようなメッセージ出力を確認できます。これは、XIAO が現在「スリープ中」であることを意味します。
+XIAO がディープスリープに入る前に、十分素早くシリアルモニタをオンにできれば、下図のようなメッセージ出力を確認できます。これは、XIAO が現在「スリープ中」であることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/15.png" style={{width:700, height:'auto'}}/></div>
 
 :::tip
-ディープスリープモードに入ると、XIAO のポートは表示されなくなり、再びポート番号を確認するにはウェイクアップさせる必要があります！
+ディープスリープモードに入ると、XIAO のポートは表示されなくなり、再びポート番号を確認するには、XIAO をウェイクアップする必要があります！
 :::
 
-このプログラムでは、**D1** の Low レベルでウェイクアップするようにしています。つまり、D1 ピンにボタンを接続し、そのボタンを押すと XIAO が起床します。
+このプログラムでは、**D1** の Low レベルでウェイクアップするようにしています。つまり、D1 ピンにボタンを接続し、そのボタンを押すと XIAO が起床するということです。
 
 :::caution
 XIAO ESP32-C3 は GPIO ウェイクアップとタイマーウェイクアップをサポートしており、ウェイクアップをサポートするピンは D0～D3 です。
@@ -361,27 +365,27 @@ XIAO ESP32-C3 は GPIO ウェイクアップとタイマーウェイクアップ
 
 ## トラブルシューティング
 
-### Q1: コードをボードにアップロードするときに Arduino IDE がフリーズします
+### Q1: コードをボードに書き込む際に Arduino IDE がフリーズします
 
-まず、ボードを PC に接続した状態で **RESET BUTTON** を 1 回押してボードをリセットしてみてください。それでも解決しない場合は、**BOOT BUTTON** を押し続けたままボードを PC に接続し、**BOOT** ボタンを押したまま接続した後に離して **bootloader mode** に入ります。
+まず、ボードを PC に接続した状態で **RESET BUTTON** を 1 回押して、ボードをリセットしてみてください。それでも解決しない場合は、**BOOT BUTTON** を押し続けたままボードを PC に接続し、**BOOT** ボタンを離して **bootloader mode** に入ってください。
 
-### Q2: Arduino IDE 上でボードがシリアルデバイスとして表示されません
+### Q2: Arduino IDE 上で、ボードがシリアルデバイスとして表示されません
 
 上記の **Q1** と同じ手順をお試しください。
 
-### Q3: ブートローダを工場出荷時ファームウェアで書き直したい
+### Q3: ブートローダを工場出荷時ファームウェアで書き直したいです
 
 ボードを **USB Type-C** 経由で PC に接続し、**ESP RF Test Tool** を使用してブートローダを工場出荷時ファームウェアで書き直すだけで構いません。
 
-- **Step 1.** **BOOT BUTTON** を押し続けたまま XIAO ESP32C3 を PC に接続し、**bootloader mode** に入ります
+- **ステップ 1.** **BOOT BUTTON** を押し続けたまま XIAO ESP32C3 を PC に接続し、**bootloader mode** に入ります
 
-- **Step 2.** 接続されたら、BOOT BUTTON を離します
+- **ステップ 2.** 接続されたら、BOOT BUTTON を離します
 
-- **Step 3.** [このページ](https://www.espressif.com/en/support/download/other-tools) にアクセスし、**ESP RF Test Tool and Test Guide** をダウンロードします
+- **ステップ 3.** [このページ](https://www.espressif.com/en/support/download/other-tools) にアクセスし、**ESP RF Test Tool and Test Guide** をダウンロードします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-tool-download.png" style={{width:1000, height:'auto'}}/></div>
 
-- **Step 4.** **.zip** を解凍し、`ESP_RF_Test_EN\ESP_RF_Test_EN\EspRFTestTool_v2.8_Manual` に移動して **EspRFTestTool_v2.8_Manual.exe** を開きます
+- **ステップ 4.** **.zip** を解凍し、`ESP_RF_Test_EN\ESP_RF_Test_EN\EspRFTestTool_v2.8_Manual` に移動して **EspRFTestTool_v2.8_Manual.exe** を開きます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-tool-open.png" style={{width:500, height:'auto'}}/></div>
 
@@ -397,13 +401,13 @@ XIAO ESP32-C3 は GPIO ウェイクアップとタイマーウェイクアップ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-6.jpg" style={{width:500, height:'auto'}}/></div>
 
-- **ステップ 7.** [XIAO ESP32C3 のファクトリーファームウェア](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin) をダウンロードして選択します。
+- **ステップ 7.** [XIAO ESP32C3 のファクトリファームウェア](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin) をダウンロードして選択します。
 
 - **ステップ 8.** 最後に **Load Bin** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-8.png" style={{width:500, height:'auto'}}/></div>
 
-フラッシュが成功すると、次のような出力が表示されます
+フラッシュが成功すると次のような出力が表示されます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-9.png" style={{width:500, height:'auto'}}/></div>
 
@@ -420,7 +424,7 @@ XIAO ESP32-C3 は GPIO ウェイクアップとタイマーウェイクアップ
 - **📄[回路図]** [XIAO ESP32-C3 回路図](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf )
 - **🗃️[PCB 設計ファイル]** 
   - [XIAO ESP32-C3 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip )
-- **🗃️[PCB 設計ライブラリ]** 
+- **🗃️[PCB ライブラリ]** 
   - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO ESP32-C3 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx )
@@ -431,12 +435,12 @@ XIAO ESP32-C3 は GPIO ウェイクアップとタイマーウェイクアップ
 - **📄[3D モデル]** [XIAO ESP32-C3 3D モデル](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1 )
 
 **ソフトウェア & ツール**
-- **🗃️[ファクトリーファームウェア]** [XIAO ESP32-C3 ファクトリーファームウェア](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin )
+- **🗃️[ファクトリファームウェア]** [XIAO ESP32-C3 ファクトリファームウェア](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin )
 - **🔗[MicroPython ライブラリ]** [XIAO ESP32-C3 MicroPython ライブラリ](https://github.com/IcingTomato/micropython_xiao_esp32c3 )
 - **🔗[Platform IO]** [Seeed Studio XIAO ESP32-C3 用 PlatformIO](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html )
 
 **その他**
-- **🔗[Wiki]** [Seeed Studio XIAO ESP32-C3 を最初に見てみよう](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html )  
+- **🔗[Wiki]** [First Look at the Seeed Studio XIAO ESP32-C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html )  
   - XIAO ESP32C3 の優れたイントロで、主な機能と基本的な使い方をカバーしています。
 - **📄[ドキュメント]** [XIAO ESP32-C3 低消費電力レポート](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/Low_Power_Consumption.pdf )
 
@@ -447,7 +451,7 @@ XIAO ESP32-C3 は GPIO ウェイクアップとタイマーウェイクアップ
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
 
-## コースリソース
+## コース用リソース
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 

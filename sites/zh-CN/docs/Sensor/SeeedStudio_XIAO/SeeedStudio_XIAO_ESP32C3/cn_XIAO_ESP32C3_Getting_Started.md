@@ -21,7 +21,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-**Seeed Studio XIAO ESP32C3** 是一款基于 Espressif **ESP32-C3** WiFi/Bluetooth 双模芯片的物联网迷你开发板，采用 **32 位 RISC-V CPU**，凭借其高效架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **Bluetooth 5 (BLE)** 协议。该开发板配备了外置天线，可增强无线应用的信号强度。它还具有**小巧精致的外形尺寸**以及**单面贴片设计**。板载接口丰富，拥有 **11 路数字 I/O**（可用作 **PWM 引脚**）以及 **4 路模拟 I/O**（可用作 **ADC 引脚**）。它支持 **UART、I2C 和 SPI** 等 4 种串行接口。板上还集成了一个小型**复位按钮**和一个**引导模式按钮**。XIAO ESP32C3 与 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board) 完全兼容，但对于 Seeeduino XIAO Expansion board，板上的 SWD 弹簧触点将不兼容。
+**Seeed Studio XIAO ESP32C3** 是一款基于 Espressif **ESP32-C3** WiFi/Bluetooth 双模芯片的物联网迷你开发板，采用 **32 位 RISC-V CPU**，凭借其高效架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **Bluetooth 5 (BLE)** 协议。该开发板配备了外置天线，可增强无线应用的信号强度。同时它具有**小巧精致的外形尺寸**，并采用**单面贴片设计**。板载接口丰富，拥有 **11 路数字 I/O**（可用作 **PWM 引脚**）以及 **4 路模拟 I/O**（可用作 **ADC 引脚**）。它支持 **UART、I2C 和 SPI** 等多种串行接口。板上还集成了一个小型**复位按钮**和一个**引导模式按钮**。XIAO ESP32C3 与 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board) 完全兼容，但对于 Seeeduino XIAO Expansion board，板上的 SWD 弹簧触点将不兼容。
 
 基于上述特性，XIAO ESP32C3 被定位为一款**高性能、低功耗、具性价比的物联网迷你开发板**，适用于**低功耗物联网应用和无线可穿戴应用**。
 
@@ -51,7 +51,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </tr>
   <tr>
     <td>接口</td>
-    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>4x ADC<br/>1x Reset 按钮<br/>1x Boot 按钮</td>
+    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>4x ADC<br/>1x Reset button<br/>1x Boot button</td>
   </tr>
   <tr>
     <td>尺寸</td>
@@ -66,11 +66,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
     <td>深度睡眠模式：44 μA</td>
   </tr>
   <tr>
-    <td>Wi-Fi 使能功耗</td>
+    <td>Wi-Fi 使能时功耗</td>
     <td>工作模式：75 mA<br/>Modem-sleep 模式：25 mA<br/>Light-sleep 模式：4 mA</td>
   </tr>
   <tr>
-    <td>BLE 使能功耗</td>
+    <td>BLE 使能时功耗</td>
     <td>Modem-sleep 模式：27 mA<br/>Light-sleep 模式：10 mA</td>
   </tr>
   <tr>
@@ -81,20 +81,24 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 ### 特性
 
 - **强大的 CPU：** ESP32-C3，32 位 RISC-V 单核处理器，最高运行频率可达 160 MHz
-- **完整的 Wi-Fi 子系统：** 符合 IEEE 802.11b/g/n 协议，支持 Station 模式、SoftAP 模式、SoftAP + Station 模式以及混杂模式
+- **完整的 WiFi 子系统：** 符合 IEEE 802.11b/g/n 协议，支持 Station 模式、SoftAP 模式、SoftAP + Station 模式以及混杂模式
 - **Bluetooth LE 子系统：** 支持 Bluetooth 5 和 Bluetooth mesh 功能
 - **超低功耗：** 深度睡眠功耗约为 43μA
-- **更好的射频性能：** 配备外置射频天线
+- **更佳的射频性能：** 内含外置射频天线
 - **电池充电芯片：** 支持锂电池充放电管理
 - **丰富的片上资源：** 400KB SRAM 和 4MB 板载 Flash 存储
 - **超小尺寸：** 小如拇指（21x17.8mm），XIAO 系列经典外形，适用于可穿戴设备和小型项目
-- **可靠的安全特性：** 支持 AES-128/256、Hash、RSA、HMAC、数字签名和安全启动的加密硬件加速器
+- **可靠的安全特性：** 支持 AES-128/256、Hash、RSA、HMAC、数字签名和安全启动的密码学硬件加速器
 - **丰富的接口：** 1xI2C、1xSPI、2xUART、11xGPIO(PWM)、4xADC、1xJTAG 焊盘接口
 - 单面元件、表面贴装设计
 
-## 硬件概览
+## 硬件总览
 
-> *A3(GP105) - 使用 ADC2，可能会因为错误的采样信号而失效。为了可靠的模拟读取，请改用 ADC1(A0/A1/A2)。请参考 ESP32-C3 数据手册。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+> *A3(GP105) - 使用 ADC2，可能会因为错误采样信号而失效。为了获得可靠的模拟读取，请改用 ADC1(A0/A1/A2)。请参考 ESP32-C3 数据手册。
 
 ### 正面
 
@@ -111,17 +115,17 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 | 5V              | VBUS      |           |                                     | 电源输入/输出       |
 | GND             |           |           |                                     |                      |
 | 3V3             | 3V3_OUT   |           |                                     | 电源输出            |
-| D0              | 模拟      | GPIO2     | ADC1_CH2,                           | GPIO, ADC            |
-| D1              | 模拟      | GPIO3     | ADC1_CH3                            | GPIO, ADC            |
-| D2              | 模拟      | GPIO4     | ADC1_CH4, FSPIHD, MTMS              | GPIO, ADC            |
-| D3              | 模拟      | GPIO5     | ADC2_CH0, FSPIWP, MTDI              | GPIO, ADC            |
+| D0              | Analog    | GPIO2     | ADC1_CH2,                           | GPIO, ADC            |
+| D1              | Analog    | GPIO3     | ADC1_CH3                            | GPIO, ADC            |
+| D2              | Analog    | GPIO4     | ADC1_CH4, FSPIHD, MTMS              | GPIO, ADC            |
+| D3              | Analog    | GPIO5     | ADC2_CH0, FSPIWP, MTDI              | GPIO, ADC            |
 | D4              | SDA       | GPIO6     | FSPICLK, MTCK                       | GPIO, I2C 数据       |
-| D5              | SCL       | GPIO7     | FSPID, MTDO                         | GPIO, I2C 时钟      |
+| D5              | SCL       | GPIO7     | FSPID, MTDO                         | GPIO, I2C 时钟       |
 | D6              | TX        | GPIO21    | U0TXD                               | GPIO, UART 发送      |
 | D7              | RX        | GPIO20    | U0RXD                               | GPIO, UART 接收      |
-| D8              | SCK       | GPIO8     |                                     | GPIO, SPI 时钟      |
-| D9              | MISO      | GPIO9     |                                     | GPIO, SPI 数据      |
-| D10             | MOSI      | GPIO10    | FSPICS0                             | GPIO, SPI 数据      |
+| D8              | SCK       | GPIO8     |                                     | GPIO, SPI 时钟       |
+| D9              | MISO      | GPIO9     |                                     | GPIO, SPI 数据       |
+| D10             | MOSI      | GPIO10    | FSPICS0                             | GPIO, SPI 数据       |
 | MTDO            |           | GPIO7     |                             |            JTAG              |
 | MTDI            |           | GPIO5     |                        |        JTAG, ADC                  |
 | MTCK            |           | GPIO6     |                           |        JTAG, ADC               |
@@ -133,13 +137,13 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ### 电源引脚
 
-- 5V - 这是来自 USB 端口的 5V 输出。你也可以将其用作电压输入，但必须在外部电源和该引脚之间串联某种二极管（肖特基、小信号、功率二极管），二极管阳极接电池，阴极接 5V 引脚。
-- 3V3 - 这是板载稳压器的稳压输出。你可以从这里汲取 700mA 电流
+- 5V - 这是来自 USB 端口的 5V 输出。你也可以将其作为电压输入使用，但必须在外部电源和该引脚之间串联某种二极管（肖特基、小信号或功率二极管），二极管阳极接电池，阴极接 5V 引脚。
+- 3V3 - 这是板载稳压器的稳压输出。你可以从中汲取 700mA 电流
 - GND - 电源/数据/信号地
 
-### 启动配置引脚
+### 启动配置引脚（Strapping Pins）
 
-根据 ESP32C3 芯片手册，芯片中的 **GPIO2**、**GPIO8** 和 **GPIO9** 为启动配置引脚（Strapping Pins），这些引脚的高低电平配置可能会使芯片进入不同的 Boot 模式，在使用这些引脚时请注意这一点，否则可能会导致你的 XIAO 一直无法上传或执行程序。
+根据 ESP32C3 芯片手册，芯片中的 **GPIO2**、**GPIO8** 和 **GPIO9** 为启动配置引脚（Strapping Pins），这些引脚的高低电平配置可能会使芯片进入不同的 Boot 模式，在使用这些引脚时请特别注意，否则可能会导致你的 XIAO 无法上传或执行程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/20.png" style={{width:800, height:'auto'}}/></div>
 
@@ -169,7 +173,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/connect-led-2.png" style={{width:500, height:'auto'}}/></div>
 
-**注意：** 请确保串联一个电阻（约 150Ω）以限制流经 LED 的电流，防止过大电流烧毁 LED
+**注意：** 请确保串联连接一个电阻（约 150Ω），以限制流过 LED 的电流，防止过大的电流烧毁 LED
 
 ### 软件准备
 
@@ -179,9 +183,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 - **步骤 2.** 启动 Arduino 应用程序
 
-- **步骤 3.** 向 Arduino IDE 添加 ESP32 开发板包
+- **步骤 3.** 向 Arduino IDE 中添加 ESP32 开发板包
 
-进入 **File > Preferences**，并在 **"Additional Boards Manager URLs"** 中填入以下 URL：
+进入 **File > Preferences**，并在 **"Additional Boards Manager URLs"** 中填入下面的 URL：
 *[https://jihulab.com/esp-mirror/espressif/arduino-esp32.git](https://jihulab.com/esp-mirror/espressif/arduino-esp32.git)*
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_board.png" style={{width:550, height:'auto'}}/></div>
@@ -206,7 +210,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 - **步骤 1.** 将下面的代码复制到 Arduino IDE 中
 
-确保你的 `D10` 按上图所示连接到一个 LED。
+确保你的 `D10` 按照上图所示连接到一个 LED。
 
 ```cpp
 
@@ -245,29 +249,29 @@ XIAO ESP32C3 支持使用 3.7V 锂电池作为电源输入。你可以参考下�
 **电池使用说明：**
 
 1. 请使用符合规格的合格电池。
-2. 使用电池时，XIAO 仍可以通过数据线连接到你的电脑设备，请放心，XIAO 内置电路保护芯片，是安全的。
-3. 当使用电池供电时，XIAO ESP32C3 不会有任何 LED 亮起（除非你编写了特定程序），请不要通过 LED 的状态来判断 XIAO ESP32C3 是否在工作，而应根据你的程序合理判断。
-4. 很抱歉，目前我们无法通过软件帮助你检查剩余电量（因为没有多余的芯片引脚可用），你需要定期给电池充电或使用万用表检测电池电量。
+2. 使用电池时，XIAO 仍可以通过数据线连接到你的计算机设备，请放心，XIAO 内置电路保护芯片，是安全的。
+3. 当使用电池供电时，XIAO ESP32C3 不会有任何 LED 亮起（除非你编写了特定程序），请不要通过 LED 的状态来判断 XIAO ESP32C3 是否在工作，而应根据你的程序进行合理判断。
+4. 很抱歉，目前我们无法通过软件帮助你检查剩余电量（因为没有多余的芯片引脚可用），你需要定期为电池充电或使用万用表检测电池电量。
 
 ### 检测电池电压
 
 由于 ESP32C3 引脚数量的限制，为了保证 XIAO ESP32C3 拥有与其他 XIAO 系列相同数量的 GPIO，引脚工程师没有多余的引脚分配给电池进行电压测量。
 
-但如果你更希望使用单独的引脚进行电池电压测量，可以参考 [msfujino](https://forum.seeedstudio.com/u/msfujino) 的巧妙操作。我们也在此特别感谢 [msfujino](https://forum.seeedstudio.com/u/msfujino) 为 XIAO ESP32C3 分享的所有经验和付出。
+但如果你更希望使用单独的引脚来测量电池电压，可以参考 [msfujino](https://forum.seeedstudio.com/u/msfujino) 的巧妙操作。我们也在此特别感谢 [msfujino](https://forum.seeedstudio.com/u/msfujino) 为 XIAO ESP32C3 分享的所有经验和付出。
 
-其基本工作思路是：使用 200k 电阻将电池电压分压为 1/2 并连接到 A0 端口，从而可以监测电压。
+其基本操作思路是：使用 200k 将电池电压分压为 1/2 并连接到 A0 端口，从而可以监测电压。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/3.png" alt="pir" width="300" height="auto"/></div>
 
-数据手册中标称满量程 AD 转换为 2500mV，但芯片之间的差异较大，实际为 ±10%。我的芯片满量程为 2700mV。
+数据手册中标称满量程 AD 转换为 2500mV，但芯片之间的差异较大，实际约为 ±10%。我的芯片满量程为 2700mV。
 
 幸运的是，每颗芯片的校准修正值都写在熔丝区域，通过使用 `analogReadMilliVolts()` 函数，我无需做任何特殊处理就可以读取到修正后的电压值。
 
 AD 转换结果与万用表测得的电压非常一致，误差约为 5 mV，在实际使用中没有问题。
 
-另外，特别是在通信过程中，会出现尖峰状误差，需要进行 16 次平均才能将其消除。
+另外，尤其在通信过程中，会出现尖峰状误差，需要进行 16 次平均才能将其消除。
 
-下面是用于测试电池电压的程序。
+下面是测试电池电压的程序。
 
 ```cpp
 void setup() {
@@ -289,12 +293,12 @@ void loop() {
 :::tip
 以上内容来自 Seeed Studio 论坛用户 **msfujino**，原帖地址：
 [https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535).
-我们建议你在根据上述内容尝试测量电池电压之前，具备良好的动手能力和较好的焊接技术，并对电池短路等危险操作保持警惕。
+我们建议你在根据上述方法测量电池电压前，具备较好的动手能力和较高的焊接水平，并谨慎对待电池短路等危险操作。
 :::
 
 ## 深度睡眠模式与唤醒
 
-XIAO ESP32C3 支持深度睡眠模式和唤醒功能。对于这两个功能的使用，我们提供以下使用示例。
+XIAO ESP32C3 支持深度睡眠模式和唤醒功能。对于这两个功能的使用，我们提供了以下使用示例。
 
 ```cpp
 #define BUTTON_PIN_BITMASK 0x200000000 // 2^33 in hex
@@ -345,7 +349,7 @@ void loop(){
 }
 ```
 
-如果你足够快地在 XIAO 进入深度睡眠之前打开串口监视器，那么你可以看到如下所示的输出信息。这意味着 XIAO 现在已经“睡着”了。
+如果你足够快地在 XIAO 进入深度睡眠前打开串口监视器，那么你可以看到如下所示的输出信息。这意味着 XIAO 现在已经“睡着”了。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/15.png" style={{width:700, height:'auto'}}/></div>
 
@@ -363,21 +367,21 @@ XIAO ESP32-C3 支持 GPIO 唤醒和定时器唤醒，支持唤醒的引脚为 D0
 
 ### Q1：在向开发板上传代码时，Arduino IDE 卡住了
 
-你可以先尝试在开发板连接到电脑时，单击一次 **RESET BUTTON** 来重置开发板。如果仍然无效，请按住 **BOOT BUTTON**，在按住 **BOOT** 按钮的同时将开发板连接到电脑，然后松开按钮以进入 **bootloader 模式**。
+你可以先在开发板连接到电脑时，单击一次 **RESET BUTTON** 来重置开发板。如果这不起作用，请按住 **BOOT BUTTON**，在按住 **BOOT** 按钮的同时将开发板连接到电脑，然后松开按钮以进入 **bootloader mode**。
 
-### Q2：我的开发板在 Arduino IDE 中没有显示为串口设备
+### Q2：我的开发板没有在 Arduino IDE 中显示为串口设备
 
-请参考上面 **Q1** 中的相同解决方法。
+请参考上面 **Q1** 的相同答案。
 
-### Q3：我想使用出厂固件重新烧录 bootloader
+### Q3：我想用出厂固件重新烧录 bootloader
 
-你只需通过 **USB Type-C** 将开发板连接到电脑，并使用 **ESP RF Test Tool** 通过出厂固件重新烧录 bootloader。
+你只需通过 **USB Type-C** 将开发板连接到电脑，并使用 **ESP RF Test Tool** 重新烧录带有出厂固件的 bootloader。
 
-- **步骤 1.** 按住 **BOOT BUTTON** 并将 XIAO ESP32C3 连接到电脑以进入 **bootloader 模式**
+- **步骤 1.** 按住 **BOOT BUTTON**，并将 XIAO ESP32C3 连接到电脑以进入 **bootloader mode**
 
 - **步骤 2.** 连接完成后，松开 BOOT BUTTON
 
-- **步骤 3.** 访问[此页面](https://www.espressif.com/en/support/download/other-tools)并下载 **ESP RF Test Tool and Test Guide**
+- **步骤 3.** 访问 [此页面](https://www.espressif.com/en/support/download/other-tools) 并下载 **ESP RF Test Tool and Test Guide**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-tool-download.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -385,7 +389,7 @@ XIAO ESP32-C3 支持 GPIO 唤醒和定时器唤醒，支持唤醒的引脚为 D0
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-tool-open.png" style={{width:500, height:'auto'}}/></div>
 
-- **步骤 5.** 选择 **ESP32C3** 作为 ChipType，选择你的 COM 端口，将 BaudRate 设置为 **115200**，然后点击 **open**
+- **步骤 5.** 选择 **ESP32C3** 作为 ChipType，选择你的 COM 端口，将 BaudRate 设为 **115200**，然后点击 **open**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-2.png" style={{width:500, height:'auto'}}/></div>
 
@@ -403,7 +407,7 @@ XIAO ESP32-C3 支持 GPIO 唤醒和定时器唤醒，支持唤醒的引脚为 D0
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-8.png" style={{width:500, height:'auto'}}/></div>
 
-当烧录成功时，你将看到如下输出
+烧录成功后你将看到如下输出
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-9.png" style={{width:500, height:'auto'}}/></div>
 
@@ -416,7 +420,7 @@ XIAO ESP32-C3 支持 GPIO 唤醒和定时器唤醒，支持唤醒的引脚为 D0
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 
 **硬件设计**
-- **📄[数据手册]** [Espressif ESP32-C3 数据手册](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf )
+- **📄[Datasheet]** [Espressif ESP32-C3 数据手册](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf )
 - **📄[原理图]** [XIAO ESP32-C3 原理图](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf )
 - **🗃️[PCB 设计文件]** 
   - [XIAO ESP32-C3 KiCad 工程](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip )

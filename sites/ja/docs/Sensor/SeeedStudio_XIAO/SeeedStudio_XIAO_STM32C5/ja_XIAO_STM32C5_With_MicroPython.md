@@ -13,7 +13,7 @@ last_update:
   date: 09/02/2026
   author: Zeller
 createdAt: '2026-09-01'
-updatedAt: '2026-09-02'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/ja/xiao_stm32c5_with_micropython/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,7 +46,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概要
 
-[MicroPython](https://github.com/micropython/micropython/wiki) は、性能が重要なコード向けにネイティブコード出力をサポートする Python インタプリタです。マイコンやリソース制約の厳しいシステム向けに最適化された、Python 3.6+ のコア機能のサブセットを提供します。CPython とは異なっており、その違いについては [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) のページで詳しく読むことができます。
+[MicroPython](https://github.com/micropython/micropython/wiki) は、性能が重要なコード向けにネイティブコード出力をサポートする Python インタプリタです。マイコンやリソース制約の厳しいシステム向けに最適化された、Python 3.6+ のコア機能のサブセットを提供します。これは CPython とは異なり、その違いについては [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) のページで詳しく読むことができます。
 
 ## ハードウェアの準備
 
@@ -74,11 +74,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 XIAO STM32C5 をブートローダーモードにして、`.uf2` ファームウェアファイルをボードの USB マスストレージドライブにコピーすることで、MicroPython ファームウェアを更新します。
 
-1. XIAO STM32C5 MicroPython ファームウェアのアーカイブをダウンロードして展開します。
+1. XIAO STM32C5 MicroPython ファームウェアアーカイブをダウンロードして解凍します。
 
 - **📄[Firmware]** [XIAO STM32C5 MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/xiao-stm32c5-micropython-firmware.zip)
 
-2. XIAO STM32C5 を USB で PC に接続します。**Reset** ボタンを素早く 2 回押してブートローダーモードに入ります。**XIAOC5BOOT** という名前の USB ドライブが表示されるはずです。展開したアーカイブから **micropython-xiao-stm32c5.uf2** をそのドライブにコピーします。ファームウェアのインストールが完了すると、ボードは自動的に再起動します。
+2. XIAO STM32C5 を USB で PC に接続します。**Reset** ボタンを素早く 2 回押してブートローダーモードに入ります。**XIAOC5BOOT** という名前の USB ドライブが表示されるはずです。解凍したアーカイブから **micropython-xiao-stm32c5.uf2** をそのドライブにコピーします。ファームウェアのインストール後、ボードは自動的に再起動します。
 
 :::tip
 **XIAOC5BOOT** が表示されない場合は、USB ケーブルを抜き差ししてから、再度 **Reset** を 2 回押してください。USB ケーブルがデータ転送に対応していることを確認してください。
@@ -88,11 +88,11 @@ XIAO STM32C5 をブートローダーモードにして、`.uf2` ファームウ
 
 使用している環境に合ったバージョンを選んでインストールします。ここでは Windows システムにインストールするため、Windows 版を選択しています。
 
-使用したい Python バージョンに応じた指示に従ってください。
+使用したい Python バージョンに応じた手順に従ってください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_ide_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-その後は、デフォルトの手順に従って設定を進めるだけです。
+その後は、デフォルトの設定手順に従って進めるだけです。
 
 
 ### インタプリタの設定
@@ -105,9 +105,13 @@ XIAO STM32C5 をブートローダーモードにして、`.uf2` ファームウ
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/mpy_2.png" style={{width:800, height:'auto'}}/></div>
 ## ピンマップ
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">インタラクティブピン配置を確認</a>
+</div>
+
 :::tip
 
-- 完全なピン配置の詳細については、[XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/ja/xiao_stm32c5_getting_started/#ハードウェア概要) を参照してください。
+- ピン配置の詳細については、[XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/ja/xiao_stm32c5_getting_started/#ハードウェア概要) を参照してください。
 
 :::
 
@@ -117,8 +121,8 @@ XIAO STM32C5 をブートローダーモードにして、`.uf2` ファームウ
 | D1 / A1 | PA1 | ADC1_IN1 / GPIO | `XiaoADC(1)` / `XiaoPin(1)` |
 | D2 / A2 | PA2 | ADC1_IN2 / GPIO | `XiaoADC(2)` / `XiaoPin(2)` |
 | D3 / A3 | PA3 | ADC1_IN3 / GPIO | `XiaoADC(3)` / `XiaoPin(3)` |
-| D4 | PB7 | I2C1 SDA / GPIO | ヘッダー I2C データ |
-| D5 | PB6 | I2C1 SCL / GPIO | ヘッダー I2C クロック |
+| D4 | PB7 | I2C1 SDA / GPIO | ヘッダ I2C データ |
+| D5 | PB6 | I2C1 SCL / GPIO | ヘッダ I2C クロック |
 | D6 | PA9 | USART1 TX / GPIO | UART 送信 |
 | D7 | PA10 | USART1 RX / GPIO | UART 受信 |
 | D8 | PE2 | SPI3 SCK / GPIO | ハードウェア SPI クロック |
@@ -128,7 +132,7 @@ XIAO STM32C5 をブートローダーモードにして、`.uf2` ファームウ
 | D12 | PB9 | GPIO / FDCAN1 TX 対応 | 現在のファームウェアでは FDCAN1 は有効になっていません |
 | D13 | PB5 | FDCAN2 RX / GPIO | `XiaoCAN("can0", ...)` |
 | D14 | PB13 | FDCAN2 TX / GPIO | `XiaoCAN("can0", ...)` |
-| D15 / CAN_STB | PB14 | CAN トランシーバ スタンバイ | Low：通常動作、High：スタンバイ |
+| D15 / CAN_STB | PB14 | CAN トランシーバスタンバイ | Low：通常動作、High：スタンバイ |
 | CAN_H | — | CAN FD 差動バス High | オンボード CAN トランシーバ出力、GPIO ではありません |
 | CAN_L | — | CAN FD 差動バス Low | オンボード CAN トランシーバ出力、GPIO ではありません |
 | BAT_EN | PA15 | バッテリ測定イネーブル | `XiaoPin("bat_en", Pin.OUT)` |
@@ -142,7 +146,7 @@ XIAO STM32C5 をブートローダーモードにして、`.uf2` ファームウ
 
 ## LED 点滅
 
-デジタルピンは主に、高レベルと低レベルの論理を出力することで、外部センサやアクチュエータのオン・オフ制御を実現します。Grove Base for XIAO 拡張ボードと標準 Grove 周辺モジュールを組み合わせることで、このセクションでは XIAO STM32C5 上のデジタルピンの低レベルドライバロジックと実用的な呼び出し方法について詳しく説明します。
+デジタルピンは主に、高レベルと低レベルの論理を出力することで、外部センサやアクチュエータのオン・オフ制御を実現します。Grove Base for XIAO 拡張ボードと標準 Grove 周辺モジュールを組み合わせることで、このセクションでは XIAO STM32C5 上のデジタルピンの基礎的なドライバロジックと実用的な呼び出し方法について詳しく説明します。
 
 ### ハードウェアの準備
 
@@ -262,7 +266,7 @@ PWM は、デジタル出力 GPIO に基づいて実装されたタイミング�
 
 ### ソフトウェアプログラム
 
-この例では、XIAO STM32C5 の D0 をサーボの制御信号ピンとして使用します。タイミングはハードウェア PWM ペリフェラルではなくソフトウェアで生成されます。
+この例では、XIAO STM32C5 上の D0 をサーボの制御信号ピンとして使用します。タイミングはハードウェア PWM ペリフェラルではなくソフトウェアで生成されます。
 
 1. Thonny で **File > New** を選択してファイルを作成し、次のコードを入力します：
 
@@ -332,15 +336,15 @@ finally:
 
 ### 結果
 
-スクリプトが開始すると、サーボはおおよそ 0° から 180° まで往復し、再び 0° に戻る動作を繰り返します。ループは 20 ms の制御フレームごとに 1° ずつ指令値を進めます。これは、実行オーバーヘッドおよびサーボ自身の機械的制限を除いて、公称 50°/s（約 0.87 rad/s）の指令スイープ速度に相当します。
+スクリプトが開始すると、サーボはおおよそ 0° から 180° まで往復し、再び 0° に戻る動作を繰り返します。ループは 20 ms の制御フレームごとに 1° ずつ指令を進めます。これは、実行オーバーヘッドおよびサーボ自身の機械的制限を除いて、公称 50°/s（約 0.87 rad/s）の指令スイープ速度に相当します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_2.gif" style={{width:600, height:'auto'}}/></div>
 
 ## CAN 経由で DM-J4310-2EC モーターを駆動する
 
-XIAO STM32C5 は 2 つの CAN FD インターフェースを提供します。1 つは外付け CAN トランシーバと共に使用するためのロジックレベルの送受信信号を出力します。もう 1 つはオンボードの TCAN3403-Q1 CAN FD トランシーバに接続されており、CAN_H と CAN_L を介して CAN バスに直接接続できます。CAN FD は、より大きなペイロードと高いデータフェーズビットレートをサポートしつつ Classical CAN との互換性を維持しており、自動車用電子機器、産業用制御、ロボット工学、分散センサーネットワークに適しています。
+XIAO STM32C5 は 2 つの CAN FD インターフェースを提供します。1 つは外部 CAN トランシーバーで使用するためのロジックレベルの送受信信号を提供します。もう 1 つはオンボードの TCAN3403-Q1 CAN FD トランシーバーに接続されており、CAN_H と CAN_L を介して CAN バスに直接接続できます。CAN FD は、より大きなペイロードと高いデータフェーズビットレートをサポートしつつ Classical CAN との互換性を維持しているため、自動車用電子機器、産業用制御、ロボット工学、分散センサーネットワークに適しています。
 
-オンボードの CAN FD 回路には、切り離し可能な 120 Ω の終端抵抗も含まれています。ボードがバスの端にある場合はこの抵抗を有効にします。ボードがバスの途中にある場合、または XIAO 側のバス端にすでに別の 120 Ω 抵抗が取り付けられている場合は、これを切り離します。トランシーバは、CAN 通信が使用されていないときの消費電力を低減するためのスタンバイ制御もサポートしています。
+オンボードの CAN FD 回路には、切り離し可能な 120 Ω の終端抵抗も含まれています。ボードがバスの端にある場合はこの抵抗を有効にします。ボードがバスの途中にある場合、または XIAO 側のバスにすでに別の 120 Ω 抵抗が取り付けられている場合は、これを切り離します。トランシーバーは、CAN 通信が使用されていないときの消費電力を低減するためのスタンバイ制御もサポートしています。
 
 - 参考用法: [XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/ja/xiao_stm32c5_canfd_usage/)
 
@@ -449,12 +453,12 @@ XIAO STM32C5 は 2 つの CAN FD インターフェースを提供します。1 
 ### ソフトウェアプログラム
 
 :::caution
-モーターには 24 V 電源が必要です。適切な電流定格を持つ、規格に準拠した電流制限付き電源を使用してください。配線を変更する前には必ず電源を切り、初期テスト中はモーターに負荷をかけないようにし、XIAO の GND をモーター電源のマイナス端子に接続してください。不適切な電源や配線は、機器の損傷や安全上の危険を引き起こす可能性があります。
+モーターには 24 V 電源が必要です。適切な電流定格を持つ、規格に準拠した電流制限付き電源を使用してください。配線を変更する前には必ず電源を切り、初期テスト中はモーターに負荷をかけないようにし、XIAO の GND をモーター電源のマイナス端子に接続してください。不適切な電源または配線は、機器の損傷や安全上の危険を引き起こす可能性があります。
 :::
 
 1. Damiao ホストコンピュータ設定ソフトウェアを使用して、モーターの **CAN ID** を `0x001`、**Master ID** を `0x011` に設定します。詳細については、[Getting Started with the Damiao 43 Series Motors](https://wiki.seeedstudio.com/ja/damiao_series/) を参照してください。
 
-- モーターを XIAO STM32C5 の背面の CAN_H および CAN_L パッドに接続します。オンボードトランシーバは D13/PB5（RX）、D14/PB13（TX）、D15/PB14（スタンバイ）を使用します。通常動作のために D15 を Low に駆動します。
+- モーターを XIAO STM32C5 の背面の CAN_H および CAN_L パッドに接続します。オンボードトランシーバーは D13/PB5（RX）、D14/PB13（TX）、D15/PB14（スタンバイ）を使用します。通常動作のために D15 を Low に駆動します。
 
 2. Thonny で **File > New** を選択してファイルを作成し、次のプログラムを `driver_dm4310.py` として保存します：
 
@@ -729,16 +733,16 @@ if __name__ == "__main__":
 
 ### 結果
 
-モーターが有効になると、DM-J4310 は `0 → 3 → 6 → 10 → 6 → 3 rad/s` の目標速度を 5 秒ごとに切り替えながら循環します。Shell には、選択された目標速度とデコードされたモーターフィードバックデータが表示されます。このサンプルでは、オンボード LED は制御しません。
+モーターが有効になると、DM-J4310 は `0 → 3 → 6 → 10 → 6 → 3 rad/s` の目標速度を 5 秒ごとに切り替えながら循環します。Shell には、選択された目標速度とデコードされたモーターのフィードバックデータが表示されます。このサンプルでは、オンボード LED は制御しません。
 
 :::tip
 
-XIAO STM32C5 の CAN_H をモーターの CAN_H に、CAN_L を CAN_L に接続します。また、グラウンド同士も接続してください。差動ラインを逆にしたり、共通グラウンドを接続しなかったりすると、通信ができない場合があります。
+XIAO STM32C5 の CAN_H をモーターの CAN_H に、CAN_L を CAN_L に接続します。また、グランド同士も接続してください。差動ラインを逆にしたり、共通グランドを省略したりすると、通信できない場合があります。
 
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/canfd_12.gif" style={{width:400, height:'auto'}}/></div>
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 

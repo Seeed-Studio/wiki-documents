@@ -42,9 +42,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## はじめに
 
-Seeed Studio XIAO ESP32C6 は、高度に統合された [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) を搭載しており、**2 つの 32 ビット RISC-V プロセッサ** をベースに構成されています。高性能 (HP) プロセッサは **最大 160 MHz で動作** し、低消費電力 (LP) 32 ビット RISC-V プロセッサは最大 20 MHz で動作します。チップ上には **512KB の SRAM と 4 MB のフラッシュ** が搭載されており、より広いプログラム領域を提供し、IoT 制御シナリオにさらなる可能性をもたらします。
+Seeed Studio XIAO ESP32C6 は、高度に統合された [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) を搭載しており、**2 つの 32-bit RISC-V プロセッサ**を内蔵しています。高性能 (HP) プロセッサは**最大 160 MHz で動作**し、低消費電力 (LP) 32-bit RISC-V プロセッサは最大 20 MHz で動作します。チップ上には**512KB の SRAM と 4 MB の Flash** が搭載されており、より広いプログラム領域を提供し、IoT 制御シナリオにさらなる可能性をもたらします。
 
-XIAO ESP32C6 は、**強化されたワイヤレス接続により Matter をネイティブサポート** しています。ワイヤレススタックは **2.4 GHz WiFi 6、Bluetooth® 5.3、Zigbee、Thread (802.15.4)** をサポートします。Thread に対応した初の XIAO メンバーとして、Matter 準拠のプロジェクト構築に最適であり、スマートホームにおける相互運用性を実現します。
+XIAO ESP32C6 は、**強化されたワイヤレス接続により Matter をネイティブサポート**しています。ワイヤレススタックは、**2.4 GHz WiFi 6、Bluetooth® 5.3、Zigbee、Thread (802.15.4)** をサポートします。Thread に対応した初の XIAO メンバーとして、Matter 準拠のプロジェクト構築に最適であり、スマートホームにおける相互運用性を実現します。
 
 export const Highlight = ({children, color}) => (
   <span
@@ -61,19 +61,19 @@ export const Highlight = ({children, color}) => (
 ### 仕様
 <table>
   <tr>
-    <th>Product</th>
+    <th>製品</th>
     <td>XIAO ESP32-C6</td>
     <td><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html ">XIAO ESP32-C3</a></td>
     <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html ">XIAO ESP32-S3</a></td>
   </tr>
   <tr>
-    <th>Processor</th>
-    <td>Espressif ESP32-C6 SoC<br/>2 つの 32 ビット RISC-V プロセッサを搭載し、高性能コアは最大 160 MHz、低消費電力コアは最大 20 MHz で動作</td>
-    <td>Espressif ESP32-C3 SoC<br/>最大 160 MHz で動作する 4 段パイプラインの RISC-V シングルコア 32 ビットチッププロセッサ</td>
-    <td>Espressif ESP32-S3R8 SoC<br/>最大 240 MHz で動作する Xtensa LX7 デュアルコア 32 ビットプロセッサ</td>
+    <th>プロセッサ</th>
+    <td>Espressif ESP32-C6 SoC<br/>2 つの 32-bit RISC-V プロセッサを搭載し、高性能コアは最大 160 MHz、低消費電力コアは最大 20 MHz で動作</td>
+    <td>Espressif ESP32-C3 SoC<br/>4 段パイプラインを備え、最大 160 MHz で動作する RISC-V シングルコア 32-bit チッププロセッサ</td>
+    <td>Espressif ESP32-S3R8 SoC<br/>Xtensa LX7 デュアルコア 32-bit プロセッサ、最大 240 MHz で動作</td>
   </tr>
   <tr>
-    <th rowspan="3">Wireless</th>
+    <th rowspan="3">ワイヤレス</th>
     <td>完全な 2.4GHz Wi-Fi 6 サブシステム</td>
     <td>完全な 2.4GHz Wi-Fi サブシステム</td>
     <td>完全な 2.4GHz Wi-Fi サブシステム</td>
@@ -87,13 +87,13 @@ export const Highlight = ({children, color}) => (
     <td>/</td>
   </tr>
   <tr>
-    <th>On-chip Memory</th>
+    <th>オンチップメモリ</th>
     <td>512KB SRAM &amp; 4MB Flash</td>
     <td>400KB SRAM &amp; 4MB Flash</td>
     <td>8MB PSRAM &amp; 8MB Flash</td>
   </tr>
   <tr>
-    <th rowspan="2">Interface</th>
+    <th rowspan="2">インターフェース</th>
     <td>1x UART<br/>1x LP_UART<br/>1x IIC<br/>1x LP_IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>7x ADC<br/>1x SDIO</td>
     <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>4x ADC</td>
     <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>9x ADC<br/>1x User LED<br/>1x Charge LED</td>
@@ -102,21 +102,21 @@ export const Highlight = ({children, color}) => (
     <td colspan="3">1x Reset button<br/>1x Boot button</td>
   </tr>
   <tr>
-    <th>Dimensions</th>
+    <th>寸法</th>
     <td colspan="3">21 x 17.8mm</td>
   </tr>
   <tr>
-    <th>Power</th>
+    <th>電源</th>
     <td colspan="3">入力電圧 (Type-C): 5V<br/>入力電圧 (BAT): 3.7V</td>
   </tr>
   <tr>
-    <th>Power Consumption Model (Typ.)<br/>(Supply Power: 3.8V)</th>
+    <th>消費電力モード (代表値)<br/>(供給電圧: 3.8V)</th>
     <td>Modem-sleep モード: 30 mA<br/>Light-sleep モード: 3.1 mA<br/>Deep Sleep モード: 15 μA</td>
     <td>Modem-sleep モード: 24 mA<br/>Light-sleep モード: 3 mA<br/>Deep Sleep モード: 44 μA</td>
     <td>Modem-sleep モード: 27 mA<br/>Light-sleep モード: 2 mA<br/>Deep Sleep モード: 14 μA</td>
   </tr>
   <tr>
-    <th>Working Temperature</th>
+    <th>動作温度</th>
     <td>-40°C ~ 85°C</td>
     <td>-40°C ~ 85°C</td>
     <td>-40°C ~ 65°C</td>
@@ -130,12 +130,16 @@ export const Highlight = ({children, color}) => (
 - **強化された接続性**: ***2.4*** GHz Wi-Fi 6 (802.11ax)、Bluetooth 5(LE)、IEEE 802.15.4 無線接続を統合し、**Thread** および **Zigbee** プロトコルの適用を可能にします。
 - **Matter ネイティブ対応**: Matter 準拠のスマートホームプロジェクトの構築をサポートし、異なるスマートデバイス間の相互運用性を確保します。
 - **チップ上でのセキュリティ暗号化**: ESP32-C6 を利用して、セキュアブート、暗号化、Trusted Execution Environment (TEE) 機能を提供し、スマートホームプロジェクトのセキュリティを強化します。
-- **優れた RF 性能**: オンボードアンテナにより *80m* の BLE/Wi-Fi 通信距離を実現し、外部 UFL アンテナ接続用インターフェースも備えているため、信頼性の高い接続が可能です。
-- **電力消費の最適化**: 4 つの動作モードを提供し、その中には消費電流が *15* μA まで低いディープスリープモードが含まれ、リチウム電池の充電管理もサポートします。
-- **デュアル RISC-V プロセッサ**: 2 つの 32 ビット RISC-V プロセッサを搭載し、高性能プロセッサは最大 160 MHz、低消費電力プロセッサは最大 *20 MHz* で動作します。
+- **優れた RF 性能**: オンボードアンテナにより *80m* の BLE/Wi-Fi 通信距離を実現し、外部 UFL アンテナ接続用インターフェースも備えており、信頼性の高い接続を保証します。
+- **電力消費の最適化**: 4 つの動作モードを提供し、その中には消費電流が *15* μA まで低減されるディープスリープモードが含まれ、リチウム電池の充電管理もサポートします。
+- **デュアル RISC-V プロセッサ**: 2 つの 32-bit RISC-V プロセッサを搭載し、高性能プロセッサは最大 160 MHz、低消費電力プロセッサは最大 *20 MHz* で動作します。
 - **クラシックな XIAO デザイン**: 21 x 17.8mm の親指サイズフォームファクタと片面実装デザインを維持しており、ウェアラブルデバイスのようなスペース制約のあるプロジェクトに最適です。
 
 ## ハードウェア概要
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c6" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 ### 表面
 
@@ -147,12 +151,12 @@ export const Highlight = ({children, color}) => (
 
 :::tip RF スイッチ
 
-**RF スイッチ** 機能により、`GPIO14` を設定することで内蔵セラミックアンテナと外部アンテナを切り替えることができます。この機能を有効にするには、まず *`GPIO3` を Low レベルに設定する必要があります*。これにより RF スイッチ制御が有効になります。  
+**RF スイッチ**機能を使用すると、`GPIO14` を設定することで内蔵セラミックアンテナと外部アンテナを切り替えることができます。この機能を有効にするには、まず *`GPIO3` を Low レベルに設定する必要があります*。これにより RF スイッチ制御が有効になります。  
 
 - **GPIO14 Low レベル（デフォルト設定）**: デバイスは内蔵セラミックアンテナを使用します。
 - **GPIO14 High レベル**: デバイスは外部アンテナに切り替わります。  
 
-デフォルトでは、`GPIO14` は Low レベルに設定されており、内蔵アンテナが有効になっています。外部アンテナを使用するには、`GPIO14` を High レベルに設定します。外部アンテナを有効化するために `GPIO3` と `GPIO14` をどのように設定するかについては、以下のサンプルコードを参照してください。
+デフォルトでは、`GPIO14` は Low レベルに設定されており、内蔵アンテナが有効になっています。外部アンテナを使用するには、`GPIO14` を High レベルに設定します。外部アンテナを有効にするために `GPIO3` と `GPIO14` をどのように設定するかについては、以下のサンプルコードを参照してください。
 
 ```cpp
 void setup() {
@@ -171,38 +175,38 @@ void setup() {
 
 ## ピンマップ
 
-| XIAO Pin                 | Function   | Chip Pin  | Alternate Functions | Description                          |
+| XIAO ピン               | 機能      | チップピン | 代替機能              | 説明                                   |
 | :---------------------: | :-------: | :-------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS      |           |                    | 電源入力/出力                        |
+| 5V                      | VBUS      |           |                    | 電源入力/出力                          |
 | GND                     |           |           |                    |                                      |
-| 3V3                     | 3V3_OUT   |           |                    | 電源出力                             |
+| 3V3                     | 3V3_OUT   |           |                    | 電源出力                               |
 | D0                      | Analog    | GPIO0     | LP_GPIO0           | GPIO, ADC                            |
 | D1                      | Analog    | GPIO1     | LP_GPIO1           | GPIO, ADC                            |
 | D2                      | Analog    | GPIO2     | LP_GPIO2           | GPIO, ADC                            |
 | D3                      | Digital   | GPIO21    | SDIO_DATA1         | GPIO                                 |
-| D4                      | SDA       | GPIO22    | SDIO_DATA2         | GPIO, I2C データ                     |
-| D5                      | SCL       | GPIO23    | SDIO_DATA3         | GPIO, I2C クロック                   |
-| D6                      | TX        | GPIO16    |                    | GPIO, UART 送信                      |
-| D7                      | RX        | GPIO17    |                    | GPIO, UART 受信                      |
-| D8                      | SCK       | GPIO19    | SPI_CLK           | GPIO, SPI クロック                   |
-| D9                      | MISO      | GPIO20    | SPI_MISO          | GPIO, SPI データ                     |
-| D10                     | MOSI      | GPIO18    | SPI_MOSI           | GPIO, SPI データ                     |
+| D4                      | SDA       | GPIO22    | SDIO_DATA2         | GPIO, I2C データ                      |
+| D5                      | SCL       | GPIO23    | SDIO_DATA3         | GPIO, I2C クロック                    |
+| D6                      | TX        | GPIO16    |                    | GPIO, UART 送信                       |
+| D7                      | RX        | GPIO17    |                    | GPIO, UART 受信                       |
+| D8                      | SCK       | GPIO19    | SPI_CLK           | GPIO, SPI クロック                    |
+| D9                      | MISO      | GPIO20    | SPI_MISO          | GPIO, SPI データ                      |
+| D10                     | MOSI      | GPIO18    | SPI_MOSI           | GPIO, SPI データ                      |
 | MTDO                    |           | GPIO7     |                    | JTAG                                 |
 | MTDI                    |           | GPIO5     |                    | JTAG, ADC                            |
 | MTCK                    |           | GPIO6     |                    | JTAG, ADC                            |
 | MTMS                    |           | GPIO4     |                    | JTAG, ADC                            |
-| EN                      |           | CHIP_PU   |                    | リセット                             |
-| Boot                    |           | GPIO9     |                    | ブートモードに入る                   |
+| EN                      |           | CHIP_PU   |                    | リセット                              |
+| Boot                    |           | GPIO9     |                    | ブートモードに入る                    |
 | RF Switch Port Select   |           | GPIO14    |                    | オンボードアンテナと UFL アンテナの切り替え |
-| RF Switch Power         |           | GPIO3     |                    | 電源                                 |
-| Light                   |           | GPIO15    |                    | ユーザー用ライト                     |
+| RF Switch Power         |           | GPIO3     |                    | 電源                                  |
+| Light                   |           | GPIO15    |                    | ユーザー用ライト                       |
 ## はじめに
 
-XIAO ESP32C6 をすばやく使い始められるように、以下のハードウェアおよびソフトウェアの準備を読んで、XIAO の準備を行ってください。
+XIAO ESP32C6 をより早く使い始められるように、以下のハードウェアおよびソフトウェアの準備を読んで、XIAO の準備を行ってください。
 
 ### ハードウェアの準備
 
-次のものを準備する必要があります：
+次のものを用意する必要があります：
 
 - 1 x [Seeed Studio XIAO ESP32C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html)
 - 1 x コンピュータ
@@ -212,11 +216,11 @@ XIAO ESP32C6 をすばやく使い始められるように、以下のハード�
 一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルを持っていない場合や、お使いの USB ケーブルがデータ転送に対応しているか分からない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) を確認してください。
 :::
 
-#### ヘッダのはんだ付け
+#### ヘッダピンのはんだ付け
 
-XIAO ESP32C6 はデフォルトではピンヘッダが実装されていないため、自分でピンヘッダを用意し、XIAO の対応するピンにはんだ付けして、拡張ボードやセンサに接続できるようにする必要があります。
+XIAO ESP32C6 はデフォルトではピンヘッダが実装されていない状態で出荷されます。拡張ボードやセンサに接続できるように、ピンヘッダを別途用意し、XIAO の対応するピンにはんだ付けする必要があります。
 
-XIAO ESP32C6 は非常に小型なため、ヘッダをはんだ付けする際は、異なるピン同士をブリッジさせないこと、シールドや他の部品にはんだが付着しないことに注意してください。そうしないと、XIAO が短絡したり正常に動作しなくなる可能性があり、その結果生じた損害はユーザーの責任となります。
+XIAO ESP32C6 は非常に小型であるため、ヘッダピンをはんだ付けする際は、異なるピン同士をくっつけないこと、シールドや他の部品に半田が付着しないことに注意してください。そうしないと、XIAO が短絡したり正常に動作しなくなる可能性があり、その結果生じた問題についてはユーザーの責任となります。
 
 #### BootLoader モード
 
@@ -225,10 +229,10 @@ XIAO ESP32C6 は非常に小型なため、ヘッダをはんだ付けする際�
 - コンピュータに接続しても、XIAO のポート番号が見つからない。
 - コンピュータに接続してポート番号は表示されるが、プログラムの書き込みに失敗する。
 
-上記 2 つの状況に遭遇した場合、XIAO を BootLoader モードに入れることで、認識されないデバイスや書き込み失敗の問題のほとんどを解決できます。具体的な方法は次のとおりです：
+上記 2 つの状況に遭遇した場合、XIAO を BootLoader モードにすることで、デバイスが認識されない問題や書き込み失敗の多くを解決できます。具体的な方法は次のとおりです：
 
 - **Step 1**. XIAO ESP32C6 上の BOOT ボタンを押し続けたままにします。
-- **Step 2**. BOOT ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後で BOOT ボタンを離します。
+- **Step 2**. BOOT ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続したら BOOT ボタンを離します。
 - **Step 3**. **Blink** プログラムを書き込んで、XIAO ESP32C6 の動作を確認します。
 
 #### リセット
@@ -242,16 +246,16 @@ XIAO ESP32C6 は非常に小型なため、ヘッダをはんだ付けする際�
 XIAO ESP32C6 に推奨される開発ツールは Arduino IDE です。そのため、ソフトウェアの準備として Arduino のインストールを完了させる必要があります。
 
 :::tip
-初めて Arduino を使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
+Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 
-また、XIAO ESP32C6 用のオンボードパッケージを利用するには、少なくともバージョン **2.0.8** が必要です。
+また、XIAO ESP32C6 用のオンボードパッケージを利用するには、少なくとも **2.0.8** 以降のバージョンが必要です。
 
 :::
 
 - **Step 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
   </div>
 
   <br></br>
@@ -267,7 +271,7 @@ XIAO ESP32C6 ボードをインストールするには、次の手順に従い�
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
-1. 上記のボードマネージャ URL を Arduino IDE の設定に追加します。この URL は [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) から取得したものです。
+1. 上記のボードマネージャ URL を Arduino IDE の環境設定に追加します。この URL は [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) から取得したものです。
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
 
@@ -297,7 +301,7 @@ esp32 ボードのバージョンが `3.0.0` より大きい場合にのみ利�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/upload_program.png" style={{width:1000, height:'auto'}}/></div>
 
-プログラムの書き込みが正常に完了すると、次のような出力メッセージが表示され、XIAO ESP32C6 の右側にあるオレンジ色の LED が点滅しているのを確認できます。
+プログラムが正常に書き込まれると、次のような出力メッセージが表示され、XIAO ESP32C6 の右側にあるオレンジ色の LED が点滅しているのを確認できます。
 
 <table>
  <tr>
@@ -310,7 +314,7 @@ esp32 ボードのバージョンが `3.0.0` より大きい場合にのみ利�
 
 XIAO ESP32C6 シリーズには電源管理チップが内蔵されており、バッテリーによる単独給電や、USB ポートを介したバッテリーの充電が可能です。
 
-XIAO にバッテリーを接続する場合は、認証済みの充電式 3.7V リチウムバッテリーの使用を推奨します。バッテリーをはんだ付けする際は、必ず正極と負極を正しく区別してください。負極パッドはシルク印刷「D8」の近くの左側に、正極パッドはシルク印刷「D5」の近くの右側にあります。
+XIAO にバッテリーを接続する場合は、認証済みの充電式 3.7V リチウムバッテリーの使用を推奨します。バッテリーをはんだ付けする際は、必ず正極と負極を慎重に見分けてください。負極パッドはシルク印刷「D8」の近くの左側に、正極パッドはシルク印刷「D5」の近くの右側にあります。
 
 :::caution
 バッテリー電源を使用している場合、5V ピンには電圧は出力されません。
@@ -333,11 +337,11 @@ XIAO ESP32C6 の赤色ライトの動作は次のとおりです：
 
 ## バッテリー電圧の読み取り
 
-XIAO ESP32C6 上のバッテリー電圧を監視するには、[XIAO ESP32C3](/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage) の場合と同様に、200k の抵抗を 1:2 の構成で実装する必要があります。この構成により電圧が半分に分圧され、A0 アナログポートを介して安全に監視できるようになります。
+XIAO ESP32C6 上のバッテリー電圧を監視するには、[XIAO ESP32C3](/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage) と同様に、200k の抵抗を 1:2 の構成ではんだ付けする必要があります。この構成により電圧が半分に分圧され、A0 アナログポートを介して安全に監視できるようになります。
 
 ### サンプルコード
 
-以下のコードでは、A0 ポートの ADC を初期化し、16 回の読み取り値を平均してバッテリー電圧を算出し、電圧分割器の 1:2 減衰比を補正します。
+以下のコードでは、A0 ポートの ADC を初期化し、16 回の読み取り値を平均してバッテリー電圧を算出し、電圧分圧器の 1:2 減衰比を考慮して補正します。
 
 ```cpp
 #include <Arduino.h>
@@ -358,11 +362,11 @@ void loop() {
 }
 ```
 
-このコードは ADC から 16 回測定を行い、その平均値を取り、電圧分割器の 1:2 比を補正して、バッテリー電圧を小数点以下 3 桁の精度でボルト単位で出力します。
+このコードは ADC から 16 回測定を行い、その平均値を取り、電圧分圧器の 1:2 比を補正して、バッテリー電圧を小数点以下 3 桁の精度でボルト単位で出力します。
 
 ## ディープスリープモードとウェイクアップ
 
-XIAO ESP32C6 には、完全なディープスリープモードとウェイクアップ機能があります。ここでは、ESP が提供する中でもよく使われる 2 つの例を紹介します。
+XIAO ESP32C6 には、完全なディープスリープモードとウェイクアップ機能があります。ここでは、ESP が提供する中でも一般的な 2 つの例を紹介します。
 
 ### デモ1: 外部ウェイクアップによるディープスリープ
 
@@ -447,7 +451,7 @@ void loop(){
 
 ESP32 は、IoT アプリケーションでは電力が重要な要素であるため、効果的な省電力のためにディープスリープモードを提供します。このモードでは、CPU、RAM の大部分、および APB_CLK からクロック供給されるすべてのデジタル周辺機能の電源がオフになります。チップのうち電源をオンのままにできる部分は、RTC コントローラ、RTC 周辺機能、および RTC メモリのみです。
 
-このコードは、タイマーでウェイクアップする最も基本的なディープスリープと、再起動後も使用できるようにデータを RTC メモリに保存する方法を示します。
+このコードは、タイマーでウェイクアップする最も基本的なディープスリープと、再起動をまたいで使用するために RTC メモリにデータを保存する方法を示します。
 
 ```cpp
 /*
@@ -535,7 +539,7 @@ void loop(){
 ```
 
 :::tip
-ディープスリープモードやウェイクアップ機能をさらに活用する方法を学びたい場合は、Arduino IDE 内で ESP がチップ向けに公式に作成したサンプルプログラムをさらに見つけることができます。
+ディープスリープモードやウェイクアップ機能をさらに活用する方法を学びたい場合は、Arduino IDE 内で ESP がチップ向けに公式に作成したサンプルプログラムをもっと見つけることができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/16.png" style={{width:600, height:'auto'}}/></div>
 :::
@@ -543,25 +547,25 @@ void loop(){
 ## リソース
 
 **ハードウェア設計**
-- **📄[データシート]** [Espressif ESP32-C6 データシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf )
-- **📄[回路図]** [XIAO ESP32-C6 回路図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf )
-- **🗃️[PCB 設計ファイル]** [XIAO ESP32-C6 KiCad プロジェクト](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH&PCB_260114.zip )
+- **📄[データシート]** [Espressif ESP32-C6 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf )
+- **📄[回路図]** [XIAO ESP32-C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf )
+- **🗃️[PCB 設計ファイル]** [XIAO ESP32-C6 KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH&PCB_260114.zip )
 - **🗃️[PCB 設計ライブラリ]** 
   - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO ESP32-C6 ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx )
 
-**メカニカル設計**
-- **📄[3D モデル]** [XIAO ESP32-C6 3D モデル](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
+**メカ設計**
+- **📄[3D モデル]** [XIAO ESP32-C6 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="カスタマイズの見積もりを依頼"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
+  imageAlt="XIAO の見積もりを依頼"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
 
-## コースリソース
+## コース用リソース
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
@@ -569,7 +573,7 @@ void loop(){
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

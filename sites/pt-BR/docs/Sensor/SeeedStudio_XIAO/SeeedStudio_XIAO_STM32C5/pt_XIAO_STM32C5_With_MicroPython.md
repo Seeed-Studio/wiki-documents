@@ -1,6 +1,6 @@
 ---
 title: XIAO STM32C5 com MicroPython
-description: Aprenda a instalar o MicroPython no Seeed Studio XIAO STM32C5 e usar GPIO, sinais de controle de servo gerados por software e CAN para construir aplicações práticas.
+description: Aprenda como instalar o MicroPython no Seeed Studio XIAO STM32C5 e usar GPIO, sinais de controle de servo gerados por software e CAN para criar aplicações práticas.
 keywords:
   - xiao
   - stm32
@@ -13,7 +13,7 @@ last_update:
   date: 09/02/2026
   author: Zeller
 createdAt: '2026-09-01'
-updatedAt: '2026-09-02'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_with_micropython/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,7 +46,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Visão geral
 
-[MicroPython](https://github.com/micropython/micropython/wiki) é um interpretador Python com suporte à emissão de código nativo para trechos de código críticos em desempenho. Ele fornece um subconjunto dos recursos principais do Python 3.6+, otimizados para microcontroladores e sistemas com recursos limitados. Ele é diferente do CPython, e você pode ler mais sobre as diferenças na página [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences).
+[MicroPython](https://github.com/micropython/micropython/wiki) é um interpretador Python com suporte à emissão de código nativo para trechos de código com requisitos críticos de desempenho. Ele fornece um subconjunto dos recursos principais do Python 3.6+, otimizados para microcontroladores e sistemas com recursos limitados. Ele é diferente do CPython, e você pode ler mais sobre as diferenças na página [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences).
 
 ## Preparação de hardware
 
@@ -72,13 +72,13 @@ Antes de começar, você precisa preparar uma placa de desenvolvimento XIAO STM3
 
 ## Implantando o firmware MicroPython
 
-Atualize o firmware MicroPython no XIAO STM32C5 entrando no modo bootloader e copiando um arquivo de firmware `.uf2` para a unidade USB de armazenamento em massa da placa.
+Atualize o firmware MicroPython no XIAO STM32C5 entrando no modo bootloader e copiando um arquivo de firmware `.uf2` para a unidade de armazenamento em massa USB da placa.
 
 1. Baixe e extraia o arquivo compactado do firmware MicroPython para o XIAO STM32C5:
 
 - **📄[Firmware]** [XIAO STM32C5 MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/xiao-stm32c5-micropython-firmware.zip)
 
-2. Conecte o XIAO STM32C5 ao computador via USB. Pressione rapidamente duas vezes o botão **Reset** para entrar no modo bootloader. Uma unidade USB chamada **XIAOC5BOOT** deve aparecer. Copie **micropython-xiao-stm32c5.uf2** do arquivo extraído para essa unidade. A placa será reiniciada automaticamente após a instalação do firmware.
+2. Conecte o XIAO STM32C5 ao seu computador via USB. Pressione rapidamente duas vezes o botão **Reset** para entrar no modo bootloader. Uma unidade USB chamada **XIAOC5BOOT** deve aparecer. Copie **micropython-xiao-stm32c5.uf2** do arquivo extraído para essa unidade. A placa será reiniciada automaticamente após a instalação do firmware.
 
 :::tip
 Se **XIAOC5BOOT** não aparecer, desconecte e reconecte o cabo USB e, em seguida, pressione duas vezes **Reset** novamente. Certifique-se de que o cabo USB suporta transferência de dados.
@@ -88,7 +88,7 @@ Se **XIAOC5BOOT** não aparecer, desconecte e reconecte o cabo USB e, em seguida
 
 Escolha a versão apropriada para instalação. Aqui, estou instalando em um sistema Windows, então selecionei a versão para Windows.
 
-Siga as instruções para a versão de Python desejada.
+Siga as instruções para a versão desejada do Python.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_ide_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -104,6 +104,10 @@ Em seguida, basta seguir as etapas padrão de configuração.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/mpy_2.png" style={{width:800, height:'auto'}}/></div>
 ## Mapa de pinos
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explorar o pinout interativo</a>
+</div>
 
 :::tip
 
@@ -128,7 +132,7 @@ Em seguida, basta seguir as etapas padrão de configuração.
 | D12 | PB9 | GPIO / FDCAN1 TX disponível | FDCAN1 não está habilitado no firmware atual |
 | D13 | PB5 | FDCAN2 RX / GPIO | `XiaoCAN("can0", ...)` |
 | D14 | PB13 | FDCAN2 TX / GPIO | `XiaoCAN("can0", ...)` |
-| D15 / CAN_STB | PB14 | Standby do transceptor CAN | Low: normal; high: standby |
+| D15 / CAN_STB | PB14 | Standby do transceptor CAN | Baixo: normal; alto: standby |
 | CAN_H | — | Barramento diferencial CAN FD alto | Saída do transceptor CAN onboard; não é um GPIO |
 | CAN_L | — | Barramento diferencial CAN FD baixo | Saída do transceptor CAN onboard; não é um GPIO |
 | BAT_EN | PA15 | Habilitar medição da bateria | `XiaoPin("bat_en", Pin.OUT)` |
@@ -226,7 +230,7 @@ Após o início do script, o LED externo conectado ao D1 pisca em intervalos de 
 
 ## Acionar um servo motor
 
-PWM é uma função de saída de forma de onda temporizada implementada com base em GPIOs de saída digital. Ela alterna rapidamente os níveis do pino em uma frequência fixa e ajusta dinamicamente o ciclo de trabalho do nível alto dentro de um único ciclo, de modo a fornecer sinais analógicos equivalentes para os periféricos. Em aplicações de engenharia prática, PWM é amplamente utilizado para controle preciso de ângulo de servomotores e ajuste suave de brilho de LEDs.
+PWM é uma função de saída de forma de onda temporizada implementada com base em GPIOs de saída digital. Ela alterna rapidamente os níveis do pino em uma frequência fixa e ajusta dinamicamente o ciclo de trabalho do nível alto dentro de um único ciclo, de modo a fornecer sinais analógicos equivalentes para os periféricos. Em aplicações de engenharia prática, o PWM é amplamente utilizado para controle preciso de ângulo de servomotores e ajuste suave de brilho de LEDs.
 
 ### Preparação de hardware
 
@@ -262,7 +266,7 @@ PWM é uma função de saída de forma de onda temporizada implementada com base
 
 ### Programa de software
 
-Este exemplo usa D0 no XIAO STM32C5 como o pino de sinal de controle do servo. A temporização é gerada por software em vez de por um periférico PWM de hardware.
+Este exemplo usa D0 no XIAO STM32C5 como o pino de sinal de controle do servo. A temporização é gerada por software em vez de por um periférico de PWM de hardware.
 
 1. No Thonny, selecione **File > New** para criar um arquivo e, em seguida, insira o seguinte código:
 
@@ -340,7 +344,7 @@ Após o início do script, o servo varre repetidamente de aproximadamente 0° a 
 
 O XIAO STM32C5 fornece duas interfaces CAN FD. Uma expõe sinais de transmissão e recepção em nível lógico para uso com um transceptor CAN externo. A outra está conectada ao transceptor CAN FD TCAN3403-Q1 integrado e pode se conectar diretamente a um barramento CAN por meio de CAN_H e CAN_L. O CAN FD permanece compatível com o CAN Clássico, ao mesmo tempo em que oferece uma carga útil maior e uma taxa de bits de fase de dados mais alta, tornando-o adequado para eletrônica automotiva, controle industrial, robótica e redes de sensores distribuídos.
 
-O circuito CAN FD integrado também inclui um resistor de terminação de 120 Ω desconectável. Ative esse resistor quando a placa estiver em uma das extremidades do barramento. Desconecte-o quando a placa estiver no meio do barramento ou quando outro resistor de 120 Ω já estiver instalado na extremidade do barramento do XIAO. O transceptor também oferece suporte ao controle de standby para reduzir o consumo de energia quando a comunicação CAN não estiver em uso.
+O circuito CAN FD integrado também inclui um resistor de terminação de 120 Ω desconectável. Ative esse resistor quando a placa estiver em uma das extremidades do barramento. Desconecte-o quando a placa estiver no meio do barramento ou quando outro resistor de 120 Ω já estiver instalado na extremidade do barramento do XIAO. O transceptor também oferece suporte ao controle de modo de espera para reduzir o consumo de energia quando a comunicação CAN não estiver em uso.
 
 - Uso de referência: [XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_canfd_usage/)
 
@@ -449,12 +453,12 @@ O circuito CAN FD integrado também inclui um resistor de terminação de 120 Ω
 ### Programa de software
 
 :::caution
-O motor requer uma alimentação de 24 V. Use uma fonte de alimentação em conformidade, limitada em corrente e com uma corrente nominal apropriada. Desligue a fonte antes de alterar qualquer fiação, mantenha o motor sem carga durante os testes iniciais e conecte o terra do XIAO ao terminal negativo da fonte de alimentação do motor. Alimentação ou fiação incorretas podem danificar o equipamento e criar um risco de segurança.
+O motor requer uma alimentação de 24 V. Use uma fonte de alimentação em conformidade, limitada em corrente e com classificação de corrente apropriada. Desligue a fonte antes de alterar qualquer fiação, mantenha o motor sem carga durante os testes iniciais e conecte o terra do XIAO ao terminal negativo da fonte de alimentação do motor. Alimentação ou fiação incorretas podem danificar o equipamento e criar um risco de segurança.
 :::
 
 1. Use o software de configuração Damiao para computador host para definir o **CAN ID** do motor como `0x001` e o **Master ID** como `0x011`. Para mais detalhes, consulte [Getting Started with the Damiao 43 Series Motors](https://wiki.seeedstudio.com/pt-br/damiao_series/).
 
-- Conecte o motor aos pads traseiros CAN_H e CAN_L do XIAO STM32C5. O transceptor integrado usa D13/PB5 (RX), D14/PB13 (TX) e D15/PB14 (standby); coloque D15 em nível baixo para operação normal.
+- Conecte o motor aos pads CAN_H e CAN_L traseiros do XIAO STM32C5. O transceptor integrado usa D13/PB5 (RX), D14/PB13 (TX) e D15/PB14 (standby); coloque D15 em nível baixo para operação normal.
 
 2. No Thonny, selecione **File > New** para criar um arquivo e, em seguida, salve o seguinte programa como `driver_dm4310.py`:
 
@@ -729,7 +733,7 @@ if __name__ == "__main__":
 
 ### Resultado
 
-Depois que o motor é habilitado, o DM-J4310 alterna ciclicamente entre velocidades alvo de `0 → 3 → 6 → 10 → 6 → 3 rad/s`, mudando o alvo a cada cinco segundos. O Shell exibe a velocidade alvo selecionada e os dados de realimentação do motor decodificados. O exemplo não controla o LED onboard.
+Depois que o motor é habilitado, o DM-J4310 alterna ciclicamente entre velocidades alvo de `0 → 3 → 6 → 10 → 6 → 3 rad/s`, mudando o alvo a cada cinco segundos. O Shell exibe a velocidade alvo selecionada e os dados de realimentação do motor decodificados. Este exemplo não controla o LED onboard.
 
 :::tip
 
@@ -740,7 +744,7 @@ Conecte o CAN_H no XIAO STM32C5 ao CAN_H no motor e o CAN_L ao CAN_L. Conecte ta
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/canfd_12.gif" style={{width:400, height:'auto'}}/></div>
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

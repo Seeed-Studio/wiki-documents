@@ -1,5 +1,5 @@
 ---
-title:  Multiplexação de pinos com XIAO STM32C5
+title: Multiplexação de pinos com XIAO STM32C5
 description: ''
 keywords:
   - xiao
@@ -13,7 +13,7 @@ last_update:
   date: 08/26/2026
   author: Zeller
 createdAt: '2026-08-26'
-updatedAt: '2026-09-01'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_pin_multiplexing/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,12 +46,16 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Visão geral
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
 O XIAO STM32C5 possui recursos abundantes de pinos e oferece suporte nativo ao desenvolvimento com várias interfaces periféricas padrão, incluindo Digital, Analógica, SPI e IIC. Este artigo demonstra implementações relevantes com casos de aplicação prática.
 
 :::tip
 
 Este tutorial foi desenvolvido com base no sistema de build PlatformIO e no Zephyr RTOS.
-Se você não estiver familiarizado com a criação de um projeto para o XIAO STM32C5 no PlatformIO, você pode ir para [Getting Started With Seeed Studio XIAO STM32C5](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_getting_started/#getting-started-with-platformio)
+Se você não está familiarizado com a criação de um projeto para o XIAO STM32C5 no PlatformIO, você pode ir para [Getting Started With Seeed Studio XIAO STM32C5](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_getting_started/#getting-started-with-platformio)
 
 :::
 
@@ -97,7 +101,7 @@ De acordo com o pinout do XIAO STM32C5, D1 pode ser selecionado como o pino de c
 
 :::tip
 
-- Para o pinout do XIAO STM32C5, clique em [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_getting_started/#hardware-overview) para ver os detalhes.
+- Para o pinout do XIAO STM32C5, clique em [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_getting_started/#visão-geral-do-hardware) para ver os detalhes.
 
 :::
 
@@ -165,7 +169,7 @@ Abra o Serial Monitor e defina a taxa de baud para **115200**.
 
 ## PWM
 
-PWM é uma função de saída de forma de onda temporizada implementada com base em GPIOs de saída digital. Ela alterna rapidamente os níveis do pino em uma frequência fixa e ajusta dinamicamente o ciclo de trabalho do nível alto dentro de um único ciclo, de modo a fornecer sinais analógicos equivalentes para os periféricos. Em aplicações de engenharia prática, o PWM é amplamente utilizado para controle preciso de ângulo de servomotores e ajuste suave de brilho de LEDs.
+PWM é uma função de saída de forma de onda temporizada implementada com base em GPIOs de saída digital. Ela alterna rapidamente os níveis do pino em uma frequência fixa e ajusta dinamicamente o ciclo de trabalho do nível alto dentro de um único ciclo, de modo a fornecer sinais analógicos equivalentes para os periféricos. Em aplicações de engenharia prática, PWM é amplamente utilizado para controle preciso de ângulo de servomotores e ajuste suave de brilho de LEDs.
 
 ### Acionar um servomotor
 
@@ -207,11 +211,11 @@ De acordo com o pinout do XIAO STM32C5, **D0** pode ser selecionado como o pino 
 
 :::tip
 
-- Para o pinout do XIAO STM32C5, clique em [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_getting_started/#hardware-overview) para ver os detalhes.
+- Para o pinout do XIAO STM32C5, clique em [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_getting_started/#visão-geral-do-hardware) para ver os detalhes.
 
 :::
 
-1. Modifique o arquivo `app.overlay`. No XIAO STM32C5, D0 corresponde ao pino PA0. Ao configurar o PA0 como a função alternativa AF1 no DeviceTree, o TIM2_CH1 pode ser usado para gerar um sinal PWM.
+1. Modifique o arquivo `app.overlay`. No XIAO STM32C5, D0 corresponde ao pino PA0. Configurando o PA0 como função alternativa AF1 no DeviceTree, o TIM2_CH1 pode ser usado para gerar um sinal PWM.
 
 <details>
 <summary>app.overlay</summary>
@@ -404,7 +408,7 @@ A Seeed Studio Expansion Board Base for XIAO está equipada com um buzzer eletro
 ```
 </details>
 
-2. Modifique o arquivo `prj.conf` para habilitar as configurações relevantes de PWM.
+2. Modifique o arquivo `prj.conf` para habilitar as configurações relacionadas a PWM.
 
 ```prj
 CONFIG_GPIO=y
@@ -488,7 +492,7 @@ int main(void)
 
 #### Resultado
 
-Quando o botão na Seeed Studio Expansion Board Base for XIAO for pressionado, o buzzer irá soar. Abra o Serial Monitor e defina a taxa de baud para **115200**, e o status correspondente será impresso.
+Quando o botão na Seeed Studio Expansion Board Base for XIAO for pressionado, o buzzer emitirá som. Abra o Serial Monitor e defina a taxa de baud para **115200**, e o status correspondente será impresso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_4_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -628,7 +632,7 @@ Os resultados de medição podem variar sob diferentes condições ambientais. C
 
 ## UART
 
-O Receptor/Transmissor Assíncrono Universal (UART) é um protocolo padrão de comunicação serial assíncrona. Ele não requer sinais de clock externos para sincronização e realiza a transmissão e recepção assíncronas de dados com base na taxa de baud predefinida por ambos os lados da comunicação. Em termos de fiação física, um enlace de dados full-duplex pode ser estabelecido simplesmente cruzando os pinos TX e RX dos dispositivos e conectando seus terras em comum. Com baixo custo de hardware e suporte para envio e recebimento simultâneos, o UART é amplamente adotado em sistemas embarcados para saída de logs de console, depuração de periféricos modulares e comunicação de dados ponto a ponto de baixa largura de banda.
+O Receptor/Transmissor Assíncrono Universal (UART) é um protocolo padrão de comunicação serial assíncrona. Ele não requer sinais de clock externos para sincronização e realiza a transmissão e recepção assíncronas de dados com base na taxa de baud predefinida por ambos os lados da comunicação. Em termos de fiação física, um enlace de dados full-duplex pode ser estabelecido simplesmente cruzando os pinos TX e RX dos dispositivos e conectando seus terras em comum. Com custo de hardware mínimo e suporte para envio e recebimento simultâneos, o UART é amplamente adotado em sistemas embarcados para saída de logs de console, depuração de periféricos modulares e comunicação de dados ponto a ponto de baixa largura de banda.
 
 ### Preparação de hardware
 
@@ -657,7 +661,7 @@ O Receptor/Transmissor Assíncrono Universal (UART) é um protocolo padrão de c
 
 ### Preparação de software
 
-1. Modifique o app.overlay. No XIAO STM32C5, D6 corresponde a PA9 / USART1_TX, e D7 corresponde a PA10 / USART1_RX. O nó correspondente no DeviceTree é usart1. Defina a taxa de baud padrão para 115200.
+1. Modifique app.overlay. No XIAO STM32C5, D6 corresponde a PA9 / USART1_TX, e D7 corresponde a PA10 / USART1_RX. O nó correspondente no DeviceTree é usart1. Defina a taxa de baud padrão para 115200.
 
 ```dtsi
 / {
@@ -668,7 +672,7 @@ O Receptor/Transmissor Assíncrono Universal (UART) é um protocolo padrão de c
 };
 ```
 
-2. Modifique o prj.conf para habilitar o suporte ao console serial.
+2. Modifique prj.conf para habilitar o suporte ao console serial.
 
 ```prj
 CONFIG_SERIAL=y
@@ -795,7 +799,7 @@ int main(void)
 
 ## I2C
 
-I2C é um protocolo síncrono de comunicação de dados half-duplex. Ele permite a conexão de múltiplos dispositivos por meio de endereçamento via linha de clock SCL e linha de dados SDA, sendo comumente usado para ler dados de sensores que exigem taxas de transmissão relativamente altas, como IMUs e sensores de temperatura/umidade, ou para saída de exibição em OLED.
+I2C é um protocolo síncrono de comunicação de dados half-duplex. Ele permite a conexão de múltiplos dispositivos por meio de endereçamento através da linha de clock SCL e da linha de dados SDA, e é comumente usado para ler dados de sensores que exigem taxas de transmissão relativamente altas, como IMUs e sensores de temperatura/umidade, ou para saída de exibição em OLED.
 
 ### Preparação de hardware
 
@@ -824,7 +828,7 @@ I2C é um protocolo síncrono de comunicação de dados half-duplex. Ele permite
 
 ### Preparação de software
 
-1. No XIAO STM32C5, D4 corresponde a PB7 / I2C1_SDA, e D5 corresponde a PB6 / I2C1_SCL. Como o I2C1 já está habilitado no DTS em nível de placa, adicione um nó de display SSD1306 no endereço I2C 0x3C. Modifique o app.overlay da seguinte forma:
+1. No XIAO STM32C5, D4 corresponde a PB7 / I2C1_SDA, e D5 corresponde a PB6 / I2C1_SCL. Como o I2C1 já está habilitado no DTS em nível de placa, adicione um nó de display SSD1306 no endereço I2C 0x3C. Modifique app.overlay da seguinte forma:
 
 ```dts
 / {
@@ -859,7 +863,7 @@ CONFIG_CHARACTER_FRAMEBUFFER=y
 CONFIG_HEAP_MEM_POOL_SIZE=2048
 ```
 
-3. Escreva a função principal para definir a posição de exibição e as funções para a string.
+3. Escreva a função principal para definir a posição do display e as funções para a string.
 
 <details>
 
@@ -898,13 +902,13 @@ int main(void)
 
 ### Resultado
 
-Após a execução do programa, o OLED exibe **XIAO STM32C5 Hello World**.
+Após a execução do programa, o OLED exibirá **XIAO STM32C5 Hello World**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_5.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## SPI
 
-SPI é um protocolo de comunicação de alta velocidade, síncrono e full-duplex. Diferente da comunicação assíncrona, o SPI depende de uma linha de clock dedicada SCLK para sincronização precisa dos dados. Geralmente adota a topologia clássica de hardware de quatro fios, composta pelos pinos MOSI, MISO e de seleção de chip CS/SS. Equipado com canais independentes de envio e recebimento de dados e alta frequência de clock de barramento, o SPI oferece excelente taxa de transferência de dados. Ele é amplamente utilizado em cenários de acionamento de periféricos que exigem alta largura de banda, como dispositivos de armazenamento em massa, incluindo Flash e cartões SD, telas de alta resolução e alta taxa de atualização, e sensores de amostragem em alta frequência.
+SPI é um protocolo de comunicação full-duplex, síncrono e de alta velocidade. Diferente da comunicação assíncrona, o SPI depende de uma linha de clock dedicada SCLK para sincronização precisa dos dados. Geralmente adota a topologia clássica de hardware de quatro fios, composta pelos pinos MOSI, MISO e de seleção de chip CS/SS. Equipado com canais independentes de envio e recebimento de dados e alta frequência de clock de barramento, o SPI oferece excelente taxa de transferência de dados. Ele é amplamente utilizado em cenários de acionamento de periféricos que exigem alta largura de banda, como dispositivos de armazenamento em massa, incluindo Flash e cartões SD, telas de alta resolução e alta taxa de atualização, e sensores de amostragem em alta frequência.
 
 Em seguida, será demonstrado um exemplo com cartão SD: ler o tamanho do cartão SD e gravar nele um arquivo chamado `XIAOTEST.TXT`, com o conteúdo **Hello XIAO STM32C5**.
 
@@ -994,7 +998,7 @@ Além disso, você também precisa preparar um cartão SD formatado como FAT32, 
 </details>
 <br/>
 
-2. Modifique o prj.conf para habilitar as configurações relacionadas a SPI.
+2. Modifique o prj.conf para habilitar as configurações relacionadas ao SPI.
 
 ```prj
 CONFIG_DISK_ACCESS=y
@@ -1194,7 +1198,7 @@ int main(void)
 
 ## RTC
 
-RTC (Real-Time Clock) é um periférico de temporização de hardware de baixo consumo de energia usado para manter continuamente informações precisas de hora e calendário. Ele normalmente opera a partir de uma fonte de clock independente de baixa frequência, como um oscilador de cristal de 32,768 kHz, e pode continuar funcionando através do domínio de alimentação de backup quando o sistema principal está desligado. Os periféricos RTC normalmente suportam segundos, minutos, horas, datas, dias da semana, meses e anos, bem como funções de alarme, despertar periódico e carimbo de data e hora. O RTC é amplamente utilizado em aplicações que exigem manutenção de tempo em longo prazo, despertar agendado, registro de eventos e operação de baixo consumo de energia, como registradores de dados, controladores industriais, dispositivos de casa inteligente e instrumentos portáteis.
+RTC (Real-Time Clock) é um periférico de temporização de hardware de baixo consumo de energia usado para manter continuamente informações precisas de hora e calendário. Ele normalmente opera a partir de uma fonte de clock independente de baixa frequência, como um oscilador de cristal de 32,768 kHz, e pode continuar funcionando através do domínio de alimentação de backup quando o sistema principal está desligado. Os periféricos RTC geralmente suportam segundos, minutos, horas, datas, dias da semana, meses e anos, bem como funções de alarme, despertar periódico e carimbo de data/hora. O RTC é amplamente utilizado em aplicações que exigem manutenção de tempo em longo prazo, despertar agendado, registro de eventos e operação de baixo consumo de energia, como registradores de dados, controladores industriais, dispositivos de casa inteligente e instrumentos portáteis.
 
 O Round Display for Seeed Studio XIAO possui um circuito RTC integrado. A seguir é demonstrada a função de relógio RTC funcionando com o XIAO STM32C5.
 
@@ -1315,7 +1319,7 @@ CONFIG_MAIN_STACK_SIZE=4096
 CONFIG_PRINTK=y
 ```
 
-3. Escreva o main.c para ler o RTC PCF8563 e exibir a data, a hora e o dia da semana na tela redonda.
+3. Escreva o main.c para ler o PCF8563 RTC e exibir a data, hora e dia da semana na tela redonda.
 
 <details>
 
@@ -1610,14 +1614,14 @@ int main(void)
 
 ### Resultado
 
-Este exemplo define e lê a data e a hora do RTC PCF8563 no Round Display via I²C e mostra o resultado no LCD circular. Sem uma bateria de backup para o RTC, o PCF8563 mantém a contagem de tempo enquanto o sistema está ligado, mas não há garantia de que o horário será mantido após a remoção da alimentação. Com uma bateria tipo moeda CR927 instalada, o RTC pode continuar funcionando enquanto a alimentação principal está desconectada e manter o horário correto quando o sistema for ligado novamente.
-Se o RTC não contiver um horário válido, o exemplo o inicializa para 2026-06-16 12:00:00 para demonstração. Defina o RTC para o horário atual separadamente; este exemplo não o sincroniza automaticamente.
+Este exemplo define e lê a data e a hora do PCF8563 RTC no Round Display via I²C e mostra o resultado no LCD circular. Sem uma bateria de backup do RTC, o PCF8563 mantém a hora enquanto o sistema está alimentado, mas não há garantia de que a hora será mantida após a remoção da alimentação. Com uma bateria tipo moeda CR927 instalada, o RTC pode continuar funcionando enquanto a alimentação principal está desconectada e manter a hora correta quando o sistema for ligado novamente.
+Se o RTC não contiver uma hora válida, o exemplo o inicializa para 2026-06-16 12:00:00 para demonstração. Defina o RTC para a hora atual separadamente; este exemplo não o sincroniza automaticamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_7.gif" style={{width:400, height:'auto'}}/></div>
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

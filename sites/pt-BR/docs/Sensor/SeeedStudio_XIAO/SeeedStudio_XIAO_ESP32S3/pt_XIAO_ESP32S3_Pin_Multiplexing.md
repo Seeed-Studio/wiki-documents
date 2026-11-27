@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
  </tr>
 </table>
 
-O Seeed Studio XIAO ESP32-S3 é uma placa de desenvolvimento poderosa e versátil que possui uma variedade de interfaces periféricas e pinos GPIO. Esses pinos podem ser usados para diversos propósitos, como se comunicar com outros dispositivos, ler sensores analógicos, controlar LEDs e muito mais. Neste tutorial, vamos explorar o pinout do XIAO ESP32-S3 e de sua placa relacionada, o XIAO ESP32-S3 Sense, e aprender como usar esses pinos para diferentes finalidades. Especificamente, vamos abordar o uso de 1x UART, 1x lIC, 1x lIS, 1x SPI, 11x GPIOs (PWM), 9xADC, 1x LED de usuário, 1x LED de carga, 1x botão de reset, 1x botão de boot e, para o XIAO ESP32-S3 Sense, 1x conector B2B (com 2 GPIOs adicionais). Ao final deste tutorial, você terá um bom entendimento do pinout do XIAO ESP32-S3 e será capaz de utilizá-lo de forma eficaz em seus projetos.
+O Seeed Studio XIAO ESP32-S3 é uma placa de desenvolvimento poderosa e versátil que possui uma variedade de interfaces periféricas e pinos GPIO. Esses pinos podem ser usados para diversos propósitos, como comunicação com outros dispositivos, leitura de sensores analógicos, controle de LEDs e muito mais. Neste tutorial, exploraremos o pinout do XIAO ESP32-S3 e de sua placa relacionada, o XIAO ESP32-S3 Sense, e aprenderemos como usar esses pinos para diferentes finalidades. Especificamente, cobriremos o uso de 1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x LED de usuário, 1x LED de carga, 1x botão de reset, 1x botão de boot e, para o XIAO ESP32-S3 Sense, 1x conector B2B (com 2 GPIOs adicionais). Ao final deste tutorial, você terá um bom entendimento do pinout do XIAO ESP32-S3 e será capaz de utilizá-lo de forma eficaz em seus projetos.
 
 ## Introdução
 
@@ -67,17 +67,21 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 <Tabs>
 <TabItem value="ESP32S3" label="XIAO ESP32-S3" default>
 
-### Frente do XIAO ESP32-S3
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
+### XIAO ESP32-S3 (frente)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Verso do XIAO ESP32-S3
+### XIAO ESP32-S3 (verso)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 **Mapa de pinos**
 
-| Pino XIAO               | Função           | Pino do chip | Funções alternativas | Descrição                            |
+| Pino XIAO               | Função           | Pino do chip | Funções alternativas | Descrição                             |
 | :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
 | 5V                      | VBUS             |           |                    | Entrada/Saída de alimentação         |
 | GND                     |                  |           |                    |                                      |
@@ -86,8 +90,8 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 | D1                      | Analógico        | GPIO2     | TOUCH2             | GPIO, ADC                            |
 | D2                      | Analógico        | GPIO3     | TOUCH3             | GPIO, ADC                            |
 | D3                      | Analógico        | GPIO4     | TOUCH4             | GPIO, ADC                            |
-| D4                      | Analógico, SDA   | GPIO5     | TOUCH5             | GPIO, I2C Dados, ADC                 |
-| D5                      | Analógico, SCL   | GPIO6     | TOUCH6             | GPIO, I2C Clock, ADC                 |
+| D4                      | Analógico, SDA   | GPIO5     | TOUCH5             | GPIO, dados I2C, ADC                 |
+| D5                      | Analógico, SCL   | GPIO6     | TOUCH6             | GPIO, clock I2C, ADC                 |
 | D6                      | TX               | GPIO43    |                    | GPIO, transmissão UART               |
 | D7                      | RX               | GPIO44    |                    | GPIO, recepção UART                  |
 | D8                      | Analógico, SCK   | GPIO7     | TOUCH7             | GPIO, clock SPI, ADC                 |
@@ -102,23 +106,27 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 | Reset                   |                  | CHIP_PU   |                    |                                      |
 | Boot                    |                  | GPIO0     |                    | Entrar no modo de boot               |
 | U.FL-R-SMT1             |                  | LNA_IN    |                    | Antena UFL                           |
-| CHARGE_LED              |                  |           |                    | CHG-LED                              |
+| CHARGE_LED              |                  |           |                    | LED de carga                         |
 | USER_LED                |                  | GPIO21    |                    | Luz de usuário                       |
 
 </TabItem>
 <TabItem value="ESP32S3Sense" label="XIAO ESP32-S3 Sense">
 
-### Frente do XIAO ESP32-S3 Sense
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3sense" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
+### XIAO ESP32-S3 Sense (frente)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Verso do XIAO ESP32-S3 Sense
+### XIAO ESP32-S3 Sense (verso)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 **Mapa de pinos**
 
-| Pino XIAO               | Função           | Pino do chip | Funções alternativas | Descrição                            |
+| Pino XIAO               | Função           | Pino do chip | Funções alternativas | Descrição                             |
 | :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
 | 5V                      | VBUS             |           |                    | Entrada/Saída de alimentação         |
 | GND                     |                  |           |                    |                                      |
@@ -127,8 +135,8 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 | D1                      | Analógico        | GPIO2     | TOUCH2             | GPIO, ADC                            |
 | D2                      | Analógico        | GPIO3     | TOUCH3             | GPIO, ADC                            |
 | D3                      | Analógico        | GPIO4     | TOUCH4             | GPIO, ADC                            |
-| D4                      | Analógico, SDA   | GPIO5     | TOUCH5             | GPIO, I2C Dados, ADC                 |
-| D5                      | Analógico, SCL   | GPIO6     | TOUCH6             | GPIO, I2C Clock, ADC                 |
+| D4                      | Analógico, SDA   | GPIO5     | TOUCH5             | GPIO, dados I2C, ADC                 |
+| D5                      | Analógico, SCL   | GPIO6     | TOUCH6             | GPIO, clock I2C, ADC                 |
 | D6                      | TX               | GPIO43    |                    | GPIO, transmissão UART               |
 | D7                      | RX               | GPIO44    |                    | GPIO, recepção UART                  |
 | D8                      | Analógico, SCK   | GPIO7     | TOUCH7             | GPIO, clock SPI, ADC                 |
@@ -143,10 +151,10 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 | Reset                   |                  | CHIP_PU   |                    |                                      |
 | Boot                    |                  | GPIO0     |                    | Entrar no modo de boot               |
 | U.FL-R-SMT1             |                  | LNA_IN    |                    | Antena UFL                           |
-| CHARGE_LED              |                  |           |                    | CHG-LED                              |
+| CHARGE_LED              |                  |           |                    | LED de carga                         |
 | USER_LED                |                  | GPIO21    |                    | Luz de usuário                       |
-| Digital microphone_CLK  |                  | GPIO42    |                    | Pino de clock PDM para MIC           |
-| Digital microphone_DATA |                  | GPIO41    |                    | Pino de dados PDM para MIC           |
+| Digital microphone_CLK  |                  | GPIO42    |                    | Pino de clock PDM para o microfone   |
+| Digital microphone_DATA |                  | GPIO41    |                    | Pino de dados PDM para o microfone   |
 | Onboard SD Card__CS     |                  | GPIO21    |                    | Pino de seleção de chip do cartão SD |
 | Onboard SD Card_SCK     |                  | GPIO7     |                    | Pino de clock do cartão SD           |
 | Onboard SD Card_MISO    |                  | GPIO8     |                    | Pino de entrada de dados do cartão SD|
@@ -159,20 +167,24 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 | GPIO10    | Pino de clock relacionado à câmera  |
 | GPIO11    | Pino de dados de vídeo da câmera (Y8)          |
 | GPIO12    | Pino de dados de vídeo da câmera (Y7)          |
-| GPIO13    | Pino de clock de pixel da câmera              |
+| GPIO13    | Pino de clock de pixel da câmera    |
 | GPIO14    | Pino de dados de vídeo da câmera (Y6)          |
 | GPIO15    | Pino de dados de vídeo da câmera (Y2)          |
 | GPIO16    | Pino de dados de vídeo da câmera (Y5)          |
 | GPIO17    | Pino de dados de vídeo da câmera (Y3)          |
 | GPIO18    | Pino de dados de vídeo da câmera (Y4)          |
-| GPIO40    | Pino de dados I2C para câmera             |
-| GPIO39    | Pino de clock I2C para câmera            |
-| GPIO38    | Pino de sincronização vertical da câmera            |
-| GPIO47    | Pino de sincronização horizontal da câmera          |
+| GPIO40    | Pino de dados I2C para câmera       |
+| GPIO39    | Pino de clock I2C para câmera       |
+| GPIO38    | Pino de sincronização vertical da câmera       |
+| GPIO47    | Pino de sincronização horizontal da câmera     |
 | GPIO48    | Pino de dados de vídeo da câmera (Y9)          |
 
 </TabItem>
 <TabItem value="ESP32S3Plus" label="XIAO ESP32-S3 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3plus" target="_blank" rel="noopener noreferrer">Explore o Pinout Interativo</a>
+</div>
 
 ### Frente do XIAO ESP32-S3 Plus
 
@@ -182,24 +194,24 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-**Mapa de pinos**
+**Mapa de Pinos**
 
-| Pino XIAO                 | Função         | Pino do Chip  | Funções Alternativas | Descrição                          |
+| Pino XIAO                | Função           | Pino do Chip  | Funções Alternativas | Descrição                          |
 | :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS             |           |                    | Entrada/Saída de energia                   |
+| 5V                      | VBUS             |           |                    | Entrada/Saída de energia           |
 | GND                     |                  |           |                    |                                      |
-| 3V3                     | 3V3_OUT          |           |                    | Saída de energia                         |
-| D0                      | Analógico           | GPIO1     |                    | GPIO, ADC                            |
-| D1                      | Analógico           | GPIO2     |                    | GPIO, ADC                            |
-| D2                      | Analógico           | GPIO3     |                    | GPIO, ADC                            |
-| D3                      | Analógico           | GPIO4     |                    | GPIO, ADC                            |
-| D4                      | Analógico, SDA      | GPIO5     |                    | GPIO, dados I2C, ADC                  |
-| D5                      | Analógico, SCL      | GPIO6     |                    | GPIO, clock I2C, ADC                 |
-| D6                      | TX               | GPIO43    |                    | GPIO, transmissão UART                  |
-| D7                      | RX               | GPIO44    |                    | GPIO, recepção UART                   |
-| D8                      | Analógico, SCK      | GPIO7     |                    | GPIO, clock SPI, ADC                 |
-| D9                      | Analógico, MISO     | GPIO8     |                    | GPIO, dados SPI, ADC                  |
-| D10                     | Analógico, MOSI     | GPIO9     |                    | GPIO, dados SPI, ADC                  |
+| 3V3                     | 3V3_OUT          |           |                    | Saída de energia                    |
+| D0                      | Analógico        | GPIO1     |                    | GPIO, ADC                            |
+| D1                      | Analógico        | GPIO2     |                    | GPIO, ADC                            |
+| D2                      | Analógico        | GPIO3     |                    | GPIO, ADC                            |
+| D3                      | Analógico        | GPIO4     |                    | GPIO, ADC                            |
+| D4                      | Analógico, SDA   | GPIO5     |                    | GPIO, Dados I2C, ADC                 |
+| D5                      | Analógico, SCL   | GPIO6     |                    | GPIO, Clock I2C, ADC                 |
+| D6                      | TX               | GPIO43    |                    | GPIO, Transmissão UART               |
+| D7                      | RX               | GPIO44    |                    | GPIO, Recepção UART                  |
+| D8                      | Analógico, SCK   | GPIO7     |                    | GPIO, Clock SPI, ADC                 |
+| D9                      | Analógico, MISO  | GPIO8     |                    | GPIO, Dados SPI, ADC                 |
+| D10                     | Analógico, MOSI  | GPIO9     |                    | GPIO, Dados SPI, ADC                 |
 | D11                     |                  | GPIO38    |                    | GPIO, ADC                            |
 | D12                     |                  | GPIO39    |                    | GPIO, ADC                            |
 | D13                     |                  | GPIO40    |                    |                                      |
@@ -214,11 +226,11 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 | MTCK                    |                  | GPIO39    |                    | JTAG, ADC                            |
 | MTMS                    |                  | GPIO42    |                    | JTAG, ADC                            |
 | Reset                   |                  | CHIP_PU   |                    |                                      |
-| Boot                    |                  | GPIO0     |                    | Entrar no modo de boot                      |
-| ADC_BAT                 |                  | GPIO10    |                    | Ler o valor de tensão da bateria           |
-| U.FL-R-SMT1             |                  | LNA_IN    |                    | Antena UFL                          |
+| Boot                    |                  | GPIO0     |                    | Entrar no modo de boot               |
+| ADC_BAT                 |                  | GPIO10    |                    | Ler o valor de tensão da bateria     |
+| U.FL-R-SMT1             |                  | LNA_IN    |                    | Antena UFL                           |
 | CHARGE_LED              |                  | VCC_3V3   |                    | CHG-LED                              |
-| USER_LED                |                  | GPIO21    |                    | Luz do usuário                           |
+| USER_LED                |                  | GPIO21    |                    | Luz do usuário                       |
 
 </TabItem>
 </Tabs>
@@ -229,7 +241,7 @@ Antes de tudo, é bastante essencial ter alguns parâmetros básicos do produto.
 - O conector B2B do XIAO ESP32-S3 Plus é compatível com a [placa de extensão Wio-SX1262](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html), mas não com a placa de sensor de câmera Plug-in.
 :::
 
-- 5V - Esta é a saída de 5 V da porta USB. Você também pode usá-la como entrada de tensão, mas deve ter algum tipo de diodo (schottky, sinal, potência) entre sua fonte de alimentação externa e este pino, com o ânodo para a bateria e o cátodo para o pino de 5 V.
+- 5V - Esta é a saída de 5 V da porta USB. Você também pode usá-la como entrada de tensão, mas deve haver algum tipo de diodo (schottky, sinal, potência) entre sua fonte de alimentação externa e este pino, com o ânodo para a bateria e o cátodo para o pino de 5 V.
 
 - 3V3 - Esta é a saída regulada do regulador onboard. Você pode consumir 700 mA
 
@@ -240,22 +252,22 @@ Abaixo está uma visão geral dos pinos funcionais do XIAO ESP32-S3.
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>Número do pino</th>
-   <th>Descrição da função</th>
+   <th>Número do Pino</th>
+   <th>Descrição da Função</th>
   </tr>
     <tr>
-   <th colspan="2">-- Pinos do microfone PDM --</th>
+   <th colspan="2">-- Pinos do Microfone PDM --</th>
   </tr>
   <tr>
    <td align="center">GPIO 41</td>
-   <td align="center">Dados do microfone PDM</td>
+   <td align="center">Dados do Microfone PDM</td>
   </tr>
   <tr>
    <td align="center">GPIO 42</td>
-   <td align="center">Clock do microfone PDM</td>
+   <td align="center">Clock do Microfone PDM</td>
   </tr>
     <tr>
-   <th colspan="2">-- Pinos SPI do cartão MicroSD --</th>
+   <th colspan="2">-- Pinos SPI do Cartão MicroSD --</th>
   </tr>
   <tr>
    <td align="center">GPIO 21</td>
@@ -274,7 +286,7 @@ Abaixo está uma visão geral dos pinos funcionais do XIAO ESP32-S3.
    <td align="center">MicroSD SPI MOSI</td>
   </tr>
     <tr>
-   <th colspan="2">-- Pinos da câmera --</th>
+   <th colspan="2">-- Pinos da Câmera --</th>
   </tr>
     <tr>
    <td align="center">GPIO 10</td>
@@ -318,11 +330,11 @@ Abaixo está uma visão geral dos pinos funcionais do XIAO ESP32-S3.
   </tr>
     <tr>
    <td align="center">GPIO 39</td>
-   <td align="center">SCL da câmera</td>
+   <td align="center">Camera SCL</td>
   </tr>
     <tr>
    <td align="center">GPIO 40</td>
-   <td align="center">SDA da câmera</td>
+   <td align="center">Camera SDA</td>
   </tr>
     <tr>
    <td align="center">GPIO 47</td>
@@ -337,7 +349,7 @@ Abaixo está uma visão geral dos pinos funcionais do XIAO ESP32-S3.
 
 ### Soldar o header
 
-Para usar as funções de cada pino de acordo com este tutorial, recomendamos soldar os pinos com antecedência.
+Para usar as funções de cada pino de acordo com este tutorial, recomendamos soldar os pinos antecipadamente.
 
 Devido ao tamanho miniatura do XIAO ESP32-S3, tenha cuidado ao soldar os headers, não junte pinos diferentes e não deixe a solda encostar no shield ou em outros componentes. Caso contrário, isso pode fazer com que o XIAO entre em curto-circuito ou não funcione corretamente, e as consequências causadas por isso serão de responsabilidade do usuário.
 
@@ -394,7 +406,7 @@ Instale o XIAO ESP32-S3 ou Sense na placa de expansão e conecte o relé à inte
 
 ### Implementação de software
 
-Neste exemplo, implementaremos o controle do estado ligado/desligado de um relé usando um botão conectado à placa de expansão XIAO. Quando o botão é pressionado, o relé liga e, quando o botão é solto, o relé desliga.
+Neste exemplo, vamos implementar o controle do estado ligado/desligado de um relé usando um botão conectado à placa de expansão XIAO. Quando o botão é pressionado, o relé liga, e quando o botão é solto, o relé desliga.
 
 ```c
 const int buttonPin = D1;     // the number of the pushbutton pin
@@ -423,7 +435,7 @@ void loop() {
 }
 ```
 
-Se tudo correr bem, após o upload do programa, você deverá ver o seguinte efeito.
+Se tudo correr bem, após enviar o programa, você deverá ver o seguinte efeito.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/19.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -453,7 +465,7 @@ Depois de cortar a conexão entre J1 e J2, a função de microfone na placa de e
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/21.png" style={{width:400, height:'auto'}}/></div>
 :::
 
-Para o esquema do circuito real, consulte o diagrama a seguir:
+Para o esquema elétrico real, consulte o diagrama a seguir:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/92.png" style={{width:600, height:'auto'}}/></div>
 
@@ -504,10 +516,10 @@ void loop() {
 }
 ```
 
-O método acima também é aplicável às seções [Digital as PWM](#digital-as-pwm) e [Analog](#analog). Você só precisa modificar os números dos pinos da placa de expansão que deseja usar. Isso não será repetido mais adiante.
+O método acima também é aplicável às seções [Digital as PWM](#Digital-as-PWM) e [Analog](#Analog). Você só precisa modificar os números dos pinos da placa de expansão que deseja usar. Isso não será repetido depois.
 
 :::caution
-Para os dois pinos adicionais D11 e D12 no XIAO ESP32-S3 Sense, ainda não definimos macros para os pinos. Ou seja, você ainda não pode usar D11/A11 ou D12/A12 para controlar esses dois pinos, mas pode controlá-los usando os números GPIO, GPIO42 e GPIO41, respectivamente. Enviaremos as definições de macro para esses dois pinos o mais rápido possível e, assim que o envio for concluído, você poderá usar as definições de pino D/A.
+Para os dois pinos adicionais D11 e D12 no XIAO ESP32-S3 Sense, ainda não definimos macros para os pinos. Ou seja, você ainda não pode usar D11/A11 ou D12/A12 para controlar esses dois pinos, mas pode controlá-los usando os números GPIO, GPIO42 e GPIO41, respectivamente. Enviaremos as definições de macro para esses dois pinos o mais rápido possível e, assim que o envio for concluído, você poderá usar D/A nas definições de pino.
 :::
 
 ## Digital como PWM
@@ -553,7 +565,7 @@ Todos os pinos GPIO no XIAO ESP32-S3 suportam saída PWM. Portanto, você pode u
  </tr>
 </table>
 
-Instale o XIAO ESP32-S3 ou Sense na placa de expansão e, em seguida, conecte o LED de Cor Variável à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao seu computador por meio de um cabo USB-C.
+Instale o XIAO ESP32-S3 ou Sense na placa de expansão, depois conecte o LED de Cor Variável à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao seu computador via cabo USB-C.
 
 ### Implementação de software
 
@@ -592,7 +604,7 @@ Se o programa for executado com sucesso, você verá o seguinte efeito em execu�
 
 ## Analógico
 
-No XIAO ESP32-S3, entre os 11 pinos GPIO integrados, exceto os pinos D6 e D7 usados para comunicação serial, os 9 pinos restantes suportam a função Analógica. Você pode usar esses pinos GPIO com funcionalidade analógica para ler valores de sensores que produzem sinais analógicos, como sensores de oxigênio, sensores de intensidade de luz e assim por diante.
+No XIAO ESP32-S3, entre os 11 pinos GPIO integrados, exceto os pinos D6 e D7 usados para comunicação serial, os 9 pinos restantes suportam a função analógica. Você pode usar esses pinos GPIO com funcionalidade analógica para ler valores de sensores que produzem sinais analógicos, como sensores de oxigênio, sensores de intensidade de luz e assim por diante.
 
 :::caution
 Embora o XIAO ESP32-S3 atribua GPIO41 e GPIO42 aos pinos A11 e A12, devido à natureza do chip ESP32-S3, os pinos A11 e A12 não suportam funcionalidade ADC. Certifique-se de distingui-los e diferenciá-los.
@@ -637,7 +649,7 @@ Embora o XIAO ESP32-S3 atribua GPIO41 e GPIO42 aos pinos A11 e A12, devido à na
  </tr>
 </table>
 
-Instale o XIAO ESP32-S3 ou Sense na placa de expansão e, em seguida, conecte o Sensor de Oxigênio à interface A0/D0 na placa de expansão com o cabo Grove. Por fim, conecte o XIAO ao computador por meio de um cabo USB-C.
+Instale o XIAO ESP32-S3 ou Sense na placa de expansão, depois conecte o Sensor de Oxigênio à interface A0/D0 na placa de expansão com o cabo Grove. Por fim, conecte o XIAO ao computador via cabo USB-C.
 
 ### Implementação de software
 
@@ -711,16 +723,16 @@ float readConcentration()
 ```
 
 :::tip
-Se você quiser usar a função Analógica de um pino, deve usar a letra "A" como prefixo para o número do pino, como A4, A5. Por outro lado, se quiser usar a função digital, então deve usar a letra "D" como prefixo para o número do pino, como D4, D5.
+Se você quiser usar a função analógica de um pino, deve usar a letra "A" como prefixo para o número do pino, como A4, A5. Por outro lado, se quiser usar a função digital, então deve usar a letra "D" como prefixo para o número do pino, como D4, D5.
 :::
 
-Depois de enviar o programa, abra o Serial Monitor na Arduino IDE e defina a taxa de transmissão para 9600. Aguarde o aquecimento do sensor de oxigênio e então você poderá ver o valor preciso da concentração de oxigênio.
+Após enviar o programa, abra o Serial Monitor na Arduino IDE e defina a taxa de transmissão para 9600. Aguarde o aquecimento do sensor de oxigênio e então você poderá ver o valor preciso da concentração de oxigênio.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/23.png" style={{width:600, height:'auto'}}/></div>
 
 ## Serial
 
-Ao trabalhar com a Arduino IDE, a comunicação Serial é uma parte essencial de muitos projetos. Para usar Serial na Arduino IDE, você precisa começar abrindo a janela Serial Monitor. Isso pode ser feito clicando no ícone **Serial Monitor** na barra de ferramentas ou pressionando o atalho **Ctrl+Shift+M**.
+Ao trabalhar com a Arduino IDE, a comunicação Serial é uma parte essencial de muitos projetos. Para usar Serial na Arduino IDE, você precisa começar abrindo a janela Serial Monitor. Isso pode ser feito clicando no ícone **Serial Monitor** na barra de ferramentas ou pressionando a tecla de atalho **Ctrl+Shift+M**.
 
 ### Uso geral
 
@@ -763,18 +775,18 @@ void loop() {
 
 Neste código, primeiro inicializamos a comunicação Serial em uma taxa de transmissão de **9600** usando a função `Serial.begin()` na função `setup()`. Em seguida, na função `loop()`, usamos a função `Serial.print()` para enviar "Hello World!" para a porta Serial.
 
-Também usamos a função `Serial.available()` para verificar se há algum dado disponível para ser lido da porta Serial. Se houver, lemos o byte recebido usando a função `Serial.read()` e o armazenamos em uma variável chamada incomingByte. Em seguida, usamos as funções `Serial.print()` e `Serial.println()` para imprimir "I received: " seguido do valor de incomingByte no Serial Monitor.
+Nós também usamos a função `Serial.available()` para verificar se há algum dado disponível para ser lido pela porta Serial. Se houver, lemos o byte recebido usando a função `Serial.read()` e o armazenamos em uma variável chamada incomingByte. Em seguida, usamos as funções `Serial.print()` e `Serial.println()` para imprimir "I received: " seguido do valor de incomingByte no monitor Serial.
 
-Por fim, adicionamos uma função `delay()` para aguardar um segundo antes de repetir o loop. Este código demonstra como usar algumas das funções Serial mais comuns na Arduino IDE para enviar e receber dados pela porta Serial.
+Por fim, adicionamos uma função `delay()` para esperar um segundo antes de repetir o loop. Este código demonstra como usar algumas das funções Serial mais comuns na Arduino IDE para enviar e receber dados pela porta Serial.
 
-Depois de enviar o programa, abra o Serial Monitor na Arduino IDE e defina a taxa de transmissão para 9600. Você verá a seguinte mensagem no monitor serial, que exibe "Hello World!" a cada segundo. Além disso, você pode enviar conteúdo para o XIAO ESP32-S3 através do monitor serial, e o XIAO imprimirá cada byte do conteúdo que você enviar.
+Após enviar o programa, abra o Serial Monitor na Arduino IDE e defina a taxa de transmissão para 9600. Você verá a seguinte mensagem no monitor serial, que exibe “Hello World!” a cada segundo. Além disso, você pode enviar conteúdo para o XIAO ESP32-S3 através do monitor serial, e o XIAO imprimirá cada byte do conteúdo que você enviar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/24.png" style={{width:600, height:'auto'}}/></div>
 
 ### Uso do Serial1
 
-De acordo com os diagramas de pinos do XIAO ESP32-S3 acima para parâmetros específicos, podemos observar que existem pinos TX e RX.
-Isso é diferente da comunicação serial, mas o uso também é muito semelhante, exceto que alguns parâmetros precisam ser adicionados.
+De acordo com os diagramas de pinos do XIAO ESP32-S3 acima para parâmetros específicos, podemos observar que há pinos TX e RX.
+Isso é diferente da comunicação serial padrão, mas o uso também é muito semelhante, exceto que alguns parâmetros precisam ser adicionados.
 Então, a seguir, usaremos os pinos expostos pelo chip para comunicação serial.
 
 Função principal que precisa ser incluída:
@@ -785,7 +797,7 @@ Função principal que precisa ser incluída:
   - `rxPin` :pino de recepção
   - `txPin` :pino de envio
 
-Vale ressaltar que, se usarmos porta de pino digital para definir, este local deve ser `#define RX_PIN D7`, `#define TX_PIN D6`; se usarmos porta de pino GPIO para definir, este local deve ser `#define RX_PIN 44`, `#define TX_PIN 43`. Consulte os diagramas de pinos das diferentes séries XIAO para parâmetros específicos.
+Vale ressaltar que, se usarmos porta de pino digital para definir, este local deve ser `#define RX_PIN D7`, `#define TX_PIN D6`; se usarmos porta de pino GPIO para definir, este local deve ser `#define RX_PIN 44`, `#define TX_PIN 43`. Consulte os diagramas de pinos das diferentes XIAO Series para parâmetros específicos.
 
 Aqui está um programa de exemplo:
 
@@ -809,7 +821,7 @@ void loop() {
 }
 ```
 
-Depois de enviar o programa, abra o Serial Monitor na Arduino IDE e defina a taxa de transmissão para 115200. Então, você pode enviar o conteúdo que quiser para o XIAO ESP32-S3 através do Serial Monitor, e o XIAO imprimirá cada byte do conteúdo que você enviar. Aqui, o conteúdo que inseri é "Hello Everyone", meu gráfico de resultados é o seguinte
+Após enviar o programa, abra o Serial Monitor na Arduino IDE e defina a taxa de transmissão para 115200. Então, você pode enviar o conteúdo que quiser para o XIAO ESP32-S3 através do Serial Monitor, e o XIAO imprimirá cada byte do conteúdo que você enviar. Aqui, o conteúdo que inseri é "Hello Everyone", meu gráfico de resultados é o seguinte
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
@@ -817,7 +829,7 @@ Depois de enviar o programa, abra o Serial Monitor na Arduino IDE e defina a tax
 
 Se você achar que uma porta serial de hardware não é suficiente, também pode usar a função de software serial do ESP32 para definir alguns pinos como software serial para expandir o número de portas seriais.
 
-Claro, recomendamos usar o segundo método de mapeamento de portas seriais de hardware, pois é um recurso exclusivo do ESP32. Você pode ler mais sobre isso na seção [Other Hardware Serial](#Outros-Seriais-de-Hardware).
+Claro, recomendamos usar o segundo método de mapeamento de portas seriais de hardware, pois é um recurso exclusivo do ESP32. Você pode ler mais sobre isso na seção [Other Hardware Serial](#Other-Hardware-Serial).
 
 Para produtos de chip da série ESP32, se você precisar usar a porta serial por software, será necessário baixar separadamente a biblioteca de porta serial por software de terceiros. Uma referência é fornecida aqui.
 
@@ -838,7 +850,7 @@ Como você já baixou a biblioteca em formato zip, abra sua Arduino IDE, clique 
 Em seguida, você pode usar a porta serial por software do ESP32.
 
 :::caution
-Se você tiver outras bibliotecas de porta serial por software instaladas no seu computador, é provável que causem conflito, portanto, verifique por conta própria.
+Se você tiver outras bibliotecas de porta serial por software instaladas no seu computador, é provável que causem conflito, portanto, verifique isso por conta própria.
 :::
 
 ```c
@@ -885,9 +897,9 @@ Por fim, adicionamos uma função `delay()` para esperar um segundo antes de rep
 Observe que, para usar a serial por software no ESP32-S3, você precisa selecionar os pinos apropriados para RX e TX que não sejam usados para qualquer outro propósito. Neste exemplo, usamos os pinos 9 e 10 para RX e TX, respectivamente.
 :::
 
-### Outros Seriais de Hardware
+### Other Hardware Serial
 
-O ESP32S3 possui um total de três interfaces de comunicação UART, numeradas de 0 a 2, que são UART0, UART1 e UART2. Os pinos dessas três portas seriais não são fixos e podem ser remapeados para qualquer porta de IO.
+O ESP32S3 possui um total de três interfaces de comunicação UART, numeradas de 0 a 2, que são UART0, UART1 e UART2. Os pinos dessas três portas seriais não são fixos e podem ser remapeados para qualquer porta de E/S.
 
 Por padrão, não usamos a **UART0**, pois ela é usada para comunicação serial USB. Você pode usar outras portas seriais de hardware personalizando o mapeamento da serial de hardware.
 
@@ -953,7 +965,7 @@ Por favor, prepare o seguinte.
  </tr>
 </table>
 
-Baixe a biblioteca do sensor para o seu computador. E adicione-a à Arduino IDE.
+Baixe a biblioteca do sensor para o seu computador. Em seguida, adicione-a à IDE do Arduino.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank" rel="noopener noreferrer">
@@ -1050,7 +1062,7 @@ void loop()
 }
 ```
 
-Faça o upload do programa e, em seguida, abra o monitor serial e defina a taxa de transmissão para 115200.
+Envie o programa e, em seguida, abra o monitor serial e defina a taxa de transmissão para 115200.
 
 Se tudo correr bem, você verá mensagens de dados no monitor serial.
 
@@ -1092,13 +1104,13 @@ O XIAO ESP32-S3 possui uma interface I2C que pode ser usada para transmissão e 
  </tr>
 </table>
 
-O display OLED na placa de expansão XIAO usa o protocolo I2C e é conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos conectar diretamente o XIAO na placa de expansão e programá-lo para exibir conteúdo na tela.
+O display OLED na placa de expansão XIAO usa o protocolo I2C e é conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos conectar diretamente o XIAO à placa de expansão e programá-lo para exibir conteúdo na tela.
 
 ### Implementação de software
 
 Este exemplo apresenta como usar o display OLED na Seeed Studio Expansion Base para XIAO ESP32-S3.
 
-#### Etapa 1. Instale o Seeed Studio XIAO ESP32-S3 na placa de expansão e depois conecte o cabo Type-C
+#### Etapa 1. Instale o Seeed Studio XIAO ESP32-S3 na placa de expansão e conecte o cabo Type-C
 
 #### Etapa 2. Instale a biblioteca u8g2
 
@@ -1108,7 +1120,7 @@ Este exemplo apresenta como usar o display OLED na Seeed Studio Expansion Base p
     </a>
 </div>
 
-#### Etapa 3. Copie o código e cole na Arduino IDE e depois faça o upload
+#### Etapa 3. Copie o código e cole na IDE do Arduino e depois envie
 
 ```c
 #include <Arduino.h>
@@ -1135,7 +1147,7 @@ Na função `setup()`, inicializamos o display OLED usando a função `u8x8.begi
 
 Na função `loop()`, definimos a fonte usando a função `u8x8.setFont()` e especificamos a posição do cursor no display usando a função `u8x8.setCursor()`. Por fim, usamos a função `u8x8.print()` para exibir a string "Hello World!" no display OLED.
 
-Se você fizer o upload de um programa para o XIAO ESP32-S3, verá conteúdo exibido na tela do display OLED na placa de expansão.
+Se você enviar um programa para o XIAO ESP32-S3, verá conteúdo exibido na tela do display OLED na placa de expansão.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/29.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -1213,11 +1225,11 @@ void loop(void) {
 }
 ```
 
-Na função `setup()`, a classe `U8G2_SH1107_128X128_1_4W_HW_SPI` é instanciada com os argumentos de construtor apropriados que especificam os pinos usados para chip select (cs), data/command (dc) e reset. Em seguida, a função `u8g2.begin()` é chamada para inicializar o display.
+Na função `setup()`, a classe `U8G2_SH1107_128X128_1_4W_HW_SPI` é instanciada com os argumentos de construtor apropriados que especificam os pinos usados para chip select (cs), dados/comando (dc) e reset. Em seguida, a função `u8g2.begin()` é chamada para inicializar o display.
 
 Na função `loop()`, o display é atualizado com novo conteúdo usando as funções `u8g2.firstPage()`, `u8g2.setFont()` e `u8g2.drawStr()`. A função `u8g2.firstPage()` configura o buffer do display para escrita, enquanto `u8g2.nextPage()` exibe o conteúdo atualizado. O laço do-while garante que o conteúdo seja exibido continuamente até que o programa seja interrompido.
 
-No geral, este código demonstra como usar a biblioteca U8g2 para controlar um display OLED e exibir texto nele.
+De modo geral, este código demonstra como usar a biblioteca U8g2 para controlar um display OLED e exibir texto nele.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/31.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -1243,18 +1255,18 @@ As interfaces de ilhas de solda fornecidas na placa de expansão Sense permitem 
 </table>
 
 :::caution
-Como pode ser visto na imagem, devido às limitações de espaço do XIAO, muitos traçados de fios são muito compactos. Portanto, ao cortar a conexão do J3, tenha muito cuidado para não cortar fora da linha branca, caso contrário isso pode fazer com que a placa de desenvolvimento apresente mau funcionamento!
+Como pode ser visto na imagem, devido às limitações de espaço do XIAO, muitos traçados de fios são muito compactos. Portanto, ao cortar a conexão de J3, tenha muito cuidado para não cortar fora da linha branca, caso contrário isso pode fazer com que a placa de desenvolvimento apresente mau funcionamento!
 :::
 
 :::caution
-Por uma questão de bom senso, o J3 é simplesmente descrito acima como uma interface que liga ou desliga a função do cartão SD, mas isso na verdade não é preciso. A conexão real do circuito é mostrada abaixo. Cortar o J3 na verdade desconecta os resistores de pull-up de R4 a R6, que é a principal razão pela qual a função do cartão SD é desativada enquanto a função SPI é restaurada ao normal.
+Por uma questão de bom senso, o J3 foi simplesmente descrito acima como uma interface que liga ou desliga a função do cartão SD, mas isso na verdade não é preciso. A conexão real do circuito é mostrada abaixo. Cortar o J3 na verdade desconecta os resistores de pull-up de R4 a R6, que é a principal razão pela qual a função do cartão SD é desativada enquanto a função SPI é restaurada ao normal.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/93.png" style={{width:800, height:'auto'}}/></div>
 :::
 
-## Pinos Touch
+## Pinos de toque
 
-Além dos pinos funcionais comuns mencionados acima, XIAO ESP32-S3/XIAO ESP32-S3 Sense também possui 9 pinos de detecção de toque A0~A5, A8~A10.
+Além dos pinos funcionais comuns mencionados acima, o XIAO ESP32-S3/XIAO ESP32-S3 Sense também possui 9 pinos de detecção de toque A0~A5, A8~A10.
 
 Podemos verificar se um pino foi tocado lendo seu valor analógico, o que é muito conveniente. O programa a seguir é usado para detectar se o pino A5 foi tocado.
 
@@ -1272,13 +1284,13 @@ void loop(void) {
 }
 ```
 
-Depois de enviar o programa, abra o monitor serial e defina a taxa de baud para 9600. Em seguida, toque no pino A5 e você verá que o valor de leitura analógica será significativamente maior do que o valor antes de tocar.
+Após enviar o programa, abra o monitor serial e defina a taxa de transmissão para 9600. Em seguida, toque o pino A5 e você verá que o valor de leitura analógica será significativamente maior do que o valor antes de tocar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
 ## Pinos USB
 
-ESP32-S3 é um microcontrolador que integra funcionalidades de Wi-Fi e Bluetooth, e seus pinos D+ e D- são usados para suportar comunicação USB. Especificamente, esses dois pinos são linhas de sinal diferencial usadas para transmissão de dados em alta velocidade entre dispositivos e hosts USB 2.0.
+ESP32-S3 é um microcontrolador que integra funcionalidades de Wi-Fi e Bluetooth, e seus pinos D+ e D- são usados para suportar comunicação USB. Especificamente, esses dois pinos são linhas de sinal diferencial usadas para transmissão de dados em alta velocidade entre dispositivos USB 2.0 e hosts.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.png" style={{width:200, height:'auto'}}/></div>
 
@@ -1288,21 +1300,21 @@ O pino D+ é a linha de polaridade positiva usada para enviar dados, enquanto o 
 
 ## Pinos JTAG
 
-A interface JTAG (Joint Test Action Group) do ESP32-S3 é uma interface de depuração e teste que pode ser usada para depuração e programação de hardware em nível muito baixo durante o desenvolvimento, depuração e testes. A interface JTAG inclui um conjunto de linhas de sinal padrão, incluindo linhas de clock, linhas de entrada de dados, linhas de saída de dados, linhas de seleção de modo de teste, linhas de clock de modo de teste e assim por diante.
+A interface JTAG (Joint Test Action Group) do ESP32-S3 é uma interface de depuração e teste que pode ser usada para depuração de hardware em nível muito baixo e programação durante o desenvolvimento, depuração e testes. A interface JTAG inclui um conjunto de linhas de sinal padrão, incluindo linhas de clock, linhas de entrada de dados, linhas de saída de dados, linhas de seleção de modo de teste, linhas de clock de modo de teste e assim por diante.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/35.png" style={{width:200, height:'auto'}}/></div>
 
 A interface JTAG do ESP32-S3 pode ser usada para os seguintes propósitos:
 
-1. Depuração: a interface JTAG pode ser usada para depuração e execução passo a passo no chip ESP32-S3 para ajudar os desenvolvedores a encontrar e resolver erros de código.
+1. Depuração: A interface JTAG pode ser usada para depuração e execução passo a passo no chip ESP32-S3 para ajudar os desenvolvedores a encontrar e resolver erros de código.
 
 2. Gravação de programas: Por meio da interface JTAG, programas ou firmware de depuração podem ser carregados no chip ESP32-S3.
 
 3. Leitura do estado da CPU: A interface JTAG pode ser usada para ler o estado da CPU, o conteúdo da memória e os valores dos registradores do chip ESP32-S3 para depuração e testes.
 
-Deve-se notar que o uso da interface JTAG requer dispositivos de hardware dedicados e ferramentas de software, bem como o conhecimento e as habilidades profissionais correspondentes. Portanto, em geral, a interface JTAG é usada apenas em cenários específicos, como desenvolvimento, depuração e testes. Para usuários em geral, usar outras funções e interfaces do ESP32-S3 já é suficiente.
+Deve-se notar que o uso da interface JTAG requer dispositivos de hardware dedicados e ferramentas de software, bem como o conhecimento e as habilidades profissionais correspondentes. Portanto, em geral, a interface JTAG é usada apenas em cenários específicos, como desenvolvimento, depuração e testes. Para usuários em geral, o uso de outras funções e interfaces do ESP32-S3 já é suficiente.
 
-Se você quiser saber mais sobre depuração JTAG, leia a [documentação oficial do ESP32](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/index.html).
+Se você quiser saber mais sobre depuração com JTAG, leia a [documentação oficial do ESP32](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/index.html).
 
 ## Solução de problemas
 
@@ -1310,7 +1322,7 @@ Se você quiser saber mais sobre depuração JTAG, leia a [documentação oficia
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/25.png" style={{width:600, height:'auto'}}/></div>
 
-R: Se você encontrar esse tipo de erro, ligue a chave **USB CDC On Boot**.
+R: Se você encontrar esse tipo de erro, ative a chave **USB CDC On Boot**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/28.png" style={{width:600, height:'auto'}}/></div>
 
@@ -1333,13 +1345,13 @@ R: A seguir está uma lista de recursos suportados/não suportados fornecida pel
 | I2S           | Sim           | Sim           | Sim           | Sim           |                        |
 | LEDC          | Sim           | Sim           | Sim           | Sim           |                        |
 | Motor PWM     | Não           | Não suportado | Não suportado | Não suportado |                        |
-| Contador de pulso | Não       | Não           | Não           | Não           |                        |
+| Contador de pulso | Não        | Não           | Não           | Não           |                        |
 | RMT           | Sim           | Sim           | Sim           | Sim           |                        |
 | SDIO          | Não           | Não           | Não           | Não           |                        |
 | SDMMC         | Sim           | Não suportado | Não suportado | Sim           |                        |
 | Timer         | Sim           | Sim           | Sim           | Sim           |                        |
 | Sensor de temp.  | Não suportado | Sim        | Sim           | Sim           |                        |
-| Toque         | Sim           | Sim           | Não suportado | Sim           |                        |
+| Touch         | Sim           | Sim           | Não suportado | Sim           |                        |
 | TWAI          | Não           | Não           | Não           | Não           |                        |
 | UART          | Sim           | Sim           | Sim           | Sim           |                        |
 | USB           | Não suportado | Sim           | Sim           | Sim           | ESP32-C3 apenas CDC/JTAG |
@@ -1347,7 +1359,7 @@ R: A seguir está uma lista de recursos suportados/não suportados fornecida pel
 
 ### P3: Por que sempre posso ver a mensagem de depuração do chip no monitor serial?
 
-R: Você pode tentar desligar a saída das mensagens de depuração usando o seguinte método, **Tool -> Core Debug Level: -> None** na Arduino IDE.
+R: Você pode tentar desativar a saída de mensagens de depuração usando o seguinte método, **Tool -> Core Debug Level: -> None** na Arduino IDE.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/90.png" style={{width:500, height:'auto'}}/></div>
 
@@ -1355,7 +1367,7 @@ No entanto, esse método nem sempre funciona, na verdade, as informações de de
 
 ### P4: Por que eu cortei a conexão de J3, mas ainda testo e obtenho os pinos D8 e D9 em nível alto? A gravação no cartão microSD ainda tem uma probabilidade de sucesso?
 
-Em termos de projeto de cartão SD, o circuito correto deve ter resistores de pull-up para fazer o cartão microSD funcionar corretamente. Se você descobrir que o nível do pino e a leitura e gravação do cartão ainda estão normais após cortar J3, isso pode ser apenas uma situação de sorte e não recomendamos que você leia e grave o cartão nesse caso, o que pode causar o problema de perda dos dados gravados. Enquanto isso, os pinos D8 e D9 podem ter o nível modificado escrevendo nível baixo após cortar J3.
+Em termos de projeto de cartão SD, o circuito correto deve ter resistores de pull-up para que o cartão microSD funcione corretamente. Se você descobrir que o nível do pino e a leitura e gravação do cartão ainda estão normais após cortar J3, isso pode ser apenas uma situação de sorte e não recomendamos que você leia e grave o cartão nesse caso, o que pode causar o problema de perda dos dados gravados. Enquanto isso, os pinos D8 e D9 podem ter o nível modificado escrevendo nível baixo após cortar J3.
 
 ## Suporte técnico e discussão sobre o produto
 

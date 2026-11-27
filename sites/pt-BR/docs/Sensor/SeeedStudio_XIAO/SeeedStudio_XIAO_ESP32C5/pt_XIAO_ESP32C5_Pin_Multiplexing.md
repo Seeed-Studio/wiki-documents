@@ -1,5 +1,5 @@
 ---
-title: Multiplexação de pinos com Seeed Studio XIAO ESP32-C5
+title: Multiplexação de pinos com o Seeed Studio XIAO ESP32-C5
 description: ''
 keywords:
   - xiao
@@ -37,16 +37,20 @@ import TabItem from '@theme/TabItem';
  </table>
 </div>
 
-O Seeed Studio XIAO ESP32-C5 é uma placa de desenvolvimento poderosa e versátil que possui uma variedade de interfaces periféricas e pinos GPIO. Esses pinos podem ser usados para diversos propósitos, como se comunicar com outros dispositivos, ler sensores analógicos, controlar LEDs e muito mais. Neste tutorial, vamos orientá-lo sobre como usar os pinos multiplexados do XIAO ESP32-C5.<br/>
+O Seeed Studio XIAO ESP32-C5 é uma placa de desenvolvimento poderosa e versátil que possui uma variedade de interfaces periféricas e pinos GPIO. Esses pinos podem ser usados para diversos fins, como comunicação com outros dispositivos, leitura de sensores analógicos, controle de LEDs e muito mais. Neste tutorial, vamos orientá-lo sobre como usar os pinos multiplexados do XIAO ESP32-C5.<br/>
 Em resumo, o XIAO ESP32-C5 possui 1×I2C, 1×SPI, 2×UART, até 11×GPIO (com capacidade de PWM), 5×canais ADC e uma interface de almofadas de conexão JTAG (pads no lado inverso).
 
 ## Introdução
 
-Em seguida, fornecerei tutoriais de exemplo e código, respectivamente, com base em duas plataformas: **PlatformIO** e **Arduino IDE**, e você pode escolher a plataforma de desenvolvimento de acordo com suas circunstâncias específicas.<br/>
+Em seguida, fornecerei exemplos de tutoriais e códigos, respectivamente, com base em duas plataformas: **PlatformIO** e **Arduino IDE**, e você pode escolher a plataforma de desenvolvimento de acordo com suas necessidades específicas.<br/>
 Se você ainda não usou o **Arduino IDE**, consulte [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_getting_started/).<br/>
 Se você ainda não usou o **PlatfromIO**, consulte [Platform IO with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_with_platformio/)。
 
 ### Visão geral dos pinos
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c5" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 Antes de começarmos, vamos revisar todos os pinos que o XIAO ESP32-C5 possui e suas funções com o seguinte esquema.
 
@@ -60,16 +64,16 @@ Antes de começarmos, vamos revisar todos os pinos que o XIAO ESP32-C5 possui e 
 
 ### Digital
 
-Todos os 11 pinos IO (D0–D10) do XIAO ESP32-C5 suportam funções digitais. Abaixo está um exemplo prático demonstrando como usar funções digitais para controlar o estado ligado/desligado de uma luz, e você pode multiplexar esses pinos de acordo com suas necessidades específicas.
+Todos os 11 pinos IO (D0–D10) do XIAO ESP32-C5 suportam funções digitais. Abaixo está um exemplo prático que demonstra como usar funções digitais para controlar o estado ligado/desligado de uma luz, e você pode multiplexar esses pinos de acordo com suas necessidades específicas.
 
 #### Preparação de hardware
 
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO ESP32-C5</th>
-        <th>Seeed Studio Grove Base for XIAO </th>
-        <th>Grove - Variable Color LED</th>
-        <th>Grove - Button</th>
+        <th>Seeed Studio Grove Base para XIAO </th>
+        <th>Grove - LED de Cor Variável</th>
+        <th>Grove - Botão</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -222,7 +226,7 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_1.gif" style={{width:400, height:'auto'}}/></div>
 
 :::tip
-Se o efeito acima não for alcançado depois que você pressionar o botão, talvez seja necessário pressionar primeiro o botão RESET onboard para “acordar” a placa.
+Se o efeito acima não for alcançado após você pressionar o botão, talvez seja necessário pressionar primeiro o botão RESET onboard para ativar a placa.
 :::
 
 ### PWM
@@ -234,8 +238,8 @@ Todos os pinos D0–D11 do XIAO ESP32-C5 suportam funcionalidade PWM. O PWM pode
 <table align="center">
  <tr>
    <th>Seeed Studio XIAO ESP32-C5</th>
-        <th>Seeed Studio Grove Base for XIAO </th>
-        <th>Grove - Variable Color LED</th>
+        <th>Seeed Studio Grove Base para XIAO </th>
+        <th>Grove - LED de Cor Variável</th>
  </tr>
  <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -253,7 +257,7 @@ Todos os pinos D0–D11 do XIAO ESP32-C5 suportam funcionalidade PWM. O PWM pode
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
-  </div></td>
+  </div></td]
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
@@ -264,7 +268,7 @@ Todos os pinos D0–D11 do XIAO ESP32-C5 suportam funcionalidade PWM. O PWM pode
 
 #### Software
 
-Os exemplos de código a seguir são baseados, respectivamente, no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com sua situação real de desenvolvimento.
+Os seguintes exemplos de código são baseados respectivamente no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com a sua situação real de desenvolvimento.
 
 <Tabs>
 <TabItem value=' Arduino IDE'>
@@ -390,7 +394,7 @@ Para o XIAO ESP32-C5, os pinos A0–A5 suportam funcionalidade de leitura analó
 
 #### Software
 
-Os seguintes exemplos de código são baseados em Arduino IDE e PlatformIO, respectivamente, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com a sua situação real de desenvolvimento.
+Os seguintes exemplos de código são baseados respectivamente no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com a sua situação real de desenvolvimento.
 
 <Tabs>
 <TabItem value=' Arduino IDE'>
@@ -473,7 +477,7 @@ void loop() {
 
 #### Resultado
 
-Abra o monitor serial, e ele imprimirá o valor bruto de ADC (analogValue), o valor em milivolts (analogVolts) e o valor de tensão (voltage) lidos do Grove-Rotary Angle Sensor. Mudanças óbvias ocorrerão à medida que você girar o Grove-Rotary Angle Sensor.
+Abra o monitor serial, e ele imprimirá o valor bruto de ADC (analogValue), o valor em milivolts (analogVolts) e o valor de tensão (voltage) lidos do Grove-Rotary Angle Sensor. Mudanças evidentes ocorrerão à medida que você girar o Grove-Rotary Angle Sensor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_3.png" style={{width:600, height:'auto'}}/></div>
 
@@ -518,7 +522,7 @@ Para **USB Serial**, conecte a placa diretamente a um computador via USB-C para 
 
 ##### Software
 
-Os seguintes exemplos de código são baseados em Arduino IDE e PlatformIO, respectivamente, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com a sua situação real de desenvolvimento.<br/>
+Os seguintes exemplos de código são baseados respectivamente no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com a sua situação real de desenvolvimento.<br/>
 Os pinos correspondentes para Serial1 são `RX_PIN - D7` e `TX_PIN - D6`.
 
 <Tabs>
@@ -582,15 +586,15 @@ void loop() {
 
 ##### Resultado
 
-Após enviar o programa, você pode monitorá-lo por meio da função UART do **XIAO Debug Mate** da Seeed Studio.
+Após fazer o upload do programa, você pode monitorá-lo por meio da função UART do Seeed Studio **XIAO Debug Mate**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-Se você ainda não usou o Seeed Studio XIAO Debug Mate, pode visitar [Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/pt-br/getting_started_with_xiao_debug_mate/).
+Se você ainda não usou o Seeed Studio XIAO Debug Mate, pode visitar  [Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/pt-br/getting_started_with_xiao_debug_mate/).
 :::
 
-#### Serial por software
+#### Software Serial
 
 Esta seção demonstrará a funcionalidade da comunicação serial por software, simulando pinos de comunicação serial usando pinos de uso geral.
 
@@ -627,7 +631,7 @@ Esta seção demonstrará a funcionalidade da comunicação serial por software,
 
 ##### Software
 
-Os exemplos de código a seguir são baseados respectivamente no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com a sua situação real de desenvolvimento.<br/>
+Os exemplos de código a seguir são baseados, respectivamente, no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de controle. Você pode selecionar e reutilizar o código apropriado de acordo com a sua situação real de desenvolvimento.<br/>
 Os pinos correspondentes simulados por software são `RX_PIN - D2` e `TX_PIN - D1`.
 
 <Tabs>
@@ -747,7 +751,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_wire_1.png" style={{width:600, height:'auto'}}/></div>
 
-- Após enviar o programa, conecte a placa a qualquer ferramenta serial, configure a taxa de baud correspondente e então a comunicação bidirecional poderá ser estabelecida.
+- Após fazer o upload do programa, conecte a placa a qualquer ferramenta serial, configure a taxa de baud correspondente e, em seguida, a comunicação bidirecional poderá ser estabelecida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_4.png" style={{width:600, height:'auto'}}/></div>
 
@@ -787,7 +791,7 @@ O chip XIAO ESP32-C5 integra uma interface I2C, que pode ser usada para conectar
 
 #### Software
 
-Os exemplos de código a seguir são baseados respectivamente no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de exibição. Você pode selecionar e reutilizar o código apropriado de acordo com o seu cenário real de desenvolvimento.
+Os exemplos de código a seguir são baseados, respectivamente, no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de exibição. Você pode selecionar e reutilizar o código apropriado de acordo com o seu cenário real de desenvolvimento.
 
 <Tabs>
 <TabItem value=' Arduino IDE'>
@@ -869,13 +873,13 @@ void loop(void) {
 
 #### Resultado
 
-- Após enviar o programa, o texto `Hello World!` e `XIAO ESP32-C5!` será exibido na tela.
+- Após fazer o upload do programa, o texto `Hello World!` e `XIAO ESP32-C5!` será exibido na tela.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 ### SPI
 
-O chip XIAO ESP32-C5 integra uma interface SPI, que pode ser usada para conectar dispositivos SPI externos, como memória flash, displays e sensores. Este exemplo demonstra a funcionalidade do SPI usando uma tela SPI.
+O chip XIAO ESP32-C5 integra uma interface SPI, que pode ser usada para conectar dispositivos SPI externos, como memória flash, displays e sensores. Este exemplo demonstra a funcionalidade de SPI usando uma tela SPI.
 
 #### Preparação de hardware
 
@@ -909,7 +913,7 @@ O chip XIAO ESP32-C5 integra uma interface SPI, que pode ser usada para conectar
 
 #### Software
 
-Os trechos de código a seguir são baseados, respectivamente, no Arduino IDE e no PlatformIO, e alcançam o mesmo efeito de exibição. Você pode selecionar e reutilizar o código apropriado de acordo com suas necessidades reais de desenvolvimento.
+Os trechos de código a seguir são baseados em Arduino IDE e PlatformIO, respectivamente, e alcançam o mesmo efeito de exibição. Você pode selecionar e reutilizar o código apropriado de acordo com suas necessidades reais de desenvolvimento.
 
 <Tabs>
 <TabItem value=' Arduino IDE'>
@@ -1015,13 +1019,13 @@ void loop(void) {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_wire_2.png" style={{width:600, height:'auto'}}/></div>
 
-- Após enviar o código, o texto Hello XIAO ESP32-C5 será exibido na tela.
+- Após o envio do código, o texto Hello XIAO ESP32-C5 será exibido na tela.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_5.jpg" style={{width:600, height:'auto'}}/></div>
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

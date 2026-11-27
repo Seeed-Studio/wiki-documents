@@ -17,9 +17,13 @@ url: https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/
 
 Seeed Studio XIAO ESP32C3 拥有丰富的接口。它有 **11 个数字 I/O** 可用作 **PWM 引脚**，以及 **4 个模拟输入** 可用作 **ADC 引脚**。它支持 **UART、I2C、SPI 和 I2S** 四种串行通信接口。本篇 wiki 将帮助你了解这些接口，并在你的下一个项目中加以实现！
 
-## 硬件总览
+## 硬件概览
 
-> *A3(GP105) - 使用 ADC2，可能会因为错误采样信号而失效。为了获得可靠的模拟读取，请改用 ADC1(A0/A1/A2)。请参考 ESP32-C3 数据手册。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+> *A3(GP105) - 使用 ADC2，在错误采样信号的影响下可能会失效。为了获得可靠的模拟读取，请改用 ADC1(A0/A1/A2)。请参考 ESP32-C3 数据手册。
 
 ### 正面
 
@@ -62,9 +66,9 @@ void loop() {
 }
 ```
 
-## 数字引脚作为 PWM
+## 数字引脚作为 PWM 使用
 
-将一个 LED 连接到 D10 引脚。然后上传以下代码，即可看到 LED 逐渐变暗。
+将一个 LED 连接到 D10 引脚。然后上传以下代码，观察 LED 逐渐变暗的效果。
 
 ```cpp
 int ledPin = D10;    // LED connected to digital pin 10
@@ -143,15 +147,15 @@ Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
 
 :::
 
-默认情况下，USB 串口是启用的，这意味着你可以通过 USB Type-C 将开发板连接到电脑，并在 Arduino IDE 上打开串口监视器来查看通过串口发送的数据。
+默认情况下，USB 串口是启用的，这意味着你可以通过 USB Type-C 将开发板连接到电脑，并在 Arduino IDE 上打开串口监视器查看通过串口发送的数据。
 
-然而，如果你想使用 UART0 作为串口，则需要将 D6 引脚作为 TX 引脚、D7 引脚作为 RX 引脚，并连接到一个 USB-Serial 转换器。
+但是，如果你想使用 UART0 作为串口，则需要将 D6 引脚作为 TX 引脚、D7 引脚作为 RX 引脚连接到一个 USB-Serial 转换器。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-3.png" alt="pir" width={1000} height="auto" /></div>
 
-此外，你还需要在 Arduino IDE 中将 **USB CDC On Boot** 设置为 **Disabled**。
+同时，你需要在 Arduino IDE 中将 **USB CDC On Boot** 设置为 **Disabled**。
 
-**注意：当开发板在 Arduino Board Manager 中显示出来时，请更换照片**
+**注意：当开发板在 Arduino Board Manager 中显示出来后，请更换此照片**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
 
@@ -232,7 +236,7 @@ void loop()
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank"><div align="center"><img width = {300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
 
-在这里，我们希望解析心率和呼吸数据，然后你可以像这样重写你的程序。
+这里，我们希望解析心率和呼吸数据，然后你可以像下面这样重写你的程序。
 
 ```c
 #include "Arduino.h"
@@ -331,10 +335,10 @@ void loop()
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/2.png" alt="pir" width="800" height="auto"/></div>
 
-### Serial1 使用方法
+### Serial1 用法
 
-根据上面 XIAO ESP32C3 引脚图中的具体参数，我们可以看到有 TX 引脚和 RX 引脚。
-这与普通串口通信有所不同，但用法也非常相似，只是需要额外添加几个参数。
+根据上面 XIAO ESP32C3 引脚图中的具体参数，我们可以观察到有 TX 引脚和 RX 引脚。
+这与串口通信有所不同，但用法也非常相似，只是需要添加几个参数。
 所以接下来，我们将使用芯片引出的引脚进行串口通信。
 
 需要包含的核心函数：
@@ -369,7 +373,7 @@ void loop() {
 }
 ```
 
-上传程序后，在 Arduino IDE 中打开串口监视器，并将波特率设置为 115200。然后，你就可以通过串口监视器向 XIAO ESP32C3 发送你想要的内容，XIAO 会打印出你发送内容的每一个字节。在这里，我输入的内容是 "Hello Everyone"，我的结果图如下所示
+上传程序后，在 Arduino IDE 中打开串口监视器，并将波特率设置为 115200。然后，你就可以通过串口监视器 Serial 向 XIAO ESP32C3 发送你想要的内容，XIAO 会打印出你发送内容的每一个字节。这里，我输入的内容是 "Hello Everyone"，我的结果图如下所示
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
@@ -485,7 +489,7 @@ void loop(void) {
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-5.png" alt="pir" width={1000} height="auto" /></div>
 
-- **步骤 2**. 打开 Arduino IDE，导航到 `Sketch > Include Library > Add .ZIP Library...` 并打开下载好的 zip 文件
+- **步骤 2**. 打开 Arduino IDE，导航到 `Sketch > Include Library > Add .ZIP Library...` 并打开下载的 zip 文件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
 
@@ -592,7 +596,7 @@ void loop() {
 
 - **步骤 4.** 上传代码并打开 **串口监视器**
 
-**注意：** 上传代码后，不会自动执行，直到你点击 Arduino 窗口右上角的 **Serial Monitor（串口监视器）**。
+**注意：** 上传代码后，它不会自动执行，直到你点击 Arduino 窗口右上角的 **Serial Monitor（串口监视器）**。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-8.jpg" alt="pir" width={600} height="auto" /></div>
 
@@ -602,7 +606,7 @@ void loop() {
 
 ### D9
 
-XIAO ESP32C3 的 D9 连接到 ESP32-C3 的 GPIO9（15）、上拉电阻（R6）和 BOOT 按钮。BOOT 按钮（以及 RESET 按钮）允许你手动切换 ESP32-C3 的启动模式（Boot Mode）。
+XIAO ESP32C3 的 D9 连接到 ESP32-C3 的 GPIO9（15）、上拉电阻（R6）以及 BOOT 按钮。BOOT 按钮（和 RESET 按钮）允许你手动切换 ESP32-C3 的启动模式（Boot Mode）。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" alt="pir" width={600} height="auto" /></div>
 
@@ -610,15 +614,15 @@ XIAO ESP32C3 的 D9 连接到 ESP32-C3 的 GPIO9（15）、上拉电阻（R6）�
 
 ### D6
 
-XIAO ESP32C3 的 D6 连接到 ESP32-C3 的 U0TXD（28）。第 1/2 阶段引导加载程序的运行状态会以文本形式输出到 U0TXD。
+XIAO ESP32C3 的 D6 连接到 ESP32-C3 的 U0TXD（28）。第 1/第 2 阶段 bootloader 的运行状态会以文本形式输出到 U0TXD。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/11.png" alt="pir" width={400} height="auto" /></div>
 
-D6 在启动时被设置为 UART 输出，因此如果你将 D6 用作输入，可能会意外产生较大的电流。**因此建议仅在输出模式下使用 D6 引脚**。
+D6 在启动时被设置为 UART 输出，因此如果你将 D6 用作输入，可能会意外产生较大的电流。**因此建议 D6 引脚仅在输出模式下使用**。
 
-但是，由于这个 D6 是 UART 输出，你需要注意几点：其一，在未通信的待机模式下它为 HIGH；其二，是第 1/2 阶段引导加载程序的文本输出。启动后信号会在 HIGH/LOW 之间快速跳变，如有需要必须采取对策。
+但是，由于这个 D6 是 UART 输出，你需要注意几点：其一，在未通信的待机模式下它为 HIGH；其二，是第 1/第 2 阶段 bootloader 的文本输出。启动后信号会在 HIGH/LOW 之间快速跳变，如有需要必须进行抑制。
 
-所以尽量不要使用 D6。（当然，在你理解其行为之后再使用也是可以的。）
+所以尽量不要使用 D6。（当然，在你理解其行为之后再使用是可以的。）
 
 ### D8
 
@@ -630,7 +634,7 @@ Seeed Studio XIAO ESP32C3 的 D8 连接到 ESP32-C3 的 GPIO8（14）。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/13.png" alt="pir" width={700} height="auto" /></div>
 
-如果你使用下载启动，**请在启动时为 GPIO8 添加上拉电阻以使其保持 HIGH**。
+如果你使用下载启动模式，**请添加上拉电阻以确保在启动时将 GPIO8 拉为 HIGH**。
 
 特别感谢 SeeedJP 同事 **matsujirushi** 对本节内容进行测试和贡献。这里是原始文章的参考链接。
 

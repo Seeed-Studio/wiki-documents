@@ -7,7 +7,7 @@ last_update:
   date: 09/09/2025
   author: MicroBlocks
 createdAt: '2025-09-09'
-updatedAt: '2026-03-12'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/xiao_rp2040_microblocks/
 ---
 
@@ -15,9 +15,13 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_rp2040_microblocks/
 
 ## MicroBlocks
 
-MicroBlocks é uma linguagem baseada em blocos que facilita para iniciantes (de 9 anos até adultos) a programação de microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor que o MicroPython; capacidade de controlar pinos GPIO e interagir com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem MicroBlocks para prototipagem e testes rápidos por causa de seu ciclo de desenvolvimento interativo e ágil.
+MicroBlocks é uma linguagem em blocos que facilita para iniciantes (de 9 anos até adultos) programar microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor que o MicroPython; capacidade de controlar pinos GPIO e se comunicar com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem MicroBlocks para prototipagem e testes rápidos por causa de seu ciclo de desenvolvimento rápido e interativo.
 
 ### Pinout e recursos de hardware do XIAO RP2040
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2040-overview.jpg" style={{width:600, height:'auto'}}/></div><br />
 
@@ -32,10 +36,10 @@ Esta placa também possui um único LED RGB (NeoPixel) no pino 14.
 ## Instalando o firmware do MicroBlocks
 
 Para entrar no modo bootloader, mantenha pressionado o botão B (boot) enquanto clica no botão R (reset).
-Os três LEDs acenderão e uma unidade USB virtual chamada **RPI-RP2** aparecerá.
+Todos os três LEDs acenderão e uma unidade USB virtual chamada **RPI-RP2** aparecerá.
 
 Baixe o [arquivo de firmware](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2040.uf2),
-da [pasta vm](https://microblocks.fun/downloads/latest/vm)
+na [pasta vm](https://microblocks.fun/downloads/latest/vm)
 e então arraste o arquivo para a unidade USB virtual.
 
 O firmware será instalado e, após alguns segundos, a unidade USB virtual desaparecerá.
@@ -64,7 +68,7 @@ Um círculo verde e o nome da placa aparecerão quando a placa estiver conectada
 
 ## Programando no MicroBlocks
 
-MicroBlocks é um ambiente de programação **ao vivo**, para que você possa testar enquanto programa.
+MicroBlocks é um ambiente de programação **ao vivo**, então você pode testar enquanto programa.
 Clique em blocos e scripts para executá-los.
 Arraste blocos para o painel de scripts e monte-os para criar scripts.
 
@@ -80,7 +84,7 @@ Clique no botão **Add Library** para adicionar bibliotecas.
 
 ## Exemplos
 
-Este script fará os LEDs vermelho, azul e verde se alternarem em ciclo:
+Este script fará os LEDs vermelho, azul e verde alternarem em sequência:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-three-led-blink.png" style={{width:300, height:'auto'}}/></div>
 
@@ -93,7 +97,7 @@ inclui muitos exemplos adicionais.
 
 ## Agradecimentos especiais
 
-Agradecimentos especiais ao John, da MicroBlocks, por escrever o artigo.
+Agradecimentos especiais ao John, do MicroBlocks, por escrever o artigo.
 
 ## Recursos do MicroBlocks
 

@@ -7,7 +7,7 @@ last_update:
   date: 09/09/2025
   author: MicroBlocks
 createdAt: '2025-09-09'
-updatedAt: '2026-03-12'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/pt-br/xiao_ble_microblocks/
 ---
 
@@ -15,9 +15,13 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_ble_microblocks/
 
 ## MicroBlocks
 
-MicroBlocks é uma linguagem em blocos que facilita para iniciantes (de 9 anos a adultos) programarem microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor do que o MicroPython; capacidade de controlar pinos GPIO e fazer interface com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem MicroBlocks para prototipagem rápida e testes por causa de seu ciclo de desenvolvimento rápido e interativo.
+MicroBlocks é uma linguagem baseada em blocos que facilita para iniciantes (dos 9 anos até adultos) programar microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor que o MicroPython; capacidade de controlar pinos GPIO e se comunicar com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem MicroBlocks para prototipagem e testes rápidos por causa de seu ciclo de desenvolvimento rápido e interativo.
 
-## Pinagem e Recursos de Hardware do XIAO nRF52840
+## Pinout e recursos de hardware do XIAO nRF52840
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-nrf52-sense.png" style={{width:600, height:'auto'}}/></div>
 
@@ -31,21 +35,21 @@ Todos os LEDs são invertidos: defina o pino associado como LOW para acender o L
 
 A versão Sense também inclui um microfone PDM onboard, sensor de temperatura e IMU LSM6DS3TR-C de 6 eixos, que são suportados pelas bibliotecas "Microphone", "Basic Sensors" e "Motion" do MicroBlocks.
 
-## Instalando o Firmware do MicroBlocks
+## Instalando o firmware do MicroBlocks
 
-Para entrar no modo bootloader, clique rapidamente no botão de reset duas vezes.
+Para entrar no modo bootloader, clique rapidamente duas vezes no botão de reset.
 (O botão de reset é bem pequenininho, localizado à esquerda da porta USB quando a porta está voltada para cima.)
 
-Uma unidade USB virtual chamada **XIAO-SENSE** aparecerá.
+Uma unidade USB virtual chamada **XIAO-SENSE** irá aparecer.
 
-Baixe o [arquivo de firmware](https://microblocks.fun/downloads/latest/vm/vm_xiao_nrf52840.uf2) na [pasta de firmware](https://microblocks.fun/downloads/latest/vm) do MicroBlocks e arraste o arquivo para a unidade USB virtual.
+Baixe o [arquivo de firmware](https://microblocks.fun/downloads/latest/vm/vm_xiao_nrf52840.uf2), na [pasta de firmware](https://microblocks.fun/downloads/latest/vm) do MicroBlocks e então arraste o arquivo para a unidade USB virtual.
 
 O firmware será instalado e, após alguns segundos, a unidade USB virtual desaparecerá.
 Você pode ignorar qualquer aviso de que o disco não foi ejetado corretamente.
 
 ## Conectando a placa ao MicroBlocks
 
-Conecte a placa ao seu computador com um cabo USB de dados (**não** um cabo somente de energia).
+Conecte a placa ao seu computador com um cabo USB de dados (**não** um cabo somente de alimentação).
 
 Execute o [editor MicroBlocks](https://microblocks.fun/run/microblocks.html) em um navegador Chrome ou Edge.
 Clique no botão **connect** (ícone de plugue):
@@ -56,7 +60,7 @@ Selecione **connect (USB)** no menu:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:200, height:'auto'}}/></div>
 
-**Observação:** Você também pode conectar sem fio selecionando **connect (BLE)** no menu de conexão.
+**Nota:** Você também pode conectar sem fio selecionando **connect (BLE)** no menu de conexão.
 
 Selecione sua placa na caixa de diálogo e clique no botão **connect**:
 
@@ -74,12 +78,12 @@ MicroBlocks é um ambiente de programação **ao vivo**, então você pode testa
 Clique em blocos e scripts para executá-los.
 Arraste blocos para o painel de scripts e monte-os para criar scripts.
 
-Seu código é armazenado na memória flash persistente e pode ser executado mesmo quando a placa não está conectada ao editor MicroBlocks.
-Scripts sob um bloco **when started** são executados quando a placa é energizada.
+Seu código é armazenado em memória flash persistente e pode ser executado mesmo quando a placa não está conectada ao editor MicroBlocks.
+Scripts sob um bloco **when started** são executados quando a placa é ligada.
 
 MicroBlocks oferece suporte a concorrência. Até dez scripts podem ser executados ao mesmo tempo.
 
-Além de seus muitos blocos integrados, MicroBlocks possui quase 200 bibliotecas que suportam recursos e periféricos adicionais.
+Além de seus muitos blocos integrados, MicroBlocks possui quase 200 bibliotecas que oferecem recursos e periféricos adicionais.
 Clique no botão **Add Library** para adicionar bibliotecas.
 
 ## Exemplos
@@ -94,7 +98,7 @@ Este script irá alternar entre os LEDs vermelho, azul e verde:
 
 A [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual) inclui muitos exemplos adicionais.
 
-## Agradecimentos Especiais
+## Agradecimentos especiais
 
 Agradecimentos especiais ao John, do MicroBlocks, por escrever o artigo.
 

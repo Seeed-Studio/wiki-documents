@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 # Multiplexación de pines en Seeed Studio XIAO nRF52840 (Sense)
 
-Seeed Studio XIAO nRF52840 (Sense) tiene interfaces muy completas. Hay **11 E/S digitales** que se pueden usar como **pines PWM** y **6 entradas analógicas** que se pueden usar como **pines ADC**. Es compatible con las tres interfaces de comunicación serie más comunes, como **UART, I2C y SPI**. ¡Este wiki será útil para aprender sobre estas interfaces e implementarlas en tus próximos proyectos!
+Seeed Studio XIAO nRF52840 (Sense) tiene interfaces muy completas. Hay **11 E/S digitales** que se pueden usar como **pines PWM** y **6 entradas analógicas** que se pueden usar como **pines ADC**. Es compatible con las tres interfaces de comunicación serie más comunes como **UART, I2C y SPI**. Este wiki será útil para aprender sobre estas interfaces e implementarlas en tus próximos proyectos.
 
 > Las funciones básicas aquí funcionan bien para ambas bibliotecas de Arduino de Seeed Studio XIAO nRF52840.
 
@@ -27,21 +27,25 @@ Seeed Studio XIAO nRF52840 (Sense) tiene interfaces muy completas. Hay **11 E/S 
 <Tabs>
 <TabItem value="nRF52840" label="XIAO nRF52840" default>
 
-### Parte frontal de XIAO nRF52840
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+### XIAO nRF52840 frontal
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Parte trasera de XIAO nRF52840
+### XIAO nRF52840 posterior
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 **Mapa de pines**
 
-| Pin XIAO                 | Función          | Pin del chip | Descripción                                         | Nombre Arduino |
+| Pin XIAO                | Función          | Pin del chip | Descripción                                          | Nombre Arduino |
 | :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
 | 5V                      | VBUS             |               | Entrada/Salida de alimentación                      |              |
 | GND                     |                  |               |                                                      |              |
-| 3V3                     | 3V3_OUT          |               | Salida de alimentación                              |              |
+| 3V3                     | 3V3_OUT          |               | Salida de alimentación                               |              |
 | D0                      | Analógico        | P0.02         | GPIO, AIN0                                           | 0            |
 | D1                      | Analógico        | P0.03         | GPIO, AIN1                                           | 1            |
 | D2                      | Analógico        | P0.28         | GPIO, AIN4                                           | 2            |
@@ -60,24 +64,28 @@ Seeed Studio XIAO nRF52840 (Sense) tiene interfaces muy completas. Hay **11 E/S 
 | RF Switch Port Select   |                  | P2.05         | Conmutar antena integrada                            |              |
 | RF Switch Power         |                  | P2.03         | Alimentación                                         |              |
 | CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                          |              |
-| USER_LED_R              |                  | P0.26         | Pin de LED RGB rojo controlado por el usuario        | 11           |
-| USER_LED_B              |                  | P0.06         | Pin de LED RGB azul controlado por el usuario        | 13/12        |
-| USER_LED_G              |                  | P0.30         | Pin de LED RGB verde controlado por el usuario       | 12/13        |
+| USER_LED_R              |                  | P0.26         | Pin del LED RGB rojo controlado por el usuario       | 11           |
+| USER_LED_B              |                  | P0.06         | Pin del LED RGB azul controlado por el usuario       | 13/12        |
+| USER_LED_G              |                  | P0.30         | Pin del LED RGB verde controlado por el usuario      | 12/13        |
 
 </TabItem>
 <TabItem value="nRF52840Plus" label="XIAO nRF52840 Plus">
 
-### Parte frontal de XIAO nRF52840 Plus
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840plus" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+### XIAO nRF52840 Plus frontal
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Plus_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Parte trasera de XIAO nRF52840 Plus
+### XIAO nRF52840 Plus posterior
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 **Mapa de pines**
 
-| Pin XIAO                 | Función             | Pin del chip | Funciones alternativas | Descripción                              | Nombre Arduino |
+| Pin XIAO                | Función             | Pin del chip | Funciones alternativas | Descripción                              | Nombre Arduino |
 | :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
 | 5V                      | VBUS                 |           |                    | Entrada/Salida de alimentación           |              |
 | GND                     |                      |           |                    |                                          |              |
@@ -107,12 +115,16 @@ Seeed Studio XIAO nRF52840 (Sense) tiene interfaces muy completas. Hay **11 E/S 
 | RF Switch Port Select   |                      | P2.05     |                    | Conmutar antena integrada                |              |
 | RF Switch Power         |                      | P2.03     |                    | Alimentación                             |              |
 | CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |              |
-| USER_LED_R              |                      | P0.26     |                    | Pin de LED RGB rojo controlado por el usuario | 11           |
-| USER_LED_B              |                      | P0.06     |                    | Pin de LED RGB azul controlado por el usuario | 13/12        |
-| USER_LED_G              |                      | P0.30     |                    | Pin de LED RGB verde controlado por el usuario | 12/13        |
+| USER_LED_R              |                      | P0.26     |                    | Pin del LED RGB rojo controlado por el usuario | 11           |
+| USER_LED_B              |                      | P0.06     |                    | Pin del LED RGB azul controlado por el usuario | 13/12        |
+| USER_LED_G              |                      | P0.30     |                    | Pin del LED RGB verde controlado por el usuario | 12/13        |
 
 </TabItem>
 <TabItem value="nRF52840Sense" label="XIAO nRF52840 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
 
 ### Parte frontal de XIAO nRF52840 Sense
 
@@ -124,9 +136,9 @@ Seeed Studio XIAO nRF52840 (Sense) tiene interfaces muy completas. Hay **11 E/S 
 
 **Mapa de pines**
 
-| Pin XIAO                | Función         | Pin del chip | Descripción                                          | Nombre Arduino |
+| Pin de XIAO             | Función         | Pin del chip | Descripción                                          | Nombre en Arduino |
 | :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
-| 5V                      | VBUS             |               | Entrada/Salida de alimentación                       |              |
+| 5V                      | VBUS             |               | Entrada/Salida de alimentación                      |              |
 | GND                     |                  |               |                                                      |              |
 | 3V3                     | 3V3_OUT          |               | Salida de alimentación                               |              |
 | D0                      | Analógico        | P0.02         | GPIO, AIN0                                           | 0            |
@@ -158,17 +170,21 @@ Seeed Studio XIAO nRF52840 (Sense) tiene interfaces muy completas. Hay **11 E/S 
 </TabItem>
 <TabItem value="nRF52840SensePlus" label="XIAO nRF52840 Sense Plus">
 
-### XIAO nRF52840 Sense Plus frontal
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840senseplus" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+### Parte frontal de XIAO nRF52840 Sense Plus
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_Plus_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### XIAO nRF52840 Sense Plus posterior
+### Parte trasera de XIAO nRF52840 Sense Plus
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 **Mapa de pines**
 
-| Pin XIAO                | Función             | Pin del chip | Funciones alternativas | Descripción                              | Nombre Arduino |
+| Pin de XIAO             | Función             | Pin del chip | Funciones alternativas | Descripción                              | Nombre en Arduino |
 | :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
 | 5V                      | VBUS                 |           |                    | Entrada/Salida de alimentación           |              |
 | GND                     |                      |           |                    |                                          |              |
@@ -241,9 +257,9 @@ void loop() {
 }
 ```
 
-## Digital como PWM
+## Digital as PWM
 
-Conecta un LED al pin D10. Luego sube el siguiente código para ver cómo el LED se va atenuando gradualmente.
+Conecta un LED al pin D10. Luego sube el siguiente código para ver cómo el LED se atenúa gradualmente.
 
 ```cpp
 int ledPin = 10;    // LED connected to digital pin 10
@@ -271,7 +287,7 @@ void loop() {
 }
 ```
 
-## Analógico
+## Analog
 
 Conecta un potenciómetro al pin A5 y un LED al pin D10. Luego sube el siguiente código para controlar el intervalo de parpadeo del LED girando la perilla del potenciómetro.
 
@@ -298,9 +314,9 @@ void loop() {
 }
 ```
 
-## Serie
+## Serial
 
-Usa Serial1 para usar el UART a través de GPIO en lugar de USB. También puedes usar ambos de forma simultánea.
+Usa Serial1 para utilizar el UART a través de GPIO en lugar de USB. También puedes usar ambos de forma simultánea.
 Usa el pin D6 como pin TX de UART y el pin D7 como pin RX de UART para enviar el mensaje "Hello World!".
 
 ```cpp
@@ -328,7 +344,7 @@ void loop() {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-I2C-2.png" alt="pir" width={1000} height="auto" /></p>
 
-- **Paso 2.** Abre Arduino IDE, navega a `Sketch > Include Library > Manage Libraries...`
+- **Paso 2.** Abre Arduino IDE y navega a `Sketch > Include Library > Manage Libraries...`
 
 - **Paso 3.** Busca **u8g2** e instálala
 
@@ -374,9 +390,9 @@ void loop(void) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-SPI.png" alt="pir" width={1000} height="auto" /></p>
 
-- **Paso 2.** Esta pantalla OLED es compatible tanto con comunicación I2C como SPI, y el modo predeterminado es I2C. Para usar el modo SPI, debes consultar la [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/es/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) para cambiar la comunicación de la pantalla OLED a SPI antes de continuar
+- **Paso 2.** Esta pantalla OLED admite comunicación tanto I2C como SPI, y el modo predeterminado es I2C. Para usar el modo SPI, debes consultar la [wiki de Grove - OLED Display 1.12 (SH1107) V3.0](https://wiki.seeedstudio.com/es/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) para cambiar la comunicación de la pantalla OLED a SPI antes de continuar.
 
-**Nota:** Asegúrate de que la biblioteca U8g2 esté instalada a partir de los pasos anteriores.
+**Nota:** Asegúrate de que la librería U8g2 esté instalada a partir de los pasos anteriores.
 
 - **Paso 3.** Sube el siguiente código para mostrar cadenas de texto en la pantalla OLED
 

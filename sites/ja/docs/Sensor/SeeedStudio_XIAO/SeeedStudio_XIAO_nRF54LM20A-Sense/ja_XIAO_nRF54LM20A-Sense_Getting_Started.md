@@ -12,7 +12,7 @@ last_update:
   date: 08/24/2026
   author: Zeller
 createdAt: '2025-05-13'
-updatedAt: '2026-08-24'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54lm20a_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -27,7 +27,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
         <div className="get_one_now_container" style={{textAlign: 'center'}}>
           <a
             className="get_one_now_item"
-            href="https://www.seeedstudio.com/Seeed-Studio-XIAF54LM20A-Sense-p-6840.html"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -45,7 +45,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## はじめに
 
-Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A SoC を中心に構成された、コンパクトで超低消費電力のワイヤレス開発ボードです。128 MHz Arm Cortex-M33 プロセッサ、512 KB RAM、2 MB オンチップ NVM、マルチプロトコル 2.4 GHz ワイヤレス接続、オンボード IMU、デジタルマイク、8MB 外部フラッシュ、IPEX アンテナコネクタ、nPM1300 PMIC を搭載し、バッテリー駆動の高度な IoT、ウェアラブル、スマートセンシング、エッジ AI アプリケーションに対応します。
+Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A SoC を中心に構成された、コンパクトで超低消費電力のワイヤレス開発ボードです。128 MHz Arm Cortex-M33 プロセッサ、512 KB RAM、2 MB オンチップ NVM、マルチプロトコル 2.4 GHz ワイヤレス接続、オンボード IMU、デジタルマイク、8MB 外部フラッシュ、IPEX アンテナコネクタ、nPM1300 PMIC を備え、バッテリー駆動の高度な IoT、ウェアラブル、スマートセンシング、エッジ AI アプリケーションに対応します。
 
 ### 仕様
 
@@ -161,11 +161,11 @@ Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A 
 
 - **高度な接続性とセキュリティを備えた高性能 SoC**
 
-  Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A SoC を搭載した、コンパクトで超低消費電力のワイヤレス開発ボードです。128 MHz Arm Cortex-M33 プロセッサ、512 KB RAM、2 MB オンチップ NVM、128 MHz RISC-V コプロセッサ、マルチプロトコル 2.4 GHz ワイヤレス接続、オンボード IMU、デジタルマイク、8MB 外部フラッシュ、IPEX アンテナコネクタ、Nordic nPM1300 PMIC を備え、高効率な電源管理を実現します。Bluetooth LE、Bluetooth Channel Sounding、Bluetooth Mesh、Thread、Zigbee、Matter、最大 4 Mbps の独自 2.4 GHz プロトコルをサポートし、次世代のコネクテッド製品向けに設計されています。オンボードのモーションおよびオーディオセンサーにより、ウェアラブル、スマートセンシング、TinyML、ジェスチャ認識、音声トリガーデバイス、バッテリー駆動 IoT アプリケーションに最適です。
+  Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A SoC を搭載した、コンパクトで超低消費電力のワイヤレス開発ボードです。128 MHz Arm Cortex-M33 プロセッサ、512 KB RAM、2 MB オンチップ NVM、128 MHz RISC-V コプロセッサ、マルチプロトコル 2.4 GHz ワイヤレス接続、オンボード IMU、デジタルマイク、8MB 外部フラッシュ、IPEX アンテナコネクタ、Nordic nPM1300 PMIC による高効率な電源管理を備えています。Bluetooth LE、Bluetooth Channel Sounding、Bluetooth Mesh、Thread、Zigbee、Matter、および最大 4 Mbps の独自 2.4 GHz プロトコルをサポートし、次世代のコネクテッド製品向けに設計されています。オンボードのモーションセンサとオーディオセンサにより、ウェアラブル、スマートセンシング、TinyML、ジェスチャ認識、音声トリガデバイス、バッテリー駆動 IoT アプリケーションに最適です。
 
 - **超低消費電力効率**
 
-  Nordic nRF54LM20A と nPM1300 PMIC をベースとした XIAO nRF54LM20A Sense は、BAT 電源動作時にわずか 4.76 µA のディープスリープ電流を実測しています。nPM1300 PMIC と 0.33 µA の Ship Mode BAT 電流を組み合わせることで、アクティブなワイヤレス動作時でも、3.7 V の模擬バッテリー入力および TX 出力 +8 dBm 設定で平均電流 3.87 mA を記録し、長寿命バッテリー駆動のセンシングアプリケーション、ウェアラブル、常時オンの IoT デバイスに理想的です。
+  Nordic nRF54LM20A と nPM1300 PMIC をベースとした XIAO nRF54LM20A Sense は、BAT 電源動作時にわずか 4.76 µA のディープスリープ電流を実測しています。nPM1300 PMIC とその 0.33 µA の Ship Mode BAT 電流と組み合わせることで、アクティブなワイヤレス動作時には、3.7 V の模擬バッテリー入力および TX 出力 +8 dBm 設定で平均電流 3.87 mA を記録し、長寿命バッテリー駆動のセンシングアプリケーション、ウェアラブル、常時オンの IoT デバイスに理想的です。
 
 - **洗練された開発体験**
 
@@ -175,6 +175,10 @@ Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A 
 
 <Tabs>
 <TabItem value="XIAO nRF54LM20A" label="XIAO nRF54LM20A" default>
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54lm20a" target="_blank" rel="noopener noreferrer">インタラクティブ Pinout を確認</a>
+</div>
 
 ### XIAO nRF54LM20A 表面
 
@@ -186,6 +190,10 @@ Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A 
 
 </TabItem>
 <TabItem value="XIAO nRF54LM20A Sense" label="XIAO nRF54LM20A Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54lm20asense" target="_blank" rel="noopener noreferrer">インタラクティブ Pinout を確認</a>
+</div>
 
 ### XIAO nRF54LM20A Sense 表面
 
@@ -203,15 +211,15 @@ Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A 
 | XIAO ピン       | 機能           | チップピン                          | 説明                                                                         |
 | :------------: | :------------: | :-------------------------------: | :-------------------------------------------------------------------------- |
 | **電源ピン**   |                |                                   |                                                                             |
-| VBUS           | VBUS           | -                                 | 5V 電源入力/出力                                                            |
+| VBUS           | VBUS           | -                                 | 5V 電源入力/出力                                                             |
 | GND            | GND            | -                                 | グラウンド                                                                   |
-| 3V3            | 3V3-OUT        | -                                 | 3.3V 電源出力                                                               |
-| BAT+           | BAT+           | -                                 | バッテリー入力 (I²C 経由で nPM1300 により監視)                              |
+| 3V3            | 3V3-OUT        | -                                 | 3.3V 電源出力                                                                |
+| BAT+           | BAT+           | -                                 | バッテリー入力 (I²C 経由で nPM1300 により監視)                               |
 | BAT-           | BAT-           | -                                 | バッテリーマイナス端子                                                      |
-| SHPHLD         | SHPHLD         | -                                 | PMIC Ship/Hibernate モード制御 (超低消費電力出荷状態)                       |
+| SHPHLD         | SHPHLD         | -                                 | PMIC Ship/Hibernate モード制御 (超低消費電力の出荷状態)                     |
 | **システム & 制御ピン** |        |                                   |                                                                             |
-| RESET          | RESET          | -                                 | ボードリセット                                                              |
-| SWCLK          | SWCLK          | nRF54LM20A SWCLK / SAMD11 SWCLK   | シリアルワイヤクロック (nRF54 および SAMD11 用)                             |
+| RESET          | RESET          | -                                 | ボードリセット                                                               |
+| SWCLK          | SWCLK          | nRF54LM20A SWCLK / SAMD11 SWCLK   | シリアルワイヤクロック (nRF54 および SAMD11 用)                              |
 | SWDIO          | SWDIO          | nRF54LM20A SWDIO / SAMD11 SWDIO   | シリアルワイヤデータ (nRF54 および SAMD11 用)                               |
 | SAMD11_RESET   | RESET          | SAMD11 RESET                      | SAMD11 コプロセッサリセット                                                 |
 | **ユーザー & LED ピン** |            |                                   |                                                                             |
@@ -228,14 +236,14 @@ Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A 
 | **I2C ピン**   |                |                                   |                                                                             |
 | SDA            | I2C_SDA        | P1.03                             | I2C データライン (IMU & 周辺機器)                                           |
 | SCL            | I2C_SCL        | P1.07                             | I2C クロックライン (IMU & 周辺機器)                                         |
-| -              | BAT_SDA        | P1.18                             | バッテリーモニタ用 I2C SDA (nPM1300)                                        |
-| -              | BAT_SCL        | P1.17                             | バッテリーモニタ用 I2C SCL (nPM1300)                                        |
+| -              | BAT_SDA        | P1.18                             | バッテリーモニタ I2C SDA (nPM1300)                                          |
+| -              | BAT_SCL        | P1.17                             | バッテリーモニタ I2C SCL (nPM1300)                                          |
 | **UART ピン**  |                |                                   |                                                                             |
-| TX             | UART_TX        | P1.08                             | UART 送信                                                                   |
-| RX             | UART_RX        | P1.09                             | UART 受信                                                                   |
+| TX             | UART_TX        | P1.08                             | UART 送信                                                                    |
+| RX             | UART_RX        | P1.09                             | UART 受信                                                                    |
 | **SPI ピン**   |                |                                   |                                                                             |
-| MOSI           | SPI_MOSI       | P1.06                             | SPI マスタ出力・スレーブ入力                                                |
-| MISO           | SPI_MISO       | P1.05                             | SPI マスタ入力・スレーブ出力                                                |
+| MOSI           | SPI_MOSI       | P1.06                             | SPI Master Out Slave In                                                     |
+| MISO           | SPI_MISO       | P1.05                             | SPI Master In Slave Out                                                     |
 | SCK            | SPI_SCK        | P1.04                             | SPI シリアルクロック                                                         |
 | **オンボード周辺ピン** |      |                                   |                                                                             |
 | -              | MIC_DAT        | P1.14                             | マイクデータライン                                                           |
@@ -247,10 +255,10 @@ Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A 
 | -              | NFC            | P1.02 / P1.01                     | NFC アンテナピン                                                             |
 | -              | GRTC           | P0.04 / P0.05                     | 汎用 RTC ピン                                                                |
 
-## PlatformIO を使った入門
+## PlatformIO で始める
 
 このセクションでは、RGB LED のマルチカラー点滅効果を通して、XIAO nRF54LM20A を素早く使い始める方法を案内します。
-以下のハードウェアおよびソフトウェアの準備を完了し、その後の開発に向けて XIAO をセットアップしてください。
+以下のハードウェアおよびソフトウェアの準備を完了し、今後の開発に向けて XIAO をセットアップしてください。
 
 ### ハードウェアの準備
 
@@ -298,19 +306,19 @@ Seeed Studio XIAO nRF54LM20A Sense は、Nordic Semiconductor 社の nRF54LM20A 
   </table>
 </div>
 
-### VS Code のダウンロード
+### VS Code をダウンロード
 
-使用しているシステムに応じて [VS Code](https://code.visualstudio.com/download) をダウンロードしてください。
+使用しているシステムに応じて [VS Code](https://code.visualstudio.com/download) をダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-### PlatformIO 拡張機能のインストール
+### PlatformIO 拡張機能をインストール
 
 VSCode を開き、Extensions をクリックして PlatformIO を検索し、インストールを選択します。インストール完了後、VSCode を再起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
-### platform-seeedboards プラットフォームパッケージのインストール
+### platform-seeedboards プラットフォームパッケージをインストール
 
 Seeed Studio XIAO シリーズのボードはカスタム PlatformIO プラットフォームを使用しているため、対応するプラットフォームパッケージを手動でインストールする必要があります。
 
@@ -351,13 +359,13 @@ board = seeed-xiao-nrf54lm20a
 
 :::
 
-### 新規プロジェクトの作成
+### 新しいプロジェクトを作成
 
 1. PlatformIO 拡張機能を開き、**Create New Project** を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-2. プロジェクト名を設定し、開発ボード、フレームワーク、ファイル保存パスを選択します。
+2. プロジェクト名を設定し、開発ボード、フレームワーク、ファイルの保存パスを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_3.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -381,7 +389,7 @@ board = seeed-xiao-nrf54lm20a
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_5.png" style={{width:800, height:'auto'}}/></div>
 
-### Blink プログラムの追加
+### Blink プログラムを追加
 
 このチュートリアルは Zephyr RTOS をベースに開発されています。プロジェクトは次の 3 つのコアファイルで構成されています：
 
@@ -391,7 +399,7 @@ board = seeed-xiao-nrf54lm20a
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_6.png" style={{width:800, height:'auto'}}/></div>
 
-1. **main.c** プログラムを追加する
+1. **main.c** プログラムを追加
 
 <details>
 
@@ -500,7 +508,7 @@ int main(void)
 
 </details>
 
-2. app.overlay ファイルを追加する
+2. app.overlay ファイルを追加
 
 Devicetree オーバーレイファイルは、新しく作成した空のサンプルには存在しません。zephyr ディレクトリの下に追加する必要があります。
 
@@ -556,7 +564,7 @@ Devicetree オーバーレイファイルは、新しく作成した空のサン
 
 </details>
 
-3. `prj.conf` を修正し、対応する設定を有効にします。
+3. `prj.conf` を編集し、対応する設定を有効にします。
 
 ```prj
 CONFIG_GPIO=y
@@ -564,7 +572,7 @@ CONFIG_PWM=y
 CONFIG_SERIAL=n
 ```
 
-### プログラムのコンパイルと書き込み
+### プログラムをコンパイルして書き込む
 
 以下では、コンパイルと書き込みの 2 つの方法を紹介します。
 
@@ -580,7 +588,7 @@ pio run -e seeed-xiao-nrf54lm20a -t upload -v
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_9.png" style={{width:800, height:'auto'}}/></div>
 
-### 結果を確認する
+### 結果を確認
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_5.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -610,18 +618,18 @@ XIAO nRF54LM20A は、3.7V リチウムバッテリーを電源入力として�
 </div>
 
 :::caution
-はんだ付けの際には、正極端子と負極端子を短絡させてバッテリーや機器を損傷させないよう、十分に注意してください。
-バッテリーに電力が残っている場合は、決して基板上にはんだ付けしないでください。基板の回路が焼損するおそれがあります。通電中に短絡が発生すると大きな危険を伴うため、アダプタを使用することを推奨します。
+はんだ付けの際には、バッテリーや機器を焼損しないよう、必ず正極と負極を短絡させないように注意してください。
+バッテリーに電力が残っている場合は、決して基板上にはんだ付けしないでください。基板が焼損するおそれがあります。通電中にショートさせることは大きな危険を伴うため、アダプタの使用を推奨します。
 
 :::
 
 **バッテリー使用上の注意：**
 
-1. 規格を満たした適合バッテリーを必ず使用してください。
-2. バッテリー使用中でも、XIAO はデータケーブルを介してコンピュータ機器に接続できます。XIAO には保護回路チップが内蔵されており、安全にご使用いただけます。
+1. 規格を満たした適切なバッテリーを使用してください。
+2. バッテリー使用中でも、XIAO はデータケーブルを介してコンピュータデバイスに接続できます。XIAO には保護回路チップが内蔵されており、安全にご使用いただけます。
 
 ### 充電インジケータの動作
-このサンプルでは、nPM1300 の VBUS、VBAT、IBAT ステータスを読み取ることでオンボードの LEDDRV1 を制御します。充電中は LED が点灯し、バッテリーが満充電になった場合、バッテリーが接続されていない場合、または USB ケーブルが抜かれた場合には消灯します。同時に、プログラムはシリアルポート経由でバッテリー電圧、充電電流、および充電状態を出力し、充電プロセスを容易に監視できるようにします。
+このサンプルでは、nPM1300 の VBUS、VBAT、IBAT の状態を読み取り、オンボードの LEDDRV1 を制御します。充電中は LED が点灯し、バッテリーが満充電になった場合、バッテリーが接続されていない場合、または USB ケーブルが抜かれた場合には消灯します。同時に、プログラムはシリアルポート経由でバッテリー電圧、充電電流、および充電状態を出力し、充電プロセスを容易に監視できるようにします。
 
 
 <div className="github_container" style={{textAlign: 'center'}}>
@@ -634,7 +642,7 @@ XIAO nRF54LM20A は、3.7V リチウムバッテリーを電源入力として�
 
 ### バッテリー電圧検出
 
-XIAO nRF54LM20A は、nPM1300-CAA ロードスイッチを用いてバッテリー電力を効率的に計測するバッテリー電圧検出機能を統合しています。本ガイドでは、バッテリー検出のソフトウェア実装 **（特に main.c コード）** を中心に解析し、Zephyr NCS SDK の複雑さを回避しつつ、PlatformIO 環境でこの機能を簡単にデプロイして使用する方法を解説します。
+XIAO nRF54LM20A は、nPM1300-CAA ロードスイッチを用いてバッテリー電力を効率的に計測することを中心としたバッテリー電圧検出機能を統合しています。本ガイドでは、バッテリー検出のソフトウェア実装 **（特に main.c コード）** を解析し、Zephyr NCS SDK の複雑さを回避しつつ、PlatformIO 環境でこの機能を簡単にデプロイして使用する方法を解説します。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_10.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -643,7 +651,7 @@ XIAO nRF54LM20A は、nPM1300-CAA ロードスイッチを用いてバッテリ�
 
 nPM1300-CAA チップの役割：
 
-nPM1300-CAA は高集積の電源管理 IC（PMIC）であり、TPS22916 の単純なロードスイッチ機能を置き換えるものです。低消費電力でのモニタリングのためにバッテリー電圧の切り替えを制御するだけでなく、充電、レギュレーション、および（電圧・電流・温度による）高精度な燃料ゲージ機能も統合しており、nRF54LM20A のバッテリー寿命を最大限に引き延ばします。
+nPM1300-CAA は高集積の電源管理 IC（PMIC）であり、TPS22916 の単純なロードスイッチ機能を置き換えるものです。低消費電力でのモニタリングのためにバッテリー電圧の切り替えを制御するだけでなく、充電、レギュレーション、および高精度なフューエルゲージ（電圧・電流・温度による）を統合し、nRF54LM20A のバッテリー寿命を最大化します。
 
 
 
@@ -659,7 +667,7 @@ nPM1300-CAA は高集積の電源管理 IC（PMIC）であり、TPS22916 の単�
 
 ## 周辺機能の概要
 
-このボードの周辺回路には IMU とマイクが含まれます。下図でそれぞれの位置を確認できます。
+このボードの周辺回路には、IMU とマイクが含まれます。下図でそれぞれの位置を確認できます。
 
 <div style={{textAlign: 'center'}}>
   <img
@@ -698,7 +706,7 @@ pio run -t clean
 
 この問題は通常、OpenOCD の実行ファイルディレクトリがシステムの `PATH` に追加されていないことが原因です。次のコマンドを使用して、`~/.zshrc` ファイルに永続的に追加できます。
 
-> **Note:** この解決方法は **macOS のみ** を対象としています。
+> **注意：** この解決方法は **macOS のみ** を対象としています。
 
 ```shell
 echo 'export PATH="$HOME/Library/Application Support/Seeed/OpenOCD/tool-openocd/bin:$PATH"' >> ~/.zshrc
@@ -759,7 +767,7 @@ rm -rf ~/.platformio/packages/platform-seeed-* ~/.platformio/packages/framework-
 
 ## 技術サポートと製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div className="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

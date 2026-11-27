@@ -13,7 +13,7 @@ last_update:
   date: 08/11/2026
   author: Zeller
 createdAt: '2026-08-07'
-updatedAt: '2026-08-11'
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -52,11 +52,11 @@ Conheça o primeiro XIAO com STM32. Construído em torno do STM32C5A3CG com um n
 
 - **O primeiro XIAO com STM32**: Construído com o STM32C5A3CG, com um processador Arm Cortex-M33 de 144MHz, suporte a ponto flutuante e instruções DSP para controle embarcado e processamento de sensores.
 - **Conectividade CAN FD integrada**: Dois controladores CAN FD nativos, com um canal conectado a um transceptor TCAN3403-Q1 onboard e pads CANH/CANL acessíveis. Adicione um transceptor externo para usar o segundo canal.
-- **IMU de 6 eixos com aquecimento programável**: O acelerômetro e giroscópio LSM6DS3TR-C onboard são combinados com resistores de aquecimento dedicados ao redor do sensor. O aquecimento controlado por GPIO permite aquecimento programável e, com firmware de feedback de temperatura, regulação de temperatura em malha fechada para ajudar a reduzir a deriva relacionada à temperatura em aplicações de robótica e detecção de movimento.
+- **IMU de 6 eixos com aquecimento programável**: O acelerômetro e giroscópio LSM6DS3TR-C onboard são combinados com resistores de aquecimento dedicados ao redor do sensor. O aquecimento controlado por GPIO permite aquecimento programável e, com firmware de realimentação de temperatura, regulação de temperatura em malha fechada para ajudar a reduzir a deriva relacionada à temperatura em aplicações de robótica e detecção de movimento.
 - **Flash externa de 16MB**: Armazene dados de aplicação, logs de sensores, arquivos de configuração e registros de mensagens CAN usando o firmware da aplicação.
 - **Cristal externo para temporização de comunicação**: Um cristal externo de alta velocidade onboard fornece uma referência de clock para CAN FD e outras aplicações sensíveis à temporização.
-- **USB‑C e carregamento de bateria**: Desenvolva via USB‑C ou construa dispositivos alimentados por bateria usando o circuito de carregamento de bateria de lítio onboard e pads de conexão de bateria.
-- **Design compacto e fácil de integrar**: O formato XIAO e os pads laterais metalizados suportam prototipagem em breadboard com headers e integração em placas carrier personalizadas.
+- **USB-C e carregamento de bateria**: Desenvolva via USB‑C ou construa dispositivos alimentados por bateria usando o circuito de carregamento de bateria de lítio onboard e pads de conexão de bateria.
+- **Design compacto e fácil de integrar**: O formato XIAO e os pads metalizados nas bordas suportam prototipagem em breadboard com headers e integração em placas carrier personalizadas.
 
 ## Especificações
 
@@ -64,20 +64,20 @@ Conheça o primeiro XIAO com STM32. Construído em torno do STM32C5A3CG com um n
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Produto                    | Seeed Studio XIAO STM32C5                                                                                             |
 | Microcontrolador           | STMicroelectronics STM32C5A3CG                                                                                        |
-| CPU                        | Arm Cortex-M33 de núcleo único, até 144MHz, com FPU e instruções DSP                                                  |
-| Encapsulamento do MCU      | UFQFPN48                                                                                                              |
+| CPU                        | Arm Cortex-M33 de núcleo único, até 144MHz, com FPU e instruções DSP                                                 |
+| Pacote do MCU              | UFQFPN48                                                                                                              |
 | Flash interna de programa  | 1MB                                                                                                                   |
 | SRAM                       | 256KB                                                                                                                 |
 | Flash externa              | 16MB                                                                                                                  |
 | Controladores CAN          | 2 controladores CAN FD nativos                                                                                        |
 | Transceptor CAN onboard    | 1 x TI TCAN3403-Q1                                                                                                    |
-| Conexão de barramento CAN onboard | Pads CANH/CANL; use o GND da placa como referência de sinal                                                           |
+| Conexão de barramento CAN onboard | Pads CANH/CANL; use o GND da placa como referência de sinal                                                          |
 | Segundo canal CAN          | Sinais digitais TX/RX; transceptor CAN externo necessário                                                             |
 | Terminação CAN             | 120 ohms, habilitada por padrão; pode ser desconectada por meio de um jumper de solda cortável                       |
 | Isolação CAN               | Sem isolamento galvânico onboard                                                                                      |
 | IMU                        | STMicroelectronics LSM6DS3TR-C, acelerômetro de três eixos e giroscópio de três eixos                                 |
 | Aquecimento do IMU         | Resistores de aquecimento dedicados ao redor do IMU com acionamento controlado por GPIO                              |
-| Regulação de temperatura   | Aquecimento programável; regulação de ponto de ajuste em malha fechada requer feedback de temperatura e firmware de aplicação adequado |
+| Regulação de temperatura   | Aquecimento programável; regulação de setpoint em malha fechada requer realimentação de temperatura e firmware de aplicação adequado |
 | Clock externo              | Cristal externo de alta velocidade onboard                                                                            |
 | USB                        | USB‑C; USB 2.0 Full Speed, taxa de sinalização de 12Mbps                                                              |
 | Nível lógico               | 3,3V                                                                                                                  |
@@ -86,18 +86,22 @@ Conheça o primeiro XIAO com STM32. Construído em torno do STM32C5A3CG com um n
 | Controles do usuário       | Botão de reset e botão de boot                                                                                        |
 | Indicadores                | LED de usuário e indicador de carregamento                                                                            |
 | Interface de depuração     | SWD                                                                                                                   |
-| Fator de forma             | Módulo XIAO compacto com pads laterais metalizados                                                                    |
+| Fator de forma             | Módulo XIAO compacto com pads metalizados nas bordas                                                                  |
 
 ## Visão geral de hardware
 
 <Tabs>
 <TabItem value="XIAO STM32C5" label="XIAO STM32C5" default>
 
-### XIAO STM32C5 - Frente
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
+### Frente do XIAO STM32C5
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/XIAO STM32C5_Front_1.png" style={{width:1000, height:'auto'}}/></div>
 <br/>
-### XIAO STM32C5 - Verso
+### Verso do XIAO STM32C5
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/XIAO STM32C5_Back_1.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -127,10 +131,10 @@ Conheça o primeiro XIAO com STM32. Construído em torno do STM32C5A3CG com um n
 | D13               | CAN FD          | PB5       | FDCAN2_RX           | GPIO e recepção do transceptor CAN onboard                   |
 | D14               | CAN FD          | PB13      | FDCAN2_TX           | GPIO e transmissão do transceptor CAN onboard                |
 | D15               | Controle CAN    | PB14      | CAN_STB             | Controla o modo standby do transceptor CAN onboard           |
-| CAN_H             | Barramento CAN  |           | TCAN3403 CANH       | Barramento diferencial CAN FD alto                           |
-| CAN_L             | Barramento CAN  |           | TCAN3403 CANL       | Barramento diferencial CAN FD baixo                          |
-| CANFD2_TERM       | Terminação CAN  |           | JP1, 120 ohm        | Corte/abra para desabilitar o resistor de terminação de 120 ohms onboard |
-| BAT+              | Alimentação da bateria |           | VBAT                | Terminal positivo para uma bateria Li-ion/LiPo de 3,7V       |
+| CAN_H             | Barramento CAN  |           | TCAN3403 CANH       | Linha alta diferencial do barramento CAN FD                  |
+| CAN_L             | Barramento CAN  |           | TCAN3403 CANL       | Linha baixa diferencial do barramento CAN FD                 |
+| CANFD2_TERM       | Terminação CAN  |           | JP1, 120 ohm        | Corte/abra para desativar o resistor de terminação de 120 ohms onboard |
+| BAT+              | Alimentação da bateria |           | VBAT                | Terminal positivo para uma bateria Li‑ion/LiPo de 3,7V       |
 | BAT-              | Terra da bateria |           | GND                 | Terminal negativo da bateria                                 |
 | BAT_EN            | Monitor de bateria | PA15      |                     | Habilita o circuito de medição de tensão da bateria          |
 | BAT_READ          | Analógico       | PA4       | ADC                 | Lê a tensão da bateria; a entrada ADC é aproximadamente VBAT / 2 |
@@ -149,13 +153,13 @@ Conheça o primeiro XIAO com STM32. Construído em torno do STM32C5A3CG com um n
 
 ## Uso do Bootloader
 
-O XIAO STM32C5 vem de fábrica com um bootloader compatível com UF2, destinado principalmente a atualizações de firmware. Antes de gravar um arquivo `.uf2`, pressione rapidamente duas vezes o botão Reset on‑board. Uma unidade de armazenamento em massa chamada **XIAOC5BOOT** será montada no seu PC. Em seguida, você pode copiar o arquivo de firmware para essa unidade para concluir a gravação.
+O XIAO STM32C5 vem de fábrica pré-carregado com um bootloader compatível com UF2, destinado principalmente a atualizações de firmware. Antes de gravar um arquivo `.uf2`, pressione rapidamente duas vezes o botão Reset on‑board. Uma unidade de armazenamento em massa chamada **XIAOC5BOOT** será montada no seu PC. Em seguida, você pode copiar o arquivo de firmware para essa unidade para concluir a gravação.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_disk_1.png" style={{width:400, height:'auto'}}/></div>
 
 ## Introdução ao PlatformIO
 
-Esta seção demonstra o desenvolvimento e uso do XIAO STM32C5 acendendo o LED de usuário on‑board, utilizando a plataforma de desenvolvimento PlatformIO com o framework Zephyr RTOS.
+Esta seção demonstra o desenvolvimento e uso do XIAO STM32C5 acendendo o LED de usuário on‑board, usando a plataforma de desenvolvimento PlatformIO com o framework Zephyr RTOS.
 
 ### Preparação de Hardware
 
@@ -202,7 +206,7 @@ Você precisa preparar o seguinte:
 
 **Passo 1.** Baixar o VS Code
 
-Baixe o [VS Code](https://code.visualstudio.com/download) de acordo com o sistema que você está usando
+Baixe de acordo com o sistema que você está usando o [VS Code](https://code.visualstudio.com/download)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
@@ -226,7 +230,7 @@ pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- Se você já usou placas da série Seeed Studio XIAO no PlatformIO, execute o comando abaixo para atualizar:
+- Se você já usou anteriormente placas da série Seeed Studio XIAO no PlatformIO, execute o comando abaixo para atualizar:
 
 
 ```bash
@@ -250,21 +254,21 @@ board = seeed-xiao-stm32c5
 
 :::
 
-**Passo 4.** Criar um novo projeto
+**Passo 4.** Criar um Novo Projeto
 
 <details>
 
-<summary>Passos acelerados para criar um novo projeto pela primeira vez (Opcional)</summary>
+<summary>Acelerar etapas para criar um novo projeto pela primeira vez (Opcional)</summary>
 
 Nesta etapa, você pode pré‑baixar os pacotes de recursos necessários para o desenvolvimento com o XIAO STM32C5 para acelerar a criação do seu primeiro novo projeto.
 
-**1. Instale o pacote do framework Zephyr.**
+**1. Instalar o pacote do framework Zephyr.**
 
 ```bash
 pio pkg install --global --tool "framework-zephyr-nrf54lm20=https://dl.registry.platformio.org/download/platformio/tool/framework-zephyr/3.40400.260428/framework-zephyr-3.40400.260428.tar.gz"
 ```
 
-**2. Instale os módulos Zephyr e o STM32 HAL.**
+**2. Instalar os módulos Zephyr e o STM32 HAL.**
 
 Copie o bloco de comandos para o seu sistema operacional no terminal do VS Code. Se aparecer um aviso de colagem multilinha, clique em **Paste** para preservar as quebras de linha. Não clique em **Paste as one line**.
 
@@ -290,7 +294,7 @@ python "$HOME/.platformio/packages/framework-zephyr-nrf54lm20/scripts/platformio
 
 :::tip
 
-O tamanho do download é grande. Aguarde pacientemente e mantenha sua conexão de rede estável.
+O tamanho do download é grande. Aguarde pacientemente e mantenha sua rede estável.
 
 :::
 
@@ -312,17 +316,17 @@ A criação do projeto pode levar algum tempo na primeira inicialização, aguar
 
 ### Compilar e Enviar
 
-**Passo 1.** Escrever o programa de piscar LED
+**Passo 1.** Escrever o Programa de Piscar o LED
 
 O XIAO STM32C5 possui um LED de usuário mapeado para o GPIO PB12. O LED acende em nível lógico baixo; este exemplo o configura para piscar a cada 500 ms.
 
 O projeto consiste em três arquivos principais:
 
 - `main.c`: Programa principal que contém a lógica da aplicação.
-- `app.overlay`: Arquivo Devicetree overlay para configuração de periféricos de hardware.
+- `app.overlay`: Arquivo de overlay do Devicetree para configuração de periféricos de hardware.
 - `prj.conf`: Arquivo de configuração do projeto para habilitar os módulos necessários do Zephyr.
 
-Siga os passos abaixo para acender o LED:
+Siga as etapas abaixo para acender o LED:
 
 - Abra o seu projeto recém‑criado e crie o arquivo devicetree `app.overlay` dentro da pasta `zephyr`.
 
@@ -389,7 +393,7 @@ int main(void)
 }
 ```
 
-**Passo 2.** Compilar e enviar o programa
+**Passo 2.** Compilar e Enviar o Programa
 
 - Na barra de ferramentas inferior, acione a compilação do projeto com um clique.
 
@@ -405,13 +409,13 @@ pio run -e seeed-xiao-stm32c5
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_4.png" style={{width:800, height:'auto'}}/></div>
 
-Da mesma forma, o envio do firmware também pode ser concluído pela linha de comando.
+Da mesma forma, o envio do firmware também pode ser concluído através da linha de comando.
 
 ```bash
 pio run -e seeed-xiao-stm32c5 -t upload
 ```
 
-- Resultado da execução do programa
+- Resultado da Execução do Programa
 
 O LED on‑board do XIAO STM32C5 pisca em um intervalo de 500 ms.
 
@@ -423,15 +427,15 @@ Enquanto isso, a porta serial exibe o estado ligado/desligado do LED.
 
 ## Uso da Bateria
 
-Um conector de bateria **BAT** é reservado no lado traseiro do XIAO STM32C5 para alimentação usando uma bateria de íons de lítio de 3,7 V‑4,2 V.
+Um conector de bateria **BAT** é reservado no lado traseiro do XIAO STM32C5 para alimentação usando uma bateria de íon‑lítio de 3,7 V‑4,2 V.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_5.png" style={{width:600, height:'auto'}}/></div>
 
-### Leitura da Tensão da Bateria
+### Ler a Tensão da Bateria
 
 O XIAO STM32C5 incorpora circuitos de detecção de tensão da bateria e de carregamento da bateria.
 
-No circuito de detecção, **BAT_EN / PA15** habilita o chip TPS22916CNYFPR, enquanto **BAT_Reading / PA4** lê a tensão da bateria. São usados dois resistores divisores de tensão de 10 kΩ, portanto o valor medido é igual à metade da tensão real da bateria de íons de lítio.
+No circuito de detecção, **BAT_EN / PA15** habilita o chip TPS22916CNYFPR, enquanto **BAT_Reading / PA4** lê a tensão da bateria. São usados dois resistores divisores de tensão de 10 kΩ, portanto o valor medido é igual à metade da tensão real da bateria de íon‑lítio.
 
 O Charge_LED pisca durante o carregamento da bateria e apaga quando o carregamento é concluído.
 
@@ -596,7 +600,7 @@ int main(void)
 
 O XIAO STM32C5 possui um **[LSM6DS3TR‑C](https://www.st.com.cn/resource/en/datasheet/lsm6ds3tr-c.pdf) sensor inercial de 6 eixos** integrado, que combina um acelerômetro de 3 eixos e um giroscópio de 3 eixos. Ele pode ser aplicado em detecção de atitude, reconhecimento de movimento, monitoramento de vibração e outros casos de uso.
 
-Para mitigar o impacto da variação de temperatura ambiente no desvio do sensor e na estabilidade das medições, a placa implementa um circuito ativo de aquecimento para compensação de temperatura. Resistores de aquecimento posicionados ao redor da IMU fornecem aquecimento uniforme para o sensor, e a potência de aquecimento pode ser ajustada por sinais PWM. Combinado com as leituras internas de temperatura da IMU, o controle por software mantém o sensor operando em uma temperatura relativamente estável. Isso reduz a deriva de medição causada pela deriva de temperatura e melhora a consistência dos dados durante a operação de longo prazo e sob condições de temperatura variável.
+Para mitigar o impacto da variação de temperatura ambiente no desvio do sensor e na estabilidade das medições, a placa implementa um circuito de aquecimento com compensação ativa de temperatura. Resistores de aquecimento posicionados ao redor da IMU fornecem aquecimento uniforme para o sensor, e a potência de aquecimento pode ser ajustada por meio de sinais PWM. Combinado com as leituras internas de temperatura da IMU, o controle por software mantém o sensor operando em uma temperatura relativamente estável. Isso reduz a deriva de medição causada pela deriva de temperatura e melhora a consistência dos dados durante a operação de longo prazo e sob condições de temperatura variável.
 
 - Uso de referência: [XIAO STM32C5 IMU Usage](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_application/#imu-usage)
 
@@ -604,9 +608,9 @@ Para mitigar o impacto da variação de temperatura ambiente no desvio do sensor
 
 ## CAN FD
 
-O XIAO STM32C5 possui dois controladores CAN FD. O FDCAN1 expõe pinos TX e RX em nível lógico e requer um transceptor CAN externo para conexão ao barramento CAN. O FDCAN2 está conectado ao transceptor integrado [TCAN3403-Q1](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/tcan3403-q1.pdf) e se conecta ao barramento através dos pads CAN_H e CAN_L. A placa também pode trocar quadros Classical CAN. No entanto, nós que suportam apenas Classical CAN não conseguem decodificar quadros CAN FD, portanto confirme que os nós ativos no barramento suportam CAN FD antes de transmitir tráfego FD. O CAN FD suporta cargas úteis de até 64 bytes e, quando a comutação de taxa de bits está habilitada, uma taxa de bits mais alta durante a fase de dados.
+O XIAO STM32C5 possui dois controladores CAN FD. O FDCAN1 expõe pinos TX e RX em nível lógico e requer um transceptor CAN externo para conexão a um barramento CAN. O FDCAN2 está conectado ao transceptor onboard [TCAN3403-Q1](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/tcan3403-q1.pdf) e se conecta ao barramento através dos pads CAN_H e CAN_L. A placa também pode trocar quadros CAN Clássico. No entanto, nós que suportam apenas CAN Clássico não conseguem decodificar quadros CAN FD, portanto confirme que os nós ativos no barramento suportam CAN FD antes de transmitir tráfego FD. O CAN FD suporta cargas úteis de até 64 bytes e, quando a comutação de taxa de bits está habilitada, uma taxa de bits mais alta durante a fase de dados.
 
-A placa possui um resistor de terminação de 120 Ω integrado e desconectável, habilitado por padrão. Mantenha-o habilitado quando o XIAO estiver em uma extremidade física do barramento CAN e essa extremidade não tiver outro terminador. Desabilite-o quando o XIAO for um nó intermediário ou já houver outro terminador instalado na mesma extremidade. Certifique-se de que a extremidade oposta do barramento também esteja devidamente terminada. O transceptor suporta modo de espera (standby) para reduzir o consumo de energia quando a comunicação CAN não é necessária.
+A placa possui um resistor de terminação onboard de 120 Ω desconectável, habilitado por padrão. Mantenha-o habilitado quando o XIAO estiver em uma extremidade física do barramento CAN e essa extremidade não tiver outro terminador. Desabilite-o quando o XIAO for um nó intermediário ou já houver outro terminador instalado na mesma extremidade. Certifique-se de que a extremidade oposta do barramento também esteja devidamente terminada. O transceptor suporta modo de espera para reduzir o consumo de energia quando a comunicação CAN não é necessária.
 
 - Uso de referência: [XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/pt-br/xiao_stm32c5_canfd_usage/)
 
@@ -619,17 +623,17 @@ A placa possui um resistor de terminação de 120 Ω integrado e desconectável,
 - **📄[Datasheet]** [LSM6DS3TR-C](https://www.st.com.cn/resource/en/datasheet/lsm6ds3tr-c.pdf)
 - **📄[Datasheet]** [TCAN3403D4BQ1](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/tcan3403-q1.pdf)
 - **📄[Esquemático]** [XIAO STM32C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/Seeed-Studio-XIAO-STM32C5-v1.0.pdf)
-- **🗃️[Arquivos de projeto de PCB]** 
+- **🗃️[Arquivos de Projeto de PCB]** 
   - [ XIAO STM32C5 Projeto KiCad](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO_STM32C5_v1.0_SCH&PCB.zip)
   - [XIAO STM32C5 Projeto Eagle](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO_STM32C5_v1.0_SCH&PCB.zip)
-- **🗃️[Bibliotecas de projeto de PCB]** 
+- **🗃️[Bibliotecas de Projeto de PCB]** 
   - [XIAO Series Pegadas KiCad](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
   - [XIAO Series Símbolos SCH KiCad](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip)
-- **📄[Diagrama de pinagem]** [XIAO STM32C5 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO-STM32C5-pinout_sheet.xlsx)
+- **📄[Diagrama de Pinagem]** [XIAO STM32C5 Folha de Pinagem](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO-STM32C5-pinout_sheet.xlsx)
 
 ## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

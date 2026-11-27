@@ -10,7 +10,7 @@ last_update:
   date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-08-25'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/cn/XIAO-RP2040/
 ---
 
@@ -47,15 +47,15 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概述
 
-Seeed Studio XIAO RP2040 系列包括 **XIAO RP2040** 和 **XIAO RP2040 Plus**。两块开发板都由同一颗 Raspberry Pi RP2040 微控制器驱动，该芯片集成了最高运行频率可达 133 MHz 的双核 Arm Cortex-M0+ 处理器和 264 KB SRAM。每块板载还包含 2 MB Flash 存储。因此，它们具备相同的核心处理性能，并共享同一套 RP2040 软件生态。
+Seeed Studio XIAO RP2040 系列包括 **XIAO RP2040** 和 **XIAO RP2040 Plus**。两块板都由同一颗 Raspberry Pi RP2040 微控制器驱动，其特性为双核 Arm Cortex-M0+ 处理器，最高运行频率 133 MHz，配备 264 KB SRAM。每块板还集成了 2 MB 片上 Flash 存储。因此，它们具备相同的核心处理性能，并共享同一套 RP2040 软件生态。
 
 两块板之间的主要差异在于可用的 GPIO 数量、可用的外设连接以及板载电源管理特性。
 
-标准版 XIAO RP2040 采用通用的 14 针 XIAO 封装，引出 11 个 GPIO 引脚和 3 个电源引脚。其 11 个数字 I/O 引脚均支持 PWM，其中有 4 个还支持模拟输入。该板在紧凑的 21 × 17.8 mm 尺寸中提供 I2C、UART、SPI 和 SWD 接口。
+标准版 XIAO RP2040 采用常见的 14 针 XIAO 封装脚位，包括 11 个 GPIO 引脚和 3 个电源引脚。其 11 个数字 I/O 引脚均支持 PWM，其中有 4 个还支持模拟输入。该板在紧凑的 21 × 17.8 mm 尺寸中提供 I2C、UART、SPI 和 SWD 接口。
 
-XIAO RP2040 Plus 保留了相同的 14 针 XIAO 引脚布局，并在板背面和侧边增加了 15 个 GPIO 焊盘，使可用数字 I/O 引脚总数从 11 个增加到 26 个。它还增加了第二路 I2C 接口、独立的 USB D+/D− 焊盘，以及包括 BAT+、BAT− 和 BAT_EN 在内的电池相关连接。
+XIAO RP2040 Plus 保留了相同的 14 针 XIAO 常规布局，并在板背面和侧边增加了 15 个 GPIO 焊盘，使可用数字 I/O 引脚总数从 11 个提升到 26 个。它还增加了第二路 I2C 接口、独立的 USB D+/D− 焊盘，以及包括 BAT+、BAT− 和 BAT_EN 在内的电池相关连接。
 
-对于电池供电应用，XIAO RP2040 Plus 集成了板载 PMIC、电池充电指示灯以及 BAT 到 3V3 的回流保护。这些附加特性使 Plus 版本更适合用于自定义载板、贴片组装、电池供电设备以及需要更多 I/O 资源的项目。
+对于电池供电应用，XIAO RP2040 Plus 集成了板载 PMIC、电池充电指示灯以及 BAT 到 3V3 的回流保护。这些附加特性使 Plus 版本更适合定制载板、贴片组装、电池供电设备以及需要更多 I/O 资源的项目。
 
 Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 
@@ -68,14 +68,14 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 ## 特性
 
 - **强大的 RP2040 MCU：** 双核 Arm Cortex-M0+ 处理器，最高运行频率 133 MHz
-- **丰富的存储资源：** 264 KB SRAM 和 2 MB 板载 Flash 存储
+- **丰富的存储资源：** 264 KB SRAM 和 2 MB 片上 Flash 存储
 - **广泛的软件兼容性：** 支持 Arduino、PlatformIO、MicroPython、CircuitPython、TinyGo、Rust、Zephyr 等
-- **通用 XIAO 封装：** 两个版本均采用标准 14 针 XIAO 引脚布局，包括 11 个 GPIO 引脚和 3 个电源引脚
+- **统一的 XIAO 封装：** 两个版本都保留标准 14 针 XIAO 布局，包括 11 个 GPIO 引脚和 3 个电源引脚
 - **紧凑外形尺寸：** 拇指大小的 21 × 17.8 mm 设计，适用于可穿戴设备和空间受限的应用
 - **标准 XIAO RP2040 接口：** 11 个数字 I/O 引脚、4 个模拟输入引脚、11 个支持 PWM 的引脚，以及 I2C、UART、SPI 和 SWD 接口
 - **扩展的 XIAO RP2040 Plus I/O：** 额外增加 15 个 GPIO 焊盘，总计 26 个数字 I/O 引脚，并提供第二路 I2C 接口和独立 USB D+/D− 焊盘
-- **集成电池管理：** XIAO RP2040 Plus 集成板载 PMIC、电池充电指示、独立电池连接以及 BAT 到 3V3 的回流保护
-- **灵活的组装方式：** 兼容面包板的通用引脚，结合半孔和适用于 SMD 的焊盘，便于自定义载板设计
+- **集成电池管理：** XIAO RP2040 Plus 集成板载 PMIC、电池充电指示、专用电池连接以及 BAT 到 3V3 的回流保护
+- **灵活的组装方式：** 兼容面包板的通用引脚，结合半孔边缘和适用于 SMD 的焊盘，便于定制载板设计
 
 ## 规格参数
 
@@ -106,7 +106,7 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
     </tr>
     <tr>
       <td><strong>Flash</strong></td>
-      <td colspan="2">2 MB 板载 Flash</td>
+      <td colspan="2">2 MB 片上 Flash</td>
     </tr>
     <tr>
       <td><strong>接口</strong></td>
@@ -160,7 +160,7 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
       <td><strong>电源</strong></td>
       <td colspan="2">
         输入电压（Type-C）：5V<br/>
-        输入电压（BAT）：3.7V ~ 4.2V
+        输入电压（BAT）：3.7V ~ 4.2 V
       </td>
     </tr>
     <tr>
@@ -181,7 +181,7 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
     </tr>
     <tr>
       <td><strong>尺寸</strong></td>
-      <td colspan="2">21 × 17.8 mm</td>
+      <td colspan="2">21 x 17.8mm</td>
     </tr>
     <tr>
       <td><strong>产品变体</strong></td>
@@ -203,6 +203,10 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 <Tabs>
 <TabItem value="XIAO RP2040" label="XIAO RP2040" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
 ### XIAO RP2040 正面
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO_RP2040_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -214,6 +218,10 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 </TabItem>
 
 <TabItem value="XIAO RP2040 Plus" label="XIAO RP2040 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
 
 ### XIAO RP2040 Plus 正面
 
@@ -231,9 +239,9 @@ Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 MCU 的工作电压为 3.3V。如果接入通用 I/O 引脚的电压高于 3.3V，可能会导致芯片损坏。
 
 对于电源引脚：
-内置的 DC-DC 转换电路可以将 5V 转换为 3.3V，允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
+内置的 DC-DC 转换电路可以将 5V 电压转换为 3.3V，允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
 
-XIAO RP2040 目前仅支持电池供电，在连接电池时不能同时连接 Type-C，否则可能存在安全风险。
+XIAO RP2040 目前仅支持电池供电，当连接电池时不能再连接 Type-C，否则可能存在安全风险。
 
 请注意使用安全，请勿撬起屏蔽罩。
 :::
@@ -241,52 +249,52 @@ XIAO RP2040 目前仅支持电池供电，在连接电池时不能同时连接 T
 ## **引脚映射**
 
 | XIAO 引脚 | 功能                  | XIAO RP2040  | XIAO RP2040 Plus | 描述                                                           |
-| :--------- | :--------------------- | :----------- | :---------------- | :------------------------------------------------------------- |
-| 5V         | VBUS                   | VBUS         | VBUS              | USB 5V 电源输入/输出                                           |
-| GND        | GND                    | GND          | GND               | 地                                                             |
-| 3V3        | 3V3_OUT                | 3V3_OUT      | 3V3_OUT           | 3.3V 电源输出                                                  |
-| D0         | A0                     | GPIO26       | GPIO26            | GPIO，ADC0                                                     |
-| D1         | A1                     | GPIO27       | GPIO27            | GPIO，ADC1                                                     |
-| D2         | A2                     | GPIO28       | GPIO28            | GPIO，ADC2                                                     |
-| D3         | A3                     | GPIO29       | GPIO29            | GPIO，ADC3                                                     |
-| D4         | SDA0                   | GPIO6        | GPIO6             | GPIO，I2C0 数据                                                |
-| D5         | SCL0                   | GPIO7        | GPIO7             | GPIO，I2C0 时钟                                                |
-| D6         | TX                     | GPIO0        | GPIO0             | GPIO，UART 发送                                                |
-| D7         | RX                     | GPIO1        | GPIO1             | GPIO，UART 接收                                                |
-| D8         | SCK                    | GPIO2        | GPIO2             | GPIO，SPI 时钟                                                 |
-| D9         | MISO                   | GPIO4        | GPIO4             | GPIO，SPI 数据输入                                             |
-| D10        | MOSI                   | GPIO3        | GPIO3             | GPIO，SPI 数据输出                                             |
-| D11        | —                      | —            | —                 | 不作为外部引脚提供                                             |
-| D12        | GPIO                   | —            | GPIO18            | 仅 Plus 版本的扩展 GPIO                                        |
-| D13        | SCL1                   | —            | GPIO21            | 仅 Plus 版本的 I2C1 时钟                                       |
-| D14        | SDA1                   | —            | GPIO20            | 仅 Plus 版本的 I2C1 数据                                       |
-| D15        | GPIO                   | —            | GPIO19            | 仅 Plus 版本的扩展 GPIO                                        |
-| D16        | GPIO                   | —            | GPIO22            | 仅 Plus 版本的扩展 GPIO                                        |
-| D17        | GPIO                   | —            | GPIO23            | 仅 Plus 版本的扩展 GPIO                                        |
-| D18        | —                      | —            | —                 | 不作为外部引脚提供                                             |
-| D19        | GPIO                   | —            | GPIO5             | 仅 Plus 版本的扩展 GPIO                                        |
-| D20        | GPIO                   | —            | GPIO13            | 仅 Plus 版本的扩展 GPIO                                        |
-| D21        | GPIO                   | —            | GPIO14            | 仅 Plus 版本的扩展 GPIO                                        |
-| D22        | GPIO                   | —            | GPIO15            | 仅 Plus 版本的扩展 GPIO                                        |
-| D23        | GPIO                   | —            | GPIO16            | 仅 Plus 版本的扩展 GPIO                                        |
-| D24        | GPIO                   | —            | GPIO17            | 仅 Plus 版本的扩展 GPIO                                        |
-| D25        | GPIO                   | —            | GPIO10            | 仅 Plus 版本的扩展 GPIO                                        |
-| D26        | GPIO                   | —            | GPIO9             | 仅 Plus 版本的扩展 GPIO                                        |
-| D27        | GPIO                   | —            | GPIO8             | 仅 Plus 版本的扩展 GPIO                                        |
+| :--------- | :--------------------- | :----------- | :---------------- | :----------------------------------------------------------- |
+| 5V         | VBUS                   | VBUS         | VBUS              | USB 5 V 电源输入/输出                                         |
+| GND        | GND                    | GND          | GND               | 地                                                            |
+| 3V3        | 3V3_OUT                | 3V3_OUT      | 3V3_OUT           | 3.3 V 电源输出                                                |
+| D0         | A0                     | GPIO26       | GPIO26            | GPIO，ADC0                                                    |
+| D1         | A1                     | GPIO27       | GPIO27            | GPIO，ADC1                                                    |
+| D2         | A2                     | GPIO28       | GPIO28            | GPIO，ADC2                                                    |
+| D3         | A3                     | GPIO29       | GPIO29            | GPIO，ADC3                                                    |
+| D4         | SDA0                   | GPIO6        | GPIO6             | GPIO，I2C0 数据                                               |
+| D5         | SCL0                   | GPIO7        | GPIO7             | GPIO，I2C0 时钟                                               |
+| D6         | TX                     | GPIO0        | GPIO0             | GPIO，UART 发送                                               |
+| D7         | RX                     | GPIO1        | GPIO1             | GPIO，UART 接收                                               |
+| D8         | SCK                    | GPIO2        | GPIO2             | GPIO，SPI 时钟                                                |
+| D9         | MISO                   | GPIO4        | GPIO4             | GPIO，SPI 数据输入                                            |
+| D10        | MOSI                   | GPIO3        | GPIO3             | GPIO，SPI 数据输出                                            |
+| D11        | —                      | —            | —                 | 不作为外部引脚提供                                            |
+| D12        | GPIO                   | —            | GPIO18            | 仅 Plus 版扩展 GPIO                                           |
+| D13        | SCL1                   | —            | GPIO21            | 仅 Plus 版 I2C1 时钟                                          |
+| D14        | SDA1                   | —            | GPIO20            | 仅 Plus 版 I2C1 数据                                          |
+| D15        | GPIO                   | —            | GPIO19            | 仅 Plus 版扩展 GPIO                                           |
+| D16        | GPIO                   | —            | GPIO22            | 仅 Plus 版扩展 GPIO                                           |
+| D17        | GPIO                   | —            | GPIO23            | 仅 Plus 版扩展 GPIO                                           |
+| D18        | —                      | —            | —                 | 不作为外部引脚提供                                            |
+| D19        | GPIO                   | —            | GPIO5             | 仅 Plus 版扩展 GPIO                                           |
+| D20        | GPIO                   | —            | GPIO13            | 仅 Plus 版扩展 GPIO                                           |
+| D21        | GPIO                   | —            | GPIO14            | 仅 Plus 版扩展 GPIO                                           |
+| D22        | GPIO                   | —            | GPIO15            | 仅 Plus 版扩展 GPIO                                           |
+| D23        | GPIO                   | —            | GPIO16            | 仅 Plus 版扩展 GPIO                                           |
+| D24        | GPIO                   | —            | GPIO17            | 仅 Plus 版扩展 GPIO                                           |
+| D25        | GPIO                   | —            | GPIO10            | 仅 Plus 版扩展 GPIO                                           |
+| D26        | GPIO                   | —            | GPIO9             | 仅 Plus 版扩展 GPIO                                           |
+| D27        | GPIO                   | —            | GPIO8             | 仅 Plus 版扩展 GPIO                                           |
 | Reset      | RUN                    | RUN          | RUN               | 复位输入                                                       |
-| Boot       | RP2040_BOOT            | RP2040_BOOT  | RP2040_BOOT       | 进入 bootloader 模式                                           |
-| USER_LED_R | 红色通道               | GPIO17       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 红色通道                     |
-| USER_LED_G | 绿色通道               | GPIO16       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 绿色通道                     |
-| USER_LED_G | 蓝色通道               | GPIO25       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 蓝色通道                     |
-| RGB_LED    | WS2812B 数据           | —            | GPIO12/NEOPIX     | 单线 WS2812B 彩色数据控制                                     |
-| RGB_EN     | WS2812B 使能           | —            | GPIO11            | 控制 WS2812B 供电；不是颜色数据引脚                           |
-| User LED   | 用户控制 LED           | —            | GPIO25            | XIAO RP2040 Plus 上的独立用户 LED                             |
-| BAT_EN     | 电池使能               | —            | GPIO24            | Plus 版本上的电池电源控制                                     |
-| CHARGE_LED | 充电指示灯             | —            | —                 | 硬件控制的充电状态 LED；不是用户 GPIO                          |
-| SWDIO      | SWD 调试               | SWDIO        | RP2040_SWDIO      | 串行线调试数据                                                 |
-| SWCLK      | SWD 调试               | SWCLK        | RP2040_SWCLK      | 串行线调试时钟                                                 |
-| USB_D+     | USB                    | -            | USB_DP      | USB 1.1 全速正向数据                                           |
-| USB_D-     | USB                    | -            | USB_DM      | USB 1.1 全速负向数据                                           |
+| Boot       | RP2040_BOOT            | RP2040_BOOT  | RP2040_BOOT       | 进入 bootloader 模式                                          |
+| USER_LED_R | 红色通道               | GPIO17       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 红色通道                    |
+| USER_LED_G | 绿色通道               | GPIO16       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 绿色通道                    |
+| USER_LED_G | 蓝色通道               | GPIO25       | —                 | 在 XIAO RP2040 上直接控制 RGB LED 蓝色通道                    |
+| RGB_LED    | WS2812B 数据           | —            | GPIO12/NEOPIX     | 单线 WS2812B 彩色数据控制                                    |
+| RGB_EN     | WS2812B 使能           | —            | GPIO11            | 使能 WS2812B 供电；不是颜色数据引脚                          |
+| User LED   | 用户控制 LED           | —            | GPIO25            | XIAO RP2040 Plus 上独立的用户 LED                            |
+| BAT_EN     | 电池使能               | —            | GPIO24            | Plus 版上的电池电源控制                                      |
+| CHARGE_LED | 充电指示灯             | —            | —                 | 硬件控制的充电状态 LED；不是用户 GPIO                        |
+| SWDIO      | SWD 调试               | SWDIO        | RP2040_SWDIO      | 串行线调试数据                                                |
+| SWCLK      | SWD 调试               | SWCLK        | RP2040_SWCLK      | 串行线调试时钟                                                |
+| USB_D+     | USB                    | -            | USB_DP      | USB 1.1 全速正向数据线                                       |
+| USB_D-     | USB                    | -            | USB_DM      | USB 1.1 全速负向数据线                                       |
 
 ### 进入 Bootloader 模式
 
@@ -314,18 +322,18 @@ XIAO RP2040 目前仅支持电池供电，在连接电池时不能同时连接 T
 
 :::note
 
-只有 XIAO RP2040 Plus 在背面配备了 BAT 电池连接器，请注意。
+只有 XIAO RP2040 Plus 在背面配有 BAT 电池连接器，请注意区分。
 
 :::
 
-XIAO RP2040 Plus 支持使用 3.7V 锂电池作为电源输入。你可以参考下图了解接线方式。
+XIAO RP2040 Plus 支持使用 3.7V 锂电池作为电源输入。你可以参考下图进行接线。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_battery.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 :::caution
 
-焊接时请务必注意不要让正负极短路，以免烧毁电池和设备。如果电池本身带电，切勿直接将其焊接到电路板上，否则可能会烧坏电路板。在电路上电的情况下发生短路风险极大，建议使用转接头进行连接。
+焊接时请务必注意不要让正负极短路，以免烧毁电池和设备。如果电池本身带电，切勿直接将其焊接到电路板上，否则可能烧毁电路板。在电路上电的情况下发生短路风险极大，建议使用适配器。
 
 :::
 
@@ -335,7 +343,7 @@ XIAO RP2040 Plus 支持使用 3.7V 锂电池作为电源输入。你可以参考
 
 电池电压测量电路使用 **TPS22916CNYFPR** 负载开关来使能或关闭测量通路。当需要测量电池电压时，MCU 通过 **BAT_EN (GPIO24)** 使能测量通路，从而在设备处于待机模式时降低电池消耗。<br/>
 
-此外，还使用了 **SGM4875XXDM6G/TR** 模拟开关来切换 ADC 输入通道。通过 **GPIO24/BAT_EN** 控制，选择将电池测量信号或其他模拟输入信号连接到 **A3 (GPIO29) ADC** 引脚，从而实现 ADC 引脚的复用。
+此外，还使用了一个 **SGM4875XXDM6G/TR** 模拟开关来切换 ADC 输入通道。通过 **GPIO24/BAT_EN** 控制，选择将电池测量信号或其他模拟输入信号连接到 **A3 (GPIO29) ADC** 引脚，从而实现 ADC 引脚的复用。
 
 :::tip
 
@@ -346,7 +354,7 @@ XIAO RP2040 Plus 支持使用 3.7V 锂电池作为电源输入。你可以参考
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_battery_charge.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-电池电压通过分压电阻电路进行测量。ADC 读取到的电压是实际电池电压的一半，因此软件必须将 ADC 测量值乘以 2 才能得到实际电池电压。
+电池电压是通过电阻分压电路进行测量的。ADC 读取到的电压是实际电池电压的一半，因此软件必须将 ADC 测量值乘以 2 才能得到实际电池电压。
 
 <details>
 
@@ -444,8 +452,8 @@ void loop() {
 - **📄[Pinout Diagram]** [XIAO RP2040 引脚分布表](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
 
 **结构设计**
-- **📄[2D 尺寸]** [XIAO RP2040 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
-- **📄[3D 模型]** [ XIAO RP2040 3D 模型](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
+- **📄[2D Dimensions]** [XIAO RP2040 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
+- **📄[3D Model]** [ XIAO RP2040 3D 模型](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
 
 ### XIAO RP2040 Plus
 

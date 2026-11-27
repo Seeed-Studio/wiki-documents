@@ -18,7 +18,11 @@ url: https://wiki.seeedstudio.com/cn/xiao_ra4m1_pin_multiplexing/
 
 ## 硬件概述
 
-在开始之前，了解一些产品的基本参数非常重要。下表提供了 Seeed Studio XIAO RA4M1 的特性信息。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=ra4" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+在开始之前，了解产品的一些基本参数非常重要。下表提供了 Seeed Studio XIAO RA4M1 的特性信息。
 
 ### 正面
 
@@ -30,7 +34,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_ra4m1_pin_multiplexing/
 
 ## 数字引脚
 
-XIAO RA4M1 具有多达 11 个常规 GPIO 引脚、6 个模拟引脚以及 8 个可复用 IO 端口。在本示例中，我们将使用 XIAO RA4M1、XIAO 扩展板和一个继电器，演示如何使用不同的数字引脚进行读写。
+XIAO RA4M1 具有多达 11 个常规 GPIO 引脚、6 个模拟引脚以及 8 个可复用 IO 端口。在本示例中，我们将使用 XIAO RA4M1、XIAO 扩展板和一个继电器，演示如何使用不同的数字引脚进行读写操作。
 
 ### 硬件准备
 
@@ -97,7 +101,7 @@ void loop() {
 }
 ```
 
-如果一切顺利，在上传程序后，你应该能看到如下效果。
+如果一切顺利，在上传程序后，你应该会看到如下效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/31.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -176,7 +180,7 @@ void loop() {
 
 ## 模拟引脚
 
-XIAO RA4M1 开发板配备最高 14 位 ADC，可高分辨率读取模拟传感器数值，帮助我们获得更精确的数值。XIAO RA4M1 开发板上的模数转换器（ADC）默认分辨率为 10 位，可以提升到 12 位和 14 位，以提高模拟读数的精度。
+XIAO RA4M1 开发板配备最高 14 位的 ADC，可对模拟传感器数值进行高分辨率读取，帮助我们获得更精确的数值。XIAO RA4M1 开发板上的模数转换器（ADC）默认分辨率为 10 位，可以配置为 12 位和 14 位分辨率，以提升模拟读数的精度。
 
 不同 ADC 精度下的详细数据范围
 
@@ -272,13 +276,13 @@ void Fourteen_Bite_ADC_Config() {
 }
 ```
 
-如果一切顺利，在上传程序之后，你应该会看到如下效果。
+如果一切顺利，在上传程序后，你应该会看到如下效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/33.gif" style={{width:650, height:'auto'}}/></div>
 
 ## 串口
 
-在使用 Arduino IDE 时，串口通信是许多项目中必不可少的一部分。要在 Arduino IDE 中使用串口，你需要先打开串口监视器窗口。这可以通过点击工具栏中的 **Serial Monitor** 图标，或者按下 **Ctrl+Shift+M** 快捷键来完成。
+在使用 Arduino IDE 时，串口通信是许多项目中必不可少的一部分。要在 Arduino IDE 中使用串口，你需要先打开串口监视器窗口。这可以通过点击工具栏中的 **Serial Monitor** 图标，或按下快捷键 **Ctrl+Shift+M** 来完成。
 
 ### 通用用法
 
@@ -289,7 +293,7 @@ void Fourteen_Bite_ADC_Config() {
 - `Serial.write()` -- 用于向串口发送二进制数据；
 - `Serial.available()` -- 用于检查串口中是否有可读取的数据；
 - `Serial.read()` -- 用于从串口读取一个字节的数据；
-- `Serial.flush()` -- 用于等待正在发送的串口数据传输完成。
+- `Serial.flush()` -- 用于等待所有要发送的串口数据传输完成。
 
 通过使用这些串口函数，你可以在 Arduino 开发板和计算机之间发送和接收数据，从而为创建交互式项目提供了许多可能性。
 
@@ -319,11 +323,11 @@ void loop() {
 }
 ```
 
-### Serial1 的用法
+### Serial1 的使用
 
-根据上面的 XIAO RA4M1 引脚图中的具体参数，我们可以看到有 TX 引脚和 RX 引脚。
-这与串口通信有所不同，但用法也非常相似，只是需要添加几个参数。
-所以下一步，我们将使用芯片引出的引脚进行串口通信。
+根据上文中 XIAO RA4M1 引脚图中的具体参数，我们可以看到有 TX 引脚和 RX 引脚。
+这与串口通信不同，但用法也非常相似，只是需要添加几个参数。
+所以下一步，我们将使用芯片引出的这些引脚进行串口通信。
 
 ```c
 
@@ -344,7 +348,7 @@ void loop() {
 }
 ```
 
-### 软件串口的用法
+### 软件串口的使用
 
 ```c
 #include <SoftwareSerial.h>
@@ -376,15 +380,15 @@ void loop() {
 }
 ```
 
-在这个程序中，我们首先包含 `SoftwareSerial.h` 库以使用软件串口。然后，我们使用引脚 2 和 3 分别作为 RX 和 TX 创建一个名为 mySerial 的新的 SoftwareSerial 对象。
+在这个程序中，我们首先包含 `SoftwareSerial.h` 库以使用软件串口。然后，我们使用引脚 2 和 3 分别作为 RX 和 TX 创建了一个名为 mySerial 的 SoftwareSerial 对象。
 
-在 `setup()` 函数中，我们初始化硬件串口（`Serial.begin()`）和软件串口（`mySerial.begin()`）。
+在 `setup()` 函数中，我们初始化了硬件串口（`Serial.begin()`）和软件串口（`mySerial.begin()`）。
 
-在 `loop()` 函数中，我们使用 `mySerial.available()` 函数检查软件串口中是否有可读取的数据。如果有，我们使用 `mySerial.read()` 函数读取传入的字节，并将其存储在一个名为 data 的变量中。然后，我们使用 `Serial.print()` 和 `Serial.println()` 函数在硬件串口上打印“Received data: ”，后面跟上 data 的值。
+在 `loop()` 函数中，我们使用 `mySerial.available()` 函数检查软件串口中是否有可读取的数据。如果有，我们使用 `mySerial.read()` 函数读取传入的字节，并将其存储在名为 data 的变量中。然后，我们使用 `Serial.print()` 和 `Serial.println()` 函数在硬件串口上打印“Received data: ”，并在其后输出 data 的值。
 
-我们还使用 `mySerial.print()` 函数向软件串口写入 "Hello World!"。这会将数据从 XIAO 发送到连接在软件串口上的设备。
+我们还使用 `mySerial.print()` 函数向软件串口写入 "Hello World!"。这会将数据从 XIAO 发送到连接在软件串口端口上的设备。
 
-最后，我们添加一个 `delay()` 函数，在重复循环之前等待一秒钟。
+最后，我们添加了一个 `delay()` 函数，在重复循环之前等待一秒钟。
 
 ## IIC
 
@@ -415,7 +419,7 @@ XIAO RA4M1 具有一个 I2C 接口，可用于许多传感器的数据传输和�
  </tr>
 </table>
 
-XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，并通过板上的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插到扩展板上，并通过编程在屏幕上显示内容。
+XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，并通过板载的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插到扩展板上，并通过编程在屏幕上显示内容。
 
 ### 软件实现
 
@@ -452,7 +456,7 @@ void loop(void) {
 }
 ```
 
-在代码的前几行中，我们包含了所需的库，例如 Arduino.h、U8x8lib.h 和 Wire.h。U8x8lib.h 库提供了控制 OLED 显示屏的函数，而 Wire.h 库提供了 I2C 通信的函数。
+在代码的前几行中，我们包含了所需的库，例如 Arduino.h、U8x8lib.h 和 Wire.h。U8x8lib.h 库提供了控制 OLED 显示屏的函数，而 Wire.h 库提供了用于 I2C 通信的函数。
 
 在 `setup()` 函数中，我们使用 `u8x8.begin()` 函数初始化 OLED 显示屏。我们还使用 `u8x8.setFlipMode()` 函数设置显示屏的翻转模式，将屏幕旋转 180 度。
 
@@ -527,11 +531,11 @@ void loop(void) {
 }
 ```
 
-在 `setup()` 函数中，使用合适的构造函数参数实例化 `U8G2_SH1107_128X128_1_4W_HW_SPI` 类，这些参数指定了用于片选（cs）、数据/命令（dc）和复位的引脚。然后调用 `u8g2.begin()` 函数来初始化显示屏。
+在 `setup()` 函数中，通过 `U8G2_SH1107_128X128_1_4W_HW_SPI` 类并使用合适的构造函数参数进行实例化，这些参数指定了片选（cs）、数据/命令（dc）以及复位所使用的引脚。然后调用 `u8g2.begin()` 函数来初始化显示屏。
 
-在 `loop()` 函数中，使用 `u8g2.firstPage()`、`u8g2.setFont()` 和 `u8g2.drawStr()` 函数来更新显示内容。`u8g2.firstPage()` 函数用于为写入设置显示缓冲区，而 `u8g2.nextPage()` 用于显示更新后的内容。do-while 循环确保内容会持续显示，直到程序停止。
+在 `loop()` 函数中，使用 `u8g2.firstPage()`、`u8g2.setFont()` 和 `u8g2.drawStr()` 函数来用新内容更新显示屏。`u8g2.firstPage()` 函数用于为写入设置显示缓冲区，而 `u8g2.nextPage()` 用于显示更新后的内容。do-while 循环确保内容会持续显示，直到程序停止。
 
-总体而言，该代码演示了如何使用 U8g2 库来控制 OLED 显示屏并在其上显示文本。
+总体来说，这段代码演示了如何使用 U8g2 库来控制 OLED 显示屏并在其上显示文本。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
@@ -542,7 +546,7 @@ void loop(void) {
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO RA4M1</th>
-     <th>XIAO CAN Bus 扩展板</th>
+     <th>XIAO CAN Bus Expansion Board</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -564,7 +568,7 @@ void loop(void) {
 
 #### 步骤 1. 准备两个 CAN Bus Breakout Board 和 XIAO RA4M1
 
-#### 步骤 2. 将这两个 XIAO RA4M1 分别插入 CAN Bus Breakout Board
+#### 步骤 2. 将这两个 XIAO RA4M1 分别插入 CAN Bus Breakout Board 中
 
 #### 步骤 3. 准备杜邦线连接
 
@@ -585,14 +589,14 @@ void loop(void) {
 该库包含多个示例，包括：
 
 - ***OBDII-PIDs*** -  从 OBD-II 接口获取数据
-- ***send*** - 向 CAN 总线发送一帧
-- ***recv*** - 从 CAN 总线接收一帧
-- ***set_mask_filter_recv*** - 通过设置掩码和过滤器，从 CAN 总线接收一帧
+- ***send*** - 向 CAN 总线发送一帧数据
+- ***recv*** - 从 CAN 总线接收一帧数据
+- ***set_mask_filter_recv*** - 通过设置掩码和过滤器，从 CAN 总线接收一帧数据
 
 ### 软件实现
 
 :::tip
-不允许同时为两个 XIAO RA4M1 上电并下载程序，否则会导致串口下载时报错。下载完一个后，将其拔下，然后给另一个 XIAO RA4M1 上电并下载程序，最后再同时上电以查看串口信息。
+不允许同时为两个 XIAO RA4M1 上电并下载程序，否则会导致串口下载时报错。下载完一个后，将其拔下，再给另一个 XIAO RA4M1 上电并下载程序，最后同时上电以查看串口信息。
 :::
 
 **CAN 写入代码**
@@ -781,7 +785,7 @@ void loop()
 ```
 
 :::tip
-在本示例中，你需要焊接 CAN Bus Breakout Board 端子引脚 P1 中的一个引脚，只有这样才能使用任意速率，否则你只能使用低于 125 的 CAN 波特率
+在本示例中，你需要焊接 CAN Bus Breakout Board 端子引脚 P1 中的一个，只有这样才能使用任意速率，否则你只能使用低于 125 的 CAN 波特率
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/30.png" style={{width:600, height:'auto'}}/></div>
@@ -792,7 +796,7 @@ void loop()
 
 ### 硬件准备
 
-CAN 协议要求发送端必须接收到自己发送的报文。仅仅连接 TX 和 RX 并不足以完成通信；必须连接一个收发器才能进行通信。这里我们使用官方 Arduino **SN65HVD230 分裂器模块**。
+CAN 协议要求发送端必须接收到自己发送的报文。仅仅连接 TX 和 RX 并不足以完成通信；必须连接收发器才能进行通信。这里，我们使用官方 Arduino **SN65HVD230 分裂器模块**。
 
 <table>
     <thead>
@@ -932,13 +936,13 @@ void loop()
 
 ***什么时候需要连接终端电阻？***
 
-- 1. 远距离通信：如果 CAN 总线较长（例如超过 1 米），则必须在总线两端连接终端电阻，以避免信号反射导致的通信问题。
-- 2. 多节点通信：如果多个节点连接到同一条 CAN 总线上，终端电阻同样必不可少。它们可以确保总线阻抗的稳定，从而防止信号失真。
+- 1. 远距离通信：如果 CAN 总线较长（例如超过 1 米），则必须在总线两端连接终端电阻，以避免信号反射引起的通信问题。
+- 2. 多节点通信：如果多个节点连接到同一条 CAN 总线上，终端电阻同样必不可少。它们可以保证总线阻抗的稳定，从而防止信号失真。
 
 ***什么时候可以断开终端电阻？***
 
 - 1. 短距离通信：在某些短距离应用中（通常小于 1 米），可以省略终端电阻，因为信号反射对通信的影响相对较小。
-- 2. 单节点通信：如果总线上只有一个节点（例如在调试环境中）且距离较短，则可以暂时断开终端电阻。
+- 2. 单节点通信：如果总线上只有一个节点（例如在调试环境中）且距离较短，可以暂时断开终端电阻。
 
 <table align="center">
  <tr>
@@ -953,7 +957,7 @@ void loop()
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

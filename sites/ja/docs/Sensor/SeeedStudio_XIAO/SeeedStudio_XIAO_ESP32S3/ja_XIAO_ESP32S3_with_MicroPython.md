@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO ESP32S3 で MicroPython を使う
-title: XIAO ESP32S3 で MicroPython を使う
+description: Seeed Studio XIAO ESP32S3 と MicroPython
+title: XIAO ESP32S3 と MicroPython
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/esp32s3_micropython/title.png
@@ -9,15 +9,15 @@ last_update:
   date: 11/05/2026
   author: Evelyn Chen
 createdAt: '2024-08-14'
-updatedAt: '2025-09-11'
+updatedAt: '2026-11-05'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_with_micropython/
 ---
 
-# **Seeed Studio XIAO ESP32S3 で MicroPython を使う**
+# **Seeed Studio XIAO ESP32S3 と MicroPython**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/title.png" /></div>
 
-[MicroPython](https://github.com/micropython/micropython/wiki) は、一部にネイティブコードコンパイル機能を備えた Python インタプリタです。組み込みプロセッサや制約のあるシステム向けに実装された、Python 3.5 機能のサブセットを提供します。これは CPython とは異なり、その違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
+[MicroPython](https://github.com/micropython/micropython/wiki) は、一部にネイティブコードコンパイル機能を備えた Python インタプリタです。組み込みプロセッサや制約のあるシステム向けに実装された Python 3.5 機能のサブセットを提供します。これは CPython とは異なり、その違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
 
 ## MicroPython のインストール
 
@@ -32,8 +32,8 @@ pip install esptool
 #### XIAO ESP32S3 用 MicroPython ファームウェアのダウンロード
 
 [micropython.org](https://micropython.org/download/SEEED_XIAO_ESP32S3/) からファームウェアのバイナリファイルをダウンロードする必要があります。
-正しい bin ファイルをダウンロードしたら、そのフォルダへ移動し、そこで cmd ターミナルを開きます。
-最終稿時点での最新バージョンの bin ファイルは次のとおりです：
+正しい bin ファイルをダウンロードしたら、そのフォルダに移動し、そこで cmd ターミナルを開きます。
+最終稿の時点で、bin ファイルの最新バージョンは次のとおりです：
 
 ```
 SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
@@ -41,7 +41,7 @@ SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 
 #### XIAO ESP32S3 を PC に接続する
 
-XIAO ESP32S3 ボードの BOOT ボタンを押し続けたまま、Type-C USB ケーブルを PC に接続して「ブートローダ」モードに入る必要があります。
+XIAO ESP32S3 ボードの BOOT ボタンを押し続けたまま、Type-C USB ケーブルで PC に接続して「ブートローダ」モードに入る必要があります。
 
 #### ポートの確認
 
@@ -49,13 +49,13 @@ PC 上のすべてのシリアルデバイスを確認します。
 
 - Linux
 
-Linux では、*dmesg* コマンドを使って接続されているデバイスを確認できます：
+Linux では、*dmesg* コマンドを使用して接続されているデバイスを表示できます：
 
 ```Linux
 dmesg | grep tty
 ```
 
-または、*ls* を使ってシリアルデバイスを一覧表示できます：
+または、*ls* を使用してシリアルデバイスを一覧表示できます：
 
 ```
 ls /dev/ttyS* /dev/ttyUSB*
@@ -63,12 +63,12 @@ ls /dev/ttyS* /dev/ttyUSB*
 
 - Windows
 
-Windows では、デバイスマネージャーを開いて USB-シリアルポートのアドレスを確認できます。
+Windows では、デバイスマネージャーを開き、USB-シリアルポートのアドレスを確認できます。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/2.png" /></div>
 
 - macOS
 
-macOS では、*ls* コマンドを使って利用可能なシリアルポートを一覧表示できます：
+macOS では、*ls* コマンドを使用して利用可能なシリアルポートを一覧表示できます：
 
 ```
 ls /dev/cu*
@@ -78,14 +78,14 @@ ls /dev/cu*
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/1.png" /></div>
 
 :::tip
-ポートがビジー状態の場合、次のコマンドを使用して、そのポートを使用しているプロセスを特定し、終了させることができます（macOS の場合）：
+ポートがビジーな場合、次のコマンドを使用して、そのポートを使用しているプロセスを特定して終了できます（macOS の場合）：
 ポートを使用しているプロセスを特定します：
 
 ```
 lsof | grep port
 ```
 
-このコマンドは開いているファイルを一覧表示し、指定したポートを使用しているプロセスを検索します。
+このコマンドはオープンファイルを一覧表示し、指定したポートを使用しているプロセスを検索します。
 出力からプロセス ID（PID）を見つけ、そのプロセスを終了します：
 
 ```
@@ -113,11 +113,11 @@ esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash
 
 同様に、'/dev/cu.usbmodem11301' は正しいポート名に、'SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin' は使用するファームウェアファイルへのパスに置き換えてください。
 RTS ピン経由でハードリセットすることを忘れないでください。
-その後、お好みのツールを使って ESP32 向けにスクリプトをコンパイルし始めることができます！
+その後、お好みのツールを使って ESP32 用のスクリプトをコンパイルし始めることができます！
 
 ## MicroPython におすすめのエディタ
 
-一般的なツールをいくつか以下に挙げます。
+一般的なツールの一部を以下に示します。
 
 - [Thonny IDE](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
 - [Arduino for micropython](https://docs.arduino.cc/micropython/)
@@ -134,7 +134,7 @@ pip install thonny
 thonny
 ```
 
-Run-->Configure Interpreter に進み、Thonny のオプション内の Interpreter タブが下図のようになっていることを確認し、「CircuitPython (generic)」とポートを選択します：
+Run-->Configure Interpreter に移動し、Thonny のオプション内の Interpreter タブが下図のようになっていることを確認し、「CircuitPython (generic)」とポートを選択します：
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/4.png" /></div>
 
 ダイアログで "OK" をクリックすると、下図のように Thonny ウィンドウ下部に Micropython シェルが表示されるはずです。
@@ -181,15 +181,15 @@ while True:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/8.png" /></div>
 
-- 新しいプロジェクトを作成
+- 新しいプロジェクトの作成
 VS Code を開き、マイコン用の新しいプロジェクトを作成します。
-- 新しい Python ファイルを追加
+- 新しい Python ファイルの追加
 プロジェクト内に新しい Python ファイルを作成します。
 - スクリプトを MCU にアップロードしてコンパイル
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/10.png" /></div>
 
-### 4. uPyCraft IDE
+### 4. uPtCraft IDE
 
 - [macOS](https://randomnerdtutorials.com/install-upycraft-ide-mac-os-x-instructions/)
 
@@ -198,20 +198,24 @@ VS Code を開き、マイコン用の新しいプロジェクトを作成しま
 
 ## ピン配置 / ポート情報
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/10.png" /></div>
 
 - さらに詳しい情報は [hardware overview](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/#ハードウェア概要) を参照してください
 - [Seeed Studio XIAO ESP32S3 回路図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 
-## XIAO ESP32S3 で MicroPython を始める
+## XIAO ESP32S3 での MicroPython 入門
 
-こちらに [ESP32 を micropython で操作するためのクイックリファレンス](https://docs.micropython.org/en/latest/esp32/quickref.html#installing-micropython)があります。
-[micropython libraries](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries) についてさらに詳しく知りたい場合はこちらを参照してください。
+[ESP32 の Micropython による操作のクイックリファレンス](https://docs.micropython.org/en/latest/esp32/quickref.html#installing-micropython)はこちらです。
+[micropython libraries](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries) についての詳細な知識はこちらを参照してください。
 
 ### 一般的なボード制御
 
-MicroPython REPL（*R*ead-*E*val-*P*rint-*L*oop）は UART0（GPIO1=TX、GPIO3=RX）上で動作し、ボーレートは 115200 です。タブ補完は、オブジェクトが持つメソッドを調べるのに便利です。ペーストモード（ctrl-E）は、大きな Python コードの塊を REPL に貼り付けるのに便利です。
-MicroPython（Python と同様）では *dir()* 関数を使って、オブジェクトの属性やメソッドを一覧表示できます。
+MicroPython REPL（*R*ead-*E*val-*P*rint-*L*oop）は、ボーレート 115200 の UART0（GPIO1=TX、GPIO3=RX）上にあります。タブ補完は、オブジェクトが持つメソッドを調べるのに便利です。ペーストモード（ctrl-E）は、大きな Python コードの塊を REPL に貼り付けるのに便利です。
+MicroPython（Python と同様）では *dir()* 関数を使用して、オブジェクトの属性とメソッドを一覧表示できます。
 例えば、シェルで *dir(machine)* と入力します：
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/11.png" /></div>
 
@@ -241,7 +245,7 @@ esp.flash_read(byte_offset, buffer)
 ```
 
 *esp32* モジュール：
-ESP32C3、ESP32S2、および ESP32S3 には内部温度センサが搭載されており、摂氏温度を返します：
+ESP32C3、ESP32S2、および ESP32S3 には内部温度センサがあり、摂氏温度を返します：
 
 ```python
 import esp32
@@ -251,7 +255,7 @@ esp32.mcu_temperature() # read the internal temperature of the MCU, in Celsius
 ### ネットワーク - WLAN
 
 *Network* モジュール：
-詳しくは[こちら](https://docs.micropython.org/en/latest/library/network.WLAN.html)を参照してください。
+詳細情報は[こちら](https://docs.micropython.org/en/latest/library/network.WLAN.html)を参照してください。
 
 ```python
 import network
@@ -270,7 +274,7 @@ ap.config(max_clients=10) # set how many clients can connect to the network
 ap.active(True)         # activate the interface
 ```
 
-ローカルの WiFi ネットワークに接続するための便利な関数は次のとおりです：
+ローカル WiFi ネットワークに接続するための便利な関数は次のとおりです：
 
 ```python
 def do_connect():
@@ -301,7 +305,7 @@ delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 
 ### タイマー
 
-ESP32 ポートには 4 つのハードウェアタイマーがあります。[class](https://docs.micropython.org/en/latest/library/machine.Timer.html#machine-timer) を、タイマー ID 0〜3（両端を含む）で使用します：
+ESP32 ポートには 4 つのハードウェアタイマーがあります。0 から 3（両端を含む）までのタイマー ID を指定して [class](https://docs.micropython.org/en/latest/library/machine.Timer.html#machine-timer) を使用します：
 
 ```python
 from machine import Timer
@@ -316,7 +320,7 @@ tim1.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(1))
 周期はミリ秒単位です。
 このポートでは現在、仮想タイマーはサポートされていません。
 
-### ピンとGPIO
+### ピンと GPIO
 
 *machine.Pin* クラス：
 
@@ -337,7 +341,7 @@ p6 = Pin(6, Pin.OUT, drive=Pin.DRIVE_3) # set maximum drive strength
 
 ```
 
-使用可能なピンは、次の範囲（両端を含む）です：1,2,3,4,5,6,7,8,9,43,44。これらはESP32S3チップの実際のGPIOピン番号に対応します。
+使用可能なピンは、次の範囲（両端を含む）です：1,2,3,4,5,6,7,8,9,43,44。これらは ESP32S3 チップの実際の GPIO ピン番号に対応します。
 
 ### UART（シリアルバス）
 
@@ -351,7 +355,7 @@ uart1.write('hello')  # write 5 bytes
 uart1.read(5)         # read up to 5 bytes
 ```
 
-ESP32C3 にはハードウェアUARTが1つあります。ピンは以下のとおりです：
+ESP32C3 には 1 つのハードウェア UART があります。ピンは以下のとおりです：
 
 | UART | Pin |
 |------|-----|
@@ -360,7 +364,7 @@ ESP32C3 にはハードウェアUARTが1つあります。ピンは以下のと�
 
 ### PWM（パルス幅変調）
 
-PWMは、出力が有効なすべてのピンで有効にできます。基本周波数は1Hzから40MHzまで設定できますが、トレードオフがあります。基本周波数が高くなると、デューティ分解能は低下します。
+PWM は、出力が有効なすべてのピンで使用できます。基本周波数は 1Hz から 40MHz まで設定できますが、トレードオフとして、基本周波数が高くなるとデューティ分解能は低下します。
 *machine.PWM* クラス：
 
 ```python
@@ -385,9 +389,9 @@ pwm3 = PWM(Pin(3), freq=20000, duty=512)  # create and configure in one go
 print(pwm3)                               # view PWM settings
 ```
 
-### ADC（アナログ-デジタル変換）
+### ADC（アナログ‐デジタル変換）
 
-XIAO ESP32S3 では、ピン 1,2,3,4,5,6,7,8,9 でADC機能が利用できます。
+XIAO ESP32S3 では、ピン 1,2,3,4,5,6,7,8,9 で ADC 機能が利用できます。
 *machine.ADC* クラス：
 
 ```python
@@ -400,9 +404,9 @@ val = adc.read_uv()   # read an analog value in microvolts
 
 ### SPI
 
-#### ソフトウェアSPIバス
+#### ソフトウェア SPI バス
 
-ソフトウェアSPI（ビットバンギングを使用）はすべてのピンで動作し、*machine.SoftSPI* クラスを介してアクセスします：
+ソフトウェア SPI（ビットバンギングを使用）はすべてのピンで動作し、*machine.SoftSPI* クラスを介してアクセスします：
 
 ```python
 from machine import Pin, SoftSPI
@@ -428,9 +432,9 @@ spi.write_readinto(b'1234', buf) # write to MOSI and read from MISO into the buf
 spi.write_readinto(buf, buf) # write buf to MOSI and read MISO back into buf
 ```
 
-#### ハードウェアSPIバス
+#### ハードウェア SPI バス
 
-ハードウェアSPIは machine.SPI クラスを介してアクセスし、上記のソフトウェアSPIと同じメソッドを持ちます：
+ハードウェア SPI は machine.SPI クラスを介してアクセスし、上記のソフトウェア SPI と同じメソッドを持ちます：
 
 ```python
 from machine import Pin, SPI
@@ -447,9 +451,9 @@ hspi = SPI(1, 10000000, sck=Pin(7), mosi=Pin(9), miso=Pin(8))
 
 ### I2C
 
-#### ソフトウェアI2Cバス
+#### ソフトウェア I2C バス
 
-ソフトウェアI2C（ビットバンギングを使用）は、出力可能なすべてのピンで動作し、*machine.SoftI2C* クラスを介してアクセスします：
+ソフトウェア I2C（ビットバンギングを使用）は、出力可能なすべてのピンで動作し、*machine.SoftI2C* クラスを介してアクセスします：
 
 ```python
 from machine import Pin, SoftI2C
@@ -465,24 +469,24 @@ buf = bytearray(10)     # create a buffer with 10 bytes
 i2c.writeto(0x3a, buf)  # write the given buffer to the peripheral
 ```
 
-#### ハードウェアI2Cバス
+#### ハードウェア I2C バス
 
-ドライバは *machine.I2C* クラスを介してアクセスし、上記のソフトウェアI2Cと同じメソッドを持ちます：
+ドライバは *machine.I2C* クラスを介してアクセスし、上記のソフトウェア I2C と同じメソッドを持ちます：
 
 ```python
 from machine import Pin, I2C
 i2c = I2C(0, scl=Pin(6), sda=Pin(5), freq=400000)
 ```
 
-### XIAO用拡張ボードベース
+### XIAO 用 Expension Board Base
 
 *前提条件*：
 
 <table align="center">
   <tbody><tr>
-      <th>ヘッダーピンをはんだ付けした XIAO ESP32S3<br /></th>
-      <th>XIAO用拡張ボードベース</th>
-      <th>Grove 光センサー</th>
+      <th>ヘッダをはんだ付けした XIAO ESP32S3<br /></th>
+      <th>XIAO 用 Expension Board Base</th>
+      <th>Grove Light センサー</th>
     </tr>
     <tr>
       <td><div align="center"><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:210, height:'auto'}}/></div></td>
@@ -539,13 +543,13 @@ while True:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/13.png" /></div>
 
-#### OLEDスクリーンを点灯させる
+#### OLED 画面を点灯させる
 
 XIAO ESP32S3 を接続し、Thonny を開いて右下をクリックし、インタプリタを設定します
-インタプリタ Micropython (ESP32) を選択し、**Port >>> OK をクリック** します
+インタプリタ Micropython (ESP32) と **Port >>> OK をクリック** を選択します
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/14.png" /></div>
 
-すべてがうまくいけば、シェルに出力が表示されます。
+すべてがうまくいけば、シェルに出力が表示されます
 MicroPython から ssd1306 ライブラリをインストールします。
 "Tools" をクリック >>> "Management Packages" をクリック >>> ライブラリ名を入力 >>> "Search micropython-lib and PyPl" をクリック
 
@@ -577,17 +581,17 @@ oled.show()  # Show the text
 
 #### カメラストリーミングテスト
 
-ESP32S3 sense（カメラ付き）向けにもカメラストリーミングテストが用意されています。詳しくは[こちら](https://wiki.seeedstudio.com/ja/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example)を参照してください。
+ESP32S3 sense（カメラ付き）向けにカメラストリーミングテストも用意されています。[こちら](https://wiki.seeedstudio.com/ja/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example)を参照してください。
 
-この記事をお読みいただきありがとうございます。コメント欄でぜひご意見をお聞かせください。
+この記事をお読みいただきありがとうございます。コメント欄でぜひご意見をお寄せください。
 
 ## リソース
 
-- MicroPython を搭載した XIAO ESP32S3 用の[ファームウェアバイナリファイル](https://micropython.org/download/ESP32_GENERIC_S3/)
+- MicroPython を搭載した XIAO ESP32S3 用の [ファームウェアバイナリファイル](https://micropython.org/download/ESP32_GENERIC_S3/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

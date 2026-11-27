@@ -27,11 +27,15 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="XIAO MG24" label="XIAO MG24">
 
-### Frente do XIAO MG24
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
+### XIAO MG24 Frente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Verso do XIAO MG24
+### XIAO MG24 Verso
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -39,11 +43,15 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
 
-### Frente do XIAO MG24 Sense
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24sense" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
+### XIAO MG24 Sense Frente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Verso do XIAO MG24 Sense
+### XIAO MG24 Sense Verso
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -119,7 +127,7 @@ void loop() {
 
 ### Gráfico de resultado
 
-Se tudo correr bem, após enviar o programa, você deverá ver o seguinte efeito.
+Se tudo correr bem, após o upload do programa, você deverá ver o seguinte efeito.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/2.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -160,7 +168,7 @@ Todos os pinos GPIO no XIAO MG24(Sense) suportam saída PWM. Portanto, você pod
 </table>
 
 :::tip
-Instale o XIAO MG24(Sense) na placa de expansão e, em seguida, conecte o Variable Color LED à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao seu computador por meio de um cabo USB‑C.
+Instale o XIAO MG24(Sense) na placa de expansão, depois conecte o Variable Color LED à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao seu computador por meio de um cabo USB‑C.
 :::
 
 ### Implementação de software
@@ -248,7 +256,7 @@ Em seguida, vamos escolher dois sensores para refletir as características do AD
 ### Implementação de software
 
 <Tabs>
-  <TabItem value="Without DMA" label="analogRead sem DMA" default>
+  <TabItem value="Without DMA" label="analogRead Without DMA" default>
 
 ``` cpp
 const int analogInPin = D1;  // Analog input pin that the potentiometer is attached to
@@ -275,7 +283,7 @@ void loop() {
 ```
 
   </TabItem>
-  <TabItem value="With DMA" label="analogRead com DMA">
+  <TabItem value="With DMA" label="analogRead With DMA">
 
 ``` cpp
 #define ANALOG_VALUE_MIN 0     // Define the minimum analog value
@@ -370,7 +378,7 @@ float getAverage(uint32_t *buffer, uint32_t buf_size) {
 Deve-se observar que, se você quiser usar DMA para ler sinais analógicos, a versão da sua biblioteca precisa ser superior a 2.2.0. Atualmente, a nova versão ainda não foi aprovada e você precisa instalá-la manualmente.
 :::
 
-### Gráfico de resultado
+### Gráfico de resultados
 
 Se tudo correr bem, após enviar o programa, você deverá ver o seguinte efeito.
 
@@ -378,7 +386,7 @@ Se tudo correr bem, após enviar o programa, você deverá ver o seguinte efeito
 
 ## UART
 
-Ao trabalhar com a Arduino IDE, a comunicação Serial é uma parte essencial de muitos projetos. Para usar Serial na Arduino IDE, você precisa começar abrindo a janela Serial Monitor. Isso pode ser feito clicando no ícone **Serial Monitor** na barra de ferramentas ou pressionando o atalho **Ctrl+Shift+M**.
+Ao trabalhar com a Arduino IDE, a comunicação Serial é uma parte essencial de muitos projetos. Para usar Serial na Arduino IDE, você precisa começar abrindo a janela do Serial Monitor. Isso pode ser feito clicando no ícone **Serial Monitor** na barra de ferramentas ou pressionando o atalho **Ctrl+Shift+M**.
 
 ### Uso geral de Serial
 
@@ -421,9 +429,9 @@ void loop() {
 
 ### Uso de Serial1
 
-De acordo com os diagramas de pinos do XIAO MG24(Sense) acima para parâmetros específicos, podemos observar que há pinos TX e RX.
+De acordo com os diagramas de pinos do XIAO MG24(Sense) acima para parâmetros específicos, podemos observar que existem pinos TX e RX.
 Isso é diferente da comunicação serial, mas o uso também é muito semelhante, exceto que alguns parâmetros precisam ser adicionados.
-Então, a seguir, usaremos os pinos expostos pelo chip para comunicação serial.
+Então, em seguida, usaremos os pinos expostos pelo chip para comunicação serial.
 
 ```c
 #define BAUD 115200
@@ -452,7 +460,7 @@ O XIAO MG24(Sense) possui uma interface I2C que pode ser usada para transmissão
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO MG24 Sense</th>
-        <th>Base de Expansão Seeed Studio para XIAO com Grove OLED</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -472,11 +480,11 @@ O XIAO MG24(Sense) possui uma interface I2C que pode ser usada para transmissão
  </tr>
 </table>
 
-O display OLED na placa de expansão XIAO usa o protocolo I2C e é conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos conectar diretamente o XIAO à placa de expansão e programá-lo para exibir conteúdo na tela.
+O display OLED na placa de expansão XIAO usa o protocolo I2C e está conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos simplesmente conectar o XIAO à placa de expansão e programá-lo para exibir conteúdo na tela.
 
 ### Implementação de software
 
-Este exemplo apresenta como usar o display OLED na Base de Expansão Seeed Studio para XIAO MG24(Sense).
+Este exemplo apresenta como usar o display OLED na Seeed Studio Expansion Base para XIAO MG24(Sense).
 
 ***Passo 1. Instale o Seeed Studio XIAO MG24(Sense) na placa de expansão e conecte o cabo Type-C.***
 
@@ -563,7 +571,7 @@ O chip XIAO MG24(Sense) integra vários periféricos, incluindo uma interface SP
     </a>
 </div><br />
 
-Com base no programa de exemplo Arduino fornecido pela **Waveshare**, escrevemos uma biblioteca Arduino para uso com toda a série XIAO, e você pode ir diretamente para o Github dessa biblioteca por meio do botão abaixo.
+Com base no programa de exemplo Arduino fornecido pela **Waveshare**, escrevemos uma biblioteca Arduino para uso com toda a série XIAO, e você pode ir diretamente para o Github desta biblioteca através do botão abaixo.
 
 ### Preparação de hardware
 
@@ -592,7 +600,7 @@ Com base no programa de exemplo Arduino fornecido pela **Waveshare**, escrevemos
  </table>
 </div>
 
-### Conexão dos pinos
+### Conexão de pinos
 
 Depois de preparar o hardware conforme mencionado acima, use jumpers para conectar a interface SPI do XIAO e do OLED. Consulte o diagrama a seguir para o método de fiação.
 

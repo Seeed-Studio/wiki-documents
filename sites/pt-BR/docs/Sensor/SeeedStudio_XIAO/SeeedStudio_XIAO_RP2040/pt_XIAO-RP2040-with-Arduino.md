@@ -34,26 +34,26 @@ Alguns cabos USB podem apenas fornecer energia e não transferir dados. Se você
 :::
 **Conexão de hardware:**
 
-- Passo 1. Pressione e segure o botão BOOT e então conecte o Seeed Studio XIAO RP2040 ao PC.
+- Etapa 1. Pressione e segure o botão BOOT e então conecte o Seeed Studio XIAO RP2040 ao PC.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" /></div>
 
-- Passo 2. Se o disco **RPI-RP2** for exibido no PC e o LED de alimentação no Seeed Studio XIAO RP2040 estiver aceso, a conexão estará concluída.
+- Etapa 2. Se o disco **RPI-RP2** for exibido no PC e o LED de alimentação no Seeed Studio XIAO RP2040 acender, a conexão estará concluída.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
 ### Configuração de software
 
-- **Passo 1.** Baixe e instale a versão mais recente da Arduino IDE de acordo com o seu sistema operacional
+- **Etapa 1.** Baixe e instale a versão mais recente da Arduino IDE de acordo com o seu sistema operacional
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
   </div>
   <br></br>
 
-- **Passo 2.** Inicie o aplicativo Arduino.
+- **Etapa 2.** Inicie o aplicativo Arduino.
 
-- **Passo 3.**  Adicione o pacote de placa Seeed Studio XIAO RP2040 à sua Arduino IDE
+- **Etapa 3.**  Adicione o pacote de placa Seeed Studio XIAO RP2040 à sua Arduino IDE
 
 Navegue até **File** > **Preferences** e preencha **Additional Boards Manager URLs** com a URL abaixo:
 
@@ -67,25 +67,25 @@ Navegue até **Tools-> Board-> Boards Manager...**, digite a palavra-chave **ard
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/arduino_2.png"/></div>
 
-- **Passo 4.** Selecione sua placa e porta. Se a porta serial não for exibida, entre primeiro no modo BOOT. Veja [Configuração de hardware](#configuração-de-hardware).
+- **Etapa 4.** Selecione sua placa e porta. Se a porta serial não for exibida, entre primeiro no modo BOOT. Veja [Configuração de hardware](#configuração-de-hardware).
 
-- **Passo 5.** Abra o exemplo Blink navegando em **"File --> Examples --->01.Basics --> Blink"**
+- **Etapa 5.** Abra o exemplo Blink navegando em **"File --> Examples --->01.Basics --> Blink"**
 
 <div align="center"><img width ="550" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/select_blink.png"/></div>
 
 **Placa**
 
-Após instalar o pacote de placa, navegue até **Tools-> Board**, encontre "**Seeed Studio XIAO RP2040**" e selecione-o. Agora terminamos a configuração do Seeed Studio XIAO RP2040 para a Arduino IDE.
+Depois de instalar o pacote de placa, navegue até **Tools-> Board**, encontre "**Seeed Studio XIAO RP2040**" e selecione-o. Agora terminamos a configuração do Seeed Studio XIAO RP2040 para a Arduino IDE.
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/4.png"/></div>
 
 **Porta**
 
-Navegue até Tools > Port e selecione o nome da porta serial do Seeed Studio XIAO RP2040 conectado. Provavelmente será COM3 ou superior (**COM1** e **COM2** geralmente são reservadas para portas seriais de hardware). A porta serial do Seeed Studio XIAO RP2040 conectado geralmente contém parênteses em que está escrito "Seeed Studio XIAO RP2040".
+Navegue até Tools > Port e selecione o nome da porta serial do Seeed Studio XIAO RP2040 conectado. Provavelmente será COM3 ou superior (**COM1** e **COM2** geralmente são reservadas para portas seriais de hardware). A porta serial do Seeed Studio XIAO RP2040 conectado geralmente contém parênteses nos quais está escrito "Seeed Studio XIAO RP2040".
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png"/></div>
 
-- **Passo 6.** Clique no botão **Upload** para enviar o código de exemplo Blink para a placa.
+- **Etapa 6.** Clique no botão **Upload** para enviar o código de exemplo Blink para a placa.
 
 <div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl5.png"/></div>
 
@@ -97,14 +97,18 @@ Se o envio do programa Arduino falhar, tente manter pressionado o botão "BOOT" 
 
 ## Multiplexação de pinos no Seeed Studio XIAO RP2040
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
 O Seeed Studio XIAO RP2040 contém 11 pinos digitais, 4 pinos analógicos, 11 pinos PWM, 1 interface I2C, 1 interface UART, 1 interface SPI, 1 interface de almofada de ligação SWD. Vamos fornecer tutoriais sobre essas interfaces para ajudar em seus projetos.
 
 ### Digital
 
-Conecte um botão de pressão ao pino D0 e um LED ao pino 25. Em seguida, envie o código a seguir para controlar o LIGAR/DESLIGAR do LED usando o botão de pressão.
+Conecte um botão de pressão ao pino D0 e um LED ao pino 25. Em seguida, envie o código a seguir para controlar o LIGAR/DESLIGAR do LED usando o botão.
 
 :::warning
-Observe que a tensão de operação do Seeed Studio XIAO RP2040 é 3,3 V; se você conectar o sensor incorretamente a 5 V, a placa-mãe pode não funcionar corretamente.
+Observe que a tensão de operação do Seeed Studio XIAO RP2040 é 3,3 V; se você conectar o sensor incorretamente a 5 V, a placa-mãe poderá não funcionar corretamente.
 :::
 
 ```cpp
@@ -248,11 +252,11 @@ void loop()
 
 :::caution
 
-Os LEDs RGB podem causar fadiga ocular ou lesão se operados com brilho excessivo; é recomendável o uso de proteção ocular adequada.
+Os LEDs RGB podem causar fadiga ocular ou lesão se operados com brilho excessivo; é recomendado o uso de proteção ocular adequada.
 
 :::
 
-Na série XIAO RP2040, o GPIO11 (NEOPIXEL_POWER) atua como pino de habilitação, enquanto o GPIO12 (PIN_NEOPIXEL) controla a saída de cor RGB. Siga os passos abaixo para o uso.
+Na série XIAO RP2040, o GPIO11 (NEOPIXEL_POWER) funciona como pino de habilitação, enquanto o GPIO12 (PIN_NEOPIXEL) controla a saída de cor RGB. Siga as etapas abaixo para o uso.
 
 :::tip
 
@@ -262,7 +266,7 @@ O XIAO RP2040 é equipado com um LED RGB SMD de lente redonda, enquanto o XIAO R
 
 Primeiro, precisamos adicionar uma biblioteca de terceiros.
 
-- **Passo 1.** Abra a Arduino IDE, navegue até `Sketch > Include Library > Manage Libraries...` para buscar a biblioteca.
+- **Etapa 1.** Abra a Arduino IDE, navegue até `Sketch > Include Library > Manage Libraries...` para pesquisar a biblioteca.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
@@ -270,7 +274,7 @@ Digite a palavra-chave **Adafruit_NeoPixel** no Arduino Library Manager e instal
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl6.png" /></div>
 
-- **Passo 2.** Copie os códigos para o Arduino e clique no botão **Upload** para enviar.
+- **Etapa 2.** Copie os códigos para o Arduino e clique no botão **Upload** para enviar.
 
 ```cpp
 #include <Adafruit_NeoPixel.h>

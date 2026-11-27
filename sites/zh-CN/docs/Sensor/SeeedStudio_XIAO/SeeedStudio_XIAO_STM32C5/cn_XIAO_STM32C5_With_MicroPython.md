@@ -13,7 +13,7 @@ last_update:
   date: 09/02/2026
   author: Zeller
 createdAt: '2026-09-01'
-updatedAt: '2026-09-02'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/cn/xiao_stm32c5_with_micropython/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,7 +46,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概述
 
-[MicroPython](https://github.com/micropython/micropython/wiki) 是一个 Python 解释器，支持为性能关键代码生成本地代码。它提供了经过优化、适用于微控制器和资源受限系统的 Python 3.6+ 核心特性子集。它与 CPython 不同，你可以在 [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) 页面了解更多差异。
+[MicroPython](https://github.com/micropython/micropython/wiki) 是一个 Python 解释器，支持为性能关键代码生成本地代码。它提供了经过裁剪的 Python 3.6+ 核心特性子集，并针对微控制器和资源受限系统进行了优化。它与 CPython 不同，你可以在 [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) 页面了解更多差异。
 
 ## 硬件准备
 
@@ -72,16 +72,16 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 部署 MicroPython 固件
 
-通过进入 bootloader 模式，并将 `.uf2` 固件文件复制到开发板的 USB 大容量存储驱动器上，来更新 XIAO STM32C5 上的 MicroPython 固件。
+通过进入 bootloader 模式，并将 `.uf2` 固件文件复制到开发板的 USB 大容量存储盘上，来更新 XIAO STM32C5 上的 MicroPython 固件。
 
 1. 下载并解压 XIAO STM32C5 MicroPython 固件压缩包：
 
-- **📄[Firmware]** [XIAO STM32C5 MicroPython 固件](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/xiao-stm32c5-micropython-firmware.zip)
+- **📄[Firmware]** [XIAO STM32C5 MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/xiao-stm32c5-micropython-firmware.zip)
 
-2. 通过 USB 将 XIAO STM32C5 连接到电脑。快速双击 **Reset** 按钮进入 bootloader 模式。此时会出现名为 **XIAOC5BOOT** 的 USB 驱动器。将解压后的 **micropython-xiao-stm32c5.uf2** 复制到该驱动器中。固件安装完成后，开发板会自动重启。
+2. 通过 USB 将 XIAO STM32C5 连接到电脑。快速双击 **Reset** 按钮进入 bootloader 模式。此时会出现名为 **XIAOC5BOOT** 的 USB 磁盘。将解压后的 **micropython-xiao-stm32c5.uf2** 复制到该磁盘中。固件安装完成后，开发板会自动重启。
 
 :::tip
-如果没有出现 **XIAOC5BOOT**，请断开并重新连接 USB 线，然后再次双击 **Reset**。确保 USB 线支持数据传输。
+如果没有出现 **XIAOC5BOOT**，请断开并重新连接 USB 线，然后再次双击 **Reset**。请确保 USB 线支持数据传输。
 :::
 
 ## 安装 [Thonny IDE](https://thonny.org/)
@@ -92,7 +92,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_ide_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-然后按照默认步骤完成配置即可。
+然后只需按照默认步骤完成配置即可。
 
 
 ### 解释器配置
@@ -105,9 +105,13 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/mpy_2.png" style={{width:800, height:'auto'}}/></div>
 ## 引脚映射
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
 :::tip
 
-- 完整引脚说明请参阅 [XIAO STM32C5 引脚列表](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#硬件概述)。
+- 如需完整引脚说明，请参阅 [XIAO STM32C5 引脚列表](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#硬件概述)。
 
 :::
 
@@ -124,8 +128,8 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 | D8 | PE2 | SPI3 SCK / GPIO | 硬件 SPI 时钟 |
 | D9 | PB0 | SPI3 MISO / GPIO | 硬件 SPI 数据输入 |
 | D10 | PB15 | SPI3 MOSI / GPIO | 硬件 SPI 数据输出 |
-| D11 | PB8 | GPIO / FDCAN1 RX 功能 | 当前固件未启用 FDCAN1 |
-| D12 | PB9 | GPIO / FDCAN1 TX 功能 | 当前固件未启用 FDCAN1 |
+| D11 | PB8 | GPIO / FDCAN1 RX 能力 | 当前固件未启用 FDCAN1 |
+| D12 | PB9 | GPIO / FDCAN1 TX 能力 | 当前固件未启用 FDCAN1 |
 | D13 | PB5 | FDCAN2 RX / GPIO | `XiaoCAN("can0", ...)` |
 | D14 | PB13 | FDCAN2 TX / GPIO | `XiaoCAN("can0", ...)` |
 | D15 / CAN_STB | PB14 | CAN 收发器待机控制 | 低：正常；高：待机 |
@@ -142,7 +146,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## LED 闪烁
 
-数字引脚主要通过输出高、低逻辑电平，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细说明 XIAO STM32C5 上数字引脚的底层驱动逻辑和实际调用方式。
+数字引脚主要通过输出高、低逻辑电平，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细说明 XIAO STM32C5 上数字引脚的底层驱动逻辑及其实用调用方式。
 
 ### 硬件准备
 
@@ -220,13 +224,13 @@ except KeyboardInterrupt:
 
 ### 结果
 
-脚本启动后，连接到 D1 的外部 LED 将以一秒为周期闪烁。
+脚本运行后，连接到 D1 的外接 LED 将以一秒为周期闪烁。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_1.gif" style={{width:600, height:'auto'}}/></div>
 
 ## 驱动舵机
 
-PWM 是一种基于数字输出 GPIO 实现的定时波形输出功能。它以固定频率快速切换引脚电平，并在单个周期内动态调整高电平占空比，从而向外设输出等效的模拟信号。在实际工程应用中，PWM 被广泛用于舵机的精确角度控制以及 LED 的平滑亮度调节。
+PWM 是一种基于数字输出 GPIO 实现的定时波形输出功能。它以固定频率快速切换引脚电平，并在单个周期内动态调节高电平占空比，从而向外设输出等效的模拟信号。在实际工程应用中，PWM 被广泛用于舵机的精确角度控制以及 LED 的平滑亮度调节。
 
 ### 硬件准备
 
@@ -332,15 +336,15 @@ finally:
 
 ### 结果
 
-脚本启动后，舵机会反复从约 0° 扫到 180°，再回到 0°。循环每 20 ms 控制帧将指令推进 1°，对应标称指令扫描速率为 50°/s（约 0.87 rad/s），不包括执行开销和舵机自身的机械极限。
+脚本启动后，舵机会在大约 0° 到 180° 之间往复摆动，然后回到 0°。循环每 20 ms 控制帧将指令推进 1°，对应标称指令扫描速率为 50°/s（约 0.87 rad/s），不包括执行开销和舵机自身的机械极限。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_2.gif" style={{width:600, height:'auto'}}/></div>
 
 ## 通过 CAN 驱动 DM-J4310-2EC 电机
 
-XIAO STM32C5 提供两个 CAN FD 接口。其中一个引出逻辑电平的发送和接收信号，用于连接外部 CAN 收发器。另一个连接到板载 TCAN3403-Q1 CAN FD 收发器，可通过 CAN_H 和 CAN_L 直接连接到 CAN 总线。CAN FD 在保持与经典 CAN 兼容的同时，支持更大的有效载荷和更高的数据相位比特率，非常适合汽车电子、工业控制、机器人以及分布式传感器网络等应用。
+XIAO STM32C5 提供两个 CAN FD 接口。其中一个引出逻辑电平的发送和接收信号，用于连接外部 CAN 收发器。另一个连接到板载 TCAN3403-Q1 CAN FD 收发器，可通过 CAN_H 和 CAN_L 直接连接到 CAN 总线。CAN FD 在支持更大负载和更高数据相位比特率的同时，仍与经典 CAN 兼容，使其适用于汽车电子、工业控制、机器人和分布式传感器网络。
 
-板载 CAN FD 电路还包括一个可断开的 120 Ω 终端电阻。当开发板位于总线一端时，请启用该电阻；当开发板位于总线中间，或在 XIAO 端已经安装了另一个 120 Ω 电阻时，请断开该电阻。收发器还支持待机控制，在未使用 CAN 通信时可降低功耗。
+板载 CAN FD 电路还包括一个可断开的 120 Ω 终端电阻。当开发板位于总线一端时，请启用该电阻。当开发板位于总线中间，或在 XIAO 端已经安装了另一个 120 Ω 电阻时，请断开该电阻。收发器还支持待机控制，在未使用 CAN 通信时可降低功耗。
 
 - 参考用法：[XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/cn/xiao_stm32c5_canfd_usage/)
 
@@ -449,7 +453,7 @@ XIAO STM32C5 提供两个 CAN FD 接口。其中一个引出逻辑电平的发�
 ### 软件程序
 
 :::caution
-电机需要 24 V 电源。请使用符合规范、带限流功能且电流额定值合适的电源。在更改任何接线前关闭电源，在初始测试期间保持电机空载，并将 XIAO 的地线连接到电机电源的负极端子。不正确的电源或接线可能会损坏设备并造成安全隐患。
+电机需要 24 V 电源。请使用符合规范、限流且具有合适电流额定值的电源。在更改任何接线前关闭电源，在初始测试期间保持电机空载，并将 XIAO 的地线连接到电机电源的负极端子。不正确的电源或接线可能会损坏设备并造成安全隐患。
 :::
 
 1. 使用 Damiao 上位机配置软件将电机的 **CAN ID** 设置为 `0x001`，**Master ID** 设置为 `0x011`。详情请参阅 [Getting Started with the Damiao 43 Series Motors](https://wiki.seeedstudio.com/cn/damiao_series/)。
@@ -733,7 +737,7 @@ if __name__ == "__main__":
 
 :::tip
 
-将 XIAO STM32C5 上的 CAN_H 连接到电机的 CAN_H，CAN_L 连接到 CAN_L，同时连接地线。反接差分线或未连接公共地线都可能导致通信失败。
+将 XIAO STM32C5 上的 CAN_H 连接到电机的 CAN_H，将 CAN_L 连接到 CAN_L，同时连接地线。反接差分线或未连接公共地线可能会导致通信失败。
 
 :::
 

@@ -18,9 +18,13 @@ url: https://wiki.seeedstudio.com/cn/XIAO_RP2350_Pin_Multiplexing/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png" style={{width:800, height:'auto'}}/></div>
 
-Seeed Studio XIAO RP2350 拥有丰富的接口。它有 **19 个数字 I/O** 可用作 **PWM 引脚**，以及 **3 个模拟输入** 可用作 **ADC 引脚**。它支持 **UART、I2C 和 SPI** 等四种串行通信接口。本教程将帮助你了解这些接口，并在你的下一个项目中加以实现！
+Seeed Studio XIAO RP2350 拥有丰富的接口。它有 **19 个数字 I/O** 可用作 **PWM 引脚**，以及 **3 个模拟输入** 可用作 **ADC 引脚**。它支持 **UART、I2C 和 SPI** 等四种串行通信接口。本篇 wiki 将帮助你了解这些接口，并在你的下一个项目中加以实现！
 
 ## 硬件总览
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2350" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
 
 ### 正面
 
@@ -32,7 +36,7 @@ Seeed Studio XIAO RP2350 拥有丰富的接口。它有 **19 个数字 I/O** 可
 
 ## 准备工作
 
-目前，由于兼容性问题，XIAO RP2350 的引脚使用存在一些问题。我们已经修复了该问题，并且已合并树莓派官方库。当前版本为 4.2.0，更新将在下一个版本 **4.2.1** 中完成。
+目前，由于兼容性问题，XIAO RP2350 的引脚使用存在一些问题。我们已经修复了该问题，并合入了 Raspberry Pi 官方库。当前版本为 4.2.0，相关更新将在下一个版本 **4.2.1** 中完成。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/12.png" style={{width:500, height:'auto'}}/></div>
 
@@ -78,7 +82,7 @@ Seeed Studio XIAO RP2350 拥有丰富的接口。它有 **19 个数字 I/O** 可
 
 ### 软件实现
 
-在本示例中，我们将通过连接到 XIAO 扩展板的按键来控制继电器的开/关状态。当按下按键时，继电器打开；当松开按键时，继电器关闭。
+在本示例中，我们将通过连接到 XIAO 扩展板的按键来控制继电器的开关状态。按下按键时，继电器吸合；松开按键时，继电器断开。
 
 ```c
 //define which pin you use
@@ -98,7 +102,7 @@ void loop() {
 }
 ```
 
-### 效果展示
+### 效果
 
 如果一切顺利，在上传程序后，你应该会看到如下效果。
 
@@ -106,7 +110,7 @@ void loop() {
 
 ## 数字引脚作为 PWM 使用
 
-XIAO RP2350 上的所有 GPIO 引脚都支持 PWM 输出。因此，你可以使用任意引脚输出 PWM 来调节灯光亮度、控制舵机等功能。
+XIAO RP2350 上的所有 GPIO 引脚都支持 PWM 输出。因此，你可以使用任意引脚输出 PWM，用于调节灯光亮度、控制舵机等功能。
 
 ### 硬件准备
 
@@ -173,7 +177,7 @@ void loop() {
 }
 ```
 
-### 效果展示
+### 效果
 
 如果程序运行成功，你将看到如下运行效果。
 
@@ -181,7 +185,7 @@ void loop() {
 
 ## 模拟引脚
 
-XIAO MG24（Sense）开发板配备 12 位 ADC，可对模拟传感器数值进行高分辨率读取，这有助于我们获得更加精确的读数。
+XIAO MG24(Sense) 开发板配备了 12 位 ADC，可对模拟传感器数值进行高分辨率读取，这有助于我们获得更加精确的读数。
 
 接下来，我们将选择两个传感器来体现 ADC 的特性。
 
@@ -249,12 +253,12 @@ void loop()
 
 一些常用的串口函数包括：
 
-- `Serial.begin()` -- 以指定的波特率初始化通信；
-- `Serial.print()` -- 以可读格式向串口发送数据；
-- `Serial.write()` -- 向串口发送二进制数据；
-- `Serial.available()` -- 检查串口中是否有可读取的数据；
-- `Serial.read()` -- 从串口读取一个字节的数据；
-- `Serial.flush()` -- 等待正在发送的串口数据传输完成。
+- `Serial.begin()` -- 用于以指定的波特率初始化通信；
+- `Serial.print()` -- 用于以可读格式向串口发送数据；
+- `Serial.write()` -- 用于向串口发送二进制数据；
+- `Serial.available()` -- 用于检查串口中是否有可读取的数据；
+- `Serial.read()` -- 用于从串口读取一个字节的数据；
+- `Serial.flush()` -- 用于等待所有要发送的串口数据传输完成。
 
 通过使用这些串口函数，你可以在 Arduino 开发板和计算机之间发送和接收数据，从而为创建交互式项目提供了许多可能性。
 
@@ -292,7 +296,7 @@ void loop() {
 
 ### Serial1 的使用
 
-根据上面 XIAO RP2350 引脚图中的具体参数，我们可以看到有 TX 和 RX 引脚（D6、D7）。
+根据上面的 XIAO RP2350 引脚图中的具体参数，我们可以看到有 TX 和 RX 引脚（D6、D7）。
 用法也非常相似，但我们需要使用**串口监控工具**来监控 D6、D7 引脚以获取数据。
 所以下一步，我们将使用 D6、D7 引脚来使用 **serial1**。
 
@@ -492,7 +496,7 @@ XIAO RP2350 芯片集成了多种外设，其中包括一个 SPI 接口，可用
  </tr>
 </table>
 
-按照上述硬件准备完成后，使用杜邦线连接 XIAO 与 OLED 的 SPI 接口。请参考下表进行接线。
+按照上述硬件准备完成后，使用杜邦线将 XIAO 与 OLED 的 SPI 接口连接起来。请参考下表进行接线。
 
 |XIAO RP2350| OLED 显示屏|
 |-----------|-------------|
@@ -550,7 +554,7 @@ void loop(void) {
 
 ## 总结
 
-你已经学习了 XIAO RP2350 引脚的基本功能。现在，就尽情玩转它吧~
+你已经学习了 XIAO RP2350 引脚的基本功能。现在，就尽情玩耍吧~
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 技术支持与产品讨论

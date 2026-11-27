@@ -1,6 +1,6 @@
 ---
-description: XIAO nRF52840(sense) With Zephyr(RTOS)
-title: XIAO nRF52840(sense) With Zephyr(RTOS)
+description: XIAO nRF52840(sense) と Zephyr(RTOS)
+title: XIAO nRF52840(sense) と Zephyr(RTOS)
 keywords:
   - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -8,130 +8,130 @@ slug: /XIAO-nRF52840-Zephyr-RTOS
 last_update:
   date: 06/07/2024
   author: Tim
-createdAt: '2025-05-27'
-updatedAt: '2025-09-25'
+createdAt: '2023-07-26'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/ja/XIAO-nRF52840-Zephyr-RTOS/
 ---
 
-# XIAO nRF52840(sense)とZephyr（RTOS）
+# XIAO nRF52840(sense) と Zephyr(RTOS)
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-ble.png"/></div>
 
-## RTOSとは
+## RTOS とは
 
-今日の組み込みシステムの最も重要なコンポーネントの一つは、**RTOS**（**リアルタイムオペレーティングシステム**とも呼ばれる）であり、タスクスケジューリングからアプリケーションの実行まで、すべてを担当しています。
+今日の組み込みシステムで最も重要なコンポーネントの 1 つが **RTOS**（**Real-Time Operating System（リアルタイムオペレーティングシステム）**）であり、タスクスケジューリングからアプリケーションの実行まで、あらゆることを担当します。
 
-**RTOS**は予測可能な実行モードを提供するように設計されています。処理がシステムの時間制限を満たす必要がある場合、RTOSが使用されます。したがって、GPOS（汎用オペレーティングシステム）と比較して、RTOSは通常軽量で小さく、一般的に特定のハードウェア上で特定のタイプのアプリケーションを実行するために必要な機能のみを提供します。場合によっては、開発者は既存のRTOSを変更し、特定のアプリケーションに必要な機能のみを提供するように絞り込んだり、その機能や性能特性をカスタマイズしたりできます。
+**RTOS** は予測可能な実行モードを提供するように設計されています。処理がシステムの時間制約を満たさなければならない場合に RTOS が使用されます。そのため、GPOS（General Purpose Operating System、汎用オペレーティングシステム）と比較して、RTOS は通常軽量かつ小型であり、一般的に特定のハードウェア上で特定の種類のアプリケーションを実行するために必要な機能のみを提供します。場合によっては、開発者は既存の RTOS を変更し、特定のアプリケーションに必要な機能だけを提供するように縮小したり、機能や性能特性をカスタマイズしたりすることができます。
 
-## [Zephyr](https://www.zephyrproject.org/)とは
+## [Zephyr](https://www.zephyrproject.org/) とは
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
 
-[**Zephyr**](https://www.zephyrproject.org/) OSは、リソース制約のある組み込みシステムでの使用を目的として設計された小さなフットプリントカーネルに基づいています：シンプルな組み込み環境センサーやLEDウェアラブルから、高度な組み込みコントローラー、スマートウォッチ、IoTワイヤレスアプリケーションまで。
+[**Zephyr**](https://www.zephyrproject.org/) OS は、小さなフットプリントのカーネルをベースとしており、リソースに制約のある組み込みシステムでの使用を目的に設計されています。シンプルな環境センサーや LED ウェアラブルから、高度な組み込みコントローラ、スマートウォッチ、IoT ワイヤレスアプリケーションまで対応します。
 
-## 機能
+## 特長
 
-Zephyrは、以下を含む多数の機能を提供し、その数は絶えず増加しています：
+Zephyr は、数多くの、そして増え続けている機能を提供します。
 
-### 豊富なカーネルサービス群
+### 充実したカーネルサービス群
 
-Zephyrは開発のための多くの馴染みのあるサービスを提供します：
+Zephyr は、開発向けにおなじみのサービスを多数提供します。
 
-- *マルチスレッドサービス* - 協調的、優先度ベース、非プリエンプティブ、およびプリエンプティブスレッド用で、オプションのラウンドロビンタイムスライシング付き。POSIX pthreads互換API サポートを含みます。
-- *割り込みサービス* - 割り込みハンドラーのコンパイル時登録用。
-- *メモリ割り当てサービス* - 固定サイズまたは可変サイズメモリブロックの動的割り当てと解放用。
-- *スレッド間同期サービス* - バイナリセマフォ、カウンティングセマフォ、およびミューテックスセマフォ用。
-- *スレッド間データ受け渡しサービス* - 基本メッセージキュー、拡張メッセージキュー、およびバイトストリーム用。
-- *電源管理サービス* - 包括的な、アプリケーションまたはポリシー定義のシステム電源管理や、細粒度の、ドライバー定義のデバイス電源管理など。
+- *マルチスレッドサービス*：協調型、優先度ベース、非プリエンプティブおよびプリエンプティブスレッドに対応し、オプションでラウンドロビンタイムスライスを提供します。POSIX pthreads 互換の API サポートを含みます。
+- *割り込みサービス*：割り込みハンドラのコンパイル時登録。
+- *メモリアロケーションサービス*：固定サイズまたは可変サイズのメモリブロックの動的な割り当てと解放。
+- *スレッド間同期サービス*：バイナリセマフォ、カウンティングセマフォ、ミューテックスセマフォ。
+- *スレッド間データ受け渡しサービス*：基本メッセージキュー、拡張メッセージキュー、バイトストリーム。
+- *電源管理サービス*：包括的でアプリケーションまたはポリシー定義のシステム電源管理と、ドライバ定義のきめ細かなデバイス電源管理。
 
 ### 複数のスケジューリングアルゴリズム
 
-  Zephyrは包括的なスレッドスケジューリング選択肢を提供します：
+  Zephyr は包括的なスレッドスケジューリングの選択肢を提供します。
 
-- 協調的およびプリエンプティブスケジューリング
-- 最早期限優先（EDF）
-- 「割り込みボトムハーフ」または「タスクレット」動作を実装するメタIRQスケジューリング
-- タイムスライシング：同じ優先度のプリエンプティブスレッド間でのタイムスライシングを有効化
+- 協調型およびプリエンプティブスケジューリング
+- Earliest Deadline First（EDF）
+- 「割り込みボトムハーフ」または「タスクレット」動作を実装する Meta IRQ スケジューリング
+- タイムスライシング：同一優先度のプリエンプティブスレッド間でのタイムスライスを有効化
 - 複数のキューイング戦略：
-  - シンプルなリンクリスト準備キュー
-  - 赤黒木準備キュー
-  - 従来のマルチキュー準備キュー
+  - シンプルなリンクリストレディキュー
+  - 赤黒木レディキュー
+  - 従来型マルチキューレディキュー
 
-### Bluetooth Low Energy 5.0サポート
+### Bluetooth Low Energy 5.0 サポート
 
-Bluetooth 5.0準拠（ESR10）およびBluetooth Low Energyコントローラーサポート（LE Link Layer）。Bluetooth meshおよびBluetooth認定対応Bluetoothコントローラーを含みます。
+Bluetooth 5.0 準拠（ESR10）および Bluetooth Low Energy コントローラサポート（LE Link Layer）。Bluetooth Mesh と、Bluetooth 認証取得済みの Bluetooth コントローラを含みます。
 
-- すべての可能なLEロールを持つGeneric Access Profile（GAP）
+- すべての LE ロールに対応した Generic Access Profile（GAP）
 - Generic Attribute Profile（GATT）
-- Bluetooth 4.2のSecure Connections機能を含むペアリングサポート
-- クリーンなHCIドライバー抽象化
-- 完全なHostスタックの代わりにZephyrをコントローラーとして実行するためのRaw HCIインターフェース
-- 複数の人気コントローラーで検証済み
-- 高度に設定可能
+- Bluetooth 4.2 の Secure Connections 機能を含むペアリングサポート
+- クリーンな HCI ドライバ抽象化
+- Zephyr をフルホストスタックではなくコントローラとして動作させるための Raw HCI インターフェース
+- 複数の一般的なコントローラで検証済み
+- 高い構成可能性
 
-Meshサポート：
+Mesh サポート：
 
-- リレー、フレンドノード、低電力ノード（LPN）およびGATT Proxy機能
-- 両方のプロビジョニングベアラーをサポート（PB-ADV & PB-GATT）
-- 高度に設定可能で、最低16k RAMのデバイスに適合
+- Relay、Friend Node、Low-Power Node（LPN）、GATT Proxy 機能
+- 両方のプロビジョニングベアラー（PB-ADV と PB-GATT）をサポート
+- 高い構成可能性があり、少なくとも 16k RAM を持つデバイスに収まります
 
 *参考: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
-## はじめに
+## 入門ガイド
 
-Zephyrツールチェーンがセットアップされ、関連するSDKがダウンロードされたら、アプリケーション開発を開始できます。
+Zephyr ツールチェーンをセットアップし、関連する SDK をダウンロードしたら、アプリケーション開発を開始できます。
 
-Xiao nrf52840については、[ボード説明ファイル](https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html)を参照して、さらなるセットアップ情報を確認できます。
+Xiao nrf52840 については、さらなるセットアップ情報として [ボード記述ファイル](https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html) を参照できます。
 
-Xiao nrf52840をプログラムするには、以下の手順を実行できます：
+Xiao nrf52840 に書き込むには、次の手順を実行します。
 
-1. サンプルまたはあなたのアプリケーションをビルドする
-2. Xiao nrf52840を接続する
-3. `RST`ボタンをダブルクリックして、デバイスをuf2ブートローダーモードに設定する
-4. `west flash -r uf2`コマンドを実行してデバイスにフラッシュする
+1. サンプルまたは自分のアプリケーションをビルドする
+2. Xiao nrf52840 を接続する
+3. `RST` ボタンをダブルクリックして、デバイスを uf2 ブートローダーモードにする
+4. コマンド `west flash -r uf2` を実行してデバイスを書き込む
 
-最も簡単な例は、ボード上で「Hello World」サンプルを実行することです。Zephyrインストールのディレクトリに移動した後、以下のコマンドを実行してください。
+最も簡単な例は、ボード上で "Hello World" サンプルを実行することです。Zephyr をインストールしたディレクトリに移動した後、次のコマンドを実行します。
 
 ```
 west build -p always -b xiao_ble samples/hello_world
 ```
 
-Xiao nRF52840 Senseボードを使用している場合、`xiao_ble`の代わりに`xiao_ble/nrf52840/sense`を使用してボード定義ファイル用にビルドできます（この例では違いはありません）：
+Xiao nRF52840 Sense ボードを使用している場合は、`xiao_ble` の代わりに `xiao_ble/nrf52840/sense` を使用することで、そのボード定義ファイル向けにビルドできます（この例では違いはありません）。
 
 ```
 west build -p always -b xiao_ble/nrf52840/sense samples/hello_world
 ```
 
-これが完了したら、uf2ブートローダーモードに入り、次のように入力します：
+これが完了したら uf2 ブートローダーモードに入り、次を入力します。
 
 ```
 west flash -r uf2
 ```
 
-デバイスのポートを見つけます。Ubuntuの場合は以下のコマンドで確認できます：`ls /dev/tty*` を実行し、USBを接続した際に表示されるデバイスを確認してください。
+デバイスのポートを見つけます。Ubuntu の場合は `ls /dev/tty*` を実行し、USB を接続したときにどのデバイスが現れるかを確認することで行えます。
 
-私の例では `/dev/ttyACM0` が表示されます：
+この例では `/dev/ttyACM0` が表示されます。
 
-screenを使用してシリアル応答に接続し、監視することができます：
+screen を使用して、シリアル応答に接続してモニタリングできます。
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-以下のような応答が表示されるはずです：
+次のような応答が表示されるはずです。
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
 Hello World! xiao_ble/nrf52840
 ```
 
-Xiaoとその拡張ボードでZephyrを使用するプロセスを支援するため、ここで使用されるいくつかのオーバーレイと設定を含むリポジトリが構築されています。このwiki記事に含まれるコマンドは、zephyrルートに対して相対的に`../applications/xiao-zephyr-examples`に配置されていることを前提としています。以下のコマンドでパスを更新することで、代替パスを提供できます。
+Xiao とその拡張ボードで Zephyr を使用するプロセスを支援するために、ここで使用されている複数のオーバーレイと設定を含むリポジトリが作成されています。この wiki 記事に含まれるコマンドは、Zephyr のルートから相対パスで `../applications/xiao-zephyr-examples` に配置されていることを前提としています。別のパスを使用する場合は、以下のコマンド内のパスを更新してください。
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 ```
 
-## ハードウェア準備
+## ハードウェアの準備
 
 <table align="center">
   <tbody><tr>
@@ -145,68 +145,72 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
   </tbody></table>
 
-### 開発者向け知識
+### 開発者向けの知識
 
-#### XIAO拡張ボード
+#### XIAO 拡張ボード
 
-  Seeed Studio XIAO nrf52840でGroveモジュールを使用するために、[Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)を使用し、その上にXIAO nrf52840を接続します。
+  Seeed Studio XIAO nrf52840 で Grove モジュールを使用するために、[Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) を使用し、その上に XIAO nrf52840 を接続します。
 
-  その後、ボード上のGroveコネクタを使用してGroveモジュールを接続できます
+  その後、ボード上の Grove コネクタを使用して Grove モジュールを接続できます。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
 
 #### ピン定義
 
-  GroveモジュールをSeeed Studio XIAO用GroveシールドのGroveコネクタに接続する際は、以下の図に従って適切な内部ピン番号を使用する必要があります。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
+
+  Grove Shield for Seeed Studio XIAO 上の Grove コネクタに Grove モジュールを接続する際は、以下の図に従って、適切な内部ピン番号を使用する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png"style={{width:900, height:'auto'}}/></div>
 
-### 主要機能
+### 主な機能
 
-- オンボードLED
-- オンボードIMU (Sense)
-- オンボードマイク (Sense)
+- オンボード LED
+- オンボード IMU（Sense）
+- オンボードマイク（Sense）
 - Bluetooth
 - TFLite
 
-#### オンボードLED
+#### オンボード LED
 
-この例では、blinkyサンプルを使用してオンボードLEDを点滅させます。
+この例では、blinky サンプルを使用してオンボード LED を点滅させます。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/basic/blinky
 ```
 
-RESETボタンを2回押してからフラッシュします：
+RESET ボタンをダブルクリックしてから、次のように書き込みます。
 
 ```
 west flash -r uf2
 ```
 
-オンボードの赤色LEDがオンとオフを切り替わり、点滅効果を作り出すのが見えるでしょう。
+オンボードの赤色 LED がオンとオフを切り替え、点滅しているのが確認できます。
 
-この例がなぜ動作するのかを理解するために、少し詳しく見てみましょう。
+なぜ動作するのか、この例を少し掘り下げてみましょう。
 
-関連するサンプルコードはled0を参照しています：
+関連するサンプルコードでは led0 を参照しています。
 
 ```
 #define LED0_NODE DT_ALIAS(led0)
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-これは、Xiao nRF52840 デバイスツリーコードでエイリアスを介して定義されています：
+これはエイリアスを介して Xiao nRF52840 の devicetree コード内で定義されています。
 
 ```
  aliases {
@@ -223,11 +227,11 @@ static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
   }
 ```
 
-ボード上の26番ピンに対応しています。
+これはボード上の 26 番ピンに対応しています。
 
-Xiaoブレイクアウトのピンについては、ボードファイルがXiaoコネクタを提供しているため、&gpio0ピンマッピングを直接使用する必要はありません。これによりインターフェースが簡素化されます。
+Xiao のブレークアウトピンについては、ボードファイルがインターフェースを簡素化する Xiao コネクタを提供しているため、&gpio0 のピンマッピングを直接使用する必要はありません。
 
-例えば、D0を参照する場合は、`&gpio 2`または`&xiao_d 0`として参照します。
+たとえば D0 を参照する場合、`&gpio 2` または `&xiao_d 0` のいずれかとして参照します。
 
 ```
 / {
@@ -253,18 +257,18 @@ Xiaoブレイクアウトのピンについては、ボードファイルがXiao
 };
 ```
 
-#### オンボードIMU（センス）
+#### オンボード IMU（Sense）
 
-Xiao nrf52840の主要な機能の一つは、内蔵のIMUセンサーです。このデータを使用して、機械学習モデルの訓練、ジェスチャーの検出、ボードの動きの検出などが可能です。
+Xiao nrf52840 の主な機能の 1 つは、内蔵 IMU センサーです。このデータを用いて機械学習モデルを学習させたり、ジェスチャーやボードの動きを検出したりすることができます。
 
-この機能をテストするために、IMUを利用する内蔵サンプルを使用し、その後、なぜそれが動作するのかに関連するコードを調べてみます。
+この機能をテストするために、IMU を利用するビルトインサンプルを使用し、その後でなぜ動作するのかに関する関連コードを確認します。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p -b xiao_ble/nrf52840/sense samples/sensor/lsm6dsl
 ```
 
-RESETボタンをダブルプレスしてからフラッシュします：
+RESET ボタンを素早く 2 回押してから、次をフラッシュします：
 
 ```
 west flash -r uf2
@@ -276,7 +280,7 @@ west flash -r uf2
 screen /dev/ttyACM0 115200
 ```
 
-これは以下のような内容を表示するはずです：
+次のような内容が表示されるはずです：
 
 ```
 3LSM6DSL sensor samples:
@@ -298,13 +302,13 @@ gyro x:0.035430 dps y:-0.132252 dps z:-0.007788 dps
 loop:48 trig_cnt:10107
 ```
 
-なぜ動作するのでしょうか？Zephyrのgithubリポジトリを通じて[サンプルコード](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/lsm6dsl)を確認できます。
+なぜ動作するのでしょうか？Zephyr の GitHub リポジトリから [sample code](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/lsm6dsl) を確認できます。
 
 ```
  const struct device *const lsm6dsl_dev = DEVICE_DT_GET_ONE(st_lsm6dsl);
 ```
 
-サンプルロジックは、ターゲットボード用の関連する `st_lsm6dsl` デバイスツリーオブジェクトを見つけます。Xiao nrf52840 sense デバイスツリーを確認して、それがどのように設定されているかをさらに詳しく見ることができます：
+このサンプルロジックは、ターゲットボードに対応する `st_lsm6dsl` devicetree オブジェクトを見つけます。Xiao nrf52840 sense の devicetree を確認することで、それがどのように設定されているかをさらに確認できます：
 
 ```
  lsm6ds3tr-c-en {
@@ -337,25 +341,25 @@ loop:48 trig_cnt:10107
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/imu.jpg" style={{width:500, height:'auto'}}/></div>
 
-GPIOを使用してピン電源を有効にしています。定義ファイルから、GPIO1 8を使用していることがわかります。以下に[Xiao nRF52840回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)の関連部分をハイライトしました：
+GPIO がピン電源を有効にするために使用されています。定義ファイルから、GPIO1 8 が使用されていることがわかります。以下に、[Xiao nRF52840 の回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)の関連部分をハイライトしました：
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/schematic-pin-highlight-imu.png?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/schematic-pin-highlight-imu.png" style={{width:500, height:'auto'}}/></div>
 
-この回路図のハイライトから、GPIO1 8がIMUのイネーブルピンであることがわかります。さらに、GPIO0 11が割り込みピンです。そのため、これは上記のデバイスツリースニペットに反映されています。
+この回路図のハイライトから、GPIO1 8 が IMU のイネーブルピンであることがわかります。さらに GPIO0 11 は割り込みピンです。そのため、これは上記の devicetree スニペットに反映されています。
 
 #### オンボードマイク（Sense）
 
-Xiao nrf52840の主要な機能の一つは、内蔵マイクです。IMUと同様に、その使用により多くの機械学習アプリケーションが可能になります。
+Xiao nrf52840 の主な機能の 1 つは、内蔵マイクです。IMU と同様に、これを利用することで多くの機械学習アプリケーションが可能になります。
 
-この機能をテストするために、マイクを利用する内蔵サンプルを使用し、それが動作する理由に関連するコードを調べてみます。
+この機能をテストするために、マイクを利用するビルトインサンプルを使用し、その後でなぜ動作するのかに関する関連コードを確認します。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p -b xiao_ble/nrf52840/sense samples/drivers/audio/dmic
 ```
 
-RESETボタンをダブルプレスしてからフラッシュします：
+RESET ボタンを素早く 2 回押してから、次をフラッシュします：
 
 ```
 west flash -r uf2
@@ -367,7 +371,7 @@ west flash -r uf2
 screen /dev/ttyACM0 115200
 ```
 
-これは次のような内容を表示するはずです：
+次のような内容が表示されるはずです：
 
 ```
 [00:00:00.297,088] <inf> dmic_sample: PCM output rate: 16000, channels: 1
@@ -393,17 +397,17 @@ screen /dev/ttyACM0 115200
 [00:00:01.897,399] <inf> dmic_sample: Exiting
 ```
 
-なぜ動作するのでしょうか？Zephyrのgithubリポジトリを通じて[サンプルコード](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/drivers/audio/dmic)を確認できます。
+なぜ動作するのでしょうか？Zephyr の GitHub リポジトリから [sample code](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/drivers/audio/dmic) を確認できます。
 
-このサンプルは以下のことを実演しています：
+このサンプルは次の内容を示しています：
 
-> これは:ref:`Audio DMIC API`の使用方法を示し、このAPIを実装するドライバーの開発を支援することを目的とした非常にシンプルなアプリケーションです。異なる設定（1チャンネルと2チャンネルを使用）で2つのPDM転送を実行しますが、受信したオーディオデータを処理することはありません。
+> これは、:ref:`Audio DMIC API` の使用方法を示すこと、そしてこの API を実装するドライバを開発する際の助けとなることを目的とした、非常にシンプルなアプリケーションです。異なる構成（1 チャンネルと 2 チャンネルを使用）で 2 回の PDM 転送を実行しますが、受信したオーディオデータを一切処理しません。
 
 ```
 const struct device *const dmic_dev = DEVICE_DT_GET(DT_NODELABEL(dmic_dev));
 ```
 
-サンプルロジックは、ターゲットボード用の関連する `dmic_dev` デバイスツリーオブジェクトを見つけます。Xiao nrf52840 sense のデバイスツリーを確認して、それがどのように設定されているかをさらに詳しく見ることができます：
+このサンプルロジックは、ターゲットボードに対応する `dmic_dev` devicetree オブジェクトを見つけます。Xiao nrf52840 sense の devicetree を確認することで、それがどのように設定されているかをさらに確認できます：
 
 ```
 / {
@@ -422,7 +426,7 @@ const struct device *const dmic_dev = DEVICE_DT_GET(DT_NODELABEL(dmic_dev));
 };
 ```
 
-サンプルプロジェクトのオーバーレイでは、このレギュレータが有効化されます：
+サンプルプロジェクトのオーバーレイでは、このレギュレータが有効化されています：
 
 ```
 / {
@@ -439,16 +443,16 @@ dmic_dev: &pdm0 {
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/mic.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/mic.jpg" style={{width:500, height:'auto'}}/></div>
 
-GPIOがピン電源を有効にするために使用されています。以下に[Xiao nRF52840回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)の関連部分をハイライトしました：
+GPIO がピン電源を有効にするために使用されています。以下に、[Xiao nRF52840 の回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)の関連部分をハイライトしました：
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/schematic-pin-highlight-mic.png?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/schematic-pin-highlight-mic.png" style={{width:500, height:'auto'}}/></div>
 
-この回路図のハイライトから、GPIO1 10がマイクの有効ピンであることがわかります。
+この回路図のハイライトから、GPIO1 10 がマイクのイネーブルピンであることがわかります。
 
 #### Bluetooth
 
-このセットアップをテストするために、Zephyrの既存のサンプルを使用できます：
+このセットアップをテストするために、Zephyr の既存サンプルを使用できます：
 
 ```
 west build -p always -b xiao_ble samples/bluetooth/observer
@@ -460,13 +464,13 @@ west build -p always -b xiao_ble samples/bluetooth/observer
 west flash -r uf2
 ```
 
-フラッシュ後にMCUがリセットされるまで少し待ち、モニターに接続してください：
+フラッシュ後、MCU がリセットされるまで少し待ち、モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-ボードにコマンドを送信するためのコンソールが利用可能になります：
+ボードにコマンドを送信するためのコンソールが利用可能になっているのがわかります：
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -486,7 +490,7 @@ CONFIG_BT=y
 CONFIG_BT_OBSERVER=y
 ```
 
-[conf ファイル](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf)は、Zephyr ビルドに対してbluetooth関連機能を有効にします。
+ここでの [conf file](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf) は、Zephyr ビルド用の Bluetooth 関連機能を有効にします。
 
 #### TFLite - Hello World
 
@@ -509,13 +513,13 @@ west build -p always -b xiao_ble samples/modules/tflite-micro/hello_world
 west flash -r uf2
 ```
 
-フラッシュ後にMCUがリセットされるまで少し待ち、モニターに接続してください：
+フラッシュ後、MCU がリセットされるまで少し待ち、モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-コンソールから返される結果が表示されます：
+コンソールから結果が返されるのがわかります：
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -540,34 +544,34 @@ x_value: 1.2566366*2^1, y_value: 1.0674761*2^-1
 x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 ```
 
-TFLiteに関する追加情報はこのガイドの範囲外ですが、この例はデバイスの機能とTFLiteセットアップの実行に必要なコンポーネントのガイドとして役立ちます。
+TFLite に関する追加情報はこのガイドの範囲外ですが、この例はデバイスの機能と、TFLite セットアップを実行するために必要なコンポーネントのガイドとして役立ちます。
 
 ### 追加コンポーネント
 
-- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2Cディスプレイ
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C ディスプレイ
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - ボタン
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - ブザー
-- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SDカード
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD カード
 - [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
 - [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
 - [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
-- [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html) - SDカード
+- [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html) - SD カード
 
-#### Grove - Expansion Board - I2Cディスプレイ
+#### Grove - 拡張ボード - I2C ディスプレイ
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/xiao_expansion_oled-nrf.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/xiao_expansion_oled-nrf.jpg" style={{width:500, height:'auto'}}/></div>
 
-このセットアップをテストするために、Zephyrの既存のサンプルを使用できます：
+このセットアップをテストするために、Zephyr に用意されているサンプルを使用できます：
 
 ```
 west build -p always -b xiao_ble samples/drivers/display --  -DSHIELD=seeed_xiao_expansion_board
 west flash -r uf2
 ```
 
-この表示では、複数の黒いボックスと角で点滅するボックスが表示されます。この表示は2色のみをサポートしているためです。
+このディスプレイは 2 色のみをサポートしているため、複数の黒いボックスと、隅で点滅するボックスが表示されます。
 
-この例がなぜ機能するのかを詳しく見てみましょう：
+なぜ動作するのか、このサンプルを少し掘り下げてみましょう：
 
 ```
 / {
@@ -596,31 +600,31 @@ west flash -r uf2
 
 ```
 
-シールドは0x3CレジスタにSSD1306 OLEDスクリーンを設定します。これはchosenセクションでzephyrディスプレイとして選択されます。
+シールドは 0x3C レジスタに SSD1306 OLED 画面を設定します。`chosen` セクションで Zephyr のディスプレイとして選択されています。
 
 #### Grove - 拡張ボード - ボタン
 
-このセットアップをテストするために、Zephyrの既存のサンプルを使用できます：
+このセットアップをテストするために、Zephyr に用意されているサンプルを使用できます：
 
 ```
 west build -p always -b xiao_ble samples/basic/button -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
-ボードにフラッシュします：
+ボードに書き込みます：
 
 ```
 west flash -r uf2
 ```
 
-フラッシュ後にMCUがリセットされるまで少し待ち、モニターに接続してください：
+書き込み後、MCU がリセットされるまで少し待ち、モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-ボタンをサンプルで押すと、オンボードLEDが点灯します。
+このサンプルでは、ボタンを押すとオンボード LED が点灯します。
 
-コンソールから結果が返されるのが確認できます：
+コンソールから次のような結果が返されます：
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -633,7 +637,7 @@ Button pressed at 883367
 Button pressed at 1001258
 ```
 
-この例を少し詳しく見て、なぜ動作するのかを理解してみましょう：
+なぜ動作するのか、このサンプルを少し掘り下げてみましょう：
 
 ```
 / {
@@ -652,22 +656,22 @@ Button pressed at 1001258
 };
 ```
 
-シールド/オーバーレイファイルは、さまざまなボードコンポーネントのセットアップに使用されます。このファイルを使用することで、ボタンの例を活用できます。オーバーレイによりZephyrがボタンを設定し、関連するコードで使用できるようになります。
+シールド / オーバーレイファイルは、さまざまなボードコンポーネントを設定するために使用されます。このファイルを使用することで、オーバーレイが Zephyr にボタンを構成させ、関連するコードから利用できるようにするため、ボタンのサンプルを使用できます。
 
-この場合、Xiao nrf52840のD1です。このオーバーレイでボタンとして動作するように設定され、sw0名にエイリアスされて、この名前を期待するコードを持つサンプルで使用できるようになります。
+この場合、Xiao nrf52840 上の D1 です。このオーバーレイではボタンとして動作するように設定されており、サンプル側のコードがこれを想定しているため、`sw0` という名前にエイリアスされています。
 
 #### Grove - 拡張ボード - ブザー
 
-blinky PWMの例を使用してブザーを有効化し、PWM信号を介してその動作を制御します。このために、A3ピンのPWMを有効にするカスタムオーバーレイを使用します。
+ここでは、blinky PWM サンプルを使用して PWM 信号でブザーの動作を制御します。そのために、A3 ピン向けに PWM を有効化するカスタムオーバーレイを使用します。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-nrf52480/xiao_expansion_buzzer.overlay"
 ```
 
-フラッシュ後、サンプルが実行される過程で音が変化する一連のブザー音が聞こえ始めるはずです。
+書き込み後、サンプルが進行するにつれて音が変化する一連のブザー音が聞こえるはずです。
 
-これがなぜ機能するのかを見てみましょう：
+なぜ動作するのか見てみましょう：
 
 ```
 &pwm0 {
@@ -684,18 +688,18 @@ west build -p always -b xiao_ble samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE=
 };
 ```
 
-オーバーレイは、Xiao nrf52840のピン配置のA3ピンに対応するピン29のPWMロジックを設定します。
+オーバーレイは、Xiao nrf52840 のピン配置において A3 ピンに対応するピン 29 の PWM ロジックを構成します。
 
-#### Grove - 拡張ボード - SDカード
+#### Grove - 拡張ボード - SD カード
 
-ここではファイルシステムサンプルをXiao拡張ボードシールドと一緒に使用して、SPI経由でSDカードリーダーとのインターフェースを試してみます。拡張ボードシールドには、関連する`&xiao_d 2`ピン用に設定されたCSピンがあるため、この機能をボードに関連付けるためにシールドを追加する以外に、あなたが行う作業はありません。さらに準備するために、SDカード機能を有効にするカスタム設定を使用しています。
+ここでは、Xiao 拡張ボードシールドとともに filesystem サンプルを使用し、SPI 経由で SD カードリーダーとのインターフェースを試します。拡張ボードシールドでは、対応する `&xiao_d 2` ピンに CS ピンが設定されているため、シールドを追加する以外に、この機能をボードに関連付けるための作業は不要です。さらに準備として、SD カード機能を有効にするカスタム config を使用します。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-次にフラッシュして監視します（まずRESETを2回押してuf2ブートローダーモードに入ります）：
+次に、書き込みとモニタを行います（最初に RESET を 2 回押して uf2 ブートローダーモードに入ります）：
 
 ```
 west flash -r uf2
@@ -716,9 +720,9 @@ Listing dir /SD: ...
 [FILE] IMAGE2.JPG (size = 97963)
 ```
 
-この場合、私のSDカードには2つのファイルがありました。それらの名前とサイズがコンソールに出力されました。
+この場合、私の SD カードには 2 つのファイルがありました。それらの名前とサイズがコンソールに出力されました。
 
-ここで関連する要素を見てみましょう：
+ここで関係する要素を確認してみましょう：
 
 ```
 CONFIG_SPI=y
@@ -726,9 +730,9 @@ CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
 ```
 
-関連する設定では、SPI、SDMMCディスクドライバー、およびGPIOを有効にしています。この設定がないと、サンプルがSDカードを見つけることができないため、オーバーレイがエラーを引き起こします。
+関連する config では、SPI、SDMMC ディスクドライバ、および GPIO を有効にしています。この config がないと、サンプルが SD カードを見つけられないため、オーバーレイはエラーにつながります。
 
-Xiao拡張ボードシールドの関連部分を以下に示します：
+Xiao 拡張ボードシールドの関連部分を以下に示します：
 
 ```
 &xiao_spi {
@@ -748,31 +752,31 @@ Xiao拡張ボードシールドの関連部分を以下に示します：
 };
 ```
 
-前述のように、`&xiao_d 2` ピンマッピングは、`&xiao_d` ピン設定をサポートしている限り、使用するボードに関係なく D2 ピンを選択できるようにするために使用されます。
+前述のとおり、`&xiao_d 2` ピンマッピングは、ボードが `&xiao_d` ピン設定をサポートしている限り、使用するボードに関係なく D2 ピンを選択できるようにするために使用されます。
 
-#### Grove - 温湿度センサー (SHT31)
+#### Grove - 温湿度センサ (SHT31)
 
-まずピンをはんだ付けし、Xiao nrf52840 を拡張ボードに接続します。次に、Grove SHT31 と拡張ボード上の I2C ポートの 1 つの間に Grove コネクタケーブルを接続します。
+まずピンをはんだ付けし、Xiao nrf52840 を拡張ボードに接続します。次に、Grove SHT31 と拡張ボード上の I2C ポートの 1 つの間を Grove コネクタケーブルで接続します。
 
-この設定をテストするために、Zephyr の既存のサンプルを使用できます：
+このセットアップをテストするために、Zephyr に用意されているサンプルを使用できます：
 
 ```
 west build -p always -b xiao_ble samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay
 ```
 
-ボードがuf2ブートローダーモードになった後、ボードにフラッシュします：
+uf2 ブートローダーモードに入ったら、ボードに書き込みます：
 
 ```
 west flash -r uf2
 ```
 
-フラッシュ後にMCUがリセットされるまで少し待ち、モニターに接続してください：
+書き込み後、MCU がリセットされるまで少し待ち、モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-コンソールから返される結果が表示されます：
+コンソールから次のような結果が返されます：
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -784,7 +788,7 @@ SHT3XD: 25.84 Cel ; 56.07 %RH
 SHT3XD: 25.84 Cel ; 55.69 %RH
 ```
 
-この例を少し詳しく見て、なぜ動作するのかを理解しましょう：
+なぜ動作するのか、このサンプルを少し掘り下げてみましょう：
 
 ```
  &xiao_i2c {
@@ -795,15 +799,15 @@ SHT3XD: 25.84 Cel ; 55.69 %RH
  };
 ```
 
-アプリオーバーレイファイルは、さまざまなボードコンポーネントをセットアップするために使用されます。このファイルを使用することで、SHT31の例を活用できます。オーバーレイが[サンプルロジック](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c)に対して、私たちのボード用にセンサーを設定する方法を通知するためです。
+app オーバーレイファイルは、さまざまなボードコンポーネントを設定するために使用されます。このファイルを使用することで、オーバーレイが [サンプルロジック](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) に対して、センサをこのボード向けにどのように構成するかを伝えるため、SHT31 のサンプルを利用できます。
 
-#### 1.69インチLCDディスプレイモジュール、240×280解像度、SPIインターフェース
+#### 1.69インチ LCD ディスプレイモジュール、240×280 解像度、SPI インターフェース
 
-この例では、SPIを使用して240x280解像度の1.69インチLCDに接続します。
+この例では、SPI を使用して 240x280 解像度の 1.69 インチ LCD に接続します。
 
-まず、以下の画像をガイドとして使用してボードをLCDスクリーンに接続してください（この場合はXiao nrf52840を使用していますが、接続には同じピンレイアウトが使用されます）。
+まず、次の画像をガイドとして使用し、ボードを LCD 画面に接続します（ここでは Xiao nrf52840 を使用していますが、接続に使用するピン配置は同じです）。
 
-| 1.69インチLCD SPIディスプレイ| XIAO nrf52840 |
+| 1.69-inch LCD SPI Display| XIAO nrf52840 |
 | ------------- | ------------------------- |
 | VCC | 3V3 |
 | GND | GND |
@@ -816,7 +820,7 @@ SHT3XD: 25.84 Cel ; 55.69 %RH
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
-これでファームウェアをビルドしてフラッシュできます：
+これでファームウェアをビルドして書き込むことができます：
 
 ```
 cd ~/zephyrproject/zephyr
@@ -824,38 +828,38 @@ west build -p always -b xiao_ble samples/drivers/display -- -DDTC_OVERLAY_FILE=$
 west flash -r uf2
 ```
 
-新しいファームウェアが配置されると、デバイスは以前に拡張ボードで見たのと同じデモ画面を表示しますが、今度はSPI経由のカラーLCD用に更新されています。
+新しいファームウェアが書き込まれると、デバイスには、先ほど拡張ボードで見たのと同じデモ画面が、SPI 経由のカラー LCD 用に更新された形で表示されます。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/spi_lcd-nrf.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/spi_lcd-nrf.jpg" style={{width:500, height:'auto'}}/></div>
 
-#### Xiao用ラウンドディスプレイ
+#### Round Display for Xiao
 
-このセットアップをテストするために、Zephyrの既存のサンプルを使用できます：
+このセットアップをテストするために、Zephyr に用意されているサンプルを使用できます：
 
 ```
 west build -p always -b xiao_ble samples/drivers/display --  -DSHIELD=seeed_xiao_round_display
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスに書き込みます：
 
 ```
 west flash -r uf2
 ```
 
-複数の色付きコーナーと黒いコーナーが点滅している表示が見えます。
+複数の色付きのコーナーが表示され、そのうちの 1 つの黒いコーナーが点滅しているのが見えるはずです。
 
-別の例では、タッチスクリーンの使用方法を示しています：
+別のサンプルでは、タッチスクリーンの使用方法を示しています：
 
 ```
 west build -p always -b xiao_ble samples/modules/lvgl/demos --  -DSHIELD=seeed_xiao_round_display -DCONFIG_LV_Z_DEMO_MUSIC=y
 ```
 
-ここで示されている音楽デモは実際の画面の一部分のみですが、それでもタッチスクリーンの動作を実演しています。ご覧のように、再生ボタンをタッチすると音楽アニメーションがオンになります。
+ここで示しているミュージックデモは実際の画面の一部に過ぎませんが、それでもタッチスクリーンが動作している様子を示しています。ご覧のとおり、再生ボタンに触れると音楽アニメーションがオンになります。
 
-[シールドファイル](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay)から分かるように、これはGC9A01円形ディスプレイドライバーとSPI経由でインターフェースし、CHSC6Xタッチモジュールとi2c経由でインターフェースすることで動作します。
+[shield ファイル](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay)からわかるように、これは SPI 経由で GC9A01 ラウンドディスプレイドライバと、i2c 経由で CHSC6X タッチモジュールとインターフェースすることで動作しています。
 
-この例について少し詳しく見て、どのように動作するかを確認してみましょう：
+どのように動作するのか、このサンプルを少し掘り下げてみましょう：
 
 ```
 / {
@@ -906,31 +910,31 @@ west build -p always -b xiao_ble samples/modules/lvgl/demos --  -DSHIELD=seeed_x
 };
 ```
 
-このシールドは以下の機能を実行します：
+このシールドは次のことを行います：
 
-- GC9A01ディスプレイを選択されたZephyrディスプレイとして設定
-- CHSC6Xモジュールを使用するようにLVGLポインタロジックを設定
-- ピンがバックライトとタッチ割り込みに使用されるため、シリアルを無効化（上記の`irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`で確認可能）
-- D1、D2、D3ピンを使用してSPI用の円形ディスプレイを設定
+- GC9A01 ディスプレイを選択された Zephyr ディスプレイとして選択します
+- LVGL ポインターロジックを CHSC6X モジュールを使用するように設定します
+- ピンがバックライトとタッチ割り込みに使用されているため、シリアルを無効にします（上記の `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;` を参照）
+- D1、D2、D3 ピンを使用して SPI 用にラウンドディスプレイを構成します
 
-[サンプルロジック](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c)は[LVGLデモサンプルコード](https://github.com/lvgl/lvgl/tree/master/demos/music)に依存しており、さらに詳しく調べることができます。
+[sample logic](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) は、さらに確認できる [LVGL demo example code](https://github.com/lvgl/lvgl/tree/master/demos/music) に依存しています。
 
-#### Round Display for Xiao - SDカード
+#### Round Display for Xiao - SD Card
 
-ここではファイルシステムサンプルとXiao Expansion Boardシールドを使用して、SPI経由でSDカードリーダーとのインターフェースを試します。拡張ボードシールドには関連する`&xiao_d 2`ピン用にCSピンが設定されているため、この機能をボードに関連付けるためにシールドを追加する以外に作業は必要ありません。さらに準備するために、SDカード機能を有効にするカスタム設定を使用しています。
+ここではファイルシステムサンプルと Xiao Expansion Board シールドを使用して、SPI 経由で SD カードリーダーとのインターフェースを試します。拡張ボードシールドでは、CS ピンが対応する `&xiao_d 2` ピンに設定されているため、この機能をボードに関連付けるためにシールドを追加する以外に、あなたが行う作業は必要ありません。さらに準備として、SD カード機能を有効にするカスタム設定を使用しています。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_round_display
 ```
 
-次にフラッシュして監視します（まずRESETを2回押してuf2ブートローダーモードに入ります）：
+次にフラッシュしてモニタします（最初に RESET を 2 回押して uf2 ブートローダーモードに入ります）：
 
 ```
 west flash -r uf2
 ```
 
-フラッシュ後にMCUがリセットされるまで少し待ち、モニターに接続してください：
+フラッシュ後に MCU がリセットされるまで少し待ち、モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
@@ -951,7 +955,7 @@ Listing dir /SD: ...
 [FILE] IMAGE2.JPG (size = 97963)
 ```
 
-期待通り、ファイルの内容はXiao拡張ボードSDカードの例からの出力と同様の方法で表示されます。
+予想どおり、ファイルの内容は Xiao Expansion Board の SD カード例の出力と同様の形式で表示されます。
 
 ラウンドディスプレイシールドの関連部分を以下に示します：
 
@@ -973,16 +977,16 @@ Listing dir /SD: ...
 };
 ```
 
-D2はSD CSピンに使用されます。
+D2 は SD の CS ピンとして使用されます。
 
-## ✨ コントリビュータープロジェクト
+## ✨ Contributor Project
 
-- このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293418)によってサポートされています。
-- **Timの努力**に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- このプロジェクトは Seeed Studio の [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293418) によってサポートされています。
+- **Tim の尽力**に感謝するとともに、あなたの成果は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただきありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
