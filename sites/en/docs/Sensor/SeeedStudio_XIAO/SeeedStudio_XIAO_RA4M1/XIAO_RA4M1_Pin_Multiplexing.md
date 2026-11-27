@@ -18,6 +18,10 @@ url: https://wiki.seeedstudio.com/xiao_ra4m1_pin_multiplexing/
 
 ## Hardware Overview
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=ra4" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of Seeed Studio XIAO RA4M1.
 
 ### Front

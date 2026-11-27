@@ -167,6 +167,10 @@ The **Seeed Studio XIAO nRF54L15** is a compact, high-performance development bo
 <Tabs>
 <TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO nRF54L15 V1.2 (current)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="XIAO nRF54L15 V1.2 back pinout" style={{width:1000, height:'auto'}}/></div>
@@ -181,6 +185,10 @@ Identify V1.2 by the <code>v1.2</code> silkscreen printed on the PCB back — do
 
 </TabItem>
 <TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15sense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO nRF54L15 Sense V1.2 (current)
 

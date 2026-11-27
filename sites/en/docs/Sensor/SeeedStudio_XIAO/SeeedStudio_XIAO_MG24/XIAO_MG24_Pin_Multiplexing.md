@@ -27,6 +27,10 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="XIAO MG24" label="XIAO MG24">
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO MG24 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -38,6 +42,10 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24sense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO MG24 Sense Front
 

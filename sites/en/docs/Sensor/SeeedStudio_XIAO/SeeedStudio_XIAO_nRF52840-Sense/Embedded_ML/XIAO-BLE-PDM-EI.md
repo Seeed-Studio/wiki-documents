@@ -51,6 +51,10 @@ We don't need any hardware preparation. The XIAO nRF52840 already has everything
 
 #### Here's the hardware pinout for XIAO nRF52840 Sense
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/XIAO_nrf82840_hardware.png" alt="XIAO nrf82840 hardware" width={600} height="auto" /></p>
 <p style={{textAlign: 'center'}}></p>
 

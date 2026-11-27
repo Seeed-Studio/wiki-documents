@@ -43,6 +43,10 @@ The Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC]
 
 ### Pinout Overview
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c6" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 Before we begin, let's review all the pins that the XIAO ESP32C6 has and its functions with the following schematic.
 
 ### Front

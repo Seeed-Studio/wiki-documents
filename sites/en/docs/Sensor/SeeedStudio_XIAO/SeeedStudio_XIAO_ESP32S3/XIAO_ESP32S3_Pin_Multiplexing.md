@@ -67,6 +67,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 <Tabs>
 <TabItem value="ESP32S3" label="XIAO ESP32-S3" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO ESP32-S3 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -107,6 +111,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 </TabItem>
 <TabItem value="ESP32S3Sense" label="XIAO ESP32-S3 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3sense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO ESP32-S3 Sense Front
 
@@ -173,6 +181,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 </TabItem>
 <TabItem value="ESP32S3Plus" label="XIAO ESP32-S3 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3plus" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO ESP32-S3 Plus Front
 

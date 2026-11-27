@@ -19,6 +19,10 @@ MicroBlocks is a blocks-language that makes it easy for beginners (9 years to ad
 
 ### XIAO SAMD21 Pinout and Hardware Features
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-pinout-samd21.jpg" style={{width:600, height:'auto'}}/></div>
 
 Like all XIAO boards, this board has 11 GPIO pins, pins 0..10. All pins can be used for analog input and digital and analog output.
