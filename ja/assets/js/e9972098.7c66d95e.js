@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwiki_ja=self.webpackChunkwiki_ja||[]).push([["72161"],{72267(e){e.exports=JSON.parse('{"name":"docusaurus-theme-search-typesense","id":"default"}')}}]);
