@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 <div className="rebot-page">
 
 <div align="center">
-  <img width={1000} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT 双臂机器人" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT 双臂机器人" />
 </div>
 
 <GitHubStarButton
