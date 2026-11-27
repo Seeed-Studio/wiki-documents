@@ -15,7 +15,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/
 
 # 使用 Arduino 的 Seeed Studio XIAO RP2040
 
-本页面将介绍如何连接 Seeed Studio XIAO RP2040 并使用 Arduino 进行编程。同时还会包含一些关于引脚复用的项目。
+本页面将介绍如何连接 Seeed Studio XIAO RP2040 并使用 Arduino 进行编程。同时也会包含一些关于引脚复用的项目。
 
 ## 入门指南
 
@@ -42,7 +42,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
-### 软件设置
+### 软件准备
 
 - **步骤 1.** 根据你的操作系统下载并安装最新版本的 Arduino IDE
 
@@ -55,7 +55,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/
 
 - **步骤 3.**  在 Arduino IDE 中添加 Seeed Studio XIAO RP2040 的开发板包
 
-依次进入 **File** > **Preferences**，在 **Additional Boards Manager URLs** 中填入以下链接：
+依次点击 **File** > **Preferences**，在 **Additional Boards Manager URLs** 中填入以下链接：
 
 ```URL
 https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
@@ -63,11 +63,11 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/5.png"/></div>
 
-依次进入 **Tools-> Board-> Boards Manager...**，在搜索框中输入关键字 **arduino-pico**。选择最新版本的 **Raspberry Pi Pico/RP2040/RP2350** 并安装。
+依次点击 **Tools-> Board-> Boards Manager...**，在搜索框中输入关键字 **arduino-pico**。选择最新版本的 **Raspberry Pi Pico/RP2040/RP2350** 并安装。
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/arduino_2.png"/></div>
 
-- **步骤 4.** 选择你的开发板和端口。如果串口没有显示，请先进入 BOOT 模式。参见 [硬件准备](#硬件准备)。
+- **步骤 4.** 选择你的开发板和端口。如果未显示串口，请先进入 BOOT 模式。参见 [Hardware Setup](#硬件-准备)。
 
 - **步骤 5.** 通过 **"File --> Examples --->01.Basics --> Blink"** 打开 Blink 示例
 
@@ -75,13 +75,13 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 
 **开发板**
 
-安装好开发板包后，依次进入 **Tools-> Board**，找到 "**Seeed Studio XIAO RP2040**" 并选择它。至此，我们已经完成了在 Arduino IDE 中对 Seeed Studio XIAO RP2040 的设置。
+安装好开发板包后，依次点击 **Tools-> Board**，找到 "**Seeed Studio XIAO RP2040**" 并选择它。至此，我们已经完成了在 Arduino IDE 中对 Seeed Studio XIAO RP2040 的设置。
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/4.png"/></div>
 
 **端口**
 
-依次进入 Tools > Port，并选择已连接的 Seeed Studio XIAO RP2040 的串口名称。它通常是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串口）。已连接的 Seeed Studio XIAO RP2040 的串口名称通常会带有括号，其中写着 "Seeed Studio XIAO RP2040"。
+依次点击 Tools > Port，并选择已连接的 Seeed Studio XIAO RP2040 的串口名称。它通常是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串口）。已连接的 Seeed Studio XIAO RP2040 的串口名称通常会带有括号，括号中写着 "Seeed Studio XIAO RP2040"。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png"/></div>
 
@@ -92,12 +92,16 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 上传完成后，你应该可以看到开发板上的 25 号引脚绿色（USER）LED 每秒闪烁一次。如果是这样，恭喜你！这意味着连接成功，现在你可以使用 Seeed Studio XIAO RP2040 探索更多项目了！
 
 :::note
-如果 Arduino 程序上传失败，请尝试按住 "BOOT" 按钮，然后点击 "RUN" 按钮。此时，Seeed Studio XIAO RP2040 将进入 boot 模式（你的电脑会加载一个可移动磁盘），然后你就可以再次上传 Arduino 程序。
+如果 Arduino 程序上传失败，请尝试按住 "BOOT" 按钮，然后点击 "RUN" 按钮。此时 Seeed Studio XIAO RP2040 将进入 boot 模式（你的电脑会加载一个可移动磁盘），然后你就可以再次上传 Arduino 程序。
 :::
 
 ## Seeed Studio XIAO RP2040 的引脚复用
 
-Seeed Studio XIAO RP2040 包含 11 个数字引脚、4 个模拟引脚、11 个 PWM 引脚、1 个 I2C 接口、1 个 UART 接口、1 个 SPI 接口、1 个 SWD 焊盘接口。我们将针对这些接口提供教程，以便更好地帮助你的项目开发。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+Seeed Studio XIAO RP2040 包含 11 个数字引脚、4 个模拟引脚、11 个 PWM 引脚、1 个 I2C 接口、1 个 UART 接口、1 个 SPI 接口、1 个 SWD 焊盘接口。我们将提供这些接口的教程，以便更好地帮助你的项目开发。
 
 ### 数字
 
@@ -178,7 +182,7 @@ void loop() {
 }
 ```
 
-### 三色指示 LED
+### 三色指示灯
 
 在 XIAO RP2040 上，电源指示灯旁边有三个独立的单色 LED。GPIO17 控制红色 LED，GPIO16 控制绿色 LED，GPIO25 控制蓝色 LED。下面列出了宏定义。
 
@@ -262,11 +266,11 @@ XIAO RP2040 配备的是贴片圆头 RGB LED，而 XIAO RP2040 Plus 使用的是
 
 首先，我们需要添加一个第三方库。
 
-- **步骤 1.** 打开 Arduino IDE，依次进入 `Sketch > Include Library > Manage Libraries...` 来搜索库。
+- **步骤 1.** 打开 Arduino IDE，依次点击 `Sketch > Include Library > Manage Libraries...` 来搜索库。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-在 Arduino Library Manager 中输入关键字 **Adafruit_NeoPixel** 并安装最新版本。
+在 Arduino Library Manager 中输入关键字 **Adafruit_NeoPixel**，并安装最新版本。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl6.png" /></div>
 
@@ -335,7 +339,7 @@ RGB LED 将显示彩虹颜色。
 
 ### I2C
 
-这里我们将通过 IIC 将 Seeed Studio XIAO RP2040 与 [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) 连接，并显示 "Hello world"。
+这里我们将通过 IIC 将 Seeed Studio XIAO RP2040 与 [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) 连接，并显示 “Hello world”。
 
 **连接方式**：
 
@@ -343,7 +347,7 @@ RGB LED 将显示彩虹颜色。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_15.png" /></div>
 
-- **步骤 1.** 打开 Arduino IDE，依次进入 `Sketch > Include Library > Manage Libraries...` 来搜索库。
+- **步骤 1.** 打开 Arduino IDE，依次点击 `Sketch > Include Library > Manage Libraries...` 来搜索库。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
@@ -388,7 +392,7 @@ void loop(void) {
 
 ### SPI
 
-这里我们将通过 SPI 连接 [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)，并显示 "Hello World"。该 OLED 显示屏同时支持 IIC 和 SPI 通信，但默认通信模式为 IIC。在开始之前，必须先[将 IIC 功能更改为 SPI 功能](https://wiki.seeedstudio.com/cn/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)。
+这里我们将通过 SPI 连接 [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)，并显示 “Hello World”。该 OLED 显示屏同时支持 IIC 和 SPI 通信，但默认通信模式为 IIC。在开始之前，必须先[将 IIC 功能更改为 SPI 功能](https://wiki.seeedstudio.com/cn/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)。
 
 **连接方式**：
 
@@ -396,7 +400,7 @@ void loop(void) {
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl9.png" /></div>
 
-- **步骤 1.** 打开 Arduino IDE，依次进入 `Sketch > Include Library > Manage Libraries...` 来搜索库。
+- **步骤 1.** 打开 Arduino IDE，依次点击 `Sketch > Include Library > Manage Libraries...` 来搜索库。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 

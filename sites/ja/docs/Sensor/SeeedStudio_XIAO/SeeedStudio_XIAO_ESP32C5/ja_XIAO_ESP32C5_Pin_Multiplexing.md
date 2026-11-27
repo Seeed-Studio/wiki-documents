@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO ESP32-C5 でのピンマルチプレクシング
+title: Seeed Studio XIAO ESP32-C5 のピン多重化
 description: ''
 keywords:
   - xiao
@@ -37,16 +37,20 @@ import TabItem from '@theme/TabItem';
  </table>
 </div>
 
-Seeed Studio XIAO ESP32-C5 は、多様な周辺インターフェースと GPIO ピンを備えた高性能で汎用性の高い開発ボードです。これらのピンは、他のデバイスとの通信、アナログセンサーの読み取り、LED の制御など、さまざまな用途に使用できます。本チュートリアルでは、XIAO ESP32-C5 のマルチプレクスされたピンの使い方を解説します。<br/>
+Seeed Studio XIAO ESP32-C5 は、さまざまな周辺インターフェースと GPIO ピンを備えた高性能で多用途な開発ボードです。これらのピンは、他のデバイスとの通信、アナログセンサーの読み取り、LED の制御など、さまざまな用途に使用できます。本チュートリアルでは、XIAO ESP32-C5 の多重化されたピンの使い方を解説します。<br/>
 まとめると、XIAO ESP32-C5 は 1×I2C、1×SPI、2×UART、最大 11×GPIO（PWM 対応）、5×ADC チャンネル、および JTAG（裏面パッド）のボンディングパッドインターフェースを備えています。
 
 ## 入門ガイド
 
-次に、**PlatformIO** と **Arduino IDE** の 2 つのプラットフォームに基づいて、それぞれサンプルチュートリアルとコードを提供します。ご自身の状況に応じて開発プラットフォームを選択してください。<br/>
-**Arduino IDE** をまだ使用したことがない場合は、[Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/) を参照してください。<br/>
-**PlatfromIO** をまだ使用したことがない場合は、[Platform IO with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/ja/xiao_esp32c5_with_platformio/) を参照してください。
+次に、**PlatformIO** と **Arduino IDE** の 2 つのプラットフォームそれぞれに基づいたサンプルチュートリアルとコードを紹介します。ご自身の状況に応じて開発プラットフォームを選択してください。<br/>
+まだ **Arduino IDE** を使用したことがない場合は、[Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/) を参照してください。<br/>
+まだ **PlatfromIO** を使用したことがない場合は、[Platform IO with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/ja/xiao_esp32c5_with_platformio/) を参照してください。
 
 ### ピン配置の概要
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c5" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 始める前に、次の回路図を使って XIAO ESP32-C5 が持つすべてのピンとその機能を確認しましょう。
 
@@ -60,7 +64,7 @@ Seeed Studio XIAO ESP32-C5 は、多様な周辺インターフェースと GPIO
 
 ### デジタル
 
-XIAO ESP32-C5 の 11 本すべての IO ピン（D0–D10）はデジタル機能をサポートしています。以下は、デジタル機能を使用してライトのオン／オフ状態を制御する実用的な例であり、用途に応じてこれらのピンをマルチプレクスして使用できます。
+XIAO ESP32-C5 の 11 本すべての IO ピン（D0–D10）はデジタル機能をサポートしています。以下は、デジタル機能を使用してライトのオン／オフ状態を制御する実用的な例であり、用途に応じてこれらのピンを多重化して使用できます。
 
 #### ハードウェアの準備
 
@@ -217,17 +221,17 @@ void loop() {
 
 #### 結果
 
-- コードを書き込んだ後、ボタンを押すと、押すたびに LED のオン／オフが切り替わり、実際の照明を制御しているような効果を再現できます。
+- コードを書き込んだ後、ボタンを押すと、押すたびに LED のオン／オフが切り替わり、実際にライトを操作しているような効果を再現できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_1.gif" style={{width:400, height:'auto'}}/></div>
 
 :::tip
-ボタンを押しても上記のような動作が得られない場合は、まずオンボードの RESET ボタンを押してボードを起動する必要があるかもしれません。
+ボタンを押しても上記のような動作が得られない場合は、ボードを起動するためにオンボードの RESET ボタンを先に押す必要があるかもしれません。
 :::
 
 ### PWM
 
-XIAO ESP32-C5 の D0–D11 のすべてのピンは PWM 機能をサポートしています。PWM は、サーボ、モーター、LED ライトなどのデバイスを駆動するために使用できます。以下は、PWM 制御による呼吸ライトの例で、PWM の機能を示すものです。
+XIAO ESP32-C5 の D0–D11 のすべてのピンは PWM 機能をサポートしています。PWM はサーボ、モーター、LED ライトなどのデバイスを駆動するために使用できます。以下は、PWM 制御によるブリージングライトの例で、PWM の機能を示します。
 
 #### ハードウェアの準備
 
@@ -347,7 +351,7 @@ void loop() {
 
 #### 結果
 
-コードを書き込むと、Grove - Variable Color LED がブレスライト効果を表示します。
+コードを書き込むと、Grove - Variable Color LED はブリージングライト効果を表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_2.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -479,7 +483,7 @@ void loop() {
 
 ### シリアル通信
 
-XIAO ESP32-C5 には、シリアル通信に利用できる 2 つのハードウェアシリアル通信インターフェース **USB Serial** と **UART1 Serial** が搭載されています。さらに、他の汎用ピンを使用してシリアル通信インターフェースを擬似的に実装することもできます。
+XIAO ESP32-C5 には、シリアル通信インターフェースとして使用できる 2 つのハードウェアシリアル通信インターフェース **USB Serial** と **UART1 Serial** が搭載されています。さらに、他の汎用ピンを使用してシリアル通信インターフェースを擬似的に実装することもできます。
 
 #### USB / UART1 シリアル
 
@@ -582,12 +586,12 @@ void loop() {
 
 ##### 結果
 
-プログラムを書き込んだ後、Seeed Studio の **XIAO Debug Mate** の UART 機能を介してモニタリングできます。
+プログラムを書き込んだ後、Seeed Studio **XIAO Debug Mate** の UART 機能を通してモニタリングできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-Seeed Studio XIAO Debug Mate をまだ使用したことがない場合は、[Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/ja/getting_started_with_xiao_debug_mate/) を参照してください。
+まだ Seeed Studio XIAO Debug Mate を使用したことがない場合は、[Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/ja/getting_started_with_xiao_debug_mate/) を参照してください。
 :::
 
 #### ソフトウェアシリアル
@@ -627,7 +631,7 @@ Seeed Studio XIAO Debug Mate をまだ使用したことがない場合は、[Ge
 
 ##### ソフトウェア
 
-以下のコード例は、それぞれ Arduino IDE と PlatformIO をベースにしており、同じ制御効果を実現します。実際の開発状況に応じて、適切なコードを選択して再利用できます。<br/>
+以下のコード例は Arduino IDE と PlatformIO をそれぞれベースとしており、同じ制御効果を実現します。実際の開発状況に応じて、適切なコードを選択して再利用できます。<br/>
 対応するソフトウェアシミュレートピンは `RX_PIN - D2` と `TX_PIN - D1` です。
 
 <Tabs>
@@ -753,7 +757,7 @@ void loop() {
 
 ### I2C
 
-XIAO ESP32-C5 チップには I2C インターフェースが統合されており、フラッシュメモリ、ディスプレイ、センサなどの外部 I2C デバイスを接続するために使用できます。次に、Seeed Studio Expansion Board Base for XIAO を例として、I2C の使用方法を説明します。
+XIAO ESP32-C5 チップには I2C インターフェースが統合されており、フラッシュメモリ、ディスプレイ、センサなどの外部 I2C デバイスを接続するために使用できます。次に、Seeed Studio Expansion Board Base for XIAO を例に、I2C の使用方法をデモンストレーションします。
 
 #### ハードウェアの準備
 
@@ -787,7 +791,7 @@ XIAO ESP32-C5 チップには I2C インターフェースが統合されてお�
 
 #### ソフトウェア
 
-以下のコード例は、それぞれ Arduino IDE と PlatformIO をベースにしており、同じ表示効果を実現します。実際の開発シナリオに応じて、適切なコードを選択して再利用できます。
+以下のコード例は Arduino IDE と PlatformIO をそれぞれベースとしており、同じ表示効果を実現します。実際の開発シナリオに応じて、適切なコードを選択して再利用できます。
 
 <Tabs>
 <TabItem value=' Arduino IDE'>
@@ -875,7 +879,7 @@ void loop(void) {
 
 ### SPI
 
-XIAO ESP32-C5 チップには SPI インターフェースが統合されており、フラッシュメモリ、ディスプレイ、センサなどの外部 SPI デバイスを接続するために使用できます。この例では、SPI 画面を使用して SPI の機能をデモンストレーションします。
+XIAO ESP32-C5 チップには SPI インターフェースが統合されており、フラッシュメモリ、ディスプレイ、センサなどの外部 SPI デバイスを接続するために使用できます。この例では、SPI スクリーンを使用して SPI の機能をデモンストレーションします。
 
 #### ハードウェアの準備
 

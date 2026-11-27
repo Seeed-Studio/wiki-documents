@@ -1,5 +1,5 @@
 ---
-description: Arduino での Seeed Studio XIAO RP2040
+description: Arduino で Seeed Studio XIAO RP2040 を使う
 title: Arduino
 keywords:
   - xiao
@@ -13,9 +13,9 @@ updatedAt: '2026-08-06'
 url: https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/
 ---
 
-# Seeed Studio XIAO RP2040 と Arduino
+# Seeed Studio XIAO RP2040 を Arduino で使う
 
-このページでは、Seeed Studio XIAO RP2040 をコンピュータに接続し、Arduino でプログラムを行います。ピンのマルチプレクシングに関するいくつかのプロジェクトも紹介します。
+このページでは、Seeed Studio XIAO RP2040 を PC に接続し、Arduino でプログラムします。ピンのマルチプレクシングに関するいくつかのプロジェクトも紹介します。
 
 ## はじめに
 
@@ -34,26 +34,26 @@ url: https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/
 :::
 **ハードウェア接続：**
 
-- Step 1. BOOT ボタンを押し続けたまま、Seeed Studio XIAO RP2040 を PC に接続します。
+- ステップ 1. BOOT ボタンを押し続けたまま、Seeed Studio XIAO RP2040 を PC に接続します。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" /></div>
 
-- Step 2. PC 上に **RPI-RP2** ディスクが表示され、Seeed Studio XIAO RP2040 上の電源 LED が点灯していれば、接続は完了です。
+- ステップ 2. PC 上に **RPI-RP2** ディスクが表示され、Seeed Studio XIAO RP2040 上の電源 LED が点灯していれば、接続は完了です。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
 ### ソフトウェアのセットアップ
 
-- **Step 1.** お使いのオペレーティングシステムに応じて、最新バージョンの Arduino IDE をダウンロードしてインストールします。
+- **ステップ 1.** お使いのオペレーティングシステムに応じて、最新版の Arduino IDE をダウンロードしてインストールします。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
   </div>
   <br></br>
 
-- **Step 2.** Arduino アプリケーションを起動します。
+- **ステップ 2.** Arduino アプリケーションを起動します。
 
-- **Step 3.**  Arduino IDE に Seeed Studio XIAO RP2040 のボードパッケージを追加します。
+- **ステップ 3.**  Arduino IDE に Seeed Studio XIAO RP2040 のボードパッケージを追加します。
 
 **File** > **Preferences** に移動し、**Additional Boards Manager URLs** に以下の URL を入力します：
 
@@ -63,13 +63,13 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/5.png"/></div>
 
-**Tools-> Board-> Boards Manager...** に移動し、検索欄にキーワード **arduino-pico** を入力します。**Raspberry Pi Pico/RP2040/RP2350** の最新バージョンを選択してインストールします。
+**Tools-> Board-> Boards Manager...** に移動し、検索欄に **arduino-pico** というキーワードを入力します。**Raspberry Pi Pico/RP2040/RP2350** の最新版を選択してインストールします。
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/arduino_2.png"/></div>
 
-- **Step 4.** ボードとポートを選択します。シリアルポートが表示されない場合は、まず BOOT モードに入ってください。[Hardware Setup](#ハードウェアのセットアップ) を参照してください。
+- **ステップ 4.** ボードとポートを選択します。シリアルポートが表示されない場合は、まず BOOT モードに入ってください。[ハードウェアのセットアップ](#ハードウェアのセットアップ) を参照してください。
 
-- **Step 5.** **"File --> Examples --->01.Basics --> Blink"** に移動して Blink のサンプルを開きます。
+- **ステップ 5.** **"File --> Examples --->01.Basics --> Blink"** をたどって Blink のサンプルを開きます。
 
 <div align="center"><img width ="550" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/select_blink.png"/></div>
 
@@ -81,30 +81,34 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 
 **ポート**
 
-Tools > Port に移動し、接続されている Seeed Studio XIAO RP2040 のシリアルポート名を選択します。通常は COM3 以降になります（**COM1** と **COM2** は通常、ハードウェアシリアルポート用に予約されています）。接続されている Seeed Studio XIAO RP2040 のシリアルポートには、かっこ内に「Seeed Studio XIAO RP2040」と記載されていることが多いです。
+Tools > Port に移動し、接続されている Seeed Studio XIAO RP2040 のシリアルポート名を選択します。通常は COM3 以降になります（**COM1** と **COM2** は、ハードウェアシリアルポート用に予約されていることが多いです）。接続されている Seeed Studio XIAO RP2040 のシリアルポートには、かっこ内に「Seeed Studio XIAO RP2040」と記載されていることが一般的です。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png"/></div>
 
-- **Step 6.** **Upload** ボタンをクリックして、Blink のサンプルコードをボードに書き込みます。
+- **ステップ 6.** **Upload** ボタンをクリックして、Blink のサンプルコードをボードに書き込みます。
 
 <div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl5.png"/></div>
 
-書き込みが完了すると、ボード上のピン 25 の緑色（USER）LED が 1 秒ごとに点滅するはずです。もしそうなっていれば、おめでとうございます！接続は成功しており、これで Seeed Studio XIAO RP2040 を使ってさらに多くのプロジェクトに取り組むことができます。
+書き込みが完了すると、ボード上の 25 番ピンの緑色 (USER) LED が 1 秒ごとに点滅するはずです。点滅していればおめでとうございます！接続が成功しており、これで Seeed Studio XIAO RP2040 を使ってさらに多くのプロジェクトに取り組むことができます。
 
 :::note
-Arduino プログラムの書き込みに失敗する場合は、「BOOT」ボタンを押し続けたまま「RUN」ボタンをクリックしてみてください。この時点で Seeed Studio XIAO RP2040 はブートモードに入り（コンピュータにリムーバブルディスクとしてマウントされます）、再度 Arduino プログラムを書き込むことができるようになります。
+Arduino プログラムの書き込みに失敗する場合は、「BOOT」ボタンを押し続けたまま「RUN」ボタンをクリックしてみてください。このとき、Seeed Studio XIAO RP2040 はブートモードに入り（コンピュータにリムーバブルディスクとしてマウントされます）、再度 Arduino プログラムを書き込めるようになります。
 :::
 
 ## Seeed Studio XIAO RP2040 のピンマルチプレクシング
 
-Seeed Studio XIAO RP2040 には、11 本のデジタルピン、4 本のアナログピン、11 本の PWM ピン、1 つの I2C インターフェース、1 つの UART インターフェース、1 つの SPI インターフェース、1 つの SWD ボンディングパッドインターフェースが搭載されています。これらのインターフェースに関するチュートリアルを提供し、プロジェクトに役立てられるようにします。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
+
+Seeed Studio XIAO RP2040 には、11 本のデジタルピン、4 本のアナログピン、11 本の PWM ピン、1 つの I2C インターフェース、1 つの UART インターフェース、1 つの SPI インターフェース、1 つの SWD ボンディングパッドインターフェースがあります。これらのインターフェースについてのチュートリアルを提供し、プロジェクトに役立てられるようにします。
 
 ### デジタル
 
-プッシュボタンをピン D0 に、LED をピン 25 に接続します。その後、以下のコードを書き込んで、プッシュボタンを使って LED の ON/OFF を制御します。
+プッシュボタンをピン D0 に、LED をピン 25 に接続します。次に、以下のコードを書き込んで、プッシュボタンで LED の ON/OFF を制御します。
 
 :::warning
-Seeed Studio XIAO RP2040 の動作電圧は 3.3V であることに注意してください。誤ってセンサを 5V に接続すると、マザーボードが正常に動作しない可能性があります。
+Seeed Studio XIAO RP2040 の動作電圧は 3.3V であることに注意してください。誤って 5V のセンサーを接続すると、マザーボードが正常に動作しない可能性があります。
 :::
 
 ```cpp
@@ -137,7 +141,7 @@ void loop() {
 
 ### アナログ
 
-可変抵抗器をピン A0 に、LED をピン 25 に接続します。その後、以下のコードを書き込んで、可変抵抗器のつまみを回すことで LED の点滅間隔を制御します。
+可変抵抗器をピン A0 に、LED をピン 25 に接続します。次に、以下のコードを書き込んで、可変抵抗器のつまみを回すことで LED の点滅間隔を制御します。
 
 ```cpp
 const int sensorPin = A0;
@@ -164,7 +168,7 @@ int sensorValue = analogRead(sensorPin);
 
 ### シリアル
 
-ピン D6 を UART の TX ピン、ピン D7 を UART の RX ピンとして使用し、「Hello World!」メッセージを送信します。
+UART の TX ピンとしてピン D6 を、RX ピンとしてピン D7 を使用し、「Hello World!」メッセージを送信します。
 
 ```cpp
 void setup() {
@@ -178,9 +182,9 @@ void loop() {
 }
 ```
 
-### 3 色インジケータ LED
+### 3 色インジケーター LED
 
-XIAO RP2040 では、電源インジケータの横に 3 つの単色 LED が離れて配置されています。GPIO17 は赤色 LED、GPIO16 は緑色 LED、GPIO25 は青色 LED を制御します。マクロ定義は以下のとおりです。
+XIAO RP2040 では、電源インジケーターの横に 3 つの単色 LED が配置されています。GPIO17 は赤色 LED、GPIO16 は緑色 LED、GPIO25 は青色 LED を制御します。マクロ定義は以下のとおりです。
 
 ```c
 #define PIN_LED_R      (17u)
@@ -252,7 +256,7 @@ RGB LED を過度な明るさで動作させると、眼精疲労や目の損傷
 
 :::
 
-XIAO RP2040 シリーズでは、GPIO11（NEOPIXEL_POWER）がイネーブルピンとして機能し、GPIO12（PIN_NEOPIXEL）が RGB カラー出力を制御します。使用するには、以下の手順に従ってください。
+XIAO RP2040 シリーズでは、GPIO11 (NEOPIXEL_POWER) がイネーブルピンとして機能し、GPIO12 (PIN_NEOPIXEL) が RGB カラー出力を制御します。以下の手順に従って使用してください。
 
 :::tip
 
@@ -262,15 +266,15 @@ XIAO RP2040 には SMD ラウンドレンズ RGB LED が搭載されており、
 
 まず、サードパーティライブラリを追加する必要があります。
 
-- **Step 1.** Arduino IDE を開き、`Sketch > Include Library > Manage Libraries...` に移動してライブラリを検索します。
+- **ステップ 1.** Arduino IDE を開き、`Sketch > Include Library > Manage Libraries...` に移動してライブラリを検索します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-Arduino Library Manager で **Adafruit_NeoPixel** ライブラリというキーワードを入力し、最新バージョンをインストールします。
+Arduino Library Manager で **Adafruit_NeoPixel** というキーワードを入力し、最新版のライブラリをインストールします。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl6.png" /></div>
 
-- **Step 2.** コードを Arduino にコピーし、**Upload** ボタンをクリックして書き込みます。
+- **ステップ 2.** コードを Arduino にコピーし、**Upload** ボタンをクリックして書き込みます。
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -335,9 +339,9 @@ RGB LED はレインボーカラーを表示します。
 
 ### I2C
 
-ここでは Seeed Studio XIAO RP2040 を [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) と IIC で接続し、「Hello world」を表示します。
+ここでは Seeed Studio XIAO RP2040 と [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) を IIC で接続し、「Hello world」を表示します。
 
-**接続**:
+**接続**：
 
 PIN 5 を SCL ピン、PIN 4 を SDA ピンとして使用します。
 
@@ -388,9 +392,9 @@ void loop(void) {
 
 ### SPI
 
-ここでは [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) を SPI で接続し、「Hello World」を表示します。OLED ディスプレイは IIC と SPI の両方の通信をサポートしていますが、デフォルトの通信モードは IIC です。開始する前に、必ず[IIC 機能を SPI 機能に変更](https://wiki.seeedstudio.com/ja/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)してください。
+ここでは [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) を SPI で接続し、「Hello World」を表示します。この OLED ディスプレイは IIC と SPI の両方の通信をサポートしていますが、デフォルトの通信モードは IIC です。開始する前に、[IIC 機能を SPI 機能に変更する](https://wiki.seeedstudio.com/ja/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/) 必要があります。
 
-**接続**:
+**接続**：
 
 PIN 8 を SCK ピン、PIN 9 を MISO ピン、PIN10 を MOSI ピンとして使用します。
 
@@ -460,7 +464,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

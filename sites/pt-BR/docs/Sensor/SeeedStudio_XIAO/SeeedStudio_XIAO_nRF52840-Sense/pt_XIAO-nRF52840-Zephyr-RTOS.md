@@ -9,7 +9,7 @@ last_update:
   date: 06/07/2024
   author: Tim
 createdAt: '2023-07-26'
-updatedAt: '2026-03-12'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-nRF52840-Zephyr-RTOS/
 ---
 
@@ -21,51 +21,51 @@ url: https://wiki.seeedstudio.com/pt-br/XIAO-nRF52840-Zephyr-RTOS/
 
 Um dos componentes mais importantes dos sistemas embarcados atuais é o **RTOS**, também conhecido como **Real-Time Operating System** (Sistema Operacional em Tempo Real), que é responsável por tudo, desde o agendamento de tarefas até a execução de aplicações.
 
-O **RTOS** é projetado para fornecer um modo de execução previsível. Quando o processamento precisa atender ao limite de tempo do sistema, utiliza‑se um RTOS. Portanto, em comparação com um GPOS (General Purpose Operating System), o RTOS costuma ser leve e pequeno, e em geral fornece apenas as funções necessárias para executar tipos específicos de aplicações em um hardware específico. Em alguns casos, os desenvolvedores podem modificar o RTOS existente, reduzi‑lo para fornecer apenas a funcionalidade exigida por uma aplicação específica e/ou personalizar suas características de funcionalidade ou desempenho.
+O **RTOS** é projetado para fornecer um modo de execução previsível. Quando o processamento precisa atender ao limite de tempo do sistema, utiliza-se um RTOS. Portanto, em comparação com um GPOS (General Purpose Operating System), o RTOS costuma ser leve e pequeno em tamanho, e geralmente fornece apenas as funções necessárias para executar tipos específicos de aplicações em hardware específico. Em alguns casos, os desenvolvedores podem modificar o RTOS existente, reduzi-lo para fornecer apenas a funcionalidade exigida por uma aplicação específica e/ou personalizar suas características de funcionalidade ou desempenho.
 
 ## O que é o [Zephyr](https://www.zephyrproject.org/)
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
 
-O sistema operacional [**Zephyr**](https://www.zephyrproject.org/) é baseado em um kernel de pequeno porte projetado para uso em sistemas embarcados e com recursos limitados: desde simples sensores ambientais embarcados e wearables com LED até sofisticados controladores embarcados, smartwatches e aplicações sem fio de IoT.
+O sistema operacional [**Zephyr**](https://www.zephyrproject.org/) é baseado em um kernel de pequeno porte projetado para uso em sistemas embarcados e com recursos limitados: desde sensores ambientais embarcados simples e wearables com LEDs até controladores embarcados sofisticados, smartwatches e aplicações sem fio de IoT.
 
-## Funcionalidades
+## Recursos
 
-O Zephyr oferece um grande e sempre crescente número de funcionalidades, incluindo:
+O Zephyr oferece um grande e crescente número de recursos, incluindo:
 
-### Extenso conjunto de serviços de Kernel
+### Amplo conjunto de serviços de Kernel
 
 O Zephyr oferece vários serviços familiares para desenvolvimento:
 
-- *Serviços de multithreading* para threads cooperativas, baseadas em prioridade, não preemptivas e preemptivas, com fatiamento de tempo opcional em round‑robin. Inclui suporte de API compatível com POSIX pthreads.
-- *Serviços de interrupção* para registro, em tempo de compilação, de tratadores de interrupção.
+- *Serviços de multithreading* para threads cooperativas, baseadas em prioridade, não-preemptivas e preemptivas, com fatiamento de tempo round robin opcional. Inclui suporte a API compatível com POSIX pthreads.
+- *Serviços de interrupção* para registro em tempo de compilação de manipuladores de interrupção.
 - *Serviços de alocação de memória* para alocação dinâmica e liberação de blocos de memória de tamanho fixo ou variável.
-- *Serviços de sincronização entre threads* para semáforos binários, semáforos contadores e semáforos de mutex.
-- *Serviços de passagem de dados entre threads* para filas de mensagens básicas, filas de mensagens aprimoradas e fluxos de bytes.
-- *Serviços de gerenciamento de energia*, como Gerenciamento de Energia do Sistema de forma geral, definida pela aplicação ou por política, e Gerenciamento de Energia de Dispositivo, definido de forma granular pelo driver.
+- *Serviços de sincronização entre threads* para semáforos binários, semáforos contadores e semáforos mutex.
+- *Serviços de passagem de dados entre threads* para filas de mensagens básicas, filas de mensagens avançadas e fluxos de bytes.
+- *Serviços de gerenciamento de energia*, como gerenciamento de energia do sistema abrangente, definido pela aplicação ou por política, e gerenciamento de energia de dispositivo, definido pelo driver e em nível mais granular.
 
-### Vários algoritmos de escalonamento
+### Múltiplos algoritmos de escalonamento
 
   O Zephyr fornece um conjunto abrangente de opções de escalonamento de threads:
 
 - Escalonamento cooperativo e preemptivo
 - Earliest Deadline First (EDF)
 - Escalonamento Meta IRQ implementando o comportamento de “interrupt bottom half” ou “tasklet”
-- Fatiamento de tempo (Timeslicing): permite fatiamento de tempo entre threads preemptíveis de prioridade igual
-- Várias estratégias de enfileiramento:
-  - Fila pronta com lista ligada simples
-  - Fila pronta com árvore rubro‑negra
-  - Fila pronta tradicional de múltiplas filas
+- Timeslicing: permite fatiamento de tempo entre threads preemptíveis de mesma prioridade
+- Múltiplas estratégias de enfileiramento:
+  - Fila pronta com lista encadeada simples
+  - Fila pronta com árvore vermelho/preto
+  - Fila pronta multi-fila tradicional
 
 ### Suporte a Bluetooth Low Energy 5.0
 
-Compatível com Bluetooth 5.0 (ESR10) e suporte a Bluetooth Low Energy Controller (camada de enlace LE). Inclui Bluetooth Mesh e um controlador Bluetooth pronto para qualificação Bluetooth.
+Compatível com Bluetooth 5.0 (ESR10) e suporte a Bluetooth Low Energy Controller (LE Link Layer). Inclui Bluetooth mesh e um controlador Bluetooth pronto para qualificação Bluetooth.
 
 - Generic Access Profile (GAP) com todos os possíveis papéis LE
 - Generic Attribute Profile (GATT)
 - Suporte a pareamento, incluindo o recurso Secure Connections do Bluetooth 4.2
 - Abstração limpa de driver HCI
-- Interface HCI bruta para executar o Zephyr como um Controller em vez de uma pilha Host completa
+- Interface HCI bruta para executar o Zephyr como um Controller em vez de uma pilha completa de Host
 - Verificado com vários controladores populares
 - Altamente configurável
 
@@ -77,26 +77,26 @@ Suporte a Mesh:
 
 *Referência: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
-## Primeiros Passos
+## Introdução
 
-Depois que a toolchain do Zephyr estiver configurada e um SDK associado tiver sido baixado, você pode começar o desenvolvimento de aplicações.
+Depois que a toolchain do Zephyr for configurada e um SDK associado for baixado, você poderá começar o desenvolvimento de aplicações.
 
-Para o Xiao nrf52840, o [arquivo de descrição da placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html) pode ser usado como referência para obter mais informações de configuração.
+Para o Xiao nrf52840, o [arquivo de descrição da placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html) pode ser consultado para obter mais informações de configuração.
 
-Para programar o Xiao nrf52840, você pode seguir as etapas abaixo:
+Para programar o Xiao nrf52840, podem ser seguidos os seguintes passos:
 
 1. Compile um exemplo ou a sua aplicação
 2. Conecte o Xiao nrf52840
-3. Dê um clique duplo no botão `RST` para colocar o dispositivo no modo bootloader uf2
+3. Clique duas vezes no botão `RST` colocando o dispositivo no modo bootloader uf2
 4. Execute o comando `west flash -r uf2` para gravar o dispositivo
 
-O exemplo mais simples é executar o exemplo "Hello World" na placa. Após mudar para o diretório da instalação do Zephyr, execute os seguintes comandos.
+O exemplo mais simples é executar o exemplo "Hello World" na placa. Depois de mudar para o diretório da instalação do Zephyr, execute os seguintes comandos.
 
 ```
 west build -p always -b xiao_ble samples/hello_world
 ```
 
-Se você estiver utilizando uma placa Xiao nRF52840 Sense, pode compilar para o arquivo de definição de placa dela usando `xiao_ble/nrf52840/sense` no lugar de `xiao_ble`, da seguinte forma (para este exemplo não faz diferença):
+Se você estiver usando uma placa Xiao nRF52840 Sense, poderá compilar para o arquivo de definição de placa dela usando `xiao_ble/nrf52840/sense` no lugar de `xiao_ble`, assim (para este exemplo não faz diferença):
 
 ```
 west build -p always -b xiao_ble/nrf52840/sense samples/hello_world
@@ -125,7 +125,7 @@ Você deverá ver uma resposta semelhante à seguinte:
 Hello World! xiao_ble/nrf52840
 ```
 
-Para auxiliar no processo de uso do Zephyr com o Xiao e sua placa de expansão, foi construído um repositório com vários overlays e configurações usados aqui. Os comandos incluídos neste artigo da wiki assumem que ele está localizado em `../applications/xiao-zephyr-examples` em relação à raiz do Zephyr. Um caminho alternativo pode ser fornecido aos comandos abaixo atualizando‑o.
+Para auxiliar no processo de uso do Zephyr com o Xiao e sua placa de expansão, foi construído um repositório com vários overlays e configurações usados aqui. Os comandos incluídos neste artigo da wiki assumem que ele está localizado em `../applications/xiao-zephyr-examples` em relação à raiz do Zephyr. Um caminho alternativo pode ser fornecido aos comandos abaixo atualizando-o.
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
@@ -136,7 +136,7 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 <table align="center">
   <tbody><tr>
       <th>Seeed Studio XIAO nrf52840 Sense</th>
-      <th>Placa de Expansão Seeed Studio</th>
+      <th>Seeed Studio Expansion Board</th>
     </tr>
     <tr>
       <td><div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -145,34 +145,38 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
   </tbody></table>
 
-### Conhecimentos para o Desenvolvedor
+### Conhecimentos do desenvolvedor
 
 #### Placa de Expansão XIAO
 
-  Para usar módulos Grove com o Seeed Studio XIAO nrf52840, utilizaremos uma [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) e conectaremos o XIAO nrf52840 nela.
+  Para usar módulos Grove com o Seeed Studio XIAO nrf52840, usaremos uma [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) e conectaremos o XIAO nrf52840 nela.
 
   Depois disso, os conectores Grove na placa podem ser usados para conectar módulos Grove
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
 
-#### Definições de Pinos
+#### Definições de pinos
 
-  Você precisa seguir o gráfico abaixo para usar os números internos de pinos apropriados ao conectar os módulos Grove aos conectores Grove no Grove Shield para Seeed Studio XIAO.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">Explore o Pinout Interativo</a>
+</div>
+
+  Você precisa seguir o gráfico abaixo para usar os números de pinos internos apropriados ao conectar os módulos Grove aos conectores Grove no Grove Shield para Seeed Studio XIAO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png"style={{width:900, height:'auto'}}/></div>
 
-### Funcionalidade Primária
+### Funcionalidade principal
 
 - LED onboard
 - IMU onboard (Sense)
@@ -206,7 +210,7 @@ O código de exemplo associado faz referência a led0:
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-Isto é definido no código devicetree do Xiao nRF52840 por meio de um alias:
+Isso é definido no código devicetree do Xiao nRF52840 por meio de um alias:
 
 ```
  aliases {
@@ -225,9 +229,9 @@ Isto é definido no código devicetree do Xiao nRF52840 por meio de um alias:
 
 Ele corresponde ao pino 26 na placa.
 
-Para os pinos com o breakout do Xiao você não precisa usar o mapeamento de pinos &gpio0 diretamente, pois os arquivos da placa fornecem um conector Xiao que simplifica a interface.
+Para os pinos com o breakout do Xiao você não precisa usar diretamente o mapeamento de pinos &gpio0, pois os arquivos da placa fornecem um conector Xiao que simplifica a interface.
 
-Por exemplo, se eu fosse referenciar o D0, eu o referenciaria como `&gpio 2` ou `&xiao_d 0`.
+Por exemplo, se eu fosse referenciar D0, eu o referenciaria como `&gpio 2` ou `&xiao_d 0`.
 
 ```
 / {
@@ -255,9 +259,9 @@ Por exemplo, se eu fosse referenciar o D0, eu o referenciaria como `&gpio 2` ou 
 
 #### IMU onboard (Sense)
 
-Uma das principais funcionalidades do Xiao nrf52840 é o seu sensor IMU integrado. Com esses dados é possível treinar um modelo de machine learning, detectar gestos, movimento da placa etc.
+Um dos principais recursos do Xiao nrf52840 é seu sensor IMU integrado. Com esses dados, é possível treinar um modelo de aprendizado de máquina, detectar gestos, movimento da placa, etc.
 
-Para testar esse recurso utilizaremos um exemplo embutido que utiliza a IMU e depois analisaremos o código associado para entender por que ele funciona.
+Para testar este recurso, usaremos um exemplo integrado que utiliza o IMU e depois analisaremos o código associado para entender por que ele funciona.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -298,7 +302,7 @@ gyro x:0.035430 dps y:-0.132252 dps z:-0.007788 dps
 loop:48 trig_cnt:10107
 ```
 
-Por que isso funciona? Podemos ver o [código de exemplo](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/lsm6dsl) através do repositório do Zephyr no GitHub.
+Por que isso funciona? Podemos ver o [código de exemplo](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/lsm6dsl) no repositório do Zephyr no GitHub.
 
 ```
  const struct device *const lsm6dsl_dev = DEVICE_DT_GET_ONE(st_lsm6dsl);
@@ -337,18 +341,18 @@ A lógica do exemplo encontra o objeto devicetree `st_lsm6dsl` associado para a 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/imu.jpg" style={{width:500, height:'auto'}}/></div>
 
-Um GPIO está sendo usado para habilitar a alimentação do pino. Você pode ver, a partir do arquivo de definição, que ele está usando GPIO1 8. Eu destaquei a parte relevante do [esquema do Xiao nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf) abaixo:
+Um GPIO está sendo usado para habilitar a alimentação do pino. Você pode ver pelo arquivo de definição que ele está usando o GPIO1 8. Eu destaquei a parte relevante do [esquemático do Xiao nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf) abaixo:
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/schematic-pin-highlight-imu.png?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/schematic-pin-highlight-imu.png" style={{width:500, height:'auto'}}/></div>
 
-A partir deste destaque do esquema você pode ver que o GPIO1 8 é o pino de habilitação para o IMU. Além disso, o GPIO0 11 é o pino de interrupção. Isso é refletido no trecho de devicetree acima.
+A partir deste destaque do esquemático, você pode ver que o GPIO1 8 é o pino de habilitação para o IMU. Além disso, o GPIO0 11 é o pino de interrupção. Assim, isso é refletido no trecho de devicetree acima.
 
-#### Microfone Onboard (Sense)
+#### Mic onboard (Sense)
 
-Uma das principais funcionalidades do Xiao nrf52840 é seu microfone integrado. Assim como o IMU, ele permite muitas aplicações de aprendizado de máquina por meio de seu uso.
+Um dos principais recursos do Xiao nrf52840 é seu microfone integrado. Assim como o IMU, ele permite muitas aplicações de aprendizado de máquina por meio de seu uso.
 
-Para testar esse recurso, usaremos um exemplo integrado que utiliza o microfone e então veremos o código associado para entender por que isso funciona.
+Para testar este recurso, usaremos um exemplo integrado que utiliza o microfone e depois analisaremos o código associado para entender por que ele funciona.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -393,11 +397,11 @@ Isso deve exibir algo semelhante a isto:
 [00:00:01.897,399] <inf> dmic_sample: Exiting
 ```
 
-Por que isso funciona? Podemos ver o [código de exemplo](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/drivers/audio/dmic) através do repositório do Zephyr no GitHub.
+Por que isso funciona? Podemos ver o [código de exemplo](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/drivers/audio/dmic) no repositório do Zephyr no GitHub.
 
 Este exemplo demonstra o seguinte:
 
-> Este é um aplicativo bem simples cuja finalidade é mostrar como usar a :ref:`Audio DMIC API` e também servir de auxílio no desenvolvimento de drivers para implementar essa API. Ele realiza duas transferências PDM com configurações diferentes (usando um canal e dois canais), mas não processa de forma alguma os dados de áudio recebidos.
+> Este é um aplicativo muito simples destinado a mostrar como usar a :ref:`Audio DMIC API` e também a servir de auxílio no desenvolvimento de drivers para implementar essa API. Ele realiza duas transferências PDM com configurações diferentes (usando um canal e dois canais), mas não processa de forma alguma os dados de áudio recebidos.
 
 ```
 const struct device *const dmic_dev = DEVICE_DT_GET(DT_NODELABEL(dmic_dev));
@@ -422,7 +426,7 @@ A lógica do exemplo encontra o objeto devicetree `dmic_dev` associado para a pl
 };
 ```
 
-No overlay do projeto de exemplo, esse regulador é então habilitado:
+No overlay do projeto de exemplo, este regulador é então habilitado:
 
 ```
 / {
@@ -439,28 +443,28 @@ dmic_dev: &pdm0 {
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/mic.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/mic.jpg" style={{width:500, height:'auto'}}/></div>
 
-Um GPIO está sendo usado para habilitar a alimentação do pino. Eu destaquei a parte relevante do [esquema do Xiao nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf) abaixo:
+Um GPIO está sendo usado para habilitar a alimentação do pino. Eu destaquei a parte relevante do [esquemático do Xiao nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf) abaixo:
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/schematic-pin-highlight-mic.png?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/schematic-pin-highlight-mic.png" style={{width:500, height:'auto'}}/></div>
 
-A partir deste destaque do esquema você pode ver que o GPIO1 10 é o pino de habilitação para o microfone.
+A partir deste destaque do esquemático, você pode ver que o GPIO1 10 é o pino de habilitação para o microfone.
 
 #### Bluetooth
 
-Para testar essa configuração, podemos usar um exemplo existente com o Zephyr:
+Para testar esta configuração, podemos usar um exemplo existente com o Zephyr:
 
 ```
 west build -p always -b xiao_ble samples/bluetooth/observer
 ```
 
-Faça o flash da sua placa:
+Faça o flash na sua placa:
 
 ```
 west flash -r uf2
 ```
 
-Espere um momento para o MCU reiniciar após o flash e conecte-se para monitorar:
+Aguarde um momento para o MCU reiniciar após o flash e conecte-se para monitorar:
 
 ```
 screen /dev/ttyACM0 115200
@@ -486,7 +490,7 @@ CONFIG_BT=y
 CONFIG_BT_OBSERVER=y
 ```
 
-O [arquivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf) aqui habilita recursos relacionados a bluetooth para a compilação do Zephyr.
+O [arquivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf) aqui habilita recursos relacionados a bluetooth para a build do Zephyr.
 
 #### TFLite - Hello World
 
@@ -497,19 +501,19 @@ west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-Compile o exemplo e faça o flash para sua placa:
+Compile o exemplo e faça o flash na sua placa:
 
 ```
 west build -p always -b xiao_ble samples/modules/tflite-micro/hello_world
 ```
 
-Faça o flash da sua placa:
+Faça o flash na sua placa:
 
 ```
 west flash -r uf2
 ```
 
-Espere um momento para o MCU reiniciar após o flash e conecte-se para monitorar:
+Aguarde um momento para o MCU reiniciar após o flash e conecte-se para monitorar:
 
 ```
 screen /dev/ttyACM0 115200
@@ -540,9 +544,9 @@ x_value: 1.2566366*2^1, y_value: 1.0674761*2^-1
 x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 ```
 
-Informações adicionais sobre TFLite estão fora do escopo deste guia, mas o exemplo serve como uma referência para as capacidades do dispositivo e os componentes necessários para executar a configuração do TFLite.
+Informações adicionais sobre TFLite estão fora do escopo deste guia, mas o exemplo serve como um guia para as capacidades do dispositivo e os componentes necessários para executar a configuração do TFLite.
 
-### Componentes Adicionais
+### Componentes adicionais
 
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Display I2C
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Botão
@@ -558,14 +562,14 @@ Informações adicionais sobre TFLite estão fora do escopo deste guia, mas o ex
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/xiao_expansion_oled-nrf.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/xiao_expansion_oled-nrf.jpg" style={{width:500, height:'auto'}}/></div>
 
-Para testar esta configuração podemos usar um exemplo existente com Zephyr:
+Para testar esta configuração podemos usar um exemplo existente com o Zephyr:
 
 ```
 west build -p always -b xiao_ble samples/drivers/display --  -DSHIELD=seeed_xiao_expansion_board
 west flash -r uf2
 ```
 
-Você verá um display mostrando vários quadrados pretos e um quadrado piscando em um canto, dado que este display só suporta duas cores.
+Você verá um display mostrando vários quadrados pretos e um quadrado piscando no canto, dado que este display só suporta duas cores.
 
 Vamos nos aprofundar um pouco neste exemplo para ver por que ele funciona:
 
@@ -600,7 +604,7 @@ O shield configura uma tela OLED SSD1306 no registrador 0x3C. Ela é selecionada
 
 #### Grove - Placa de Expansão - Botão
 
-Para testar esta configuração podemos usar um exemplo existente com Zephyr:
+Para testar esta configuração podemos usar um exemplo existente com o Zephyr:
 
 ```
 west build -p always -b xiao_ble samples/basic/button -- -DSHIELD=seeed_xiao_expansion_board
@@ -612,15 +616,15 @@ Grave o firmware na sua placa:
 west flash -r uf2
 ```
 
-Espere um momento para o MCU reiniciar após a gravação e conecte o monitor:
+Aguarde um momento para o MCU reiniciar após a gravação e conecte ao monitor:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-Pressionar o botão com o exemplo fará o LED onboard acender.
+Pressionar o botão com o exemplo em execução fará o LED onboard acender.
 
-Você verá resultados retornados no console:
+Você verá resultados retornados pelo console:
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -652,7 +656,7 @@ Vamos nos aprofundar um pouco neste exemplo para ver por que ele funciona:
 };
 ```
 
-O arquivo de shield / overlay é usado para configurar vários componentes da placa. Usando esse arquivo, o exemplo do botão pode ser utilizado, pois o overlay permite que o Zephyr configure o botão e o torne disponível para o código associado.
+O arquivo de shield / overlay é usado para configurar vários componentes da placa. Usando este arquivo o exemplo do botão pode ser utilizado, pois o overlay permite que o Zephyr configure o botão e o disponibilize para o código associado.
 
 Neste caso o D1 no Xiao nrf52840. Ele é configurado neste overlay para atuar como um botão e é associado ao nome sw0 para permitir que seja usado pelo exemplo, que possui código esperando isso.
 
@@ -665,7 +669,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-nrf52480/xiao_expansion_buzzer.overlay"
 ```
 
-Após a gravação você deverá começar a ouvir uma série de bipes que mudam de som à medida que o exemplo é executado.
+Após a gravação você deverá começar a ouvir uma série de bipes que mudam de som conforme o exemplo é executado.
 
 Vamos ver por que isso funciona:
 
@@ -688,7 +692,7 @@ O overlay configura a lógica de PWM para o pino 29, que corresponde ao pino A3 
 
 #### Grove - Placa de Expansão - Cartão SD
 
-Aqui usaremos o exemplo de sistema de arquivos juntamente com o shield Xiao Expansion Board para tentar interagir com o leitor de cartão SD via SPI. O shield da placa de expansão tem o pino CS configurado para o pino `&xiao_d 2` associado, então nenhum trabalho é necessário da sua parte para associar esse recurso com a placa além de adicionar o shield. Para prepará-lo ainda mais, estamos usando uma configuração personalizada que habilita a funcionalidade de cartão SD.
+Usaremos aqui o exemplo de filesystem junto com o shield Xiao Expansion Board para tentar fazer a interface com o leitor de cartão SD via SPI. O shield da placa de expansão tem o pino CS configurado para o pino `&xiao_d 2` associado, então nenhum trabalho é necessário da sua parte para associar esse recurso à placa além de adicionar o shield. Para prepará-lo ainda mais estamos usando uma configuração personalizada que habilita a funcionalidade do cartão SD.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -726,7 +730,7 @@ CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
 ```
 
-Na configuração associada estamos habilitando SPI, o driver de disco SDMMC e o GPIO. Sem essa configuração o overlay resultará em um erro, pois o exemplo não consegue encontrar o cartão SD.
+Na configuração associada estamos habilitando o SPI, o driver de disco SDMMC e o GPIO. Sem essa configuração o overlay levará a um erro, pois o exemplo não consegue encontrar o cartão SD.
 
 A parte relevante do shield Xiao Expansion Board é mostrada abaixo:
 
@@ -748,13 +752,13 @@ A parte relevante do shield Xiao Expansion Board é mostrada abaixo:
 };
 ```
 
-Como mencionado anteriormente, o mapeamento do pino `&xiao_d 2` é usado para permitir que o pino D2 seja selecionado para isso, independentemente da placa utilizada, desde que ela ofereça a configuração de pinos `&xiao_d`.
+Como mencionado anteriormente, o mapeamento do pino `&xiao_d 2` é usado para permitir que o pino D2 seja selecionado para isso, independentemente da placa usada, desde que ela suporte a configuração de pinos `&xiao_d`.
 
 #### Grove - Sensor de Temperatura e Umidade (SHT31)
 
-Primeiro solde os pinos e conecte seu Xiao nrf52840 à placa de expansão. Em seguida, conecte um cabo conector Grove entre o Grove SHT31 e uma das portas I2C na placa de expansão.
+Primeiro solde os pinos e conecte seu Xiao nrf52840 à placa de expansão. Em seguida conecte um cabo conector Grove entre o Grove SHT31 e uma das portas I2C na placa de expansão.
 
-Para testar esta configuração podemos usar um exemplo existente com Zephyr:
+Para testar esta configuração podemos usar um exemplo existente com o Zephyr:
 
 ```
 west build -p always -b xiao_ble samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay
@@ -766,13 +770,13 @@ Grave sua placa depois que ela estiver em modo bootloader uf2:
 west flash -r uf2
 ```
 
-Espere um momento para o MCU reiniciar após a gravação e conecte o monitor:
+Aguarde um momento para o MCU reiniciar após a gravação e conecte ao monitor:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-Você verá resultados retornados no console:
+Você verá resultados retornados pelo console:
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -795,15 +799,15 @@ Vamos nos aprofundar um pouco neste exemplo para ver por que ele funciona:
  };
 ```
 
-O arquivo de app overlay é usado para configurar vários componentes da placa. Usando esse arquivo o exemplo do SHT31 pode ser utilizado, pois o overlay informa à [lógica do exemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) como configurar o sensor para nossa placa.
+O arquivo de app overlay é usado para configurar vários componentes da placa. Usando este arquivo o exemplo SHT31 pode ser utilizado, pois o overlay informa à [lógica do exemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) como configurar o sensor para nossa placa.
 
 #### Módulo de Display LCD de 1,69 polegadas, Resolução 240×280, Interface SPI
 
-Para este exemplo usaremos SPI para conectar um LCD de 1,69 polegadas com resolução de 240x280.
+Para este exemplo usaremos SPI para conectar a um LCD de 1,69 polegadas com resolução de 240x280.
 
 Primeiro conecte sua placa à tela LCD usando a imagem a seguir como guia (neste caso estamos usando o Xiao nrf52840, mas o mesmo layout de pinos é usado para a conexão aqui).
 
-| Display LCD SPI 1,69 polegadas| XIAO nrf52840 |
+| Display LCD SPI de 1,69 polegadas| XIAO nrf52840 |
 | ------------- | ------------------------- |
 | VCC | 3V3 |
 | GND | GND |
@@ -816,7 +820,7 @@ Primeiro conecte sua placa à tela LCD usando a imagem a seguir como guia (neste
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
-Agora podemos construir e gravar o firmware:
+Agora podemos compilar e gravar o firmware:
 
 ```
 cd ~/zephyrproject/zephyr
@@ -831,7 +835,7 @@ Com o novo firmware em funcionamento, o dispositivo agora mostra a mesma tela de
 
 #### Display Redondo para Xiao
 
-Para testar esta configuração podemos usar um exemplo existente com Zephyr:
+Para testar esta configuração podemos usar um exemplo existente com o Zephyr:
 
 ```
 west build -p always -b xiao_ble samples/drivers/display --  -DSHIELD=seeed_xiao_round_display
@@ -853,7 +857,7 @@ west build -p always -b xiao_ble samples/modules/lvgl/demos --  -DSHIELD=seeed_x
 
 A demonstração de música mostrada aqui é apenas uma parte da tela real, mas ainda assim demonstra a tela sensível ao toque em ação. Como você pode ver, tocar no botão de play liga a animação de música.
 
-Você pode ver pelo [arquivo de shield](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) que isso funciona interagindo com o driver de display redondo GC9A01 via SPI e com o módulo de toque CHSC6X via i2c.
+Você pode ver pelo [arquivo de shield](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) que isso funciona fazendo a interface com o driver de display redondo GC9A01 via SPI e com o módulo de toque CHSC6X via i2c.
 
 Vamos nos aprofundar um pouco neste exemplo para ver como ele funciona:
 
@@ -909,15 +913,15 @@ Vamos nos aprofundar um pouco neste exemplo para ver como ele funciona:
 Este shield faz o seguinte:
 
 - Seleciona o display GC9A01 como o display Zephyr escolhido
-- Define a lógica do ponteiro LVGL para usar o módulo CHSC6X
-- Desabilita a serial pois os pinos são usados para o backlight e interrupção de toque (como visto acima via: `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`)
+- Define a lógica de ponteiro LVGL para usar o módulo CHSC6X
+- Desativa a serial, pois os pinos são usados para o backlight e interrupção de toque (como visto acima via: `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`)
 - Configura o display redondo para SPI usando os pinos D1, D2 e D3
 
-A [lógica de exemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) baseia-se no [código de exemplo da demonstração LVGL](https://github.com/lvgl/lvgl/tree/master/demos/music) que pode ser examinado mais detalhadamente.
+A [lógica de exemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) depende do [código de exemplo da demo LVGL](https://github.com/lvgl/lvgl/tree/master/demos/music), que pode ser analisado mais detalhadamente.
 
 #### Display Redondo para Xiao - Cartão SD
 
-Usaremos aqui o exemplo de sistema de arquivos junto com o shield da Xiao Expansion Board para tentar a interface com o leitor de cartão SD via SPI. O shield da placa de expansão tem o pino CS configurado para o pino `&xiao_d 2` associado, então nenhum trabalho é necessário da sua parte para associar essa capacidade à placa além de adicionar o shield. Para prepará-lo ainda mais, estamos usando uma configuração personalizada que habilita a funcionalidade do cartão SD.
+Usaremos aqui o exemplo de filesystem junto com o shield Xiao Expansion Board para tentar fazer a interface com o leitor de cartão SD via SPI. O shield da placa de expansão tem o pino CS configurado para o pino associado `&xiao_d 2`, portanto nenhum trabalho é necessário da sua parte para associar esse recurso à placa além de adicionar o shield. Para prepará-lo ainda mais, estamos usando uma configuração personalizada que habilita a funcionalidade do cartão SD.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -930,7 +934,7 @@ Agora faça o flash e monitore (primeiro pressionando RESET duas vezes para entr
 west flash -r uf2
 ```
 
-Espere um momento para o MCU reiniciar após o flash e conecte-se ao monitor:
+Aguarde um momento para o MCU reiniciar após o flash e conecte-se ao monitor:
 
 ```
 screen /dev/ttyACM0 115200
@@ -975,12 +979,12 @@ A parte relevante do shield do display redondo é mostrada abaixo:
 
 D2 é usado para o pino CS do SD.
 
-## ✨ Projeto de Colaborador
+## ✨ Projeto de Contribuidor
 
-- Este projeto é apoiado pelo [Projeto de Colaboradores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293418) da Seeed Studio.
+- Este projeto é apoiado pelo [Projeto de Contribuidores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293418) da Seeed Studio.
 - Agradecemos **os esforços do Tim** e o seu trabalho será [exibido](https://wiki.seeedstudio.com/pt-br/Honorary-Contributors/).
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

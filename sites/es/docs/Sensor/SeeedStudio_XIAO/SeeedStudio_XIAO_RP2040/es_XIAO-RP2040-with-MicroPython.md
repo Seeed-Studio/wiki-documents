@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/es/XIAO-RP2040-with-MicroPython/
 ---
 
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/es/XIAO-RP2040-with-MicroPython/
 
 ## Introducción a MicroPython
 
-[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con una función parcial de compilación a código nativo. Proporciona un subconjunto de las funciones de Python 3.5, implementado para procesadores embebidos y sistemas con recursos limitados. Es diferente de CPython y puedes leer más sobre las diferencias [aquí](https://github.com/micropython/micropython/wiki/Differences).
+[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con una función parcial de compilación de código nativo. Proporciona un subconjunto de las funciones de Python 3.5, implementado para procesadores embebidos y sistemas con recursos limitados. Es diferente de CPython y puedes leer más sobre las diferencias [aquí](https://github.com/micropython/micropython/wiki/Differences).
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
@@ -63,7 +63,7 @@ Primero, vamos a conectar la Serie Seeed Studio XIAO RP2040 al ordenador y subir
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_2_1.png" /></div><br/>
 
-**Paso 6.** Ve a Files -> New, pega el siguiente código y ejecuta el script.
+**Paso 6.** Ve a Files -> New, pega el código de abajo y ejecuta el script.
 
 ```py
 from machine import Pin, Timer
@@ -88,14 +88,19 @@ tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 
 :::tip
 
-- La sección de [Recursos adicionales](#Recursos-adicionales) contiene firmware de MicroPython y ejemplos relevantes para XIAO RP2040 Plus. Puedes usar estos ejemplos siguiendo los tutoriales de XIAO RP2040, pero asegúrate de reemplazar y modificar los pines correspondientes.
+- La sección de [Recursos adicionales](#recursos-adicionales) contiene firmware de MicroPython y ejemplos relevantes para XIAO RP2040 Plus. Puedes usar estos ejemplos siguiendo los tutoriales de XIAO RP2040, pero asegúrate de reemplazar y modificar los pines correspondientes.
 - Para comprobar las diferencias dentro de la serie XIAO RP2040, consulta [XIAO RP2040 Series Pin Overview](https://wiki.seeedstudio.com/es/XIAO-RP2040/#visión-general-del-hardware)
 
 :::
 
 ## Pines de la Serie XIAO RP2040
 
-| Nombre de pin en MicroPython | GPIO de XIAO RP2040 | GPIO de XIAO RP2040 Plus | ADC | Función |
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explorar pinout interactivo de XIAO RP2040</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">Explorar pinout interactivo de XIAO RP2040 Plus</a>
+</div>
+
+| Nombre de pin en MicroPython | GPIO XIAO RP2040 | GPIO XIAO RP2040 Plus | ADC | Función |
 | :--- | :---: | :---: | :---: | :--- |
 | D0 / A0 | GPIO26 | GPIO26 | 0 | GPIO, ADC0 |
 | D1 / A1 | GPIO27 | GPIO27 | 1 | GPIO, ADC1 |
@@ -174,7 +179,7 @@ while True:
         utime.sleep(0.2)
 ```
 
-- **Paso 4**. Sube los códigos haciendo clic en el botón "Run current script". La primera vez, Thonny te preguntará dónde quieres guardar tu archivo de código. Tanto **This Computer** como **Raspberry Pi Pico** están bien.
+- **Paso 4**. Sube los códigos haciendo clic en el botón "Run current script". La primera vez, Thonny preguntará dónde quieres guardar tu archivo de código. Tanto **This Computer** como **Raspberry Pi Pico** son válidos.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
@@ -192,7 +197,7 @@ En este proyecto, vamos a conectar [Grove - OLED Display 0.96" (SSD1315)](https:
 
 - **Paso 1**. Descarga la biblioteca [ssd1306.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ssd1306.py) y ábrela con Thonny.
 
-- **Paso 2**. Haz clic en "File-->Save as" y guarda la biblioteca en la "Raspberry Pi Pico"
+- **Paso 2**. Haz clic en "File-->Save as" y guarda la biblioteca en el "Raspberry Pi Pico"
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
@@ -221,7 +226,7 @@ while True:
     #sleep(0.5)
 ```
 
-- **Paso 4**. Sube los códigos haciendo clic en el botón "Run current script". La primera vez, Thonny te preguntará dónde quieres guardar tu archivo de código. Tanto **This Computer** como **Raspberry Pi Pico** están bien.
+- **Paso 4**. Sube los códigos haciendo clic en el botón "Run current script". La primera vez, Thonny preguntará dónde quieres guardar tu archivo de código. Tanto **This Computer** como **Raspberry Pi Pico** son válidos.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
@@ -231,7 +236,7 @@ Si todo funciona bien, verás el texto "Hello,World!" mostrado en la pantalla.
 
 ## Consola de dispositivo MicroPython
 
-Nuestro socio **Neil** ha escrito un programa de consola de línea de comandos para XIAO usando MicroPython. Con este programa puedes subir, descargar y borrar archivos fácilmente. ¡Le agradecemos su contribución a XIAO!
+Nuestro socio **Neil** ha escrito un programa de consola de línea de comandos para XIAO usando MicroPython. Con este programa puedes subir, descargar y eliminar archivos fácilmente. ¡Le agradecemos su contribución a XIAO!
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div>
 
@@ -245,7 +250,7 @@ Algunas bibliotecas adicionales y códigos de ejemplo están aquí:
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

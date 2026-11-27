@@ -1,5 +1,5 @@
 ---
-title: Introducción a XIAO STM32C5
+title: Primeros pasos con XIAO STM32C5
 description: ''
 keywords:
   - xiao
@@ -13,7 +13,7 @@ last_update:
   date: 08/11/2026
   author: Zeller
 createdAt: '2026-08-07'
-updatedAt: '2026-08-11'
+updatedAt: '2026-10-19'
 url: https://wiki.seeedstudio.com/es/xiao_stm32c5_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,16 +46,16 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Descripción general
 
-Conoce el primer XIAO basado en STM32. Construido alrededor del STM32C5A3CG con un núcleo Arm Cortex-M33 a 144MHz, XIAO STM32C5 aporta conectividad CAN FD, 16MB de Flash externa y una IMU de seis ejes con calentamiento programable al formato compacto XIAO. Resistencias de calentamiento dedicadas alrededor de la IMU permiten un calentamiento controlado por firmware para proyectos de robótica y detección de movimiento. Dos controladores CAN FD nativos, incluido un canal con un transceptor TCAN3403-Q1 integrado en la placa, proporcionan un punto de partida para adaptadores USB-a-CAN, sensores conectados y proyectos de control de robots. USB-C y carga de batería integrada admiten tanto el desarrollo de escritorio como aplicaciones portátiles.
+Conoce el primer XIAO basado en STM32. Construido alrededor del STM32C5A3CG con un núcleo Arm Cortex-M33 a 144MHz, XIAO STM32C5 aporta conectividad CAN FD, 16MB de Flash externa y una IMU de seis ejes con calentamiento programable al formato compacto XIAO. Resistencias de calentamiento dedicadas alrededor de la IMU permiten un calentamiento controlado por firmware para proyectos de robótica y detección de movimiento. Dos controladores CAN FD nativos, incluido un canal con un transceptor TCAN3403-Q1 integrado en la placa, proporcionan un punto de partida para adaptadores USB-a-CAN, sensores conectados y proyectos de control de robots. El USB-C y la carga de batería integrada admiten tanto el desarrollo de escritorio como las aplicaciones portátiles.
 
 ## Características
 
-- **El primer XIAO basado en STM32**: Construido con el STM32C5A3CG, que incorpora un procesador Arm Cortex-M33 a 144MHz, soporte de coma flotante e instrucciones DSP para control embebido y procesamiento de sensores.
+- **El primer XIAO basado en STM32**: Construido con el STM32C5A3CG, que incorpora un procesador Arm Cortex-M33 a 144MHz, compatibilidad con coma flotante e instrucciones DSP para control embebido y procesamiento de sensores.
 - **Conectividad CAN FD integrada**: Dos controladores CAN FD nativos, con un canal conectado a un transceptor TCAN3403-Q1 integrado en la placa y pads accesibles CANH/CANL. Añade un transceptor externo para usar el segundo canal.
-- **IMU de 6 ejes con calentamiento programable**: El acelerómetro y giróscopo LSM6DS3TR-C integrado se combinan con resistencias de calentamiento dedicadas alrededor del sensor. El calentamiento controlado por GPIO permite un calentamiento programable y, con firmware de retroalimentación de temperatura, regulación de temperatura en lazo cerrado para ayudar a reducir la deriva relacionada con la temperatura en aplicaciones de robótica y detección de movimiento.
+- **IMU de 6 ejes con calentamiento programable**: El acelerómetro y giróscopo LSM6DS3TR-C integrados en la placa se combinan con resistencias de calentamiento dedicadas alrededor del sensor. El calentamiento controlado por GPIO permite un calentamiento programable y, con firmware de retroalimentación de temperatura, una regulación de temperatura en lazo cerrado para ayudar a reducir la deriva relacionada con la temperatura en aplicaciones de robótica y detección de movimiento.
 - **Flash externa de 16MB**: Almacena datos de aplicación, registros de sensores, archivos de configuración y registros de mensajes CAN mediante el firmware de la aplicación.
 - **Cristal externo para temporización de comunicaciones**: Un cristal externo de alta velocidad integrado en la placa proporciona una referencia de reloj para CAN FD y otras aplicaciones sensibles a la temporización.
-- **USB-C y carga de batería**: Desarrolla a través de USB-C o construye dispositivos alimentados por batería utilizando el circuito de carga de baterías de litio integrado y los pads de conexión de batería.
+- **USB-C y carga de batería**: Desarrolla a través de USB-C o crea dispositivos alimentados por batería utilizando el circuito de carga de baterías de litio integrado en la placa y los pads de conexión de batería.
 - **Diseño compacto y fácil de integrar**: El formato XIAO y los pads bordeados tipo castellated admiten prototipado en breadboard con pines y la integración en placas portadoras personalizadas.
 
 ## Especificaciones
@@ -71,18 +71,18 @@ Conoce el primer XIAO basado en STM32. Construido alrededor del STM32C5A3CG con 
 | Flash externa              | 16MB                                                                                                                  |
 | Controladores CAN          | 2 controladores CAN FD nativos                                                                                        |
 | Transceptor CAN integrado  | 1 x TI TCAN3403-Q1                                                                                                    |
-| Conexión de bus CAN        | Pads CANH/CANL; usa GND de la placa como referencia de señal                                                          |
+| Conexión de bus CAN        | Pads CANH/CANL; usa la GND de la placa como referencia de señal                                                       |
 | Segundo canal CAN          | Señales digitales TX/RX; se requiere un transceptor CAN externo                                                       |
 | Terminación CAN            | 120 ohmios, habilitada por defecto; se puede desconectar mediante un puente de soldadura recortable                  |
-| Aislamiento CAN            | Sin aislamiento galvánico integrado                                                                                   |
+| Aislamiento CAN            | Sin aislamiento galvánico integrado en la placa                                                                       |
 | IMU                        | STMicroelectronics LSM6DS3TR-C, acelerómetro de tres ejes y giróscopo de tres ejes                                    |
 | Calentamiento de la IMU    | Resistencias de calentamiento dedicadas alrededor de la IMU con accionamiento controlado por GPIO                    |
 | Regulación de temperatura  | Calentamiento programable; la regulación de punto de consigna en lazo cerrado requiere retroalimentación de temperatura y firmware de aplicación adecuado |
 | Reloj externo              | Cristal externo de alta velocidad integrado en la placa                                                               |
 | USB                        | USB-C; USB 2.0 Full Speed, velocidad de señalización de 12Mbps                                                        |
-| Nivel lógico               | 3.3V                                                                                                                  |
+| Nivel lógico               | 3,3V                                                                                                                  |
 | Alimentación               | Entrada de 5V por USB-C o batería de litio compatible a través de los pads BAT                                       |
-| Carga de batería           | Circuito de carga integrado                                                                                           |
+| Carga de batería           | Circuito de carga integrado en la placa                                                                               |
 | Controles de usuario       | Botón de reinicio y botón de arranque                                                                                 |
 | Indicadores                | LED de usuario e indicador de carga                                                                                   |
 | Interfaz de depuración     | SWD                                                                                                                   |
@@ -92,6 +92,10 @@ Conoce el primer XIAO basado en STM32. Construido alrededor del STM32C5A3CG con 
 
 <Tabs>
 <TabItem value="XIAO STM32C5" label="XIAO STM32C5" default>
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
 
 ### Parte frontal de XIAO STM32C5
 
@@ -106,46 +110,46 @@ Conoce el primer XIAO basado en STM32. Construido alrededor del STM32C5A3CG con 
 
 ## **Mapa de pines**
 
-| Pin / Señal XIAO | Función         | Pin del chip | Funciones alternativas | Descripción                                                   |
-| :---------------: | :-------------: | :-------:    | :--------------------: | :----------------------------------------------------------- |
-| VBUS              | Alimentación    |              | USB 5V                 | Entrada/salida de alimentación de 5V                         |
-| GND               | Tierra          |              |                        | Tierra de alimentación                                       |
-| 3V3 / 3.3V-OUT    | Alimentación    |              | VOUT_3V3               | Salida regulada de 3.3V                                      |
-| D0                | Analógico       | PA0          | A0, ADC                | GPIO y entrada analógica                                     |
-| D1                | Analógico       | PA1          | A1, ADC                | GPIO y entrada analógica                                     |
-| D2                | Analógico       | PA2          | A2, ADC                | GPIO y entrada analógica                                     |
-| D3                | Analógico       | PA3          | A3, ADC                | GPIO y entrada analógica                                     |
-| D4                | I2C             | PB7          | I2C1_SDA               | GPIO y datos I2C                                             |
-| D5                | I2C             | PB6          | I2C1_SCL               | GPIO y reloj I2C                                             |
-| D6                | UART            | PA9          | UART_TX                | GPIO y transmisión UART                                      |
-| D7                | UART            | PA10         | UART_RX                | GPIO y recepción UART                                        |
-| D8                | SPI             | PE2          | SPI_SCK                | GPIO y reloj SPI                                             |
-| D9                | SPI             | PB0          | SPI_MISO               | GPIO y entrada de datos SPI                                  |
-| D10               | SPI             | PB15         | SPI_MOSI               | GPIO y salida de datos SPI                                   |
-| D11               | CAN FD          | PB8          | FDCAN1_RX              | GPIO y recepción FDCAN1                                      |
-| D12               | CAN FD          | PB9          | FDCAN1_TX              | GPIO y transmisión FDCAN1                                    |
-| D13               | CAN FD          | PB5          | FDCAN2_RX              | GPIO y recepción del transceptor CAN integrado               |
-| D14               | CAN FD          | PB13         | FDCAN2_TX              | GPIO y transmisión del transceptor CAN integrado             |
-| D15               | Control CAN     | PB14         | CAN_STB                | Controla el modo de espera del transceptor CAN integrado     |
-| CAN_H             | Bus CAN         |              | TCAN3403 CANH          | Línea alta diferencial del bus CAN FD                        |
-| CAN_L             | Bus CAN         |              | TCAN3403 CANL          | Línea baja diferencial del bus CAN FD                        |
-| CANFD2_TERM       | Terminación CAN |              | JP1, 120 ohm           | Cortar/abrir para desactivar la resistencia de terminación de 120 ohm integrada |
-| BAT+              | Alimentación de batería |        | VBAT                   | Terminal positivo para una batería Li-ion/LiPo de 3.7V       |
-| BAT-              | Tierra de batería |            | GND                    | Terminal negativo de la batería                              |
-| BAT_EN            | Monitor de batería | PA15      |                        | Habilita el circuito de medición de voltaje de batería       |
-| BAT_READ          | Analógico       | PA4          | ADC                    | Lee el voltaje de la batería; la entrada ADC es aproximadamente VBAT / 2 |
-| SWCLK             | Depuración      | PA14         | Reloj SWD              | Pad de reloj Serial Wire Debug                               |
-| SWDIO             | Depuración      | PA13         | Datos SWD              | Pad de datos Serial Wire Debug                               |
-| RST               | Sistema         | NRST         | STM32C5_RESET          | Pad de prueba de reinicio por hardware                       |
-| USB_D+            | USB             | PA12         | USB_DP                 | Datos diferenciales USB 2.0 positivos                        |
-| USB_D-            | USB             | PA11         | USB_DN                 | Datos diferenciales USB 2.0 negativos                        |
-| BOOT              | Sistema         | PH2-BOOT0    | STM32C5_BOOT           | Pad de prueba de modo de arranque y señal del botón de arranque |
-| CHARGE_LED        | Indicador       |              | Salida NCHG del cargador | LED rojo de estado de carga controlado por el CI cargador    |
-| USER_LED          | Indicador GPIO  | PB12         | GPIO25 / User_LED      | LED verde de usuario; conectado activo en bajo               |
-| IMU_SDA           | IMU integrada   | PB4          | I2C2_SDA               | Datos I2C para la IMU LSM6DS3TR-C integrada                   |
-| IMU_SCL           | IMU integrada   | PB3          | I2C2_SCL               | Reloj I2C para la IMU LSM6DS3TR-C integrada                   |
-| IMU_INT           | IMU integrada   | PC13         | IMU_INT1               | Salida de interrupción de la IMU integrada                   |
-| IMU_HEATER_PWM    | Calentador IMU  | PA8          | PWM                    | Control PWM para el calentador de compensación de temperatura de la IMU |
+| Pin / señal XIAO   | Función         | Pin del chip | Funciones alternativas | Descripción                                                   |
+| :---------------: | :-------------: | :-------: | :-----------------: | :----------------------------------------------------------- |
+| VBUS              | Alimentación    |           | USB 5V              | Entrada/salida de alimentación de 5V                         |
+| GND               | Tierra          |           |                     | Tierra de alimentación                                       |
+| 3V3 / 3.3V-OUT    | Alimentación    |           | VOUT_3V3            | Salida regulada de 3,3V                                      |
+| D0                | Analógico       | PA0       | A0, ADC             | GPIO y entrada analógica                                     |
+| D1                | Analógico       | PA1       | A1, ADC             | GPIO y entrada analógica                                     |
+| D2                | Analógico       | PA2       | A2, ADC             | GPIO y entrada analógica                                     |
+| D3                | Analógico       | PA3       | A3, ADC             | GPIO y entrada analógica                                     |
+| D4                | I2C             | PB7       | I2C1_SDA            | GPIO y datos I2C                                             |
+| D5                | I2C             | PB6       | I2C1_SCL            | GPIO y reloj I2C                                             |
+| D6                | UART            | PA9       | UART_TX             | GPIO y transmisión UART                                      |
+| D7                | UART            | PA10      | UART_RX             | GPIO y recepción UART                                        |
+| D8                | SPI             | PE2       | SPI_SCK             | GPIO y reloj SPI                                             |
+| D9                | SPI             | PB0       | SPI_MISO            | GPIO y entrada de datos SPI                                  |
+| D10               | SPI             | PB15      | SPI_MOSI            | GPIO y salida de datos SPI                                   |
+| D11               | CAN FD          | PB8       | FDCAN1_RX           | GPIO y recepción FDCAN1                                      |
+| D12               | CAN FD          | PB9       | FDCAN1_TX           | GPIO y transmisión FDCAN1                                    |
+| D13               | CAN FD          | PB5       | FDCAN2_RX           | GPIO y recepción del transceptor CAN integrado en la placa   |
+| D14               | CAN FD          | PB13      | FDCAN2_TX           | GPIO y transmisión del transceptor CAN integrado en la placa |
+| D15               | Control CAN     | PB14      | CAN_STB             | Controla el modo de espera del transceptor CAN integrado en la placa |
+| CAN_H             | Bus CAN         |           | TCAN3403 CANH       | Línea alta diferencial del bus CAN FD                        |
+| CAN_L             | Bus CAN         |           | TCAN3403 CANL       | Línea baja diferencial del bus CAN FD                        |
+| CANFD2_TERM       | Terminación CAN |           | JP1, 120 ohm        | Cortar/abrir para desactivar la resistencia de terminación de 120 ohm integrada en la placa |
+| BAT+              | Alimentación de batería |           | VBAT                | Terminal positivo para una batería de 3,7V Li-ion/LiPo       |
+| BAT-              | Tierra de batería |           | GND                 | Terminal negativo de la batería                              |
+| BAT_EN            | Monitor de batería | PA15      |                     | Habilita el circuito de medición de tensión de batería       |
+| BAT_READ          | Analógico       | PA4       | ADC                 | Lee la tensión de la batería; la entrada ADC es aproximadamente VBAT / 2 |
+| SWCLK             | Depuración      | PA14      | Reloj SWD           | Pad de reloj Serial Wire Debug                               |
+| SWDIO             | Depuración      | PA13      | Datos SWD           | Pad de datos Serial Wire Debug                               |
+| RST               | Sistema         | NRST      | STM32C5_RESET       | Pad de prueba de reinicio por hardware                       |
+| USB_D+            | USB             | PA12      | USB_DP              | Datos diferenciales positivos USB 2.0                        |
+| USB_D-            | USB             | PA11      | USB_DN              | Datos diferenciales negativos USB 2.0                        |
+| BOOT              | Sistema         | PH2-BOOT0 | STM32C5_BOOT        | Pad de prueba de modo de arranque y señal del botón de arranque |
+| CHARGE_LED        | Indicador       |           | Salida NCHG del cargador | LED rojo de estado de carga controlado por el CI cargador    |
+| USER_LED          | Indicador GPIO  | PB12      | GPIO25 / User_LED   | LED verde de usuario; conectado activo en bajo               |
+| IMU_SDA           | IMU integrada   | PB4       | I2C2_SDA            | Datos I2C para la IMU LSM6DS3TR-C integrada en la placa      |
+| IMU_SCL           | IMU integrada   | PB3       | I2C2_SCL            | Reloj I2C para la IMU LSM6DS3TR-C integrada en la placa      |
+| IMU_INT           | IMU integrada   | PC13      | IMU_INT1            | Salida de interrupción de la IMU integrada en la placa       |
+| IMU_HEATER_PWM    | Calentador de IMU | PA8       | PWM                 | Control PWM para el calentador de compensación de temperatura de la IMU |
 
 ## Uso del bootloader
 
@@ -208,14 +212,14 @@ Descarga [VS Code](https://code.visualstudio.com/download) según el sistema que
 <br/>
 **Paso 2.** Instalar la extensión PlatformIO
 
-Abre VSCode, haz clic en Extensions, luego busca PlatformIO y selecciona instalar. Cuando termine la instalación, reinicia VSCode.
+Abre VSCode, haz clic en Extensions, luego busca PlatformIO y selecciona instalar. Después de que la instalación se complete, reinicia VSCode.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 **Paso 3.** Instalar el paquete de plataforma platform-seeedboards
 
-Las placas de la serie Seeed Studio XIAO utilizan una plataforma personalizada de PlatformIO, por lo que debes instalar manualmente el paquete de plataforma correspondiente.
+Las placas de la serie Seeed Studio XIAO utilizan una plataforma personalizada de PlatformIO, por lo que necesitas instalar manualmente el paquete de plataforma correspondiente.
 
 - Ejecuta el siguiente comando para una instalación nueva:
 
@@ -226,7 +230,7 @@ pio pkg install -g -p "https://github.com/Seeed-Studio/platform-seeedboards.git"
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/gst_new_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-- Si ya has utilizado anteriormente placas de la serie Seeed Studio XIAO en PlatformIO, ejecuta el siguiente comando para actualizar:
+- Si has utilizado anteriormente placas de la serie Seeed Studio XIAO en PlatformIO, ejecuta el siguiente comando para actualizar:
 
 
 ```bash
@@ -290,7 +294,7 @@ python "$HOME/.platformio/packages/framework-zephyr-nrf54lm20/scripts/platformio
 
 :::tip
 
-El tamaño de la descarga es grande. Por favor, espera con paciencia y mantén tu red estable.
+El tamaño de la descarga es grande. Por favor, espera pacientemente y mantén tu red estable.
 
 :::
 
@@ -300,13 +304,13 @@ El tamaño de la descarga es grande. Por favor, espera con paciencia y mantén t
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_1.png" style={{width:800, height:'auto'}}/></div>
 
-- Pon nombre a tu proyecto, elige **Seeed Studio XIAO STM32C5** como la placa de destino y configura el framework de desarrollo y la ruta de almacenamiento del proyecto.
+- Nombra tu proyecto, elige **Seeed Studio XIAO STM32C5** como la placa de destino y configura el framework de desarrollo y la ruta de almacenamiento del proyecto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_2.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
 
-La creación del proyecto puede tardar algo de tiempo en el primer inicio, por favor espera con paciencia.
+La creación del proyecto puede tardar algún tiempo en el primer inicio, por favor espera pacientemente.
 
 :::
 
@@ -314,13 +318,13 @@ La creación del proyecto puede tardar algo de tiempo en el primer inicio, por f
 
 **Paso 1.** Escribir el programa de parpadeo del LED
 
-El XIAO STM32C5 incorpora un LED de usuario asignado al GPIO PB12. El LED se enciende con un nivel lógico bajo; este ejemplo lo configura para parpadear cada 500 ms.
+El XIAO STM32C5 incluye un LED de usuario asignado al GPIO PB12. El LED se enciende con un nivel lógico bajo; este ejemplo lo configura para parpadear cada 500 ms.
 
 El proyecto consta de tres archivos principales:
 
 - `main.c`: Programa principal que contiene la lógica de la aplicación.
 - `app.overlay`: Archivo de superposición Devicetree para la configuración de periféricos de hardware.
-- `prj.conf`: Archivo de configuración del proyecto para habilitar los módulos necesarios de Zephyr.
+- `prj.conf`: Archivo de configuración del proyecto para habilitar los módulos Zephyr necesarios.
 
 Sigue los pasos a continuación para encender el LED:
 
@@ -594,11 +598,11 @@ int main(void)
 
 ## IMU
 
-El XIAO STM32C5 incorpora un **[LSM6DS3TR‑C](https://www.st.com.cn/resource/en/datasheet/lsm6ds3tr-c.pdf) sensor inercial de 6 ejes** a bordo, que integra un acelerómetro de 3 ejes y un giroscopio de 3 ejes. Puede aplicarse a la detección de actitud, reconocimiento de movimiento, monitorización de vibraciones y otros casos de uso.
+El XIAO STM32C5 incorpora un **[LSM6DS3TR‑C](https://www.st.com.cn/resource/en/datasheet/lsm6ds3tr-c.pdf) sensor inercial de 6 ejes**, que integra un acelerómetro de 3 ejes y un giroscopio de 3 ejes. Puede aplicarse a la detección de actitud, reconocimiento de movimiento, monitorización de vibraciones y otros casos de uso.
 
-Para mitigar el impacto de la variación de la temperatura ambiente en el sesgo del sensor y la estabilidad de la medición, la placa implementa un circuito de calentamiento de compensación activa de temperatura. Las resistencias de calentamiento colocadas alrededor de la IMU proporcionan un calentamiento uniforme para el sensor, y la potencia de calentamiento puede ajustarse mediante señales PWM. Combinado con las lecturas internas de temperatura de la IMU, el control por software mantiene el sensor funcionando a una temperatura relativamente estable. Esto reduce la deriva de medición causada por la deriva de temperatura y mejora la consistencia de los datos durante el funcionamiento a largo plazo y en condiciones de temperatura variable.
+Para mitigar el impacto de la variación de la temperatura ambiente en el sesgo del sensor y la estabilidad de la medición, la placa implementa un circuito de calentamiento con compensación activa de temperatura. Las resistencias de calentamiento colocadas alrededor de la IMU proporcionan un calentamiento uniforme para el sensor, y la potencia de calentamiento puede ajustarse mediante señales PWM. Combinado con las lecturas de temperatura internas de la IMU, el control por software mantiene el sensor funcionando a una temperatura relativamente estable. Esto reduce la deriva de medición causada por la deriva de temperatura y mejora la consistencia de los datos durante el funcionamiento a largo plazo y en condiciones de temperatura variable.
 
-- Uso de referencia: [Uso de la IMU del XIAO STM32C5](https://wiki.seeedstudio.com/es/xiao_stm32c5_application/#uso-de-la-imu)
+- Uso de referencia: [XIAO STM32C5 IMU Usage](https://wiki.seeedstudio.com/es/xiao_stm32c5_application/#imu-usage)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/gst_7.png" style={{width:550, height:'auto'}}/></div>
 
@@ -608,7 +612,7 @@ El XIAO STM32C5 tiene dos controladores CAN FD. FDCAN1 expone pines TX y RX a ni
 
 La placa tiene una resistencia de terminación integrada de 120 Ω desconectable, habilitada por defecto. Mantenla habilitada cuando el XIAO esté en un extremo físico del bus CAN y ese extremo no tenga otro terminador. Desactívala cuando el XIAO sea un nodo intermedio o ya haya otro terminador instalado en el mismo extremo. Asegúrate de que el extremo opuesto del bus también esté correctamente terminado. El transceptor admite el modo de espera para reducir el consumo de energía cuando no se necesita comunicación CAN.
 
-- Uso de referencia: [Uso de CANFD del XIAO STM32C5](https://wiki.seeedstudio.com/es/xiao_stm32c5_canfd_usage/)
+- Uso de referencia: [XIAO STM32C5 CANFD Usage](https://wiki.seeedstudio.com/es/xiao_stm32c5_canfd_usage/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/canfd_2.png" style={{width:550, height:'auto'}}/></div>
 
@@ -618,14 +622,14 @@ La placa tiene una resistencia de terminación integrada de 120 Ω desconectable
 - **📄[Datasheet]** [STM32C5A3CG](https://www.st.com/resource/en/datasheet/stm32c5a3cg.pdf)
 - **📄[Datasheet]** [LSM6DS3TR-C](https://www.st.com.cn/resource/en/datasheet/lsm6ds3tr-c.pdf)
 - **📄[Datasheet]** [TCAN3403D4BQ1](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/tcan3403-q1.pdf)
-- **📄[Esquemático]** [Esquemático del XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/Seeed-Studio-XIAO-STM32C5-v1.0.pdf)
+- **📄[Esquemático]** [Esquemático XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/Seeed-Studio-XIAO-STM32C5-v1.0.pdf)
 - **🗃️[Archivos de diseño de PCB]** 
-  - [Proyecto KiCad del XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO_STM32C5_v1.0_SCH&PCB.zip)
-  - [Proyecto Eagle del XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO_STM32C5_v1.0_SCH&PCB.zip)
+  - [Proyecto KiCad XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO_STM32C5_v1.0_SCH&PCB.zip)
+  - [Proyecto Eagle XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO_STM32C5_v1.0_SCH&PCB.zip)
 - **🗃️[Librerías de diseño de PCB]** 
   - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
   - [Símbolos SCH KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip)
-- **📄[Diagrama de pines]** [Hoja de pines del XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO-STM32C5-pinout_sheet.xlsx)
+- **📄[Diagrama de pines]** [Hoja de pines XIAO STM32C5](https://files.seeedstudio.com/wiki/XIAO_STM32C5/res/XIAO-STM32C5-pinout_sheet.xlsx)
 
 ## Soporte técnico y debate sobre el producto
 

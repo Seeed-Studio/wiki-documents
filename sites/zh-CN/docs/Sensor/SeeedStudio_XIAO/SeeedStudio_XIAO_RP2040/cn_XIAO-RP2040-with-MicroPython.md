@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-MicroPython/
 ---
 
@@ -33,13 +33,13 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-MicroPython/
 
 ### 将 XIAO RP2040 系列连接到电脑
 
-- **步骤 1**. 按住 **BOOT** 按钮不放，然后通过 Type-C 线将 Seeed Studio XIAO RP2040 系列连接到电脑。如果一切正常，电脑上会显示一个名为 **RPI-RP2** 的磁盘。
+- **步骤 1**. 按住 **BOOT** 按钮不放，然后通过 Type-C 线将 Seeed Studio XIAO RP2040 系列连接到电脑。如果一切正常，电脑上会显示一个 **RPI-RP2** 磁盘。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
 - **步骤 2**. 烧录固件
 
-    只需前往官网下载最新固件，然后将 `.uf2` 文件拖放到 **RPI-RP2** 磁盘中即可完成固件烧录。
+    只需前往官网并下载最新固件，然后将 `.uf2` 文件拖放到 **RPI-RP2** 磁盘中即可完成固件烧录。
 
     - [XIAO RP2040 系列 MicroPython 固件](https://micropython.org/download/SEEED_XIAO_RP2040/)
 
@@ -55,7 +55,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-MicroPython/
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-- **步骤 4**. 选择 **Interpreter** 选项卡，将设备设置为 **MicroPython(generic)**，端口设置为 **Board CDC @ Port**
+- **步骤 4**. 选择 **Interpreter** 界面，将设备选择为 **MicroPython(generic)**，端口选择为 **Board CDC @ Port**
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/mpy_1.png" /></div>
 
@@ -63,7 +63,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-MicroPython/
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_2_1.png" /></div><br/>
 
-**步骤 6.** 依次点击 Files -> New，粘贴下面的代码，然后运行脚本。
+**步骤 6.** 进入 Files -> New，粘贴下面的代码并运行脚本。
 
 ```py
 from machine import Pin, Timer
@@ -82,20 +82,25 @@ tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 ```
 
-- 板载 LED 将以 1 秒为间隔闪烁。
+- LED 将以 1 秒的间隔闪烁。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/mpy_1.jpg" /></div><br/>
 
 :::tip
 
-- [附加资源](#附加资源)部分包含适用于 XIAO RP2040 Plus 的 MicroPython 固件和相关示例。你可以按照 XIAO RP2040 教程来使用这些示例，但请务必替换并修改相应的引脚。
-- 如需查看 XIAO RP2040 系列之间的差异，请参考 [XIAO RP2040 系列引脚概览](https://wiki.seeedstudio.com/cn/XIAO-RP2040/#硬件概览)
+- [Additional Resources](#additional-resources) 部分包含适用于 XIAO RP2040 Plus 的 MicroPython 固件和相关示例。你可以按照 XIAO RP2040 教程来使用这些示例，但请务必替换并修改相应的引脚。
+- 如需查看 XIAO RP2040 系列之间的差异，请参考 [XIAO RP2040 系列引脚概览](https://wiki.seeedstudio.com/cn/XIAO-RP2040/#硬件概述)
 
 :::
 
 ## XIAO RP2040 系列引脚
 
-| MicroPython 引脚名称 | XIAO RP2040 GPIO | XIAO RP2040 Plus GPIO | ADC | 功能 |
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">探索 XIAO RP2040 交互式引脚图</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">探索 XIAO RP2040 Plus 交互式引脚图</a>
+</div>
+
+| MicroPython 引脚名 | XIAO RP2040 GPIO | XIAO RP2040 Plus GPIO | ADC | 功能 |
 | :--- | :---: | :---: | :---: | :--- |
 | D0 / A0 | GPIO26 | GPIO26 | 0 | GPIO，ADC0 |
 | D1 / A1 | GPIO27 | GPIO27 | 1 | GPIO，ADC1 |
@@ -174,7 +179,7 @@ while True:
         utime.sleep(0.2)
 ```
 
-- **步骤 4**. 点击 “Run current script” 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存在哪里，选择 **This Computer** 或 **Raspberry Pi Pico** 都可以。
+- **步骤 4**. 点击 “Run current script” 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存到哪里，选择 **This Computer** 或 **Raspberry Pi Pico** 都可以。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
@@ -221,7 +226,7 @@ while True:
     #sleep(0.5)
 ```
 
-- **步骤 4**. 点击 “Run current script” 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存在哪里，选择 **This Computer** 或 **Raspberry Pi Pico** 都可以。
+- **步骤 4**. 点击 “Run current script” 按钮上传代码。第一次运行时，Thonny 会询问你要将代码文件保存到哪里，选择 **This Computer** 或 **Raspberry Pi Pico** 都可以。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
@@ -245,7 +250,7 @@ while True:
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供了多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -27,11 +27,15 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="XIAO MG24" label="XIAO MG24">
 
-### Parte frontal de XIAO MG24
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+### XIAO MG24 - Parte frontal
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Parte trasera de XIAO MG24
+### XIAO MG24 - Parte trasera
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -39,11 +43,15 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
 
-### Parte frontal de XIAO MG24 Sense
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24sense" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+### XIAO MG24 Sense - Parte frontal
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-### Parte trasera de XIAO MG24 Sense
+### XIAO MG24 Sense - Parte trasera
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -84,11 +92,11 @@ import TabItem from '@theme/TabItem';
   </tr>
 </table>
 
-Instala XIAO MG24(Sense) en la placa de expansión y conecta el relé a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Por último, conecta XIAO al ordenador mediante un cable USB-C.
+Instala XIAO MG24(Sense) en la placa de expansión y conecta el relé a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Finalmente, conecta XIAO al ordenador mediante un cable USB-C.
 
 ### Implementación de software
 
-En este ejemplo, implementaremos el control del estado de encendido/apagado de un relé utilizando un botón conectado a la placa de expansión XIAO. Cuando se pulsa el botón, el relé se enciende y, cuando se suelta el botón, el relé se apaga.
+En este ejemplo, implementaremos el control del estado de encendido/apagado de un relé utilizando un botón conectado a la placa de expansión XIAO. Cuando se pulsa el botón, el relé se enciende y, cuando se suelta, el relé se apaga.
 
 ```c
 const int buttonPin = D1;     // the number of the pushbutton pin
@@ -125,7 +133,7 @@ Si todo va bien, después de cargar el programa deberías ver el siguiente efect
 
 ## Digital como PWM
 
-Todos los pines GPIO en XIAO MG24(Sense) admiten salida PWM. Por lo tanto, puedes utilizar cualquier pin para generar PWM y ajustar el brillo de las luces, controlar servos y otras funciones.
+Todos los pines GPIO en XIAO MG24(Sense) admiten salida PWM. Por lo tanto, puedes usar cualquier pin para generar PWM y ajustar el brillo de luces, controlar servos y otras funciones.
 
 ### Preparación de hardware
 
@@ -160,12 +168,12 @@ Todos los pines GPIO en XIAO MG24(Sense) admiten salida PWM. Por lo tanto, puede
 </table>
 
 :::tip
-Instala XIAO MG24(Sense) en la placa de expansión, luego conecta el Variable Color LED a la interfaz A0/D0 de la placa de expansión utilizando un cable Grove. Por último, conecta XIAO a tu ordenador mediante un cable USB-C.
+Instala XIAO MG24(Sense) en la placa de expansión, luego conecta el Variable Color LED a la interfaz A0/D0 de la placa de expansión usando un cable Grove. Finalmente, conecta XIAO a tu ordenador mediante un cable USB-C.
 :::
 
 ### Implementación de software
 
-En este ejemplo, mostraremos cómo utilizar la salida PWM para controlar el brillo de una luz.
+En este ejemplo, mostraremos cómo usar la salida PWM para controlar el brillo de una luz.
 
 ```cpp
 int LED_pin = D0;    // LED connected to digital pin 10
@@ -367,7 +375,7 @@ float getAverage(uint32_t *buffer, uint32_t buf_size) {
 </Tabs>
 
 :::tip
-Cabe señalar que si deseas usar DMA para leer señales analógicas, la versión de tu biblioteca debe ser superior a 2.2.0. Actualmente, la nueva versión no ha sido aprobada y necesitas instalarla manualmente.
+Cabe señalar que si quieres usar DMA para leer señales analógicas, la versión de tu biblioteca debe ser superior a la 2.2.0. Actualmente, la nueva versión no ha sido aprobada y necesitas instalarla manualmente.
 :::
 
 ### Gráfico de resultados
@@ -421,7 +429,7 @@ void loop() {
 
 ### Uso de Serial1
 
-De acuerdo con los diagramas de pines anteriores de XIAO MG24(Sense) para parámetros específicos, podemos observar que hay un pin TX y un pin RX.
+Según los diagramas de pines anteriores de XIAO MG24(Sense) para parámetros específicos, podemos observar que hay un pin TX y un pin RX.
 Esto es diferente de la comunicación serial, pero el uso también es muy similar, excepto que es necesario añadir algunos parámetros.
 Así que a continuación utilizaremos los pines sacados por el chip para la comunicación serial.
 
@@ -445,7 +453,7 @@ void loop() {
 
 ## I2C
 
-XIAO MG24(Sense) tiene una interfaz I2C que se puede usar para la transmisión y el análisis de datos de muchos sensores, así como para usar algunas pantallas OLED.
+XIAO MG24(Sense) tiene una interfaz I2C que puede utilizarse para la transmisión y el análisis de datos de muchos sensores, así como para usar algunas pantallas OLED.
 
 ### Preparación de hardware
 
@@ -476,7 +484,7 @@ La pantalla OLED en la placa de expansión XIAO utiliza el protocolo I2C y está
 
 ### Implementación de software
 
-Este ejemplo presenta cómo usar la pantalla OLED en la Base de expansión Seeed Studio para XIAO MG24(Sense).
+Este ejemplo introduce cómo usar la pantalla OLED en la Base de expansión Seeed Studio para XIAO MG24(Sense).
 
 ***Paso 1. Instala la Seeed Studio XIAO MG24(Sense) en la placa de expansión y luego conecta el cable Type-C.***
 
@@ -547,13 +555,13 @@ void smeil_display() {
 }
 ```
 
-### Gráfico de resultado
+### Gráfico de resultados
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/7.gif" style={{width:500, height:'auto'}}/></div>
 
 ## SPI
 
-El chip XIAO MG24(Sense) integra múltiples periféricos, incluyendo una interfaz SPI que se puede utilizar para conectar dispositivos SPI externos como memorias flash, pantallas, sensores y más.
+El chip XIAO MG24(Sense) integra múltiples periféricos, incluido una interfaz SPI que se puede utilizar para conectar dispositivos SPI externos como memoria flash, pantallas, sensores y más.
 
 ### Descripción general de la biblioteca de Arduino
 
@@ -563,7 +571,7 @@ El chip XIAO MG24(Sense) integra múltiples periféricos, incluyendo una interfa
     </a>
 </div><br />
 
-Basándonos en el programa de ejemplo de Arduino proporcionado por **Waveshare**, hemos escrito una biblioteca de Arduino para su uso con toda la serie XIAO, y puedes ir directamente al Github de esta biblioteca mediante el botón de abajo.
+Basándonos en el programa de ejemplo de Arduino proporcionado por **Waveshare**, hemos escrito una biblioteca de Arduino para usar con toda la serie XIAO, y puedes ir directamente al Github de esta biblioteca mediante el botón de abajo.
 
 ### Preparación de hardware
 
@@ -571,7 +579,7 @@ Basándonos en el programa de ejemplo de Arduino proporcionado por **Waveshare**
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO MG24 Sense</th>
-   <th>Pantalla SPI LCD de 1,69 pulgadas</th>
+   <th>Pantalla LCD SPI de 1,69 pulgadas</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -600,7 +608,7 @@ Después de preparar el hardware como se mencionó anteriormente, utiliza cables
 
 ### Instalación
 
-Dado que has descargado la biblioteca zip, abre tu IDE de Arduino, haz clic en **Sketch > Include Library > Add .ZIP Library**. Elige el archivo zip que acabas de descargar, y si la biblioteca se instala correctamente, verás **Library added to your libraries** en la ventana de notificación. Lo que significa que la biblioteca se ha instalado correctamente.
+Como ya has descargado la biblioteca zip, abre tu IDE de Arduino, haz clic en **Sketch > Include Library > Add .ZIP Library**. Elige el archivo zip que acabas de descargar, y si la biblioteca se instala correctamente, verás **Library added to your libraries** en la ventana de notificación. Lo que significa que la biblioteca se ha instalado correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 

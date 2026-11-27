@@ -8,8 +8,8 @@ slug: /XIAO-ESP32C3-Zephyr
 last_update:
   date: 4/17/2023
   author: timo614
-createdAt: '2025-02-21'
-updatedAt: '2025-09-25'
+createdAt: '2023-07-26'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/es/XIAO-ESP32C3-Zephyr/
 ---
 
@@ -17,83 +17,83 @@ url: https://wiki.seeedstudio.com/es/XIAO-ESP32C3-Zephyr/
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32c3.png"/></div>
 
-## Qué es RTOS
+## Qué es un RTOS
 
-Uno de los componentes más importantes de los sistemas embebidos actuales es el **RTOS** también conocido como **Sistema Operativo de Tiempo Real**, que es responsable de todo, desde la programación de tareas hasta la ejecución de aplicaciones.
+Uno de los componentes más importantes de los sistemas embebidos actuales es el **RTOS**, también conocido como **Real-Time Operating System** (sistema operativo en tiempo real), que se encarga de todo, desde la planificación de tareas hasta la ejecución de aplicaciones.
 
-**RTOS** está diseñado para proporcionar un modo de ejecución predecible. Cuando el procesamiento debe cumplir con el límite de tiempo del sistema, se utiliza RTOS. Por lo tanto, en comparación con GPOS (Sistema Operativo de Propósito General), RTOS suele ser ligero y pequeño en tamaño, y generalmente solo proporciona funciones requeridas para ejecutar tipos específicos de aplicaciones en hardware específico. En algunos casos, los desarrolladores pueden modificar el RTOS existente, reducirlo para proporcionar solo la funcionalidad requerida por una aplicación específica, y/o personalizar su funcionalidad o características de rendimiento.
+El **RTOS** está diseñado para proporcionar un modo de ejecución predecible. Cuando el procesamiento debe cumplir con el límite de tiempo del sistema, se utiliza un RTOS. Por lo tanto, en comparación con un GPOS (General Purpose Operating System), un RTOS suele ser ligero y de tamaño reducido, y en general solo proporciona las funciones necesarias para ejecutar tipos específicos de aplicaciones en hardware específico. En algunos casos, los desarrolladores pueden modificar el RTOS existente, reducirlo para que solo proporcione la funcionalidad requerida por una aplicación específica y/o personalizar sus características de funcionalidad o rendimiento.
 
 ## Qué es [Zephyr](https://www.zephyrproject.org/)
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
 
-El SO [**Zephyr**](https://www.zephyrproject.org/) está basado en un kernel de huella pequeña diseñado para uso en sistemas embebidos y con recursos limitados: desde simples sensores ambientales embebidos y wearables LED hasta controladores embebidos sofisticados, relojes inteligentes y aplicaciones inalámbricas IoT.
+El sistema operativo [**Zephyr**](https://www.zephyrproject.org/) se basa en un kernel de pequeña huella diseñado para su uso en sistemas embebidos y con recursos limitados: desde simples sensores ambientales embebidos y wearables con LED hasta sofisticados controladores embebidos, relojes inteligentes y aplicaciones inalámbricas de IoT.
 
 ## Características
 
-Zephyr ofrece un gran y siempre creciente número de características incluyendo:
+Zephyr ofrece un gran número de características, en constante crecimiento, que incluyen:
 
-### Suite extensa de servicios de Kernel
+### Amplio conjunto de servicios del kernel
 
 Zephyr ofrece una serie de servicios familiares para el desarrollo:
 
-- *Servicios Multi-hilo* para hilos cooperativos, basados en prioridad, no preventivos y preventivos con división de tiempo round robin opcional. Incluye soporte de API compatible con POSIX pthreads.
-- *Servicios de Interrupción* para registro en tiempo de compilación de manejadores de interrupción.
-- *Servicios de Asignación de Memoria* para asignación dinámica y liberación de bloques de memoria de tamaño fijo o variable.
-- *Servicios de Sincronización Entre Hilos* para semáforos binarios, semáforos de conteo y semáforos mutex.
-- *Servicios de Paso de Datos Entre Hilos* para colas de mensajes básicas, colas de mensajes mejoradas y flujos de bytes.
-- *Servicios de Gestión de Energía* como Gestión de Energía del Sistema general, definida por aplicación o política, y Gestión de Energía de Dispositivo de grano fino, definida por controlador.
+- *Servicios de multiproceso* para hilos cooperativos, basados en prioridad, no expropiativos y expropiativos con división de tiempo round robin opcional. Incluye compatibilidad con la API POSIX pthreads.
+- *Servicios de interrupción* para el registro en tiempo de compilación de manejadores de interrupciones.
+- *Servicios de asignación de memoria* para la asignación dinámica y liberación de bloques de memoria de tamaño fijo o variable.
+- *Servicios de sincronización entre hilos* para semáforos binarios, semáforos contadores y semáforos mutex.
+- *Servicios de paso de datos entre hilos* para colas de mensajes básicas, colas de mensajes mejoradas y flujos de bytes.
+- *Servicios de gestión de energía* como la Gestión de Energía del Sistema de alto nivel, definida por la aplicación o por políticas, y la Gestión de Energía de Dispositivos de grano fino definida por el controlador.
 
-### Múltiples Algoritmos de Programación
+### Múltiples algoritmos de planificación
 
-  Zephyr proporciona un conjunto integral de opciones de programación de hilos:
+  Zephyr proporciona un conjunto completo de opciones de planificación de hilos:
 
-- Programación Cooperativa y Preventiva
+- Planificación cooperativa y expropiativa
 - Earliest Deadline First (EDF)
-- Programación Meta IRQ implementando comportamiento de "interrupt bottom half" o "tasklet"
-- División de tiempo: Habilita la división de tiempo entre hilos preventivos de igual prioridad
-- Múltiples estrategias de cola:
-  - Cola de preparados de lista enlazada simple
-  - Cola de preparados de árbol rojo/negro
-  - Cola de preparados multi-cola tradicional
+- Planificación Meta IRQ que implementa el comportamiento de “interrupt bottom half” o “tasklet”
+- División de tiempo: permite la división de tiempo entre hilos expropiables de igual prioridad
+- Múltiples estrategias de encolado:
+  - Cola de listados enlazados simple
+  - Cola de listados rojo/negro
+  - Cola tradicional de múltiples colas
 
-### Soporte Bluetooth Low Energy 5.0
+### Compatibilidad con Bluetooth Low Energy 5.0
 
-Cumple con Bluetooth 5.0 (ESR10) y soporte de Controlador Bluetooth Low Energy (LE Link Layer). Incluye malla Bluetooth y un controlador Bluetooth listo para calificación Bluetooth.
+Compatible con Bluetooth 5.0 (ESR10) y con el controlador Bluetooth Low Energy (capa de enlace LE). Incluye Bluetooth mesh y un controlador Bluetooth listo para la cualificación Bluetooth.
 
-- Perfil de Acceso Genérico (GAP) con todos los roles LE posibles
-- Perfil de Atributo Genérico (GATT)
-- Soporte de emparejamiento, incluyendo la característica de Conexiones Seguras de Bluetooth 4.2
-- Abstracción de controlador HCI limpia
-- Interfaz HCI cruda para ejecutar Zephyr como Controlador en lugar de una pila Host completa
+- Perfil de Acceso Genérico (GAP) con todos los posibles roles LE
+- Perfil de Atributos Genéricos (GATT)
+- Compatibilidad con emparejamiento, incluida la función Secure Connections de Bluetooth 4.2
+- Abstracción limpia del controlador HCI
+- Interfaz HCI en bruto para ejecutar Zephyr como un controlador en lugar de una pila de Host completa
 - Verificado con múltiples controladores populares
 - Altamente configurable
 
-Soporte de Malla:
+Compatibilidad con Mesh:
 
-- Características de Relay, Friend Node, Low-Power Node (LPN) y GATT Proxy
-- Ambos portadores de Aprovisionamiento soportados (PB-ADV & PB-GATT)
-- Altamente configurable, ajustándose en dispositivos con al menos 16k RAM
+- Funciones de Relay, Friend Node, Low-Power Node (LPN) y GATT Proxy
+- Compatibles ambos portadores de Provisioning (PB-ADV y PB-GATT)
+- Altamente configurable, se adapta a dispositivos con al menos 16k de RAM
 
-*Referencia: [**Proyecto Zephyr**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
+*Referencia: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
-## Primeros Pasos
+## Primeros pasos
 
-El primer paso para trabajar con Zephyr es configurar el SDK y la cadena de herramientas para el desarrollo local. La [guía de primeros pasos de Zephyr](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) debe ser consultada para el procedimiento de configuración asociado necesario para tu entorno.
+El primer paso para trabajar con Zephyr es configurar el SDK y la toolchain para el desarrollo local. Debe consultarse la [guía de inicio de Zephyr](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) para el procedimiento de configuración asociado necesario para tu entorno.
 
-Una vez que la cadena de herramientas de Zephyr haya sido configurada y se haya descargado un SDK asociado, puedes comenzar el desarrollo de aplicaciones.
+Una vez que la toolchain de Zephyr se haya configurado y se haya descargado un SDK asociado, puedes comenzar el desarrollo de aplicaciones.
 
-Para el Xiao ESP32C3, el [archivo de descripción de la placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32c3/doc/index.html) puede ser consultado para obtener información adicional de configuración.
+Para el Xiao ESP32C3 se puede consultar el [archivo de descripción de la placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32c3/doc/index.html) para obtener más información de configuración.
 
-Para obtener los blobs necesarios para usar el ESP32C3, ejecuta el siguiente comando:
+Para obtener los blobs necesarios para usar el ESP32C3 ejecuta el siguiente comando:
 
 ```
 west blobs fetch hal_espressif
 ```
 
-Después de esto, las muestras pueden ser compiladas y cargadas a la placa.
+Después de esto se pueden compilar ejemplos y flashearlos en la placa.
 
-El ejemplo más simple es ejecutar la muestra "Hello World" en la placa. Después de cambiar al directorio de instalación de Zephyr, ejecuta los siguientes comandos.
+El ejemplo más sencillo es ejecutar el ejemplo "Hello World" en la placa. Después de cambiar al directorio de la instalación de Zephyr ejecuta los siguientes comandos.
 
 ```
 west build -p always -b xiao_esp32c3 samples/hello_world
@@ -101,25 +101,25 @@ west flash
 west espressif monitor
 ```
 
-Con el comando final deberías ver la respuesta mostrando el saludo "Hello World!".
+Con el comando final deberías ver la respuesta que muestra el saludo "Hello World!".
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Hello World! xiao_esp32c3/esp32c3
 ```
 
-Para ayudar con el proceso de usar Zephyr con Xiao y su placa de expansión, se ha construido un repositorio con varias superposiciones y configuraciones utilizadas aquí. Los comandos incluidos en este artículo de wiki asumen que está ubicado en `../applications/xiao-zephyr-examples` relativo a la raíz de zephyr. Se puede proporcionar una ruta alternativa a los comandos a continuación actualizándola.
+Para ayudar con el proceso de uso de Zephyr con Xiao y su placa de expansión se ha creado un repositorio con varias superposiciones y configuraciones utilizadas aquí. Los comandos incluidos en este artículo de la wiki asumen que está ubicado en `../applications/xiao-zephyr-examples` con respecto a la raíz de Zephyr. Se puede proporcionar una ruta alternativa a los comandos siguientes actualizándola.
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 ```
 
-## Preparación del Hardware
+## Preparación de hardware
 
 <table align="center">
   <tbody><tr>
       <th>Seeed Studio XIAO ESP32C3</th>
-      <th>Seeed Studio Expansion Board</th>
+      <th>Placa de expansión Seeed Studio</th>
       <th>Grove Red LED</th>
     </tr>
     <tr>
@@ -130,48 +130,52 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-p-1142.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
   </tbody></table>
 
-### Conocimiento del Desarrollador
+### Conocimientos para desarrolladores
 
-#### Placa de Expansión XIAO
+#### Placa de expansión XIAO
 
-  Para usar módulos Grove con Seeed Studio XIAO ESP32C3, utilizaremos una [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) y conectaremos XIAO ESP32C3 en ella.
+  Para poder utilizar módulos Grove con Seeed Studio XIAO ESP32C3, usaremos una [base de expansión Seeed Studio para XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) y conectaremos el XIAO ESP32C3 en ella.
 
-  Después de eso, los conectores Grove en la placa se pueden usar para conectar módulos Grove.
+  Después de eso, los conectores Grove de la placa se pueden utilizar para conectar módulos Grove.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
 
-#### Definiciones de Pines
+#### Definiciones de pines
 
-  Necesitas seguir el gráfico a continuación para usar los números de pin internos apropiados al conectar los módulos Grove a los conectores Grove en Grove Shield para Seeed Studio XIAO.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+  Debes seguir el gráfico siguiente para utilizar los números de pines internos apropiados cuando conectes los módulos Grove a los conectores Grove en el Grove Shield para Seeed Studio XIAO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png"style={{width:900, height:'auto'}}/></div>
 
-### Funcionalidad Principal
+### Funcionalidad principal
 
-- GPIO / Habilitación de LED
+- GPIO / LED habilitado
 - Bluetooth
 - Wi-Fi
 - TFLite
 
-#### GPIO / Habilitación de LED
+#### GPIO / LED habilitado
 
-Para probar esta configuración podemos usar la muestra de parpadeo con Zephyr pero usaremos un LED Grove adicional y una superposición para anular el LED al pin D0 para demostrar que esto funciona (el Xiao ESP32C3 no tiene un LED programable a bordo):
+Para probar esta configuración podemos usar el ejemplo blinky con Zephyr, pero utilizaremos un LED Grove adicional y una superposición para redefinir el LED al pin D0 para demostrar que esto funciona (el Xiao ESP32C3 no tiene un LED integrado programable):
 
 ```
 west build -p always -b xiao_esp32c3 samples/basic/blinky -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/d0_led.overlay
@@ -179,13 +183,13 @@ west flash
 west espressif monitor
 ```
 
-Presiona dos veces RESET o conecta brevemente el pin RST a GND.
+Pulsa dos veces RESET o cortocircuita el pin RST con GND.
 
 ```
 west flash
 ```
 
-Verás que el LED rojo adjunto se enciende y apaga creando un efecto de parpadeo.
+Verás que el LED rojo conectado se enciende y apaga creando un efecto de parpadeo.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona.
 
@@ -196,7 +200,7 @@ El código de ejemplo asociado hace referencia a led0:
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-La superposición LED (`xiao-zephyr-examples/d0_led.overlay`) define este LED para nosotros:
+La superposición del LED (`xiao-zephyr-examples/d0_led.overlay`) define este LED por nosotros:
 
 ```
 / {
@@ -214,9 +218,9 @@ La superposición LED (`xiao-zephyr-examples/d0_led.overlay`) define este LED pa
 };
 ```
 
-Esta superposición establece D0 (como se muestra a través de `&xiao_d 0`) como un LED y lo asocia con el alias `led0`. `led0` es un alias que permite que muchas muestras lo usen como el LED que se está controlando, ya que buscan específicamente este nombre.
+Esta superposición configura D0 (como se muestra mediante `&xiao_d 0`) como un LED y lo asocia con el alias `led0`. `led0` es un alias que permite que muchos ejemplos lo utilicen como el LED que se controla, ya que buscan específicamente este nombre.
 
-Si monitoreas la salida serie a través de `west espressif monitor` verás una salida similar a:
+Si monitorizas la salida serie mediante `west espressif monitor` verás una salida similar a:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -228,7 +232,7 @@ LED state: ON
 
 #### Bluetooth
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 west build -p always -b xiao_esp32c3 samples/bluetooth/observer
@@ -258,11 +262,11 @@ CONFIG_BT=y
 CONFIG_BT_OBSERVER=y
 ```
 
-El [archivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf) aquí habilita las características relacionadas con bluetooth para la compilación de Zephyr.
+El [archivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf) aquí habilita funciones relacionadas con bluetooth para la compilación de Zephyr.
 
 #### Wi-Fi
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 west build -p always -b xiao_esp32c3 samples/net/wifi
@@ -277,7 +281,7 @@ Verás una consola disponible para enviar comandos a la placa:
 uart:~$
 ```
 
-Existen varios comandos que te permiten ver y conectarte a redes locales, consulta el [readme de ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst) para más información.
+Existen varios comandos que te permiten ver y conectarte a redes locales; consulta el [readme del ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst) para obtener más información.
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -298,7 +302,7 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
 };
 ```
 
-El [archivo overlay](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32c3.overlay) de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo puede ser utilizado ya que el overlay informa a la lógica del ejemplo para habilitar Wi-Fi.
+El [archivo overlay de la app](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32c3.overlay) se utiliza para configurar varios componentes de la placa. Usando este archivo se puede utilizar el ejemplo, ya que el overlay informa a la lógica del ejemplo para habilitar Wi-Fi.
 
 ```
 CONFIG_WIFI=y
@@ -314,18 +318,18 @@ CONFIG_ESP32_WIFI_STA_AUTO_DHCPV4=y
 CONFIG_NET_LOG=y
 ```
 
-El [archivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32c3.conf) aquí habilita varias características relacionadas con redes para la compilación de Zephyr.
+El [archivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32c3.conf) aquí habilita varias funciones relacionadas con redes para la compilación de Zephyr.
 
 #### TFLite - Hello World
 
-Habilitar TFLite con Zephyr y actualizar:
+Habilita TFLite con Zephyr y actualiza:
 
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-Compila la muestra y grábala en tu placa:
+Compila el ejemplo y flashea tu placa:
 
 ```
 west build -p always -b xiao_esp32c3 samples/modules/tflite-micro/hello_world
@@ -333,7 +337,7 @@ west flash
 west espressif monitor
 ```
 
-Verás los resultados devueltos desde la consola:
+Verás resultados devueltos desde la consola:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -358,9 +362,9 @@ x_value: 1.2566366*2^1, y_value: 1.0674761*2^-1
 x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 ```
 
-La información adicional sobre TFLite está fuera del alcance de esta guía, pero el ejemplo sirve como guía de las capacidades del dispositivo y los componentes requeridos para ejecutar la configuración de TFLite.
+Información adicional sobre TFLite está fuera del alcance de esta guía, pero el ejemplo sirve como una guía de las capacidades del dispositivo y de los componentes necesarios para ejecutar la configuración de TFLite.
 
-### Componentes Adicionales
+### Componentes adicionales
 
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Pantalla I2C
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Botón
@@ -373,14 +377,14 @@ La información adicional sobre TFLite está fuera del alcance de esta guía, pe
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32c3/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23c3_zephyr/xiao_expansion_oled.jpg" style={{width:600, height:'auto'}}/></div>
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 west build -p always -b xiao_esp32c3 samples/drivers/display --  -DSHIELD=seeed_xiao_expansion_board
 west flash
 ```
 
-Verás una pantalla que muestra múltiples cajas negras y una caja parpadeante en la esquina dado que esta pantalla solo soporta dos colores.
+Verás una pantalla que muestra varios cuadros negros y un cuadro parpadeante en la esquina, dado que esta pantalla solo admite dos colores.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
 
@@ -411,11 +415,11 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
 
 ```
 
-El shield configura una pantalla OLED SSD1306 en el registro 0x3C. Se selecciona como la pantalla de zephyr en la sección chosen.
+El shield configura una pantalla OLED SSD1306 en el registro 0x3C. Se selecciona como la pantalla de Zephyr en la sección chosen.
 
-#### Grove - Placa de Expansión - Botón
+#### Grove - Expansion Board - Botón
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr pero usaremos un LED Grove adicional y una superposición para anular el LED al pin D0 para demostrar que esto funciona (el Xiao ESP32C3 no tiene un LED integrado programable):
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr, pero utilizaremos un LED Grove adicional y un overlay para reasignar el LED al pin D0 para demostrar que esto funciona (el Xiao ESP32C3 no tiene un LED programable integrado):
 
 ```
 west build -p always -b xiao_esp32c3 samples/basic/button -- -DSHIELD=seeed_xiao_expansion_board -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/d0_led.overlay
@@ -423,9 +427,9 @@ west flash
 west espressif monitor
 ```
 
-Presionar el botón con la muestra activará el LED asociado a D0 para que se encienda.
+Al pulsar el botón con el ejemplo, se encenderá el LED asociado a D0.
 
-Verás los resultados devueltos desde la consola:
+Verás resultados devueltos desde la consola:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -460,18 +464,18 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
 };
 ```
 
-El archivo de shield / overlay se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo del botón puede utilizarse ya que el overlay permite que Zephyr configure el botón y lo haga disponible para el código asociado.
+El archivo de shield / overlay se utiliza para configurar varios componentes de la placa. Usando este archivo se puede utilizar el ejemplo del botón, ya que el overlay permite que Zephyr configure el botón y lo ponga a disposición del código asociado.
 
-En este caso D1 en el Xiao ESP32C3. Se configura en este overlay para actuar como un botón y se le asigna el alias sw0 para permitir que sea usado para la muestra que tiene código esperando esto.
+En este caso D1 en el Xiao ESP32C3. En este overlay se configura para actuar como un botón y se le asigna el alias sw0 para permitir que se use en el ejemplo, cuyo código espera este nombre.
 
-El LED como se muestra arriba en el ejemplo del LED también se configura a través de su archivo overlay. Ahora con el botón asociado, presionarlo enciende este LED.
+El LED, como se muestra arriba en el ejemplo del LED, también se configura mediante su archivo overlay. Ahora, al asociarlo con el botón, al presionarlo se enciende este LED.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32c3/led-button.gif?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23c3_zephyr/led-button.gif" style={{width:600, height:'auto'}}/></div>
 
-#### Grove - Placa de Expansión - Zumbador
+#### Grove - Expansion Board - Zumbador
 
-Activaremos nuestro zumbador usando el ejemplo PWM blinky para controlar su activación a través de una señal PWM. Para esto usaremos un overlay personalizado que habilita el PWM para el pin A3.
+Activaremos nuestro zumbador usando el ejemplo blinky PWM para controlar su activación mediante una señal PWM. Para ello usaremos un overlay personalizado que habilita el PWM para el pin A3.
 
 ```
 cd ~/zephyrproject/zephyr
@@ -479,9 +483,9 @@ west build -p always -b xiao_esp32c3 samples/basic/blinky_pwm -- -DDTC_OVERLAY_F
 west flash
 ```
 
-Después de flashear deberías comenzar a escuchar una serie de zumbidos que cambian de sonido mientras la muestra ejecuta su curso.
+Después de flashear deberías empezar a oír una serie de zumbidos que cambian de sonido a medida que el ejemplo se ejecuta.
 
-Veamos por qué esto funciona:
+Veamos por qué funciona esto:
 
 ```
 #include <zephyr/dt-bindings/pwm/pwm.h>
@@ -523,18 +527,18 @@ Veamos por qué esto funciona:
 };
 ```
 
-La superposición configura la lógica PWM para el pin 5 que corresponde con el pin A3 del pinout del ESP32C3.
+El overlay configura la lógica PWM para el pin 5, que corresponde al pin A3 según el pinout del ESP32C3.
 
-#### Grove - Placa de Expansión - Tarjeta SD
+#### Grove - Expansion Board - Tarjeta SD
 
-Usaremos aquí la muestra del sistema de archivos junto con el shield de la Placa de Expansión Xiao para probar la interfaz con el lector de tarjetas SD a través de SPI. El shield de la placa de expansión tiene el pin CS configurado para el pin `&xiao_d 2` asociado, por lo que no se necesita trabajo de tu parte para asociar esta capacidad con la placa además de añadir el shield. Para prepararlo adicionalmente, estamos usando una configuración personalizada que habilita la funcionalidad de la tarjeta SD.
+Aquí usaremos el ejemplo de sistema de archivos junto con el shield Xiao Expansion Board para intentar comunicarnos con el lector de tarjetas SD mediante SPI. El shield de la placa de expansión tiene el pin CS configurado para el pin `&xiao_d 2` asociado, por lo que no se requiere trabajo adicional de tu parte para asociar esta capacidad con la placa, aparte de añadir el shield. Para prepararlo aún más estamos usando una configuración personalizada que habilita la funcionalidad de la tarjeta SD.
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_esp32c3 samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Now flash and monitor:
+Ahora flashea y monitoriza:
 
 ```
 west flash
@@ -555,9 +559,9 @@ Listing dir /SD: ...
 [FILE] IMAGE2.JPG (size = 97963)
 ```
 
-En este caso mi tarjeta SD tenía dos archivos. Sus nombres y sus tamaños fueron mostrados en mi consola.
+En este caso mi tarjeta SD tenía dos archivos. Sus nombres y tamaños se mostraron en mi consola.
 
-Veamos los elementos relevantes en juego aquí:
+Revisemos los elementos relevantes que intervienen aquí:
 
 ```
 CONFIG_SPI=y
@@ -565,9 +569,9 @@ CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
 ```
 
-En la configuración asociada estamos habilitando SPI, el controlador de disco SDMMC, y el GPIO. Sin esta configuración, la superposición llevará a un error ya que la muestra no puede encontrar la tarjeta SD.
+En la configuración asociada estamos habilitando SPI, el controlador de disco SDMMC y el GPIO. Sin esta configuración, la superposición dará lugar a un error ya que el ejemplo no puede encontrar la tarjeta SD.
 
-La parte relevante del shield de la Placa de Expansión Xiao se muestra a continuación:
+La parte relevante del shield de la Xiao Expansion Board se muestra a continuación:
 
 ```
 &xiao_spi {
@@ -587,16 +591,16 @@ La parte relevante del shield de la Placa de Expansión Xiao se muestra a contin
 };
 ```
 
-Como se mencionó anteriormente, el mapeo de pines `&xiao_d 2` se utiliza para permitir que el pin D2 sea seleccionado para esto independientemente de la placa utilizada, siempre que soporte la configuración de pines `&xiao_d`.
+Como se mencionó anteriormente, se utiliza la asignación de pines `&xiao_d 2` para permitir que el pin D2 sea seleccionado para esto independientemente de la placa utilizada, siempre que sea compatible con la configuración de pines `&xiao_d`.
 
-#### Grove - Sensor de Temperatura y Humedad (SHT31)
+#### Grove - Temperature and Humidity Sensor (SHT31)
 
-Primero solda los pines y conecta tu Xiao ESP32C3 a la placa de expansión. Luego conecta un cable conector grove entre el Grove SHT31 y uno de los puertos I2C en la placa de expansión.
+Primero suelda los pines y conecta tu Xiao ESP32C3 a la placa de expansión. Luego conecta un cable conector Grove entre el Grove SHT31 y uno de los puertos I2C en la placa de expansión.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32c3/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23c3_zephyr/xiao_sht31.jpg" style={{width:600, height:'auto'}}/></div>
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 west build -p always -b xiao_esp32c3 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay
@@ -604,7 +608,7 @@ west flash
 west espressif monitor
 ```
 
-Verás los resultados devueltos desde la consola:
+Verás resultados devueltos desde la consola:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -630,15 +634,15 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
  };
 ```
 
-El archivo de superposición de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo SHT31 puede utilizarse ya que la superposición informa a la [lógica de muestra](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) cómo configurar el sensor para nuestra placa.
+El archivo de superposición de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo SHT31 puede utilizarse ya que la superposición informa a la [lógica del ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) cómo configurar el sensor para nuestra placa.
 
-#### Módulo de Pantalla LCD de 1.69 pulgadas, Resolución 240×280, Interfaz SPI
+#### Módulo de pantalla LCD de 1,69 pulgadas, resolución 240×280, interfaz SPI
 
-Para este ejemplo usaremos SPI para conectar a una LCD de 1.69 pulgadas con una resolución de 240x280.
+Para este ejemplo usaremos SPI para conectar una pantalla LCD de 1,69 pulgadas con una resolución de 240x280.
 
-Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía (en este caso estamos usando el Xiao ESP32C3 pero el mismo diseño de pines se usa para conectar aquí).
+Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía (en este caso estamos usando la Xiao ESP32C3 pero se utiliza la misma distribución de pines para la conexión aquí).
 
-| Pantalla SPI LCD de 1.69 pulgadas| XIAO ESP32C3 |
+| Pantalla LCD SPI de 1,69 pulgadas| XIAO ESP32C3 |
 | ------------- | ------------------------- |
 | VCC | 3V3 |
 | GND | GND |
@@ -659,14 +663,14 @@ west build -p always -b xiao_esp32c3 samples/drivers/display -- -DDTC_OVERLAY_FI
 west flash
 ```
 
-Con el nuevo firmware en su lugar, el dispositivo ahora muestra la misma pantalla de demostración que vimos anteriormente en la placa de expansión, solo que ahora actualizada para la LCD a color sobre SPI.
+Con el nuevo firmware en su lugar, el dispositivo ahora muestra la misma pantalla de demostración que vimos anteriormente en la placa de expansión, solo que ahora actualizada para la pantalla LCD en color sobre SPI.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32c3/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23c3_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
 
-#### Pantalla Redonda para Xiao
+#### Round Display for Xiao
 
-Para probar esta configuración podemos usar una muestra existente con Zephyr:
+Para probar esta configuración podemos usar un ejemplo existente con Zephyr:
 
 ```
 west build -p always -b xiao_esp32c3 samples/drivers/display --  -DSHIELD=seeed_xiao_round_display
@@ -678,7 +682,7 @@ Entra en modo bootloader y flashea tu dispositivo:
 west flash
 ```
 
-Verás una pantalla que muestra múltiples esquinas de colores con una esquina negra parpadeando.
+Verás una pantalla que muestra varias esquinas de colores con una esquina negra parpadeando.
 
 Otro ejemplo demuestra el uso de la pantalla táctil:
 
@@ -686,9 +690,9 @@ Otro ejemplo demuestra el uso de la pantalla táctil:
 west build -p always -b xiao_esp32c3 samples/modules/lvgl/demos --  -DSHIELD=seeed_xiao_round_display -DCONFIG_LV_Z_DEMO_MUSIC=y
 ```
 
-La demostración de música mostrada aquí es solo una parte de la pantalla real, pero aún así demuestra la pantalla táctil en acción. Como puedes ver, tocar el botón de reproducción activa la animación de música.
+La demo de música que se muestra aquí es solo una parte de la pantalla real, pero aun así demuestra la pantalla táctil en acción. Como puedes ver, al tocar el botón de reproducción se activa la animación de música.
 
-Puedes ver desde el [archivo shield](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) que esto funciona interfazando con el controlador de pantalla redonda GC9A01 a través de SPI y el módulo táctil CHSC6X a través de i2c.
+Puedes ver en el [archivo del shield](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) que esto funciona al interactuar con el controlador de pantalla redonda GC9A01 sobre SPI y el módulo táctil CHSC6X sobre i2c.
 
 Profundicemos un poco en este ejemplo para ver cómo funciona:
 
@@ -744,20 +748,20 @@ Profundicemos un poco en este ejemplo para ver cómo funciona:
 Este shield hace lo siguiente:
 
 - Selecciona la pantalla GC9A01 como la pantalla Zephyr elegida
-- Configura la lógica del puntero LVGL para usar el módulo CHSC6X
+- Establece la lógica del puntero LVGL para usar el módulo CHSC6X
 - Deshabilita el puerto serie ya que los pines se usan para la retroiluminación y la interrupción táctil (como se ve arriba mediante: `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`)
 - Configura la pantalla redonda para SPI usando los pines D1, D2 y D3
 
-La [lógica de ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) se basa en el [código de ejemplo de demostración de LVGL](https://github.com/lvgl/lvgl/tree/master/demos/music) que puede examinarse más a fondo.
+La [lógica del ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) se basa en el [código de ejemplo de la demo LVGL](https://github.com/lvgl/lvgl/tree/master/demos/music), que puede examinarse más a fondo.
 
-## ✨ Proyecto de Colaborador
+## ✨ Proyecto de Colaboradores
 
-- Este proyecto está respaldado por el [Proyecto de Colaborador](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=57293521) de Seeed Studio.
-- Gracias a **los esfuerzos de Tim** y tu trabajo será [exhibido](https://wiki.seeedstudio.com/es/Honorary-Contributors/).
+- Este proyecto está respaldado por el [Proyecto de Colaboradores](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=57293521) de Seeed Studio.
+- Gracias a los **esfuerzos de Tim** y tu trabajo será [exhibido](https://wiki.seeedstudio.com/es/Honorary-Contributors/).
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Debate sobre el Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

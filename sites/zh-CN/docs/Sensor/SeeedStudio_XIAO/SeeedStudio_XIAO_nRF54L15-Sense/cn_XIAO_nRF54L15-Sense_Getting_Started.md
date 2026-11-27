@@ -12,7 +12,7 @@ last_update:
   author: Jason
 sidebar_position: 0
 createdAt: '2025-07-28'
-updatedAt: '2026-06-30'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -51,7 +51,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-**Seeed Studio XIAO nRF54L15** 是一款紧凑型高性能开发板，搭载先进的 Nordic nRF54L15 芯片。这款新一代 SoC 将超低功耗多协议 2.4 GHz 射频与 MCU 集成在一起，MCU 包含 **128 MHz Arm® Cortex®-M33 处理器** 和 **128 MHz RISC-V 协处理器**。它提供最高 **1.5 MB NVM 和 256 KB RAM** 的可扩展存储，并采用内部超低功耗设计，可显著延长电池寿命。其强大的射频支持 **Bluetooth® 6.0（包括 Channel Sounding）、Matter、Thread、Zigbee** 以及最高 **4 Mbps** 吞吐率的 2.4 GHz 私有模式。该开发板集成了完整的外设集、内置 **128 MHz RISC-V 协处理器**，并具备 **TrustZone®** 隔离和加密引擎侧信道防护等高级安全特性。凭借 **内置锂电池管理**，XIAO nRF54L15 非常适合用于智能可穿戴设备、工业传感器和高级人机界面等紧凑、安全且高能效的物联网解决方案。
+**Seeed Studio XIAO nRF54L15** 是一款紧凑型高性能开发板，搭载先进的 Nordic nRF54L15 芯片。这款新一代 SoC 将超低功耗多协议 2.4 GHz 射频与 MCU 集成在一起，MCU 内含 **128 MHz Arm® Cortex®-M33 处理器** 和 **128 MHz RISC-V 协处理器**。它提供最高 **1.5 MB NVM 和 256 KB RAM** 的可扩展存储，并采用内部超低功耗设计，可显著延长电池寿命。其强大的射频支持 **Bluetooth® 6.0（包括 Channel Sounding）、Matter、Thread、Zigbee** 以及最高 **4 Mbps** 的 2.4 GHz 自有高速模式。该开发板集成了完整的外设资源、内置 **128 MHz RISC-V 协处理器**，并具备 **TrustZone®** 隔离和加密引擎保护等高级安全特性。凭借 **内置锂电池管理**，XIAO nRF54L15 非常适合用于智能可穿戴设备、工业传感器和高级人机界面等紧凑、安全且高能效的物联网应用。
 
 
 ### 规格参数
@@ -64,28 +64,28 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </tr>
   <tr>
       <th>MCU</th>
-      <td align="center">Arm Cortex-M33 128 MHz<br/>RISC-V coprocessor 128 MHz FLPR</td>
-      <td align="center">Arm Cortex-M33 128 MHz<br/>RISC-V coprocessor 128 MHz FLPR</td>
+      <td align="center">Arm Cortex-M33 128 MHz<br/>RISC-V 协处理器 128 MHz FLPR</td>
+      <td align="center">Arm Cortex-M33 128 MHz<br/>RISC-V 协处理器 128 MHz FLPR</td>
   </tr>
   <tr>
       <th>无线连接</th>
       <td align="center">
-        Bluetooth LE 6.0（include Channel Sounding）<br/>
+        Bluetooth LE 6.0（包括 Channel Sounding）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        Proprietary 2.4 GHz protocols<br/>
+        自有 2.4 GHz 协议<br/>
       </td>
       <td align="center">
-        Bluetooth LE 6.0（include Channel Sounding）<br/>
+        Bluetooth LE 6.0（包括 Channel Sounding）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        Proprietary 2.4 GHz protocols<br/>
+        自有 2.4 GHz 协议<br/>
       </td>
   </tr>
   <tr>
@@ -96,7 +96,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   <tr>
       <th>板载传感器</th>
       <td align="center">N/A</td>
-      <td align="center">6 DOF IMU(LSM6DS3TR-C)<br/>Microphone (MSM261DGT006)</td>
+      <td align="center">6 自由度 IMU(LSM6DS3TR-C)<br/>麦克风 (MSM261DGT006)</td>
   </tr>
   <tr>
       <th>发射功率（TX power）</th>
@@ -109,9 +109,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
       <td align="center">-96 dBm</td>
   </tr>
   <tr>
-      <th>突出外设</th>
-      <td align="center">14-bit ADC, Global RTC</td>
-      <td align="center">14-bit ADC, Global RTC</td>
+      <th>重点外设</th>
+      <td align="center">14 位 ADC，Global RTC</td>
+      <td align="center">14 位 ADC，Global RTC</td>
   </tr>
   <tr>
       <th>电源</th>
@@ -137,12 +137,12 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
       <td align="center">3.7 至 5 V</td>
   </tr>
   <tr>
-      <th>ESB 和 2.4 GHz 私有协议</th>
+      <th>ESB 和 2.4 GHz 自有协议</th>
       <td align="center">最高 4 Mbps</td>
       <td align="center">最高 4 Mbps</td>
   </tr>
   <tr>
-      <th>防篡改检测器</th>
+      <th>防篡改检测</th>
       <td align="center">YES</td>
       <td align="center">YES</td>
   </tr>
@@ -156,22 +156,26 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 ### 特性
 
 - **强大的 CPU**：128 MHz Arm® Cortex®-M33 处理器，支持 DSP 指令和 FPU 浮点运算，32 位 RISC 架构，并集成 128 MHz RISC-V 协处理器。
-- **超低功耗**：专为实现卓越的超低功耗而设计，可显著延长电池寿命，并集成先进的电源管理。
-- **多模式无线传输**：集成 2.4 GHz 多协议无线收发器，支持 Bluetooth Low Energy（包括 Channel Sounding）、802.15.4-2020、Matter、Thread、Zigbee 以及 2.4 GHz 私有模式（最高 4 Mbps）。
+- **超低功耗**：专为超低功耗设计，可显著延长电池寿命，并集成先进的电源管理。
+- **多模式无线传输**：集成 2.4 GHz 多协议无线收发器，支持 Bluetooth Low Energy（包括 Channel Sounding）、802.15.4-2020、Matter、Thread、Zigbee 以及 2.4 GHz 自有模式（最高 4 Mbps）。
 - **强健的安全性**：具备 TrustZone® 隔离、防篡改检测以及加密引擎侧信道泄露防护等高级安全特性。
 - **丰富的片上资源**：最高 1.5 MB NVM 和 256 KB RAM 的可扩展存储配置，提供充足的存储空间。
-- **丰富的接口**：完整的外设集，包括可在 System OFF 模式下使用的新型 Global RTC、14 位 ADC 和高速串行接口。内置锂电池管理。
+- **丰富的接口**：完整的外设集，包括可在 System OFF 模式下使用的新 Global RTC、14 位 ADC 和高速串行接口。内置锂电池管理。
 
 ## 硬件概览
 
 <Tabs>
 <TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15" target="_blank" rel="noopener noreferrer">体验交互式引脚图</a>
+</div>
+
 ### XIAO nRF54L15 V1.2（当前版本）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="XIAO nRF54L15 V1.2 back pinout" style={{width:1000, height:'auto'}}/></div>
 
-通过 PCB 背面印刷的 <code>v1.2</code> 丝印来识别 V1.2 版本——不要依赖购买日期。不同版本之间侧边排针保持不变。在背面，<strong>3V3</strong>、<strong>RST2</strong>、<strong>SWCLK2</strong> 和 <strong>SWDIO2</strong> 焊盘位置发生了变化，因此夹具、弹簧针以及背面焊盘供电设计必须根据对应版本的图片进行核对。专门的 V1.2 正面引脚图正在审批中；下方侧边排针标注适用于两个版本。
+通过 PCB 背面印刷的 <code>v1.2</code> 丝印来识别 V1.2 版本——不要依赖购买日期。两版之间侧边排针保持不变。在背面，<strong>3V3</strong>、<strong>RST2</strong>、<strong>SWCLK2</strong> 和 <strong>SWDIO2</strong> 焊盘位置已变更，因此夹具、弹簧针以及背面焊盘供电设计必须根据对应版本的图片进行核对。专门的 V1.2 正面引脚图正在审批中；下方侧边排针标注适用于两个版本。
 
 ### XIAO nRF54L15 早期硬件版本
 
@@ -182,11 +186,15 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 </TabItem>
 <TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense">
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15sense" target="_blank" rel="noopener noreferrer">体验交互式引脚图</a>
+</div>
+
 ### XIAO nRF54L15 Sense V1.2（当前版本）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Pinout_Back_20261112.png" alt="XIAO nRF54L15 Sense V1.2 back pinout" style={{width:1000, height:'auto'}}/></div>
 
-通过 PCB 背面印刷的 <code>v1.2</code> 丝印来识别 V1.2 版本——不要依赖购买日期。不同版本之间侧边排针保持不变。在背面，<strong>3V3</strong>、<strong>RST2</strong>、<strong>SWCLK2</strong> 和 <strong>SWDIO2</strong> 焊盘位置发生了变化，因此夹具、弹簧针以及背面焊盘供电设计必须根据对应版本的图片进行核对。专门的 V1.2 正面引脚图正在审批中；下方侧边排针标注适用于两个版本。
+通过 PCB 背面印刷的 <code>v1.2</code> 丝印来识别 V1.2 版本——不要依赖购买日期。两版之间侧边排针保持不变。在背面，<strong>3V3</strong>、<strong>RST2</strong>、<strong>SWCLK2</strong> 和 <strong>SWDIO2</strong> 焊盘位置已变更，因此夹具、弹簧针以及背面焊盘供电设计必须根据对应版本的图片进行核对。专门的 V1.2 正面引脚图正在审批中；下方侧边排针标注适用于两个版本。
 
 ### XIAO nRF54L15 Sense 早期硬件版本
 
@@ -204,19 +212,19 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 | 5V                     | VBUS       |                               | 电源输入/输出                |
 | GND                    |            |                               |                              |
 | 3V3                    | 3V3_OUT    |                              | 电源输出                     |
-| D0                     | 模拟       | P1.04                        | GPIO, ADC                    |
-| D1                     | 模拟       | P1.05                        | GPIO, ADC                    |
-| D2                     | 模拟       | P1.06                         | GPIO, ADC                    |
-| D3                     | 模拟       | P1.07                         | GPIO, ADC                    |
-| D4                     | SDA-0      | P1.10                         | GPIO, I2C 数据               |
-| D5                     | SCL-0      | P1.11                         | GPIO, I2C 时钟               |
-| D6                     | TX         | P2.08                         | GPIO, UART 发送              |
-| D7                     | RX         | P2.07                         | GPIO, UART 接收              |
-| D8                     | SPI_SCK    | P2.01                         | GPIO, SPI 时钟               |
-| D9                     | SPI_MISO   | P2.04                         | GPIO, SPI 数据               |
-| D10                    | SPI_MOSI   | P2.02                         | GPIO, SPI 数据               |
-| D11                    | SCL-1      | P0.03                         | GPIO, I2C                    |
-| D12                    | SDA-1      | P0.04                         | GPIO,I2C                     |
+| D0                     | 模拟       | P1.04                        | GPIO，ADC                    |
+| D1                     | 模拟       | P1.05                        | GPIO，ADC                    |
+| D2                     | 模拟       | P1.06                         | GPIO，ADC                    |
+| D3                     | 模拟       | P1.07                         | GPIO，ADC                    |
+| D4                     | SDA-0      | P1.10                         | GPIO，I2C 数据               |
+| D5                     | SCL-0      | P1.11                         | GPIO，I2C 时钟               |
+| D6                     | TX         | P2.08                         | GPIO，UART 发送              |
+| D7                     | RX         | P2.07                         | GPIO，UART 接收              |
+| D8                     | SPI_SCK    | P2.01                         | GPIO，SPI 时钟               |
+| D9                     | SPI_MISO   | P2.04                         | GPIO，SPI 数据               |
+| D10                    | SPI_MOSI   | P2.02                         | GPIO，SPI 数据               |
+| D11                    | SCL-1      | P0.03                         | GPIO，I2C                    |
+| D12                    | SDA-1      | P0.04                         | GPIO，I2C                    |
 | D13                    | GPIO       | P2.10                         | GPIO                         |
 | D14                    | GPIO       | P2.09                         | GPIO                         |
 | D15                    | GPIO       | P2.06                         | GPIO                         |
@@ -247,7 +255,7 @@ NCS 提供了丰富的现成示例应用、协议栈、库和硬件驱动，旨�
 
 <details>
 
-<summary>提前安装 nRF Connect SDK 相关知识</summary>
+<summary>预先安装 nRF Connect SDK 相关知识</summary>
 
 本文档详细说明了如何在 Windows 11 电脑上安装 nRF Connect SDK 开发环境。以下是需要安装的工具概览
 
@@ -280,7 +288,7 @@ west --version
 - nRF Connect SDK
 - VSCode nRF Connect 插件
 
-***如果你已经在电脑上预先安装了这些工具，可以通过以下命令检查你的工具版本号***
+***如果你已经在电脑上预先安装了这些工具，可以通过以下命令检查工具的版本号***
 
 </details>
 
@@ -318,7 +326,7 @@ You should see the following output:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-nRF Connect for VS Code 扩展使开发者能够利用流行的 Visual Studio Code 集成开发环境（VS Code IDE）来开发、构建、调试和部署基于 Nordic nRF Connect SDK（软件开发套件）的嵌入式应用。该扩展包含诸多实用开发工具，例如编译器接口、链接器、完整的构建系统、支持 RTOS 的调试器、与 nRF Connect SDK 的无缝对接、设备树可视化编辑器以及集成串口终端。
+nRF Connect for VS Code 扩展使开发者能够利用流行的 Visual Studio Code 集成开发环境（VS Code IDE）来开发、构建、调试和部署基于 Nordic nRF Connect SDK（软件开发套件）的嵌入式应用。该扩展包含实用的开发工具，例如编译器接口、链接器、完整的构建系统、支持 RTOS 的调试器、与 nRF Connect SDK 的无缝对接、设备树可视化编辑器以及集成串口终端。
 
 nRF Connect for VS Code 扩展包包括以下组件：
 
@@ -335,7 +343,7 @@ nRF Connect for VS Code 扩展包包括以下组件：
 
 工具链是一组协同工作的工具集合，用于构建 nRF Connect SDK 应用程序，包括汇编器、编译器、链接器和 CMake 组件。
 第一次打开 nRF Connect for VS Code 时，系统会提示你安装工具链。如果扩展未检测到电脑上已安装的任何工具链，通常就会出现此提示。
-点击 Install Toolchain，将列出可在电脑上下载和安装的工具链版本列表。选择与你计划使用的 nRF Connect SDK 版本相匹配的工具链版本。我们始终建议使用最新的 nRF Connect SDK 标记版本。
+点击 Install Toolchain，将列出可在电脑上下载和安装的工具链版本列表。选择与你计划使用的 nRF Connect SDK 版本匹配的工具链版本。我们始终建议使用最新的 nRF Connect SDK 标记版本。
 
 默认情况下，nRF Connect for VS Code 只显示工具链的 Released 选项卡（即稳定版本）。如果你正在评估新功能，并希望使用 Preview 选项卡或其他类型的选项卡（例如 Customer Sampling -cs），请点击如下所示的 "Show all toolchain versions"：
 
@@ -349,7 +357,7 @@ nRF Connect for VS Code 扩展包包括以下组件：
 
 在 VS Code 的 nRF Connect 扩展中，点击 Manage SDK。在 Manage SDK 菜单中，我们可以安装或卸载 nRF Connect SDK 版本。由于这是我们第一次使用该扩展，界面只会显示两个选项。
 
-点击 Install SDK 将列出所有可供下载并在本地安装的 nRF Connect SDK 版本。选择项目开发所需的 nRF Connect SDK 版本。
+点击 Install SDK 将列出所有可下载并在本地安装的 nRF Connect SDK 版本。选择项目开发所需的 nRF Connect SDK 版本。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
 
 如果你已经在 VS Code 中打开了 SDK 文件夹，那么你将看到 Manage west workspace，而不是 Manage SDK 菜单选项。要解决此问题，请在 VS Code 中打开另一个窗口或文件夹。
@@ -360,12 +368,12 @@ nRF Connect for VS Code 扩展包包括以下组件：
 
 :::tip
 如果你没有看到上述任一选项，请确保已安装最新版本的 nRF Connect for VS Code 扩展包。
-需要特别注意的是，nRF Connect SDK 与 IDE 无关，这意味着你可以选择使用任意 IDE，甚至不使用 IDE。nRF Connect SDK 可以通过 https://www.nordicsemi.com/Products/Development-tools/nRF-Util（nrfutil）命令行界面（CLI）下载和安装 nRF Connect。然而，我们强烈建议在 VS Code 中使用我们的 nRF Connect for VS Code 扩展，因为它不仅集成了方便的图形用户界面（GUI）和高效的命令行界面（CLI），还包含大量能够极大简化固件开发的功能。将其他 IDE 配置为与 nRF Connect SDK 协同工作需要额外的手动步骤，超出了本课程的范围。
+需要特别注意的是，nRF Connect SDK 与 IDE 无关，这意味着你可以选择使用任意 IDE，甚至不使用 IDE。可以通过 https://www.nordicsemi.com/Products/Development-tools/nRF-Util 提供的 (nrfutil) 命令行接口（CLI）来下载并安装 nRF Connect。然而，我们强烈建议在 VS Code 中使用我们的 nRF Connect for VS Code 扩展，因为它不仅集成了方便的图形用户界面（GUI）和高效的命令行接口（CLI），还包含大量功能，可极大简化固件开发。将其他 IDE 配置为与 nRF Connect SDK 协同工作需要额外的手动步骤，超出了本课程的范围。
 :::
 
 #### 创建用户程序
 
-在本练习中，我们将基于 blinky 示例编写一个简单应用，用于控制开发板上的 LED 闪烁。该方法同样适用于所有受支持的 Nordic Semiconductor 开发板（nRF54、nRF53、nRF52、nRF70 或 nRF91 系列）。目标是确保构建和烧录示例所需的所有工具均已正确配置。重点在于学习如何创建应用、构建应用，并使用 “Copy Example” 模板将其烧录到 Nordic 芯片开发板上！
+在本练习中，我们将基于 blinky 示例编写一个简单应用，用于控制开发板上的 LED 闪烁。该方法同样适用于所有受支持的 Nordic Semiconductor 开发板（nRF54、nRF53、nRF52、nRF70 或 nRF91 系列）。目标是确保构建和烧录该示例所需的所有工具均已正确配置。重点在于学习如何创建应用、构建应用，并使用 “Copy Example” 模板将其烧录到 Nordic 芯片开发板上！
 
 - 在 VS Code 中，点击 nRF Connect 扩展图标。在 Welcome 视图中，点击 Create New Application。
 
@@ -386,7 +394,7 @@ Blinky 示例会让开发板上的 LED1 持续闪烁。
     </a>
 </div>
 
-首先，**从 GitHub 链接克隆仓库**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git` 到你偏好的本地文件夹。克隆完成后，进入 `platform-seeedboards/zephyr/` 目录。**记住这个 `zephyr` 文件夹路径**；
+要开始，请**从 GitHub 链接克隆仓库**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git`到你偏好的本地文件夹。克隆完成后，进入 `platform-seeedboards/zephyr/` 目录。**记住这个 `zephyr` 文件夹路径**；
 
 要在 VS Code 中为 nRF Connect 配置你的开发板，可以按照以下步骤进行：
 
@@ -469,7 +477,7 @@ choco install openocd
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- 按照屏幕提示操作；你可能需要输入 macOS 用户密码。安装完成后，运行终端提示的命令，将 Homebrew 添加到你的 PATH 环境变量中`(例如，eval "$(/opt/homebrew/bin/brew shellenv)")`。然后关闭并重新打开终端。
+- 按照屏幕提示操作；你可能需要输入 macOS 用户密码。安装完成后，按照终端提示运行命令，将 Homebrew 添加到你的 PATH 环境变量中`(例如，eval "$(/opt/homebrew/bin/brew shellenv)")`。然后关闭并重新打开终端。
 
 **2. 安装 Ccache：**
 
@@ -506,11 +514,11 @@ brew install openocd
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/west_flash_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-如果出现 west flash 错误，说明 VS Code 中的 CMake 插件发生了冲突，你需要移除 CMake 插件。
+如果出现 west flash 错误，说明与 VS Code 中的 CMake 插件发生冲突，你需要移除 CMake 插件。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/error.jpg" style={{width:800, height:'auto'}}/></div>
 :::
 
-当我们在 Seeed Studio XIAO nRF54L15 Sense 中成功烧录程序后，你可以看到开发板上的用户指示灯以绿色不停闪烁，如果你手中的板子也呈现相同的效果，就说明你已经成功啦！🎊
+当我们在 Seeed Studio XIAO nRF54L15 Sense 中成功烧录程序后，你可以看到开发板上方的用户指示灯以绿色不停闪烁，如果你手中的板子也呈现相同的效果，就说明你已经成功上手了！🎊
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -569,34 +577,34 @@ return 0;
 
 **LED 设备定义**：
 
-- `#define LED0_NODE DT_ALIAS(led0)`: 获取名为 "led0" 的设备树别名对应的节点标识符，从而以与硬件无关的方式引用该 LED。
+- `#define LED0_NODE DT_ALIAS(led0)`: 获取 "led0" 别名对应的设备树节点标识符，从而以与硬件无关的方式引用该 LED。
 - `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`: 使用设备树节点创建一个 GPIO 规范结构体（`led`），其中包含该 LED 的硬件细节（引脚、端口）。如果这里出现构建错误，说明硬件不受支持。
 
 **main() 函数初始化**：
 
 - **变量设置**：
-  - `int ret`: 用于存储函数返回值，以检查操作是否成功。
-  - `bool led_state = true`: 用于跟踪 LED 状态（初始化为“ON”）。
+  - `int ret`: 存储函数返回值，用于检查操作是否成功。
+  - `bool led_state = true`: 跟踪 LED 状态（初始化为“开启”）。
 
 - **GPIO 就绪检查**：
   - `if (!gpio_is_ready_dt(&led)) { return 0; }`: 验证 LED 的 GPIO 硬件是否就绪（例如驱动是否已加载）。如果未就绪则退出。
 
 - **GPIO 配置**：
   - `ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE)`: 将 LED 的 GPIO 引脚配置为有效高输出。
-  - 如果失败（`ret < 0`）则退出，以避免无效操作。
+  - 如果失败（`ret < 0`）则退出，以防止无效操作。
 
 **主循环**：
-在一个无限的 `while (1)` 循环中运行，以周期性地切换 LED：
+在无限的 `while (1)` 循环中运行，周期性地切换 LED：
 
 - **切换 LED 状态**：
-  - `ret = gpio_pin_toggle_dt(&led)`: 翻转 LED 的 GPIO 输出（ON ↔ OFF）。失败时退出。
+  - `ret = gpio_pin_toggle_dt(&led)`: 翻转 LED 的 GPIO 输出（开 ↔ 关）。失败则退出。
 
 - **更新状态跟踪**：
   - `led_state = !led_state`: 使软件状态标志与硬件状态保持同步。
 
 - **日志与延时**：
   - `printf("LED state: %s\n", led_state ? "ON" : "OFF")`: 通过串口输出当前 LED 状态。
-  - `k_msleep(SLEEP_TIME_MS)`: 使用 Zephyr 的 RTOS 延时函数暂停 1000ms（1 秒），以控制闪烁频率。
+  - `k_msleep(SLEEP_TIME_MS)`: 使用 Zephyr 的 RTOS 延时函数暂停 1000ms（1 秒），从而控制闪烁频率。
 
 #### 深入了解 nRF Connect SDK 内部机制
 
@@ -644,7 +652,7 @@ bash factory_reset.sh
 本示例演示如何控制 Seeed Studio XIAO nRF54L15 上的射频开关，在板载之间进行切换 
 
 :::
-以下示例适用于 PlatformIO 和 nRF Connect SDK。它可以直接在 PlatformIO 中使用，而在 SDK 中则需要手动添加文件。请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#battery-powered-board)
+以下示例适用于 PlatformIO 和 nRF Connect SDK。它可以直接在 PlatformIO 中使用，而在 SDK 中则需要手动添加文件。请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#电池供电板)
 :::
 
 <div style={{textAlign:'center'}}>
@@ -662,7 +670,7 @@ bash factory_reset.sh
 
 - 按下用户按键（SW0）在陶瓷天线和外置天线之间切换。
 
-- 用户 LED 指示当前天线选择（LED 亮表示外置天线，LED 灭表示陶瓷天线）。
+- 用户 LED 指示当前天线选择（LED 亮为外置天线，LED 灭为陶瓷天线）。
 
 - 启动时的默认天线可以通过 prj.conf 进行配置。
 
@@ -900,9 +908,9 @@ CONFIG_BT_DEVICE_NAME="zephyr-ble"
 
 ## 电池供电板
 
-XIAO nRF54L15 内置电源管理芯片，使 XIAO nRF54L15 可以通过电池独立供电，或通过 XIAO nRF54L15 的 USB 接口为电池充电。
+XIAO nRF54L15 内置电源管理芯片，使 XIAO nRF54L15 可以通过电池独立供电，或者通过 XIAO nRF54L15 的 USB 端口为电池充电。
 
-如果你想为 XIAO 连接电池，我们建议你购买合格的 3.7V 可充电锂电池。焊接电池时，请注意区分正负极。
+如果你想为 XIAO 连接电池，我们建议你购买合格的可充电 3.7V 锂电池。焊接电池时，请注意区分正负极。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_connect.jpg" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:500, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -922,41 +930,41 @@ XIAO nRF54L15 内置电源管理芯片，使 XIAO nRF54L15 可以通过电池独
 3. When connecting Type-C to charge the battery fully, the red light turns off. -->
 
 :::caution
-焊接时请务必注意不要将正负极短路，以免烧毁电池和设备。
+焊接时请务必注意不要让正负极短路，以免烧毁电池和设备。
 :::
 
 ### 供电指南
 
 下表总结了在早期硬件版本和 V1.2 上，哪些电源输入会让板载 SAMD11 调试/UART 协处理器保持工作。
 
-| 电源来源 | 早期版本 SAMD11 | V1.2 SAMD11 | 使用指南 |
+| 电源来源 | 早期版本 SAMD11 | V1.2 SAMD11 | 指导说明 |
 | --- | --- | --- | --- |
-| USB-C 5 V | 供电 | 供电 | 用于编程、USB 串口以及给已连接电池充电。 |
-| 侧边 <code>5V</code> / <code>VBUS</code> 引脚 | 不主动供电 | 供电 | 接受稳压 5 V 输入。在 V1.2 上，这一路也会给充电芯片供电，因此可为连接的电池充电。 |
+| USB-C 5 V | 供电 | 供电 | 用于编程、USB 串口以及给已连接的电池充电。 |
+| 侧边 <code>5V</code> / <code>VBUS</code> 引脚 | 不主动供电 | 供电 | 接受稳压 5 V 输入。在 V1.2 上，这一路径也会给充电芯片供电，因此可为已连接的电池充电。 |
 | 背面 <code>BAT</code> 焊盘 | 不主动供电 | 不主动供电 | 连接极性正确的、可充电的单节 3.7 V 锂离子/锂聚合物电池。使用该输入进行独立电池供电和低功耗测量。 |
 
 - 在 V1.2 上，当仅通过 BAT 焊盘为板子供电时，侧边 <code>5V</code> / <code>VBUS</code> 引脚不会提供可用的 5 V 输出。
 - 在早期硬件版本上，当仅由电池为板子供电时，侧边 5 V 引脚的电压可能接近电池电压，但它不是稳定的 5 V 输出。
-- 对于 V1.2 的低功耗测量，请通过背面 BAT 焊盘使用标称 3.7 V 的电源为板子供电，并断开 USB-C、侧边 5V/VBUS 引脚以及电池充电路径上的任何其他外部连接。
+- 对于 V1.2 的低功耗测量，请通过背面 BAT 焊盘使用标称 3.7 V 电源为板子供电，并断开 USB-C、侧边 5V/VBUS 引脚以及电池充电路径上的任何其他外部连接。
 
 V1.2 原理图中的充电电流设置为 200 mA；实际充电电流取决于当前的充电状态。
 
 ### 电池电压检测
 :::tip
 
-在 V1.2 上，板载 UM3204H 隔离了 nRF54L15 与 SAMD11 之间的信号，消除了下面所述通过 UART 产生的反向供电路径。部署在电池上的 V1.2 固件，无需仅为了这个历史遗留的冷启动问题而禁用 UART。当板子仅通过 BAT 供电时，板载 SAMD11 不会被主动供电；如果需要日志，请使用带 RTT 支持的外部 SWD 调试器。
+在 V1.2 上，板载 UM3204H 隔离了 nRF54L15 与 SAMD11 之间的信号，消除了下面所述通过 UART 产生的反向供电路径。部署在电池上的 V1.2 固件，无需仅为了解决这一历史冷启动问题而关闭 UART。当板子仅通过 BAT 供电时，板载 SAMD11 不会被主动供电；如果需要日志，请使用带 RTT 支持的外部 SWD 调试器。
 
 :::
 
 <strong>早期硬件版本 — 历史 UART 解决方案</strong>
 
-如果早期版本的板子从 USB-C 启动正常，但在完全断电后仅重新接入电池却无法启动，请检查固件是否启用了板载 USB 转串口 UART。在早期硬件上，nRF54L15 与 SAMD11 的 UART 信号是直接相连的。在仅 BAT 供电的情况下，未上电的 SAMD11 可能通过这些信号被反向供电，从而干扰冷启动。这只会影响板载 USB 转串口/调试 UART，不会影响侧边的 <code>D6/TX</code> 和 <code>D7/RX</code> 用户 UART 引脚。
+如果早期版本的板子从 USB-C 启动正常，但在完全断电后仅重新接上电池却无法启动，请检查固件是否启用了板载 USB 转串口 UART。在早期硬件上，nRF54L15 与 SAMD11 的 UART 信号是直接相连的。当仅由 BAT 供电时，未上电的 SAMD11 可能通过这些信号被反向供电，从而干扰冷启动。这只会影响板载 USB 转串口/调试 UART，不会影响侧边的 <code>D6/TX</code> 和 <code>D7/RX</code> 用户 UART 引脚。
 
 为了在 USB 台式调试时保留日志，同时仍然为早期硬件生成电池部署版本，请管理两个构建配置：
 
 <strong>场景 A：USB 台式调试（早期硬件版本）</strong>
 
-在你的工程目录中创建一个名为 <code>prj_uart.conf</code> 的文件，用于临时启用 UART 以进行调试。
+在你的工程目录下创建一个名为 <code>prj_uart.conf</code> 的文件，用于临时启用 UART 以进行调试。
 
 ```ini
 # Enable UART for USB debugging (earlier hardware revision)
@@ -972,7 +980,7 @@ west build -p always -d build_uart -b xiao_nrf54l15/nrf54l15/cpuapp . -DOVERLAY_
 
 <strong>场景 B：电池部署（早期硬件版本）</strong>
 
-修改主 <code>prj.conf</code>，在电池部署版本中禁用 UART。
+修改主 <code>prj.conf</code>，在电池部署版本中关闭 UART。
 
 ```ini
 CONFIG_SERIAL=n
@@ -995,7 +1003,7 @@ west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
 <code>CONFIG_SERIAL=n</code> 也会禁用应用中使用的其他 UART 外设。仅将此配置应用于早期硬件版本的电池部署构建。对于 V1.2，仅为了解决历史上的 SAMD11 反向供电问题，并不需要这样配置。
 :::
 
-XIAO nRF54L15 集成了电池电压检测功能，核心是利用 TPS22916CYFPR 负载开关高效管理电池电源测量。本指南将重点分析电池检测的软件实现（尤其是 main.c 代码），并指导你如何在 PlatformIO 环境中轻松部署和使用这一功能，从而避免直接使用 Zephyr NCS SDK 带来的复杂性。
+XIAO nRF54L15 集成了电池电压检测功能，核心是利用 TPS22916CYFPR 负载开关高效管理电池电源测量。本指南将重点分析电池检测的软件实现（尤其是 **main.c 代码**），并指导你如何在 PlatformIO 环境中轻松部署和使用这一功能，从而避免直接使用 Zephyr NCS SDK 带来的复杂性。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_A.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:600, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -1006,7 +1014,7 @@ TPS22916CYFPR 芯片的作用：
 
 - 它是一个智能电源开关，可按需控制电池电压的通断。当需要测量电池电压时，它会导通，将电池连接到分压电路；当不需要测量时，它会关断，切断连接。
 
-- 这个功能能帮助我们做什么？
+- 这个特性能帮助我们做什么？
 通过这种按需切换机制，芯片大幅降低了不必要的电流消耗，有效延长电池寿命。结合后续的分压电路以及 nRF54L15 的 ADC（模数转换器），XIAO nRF54L15 能够精确监测电池剩余电量，为物联网设备等电池供电、低功耗应用提供重要的续航优化支持。
 
 :::note
@@ -1024,7 +1032,7 @@ TPS22916CYFPR 芯片的作用：
 
 ### 添加 overlay 并修改配置文件
 
-如果你想在 nRF Connect SDK 中使用这个电池示例程序，你需要添加 app.overlay 并修改 prj.conf 文件。
+如果你想在 nRF Connect SDK 中使用这个电池示例程序，需要添加 app.overlay 并修改 prj.conf 文件。
 
 - 在工程目录下新建一个名为 `app.overlay` 的文件。然后将以下代码粘贴进去，最后按 Ctrl + S 保存。
 
@@ -1416,33 +1424,33 @@ int main(void)
 
 ## 硬件版本常见问题
 
-<p><strong>Q1: 我如何识别 V1.2？</strong></p>
-<p>查看印在 PCB 背面的 <code>v1.2</code> 丝印。不要通过购买日期来判断版本。</p>
+<p><strong>Q1：我如何识别 V1.2？</strong></p>
+<p>查看 PCB 背面印刷的 <code>v1.2</code> 丝印。不要通过购买日期来判断版本。</p>
 
 
 
-<p><strong>Q2: V1.2 有哪些改动？</strong></p>
+<p><strong>Q2：V1.2 有哪些变化？</strong></p>
 <p>V1.2 在 nRF54L15 ↔ SAMD11 UART 信号上增加了隔离，重新设计了 USB/VBUS/BAT 供电切换，增加了 NFC 匹配电容 C21/C26，调整了充电指示和电池采样电路，并移动了背面的 <code>3V3</code>、<code>RST2</code>、<code>SWCLK2</code> 和 <code>SWDIO2</code> 焊盘。</p>
 
 
 
-<p><strong>Q3: 为什么早期版本的板子在启用 UART 时，可能无法仅靠电池冷启动？</strong></p>
-<p>在早期硬件上，板载 USB 转串口 UART 信号是直接连接的，在仅 BAT 供电冷启动时，未上电的 SAMD11 可能会通过这些信号被反向供电。请参见上文针对早期硬件版本的解决方法。这只影响板载 USB 转串口/调试 UART，不影响侧边的 <code>D6/TX</code> 和 <code>D7/RX</code> 用户 UART 引脚。</p>
+<p><strong>Q3：为什么在启用 UART 时，早期版本的板子可能无法仅靠电池冷启动？</strong></p>
+<p>在早期硬件上，板载 USB 转串口 UART 信号是直接连接的，在仅 BAT 冷启动时，未上电的 SAMD11 可能会通过这些信号被反向供电。请参见上文针对早期硬件版本的解决方法。这只影响板载 USB 转串口/调试 UART，不影响侧边的 <code>D6/TX</code> 和 <code>D7/RX</code> 用户 UART 引脚。</p>
 
 
 
-<p><strong>Q4: 我应该如何给 V1.2 供电以进行低功耗测量？</strong></p>
+<p><strong>Q4：为了进行低功耗测量，我应该如何给 V1.2 供电？</strong></p>
 <p>通过背面的 BAT 焊盘使用标称 3.7 V 的电源给板子供电，并断开 USB-C 和侧边的 5V/VBUS 引脚。在 Sense 版本上，记录 IMU 和麦克风是否启用。</p>
 
 
 
-<p><strong>Q5: 我可以复用早期的引脚定义或应用吗？</strong></p>
-<p>侧边排针的信号定义未改变，因此早期的侧边排针应用通常可以沿用。背面的探针、夹具、调试焊盘以及电源路径必须根据对应版本的示意图进行核对。</p>
+<p><strong>Q5：我可以复用早期的引脚定义或应用吗？</strong></p>
+<p>侧边排针的信号定义没有变化，因此早期的侧边排针应用通常可以沿用。背面的探针、夹具、调试焊盘以及电源路径必须根据对应版本的示意图进行核对。</p>
 
 
 
-<p><strong>Q6: 侧边的 5V/VBUS 引脚能给 V1.2 板供电并充电吗？</strong></p>
-<p>可以，该引脚接受稳压 5 V 输入。在 V1.2 上，充电器同样由 VBUS 供电，因此连接的电池可以被充电。在仅电池供电模式下，它不是 5 V 输出。</p>
+<p><strong>Q6：侧边的 5V/VBUS 引脚能给 V1.2 板供电并充电吗？</strong></p>
+<p>可以，该引脚接受稳压 5 V 输入。在 V1.2 上，充电器同样由 VBUS 供电，因此连接的电池可以被充电。在仅电池模式下，它不是 5 V 输出。</p>
 
 ## 资源
 
@@ -1459,7 +1467,7 @@ int main(void)
 - **📄[Pinout Diagram]** [XIAO nRF54L15 引脚分布表](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
 **机械结构**
-- **🗃️[2D Dimensions]** [DXF 格式的 XIAO nRF54L15 尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
+- **🗃️[2D 尺寸]** [DXF 格式的 XIAO nRF54L15 尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
 
 ### Seeed Studio XIAO nRF54L15 Sense
 
@@ -1473,10 +1481,10 @@ int main(void)
 - **🗃️[PCB Design Libraries]** 
   - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO 系列 KiCad SCH 符号](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **🗃️[引脚图]** [XIAO nRF54L15 Sense 引脚分布表](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
+- **🗃️[引脚图]** [XIAO nRF54L15 Sense 引脚表](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
 **机械结构**
-- **📄[2D 尺寸]** [XIAO nRF54L15 Sense DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
+- **📄[2D 尺寸]** [XIAO nRF54L15 Sense DXF 格式尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
 - **🗃️[3D 尺寸]** [XIAO nRF54L15 Sense 3D 尺寸](https://grabcad.com/library/seeed-studio-xiao-nrf54l15-sense-1 )
 
 <JetsonLeadQuote

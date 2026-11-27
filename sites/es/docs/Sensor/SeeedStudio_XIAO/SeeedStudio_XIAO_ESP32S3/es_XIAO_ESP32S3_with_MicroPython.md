@@ -9,7 +9,7 @@ last_update:
   date: 11/05/2026
   author: Evelyn Chen
 createdAt: '2024-08-14'
-updatedAt: '2025-09-11'
+updatedAt: '2026-11-05'
 url: https://wiki.seeedstudio.com/es/xiao_esp32s3_with_micropython/
 ---
 
@@ -41,7 +41,7 @@ SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 
 #### Conectar el XIAO ESP32S3 a tu PC
 
-Debes mantener presionado el botón BOOT en tu placa XIAO ESP32S3 para entrar en modo 'bootloader' mientras la conectas con el cable USB tipo C a tu PC.
+Debes mantener presionado el botón BOOT en tu placa XIAO ESP32S3 para entrar en modo 'bootloader' mientras la conectas al cable USB tipo C a tu PC.
 
 #### Comprobar el puerto
 
@@ -55,7 +55,7 @@ En Linux, puedes usar el comando *dmesg* para ver los dispositivos conectados:
 dmesg | grep tty
 ```
 
-Como alternativa, puedes listar los dispositivos serie usando *ls*:
+Alternativamente, puedes listar los dispositivos serie usando *ls*:
 
 ```
 ls /dev/ttyS* /dev/ttyUSB*
@@ -113,7 +113,7 @@ esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash
 
 De nuevo, sustituye '/dev/cu.usbmodem11301' por el nombre de puerto correcto, y 'SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin' por la ruta a tu archivo de firmware en blanco.
 No olvides hacer un reinicio por hardware mediante el pin RTS.
-¡Entonces puedes empezar a compilar scripts usando tu herramienta preferida para ESP32!
+¡Luego puedes empezar a compilar scripts usando tu herramienta preferida para ESP32!
 
 ## Editores recomendados para MicroPython
 
@@ -198,6 +198,10 @@ Crea un nuevo archivo Python dentro de tu proyecto.
 
 ## Información de pines/puertos
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/10.png" /></div>
 
 - Para más información, consulta la [visión general del hardware](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/#visión-general-del-hardware)
@@ -251,7 +255,7 @@ esp32.mcu_temperature() # read the internal temperature of the MCU, in Celsius
 ### Red-WLAN
 
 El módulo *Network*:
-Para más información consulta [aquí](https://docs.micropython.org/en/latest/library/network.WLAN.html).
+Más información consulta [aquí](https://docs.micropython.org/en/latest/library/network.WLAN.html).
 
 ```python
 import network
@@ -301,7 +305,7 @@ delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 
 ### Temporizadores
 
-El puerto ESP32 tiene cuatro temporizadores de hardware. Usa la [clase](https://docs.micropython.org/en/latest/library/machine.Timer.html#machine-timer) con un ID de temporizador de 0 a 3 (inclusive):
+El puerto ESP32 tiene cuatro temporizadores de hardware. Utiliza la [clase](https://docs.micropython.org/en/latest/library/machine.Timer.html#machine-timer) con un ID de temporizador de 0 a 3 (inclusive):
 
 ```python
 from machine import Timer
@@ -313,7 +317,7 @@ tim1 = Timer(1)
 tim1.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(1))
 ```
 
-El período está en milisegundos.
+El periodo está en milisegundos.
 Los temporizadores virtuales no son compatibles actualmente en este puerto.
 
 ### Pines y GPIO
@@ -351,7 +355,7 @@ uart1.write('hello')  # write 5 bytes
 uart1.read(5)         # read up to 5 bytes
 ```
 
-El ESP32C3 tiene un UART de hardware. Los pines se enumeran a continuación:
+El ESP32C3 tiene un UART de hardware. los pines se enumeran a continuación:
 
 | UART | Pin |
 |------|-----|
@@ -542,12 +546,12 @@ while True:
 #### Encender la pantalla OLED
 
 Conecta tu XIAO ESP32S3, abre Thonny y haz clic en la parte inferior derecha para configurar el intérprete
-Selecciona intérprete - Micropython (ESP32) y **Port >>> haz clic en OK**
+Selecciona intérprete- Micropython (ESP32) y **Port >>> Haz clic en OK**
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/14.png" /></div>
 
 Si todo va bien, verás la salida en la consola
 Instala la biblioteca ssd1306 desde MicroPython.
-Haz clic en "Tools" >>> haz clic en "Management Packages" >>> introduce el nombre de la biblioteca >>> haz clic en "Search micropython-lib and PyPl"
+Haz clic en "Tools" >>> Haz clic en "Management Packages" >>> Introduce el nombre de la biblioteca >>> Haz clic en "Search micropython-lib and PyPl"
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/15.png" /></div>
 
@@ -577,9 +581,9 @@ oled.show()  # Show the text
 
 #### Prueba de transmisión de cámara
 
-También se proporciona una prueba de transmisión de cámara para ESP32S3 sense (con cámara), por favor consulta [aquí](https://wiki.seeedstudio.com/es/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example).
+También se proporciona una prueba de transmisión de cámara para ESP32S3 sense(con cámara), por favor consulta [aquí](https://wiki.seeedstudio.com/es/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example).
 
-¡Gracias por leer este artículo! No dudes en compartir tus ideas en los comentarios.
+Gracias por leer este artículo. No dudes en compartir tus ideas en los comentarios.
 
 ## Recursos
 
@@ -587,7 +591,7 @@ También se proporciona una prueba de transmisión de cámara para ESP32S3 sense
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

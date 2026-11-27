@@ -1,5 +1,5 @@
 ---
-description: XIAO RP2040をMicroBlocksで使用する。
+description: MicroBlocks 上で XIAO RP2040 を使用する。
 title: MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
 slug: /xiao_rp2040_microblocks
@@ -7,7 +7,7 @@ last_update:
   date: 09/09/2025
   author: MicroBlocks
 createdAt: '2025-09-09'
-updatedAt: '2025-09-25'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/xiao_rp2040_microblocks/
 ---
 
@@ -15,94 +15,98 @@ url: https://wiki.seeedstudio.com/ja/xiao_rp2040_microblocks/
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
+MicroBlocks は、初心者（9 歳から大人まで）がマイコンを簡単にプログラムできるようにするブロック型言語です。一見シンプルに見えますが、MicroBlocks は MicroPython よりも高いパフォーマンスを持つ強力なプログラミング言語であり、GPIO ピンの制御や I2C、SPI、シリアル経由での周辺機器とのインターフェース、そして約 200 個の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストに MicroBlocks を好んで使用しています。
 
-### XIAO RP2040 ピン配置とハードウェア機能
+### XIAO RP2040 のピン配置とハードウェア機能
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2040-overview.jpg" style={{width:600, height:'auto'}}/></div><br />
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2040-pinout.png" style={{width:700, height:'auto'}}/></div><br />
 
-このボードには11個のGPIOピン（ピン0..10）があります。ピン0..3はアナログ入力として使用できます。
-また、3つの小さなLEDがあります：赤（ピン11、ユーザーLED）、緑（ピン12）、青（ピン13）。
-すべてのLEDは反転しています：LEDを点灯させるには、対応するピンをLOWに設定します。
+このボードには 11 本の GPIO ピン（ピン 0..10）があります。ピン 0..3 はアナログ入力として使用できます。
+また、赤（ピン 11、ユーザー LED）、緑（ピン 12）、青（ピン 13）の 3 つの小さな LED があります。
+すべての LED は反転動作で、対応するピンを LOW に設定すると LED が点灯します。
 
-このボードには、ピン14に単一のRGB LED（NeoPixel）もあります。
+このボードには、ピン 14 に単一の RGB LED（NeoPixel）も搭載されています。
 
-## MicroBlocksファームウェアのインストール
+## MicroBlocks ファームウェアのインストール
 
-ブートローダーモードに入るには、R（リセット）ボタンをクリックしながらB（ブート）ボタンを押し続けます。
-3つのLEDがすべて点灯し、**RPI-RP2**という名前の仮想USBドライブが表示されます。
+ブートローダーモードに入るには、R（reset）ボタンをクリックしている間、B（boot）ボタンを押し続けます。
+3 つすべての LED が点灯し、**RPI-RP2** という名前の仮想 USB ドライブが表示されます。
 
-[ファームウェアファイル](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2040.uf2)を
-[vmフォルダ](https://microblocks.fun/downloads/latest/vm)から
-ダウンロードし、そのファイルを仮想USBドライブにドラッグします。
+[firmware file](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2040.uf2) を
+[vm folder](https://microblocks.fun/downloads/latest/vm) からダウンロードし、
+そのファイルを仮想 USB ドライブにドラッグします。
 
-ファームウェアがインストールされ、数秒後に仮想USBドライブが消えます。
-ディスクが適切に取り出されなかったという警告は無視してください。
+数秒後にファームウェアがインストールされ、仮想 USB ドライブは表示されなくなります。
+ディスクが正しく取り出されなかったという警告は無視してかまいません。
 
-## ボードをMicroBlocksに接続する
+## ボードを MicroBlocks に接続する
 
-データUSBケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
+データ通信対応の USB ケーブル（電源専用ケーブルではない）でボードをコンピュータに接続します。
 
-ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
+Chrome または Edge ブラウザで [MicroBlocks editor](https://microblocks.fun/run/microblocks.html) を実行します。
 **connect**（プラグアイコン）ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:200, height:'auto'}}/></div>
 
-メニューから**connect (USB)**を選択します：
+メニューから **connect (USB)** を選択します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:200, height:'auto'}}/></div>
 
-ダイアログからボードを選択し、**connect**ボタンをクリックします：
+ダイアログから自分のボードを選択し、**connect** ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-rp2040.png" style={{width:400, height:'auto'}}/></div>
 
-ボードが接続されると、緑色の円とボード名が表示されます：
+ボードが接続されると、緑の丸とボード名が表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connected-rp2040.png" style={{width:200, height:'auto'}}/></div>
 
-## MicroBlocksでのコーディング
+## MicroBlocks でのコーディング
 
-MicroBlocksは**ライブ**コーディング環境なので、コーディングしながらテストできます。
+MicroBlocks は **ライブ** コーディング環境なので、コードを書きながらテストできます。
 ブロックやスクリプトをクリックして実行します。
-ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
+ブロックをスクリプト領域にドラッグし、組み立ててスクリプトを作成します。
 
-コードは永続的なフラッシュメモリに保存され、ボードが
-MicroBlocksエディターに接続されていなくても実行できます。
-**when started**ブロックの下にあるスクリプトは、ボードに電源が供給されたときに実行されます。
+コードは永続フラッシュメモリに保存され、ボードが
+MicroBlocks editor に接続されていないときでも実行できます。
+**when started** ブロックの下にあるスクリプトは、ボードの電源が入ったときに実行されます。
 
-MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
+MicroBlocks は並行処理をサポートしており、最大 10 個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
-追加機能や周辺機器をサポートしています。
-**Add Library**ボタンをクリックしてライブラリを追加します。
+多数の組み込みブロックに加えて、MicroBlocks には
+追加機能や周辺機器をサポートする約 200 個のライブラリがあります。
+ライブラリを追加するには **Add Library** ボタンをクリックします。
 
 ## 例
 
-このスクリプトは、赤、青、緑のLEDを順番に点滅させます：
+このスクリプトは赤、青、緑の LED を順番に点灯させます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-three-led-blink.png" style={{width:300, height:'auto'}}/></div>
 
-このスクリプトは、RGB NeoPixelの色を変化させます：
+このスクリプトは RGB NeoPixel の色を変化させます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2040-neopixel.png" style={{width:300, height:'auto'}}/></div>
 
-[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には
-多くの追加例が含まれています。
+[Blocks Reference](https://wiki.microblocks.fun/en/reference_manual) には、
+さらに多くのサンプルが含まれています。
 
-## 特別な感謝
+## 謝辞
 
-この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
+この記事を執筆してくださった MicroBlocks の John 氏に感謝いたします。
 
-## MicroBlocksリソース
+## MicroBlocks リソース
 
-- [ウェブサイト](https://microblocks.fun)
+- [Website](https://microblocks.fun)
 
-- [ユーザーガイド](https://wiki.microblocks.fun/en/ide)
+- [User Guide](https://wiki.microblocks.fun/en/ide)
 
-- [ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)
+- [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual)
 
-- [ライブラリリファレンス](https://wiki.microblocks.fun/en/libraries)
+- [Libraries Reference](https://wiki.microblocks.fun/en/libraries)
 
-- [学習ガイド](https://learn.microblocks.fun)
+- [Learning Guides](https://learn.microblocks.fun)

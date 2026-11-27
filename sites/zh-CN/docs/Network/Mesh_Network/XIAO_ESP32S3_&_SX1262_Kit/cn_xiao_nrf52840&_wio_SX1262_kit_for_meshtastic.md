@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-102010710-nrf52840_wio-sx1262-kit_1.jpg" alt="pir" width={800} height="auto" /></p>
 
-该套件将 XIAO nRF52840 与 Wio-SX1262 结合在一起，支持 BLE5.0、Thread、Zigbee 和 LoRa（862-930MHz），并具备低功耗运行特性。它可应用于 [Meshtastic®](https://meshtastic.org/)、传感器网络、环境监测、资产追踪、教育和创新等多个领域。
+该套件将 XIAO nRF52840 与 Wio-SX1262 结合在一起，支持 BLE5.0、Thread、Zigbee 和 LoRa（862-930MHz），并具备低功耗运行特性。它可广泛应用于 [Meshtastic®](https://meshtastic.org/)、传感器网络、环境监测、资产追踪、教育和创新等多个领域。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html" target="_blank">
@@ -32,7 +32,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 - **多功能微控制器**：集成 Nordic nRF52840 芯片，带 FPU，最高运行频率 64 MHz，板载多种开发接口，支持 Arduino / CircuitPython / Micropython
 - **强大的 LoRa 性能**：基于 Semtech SX1262 的远距离 LoRa，支持 868/915 MHz 频段。
-- **双核通信**：支持蓝牙和 LoRa 双模通信，实现跨域互联。
+- **双核通信**：同时支持 Bluetooth 和 LoRa 双模，实现跨域互联。
 - 尺寸仅为 **8mm × 22mm × 23mm**，采用一体化天线设计。
 
 ### 规格参数
@@ -42,12 +42,16 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 | [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) | **MCU：** Nordic nRF52840  <br /> **内核：** ARM® Cortex®-M4，带 FPU，最高 64 MHz |  
 | [Wio-SX1262](https://www.seeedstudio.com/Wio-SX1262-for-XIAO-p-6379.html) | **LoRa 模组：** Semtech SX1262  <br /> **频率：** 862&#126;930MHz |  
 | **无线** | Bluetooth 5.0 / NFC |  
-| **接口** | **XIAO nRF52840：**  <br /> - 1x UART，1x I²C，1x SPI（连接至 SX1262）  <br /> - 1x NFC，1x SWD，11x GPIO（PWM）  <br /> - 6x ADC  <br /> **Wio-SX1262：**  <br />  - 1x SPI（连接至 XIAO nRF52840） |  
+| **接口** | **XIAO nRF52840：**  <br /> - 1x UART，1x I²C，1x SPI（连接到 SX1262）  <br /> - 1x NFC，1x SWD，11x GPIO（PWM）  <br /> - 6x ADC  <br /> **Wio-SX1262：**  <br />  - 1x SPI（连接到 XIAO nRF52840） |  
 | **电源** | **输入电压：**  <br /> - Type-C：5V  <br /> - 电池（BAT）：4.2V  <br /> **电池充电电流：** 50mA / 100mA  <br /> **待机功耗：** &lt;5µA |  
 | **工作温度** | -40°C &#126; 65°C |  
 | **尺寸** | 21 x 17.8mm |  
 
-### 引脚定义
+### 引脚分布
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52" target="_blank" rel="noopener noreferrer">体验交互式引脚图</a>
+</div>
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/imageXIAO_nRF52840-2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -55,7 +59,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 ## 快速上手
 
-XIAO nRF52840 & Wio-SX1262 套件预装了 Meshtastic 固件，可帮助你快速开始使用。
+XIAO nRF52840 & Wio-SX1262 套件已预先烧录 Meshtastic 固件，可帮助你快速开始使用。
 
 ### 烧录固件
 
@@ -71,17 +75,17 @@ XIAO nRF52840 & Wio-SX1262 套件预装了 Meshtastic 固件，可帮助你快�
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-将套件连接到电脑，在设备中选择 `Seeed` → `Seeed XIAO nRF52840 Kit`，并选择最新固件，然后点击 `Flash`。
+将套件连接到电脑，在设备选项中选择 `Seeed` → `Seeed XIAO nRF52840 Kit`，并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-device.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/filw-flash.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，此时会出现名为 `XIAO-xxx` 的串口，点击并连接它，系统中应显示名为 `XIAO-xxx` 的驱动器。
+点击 `Enter DFU Mode`，此时会出现名为 `XIAO-xxx` 的串口，点击并连接它，系统中也应显示名为 `XIAO-xxx` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖入 DFU 盘。文件拷贝完成并设备重启后，固件即会被烧录。
+将 UF2 文件拖入 DFU 盘中。文件拷贝完成并设备重启后，固件即会被烧录。
 
 ### 查看节点名称
 
@@ -98,7 +102,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS App">
 
-- 在蓝牙面板中选择目标设备。
+- 在 Bluetooth 面板中选择目标设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -123,7 +127,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置参数
 
-为了开始在 Mesh 网络中通信，你必须先设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行配置。
+为了开始在 Mesh 网络中通信，你必须先设置所在区域（Region）。该设置会控制设备使用的频率范围，应根据你所在的地区进行配置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -149,7 +153,7 @@ import TabItem from '@theme/TabItem';
 更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当你的设备达到该限制时，将会停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、按每分钟计算。如果达到该限制，你的设备将停止发射，直到再次被允许发送。
 :::
 
 现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
@@ -186,7 +190,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO：大能量，小板子——精通 Arduino 与 TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技术支持与产品讨论
 

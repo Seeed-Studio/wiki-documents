@@ -1,5 +1,5 @@
 ---
-description: Seeed Studio XIAO RP2350 におけるピン多重化
+description: Seeed Studio XIAO RP2350 のピン多重化
 title: ピン多重化 (Arduino)
 keywords:
   - xiao
@@ -22,6 +22,10 @@ Seeed Studio XIAO RP2350 は豊富なインターフェースを備えていま�
 
 ## ハードウェア概要
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2350" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
+
 ### 表面
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -32,11 +36,11 @@ Seeed Studio XIAO RP2350 は豊富なインターフェースを備えていま�
 
 ## 準備
 
-現在、互換性の問題により XIAO RP2350 のピン使用にいくつかの問題があります。私たちはこの問題を修正し、Raspberry Pi 公式ライブラリもマージされました。現在のバージョンは 4.2.0 で、次のバージョン **4.2.1** で更新が完了する予定です。
+現在、互換性の問題により XIAO RP2350 のピン使用にいくつかの問題があります。この問題はすでに修正されており、Raspberry Pi 公式ライブラリもマージされています。現在のバージョンは 4.2.0 で、次のバージョン **4.2.1** で更新が完了する予定です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/12.png" style={{width:500, height:'auto'}}/></div>
 
-それまでの間、**Arduino15/packages/rp2040/hardware/rp2040/4.2.0/variants/seeed_xiao_rp2350（Your Arduino Library Address）** にあるこのファイルを置き換えてください。[ここをクリックしてファイルをダウンロード](https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/file.zip)できます。完了したら、作業を楽しむことができます。
+それまでの間は、**Arduino15/packages/rp2040/hardware/rp2040/4.2.0/variants/seeed_xiao_rp2350（お使いの Arduino ライブラリアドレス）** にあるこのファイルを置き換えてください。[こちらをクリックしてファイルをダウンロード](https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/file.zip)できます。完了したら、作業を楽しむことができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -47,7 +51,7 @@ Seeed Studio XIAO RP2350 は豊富なインターフェースを備えていま�
 <table align="center">
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
-        <th>Grove OLED 付き Seeed Studio Expansion Base for XIAO</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - LED</th>
   </tr>
   <tr>
@@ -78,7 +82,7 @@ XIAO RP2350 を拡張ボードに取り付け、Grove ケーブルを使用し�
 
 ### ソフトウェア実装
 
-この例では、XIAO 拡張ボードに接続されたボタンを使用してリレーのオン/オフ状態を制御します。ボタンが押されるとリレーがオンになり、ボタンを離すとリレーがオフになります。
+この例では、XIAO 拡張ボードに接続されたボタンを使ってリレーのオン／オフ状態を制御します。ボタンが押されるとリレーがオンになり、ボタンを離すとリレーがオフになります。
 
 ```c
 //define which pin you use
@@ -98,22 +102,22 @@ void loop() {
 }
 ```
 
-### 効果
+### 動作結果
 
-すべてが問題なく進めば、プログラムを書き込んだ後、次のような動作が確認できるはずです。
+すべてが正常に進めば、プログラムを書き込んだ後に次のような動作が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/1.gif" style={{width:500, height:'auto'}}/></div>
 
-## デジタルを PWM として使用
+## PWM としてのデジタル
 
-XIAO RP2350 のすべての GPIO ピンは PWM 出力をサポートしています。そのため、任意のピンを使用して PWM を出力し、ライトの明るさを調整したり、サーボを制御したり、その他の機能を実現できます。
+XIAO RP2350 のすべての GPIO ピンは PWM 出力をサポートしています。そのため、任意のピンを使用して PWM を出力し、ライトの明るさ調整、サーボ制御などを行うことができます。
 
 ### ハードウェアの準備
 
 <table align="center">
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
-        <th>Grove OLED 付き Seeed Studio Expansion Base for XIAO</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - LED</th>
   </tr>
   <tr>
@@ -144,7 +148,7 @@ XIAO RP2350 を拡張ボードに取り付け、Grove ケーブルを使用し�
 
 ### ソフトウェア実装
 
-この例では、PWM 出力を使用してライトの明るさを制御する方法を示します。
+この例では、PWM 出力を使用してライトの明るさを制御する方法を紹介します。
 
 ```cpp
 int LED_pin = D0;    // LED connected to digital pin 10
@@ -173,7 +177,7 @@ void loop() {
 }
 ```
 
-### 効果
+### 動作結果
 
 プログラムが正常に動作すると、次のような動作結果が確認できます。
 
@@ -181,7 +185,7 @@ void loop() {
 
 ## アナログ
 
-XIAO MG24(Sense) 開発ボードには、アナログセンサー値を高分解能で読み取るための 12 ビット ADC が搭載されており、より正確な値を読み取るのに役立ちます。
+XIAO MG24(Sense) 開発ボードには、アナログセンサー値を高分解能で読み取るための 12 ビット ADC が搭載されており、より正確な値を取得するのに役立ちます。
 
 次に、ADC の特性を反映するために 2 つのセンサーを選択します。
 
@@ -190,7 +194,7 @@ XIAO MG24(Sense) 開発ボードには、アナログセンサー値を高分解
 <table align="center">
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
-        <th>Grove OLED 付き Seeed Studio Expansion Base for XIAO</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Loudness Sensor</th>
   </tr>
   <tr>
@@ -235,15 +239,15 @@ void loop()
 }
 ```
 
-### 実行結果
+### 効果
 
-すべてが問題なく進めば、プログラムを書き込んだ後に次のような結果が確認できます。
+すべてが順調に進めば、プログラムを書き込んだ後に次のような効果が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/5.png" style={{width:800, height:'auto'}}/></div>
 
 ## UART
 
-Arduino IDE を使用する場合、シリアル通信は多くのプロジェクトで不可欠な要素です。Arduino IDE で Serial を使用するには、まずシリアルモニタウィンドウを開く必要があります。これは、ツールバーの **Serial Monitor** アイコンをクリックするか、ショートカットキー **Ctrl+Shift+M** を押すことで行えます。
+Arduino IDE を使用する場合、シリアル通信は多くのプロジェクトで不可欠な要素です。Arduino IDE で Serial を使用するには、まず Serial Monitor ウィンドウを開く必要があります。これは、ツールバーの **Serial Monitor** アイコンをクリックするか、ショートカットキー **Ctrl+Shift+M** を押すことで行えます。
 
 ### 一般的な使い方
 
@@ -254,9 +258,9 @@ Arduino IDE を使用する場合、シリアル通信は多くのプロジェ�
 - `Serial.write()` -- バイナリデータをシリアルポートに送信します。
 - `Serial.available()` -- シリアルポートから読み取ることができるデータがあるかどうかを確認します。
 - `Serial.read()` -- シリアルポートから 1 バイトのデータを読み取ります。
-- `Serial.flush()` -- 送信中のシリアルデータの送信が完了するまで待機します。
+- `Serial.flush()` -- 送信中のシリアルデータの送信完了を待機します。
 
-これらの Serial 関数を使用することで、Arduino ボードとコンピュータの間でデータを送受信でき、インタラクティブなプロジェクトを作成するための多くの可能性が広がります。
+これらの Serial 関数を使用することで、Arduino ボードとコンピュータ間でデータを送受信でき、インタラクティブなプロジェクトを作成するための多くの可能性が広がります。
 
 以下はサンプルプログラムです：
 
@@ -284,22 +288,22 @@ void loop() {
 }
 ```
 
-### 実行結果
+### 効果
 
-すべてが問題なく進めば、プログラムを書き込んだ後に次のような結果が確認できます。
+すべてが順調に進めば、プログラムを書き込んだ後に次のような効果が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/2.png" style={{width:500, height:'auto'}}/></div>
 
 ### Serial1 の使用方法
 
-上記の XIAO RP2350 のピン配置図に基づいて各パラメータを確認すると、TX と RX ピン（D6、D7）があることが分かります。
-使い方も非常によく似ていますが、データを取得するためには **シリアルポートモニタリングツール** を使用して D6、D7 ピンを監視する必要があります。
-そこで次に、D6、D7 ピンを使用して **serial1** を利用してみます。
+上記の XIAO RP2350 のピン図に示されている各種パラメータによると、TX と RX ピン（D6, D7）があることがわかります。
+使い方も非常によく似ていますが、データを取得するためには **シリアルポートモニタリングツール** を使用して D6, D7 ピンを監視する必要があります。
+そこで次に、D6, D7 ピンを使用して **Serial1** を利用します。
 
 :::tip
-通常、デバイスとコンピュータ間の通信には **Serial** を使用し、プログラム内で何が起きているかを把握します。
+通常、デバイスとコンピュータ間の通信には **Serial** を使用し、プログラム内で何が起こっているかを把握します。
 
-それを踏まえて、このデバイスを別のデバイスとの通信に使いたい場合があります。そのような場合には **Serial1** を使用します。
+その上で、このデバイスを使って別のデバイスと通信したい場合があります。このような場合には **Serial1** を使用します。
 :::
 
 ```c
@@ -319,15 +323,15 @@ void loop() {
 }
 ```
 
-### 実行結果
+### 効果
 
-すべてが問題なく進めば、プログラムを書き込んだ後に次のような結果が確認できます。
+すべてが順調に進めば、プログラムを書き込んだ後に次のような効果が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/1.png" style={{width:500, height:'auto'}}/></div>
 
 ## I2C
 
-XIAO RP2350 には I2C インターフェースが搭載されており、多くのセンサーのデータ送信や解析、さらには一部の OLED 画面の使用にも利用できます。
+XIAO RP2350 には I2C インターフェースが搭載されており、多くのセンサーのデータ送信および解析や、いくつかの OLED 画面の使用に利用できます。
 
 ### ハードウェア準備
 
@@ -387,7 +391,7 @@ DHT20 センサーは I2C プロトコルを使用しているため、XIAO Expa
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/11.png" style={{width:800, height:'auto'}}/></div>
 
-今回は DHT20 を使用するため、次のコードのように DHT20 用のコードのコメントを解除する必要があります。
+DHT20 を使用するため、次のコードのように DHT20 のコードのコメントを解除する必要があります。
 
 ```c
 // Example testing sketch for various DHT humidity/temperature sensors
@@ -459,13 +463,13 @@ void loop() {
 
 ### 効果
 
-すべてが順調に進めば、プログラムを書き込んだ後に次のような動作が確認できるはずです。
+すべてが順調に進めば、プログラムを書き込んだ後、次のような動作が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/4.png" style={{width:800, height:'auto'}}/></div>
 
 ## SPI
 
-XIAO RP2350 チップには複数のペリフェラルが統合されており、その中には SPI インターフェースも含まれます。これを使用して、フラッシュメモリ、ディスプレイ、センサなどの外部 SPI デバイスを接続できます。XIAO RP2350 は高速 SPI 転送モードもサポートしており、最大 80 MHz の SPI 転送レートを実現できます。これにより、ほとんどの SPI デバイスのデータ転送ニーズを満たすことができます。
+XIAO RP2350 チップには複数のペリフェラルが統合されており、その中には SPI インターフェースも含まれています。これを使用して、フラッシュメモリ、ディスプレイ、センサなどの外部 SPI デバイスを接続できます。XIAO RP2350 は高速 SPI 転送モードもサポートしており、最大 80 MHz の SPI 転送レートを実現でき、多くの SPI デバイスのデータ転送ニーズを満たします。
 
 ### ハードウェアの準備
 
@@ -492,7 +496,7 @@ XIAO RP2350 チップには複数のペリフェラルが統合されており�
  </tr>
 </table>
 
-上記のようにハードウェアを準備したら、ジャンパワイヤを使用して XIAO と OLED の SPI インターフェースを接続します。配線は次の表を参照してください。
+上記のようにハードウェアを準備したら、ジャンパワイヤを使って XIAO と OLED の SPI インターフェースを接続します。配線は次の表を参照してください。
 
 |XIAO RP2350| OLED Display|
 |-----------|-------------|
@@ -506,7 +510,7 @@ XIAO RP2350 チップには複数のペリフェラルが統合されており�
 
 ### ソフトウェア実装
 
-次に、以下のプログラムを例として、SPI インターフェースを使用して OLED 画面表示を制御する方法を紹介します。
+次に、以下のプログラムを例として、SPI インターフェースを使用して OLED 画面の表示を制御する方法を紹介します。
 
 u8g2 ライブラリをインストールします。
 
@@ -540,9 +544,9 @@ void loop(void) {
 }
 ```
 
-`setup()` 関数では、チップセレクト（cs）、データ/コマンド（dc）、リセットに使用するピンを指定する適切なコンストラクタ引数で `U8G2_SH1107_128X128_1_4W_HW_SPI` クラスをインスタンス化します。その後、`u8g2.begin()` 関数を呼び出してディスプレイを初期化します。
+`setup()` 関数では、チップセレクト（cs）、データ/コマンド（dc）、リセットに使用するピンを指定する適切なコンストラクタ引数を用いて `U8G2_SH1107_128X128_1_4W_HW_SPI` クラスのインスタンスを生成します。続いて、`u8g2.begin()` 関数を呼び出してディスプレイを初期化します。
 
-`loop()` 関数では、`u8g2.firstPage()`、`u8g2.setFont()`、`u8g2.drawStr()` 関数を使用して、新しいコンテンツでディスプレイを更新します。`u8g2.firstPage()` 関数は書き込み用にディスプレイバッファを設定し、`u8g2.nextPage()` が更新された内容を表示します。do-while ループにより、プログラムが停止するまでコンテンツが継続的に表示されることが保証されます。
+`loop()` 関数では、`u8g2.firstPage()`、`u8g2.setFont()`、`u8g2.drawStr()` 関数を使用して、新しいコンテンツでディスプレイを更新します。`u8g2.firstPage()` 関数は書き込み用にディスプレイバッファを設定し、`u8g2.nextPage()` が更新された内容を表示します。do-while ループにより、プログラムが停止するまでコンテンツが継続的に表示されるようになっています。
 
 全体として、このコードは U8g2 ライブラリを使用して OLED ディスプレイを制御し、その上にテキストを表示する方法を示しています。
 
@@ -550,12 +554,12 @@ void loop(void) {
 
 ## まとめ
 
-ここまでで、XIAO RP2350 のピンの基本的な機能を学びました。さあ、これを使って楽しんでみましょう〜
+ここまでで、XIAO RP2350 のピンの基本的な機能を学びました。さあ、これを使っていろいろ楽しんでみましょう〜
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/ja/XIAO-SAMD21-MicroPython/
 ---
 
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/ja/XIAO-SAMD21-MicroPython/
 
 ## **MicroPython の概要**
 
-[MicroPython](https://github.com/micropython/micropython/wiki) は、一部にネイティブコードコンパイル機能を備えた Python インタプリタです。組み込みプロセッサや制約のあるシステム向けに実装された、Python 3.5 機能のサブセットを提供します。これは CPython とは異なり、その違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
+[MicroPython](https://github.com/micropython/micropython/wiki) は、一部をネイティブコードとしてコンパイルできる機能を備えた Python インタプリタです。組み込みプロセッサや制約のあるシステム向けに実装された、Python 3.5 機能のサブセットを提供します。これは CPython とは異なり、その違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
@@ -47,7 +47,7 @@ url: https://wiki.seeedstudio.com/ja/XIAO-SAMD21-MicroPython/
 
 - **ステップ 2**. ファームウェアを書き込む
 
-MicroPython の公式サイトにアクセスし、最新のファームウェアをダウンロードします。
+MicroPython の公式サイトにアクセスして、最新のファームウェアをダウンロードします
 
     - [XIAO SAMD21 Series MicroPython Firmware](https://micropython.org/download/SEEED_XIAO_SAMD21/)
 
@@ -68,17 +68,17 @@ MicroPython の公式サイトにアクセスし、最新のファームウェ�
 
 ### ソフトウェアの準備
 
-- **ステップ 1**. お使いの OS に応じて、最新版の [Thonny editor](https://thonny.org/) をダウンロードしてインストールします。
+- **ステップ 1**. お使いの OS に応じて、最新版の [Thonny editor](https://thonny.org/) をダウンロードしてインストールします
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_6.png" /></div>
 
-- **ステップ 2**. Thonny を起動します。
+- **ステップ 2**. Thonny を起動します
 
 - **ステップ 3**. **Tools-->Options** をクリックして設定画面を開きます。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-- **ステップ 4**. **Interpreter** タブを選択し、デバイスを **MicroPython(generic)**、ポートを **Board CDC @ Port** に設定します。
+- **ステップ 4**. **Interpreter** タブを選択し、デバイスを **MicroPython(generic)**、ポートを **Board CDC @ Port** に設定します
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/mpy_1.png" /></div>
 
@@ -86,19 +86,24 @@ MicroPython の公式サイトにアクセスし、最新のファームウェ�
 
 ### SEEED XIAO SAMD21 シリーズのピン割り当て表
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">XIAO SAMD21 インタラクティブ Pinout を確認</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">XIAO SAMD21 Plus インタラクティブ Pinout を確認</a>
+</div>
+
 | MicroPython ピン名 | XIAO SAMD21 GPIO (ID) | XIAO SAMD21 Plus GPIO (ID) | IRQ SAMD21 / Plus | ADC | 機能 |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |
-| D1 / A1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO, ADC |
-| D2 / A2 | PA10 (10) | PA10 (10) | 10 / 10 | 18 | GPIO, ADC |
-| D3 / A3 | PA11 (11) | PA11 (11) | 11 / 11 | 19 | GPIO, ADC |
-| D4 / A4 / SDA | PA08 (8) | PA08 (8) | NMI / NMI | 16 | GPIO, ADC, I2C SDA |
-| D5 / A5 / SCL | PA09 (9) | PA09 (9) | 9 / 9 | 17 | GPIO, ADC, I2C SCL |
-| D6 / A6 / TX | PB08 (40) | PB08 (40) | 8 / 8 | 2 | GPIO, ADC, UART TX |
-| D7 / A7 / RX | PB09 (41) | PB09 (41) | 9 / 9 | 3 | GPIO, ADC, UART RX |
-| D8 / A8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO, ADC, SPI SCK |
-| D9 / A9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO, ADC, SPI MISO |
-| D10 / A10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | 6 | GPIO, ADC, SPI MOSI |
+| D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO、ADC、DAC |
+| D1 / A1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO、ADC |
+| D2 / A2 | PA10 (10) | PA10 (10) | 10 / 10 | 18 | GPIO、ADC |
+| D3 / A3 | PA11 (11) | PA11 (11) | 11 / 11 | 19 | GPIO、ADC |
+| D4 / A4 / SDA | PA08 (8) | PA08 (8) | NMI / NMI | 16 | GPIO、ADC、I2C SDA |
+| D5 / A5 / SCL | PA09 (9) | PA09 (9) | 9 / 9 | 17 | GPIO、ADC、I2C SCL |
+| D6 / A6 / TX | PB08 (40) | PB08 (40) | 8 / 8 | 2 | GPIO、ADC、UART TX |
+| D7 / A7 / RX | PB09 (41) | PB09 (41) | 9 / 9 | 3 | GPIO、ADC、UART RX |
+| D8 / A8 / SCK | PA07 (7) | PA07 (7) | 7 / 7 | 7 | GPIO、ADC、SPI SCK |
+| D9 / A9 / MISO | PA05 (5) | PA05 (5) | 5 / 5 | 5 | GPIO、ADC、SPI MISO |
+| D10 / A10 / MOSI | PA06 (6) | PA06 (6) | 6 / 6 | 6 | GPIO、ADC、SPI MOSI |
 | USER_LED / D13 / SCL1 | PA17 (17) | PA17 (17) | 1 / 1 | — | 元のユーザー LED、Plus では D13 & I2C1 SCL |
 | RX_LED / D27 | PA18 (18) | PA18 (18) | 2 / 2 | — | 元の RX LED、Plus では D27 |
 | TX_LED / D19 / I2S_SD | PA19 (19) | PA19 (19) | 3 / 3 | — | 元の TX LED、Plus では D19 & I2S データ |
@@ -115,7 +120,7 @@ MicroPython の公式サイトにアクセスし、最新のファームウェ�
 | D24 | — | PB23 (55) | — / 7 | — | Plus 拡張 GPIO |
 | D25 | — | PA23 (23) | — / 7 | — | Plus 拡張 GPIO |
 | D26 | — | PA22 (22) | — / 6 | — | Plus 拡張 GPIO |
-| RGB_LED | — | PA27 (27) | — / 15 | — | Plus アドレス指定可能 RGB LED (WS2812) |
+| RGB_LED | — | PA27 (27) | — / 15 | — | Plus アドレサブル RGB LED (WS2812) |
 | BUTTON | — | PB22 (54) | — / 6 | — | Plus ユーザーボタン（アクティブ Low） |
 | USB_DM | PA24 (24) | PA24 (24) | 12 / 12 | — | USB D−（ネイティブ USB、GPIO ではない） |
 | USB_DP | PA25 (25) | PA25 (25) | 13 / 13 | — | USB D+（ネイティブ USB、GPIO ではない） |
@@ -128,11 +133,11 @@ GPIO (ID) の括弧内の数字は、物理 MCU パッケージのピン番号�
 
 ### コードを書き込む
 
-"Run current script" ボタンをクリックしてコードを書き込みます。初回は、Thonny からコードファイルの保存先を尋ねられます。**This Computer** と **MicroPython device** のどちらを選んでも構いません。
+"Run current script" ボタンをクリックしてコードを書き込みます。初回のみ、Thonny からコードファイルをどこに保存するか尋ねられます。**This Computer** と **MicroPython device** のどちらを選んでも構いません。
 
 プログラムをオフラインで使用したい場合は、プログラムを XIAO SAMD21 に保存する必要があります。
 
-Ctrl + Shift + S を同時に押し続け、**MicroPython device** に保存するオプションを選択します。
+Ctrl + Shift + S を同時に押し続けてから、**MicroPython device** に保存するオプションを選択します
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/6.jpg" /></div>
 
@@ -144,9 +149,9 @@ Ctrl + Shift + S を同時に押し続け、**MicroPython device** に保存す�
 
     次のコードを Thonny にコピーします。
 
-1. XIAO SAMD21 の場合、RX_LED は PA18 です。
+1. XIAO SAMD21 の場合、RX_LED は PA18 です
 
-    青色の RX_LED が点灯し、1 秒ごとに点滅するのが確認できます。
+    青色の RX_LED が点灯し、1 秒ごとに点滅するのが確認できます
 
 ```python
 from machine import Pin, Timer
@@ -167,7 +172,7 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
 
-2. XIAO SAMD21 Plus では RX_LED と TX_LED は取り外されており、その代わりに WS2812 LED が使用されています。そのデータピンは PA27 に割り当てられています。
+2. XIAO SAMD21 Plus では RX_LED と TX_LED は取り外されており、その代わりに WS2812 LED が使用されています。データピンは PA27 に割り当てられています。
 <br/>
 ```py
 from machine import Pin, Timer
@@ -314,11 +319,11 @@ print(i2c.readfrom(0x51, 4))
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/8.png" /></div>
 
-micropython に慣れてくると、さらに多くのことができるようになります。私たちは、皆さまのためにより多くの価値を生み出せることを楽しみにしています。ぜひ、あなたのプロジェクトも私たちと共有してください！
+MicroPython に慣れ親しむことで、より多くのことができるようになります。私たちは、皆さまのためにさらに多くの価値を生み出せることを楽しみにしています。ぜひ、あなたのプロジェクトも私たちと共有してください！
 
 ### DAC サポート
 
-コードを提供してくださった Aleksei Tertychnyi 氏に感謝いたします。関連するすべての機能は彼によって開発・貢献されました。
+コードを提供してくださった Aleksei Tertychnyi 氏に感謝いたします。関連するすべての機能は、彼によって開発・貢献されました。
 
 ```python
 from machine import Pin, Timer, DAC
@@ -374,9 +379,9 @@ tim.init(period=1000,              # callback period in milliseconds (1000 ms = 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳しく見る</font></span></strong></a></div>
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

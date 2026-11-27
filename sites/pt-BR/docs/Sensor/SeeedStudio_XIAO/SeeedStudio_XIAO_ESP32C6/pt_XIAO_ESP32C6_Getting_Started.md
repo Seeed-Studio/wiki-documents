@@ -42,9 +42,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Introdução
 
-O Seeed Studio XIAO ESP32C6 é alimentado pelo altamente integrado [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6), construído sobre **dois processadores RISC-V de 32 bits**, com um processador de alto desempenho (HP) **rodando até 160 MHz**, e um processador RISC-V de 32 bits de baixo consumo (LP), que pode ser clockado até 20 MHz. Há **512KB de SRAM e 4 MB de Flash no chip**, permitindo mais espaço de programação e trazendo mais possibilidades para cenários de controle de IoT.
+Seeed Studio XIAO ESP32C6 é alimentado pelo altamente integrado [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6), baseado em **dois processadores RISC-V de 32 bits**, com um processador de alto desempenho (HP) **rodando até 160 MHz**, e um processador RISC-V de 32 bits de baixo consumo (LP), que pode operar até 20 MHz. Há **512KB de SRAM e 4 MB de Flash no chip**, permitindo mais espaço de programação e trazendo mais possibilidades para cenários de controle de IoT.
 
-O XIAO ESP32C6 é **nativamente compatível com Matter graças à sua conectividade sem fio aprimorada**. A pilha sem fio suporta **WiFi 6 de 2,4 GHz, Bluetooth® 5.3, Zigbee e Thread (802.15.4)**. Como o primeiro membro da família XIAO compatível com Thread, é uma escolha perfeita para construir projetos compatíveis com Matter, alcançando assim interoperabilidade em casas inteligentes.
+XIAO ESP32C6 é **nativamente compatível com Matter graças à sua conectividade sem fio aprimorada**. A pilha sem fio suporta **WiFi 6 de 2,4 GHz, Bluetooth® 5.3, Zigbee e Thread (802.15.4)**. Como o primeiro membro da família XIAO compatível com Thread, é uma escolha perfeita para construir projetos compatíveis com Matter, alcançando assim interoperabilidade em casas inteligentes.
 
 export const Highlight = ({children, color}) => (
   <span
@@ -68,12 +68,12 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
     <th>Processador</th>
-    <td>Espressif ESP32-C6 SoC<br/>dois processadores RISC-V de 32 bits, com o de alto desempenho rodando até 160 MHz e o de baixo consumo clockado até 20 MHz</td>
+    <td>Espressif ESP32-C6 SoC<br/>dois processadores RISC-V de 32 bits, com o de alto desempenho rodando até 160 MHz e o de baixo consumo operando até 20 MHz</td>
     <td>Espressif ESP32-C3 SoC<br/>processador RISC-V single-core de 32 bits com pipeline de quatro estágios que opera até 160 MHz</td>
     <td>Espressif ESP32-S3R8 SoC<br/>processador Xtensa LX7 dual-core de 32 bits rodando até 240 MHz</td>
   </tr>
   <tr>
-    <th rowspan="3">Sem fio</th>
+    <th rowspan="3">Wireless</th>
     <td>Subsistema Wi-Fi 6 completo de 2,4GHz</td>
     <td>Subsistema Wi-Fi completo de 2,4GHz</td>
     <td>Subsistema Wi-Fi completo de 2,4GHz</td>
@@ -110,7 +110,7 @@ export const Highlight = ({children, color}) => (
     <td colspan="3">Tensão de entrada (Type-C): 5V<br/>Tensão de entrada (BAT): 3.7V</td>
   </tr>
   <tr>
-    <th>Modelo de Consumo de Energia (Típ.)<br/>(Alimentação: 3.8V)</th>
+    <th>Modelo de Consumo de Energia (Típ.)<br/>(Fonte de alimentação: 3.8V)</th>
     <td>Modo Modem-sleep: 30 mA<br/>Modo Light-sleep: 3.1 mA<br/>Modo Deep Sleep: 15 μA</td>
     <td>Modo Modem-sleep: 24 mA<br/>Modo Light-sleep: 3 mA<br/>Modo Deep Sleep: 44 μA</td>
     <td>Modo Modem-sleep: 27 mA<br/>Modo Light-sleep: 2 mA<br/>Modo Deep Sleep: 14 μA</td>
@@ -129,13 +129,17 @@ export const Highlight = ({children, color}) => (
 
 - **Conectividade aprimorada**: Integra conectividade de rádio Wi-Fi 6 (802.11ax) de ***2.4*** GHz, Bluetooth 5(LE) e IEEE 802.15.4, permitindo a aplicação dos protocolos **Thread** e **Zigbee**.
 - **Compatível nativamente com Matter**: Suporta a construção de projetos de casa inteligente compatíveis com Matter, garantindo interoperabilidade entre diferentes dispositivos inteligentes.
-- **Segurança criptografada no chip**: Utiliza o ESP32-C6 para fornecer recursos de boot seguro, criptografia e Trusted Execution Environment (TEE), aprimorando a segurança de projetos de casa inteligente.
+- **Segurança criptografada no chip**: Utiliza o ESP32-C6 para fornecer recursos de secure boot, criptografia e Trusted Execution Environment (TEE), aprimorando a segurança de projetos de casa inteligente.
 - **Desempenho RF excepcional**: Possui uma antena integrada com alcance BLE/Wi-Fi de até *80m* e oferece uma interface para conexão de uma antena UFL externa, garantindo conectividade confiável.
 - **Aproveitamento do consumo de energia**: Oferece quatro modos de operação, incluindo um modo de deep sleep com consumo tão baixo quanto *15* μA, além de suporte para gerenciamento de carga de bateria de lítio.
 - **Processadores RISC-V duplos**: Incorpora dois processadores RISC-V de 32 bits, com o processador de alto desempenho capaz de rodar até 160 MHz e o processador de baixo consumo até *20 MHz*.
 - **Designs clássicos XIAO**: Mantém o formato do tamanho de um polegar de 21 x 17.8mm e o design de montagem em um único lado, ideal para projetos com espaço limitado, como dispositivos vestíveis.
 
-## Visão geral do hardware
+## Visão geral de hardware
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c6" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 ### Frente
 
@@ -147,12 +151,12 @@ export const Highlight = ({children, color}) => (
 
 :::tip RF Switch
 
-O recurso **RF Switch** permite alternar entre a antena cerâmica integrada e uma antena externa configurando o `GPIO14`. Para habilitar essa função, *você deve primeiro definir o `GPIO3` para nível baixo*, pois isso ativa o controle do RF switch.  
+O recurso **RF Switch** permite alternar entre a antena cerâmica integrada e uma antena externa configurando o `GPIO14`. Para habilitar essa função, *você deve primeiro definir o `GPIO3` em nível baixo*, pois isso ativa o controle do RF switch.  
 
 - **GPIO14 em nível baixo (configuração padrão)**: O dispositivo usa a antena cerâmica integrada.
 - **GPIO14 em nível alto**: O dispositivo alterna para a antena externa.  
 
-Por padrão, o `GPIO14` é definido para nível baixo, habilitando a antena integrada. Para usar uma antena externa, defina o `GPIO14` para nível alto. Consulte o código de exemplo abaixo para obter orientação sobre como configurar `GPIO3` e `GPIO14` para ativar a antena externa:
+Por padrão, `GPIO14` é definido em nível baixo, habilitando a antena integrada. Para usar uma antena externa, defina `GPIO14` em nível alto. Consulte o código de exemplo abaixo para obter orientação sobre como configurar `GPIO3` e `GPIO14` para ativar a antena externa:
 
 ```cpp
 void setup() {
@@ -171,32 +175,32 @@ void setup() {
 
 ## Mapa de pinos
 
-| Pino XIAO                | Função    | Pino do chip | Funções alternativas | Descrição                           |
+| Pino XIAO               | Função    | Pino do chip | Funções alternativas | Descrição                            |
 | :---------------------: | :-------: | :-------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS      |           |                    | Entrada/Saída de alimentação        |
+| 5V                      | VBUS      |           |                    | Entrada/Saída de alimentação         |
 | GND                     |           |           |                    |                                      |
-| 3V3                     | 3V3_OUT   |           |                    | Saída de alimentação                |
+| 3V3                     | 3V3_OUT   |           |                    | Saída de alimentação                 |
 | D0                      | Analógico | GPIO0     | LP_GPIO0           | GPIO, ADC                            |
 | D1                      | Analógico | GPIO1     | LP_GPIO1           | GPIO, ADC                            |
 | D2                      | Analógico | GPIO2     | LP_GPIO2           | GPIO, ADC                            |
 | D3                      | Digital   | GPIO21    | SDIO_DATA1         | GPIO                                 |
-| D4                      | SDA       | GPIO22    | SDIO_DATA2         | GPIO, dados I2C                      |
-| D5                      | SCL       | GPIO23    | SDIO_DATA3         | GPIO, clock I2C                      |
-| D6                      | TX        | GPIO16    |                    | GPIO, transmissão UART               |
-| D7                      | RX        | GPIO17    |                    | GPIO, recepção UART                  |
-| D8                      | SCK       | GPIO19    | SPI_CLK           | GPIO, clock SPI                      |
-| D9                      | MISO      | GPIO20    | SPI_MISO          | GPIO, dados SPI                      |
-| D10                     | MOSI      | GPIO18    | SPI_MOSI           | GPIO, dados SPI                      |
+| D4                      | SDA       | GPIO22    | SDIO_DATA2         | GPIO, I2C Data                       |
+| D5                      | SCL       | GPIO23    | SDIO_DATA3         | GPIO, I2C Clock                      |
+| D6                      | TX        | GPIO16    |                    | GPIO, UART Transmit                  |
+| D7                      | RX        | GPIO17    |                    | GPIO, UART Receive                   |
+| D8                      | SCK       | GPIO19    | SPI_CLK           | GPIO, SPI Clock                      |
+| D9                      | MISO      | GPIO20    | SPI_MISO          | GPIO, SPI Data                       |
+| D10                     | MOSI      | GPIO18    | SPI_MOSI           | GPIO, SPI Data                       |
 | MTDO                    |           | GPIO7     |                    | JTAG                                 |
 | MTDI                    |           | GPIO5     |                    | JTAG, ADC                            |
 | MTCK                    |           | GPIO6     |                    | JTAG, ADC                            |
 | MTMS                    |           | GPIO4     |                    | JTAG, ADC                            |
 | EN                      |           | CHIP_PU   |                    | Reset                                |
 | Boot                    |           | GPIO9     |                    | Entrar no modo Boot                  |
-| RF Switch Port Select   |           | GPIO14    |                    | Alternar entre a antena integrada e a antena UFL |
+| RF Switch Port Select   |           | GPIO14    |                    | Alternar entre a antena onboard e a antena UFL |
 | RF Switch Power         |           | GPIO3     |                    | Alimentação                          |
 | Light                   |           | GPIO15    |                    | Luz do usuário                       |
-## Primeiros passos
+## Introdução
 
 Para permitir que você comece mais rápido com o XIAO ESP32C6, leia a preparação de hardware e software abaixo para preparar o XIAO.
 
@@ -209,18 +213,18 @@ Você precisa preparar o seguinte:
 - 1 x Cabo USB Tipo-C
 
 :::tip
-Alguns cabos USB podem apenas fornecer energia e não transferem dados. Se você não tiver um cabo USB ou não souber se o seu cabo USB pode transmitir dados, você pode conferir o [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Alguns cabos USB podem apenas fornecer energia e não transferir dados. Se você não tiver um cabo USB ou não souber se o seu cabo USB pode transmitir dados, você pode verificar o [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 
 #### Soldar o header
 
-O XIAO ESP32C6 é enviado sem pinos de header por padrão, você precisa preparar seus próprios pinos de header e soldá-los nos pinos correspondentes do XIAO para que possa conectá-lo à placa de expansão ou ao sensor.
+O XIAO ESP32C6 é enviado sem pinos de header por padrão, você precisa preparar seus próprios pinos de header e soldá-los nos pinos correspondentes do XIAO para que possa conectar à placa de expansão ou ao sensor.
 
-Devido ao tamanho reduzido do XIAO ESP32C6, tenha cuidado ao soldar os headers, não deixe pinos diferentes grudarem entre si e não deixe a solda encostar no shield ou em outros componentes. Caso contrário, isso pode fazer com que o XIAO entre em curto-circuito ou não funcione corretamente, e as consequências causadas por isso serão de responsabilidade do usuário.
+Devido ao tamanho reduzido do XIAO ESP32C6, tenha cuidado ao soldar os headers, não junte pinos diferentes e não deixe a solda encostar no shield ou em outros componentes. Caso contrário, isso pode fazer com que o XIAO entre em curto-circuito ou não funcione corretamente, e as consequências causadas por isso serão de responsabilidade do usuário.
 
 #### Modo BootLoader
 
-Às vezes usamos o programa errado e o XIAO parece perder as portas ou não funcionar corretamente. O comportamento específico é:
+Às vezes usamos o programa errado e o XIAO parece perder portas ou não funcionar corretamente. O comportamento específico é:
 
 - Conectado ao computador, mas nenhum número de porta é encontrado para o XIAO.
 - O computador está conectado e o número da porta aparece, mas o upload do programa falha.
@@ -228,16 +232,16 @@ Devido ao tamanho reduzido do XIAO ESP32C6, tenha cuidado ao soldar os headers, 
 Quando você encontrar as duas situações acima, pode tentar colocar o XIAO no modo BootLoader, o que pode resolver a maioria dos problemas de dispositivos não reconhecidos e falhas de upload. O método específico é:
 
 - **Passo 1**. Pressione e segure o botão BOOT no XIAO ESP32C6 sem soltá-lo.
-- **Passo 2**. Mantenha o botão BOOT pressionado e então conecte ao computador através do cabo de dados. Solte o botão BOOT após conectar ao computador.
+- **Passo 2**. Mantenha o botão BOOT pressionado e então conecte ao computador via cabo de dados. Solte o botão BOOT após conectar ao computador.
 - **Passo 3**. Faça o upload do programa **Blink** para verificar o funcionamento do XIAO ESP32C6.
 
 #### Reset
 
 Quando o programa rodar de forma anormal, você pode pressionar Reset uma vez durante a energização para que o XIAO volte a executar o programa carregado.
 
-Quando você pressiona e mantém pressionada a tecla BOOT enquanto liga a placa e, em seguida, pressiona a tecla Reset uma vez, você também pode entrar no modo BootLoader.
+Quando você pressiona e segura a tecla BOOT enquanto liga e, em seguida, pressiona a tecla Reset uma vez, também pode entrar no modo BootLoader.
 
-### Preparação de Software
+### Preparação de software
 
 A ferramenta de programação recomendada para o XIAO ESP32C6 é o Arduino IDE, portanto você precisa concluir a instalação do Arduino como parte da preparação de software.
 
@@ -257,7 +261,7 @@ E o pacote on-board para o XIAO ESP32C6 requer pelo menos a versão **2.0.8** pa
   <br></br>
 - **Passo 2.** Inicie o aplicativo Arduino.
 - **[Passo 3](#add-board).**  Adicione o pacote on-board do XIAO ESP32C6 ao Arduino IDE e clique em `OK`.
-- **Passo 4.** Feche o Arduino IDE e abra-o novamente.
+- **Passo 4.** Feche o Arduino IDE e reabra-o.
 
 #### Adicionar a placa XIAO-C6 {#add-board}
 
@@ -267,7 +271,7 @@ Para instalar a placa XIAO ESP32C6, siga estes passos:
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
-1. Adicione a URL do gerenciador de placas acima nas preferências do seu Arduino IDE, que é retirada de [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide).
+1. Adicione a URL do gerenciador de placas acima às preferências do seu Arduino IDE, que é retirada de [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide).
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
 
@@ -283,13 +287,13 @@ Disponível apenas se a versão da placa esp32 for maior que `3.0.0`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/select_xiao_c6.png" style={{width:1000, height:'auto'}}/></div>
 
-Agora divirta-se programando ✨.
+Agora aproveite para programar ✨.
 
 #### Execute seu primeiro programa Blink
 
 - **Passo 1.** Inicie o aplicativo Arduino.
 
-- **Passo 2.** Navegue até **File > Examples > 01.Basics > Blink** e abra o programa.
+- **Passo 2.** Navegue até **File > Examples > 01.Basics > Blink**, abra o programa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
@@ -308,7 +312,7 @@ Depois que o programa for carregado com sucesso, você verá a seguinte mensagem
 
 ## Uso da bateria
 
-A série XIAO ESP32C6 possui um chip de gerenciamento de energia integrado, permitindo que seja alimentada independentemente por uma bateria ou que carregue a bateria através de sua porta USB.
+A série XIAO ESP32C6 possui um chip de gerenciamento de energia integrado, permitindo que seja alimentado de forma independente por uma bateria ou que carregue a bateria através de sua porta USB.
 
 Para conectar uma bateria ao seu XIAO, recomendamos usar uma bateria de lítio recarregável de 3,7 V qualificada. Ao soldar a bateria, distinga cuidadosamente entre os terminais positivo e negativo. A almofada do eletrodo negativo deve estar localizada no lado esquerdo, próxima à marcação em silk screen "D8", enquanto a almofada do eletrodo positivo deve estar localizada no lado direito, próxima à marcação em silk screen "D5".
 
@@ -326,14 +330,14 @@ O comportamento da luz vermelha para o XIAO ESP32C6 é o seguinte:
   - A luz vermelha acende quando o cabo Tipo-C é conectado e apaga após 30 segundos.
 - Quando uma bateria está conectada e o cabo Tipo-C é conectado para carregamento:
   - A luz vermelha pisca.
-- Quando a bateria está totalmente carregada através da conexão Tipo-C:
+- Quando a bateria está totalmente carregada via conexão Tipo-C:
   - A luz vermelha apaga.
 
 :::
 
 ## Leitura da tensão da bateria
 
-Para monitorar a tensão da bateria no XIAO ESP32C6, de forma semelhante ao [XIAO ESP32C3](/pt-br/XIAO_ESP32C3_Getting_Started/#verificar-a-tensão-da-bateria), você precisará soldar um resistor de 200k em uma configuração de 1:2. Essa configuração reduz a tensão pela metade, permitindo o monitoramento seguro através da porta analógica A0.
+Para monitorar a tensão da bateria no XIAO ESP32C6, semelhante ao [XIAO ESP32C3](/pt-br/XIAO_ESP32C3_Getting_Started/#verificar-a-tensão-da-bateria), você precisará soldar um resistor de 200k em uma configuração de 1:2. Essa configuração reduz a tensão pela metade, permitindo o monitoramento seguro através da porta analógica A0.
 
 ### Código de exemplo
 
@@ -358,13 +362,13 @@ void loop() {
 }
 ```
 
-Este código faz 16 medições a partir do ADC, calcula a média e então compensa a razão 1:2 do divisor de tensão para fornecer a tensão da bateria em volts com três casas decimais de precisão.
+Este código faz 16 medições do ADC, calcula a média e depois compensa a razão 1:2 do divisor de tensão para fornecer a tensão da bateria em volts com três casas decimais de precisão.
 
 ## Modo de deep sleep e wake-up
 
 O XIAO ESP32C6 possui um modo de deep sleep completo e função de wake-up. Aqui mostraremos dois dos exemplos mais comuns oferecidos pelo ESP.
 
-### Demo1: Deep Sleep com Wake Up Externo
+### Demo1: Deep Sleep com Wake Up externo
 
 Este código mostra como usar o deep sleep com um gatilho externo como fonte de wake up e como armazenar dados na memória RTC para usá-los após reinicializações.
 
@@ -445,9 +449,9 @@ void loop(){
 
 ### Demo2: Modo Deep Sleep com Despertar por Timer
 
-O ESP32 oferece um modo de deep sleep para uma economia de energia eficaz, já que energia é um fator importante para aplicações de IoT. Nesse modo, as CPUs, a maior parte da RAM e todos os periféricos digitais que são acionados a partir de APB_CLK são desligados. As únicas partes do chip que ainda podem permanecer ligadas são: o controlador RTC, os periféricos RTC e as memórias RTC.
+O ESP32 oferece um modo de deep sleep para uma economia de energia eficaz, já que energia é um fator importante para aplicações de IoT. Nesse modo, as CPUs, a maior parte da RAM e todos os periféricos digitais que são acionados a partir do APB_CLK são desligados. As únicas partes do chip que ainda podem permanecer ligadas são: o controlador RTC, os periféricos RTC e as memórias RTC.
 
-Este código demonstra o deep sleep mais básico com um timer para acordá‑lo e como armazenar dados na memória RTC para usá‑los após reinicializações.
+Este código demonstra o deep sleep mais básico com um timer para acordar o dispositivo e como armazenar dados na memória RTC para usá-los após reinicializações.
 
 ```cpp
 /*
@@ -567,7 +571,7 @@ Se você quiser aprender a usar mais funções do modo deep sleep e de despertar
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico e Discussão sobre o Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

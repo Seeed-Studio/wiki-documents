@@ -1,6 +1,6 @@
 ---
-description: MicroBlocksでXIAO RP2350を使用する。
-title: XIAO RP2350とMicroBlocks
+description: MicroBlocks 上で XIAO RP2350 を使用する。
+title: MicroBlocks での XIAO RP2350
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
 slug: /xiao_rp2350_microblocks
 last_update:
@@ -11,93 +11,97 @@ updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/ja/xiao_rp2350_microblocks/
 ---
 
-## XIAO RP2350とMicroBlocks
+## MicroBlocks での XIAO RP2350
 
 ### MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目の単純さにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
+MicroBlocks は、初心者（9 歳から大人まで）がマイコンを簡単にプログラムできるようにするブロック型言語です。その見た目のシンプルさにもかかわらず、MicroBlocks は MicroPython よりも高いパフォーマンスを持つ強力なプログラミング言語であり、GPIO ピンの制御や I2C、SPI、シリアル経由での周辺機器とのインターフェース、そして約 200 個の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストに MicroBlocks を好んで使用しています。
 
-### XIAO RP2350のピン配置とハードウェア機能
+### XIAO RP2350 のピン配置とハードウェア機能
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2350" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2350-pinout.png" style={{width:600, height:'auto'}}/></div><br />
 
-ピン0..18はGPIOピンです。（**注意：GPIO 11-18はボードの裏面のパッドです。**）
-ピン0..2はアナログ入力として使用できます。このボードにはピン19に黄色のユーザーLED（反転）があり、
-ピン20に単一のRGB LED（NeoPixel）があります。
+ピン 0..18 は GPIO ピンです。（**注意: GPIO 11〜18 は基板裏面のパッドです。**）
+ピン 0..2 はアナログ入力として使用できます。このボードにはピン 19（反転）に黄色のユーザー LED があり、
+ピン 20 には 1 個の RGB LED（NeoPixel）が搭載されています。
 
-### MicroBlocksファームウェアのインストール
+### MicroBlocks ファームウェアのインストール
 
-ブートローダーモードに入るには、小さなB（boot）ボタンを押しながらR（reset）ボタンをクリックします。**RP2350**という名前の仮想USBドライブが表示されます。
+ブートローダーモードに入るには、小さな B（boot）ボタンを押しながら R（reset）ボタンをクリックします。**RP2350** という名前の仮想 USB ドライブが表示されます。
 
-[ファームウェアファイル](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2350.uf2)を
-[vmフォルダ](https://microblocks.fun/downloads/latest/vm)からダウンロードし、
-そのファイルを仮想USBドライブにドラッグします。
+[firmware file](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2350.uf2) を
+[vm folder](https://microblocks.fun/downloads/latest/vm) からダウンロードし、
+そのファイルを仮想 USB ドライブにドラッグします。
 
-ファームウェアがインストールされ、数秒後に仮想USBドライブが消えます。
-ディスクが正しく取り出されなかったという警告は無視してください。
+数秒後にファームウェアがインストールされ、仮想 USB ドライブは自動的に消えます。
+ディスクが正しく取り出されなかったという警告は無視してかまいません。
 
-### ボードをMicroBlocksに接続する
+### ボードを MicroBlocks に接続する
 
-データUSBケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
+データ通信対応の USB ケーブル（電源専用ケーブルでは**ない**もの）でボードをコンピュータに接続します。
 
-ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
+Chrome または Edge ブラウザで [MicroBlocks editor](https://microblocks.fun/run/microblocks.html) を実行します。
 **connect**（プラグアイコン）ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:200, height:'auto'}}/></div>
 
-メニューから**connect (USB)**を選択します：
+メニューから **connect (USB)** を選択します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:200, height:'auto'}}/></div>
 
-ダイアログからボードを選択し、**connect**ボタンをクリックします：
+ダイアログで自分のボードを選択し、**connect** ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-rp2350.png" style={{width:200, height:'auto'}}/></div>
 
-ボードが接続されると、緑色の円とボード名が表示されます：
+ボードが接続されると、緑色の丸とボード名が表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connected-rp2350.png" style={{width:200, height:'auto'}}/></div>
 
-### MicroBlocksでのコーディング
+### MicroBlocks でのコーディング
 
-MicroBlocksは**ライブ**コーディング環境なので、コーディングしながらテストできます。
+MicroBlocks はコードを書きながらテストできる **ライブ** コーディング環境です。
 ブロックやスクリプトをクリックして実行します。
-ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
+ブロックをスクリプト領域にドラッグし、組み合わせてスクリプトを作成します。
 
-コードは永続的なフラッシュメモリに保存され、ボードが
-MicroBlocksエディターに接続されていなくても実行できます。
-**when started**ブロックの下にあるスクリプトは、ボードに電源が入ったときに実行されます。
+あなたのコードは永続フラッシュメモリに保存され、ボードが
+MicroBlocks エディタに接続されていないときでも実行できます。
+**when started** ブロックの下にあるスクリプトは、ボードの電源が入ったときに実行されます。
 
-MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
+MicroBlocks は並行実行をサポートしており、最大 10 個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
-追加機能と周辺機器をサポートしています。
-**Add Library**ボタンをクリックしてライブラリを追加します。
+多数の組み込みブロックに加えて、MicroBlocks には
+追加機能や周辺機器をサポートする約 200 個のライブラリがあります。
+ライブラリを追加するには **Add Library** ボタンをクリックします。
 
 ### 例
 
-このスクリプトは黄色のユーザーLEDを点滅させます：
+このスクリプトは黄色のユーザー LED を点滅させます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-このスクリプトはRGB NeoPixelの色を変化させます：
+このスクリプトは RGB NeoPixel の色を変化させます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2350-neopixel.png" style={{width:200, height:'auto'}}/></div>
 
-[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には
-多くの追加例が含まれています。
+[Blocks Reference](https://wiki.microblocks.fun/en/reference_manual) には、
+さらに多くのサンプルが含まれています。
 
-## 特別な感謝
+## 特別な謝辞
 
-この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
+この記事を執筆してくださった MicroBlocks の John 氏に特別な感謝を申し上げます。
 
-### MicroBlocksリソース
+### MicroBlocks リソース
 
-- [ウェブサイト](https://microblocks.fun)
+- [Website](https://microblocks.fun)
 
-- [ユーザーガイド](https://wiki.microblocks.fun/en/ide)
+- [User Guide](https://wiki.microblocks.fun/en/ide)
 
-- [ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)
+- [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual)
 
-- [ライブラリリファレンス](https://wiki.microblocks.fun/en/libraries)
+- [Libraries Reference](https://wiki.microblocks.fun/en/libraries)
 
-- [学習ガイド](https://learn.microblocks.fun)
+- [Learning Guides](https://learn.microblocks.fun)

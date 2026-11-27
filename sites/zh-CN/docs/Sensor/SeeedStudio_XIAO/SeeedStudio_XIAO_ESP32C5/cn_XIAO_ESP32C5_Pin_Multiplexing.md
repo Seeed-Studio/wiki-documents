@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 Seeed Studio XIAO ESP32-C5 是一款功能强大且用途广泛的开发板，具备多种外设接口和 GPIO 引脚。这些引脚可用于多种用途，例如与其他设备通信、读取模拟传感器、控制 LED 等。在本教程中，我们将指导你如何使用 XIAO ESP32-C5 的复用引脚。<br/>
-总的来说，XIAO ESP32-C5 具有 1×I2C、1×SPI、2×UART、最多 11×GPIO（支持 PWM）、5×ADC 通道，以及一个 JTAG（背面焊盘）焊盘接口。
+总的来说，XIAO ESP32-C5 具备 1×I2C、1×SPI、2×UART、最多 11×GPIO（支持 PWM）、5×ADC 通道，以及一个 JTAG（背面焊盘）焊盘接口。
 
 ## 入门指南
 
@@ -48,7 +48,11 @@ Seeed Studio XIAO ESP32-C5 是一款功能强大且用途广泛的开发板，�
 
 ### 引脚总览
 
-在开始之前，让我们先通过下图原理示意图回顾一下 XIAO ESP32-C5 拥有的所有引脚及其功能。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c5" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+在开始之前，让我们先通过下图回顾一下 XIAO ESP32-C5 拥有的所有引脚及其功能。
 
 ### 正面
 
@@ -217,12 +221,12 @@ void loop() {
 
 #### 结果
 
-- 上传代码后，按下按钮——每按一次都会切换 LED 的开与关，从而模拟现实生活中控制灯光的效果。
+- 上传代码后，按下按钮——每按一次，LED 就会在亮与灭之间切换，模拟现实生活中控制灯光的效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_1.gif" style={{width:400, height:'auto'}}/></div>
 
 :::tip
-如果你在按下按钮后没有出现上述效果，可能需要先按一下板载的 RESET 按钮来唤醒开发板。
+如果你在按下按钮后没有看到上述效果，可能需要先按一下板载的 RESET 按钮来唤醒开发板。
 :::
 
 ### PWM
@@ -390,7 +394,7 @@ void loop() {
 
 #### 软件
 
-以下代码示例分别基于 Arduino IDE 和 PlatformIO，它们实现了相同的控制效果。你可以根据实际开发情况选择并复用合适的代码。
+下面的代码示例分别基于 Arduino IDE 和 PlatformIO，它们实现了相同的控制效果。你可以根据自己的实际开发情况选择并复用合适的代码。
 
 <Tabs>
 <TabItem value=' Arduino IDE'>
@@ -483,7 +487,7 @@ XIAO ESP32-C5 具有两个硬件串行通信接口：**USB Serial** 和 **UART1 
 
 #### USB / UART1 串口
 
-对于 **USB Serial**，通过 USB-C 将开发板直接连接到计算机即可进行监视——这就是前面示例中使用的接口。对于 **UART1 Serial**，请使用 Seeed Studio 的 **XIAO Debug Mate** 进行监视。
+对于 **USB Serial**，通过 USB-C 将开发板直接连接到电脑即可进行监视——这就是前面示例中使用的接口。对于 **UART1 Serial**，请使用 Seeed Studio 的 **XIAO Debug Mate** 进行监视。
 
 ##### 硬件准备
 
@@ -518,7 +522,7 @@ XIAO ESP32-C5 具有两个硬件串行通信接口：**USB Serial** 和 **UART1 
 
 ##### 软件
 
-以下代码示例分别基于 Arduino IDE 和 PlatformIO，它们实现了相同的控制效果。你可以根据实际开发情况选择并复用合适的代码。<br/>
+下面的代码示例分别基于 Arduino IDE 和 PlatformIO，它们实现了相同的控制效果。你可以根据自己的实际开发情况选择并复用合适的代码。<br/>
 Serial1 对应的引脚为 `RX_PIN - D7` 和 `TX_PIN - D6`。
 
 <Tabs>
@@ -582,7 +586,7 @@ void loop() {
 
 ##### 结果
 
-上传程序后，你可以通过 Seeed Studio **XIAO Debug Mate** 的 UART 功能进行监视。
+上传程序后，你可以通过 Seeed Studio **XIAO Debug Mate** 的 UART 功能进行监控。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -747,7 +751,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_wire_1.png" style={{width:600, height:'auto'}}/></div>
 
-- 程序上传完成后，将开发板连接到任意串口工具，配置相应的波特率，即可建立双向通信。
+- 上传程序后，将开发板连接到任意串口工具，配置相应的波特率，即可建立双向通信。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_4.png" style={{width:600, height:'auto'}}/></div>
 
@@ -869,13 +873,13 @@ void loop(void) {
 
 #### 结果
 
-- 程序上传完成后，屏幕上会显示 `Hello World!` 和 `XIAO ESP32-C5!` 文本。
+- 上传程序后，屏幕上会显示 `Hello World!` 和 `XIAO ESP32-C5!` 文本。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 ### SPI
 
-XIAO ESP32-C5 芯片集成了 SPI 接口，可用于连接外部 SPI 设备，如闪存、显示屏和传感器。本示例通过一个 SPI 屏幕来演示 SPI 的功能。
+XIAO ESP32-C5 芯片集成了 SPI 接口，可用于连接外部 SPI 设备，如闪存、显示屏和传感器。本示例通过 SPI 屏幕演示 SPI 的功能。
 
 #### 硬件准备
 
@@ -1021,7 +1025,7 @@ void loop(void) {
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

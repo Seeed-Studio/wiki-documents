@@ -1,6 +1,6 @@
 ---
-description: XIAO ESP32S3(sense) 与 Zephyr(RTOS)
-title: XIAO ESP32S3(sense) 与 Zephyr(RTOS)
+description: XIAO ESP32S3(sense) 搭配 Zephyr(RTOS)
+title: XIAO ESP32S3(sense) 搭配 Zephyr(RTOS)
 keywords:
   - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -8,44 +8,44 @@ slug: /xiao_esp32s3_zephyr_rtos
 last_update:
   date: 3/20/2024
   author: timo614
-createdAt: '2023-11-13'
-updatedAt: '2025-09-23'
+createdAt: '2023-07-26'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_zephyr_rtos/
 ---
 
-# XIAO ESP32S3(sense) 与 Zephyr(RTOS)
+# XIAO ESP32S3(sense) 搭配 Zephyr(RTOS)
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32s3.png"/></div>
 
-本wiki介绍了[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)对[Zephyr](https://www.zephyrproject.org/)的支持。通过本指南的帮助，您将能够利用该开发板的可用功能集。
+本 wiki 介绍了 [Zephyr](https://www.zephyrproject.org/) 对 [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/) 的支持。借助本指南，你将能够使用该开发板所提供的全部功能。
 
-## 什么是[Zephyr](https://www.zephyrproject.org/)
+## 什么是 [Zephyr](https://www.zephyrproject.org/)
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
 
-[**Zephyr**](https://www.zephyrproject.org/) OS基于一个小占用空间的内核，专为资源受限和嵌入式系统而设计：从简单的嵌入式环境传感器和LED可穿戴设备到复杂的嵌入式控制器、智能手表和IoT无线应用。
+[**Zephyr**](https://www.zephyrproject.org/) 操作系统基于一个小体积内核，专为资源受限和嵌入式系统设计：从简单的嵌入式环境传感器和 LED 可穿戴设备，到复杂的嵌入式控制器、智能手表以及物联网无线应用。
 
-对于每个支持的设备，Zephyr都有一个[设备树](https://docs.zephyrproject.org/latest/build/dts/index.html)文件来描述开发板及其功能。[Xiao ESP32S3 Zephyr开发板页面](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html#supported-features)描述了当前可用的支持功能，这些功能由[开发板的dts文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_esp32s3/xiao_esp32s3_esp32s3_procpu.yaml#L7)定义。
+对于每一款受支持的设备，Zephyr 都有一个 [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) 文件来描述开发板及其特性。[Xiao ESP32S3 Zephyr 开发板页面](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html#supported-features) 描述了当前可用的受支持特性，这些特性由 [开发板的 dts 文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_esp32s3/xiao_esp32s3_esp32s3_procpu.yaml#L7) 定义。
 
-*参考：[**Zephyr项目**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
+*参考：[**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
 ## 入门指南
 
-使用Zephyr的第一步是为本地开发设置SDK和工具链。应参考[Zephyr入门指南](https://docs.zephyrproject.org/latest/develop/getting_started/index.html)了解您的环境所需的相关设置程序。
+使用 Zephyr 的第一步，是在本地开发环境中完成 SDK 和工具链的安装配置。请参考 [Zephyr 入门指南](https://docs.zephyrproject.org/latest/develop/getting_started/index.html)，根据你的环境完成相应的安装步骤。
 
-一旦Zephyr工具链已设置完成并下载了相关的SDK，您就可以开始应用程序开发。
+当 Zephyr 工具链安装完成并下载好对应的 SDK 之后，你就可以开始进行应用开发了。
 
-对于Xiao ESP32S3，可以参考[开发板描述文件](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html)获取进一步的设置信息。
+对于 Xiao ESP32S3，可以参考其 [开发板描述文件](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html) 获取更多的配置信息。
 
-要获取使用ESP32S3所需的blob文件，请运行以下命令：
+要获取使用 ESP32S3 所需的二进制文件，请运行以下命令：
 
 ```
 west blobs fetch hal_espressif
 ```
 
-在此之后，示例可以被构建并烧录到开发板上。
+之后就可以构建示例并将其烧录到开发板上。
 
-最简单的示例是在开发板上运行"Hello World"示例。切换到Zephyr安装目录后，运行以下命令。
+最简单的示例是在开发板上运行 “Hello World” 示例。在切换到 Zephyr 安装目录后，运行以下命令。
 
 ```
 west build -p always -b xiao_esp32s3 samples/hello_world
@@ -53,14 +53,14 @@ west flash
 west espressif monitor
 ```
 
-执行最后一条命令后,你应该会看到显示"Hello World!"问候语的响应。
+在执行最后一条命令后，你应该能看到输出中显示 “Hello World!” 问候语。
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 Hello World! xiao_esp32s3
 ```
 
-为了协助在 Xiao 及其扩展板上使用 Zephyr 的过程，我们构建了一个仓库，其中包含了此处使用的多个覆盖文件和配置。本 wiki 文章中包含的命令假设该仓库位于相对于 zephyr 根目录的 `../applications/xiao-zephyr-examples` 路径。可以通过更新下面的命令来提供替代路径。
+为了帮助在 Xiao 及其扩展板上使用 Zephyr 的流程，我们准备了一个仓库，其中包含本教程中使用的多个 overlay 和配置。本文中的命令假定该仓库位于 Zephyr 根目录的相对路径 `../applications/xiao-zephyr-examples`。你也可以修改下面命令中的路径来使用其他位置。
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
@@ -91,19 +91,23 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     </tr>
   </tbody></table>
 
-### 开发者知识
+### 开发者须知
 
 #### XIAO 扩展板
 
-  为了在 Seeed Studio XIAO ESP32S3 上使用 Grove 模块，我们将使用 [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) 并将 XIAO ESP32S3 连接到其上。
+  为了在 Seeed Studio XIAO ESP32S3 上使用 Grove 模块，我们将使用 [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)，并将 XIAO ESP32S3 插接在其上。
 
-  之后，板上的 Grove 连接器可用于连接 Grove 模块
+  之后，开发板上的 Grove 接口即可用于连接 Grove 模块。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
 
 #### 引脚定义
 
-  当将 Grove 模块连接到 Seeed Studio XIAO 的 Grove Shield 上的 Grove 连接器时，您需要按照下图使用适当的内部引脚编号。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+  当你将 Grove 模块连接到 Seeed Studio XIAO 的 Grove Shield 上的 Grove 接口时，需要参考下图来使用正确的内部引脚编号。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg"style={{width:900, height:'auto'}}/></div>
 
@@ -115,7 +119,7 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 
 #### 蓝牙
 
-为了测试此设置，我们可以使用 Zephyr 的现有示例：
+为了测试该配置，我们可以使用 Zephyr 中已有的一个示例：
 
 ```
 west build -p always -b xiao_esp32s3 samples/bluetooth/observer
@@ -123,7 +127,7 @@ west flash
 west espressif monitor
 ```
 
-你会看到一个可用于向开发板发送命令的控制台:
+你会看到一个控制台，可用于向开发板发送命令：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -153,11 +157,11 @@ CONFIG_BT=y
 CONFIG_BT_OBSERVER=y
 ```
 
-这里的[配置文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf)为Zephyr构建启用了蓝牙相关功能。
+此处的 [conf 文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/bluetooth/observer/prj.conf) 为 Zephyr 构建启用了蓝牙相关功能。
 
 #### Wi-Fi
 
-为了测试这个设置，我们可以使用Zephyr的现有示例：
+为了测试该配置，我们可以使用 Zephyr 中已有的一个示例：
 
 ```
 west build -p always -b xiao_esp32s3 samples/net/wifi
@@ -165,14 +169,14 @@ west flash
 west espressif monitor
 ```
 
-你会看到一个可用于向开发板发送命令的控制台:
+你会看到一个控制台，可用于向开发板发送命令：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 uart:~$
 ```
 
-存在几个命令允许您查看和连接到本地网络，更多信息请参见[示例说明文档](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst)。
+有多条命令可用于查看并连接到本地网络，更多信息请参阅 [示例自述文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst)。
 
 ```
 uart:~$ wifi scan
@@ -184,7 +188,7 @@ Num  | SSID                             (len) | Chan (Band)   | RSSI | Security 
 
 ```
 
-让我们深入了解这个示例，看看它为什么有效：
+下面我们稍微深入了解一下这个示例，看看它为什么能工作：
 
 ```
 &wifi {
@@ -192,7 +196,7 @@ Num  | SSID                             (len) | Chan (Band)   | RSSI | Security 
 };
 ```
 
-应用程序的[覆盖文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32s3.overlay)用于设置各种板载组件。使用此文件，示例可以被利用，因为覆盖文件通知示例逻辑启用Wi-Fi。
+应用的 [overlay 文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32s3.overlay) 用于配置多个板级组件。借助该文件，示例可以作为 overlay 使用，从而告知示例逻辑启用 Wi-Fi。
 
 ```
 CONFIG_WIFI=y
@@ -208,18 +212,18 @@ CONFIG_ESP32_WIFI_STA_AUTO_DHCPV4=y
 CONFIG_NET_LOG=y
 ```
 
-[conf 文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32s3.conf)在这里为 Zephyr 构建启用了几个网络相关功能。
+此处的 [conf 文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/boards/xiao_esp32s3.conf) 为 Zephyr 构建启用了若干网络相关功能。
 
 #### TFLite - Hello World
 
-启用 TFLite 与 Zephyr 并更新：
+在 Zephyr 中启用 TFLite 并更新：
 
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-构建示例并将其烧录到您的开发板：
+构建示例并将其烧录到你的开发板：
 
 ```
 west build -p always -b xiao_esp32s3 samples/modules/tflite-micro/hello_world
@@ -227,7 +231,7 @@ west flash
 west espressif monitor
 ```
 
-你将看到从控制台返回的结果：
+你会在控制台中看到返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -252,33 +256,33 @@ x_value: 1.2566366*2^1, y_value: 1.0674761*2^-1
 x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 ```
 
-关于 TFLite 的其他信息超出了本指南的范围，但该示例可以作为设备功能和运行 TFLite 设置所需组件的指南。
+关于 TFLite 的更多信息超出了本指南的范围，但该示例可作为了解设备能力以及运行 TFLite 设置所需组件的参考。
 
 ### 其他组件
 
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C 显示屏
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 按钮
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 蜂鸣器
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD 卡
-- [Grove - 温湿度传感器 (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
-- [1.69英寸 LCD 显示模块，240×280 分辨率，SPI 接口](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
-- [Xiao 圆形显示屏](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C 显示屏
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 按钮
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 蜂鸣器
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD 卡
+- [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
+- [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
+- [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
 
-#### Grove - 扩展板 - I2C 显示屏
+#### Grove - Expansion Board - I2C 显示屏
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/xiao_expansion_oled.jpg" style={{width:600, height:'auto'}}/></div>
 
-要测试此设置，我们可以使用 Zephyr 的现有示例：
+为了测试这一套配置，我们可以在 Zephyr 中使用一个现有示例：
 
 ```
 west build -p always -b xiao_esp32s3 samples/drivers/display --  -DSHIELD=seeed_xiao_expansion_board
 west flash
 ```
 
-您将看到一个显示多个黑色方块和角落中一个闪烁方块的显示屏，因为这个显示屏只支持两种颜色。
+你会看到显示屏上显示多个黑色方块，以及在角落里闪烁的方块，因为该显示屏只支持两种颜色。
 
-让我们深入了解这个例子，看看它为什么有效：
+我们来稍微深入了解一下这个示例，看看它为什么能工作：
 
 ```
 / {
@@ -307,11 +311,11 @@ west flash
 
 ```
 
-该扩展板在 0x3C 寄存器处设置了一个 SSD1306 OLED 屏幕。它在 chosen 部分被选择为 zephyr 显示器。
+该扩展板将 SSD1306 OLED 屏幕设置在 0x3C 寄存器处。它在 chosen 部分中被选为 Zephyr 的显示设备。
 
-#### Grove - 扩展板 - 按钮
+#### Grove - Expansion Board - 按钮
 
-为了测试这个设置，我们可以使用 Zephyr 的现有示例：
+为了测试这一套配置，我们可以在 Zephyr 中使用一个现有示例：
 
 ```
 west build -p always -b xiao_esp32s3 samples/basic/button -- -DSHIELD=seeed_xiao_expansion_board
@@ -319,9 +323,9 @@ west flash
 west espressif monitor
 ```
 
-按下带有示例的按钮将触发板载LED点亮。
+在运行该示例时按下按钮，会触发板载 LED 点亮。
 
-您将看到从控制台返回的结果：
+你会在控制台中看到返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -337,7 +341,7 @@ Button pressed at 1728755988
 Button pressed at 1822426500
 ```
 
-让我们深入探讨这个例子，看看为什么它能够起作用：
+我们来稍微深入了解一下这个示例，看看它为什么能工作：
 
 ```
 / {
@@ -356,22 +360,22 @@ Button pressed at 1822426500
 };
 ```
 
-屏蔽/覆盖文件用于设置各种开发板组件。使用此文件，按钮示例可以被利用，因为覆盖允许 Zephyr 配置按钮并使其可用于相关代码。
+shield / overlay 文件用于设置各种板载组件。借助该文件，可以使用按钮示例，因为 overlay 允许 Zephyr 配置按钮，并使其可供相关代码使用。
 
-在这种情况下，Xiao ESP32S3 上的 D1。它在此覆盖中设置为充当按钮，并别名为 sw0 名称，以允许它用于具有期望此功能的代码的示例。
+在这个例子中，是 Xiao ESP32S3 上的 D1 引脚。它在该 overlay 中被设置为按钮，并被别名为 sw0，以便用于该示例，因为示例代码期望使用这个名称。
 
-#### Grove - 扩展板 - 蜂鸣器
+#### Grove - Expansion Board - 蜂鸣器
 
-我们将使用闪烁 PWM 示例来激活我们的蜂鸣器，通过 PWM 信号控制其激活。为此，我们将使用一个自定义覆盖，该覆盖为 A3 引脚启用 PWM。
+我们将使用 blinky PWM 示例，通过 PWM 信号控制蜂鸣器的启停。为此我们会使用一个自定义 overlay，它为 A3 引脚启用 PWM。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_esp32s3 samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-esp32s3/xiao_expansion_buzzer.overlay"
 ```
 
-刷写完成后，您应该开始听到一系列蜂鸣声，这些声音会随着示例程序的运行而发生变化。
+烧录完成后，你应该会听到一系列蜂鸣声，随着示例运行，声音会发生变化。
 
-让我们来看看这是如何工作的：
+我们来看看它为什么能工作：
 
 ```
 #include <zephyr/dt-bindings/pwm/pwm.h>
@@ -413,25 +417,25 @@ west build -p always -b xiao_esp32s3 samples/basic/blinky_pwm -- -DDTC_OVERLAY_F
 };
 ```
 
-覆盖层为引脚 4 配置 PWM 逻辑，该引脚对应 ESP32S3 引脚图中的 A3 引脚。
+该 overlay 为引脚 4 配置了 PWM 逻辑，它对应于 ESP32S3 引脚分布中的 A3 引脚。
 
-#### Grove - 扩展板 - SD 卡
+#### Grove - Expansion Board - SD 卡
 
-我们将在这里使用文件系统示例以及 Xiao 扩展板护盾，尝试通过 SPI 与 SD 卡读卡器进行接口通信。扩展板护盾的 CS 引脚配置为关联的 `&xiao_d 2` 引脚，因此除了添加护盾外，您无需为将此功能与开发板关联而做任何工作。为了进一步准备，我们使用了启用 SD 卡功能的自定义配置。
+这里我们将结合 Xiao Expansion Board shield 使用 filesystem 示例，通过 SPI 尝试与 SD 卡读卡器进行通信。扩展板 shield 已经为对应的 `&xiao_d 2` 引脚配置了 CS 引脚，因此除了添加该 shield 外，你无需再做额外工作来将此功能与开发板关联。为了进一步做好准备，我们使用了一个自定义配置来启用 SD 卡功能。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_esp32s3 samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Now flash and monitor:
+现在进行烧录并开始监视：
 
 ```
 west flash
 west espressif monitor
 ```
 
-你应该看到类似这样的响应:
+你应该会看到类似如下的输出：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -445,9 +449,9 @@ Listing dir /SD: ...
 [FILE] IMAGE2.JPG (size = 97963)
 ```
 
-在这种情况下，我的 SD 卡有两个文件。它们的名称和大小被输出到我的控制台。
+在这个例子中，我的 SD 卡上有两个文件。它们的名称和大小都被输出到了控制台。
 
-让我们来看看这里涉及的相关元素：
+我们来看看这里涉及到的相关元素：
 
 ```
 CONFIG_SPI=y
@@ -455,9 +459,9 @@ CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
 ```
 
-在相关配置中，我们启用了 SPI、SDMMC 磁盘驱动程序和 GPIO。如果没有这个配置，覆盖层将导致错误，因为示例无法找到 SD 卡。
+在相关的配置中，我们启用了 SPI、SDMMC 磁盘驱动以及 GPIO。没有这个配置，overlay 会导致错误，因为示例无法找到 SD 卡。
 
-Xiao 扩展板屏蔽层的相关部分如下所示：
+Xiao Expansion Board shield 中的相关部分如下所示：
 
 ```
 &xiao_spi {
@@ -477,16 +481,16 @@ Xiao 扩展板屏蔽层的相关部分如下所示：
 };
 ```
 
-如前所述，`&xiao_d 2` 引脚映射用于允许选择 D2 引脚，无论使用哪种开发板，只要它支持 `&xiao_d` 引脚设置即可。
+如前所述，使用的是 `&xiao_d 2` 引脚映射，这样只要开发板支持 `&xiao_d` 引脚配置，就可以让 D2 引脚被选作该用途，而不受具体板型限制。
 
-#### Grove - 温湿度传感器 (SHT31)
+#### Grove - Temperature and Humidity Sensor (SHT31)
 
-首先焊接引脚并将您的 Xiao ESP32S3 连接到扩展板。然后使用 grove 连接线将 Grove SHT31 连接到扩展板上的其中一个 I2C 端口。
+首先焊接排针，并将 Xiao ESP32S3 连接到扩展板。然后使用一根 Grove 连接线，将 Grove SHT31 与扩展板上的一个 I2C 端口连接起来。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/xiao_sht31.jpg" style={{width:600, height:'auto'}}/></div>
 
-要测试此设置，我们可以使用 Zephyr 的现有示例：
+为了测试这一套配置，我们可以在 Zephyr 中使用一个现有示例：
 
 ```
 west build -p always -b xiao_esp32s3 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay
@@ -494,7 +498,7 @@ west flash
 west espressif monitor
 ```
 
-你将看到从控制台返回的结果：
+你会在控制台中看到返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -510,7 +514,7 @@ SHT3XD: 25.82 Cel ; 53.31 %RH
 SHT3XD: 25.84 Cel ; 53.16 %RH
 ```
 
-让我们深入探讨这个例子，看看为什么它能够起作用：
+我们来稍微深入了解一下这个示例，看看它为什么能工作：
 
 ```
  &xiao_i2c {
@@ -521,15 +525,15 @@ SHT3XD: 25.84 Cel ; 53.16 %RH
  };
 ```
 
-应用程序覆盖文件用于设置各种板载组件。使用此文件，SHT31 示例可以被利用，因为覆盖文件会告知[示例逻辑](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c)如何为我们的板子配置传感器。
+app overlay 文件用于设置各种板载组件。借助该文件，可以使用 SHT31 示例，因为 overlay 会告知[示例逻辑](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c)如何为我们的开发板配置该传感器。
 
-#### 1.69英寸LCD显示模块，240×280分辨率，SPI接口
+#### 1.69inch LCD Display Module, 240×280 Resolution, SPI Interface
 
-在这个示例中，我们将使用SPI连接到一个1.69英寸、240x280分辨率的LCD。
+在这个示例中，我们将使用 SPI 连接到一块 1.69 英寸、分辨率为 240x280 的 LCD。
 
-首先使用以下图片作为指导将您的板子连接到LCD屏幕（在这种情况下我们使用的是Xiao ESP32S3，但这里使用相同的引脚布局进行连接）。
+首先按照下图所示，将开发板连接到 LCD 屏幕（本例中我们使用的是 Xiao ESP32S3，但这里使用的引脚布局是相同的）。
 
-| 1.69英寸LCD SPI显示屏| XIAO ESP32S3 |
+| 1.69-inch LCD SPI Display| XIAO ESP32S3 |
 | ------------- | ------------------------- |
 | VCC | 3V3 |
 | GND | GND |
@@ -542,7 +546,7 @@ SHT3XD: 25.84 Cel ; 53.16 %RH
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
-现在我们可以构建并刷写固件：
+现在我们可以构建并烧录固件：
 
 ```
 cd ~/zephyrproject/zephyr
@@ -550,26 +554,26 @@ west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FI
 west flash
 ```
 
-随着新固件的安装，设备现在显示与我们之前在扩展板上看到的相同演示屏幕，只是现在更新为通过 SPI 的彩色 LCD。
+在烧录了新固件之后，设备现在会显示与我们之前在扩展板上看到的相同演示界面，只是现在更新为通过 SPI 驱动的彩色 LCD。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
 
 #### Xiao 圆形显示屏
 
-要测试此设置，我们可以使用 Zephyr 的现有示例：
+为了测试这套配置，我们可以使用 Zephyr 中已有的一个示例：
 
 ```
 west build -p always -b xiao_esp32s3 samples/drivers/display --  -DSHIELD=seeed_xiao_round_display
 ```
 
-进入引导加载程序模式并刷写您的设备：
+进入 bootloader 模式并烧录你的设备：
 
 ```
 west flash
 ```
 
-您将看到一个显示多个彩色角落的显示屏，其中一个黑色角落在闪烁。
+你会看到显示屏上出现多个彩色的角块，其中一个黑色角块在闪烁。
 
 另一个示例演示了触摸屏的使用：
 
@@ -577,11 +581,11 @@ west flash
 west build -p always -b xiao_esp32s3 samples/modules/lvgl/demos --  -DSHIELD=seeed_xiao_round_display -DCONFIG_LV_Z_DEMO_MUSIC=y
 ```
 
-这里展示的音乐演示只是实际屏幕的一部分，但仍然演示了触摸屏的操作。如您所见，触摸播放按钮会开启音乐动画。
+这里展示的音乐演示只是实际屏幕的一部分，但仍然展示了触摸屏的实际效果。可以看到，点击播放按钮会启动音乐动画。
 
-您可以从[shield文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay)中看到，这是通过SPI接口与GC9A01圆形显示驱动程序以及通过i2c与CHSC6X触摸模块进行交互来实现的。
+从这个[扩展板文件](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay)可以看出，它是通过 SPI 与 GC9A01 圆形显示驱动器通信，并通过 i2c 与 CHSC6X 触摸模块通信来实现工作的。
 
-让我们深入了解一下这个示例，看看它是如何工作的：
+让我们稍微深入这个示例，看看它是如何工作的：
 
 ```
 / {
@@ -632,23 +636,23 @@ west build -p always -b xiao_esp32s3 samples/modules/lvgl/demos --  -DSHIELD=see
 };
 ```
 
-这个扩展板执行以下功能：
+这个扩展板完成了以下工作：
 
-- 选择 GC9A01 显示屏作为所选的 Zephyr 显示器
-- 设置 LVGL 指针逻辑使用 CHSC6X 模块
-- 禁用串口，因为引脚用于背光和触摸中断（如上所示：`irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`）
-- 配置圆形显示屏使用 D1、D2 和 D3 引脚进行 SPI 通信
+- 选择 GC9A01 显示屏作为 Zephyr 中选定的显示设备
+- 将 LVGL 指针逻辑设置为使用 CHSC6X 模块
+- 禁用串口，因为这些引脚被用于背光和触摸中断（如上所示：`irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`）
+- 使用 D1、D2 和 D3 引脚将圆形显示屏配置为 SPI 接口
 
-[示例逻辑](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) 依赖于 [LVGL 演示示例代码](https://github.com/lvgl/lvgl/tree/master/demos/music)，可以进一步研究。
+[示例逻辑](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c)依赖于 [LVGL 音乐演示示例代码](https://github.com/lvgl/lvgl/tree/master/demos/music)，你可以进一步进行研究。
 
 ## ✨ 贡献者项目
 
-- 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=56649975) 支持。
-- 感谢 **Tim 的努力**，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 本项目由 Seeed Studio 的[贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=56649975)支持。
+- 感谢 **Tim 的付出**，你的作品将会被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -21,9 +21,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Introducción
 
-**Seeed Studio XIAO ESP32C3** es una placa de desarrollo mini para IoT basada en el chip de doble modo WiFi/Bluetooth **ESP32-C3** de Espressif, que incorpora una **CPU RISC-V de 32 bits** que ofrece un potente rendimiento de computación gracias a su arquitectura eficiente. Tiene un excelente rendimiento de radiofrecuencia, compatible con los protocolos **IEEE 802.11 b/g/n WiFi** y **Bluetooth 5 (BLE)**. Esta placa incluye una antena externa para aumentar la intensidad de la señal en tus aplicaciones inalámbricas. También cuenta con un **factor de forma pequeño y exquisito** combinado con un **diseño montable en superficie por un solo lado**. Está equipada con interfaces ricas y dispone de **11 E/S digitales** que pueden utilizarse como **pines PWM** y **4 E/S analógicas** que pueden utilizarse como **pines ADC**. Es compatible con cuatro interfaces serie como **UART, I2C y SPI**. También hay un pequeño **botón de reinicio** y un **botón de modo bootloader** en la placa. XIAO ESP32C3 es totalmente compatible con la [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) y la [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/es/Seeeduino-XIAO-Expansion-Board) excepto que, para la Seeeduino XIAO Expansion board, los contactos de resorte SWD de la placa no serán compatibles.
+**Seeed Studio XIAO ESP32C3** es una placa de desarrollo mini para IoT basada en el chip de doble modo WiFi/Bluetooth de Espressif **ESP32-C3**, que incorpora una **CPU RISC-V de 32 bits** que ofrece un potente rendimiento de cómputo gracias a su arquitectura eficiente. Tiene un excelente rendimiento de radiofrecuencia, compatible con los protocolos **IEEE 802.11 b/g/n WiFi** y **Bluetooth 5 (BLE)**. Esta placa incluye una antena externa para aumentar la intensidad de la señal en tus aplicaciones inalámbricas. También cuenta con un **factor de forma pequeño y exquisito** combinado con un **diseño de montaje superficial por una sola cara**. Está equipada con interfaces ricas y dispone de **11 E/S digitales** que pueden utilizarse como **pines PWM** y **4 E/S analógicas** que pueden utilizarse como **pines ADC**. Es compatible con cuatro interfaces serie como **UART, I2C y SPI**. También hay un pequeño **botón de reinicio** y un **botón de modo bootloader** en la placa. XIAO ESP32C3 es totalmente compatible con la [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) y la [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/es/Seeeduino-XIAO-Expansion-Board) excepto que, para la Seeeduino XIAO Expansion board, los contactos de resorte SWD de la placa no serán compatibles.
 
-Con respecto a las características destacadas anteriormente, XIAO ESP32C3 se posiciona como una **placa de desarrollo mini para IoT de alto rendimiento, bajo consumo y rentable**, adecuada para **aplicaciones IoT de bajo consumo y aplicaciones inalámbricas vestibles**.
+Con respecto a las características destacadas anteriormente, XIAO ESP32C3 se posiciona como una **placa de desarrollo mini para IoT de alto rendimiento, bajo consumo y rentable**, adecuada para **aplicaciones IoT de bajo consumo y aplicaciones portátiles inalámbricas**.
 
 Este wiki te mostrará cómo puedes empezar rápidamente con XIAO ESP32C3.
 
@@ -39,11 +39,11 @@ Este wiki te mostrará cómo puedes empezar rápidamente con XIAO ESP32C3.
   </tr>
   <tr>
     <td>Procesador</td>
-    <td>ESP32-C3 SoC<br/>Procesador de chip RISC-V monocore de 32 bits con una canalización de cuatro etapas que funciona hasta 160 MHz</td>
+    <td>ESP32-C3 SoC<br/>Procesador de chip de un solo núcleo RISC-V de 32 bits con una canalización de cuatro etapas que funciona hasta 160 MHz</td>
   </tr>
   <tr>
     <td>Inalámbrico</td>
-    <td>Subsistema Wi-Fi completo de 2.4GHz<br/>Bluetooth Low Energy 5.0/ Bluetooth Mesh</td>
+    <td>Subsistema Wi-Fi completo de 2,4 GHz<br/>Bluetooth Low Energy 5.0/ Bluetooth Mesh</td>
   </tr>
   <tr>
     <td>Memoria en chip</td>
@@ -59,7 +59,7 @@ Este wiki te mostrará cómo puedes empezar rápidamente con XIAO ESP32C3.
   </tr>
   <tr>
     <td>Potencia (típ.)</td>
-    <td>Corriente máxima de salida 3.3V: 500mA<br/>Condición de prueba: Entrada del pin BAT @ 3.8V<br/>Capacidad de fuente: 3A<br/>Corriente de carga: 380mA (rápida) / 40mA (trickle)<br/>Tensión de entrada (VIN): 5V<br/>Tensión de entrada (BAT): 3.7V</td>
+    <td>Corriente máxima de salida de 3.3V: 500mA<br/>Condición de prueba: Entrada de pin BAT @ 3.8V<br/>Capacidad de fuente: 3A<br/>Corriente de carga: 380mA (rápida) / 40mA (trickle)<br/>Voltaje de entrada (VIN): 5V<br/>Voltaje de entrada (BAT): 3.7V</td>
   </tr>
   <tr>
     <td>Consumo de energía en Deep Sleep</td>
@@ -80,21 +80,25 @@ Este wiki te mostrará cómo puedes empezar rápidamente con XIAO ESP32C3.
 </table>
 ### Características
 
-- **CPU potente:** ESP32-C3, procesador RISC-V monocore de 32 bits que funciona hasta 160 MHz
+- **CPU potente:** ESP32-C3, procesador RISC-V de 32 bits de un solo núcleo que funciona hasta 160 MHz
 - **Subsistema Wi-Fi completo:** Cumple con el protocolo IEEE 802.11b/g/n y admite modo Station, modo SoftAP, modo SoftAP + Station y modo promiscuo
 - **Subsistema Bluetooth LE:** Admite funciones de Bluetooth 5 y Bluetooth mesh
-- **Ultrabajo consumo de energía:** El consumo de energía en deep sleep es de unos 43μA
+- **Ultrabajo consumo de energía:** El consumo de energía en deep sleep es de aproximadamente 43μA
 - **Mejor rendimiento RF:** Incluye antena RF externa
 - **Chip de carga de batería:** Admite la gestión de carga y descarga de baterías de litio
-- **Recursos ricos en chip:** 400KB de SRAM y 4MB de memoria flash integrada
-- **Tamaño ultrapequeño:** Tan pequeño como un pulgar (21x17.8mm), factor de forma clásico de la serie XIAO para dispositivos vestibles y proyectos pequeños
+- **Ricos recursos en chip:** 400KB de SRAM y 4MB de memoria flash integrada
+- **Tamaño ultrapequeño:** Tan pequeño como un pulgar (21x17.8mm), factor de forma clásico de la serie XIAO para dispositivos portátiles y proyectos pequeños
 - **Funciones de seguridad fiables:** Aceleradores de hardware criptográfico que admiten AES-128/256, Hash, RSA, HMAC, firma digital y arranque seguro
-- **Interfaces ricas:** 1xI2C, 1xSPI, 2xUART, 11xGPIO(PWM), 4xADC, 1xinterfaz de almohadilla de conexión JTAG
+- **Interfaces ricas:** 1xI2C, 1xSPI, 2xUART, 11xGPIO(PWM), 4xADC, 1xinterfaz de pad de conexión JTAG
 - Componentes en un solo lado, diseño de montaje en superficie
 
 ## Descripción general del hardware
 
-> *A3(GP105) - Utiliza ADC2, que puede quedar inoperativo debido a señales de muestreo falsas. Para lecturas analógicas fiables, utiliza ADC1(A0/A1/A2) en su lugar. Consulta la hoja de datos del ESP32-C3.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+> *A3(GP105) - Usa ADC2, que puede quedar inoperativo debido a señales de muestreo falsas. Para lecturas analógicas fiables, utiliza ADC1(A0/A1/A2) en su lugar. Consulta la hoja de datos del ESP32-C3.
 
 ### Parte frontal
 
@@ -133,19 +137,19 @@ Este wiki te mostrará cómo puedes empezar rápidamente con XIAO ESP32C3.
 
 ### Pines de alimentación
 
-- 5V - Esta es la salida de 5V desde el puerto USB. También puedes usarla como entrada de tensión, pero debes tener algún tipo de diodo (schottky, de señal, de potencia) entre tu fuente de alimentación externa y este pin, con el ánodo a la batería y el cátodo al pin de 5V.
+- 5V - Esta es la salida de 5V desde el puerto USB. También puedes usarla como entrada de voltaje, pero debes tener algún tipo de diodo (schottky, de señal, de potencia) entre tu fuente de alimentación externa y este pin, con el ánodo a la batería y el cátodo al pin de 5V.
 - 3V3 - Esta es la salida regulada del regulador integrado. Puedes extraer 700mA
 - GND - Tierra de alimentación/datos/señal
 
 ### Pines de strapping
 
-Según el manual del chip del ESP32C3, **GPIO2**, **GPIO8** y **GPIO9** en el chip son pines de strapping; las configuraciones de nivel alto y bajo de estos pines pueden permitir que el chip entre en diferentes modos de arranque. Por favor, presta atención a este punto cuando utilices estos pines, de lo contrario puede impedir que tu XIAO cargue o ejecute el programa todo el tiempo.
+Según el manual del chip del ESP32C3, **GPIO2**, **GPIO8** y **GPIO9** en el chip son pines de strapping; las configuraciones de nivel alto y bajo de estos pines pueden permitir que el chip entre en diferentes modos de Boot. Por favor, presta atención a este punto cuando uses estos pines, de lo contrario puede impedir que tu XIAO cargue o ejecute el programa todo el tiempo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/20.png" style={{width:800, height:'auto'}}/></div>
 
 ## Primeros pasos
 
-Primero, vamos a conectar XIAO ESP32C3 al ordenador, conectar un LED a la placa y cargar un código sencillo desde Arduino IDE para comprobar si la placa funciona correctamente haciendo parpadear el LED conectado.
+Primero, vamos a conectar XIAO ESP32C3 al ordenador, conectar un LED a la placa y subir un código sencillo desde Arduino IDE para comprobar si la placa funciona correctamente haciendo parpadear el LED conectado.
 
 ### Preparación de hardware
 
@@ -173,11 +177,11 @@ Algunos cables USB solo pueden suministrar energía y no pueden transferir datos
 
 ### Preparación de software
 
-- **Paso 1.** Descarga e instala la última versión de Arduino IDE según tu sistema operativo
+- **Paso 1.** Descarga e instala la última versión del Arduino IDE de acuerdo con tu sistema operativo
 
 <p style={{textAlign:'center'}}><a href="https://www.arduino.cc/en/software" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" /></a></p>
 
-- **Paso 2.** Inicia la aplicación de Arduino
+- **Paso 2.** Inicia la aplicación Arduino
 
 - **Paso 3.** Añade el paquete de placa ESP32 a tu Arduino IDE
 
@@ -251,19 +255,19 @@ Ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la 
 
 ### Comprobar el voltaje de la batería
 
-Debido a la limitación del número de pines en el ESP32C3, los ingenieros no tenían pines adicionales para asignar a la batería para la medición de voltaje con el fin de garantizar que el XIAO ESP32C3 tuviera el mismo número de GPIO que los otros XIAO Serie disponibles.
+Debido a la limitación del número de pines en el ESP32C3, los ingenieros no tenían pines extra para asignar a la batería para la medición de voltaje con el fin de garantizar que el XIAO ESP32C3 tenga el mismo número de GPIO que los otros XIAO Serie disponibles.
 
-Pero si prefieres usar un pin separado para la medición del voltaje de la batería, puedes consultar la operación ingeniosa de [msfujino](https://forum.seeedstudio.com/u/msfujino). También nos gustaría dar un agradecimiento especial a [msfujino](https://forum.seeedstudio.com/u/msfujino) por toda la experiencia y los esfuerzos compartidos para el XIAO ESP32C3.
+Pero si prefieres usar un pin separado para la medición del voltaje de la batería, puedes consultar la genial operación de [msfujino](https://forum.seeedstudio.com/u/msfujino). También nos gustaría dar un agradecimiento especial a [msfujino](https://forum.seeedstudio.com/u/msfujino) por toda la experiencia y esfuerzos compartidos para el XIAO ESP32C3.
 
 La idea básica de funcionamiento es: El voltaje de la batería se dividió por 1/2 con 200k y se conectó al puerto A0 para que se pudiera monitorizar el voltaje.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/3.png" alt="pir" width="300" height="auto"/></div>
 
-La hoja de datos indica nominalmente una conversión AD de escala completa de 2500 mV, pero hay una gran variación de chip a chip, en realidad ±10 %. Mi chip tenía 2700 mV de escala completa.
+La hoja de datos indica nominalmente 2500 mV de conversión AD a escala completa, pero hay una gran variación de chip a chip, en realidad ±10%. Mi chip tenía 2700 mV a escala completa.
 
-Afortunadamente, el valor de corrección calibrado para cada chip está escrito en el área de fusibles y, utilizando la función `analogReadMilliVolts()`, puedo leer el valor de voltaje corregido sin hacer nada especial.
+Afortunadamente, el valor de corrección calibrado para cada chip está escrito en el área de fusibles, y usando la función `analogReadMilliVolts()`, puedo leer el valor de voltaje corregido sin hacer nada especial.
 
-El resultado de la conversión AD y el voltaje medido por el multímetro coinciden bien entre sí con un error de unos 5 mV, lo cual no es un problema en el uso práctico.
+El resultado de la conversión AD y el voltaje medido por el multímetro concuerdan bien entre sí con un error de unos 5 mV, lo cual no es un problema en el uso práctico.
 
 Además, especialmente durante la comunicación, se produjeron errores en forma de picos, que tuvieron que promediarse 16 veces para eliminarlos.
 
@@ -345,7 +349,7 @@ void loop(){
 }
 ```
 
-Si eres lo suficientemente rápido para encender el monitor serie antes de que el XIAO entre en sueño profundo, entonces podrás ver el mensaje de salida como se muestra a continuación. Esto significa que el XIAO está ahora "dormido".
+Si eres lo suficientemente rápido para encender el monitor serie antes de que el XIAO entre en sueño profundo, entonces podrás ver el mensaje de salida como se muestra a continuación. Esto significa que el XIAO ahora está "dormido".
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/15.png" style={{width:700, height:'auto'}}/></div>
 
@@ -365,7 +369,7 @@ El XIAO ESP32-C3 soporta activación por GPIO y por temporizador, y los pines qu
 
 Primero puedes intentar reiniciar la placa haciendo clic una vez en el **RESET BUTTON** mientras la placa está conectada a tu PC. Si eso no funciona, mantén pulsado el **BOOT BUTTON**, conecta la placa a tu PC mientras mantienes pulsado el botón **BOOT**, y luego suéltalo para entrar en **bootloader mode**.
 
-### P2: Mi placa no aparece como un dispositivo serie en Arduino IDE
+### P2: Mi placa no aparece como dispositivo serie en Arduino IDE
 
 Sigue la misma respuesta que para la **P1** anterior.
 
@@ -381,11 +385,11 @@ Simplemente puedes conectar la placa a un PC mediante **USB Type-C** y volver a 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-tool-download.png" style={{width:1000, height:'auto'}}/></div>
 
-- **Paso 4.** Extrae el archivo **.zip**, ve a `ESP_RF_Test_EN\ESP_RF_Test_EN\EspRFTestTool_v2.8_Manual` y abre **EspRFTestTool_v2.8_Manual.exe**
+- **Paso 4.** Extrae el archivo **.zip**, navega a `ESP_RF_Test_EN\ESP_RF_Test_EN\EspRFTestTool_v2.8_Manual` y abre **EspRFTestTool_v2.8_Manual.exe**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-tool-open.png" style={{width:500, height:'auto'}}/></div>
 
-- **Paso 5.** Selecciona **ESP32C3** como el ChipType, tu puerto COM, **115200** como el BaudRate y haz clic en **open**
+- **Paso 5.** Selecciona **ESP32C3** como ChipType, tu puerto COM, **115200** como BaudRate y haz clic en **open**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-2.png" style={{width:500, height:'auto'}}/></div>
 
@@ -416,7 +420,7 @@ Verás la siguiente salida cuando la grabación se haya realizado correctamente
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 
 **Diseño de hardware**
-- **📄[Datasheet]** [Hoja de datos de Espressif ESP32-C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf )
+- **📄[Hoja de datos]** [Hoja de datos de Espressif ESP32-C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf )
 - **📄[Esquemático]** [Esquemático de XIAO ESP32-C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf )
 - **🗃️[Archivos de diseño de PCB]** 
   - [Proyecto KiCad de XIAO ESP32-C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip )
@@ -426,7 +430,7 @@ Verás la siguiente salida cuando la grabación se haya realizado correctamente
 - **📄[Diagrama de pines]** [Hoja de pines de XIAO ESP32-C3](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx )
 
 **Mecánico**
-- **📄[Dimensiones 2D]** [Dimensiones 2D de XIAO ESP32-C3 en DXF](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip )
+- **📄[Dimensiones 2D]** [Dimensiones de XIAO ESP32-C3 en DXF](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip )
 - **🗃️[Dimensiones 2D]** [Datos de las almohadillas inferiores de XIAO ESP32-C3](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/XIAO_ESP32C3_v1.2_Dimensioning.zip )
 - **📄[Modelo 3D]** [Modelo 3D de XIAO ESP32-C3](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1 )
 
@@ -437,7 +441,7 @@ Verás la siguiente salida cuando la grabación se haya realizado correctamente
 
 **Otros**
 - **🔗[Wiki]** [Primer vistazo al Seeed Studio XIAO ESP32-C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html )  
-  - Una gran introducción al XIAO ESP32C3, que cubre las características clave y el uso básico.
+  - Una excelente introducción al XIAO ESP32C3, que cubre las características clave y el uso básico.
 - **📄[Documento]** [Informe sobre el bajo consumo de energía de XIAO ESP32-C3](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/Low_Power_Consumption.pdf )
 
 <JetsonLeadQuote

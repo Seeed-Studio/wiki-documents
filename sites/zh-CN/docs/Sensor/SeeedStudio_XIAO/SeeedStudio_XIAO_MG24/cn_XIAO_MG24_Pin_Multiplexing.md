@@ -20,12 +20,16 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/top.png" style={{width:700, height:'auto'}}/></div>
 
-***XIAO MG24*** 具有多达 ***22 个常规引脚***、***18 个模拟引脚***、***18 个数字引脚***、***2 组 SPI***、***2 组 UART***、***2 组 I2C***，并支持 ***全部 PWM***。它为我们提供了非常丰富的引脚资源。在本篇 wiki 中，我将教你如何驱动这些引脚，从而高效地利用它们 😀！
+***XIAO MG24*** 具有多达 ***22 个常规引脚***、***18 个模拟引脚***、***18 个数字引脚***、***2 组 SPI***、***2 组 UART***、***2 组 I2C***，并支持***全部 PWM***。它为我们提供了非常丰富的引脚资源。在本篇 wiki 中，我将教你如何驱动这些引脚，从而高效地利用它们 😀！
 
-## 硬件概述
+## 硬件总览
 
 <Tabs>
 <TabItem value="XIAO MG24" label="XIAO MG24">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
 
 ### XIAO MG24 正面
 
@@ -38,6 +42,10 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24sense" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
 
 ### XIAO MG24 Sense 正面
 
@@ -84,11 +92,11 @@ import TabItem from '@theme/TabItem';
   </tr>
 </table>
 
-请将 XIAO MG24（Sense）安装到扩展板上，并通过 Grove 线缆将继电器连接到扩展板的 **A0/D0** 接口。最后，通过 USB-C 线缆将 XIAO 连接到电脑。
+请将 XIAO MG24（Sense）安装到扩展板上，并通过 Grove 线将继电器连接到扩展板的 **A0/D0** 接口。最后，通过 USB-C 线将 XIAO 连接到电脑。
 
 ### 软件实现
 
-在本示例中，我们将通过连接在 XIAO 扩展板上的按键来控制继电器的开关状态。当按下按键时，继电器吸合；当松开按键时，继电器断开。
+在本示例中，我们将通过连接到 XIAO 扩展板的按键来控制继电器的开关状态。当按下按键时，继电器吸合；当松开按键时，继电器断开。
 
 ```c
 const int buttonPin = D1;     // the number of the pushbutton pin
@@ -119,13 +127,13 @@ void loop() {
 
 ### 结果示意图
 
-如果一切顺利，在上传程序后，你应该能看到如下效果。
+如果一切顺利，在上传程序后，你应该会看到如下效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/2.gif" style={{width:500, height:'auto'}}/></div>
 
 ## 数字引脚作为 PWM 使用
 
-XIAO MG24（Sense）上的所有 GPIO 引脚都支持 PWM 输出。因此，你可以使用任意引脚输出 PWM，用于调节灯光亮度、控制舵机等功能。
+XIAO MG24（Sense）的所有 GPIO 引脚都支持 PWM 输出。因此，你可以使用任意引脚输出 PWM，用于调节灯光亮度、控制舵机等功能。
 
 ### 硬件准备
 
@@ -160,7 +168,7 @@ XIAO MG24（Sense）上的所有 GPIO 引脚都支持 PWM 输出。因此，你�
 </table>
 
 :::tip
-请将 XIAO MG24（Sense）安装到扩展板上，然后使用 Grove 线缆将 Variable Color LED 连接到扩展板的 A0/D0 接口。最后，通过 USB-C 线缆将 XIAO 连接到电脑。
+请将 XIAO MG24（Sense）安装到扩展板上，然后使用 Grove 线将 Variable Color LED 连接到扩展板的 A0/D0 接口。最后，通过 USB-C 线将 XIAO 连接到电脑。
 :::
 
 ### 软件实现
@@ -202,7 +210,7 @@ void loop() {
 
 ## 模拟引脚
 
-XIAO MG24（Sense）开发板配备了 12 位 ADC，可对模拟传感器数值进行高分辨率读取，这有助于我们获得更加精确的读数。
+XIAO MG24（Sense）开发板配备 12 位 ADC，可对模拟传感器数值进行高分辨率读取，这有助于我们获得更加精确的读数。
 
 接下来，我们将选择两个传感器来体现 ADC 的特性。
 
@@ -422,7 +430,7 @@ void loop() {
 ### Serial1 的使用
 
 根据上文中 XIAO MG24(Sense) 引脚图中的具体参数，我们可以观察到有 TX 引脚和 RX 引脚。
-这与串口通信有所不同，但用法也非常相似，只是需要额外添加几个参数。
+这与串口通信有所不同，但用法也非常相似，只是需要添加几个参数。
 所以下一步，我们将使用芯片引出的引脚进行串口通信。
 
 ```c
@@ -472,7 +480,7 @@ XIAO MG24(Sense) 具有一个 I2C 接口，可用于许多传感器的数据传�
  </tr>
 </table>
 
-XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，并通过板载的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插到扩展板上，并通过编程在屏幕上显示内容。
+XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，并通过板载的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插在扩展板上，然后编程在屏幕上显示内容。
 
 ### 软件实现
 
@@ -553,7 +561,7 @@ void smeil_display() {
 
 ## SPI
 
-XIAO MG24(Sense) 芯片集成了多种外设，其中包括一个 SPI 接口，可用于连接外部 SPI 设备，例如闪存、显示屏、传感器等。
+XIAO MG24(Sense) 芯片集成了多个外设，其中包括一个 SPI 接口，可用于连接外部 SPI 设备，如闪存、显示屏、传感器等。
 
 ### Arduino 库概览
 
@@ -594,7 +602,7 @@ XIAO MG24(Sense) 芯片集成了多种外设，其中包括一个 SPI 接口，�
 
 ### 引脚连接
 
-按照上述说明准备好硬件后，使用跳线将 XIAO 的 SPI 接口与 OLED 连接。请参考下图了解接线方式。
+按照上述说明准备好硬件后，使用跳线将 XIAO 和 OLED 的 SPI 接口连接起来。请参考下图了解接线方式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/3.png" style={{width:700, height:'auto'}}/></div>
 
@@ -606,7 +614,7 @@ XIAO MG24(Sense) 芯片集成了多种外设，其中包括一个 SPI 接口，�
 
 ### 软件实现
 
-在正确下载并安装库之后，你可以在 examples 文件夹中找到两个名为 **helloworld.ino** 和 **bgcolor.ino** 的示例程序。`bgcolor.ino` 是一个用于显示背景颜色的示例，我们将红色设置为默认颜色。而 `helloworld.ino` 是一个用于显示我们公司 Logo 动画的示例，并且该示例包含了 bgcolor 示例所具有的效果。
+在正确下载并安装库之后，你可以在 examples 文件夹中找到两个名为 **helloworld.ino** 和 **bgcolor.ino** 的示例程序。`bgcolor.ino` 是一个用于显示背景颜色的示例，我们默认设置为红色。而 `helloworld.ino` 是一个用于显示我们公司 Logo 动画的示例，并且该示例包含了 bgcolor 示例所具有的效果。
 
 ```cpp
 #include <st7789v2.h>
@@ -675,7 +683,7 @@ void loop() {
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

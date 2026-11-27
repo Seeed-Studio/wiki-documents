@@ -18,7 +18,11 @@ url: https://wiki.seeedstudio.com/es/xiao_ra4m1_pin_multiplexing/
 
 ## Descripción general del hardware
 
-Antes de empezar, es esencial conocer algunos parámetros básicos del producto. La siguiente tabla proporciona información sobre las características de Seeed Studio XIAO RA4M1.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=ra4" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+Antes de empezar, es bastante esencial contar con algunos parámetros básicos del producto. La siguiente tabla proporciona información sobre las características de Seeed Studio XIAO RA4M1.
 
 ### Parte frontal
 
@@ -30,7 +34,7 @@ Antes de empezar, es esencial conocer algunos parámetros básicos del producto.
 
 ## Digital
 
-El XIAO RA4M1 tiene hasta 11 pines GPIO normales, 6 pines analógicos y 8 puertos IO reutilizables en la parte posterior. En este ejemplo, utilizaremos el XIAO RA4M1, la placa de expansión XIAO y un relé para demostrar cómo usar diferentes pines digitales para lectura y escritura.
+El XIAO RA4M1 tiene hasta 11 pines GPIO regulares, 6 pines analógicos y 8 puertos IO reutilizables en la parte posterior. En este ejemplo, utilizaremos el XIAO RA4M1, la placa de expansión XIAO y un relé para demostrar cómo usar diferentes pines digitales para lectura y escritura.
 
 ### Preparación de hardware
 
@@ -64,7 +68,7 @@ El XIAO RA4M1 tiene hasta 11 pines GPIO normales, 6 pines analógicos y 8 puerto
   </tr>
 </table>
 
-Instala XIAO RA4M1 o Sense en la placa de expansión y conecta el relé a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Por último, conecta XIAO al ordenador mediante un cable USB-C.
+Instala XIAO RA4M1 o Sense en la placa de expansión y conecta el relé a la interfaz **A0/D0** de la placa de expansión mediante un cable Grove. Finalmente, conecta XIAO al ordenador mediante un cable USB-C.
 
 ### Implementación de software
 
@@ -137,7 +141,7 @@ Todos los pines GPIO en XIAO RA4M1 admiten salida PWM. Por lo tanto, puedes usar
  </tr>
 </table>
 
-Instala XIAO RA4M1 o Sense en la placa de expansión y, a continuación, conecta el Variable Color LED a la interfaz A0/D0 de la placa de expansión utilizando un cable Grove. Por último, conecta XIAO a tu ordenador mediante un cable USB-C.
+Instala XIAO RA4M1 o Sense en la placa de expansión y, a continuación, conecta el Variable Color LED a la interfaz A0/D0 de la placa de expansión utilizando un cable Grove. Finalmente, conecta XIAO a tu ordenador mediante un cable USB-C.
 
 ### Implementación de software
 
@@ -170,7 +174,7 @@ void loop() {
 }
 ```
 
-Si el programa se ejecuta correctamente, verás el siguiente efecto de funcionamiento.
+Si el programa se ejecuta correctamente, verás el siguiente efecto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -180,9 +184,9 @@ La placa de desarrollo XIAO RA4M1, que dispone de un ADC de hasta 14 bits para l
 
 Datos detallados según la precisión del ADC
 
-- 10 bits:  0~1024
-- 12 bits:  0~4096
-- 14 bits:  0~16383
+- 10-bit :  0~1024
+- 12-bit :  0~4096
+- 14-bit :  0~16383
 
 A continuación, elegiremos dos sensores para reflejar las características del ADC.
 
@@ -287,7 +291,7 @@ Algunas de las funciones Serial más utilizadas incluyen:
 - `Serial.begin()` -- que inicializa la comunicación a una velocidad en baudios especificada;
 - `Serial.print()` -- que envía datos al puerto Serial en un formato legible;
 - `Serial.write()` -- que envía datos binarios al puerto Serial;
-- `Serial.available()` -- que comprueba si hay algún dato disponible para ser leído desde el puerto Serial;
+- `Serial.available()` -- que comprueba si hay datos disponibles para ser leídos desde el puerto Serial;
 - `Serial.read()` -- que lee un solo byte de datos desde el puerto Serial;
 - `Serial.flush()` -- que espera a que se complete la transmisión de los datos seriales salientes.
 
@@ -323,7 +327,7 @@ void loop() {
 
 De acuerdo con los diagramas de pines de XIAO RA4M1 anteriores para parámetros específicos, podemos observar que hay un pin TX y un pin RX.
 Esto es diferente de la comunicación serial, pero el uso también es muy similar, excepto que es necesario añadir algunos parámetros.
-Así que a continuación, utilizaremos los pines sacados por el chip para la comunicación serial.
+Así que a continuación utilizaremos los pines sacados por el chip para la comunicación serial.
 
 ```c
 
@@ -380,7 +384,7 @@ En este programa, primero incluimos la biblioteca `SoftwareSerial.h` para usar s
 
 En la función `setup()`, inicializamos tanto el serial por hardware (`Serial.begin()`) como el serial por software (`mySerial.begin()`).
 
-En la función `loop()`, usamos la función `mySerial.available()` para comprobar si hay algún dato disponible para ser leído desde el serial por software. Si lo hay, leemos el byte entrante usando la función `mySerial.read()` y lo almacenamos en una variable llamada data. Luego usamos las funciones `Serial.print()` y `Serial.println()` para imprimir "Received data: " seguido del valor de data en el serial por hardware.
+En la función `loop()`, usamos la función `mySerial.available()` para comprobar si hay datos disponibles para ser leídos desde el serial por software. Si los hay, leemos el byte entrante usando la función `mySerial.read()` y lo almacenamos en una variable llamada data. Luego usamos las funciones `Serial.print()` y `Serial.println()` para imprimir "Received data: " seguido del valor de data en el serial por hardware.
 
 También usamos la función `mySerial.print()` para escribir "Hello World!" en el serial por software. Esto enviará los datos desde el XIAO al dispositivo conectado al puerto serial por software.
 
@@ -388,14 +392,14 @@ Finalmente, añadimos una función `delay()` para esperar un segundo antes de re
 
 ## IIC
 
-XIAO RA4M1 tiene una interfaz I2C que se puede utilizar para la transmisión y el análisis de datos de muchos sensores, así como para usar algunas pantallas OLED.
+XIAO RA4M1 tiene una interfaz I2C que se puede usar para la transmisión y el análisis de datos de muchos sensores, así como para usar algunas pantallas OLED.
 
 ### Preparación de hardware
 
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO RA4M1</th>
-        <th>Base de expansión Seeed Studio para XIAO con Grove OLED</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -419,7 +423,7 @@ La pantalla OLED en la placa de expansión XIAO utiliza el protocolo I2C y está
 
 ### Implementación de software
 
-Este ejemplo introduce cómo usar la pantalla OLED en la Base de expansión Seeed Studio para XIAO RA4M1.
+Este ejemplo introduce cómo usar la pantalla OLED en la Seeed Studio Expansion Base para XIAO RA4M1.
 
 #### Paso 1. Instala el Seeed Studio XIAO RA4M1 en la placa de expansión y luego conecta el cable Type-C
 
@@ -452,19 +456,19 @@ void loop(void) {
 }
 ```
 
-En las primeras líneas del código, incluimos las bibliotecas requeridas como Arduino.h, U8x8lib.h y Wire.h. La biblioteca U8x8lib.h proporciona funciones para controlar la pantalla OLED, y la biblioteca Wire.h proporciona funciones para la comunicación I2C.
+En las primeras líneas del código, incluimos las bibliotecas necesarias como Arduino.h, U8x8lib.h y Wire.h. La biblioteca U8x8lib.h proporciona funciones para controlar la pantalla OLED, y la biblioteca Wire.h proporciona funciones para la comunicación I2C.
 
 En la función `setup()`, inicializamos la pantalla OLED usando la función `u8x8.begin()`. También configuramos el modo de giro de la pantalla usando la función `u8x8.setFlipMode()` para rotar la pantalla 180 grados.
 
 En la función `loop()`, configuramos la fuente usando la función `u8x8.setFont()` y especificamos la posición del cursor en la pantalla usando la función `u8x8.setCursor()`. Finalmente, usamos la función `u8x8.print()` para mostrar la cadena "Hello World!" en la pantalla OLED.
 
-Si subes un programa a XIAO RA4M1, verás contenido mostrado en la pantalla OLED de la placa de expansión.
+Si cargas un programa en la XIAO RA4M1, verás contenido mostrado en la pantalla OLED de la placa de expansión.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/21.png" style={{width:800, height:'auto'}}/></div>
 
 ## SPI
 
-El chip RA4M1 integra múltiples periféricos, incluido una interfaz SPI que se puede utilizar para conectar dispositivos SPI externos como memoria flash, pantallas, sensores y más. El XIAO RA4M1 también admite un modo de transferencia SPI de alta velocidad, que puede alcanzar una velocidad máxima de transferencia SPI de 80 MHz, satisfaciendo las necesidades de transferencia de datos de la mayoría de los dispositivos SPI.
+El chip RA4M1 integra múltiples periféricos, incluido una interfaz SPI que se puede usar para conectar dispositivos SPI externos como memorias flash, pantallas, sensores y más. La XIAO RA4M1 también admite un modo de transferencia SPI de alta velocidad, que puede alcanzar una velocidad máxima de transferencia SPI de 80 MHz, satisfaciendo las necesidades de transferencia de datos de la mayoría de los dispositivos SPI.
 
 ### Preparación de hardware
 
@@ -491,17 +495,17 @@ El chip RA4M1 integra múltiples periféricos, incluido una interfaz SPI que se 
  </tr>
 </table>
 
-Después de preparar el hardware como se mencionó anteriormente, utiliza cables de puente para conectar la interfaz SPI del XIAO y el OLED. Consulta el siguiente diagrama para el método de cableado.
+Después de preparar el hardware como se mencionó anteriormente, utiliza cables de puente para conectar la interfaz SPI de la XIAO y la OLED. Por favor, consulta el siguiente diagrama para el método de cableado.
 
 ### Implementación de software
 
-A continuación, tomaremos el siguiente programa como ejemplo para introducir cómo utilizar la interfaz SPI para controlar la pantalla del OLED.
+A continuación, tomaremos el siguiente programa como ejemplo para introducir cómo usar la interfaz SPI para controlar la pantalla de la OLED.
 
 Instala la biblioteca u8g2.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -527,15 +531,15 @@ void loop(void) {
 }
 ```
 
-En la función `setup()`, la clase `U8G2_SH1107_128X128_1_4W_HW_SPI` se instancia con los argumentos de constructor apropiados que especifican los pines utilizados para chip select (cs), data/command (dc) y reset. Luego, se llama a la función `u8g2.begin()` para inicializar la pantalla.
+En la función `setup()`, la clase `U8G2_SH1107_128X128_1_4W_HW_SPI` se instancia con los argumentos de constructor apropiados que especifican los pines usados para chip select (cs), datos/comando (dc) y reset. Luego, se llama a la función `u8g2.begin()` para inicializar la pantalla.
 
-En la función `loop()`, la pantalla se actualiza con nuevo contenido utilizando las funciones `u8g2.firstPage()`, `u8g2.setFont()` y `u8g2.drawStr()`. La función `u8g2.firstPage()` configura el búfer de pantalla para escritura, mientras que `u8g2.nextPage()` muestra el contenido actualizado. El bucle do-while garantiza que el contenido se muestre continuamente hasta que el programa se detenga.
+En la función `loop()`, la pantalla se actualiza con nuevo contenido usando las funciones `u8g2.firstPage()`, `u8g2.setFont()` y `u8g2.drawStr()`. La función `u8g2.firstPage()` configura el búfer de la pantalla para escritura, mientras que `u8g2.nextPage()` muestra el contenido actualizado. El bucle do-while garantiza que el contenido se muestre continuamente hasta que el programa se detenga.
 
-En general, este código demuestra cómo utilizar la biblioteca U8g2 para controlar una pantalla OLED y mostrar texto en ella.
+En general, este código demuestra cómo usar la biblioteca U8g2 para controlar una pantalla OLED y mostrar texto en ella.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
-## CAN (Placa de expansión XIAO CAN Bus)
+## CAN(XIAO CAN Bus Expansion Board)
 
 ### Preparación de hardware
 
@@ -562,11 +566,11 @@ En general, este código demuestra cómo utilizar la biblioteca U8g2 para contro
  </tr>
 </table>
 
-#### Paso 1. Prepara dos CAN Bus Breakout Board y XIAO RA4M1
+#### Paso 1 . Prepara dos CAN Bus Breakout Board y XIAO RA4M1
 
-#### Paso 2. Inserta estos dos XIAO RA4M1 por separado en la CAN Bus Breakout Board
+#### Paso 2 . Inserta estos dos XIAO RA4M1 por separado en la CAN Bus Breakout Board
 
-#### Paso 3. Prepara la conexión con cables DuPont
+#### Paso 3 . Prepara la conexión con cables DuPont
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/36.png" style={{width:400, height:'auto'}}/></div>
 
@@ -576,7 +580,7 @@ Proporcionamos una [biblioteca de Arduino para la placa MCP2515](https://github.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/Arduino_CAN_BUS_MCP2515" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -584,10 +588,10 @@ Proporcionamos una [biblioteca de Arduino para la placa MCP2515](https://github.
 
 La biblioteca incluye varios ejemplos, entre ellos:
 
-- ***OBDII-PIDs*** - recuperar datos de la interfaz OBD-II
+- ***OBDII-PIDs*** -  recuperar datos desde la interfaz OBD-II
 - ***send*** - enviar una trama al bus CAN
 - ***recv*** - recibir una trama desde el bus CAN
-- ***set_mask_filter_recv*** - recibir una trama desde el bus CAN con configuración de máscara y filtro
+- ***set_mask_filter_recv*** - recibir una trama desde el bus CAN con configuraciones de máscara y filtro
 
 ### Implementación de software
 
@@ -781,7 +785,7 @@ void loop()
 ```
 
 :::tip
-En este ejemplo, necesitas soldar uno de los pines del terminal P1 de la placa de expansión CAN Bus. Solo entonces se puede utilizar cualquier velocidad; de lo contrario, solo puedes usar una tasa de baudios CAN por debajo de 125.
+En este ejemplo, necesitas soldar uno de los pines del terminal P1 de la CAN Bus Breakout Board. Solo entonces se puede utilizar cualquier velocidad; de lo contrario, solo puedes usar una tasa de baudios CAN por debajo de 125.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/30.png" style={{width:600, height:'auto'}}/></div>

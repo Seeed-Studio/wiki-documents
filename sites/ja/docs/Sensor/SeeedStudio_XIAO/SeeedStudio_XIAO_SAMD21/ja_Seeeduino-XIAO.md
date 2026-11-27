@@ -10,7 +10,7 @@ last_update:
   date: 10/12/2026
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-09-07'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/
 ---
 
@@ -47,34 +47,34 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概要
 
-以前は Seeeduino XIAO と呼ばれていた Seeed Studio XIAO SAMD21 は、[Arduino と互換性のある強力な親指サイズの開発ボードシリーズである Seeed Studio XIAO ファミリ](https://www.seeedstudio.com/xiao-series-page)の最初の製品です。低消費電力マイコンである強力な ATSAMD21G18A-MU を搭載しています。一方で、この小さなボードは処理性能に優れていながら、必要とする電力は少なくなっています。非常に小型に設計されており、ウェアラブルデバイスや小規模プロジェクトに使用できます。
+以前は Seeeduino XIAO と呼ばれていた Seeed Studio XIAO SAMD21 は、[Arduino と互換性のある、強力な親指サイズの開発ボードシリーズである Seeed Studio XIAO ファミリ](https://www.seeedstudio.com/xiao-series-page)の最初の製品です。低消費電力マイコンである強力な ATSAMD21G18A-MU を搭載しています。一方で、この小さなボードは処理性能に優れながらも、必要とする電力は少なくなっています。非常に小型に設計されており、ウェアラブルデバイスや小規模プロジェクトに使用できます。
 
-Seeed Studio XIAO SAMD21 には 14 本のピンがあり、11 個のデジタルインターフェース、11 個のアナログインターフェース、10 個の PWM インターフェース (d1〜d10)、1 本の DAC 出力ピン D0、1 つの SWD パッドインターフェース、1 つの I2C インターフェース、1 つの SPI インターフェース、1 つの UART インターフェース、シリアル通信インジケータ (T/R)、ピンの多重化による点滅 LED (L) として使用できます。LED（Power、L、RX、TX）の色は、緑、黄、青、青です。さらに、Seeed Studio XIAO SAMD21 には Type-C インターフェースがあり、電源供給とコードの書き込みが可能です。リセットボタンは 2 つあり、それらを短絡させることでボードをリセットできます。
+Seeed Studio XIAO SAMD21 には 14 本のピンがあり、11 個のデジタルインターフェース、11 個のアナログインターフェース、10 個の PWM インターフェース（d1〜d10）、1 つの DAC 出力ピン D0、1 つの SWD パッドインターフェース、1 つの I2C インターフェース、1 つの SPI インターフェース、1 つの UART インターフェース、シリアル通信インジケータ（T/R）、ピンの多重化による点滅用 LED（L）として使用できます。LED（Power、L、RX、TX）の色は、緑、黄、青、青です。さらに、Seeed Studio XIAO SAMD21 には Type-C インターフェースがあり、電源供給とコードの書き込みが可能です。リセットボタンは 2 つあり、それらを短絡させることでボードをリセットできます。
 
-Microchip の SAMD21G18A ARM Cortex-M0+ 32 ビットプロセッサを搭載した XIAO SAMD21 Plus は、小型で多用途な XIAO SAMD21 に、柔軟性と拡張性をさらにもたらします。Arduino、MicroPython、PlatformIO との互換性を含むすべての強力な機能を維持しつつ、Plus バリアントでは、再設計されたキャッスレーションと背面パッドレイアウトにより、16 個の追加 GPIO、統合 Li-ion バッテリーマネジメント、専用の Reset および Boot ボタン、オンボードのプログラマブル WS2812 RGB LED を提供します。高度な IoT プロジェクト、バッテリー駆動のウェアラブル、組み込みアプリケーション、量産対応の SoM 設計に最適です。
+Microchip の SAMD21G18A ARM Cortex-M0+ 32 ビットプロセッサを搭載した XIAO SAMD21 Plus は、小型で多用途な XIAO SAMD21 に、柔軟性と拡張性をさらに追加します。Arduino、MicroPython、PlatformIO との互換性を含むすべての強力な機能を維持しつつ、Plus バリアントでは、再設計されたキャッスレーションと背面パッドレイアウトにより、16 個の追加 GPIO、統合 Li-ion バッテリーマネジメント、専用の Reset および Boot ボタン、オンボードのプログラマブル WS2812 RGB LED を提供します。高度な IoT プロジェクト、バッテリー駆動のウェアラブル、組み込みアプリケーション、量産向け SoM 設計に最適です。
 
 ## ドキュメント
 
-**Seeed Studio XIAO SAMD21** の使い方に関するドキュメントが 2 種類あり、それぞれ異なる分野に焦点を当てています。参考として、以下の表を確認してください。
+**Seeed Studio XIAO SAMD21** の使い方に関するドキュメントが 2 種類あり、それぞれ異なる分野に焦点を当てています。参考として以下の表を確認してください。
 
 |[**Seeed によるドキュメント**](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/)|[**Nanase によるドキュメント**](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-by-Nanase/)|
 |---|---|
 |ピン配置図|インターフェース|
-|Seeed Studio XIAO SAMD21 入門ガイド|Seeed Studio XIAO SAMD21 と MicroSD カード (SPI)|
-|Seeed Studio XIAO SAMD21 GPIO の使い方|Seeed Studio XIAO SAMD21 と GPS (UART)|
-|Seeed Studio XIAO SAMD21 リソース|Single Cycle IOBUS|
+|Seeed Studio XIAO SAMD21 入門ガイド|Seeed Studio XIAO SAMD21 と MicroSD カード（SPI）|
+|Seeed Studio XIAO SAMD21 GPIO の使い方|Seeed Studio XIAO SAMD21 と GPS（UART）|
+|Seeed Studio XIAO SAMD21 リソース|シングルサイクル IOBUS|
 
 <!-- ### CircuitPython on Seeed Studio XIAO SAMD21
 
 - Get started with [**CircuitPython on Seeed Studio XIAO SAMD21 **](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-CircuitPython). -->
 
-## 特長
+## 特徴
 
-- 強力な MCU：Microchip ATSAMD21G18A Arm® Cortex®-M0+ プロセッサ（48 MHz 動作）、256 KB フラッシュ、32 KB SRAM、ネイティブ USB 対応。
+- 強力な MCU：Microchip ATSAMD21G18A Arm® Cortex®-M0+ プロセッサ（48 MHz）、256 KB フラッシュ、32 KB SRAM、ネイティブ USB 対応。
 - 拡張された I/O：XIAO SAMD21 Plus は標準の 14 ピン XIAO レイアウトを維持しつつ、1.27 mm ピッチ背面 SMD キャッスレーションにより 16 個の GPIO を追加し、PWM、DAC、I2C、UART、SPI、I2S、SWD をサポート。
 - 統合電源管理：Li-ion バッテリーの直接接続、オンボード充電、逆流保護、充電状態インジケータに対応。
-- 柔軟な開発環境：Arduino IDE、PlatformIO、CircuitPython、TinyGo と互換。
-- コンパクトかつエコシステム対応：21 × 17.8 mm のブレッドボード対応 XIAO フォームファクタを維持しつつ、拡張ボードやカスタムキャリア設計向けに標準化された XIAO Plus 背面レイアウトを採用。
+- 柔軟な開発環境：Arduino IDE、PlatformIO、CircuitPython、TinyGo に対応。
+- コンパクトでエコシステム対応：21 × 17.8 mm のブレッドボード対応 XIAO フォームファクタを維持しつつ、拡張ボードやカスタムキャリア設計向けに標準化された XIAO Plus 背面レイアウトを採用。
 
 ## 仕様
 
@@ -164,29 +164,29 @@ Microchip の SAMD21G18A ARM Cortex-M0+ 32 ビットプロセッサを搭載し�
     <tr>
       <th>Power</th>
       <td>
-        入力電圧 (Type-C)：5 V<br />
+        入力電圧（Type-C）：5 V<br />
         BAT 入力：非対応
       </td>
       <td>
-        入力電圧 (Type-C)：5 V<br />
+        入力電圧（Type-C）：5 V<br />
         BAT 入力：3.7 V 単セル Li-ion/LiPo バッテリー
       </td>
     </tr>
     <tr>
-      <th>BAT-to-3V3 Backflow Protection</th>
+      <th>BAT から 3V3 への逆流保護</th>
       <td>なし</td>
       <td>あり</td>
     </tr>
     <tr>
-      <th>Working Temperature</th>
+      <th>動作温度</th>
       <td colspan="2">-40°C ～ 85°C</td>
     </tr>
     <tr>
-      <th>Dimensions</th>
+      <th>寸法</th>
       <td colspan="2">21 × 17.8 mm</td>
     </tr>
     <tr>
-      <th>Software Compatibility</th>
+      <th>ソフトウェア互換性</th>
       <td colspan="2">
         Arduino、PlatformIO、MicroPython、CircuitPython、Zephyr など
       </td>
@@ -198,6 +198,10 @@ Microchip の SAMD21G18A ARM Cortex-M0+ 32 ビットプロセッサを搭載し�
 
 <Tabs>
 <TabItem value="XIAO SAMD21" label="XIAO SAMD21" default>
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 ### XIAO SAMD21 表面
 
@@ -211,6 +215,10 @@ Microchip の SAMD21G18A ARM Cortex-M0+ 32 ビットプロセッサを搭載し�
 
 <TabItem value="XIAO SAMD21 Plus" label="XIAO SAMD21 Plus">
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
+
 ### XIAO SAMD21 Plus 表面
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-SAMD21-Plus-Front.png" style={{width:1000, height:'auto'}}/></div>
@@ -223,13 +231,13 @@ Microchip の SAMD21G18A ARM Cortex-M0+ 32 ビットプロセッサを搭載し�
 </Tabs>
 
 :::caution
-汎用 I/O ピンについて：
-MCU の動作電圧は 3.3V です。汎用 I/O ピンに接続される入力電圧が 3.3V を超えると、チップが損傷する可能性があります。
+一般的な I/O ピンについて：
+MCU の動作電圧は 3.3V です。一般的な I/O ピンに接続された入力電圧が 3.3V を超えると、チップが損傷する可能性があります。
 
 電源ピンについて：
-内蔵の DC-DC コンバータ回路により 5V を 3.3V に変換できるため、VIN-PIN および 5V-PIN を介して 5V 電源でデバイスに給電できます。
+内蔵の DC-DC コンバータ回路により、5V 電圧を 3.3V に変換できるため、VIN-PIN および 5V-PIN を介して 5V 電源でデバイスに給電できます。
 
-XIAO SAMD21 の背面にある VIN および GND パッドは、特に充電式リチウムバッテリー（LiPo/Li-Ion）を直接接続するために設計されていないことを理解することが重要です。このボードには、安全な動作に必要なバッテリーマネジメント回路が搭載されていません。これらのパッドは、ボード内蔵の保護ダイオードをバイパスする代替の電源入力ポイントにすぎません。プロジェクトをバッテリーで駆動したい場合は、充電と保護機能を備えた専用の外部バッテリーマネジメントモジュールを使用し、そのモジュールの安定化出力を XIAO の 5V ピンに接続する必要があります。
+XIAO SAMD21 の背面にある VIN および GND パッドは、バッテリー、特に充電式リチウムバッテリー（LiPo / Li-Ion）を直接接続するために設計されていないことを理解しておくことが極めて重要です。このボードには、安全に動作させるために必要なバッテリーマネジメント回路が搭載されていません。これらのパッドは、ボード内蔵の保護ダイオードをバイパスする代替の電源入力ポイントにすぎません。プロジェクトをバッテリーで駆動したい場合は、充電および保護機能を備えた専用の外付けバッテリーマネジメントモジュールを使用し、そのモジュールの安定化出力を XIAO の 5V ピンに接続する必要があります。
 
 使用時には注意し、シールドカバーを持ち上げないでください。
 :::
@@ -260,7 +268,7 @@ XIAO SAMD21 の背面にある VIN および GND パッドは、特に充電式�
 
 | XIAO Pin    | Function           | XIAO SAMD21   | XIAO SAMD21 Plus | Description                                                |
 | :---------- | :----------------- | :------------ | :---------------- | :--------------------------------------------------------- |
-| 5V          | VBUS               | VBUS          | VBUS              | USB 5 V 電源入出力                                         |
+| 5V          | VBUS               | VBUS          | VBUS              | USB 5 V 電源入力/出力                                      |
 | GND         | GND                | GND           | GND               | グラウンド                                                 |
 | 3V3         | 3V3_OUT            | 3V3_OUT       | 3V3_OUT           | 3.3 V 電源出力                                             |
 | D0          | A0 / DAC           | PA02          | PA02              | GPIO、ADC AIN0、DAC 出力；ハードウェア PWM なし           |
@@ -310,35 +318,35 @@ XIAO SAMD21 の背面にある VIN および GND パッドは、特に充電式�
 
 ### XIAO SAMD21 の場合
 
-ユーザーのプログラミング処理が失敗したとき、Seeed Studio XIAO SAMD21 のポートが消えてしまうことがあります。次の操作によってこの問題を解決できます。
+ユーザーのプログラミング処理が失敗したとき、Seeed Studio XIAO SAMD21 のポートが消えてしまうことがあります。この問題は、次の操作で解決できます。
 
 - Seeed Studio XIAO SAMD21 をコンピュータに接続します。
-- ピン配置図の RST ピンを、ピンセットまたは短絡線を使って 2 回ショートさせます。
+- ピン配置図の RST ピンを、ピンセットまたは短絡用の線で 2 回ショートさせます。
 - オレンジ色の LED が点滅し、その後点灯します。
 
-この時点で、チップは Bootloader モードに入り、書き込みポートが再び現れます。samd21 チップには 2 つのパーティションがあり、1 つは Bootloader、もう 1 つはユーザープログラムです。製品は出荷時にシステムメモリ内にブートローダーコードを書き込みます。上記の手順を実行することでモードを切り替えることができます。
+この時点で、チップはブートローダーモードに入り、書き込み用ポートが再び現れます。samd21 チップには 2 つのパーティションがあり、1 つはブートローダー、もう 1 つはユーザープログラムです。本製品は出荷時に、システムメモリ内にブートローダーコードを書き込んでいます。上記の手順を実行することで、これらのモードを切り替えることができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" alt="pir" width={600} height="auto" /></p>
 
 ### XIAO SAMD21 Plus の場合
 
-XIAO SAMD21 Plus をコンピュータに接続します。Reset ボタンを連続して 2 回押すと、Bootloader モードに入ります。
+XIAO SAMD21 Plus をコンピュータに接続します。Reset ボタンを連続して 2 回押すと、ブートローダーモードに入ります。
 
 ### リセット
 
 Seeed Studio XIAO SAMD21 をリセットしたい場合は、次の手順を実行してください。
 
 - Seeed Studio XIAO SAMD21 をコンピュータに接続します。
-- ピンセットまたは短絡線を使って、RST ピンを**1 回だけ**ショートさせます。
+- ピンセットまたは短絡線を使用して、RST ピンを**1回だけ**ショートさせます。
 - オレンジ色の LED が点滅し、その後点灯します。
 
-注意：内蔵 LED の動作は Arduino 上のものとは逆です。Seeed Studio XIAO SAMD21 ではピンを Low にしなければなりませんが、他のマイコンでは High にする必要があります。  
+注意：内蔵 LED の動作は Arduino のものとは逆になっています。Seeed Studio XIAO SAMD21 では、ピンを Low にする必要がありますが、他のマイコンでは High にする必要があります。  
 
 ### 割り込み
 
-Seeed Studio XIAO SAMD21 上のすべてのピンは割り込みをサポートしますが、5 番ピンと 7 番ピンの 2 本は同時には使用できません。割り込みの詳細については[こちら](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp)を確認してください。
+Seeed Studio XIAO SAMD21 上のすべてのピンは割り込みをサポートしますが、5 番ピンと 7 番ピンは同時には使用できません。割り込みの詳細については[こちら](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp)を確認してください。
 
-## はじめに
+## 入門ガイド
 
 ### ハードウェア
 
@@ -367,7 +375,7 @@ Seeed Studio XIAO SAMD21 上のすべてのピンは割り込みをサポート�
  </table>
 </div>
 
-**必要な材料**
+**必要な部材**
 
 - Seeed Studio XIAO SAMD21 x1
 - コンピュータ x1
@@ -375,10 +383,10 @@ Seeed Studio XIAO SAMD21 上のすべてのピンは割り込みをサポート�
 
 :::tip
 
-一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルを持っていない場合や、お使いの USB ケーブルがデータ転送に対応しているか分からない場合は、[seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html) を確認してください。
+一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルを持っていない場合や、使用している USB ケーブルがデータ転送に対応しているか分からない場合は、[seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html) を確認してください。
 :::
 
-- ステップ 1. Seeed Studio XIAO SAMD21 と Type-C ケーブルを用意します。
+- ステップ 1. Seeed Studio XIAO SAMD21 と Type-C ケーブルを準備します。
 
 - ステップ 2. Seeed Studio XIAO SAMD21 をコンピュータに接続します。その後、黄色の電源 LED が点灯するはずです。
 
@@ -392,12 +400,12 @@ Arduino を初めて使用する場合は、[Getting Started with Arduino](https
 - **ステップ 1. Arduino ソフトウェアをインストールする必要があります。**
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div>
 
 **Arduino アプリケーションを起動する**
 
-事前にダウンロードした Arduino アプリケーション (arduino.exe) をダブルクリックします。
+事前にダウンロードした Arduino アプリケーション（arduino.exe）をダブルクリックします。
 
 :::note
 
@@ -406,13 +414,13 @@ Arduino ソフトウェアが別の言語で起動した場合は、設定ダイ
 
 - **ステップ 2. Blink サンプルを開く**  
 
-LED 点滅サンプルスケッチを開きます：**File > Examples >01.Basics > Blink**。
+LED の点滅サンプルスケッチを開きます：**File > Examples >01.Basics > Blink**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
 
 - **ステップ 3. Seeeduino を Arduino IDE に追加する**
 
-**File > Preference** をクリックし、Additional Boards Manager URLs に以下の URL を入力します：
+**File > Preference** をクリックし、Additional Boards Manager URLs に以下の URL を入力します。
 
 ```url
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -433,20 +441,20 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/1.jpg" alt="pir" width={600} height="auto" /></p>
 
-Tools | Serial Port メニューから Arduino ボードのシリアルデバイスを選択します。通常は COM3 以降です（**COM1** と **COM2** はハードウェアシリアルポート用に予約されていることが多いです）。確認するには、Arduino ボードを取り外してからメニューを再度開き、消えた項目が Arduino ボードです。ボードを再接続し、そのシリアルポートを選択します。
+Tools | Serial Port メニューから Arduino ボードのシリアルデバイスを選択します。通常は COM3 以降になります（**COM1** と **COM2** はハードウェアシリアルポート用に予約されていることが多いです）。確認するには、Arduino ボードを取り外してからメニューを再度開き、表示が消えた項目が Arduino ボードです。ボードを再接続し、そのシリアルポートを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/2.jpg" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 5. プログラムを書き込む**  
+- **ステップ 5. プログラムをアップロードする**  
 
-環境内の **Upload** ボタンをクリックするだけです。数秒待ち、書き込みが成功すると、ステータスバーに "Done uploading." というメッセージが表示されます。
+環境内の **Upload** ボタンをクリックするだけです。数秒待ち、アップロードが成功すると、ステータスバーに "Done uploading." というメッセージが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={800} height="auto" /></p>
 
- 書き込みが完了してから数秒後、ボード上の 13 番ピン (L) の LED が（オレンジ色で）点滅し始めるはずです。そうなればおめでとうございます。Arduino が正常に動作しました。問題がある場合は、トラブルシューティングの提案を参照してください。
+ アップロードが完了して数秒後、ボード上の 13 番ピン (L) の LED が（オレンジ色で）点滅し始めるはずです。そうなればおめでとうございます。Arduino が正常に動作しています。問題がある場合は、トラブルシューティングの提案を参照してください。
 
 :::note
-最大フラッシュサイズは 8 KB です。詳細については、リソースセクションの ATSAMD21G18A-MU データシートを参照してください。
+最大フラッシュサイズは 8 KB です。詳細については、リソースセクションにある ATSAMD21G18A-MU のデータシートを参照してください。
 :::
 
 #### XIAO SAMD21 Plus Blink
@@ -461,7 +469,7 @@ XIAO SAMD21 Plus では、L (LED) ピンは削除されています。その代�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_2.png" alt="pir" width={800} height="auto" /></p>
 
-‑ コードを以下のスニペットに置き換えます。RGB_LED のデータピンは PA27 (PIN_NEOPIXEL) です。電源制御ピンは D11 です — スケッチに '#define NEOPIXEL_POWER 11' を追加してください。
+‑ 以下のスニペットにコードを置き換えます。RGB_LED のデータピンは PA27 (PIN_NEOPIXEL) です。電源制御ピンは D11 です — スケッチに '#define NEOPIXEL_POWER 11' を追加してください。
 
 :::caution
 
@@ -532,16 +540,21 @@ void loop() {
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/gst_3.gif" alt="pir" width={600} height="auto" /></p>
 
 :::note
-最大フラッシュサイズは 8 KB です。詳細については、リソースセクションの ATSAMD21G18A-MU データシートを参照してください。
+最大フラッシュサイズは 8 KB です。詳細については、リソースセクションにある ATSAMD21G18A-MU のデータシートを参照してください。
 :::
 
-## ピンのマルチプレクシング
+## ピン多重化
 
-ピンを自分で設定する必要はありません。ピンを使用した後は、関数を直接呼び出すことができます。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">XIAO SAMD21 インタラクティブ Pinout を確認</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">XIAO SAMD21 Plus インタラクティブ Pinout を確認</a>
+</div>
+
+ピンを自分で設定する必要はなく、ピンを使用した後は関数を直接呼び出すことができます。
 
 ### デジタル入力と出力
 
-- ピン 6 をデジタルピンとして使用します：
+- ピン 6 をデジタルピンとして使用します。
 
 ```c
 const int buttonPin = 6;     // the number of the pushbutton pin
@@ -573,7 +586,7 @@ void loop() {
 
 ### AnalogRead
 
-- ピン 6 をアナログピンとして使用します：
+- ピン 6 をアナログピンとして使用します。
 
 ```c
 
@@ -599,7 +612,7 @@ void loop() {
 
 ### シリアル
 
-- ピン 6 を UART の TX ピンとして使用します（UART の RX ピンはピン 7）：
+- ピン 6 を UART の TX ピンとして使用します（UART の RX ピンはピン 7）:
 
 ```c
 
@@ -616,7 +629,7 @@ void loop() {
 
 ### I2C
 
-- ピン 5 を IIC の SCL ピンとして使用します（IIC の SDA ピンはピン 4）：
+- ピン 5 を IIC の SCL ピンとして使用します（IIC の SDA ピンはピン 4）:
 
 ```c
 // Wire Master Writer
@@ -653,7 +666,7 @@ void loop()
 
 ### SPI
 
-- ピン 8 を SPI の SCK ピンとして使用します（SPI の MISO ピンはピン 9、MOSI ピンはピン 10）：
+- ピン 8 を SPI の SCK ピンとして使用します（SPI の MISO ピンはピン 9、MOSI ピンはピン 10）:
 
 ```c
 #include <SPI.h>
@@ -678,19 +691,19 @@ void loop (void) {
 
 ### QTouch
 
-QTouch の使い方については、サンプルプロジェクトを用意しています： [How to Make a Fruit Piano on Seeed Studio XIAO SAMD21 ’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/)。
+QTouch の使用方法については、サンプルプロジェクトを提供しています: [How to Make a Fruit Piano on Seeed Studio XIAO SAMD21 ’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/)。
 
 ### アナログ入力と出力
 
-PWM ベースの「アナログ出力」を備えているだけでなく、SAMD21 にはデジタル-アナログコンバータ（DAC）という形で真のアナログ出力機能もあります。このモジュールは 0〜3.3V のアナログ電圧を生成できます。より自然な音質のオーディオを生成したり、アナログデバイスを制御するための一種の「デジタル可変抵抗」として使用したりできます。
+PWM ベースの「アナログ出力」を備えている一方で、SAMD21 にはデジタル-アナログコンバータ（DAC）という形の真のアナログ出力機能もあります。このモジュールは 0〜3.3V のアナログ電圧を生成できます。より自然な音のオーディオを生成したり、アナログデバイスを制御するための一種の「デジタル可変抵抗」として使用できます。
 
-DAC は Arduino のピン A0 でのみ使用でき、analogWrite(A0, `<value>`) を使って制御します。DAC は最大 10 ビット分解能に設定できます（セットアップ内で必ず [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) を呼び出してください）。これは、0〜1023 の値が 0〜3.3V のどこかの電圧を設定することを意味します。
+DAC は Arduino のピン A0 でのみ利用可能で、analogWrite(A0, `<value>`) を使用して制御します。DAC は最大 10 ビット分解能に設定できます（セットアップ内で必ず [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) を呼び出してください）。これは、0〜1023 の値が 0〜3.3V の間のどこかの電圧を設定することを意味します。
 
-DAC に加えて、SAMD21 の ADC チャンネルも ATmega328 とは一線を画しており、最大 12 ビット分解能を備えています。つまり、アナログ入力値は 0〜4095 の範囲となり、0〜3.3V の電圧を表します。ADC を 12 ビットモードで使用するには、セットアップ内で必ず [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) を呼び出してください。
+DAC に加えて、SAMD21 の ADC チャンネルも ATmega328 とは一線を画しており、最大 12 ビット分解能を備えています。つまり、アナログ入力値は 0〜4095 の範囲となり、0〜3.3V の電圧を表します。ADC を 12 ビットモードで使用するには、セットアップ内で [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) を呼び出すようにしてください。
 
-**DAC をシリアルプロットする**
+**DAC のシリアルプロット**
 
-ここでは、DAC と ADC の両方を示すサンプルを紹介します。実験をセットアップするには、A0 を A1 に接続します — A0 にアナログ電圧を印加し、それを A1 で読み取ります。これまでのチュートリアルの中で最もシンプルな回路です：
+ここでは、DAC と ADC の両方を示すサンプルを紹介します。実験をセットアップするには、A0 を A1 に接続します — A0 をアナログ電圧で駆動し、それを A1 で読み取ります。これは、これまでのチュートリアルの中で最もシンプルな回路です:
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/AO_A1.jpg" /></div>
 
@@ -698,7 +711,7 @@ DAC に加えて、SAMD21 の ADC チャンネルも ATmega328 とは一線を�
 Seeed Studio XIAO SAMD21 は [**Seeed Studio XIAO SAMD21 expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) を使用しています
 :::
 
-このスケッチは A0 に 0〜3.3V の値をとる正弦波出力を生成します。次に A1 を使ってその出力を ADC に読み込み、0〜3.3V の電圧に変換します。
+このスケッチは A0 に 0〜3.3V の範囲の正弦波出力を生成します。その後、A1 を使用してその出力を ADC に読み込み、0〜3.3V の電圧に変換します。
 
 もちろん、シリアルモニタを開いて電圧値のストリームを確認することもできます。しかし、テキストだけでは正弦波をイメージしにくい場合は、Tools > Serial Plotter から Arduino の新しい Serial Plotter を確認してみてください。  
 
@@ -706,7 +719,7 @@ Seeed Studio XIAO SAMD21 は [**Seeed Studio XIAO SAMD21 expansion board**](http
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
 
-[Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) にコードを提供していただきありがとうございます。関連するすべての機能は彼によって開発・提供されました。
+コードを提供してくださり、関連するすべての機能を開発・貢献してくださった [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) 氏に感謝いたします。
 
 ```cpp
 #define DAC_PIN A0 // Make code a bit more legible
@@ -750,7 +763,7 @@ void loop()
 
 :::note
 
-背面に BAT バッテリーコネクタを備えているのは XIAO SAMD21 Plus のみですので、ご注意ください。
+BAT バッテリーコネクタが背面に搭載されているのは XIAO SAMD21 Plus のみですので、ご注意ください。
 
 :::
 
@@ -761,22 +774,22 @@ XIAO SAMD21 Plus は、3.7V リチウムバッテリーを電源入力として�
 
 :::caution
 
-はんだ付けの際には、プラス端子とマイナス端子を短絡させてバッテリーや機器を焼損させないよう十分注意してください。バッテリーに電力が残っている場合は、決して基板にはんだ付けしないでください。基板の回路が焼損するおそれがあります。回路に通電した状態で短絡させることは大きな危険を伴うため、アダプタの使用を推奨します。
+はんだ付けの際には、プラス端子とマイナス端子を短絡させてバッテリーや機器を焼損しないよう十分注意してください。バッテリーに電力が残っている場合は、決して基板上にはんだ付けしないでください。基板の回路が焼損する可能性があります。通電中に短絡が発生すると大きな危険を伴うため、アダプタの使用を推奨します。
 
 :::
 
 ### バッテリー電圧読み取りの例
 
-回路図によると、**SGM40567-4.2XG/TR** は単セルリチウムバッテリーの充電を行い、充電電流はおよそ **200 mA** です。充電中は **Charge_LED** が点滅します。<br/>
+回路図によると、**SGM40567-4.2XG/TR** は単セルリチウムバッテリーの充電を提供し、充電電流は約 **200 mA** です。充電中は **Charge_LED** が点滅します。<br/>
 
-バッテリー電圧の測定は、**PB2/VBAT_EN** を介して **TPS22916CNYFPR** ロードスイッチによって制御され、待機時の消費電力を低減します。バッテリー電圧は 1/2 に分圧され、**PB3/AIN11_VBAT** ADC ピンを通じて測定されます。
+バッテリー電圧の測定は、**PB2/VBAT_EN** を介した **TPS22916CNYFPR** ロードスイッチによって制御され、待機時の消費電力を低減します。バッテリー電圧は 1/2 に分圧され、**PB3/AIN11_VBAT** ADC ピンを通じて測定されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/battery_read.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
-バッテリー電圧は抵抗分圧回路を用いて測定されます。ADC が読み取る電圧は実際のバッテリー電圧の半分であるため、ソフトウェア側で ADC の測定値に 2 を掛けて実際のバッテリー電圧を求める必要があります。
+バッテリー電圧は、抵抗による分圧回路を使用して測定されます。ADC が読み取る電圧は実際のバッテリー電圧の半分であるため、ソフトウェア側で ADC の測定値に 2 を掛けて実際のバッテリー電圧を求める必要があります。
 
-Arduino コアでは、PB02 と PB03 はそれぞれピン番号 31 と 32 にマッピングされています。次のように定義します：
+Arduino コアでは、PB02 と PB03 はそれぞれピン番号 31 と 32 にマッピングされています。次のように定義します:
 
 ```cpp
 // VBAT_EN on PB02
@@ -850,14 +863,14 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_plus_detection.gif" style={{width:400, height:'auto'}}/></div>
 <br/>
 
-- バッテリー電圧測定結果：リチウムイオンバッテリーの測定電圧は、バッテリーに印字されている公称値と異なる場合があります。必ず実際の測定値を参照してください。
+- バッテリー電圧測定結果: リチウムイオンバッテリーの測定電圧は、バッテリーに印字されている公称値と異なる場合があります。必ず実際の測定値を参照してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/battery_read_1.png" style={{width:800, height:'auto'}}/></div>
 <br/>
 
 ## サンプルアプリケーション
 
-- [Seeed Studio XIAO SAMD21 を使って Raspberry PI にログインする方法](https://wiki.seeedstudio.com/ja/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
+- [Seeed Studio XIAO SAMD21 を使用して Raspberry PI にログインする方法](https://wiki.seeedstudio.com/ja/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
 
 - [SPI 通信インターフェース](https://wiki.seeedstudio.com/ja/XIAO-SPI-Communication-Interface)
 
@@ -873,7 +886,7 @@ void loop() {
 - **🗃️[PCB 設計ファイル]** 
   - [XIAO SAMD21 KiCad プロジェクト](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO_SAMD21_v2.1_SCH&PCB_20260304.zip)  
   - [XIAO SAMD21 Eagle プロジェクト](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
-- **🗃️[PCB ライブラリ]** 
+- **🗃️[PCB 設計ライブラリ]** 
   - [XIAO シリーズ フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO シリーズ SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置シート]** [XIAO SAMD21 Pinout Sheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx )
@@ -883,23 +896,23 @@ void loop() {
 - **📄[3D モデル]** [XIAO SAMD21 3D Model](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip )
 
 **ソフトウェア & ツール**
-- **📄[Factory Firmware]** [XIAO SAMD21 ファクトリーファームウェア](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
+- **📄[工場出荷時ファームウェア]** [XIAO SAMD21 Factory Firmware](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
 
 ### XIAO SAMD21 Plus
 
 **ハードウェア設計**
-- **📄[Datasheet]** [Atmel SAMD21G18 データシート](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
-- **📄[Schematic]** [XIAO SAMD21 Plus 回路図](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/202004620_XIAO-SAMD21Plus_260422.pdf)
-- **🗃️[PCB Design Files]** 
+- **📄[データシート]** [Atmel SAMD21G18 Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
+- **📄[回路図]** [XIAO SAMD21 Plus Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/202004620_XIAO-SAMD21Plus_260422.pdf)
+- **🗃️[PCB 設計ファイル]** 
   - [XIAO SAMD21 Plus KiCad プロジェクト](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/202004620_XIAO-SAMD21-Plus_V1.0_SCH&PCB_20260422.zip)  
   - [XIAO SAMD21 Plus Eagle プロジェクト](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
-- **🗃️[PCB Design Libraries]** 
+- **🗃️[PCB 設計ライブラリ]** 
   - [XIAO シリーズ フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO シリーズ SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Pinout Sheet]** [XIAO SAMD21 Plus ピン配置シート](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-PLUS-pinout_sheet.xlsx )
+- **📄[ピン配置シート]** [XIAO SAMD21 Plus Pinout Sheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-PLUS-pinout_sheet.xlsx )
 
 **メカニカル設計**
-- **📄[2D Dimensions]** [DXF 形式の XIAO 寸法](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
+- **📄[2D 寸法]** [XIAO Dimension in DXF](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
@@ -912,11 +925,11 @@ void loop() {
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Big Power, Small Board Arduino と TinyML を極める](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[電子書籍]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

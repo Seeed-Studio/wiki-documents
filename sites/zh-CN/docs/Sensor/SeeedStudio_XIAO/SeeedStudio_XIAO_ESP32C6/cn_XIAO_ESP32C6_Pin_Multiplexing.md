@@ -37,13 +37,17 @@ url: https://wiki.seeedstudio.com/cn/xiao_pin_multiplexing_esp32c6/
  </table>
 </div>
 
-Seeed Studio XIAO ESP32C6 由高度集成的 [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) 提供动力，基于**两个 32 位 RISC-V 处理器**构建，其中高性能 (HP) 处理器**最高运行频率可达 160 MHz**，低功耗 (LP) 32 位 RISC-V 处理器最高可达 20 MHz。芯片上集成有 **512KB SRAM 和 4 MB Flash**，为编程提供了更大的空间，为物联网控制场景带来更多可能性。
+Seeed Studio XIAO ESP32C6 由高度集成的 [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) 提供动力，基于**两个 32 位 RISC-V 处理器**构建，其中高性能 (HP) 处理器**最高运行频率可达 160 MHz**，低功耗 (LP) 32 位 RISC-V 处理器最高可达 20 MHz。芯片上集成了 **512KB SRAM 和 4 MB Flash**，为编程提供了更大的空间，为物联网控制场景带来更多可能性。
 
 ## 入门指南
 
 ### 引脚总览
 
-在开始之前，让我们先通过下图示意图回顾一下 XIAO ESP32C6 拥有的所有引脚及其功能。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c6" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+在开始之前，让我们先通过下面的原理图回顾一下 XIAO ESP32C6 拥有的所有引脚及其功能。
 
 ### 正面
 
@@ -53,13 +57,13 @@ Seeed Studio XIAO ESP32C6 由高度集成的 [ESP32-C6 SoC](https://www.espressi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAO_ESP32-C6_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-- 5V - 这是来自 USB 端口的 5V 输出。你也可以将其作为电压输入使用，但必须在外部电源和该引脚之间串联某种二极管（肖特基、信号或功率二极管），二极管阳极接电池，阴极接 5V 引脚。
+- 5V - 这是来自 USB 端口的 5V 输出。你也可以将其用作电压输入，但必须在外部电源和该引脚之间串联某种二极管（肖特基、信号或功率二极管），二极管阳极接电池，阴极接 5V 引脚。
 - 3V3 - 这是板载稳压器的稳压输出。你可以从这里汲取 700mA 电流
 - GND - 电源/数据/信号地 <!-- Need to be confirmed -->
 
 ## 串行通信
 
-在 XIAO ESP32C6 上有两种串行通信方式：`software serial` 和 `hardware serial`。软件串口常用于灵活配置，而硬件串口则提供更好的性能。
+在 XIAO ESP32C6 上有两种串行通信方式：`software serial` 和 `hardware serial`。Software serial 通常用于灵活配置，而 hardware serial 则提供更好的性能。
 
 ### 硬件连接
 
@@ -70,7 +74,7 @@ Seeed Studio XIAO ESP32C6 由高度集成的 [ESP32-C6 SoC](https://www.espressi
 
 #### 软件串口
 
-要使用软件串口，请安装 [EspSoftwareSerial](https://github.com/plerup/espsoftwareserial) 库。
+要使用 software serial，请安装 [EspSoftwareSerial](https://github.com/plerup/espsoftwareserial) 库。
 
 :::tip
 目前我们推荐使用 EspSoftwareSerial 库的 **7.0.0** 版本。其他版本可能存在不同程度的问题，导致软件串口无法正常工作。
@@ -136,9 +140,9 @@ void loop() {
 
 #### Serial1 的使用
 
-根据上文 XIAO ESP32C6 引脚图中的具体参数，我们可以看到有 TX 引脚和 RX 引脚。
-这与普通串行通信略有不同，但用法也非常相似，只是需要额外添加几个参数。
-接下来，我们将使用芯片引出的这些引脚进行串行通信。
+根据上面的 XIAO ESP32C6 引脚图中的具体参数，我们可以看到有 TX 引脚和 RX 引脚。
+这与前面的串行通信略有不同，但用法也非常相似，只是需要额外添加几个参数。
+所以下一步，我们将使用芯片引出的这些引脚来进行串行通信。
 
 需要包含的核心函数：
 
@@ -148,7 +152,7 @@ void loop() {
   - `rxPin` :接收引脚
   - `txPin` :发送引脚
 
-值得注意的是，如果我们使用数字引脚端口来定义，这里应为 `#define RX_PIN D7`、`#define TX_PIN D6`，具体参数请参考不同 XIAO 系列的引脚图。
+值得注意的是，如果我们使用数字引脚端口来定义，这里应写为 `#define RX_PIN D7`、`#define TX_PIN D6`，具体参数请参考不同 XIAO 系列的引脚图。
 
 下面是一个示例程序：
 
@@ -185,11 +189,11 @@ XIAO ESP32C6 具有 12 个 GPIO 引脚，你可以将其配置为输入或输出
 1. 将一个按键连接到引脚 `D1`：
    - 使用一个外部上拉电阻（如果使用内部上拉电阻则可选）。
 2. 将一个 LED 连接到引脚 `D10`：
-   - 与 LED 串联一个限流电阻。
+   - 在 LED 串联一个限流电阻。
 
 ### 软件实现
 
-GPIO API 提供了用于配置和操作 GPIO 引脚的函数。更多细节请参考 [GPIO API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/gpio.html) 文档。
+GPIO API 提供了用于配置和操作 GPIO 引脚的函数。更多详情请参考 [GPIO API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/gpio.html) 文档。
 
 ```cpp
 const int buttonPin = D1; // Button pin
@@ -256,23 +260,23 @@ void loop() {
 
 在这个示例中，我们使用一个 `Button` 结构体来保存与按键相关的数据，包括引脚编号、按键按下次数以及一个用于指示按键当前是否被按下的标志位。
 
-`isr` 函数是一个中断服务程序（ISR），用于处理按键按下事件。它会增加按键按下的次数计数，并将按下标志设置为 true。
+`isr` 函数是一个中断服务程序（ISR），用于处理按键按下事件。它会增加按键按下的次数，并将按下标志设置为 true。
 
 在 `setup` 函数中，我们初始化串行通信，将按键引脚设置为带内部上拉电阻的输入模式，并将 `isr` 函数附加到按键引脚上，作为在下降沿（按键按下）触发的中断处理函数。
 
-在 `loop` 函数中，我们检查按键是否被按下。如果是，则在串口监视器中打印按键按下的次数，并重置按下标志。此外，我们还加入了一段逻辑，每隔 10 秒从按键引脚上分离中断处理函数，大概是为了留出时间执行其他操作或防止意外中断。
+在 `loop` 函数中，我们检查按钮是否被按下。如果被按下，就会在串口监视器中打印按钮按下的次数，并重置按下标志。此外，我们还加入了一段代码，每隔 10 秒从按钮引脚上分离中断，大概是为了给其他操作留出时间，或者防止产生意外中断。
 
-好的，明白了。下面是改写后更易理解的版本：
+好的，明白了。下面是重写后更易理解的版本：
 
 ## ADC - 模数转换器
 
 XIAO ESP32C6 具有多个模拟输入引脚，可用于读取模拟电压。
 
-有关更多详细信息，请参考 [ADC API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/adc.html) 文档。
+更多详情请参考 [ADC API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/adc.html) 文档。
 
 ### 硬件连接
 
-1. 将一个电位器连接到引脚 A0，一端连接到 3.3V，另一端连接到 GND。
+1. 将一个电位器连接到 A0 引脚，一端接 3.3V，另一端接 GND。
 
 ### 软件实现
 
@@ -308,11 +312,11 @@ void loop() {
 
 XIAO ESP32-C6 具有 6 个 LEDC 通道，可以生成相互独立的波形，例如可用于驱动 RGB LED 设备。
 
-有关更多详细信息，请参考 [LEDC API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/ledc.html) 文档。
+更多详情请参考 [LEDC API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/ledc.html) 文档。
 
 ### 硬件连接
 
-1. 将一个 LED 通过限流电阻串联后连接到引脚 `D2`。
+1. 将一个 LED 通过限流电阻串联后连接到 `D2` 引脚。
 
 ### 软件实现
 
@@ -395,13 +399,13 @@ void loop() {
 }
 ```
 
-这段代码演示了如何使用 ledcWrite 函数实现 LED 的渐亮渐灭。LED 亮度在一个连续循环中逐渐增加和减小。
+这段代码演示了如何使用 ledcWrite 函数实现 LED 的渐变效果。LED 亮度在一个连续循环中逐渐增加和减小。
 
 ## I2C
 
-XIAO ESP32C6 具有硬件 I2C 接口，用于与 I2C 设备通信。
+XIAO ESP32C6 具有硬件 I2C 接口，可用于与 I2C 设备通信。
 
-有关更多详细信息，请参考 [I2C API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/i2c.html) 文档。
+更多详情请参考 [I2C API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/i2c.html) 文档。
 
 ### 硬件准备
 
@@ -485,14 +489,14 @@ void loop() {
 }
 ```
 
-在这个从机模式示例中，XIAO ESP32C6 被配置为地址为 `0x55` 的 I2C 从设备。当从机从主机接收到数据时，会调用 `onReceive` 回调函数；当主机向从机请求数据时，会调用 `onRequest` 回调函数。
+在这个从机模式示例中，XIAO ESP32C6 被配置为地址为 `0x55` 的 I2C 从设备。当从机接收到来自主机的数据时，会调用 `onReceive` 回调函数；当主机向从机请求数据时，会调用 `onRequest` 回调函数。
 
 ## SPI
 
-XIAO ESP32C6 微控制器板载有 SPI 接口，可实现与其他 SPI 兼容设备之间的高速数据交换。这在需要多个设备之间快速通信的项目中尤其有用。
+XIAO ESP32C6 微控制器开发板内置 SPI 接口，可实现与其他 SPI 兼容设备之间的高速数据交换。这在需要多个设备之间快速通信的项目中尤其有用。
 
-- 有关详细技术规格，请参考 [XIAO ESP32C6 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)。
-- 要了解更多如何在 XIAO ESP32C6 上使用 SPI 接口的信息，请查阅 [SPI API 文档](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/spi.html#)。
+- 有关详细技术规格，请参考 [XIAO ESP32C6 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)。
+- 要了解如何在 XIAO ESP32C6 上使用 SPI 接口，请查阅 [SPI API Documentation](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/spi.html#)。
 
 ### 硬件准备
 
@@ -512,7 +516,7 @@ CS -> D3 (as an example)
 
 ### 软件实现
 
-下面是一个简化的 Arduino 示例程序，演示了使用 XIAO ESP32C6 与 SPI 设备进行基本 SPI 通信。该示例向 SPI 设备发送一条命令，并读取返回的响应（从 SPI 设备读取数据）。
+下面是一个简化的 Arduino 示例程序，演示了使用 XIAO ESP32C6 与 SPI 设备进行基本 SPI 通信。该示例向 SPI 设备发送一条命令，并读取返回的数据（从 SPI 设备读回数据）。
 
 ```cpp
 #include <SPI.h>
@@ -542,12 +546,12 @@ void loop() {
 ```
 
 :::note
-请确保示例程序中的引脚分配与硬件连接中的实际引脚一致。上述示例使用了基于 XIAO ESP32-C6 的 `pin_arduino.h` 文件中预定义的引脚编号，并额外定义了 CS 引脚。
+请确保示例程序中的引脚分配与实际硬件连接保持一致。上述示例使用了基于 XIAO ESP32-C6 的 `pin_arduino.h` 文件中预定义的引脚编号，并额外定义了 CS 引脚。
 :::
 
 ## 资源
 
-- [XIAO ESP32C6 文档](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)
-- [ESP32-C6 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
-- [Arduino 参考](https://www.arduino.cc/reference/en/)
-- [Arduino ESP32 参考](https://docs.espressif.com/projects/arduino-esp32/en/latest/index.html)
+- [XIAO ESP32C6 Documentation](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)
+- [ESP32-C6 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- [Arduino Reference](https://www.arduino.cc/reference/en/)
+- [Arduino ESP32 Reference](https://docs.espressif.com/projects/arduino-esp32/en/latest/index.html)

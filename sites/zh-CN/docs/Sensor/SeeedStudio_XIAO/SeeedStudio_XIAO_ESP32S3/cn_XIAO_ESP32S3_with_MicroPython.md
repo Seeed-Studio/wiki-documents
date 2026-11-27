@@ -9,7 +9,7 @@ last_update:
   date: 11/05/2026
   author: Evelyn Chen
 createdAt: '2024-08-14'
-updatedAt: '2025-09-11'
+updatedAt: '2026-11-05'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_with_micropython/
 ---
 
@@ -17,13 +17,13 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_with_micropython/
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/title.png" /></div>
 
-[MicroPython](https://github.com/micropython/micropython/wiki) 是一个带有部分本地代码编译功能的 Python 解释器。它提供了 Python 3.5 功能的一个子集，专为嵌入式处理器和受限系统实现。它与 CPython 不同，你可以在[这里](https://github.com/micropython/micropython/wiki/Differences)阅读更多差异说明。
+[MicroPython](https://github.com/micropython/micropython/wiki) 是一个带有部分原生代码编译特性的 Python 解释器。它提供了 Python 3.5 功能的一个子集，专为嵌入式处理器和受限系统实现。它与 CPython 不同，你可以在[这里](https://github.com/micropython/micropython/wiki/Differences)阅读更多差异说明。
 
 ## 安装 MicroPython
 
 #### 安装 Esptool
 
-如果你还没有安装 esptool.py，可以在电脑上使用 pip 进行安装：
+如果你尚未安装 esptool.py，可以在电脑上使用 pip 进行安装：
 
 ``` linux
 pip install esptool
@@ -39,9 +39,9 @@ pip install esptool
 SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 ```
 
-#### 在电脑上连接 XIAO ESP32S3
+#### 将 XIAO ESP32S3 连接到电脑
 
-你需要按住 XIAO ESP32S3 板上的 BOOT 按钮不放，使其进入“bootloader”模式，同时将 Type-C USB 线插入电脑。
+你需要在将 type C USB 线插入电脑的同时，按住并保持 XIAO ESP32S3 板上的 BOOT 按钮，以进入“bootloader”模式。
 
 #### 检查端口
 
@@ -61,9 +61,9 @@ dmesg | grep tty
 ls /dev/ttyS* /dev/ttyUSB*
 ```
 
-- Windows
+- Window
 
-在 Windows 上，你可以通过打开设备管理器来找到 USB 转串口地址。
+在 Windows 上，你可以通过打开设备管理器来找到 USB 转串口的地址。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/2.png" /></div>
 
 - macOS
@@ -79,14 +79,14 @@ ls /dev/cu*
 
 :::tip
 如果端口正被占用，你可以使用以下命令查找并杀死占用该端口的进程（在 macOS 上）：
-识别正在使用该端口的进程：
+识别使用该端口的进程：
 
 ```
 lsof | grep port
 ```
 
 该命令会列出打开的文件，并搜索任何使用指定端口的进程。
-从输出中找到进程 ID（PID），并结束该进程：
+从输出中找到进程 ID（PID），并杀死该进程：
 
 ```
 kill -9 <PID>
@@ -95,15 +95,15 @@ kill -9 <PID>
 将 *PID* 替换为实际找到的进程 ID。
 :::
 
-#### 擦除 Flash
+#### 擦除 flash
 
 ```linux
 esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 erase_flash
 ```
 
-将 '/dev/cu.usbmodem11301' 替换为你系统中的正确端口名称（例如 Windows 上的 `COM3`，Linux 上的 `/dev/ttyUSB0`）。
+将 '/dev/cu.usbmodem11301' 替换为你系统中的正确端口名（例如在 Windows 上为 `COM3`，在 Linux 上为 `/dev/ttyUSB0`）。
 
-#### 写入 Flash
+#### 写入 flash
 
 将固件烧录到 XIAO ESP32S3 上：
 
@@ -111,7 +111,7 @@ esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 erase_flash
 esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin
 ```
 
-同样，将 '/dev/cu.usbmodem11301' 替换为正确的端口名称，将 'SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin' 替换为你的固件文件路径。
+同样，将 '/dev/cu.usbmodem11301' 替换为正确的端口名，将 'SEEED_XIAO_ESP32S3-20260824-v1.29.0.bin' 替换为你的固件文件路径。
 别忘了通过 RTS 引脚进行硬复位。
 然后就可以开始使用你喜欢的工具向 ESP32 编写并编译脚本了！
 
@@ -138,7 +138,7 @@ thonny
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/4.png" /></div>
 
 在对话框中点击 "OK"，你应该会在 Thonny 窗口底部看到 Micropython shell，如下图所示。
-逐行在 Shell 中输入脚本，以获取 flash 和 sram 大小：
+逐行在 Shell 中输入脚本，以获取 flash 和 sram 的大小：
 
 ```python
 import esp
@@ -182,7 +182,7 @@ while True:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/8.png" /></div>
 
 - 创建一个新项目
-打开 VS Code，为你的微控制器创建一个新项目。
+打开 VS Code，并为你的微控制器创建一个新项目。
 - 新建一个 Python 文件
 在项目中创建一个新的 Python 文件。
 - 将脚本上传到 MCU 并编译脚本
@@ -198,6 +198,10 @@ while True:
 
 ## 引脚/端口信息
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/10.png" /></div>
 
 - 更多信息请参考[硬件概述](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/#硬件概述)
@@ -205,12 +209,12 @@ while True:
 
 ## 在 XIAO ESP32S3 上开始使用 MicroPython
 
-这里有一份[关于 ESP32 使用 micropython 的快速参考](https://docs.micropython.org/en/latest/esp32/quickref.html#installing-micropython)。
-想了解更多关于 [micropython 库](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries) 的知识。
+这里有一份[基于 MicroPython 的 ESP32 操作快速参考](https://docs.micropython.org/en/latest/esp32/quickref.html#installing-micropython)。
+关于 [micropython 库](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries) 的更多知识。
 
 ### 通用板级控制
 
-MicroPython REPL（*R*ead-*E*val-*P*rint-*L*oop）位于 UART0（GPIO1=TX，GPIO3=RX），波特率为 115200。Tab 补全对于查找对象有哪些方法非常有用。粘贴模式（Ctrl-E）在向 REPL 粘贴大段 Python 代码时非常实用。
+MicroPython REPL（*R*ead-*E*val-*P*rint-*L*oop）位于 UART0（GPIO1=TX，GPIO3=RX），波特率为 115200。Tab 补全对于查找对象有哪些方法非常有用。粘贴模式（ctrl-E）在向 REPL 粘贴大段 Python 代码时非常实用。
 可以在 MicroPython 中使用 *dir()* 函数（与 Python 中类似）列出对象的属性和方法。
 例如，在 shell 中输入 *dir(machine)*：
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/11.png" /></div>
@@ -337,7 +341,7 @@ p6 = Pin(6, Pin.OUT, drive=Pin.DRIVE_3) # set maximum drive strength
 
 ```
 
-可用引脚范围（包含端点）为：1,2,3,4,5,6,7,8,9,43,44。它们对应 ESP32S3 芯片的实际 GPIO 引脚编号。
+可用引脚范围（包含）为：1,2,3,4,5,6,7,8,9,43,44。它们对应 ESP32S3 芯片的实际 GPIO 引脚编号。
 
 ### UART（串行总线）
 
@@ -353,14 +357,14 @@ uart1.read(5)         # read up to 5 bytes
 
 ESP32C3 具有一个硬件 UART。其引脚如下所示：
 
-| UART | 引脚 |
+| UART | Pin |
 |------|-----|
 | TX   | 43  |
 | RX   | 44  |
 
 ### PWM（脉宽调制）
 
-PWM 可以在所有支持输出的引脚上启用。基准频率范围为 1Hz 到 40MHz，但存在权衡：基准频率越高，占空比分辨率越低。
+PWM 可以在所有支持输出的引脚上启用。基准频率范围可以从 1Hz 到 40MHz，但存在权衡：基准频率越高，占空比分辨率越低。
 *machine.PWM* 类：
 
 ```python
@@ -439,7 +443,7 @@ hspi = SPI(1, 10000000)
 hspi = SPI(1, 10000000, sck=Pin(7), mosi=Pin(9), miso=Pin(8))
 ```
 
-| SPI  | 引脚 |
+| SPI  | Pin |
 |------|-----|
 | SCK  | D7  |
 | MOSI | D9 |
@@ -480,7 +484,7 @@ i2c = I2C(0, scl=Pin(6), sda=Pin(5), freq=400000)
 
 <table align="center">
   <tbody><tr>
-      <th>已焊接排针的 XIAO ESP32S3<br /></th>
+      <th>已焊接排针的 XIAO ESP32S3<br /> </th>
       <th>XIAO 扩展板底板</th>
       <th>Grove 光线传感器</th>
     </tr>
@@ -541,11 +545,11 @@ while True:
 
 #### 点亮 OLED 屏幕
 
-插入你的 XIAO ESP32S3，打开 Thonny，点击右下角来配置解释器。
-选择解释器 - Micropython (ESP32) 和 **Port >>> 点击 OK**
+插入你的 XIAO ESP32S3，打开 Thonny，点击右下角来配置解释器
+选择解释器 Micropython (ESP32) 和 **Port >>> 点击 OK**
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/14.png" /></div>
 
-如果一切顺利，你会在 Shell 中看到输出。
+如果一切顺利，你会在 Shell 中看到输出
 从 MicroPython 安装 ssd1306 库。
 点击 "Tools" >>> 点击 "Management Packages" >>> 输入库名称 >>> 点击 "Search micropython-lib and PyPl"
 
@@ -583,11 +587,11 @@ oled.show()  # Show the text
 
 ## 资源
 
-- 适用于 XIAO ESP32S3 的 MicroPython [固件二进制文件](https://micropython.org/download/ESP32_GENERIC_S3/)
+- 适用于 XIAO ESP32S3 的 MicroPython[固件二进制文件](https://micropython.org/download/ESP32_GENERIC_S3/)
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

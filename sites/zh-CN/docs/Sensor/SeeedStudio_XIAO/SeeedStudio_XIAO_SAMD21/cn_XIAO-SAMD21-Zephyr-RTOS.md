@@ -1,6 +1,6 @@
 ---
-description: XIAO SAMD21 与 Zephyr(RTOS)
-title: XIAO SAMD21 与 Zephyr(RTOS)
+description: XIAO SAMD21 搭配 Zephyr(RTOS)
+title: XIAO SAMD21 搭配 Zephyr(RTOS)
 keywords:
   - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -8,113 +8,113 @@ slug: /XIAO-SAMD21-Zephyr-RTOS
 last_update:
   date: 04/16/2023
   author: timo614
-createdAt: '2023-11-07'
-updatedAt: '2025-09-23'
+createdAt: '2023-07-26'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/cn/XIAO-SAMD21-Zephyr-RTOS/
 ---
 
-# XIAO SAMD21 与 Zephyr(RTOS)
+# XIAO SAMD21 搭配 Zephyr(RTOS)
 
 <div align="center"><img width ="{100}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-samd21.png"/></div>
 
 ## 什么是 RTOS
 
-当今嵌入式系统最重要的组件之一是 **RTOS**，也称为**实时操作系统**，它负责从任务调度到执行应用程序的所有工作。
+当今嵌入式系统中最重要的组件之一是 **RTOS**，也就是**实时操作系统（Real-Time Operating System）**，它负责从任务调度到执行应用程序的所有工作。
 
-**RTOS** 旨在提供可预测的执行模式。当处理必须满足系统的时间限制时，就会使用 RTOS。因此，与 GPOS（通用操作系统）相比，RTOS 通常重量轻、体积小，通常只提供在特定硬件上运行特定类型应用程序所需的功能。在某些情况下，开发人员可以修改现有的 RTOS，将其缩减为仅提供特定应用程序所需的功能，和/或定制其功能或性能特征。
+**RTOS** 旨在提供可预测的执行模式。当处理过程必须满足系统的时间限制时，就会使用 RTOS。因此，与 GPOS（通用操作系统，General Purpose Operating System）相比，RTOS 通常更轻量、体积更小，一般只提供在特定硬件上运行特定类型应用所需的功能。在某些情况下，开发者可以修改现有的 RTOS，将其精简到只提供特定应用所需的功能，和/或自定义其功能或性能特性。
 
 ## 什么是 [Zephyr](https://www.zephyrproject.org/)
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
 
-[**Zephyr**](https://www.zephyrproject.org/) 操作系统基于一个小占用空间的内核，专为在资源受限和嵌入式系统上使用而设计：从简单的嵌入式环境传感器和 LED 可穿戴设备到复杂的嵌入式控制器、智能手表和 IoT 无线应用程序。
+[**Zephyr**](https://www.zephyrproject.org/) 操作系统基于一个小体积内核，专为资源受限和嵌入式系统设计：从简单的嵌入式环境传感器和 LED 可穿戴设备，到复杂的嵌入式控制器、智能手表和物联网无线应用。
 
 ## 特性
 
-Zephyr 提供大量且不断增长的功能，包括：
+Zephyr 提供了大量且不断增长的功能，包括：
 
-### 广泛的内核服务套件
+### 丰富的内核服务套件
 
-Zephyr 为开发提供了许多熟悉的服务：
+Zephyr 为开发提供了许多常见服务：
 
-- *多线程服务*，支持协作式、基于优先级的、非抢占式和抢占式线程，可选循环时间片。包括 POSIX pthreads 兼容 API 支持。
-- *中断服务*，用于中断处理程序的编译时注册。
-- *内存分配服务*，用于固定大小或可变大小内存块的动态分配和释放。
-- *线程间同步服务*，包括二进制信号量、计数信号量和互斥信号量。
-- *线程间数据传递服务*，包括基本消息队列、增强消息队列和字节流。
-- *电源管理服务*，如总体的、应用程序或策略定义的系统电源管理和细粒度的、驱动程序定义的设备电源管理。
+- *多线程服务*：支持协作式、基于优先级的非抢占式和抢占式线程，并可选支持时间片轮转。包含兼容 POSIX pthreads 的 API 支持。
+- *中断服务*：支持在编译期注册中断处理程序。
+- *内存分配服务*：支持动态分配和释放固定大小或可变大小的内存块。
+- *线程间同步服务*：支持二值信号量、计数信号量和互斥信号量。
+- *线程间数据传递服务*：支持基础消息队列、增强消息队列和字节流。
+- *电源管理服务*：例如全局的、由应用或策略定义的系统电源管理，以及由驱动定义的细粒度设备电源管理。
 
 ### 多种调度算法
 
-  Zephyr 提供了一套全面的线程调度选择：
+  Zephyr 提供了一套全面的线程调度选项：
 
 - 协作式和抢占式调度
-- 最早截止时间优先 (EDF)
-- Meta IRQ 调度实现"中断下半部"或"tasklet"行为
-- 时间片：在相同优先级的可抢占线程之间启用时间片
-- 多种队列策略：
+- 最早截止时间优先（EDF）
+- 实现“中断下半部”或“tasklet”行为的 Meta IRQ 调度
+- 时间片：在相同优先级的可抢占线程之间启用时间片轮转
+- 多种排队策略：
   - 简单链表就绪队列
   - 红黑树就绪队列
   - 传统多队列就绪队列
 
-### 蓝牙低功耗 5.0 支持
+### 支持 Bluetooth Low Energy 5.0
 
-蓝牙 5.0 兼容 (ESR10) 和蓝牙低功耗控制器支持 (LE 链路层)。包括蓝牙网格和蓝牙认证就绪的蓝牙控制器。
+符合 Bluetooth 5.0（ESR10）规范，并支持 Bluetooth Low Energy 控制器（LE 链路层）。包括 Bluetooth Mesh 以及通过 Bluetooth 认证、可用于 Bluetooth 资格认证的控制器。
 
-- 通用访问配置文件 (GAP)，支持所有可能的 LE 角色
-- 通用属性配置文件 (GATT)
-- 配对支持，包括蓝牙 4.2 的安全连接功能
-- 清晰的 HCI 驱动程序抽象
-- 原始 HCI 接口，可将 Zephyr 作为控制器而不是完整的主机堆栈运行
-- 经过多个流行控制器验证
+- 通用访问配置文件（GAP），支持所有可能的 LE 角色
+- 通用属性配置文件（GATT）
+- 配对支持，包括来自 Bluetooth 4.2 的 Secure Connections 功能
+- 简洁的 HCI 驱动抽象
+- 原始 HCI 接口，可将 Zephyr 作为控制器而非完整主机协议栈来运行
+- 已通过多款主流控制器验证
 - 高度可配置
 
-网格支持：
+Mesh 支持：
 
-- 中继、朋友节点、低功耗节点 (LPN) 和 GATT 代理功能
-- 支持两种配置承载 (PB-ADV 和 PB-GATT)
-- 高度可配置，适用于至少具有 16k RAM 的设备
+- 中继、好友节点、低功耗节点（LPN）和 GATT 代理功能
+- 支持两种配网承载（PB-ADV 和 PB-GATT）
+- 高度可配置，可适配至少具有 16k RAM 的设备
 
-*参考：[**Zephyr 项目**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
+*参考：[**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
 ## 入门指南
 
-本 wiki 涵盖了 [Zephyr](https://www.zephyrproject.org/) 对 [XIAO SAMD21 Zephyr(RTOS) 入门指南](https://docs.zephyrproject.org/latest/boards/seeed/seeeduino_xiao/doc/index.html) 的支持。在本指南的帮助下，您将能够利用该开发板的可用功能集。
+本 wiki 涵盖了 [Zephyr](https://www.zephyrproject.org/) 对 [XIAO SAMD21 Zephyr(RTOS) 入门](https://docs.zephyrproject.org/latest/boards/seeed/seeeduino_xiao/doc/index.html)的支持。借助本指南，你将能够使用该开发板所提供的功能集。
 
-使用 Zephyr 的第一步是为本地开发设置 SDK 和工具链。应参考 [Zephyr 入门指南](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) 了解您的环境所需的相关设置程序。
+使用 Zephyr 的第一步，是为本地开发准备好 SDK 和工具链。请参考 [Zephyr 入门指南](https://docs.zephyrproject.org/latest/develop/getting_started/index.html)，根据你的环境完成相应的安装配置流程。
 
-一旦设置了 Zephyr 工具链并下载了相关的 SDK，您就可以开始应用程序开发。
+一旦 Zephyr 工具链安装完成并下载了相应的 SDK，你就可以开始进行应用开发。
 
-要对 Xiao SAMD21 进行编程，可以采取以下步骤：
+要为 Xiao SAMD21 烧录程序，可以按照以下步骤进行：
 
-1. 构建一个示例或您的应用程序
+1. 编译一个示例或你的应用程序
 2. 插入 Xiao SAMD21
-3. 将 RST 引脚短接到 GND（使用可见的测试点）以将 MCU 引导到引导加载程序模式（或快速连续按两次连接的扩展板上的 RESET 按钮）
-4. 继续使用 `west flash` 将固件刷写到开发板
+3. 将 RST 引脚与 GND 短接（使用可见的测试点），使 MCU 进入 bootloader 模式（或者在连接的扩展板上快速连续按两次 RESET 按钮）
+4. 使用 `west flash` 将固件烧录到开发板
 
-最简单的示例是在开发板上运行"Hello World"示例。切换到 Zephyr 安装目录后，运行以下命令。
+最简单的示例是在开发板上运行 “Hello World” 示例。在切换到 Zephyr 安装目录后，运行以下命令。
 
 ```
 west build -p always -b seeeduino_xiao samples/subsys/usb/console
 ```
 
-双击 RESET 或将 RST 引脚短接到 GND：
+双击 RESET 按钮或将 RST 引脚与 GND 短接：
 
 ```
 west flash
 ```
 
-通过输入 `ls /dev/tty*` 找到您设备的端口，并确认插入 USB 后出现的设备。
+通过输入 `ls /dev/tty*` 查找你的设备端口，并确认在插入 USB 后出现的是哪个设备。
 
-在我的示例中，我看到 `/dev/ttyACM0` 是新添加的设备。
+在我的示例中，我看到 `/dev/ttyACM0` 是新出现的设备。
 
-使用 screen 您可以连接并监控串行响应：
+然后可以使用 screen 连接并监视串口输出：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-你应该看到类似以下的响应：
+你应该会看到类似如下的输出：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -124,7 +124,7 @@ Hello World! arm
 Hello World! arm
 ```
 
-为了协助在 Xiao 及其扩展板上使用 Zephyr 的过程，我们构建了一个仓库，其中包含了此处使用的多个覆盖文件和配置。本 wiki 文章中包含的命令假设该仓库位于相对于 zephyr 根目录的 `../applications/xiao-zephyr-examples` 路径。可以通过更新下面的命令来提供替代路径。
+为了帮助在 Xiao 及其扩展板上使用 Zephyr 的过程，我们构建了一个仓库，其中包含本文中使用的多个 overlay 和配置。本文中的命令假设它位于相对于 Zephyr 根目录的 `../applications/xiao-zephyr-examples` 路径下。你也可以通过修改下面的命令来提供一个替代路径。
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
@@ -155,19 +155,23 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     </tr>
   </tbody></table>
 
-### 开发者知识
+### 开发者须知
 
 #### XIAO 扩展板
 
-  为了在 Seeed Studio XIAO SAMD21 上使用 Grove 模块，我们将使用 [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) 并将 XIAO SAMD21 连接到上面。
+  为了在 Seeed Studio XIAO SAMD21 上使用 Grove 模块，我们将使用 [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)，并将 XIAO SAMD21 插接在其上。
 
-  之后，板上的 Grove 连接器可以用来连接 Grove 模块
+  之后，板载的 Grove 接口即可用于连接 Grove 模块
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
 
 #### 引脚定义
 
-  当将 Grove 模块连接到 Seeed Studio XIAO 的 Grove Shield 上的 Grove 连接器时，您需要按照下图使用适当的内部引脚编号。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
+  你需要参考下图，在将 Grove 模块连接到 Seeed Studio XIAO 的 Grove Shield 上的 Grove 接口时，使用合适的内部引脚编号。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg"style={{width:900, height:'auto'}}/></div>
 
@@ -180,31 +184,31 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 
 #### 板载 LED
 
-在这个示例中，我们将使用闪烁示例来闪烁板载 LED。
+在本示例中，我们将使用 blinky 示例来让板载 LED 闪烁。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/basic/blinky
 ```
 
-双击 RESET 或将 RST 引脚短接到 GND：
+双击 RESET 按钮或将 RST 引脚与 GND 短接：
 
 ```
 west flash
 ```
 
-您将看到板载黄色 LED 开关切换，产生闪烁效果。
+你会看到板载黄色 LED 周期性亮灭，形成闪烁效果。
 
-让我们深入了解这个示例，看看它为什么有效。
+接下来我们稍微深入了解一下这个示例，看看它为什么能工作。
 
-相关的示例代码引用了 led0：
+相关示例代码引用了 led0：
 
 ```
 #define LED0_NODE DT_ALIAS(led0)
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-这在 Xiao SAMD21 设备树代码中通过别名定义:
+它在 Xiao SAMD21 的 devicetree 代码中通过一个别名进行定义：
 
 ```
  aliases {
@@ -220,11 +224,11 @@ static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
  };
 ```
 
-它对应于板上的 PA17 引脚。这可以通过查看 Xiao SAMD21 原理图找到，方法是查看 MCU 并观察引脚上的标签。
+它对应开发板上的 PA17 引脚。可以通过查看 Xiao SAMD21 原理图中 MCU 的引脚标注来找到这一点。
 
-对于使用 Xiao 分线板的引脚，您不需要直接使用 &porta 和 &portb 引脚映射，因为板文件提供了一个 Xiao 连接器，简化了接口。
+对于 Xiao 引出排针上的引脚，你不需要直接使用 &porta 和 &portb 的引脚映射，因为板级文件提供了 Xiao 连接器，从而简化了接口。
 
-例如，如果我要引用 D0，我可以将其引用为 `&porta 2` 或 `&xiao_d 0`。
+例如，如果我要引用 D0，我可以将其写作 `&porta 2` 或 `&xiao_d 0`。
 
 ```
 / {
@@ -252,7 +256,7 @@ static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 
 #### USB HID
 
-对于这个示例应用程序，我们将使用 USB HID 鼠标示例来允许 Xiao SAMD21 为主机计算机触发鼠标点击。
+在这个示例应用中，我们将使用 USB HID 鼠标示例，让 Xiao SAMD21 为主机电脑触发鼠标点击。
 
 ```
 cd ~/zephyrproject/zephyr
@@ -265,9 +269,9 @@ west build -p always -b seeeduino_xiao samples/subsys/usb/hid-mouse --  -DDTC_OV
 west flash
 ```
 
-在您的 Xiao 重置后，您现在应该能够通过扩展板上的按钮来控制鼠标左键。尝试将鼠标悬停在一些文本上并快速双击按钮。您会看到文本被高亮显示，就像您使用普通鼠标左键点击一样。您还会注意到当您点击按钮时板载 LED 会亮起，因为示例还依赖于在设备树中设置的 LED。
+在你的 Xiao 复位之后，现在你应该可以通过扩展板上的按键来控制鼠标左键。尝试将鼠标悬停在一些文本上，然后快速双击按键。你会看到文本被高亮显示，其效果与使用普通鼠标左键点击类似。你还会注意到，当你按下按键时，板载 LED 会亮起，因为该示例同样依赖在 devicetree 中设置的一个 LED。
 
-可以配置额外的按钮来与示例一起使用，因为它允许配置多达 4 个按钮来触发鼠标的按钮和方向，用于示例目的。
+可以为该示例配置更多按键，它允许最多 4 个按键被配置，用于在示例中触发鼠标的按键和方向。
 
 ```
  buttons {
@@ -284,15 +288,15 @@ west flash
  };
 ```
 
-您可以在这里看到示例中使用了 `&xiao_d` 1 来表示 D1 引脚。这个映射由 Xiao SAMD21 板文件提供，使连接到指定引脚变得方便，因为您不需要了解底层 MCU 映射，而可以依赖 Xiao 引脚布局。
+你可以从这个示例中看到，`&xiao_d` 1 在这里用来表示 D1 引脚。这个映射由 Xiao SAMD21 的板级文件提供，使得连接到指定引脚更加方便，因为你不需要了解底层 MCU 的映射，只需依赖 Xiao 的引脚定义即可。
 
-对于 HID 鼠标示例，按钮是通过检查它们是否为 `compatible = "gpio-keys";` 以及是否具有关联键的映射（鼠标为 0-3）来确定的。在这种情况下，我们使用 `zephyr,code = <INPUT_KEY_0>;`，它对应于鼠标左键。
+对于 HID 鼠标示例，按键由其是否为 `compatible = "gpio-keys";` 以及是否映射到关联按键（鼠标的 0-3）来决定。在这个例子中，我们使用的是 `zephyr,code = <INPUT_KEY_0>;`，它对应鼠标左键。
 
-`led0` 别名由板的设备树文件设置，如前一节所述。
+`led0` 别名是由前一节中提到的板级 devicetree 文件设置的。
 
 #### LittleFS
 
-在这个示例中，我们将使用 littlefs zephyr 示例来创建一个 littlefs 分区并将文件保存到文件系统。然后我们将重新连接并通过串行输出确认文件仍然存在。
+在这个示例中，我们将使用 littlefs Zephyr 示例来创建一个 littlefs 分区，并将文件保存到文件系统中。然后我们会重新连接，并通过串口输出确认它仍然存在。
 
 ```
 cd ~/zephyrproject/zephyr
@@ -305,13 +309,13 @@ west build -p always -b seeeduino_xiao samples/subsys/fs/littlefs -- -DDTC_OVERL
 west flash
 ```
 
-闪烁后等待片刻让 MCU 重置并连接到显示器:
+烧录完成后，等待 MCU 复位片刻，然后连接到监视器：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-加载完成后，你应该会看到类似这样的内容：
+加载完成后，你应该会看到类似如下的输出：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -343,7 +347,7 @@ I: Test file: /lfs/pattern.bin not found, create one!
 screen /dev/ttyACM0 115200
 ```
 
-现在再次连接到串行监视器，我们看不到格式化，也不需要创建文件：
+现在再次连接到串口监视器时，我们不会再看到格式化输出，也不需要再创建文件：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -374,14 +378,14 @@ Listing dir /lfs ...
 
 #### TFLite - Hello World
 
-启用 TFLite 与 Zephyr 并更新：
+在 Zephyr 中启用 TFLite 并更新：
 
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-在这个示例中，我们将使用示例 tflite "Hello World" 以及我们的控制台覆盖层和配置来通过 USB 串口读取响应。
+在这个示例中，我们将使用 tflite 的 “Hello World” 示例，并结合我们的控制台 overlay 和配置，通过 USB 串口读取返回结果。
 
 ```
 cd ~/zephyrproject/zephyr
@@ -394,13 +398,13 @@ west build -p always -b seeeduino_xiao samples/modules/tflite-micro/hello_world 
 west flash
 ```
 
-闪烁后等待片刻让MCU重置并连接到显示器:
+烧录完成后，等待 MCU 复位片刻，然后连接到监视器：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-你将看到从控制台返回的结果：
+你会看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -425,21 +429,21 @@ x_value: 1.2566366*2^1, y_value: 1.0674761*2^-1
 x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 ```
 
-### 附加组件
+### 其他组件
 
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C 显示屏
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 按钮
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 蜂鸣器
-- [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD 卡
-- [Grove - 温湿度传感器 (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
-- [1.69英寸 LCD 显示模块，240×280 分辨率，SPI 接口](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C 显示屏
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 按钮
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - 蜂鸣器
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD 卡
+- [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
+- [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
 
-#### Grove - 扩展板 - I2C 显示屏
+#### Grove - Expansion Board - I2C Display
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/samd21/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_samd21_zephyr/xiao_expansion_oled1.jpg" style={{width:600, height:'auto'}}/></div>
 
-要测试此设置，我们可以使用 Zephyr 的现有示例：
+为了测试这个连接，我们可以使用 Zephyr 中已有的一个示例：
 
 ```
 cd ~/zephyrproject/zephyr
@@ -452,9 +456,9 @@ west build -p always -b seeeduino_xiao samples/drivers/display -- -DSHIELD=seeed
 west flash
 ```
 
-您将看到一个显示多个黑色方框和角落中一个闪烁方框的显示，因为这个显示器只支持两种颜色。
+你会看到显示屏上显示多个黑色方块，以及在角落里有一个闪烁的方块，因为这个显示屏只支持两种颜色。
 
-让我们深入了解这个例子，看看它为什么有效：
+让我们稍微深入这个示例，看看它为什么能工作：
 
 ```
 / {
@@ -481,11 +485,11 @@ west flash
   };
 ```
 
-在这个示例中，扩展板的覆盖文件设置了一个位于 0x3C 寄存器的 SSD1306 OLED 屏幕。它在 chosen 部分被选择为 zephyr 显示器。
+在这个示例中，扩展板的 overlay 文件在 0x3C 寄存器上配置了一个 SSD1306 OLED 屏幕。它在 chosen 部分被选为 Zephyr 的显示设备。
 
-#### Grove - 扩展板 - 按钮
+#### Grove - Expansion Board - Button
 
-为了测试这个设置，我们可以使用 Zephyr 的现有示例，我们将把它与 USB 控制台覆盖和配置一起使用。
+为了测试这个连接，我们可以使用 Zephyr 中已有的一个示例，并配合 USB 控制台 overlay 和配置一起使用。
 
 ```
 cd ~/zephyrproject/zephyr
@@ -498,15 +502,15 @@ west build -p always -b seeeduino_xiao samples/basic/button -- -DDTC_OVERLAY_FIL
 west flash
 ```
 
-闪烁后等待片刻让 MCU 重置并连接到显示器:
+烧录完成后，等待 MCU 复位片刻，然后连接到监视器：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-按下带有示例的按钮将触发板载LED点亮。
+在该示例中按下按钮会触发板载 LED 点亮。
 
-您将看到从控制台返回的结果：
+你会看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -521,7 +525,7 @@ Button pressed at 550754013
 Button pressed at 591496990
 ```
 
-让我们深入探讨这个例子，看看为什么它能够起作用：
+让我们稍微深入这个示例，看看它为什么能工作：
 
 ```
 / {
@@ -540,22 +544,22 @@ Button pressed at 591496990
 };
 ```
 
-应用程序覆盖文件用于设置各种板载组件。使用此文件，按钮示例可以被利用，因为覆盖允许 Zephyr 配置按钮并使其可用于相关代码。
+app overlay 文件用于设置各种板级组件。使用该文件可以利用按键示例，因为 overlay 允许 Zephyr 配置按键并使其可供相关代码使用。
 
-在这种情况下，它使用 &xiao_d 连接器接口将 D1 关联为按钮。或者，我们也可以在这里使用 `&porta` 接口作为 `&porta 4`，这是 MCU 上与 D1 对应的引脚。
+在这个例子中，它使用 `&xiao_d` 连接器接口将 D1 关联为一个按键。或者，我们也可以在这里使用 `&porta` 接口，即 `&porta 4`，它是 MCU 上与 D1 对应的引脚。
 
 #### Grove - 扩展板 - 蜂鸣器
 
-我们将使用闪烁 PWM 示例来激活蜂鸣器，通过 PWM 信号控制其激活。为此，我们将使用一个自定义覆盖，该覆盖为 A3 引脚启用 PWM。
+我们将使用 blinky PWM 示例，通过 PWM 信号来控制蜂鸣器的启停。为此我们会使用一个自定义 overlay，使 A3 引脚启用 PWM 功能。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-samd21/xiao_expansion_buzzer.overlay"
 ```
 
-上传uf2文件后，您应该开始听到一系列蜂鸣声，这些声音会随着示例程序的运行而发生变化。
+上传 uf2 文件后，你应该会听到一系列蜂鸣声，并且在示例运行过程中声音会发生变化。
 
-让我们来看看这是如何工作的：
+我们来看看为什么它能工作：
 
 ```
 /delete-node/ &pwm_led0;
@@ -595,20 +599,20 @@ west build -p always -b seeeduino_xiao samples/basic/blinky_pwm -- -DDTC_OVERLAY
 };
 ```
 
-正在使用的覆盖层首先移除现有的 `pwm_led0` 节点，因为该开发板已经配置了这个别名。然后它配置 A3 引脚用作 PWM。
+这里使用的 overlay 首先移除了已有的 `pwm_led0` 节点，因为该板子已经用这个别名进行了配置。然后它将 A3 引脚配置为 PWM 使用。
 
-我们使用的是 A3 引脚，它对应 SAMD21 上的 GPIO PA11。鉴于其关联的 PWM 引脚复用是 PA11E_TCC1_WO1，我们使用 tcc1 定时器来实现 PWM。
+我们使用的是 A3 引脚，它在 SAMD21 上对应 GPIO PA11。鉴于其关联的 PWM pinmux 为 PA11E_TCC1_WO1，我们为 PWM 使用 tcc1 定时器。
 
 #### Grove - 扩展板 - SD 卡
 
-我们将在这里使用文件系统示例以及 Xiao 扩展板屏蔽层来尝试通过 SPI 与 SD 卡读卡器进行接口通信。扩展板屏蔽层的 CS 引脚配置为关联的 `&xiao_d 2` 引脚，因此除了添加屏蔽层之外，您无需进行任何工作来将此功能与开发板关联。为了进一步准备，我们使用了一个启用 SD 卡功能的自定义配置。
+这里我们将结合 filesystem 示例和 Xiao 扩展板 shield，通过 SPI 尝试与 SD 卡读卡器进行接口通信。扩展板 shield 已经将 CS 引脚配置为与 `&xiao_d 2` 引脚关联，因此除了添加 shield 外，你无需再做额外工作来将此功能与板子关联。为了进一步做好准备，我们使用了一个自定义配置来启用 SD 卡功能。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/subsys/fs/fs_sample -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.overlay" -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-上传 uf2 文件后连接到监视器：
+上传 uf2 文件后，连接到监视器：
 
 ```
 screen /dev/ttyACM0 115200
@@ -627,9 +631,9 @@ Listing dir /SD: ...
 [FILE] IMAGE2.JPG (size = 97963)
 ```
 
-在这种情况下，我的 SD 卡有两个文件。它们的名称和大小被输出到我的控制台。
+在这个例子中，我的 SD 卡上有两个文件。它们的名称和大小都被输出到了我的控制台。
 
-让我们来看看这里涉及的相关元素：
+我们来看看这里起作用的相关元素：
 
 ```
 CONFIG_SPI=y
@@ -637,9 +641,9 @@ CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
 ```
 
-在相关配置中，我们启用了 SPI、SDMMC 磁盘驱动程序和 GPIO。如果没有这个配置，覆盖层将导致错误，因为示例无法找到 SD 卡。
+在相关的配置中，我们启用了 SPI、SDMMC 磁盘驱动以及 GPIO。如果没有这个配置，overlay 会导致错误，因为示例无法找到 SD 卡。
 
-Xiao 扩展板屏蔽的相关部分实际上在这个示例中通过用于 Xiao SAMD21 的 `xiao_expansion_sd.overlay` 被覆盖，如下所示：
+Xiao 扩展板 shield 的相关部分实际上在这个示例中被 `xiao_expansion_sd.overlay` 覆盖了，该 overlay 用于下面所示的 Xiao SAMD21：
 
 ```
 &xiao_spi {
@@ -659,18 +663,18 @@ Xiao 扩展板屏蔽的相关部分实际上在这个示例中通过用于 Xiao 
 };
 ```
 
-如前所述，`&xiao_d 2` 引脚映射用于允许选择 D2 引脚，无论使用哪种开发板，只要它支持 `&xiao_d` 引脚设置即可。
+如前所述，`&xiao_d 2` 引脚映射用于让 D2 引脚被选作此用途，只要所用板子支持 `&xiao_d` 引脚设置，就与具体板型无关。
 
-我们在这里不使用扩展板的覆盖层而是重写它的原因是，扩展板设置的 `spi-max-frequency` 为 `24000000` 太高，会导致 SAMD21 失败。
+我们在这里不使用 shield 自带的 overlay 而是覆盖它的原因，是因为 shield 设置的 `spi-max-frequency` 为 `24000000`，频率过高，会导致 SAMD21 运行失败。
 
 #### Grove - 温湿度传感器 (SHT31)
 
-首先焊接引脚并将您的 Xiao SAMD21 连接到扩展板。然后在 Grove SHT31 和扩展板上的其中一个 I2C 端口之间连接一根 grove 连接器线缆。
+首先焊接排针，并将 Xiao SAMD21 连接到扩展板。然后使用 Grove 连接线将 Grove SHT31 与扩展板上的一个 I2C 端口连接起来。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/samd21/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_samd21_zephyr/xiaod21_sht31.jpg" style={{width:600, height:'auto'}}/></div>
 
-为了测试这个设置，我们可以使用 Zephyr 的现有示例，我们将通过覆盖层和配置文件启用 USB 控制台支持。
+为了测试这个连接，我们可以使用 Zephyr 中已有的一个示例，并通过 overlay 和 conf 启用 USB 控制台支持。
 
 ```
 cd ~/zephyrproject/zephyr
@@ -683,13 +687,13 @@ west build -p always -b seeeduino_xiao samples/sensor/sht3xd -- -DDTC_OVERLAY_FI
 west flash
 ```
 
-闪烁后等待片刻让 MCU 重置并连接到显示器:
+烧录完成后等待 MCU 复位片刻，然后连接到监视器：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-你将看到从控制台返回的结果：
+你会在控制台中看到返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -705,7 +709,7 @@ SHT3XD: 26.27 Cel ; 47.11 %RH
 SHT3XD: 26.27 Cel ; 47.72 %RH
 ```
 
-让我们深入探讨这个例子，看看为什么它能够起作用：
+我们稍微深入了解一下这个示例，看看它为什么能工作：
 
 ```
 &xiao_i2c {
@@ -727,15 +731,15 @@ SHT3XD: 26.27 Cel ; 47.72 %RH
 };
 ```
 
-应用程序覆盖文件用于设置各种板载组件。使用此文件，SHT31 示例可以被利用，因为覆盖文件告知[示例逻辑](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c)如何为我们的板子配置传感器。
+app overlay 文件用于设置各种板级组件。使用该文件可以利用 SHT31 示例，因为 overlay 会告知[示例逻辑](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c)如何为我们的板子配置该传感器。
 
-#### 1.69英寸LCD显示模块，240×280分辨率，SPI接口
+#### 1.69inch LCD Display Module, 240×280 Resolution, SPI Interface
 
-在这个示例中，我们将使用SPI连接到一个1.69英寸、240x280分辨率的LCD。
+在这个示例中，我们将使用 SPI 连接到一块 1.69 英寸、240x280 分辨率的 LCD。
 
-首先使用以下图片作为指导将您的板子连接到LCD屏幕（在这种情况下我们使用的是Xiao SAMD21，但这里使用相同的引脚布局进行连接）。
+首先按照下图所示将你的开发板连接到 LCD 屏幕（本例中我们使用的是 Xiao SAMD21，但这里的连接使用相同的引脚布局）。
 
-| 1.69英寸LCD SPI显示屏| XIAO SAMD21 |
+| 1.69-inch LCD SPI Display| XIAO SAMD21 |
 | ------------- | ------------------------- |
 | VCC | 3V3 |
 | GND | GND |
@@ -748,7 +752,7 @@ SHT3XD: 26.27 Cel ; 47.72 %RH
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
-接下来在硬件准备好后，我们可以构建和烧录：
+接下来，在硬件准备就绪后，我们可以进行构建和烧录：
 
 ```
 cd ~/zephyrproject/zephyr
@@ -761,19 +765,19 @@ west build -p always -b seeeduino_xiao samples/drivers/display -- -DDTC_OVERLAY_
 west flash
 ```
 
-随着新固件的安装，设备现在显示了与我们之前在扩展板上看到的相同演示屏幕，只是现在更新为通过 SPI 连接的彩色 LCD。
+在新固件就位后，设备现在会显示与刚才在扩展板上看到的相同演示画面，只是现在更新为通过 SPI 驱动的彩色 LCD。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/samd21/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_samd21_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## ✨ 贡献者项目
 
-- 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=57293601)支持。
-- 感谢 **Tim 的努力**，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 本项目由 Seeed Studio 的 [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=57293601) 提供支持。
+- 感谢 **Tim 的付出**，你的作品将会被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

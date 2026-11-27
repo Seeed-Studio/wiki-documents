@@ -7,7 +7,7 @@ last_update:
   date: 09/09/2025
   author: MicroBlocks
 createdAt: '2025-09-09'
-updatedAt: '2026-03-12'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/pt-br/xiao_rp2350_microblocks/
 ---
 
@@ -15,9 +15,13 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_rp2350_microblocks/
 
 ### MicroBlocks
 
-MicroBlocks é uma linguagem em blocos que torna fácil para iniciantes (de 9 anos até adultos) programarem microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor que o MicroPython; capacidade de controlar os pinos GPIO e de interagir com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem MicroBlocks para prototipagem rápida e testes por causa de seu ciclo de desenvolvimento rápido e interativo.
+MicroBlocks é uma linguagem em blocos que facilita para iniciantes (de 9 anos até adultos) programarem microcontroladores. Apesar de sua aparente simplicidade, MicroBlocks é uma linguagem de programação poderosa, com desempenho melhor que o MicroPython; capacidade de controlar pinos GPIO e se comunicar com periféricos via I2C, SPI e serial; e quase 200 bibliotecas de extensão. Na verdade, alguns projetistas de hardware preferem MicroBlocks para prototipagem e testes rápidos por causa de seu ciclo de desenvolvimento rápido e interativo.
 
 ### Pinout e recursos de hardware do XIAO RP2350
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2350" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2350-pinout.png" style={{width:600, height:'auto'}}/></div><br />
 
@@ -27,7 +31,7 @@ e um único LED RGB (NeoPixel) no pino 20.
 
 ### Instalando o firmware do MicroBlocks
 
-Para entrar no modo bootloader, mantenha pressionado o pequeno botão B (boot) enquanto clica no botão R (reset). Uma unidade USB virtual chamada **RP2350** irá aparecer.
+Para entrar no modo bootloader, mantenha pressionado o pequeno botão B (boot) enquanto clica no botão R (reset). Uma unidade USB virtual chamada **RP2350** aparecerá.
 
 Baixe o [arquivo de firmware](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2350.uf2),
 na [pasta vm](https://microblocks.fun/downloads/latest/vm)
@@ -38,7 +42,7 @@ Você pode ignorar qualquer aviso de que o disco não foi ejetado corretamente.
 
 ### Conectando a placa ao MicroBlocks
 
-Conecte a placa ao seu computador com um cabo USB de dados (**não** um cabo somente de energia).
+Conecte a placa ao seu computador com um cabo USB de dados (**não** um cabo somente de alimentação).
 
 Execute o [editor MicroBlocks](https://microblocks.fun/run/microblocks.html) em um navegador Chrome ou Edge.
 Clique no botão **connect** (ícone de plugue):
@@ -59,17 +63,17 @@ Um círculo verde e o nome da placa aparecerão quando a placa estiver conectada
 
 ### Programando no MicroBlocks
 
-MicroBlocks é um ambiente de programação **ao vivo**, para que você possa testar enquanto programa.
+MicroBlocks é um ambiente de programação **ao vivo**, então você pode testar enquanto programa.
 Clique em blocos e scripts para executá-los.
 Arraste blocos para o painel de scripts e monte-os para criar scripts.
 
-Seu código é armazenado em memória flash persistente e pode ser executado mesmo quando a placa
+Seu código é armazenado na memória flash persistente e pode ser executado mesmo quando a placa
 não está conectada ao editor MicroBlocks.
 Scripts sob um bloco **when started** são executados quando a placa é ligada.
 
 MicroBlocks oferece suporte a concorrência. Até dez scripts podem ser executados ao mesmo tempo.
 
-Além de seus muitos blocos integrados, MicroBlocks possui quase 200 bibliotecas
+Além de seus muitos blocos integrados, MicroBlocks tem quase 200 bibliotecas
 que oferecem suporte a recursos e periféricos adicionais.
 Clique no botão **Add Library** para adicionar bibliotecas.
 
@@ -83,21 +87,21 @@ Este script fará o NeoPixel RGB mudar de cor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2350-neopixel.png" style={{width:200, height:'auto'}}/></div>
 
-A [referência dos blocos](https://wiki.microblocks.fun/en/reference_manual)
-inclui muitos outros exemplos.
+A [referência de blocos](https://wiki.microblocks.fun/en/reference_manual)
+inclui muitos exemplos adicionais.
 
-## Agradecimentos Especiais
+## Agradecimentos especiais
 
 Agradecimentos especiais ao John, do MicroBlocks, por escrever o artigo.
 
 ### Recursos do MicroBlocks
 
-- [Website](https://microblocks.fun)
+- [Site](https://microblocks.fun)
 
-- [Guia do Usuário](https://wiki.microblocks.fun/en/ide)
+- [Guia do usuário](https://wiki.microblocks.fun/en/ide)
 
-- [Referência dos Blocos](https://wiki.microblocks.fun/en/reference_manual)
+- [Referência de blocos](https://wiki.microblocks.fun/en/reference_manual)
 
-- [Referência das Bibliotecas](https://wiki.microblocks.fun/en/libraries)
+- [Referência de bibliotecas](https://wiki.microblocks.fun/en/libraries)
 
-- [Guias de Aprendizagem](https://learn.microblocks.fun)
+- [Guias de aprendizagem](https://learn.microblocks.fun)

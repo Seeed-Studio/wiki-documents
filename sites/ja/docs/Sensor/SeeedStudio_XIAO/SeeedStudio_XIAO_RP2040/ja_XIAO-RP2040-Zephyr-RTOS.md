@@ -1,6 +1,6 @@
 ---
-description: XIAO RP2040 With Zephyr(RTOS)
-title: XIAO RP2040 With Zephyr(RTOS)
+description: XIAO RP2040 と Zephyr(RTOS)
+title: XIAO RP2040 と Zephyr(RTOS)
 keywords:
   - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -8,8 +8,8 @@ slug: /XIAO-RP2040-Zephyr-RTOS
 last_update:
   date: 3/20/2024
   author: timo614
-createdAt: '2025-05-27'
-updatedAt: '2025-09-25'
+createdAt: '2024-04-16'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/ja/XIAO-RP2040-Zephyr-RTOS/
 ---
 
@@ -17,58 +17,58 @@ url: https://wiki.seeedstudio.com/ja/XIAO-RP2040-Zephyr-RTOS/
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-rp2040.png"/></div>
 
-このwikiでは、[Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/ja/xiao_rp2040_getting_started/)の[Zephyr](https://www.zephyrproject.org/)サポートについて説明します。このガイドの支援により、ボードで利用可能な機能セットを活用できるようになります。
+このWikiでは、[Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/ja/xiao_rp2040_getting_started/) に対する [Zephyr](https://www.zephyrproject.org/) のサポートについて説明します。このガイドに従うことで、ボードで利用可能な機能セットを活用できるようになります。
 
-## [Zephyr](https://www.zephyrproject.org/)とは
+## [Zephyr](https://www.zephyrproject.org/) とは
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
 
-[**Zephyr**](https://www.zephyrproject.org/) OSは、リソース制約のある組み込みシステムでの使用を目的として設計された小フットプリントカーネルに基づいています：シンプルな組み込み環境センサーやLEDウェアラブルから、高度な組み込みコントローラー、スマートウォッチ、IoTワイヤレスアプリケーションまで対応します。
+[**Zephyr**](https://www.zephyrproject.org/) OS は、小さなフットプリントのカーネルをベースとしており、リソースに制約のある組み込みシステムでの使用を目的に設計されています。シンプルな環境センサやLEDウェアラブルから、高度な組み込みコントローラ、スマートウォッチ、IoTワイヤレスアプリケーションまで対応します。
 
-Zephyrは、サポートされている各デバイスに対して、ボードとその機能を記述する[devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html)ファイルを持っています。[Xiao RP2040 Zephyrボードページ](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html#supported-features)では、現在利用可能なサポート機能について説明されており、これは[ボードのdtsファイル](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_rp2040/xiao_rp2040.yaml#L7)によって定義されています。
+各サポート対象デバイスごとに、Zephyr にはボードとその機能を記述した [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) ファイルがあります。[Xiao RP2040 Zephyr ボードページ](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html#supported-features) には、[ボードの dts ファイル](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_rp2040/xiao_rp2040.yaml#L7) によって定義されている、現在利用可能なサポート機能が記載されています。
 
 *参考: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
-## はじめに
+## 入門ガイド
 
-Zephyrを使用する最初のステップは、ローカル開発用のSDKとツールチェーンをセットアップすることです。お使いの環境に必要な関連セットアップ手順については、[Zephyr入門ガイド](https://docs.zephyrproject.org/latest/develop/getting_started/index.html)を参照してください。
+Zephyr を扱う最初のステップは、ローカル開発用に SDK とツールチェーンをセットアップすることです。お使いの環境に必要なセットアップ手順については、[Zephyr 入門ガイド](https://docs.zephyrproject.org/latest/develop/getting_started/index.html) を参照してください。
 
-Zephyrツールチェーンがセットアップされ、関連するSDKがダウンロードされたら、アプリケーション開発を開始できます。
+Zephyr ツールチェーンをセットアップし、対応する SDK をダウンロードしたら、アプリケーション開発を開始できます。
 
-Xiao RP2040については、さらなるセットアップ情報として[ボード説明ファイル](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html)を参照できます。
+Xiao RP2040 については、さらなるセットアップ情報として [ボード記述ファイル](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html) を参照できます。
 
-Xiao RP2040をプログラムするには、以下の手順を実行できます：
+Xiao RP2040 を書き込むには、次の手順を実行します。
 
-1. サンプルまたはアプリケーションをビルドする
-2. Xiao RP2040を接続する
-3. `B`（ブート）と指定されたボタンを押しながら`R`（リセット）を押すと、デバイスがマスストレージデバイスとしてマウントされます
-4. フラッシュコマンドを実行してデバイスをフラッシュする `west flash -r uf2`
+1. サンプルまたは自分のアプリケーションをビルドする
+2. Xiao RP2040 を接続する
+3. `B`（ブート）に指定されたボタンを押しながら `R`（リセット）を押し、デバイスをマスストレージデバイスとしてマウントする
+4. フラッシュコマンド `west flash -r uf2` を実行してデバイスを書き込む
 
-最もシンプルな例は、ボード上で「Hello World」サンプルを実行することです。Zephyrインストールのディレクトリに移動した後、以下のコマンドを実行してください。
+最も簡単な例として、ボード上で "Hello World" サンプルを実行してみましょう。Zephyr をインストールしたディレクトリに移動した後、次のコマンドを実行します。
 
 ```
 west build -p always -b xiao_rp2040 samples/subsys/usb/console
 ```
 
-前述のようにブートローダーモードに入り、デバイスをフラッシュします：
+前述のとおりブートローダーモードに入り、次にデバイスを書き込みます。
 
 ```
 west flash -r uf2
 ```
 
-デバイスはファイルを受信した後にリセットされ、お使いのマシンはシリアル通信用にUSB経由で接続されるはずです。
+デバイスはファイルを受信するとリセットされ、マシンは USB 経由でシリアル接続されているはずです。
 
-デバイスのポートを見つけてください。例えば、Ubuntuでは `ls /dev/tty*` と入力し、USBが接続されたときに表示されるデバイスを確認してください。
+デバイスのポートを探します。例えば Ubuntu では `ls /dev/tty*` と入力し、USB を接続したときにどのデバイスが現れるかを確認します。
 
-私の例では、新しく追加されたデバイスとして `/dev/ttyACM0` が表示されます。
+この例では、新しく追加されたデバイスとして `/dev/ttyACM0` が表示されます。
 
-screenを使用して接続し、シリアル応答を監視できます：
+screen を使って接続し、シリアルの応答をモニタできます。
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-以下のような応答が表示されるはずです：
+次のような応答が表示されるはずです。
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -77,13 +77,13 @@ Hello World! arm
 Hello World! arm
 ```
 
-Xiaoとその拡張ボードでZephyrを使用するプロセスを支援するため、ここで使用されるいくつかのオーバーレイと設定を含むリポジトリが構築されています。このwiki記事に含まれるコマンドは、zephyrルートに対して相対的に`../applications/xiao-zephyr-examples`に配置されていることを前提としています。以下のコマンドでパスを更新することで、代替パスを提供できます。
+Xiao とその拡張ボードで Zephyr を使用するプロセスを支援するために、ここで使用している複数のオーバーレイと設定を含むリポジトリが用意されています。このWiki記事に含まれるコマンドは、そのリポジトリが Zephyr のルートから見て `../applications/xiao-zephyr-examples` に配置されていることを前提としています。別のパスを使用する場合は、以下のコマンド内のパスを変更してください。
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 ```
 
-## ハードウェア準備
+## ハードウェアの準備
 
 <table align="center">
   <tbody><tr>
@@ -97,12 +97,12 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -110,21 +110,25 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 
 ### 開発者向け知識
 
-#### XIAO拡張ボード
+#### XIAO Expansion Board
 
-  Seeed Studio XIAO RP2040でGroveモジュールを使用するために、[Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)を使用し、その上にXIAO RP2040を接続します。
+  Seeed Studio XIAO RP2040 で Grove モジュールを使用するために、[Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) を使用し、その上に XIAO RP2040 を接続します。
 
-  その後、ボード上のGroveコネクタを使用してGroveモジュールを接続できます
+  その後、ボード上の Grove コネクタを使用して Grove モジュールを接続できます。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
 
 #### ピン定義
 
-  GroveモジュールをSeeed Studio XIAO用Grove ShieldのGroveコネクタに接続する際は、以下の図に従って適切な内部ピン番号を使用する必要があります。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
+
+  Grove Shield for Seeed Studio XIAO 上の Grove コネクタに Grove モジュールを接続する際は、下の図に従って、適切な内部ピン番号を使用する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg"style={{width:900, height:'auto'}}/></div>
 
-### 主要機能
+### 主な機能
 
 - WS2812 LED
 - LED PWM
@@ -133,24 +137,24 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 
 #### WS2812 LED
 
-この例では、Xiao RP2040がオンボードLEDを利用し、赤、緑、青を連続的に点滅させます。
+この例では、Xiao RP2040 のオンボード LED を使用し、赤、緑、青を連続的に点滅させます。
 
-このセットアップをテストするために、Zephyrの既存サンプルを使用できます：
+このセットアップをテストするために、Zephyr に用意されている既存のサンプルを使用できます。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/led_strip
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスを書き込みます。
 
 ```
 west flash -r uf2
 ```
 
-オンボードのWS2812 LEDが赤、青、緑を点滅パターンで連続的に循環しているのが見えるでしょう。
+オンボードの WS2812 LED が、赤、青、緑を点滅パターンで連続的に切り替えるのが確認できます。
 
-この例がなぜ動作するのかを詳しく見てみましょう：
+なぜこの例が動作するのか、少し掘り下げて見てみましょう。
 
 ```
 
@@ -191,40 +195,40 @@ west flash -r uf2
  };
 ```
 
-デバイスツリーのこれらの要素は、オンボードのWS2812とその利用方法を示しています。WS2812のVCCラインがRP2040のピン11に設定されているため、デバイスツリーはgpio-hog機能を利用して、環境変数を通じてLEDを有効にできるようにしています。この場合、ピン12がWS2812のデータライン用に設定されているため、CONFIG_GPIO_HOGS環境変数が有効になっていると、LEDストリップをサンプルで使用できるようになります。
+devicetree のこれらの要素は、オンボード WS2812 とその利用方法を示しています。WS2812 の VCC ラインは RP2040 のピン11 に接続されているため、devicetree では gpio-hog 機能を利用して、環境変数を通じて LED を有効化できるようにしています。この場合、ピン12 が WS2812 のデータラインとして設定されているため、環境変数 CONFIG_GPIO_HOGS を有効にすると、この例で LED ストリップを使用できるようになります。
 
-これが機能するのは、サンプルがboardsディレクトリの一部としてxiao_rp2040.confファイルを持っているためで、その設定をボードの設定とマージして有効にするからです。
+これが動作するのは一部、例の boards ディレクトリ内に xiao_rp2040.conf ファイルがあり、その設定がボードの設定とマージされて有効化されるためです。
 
 ```
 CONFIG_GPIO=y
 CONFIG_GPIO_HOGS=y
 ```
 
-オンボードのWS2812を利用したい場合は、この変数を有効にして電力を供給できるようにすることをお勧めします。
+オンボードの WS2812 を利用したい場合は、電源を供給できるよう、この変数を有効にすることを推奨します。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Cosmic-Bee/xiao-zephyr-examples/main/images/rp2040/ws2812.gif" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/ws2812.gif" style={{width:300, height:'auto'}}/></div>
 
 #### LED PWM
 
-この例では、Xiao RP2040のPWM機能を実演します。そのために、オンボードの青色LEDを使用し、PWMを使って連続的にフェードさせます。
+この例では、Xiao RP2040 の PWM 機能をデモします。そのためにオンボードの青色 LED を使用し、PWM によって連続的にフェードさせます。
 
-このセットアップをテストするために、Zephyrの既存のサンプルを使用できます：
+このセットアップをテストするために、Zephyr に用意されている既存のサンプルを使用できます。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/fade_led
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスを書き込みます。
 
 ```
 west flash -r uf2
 ```
 
-基板上のRGB LEDの青い光がゆっくりとフェードし、再びそのプロセスを繰り返すのが見えるでしょう。
+オンボード RGB LED の青色の光がゆっくりとフェードし、その動作が繰り返されるのが確認できます。
 
-この例がなぜ動作するのかを理解するために、少し詳しく見てみましょう：
+なぜこの例が動作するのか、少し掘り下げて見てみましょう。
 
 ```
 &pwm {
@@ -233,9 +237,9 @@ west flash -r uf2
 };
 ```
 
-この `boards/xiao_rp2040.overlay` の例におけるロジックの部分は、通常無効になっているデバイスツリーからPWM機能を有効にします。Xiao RP2040 セットアップでは、青色のオンボードRGB LEDがデフォルトのPWMとして設定されています。
+この例の `boards/xiao_rp2040.overlay` にあるこのロジックによって、通常は無効になっている devicetree から PWM 機能が有効化されます。Xiao RP2040 の構成では、オンボード RGB LED の青色がデフォルトの PWM として設定されています。
 
-zephyr ボードファイルの `xiao_rp2040-pinctrl.dtsi` で確認できるように、以下が存在します：
+Zephyr のボードファイルにある `xiao_rp2040-pinctrl.dtsi` を見ると、次のような記述が存在します。
 
 ```
  pwm_ch4b_default: pwm_ch4b_default {
@@ -245,33 +249,33 @@ zephyr ボードファイルの `xiao_rp2040-pinctrl.dtsi` で確認できるよ
  };
 ```
 
-この場合、PWMは設定されたdevicetree pwm LEDを使用しており、これはピン25（青色LED）に関連付けられています。PWMピンは[RP2040ドキュメント](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html)から参照できます。
+この場合、PWM は設定済みの devicetree の PWM LED を使用しており、これはピン 25（青色 LED）に関連付けられています。PWM ピンは [RP2040 のドキュメント](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html)から参照できます。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Cosmic-Bee/xiao-zephyr-examples/main/images/rp2040/led_fade.gif" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/led_fade.gif" style={{width:300, height:'auto'}}/></div>
 
-#### Clock
+#### クロック
 
-これには既存のサンプルとコンソールオーバーレイを使用します：
+ここでは既存のサンプルと、コンソール用オーバーレイを使用します：
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュしてください：
+ブートローダーモードに入り、デバイスにフラッシュします：
 
 ```
 west flash -r uf2
 ```
 
-モニターに接続します（ボードが確実に再起動するように素早くリセットした後）：
+モニタに接続します（ボードが再起動するように素早くリセットした後）：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-設定された遅延の後、一連のタイマーが次々とトリガーされるのが確認できます：
+一定の遅延の後に、次々と一連のタイマーが動作するのが分かります：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -294,33 +298,33 @@ Set alarm in 32 sec (32000000 ticks)
 
 #### TFLite - Hello World
 
-ZephyrでTFLiteを有効にして更新します：
+TFLite を Zephyr で有効化し、更新します：
 
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-この例では、サンプルのtflite「Hello World」を、コンソールオーバーレイとconfと組み合わせて使用し、USB シリアル経由でレスポンスを読み取ります。
+この例では、USB シリアル経由で応答を読み取るために、サンプルの tflite「Hello World」とコンソール用オーバーレイおよび conf を使用します。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュしてください：
+ブートローダーモードに入り、デバイスにフラッシュします：
 
 ```
 west flash -r uf2
 ```
 
-モニターに接続：
+モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-コンソールから返される結果が表示されます：
+コンソールから結果が返されるのが分かります：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -347,34 +351,34 @@ x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 
 ### 追加コンポーネント
 
-- [Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2Cディスプレイ
-- [Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - ボタン
-- [Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - ブザー
-- [Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SDカード
-- [Grove - 温湿度センサー (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
-- [1.69インチLCDディスプレイモジュール、240×280解像度、SPIインターフェース](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C ディスプレイ
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - ボタン
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - ブザー
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD カード
+- [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
+- [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
 
-#### Grove - 拡張ボード - I2Cディスプレイ
+#### Grove - Expansion Board - I2C ディスプレイ
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/xiao_expansion_oled.jpg" style={{width:300, height:'auto'}}/></div>
 
-このセットアップをテストするために、Zephyrの既存のサンプルを使用できます：
+このセットアップをテストするために、Zephyr の既存サンプルを使用できます：
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスにフラッシュします：
 
 ```
 west flash -r uf2
 ```
 
-この表示では、複数の黒いボックスと角で点滅するボックスが表示されます。この表示は2色のみをサポートしているためです。
+このディスプレイは 2 色のみをサポートしているため、複数の黒いボックスと、隅で点滅するボックスが表示されます。
 
-この例がなぜ機能するのかを詳しく見てみましょう：
+なぜ動作するのか、この例を少し掘り下げてみましょう：
 
 ```
 / {
@@ -403,32 +407,32 @@ west flash -r uf2
 
 ```
 
-この例のシールドオーバーレイファイルは、0x3Cレジスタに SSD1306 OLED スクリーンを設定します。これは chosen セクションで zephyr ディスプレイとして選択されます。
+この例のシールドオーバーレイファイルでは、SSD1306 OLED 画面をレジスタ 0x3C に設定しています。chosen セクションで Zephyr のディスプレイとして選択されています。
 
-#### Grove - 拡張ボード - ボタン
+#### Grove - Expansion Board - ボタン
 
-この設定をテストするために、USBコンソールオーバーレイとconfと一緒に使用するZephyrの既存のサンプルを使用できます。
+このセットアップをテストするために、USB コンソール用オーバーレイと conf と共に使用する Zephyr の既存サンプルを利用します。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf -DSHIELD=seeed_xiao_expansion_board
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスにフラッシュします：
 
 ```
 west flash -r uf2
 ```
 
-モニターに接続：
+モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-ボタンをサンプルで押すと、オンボードLEDが点灯します。
+このサンプルでボタンを押すと、オンボード LED が点灯します。
 
-コンソールから結果が返されるのが確認できます：
+コンソールから結果が返されるのが分かります：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -441,7 +445,7 @@ Button pressed at 3084766465
 Button pressed at 3388674993
 ```
 
-この例を少し詳しく見て、なぜ動作するのかを理解しましょう：
+なぜ動作するのか、この例を少し掘り下げてみましょう：
 
 ```
 / {
@@ -460,28 +464,28 @@ Button pressed at 3388674993
 };
 ```
 
-アプリオーバーレイファイルは、さまざまなボードコンポーネントをセットアップするために使用されます。このファイルを使用することで、ボタンの例を活用できます。オーバーレイによりZephyrがボタンを設定し、関連するコードで使用できるようになります。
+このアプリ用オーバーレイファイルは、さまざまなボードコンポーネントをセットアップするために使用されます。このファイルを使うことで、ボタンの例を利用できます。オーバーレイにより Zephyr がボタンを構成し、関連するコードで利用できるようにしているためです。
 
-この場合、GPIO 27はXiao RP2040のピンA1/D1に対応します。このオーバーレイでボタンとして動作するように設定され、sw0という名前でエイリアスされ、このコードを期待するサンプルで使用できるようになります。
+この場合、GPIO 27 は Xiao RP2040 上のピン A1/D1 に対応します。このオーバーレイではボタンとして動作するように設定されており、sw0 という名前にエイリアスされているため、この名前を想定しているサンプルコードで使用できます。
 
-#### Grove - 拡張ボード - ブザー
+#### Grove - Expansion Board - ブザー
 
-blinky PWMの例を使用してブザーを有効化し、PWM信号を介してその動作を制御します。このために、A3ピンのPWMを有効にするカスタムオーバーレイを使用します。
+ここでは、ブザーの動作を PWM 信号で制御するために、blinky PWM の例を使ってブザーを動作させます。このために、A3 ピンの PWM を有効にするカスタムオーバーレイを使用します。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/xiao_expansion_buzzer.overlay"
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュしてください：
+ブートローダーモードに入り、デバイスにフラッシュします：
 
 ```
 west flash -r uf2
 ```
 
-uf2ファイルをフラッシュした後、サンプルが実行される過程で音が変化する一連のブザー音が聞こえ始めるはずです。
+uf2 ファイルを書き込むと、サンプルが進行するにつれて音が変化する一連のブザー音が聞こえるはずです。
 
-これがなぜ動作するのかを見てみましょう：
+なぜ動作するのか見てみましょう：
 
 ```
 /delete-node/ &pwm_led0;
@@ -518,26 +522,26 @@ uf2ファイルをフラッシュした後、サンプルが実行される過�
 };
 ```
 
-使用中のオーバーレイは、まず既存の `pwm_led0` ノードを削除します。このボードはPWM用のオンボードLEDセットアップを通じてサポートされているためです。その後、A3ピンをPWMとして使用するように設定します。
+使用しているオーバーレイでは、まず既存の `pwm_led0` ノードを削除します。このボードは PWM 用に設定されたオンボード LED によってサポートされているためです。その後、A3 ピンを PWM として使用できるように構成します。
 
-ここではPWMにチャンネル6Bを使用しています。Xiao RP2040のA3に関連するピンはピン29だからです。詳細情報や他のピンのピンマッピングについては、[RP2040 pinctrlドキュメント](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html#a8c0c1058a626d83ba5f7e18238aba150)を参照してください。
+ここでは PWM にチャネル 6B を使用しています。というのも、Xiao RP2040 上の A3 に対応するピンは 29 番ピンだからです。詳細や他のピンのピンマッピングについては、[RP2040 pinctrl ドキュメント](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html#a8c0c1058a626d83ba5f7e18238aba150)を参照してください。
 
-#### Grove - 拡張ボード - SD カード
+#### Grove - Expansion Board - SD カード
 
-ここではファイルシステムサンプルをXiao Expansion Boardシールドと組み合わせて使用し、SPI経由でSDカードリーダーとのインターフェースを試します。拡張ボードシールドには、関連する `&xiao_d 2` ピン用にCSピンが設定されているため、シールドを追加する以外に、この機能をボードに関連付けるための作業は必要ありません。さらに準備するために、SDカード機能を有効にするカスタム設定を使用しています。
+ここでは、ファイルシステムサンプルと Xiao Expansion Board シールドを使用して、SPI 経由で SD カードリーダーとのインターフェースを試します。Expansion Board シールドでは、CS ピンが対応する `&xiao_d 2` ピンに設定されているため、シールドを追加する以外に、この機能をボードに関連付けるための作業は不要です。さらに準備として、SD カード機能を有効にするカスタム設定を使用しています。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/subsys/fs/fs_sample -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスにフラッシュします：
 
 ```
 west flash -r uf2
 ```
 
-モニターに接続：
+モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
@@ -556,9 +560,9 @@ Listing dir /SD: ...
 [FILE] IMAGE2.JPG (size = 97963)
 ```
 
-この場合、私のSDカードには2つのファイルがありました。それらの名前とサイズがコンソールに出力されました。
+この場合、私の SD カードには 2 つのファイルがありました。それらの名前とサイズがコンソールに出力されました。
 
-ここで関連する要素を見てみましょう：
+ここで関係する要素を確認してみましょう：
 
 ```
 CONFIG_SPI=y
@@ -566,9 +570,9 @@ CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
 ```
 
-関連する設定では、SPI、SDMMCディスクドライバー、およびGPIOを有効にしています。この設定がないと、サンプルがSDカードを見つけることができないため、オーバーレイがエラーを引き起こします。
+関連する config では、SPI、SDMMC ディスクドライバ、および GPIO を有効にしています。この config がないと、サンプルが SD カードを見つけられないため、オーバーレイはエラーになります。
 
-Xiao拡張ボードシールドの関連部分を以下に示します：
+Xiao Expansion Board シールドの関連部分を以下に示します：
 
 ```
 &xiao_spi {
@@ -588,35 +592,35 @@ Xiao拡張ボードシールドの関連部分を以下に示します：
 };
 ```
 
-前述のように、`&xiao_d 2` ピンマッピングは、`&xiao_d` ピン設定をサポートしている限り、使用するボードに関係なく D2 ピンを選択できるようにするために使用されます。
+前述のように、`&xiao_d 2` ピンマッピングは、ボードが `&xiao_d` ピン設定をサポートしている限り、使用するボードに関係なく D2 ピンを選択できるようにするために使用されます。
 
-#### Grove - 温湿度センサー (SHT31)
+#### Grove - Temperature and Humidity Sensor (SHT31)
 
-まずピンをはんだ付けし、Xiao RP2040 を拡張ボードに接続します。次に、Grove SHT31 と拡張ボード上の I2C ポートの 1 つの間に Grove コネクタケーブルを接続します。
+まずピンをはんだ付けし、Xiao RP2040 をエクスパンションボードに接続します。次に Grove コネクタケーブルを、Grove SHT31 とエクスパンションボード上の I2C ポートのいずれかの間に接続します。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/xiao_sht31.jpg" style={{width:500, height:'auto'}}/></div>
 
-この設定をテストするために、Zephyr の既存のサンプルを使用し、オーバーレイと設定ファイルで USB コンソールサポートを有効にします。
+このセットアップをテストするために、Zephyr に用意されている既存のサンプルを使用し、オーバーレイと conf で USB コンソールサポートを有効にします。
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスを書き込みます：
 
 ```
 west flash -r uf2
 ```
 
-モニターに接続：
+モニタに接続します：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-コンソールから返される結果が表示されます：
+コンソールから次のような結果が返されます：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -630,7 +634,7 @@ SHT3XD: 26.23 Cel ; 52.48 %RH
 SHT3XD: 26.24 Cel ; 52.30 %RH
 ```
 
-この例を少し詳しく見て、なぜ動作するのかを理解しましょう：
+なぜこれが動作するのか、このサンプルを少し掘り下げてみましょう：
 
 ```
  &xiao_i2c {
@@ -641,15 +645,15 @@ SHT3XD: 26.24 Cel ; 52.30 %RH
  };
 ```
 
-アプリオーバーレイファイルは、さまざまなボードコンポーネントをセットアップするために使用されます。このファイルを使用することで、SHT31の例を活用できます。オーバーレイが[サンプルロジック](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c)に対して、私たちのボード用にセンサーを設定する方法を通知するためです。
+app オーバーレイファイルは、さまざまなボードコンポーネントを設定するために使用されます。このファイルを使用することで、オーバーレイが [サンプルロジック](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) に対して、ボード用にセンサをどのように設定するかを知らせるため、SHT31 のサンプルを利用できます。
 
-#### 1.69インチLCDディスプレイモジュール、240×280解像度、SPIインターフェース
+#### 1.69inch LCD Display Module, 240×280 Resolution, SPI Interface
 
-この例では、SPIを使用して240x280解像度の1.69インチLCDに接続します。
+この例では、SPI を使用して 240x280 解像度の 1.69 インチ LCD に接続します。
 
-まず、以下の画像をガイドとして使用してボードをLCDスクリーンに接続してください（この場合はXiao RP2040を使用していますが、接続には同じピンレイアウトが使用されます）。
+まず、次の画像をガイドとして使用してボードを LCD 画面に接続します（この例では Xiao RP2040 を使用していますが、ここでの接続には同じピン配置が使用されます）。
 
-| 1.69インチLCD SPIディスプレイ| XIAO RP2040 |
+| 1.69-inch LCD SPI Display| XIAO RP2040 |
 | ------------- | ------------------------- |
 | VCC | 3V3 |
 | GND | GND |
@@ -662,32 +666,32 @@ SHT3XD: 26.24 Cel ; 52.30 %RH
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
-次に、ハードウェアの準備ができたら、フラッシュ用のuf2ファイルをビルドできます：
+次に、ハードウェアの準備ができたら、書き込み用の uf2 ファイルをビルドします：
 
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
-ブートローダーモードに入り、デバイスをフラッシュします：
+ブートローダーモードに入り、デバイスを書き込みます：
 
 ```
 west flash -r uf2
 ```
 
-新しいファームウェアが配置されると、デバイスは以前に拡張ボードで見たのと同じデモ画面を表示しますが、今度はSPI経由のカラーLCD用に更新されています。
+新しいファームウェアが書き込まれると、デバイスには、先ほどエクスパンションボードで見たのと同じデモ画面が表示されますが、今度は SPI 経由のカラー LCD 用に更新されています。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/spi_lcd.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293558)によってサポートされています。
-- **Timの努力**に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- このプロジェクトは Seeed Studio の [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293558) によってサポートされています。
+- **Tim の尽力**に感謝します。あなたの成果は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただきありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,6 +1,6 @@
 ---
 description: ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3
-title: ESPHome Support on Seeed Studio XIAO ESP32C3
+title: Seeed Studio XIAO ESP32C3 における ESPHome サポート
 keywords:
   - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -9,34 +9,34 @@ sku: 113991054,110061541,102010633
 last_update:
   date: 10/20/2023
   author: Zachary
-createdAt: '2025-05-27'
+createdAt: '2023-10-19'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/XIAO-ESP32C3-for-ESPHome-Support/
 ---
 
-# XIAO ESP32C3をESPHome経由でHome Assistantに接続（全ポート対応）
+# XIAO ESP32C3 を ESPHome 経由で Home Assistant に接続する（すべてのポート対応）
 
 <!-- # ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3 -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png"style={{width:900, height:'auto'}}/></div>
 
-このwikiでは、[Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html)をHome Assistant上で動作するESPHomeに接続し、GroveモジュールをXIAO ESP32C3に接続した後にセンサーデータを送信/デバイスを制御する方法を段階的に説明します。ここでは**デジタル、アナログ、IIC、SPI、UART**を含むあらゆる種類のポートを適用しました。それでは始めましょう！
+この wiki では、[Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) を Home Assistant 上で動作する ESPHome に接続し、XIAO ESP32C3 に Grove モジュールを接続した後にセンサーデータを送信したりデバイスを制御したりする方法を、ステップバイステップで説明します。ここでは **デジタル、アナログ、IIC、SPI、UART** を含むあらゆる種類のポートを使用しています。それでは始めましょう！
 
-## ESPHomeとHome Assistantとは？
+## ESPHome と Home Assistant とは？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/2.png" style={{width:900, height:'auto'}}/></div>
 
-[ESPHome](https://esphome.io/)は、ESPボードの管理を可能な限りシンプルにすることを目的としたツールです。YAML設定ファイルを読み込み、ESPデバイスにインストールするカスタムファームウェアを作成します。ESPHomeの設定に追加されたデバイスやセンサーは、Home AssistantのUIに自動的に表示されます。ESPHomeは、デバイスをHome Assistantに接続してデータを送信するのに役立ちます。
+[ESPHome](https://esphome.io/) は、ESP ボードの管理をできるだけ簡単にすることを目的としたツールです。YAML 設定ファイルを読み込み、ESP デバイスにインストールされるカスタムファームウェアを作成します。ESPHome の設定に追加されたデバイスやセンサーは、自動的に Home Assistant の UI に表示されます。ESPHome を使うことで、Home Assistant デバイスに接続してデータを送信できます。
 
 ## ハードウェアの準備
 
-制御ボードとしてXIAO ESP32C3を使用し、ハードウェアとして[reRouter](https://www.seeedstudio.com/reRouter-CM4102032-p-5734.html)を使用し、複数のGroveセンサーと組み合わせています。
+制御ボードとして XIAO ESP32C3 を使用し、ハードウェアとしては [reRouter](https://www.seeedstudio.com/reRouter-CM4102032-p-5734.html) を使用し、複数の Grove センサーを接続します。
 
 <table align="center">
   <tbody><tr>
       <th>Seeed Studio XIAO ESP32C3</th>
       <th>Seeed Studio Expansion Board</th>
-      <th>Home Assistantデバイス</th>
+      <th>Home Assistant デバイス</th>
     </tr>
     <tr>
       <td><div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:100, height:'auto'}}/></div></td>
@@ -46,17 +46,17 @@ url: https://wiki.seeedstudio.com/ja/XIAO-ESP32C3-for-ESPHome-Support/
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Check More 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> もっと見る 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -64,20 +64,20 @@ url: https://wiki.seeedstudio.com/ja/XIAO-ESP32C3-for-ESPHome-Support/
 
 **Grove センサー**
 
-- [Grove - 温湿度センサー (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
-- [Grove -スマート空気品質センサー (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html)
-- [Grove - アナログマイクロフォン](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)
-- [Grove - デジタルPIRセンサー](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)
+- [Grove - Temperature and Humidity Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Grove -Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html)
+- [Grove - Analog Microphone](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)
+- [Grove - Digital PIR Sensor](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)
 
 ## ソフトウェアの準備
 
-### Home Assistantのインストール
+### Home Assistant をインストールする
 
-Home Assistantが既に稼働していることを確認してください。[製品](https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-)にHome Assistantをフラッシュする方法を紹介する複数のwikiがあります。私はRaspberry Pi CM4を搭載したreRouterを使用しているので、[公式のものを直接使用してOSをreRouterにフラッシュできます](https://www.home-assistant.io/installation/raspberrypi)。
+Home Assistant がすでに動作していることを確認してください。ここでは、Home Assistant を[製品](https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-)に書き込む方法を紹介する複数の wiki があります。私は Raspberry Pi CM4 搭載の reRouter を使用しているので、[公式の手順をそのまま使って OS を reRouter に書き込むことができます](https://www.home-assistant.io/installation/raspberrypi)。
 
-### Home AssistantにESPHomeをインストール
+### Home Assistant に ESPHome をインストールする
 
-ESPHomeは**Home Assistantアドオン**として利用でき、アドオンストアから簡単にインストールできます。
+ESPHome は **Home Assistant アドオン** として利用可能で、アドオンストアから簡単にインストールできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/1.png" style={{width:900, height:'auto'}}/></div>
 
@@ -92,11 +92,11 @@ ESPHomeは**Home Assistantアドオン**として利用でき、アドオンス�
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/5.png" style={{width:300, height:'auto'}}/></div> -->
 
-- **ステップ1.** **INSTALL**をクリック
+- **Step 1.** **INSTALL** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/2.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ2.** すべてのオプションを有効にして**START**をクリック
+- **Step 2.** すべてのオプションを有効にして **START** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
@@ -104,41 +104,41 @@ ESPHomeは**Home Assistantアドオン**として利用でき、アドオンス�
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/8.png"style={{width:700, height:'auto'}}/></div> -->
 
-ESPHomeが正常に読み込まれると、以下のウィンドウが表示されます
+ESPHome が正常に読み込まれると、次のウィンドウが表示されます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div>
 
-## はじめに
+## 入門ガイド
 
-すべてのソフトウェアとハードウェアの準備が整ったら、開始できます。
+ソフトウェアとハードウェアの準備がすべて整ったら、作業を開始できます。
 
 ### 1. Seeed Studio XIAO ESP32C3 を ESPHome に追加する
 
-- **ステップ 1.** **+ NEW DEVICE** をクリックします
+- **Step 1.** **+ NEW DEVICE** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/5.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 2.** CONTINUE をクリックします
+- **Step 2.** CONTINUE をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/6.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 3.** デバイスの **名前** を入力し、**ネットワーク名** や **パスワード** などのWiFi認証情報を入力します。その後、**NEXT** をクリックします
+- **Step 3.** デバイスの **Name** を入力し、**Network name** と **Password** などの WiFi 認証情報を入力します。その後 **NEXT** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/7.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 4.** **ESP32-C3** を選択してクリックします
+- **Step 4.** **ESP32-C3** を選択してクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/8.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 5.** このボードを手動で設定するため、**SKIP** をクリックします
+- **Step 5.** このボードは手動で設定するため、**SKIP** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/14.png" style={{width:400, height:'auto'}}/></div>
 
-- **ステップ 6.** 新しく作成されたボードの下にある **EDIT** をクリックします
+- **Step 6.** 新しく作成されたボードの下にある **EDIT** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/9.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 7.** これにより **YAML** ファイルが開き、このファイルはすべてのボード設定を行うために使用されます。**esp32** の下の内容を以下のように編集します
+- **Step 7.** これにより **YAML** ファイルが開き、このファイルを使用してすべてのボード設定を行います。**esp32** の下の内容を次のように編集します
 
 ```
 esphome:
@@ -174,102 +174,106 @@ wifi:
     password: "Your Password"
 ```
 
-:::note ここでは、ESP32用の最新バージョンの[Arduinoコア](https://github.com/espressif/arduino-esp32/releases)と[PlatformIO用のESP32サポート](https://github.com/platformio/platform-espressif32/releases)を使用しています
+:::note ここでは、ESP32 用の最新バージョンの [Arduino core](https://github.com/espressif/arduino-esp32/releases) と [PlatformIO 向け ESP32 サポート](https://github.com/platformio/platform-espressif32/releases) を使用しています
 :::
 
-- **ステップ8.** **SAVE**をクリックし、次に**INSTALL**をクリックします
+- **Step 8.** **SAVE** をクリックし、その後 **INSTALL** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/10-2.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ9.** USB Type-Cケーブルの一端をSeeed Studio XIAO ESP32C3に接続し、もう一端をreRouter CM4 1432のUSBポートの1つに接続します
+- **Step 9.** USB Type-C ケーブルの一方を Seeed Studio XIAO ESP32C3 に、もう一方を reRouter CM4 1432 の USB ポートのいずれかに接続します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ10.** **ESPHome Dashboardを実行しているコンピューターに接続**をクリックします
+- **Step 10.** **Plug into the computer running ESPHome Dashboard** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/12-1.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ11.** 接続されたポートを選択します。```/dev/ttyACM0```はreRouter CM4 1432に接続されているため、```/dev/ttyACM1```である可能性が高いです
+- **Step 11.** 接続されているポートを選択します。```/dev/ttyACM0``` は reRouter CM4 1432 に接続されているため、```/dev/ttyACM1``` である可能性が高いです
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/13-1.png" style={{width:900, height:'auto'}}/></div>
 
 :::tip
-2.4GHz Wi-Fiを使用することをお勧めします
+2.4GHz Wi-Fi を使用することをおすすめします
 :::
 
-これで、必要なボードパッケージがすべてダウンロードされ、ESPHomeファームウェアがXIAO ESP32C3にフラッシュされます。フラッシュが成功すると、以下の出力が表示されます。エラーが表示された場合は、XIAO ESP32C3を再起動するか、BOOTボタンを押しながらXIAO ESP32C3を接続してブートローダーモードに入ってください。
+これで、必要なすべてのボードパッケージがダウンロードされ、ESPHome ファームウェアが XIAO ESP32C3 に書き込まれます。書き込みが成功すると、次のような出力が表示されます。エラーが表示される場合は、XIAO ESP32C3 を再起動するか、BOOT BUTTON を押し続けたまま XIAO ESP32C3 を接続してブートローダーモードに入ってみてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/20.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ12.** 上記のウィンドウは、接続されたボードからのリアルタイムログを表示します。**STOP**をクリックして閉じます
+- **Step 12.** 上のウィンドウには、接続されたボードからのリアルタイムログが表示されます。**STOP** をクリックして閉じます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/14.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ13.** ボードのステータスが**ONLINE**と表示されている場合、ボードがWiFiに正常に接続されていることを意味します
+- **Step 13.** ボードステータスが **ONLINE** と表示されていれば、ボードが WiFi に正常に接続されていることを意味します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/15.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ14.** **Settings**に移動し、**Devices & Services**を選択します
+- **Step 14.** **Settings** に移動し、**Devices & Services** を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/19.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ15.** 発見された統合として**ESPHome**が表示されます。**CONFIGURE**をクリックします
+- **Step 15.** 検出されたインテグレーションとして **ESPHome** が表示されます。**CONFIGURE** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/20.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ16.** **SUBMIT**をクリックします
+- **Step 16.** **SUBMIT** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/21.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ17.** パスワードを入力します。これは**ステップ8**で確認できるAPIパスワードです
+- **Step 17.** パスワードを入力します。これは **STEP 8** で確認できる api パスワードです
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/22.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ18.** **FINISH**をクリックします
+- **Step 18.** **FINISH** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/23.png"style={{width:900, height:'auto'}}/></div>
 
-### 2. Groveモジュールを接続してデータを送信する
+### 2. Grove モジュールを接続してデータを送信する
 
-次に、GroveモジュールをSeeed Studio XIAO ESP32C3に接続して、Home Assistantを使用してセンサーデータを表示したり、デバイスを制御したりできるようにします！
+ここからは Grove モジュールを Seeed Studio XIAO ESP32C3 に接続し、Home Assistant を使ってセンサーデータを表示したり、デバイスを制御したりできるようにします。
 
-### 開発知識
+### 開発に関する知識
 
-#### XIAO拡張ボード
+#### XIAO 拡張ボード
 
-Seeed Studio XIAO ESP32C3でGroveモジュールを使用するために、[Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)を使用し、その上にXIAO ESP32C3を接続します。
+Seeed Studio XIAO ESP32C3 で Grove モジュールを使用するために、[Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) を使用し、その上に XIAO ESP32C3 を接続します。
 
-その後、ボード上のGroveコネクターを使用してGroveモジュールを接続できます。以下がピン定義です。
+その後、ボード上の Grove コネクタを使って Grove モジュールを接続できます。以下がピン定義です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:900, height:'auto'}}/></div>
 
 #### ピン定義
 
-Seeed Studio XIAO用GroveシールドのGroveコネクターにGroveモジュールを接続する際は、以下の図に従って適切な内部ピン番号を使用する必要があります。
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
+
+Grove Shield for Seeed Studio XIAO 上の Grove コネクタに Grove モジュールを接続する際は、下の図に従って、適切な内部ピン番号を使用する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/pin_map.png"style={{width:900, height:'auto'}}/></div>
 
-例えば、GroveモジュールをD0ポートに接続したい場合は、ESPHomeでピンをGPIO2として定義する必要があります
+例えば、Grove モジュールを D0 ポートに接続したい場合、ESPHome 上ではピンを GPIO2 として定義する必要があります
 
-#### ESPHomeとのGrove互換性リスト
+#### ESPHome との Grove 互換リスト
 
-現在、以下のGroveモジュールがESPHomeでサポートされています。[こちら](https://esphome.io/components/sensor/index.html#see-also)を確認してください
+現在、以下の Grove モジュールが ESPHome によってサポートされています。[こちら](https://esphome.io/components/sensor/index.html#see-also)を確認してください
 
-### 3. Grove接続とデータ送信
+### 3. Grove の接続とデータ送信
 
-次に、いくつかのGroveモジュールを選択し、それらがESPHomeとHome Assistantとどのように接続できるかを説明します。
+ここでは、いくつかの Grove モジュールを選択し、それらを ESPHome および Home Assistant とどのように接続できるかを説明します。
 
-#### Grove - 温湿度センサー（DHT20）
+#### Grove - Temperature and Humidity Sensor (DHT20)
 
-この温湿度センサーは、事前校正されたデジタル出力を提供します。独自の容量式センサー素子が相対湿度を測定し、温度は負の温度係数（NTC）サーミスターによって測定されます。優れた信頼性と長期安定性を備えています。購入は[こちら](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html)をクリックしてください。
+この Temperature&Humidity センサーは、事前にキャリブレーションされたデジタル出力を提供します。独自の容量式センサー素子が相対湿度を測定し、温度は負の温度係数（NTC）サーミスタによって測定されます。優れた信頼性と長期安定性を備えています。購入は[Click here](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html)から。
 
-##### セットアップ設定
+##### セットアップ構成
 
-- **ステップ1.** Grove - DHT20をSeeed Studio Expansion Base for XIAOのI2Cコネクターの1つに接続します
+- **Step 1.** Grove - DHT20 を Seeed Studio Expansion Base for XIAO 上の I2C コネクタのいずれかに接続します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/pic1.png"style={{width:300, height:'auto'}}/></div>
 
-- **ステップ2.** 以前に作成した**xiao-esp32c3.yaml**ファイル内で、ファイルを変更し、OTA経由でXIAO ESP32C3にプッシュします
+- **Step 2.** 先ほど作成した **xiao-esp32c3.yaml** ファイル内の内容を変更し、OTA で XIAO ESP32C3 に書き込みます
 
 ```
 esphome:
@@ -321,95 +325,95 @@ sensor:
     update_interval: 60s
 ```
 
-[DHT20コンポーネント](https://esphome.io/components/sensor/aht10)について詳しく学ぶことができます。ここでは、DHT20がI2Cプロトコルを使用して通信するため、I²Cバスコンポーネントを追加します。
+[DHT20 component](https://esphome.io/components/sensor/aht10) についての詳細はここから学ぶことができます。ここでは、DHT20 が I2C プロトコルを使用して通信するため、I²C Bus コンポーネントを追加しています。
 
 ##### ダッシュボードでの可視化
 
-- **ステップ1.** Home Assistantの概要ページで、3つの点をクリックし、**Edit Dashboard**をクリックします
+- **Step 1.** Home Assistant の Overview ページで、3 つの点をクリックし、**Edit Dashboard** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/35.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ2.** **+ ADD CARD**をクリックします
+- **Step 2.** **+ ADD CARD** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/36.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ3.** **By ENTITY**を選択し、**temperature**と入力して、**Temperature**の横の**チェックボックス**を選択します
+- **Step 3.** **By ENTITY** を選択し、**temperature** と入力して、**Temperature** の横の **check box** を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/37.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ4.** **ADD TO DASHBOARD**をクリックします
+- **Step 4.** **ADD TO DASHBOARD** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/38.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ5.** センサーデータをゲージとして可視化することもできます。**BY CARD**の下の**Gauge**をクリックします
+- **Step 5.** センサーデータをゲージとして可視化することもできます。**BY CARD** の下にある **Gauge** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/37-1.png"style={{width:900, height:'auto'}}/></div>
 
-これでHome Assistantダッシュボードは以下のようになります
+これで、Home Assistant のダッシュボードは次のようになります
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/39.png"style={{width:900, height:'auto'}}/></div>
 
-#### Grove - 光センサー(LS06-S)
+#### Grove - Light Sensor(LS06-S)
 
-Grove - 光センサー v1.2はアナログモジュールで、異なる範囲に変換できる様々な電気信号を出力できます。高感度で信頼性の高いフォトダイオードであるLS06-Sフォトレジスタを統合し、環境の光の強度を検出します。光測定、光検出、光制御スイッチに最適なArduino光センサーモジュールです。
+Grove - Light Sensor v1.2 はアナログモジュールであり、さまざまな電気信号を出力でき、それらは異なるレンジに変換できます。環境光の強度を検出するために、高感度で信頼性の高いフォトダイオードである LS06-S フォトレジスタを統合しています。光の測定、光検出、明るさによって制御されるスイッチに最適な Arduino 用光センサーモジュールです。
 
-購入は[こちら](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)をクリックしてください。
+購入は[Click here](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)から。
 
-##### セットアップ設定
+##### セットアップ構成
 
-- **ステップ1.** Grove - 光センサーをSeeed Studio Expansion Base for XIAOのアナログ/デジタルコネクタの1つに接続します
+- **Step 1.** Grove - Light sensor を Seeed Studio Expansion Base for XIAO 上の Analog/Digital コネクタのいずれかに接続します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/pic2.png"style={{width:300, height:'auto'}}/></div>
 
-- **ステップ2.** 以前に作成した**xiao-esp32c3.yaml**ファイル内で、ファイルを変更してOTA経由でXIAO ESP32C3にプッシュします
+- **Step 2.** 先ほど作成した **xiao-esp32c3.yaml** ファイル内の内容を変更し、OTA で XIAO ESP32C3 に書き込みます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/41-1.png"style={{width:900, height:'auto'}}/></div>
 
-うまくいけば、この結果が表示されます。
+うまくいけば、このような結果が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/42.png"style={{width:900, height:'auto'}}/></div>
 
 ##### ダッシュボードでの可視化
 
-- **ステップ1.** Home Assistantの概要ページで、3つの点をクリックし、**Edit Dashboard**をクリックします
+- **Step 1.** Home Assistant の Overview ページで、3 つの点をクリックし、**Edit Dashboard** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/35.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ2.** **+ ADD CARD**をクリックします
+- **Step 2.** **+ ADD CARD** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/36.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ3.** **By ENTITY**を選択し、**Light Sensor**を選択します
+- **Step 3.** **By ENTITY** を選択し、**Light Sensor** を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/43.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ4.** **PICK DIFFERENT CARD**を選択します
+- **Step 4.** **PICK DIFFERENT CARD** を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/44.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ5.** **Gauge**を選択します
+- **Step 5.** **Gauge** を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/45.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ6.** 最小値と最大値を設定します
+- **Step 6.** 最小値と最大値を設定します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/46.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ7.** ダッシュボードに光センサーの値が表示されます。
+- **Step 7.** すると、ダッシュボード上に照度センサーの値が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/47.png"style={{width:900, height:'auto'}}/></div>
 
-<!-- #### Grove - 温度・湿度センサー (BME680)
+<!-- #### Grove - Temperature and Humidity Sensor (BME680)
 
-Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680)は、温度、圧力、湿度、ガスを同時に測定できる多機能センサーです。BME680モジュールをベースにしており、GPS、IoTデバイス、またはこれら4つのパラメータが必要なその他のデバイスでこのセンサーを使用できます。購入は[こちら](https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html)をクリックしてください。
+The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple function sensor which can measure temperature, pressure, humidity and gas at the same time. It is based on the BME680 module and you can use this sensor in your GPS, IoT devices or other device which needs those four parameters. [Click here](https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html) for the purchase.
 
-##### セットアップ設定
+##### Setup Configuration
 
-- **ステップ1.** Grove - [Temperature, Humidity, Pressure and Gas Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)をSeeed Studio Expansion Base for XIAOのI2Cコネクタの1つに接続します
+- **Step 1.** Grove - [Temperature, Humidity, Pressure and Gas Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) を Seeed Studio Expansion Base for XIAO 上のいずれかの I2C コネクタに接続します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/30.jpg"style={{width:700, height:'auto'}}/></div>
 
-- **ステップ2.** 以前に作成した**xiao-esp32c3.yaml**ファイル内で、ファイルを変更してOTA経由でXIAO ESP32C3にプッシュします
+- **Step 2.** 以前に作成した **xiao-esp32c3.yaml** ファイル内の内容を変更し、OTA で XIAO ESP32C3 に書き込みます
 
 ```
 esphome:
@@ -465,59 +469,60 @@ sensor:
     update_interval: 60s
 ```
 
-[BME680コンポーネント](https://esphome.io/components/sensor/bme680)について詳しく学ぶことができます。これにより、BME280、BME680、BMP085、BMP280、AHT10、AHT20、AHT21ベースのセンサーを使用できます。ここでは、AHT20がI2Cプロトコルを使用して通信するため、I²Cバスコンポーネントを追加します。
+You can learn more about the [BME680 component](https://esphome.io/components/sensor/bme680) here. It allows you to use BME280, BME680, BMP085, BMP280, AHT10, AHT20 and AHT21 based sensors. Here we add the I²C Bus component because AHT20 communicates using I2C protocol.
 
-##### ダッシュボードでの可視化
+##### Visualize on Dashboard
 
-- **ステップ1.** Home Assistantの概要ページで、3つの点をクリックし、**Edit Dashboard**をクリックします
+- **Step 1.** Home Assistant の Overview ページで 3 つのドットをクリックし、**Edit Dashboard** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/31.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ2.** **+ ADD CARD**をクリックします
+- **Step 2.** **+ ADD CARD** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/32.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ3.** **By ENTITY**を選択し、**temperature**と入力して、**Temperature**の横の**チェックボックス**を選択します
+- **Step 3.** **By ENTITY** を選択し、**temperature** と入力して **Temperature** の横の **check box** を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/33.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ4.** **Humidity**、**Gas Resitance**、**Pressure**についても同じ手順を繰り返します
+- **Step 4.** **Humidity**、**Gas Resitance**、**Pressure** についても同じ操作を繰り返します
 
-- **ステップ5.** **CONTINUE**をクリックします
+- **Step 5.** **CONTINUE** をクリックします
 
-- **ステップ6.** **ADD TO DASHBOARD**をクリックします
+- **Step 6.** **ADD TO DASHBOARD** をクリックします
 
-これで、Home Assistantダッシュボードは以下のようになります
+これで Home Assistant のダッシュボードは次のようになります
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/34.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ7.** センサーデータをゲージとして可視化することもできます。**BY CARD**の下の**Gauge**をクリックします
+- **Step 7.** センサーデータをゲージとして可視化することもできます。**BY CARD** の下にある **Gauge** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/35.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ8.** ドロップダウンメニューから**Temperature**を選択します
+- **Step 8.** ドロップダウンメニューから **Temperature** を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/36.png"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ9.** **SAVE**をクリックします
+- **Step 9.** **SAVE** をクリックします
 
-- **ステップ10.** **Humidity**、**Gas Resitance**、**Pressure**についても同じ手順を繰り返します
+- **Step 10.** **Humidity**、**Gas Resitance**、**Pressure** についても同じ操作を繰り返します
 
-- これで、ダッシュボードは以下のようになります
+- これでダッシュボードは次のようになります
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/37.png"style={{width:900, height:'auto'}}/></div>
+ -->
 
-<!--#### Grove -スマート空気品質センサー (SGP41)
+<!-- #### Grove -Smart Air Quality Sensor (SGP41)
 
-SGP41デジタルガスセンサーは、SensirionのCMOSens®技術を使用しており、単一チップ上で完全で使いやすいセンサーシステムを提供します。室内空気中の揮発性有機化合物（VOC）と窒素酸化物（NOx）の濃度を測定し、デジタル出力信号を提供できます。さらに、このセンサーは優れた長期安定性と寿命を持っています。[こちらをクリック](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products)して購入してください。
+The SGP41 digital gas sensor uses Sensirion's CMOSens® technology, which offers a complete and easy-to-use sensor system on a single chip. It can measure the concentration of volatile organic compounds (VOCs) and nitrogen oxides (NOx) in indoor air and provides digital output signals. Additionally, this sensor has outstanding long-term stability and lifetime. [Click here](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products) for the purchase.
 
-##### セットアップ設定
+##### Setup Configuration
 
-- **ステップ1.** Grove - [Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products)をSeeed Studio Expansion Base for XIAOのI2Cコネクターの1つに接続します
+- **Step 1.** Grove - [Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products) を Seeed Studio Expansion Base for XIAO 上のいずれかの I2C コネクタに接続します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/38.jpg"style={{width:900, height:'auto'}}/></div>
 
-- **ステップ2.** 以前に作成した**xiao-esp32c3.yaml**ファイル内で、ファイルを変更し、OTA経由でXIAO ESP32C3にプッシュします
+- **Step 2.** 以前に作成した **xiao-esp32c3.yaml** ファイル内の内容を変更し、OTA で XIAO ESP32C3 に書き込みます
 
 ```
 esphome:
@@ -637,7 +642,7 @@ sensor:
     gas_resistance:
       name: "BME680 Gas Resistance"
     address: 0x76
-  
+
   - platform: sgp4x
     voc:
       name: "VOC Index"
@@ -647,12 +652,11 @@ sensor:
       humidity_source: bme680_hum
       temperature_source: bme680_temp
 ```
-
-**注意:** このセンサーは十分なデータサンプルを収集するために90サイクルを要し、現在のところ警告を回避することはできません。
+**Note:** このセンサーは十分なデータサンプルを収集するのに 90 サイクルを要し、現時点では警告を回避することはできません。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/38.png"style={{width:700, height:'auto'}}/></div>
 
-##### ダッシュボードでの可視化
+##### Visualize on Dashboard
 
 前述を参照してください。
 
@@ -660,13 +664,13 @@ sensor:
 
 <!-- #### Grove - Analog Microphone
 
-Grove - Analog Microphoneは、高性能SiSonic MEMS技術をベースとしており、オープンソースハードウェア業界に極めて低ノイズ、低電流、信頼性が高く、小型のマイクロフォンを提供し、厳しい条件下でも性能が向上しています。[こちらをクリック](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)して購入してください。
+The Grove - Analog Microphone is a based on high-performance SiSonic MEMS technology, offering an extremely-low-noise, low-current, reliable, and small microphone to opensource hardware industry, and it has improved performance under severe conditions. [Click here](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html) for a purchase.
 
-##### セットアップ設定
+##### Setup Configuration
 
-- **ステップ 1.** Grove - [Analog Microphone](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)をSeeed Studio Expansion Base for XIAOのA0コネクタに接続します
+- **Step 1.** Grove - [Analog Microphone](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html) を Seeed Studio Expansion Base for XIAO 上の A0 コネクタに接続します
 
-- **ステップ 2.** 以前に作成した**xiao-esp32c3.yaml**ファイル内で、ファイルを変更してOTA経由でXIAO ESP32C3にプッシュします
+- **Step 2.** 以前に作成した **xiao-esp32c3.yaml** ファイル内の内容を変更し、OTA で XIAO ESP32C3 に書き込みます
 ```
 esphome:
   name: xiao-esp32c3
@@ -719,7 +723,7 @@ binary_sensor:
     device_class: sound
 ```
 
-[Binary Sensor Component](https://esphome.io/components/binary_sensor/index.html#binary-sensor-component)について詳細情報を確認できます
+バイナリセンサーコンポーネントについての詳細情報は、[Binary Sensor Component](https://esphome.io/components/binary_sensor/index.html#binary-sensor-component)を参照してください。
 
 ##### ダッシュボードでの可視化
 
@@ -729,15 +733,15 @@ binary_sensor:
 
 <!-- #### Grove - Digital PIR Sensor
 
-PIRセンサーは人の動きを検出するIRセンサーです。このGrove Digital PIRセンサーはPIRファミリーの中で最も安価なPIRセンサーですが、素早い応答を提供し、「sig」ピンから高信号を生成することができます。購入については[こちらをクリック](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)してください。
+PIR センサーは、人の動きを検知するための IR センサーです。この Grove Digital PIR Sensor は PIR ファミリーの中で最も安価な PIR センサーですが、素早い応答が可能で、「sig」ピンから高い信号を出力することができます。購入するには[こちらをクリック](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)してください。
 
-##### セットアップ設定
+##### セットアップ構成
 
-- **ステップ1.** [Grove - Digital PIR Sensor](https://wiki.seeedstudio.com/ja/Grove-Digital-PIR-Sensor/)をSeeed Studio Expansion Base for XIAOのD7コネクタに接続します
+- **ステップ 1.** [Grove - Digital PIR Sensor](https://wiki.seeedstudio.com/ja/Grove-Digital-PIR-Sensor/) を Seeed Studio Expansion Base for XIAO の D7 コネクタに接続します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/42.jpg"style={{width:700, height:'auto'}}/></div>
 
-- **ステップ2.** 以前に作成した**xiao-esp32c3.yaml**ファイル内で、ファイルを変更してOTA経由でXIAO ESP32C3にプッシュします
+- **ステップ 2.** 以前に作成した **xiao-esp32c3.yaml** ファイル内の内容を変更し、OTA で XIAO ESP32C3 に書き込みます
 
 ```
 esphome:
@@ -791,27 +795,27 @@ binary_sensor:
     device_class: motion
 ```
 
-##### ダッシュボードで可視化
+##### ダッシュボードでの可視化
 
-前述の通りです。
+前述を参照してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png"style={{width:700, height:'auto'}}/></div> -->
 
-<!-- #### XIAO拡張ボード上のディスプレイ(SSD1306)
+<!-- #### Display(SSD1306) on XIAO Expansion Board
 
-##### セットアップ設定
+##### セットアップ構成
 
-- **ステップ1.** ディスプレイ用のフォントファイルをダウンロードします。参考として[こちらをクリック](https://esphome.io/components/display/index.html#fonts)してください
+- **ステップ 1.** ディスプレイ用のフォントファイルをダウンロードします。参考としては[こちらをクリック](https://esphome.io/components/display/index.html#fonts)してください
 
-- **ステップ2.** **設定** >>> **アドオン** >>> **ファイルエディタ**で「ファイルエディタ」をインストールします
+- **ステップ 2.** **Setting** >>> **Add-ons** >>> **File editor** から "File editor" をインストールします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/44.png"style={{width:700, height:'auto'}}/></div>
 
-- **ステップ3.** **ファイルエディタ**をクリック >>> パス：**config/esphome**を入力 >>> フォントファイルを**アップロード**します
+- **ステップ 3.** **File editor** をクリックし、パス **config/esphome** を入力してから、フォントファイルを **uoload** します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/45.png"style={{width:700, height:'auto'}}/></div>
 
-- **ステップ4.** 前に作成した**xiao-esp32c3.yaml**ファイル内で、ファイルを変更してOTA経由でXIAO ESP32C3にプッシュします
+- **ステップ 4.** 以前に作成した **xiao-esp32c3.yaml** ファイル内の内容を変更し、OTA で XIAO ESP32C3 に書き込みます
 
 ```
 esphome:
@@ -879,7 +883,7 @@ sensor:
     gas_resistance:
       name: "BME680 Gas Resistance"
     address: 0x76
-  
+
   - platform: sgp4x
     voc:
       name: "VOC Index"
@@ -894,25 +898,24 @@ binary_sensor:
     pin: GPIO20
     name: "PIR Sensor"
     device_class: motion
-    
+
   - platform: gpio
     pin: GPIO2
     name: "Sound level"
     device_class: sound
 ```
+ ESPHome の強力なレンダリングおよびディスプレイエンジンを備えた display コンポーネントについて、さらに詳しく知りたい場合は[こちらをクリック](https://esphome.io/components/display/#display-engine)して探索してください。
 
- ESPHomeの強力なレンダリングおよびディスプレイエンジンを搭載したディスプレイコンポーネントについて、[こちらをクリック](https://esphome.io/components/display/#display-engine)してさらに詳しく探索できます。
- 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/46.jpg"style={{width:700, height:'auto'}}/></div> -->
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
-- [Zacharyの努力](https://github.com/Seeed-Studio/wiki-documents/issues/603)に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- このプロジェクトは、Seeed Studio の [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によって支援されています。
+- [Zachary の尽力](https://github.com/Seeed-Studio/wiki-documents/issues/603)に感謝するとともに、あなたの成果は[こちら](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)で展示されます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

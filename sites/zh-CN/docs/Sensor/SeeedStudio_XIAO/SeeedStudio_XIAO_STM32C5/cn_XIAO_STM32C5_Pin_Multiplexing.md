@@ -1,5 +1,5 @@
 ---
-title:  使用 XIAO STM32C5 进行引脚复用
+title: 使用 XIAO STM32C5 进行引脚复用
 description: ''
 keywords:
   - xiao
@@ -13,7 +13,7 @@ last_update:
   date: 08/26/2026
   author: Zeller
 createdAt: '2026-08-26'
-updatedAt: '2026-09-01'
+updatedAt: '2026-10-12'
 url: https://wiki.seeedstudio.com/cn/xiao_stm32c5_pin_multiplexing/
 ---
 import Tabs from '@theme/Tabs';
@@ -46,18 +46,22 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概述
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
 XIAO STM32C5 具有丰富的引脚资源，原生支持使用 Digital、Analog、SPI 和 IIC 等多种标准外设接口进行开发。本文通过实际应用案例展示相关实现方法。
 
 :::tip
 
 本教程基于 PlatformIO 构建系统和 Zephyr RTOS 开发。
-如果你还不熟悉如何在 PlatformIO 下为 XIAO STM32C5 创建项目，可以跳转到 [Getting Started With Seeed Studio XIAO STM32C5](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#getting-started-with-platformio)
+如果你还不熟悉如何在 PlatformIO 下为 XIAO STM32C5 创建项目，可以跳转到 [Seeed Studio XIAO STM32C5 入门指南](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#getting-started-with-platformio)
 
 :::
 
 ## 数字 IO
 
-数字引脚主要通过输出高、低电平逻辑，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细说明 XIAO STM32C5 上数字引脚的底层驱动逻辑以及实际调用方式。
+数字引脚主要通过输出高低电平，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细说明 XIAO STM32C5 上数字引脚的底层驱动逻辑以及实际调用方式。
 
 ### 硬件准备
 
@@ -93,11 +97,11 @@ XIAO STM32C5 具有丰富的引脚资源，原生支持使用 Digital、Analog�
 
 ### 软件准备
 
-根据 XIAO STM32C5 的引脚定义，可以选择 D1 作为 Grove - LED Pack 的控制引脚。
+根据 XIAO STM32C5 的引脚图，可以选择 D1 作为 Grove - LED Pack 的控制引脚。
 
 :::tip
 
-- 关于 XIAO STM32C5 的引脚定义，请点击 [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#硬件概述) 查看详情。
+- 关于 XIAO STM32C5 的引脚图，请点击 [XIAO STM32C5 引脚列表](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#硬件概述) 查看详情。
 
 :::
 
@@ -203,11 +207,11 @@ PWM 是一种基于数字输出 GPIO 实现的定时波形输出功能。它以�
 
 #### 软件准备
 
-根据 XIAO STM32C5 的引脚定义，**D0** 可以作为 **Grove-Servo** 的控制引脚。
+根据 XIAO STM32C5 的引脚图，**D0** 可以作为 **Grove-Servo** 的控制引脚。
 
 :::tip
 
-- 关于 XIAO STM32C5 的引脚定义，请点击 [XIAO STM32C5 Pin List](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#硬件概述) 查看详情。
+- 关于 XIAO STM32C5 的引脚图，请点击 [XIAO STM32C5 引脚列表](https://wiki.seeedstudio.com/cn/xiao_stm32c5_getting_started/#硬件概述) 查看详情。
 
 :::
 
@@ -356,7 +360,7 @@ Seeed Studio Expansion Board Base for XIAO 配备了一个板载无源电磁蜂�
 
 :::
 
-1. 修改 `app.overlay` 文件。在 XIAO STM32C5 上，A3/D3 对应 PA3 引脚，该引脚通过 Seeed Studio Expansion Board Base for XIAO 上的 2N7002PW MOSFET 连接到板载 LET5020CS-03L 无源电磁蜂鸣器。通过在 DeviceTree 中将 PA3 配置为 AF1 复用功能，TIM2_CH4 可以输出周期为 250 μs、占空比为 50% 的 4 kHz PWM 信号来驱动蜂鸣器。
+1. 修改 `app.overlay` 文件。在 XIAO STM32C5 上，A3/D3 对应 PA3 引脚，该引脚通过 Seeed Studio Expansion Board Base for XIAO 上的 2N7002PW MOSFET 连接到板载 LET5020CS-03L 无源电磁蜂鸣器。通过在 DeviceTree 中将 PA3 配置为 AF1 复用功能，TIM2_CH4 可以输出周期为 250 μs、占空比为 50%、频率为 4 kHz 的 PWM 信号来驱动蜂鸣器。
 
 <details>
 <summary>app.overlay</summary>
@@ -488,7 +492,7 @@ int main(void)
 
 #### 结果
 
-当按下 Seeed Studio Expansion Board Base for XIAO 上的 Button 按键时，蜂鸣器会发声。打开串口监视器并将波特率设置为 **115200**，即可打印出对应的状态信息。
+当按下 Seeed Studio Expansion Board Base for XIAO 上的 Button 时，蜂鸣器会发声。打开串口监视器并将波特率设置为 **115200**，即可打印出对应的状态信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_4_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -622,13 +626,13 @@ int main(void)
 
 :::note
 
-在不同环境条件下，测量结果可能会有所差异。请以实际测量值为准。
+测量结果可能会在不同环境条件下有所差异，请以实际测量值为准。
 
 :::
 
 ## UART
 
-通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先设定的波特率来实现异步数据收发。在物理连线方面，只需将设备的 TX 和 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持收发同时进行，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
+通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先设定的波特率来实现数据的异步发送与接收。在物理连线方面，只需将设备的 TX 和 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持收发同时进行，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
 
 ### 硬件准备
 
@@ -789,13 +793,13 @@ int main(void)
 | D6 - TX      | RX    |
 | D7 - RX      | TX    |
 
-2. 你可以使用串口监视器查看运行时信息。也可以通过串口发送数据，接收到的数据会被打印到控制台。
+2. 你可以使用串口监视器查看运行时信息。也可以通过串口发送数据，接收到的数据会打印到控制台。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_4.png" style={{width:800, height:'auto'}}/></div>
 
 ## I2C
 
-I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线和 SDA 数据线进行寻址，实现多设备连接，常用于读取对传输速率要求较高的传感器数据，例如 IMU 和温湿度传感器，或用于 OLED 显示输出。
+I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线和 SDA 数据线进行寻址，实现多设备连接，常用于读取对传输速率要求较高的传感器数据，如 IMU 和温湿度传感器，或用于 OLED 显示输出。
 
 ### 硬件准备
 
@@ -904,7 +908,7 @@ int main(void)
 
 ## SPI
 
-SPI 是一种高速、同步且全双工的通信协议。与异步通信不同，SPI 依赖专用的 SCLK 时钟线来实现精确的数据同步。它通常采用由 MOSI、MISO 和片选 CS/SS 引脚组成的经典四线硬件拓扑结构。凭借独立的数据发送和接收通道以及较高的总线时钟频率，SPI 具备出色的数据吞吐能力，被广泛应用于对带宽要求较高的外设驱动场景，例如 Flash 和 SD 卡等大容量存储设备、高分辨率高刷新率屏幕显示以及高频采样传感器。
+SPI 是一种高速、同步且全双工的通信协议。与异步通信不同，SPI 依赖专用的 SCLK 时钟线来实现精确的数据同步。它通常采用由 MOSI、MISO 和片选 CS/SS 引脚组成的经典四线硬件拓扑结构。凭借独立的数据发送和接收通道以及较高的总线时钟频率，SPI 具备出色的数据吞吐能力，被广泛应用于对带宽要求较高的外设驱动场景，例如 Flash、SD 卡等大容量存储设备，高分辨率高刷新率的屏幕显示，以及高频采样传感器。
 
 接下来将演示一个 SD 卡示例：读取 SD 卡容量，并向其中写入名为 `XIAOTEST.TXT` 的文件，内容为 **Hello XIAO STM32C5**。
 
@@ -1184,17 +1188,17 @@ int main(void)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_6.jpg" style={{width:600, height:'auto'}}/></div>
 
-- 打开串口监视器查看文件写入信息。
+- 打开串口监视器以查看文件写入信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_6_1.png" style={{width:600, height:'auto'}}/></div>
 
-- 取出 SD 卡，将其插入连接到电脑的读卡器中，以检查写入的文件。
+- 取出 SD 卡并将其插入连接到电脑的读卡器中，以检查写入的文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_6_2.png" style={{width:600, height:'auto'}}/></div>
 
 ## RTC
 
-RTC（实时时钟）是一种低功耗硬件定时外设，用于持续保持精确的时间和日历信息。它通常由独立的低频时钟源驱动，例如 32.768 kHz 晶体振荡器，并且在主系统断电时可以通过后备电源域继续运行。RTC 外设通常支持秒、分、时、日期、星期、月份和年份，以及闹钟、周期性唤醒和时间戳等功能。RTC 广泛应用于需要长期计时、定时唤醒、事件记录和低功耗运行的场景，例如数据记录仪、工业控制器、智能家居设备和便携式仪器。
+RTC（实时时钟）是一种低功耗硬件定时外设，用于持续保持精确的时间和日历信息。它通常由一个独立的低频时钟源驱动，例如 32.768 kHz 晶体振荡器，并且在主系统断电时可以通过后备电源域继续运行。RTC 外设通常支持秒、分、时、日期、星期、月份和年份，以及闹钟、周期性唤醒和时间戳等功能。RTC 被广泛应用于需要长期计时、定时唤醒、事件记录和低功耗运行的场景，例如数据记录仪、工业控制器、智能家居设备和便携式仪器。
 
 Round Display for Seeed Studio XIAO 板载了 RTC 电路。下面演示 RTC 时钟功能在 XIAO STM32C5 上的工作情况。
 
@@ -1315,7 +1319,7 @@ CONFIG_MAIN_STACK_SIZE=4096
 CONFIG_PRINTK=y
 ```
 
-3. 编写 main.c，从 PCF8563 RTC 读取日期、时间和星期，并显示在圆形屏幕上。
+3. 编写 main.c，从 PCF8563 RTC 读取日期、时间和星期，并在圆形屏幕上显示。
 
 <details>
 
@@ -1610,7 +1614,7 @@ int main(void)
 
 ### 结果
 
-本示例通过 I²C 在圆形显示屏上的 PCF8563 RTC 上设置并读取日期和时间，并将结果显示在圆形 LCD 上。如果没有 RTC 备用电池，PCF8563 会在系统上电时保持计时，但在断电后不保证时间能够保留。安装 CR927 纽扣电池后，RTC 可以在主电源断开时继续运行，并在系统再次上电时保留正确时间。
+本示例通过 I²C 在圆形显示屏上的 PCF8563 RTC 中设置并读取日期和时间，并将结果显示在圆形 LCD 上。如果没有 RTC 备用电池，PCF8563 会在系统上电时保持计时，但在断电后不保证时间能够保留。安装 CR927 纽扣电池后，RTC 可以在主电源断开时继续运行，并在系统再次上电时保留正确时间。
 如果 RTC 中不包含有效时间，本示例会将其初始化为 2026-06-16 12:00:00 以便演示。请单独将 RTC 设置为当前时间；本示例不会自动与当前时间同步。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/pin_mux_7.gif" style={{width:400, height:'auto'}}/></div>

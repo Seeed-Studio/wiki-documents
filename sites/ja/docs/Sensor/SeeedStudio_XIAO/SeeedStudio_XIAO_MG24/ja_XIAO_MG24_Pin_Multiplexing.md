@@ -20,12 +20,16 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/top.png" style={{width:700, height:'auto'}}/></div>
 
-***XIAO MG24*** は、***22 本の汎用ピン***、***18 本のアナログピン***、***18 本のデジタルピン***、***2 系統の SPI***、***2 系統の UART***、***2 系統の I2C*** を備え、***すべてのピンで PWM*** をサポートしています。私たちが利用できる豊富な種類のピンを提供します。この Wiki では、これらのピンをどのように制御するかを解説し、効果的に活用できるようにします 😀!
+***XIAO MG24*** は、***22 本の汎用ピン***、***18 本のアナログピン***、***18 本のデジタルピン***、***2 系統の SPI***、***2 系統の UART***、***2 系統の I2C*** を備え、***すべてのピンで PWM*** をサポートしています。私たちが利用できる豊富な種類のピンが用意されています。この Wiki では、これらのピンをどのように制御するかを解説し、効果的に活用できるようにしていきます 😀。
 
 ## ハードウェア概要
 
 <Tabs>
 <TabItem value="XIAO MG24" label="XIAO MG24">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24" target="_blank" rel="noopener noreferrer">インタラクティブピン配置を確認</a>
+</div>
 
 ### XIAO MG24 表面
 
@@ -38,6 +42,10 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="XIAO MG24 Sense" label="XIAO MG24 Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=mg24sense" target="_blank" rel="noopener noreferrer">インタラクティブピン配置を確認</a>
+</div>
 
 ### XIAO MG24 Sense 表面
 
@@ -52,7 +60,7 @@ import TabItem from '@theme/TabItem';
 
 ## デジタル
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
   <tr>
@@ -117,17 +125,17 @@ void loop() {
 }
 ```
 
-### 結果グラフ
+### 実行結果
 
-すべてが問題なく進めば、プログラムを書き込んだ後に次のような動作が確認できるはずです。
+すべてが正常に動作していれば、プログラムを書き込んだ後、次のような動作が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/2.gif" style={{width:500, height:'auto'}}/></div>
 
-## デジタルを PWM として使用
+## デジタルピンを PWM として使用
 
-XIAO MG24(Sense) のすべての GPIO ピンは PWM 出力をサポートしています。そのため、任意のピンを使用して PWM を出力し、照明の明るさ調整やサーボ制御などを行うことができます。
+XIAO MG24(Sense) のすべての GPIO ピンは PWM 出力をサポートしています。そのため、任意のピンを使用して PWM を出力し、ライトの明るさ調整やサーボ制御などを行うことができます。
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
  <tr>
@@ -165,7 +173,7 @@ XIAO MG24(Sense) を拡張ボードに取り付け、その後 Grove ケーブ�
 
 ### ソフトウェア実装
 
-この例では、PWM 出力を使用してライトの明るさを制御する方法を示します。
+この例では、PWM 出力を使用してライトの明るさを制御する方法を紹介します。
 
 ```cpp
 int LED_pin = D0;    // LED connected to digital pin 10
@@ -194,7 +202,7 @@ void loop() {
 }
 ```
 
-### 結果グラフ
+### 実行結果
 
 プログラムが正常に動作すると、次のような動作結果が確認できます。
 
@@ -204,9 +212,9 @@ void loop() {
 
 XIAO MG24(Sense) 開発ボードには 12 ビット ADC が搭載されており、アナログセンサー値を高分解能で読み取ることができます。これにより、より正確な値を取得するのに役立ちます。
 
-次に、ADC の特性を反映するために 2 つのセンサーを選択します。
+次に、ADC の特性を反映するために 2 つのセンサーを選んで使用します。
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
  <tr>
@@ -367,7 +375,7 @@ float getAverage(uint32_t *buffer, uint32_t buf_size) {
 </Tabs>
 
 :::tip
-アナログ信号の読み取りに DMA を使用したい場合は、ライブラリのバージョンが 2.2.0 より新しい必要があることに注意してください。現在、新しいバージョンはまだ承認されていないため、手動でインストールする必要があります。
+DMA を使用してアナログ信号を読み取りたい場合は、ライブラリのバージョンが 2.2.0 より新しい必要があることに注意してください。現在、新しいバージョンはまだ承認されていないため、手動でインストールする必要があります。
 :::
 
 ### 結果グラフ
@@ -378,22 +386,22 @@ float getAverage(uint32_t *buffer, uint32_t buf_size) {
 
 ## UART
 
-Arduino IDE を使用する場合、Serial 通信は多くのプロジェクトで不可欠な要素です。Arduino IDE で Serial を使用するには、まず Serial Monitor ウィンドウを開く必要があります。これは、ツールバーの **Serial Monitor** アイコンをクリックするか、ショートカットキー **Ctrl+Shift+M** を押すことで行えます。
+Arduino IDE を使用する場合、シリアル通信は多くのプロジェクトで不可欠な要素です。Arduino IDE で Serial を使用するには、まずシリアルモニタウィンドウを開く必要があります。これは、ツールバーの **Serial Monitor** アイコンをクリックするか、ショートカットキー **Ctrl+Shift+M** を押すことで実行できます。
 
-### 一般的な Serial の使い方
+### 一般的なシリアルの使い方
 
-一般的によく使用される Serial 関数には次のようなものがあります：
+一般的によく使われる Serial 関数には次のようなものがあります：
 
 - `Serial.begin()` -- 指定したボーレートで通信を初期化します。
-- `Serial.print()` -- 読み取り可能な形式でデータを Serial ポートに送信します。
-- `Serial.write()` -- バイナリデータを Serial ポートに送信します。
-- `Serial.available()` -- Serial ポートから読み取ることができるデータがあるかどうかを確認します。
-- `Serial.read()` -- Serial ポートから 1 バイトのデータを読み取ります。
+- `Serial.print()` -- 読み取り可能な形式でデータをシリアルポートに送信します。
+- `Serial.write()` -- バイナリデータをシリアルポートに送信します。
+- `Serial.available()` -- シリアルポートから読み取ることができるデータがあるかどうかを確認します。
+- `Serial.read()` -- シリアルポートから 1 バイトのデータを読み取ります。
 - `Serial.flush()` -- 送信中のシリアルデータの送信完了を待機します。
 
 これらの Serial 関数を使用することで、Arduino ボードとコンピュータ間でデータを送受信でき、インタラクティブなプロジェクトを作成する多くの可能性が広がります。
 
-以下にサンプルプログラムを示します：
+以下はサンプルプログラムです：
 
 ```c
 void setup() {
@@ -421,8 +429,8 @@ void loop() {
 
 ### Serial1 の使用方法
 
-上記の XIAO MG24(Sense) のピン配置図に基づくと、特定のパラメータとして TX ピンと RX ピンがあることがわかります。
-これは通常の Serial 通信とは異なりますが、いくつかのパラメータを追加する必要がある点を除けば、使い方は非常によく似ています。
+上記の XIAO MG24(Sense) のピン図に示されている各種パラメータによると、TX ピンと RX ピンがあることがわかります。
+これは通常のシリアル通信とは異なりますが、いくつかのパラメータを追加する必要がある点を除けば、使い方は非常によく似ています。
 そこで次に、チップから引き出されたピンを使用してシリアル通信を行います。
 
 ```c
@@ -445,14 +453,14 @@ void loop() {
 
 ## I2C
 
-XIAO MG24(Sense) には I2C インターフェースがあり、多くのセンサーのデータ送信および解析、さらには一部の OLED 画面の使用に利用できます。
+XIAO MG24(Sense) には I2C インターフェースが搭載されており、多くのセンサーのデータ送信および解析や、いくつかの OLED 画面の使用に利用できます。
 
 ### ハードウェアの準備
 
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO MG24 Sense</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Grove OLED 搭載 Seeed Studio Expansion Base for XIAO</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -472,7 +480,7 @@ XIAO MG24(Sense) には I2C インターフェースがあり、多くのセン�
  </tr>
 </table>
 
-XIAO 拡張ボード上の OLED ディスプレイは I2C プロトコルを使用しており、ボード上の I2C 回路を介して XIAO の I2C インターフェースに接続されています。したがって、XIAO を拡張ボードに直接挿し込み、画面にコンテンツを表示するようにプログラムすることができます。
+XIAO 拡張ボード上の OLED ディスプレイは I2C プロトコルを使用しており、ボード上の I2C 回路を介して XIAO の I2C インターフェースに接続されています。そのため、XIAO を拡張ボードに直接挿し込み、画面にコンテンツを表示するようにプログラムできます。
 
 ### ソフトウェア実装
 
@@ -488,9 +496,9 @@ XIAO 拡張ボード上の OLED ディスプレイは I2C プロトコルを使�
     </a>
 </div>
 
-***ステップ 3. コードをコピーして Arduino IDE に貼り付け、アップロードします。***
+***ステップ 3. 以下のコードをコピーして Arduino IDE に貼り付け、アップロードします。***
 
-- 以下の zip ファイルをダウンロードします
+- 下記の zip ファイルをダウンロードします
 
 📄 **[ZIP]** [smiley_face ヘッダー](https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/smiley_face.zip)
 
@@ -600,13 +608,13 @@ XIAO MG24(Sense) チップには複数のペリフェラルが統合されてお
 
 ### インストール
 
-zip ライブラリをダウンロードしたら、Arduino IDE を開き、**Sketch > Include Library > Add .ZIP Library** をクリックします。先ほどダウンロードした zip ファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに **Library added to your libraries** と表示されます。これはライブラリが正常にインストールされたことを意味します。
+すでに zip 形式のライブラリをダウンロードしているので、Arduino IDE を開き、**Sketch > Include Library > Add .ZIP Library** をクリックします。先ほどダウンロードした zip ファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに **Library added to your libraries** と表示されます。これはライブラリが正常にインストールされたことを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
 ### ソフトウェア実装
 
-ライブラリを正しくダウンロードしてインストールすると、examples フォルダ内に **helloworld.ino** と **bgcolor.ino** という 2 つのサンプルプログラムが見つかります。`bgcolor.ino` は背景色を表示するサンプルで、デフォルトでは赤に設定しています。`helloworld.ino` は弊社ロゴのアニメーションを表示するサンプルで、このサンプルには bgcolor のサンプルが持つ効果も含まれています。
+ライブラリを正しくダウンロードしてインストールすると、examples フォルダ内に **helloworld.ino** と **bgcolor.ino** という 2 つのサンプルプログラムが見つかります。bgcolor.ino は背景色を表示するサンプルで、デフォルトでは赤に設定しています。helloworld.ino は弊社ロゴのアニメーションを表示するサンプルで、このサンプルには bgcolor のサンプルが持つ効果も含まれています。
 
 ```cpp
 #include <st7789v2.h>
@@ -670,12 +678,12 @@ void loop() {
 
 ## まとめ
 
-XIAO MG24 (Sense) のピンの基本的な機能を学びました。次は、内蔵センサーをさらに探ってみましょう。
+ここまでで、XIAO MG24 (Sense) のピンの基本的な機能を学びました。次は、内蔵センサーをさらに探っていきましょう。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

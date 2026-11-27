@@ -38,7 +38,7 @@ Algunos cables USB solo pueden suministrar energía y no pueden transferir datos
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" /></div>
 
-- Paso 2. Si el disco **RPI-RP2** se muestra en el PC y el LED de encendido de la Seeed Studio XIAO RP2040 se enciende, la conexión está completa.
+- Paso 2. Si el disco **RPI-RP2** se muestra en el PC y el LED de encendido de la Seeed Studio XIAO RP2040 está encendido, la conexión está completa.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
@@ -67,7 +67,7 @@ Ve a **Tools-> Board-> Boards Manager...**, escribe la palabra clave **arduino-p
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/arduino_2.png"/></div>
 
-- **Paso 4.** Selecciona tu placa y puerto. Si el puerto serie no se muestra, entra primero en modo BOOT. Consulta [Configuración de hardware](#Configuración-de-hardware).
+- **Paso 4.** Selecciona tu placa y puerto. Si el puerto serie no se muestra, entra primero en modo BOOT. Consulta [Configuración de hardware](#configuración-de-hardware).
 
 - **Paso 5.** Abre el ejemplo Blink navegando a **"File --> Examples --->01.Basics --> Blink"**
 
@@ -89,19 +89,23 @@ Ve a Tools > Port y selecciona el nombre del puerto serie de la Seeed Studio XIA
 
 <div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl5.png"/></div>
 
-Una vez subido, deberías poder ver que el LED verde (USER) del pin 25 de la placa parpadea una vez por segundo. Si es así, ¡enhorabuena! Esto significa que la conexión se ha realizado correctamente y ahora puedes explorar más proyectos con la Seeed Studio XIAO RP2040.
+Una vez subido, deberías poder ver que el LED verde (USER) del pin 25 en la placa parpadea una vez por segundo. Si es así, ¡enhorabuena! Esto significa que la conexión se ha realizado correctamente y ahora puedes explorar más proyectos con la Seeed Studio XIAO RP2040.
 
 :::note
-Si la carga del programa de Arduino falla, intenta mantener pulsado el botón "BOOT" y luego hacer clic en el botón "RUN". En este punto, la Seeed Studio XIAO RP2040 entrará en modo boot (tu ordenador montará un disco extraíble) y podrás volver a cargar el programa de Arduino.
+Si la carga del programa de Arduino falla, intenta mantener pulsado el botón "BOOT" y luego hacer clic en el botón "RUN". En este momento, la Seeed Studio XIAO RP2040 entrará en modo boot (tu ordenador montará un disco extraíble) y podrás volver a subir el programa de Arduino.
 :::
 
 ## Multiplexación de pines en la Seeed Studio XIAO RP2040
 
-La Seeed Studio XIAO RP2040 contiene 11 pines digitales, 4 pines analógicos, 11 pines PWM, 1 interfaz I2C, 1 interfaz UART, 1 interfaz SPI, 1 interfaz de pads de soldadura SWD. Vamos a proporcionar tutoriales sobre estas interfaces para que sean útiles para tus proyectos.
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explora el pinout interactivo</a>
+</div>
+
+La Seeed Studio XIAO RP2040 contiene 11 pines digitales, 4 pines analógicos, 11 pines PWM, 1 interfaz I2C, 1 interfaz UART, 1 interfaz SPI, 1 interfaz de pads de unión SWD. Vamos a proporcionar tutoriales sobre estas interfaces para que sean útiles para tus proyectos.
 
 ### Digital
 
-Conecta un pulsador al pin D0 y un LED al pin 25. Luego sube el siguiente código para controlar el ENCENDIDO/APAGADO del LED usando el pulsador.
+Conecta un pulsador al pin D0 y un LED al pin 25. Luego sube el siguiente código para controlar el encendido/apagado del LED usando el pulsador.
 
 :::warning
 Ten en cuenta que el voltaje de funcionamiento de la Seeed Studio XIAO RP2040 es de 3,3 V; si conectas el sensor incorrectamente a 5 V, la placa base puede no funcionar correctamente.
@@ -335,7 +339,7 @@ El LED RGB mostrará un color arcoíris.
 
 ### I2C
 
-Aquí vamos a conectar el Seeed Studio XIAO RP2040 con [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) a través de IIC y mostrar "Hello world".
+Aquí vamos a conectar la Seeed Studio XIAO RP2040 con [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) mediante IIC y mostrar "Hello world".
 
 **Conexión**:
 
@@ -388,7 +392,7 @@ Los resultados se muestran como:
 
 ### SPI
 
-Aquí vamos a conectar [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) a través de SPI y mostrar "Hello World". La pantalla OLED admite comunicación tanto IIC como SPI y, sin embargo, el modo de comunicación predeterminado es IIC. Es esencial [cambiar la función IIC a la función SPI](https://wiki.seeedstudio.com/es/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/) antes de comenzar.
+Aquí vamos a conectar [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) mediante SPI y mostrar "Hello World". La pantalla OLED admite comunicación tanto IIC como SPI y, sin embargo, el modo de comunicación predeterminado es IIC. Es esencial [cambiar la función IIC a la función SPI](https://wiki.seeedstudio.com/es/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/) antes de comenzar.
 
 **Conexión**:
 

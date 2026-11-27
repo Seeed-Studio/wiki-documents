@@ -1,6 +1,6 @@
 ---
-description: XIAO nRF52840 & Wio-SX1262 Kit を用いた Meshtastic
-title: XIAO nRF52840 & Wio-SX1262 Kit で始める
+description: XIAO nRF52840 & Wio-SX1262 キットに基づく Meshtastic
+title: XIAO nRF52840 & Wio-SX1262 キットで始める
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-kit.webp
 slug: /xiao_nrf52840&_wio_SX1262_kit_for_meshtastic
 sidebar_position: 2
@@ -30,7 +30,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 ### 特長
 
-- **多用途マイコン**：Nordic nRF52840 チップ（FPU 搭載、最大 64 MHz 動作）を採用し、複数の開発ポートを実装、Arduino / CircuitPython / Micropython に対応
+- **多用途マイコン**：FPU 搭載の Nordic nRF52840 チップを採用し、最大 64 MHz で動作。複数の開発ポートを実装し、Arduino / CircuitPython / Micropython をサポート
 - **強力な LoRa 性能**：Semtech SX1262 による長距離 LoRa 通信、868/915 MHz 帯をサポート。
 - **デュアルコア通信**：Bluetooth と LoRa のデュアルモードに対応し、クロスドメインな相互接続を実現。
 - サイズはわずか **8mm × 22mm × 23mm** で、一体型アンテナ設計を採用しています。
@@ -39,15 +39,19 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 | **製品** | **仕様** |  
 | :- | :- |  
-| [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) | **MCU：** Nordic nRF52840  <br /> **コア：** ARM® Cortex®-M4（FPU 搭載）、最大 64 MHz |  
-| [Wio-SX1262](https://www.seeedstudio.com/Wio-SX1262-for-XIAO-p-6379.html) | **LoRa モジュール：** Semtech SX1262  <br /> **周波数：** 862&#126;930MHz |  
+| [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) | **MCU:** Nordic nRF52840  <br /> **コア:** ARM® Cortex®-M4（FPU 搭載）、最大 64 MHz |  
+| [Wio-SX1262](https://www.seeedstudio.com/Wio-SX1262-for-XIAO-p-6379.html) | **LoRa モジュール:** Semtech SX1262  <br /> **周波数:** 862&#126;930MHz |  
 | **無線** | Bluetooth 5.0 / NFC |  
-| **インターフェース** | **XIAO nRF52840：**  <br /> - 1x UART、1x I²C、1x SPI（SX1262 に接続）  <br /> - 1x NFC、1x SWD、11x GPIO（PWM）  <br /> - 6x ADC  <br /> **Wio-SX1262：**  <br />  - 1x SPI（XIAO nRF52840 に接続） |  
-| **電源** | **入力電圧：**  <br /> - Type-C：5V  <br /> - バッテリー（BAT）：4.2V  <br /> **バッテリー充電電流：** 50mA / 100mA  <br /> **待機時消費電力：** &lt;5µA |  
+| **インターフェース** | **XIAO nRF52840:**  <br /> - 1x UART、1x I²C、1x SPI（SX1262 に接続）  <br /> - 1x NFC、1x SWD、11x GPIO（PWM）  <br /> - 6x ADC  <br /> **Wio-SX1262:**  <br />  - 1x SPI（XIAO nRF52840 に接続） |  
+| **電源** | **入力電圧:**  <br /> - Type-C: 5V  <br /> - バッテリー（BAT）: 4.2V  <br /> **バッテリー充電電流:** 50mA / 100mA  <br /> **待機時消費電力:** &lt;5µA |  
 | **動作温度** | -40°C &#126; 65°C |  
 | **寸法** | 21 x 17.8mm |  
 
 ### ピン配置
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/imageXIAO_nRF52840-2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -55,15 +59,15 @@ url: https://wiki.seeedstudio.com/ja/xiao_nrf52840&_wio_SX1262_kit_for_meshtasti
 
 ## はじめに
 
-XIAO nRF52840 & Wio-SX1262 Kit にはあらかじめ Meshtastic ファームウェアが書き込まれており、すぐに使い始めることができます。
+XIAO nRF52840 & Wio-SX1262 キットにはあらかじめ Meshtastic ファームウェアが書き込まれており、すぐに使い始めることができます。
 
-### ファームウェアを書き込む
+### ファームウェアの書き込み
 
 :::caution note
 ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に動作不能になる可能性があります。
 :::
 
-**動画による手順：**
+**動画による手順説明：**
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -71,32 +75,32 @@ XIAO nRF52840 & Wio-SX1262 Kit にはあらかじめ Meshtastic ファームウ�
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
 
-キットを PC に接続し、デバイスを `Seeed` → `Seeed XIAO nRF52840 Kit` に設定して最新のファームウェアを選択し、`Flash` をクリックします。
+キットを PC に接続し、デバイスを `Seeed` → `Seeed XIAO nRF52840 Kit` に設定し、最新のファームウェアを選択してから `Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-device.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/filw-flash.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode` をクリックすると、`XIAO-xxx` という名前のシリアルポートが表示されるので、それをクリックして接続します。`XIAO-xxx` という名前のドライブが表示されるはずです。
+`Enter DFU Mode` をクリックすると、`XIAO-xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、`XIAO-xxx` という名前のドライブが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
 UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピー完了後、デバイスが再起動するとファームウェアの書き込みが完了します。
 
-### ノード名を確認する
+### ノード名の確認
 
 [Meshtastic Flasher](https://flasher.meshtastic.org/) にアクセスし、`Serial Monitor` を開いて `nodenum` を検索し、対応するノード ID を確認します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
-### アプリ経由で接続する
+### アプリ経由で接続
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="iOS アプリ">
+<TabItem value="ios" label="IOS アプリ">
 
 - Bluetooth パネルで対象デバイスを選択します。
 
@@ -121,12 +125,12 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-### パラメータを設定する
+### パラメータの設定
 
-メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯を制御するもので、お住まいの地域に合わせて設定してください。
+メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御するもので、あなたの地域に合わせて設定する必要があります。
 
 <Tabs>
-<TabItem value="ios" label="iOS アプリ">
+<TabItem value="ios" label="IOS アプリ">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -152,7 +156,7 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び送信が許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスの LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
+デバイスの LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
 #### GNSS センサー設定
 
@@ -162,14 +166,14 @@ import TabItem from '@theme/TabItem';
 
 
 ### 互換性のある SX-1262
-[別売りの SX1262 を入手するにはこちらをクリック](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html)してください。
+[Click here](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html) から、単体販売されている SX1262 を入手できます。
 
 ## リソース
 ### ファイルリソース
 
 - **[PDF]** [Xiao リファレンスデザイン](https://files.seeedstudio.com/wiki/XIAO/XIAO-Reference-Design.pdf)
-- **[PDF]** [Seeed Studio XIAO nRF52840 BLE 通信距離テストレポート](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
-- **[ZIP]** [Seeed Studio XIAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
+- **[PDF]** [Seeed Studio XlAO nRF52840 BLE 通信距離テストレポート](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
+- **[ZIP]** [Seeed Studio XlAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
 - **[PDF]** [nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
 - **[PDF]** [Seeed Studio XIAO nRF52840 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
 - **[ZIP]** [Seeed Studio XIAO nRF52840 KiCAD ファイル](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)

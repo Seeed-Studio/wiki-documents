@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-09-22'
+updatedAt: '2026-09-21'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-SAMD21-MicroPython/
 ---
 
@@ -17,11 +17,11 @@ url: https://wiki.seeedstudio.com/pt-br/XIAO-SAMD21-MicroPython/
 
 ## **Introdução ao MicroPython**
 
-[MicroPython](https://github.com/micropython/micropython/wiki) é um interpretador Python com um recurso parcial de compilação de código nativo. Ele fornece um subconjunto de recursos do Python 3.5, implementado para processadores embarcados e sistemas com recursos limitados. Ele é diferente do CPython e você pode ler mais sobre as diferenças [aqui](https://github.com/micropython/micropython/wiki/Differences).
+[MicroPython](https://github.com/micropython/micropython/wiki) é um interpretador Python com um recurso parcial de compilação de código nativo. Ele fornece um subconjunto dos recursos do Python 3.5, implementado para processadores embarcados e sistemas com recursos limitados. Ele é diferente do CPython e você pode ler mais sobre as diferenças [aqui](https://github.com/micropython/micropython/wiki/Differences).
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-## Primeiros passos
+## Introdução
 
 Primeiro, vamos conectar o Seeed Studio XIAO SAMD21 ao computador e enviar um código simples em MicroPython para verificar se a placa está funcionando bem.
 
@@ -37,7 +37,7 @@ Primeiro, vamos conectar o Seeed Studio XIAO SAMD21 ao computador e enviar um c�
 
 :::tip
 
-- [**Modo Bootloader para a série XIAO SAMD21**](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/#enter-bootloader-mode)
+- [**Modo Bootloader para a Série XIAO SAMD21**](https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/#entrar-no-modo-de-bootloader)
 
 :::
 
@@ -49,7 +49,7 @@ Primeiro, vamos conectar o Seeed Studio XIAO SAMD21 ao computador e enviar um c�
 
 Basta acessar o site oficial do MicroPython e baixar o firmware mais recente
 
-    - [Firmware MicroPython da série XIAO SAMD21](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+    - [Firmware MicroPython da Série XIAO SAMD21](https://micropython.org/download/SEEED_XIAO_SAMD21/)
 
 
 Também é possível [compilar o seu próprio firmware](https://wiki.seeedstudio.com/pt-br/Compiling_MicroPython_for_embedded_devices/) para garantir segurança e suporte aos recursos mais recentes, mas isso não é necessário.
@@ -63,7 +63,7 @@ Também é possível [compilar o seu próprio firmware](https://wiki.seeedstudio
 
 - **Passo 2**. Clique no link abaixo para baixar o firmware e, em seguida, arraste e solte o arquivo `.uf2` no disco **Arduino** para concluir a gravação do firmware.
 
-    - [Firmware MicroPython da série XIAO SAMD21](https://micropython.org/download/SEEED_XIAO_SAMD21/)
+    - [Firmware MicroPython da Série XIAO SAMD21](https://micropython.org/download/SEEED_XIAO_SAMD21/)
 
 
 ### Configuração de software
@@ -86,7 +86,12 @@ Também é possível [compilar o seu próprio firmware](https://wiki.seeedstudio
 
 ### Tabela de atribuição de pinos da série SEEED XIAO SAMD21
 
-| Nome do pino MicroPython | GPIO XIAO SAMD21 (ID) | GPIO XIAO SAMD21 Plus (ID) | IRQ SAMD21 / Plus | ADC | Função |
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">Explorar pinout interativo do XIAO SAMD21</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">Explorar pinout interativo do XIAO SAMD21 Plus</a>
+</div>
+
+| Nome do pino MicroPython | XIAO SAMD21 GPIO (ID) | XIAO SAMD21 Plus GPIO (ID) | IRQ SAMD21 / Plus | ADC | Função |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |
 | D1 / A1 | PA04 (4) | PA04 (4) | 4 / 4 | 4 | GPIO, ADC |
@@ -136,7 +141,7 @@ Pressione e segure Ctrl + Shift + S ao mesmo tempo e, em seguida, selecione salv
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/6.jpg" /></div>
 
-### TESTE de GPIO (LED)
+### TESTE GPIO (LED)
 
 Precisamos preparar:
 
@@ -314,7 +319,7 @@ print(i2c.readfrom(0x51, 4))
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/8.png" /></div>
 
-A familiaridade com micropython permite que você faça mais, estamos ansiosos para criar mais valor para você. Fique à vontade para compartilhar seus projetos conosco também!
+A familiaridade com o micropython permite que você faça mais, estamos ansiosos para criar mais valor para você. Fique à vontade para compartilhar seus projetos conosco também!
 
 ### Suporte a DAC
 
@@ -376,7 +381,7 @@ Nosso parceiro **Neil** escreveu um programa de console de linha de comando para
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

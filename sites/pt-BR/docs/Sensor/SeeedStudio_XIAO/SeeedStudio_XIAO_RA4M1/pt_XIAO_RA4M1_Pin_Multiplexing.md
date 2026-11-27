@@ -18,6 +18,10 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_ra4m1_pin_multiplexing/
 
 ## Visão geral de hardware
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=ra4" target="_blank" rel="noopener noreferrer">Explore o pinout interativo</a>
+</div>
+
 Antes de começar, é essencial conhecer alguns parâmetros básicos do produto. A tabela a seguir fornece informações sobre as características do Seeed Studio XIAO RA4M1.
 
 ### Frente
@@ -103,7 +107,7 @@ Se tudo correr bem, após o upload do programa, você deverá ver o seguinte efe
 
 ## Digital como PWM
 
-Todos os pinos GPIO do XIAO RA4M1 suportam saída PWM. Portanto, você pode usar qualquer pino para gerar PWM a fim de ajustar o brilho de luzes, controlar servos e outras funções.
+Todos os pinos GPIO no XIAO RA4M1 suportam saída PWM. Portanto, você pode usar qualquer pino para gerar PWM a fim de ajustar o brilho de luzes, controlar servos e outras funções.
 
 ### Preparação de hardware
 
@@ -137,7 +141,7 @@ Todos os pinos GPIO do XIAO RA4M1 suportam saída PWM. Portanto, você pode usar
  </tr>
 </table>
 
-Instale o XIAO RA4M1 ou Sense na placa de expansão e, em seguida, conecte o Variable Color LED à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao seu computador por meio de um cabo USB-C.
+Instale o XIAO RA4M1 ou Sense na placa de expansão e conecte o Variable Color LED à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao computador por meio de um cabo USB-C.
 
 ### Implementação de software
 
@@ -170,7 +174,7 @@ void loop() {
 }
 ```
 
-Se o programa for executado com sucesso, você verá o seguinte efeito em funcionamento.
+Se o programa for executado com sucesso, você verá o seguinte efeito.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -376,15 +380,15 @@ void loop() {
 }
 ```
 
-Neste programa, primeiro incluímos a biblioteca `SoftwareSerial.h` para usar a serial por software. Em seguida, criamos um novo objeto SoftwareSerial chamado mySerial usando os pinos 2 e 3 como RX e TX, respectivamente.
+Neste programa, primeiro incluímos a biblioteca `SoftwareSerial.h` para usar software serial. Em seguida, criamos um novo objeto SoftwareSerial chamado mySerial usando os pinos 2 e 3 como RX e TX, respectivamente.
 
-Na função `setup()`, inicializamos tanto a serial de hardware (`Serial.begin()`) quanto a serial por software (`mySerial.begin()`).
+Na função `setup()`, inicializamos tanto a serial de hardware (`Serial.begin()`) quanto a serial de software (`mySerial.begin()`).
 
-Na função `loop()`, usamos a função `mySerial.available()` para verificar se há algum dado disponível para ser lido da serial por software. Se houver, lemos o byte recebido usando a função `mySerial.read()` e o armazenamos em uma variável chamada data. Em seguida, usamos as funções `Serial.print()` e `Serial.println()` para imprimir "Received data: " seguido do valor de data na serial de hardware.
+Na função `loop()`, usamos a função `mySerial.available()` para verificar se há algum dado disponível para ser lido da serial de software. Se houver, lemos o byte recebido usando a função `mySerial.read()` e o armazenamos em uma variável chamada data. Em seguida, usamos as funções `Serial.print()` e `Serial.println()` para imprimir "Received data: " seguido do valor de data na serial de hardware.
 
-Também usamos a função `mySerial.print()` para escrever "Hello World!" na serial por software. Isso enviará os dados do XIAO para o dispositivo conectado à porta serial por software.
+Também usamos a função `mySerial.print()` para escrever "Hello World!" na serial de software. Isso enviará os dados do XIAO para o dispositivo conectado à porta serial de software.
 
-Por fim, adicionamos uma função `delay()` para aguardar um segundo antes de repetir o loop.
+Por fim, adicionamos uma função `delay()` para esperar um segundo antes de repetir o loop.
 
 ## IIC
 
@@ -395,7 +399,7 @@ O XIAO RA4M1 possui uma interface I2C que pode ser usada para transmissão e an�
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO RA4M1</th>
-        <th>Seeed Studio Expansion Base para XIAO com Grove OLED</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -415,7 +419,7 @@ O XIAO RA4M1 possui uma interface I2C que pode ser usada para transmissão e an�
  </tr>
 </table>
 
-O display OLED na placa de expansão XIAO usa o protocolo I2C e é conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos simplesmente encaixar o XIAO na placa de expansão e programá-lo para exibir conteúdo na tela.
+O display OLED na placa de expansão XIAO usa o protocolo I2C e é conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos simplesmente conectar o XIAO à placa de expansão e programá-lo para exibir conteúdo na tela.
 
 ### Implementação de software
 
@@ -458,7 +462,7 @@ Na função `setup()`, inicializamos o display OLED usando a função `u8x8.begi
 
 Na função `loop()`, definimos a fonte usando a função `u8x8.setFont()` e especificamos a posição do cursor no display usando a função `u8x8.setCursor()`. Por fim, usamos a função `u8x8.print()` para exibir a string "Hello World!" no display OLED.
 
-Se você carregar um programa no XIAO RA4M1, verá conteúdo exibido na tela OLED na placa de expansão.
+Se você carregar um programa no XIAO RA4M1, verá o conteúdo exibido na tela OLED na placa de expansão.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/21.png" style={{width:800, height:'auto'}}/></div>
 
@@ -495,7 +499,7 @@ Depois de preparar o hardware conforme mencionado acima, use jumpers para conect
 
 ### Implementação de software
 
-Em seguida, usaremos o seguinte programa como exemplo para apresentar como usar a interface SPI para controlar a exibição da tela OLED.
+Em seguida, tomaremos o seguinte programa como exemplo para apresentar como usar a interface SPI para controlar a exibição da tela OLED.
 
 Instale a biblioteca u8g2.
 
@@ -529,7 +533,7 @@ void loop(void) {
 
 Na função `setup()`, a classe `U8G2_SH1107_128X128_1_4W_HW_SPI` é instanciada com os argumentos de construtor apropriados que especificam os pinos usados para chip select (cs), data/command (dc) e reset. Em seguida, a função `u8g2.begin()` é chamada para inicializar o display.
 
-Na função `loop()`, o display é atualizado com novo conteúdo usando as funções `u8g2.firstPage()`, `u8g2.setFont()` e `u8g2.drawStr()`. A função `u8g2.firstPage()` configura o buffer de exibição para escrita, enquanto `u8g2.nextPage()` exibe o conteúdo atualizado. O laço do-while garante que o conteúdo seja exibido continuamente até que o programa seja interrompido.
+Na função `loop()`, o display é atualizado com novo conteúdo usando as funções `u8g2.firstPage()`, `u8g2.setFont()` e `u8g2.drawStr()`. A função `u8g2.firstPage()` configura o buffer do display para escrita, enquanto `u8g2.nextPage()` exibe o conteúdo atualizado. O laço do-while garante que o conteúdo seja exibido continuamente até que o programa seja interrompido.
 
 No geral, este código demonstra como usar a biblioteca U8g2 para controlar um display OLED e exibir texto nele.
 
@@ -562,11 +566,11 @@ No geral, este código demonstra como usar a biblioteca U8g2 para controlar um d
  </tr>
 </table>
 
-#### Etapa 1. Prepare duas CAN Bus Breakout Board e XIAO RA4M1
+#### Passo 1. Prepare duas CAN Bus Breakout Board e XIAO RA4M1
 
-#### Etapa 2. Insira esses dois XIAO RA4M1 separadamente na CAN Bus Breakout Board
+#### Passo 2. Insira esses dois XIAO RA4M1 separadamente na CAN Bus Breakout Board
 
-#### Etapa 3. Prepare a conexão com fio DuPont
+#### Passo 3. Prepare a conexão com fio DuPont
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/36.png" style={{width:400, height:'auto'}}/></div>
 
@@ -592,7 +596,7 @@ A biblioteca inclui vários exemplos, incluindo:
 ### Implementação de software
 
 :::tip
-Não é permitido ligar e baixar programas simultaneamente para dois XIAO RA4M1, pois isso resultará em erros ao baixar pela porta serial. Depois de baixar para um, desconecte-o, ligue o outro XIAO RA4M1 para baixar o programa e, por fim, ligue ambos ao mesmo tempo para verificar a mensagem da porta serial
+Não é permitido ligar e baixar programas simultaneamente para dois XIAO RA4M1, pois isso resultará em erros ao baixar pela porta serial. Depois de baixar para um, desconecte-o, então ligue o outro XIAO RA4M1 para baixar o programa e, por fim, ligue os dois ao mesmo tempo para verificar a mensagem da porta serial
 :::
 
 **Código de escrita CAN**
@@ -781,7 +785,7 @@ void loop()
 ```
 
 :::tip
-Neste exemplo, você precisa soldar um dos pinos do terminal P1 da CAN Bus Breakout Board. Só então qualquer velocidade poderá ser usada; caso contrário, você só poderá usar baudrate CAN abaixo de 125.
+Neste exemplo, você precisa soldar um dos pinos do terminal P1 da placa de derivação do barramento CAN. Só então qualquer velocidade poderá ser usada; caso contrário, você só poderá usar uma taxa de baud CAN abaixo de 125.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/30.png" style={{width:600, height:'auto'}}/></div>
@@ -930,7 +934,7 @@ void loop()
 
 ```
 
-***Quando eu preciso conectar o resistor terminal?***
+***Quando preciso conectar o resistor terminal?***
 
 - 1. Comunicação de longa distância: Se o barramento CAN for longo (por exemplo, mais de 1 metro), resistores terminais devem ser conectados em ambas as extremidades do barramento para evitar problemas de comunicação causados por reflexão de sinal.
 - 2. Comunicação com múltiplos nós: Se vários nós estiverem conectados ao mesmo barramento CAN, os resistores terminais também são indispensáveis. Eles garantem a estabilidade de impedância do barramento, evitando assim a distorção do sinal.

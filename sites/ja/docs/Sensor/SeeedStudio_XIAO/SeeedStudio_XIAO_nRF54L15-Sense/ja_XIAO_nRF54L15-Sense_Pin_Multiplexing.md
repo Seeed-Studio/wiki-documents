@@ -11,14 +11,14 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2026-05-27'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-使いやすさのために、以下のピン多重化の例はすべて **PlatformIO** 上で行います。[XIAO nRF54L5](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/) の設定および使用方法ガイドについては、このリンクをクリックしてください。
+使いやすさのために、以下のピン多重化のサンプルはすべて **PlatformIO** 上で動作します。[XIAO nRF54L5](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/) の設定および使用方法については、このリンクをクリックしてください。
 
 :::tip
 VS Code をベースとして、nRF Connect SDK 上で以下のケースを使用したい場合は、提示された接続を参照し、`app.overlay` ファイルを追加して `prj.conf` 内の内容を変更してください。
@@ -27,6 +27,10 @@ VS Code をベースとして、nRF Connect SDK 上で以下のケースを使�
 
 :::
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15sense" target="_blank" rel="noopener noreferrer">インタラクティブ Pinout を試す</a>
+</div>
+
 ## デジタル
 
 ### ハードウェアの準備
@@ -34,7 +38,7 @@ VS Code をベースとして、nRF Connect SDK 上で以下のケースを使�
 <table align="center">
   <tr>
       <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Grove OLED 搭載 Seeed Studio Expansion Base for XIAO</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Relay</th>
   </tr>
   <tr>
@@ -143,7 +147,7 @@ int main(void)
 
 `static const struct gpio_dt_spec relay = GPIO_DT_SPEC_GET(DT_ALIAS(relay0), gpios);`
 
-- 同様に、このコード行は `relay0` という名前のリレー GPIO デバイスに関する情報を取得します。
+- 同様に、このコード行は `relay0` という名前のリレー GPIO デバイスの情報を取得します。
 
 **デバイスの準備完了チェック**
 
@@ -167,13 +171,13 @@ int main(void)
 
 `int button_state = gpio_pin_get_dt(&button);:` 各ループで、プログラムはボタンピンの現在のレベル状態を読み取ります。
 
-`if (button_state == 0):` このロジックはボタンが押されているかどうかをチェックします。多くの回路設計では、ボタンが押されるとピンが GND（グラウンド）に接続され、レベル 0（すなわち Low）になります。
+`if (button_state == 0):` このロジックはボタンが押されているかどうかを判定します。多くの回路設計では、ボタンが押されるとピンが GND（グラウンド）に接続され、レベル 0（すなわち Low）になります。
 
 `gpio_pin_set_dt(&relay, 1);:` ボタン状態が 0（押されている）の場合、リレーピンを 1（High）に設定し、リレーを閉じて接続されているデバイス（例：ランプ）をオンにします。
 
-`else:` ボタンが押されていない（状態が 1）場合は、`perform gpio_pin_set_dt(&relay, 0);` を実行してリレーピンを 0（Low）に設定し、リレーを開いて接続されているデバイスの電源を切ります。
+`else:` ボタンが押されていない（状態が 1）場合は、`perform gpio_pin_set_dt(&relay, 0);` を実行してリレーピンを 0（Low）に設定し、リレーを開放して接続されているデバイスの電源を切ります。
 
-`k_msleep(10);:` コードは各ループの最後に 10 ミリ秒の短いディレイを追加し、CPU がビジー状態になることなどを避けます。これは簡単なチャタリング対策であり、ボタンの物理的な揺れによる複数回のトリガーを防ぐとともに、消費電力も削減します。
+`k_msleep(10);:` 各ループの最後に 10 ミリ秒の短いディレイを追加し、CPU がビジー状態になることなどを避けます。これは簡単なチャタリング対策であり、ボタンの物理的な揺れによる複数回のトリガーを防ぐとともに、消費電力も削減します。
 
 ### 結果グラフ
 
@@ -350,23 +354,23 @@ int main(void)
 
 - ADC 構成：
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: このプリプロセッサディレクティブは、ADC チャネル定義を含む有効なオーバーレイファイルが存在することを保証するための Device Tree チェックです。これにより、ユーザーは特定のハードウェアに対して正しい構成を提供することが必須となります。
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: このプリプロセッサディレクティブは、ADC チャネル定義を含む有効なオーバーレイファイルが存在することを確認するための Device Tree チェックです。これにより、ユーザーは特定のハードウェアに対して正しい構成を提供することが必須となります。
 
-  - static const struct adc_dt_spec adc_channels[];: このコード部分は Zephyr の Device Tree を利用して、構成されたすべての ADC チャネルの情報を自動的に取得します。このアプローチにより、コードは異なるハードウェア間で手動の設定変更なしに柔軟かつ移植性の高いものになります。
+  - static const struct adc_dt_spec adc_channels[];: このコード部分は Zephyr の Device Tree を利用して、設定されたすべての ADC チャネルの情報を自動的に取得します。このアプローチにより、コードは異なるハードウェア間で手動の設定変更なしに柔軟かつ移植性の高いものになります。
 
   - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: adc_channels 配列のどのチャネルにポテンショメータが接続されているかを指定するマクロを定義します。
 
 - PWM 構成：
 
-  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: この行は Device Tree からエイリアス pwm_led に対応する PWM デバイス情報を取得します。これはハードウェアデバイスを検索・参照するための標準的な Zephyr の手法です。
+  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: この行は Device Tree からエイリアス pwm_led に対応する PWM デバイス情報を取得します。これはハードウェアデバイスを検索・参照するための Zephyr における標準的な方法です。
 
-  - #define PWM_PERIOD_NS 1000000UL: PWM 信号の周期を 1 ミリ秒（1,000,000 ナノ秒）として定義します。これは 1 kHz の周波数に相当し、LED の調光に適した、ちらつきが目に見えない程度に十分高い周波数です。
+  - #define PWM_PERIOD_NS 1000000UL: PWM 信号の周期を 1 ミリ秒（1,000,000 ナノ秒）として定義します。これは 1 kHz の周波数に相当し、LED の調光に適した、ちらつきが目視されない十分高い周波数です。
 
 **初期化とセットアップ**
 
 - ログ情報：
 
-  - LOG_INF("Starting Zephyr Potentiometer to PWM example...");: プログラムの開始時に情報ログメッセージを出力し、このサンプルが開始されたことをユーザーに通知します。
+  - LOG_INF("Starting Zephyr Potentiometer to PWM example...");: プログラム開始時に情報ログメッセージを出力し、このサンプルが開始されたことをユーザーに通知します。
 
 - ADC 初期化：
 
@@ -376,9 +380,9 @@ int main(void)
 
 - PWM 初期化：
 
-  - !device_is_ready(led.dev): ADC と同様に、この行は PWM デバイスが使用可能かどうかを確認します。使用可能でない場合はエラーをログに記録し、プログラムを終了します。
+  - !device_is_ready(led.dev): ADC と同様に、この行は PWM デバイスが使用可能かどうかを確認します。使用できない場合はエラーをログに記録し、プログラムを終了します。
 
-  - LOG_INF(...): PWM の周期と周波数に関する情報を出力し、ユーザーが設定内容を確認できるようにします。
+  - LOG_INF(...): PWM の周期および周波数に関する情報を出力し、ユーザーが設定内容を確認できるようにします。
 
 - ADC シーケンス構成：
 
@@ -395,17 +399,17 @@ int main(void)
 
   - int sensor_value = adc_raw_value;: 生の ADC 値を sensor_value 変数に代入します。
 
-- ADC 値から PWM デューティサイクルへのマッピング：
+- ADC 値から PWM デューティ比へのマッピング：
 
-  - uint32_t max_adc_raw: 取り得る生の ADC 値の最大値を計算します。
+  - uint32_t max_adc_raw: 可能な最大の生 ADC 値を計算します。
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: これはマッピング処理の中核となるロジックです。生の ADC 値（sensor_value）を PWM 周期（PWM_PERIOD_NS）の範囲に比例してスケーリングし、LED の明るさを調整するデューティサイクル値を算出します。
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: これはコアとなるマッピングロジックです。生の ADC 値（sensor_value）を PWM 周期（PWM_PERIOD_NS）の範囲に比例してスケーリングし、LED の明るさを調整するデューティサイクル値を取得します。
 
-- PWM デューティサイクルの設定：
+- PWM デューティサイクルの設定:
 
-  - pwm_set_dt(): この関数は新たに計算されたデューティサイクル（output_duty_ns）を PWM デバイスに適用し、LED の明るさを即座に変更します。
+  - pwm_set_dt(): この関数は、新しく計算されたデューティサイクル（output_duty_ns）を PWM デバイスに適用し、LED の明るさを即座に変化させます。
 
-- 遅延：
+- ディレイ:
 
   - k_msleep(100): プログラムは各ループの後に 100 ミリ秒一時停止します。これにより ADC 読み取りと PWM 更新の頻度が制御され、CPU 負荷の過剰な増加を防ぎ、安定したユーザー体験を提供します。
 
@@ -938,15 +942,15 @@ static Coordinates transform(Coordinates gps)
 
 - `gps_app` ログモジュール：
 
- -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` これは gps_app という名前のログモジュールを登録し、そのログレベルを INFO に設定します。これにより、Zephyr のロギングシステムを通じて情報を出力できるようになり、デバッグやモニタリングに役立ちます。
+ -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` gps_app という名前のログモジュールを登録し、そのログレベルを INFO に設定します。これにより、Zephyr のロギングシステムを通じて情報を出力できるようになり、デバッグやモニタリングに役立ちます。
 
 - 型定義とマクロ：
 
- -`UBYTE`, `UWORD`, `UDOUBLE:`これらは、変数の想定サイズを明確にすることでコードの可読性を向上させる、符号なし整数のカスタム型エイリアスです。
+ -`UBYTE`, `UWORD`, `UDOUBLE:`これらは、変数の想定サイズを明確にすることでコードの可読性を向上させる、カスタムの符号なし整数型エイリアスです。
 
-- `SENTENCE_SIZE, BUFFSIZE:` これらは、NMEA センテンスやより大きなデータバッファを格納するために使用されるバッファの固定サイズを定義します。
+- `SENTENCE_SIZE, BUFFSIZE:` NMEA センテンスやより大きなデータバッファを格納するために使用されるバッファの固定サイズを定義します。
 
-- `HOT_START, SET_NMEA_OUTPUT:` のようなマクロ：これらのマクロは、L76X GPS モジュールに送信されるさまざまな NMEA プロトコルコマンドを定義し、その動作モード、出力周波数、ボーレートなどを設定します。
+- `HOT_START, SET_NMEA_OUTPUT:` のようなマクロ：これらのマクロは、L76X GPS モジュールに送信されるさまざまな NMEA プロトコルコマンドを定義し、動作モード、出力周波数、ボーレートなどを設定します。
 
 - 構造体定義：
 
@@ -956,9 +960,9 @@ static Coordinates transform(Coordinates gps)
 
 - グローバル変数と定数：
 
-  - `buff_t:` BUFFSIZE サイズのグローバルバッファで、生の UART データを格納するために使用されます。
+  - `buff_t:` 生の UART データを格納するための、サイズ BUFFSIZE のグローバルバッファです。
 
- -` GPS: `解析された GPS データを保持するためのグローバルな GNRMC 構造体インスタンスです。
+ -` GPS: `解析された GPS データを保持するための、グローバルな GNRMC 構造体インスタンスです。
 
 - `uart_dev:` UART 通信に使用される UART デバイス構造体へのポインタです。
 
@@ -966,9 +970,9 @@ static Coordinates transform(Coordinates gps)
 
 - `uart_callback() 関数:`
 
-  - これは UART がデータを受信したときにトリガーされる UART 割り込みコールバック関数です。
+  - UART がデータを受信したときにトリガーされる UART 割り込みコールバック関数です。
 
-  - この関数は UART FIFO を 1 バイトずつ読み取り、改行文字 \n が検出されたときにデータを 1 つの完全なセンテンスとして処理します。
+  - 関数は UART FIFO を 1 バイトずつ読み取り、改行文字 \n が検出されたときにデータを 1 つの完全なセンテンスとして処理します。
 
 **メイン関数 main()**
 
@@ -978,17 +982,17 @@ static Coordinates transform(Coordinates gps)
 
   - `uart_dev = DEVICE_DT_GET:` UART デバイスハンドルを取得し、device_is_ready() を使用してデバイスが使用可能かどうかを確認します。
 
-  - `uart_irq_callback_user_data_set()`と `uart_irq_rx_enable():`これらは UART 受信割り込みを設定および有効化し、uart_callback 関数を割り込みハンドラとして登録して GPS データの非同期受信を実現します。
+  - `uart_irq_callback_user_data_set()`と `uart_irq_rx_enable():` これらは UART 受信割り込みを設定および有効化し、uart_callback 関数を割り込みハンドラとして登録して GPS データの非同期受信を実現します。
 
 - GPS モジュールの初期化：
 
-  - `L76X_Send_Command(SET_NMEA_OUTPUT):`GNRMC など、指定された NMEA センテンスのみを出力するように GPS モジュールを設定するコマンドを送信し、不要なデータトラフィックを削減します。
+  - `L76X_Send_Command(SET_NMEA_OUTPUT):` GNRMC など、指定した NMEA センテンスのみを出力するように GPS モジュールを設定するコマンドを送信し、不要なデータトラフィックを削減します。
 
  -` L76X_Send_Command(SET_POS_FIX_1S): `GPS モジュールの位置更新頻度を 1 秒に設定します。
 
 - メインループ：
 
-  - ループは無限に実行され、常に new_gnrmc_available フラグをチェックします。
+  - ループは無限に実行され、new_gnrmc_available フラグを継続的にチェックします。
 
   - フラグが true の場合、latest_gnrmc から最新の GPS センテンスを buff_t にコピーし、その後 L76X_Gat_GNRMC() を呼び出してデータを解析します。
 
@@ -996,9 +1000,9 @@ static Coordinates transform(Coordinates gps)
 
   - GPS.Status が 0 の場合、「positioning failed」というメッセージを出力します。
 
-  - 新しいデータがない場合は、「No new GNRMC data available.」と出力します。
+  - 新しいデータがない場合、「No new GNRMC data available.」と出力します。
 
-  - k_msleep(2000): 各ループの後にプログラムを 2 秒間一時停止し、出力頻度を制御します。
+  - k_msleep(2000): 各ループの後に 2 秒間プログラムを一時停止し、出力頻度を制御します。
 
 ### 結果グラフ
 
@@ -1013,7 +1017,7 @@ static Coordinates transform(Coordinates gps)
 
 ## I2C
 
-### ハードウェアの準備
+### ハードウェア準備
 
 <div class="table-center">
  <table align="center">
@@ -1223,32 +1227,32 @@ int main(void) {
 
   - `cfb_get_font_size():`この関数は利用可能なフォントをループし、適切なフォントを探します。
 
-  - コードは` 8x8 `ピクセルフォントを優先します。これは一般的で読みやすい小さなフォントだからです。
+  - コードは` 8x8 `ピクセルフォントを優先します。これは一般的で読みやすい小さなフォントであるためです。
 
   - `8x8`フォントが見つからない場合は、フォールバックとして最初に見つかったサイズが 0 でないフォントを選択します。
 
-  - `cfb_framebuffer_set_font(dev, chosen_font_idx):` 適切なフォントが見つかると、それがフレームバッファの現在のフォントとして設定されます。
+  - `cfb_framebuffer_set_font(dev, chosen_font_idx):` 適切なフォントが見つかると、それがフレームバッファ用の現在のフォントとして設定されます。
 
 - `print_text_by_row_col()` 関数：
 
- -` int pixel_x = col * font_width; `と `int pixel_y = row * font_height;:` この関数はテキストの行・列座標（文字単位）をピクセル座標に変換し、テキストの位置決めを直感的にします。
+ -` int pixel_x = col * font_width; `と `int pixel_y = row * font_height;:` この関数はテキストの行・列座標（文字単位）をピクセル座標に変換し、テキストの位置指定をより直感的にします。
 
 - `cfb_print():` これは指定したピクセル位置にテキストを印字するために使用される、CFB ライブラリの中核となる関数です。
 
 **メインループ**
 コードの中核ロジックは、無限 `while (1)`ループ内で実行されます：
 
-- 画面のクリア：`cfb_framebuffer_clear(dev, false):` 各ループの冒頭で、ディスプレイをすぐにリフレッシュせずにフレームバッファをクリアします。これにより、複数の要素を一度に描画でき、画面のちらつきを防ぎます。
+- 画面のクリア：`cfb_framebuffer_clear(dev, false):` 各ループの冒頭で、ディスプレイを即座にリフレッシュせずにフレームバッファをクリアします。これにより、複数の要素を一度に描画でき、画面のちらつきを防ぎます。
 
 - テキストの表示：
 
   - 2 つの文字列 `line1_text` と `line2_text` が定義されています。
 
-  - print_text_by_row_col(): カスタム関数を使用して、これら 2 行のテキストを画面上の指定された行と列の位置に表示します。1 行目は `(1, 2)` に、2 行目は `(2, 1)` に表示されます。
+  - print_text_by_row_col(): このカスタム関数を使用して、これら 2 行のテキストを画面上の指定された行と列の位置に表示します。1 行目は `(1, 2)` に、2 行目は `(2, 1)` に表示されます。
 
-  - ディスプレイの更新：`cfb_framebuffer_finalize(dev)`: この関数は、フレームバッファからディスプレイへ保留中の描画コマンドを一括送信し、すべてのコンテンツを同時に表示させます。
+  - ディスプレイの更新：`cfb_framebuffer_finalize(dev)`: この関数は、フレームバッファからディスプレイへ保留中の描画コマンドを一括送信し、すべての内容を同時に表示させます。
 
-  - 遅延：`k_sleep(K_MSEC(1000)):` 各ループの後、プログラムは 1000 ミリ秒（1 秒）一時停止します。これは画面の更新頻度を制御し、時計やセンサーデータなどの静的情報を安定して表示する用途に適しています。
+  - 遅延：`k_sleep(K_MSEC(1000)):` 各ループの後、プログラムは 1000 ミリ秒（1 秒）一時停止します。これは画面の更新頻度を制御するもので、時計やセンサーデータなどの静的な情報を安定して表示する用途に適しています。
 
 ### 結果グラフ
 
@@ -1405,19 +1409,19 @@ int main(void)
 }
 ```
 
-**デバイス初期化：**
+**デバイスの初期化：**
 
 - このコードはまず、`DEVICE_DT_GET(DT_CHOSEN(zephyr_display)).` を使用してデバイスツリーからディスプレイデバイスを取得します。
 
-- 次に `device_is_ready()` を呼び出して、デバイスが正しく初期化され、動作可能な状態かどうかを確認します。これはあらゆるハードウェア操作における重要な最初のステップです。
+- 次に `device_is_ready()` を呼び出して、デバイスが正しく初期化され、動作可能な状態かどうかを確認します。これはあらゆるハードウェアとやり取りする際の重要な最初のステップです。
 
 **LVGL の初期化：**
 
 - `lv_init()` は LVGL グラフィックスライブラリのエントリポイントです。ライブラリの内部状態を初期化するため、LVGL オブジェクトを作成したり、何らかの操作を行ったりする前に必ず呼び出す必要があります。
 
-**画面クリア：**
+**画面のクリア：**
 
-- `display_blanking_off()` 関数が呼び出されます。E-Paper ディスプレイでは、通常これは画面上の古いコンテンツを消去するための全画面リフレッシュをトリガーします。
+- `display_blanking_off()` 関数が呼び出されます。E-Paper ディスプレイでは、通常これは画面上の古いコンテンツを消去するためのフルリフレッシュをトリガーします。
 
 - さらにクリーンなキャンバスを確保するために、コードは `lv_scr_act()` を使用して現在アクティブなスクリーンを取得し、`lv_obj_set_style_bg_color()` を使ってその背景色を白に設定し、ディスプレイ全体を覆います。
 
@@ -1439,15 +1443,15 @@ int main(void)
 
   - `lv_obj_set_style_text_color()` と lv_obj_set_style_text_font() を使用して、テキストの色とフォントサイズを設定します。
 
-- `lv_obj_align()` 関数は、各ラベルを画面の特定の位置（中央、右上、左下、右下など）に配置します。
+- `lv_obj_align()` 関数は、各ラベルを画面上の特定の位置（中央、右上、左下、右下など）に配置します。
 
 四角形：for ループを使用して 4 つの小さな四角形オブジェクトを作成します。それぞれのサイズ、スタイル（白い塗りつぶしと黒い枠線）、位置を順番に設定し、画面左上に水平方向に並べて配置します。
 
 **メインループ：**
 
-- `The while(1)` ループは、プログラムの連続実行部分です。
+- `while(1)` ループは、プログラムの連続実行部分です。
 
-- `lv_task_handler()` はループ内で継続的に呼び出され、UI 要素の更新やイベント処理など、LVGL の内部タスクを処理します。
+- `lv_task_handler()` は、UI 要素の更新やイベント処理など、LVGL の内部タスクを処理するためにループ内で継続的に呼び出されます。
 
 - `k_sleep(K_MSEC(1000))` はスレッドを 1000 ミリ秒一時停止します。静的 d
 

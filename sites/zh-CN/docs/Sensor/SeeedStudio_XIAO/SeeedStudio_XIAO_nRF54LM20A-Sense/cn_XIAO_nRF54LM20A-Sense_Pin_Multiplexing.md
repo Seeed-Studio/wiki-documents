@@ -42,7 +42,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_pin_multiplexing/
 </div>
 
 
-XIAO nRF54LM20A 具有丰富的引脚资源，原生支持使用 Digital、Analog、SPI 和 IIC 等多种标准外设接口进行开发。本文通过实际应用案例演示相关实现方法。
+XIAO nRF54LM20A 拥有丰富的引脚资源，原生支持使用 Digital、Analog、SPI 和 IIC 等多种标准外设接口进行开发。本文通过实际应用案例，演示相关实现方法。
 
 :::tip
 
@@ -51,9 +51,13 @@ XIAO nRF54LM20A 具有丰富的引脚资源，原生支持使用 Digital、Analo
 
 :::
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54lm20asense" target="_blank" rel="noopener noreferrer">探索交互式引脚图</a>
+</div>
+
 ## 数字引脚
 
-数字引脚主要通过输出高低电平，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细阐述 XIAO nRF54LM20A 上数字引脚的底层驱动逻辑和实际调用方式。
+数字引脚主要通过输出高、低电平，实现对外部传感器和执行器的通断控制。结合 Grove Base for XIAO 扩展板和标准 Grove 外设模块，本节将详细阐述 XIAO nRF54LM20A 上数字引脚的底层驱动逻辑以及实际调用方式。
 
 ### 硬件准备
 
@@ -96,11 +100,11 @@ XIAO nRF54LM20A 具有丰富的引脚资源，原生支持使用 Digital、Analo
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，可以选择 P1.0 作为 Grove-Button 的控制引脚，P1.31 作为 Grove-Pizero Buzzer 的控制引脚。
+根据 XIAO nRF54LM20A 的引脚图，可以选择 P1.0 作为 Grove-Button 的控制引脚，P1.31 作为 Grove-Pizero Buzzer 的控制引脚。
 
 :::tip
 
-- 关于 XIAO nRF54LM20A 的引脚分布，点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
+- 关于 XIAO nRF54LM20A 的引脚图，点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
 
 :::
 
@@ -222,11 +226,11 @@ PWM 是一种基于数字输出 GPIO 实现的定时波形输出功能。它以�
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，**P1.0** 可以作为 **Grove-Servo** 的控制引脚。
+根据 XIAO nRF54LM20A 的引脚图，**P1.0** 可以作为 **Grove-Servo** 的控制引脚。
 
 :::tip
 
-- 关于 XIAO nRF54LM20A 的引脚分布，点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
+- 关于 XIAO nRF54LM20A 的引脚图，点击 [XIAO nRF54LM20A Pin List](https://wiki.seeedstudio.com/cn/xiao_nrf54lm20a_getting_started/#硬件概述) 查看详情。
 
 :::
 
@@ -393,7 +397,7 @@ int main(void)
 
 ### 结果
 
-固件烧录完成后，舵机将以 33 弧度每秒的速度从 0° 旋转到 180°，然后再旋转回 0°。
+固件烧录完成后，舵机将以每秒 33 弧度的速度从 0° 旋转到 180°，然后再旋转回 0°。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/pin_mux_1.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -403,7 +407,7 @@ int main(void)
 
 ## 模拟量
 
-模拟量 I/O 基于模数转换器（ADC），主要用于采集外部传感器输出的连续模拟电压信号。获取原始数字采样值（Raw Data）后，可通过特定的线性或非线性转换算法映射为实际工程测量值。该功能广泛应用于电池电压采样，以及对土壤湿度、环境温度等物理量的实时监测等场景。
+模拟量 I/O 基于模数转换器（ADC），主要用于采集外部传感器输出的连续模拟电压信号。获取原始数字采样值（Raw Data）后，可通过特定的线性或非线性转换算法映射为实际工程测量值。该功能广泛应用于电池电压采样，以及对土壤湿度、环境温度等物理量的实时监测场景。
 
 ### 硬件准备
 
@@ -574,7 +578,7 @@ int main(void)
 | 状态     | 传感器输出电压 | 期望 ADC 原始值|
 | -------------- | -------------- | ---------------- |
 | 空气中（干燥） | ~2.0–2.4V      | ~3400–4095       |
-| 湿润土壤中       | ~1.3–1.8V      | ~2200–3000       |
+| 潮湿土壤中       | ~1.3–1.8V      | ~2200–3000       |
 | 完全浸没在水中   | ~0.8–1.2V      | ~1365–2048       |
 
 :::
@@ -587,7 +591,7 @@ int main(void)
 
 ## UART
 
-通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步发送与接收。在物理连线方面，只需将设备的 TX 与 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持收发同时进行，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信等场景。
+通用异步收发器（UART）是一种标准的异步串行通信协议。它不需要外部时钟信号进行同步，而是依靠通信双方预先约定的波特率来实现数据的异步收发。在物理连线方面，只需将设备的 TX 与 RX 引脚交叉连接并共地，即可建立全双工数据链路。由于硬件成本极低且支持收发同时进行，UART 被广泛应用于嵌入式系统中的控制台日志输出、模块化外设调试以及低带宽点对点数据通信。
 
 ### 硬件准备
 
@@ -616,7 +620,7 @@ int main(void)
 
 ### 软件准备
 
-根据 XIAO nRF54LM20A 的引脚分布，P1.08 和 P1.09 可分别选择为串口通信的 TX 和 RX 引脚。
+根据 XIAO nRF54LM20A 的引脚分布，P1.08 和 P1.09 可分别被选作串口通信的 TX 和 RX 引脚。
 
 :::tip
 
@@ -848,7 +852,7 @@ int main(void)
 
 ### 结果
 
-1. 按照表格顺序进行接线
+1. 按照下表顺序进行接线
 
 | XIAO nRF54LM20A | CH340 |
 | --------------- | ----- |
@@ -864,7 +868,7 @@ int main(void)
 
 ## I2C
 
-I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线和 SDA 数据线进行寻址，实现多设备连接，常用于读取对传输速率要求较高的传感器数据，例如 IMU 和温湿度传感器，或用于 OLED 显示输出。
+I2C 是一种同步、半双工的数据通信协议。它通过 SCL 时钟线和 SDA 数据线进行寻址，实现多设备连接，常用于读取对传输速率要求较高的传感器数据，如 IMU 和温湿度传感器，或用于 OLED 显示输出。
 
 ### 硬件准备
 
@@ -944,7 +948,7 @@ CONFIG_CHARACTER_FRAMEBUFFER=y
 
 ```
 
-3. 编写主函数，为字符串设置显示位置和功能。
+3. 编写主函数以设置字符串的显示位置和功能。
 
 <details>
 
@@ -1278,7 +1282,7 @@ CONFIG_HEAP_MEM_POOL_SIZE=32768
 CONFIG_MAIN_STACK_SIZE=4096
 ```
 
-3. 修改 main.c 程序并编写纯色屏幕填充逻辑。
+3. 修改 main.c 程序并编写纯色填充屏幕的逻辑。
 
 <details>
 
@@ -1426,7 +1430,7 @@ int main(void)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

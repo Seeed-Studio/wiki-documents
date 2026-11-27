@@ -1,19 +1,19 @@
 ---
-description: Seeed Studio XIAO nRF52840 Sense での Home Assistant 使用のための BTHome プロトコル
+description: Seeed Studio XIAO nRF52840 Sense 上で Home Assistant 向けに BTHome プロトコルを使用する方法
 title: XIAO nRF52840 Sense での BTHome プロトコル（CircuitPython）
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO_BLE_HA
 last_update:
   date: 09/18/2023
   author: Bruno Santos (Feiticeir0)
-createdAt: '2025-05-27'
-updatedAt: '2025-09-25'
+createdAt: '2023-09-17'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/ja/XIAO_BLE_HA/
 ---
 
 # プロジェクト概要
 
-このwikiでは、Seeed Studio XIAO nRF52840 の Bluetooth 5.0 BLE 機能を Seeed Studio Grove 温湿度センサー（DHT20）と組み合わせて使用し、BTHome プロトコルを使って温度と湿度の測定値を Home Assistant にブロードキャストする方法を紹介します。
+この wiki では、Seeed Studio XIAO nRF52840 の Bluetooth 5.0 BLE 機能と Seeed Studio Grove Temperature & Humidity Sensor (DHT20) を使用して、BTHome プロトコルを用い、温度と湿度の測定値を Home Assistant にブロードキャストする方法を紹介します。
 
 コードには **CircuitPython** を使用します。
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/ja/XIAO_BLE_HA/
   <table align="center">
     <tr>
         <th>Seeed Studio XIAO nRF52840-Sense</th>
-        <th>Seeed Studio Grove 温湿度センサー V2.0（DHT20）</th>
+        <th>Seeed Studio Grove Temperature&Humidity Sensor V2.0 (DHT20)</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -34,53 +34,57 @@ url: https://wiki.seeedstudio.com/ja/XIAO_BLE_HA/
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-### ハードウェア準備
+### ハードウェアの準備
 
-Grove DHT20センサーは通信にI2Cを使用します。XIAO nRF52840 SenseのI2Cピンに接続する必要があります：
+Grove DHT20 センサーは通信に I2C を使用します。XIAO nRF52840 Sense の I2C ピンに接続する必要があります：
 
-- XIAO Grove ShieldとUniversal 4 pin Unbuckledケーブルを使用できます
-- 4 pin Female JumperからGrove 4 pin変換ケーブルを使用してDHT20センサーを直接XIAO nRF52840 Senseに接続します
+- XIAO Grove Shield とユニバーサル 4 ピンアンバックルケーブルを使用できます
+- 4 ピンメスジャンパーから Grove 4 ピン変換ケーブルを使用して、DHT20 センサーを XIAO nRF52840 Sense に直接接続します
 
-#### XIAO nRF52840 SenseとXIAO Grove Shieldのピン配置
+#### XIAO nRF52840 Sense と XIAO Grove Shield のピン配置
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">インタラクティブなピン配置を確認</a>
+</div>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/XIAO_nRF52840_pinout.png" alt="pir" width={600} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/XIAO_shield_Pinout.png" alt="pir" width={600} height="auto" /></p>
 
-### ハードウェアセットアップ
+### ハードウェアのセットアップ
 
-配線は簡単です。Shieldを使用する場合もしない場合も、以下のFritzingスケマティックでコンポーネントを接続する方法を示しています。
+配線はとても簡単です。Shield を使用する場合もしない場合も、以下の Fritzing 回路図がコンポーネント同士の配線方法を示しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/wiring.jpg" alt="Wiring" width={600} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/XIAO_Shield_wiring.jpg" alt="Wiring" width={600} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/Simple_Wiring.jpg" alt="Wiring" width={600} height="auto" /></p>
 
-## ソフトウェア準備
+## ソフトウェアの準備
 
-Thonny IDEソフトウェア（Linux）と関連するライブラリとファイルを使用します。以下の手順を実行します：
+ここでは Thonny IDE ソフトウェア（Linux）と、いくつかの関連ライブラリおよびファイルを使用します。以下の手順を実行します：
 
-1. XIAO nRF52840 SenseにCircuitPythonをインストール
-2. 必要なライブラリをインストール
-3. BTHomeプロトコルを使用してセンサーをコーディング
-4. Home Assistantを設定
+1. XIAO nRF52840 Sense に CircuitPython をインストールする
+2. 必要なライブラリをインストールする
+3. BTHome プロトコルを使用してセンサーのコードを書く
+4. Home Assistant を設定する
 
-### ステップ1 - CircuitPythonのインストール
+### ステップ 1 - CircuitPython をインストール
 
-CircuitPythonをインストールしましょう。
+まず CircuitPython をインストールします。
 
-<a  href="https://circuitpython.org/" target="_blank"><span>CircuitPython</span></a>にアクセスして、XIAO nRF52840 Sense用のバージョンをダウンロードします。
-Downloadsを選択し、検索フィールドでXIAO nRF52840と入力を開始すると、結果にセンサーが表示されます。
+<a  href="https://circuitpython.org/" target="_blank"><span>CircuitPython</span></a> にアクセスし、XIAO nRF52840 Sense 用のバージョンをダウンロードします。
+Downloads を選択し、検索フィールドに XIAO nRF52840 と入力していくと、結果にセンサーが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython1.png" alt="CircuitPython Download" width={600} height="auto" /></p>
 
@@ -88,58 +92,58 @@ Downloadsを選択し、検索フィールドでXIAO nRF52840と入力を開始�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython2.png" alt="CircuitPython Download" width="{600}" height="auto" /></p>
 
-.uf2ファイルが取得できるはずです。インストールするにはブートローダーモードに入る必要があります。XIAO nRF52840 Senseをコンピューターに接続し、リセットボタンを2回押します。
+.uf2 ファイルがあるはずです。これをインストールするにはブートローダーモードに入る必要があります。XIAO nRF52840 Sense をコンピュータに接続し、リセットボタンを 2 回押します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/functional2b.jpg" alt="CircuitPython Download" width={600} height="auto" /></p>
 
-コンピューターにXIAO-SENSEという新しいドライブが表示されるはずです。
+コンピュータ上に XIAO-SENSE という名前の新しいドライブが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython3.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
-次に、ダウンロードしたファイルをドライブにコピーします。
+次に、ダウンロードしたファイルをそのドライブにコピーします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython4.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
-しばらくすると、CIRCUITPYという名前の新しいドライブが表示されます。マイクロコントローラーにCircuitPythonがインストールされました。
+しばらくすると、CIRCUITPY という名前の新しいドライブが表示されます。これでマイコンに CircuitPython がインストールされました。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython5.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
-### ステップ2 - ライブラリのインストール
+### ステップ 2 - ライブラリをインストール
 
-Grove Temperature & Humidity sensor V2.0（DHT20）を使用するには、<a  href="https://learn.adafruit.com/adafruit-aht20/python-circuitpython" target="_blank"><span> AdafruitのAHT20ライブラリ</span></a>が必要です。
+Grove Temperature & Humidity sensor V2.0 (DHT20) を使用するには、<a  href="https://learn.adafruit.com/adafruit-aht20/python-circuitpython" target="_blank"><span> Adafruit の AHT20 ライブラリ</span></a>が必要です。
 
-前述のウェブサイトにはライブラリのインストール方法が記載されています。
+上記のウェブサイトには、ライブラリのインストール方法に関する手順があります。
 
-インストール後、以下のファイルが必要です（これらはDHT20センサーに必要なファイルです）：
+インストール後、次のファイルがあるはずです（これらが DHT20 センサーに必要なファイルです）：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython6.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
-### ステップ3 - コードのアップロード
+### ステップ 3 - コードをアップロード
 
-コードに進む前に、BTHomeとは何かを理解する必要があります。
+コードに進む前に、BTHome とは何かを理解する必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://bthome.io/images/logo.png" alt="BTHome logo" width="25%" height="auto" /></p>
 
 #### BTHome
 
-BTHomeは、Bluetooth Low Energy（BLE）を介してセンサーデータとボタン押下をブロードキャストするためのオープンスタンダードです。エネルギー効率が良く、柔軟で安全になるように設計されています。BTHomeはHome Assistantなどの人気のあるホームオートメーションプラットフォームで標準サポートされています。
+BTHome は、Bluetooth Low Energy (BLE) を介してセンサーデータやボタン押下をブロードキャストするためのオープンスタンダードです。省電力性、柔軟性、安全性を備えるよう設計されています。BTHome は Home Assistant などの一般的なホームオートメーションプラットフォームで、標準でサポートされています。
 
-BTHomeの利点：
+BTHome の利点：
 
-- オープンスタンダードなので、異なるメーカーのデバイスが連携できます。
-- デバイスはエネルギー効率が良く設計されているため、単一のバッテリーで長時間動作できます。
-- データは暗号化されているため、不正アクセスから安全です。
-- 柔軟なフォーマットなので、さまざまなセンサーデータとボタン押下の送信に使用できます。
+- オープンスタンダードであるため、異なるメーカーのデバイス同士が連携できます。
+- デバイスは省電力になるよう設計されており、単一のバッテリーで長時間動作できます。
+- データは暗号化されており、不正アクセスから保護されています。
+- 柔軟なフォーマットであり、さまざまなセンサーデータやボタン押下の送信に使用できます。
 
-BTHomeは、BLEを介してセンサーデータとボタン押下をブロードキャストするための汎用性があり強力なスタンダードです。スマートホームにセンサーデータとボタン押下を追加したい人にとって良い選択肢です。
+BTHome は、BLE を介してセンサーデータやボタン押下をブロードキャストするための多用途で強力な標準です。スマートホームにセンサーデータやボタン押下を追加したい人にとって、優れた選択肢です。
 
-詳細とデータフォーマットについては<a  href="https://bthome.io/" target="_blank"><span>公式サイト</span></a>で学ぶことができます。
+詳細やデータフォーマットについては、<a  href="https://bthome.io/" target="_blank"><span>公式サイト</span></a>で確認できます。
 
 #### コード
 
-以下がCircuitPythonコードです。
+以下が CircuitPython のコードです。
 
 <details>
-<summary>クリックしてCircuitPythonコードをコピー</summary>
+<summary>CircuitPython コードをコピーするにはクリック</summary>
 
 ```python
 # BTHome with DHT20
@@ -172,7 +176,7 @@ readTimer = INTERVAL * 10 * 60 * MINUTES_PER_READING
 
 # convert the measurement value to the BTHome format
 def value_to_little_endian (measurement):
-    
+
     # Calculate the integer value by dividing the temperature by the factor
     integer_value = int(measurement / 0.01)
 
@@ -236,7 +240,7 @@ hum = sensor.relative_humidity
 #DEBUG
 #print("\nTemperature: %0.1f C" % temp)
 #print("Humidity: %0.1f %%" % hum)
- 
+
 while True:
     adv_data = bthome.adv_data(temp,hum)
     adapter.start_advertising(
@@ -260,87 +264,87 @@ while True:
 
 </details>
 
-`code.py` として保存し、起動時に実行されるようにしてください。
+起動時に実行されるように、必ず `code.py` という名前で保存してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython6.png" alt="BTHome logo" width="500" height="auto" /></p>
 
-#### コードの説明
+#### コードの簡単な説明
 
-- コードには説明のためのコメントが豊富に含まれています。
-- 基本的に、0.2秒ごとにDHT20センサーから取得した温度と湿度をブロードキャストしています。
-- センサーに負荷をかけて0.2秒ごとに値を読み取ることを避けるため、タイマーを設置しました。5分ごとにのみ値を読み取ります。この時間は `MINUTES_PER_READING` 変数で制御されます。
+- コードには、内容を少し説明するためのコメントがたくさん入っています。
+- 基本的に、0.2 秒ごとに DHT20 センサーから取得した温度と湿度をブロードキャストしています。
+- センサーに負荷をかけず、0.2 秒ごとに値を読み取らないようにするため、タイマーを設定しています。値の読み取りは 5 分ごとにのみ行われます。この時間は `MINUTES_PER_READING` 変数で制御されます。
 
-### ステップ4 - Home Assistantでデータを表示
+### ステップ 4 - Home Assistant にデータを表示する
 
-#### ステップ4.1 - Home AssistantにXIAO nRF52840 Senseを追加
+#### ステップ 4.1 - XIAO nRF52840 Sense を Home Assistant に追加する
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/home-assistant-icon-flat.png" alt="Home Assistant Logo" width="15%" height="auto" /></p>
 
-Home Assistantは、ホームオートメーション用の無料でオープンソースのソフトウェアです。ローカル制御とプライバシーに重点を置いたスマートホームデバイスの中央制御システムとして設計されています。
+Home Assistant は、ホームオートメーション向けの無料かつオープンソースのソフトウェアです。スマートホームデバイスをローカル制御とプライバシー保護に重点を置いて一元管理するための中央制御システムとして設計されています。
 
-Home Assistantは、異なるデバイスとサービスを一箇所に統合し、それらをエンティティとして統合することで、中央スマートホームコントローラーハブとして機能します。提供されるルールベースの自動化システムにより、トリガーイベント、条件、アクションに基づいたカスタムルーチンの作成が可能で、スクリプトも含まれます。これらにより、自動化の構築、ホームセキュリティシステムのセキュリティアラームとビデオ監視のアラーム管理、エネルギー測定デバイスの監視が可能になります。
+Home Assistant は、さまざまなデバイスやサービスを 1 か所にまとめてエンティティとして統合することで、スマートホームの中央コントローラーハブとして機能します。提供されているルールベースの自動化システムにより、トリガーイベント、条件、アクション（スクリプトを含む）に基づいてカスタムルーチンを作成できます。これにより、ビルディングオートメーション、セキュリティアラームやビデオ監視によるホームセキュリティシステムのアラーム管理、さらにエネルギー計測デバイスの監視が可能になります。
 
-詳細については、<a  href="https://www.home-assistant.io/" target="_blank"><span>公式サイト</span></a>をご覧ください。
+詳しくは、<a  href="https://www.home-assistant.io/" target="_blank"><span>公式サイト</span></a>をご覧ください。
 
-#### 要件
+#### 必要条件
 
-重要な要件の一つは、HA（Home Assistant）が**Bluetoothを持っている**ことです。Raspberry PI上でHAを実行している場合、おそらく持っているでしょう。すべてはRPiのバージョンに依存します。
+重要な要件の 1 つは、HA（Home Assistant）に **Bluetooth が搭載されていること** です。Raspberry Pi 上で HA を実行している場合は、搭載されている可能性が高いです。すべては RPi のバージョンに依存します。
 
 #### 設定
 
-「ステップ3 - コードのアップロード」で、XIAO nRF52840をコーディングしました。次のステップでは、HAが検出できるように実行されている必要があります。
+"Step 3 - Upload Code" で XIAO nRF52840 にコードを書き込みました。次のステップでは、HA が検出できるように、このコードが動作している必要があります。
 
-HAのインストールを開きます。設定 -> デバイスとサービスに移動します
+HA のインストール環境を開きます。Settings -> Devices and Services に移動します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/0_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
-統合ページが表示されます。Bluetoothを選択します
+すると、Integrations ページが表示されます。Bluetooth を選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/1_HA.png" alt="Home Assistant" width="90%" height="auto" /></p>
 
-統合が表示されるはずです。
+すると、インテグレーションが表示されるはずです。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/2_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-<b>注意:</b> 何かが動作しない場合は、パッシブスキャンが<b>選択されていない</b>ことを確認してください
+<b>注意:</b> うまく動作しない場合は、Passive scanning に<b>チェックが入っていない</b>か確認してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/3_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-統合ページに入ると、XIAO nRF52840 Senseが接続されている場合、すでに検出されてページに表示されるはずです。
+Integrations ページを開いたときに、XIAO nRF52840 Sense が接続されていれば、すでに検出されており、ページに表示されているはずです。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/5_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-「設定」を押してこの新しい統合を設定します。送信を押します。
+この新しい Integration を設定するために "Configure" を押します。続いて Submit を押します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/6_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-この新しいセンサーを配置するエリアを選択するだけで完了です。
+あとは、この新しいセンサーを配置するエリアを選択するだけで完了です。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/7_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-次に、再び設定 -> 統合に移動し、新しいBTHome統合を選択します
+次に、再度 Settings -> Integrations に移動し、新しい BTHome インテグレーションを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/10_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
-統合ページに移動します。1つのデバイスと3つのエンティティがあることがわかります。
-エンティティは温度、湿度、信号強度です
+するとインテグレーションページに移動します。ここでは、1 つのデバイスと 3 つのエンティティがあることがわかります。
+エンティティは、温度、湿度、信号強度です。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/11_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
-エンティティをクリックすると、すべてを表示できる新しいページが表示されます。
+エンティティをクリックすると、それらをすべて一覧できる新しいページが表示されます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/12_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-代わりにデバイスを押すと、すべてのオプションと現在の値を含むデバイスページが表示されます。このページを使用して、ダッシュボードに追加できます。
+代わりに device を押した場合は、すべてのオプションと現在値を含むデバイスページが表示されます。このページから、ダッシュボードに追加できます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/13_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
-「ダッシュボードに追加」を押すと、配置するビューを選択できます。
+"ADD to DASHBOARD" を押すと、配置するビューを選択できます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/14_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-その後、カードのビューが表示されます。「ダッシュボードに追加」を押してダッシュボードに追加します。
+その後、カードのプレビューが表示されます。"ADD TO DASHBOARD" を押してダッシュボードに追加します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/15_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-ダッシュボードに移動すると、XIAO nRF52840 Senseによってブロードキャストされた温度と湿度を含む新しく追加されたカードが表示されます。
+ダッシュボードに移動すると、XIAO nRF52840 Sense がブロードキャストしている温度と湿度を表示する、新しく追加されたカードが確認できます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/17_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-## さらに詳しく - ディープスリープ機能
+## さらに - Deep Sleep 機能
 
-私はこれを動作させることができませんでした。もし解決策をお持ちの方がいらっしゃいましたら、コメントを残してください。[GitHub](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)でご意見をお聞かせください。
+私はうまく動作させることができませんでした。もし解決策をお持ちの方がいれば、ぜひコメントを残してください。あなたの考えを [GitHub](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237) で共有できます。
 
 ## ✨ Contributor Project
 
-- このプロジェクトは、Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
-- [Brunoの努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- このプロジェクトは Seeed Studio の [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
+- [Bruno の尽力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)に感謝するとともに、あなたの成果は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
 
-## 技術サポート・製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

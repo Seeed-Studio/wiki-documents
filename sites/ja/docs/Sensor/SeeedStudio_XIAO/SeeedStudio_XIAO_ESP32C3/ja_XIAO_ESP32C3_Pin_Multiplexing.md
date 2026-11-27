@@ -15,9 +15,13 @@ url: https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Pin_Multiplexing/
 
 # ピン多重化
 
-Seeed Studio XIAO ESP32C3 は豊富なインターフェースを備えています。**PWM ピン**として使用できる**11 個のデジタル I/O**と、**ADC ピン**として使用できる**4 個のアナログ入力**があります。**UART、I2C、SPI、I2S** といった 4 種類のシリアル通信インターフェースをサポートしています。本 Wiki は、これらのインターフェースについて学び、次回のプロジェクトで活用するのに役立ちます。
+Seeed Studio XIAO ESP32C3 は豊富なインターフェースを備えています。**PWM ピン**として使用できる**11 個のデジタル I/O**と、**ADC ピン**として使用できる**4 個のアナログ入力**があります。**UART、I2C、SPI、I2S** といった 4 種類のシリアル通信インターフェースをサポートしています。この Wiki は、これらのインターフェースについて学び、次のプロジェクトで活用するのに役立ちます。
 
 ## ハードウェア概要
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">インタラクティブ Pinout を確認</a>
+</div>
 
 > *A3(GP105) - ADC2 を使用しており、誤ったサンプリング信号により動作しなくなる場合があります。信頼性の高いアナログ読み取りには、代わりに ADC1(A0/A1/A2) を使用してください。詳細は ESP32-C3 のデータシートを参照してください。
 
@@ -32,7 +36,7 @@ Seeed Studio XIAO ESP32C3 は豊富なインターフェースを備えていま
 
 ## デジタル
 
-プッシュボタンをピン D6 に、LED をピン D10 に接続します。次に、以下のコードを書き込んで、プッシュボタンを使って LED の ON/OFF を制御します。
+プッシュボタンをピン D6 に、LED をピン D10 に接続します。次に、以下のコードを書き込んで、プッシュボタンで LED の ON/OFF を制御します。
 
 ```c
 const int buttonPin = D6;     // pushbutton connected to digital pin 6
@@ -62,7 +66,7 @@ void loop() {
 }
 ```
 
-## PWM としてのデジタル
+## デジタルを PWM として使用
 
 LED をピン D10 に接続します。次に、以下のコードを書き込んで、LED が徐々に明るくなったり暗くなったりする様子を確認します。
 
@@ -135,7 +139,7 @@ void loop() {
 
 :::note
 XIAO ESP32 C3 には `Serial2` はありません。
-また、`Serial1` を使用する必要がある場合は、ピンを定義しなければなりません。そうしないと、データを受信できない可能性があります。XIAO ESP32 シリーズでは、`Serial1` を次のように使用します。
+また、`Serial1` を使用する必要がある場合は、ピンを定義しなければなりません。そうしないと、データを受信できない可能性があります。XIAO ESP32 シリーズでは、次のように `Serial1` を使用します。
 
 ```cpp
 Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
@@ -143,7 +147,7 @@ Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
 
 :::
 
-デフォルトでは USB シリアルが有効になっており、USB Type-C を介してボードを PC に接続し、Arduino IDE 上でシリアルモニタを開いて、シリアル経由で送信されたデータを表示できます。
+デフォルトでは USB シリアルが有効になっており、USB Type-C でボードを PC に接続し、Arduino IDE 上でシリアルモニタを開くことで、シリアル経由で送信されたデータを確認できます。
 
 しかし、UART0 をシリアルとして使用したい場合は、ピン D6 を TX ピン、ピン D7 を RX ピンとして USB-シリアルアダプタに接続する必要があります。
 
@@ -155,7 +159,7 @@ Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
 
-次のコードを Arduino IDE に書き込んで、文字列 "Hello World!" をシリアル経由で送信します
+次のコードを Arduino IDE に書き込んで、シリアル経由で文字列 "Hello World!" を送信します。
 
 ```cpp
 void setup() {
@@ -169,7 +173,7 @@ void loop() {
 }
 ```
 
-Arduino シリアルモニタ上では、次のように出力されます
+Arduino シリアルモニタ上では、次のように出力されます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-2.jpg" alt="pir" width={450} height="auto" /></div>
 
@@ -333,13 +337,13 @@ void loop()
 
 ### Serial1 の使用
 
-上記の XIAO ESP32C3 のピン図に示される具体的なパラメータによると、TX ピンと RX ピンがあることがわかります。
+上記の XIAO ESP32C3 のピン図に従って具体的なパラメータを見ると、TX ピンと RX ピンがあることがわかります。
 これは通常のシリアル通信とは異なりますが、いくつかのパラメータを追加する必要がある点を除けば、使い方は非常によく似ています。
-そこで次に、チップから引き出されたピンを使用してシリアル通信を行います。
+そこで次に、チップから引き出されているピンを使用してシリアル通信を行います。
 
-含める必要があるコア関数は次のとおりです：
+含める必要があるコア関数：
 
-- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- Serial1 を有効にします。関数プロトタイプ : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
+- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- Serial1 を有効化します。関数プロトタイプ : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
   - `baud`  :ボーレート
   - `config`:設定ビット
   - `rxPin` :受信ピン
@@ -369,7 +373,7 @@ void loop() {
 }
 ```
 
-プログラムを書き込んだら、Arduino IDE でシリアルモニタを開き、ボーレートを 115200 に設定します。次に、シリアルモニタ Serial を介して XIAO ESP32C3 に任意の内容を送信できます。XIAO は、送信した内容の各バイトを出力します。ここでは、入力した内容は "Hello Everyone" であり、結果のチャートは次のとおりです。
+プログラムを書き込んだ後、Arduino IDE でシリアルモニタを開き、ボーレートを 115200 に設定します。その後、シリアルモニタ Serial を介して XIAO ESP32C3 に任意の内容を送信でき、XIAO は送信した内容の各バイトを出力します。ここでは、入力した内容は "Hello Everyone" であり、結果の図は次のとおりです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
@@ -590,7 +594,7 @@ void loop() {
 }
 ```
 
-- **ステップ 4.** コードをアップロードし、**シリアルモニタ** を開きます
+- **ステップ 4.** コードをアップロードし、**シリアルモニタ**を開きます
 
 **注意：** コードをアップロードしても、Arduino ウィンドウ右上の **Serial Monitor** をクリックするまで自動的には実行されません。
 
@@ -602,7 +606,7 @@ void loop() {
 
 ### D9
 
-XIAO ESP32C3 の D9 は、ESP32-C3 の GPIO9（15）、プルアップ抵抗（R6）、および BOOT ボタンに接続されています。BOOT ボタン（および RESET ボタン）により、ESP32-C3 のブートモードを手動で切り替えることができます。
+XIAO ESP32C3 の D9 は、ESP32-C3 の GPIO9 (15)、プルアップ抵抗 (R6)、および BOOT ボタンに接続されています。BOOT ボタン（および RESET ボタン）により、ESP32-C3 のブートモードを手動で切り替えることができます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" alt="pir" width={600} height="auto" /></div>
 
@@ -610,23 +614,23 @@ BOOT ボタンを押すと、D9 は GND に接続されます。**したがっ�
 
 ### D6
 
-XIAO ESP32C3 の D6 は、ESP32-C3 の U0TXD（28）に接続されています。第 1 / 第 2 段階ブートローダの動作状態はテキストとして U0TXD に出力されます。
+XIAO ESP32C3 の D6 は、ESP32-C3 の U0TXD (28) に接続されています。第 1/第 2 段階ブートローダの動作状態はテキストとして U0TXD に出力されます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/11.png" alt="pir" width={400} height="auto" /></div>
 
 D6 は起動時に UART 出力として設定されるため、D6 を入力として使用すると、誤って大電流を発生させてしまう可能性があります。**したがって、D6 ピンは出力モードでのみ使用することを推奨します**。
 
-しかし、この D6 は UART 出力であるため、いくつか注意すべき点があります。1 つは、通信していない待機状態では HIGH であることです。もう 1 つは、第 1 / 第 2 段階ブートローダのテキスト出力です。起動直後に信号が HIGH/LOW とパタパタ変化するため、必要に応じて対策を講じる必要があります。
+しかし、この D6 は UART 出力であるため、いくつか注意すべき点があります。1 つは、通信していない待機状態では HIGH であることです。もう 1 つは、第 1/第 2 段階ブートローダのテキスト出力です。起動直後に信号が HIGH/LOW にパタパタと変化するため、必要に応じて対策を講じる必要があります。
 
-そのため、D6 はできるだけ使用しないようにしてください。（もちろん、理解した上であれば使用しても問題ありません。）
+そのため、D6 はできるだけ使用しないようにしてください。（もちろん、理解したうえであれば使用しても問題ありません。）
 
 ### D8
 
-Seeed Studio XIAO ESP32C3 の D8 は、ESP32-C3 の GPIO8（14）に接続されています。
+Seeed Studio XIAO ESP32C3 の D8 は、ESP32-C3 の GPIO8 (14) に接続されています。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/12.png" alt="pir" width={300} height="auto" /></div>
 
-GPIO8 は、BOOT ボタンを押し続けてダウンロードブートモードを設定する際に参照され、そのとき HIGH でなければなりません。（[ここ](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf) には次のように記載されています： "The strapping combination of GPIO8 = 0 and GPIO9 = 0 is invalid and will trigger unexpected behaviour."）
+GPIO8 は、BOOT ボタンを押し続けてダウンロードブートモードを設定する際に参照され、そのとき HIGH でなければなりません。（[ここ](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf) には次のように記載されています："The strapping combination of GPIO8 = 0 and GPIO9 = 0 is invalid and will trigger unexpected behaviour."）
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/13.png" alt="pir" width={700} height="auto" /></div>
 
