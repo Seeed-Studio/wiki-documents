@@ -1,0 +1,281 @@
+---
+description: See how the ESP32-S3, touchscreen, audio codec, microSD slot, and USB port support game development on the Wio Tracker L2 Pro. Explore seven community projects.
+title: Game Development on the Wio Tracker L2 Pro
+keywords:
+  - Wio Tracker L2 Pro
+  - Game firmware
+  - WioCraft
+  - MeshPunk
+  - MeshDesk
+  - ESP32-S3
+image: /img/l2-pro-games/l2-pro-games-gallery.jpg
+slug: /l2_pro_games
+sidebar_position: 3
+last_update:
+  date: 11/27/2026
+---
+
+import {useWindowSize} from '@docusaurus/theme-common';
+
+export const games = [
+  {
+    id: 'wiocraft', name: 'WioCraft', group: 'original', devices: ['L2'],
+    type: 'L2 Pro original · Voxel survival', version: 'v0.3', badge: 'info',
+    image: '/img/l2-pro-games/l2-pro-games-hero.jpg', alt: 'WioCraft on an L2 Pro showing a block world, a touch joystick, and an inventory bar',
+    credit: 'Photo by zxw19', source: 'https://seeed-projects.github.io/seeed-meshtastic-projects/#projects',
+    description: 'A voxel game by zxw19 that generates a block world and renders it on the ESP32-S3. The touchscreen combines movement and building controls on a single display.',
+    links: [
+      ['Download v0.3', 'https://github.com/zxw19/WioCraft-L2/releases/tag/v0.3-baseline'],
+      ['Source repository', 'https://github.com/zxw19/WioCraft-L2'],
+    ],
+  },
+  {
+    id: 'meshpunk', name: 'MeshPunk', group: 'platform', devices: ['L2'],
+    type: 'Game platform', version: 'v0.5.0 stable', badge: 'success',
+    image: '/img/l2-pro-games/meshpunk-flappy-bird.jpg', alt: 'Flappy Bird title screen with a touch play button',
+    credit: 'Flappy Bird demo', source: 'https://github.com/PhilMo6/meshpunk/blob/v0.5.0/website/site/img/shots/flappy-bird.jpg',
+    description: 'A game platform with a shared input layer. Games can use the same mapped USB controller, and the App Library adds games and emulators over Wi-Fi.',
+    bundled: 'Snake · Flappy Bird · Scorched Earth',
+    library: 'Doom · PICO-8 carts · Pyxel games · Game Boy · NES · SNES · Neo Geo Pocket / Color · Sega 8-bit (Game Gear / Master System / SG-1000) · Genesis / Mega Drive · DOS',
+    links: [
+      ['Download firmware', 'https://github.com/PhilMo6/meshpunk/releases/tag/v0.5.0'],
+      ['App catalog', 'https://github.com/PhilMo6/meshpunk-apps/blob/main/catalog.toml'],
+    ],
+  },
+  {
+    id: 'quake', name: 'Quake', group: 'classic', devices: ['L2'],
+    type: 'Classic port · FPS', version: 'v1.0', badge: 'info',
+    image: '/img/l2-pro-games/quake.jpg', alt: 'First-person view down a stone corridor in Quake',
+    credit: 'PC screenshot', source: 'https://store.steampowered.com/app/2310/',
+    description: 'A first-person engine that reads converted level data from microSD and accepts touch or Bluetooth LE input.',
+    links: [['Download L2 firmware', 'https://github.com/recrof/Quake-ESP32S3/releases/tag/v1.0']],
+  },
+  {
+    id: 'quake-ii', name: 'Quake II', group: 'classic', devices: ['L2'],
+    type: 'Classic port · FPS', version: 'v1.0', badge: 'info',
+    image: '/img/l2-pro-games/quake-ii.jpg', alt: 'A firefight inside a metal structure in Quake II',
+    credit: 'PC screenshot', source: 'https://store.steampowered.com/app/2320/',
+    description: 'A separate port that loads the retail game’s PAK archives from the baseq2 folder on microSD.',
+    links: [['Download L2 firmware', 'https://github.com/recrof/Quake2-ESP32S3/releases/tag/v1.0']],
+  },
+  {
+    id: 'meshdesk', name: 'MeshDesk', group: 'preview', devices: ['L2'],
+    type: 'Touchscreen apps on microSD', version: 'Development preview', badge: 'warning',
+    image: '/img/l2-pro-games/meshdesk.jpg', alt: 'A four-by-four 2048 board with the score, New, and Undo controls on the left',
+    credit: '2048 app preview', source: 'https://github.com/mtoolstec/MeshDesk/blob/0965e6f8122b6d7d98d91c81a9d5fcf7eaf31ab8/apps/2048/app.js',
+    description: 'A development preview that loads touchscreen apps from microSD. Its 2048 app is a small example of a touch-driven board game. The project guide covers building from source.',
+    library: '2048 · Tetris · Dinosaur · Whack-a-Mole · Memory Pairs',
+    links: [
+      ['Project guide', 'https://github.com/mtoolstec/MeshDesk'],
+      ['App catalog', 'https://github.com/mtoolstec/MeshDesk/tree/main/apps'],
+    ],
+  },
+  {
+    id: 'duke', name: 'Duke Nukem 3D', group: 'classic', devices: ['L2'],
+    type: 'Classic port · FPS', version: 'v1.0', badge: 'info',
+    heroFocus: 'xMaxYMid', image: '/img/l2-pro-games/duke-nukem-3d.jpg', alt: 'An indoor scene from the first-person view in Duke Nukem 3D',
+    credit: 'PC anniversary edition', source: 'https://store.steampowered.com/app/434050/',
+    description: 'A port that takes touch or Bluetooth LE gamepad input and converts sound and music assets on first launch.',
+    links: [['Download L2 firmware', 'https://github.com/recrof/Duke3D-ESP32S3/releases/tag/v1.0']],
+  },
+  {
+    id: 'cnc', name: 'Command & Conquer', group: 'classic', devices: ['L2'],
+    type: 'Classic port · Real-time strategy', version: 'v1.0', badge: 'info',
+    image: '/img/l2-pro-games/command-and-conquer.jpg', alt: 'A desert base, minimap, and construction sidebar in Tiberian Dawn',
+    credit: 'Tiberian Dawn (PC)', source: 'https://store.steampowered.com/app/2229830/',
+    description: 'A real-time strategy port that uses touch for unit selection and map scrolling. Tiberian Dawn and Red Alert each have their own firmware image and game data.',
+    links: [['Choose an L2 image', 'https://github.com/recrof/CommandConquer-ESP32S3/releases/tag/v1.0']],
+  },
+
+];
+
+export const GameImage = ({game}) => (
+  <figure className="card__image margin--none">
+    <img src={game.image} alt={game.alt} loading="lazy"
+      style={{width:'100%', aspectRatio:'16/10', objectFit:'cover'}} />
+    <figcaption className="margin-horiz--md margin-vert--xs">
+      <small><a href={game.source}>{game.credit}</a></small>
+    </figcaption>
+  </figure>
+);
+
+export const GameDetails = ({game}) => <>
+  <div className="card__body">
+    <p className="margin-bottom--xs"><strong>{game.name}</strong>{' '}
+      <span className={'badge badge--' + game.badge} style={{color:'var(--ifm-color-black)'}}>{game.version}</span>
+    </p>
+    <p><small>{game.type}</small></p>
+    <p>{game.description}</p>
+    {game.bundled && <p><strong>Built-in games</strong><br/>{game.bundled}</p>}
+    {game.library && <p><strong>{game.bundled ? 'Install from App Library → Games' : 'Games on microSD'}</strong><br/>{game.library}</p>}
+  </div>
+  <div className="card__footer">
+    {game.links.map(([label, url], index) => <a key={url} href={url}
+      className={'button button--sm margin-right--sm margin-bottom--xs button--' + (index ? 'secondary' : 'primary')}>{label}</a>)}
+  </div>
+</>;
+
+export const GameCard = ({game}) => ['original', 'platform'].includes(game.group) ? (
+  <article className="card shadow--md margin-bottom--lg">
+    <div className="row">
+      <div className="col col--5"><GameImage game={game}/></div>
+      <div className="col col--7"><GameDetails game={game}/></div>
+    </div>
+  </article>
+) : (
+  <div className="col col--6 margin-bottom--lg">
+    <article className="card shadow--md">
+      <GameImage game={game}/>
+      <GameDetails game={game}/>
+    </article>
+  </div>
+);
+
+export const GameGroup = ({group}) => games.filter(game => game.group === group).map(game => <GameCard key={game.id} game={game}/>);
+
+export const ProjectLink = ({id}) => {
+  const [label, url] = games.find(game => game.id === id).links[0];
+  return <a href={url}>{label}</a>;
+};
+
+export const GameGallery = () => {
+  const compact = useWindowSize({desktopBreakpoint: 740}) === 'mobile';
+  const layout = compact
+    ? {columns: 4, width: 800, stride: 178, panel: 234, height: 124, rise: 75, top: 8, row: 250, label: 22}
+    : {columns: 7, width: 1600, stride: 194, panel: 402, height: 570, rise: 245, top: 42, row: 1000, label: 23};
+  const {columns, width, stride, panel, height, rise, top, row, label} = layout;
+  const rows = Math.ceil(games.length / columns);
+  return <svg role="img" aria-labelledby="game-gallery-title" viewBox={`0 0 ${width} ${rows * row}`}
+    style={{display:'block', width:'100%', marginInline:'auto'}}>
+    <title id="game-gallery-title">Community games, from left to right: {games.map(game => game.name).join(', ')}</title>
+    <defs>
+      <pattern id="game-scanlines" patternUnits="userSpaceOnUse" width="4" height="4">
+        <path d="M 0 0 H 4" stroke="var(--ifm-color-black)" strokeOpacity=".16" />
+      </pattern>
+    </defs>
+    {games.map((game, index) => {
+      const rowStart = index - index % columns;
+      const count = Math.min(columns, games.length - rowStart);
+      const x = (width - (count - 1) * stride - panel) / 2 + (index % columns) * stride;
+      const y = top + rise + Math.floor(index / columns) * row;
+      const caption = y + height + (compact ? 28 : 58);
+      return <g key={game.id}>
+        <g transform={`matrix(1 ${-rise / panel} 0 1 ${x} ${y})`}>
+          <image href={game.image} width={panel} height={height} preserveAspectRatio={`${game.heroFocus || 'xMidYMid'} slice`} />
+          <rect width={panel} height={height} fill="url(#game-scanlines)" />
+        </g>
+        <path d={`M ${x} ${caption - label * .8} v ${label}`} stroke="currentColor" opacity=".35" strokeWidth="2" />
+        <text x={x + 10} y={caption} fill="currentColor" fontSize={label} fontWeight="500">
+          {game.id === 'cnc' ? 'C&C' : game.name}
+        </text>
+      </g>;
+    })}
+  </svg>;
+};
+
+The Wio Tracker L2 Pro has the core parts of a handheld game system. Its ESP32-S3 can render a scene in memory, send pixels to the touchscreen, read level data from microSD, and play sound through the built-in speaker. Community projects show how those parts work together, from a voxel engine to a platform with USB gamepad support.
+
+## How the hardware runs a game {#hardware}
+
+| Hardware | How a game can use it |
+| --- | --- |
+| Dual-core ESP32-S3, 16 MB flash, 8 MB PSRAM | Flash holds the firmware. External RAM gives the engine room for frame buffers and cached assets. WioCraft renders at 160 × 120 and doubles each dimension for the 320 × 240 display. That reduces the number of scene pixels the CPU has to draw per frame to one quarter. |
+| 3.2-inch QSPI display and GT911 touch controller | The display receives finished pixels over QSPI. Touch coordinates can drive a virtual stick in a 3D game or select a unit directly on a strategy map. |
+| microSD slot | A port can read levels, textures, and sound from the card as needed. Quake reads its converted PAK archive from microSD and caches recently used data in PSRAM. |
+| ES8311 audio codec and built-in speaker | The engine mixes sound effects into a stream of samples. The ESP32-S3 sends the samples over I²S to the codec for playback through the speaker. |
+
+For a port, start with the board initialization in Quake. It shows how the L2 brings up the display, touch controller, and audio hardware. [L2 hardware specifications and pinout](https://wiki.seeedstudio.com/meshtastic_wio_tracker_l2_intro/) · [Quake L2 board code](https://github.com/recrof/Quake-ESP32S3/blob/HEAD/QuakeESP32S3/main/esp_board_l2.c) · [WioCraft source](https://github.com/zxw19/WioCraft-L2)
+
+## Gamepads and multiplayer links {#connectivity}
+
+**USB gamepads.** With MeshPunk v0.5.0, the L2 acts as the USB host and supplies power to a compatible controller through USB-C. The gamepad driver reads the controller, and MeshPunk maps its buttons to game actions. A developer adding a game can use that mapping for movement and actions alongside the on-screen controls. [MeshPunk v0.5.0 L2 release notes](https://github.com/PhilMo6/meshpunk/releases/tag/v0.5.0)
+
+**Wireless input.** A game can also use the ESP32-S3’s Bluetooth LE radio for input and leave the USB-C port free. The Quake port supports BLE keyboards, mice, and gamepads. Its maintainer lists 8BitDo controllers in BLE/Android mode as one example. Check the controller’s Bluetooth mode when choosing hardware for a port. [Quake input support](https://github.com/recrof/Quake-ESP32S3#hardware)
+
+**Two-player USB link.** A wired game link gives the USB port a different job. One handheld acts as host and the other as a USB device. The game firmware on both ends must agree on the data to exchange, such as each player’s inputs for the next turn. MeshPunk documents this arrangement for its Game Boy emulator on two T-Decks. Developers can use it as a reference for an L2-to-L2 implementation. Operation with two L2 Pro units is unverified. [MeshPunk Game Boy link example](https://github.com/PhilMo6/meshpunk/blob/v0.5.0/README.md)
+
+**Local Wi-Fi multiplayer.** Wi-Fi gives developers another way to exchange game data between handhelds. MeshPunk’s Doom app describes a shared Wi-Fi network for two to four players. Its documentation describes decks and leaves L2 Pro multiplayer compatibility unconfirmed. [Doom multiplayer notes](https://github.com/PhilMo6/meshpunk-apps/blob/main/apps/Doom/readme.lua)
+
+## Community projects {#projects}
+
+<GameGallery/>
+
+WioCraft is pictured on the L2 Pro. The other images are game and app previews, including PC screenshots.
+
+<nav aria-label="Browse the game collection" className="margin-bottom--md">
+  <a className="button button--secondary button--sm margin-right--sm margin-bottom--xs" href="#original">🧱 Featured original</a>
+  <a className="button button--secondary button--sm margin-right--sm margin-bottom--xs" href="#platform">🎮 Game platforms</a>
+  <a className="button button--secondary button--sm margin-right--sm margin-bottom--xs" href="#classics">🕹️ Classic ports</a>
+  <a className="button button--secondary button--sm margin-right--sm margin-bottom--xs" href="#preview">🧪 Development previews</a>
+  <a className="button button--secondary button--sm margin-bottom--xs" href="#compare">📊 Quick comparison</a>
+</nav>
+
+### Featured original {#original}
+
+<GameGroup group="original"/>
+
+### Game platforms {#platform}
+
+<GameGroup group="platform"/>
+
+### Classic ports {#classics}
+
+<div className="row">
+  <GameGroup group="classic"/>
+</div>
+
+### Development previews {#preview}
+
+<div className="row">
+  <GameGroup group="preview"/>
+  <div className="col col--6 margin-bottom--lg">
+    <article className="card shadow--md">
+      <div className="card__body">
+        <p><strong>Share your L2 Pro game</strong></p>
+        <p>Got a game running on the L2 Pro? Share a photo of it on the device, a project link, and installation instructions.</p>
+      </div>
+      <div className="card__footer">
+        <a className="button button--secondary button--sm" href="https://seeed-projects.github.io/seeed-meshtastic-projects/l2.html">Submit your project →</a>
+      </div>
+    </article>
+  </div>
+</div>
+
+## Quick comparison {#compare}
+
+| Firmware | Type | Version | What you can play | Download |
+| --- | --- | --- | --- | --- |
+| WioCraft | Original voxel survival game | v0.3 | Explore · Mine · Build · Craft | <ProjectLink id="wiocraft"/> |
+| MeshPunk | Game platform | v0.5.0 stable | Built in: Snake · Flappy Bird · Scorched Earth<br/>Installable: Doom · PICO-8 · Pyxel · GB / NES / SNES · Neo Geo Pocket / Color · Sega 8-bit · Mega Drive · DOS | <ProjectLink id="meshpunk"/> |
+| Quake | FPS | v1.0 | Quake | <ProjectLink id="quake"/> |
+| Quake II | FPS | v1.0 | Quake II | <ProjectLink id="quake-ii"/> |
+| Duke Nukem 3D | FPS | v1.0 | Duke Nukem 3D | <ProjectLink id="duke"/> |
+| Command & Conquer | Real-time strategy | v1.0 | Tiberian Dawn · Red Alert | <ProjectLink id="cnc"/> |
+| MeshDesk | Touchscreen apps | Development preview | 2048 · Tetris · Dinosaur · Whack-a-Mole · Memory Pairs | <ProjectLink id="meshdesk"/> (source) |
+
+## Firmware and recovery {#flash}
+
+The release links above lead to the community firmware. Choose the build for **Wio Tracker L2** or **L2 Pro** and follow that project's instructions for its flash address and microSD layout. MeshDesk provides a PlatformIO source build. For MeshPunk v0.5.0, the L2 release includes a full image for installation from a computer and a separate `-launcher.bin` image for bmorcelli Launcher. [MeshPunk release files](https://github.com/PhilMo6/meshpunk/releases/tag/v0.5.0)
+
+Installing game firmware replaces the current firmware. A full erase also removes settings and keys, so export the configuration and identity information you want to keep first. To return to mesh use, follow the guide for the firmware you previously used. [Restore Meshtastic](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l2/#flash-firmware) · [Restore MeshCore Ripple](https://wiki.seeedstudio.com/get_started_with_ripple_l2_pro/#flash-firmware)
+
+## Tech Support & Product Discussion {#support}
+
+<p style={{textAlign: 'center'}}>
+  <a href="https://www.facebook.com/groups/1755190828846458" target="_blank" rel="noopener noreferrer">
+    <img src="https://files.seeedstudio.com/wiki/SenseCAP/MeshTrackerX1/BannerQRCode_FBNew.jpg"
+      alt="Join the Seeed Facebook community for technical support and product discussions"
+      style={{width: '90%', maxWidth: '800px', height: 'auto'}} />
+  </a>
+</p>
+
+{/* Pre-publication checklist (hidden from the rendered page)
+The gallery uses the seven card images in the order of the games array. Each card caption links to its source.
+Local images and the social preview are in static/img/l2-pro-games/.
+l2-pro-games-gallery.jpg — desktop gallery preview for sharing. Export it again when the card images change.
+l2-pro-games-hero.jpg — WioCraft running on an L2 Pro, from Seeed Project Hub.
+meshpunk-flappy-bird.jpg — cropped photo of the author's Flappy Bird demo on other hardware.
+quake.jpg, quake-ii.jpg, duke-nukem-3d.jpg, command-and-conquer.jpg — PC screenshots from Steam. The Command & Conquer image shows Tiberian Dawn.
+meshdesk.jpg — board rendered in a browser from the project's 2048 app source.
+Replace the six remaining illustrative images with L2 Pro photos as they become available. Update their alt text, captions, and sources together.
+*/}
