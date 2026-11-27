@@ -9,11 +9,15 @@ keywords:
   - Kinematics
   - Gravity Compensation
 slug: /rebot_t701_ht_pinocchio
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-17'
+url: https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_pinocchio/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -24,7 +28,13 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <div className="rebot-page">
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT bimanual robot"
+  />
 </div>
 
 <GitHubStarButton
@@ -81,8 +91,8 @@ A cinemática direta calcula a pose do efetuador final a partir dos ângulos atu
 
 | Exemplo | Comando | Comportamento esperado |
 | --- | --- | --- |
-| Compensação de gravidade | `python t701_ht_gravity_compensation.py` | Aplica `0.8 × G(q)` sujeito aos limites de torque e imprime o torque de compensação. |
-| Compensação de gravidade com saída de FK | `python t701_ht_gravity_compensation_with_fk.py` | Aplica `G(q)` sujeito aos limites de torque e imprime os ângulos das juntas, o torque de compensação e a pose do efetuador final. |
+| Compensação de gravidade | `python t701_ht_gravity_compensation.py` | Aplica `0.8 × G(q)` sujeita aos limites de torque e imprime o torque de compensação. |
+| Compensação de gravidade com saída de FK | `python t701_ht_gravity_compensation_with_fk.py` | Aplica `G(q)` sujeita aos limites de torque e imprime os ângulos das juntas, o torque de compensação e a pose do efetuador final. |
 
 Quando você pressiona `Ctrl+C`, ambos os exemplos de compensação de gravidade param os motores diretamente.
 
@@ -163,7 +173,7 @@ Mantém a posição alvo do efetuador final enquanto gira em torno dos eixos loc
 python t701_ht_moveL_rotate_control.py
 ```
 
-Ambos os exemplos MoveL começam movendo para a pose inicial de VR. Cada trajetória é executada por 5 segundos, excluindo o posicionamento inicial e o retorno ao zero. Todos os quatro exemplos desta seção retornam ao zero e param ao final.
+Ambos os exemplos de MoveL começam movendo para a pose inicial de VR. Cada trajetória é executada por 5 segundos, excluindo o posicionamento inicial e o retorno ao zero. Todos os quatro exemplos desta seção retornam ao zero e param no final.
 
 </section>
 
@@ -173,7 +183,7 @@ Ambos os exemplos MoveL começam movendo para a pose inicial de VR. Cada trajet�
 
 - **Transladar.** Use `W` / `S`, `A` / `D` e `Q` / `E` para se mover ao longo dos eixos X, Y e Z, respectivamente.
 - **Rotacionar.** Use `1` / `2`, `3` / `4` e `5` / `6` para girar em torno dos eixos X, Y e Z, respectivamente.
-- **Redefinir a postura de referência.** No exemplo de travamento de postura em espaço nulo, pressione `R` para definir a postura atual das juntas como referência.
+- **Redefinir a postura de referência.** No exemplo de trava de postura em espaço nulo, pressione `R` para definir a postura atual das juntas como referência.
 - **Sair.** Pressione `Esc` ou `Ctrl+C` para retornar ao zero e parar.
 
 <div className="row row--align-top">
@@ -205,7 +215,7 @@ Use as teclas para controlar a velocidade do efetuador final. Se o exemplo preve
 python t701_ht_keyboard_cartesian_vel_collision_control.py
 ```
 
-**Travamento de postura em espaço nulo**
+**Trava de postura em espaço nulo**
 
 Acompanha a pose alvo do efetuador final enquanto mantém a postura das juntas o mais próxima possível da postura de referência.
 
@@ -225,7 +235,7 @@ python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py
 
 :::warning[Escopo da previsão de colisão]
 
-Depois que os braços atingem a pose inicial de VR, o exemplo de velocidade do efetuador final com previsão de colisão verifica colisões e violações de limite de junta nos próximos 0,20 segundos. As verificações de colisão usam as malhas STL em `T701-HT_URDF/meshes/` e incluem colisões entre os braços no modo de dois braços. Deixe folga durante a inicialização e o retorno ao zero e reserve espaço extra para os grippers e para a distância real de parada.
+Depois que os braços atingem a pose inicial de VR, o exemplo de velocidade do efetuador final com previsão de colisão verifica colisões e violações de limites de juntas ao longo dos próximos 0,20 segundos. As verificações de colisão usam as malhas STL em `T701-HT_URDF/meshes/` e incluem colisões entre os braços no modo de dois braços. Deixe folga durante a inicialização e o retorno ao zero e reserve espaço extra para os grippers e para a distância real de parada.
 
 :::
 

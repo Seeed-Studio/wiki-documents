@@ -11,12 +11,17 @@ keywords:
   - Dual-Arm Teleoperation
   - WebXR
 slug: /rebot_t701_ht_vr
-aliases: ["/rebot_t701_ht_quest"]
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
+aliases:
+  - /rebot_t701_ht_quest
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-19'
+url: https://wiki.seeedstudio.com/es/rebot_t701_ht_vr/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -29,7 +34,13 @@ import TabItem from '@theme/TabItem';
 <div className="rebot-page">
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT bimanual robot"
+  />
 </div>
 
 <GitHubStarButton
@@ -39,7 +50,7 @@ import TabItem from '@theme/TabItem';
   ariaLabel="Star T701-HT SDK on GitHub"
 />
 
-Usa los controladores de VR izquierdo y derecho para controlar los brazos T701 HT correspondientes, incluido el seguimiento de la pose del efector final y el control de la garra. El navegador del visor lee los datos de los controladores mediante WebXR y los envía al ordenador a través de WebSocket. El servidor de streaming los reenvía después al controlador de doble brazo por UDP.
+Usa los controladores de VR izquierdo y derecho para controlar los brazos T701 HT correspondientes, incluido el seguimiento de la pose del efector final y el control de la garra. El navegador del visor lee los datos de los controladores mediante WebXR y los envía al ordenador a través de WebSocket. El servidor de streaming los reenvía después al controlador bimanual por UDP.
 
 :::note[Compatibilidad de dispositivos]
 
@@ -107,7 +118,7 @@ Selecciona **Start Server**. El programa usa `adb reverse` para reenviar los pue
 http://localhost:8080/index.html?ws=ws://localhost:8765
 ```
 
-Configura la entrada de WebSocket de la página como `ws://localhost:8765`. El modo USB usa **HTTP / WS** y no necesita un certificado HTTPS. Aquí, `localhost` llega al ordenador a través del reenvío por USB.
+Configura la entrada de WebSocket de la página como `ws://localhost:8765`. El modo USB usa **HTTP / WS** y no necesita un certificado HTTPS. Aquí, `localhost` llega al ordenador a través del reenvío USB.
 
 #### Inicio por línea de comandos (opcional)
 
@@ -158,7 +169,7 @@ https://192.168.1.100:8080/index.html?ws=wss://192.168.1.100:8765
 
 Sustituye la IP de ejemplo por la IP real del ordenador. En el primer acceso, gestiona el aviso del certificado autofirmado en el navegador y recarga la página. Configura la entrada de WebSocket como `wss://ACTUAL_COMPUTER_IP:8765`, no `localhost` ni `ws://`.
 
-Los valores `0.0.0.0` de HTTP Host y WS Host son direcciones de escucha, no direcciones que se deban abrir en el visor. Cuando el servidor de streaming y el controlador de doble brazo se ejecutan en el mismo ordenador, el destino UDP sigue siendo `127.0.0.1:5005`.
+Los valores `0.0.0.0` de HTTP Host y WS Host son direcciones de escucha, no direcciones que se deban abrir en el visor. Cuando el servidor de streaming y el controlador bimanual se ejecutan en el mismo ordenador, el destino UDP sigue siendo `127.0.0.1:5005`.
 
 #### Inicio por línea de comandos (opcional)
 
@@ -187,9 +198,9 @@ La página restaura la configuración de WebSocket guardada. Después de cambiar
 
 ## Comprobar los datos de los controladores
 
-Selecciona **Start Verify** en la interfaz de streaming del ordenador. Mueve ambos controladores y comprueba que el recuento de paquetes aumente y que los datos de pose y botones cambien con tu entrada.
+Selecciona **Start Verify** en la interfaz de streaming del ordenador. Mueve ambos controladores y comprueba que el recuento de paquetes aumenta y que los datos de pose y botones cambian con tu entrada.
 
-Luego selecciona **Stop Verify**. Mantén en ejecución el servidor, el modo USB o WiFi seleccionado y el streaming XR del visor. Verify y el controlador de doble brazo usan el mismo puerto UDP 5005 y no pueden recibir simultáneamente.
+Luego selecciona **Stop Verify**. Mantén en ejecución el servidor, el modo USB o WiFi seleccionado y el streaming XR del visor. Verify y el controlador bimanual usan el mismo puerto UDP 5005 y no pueden recibir simultáneamente.
 
 | Tecla en la terminal | Función |
 | --- | --- |
@@ -201,11 +212,11 @@ Luego selecciona **Stop Verify**. Mantén en ejecución el servidor, el modo USB
 
 <section className="section-card">
 
-## Iniciar el control de doble brazo
+## Iniciar el control bimanual
 
 :::warning[Despeja el rango de movimiento antes de empezar]
 
-Detén Verify, `udp_receiver_test.py` y cualquier otro receptor UDP 5005. Después de recibir datos de los controladores, el programa mueve primero el brazo izquierdo y luego el derecho a sus poses iniciales de VR. Asegura el robot, retira las cargas y despeja el rango de movimiento y la trayectoria de retorno. Permanece junto al robot y mantente alejado de los puntos de pellizco de articulaciones y garra.
+Detén Verify, `udp_receiver_test.py` y cualquier otro receptor UDP 5005. Después de recibir datos de los controladores, el programa mueve primero el brazo izquierdo y luego el derecho a sus poses iniciales de VR. Asegura el robot, retira las cargas y despeja el rango de movimiento y la trayectoria de retorno. Permanece junto al robot y mantente alejado de los puntos de pellizco de articulaciones y garras.
 
 :::
 
@@ -217,7 +228,7 @@ cd scripts
 python t701_ht_vr_dual_cartesian_qp_control.py
 ```
 
-Esta entrada controla ambos brazos directamente, sin un menú de selección de brazo. Los brazos izquierdo y derecho usan `T701-HT_robot_param/T701-HT_left.yaml` y `T701-HT_right.yaml`, respectivamente.
+Esta entrada controla directamente ambos brazos, sin un menú de selección de brazo. Los brazos izquierdo y derecho usan `T701-HT_robot_param/T701-HT_left.yaml` y `T701-HT_right.yaml`, respectivamente.
 
 Espera a que terminen los movimientos iniciales y a que el programa muestre su mensaje de inicio de control, luego usa los siguientes controles:
 
@@ -227,7 +238,7 @@ Espera a que terminen los movimientos iniciales y a que el programa muestre su m
 | Soltar **Squeeze** | Mantener la posición actual. |
 | Usar **Trigger** mientras mantienes Squeeze | Abrir o cerrar la garra correspondiente. |
 | Pulsar el botón principal, etiquetado como A en el programa | Restablecer suavemente ese brazo a sus ángulos articulares iniciales para esta ejecución. |
-| Pulsar `Ctrl+C` en la terminal de control | Devolver los brazos a cero en modo MIT y detener los motores. Espera a que termine el apagado. |
+| Pulsar `Ctrl+C` en la terminal de control | Devolver los brazos a cero en modo MIT y detener los motores. Espera a que finalice el apagado. |
 
 Después de que el controlador salga, pulsa `Q` en la interfaz de streaming para detener el servidor y salir.
 
@@ -242,7 +253,7 @@ Después de que el controlador salga, pulsa `Q` en la interfaz de streaming para
 | La página USB no se abre | Confirma la autorización de depuración USB, el estado `device` en `adb devices` y que el servidor de streaming esté en ejecución. Usa `http://localhost:8080`. |
 | La página WiFi no se abre | Confirma que el visor y el ordenador estén en la misma LAN. Usa `https://ACTUAL_COMPUTER_IP:8080`, gestiona el aviso del certificado y comprueba que el ordenador permita conexiones en los puertos 8080 y 8765. |
 | WebSocket alterna entre Connecting y Reconnecting | USB usa `ws://localhost:8765` con Force HTTPS desactivado; WiFi usa `wss://ACTUAL_COMPUTER_IP:8765`. Comprueba si la página restauró la configuración del otro modo. |
-| No se puede enlazar UDP 5005 | Detén Verify, `udp_receiver_test.py` u otro receptor que use el puerto. |
+| No se puede enlazar el UDP 5005 | Detén Verify, `udp_receiver_test.py` u otro receptor que esté usando el puerto. |
 | No hay paquetes de controladores en los 10 segundos posteriores al inicio | Selecciona Start XR Stream en el visor, comprueba que WebSocket esté conectado y establece el destino UDP en `127.0.0.1:5005`. El programa sale antes de inicializar los brazos. |
 | El modo de conexión cambia después de restablecer la configuración | Reset Defaults o eliminar la configuración guardada restaura WiFi / 8080. Vuelve a establecer el modo y los puertos en la pestaña seleccionada; cambiar de modo no restablece los puertos automáticamente. |
 
@@ -252,7 +263,7 @@ Después de que el controlador salga, pulsa `Q` en la interfaz de streaming para
 
 ## Interfaz de escritorio (opcional)
 
-La interfaz de escritorio es `Quest_controller_stream/quest_stream_ui.py`. Requiere la dependencia opcional `PyQt5` y usa una configuración `.quest_stream_ui.json` independiente. Se aplican los mismos requisitos de protocolo y direcciones para USB y WiFi; configúralos por separado en la interfaz de escritorio.
+La interfaz de escritorio es `Quest_controller_stream/quest_stream_ui.py`. Requiere la dependencia opcional `PyQt5` y utiliza una configuración `.quest_stream_ui.json` independiente. Se aplican los mismos requisitos de protocolo y dirección USB y WiFi; configúralos por separado en la interfaz de escritorio.
 
 </section>
 

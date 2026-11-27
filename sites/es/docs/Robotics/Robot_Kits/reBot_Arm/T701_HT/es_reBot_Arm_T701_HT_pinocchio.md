@@ -1,7 +1,7 @@
 ---
 title: reBot Arm T701 HT con Pinocchio
 sidebar_label: Pinocchio
-description: Verifica la cinemática directa e inversa y ejecuta los ejemplos de compensación de gravedad, trayectoria cartesiana y control por teclado en el reBot Arm T701 HT.
+description: Verifica la cinemática directa e inversa y ejecuta ejemplos de compensación de gravedad, trayectoria cartesiana y control por teclado en el reBot Arm T701 HT.
 keywords:
   - reBot
   - T701 HT
@@ -9,11 +9,15 @@ keywords:
   - Kinematics
   - Gravity Compensation
 slug: /rebot_t701_ht_pinocchio
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-17'
+url: https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -24,7 +28,13 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <div className="rebot-page">
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT bimanual robot"
+  />
 </div>
 
 <GitHubStarButton
@@ -34,17 +44,17 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="Star T701-HT SDK on GitHub"
 />
 
-El SDK T701-HT usa Pinocchio para cargar el modelo URDF y calcular las poses del efector final y los pares articulares debidos a la gravedad. Usa los ejemplos de cinemática directa (FK) e inversa (IK) para comprobar la realimentación articular del robot antes de ejecutar los ejemplos de compensación de gravedad, trayectoria cartesiana y control por teclado.
+El SDK T701-HT utiliza Pinocchio para cargar el modelo URDF y calcular las poses del efector final y los pares articulares debidos a la gravedad. Usa los ejemplos de cinemática directa (FK) e inversa (IK) para comprobar la retroalimentación articular del robot antes de ejecutar los ejemplos de compensación de gravedad, trayectoria cartesiana y control por teclado.
 
 <section className="section-card">
 
 ## Preparar el robot
 
-Instala el SDK y sus dependencias usando las [instrucciones de instalación de inicio rápido de T701 HT](https://wiki.seeedstudio.com/es/rebot_t701_ht_getting_started/#instalar-el-sdk). Luego sigue los pasos restantes del Inicio Rápido para comprobar el mapeo del puerto serie, leer la realimentación de las articulaciones y del gripper, y verificar las posiciones cero.
+Instala el SDK y sus dependencias utilizando las [instrucciones de instalación de inicio rápido de T701 HT](https://wiki.seeedstudio.com/es/rebot_t701_ht_getting_started/#install-the-sdk). Luego sigue los pasos restantes del Inicio Rápido para comprobar el mapeo del puerto serie, leer la retroalimentación de las articulaciones y del gripper, y verificar las posiciones cero.
 
 :::warning[Antes de ejecutar los ejemplos en el robot]
 
-- Asegúrate de que los brazos estén firmemente montados y retira cualquier carga. Usa un solo brazo en la primera ejecución.
+- Asegúrate de que los brazos estén firmemente montados y retira cualquier carga. Usa un solo brazo para la primera ejecución.
 - Los brazos pueden empezar a moverse tan pronto como los selecciones en un ejemplo de movimiento. Despeja todo el rango de movimiento, incluido el espacio por encima y la trayectoria de regreso a cero. Permanece junto al robot durante toda la ejecución y mantente alejado de los puntos de pellizco en las articulaciones y los grippers.
 
 :::
@@ -64,11 +74,11 @@ Cuando se te solicite después de lanzar un ejemplo, introduce `1` para el brazo
 
 ## Verificar la cinemática directa e inversa
 
-La cinemática directa calcula la pose del efector final a partir de los ángulos articulares actuales. La comprobación de cinemática inversa resuelve los ángulos articulares que producen esa pose y los compara con las lecturas actuales. Ambos ejemplos usan solo la realimentación articular para sus cálculos y envían un comando de parada de motor cuando sales con `Ctrl+C`.
+La cinemática directa calcula la pose del efector final a partir de los ángulos articulares actuales. La comprobación de cinemática inversa resuelve los ángulos articulares que producen esa pose y los compara con las lecturas actuales. Ambos ejemplos utilizan solo la retroalimentación articular para sus cálculos y envían un comando de parada de motor cuando sales con `Ctrl+C`.
 
 | Ejemplo | Comando | Salida esperada |
 | --- | --- | --- |
-| Cinemática directa (FK) en vivo | `python t701_ht_forward_kinematics_test.py` | Imprime la posición del efector final en metros y el balanceo, cabeceo y guiñada (RPY) en grados aproximadamente una vez por segundo. |
+| Cinemática directa (FK) en vivo | `python t701_ht_forward_kinematics_test.py` | Imprime la posición del efector final en metros y el roll, pitch y yaw (RPY) en grados aproximadamente una vez por segundo. |
 | Comprobación de FK a IK en la pose actual | `python t701_ht_inverse_kinematics_test.py` | Imprime los ángulos articulares actuales y la posición del efector final. Si la IK tiene éxito, también imprime el error máximo de ángulo articular en radianes. |
 
 </section>
@@ -77,7 +87,7 @@ La cinemática directa calcula la pose del efector final a partir de los ángulo
 
 ## Compensación de gravedad
 
-`G(q)` es el par de gravedad que el modelo calcula a partir de los ángulos articulares `q`. La compensación de gravedad facilita mover los brazos a mano.
+`G(q)` es el par gravitatorio que el modelo calcula a partir de los ángulos articulares `q`. La compensación de gravedad facilita mover los brazos a mano.
 
 | Ejemplo | Comando | Comportamiento esperado |
 | --- | --- | --- |
@@ -118,7 +128,7 @@ python t701_ht_inv_posvel_control.py
 <div className="row row--align-top">
 <div className="col col--8" style={{minWidth: 0}}>
 
-Se mueve a la pose VR inicial, luego eleva el brazo y traza un círculo por encima.
+Se mueve a la pose VR inicial, luego eleva el brazo y traza un círculo por encima de la cabeza.
 
 ```bash
 python t701_ht_qp_ik.py
@@ -128,7 +138,7 @@ python t701_ht_qp_ik.py
 <div className="col col--4">
 <div className="image-frame" style={{marginTop: 0}}>
 
-![Demostración de círculo por encima con cinemática inversa QP](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-qp-ik-circle.gif)
+![Demostración de círculo por encima de la cabeza con cinemática inversa QP](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-qp-ik-circle.gif)
 
 </div>
 </div>
@@ -174,7 +184,7 @@ Ambos ejemplos de MoveL comienzan moviéndose a la pose VR inicial. Cada trayect
 - **Trasladar.** Usa `W` / `S`, `A` / `D` y `Q` / `E` para moverte a lo largo de los ejes X, Y y Z, respectivamente.
 - **Rotar.** Usa `1` / `2`, `3` / `4` y `5` / `6` para rotar alrededor de los ejes X, Y y Z, respectivamente.
 - **Restablecer la postura de referencia.** En el ejemplo de bloqueo de postura en el espacio nulo, presiona `R` para establecer la postura articular actual como referencia.
-- **Salir.** Presiona `Esc` o `Ctrl+C` para regresar a cero y detenerte.
+- **Salir.** Presiona `Esc` o `Ctrl+C` para volver a cero y detenerte.
 
 <div className="row row--align-top">
 <div className="col col--8" style={{minWidth: 0}}>
@@ -225,7 +235,7 @@ python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py
 
 :::warning[Alcance de la predicción de colisiones]
 
-Una vez que los brazos alcanzan la pose VR inicial, el ejemplo de velocidad del efector final con predicción de colisiones comprueba colisiones y violaciones de límites articulares durante los siguientes 0,20 segundos. Las comprobaciones de colisión usan las mallas STL en `T701-HT_URDF/meshes/` e incluyen colisiones entre los brazos en modo de doble brazo. Deja holgura durante el arranque y el regreso a cero, y permite espacio adicional para los grippers y la distancia real de parada.
+Una vez que los brazos alcanzan la pose VR inicial, el ejemplo de velocidad del efector final con predicción de colisiones comprueba colisiones y violaciones de límites articulares durante los siguientes 0,20 segundos. Las comprobaciones de colisión utilizan las mallas STL en `T701-HT_URDF/meshes/` e incluyen colisiones entre los brazos en modo de doble brazo. Deja holgura durante el arranque y el regreso a cero, y permite espacio adicional para los grippers y la distancia real de parada.
 
 :::
 

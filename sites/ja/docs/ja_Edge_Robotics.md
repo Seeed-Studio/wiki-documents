@@ -16,7 +16,7 @@ last_update:
   date: 07/04/2026
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-09-29'
+updatedAt: '2026-11-25'
 url: https://wiki.seeedstudio.com/ja/robotics_page/
 ---
 
@@ -67,9 +67,9 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-group">
       <h4>アプリケーション</h4>
       <div className="learning-steps rebot-rs-applications">
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>reBot-RS によるビジュアルグラスピング</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_grasping_demo/"><span className="step-index">1</span><div><b>ビジュアルグラスピングによる reBot-RS</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_python_visual_grasping/"><span className="step-index">2</span><div><b>reBot-RS マルチバックエンド・ビジュアルグラスピング</b></div></a>
-        <a className="step-card" href="/ja/rebot_arm_b601_rs_camera_follow/"><span className="step-index">3</span><div><b>reBot-RS リストフォロー</b></div></a>
+        <a className="step-card" href="/ja/rebot_arm_b601_rs_camera_follow/"><span className="step-index">3</span><div><b>reBot-RS 手首追従</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_bimanual/"><span className="step-index">4</span><div><b>reBot-RS 両腕協調</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_ros2_integration/"><span className="step-index">5</span><div><b>ROS2 と連携した reBot-RS</b></div></a>
         <a className="step-card" href="/ja/rebot_arm_b601_rs_isaacsim/"><span className="step-index">6</span><div><b>Isaac Sim と連携した reBot-RS</b></div></a>
@@ -155,13 +155,14 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>クイックスタート</b></a>
         <a className="step-card" href="/ja/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT 制御 SDK</b></a>
         <a className="step-card" href="/ja/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+        <a className="step-card" href="/ja/rebot_t701_ht_ros2/"><span className="step-index" aria-hidden="true">→</span><b>ROS 2 SDK</b></a>
         <a className="step-card" href="/ja/rebot_t701_ht_vr/"><span className="step-index" aria-hidden="true">→</span><b>VR テレオペレーション</b></a>
       </div>
     </div>
     <div className="learning-group">
       <h4>共通リソース</h4>
       <div className="rebot-resource-list">
-        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">説明およびシミュレーションモデル（URDF / メッシュ）</a>
+        <a href="https://github.com/Seeed-Projects/reBot-Arm-T701-SDK/tree/main/T701-HT_URDF" target="_blank" rel="noopener noreferrer">記述およびシミュレーションモデル（URDF / メッシュ）</a>
         <a href="https://github.com/Seeed-Projects/reBot-Arm-T701/blob/main/hardware/reBot_T701/README_zh.md" target="_blank" rel="noopener noreferrer">ハードウェアドキュメントおよび部品表（BOM）</a>
       </div>
     </div>
@@ -180,7 +181,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/ja/lerobot_so100m_new/"><span className="step-index">1</span><div><b>SO100 / SO101 クイックスタート</b></div></a>
         <a className="step-card" href="/ja/lerobot_steering_gear_debugging_tool/"><span className="step-index">2</span><div><b>サーボデバッグツール</b></div></a>
         <a className="step-card" href="/ja/lerobot_dataset_tool/"><span className="step-index">3</span><div><b>SO-Arm データセットツール</b></div></a>
-        <a className="step-card" href="/ja/sensecraft_robotics_so_arm101/"><span className="step-index">4</span><div><b>ノーコード VLA：SenseCraft Robotics プラットフォーム</b></div></a>
+        <a className="step-card" href="/ja/sensecraft_robotics_so_arm101/"><span className="step-index">4</span><div><b>SenseCraft Robotics によるノーコード VLA</b></div></a>
       </div>
     </div>
     <div className="learning-group">
@@ -188,11 +189,11 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <div className="learning-steps">
         <a className="step-card" href="/ja/lerobot_double_arm_so_arm_training/"><span className="step-index">5</span><div><b>デュアルアーム SO-ARM トレーニング</b></div></a>
         <a className="step-card" href="/ja/soarm101_xiao_microros_wireless_teleoperation/"><span className="step-index">6</span><div><b>SO-ARM ワイヤレステレオペレーション</b></div></a>
-        <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">7</span><div><b>SO-ARM と Amazing Hand デクスタラスハンド</b></div></a>
+        <a className="step-card" href="/ja/soarm_amazinghand_teleop/"><span className="step-index">7</span><div><b>SO-ARM と Amazing Hand デクストラスハンド</b></div></a>
         <a className="step-card" href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/"><span className="step-index">8</span><div><b>SO101 と NVIDIA GR00T</b></div></a>
         <a className="step-card" href="/ja/simulate_soarm101_by_leisaac/"><span className="step-index">9</span><div><b>LeIsaac シミュレーション</b></div></a>
         <a className="step-card" href="/ja/training_soarm101_policy_with_isaacLab/"><span className="step-index">10</span><div><b>Isaac Lab 強化学習</b></div></a>
-        <a className="step-card" href="/ja/soarm101_isaac_sim_dli/"><span className="step-index">11</span><div><b>Isaac Sim を用いた SO-ARM101</b></div></a>
+        <a className="step-card" href="/ja/soarm101_isaac_sim_dli/"><span className="step-index">11</span><div><b>Isaac Sim による SO-ARM101</b></div></a>
         <a className="step-card optional" href="/ja/control_robotic_arm_via_phospho/"><span className="step-index">+</span><div><b>Phospho LeRobot</b></div></a>
       </div>
     </div>
@@ -202,7 +203,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
 
 <details id="amazinghand" className="product-card amazinghand product-card--cover">
   <summary className="product-head">
-    <h3>AmazingHand デクスタラスハンド</h3>
+    <h3>AmazingHand デクストラスハンド</h3>
   </summary>
   <div className="product-body">
     <div className="learning-steps">
@@ -242,7 +243,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   <div className="product-body">
     <div className="learning-steps">
     <a className="step-card" href="/ja/lerobot_lekiwi/"><span className="step-index">1</span><div><b>Lekiwi 移動シャーシ クイックスタート</b></div></a>
-    <a className="step-card" href="/ja/sound_follow_robot/"><span className="step-index">2</span><div><b>サウンドフォロー デモ</b></div></a>
+    <a className="step-card" href="/ja/sound_follow_robot/"><span className="step-index">2</span><div><b>サウンドフォローデモ</b></div></a>
   </div>
   </div>
 </details>
@@ -290,7 +291,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
   <section id="courses" className="section-block compact-section">
     <div className="section-title-row">
       <div>
-        <span className="section-kicker">ラーニング</span>
+        <span className="section-kicker">学習</span>
         <h2>コース</h2>
       </div>
       <p>Seeed Robotics チームが執筆・共有する無料コースシリーズです。</p>
@@ -298,7 +299,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
     <div className="learning-steps">
       <a className="step-card" href="/ja/robotics/rebot_physical_ai_course_introduction/">
         <span className="step-index">🎓</span>
-        <div><b>ビギナーコース</b></div>
+        <div><b>初心者向けコース</b></div>
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">reBot-rs</span>
           <span className="course-compatibility-badge">reBot-dm</span>
@@ -306,7 +307,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </a>
       <a className="step-card" href="/ja/robotics/soarm_physical_ai_course_introduction/">
         <span className="step-index">🎓</span>
-        <div><b>ビギナーコース</b></div>
+        <div><b>初心者向けコース</b></div>
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">SO101</span>
         </span>
@@ -329,7 +330,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       </a>
       <a className="step-card" href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac" target="_blank" rel="noopener noreferrer">
         <span className="step-index">📘</span>
-        <div><b>NVIDIA Isaac を用いた Sim-to-Real</b></div>
+        <div><b>NVIDIA Isaac による Sim-to-Real</b></div>
         <span className="course-compatibility" aria-label="Supported robotic arms">
           <span className="course-compatibility-badge">reBot-rs</span>
         </span>
@@ -379,7 +380,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
       <p>ビジュアルグラスピング、SLAM、音声インタラクション、ロボット状態の認識のために。</p>
     </div>
     <div className="resource-columns">
-      <div><h4>LiDAR</h4><a href="/ja/robosense_lidar/">RoboSense</a><a href="/ja/mid360/">Livox MID360</a><a href="/ja/a_loam/">A-LOAM アルゴリズム</a><a href="/ja/slamtec/">Slamtec シリーズ</a><h4>音声</h4><a href="/ja/respeaker_xvf3800_introduction/">reSpeaker XMOS XVF3800 4-mic Array</a><a href="/ja/respeaker_flex_introduction/">reSpeaker Flex Split-type 4-mic Array</a><h4>IMU</h4><a href="/ja/hexfellow_y200/">HEXFELLOW Y200</a><a href="/ja/wheeltec_imu/">WHEELTEC IMU</a></div>
+      <div><h4>LiDAR</h4><a href="/ja/robosense_lidar/">RoboSense</a><a href="/ja/mid360/">Livox MID360</a><a href="/ja/a_loam/">A-LOAM アルゴリズム</a><a href="/ja/slamtec/">Slamtec シリーズ</a><h4>音声</h4><a href="/ja/respeaker_xvf3800_introduction/">reSpeaker XMOS XVF3800 4-mic アレイ</a><a href="/ja/respeaker_flex_introduction/">reSpeaker Flex 分離型 4-mic アレイ</a><h4>IMU</h4><a href="/ja/hexfellow_y200/">HEXFELLOW Y200</a><a href="/ja/wheeltec_imu/">WHEELTEC IMU</a></div>
       <div><h4>カメラ</h4><a href="/ja/orbbec_gemini2/">Orbbec Gemini 2</a><a href="/ja/orbbec_gemini305/">Orbbec Gemini 305</a><a href="/ja/orbbec_gemini_335lg/">Gemini 335Lg 深度カメラ</a><a href="/ja/orbbec_gemini336">Gemini 336 深度カメラ</a><a href="/ja/sensing_gmsl_cameras">SENSING GMSL2 カメラ</a><a href="/ja/ac1">RoboSense AC1</a><a href="/ja/orbbec_depth_camera_on_ros/">Orbbec と ROS</a><a href="/ja/orb_slam3_orbbec_gemini2/">ORB-SLAM3 と Gemini2</a><a href="/ja/csi_camera_on_ros/">Jetson 上の CSI カメラ</a><a href="/ja/pycuvslam_recomputer_robotics/">PyCuVSLAM</a></div>
     </div>
   </section>
