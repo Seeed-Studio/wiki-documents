@@ -1,0 +1,330 @@
+// ============================================
+// Agent Skills — install console + landing section
+// ============================================
+
+.accent {
+  color: var(--ifm-color-primary);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+}
+
+// ---- Detail page installer ----
+.installer {
+  margin: 28px 0 40px;
+}
+
+.installHeading {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.installTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin: 8px 0;
+  letter-spacing: -0.3px;
+}
+
+.installDesc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ifm-color-content-secondary);
+}
+
+.console {
+  background: #0b1220;
+  border: 1px solid rgba(141, 194, 21, 0.28);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+  color: #e6edf3;
+}
+
+.consoleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #0f1728;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.consoleMeta {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #8dc215;
+}
+
+.copyButton {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: transparent;
+  color: #cfd8e3;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: #8dc215;
+    color: #8dc215;
+    background: rgba(141, 194, 21, 0.08);
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 18px 20px 0;
+}
+
+.tab {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #aab6c8;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: rgba(141, 194, 21, 0.6);
+    color: #d7e6ff;
+  }
+}
+
+.tabActive {
+  background: #8dc215;
+  border-color: #8dc215;
+  color: #0b1220;
+
+  &:hover {
+    background: #a3d92a;
+    border-color: #a3d92a;
+    color: #0b1220;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 20px 20px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.stepNumber {
+  flex: 0 0 auto;
+  min-width: 22px;
+  padding-top: 5px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+  font-weight: 700;
+  color: #8dc215;
+}
+
+.stepBody {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.stepLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #8b98aa;
+}
+
+.stepCode {
+  display: block;
+  padding: 10px 12px;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  background: #111a2b;
+  color: #e6edf3;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.targetRow {
+  padding-top: 2px;
+  font-size: 12px;
+  color: #8b98aa;
+
+  code {
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(141, 194, 21, 0.1);
+    color: #c7f464;
+    font-family: var(--ifm-font-family-monospace);
+    white-space: normal;
+    word-break: break-all;
+  }
+}
+
+.consoleFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1728;
+  font-size: 12px;
+  color: #8b98aa;
+
+  a {
+    color: #8dc215;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ---- Landing section ----
+.landingSection {
+  width: 100%;
+  padding: 64px 0;
+  background: var(--ifm-background-color);
+}
+
+.landingInner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.landingHeader {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.landingTitle {
+  margin: 8px 0 12px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--ifm-heading-color);
+}
+
+.landingDesc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ifm-color-content-secondary);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  background: var(--ifm-card-background-color);
+  text-decoration: none;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    border-color: var(--ifm-color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+  }
+}
+
+.cardTag {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+}
+
+.cardAgents {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ifm-color-content-secondary);
+
+  strong {
+    color: var(--ifm-heading-color);
+  }
+}
+
+.cardCta {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+@media (max-width: 720px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .landingTitle {
+    font-size: 26px;
+  }
+
+  .installTitle {
+    font-size: 21px;
+  }
+}

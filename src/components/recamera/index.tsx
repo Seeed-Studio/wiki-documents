@@ -7,6 +7,7 @@ import {
   resourceTabs,
 } from './productData';
 import { createReCameraTranslator, localizeReCameraHref } from './i18n';
+import { AgentSkillsSection } from '../agentSkills';
 import {
   CameraIcon,
   CpuIcon,
@@ -399,6 +400,7 @@ export default function ReCameraLandingPage(): React.ReactElement {
       <HeroSection />
       <ProductFamilySection />
       <AIDeploySection />
+      <AgentSkillsSection />
       <ResourcesSection />
       <FooterSection />
     </div>
