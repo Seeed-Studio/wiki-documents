@@ -16,6 +16,8 @@ last_update:
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm T701 HT 快速开始
 
@@ -56,6 +58,40 @@ reBot Arm T701 是 Seeed Studio 推出的开源双臂机器人平台，面向物
 */}
 
 ## 开箱与组装机械臂
+
+选择你的 T701 型号，观看对应的开箱与组装视频。
+
+<Tabs>
+<TabItem value="basic" label="Basic">
+
+<div className="video-container">
+  <iframe
+    src="https://player.bilibili.com/player.html?bvid=BV18q1pzLEJM&autoplay=0"
+    title="reBot Arm T701 Basic 版开箱与组装"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+
+<TabItem value="pro" label="Pro">
+
+<div className="video-container">
+  <iframe
+    src="https://player.bilibili.com/player.html?bvid=BV1Sq1pzLEJz&autoplay=0"
+    title="reBot Arm T701 Pro 版开箱与组装"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+</Tabs>
 
 <div className="rebot-step-flow" role="list">
 

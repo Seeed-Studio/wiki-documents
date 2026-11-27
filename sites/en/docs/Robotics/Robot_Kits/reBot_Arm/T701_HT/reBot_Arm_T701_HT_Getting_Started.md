@@ -22,6 +22,8 @@ updatedAt: '2026-11-23'
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm T701 HT Quick Start
 
@@ -62,6 +64,40 @@ The reBot Arm T701 is an open-source bimanual robotic platform from Seeed Studio
 */}
 
 ## Unbox and Assemble the Robot
+
+Select your T701 model to watch the unboxing and assembly video.
+
+<Tabs>
+<TabItem value="basic" label="Basic">
+
+<div className="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/x3CkpDcxyFI"
+    title="reBot Arm T701 Basic unboxing and assembly"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+
+<TabItem value="pro" label="Pro">
+
+<div className="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/D7Cj482WSlQ"
+    title="reBot Arm T701 Pro unboxing and assembly"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+</Tabs>
 
 <div className="rebot-step-flow" role="list">
 
