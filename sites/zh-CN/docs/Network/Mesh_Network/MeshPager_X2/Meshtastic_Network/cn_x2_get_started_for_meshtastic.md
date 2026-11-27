@@ -1017,7 +1017,7 @@ sudo usermod -aG dialout "$USER"
 下面的烧录命令会擦除所有内部闪存，包括设置、频道和已保存的数据。继续之前请备份所有需要的内容。
 :::
 
-1. 下载 [X2 工厂固件 2.8.1.0046b50](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.0046b50.factory%20copy.bin)。将下载的文件从 **`firmware-seeed_meshpager_x2-2.8.1.0046b50.factory copy.bin`** 重命名为 **`x2.factory.bin`**，并将其放在电脑上的某个文件夹中。
+1. 下载 [X2 工厂固件 2.8.1.05731bd](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.05731bd.factory.bin)。将下载的文件从 **`firmware-seeed_meshpager_x2-2.8.1.05731bd.factory.bin`** 重命名为 **`x2.factory.bin`**，并将其放在电脑上的某个文件夹中。
 2. 安装 [Python 3.10 或更高版本](https://www.python.org/downloads/)。
 3. 使用 USB 数据线将 X2 连接到电脑。关闭 Web Flasher、Web Client 以及任何可能占用该端口的串口监视器。
 4. 在包含 `x2.factory.bin` 的文件夹中打开终端，并根据你的系统执行相应命令。先发送 **1200 bps 复位**，然后使用带有 **`--before usb-reset`** 的 esptool。
