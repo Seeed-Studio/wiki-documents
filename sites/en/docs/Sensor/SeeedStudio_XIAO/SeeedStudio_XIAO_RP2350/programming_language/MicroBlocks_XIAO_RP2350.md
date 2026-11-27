@@ -19,6 +19,10 @@ MicroBlocks is a blocks-language that makes it easy for beginners (9 years to ad
 
 ### XIAO RP2350 Pinout and Hardware Features
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2350" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2350-pinout.png" style={{width:600, height:'auto'}}/></div><br />
 
 Pins 0..18 are GPIO pins. (**Note: GPIO 11-18 are pads on the back of the board.**)

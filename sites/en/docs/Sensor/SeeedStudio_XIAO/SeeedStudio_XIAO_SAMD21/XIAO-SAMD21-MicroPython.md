@@ -86,6 +86,11 @@ It is also possible to [compile your own firmware](https://wiki.seeedstudio.com/
 
 ### SEEED XIAO SAMD21 Series pin assignment table
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">Explore XIAO SAMD21 Interactive Pinout</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">Explore XIAO SAMD21 Plus Interactive Pinout</a>
+</div>
+
 | MicroPython Pin Name | XIAO SAMD21 GPIO (ID) | XIAO SAMD21 Plus GPIO (ID) | IRQ SAMD21 / Plus | ADC | Function |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | D0 / A0 | PA02 (2) | PA02 (2) | 2 / 2 | 0 | GPIO, ADC, DAC |

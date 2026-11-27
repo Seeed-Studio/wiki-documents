@@ -203,6 +203,10 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 <Tabs>
 <TabItem value="XIAO RP2040" label="XIAO RP2040" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO RP2040 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO_RP2040_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -214,6 +218,10 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 </TabItem>
 
 <TabItem value="XIAO RP2040 Plus" label="XIAO RP2040 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO RP2040 Plus Front
 

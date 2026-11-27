@@ -27,6 +27,10 @@ Seeed Studio XIAO nRF52840 (Sense) has rich interfaces. There are **11 digital I
 <Tabs>
 <TabItem value="nRF52840" label="XIAO nRF52840" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO nRF52840 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -66,6 +70,10 @@ Seeed Studio XIAO nRF52840 (Sense) has rich interfaces. There are **11 digital I
 
 </TabItem>
 <TabItem value="nRF52840Plus" label="XIAO nRF52840 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840plus" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO nRF52840 Plus Front
 
@@ -114,6 +122,10 @@ Seeed Studio XIAO nRF52840 (Sense) has rich interfaces. There are **11 digital I
 </TabItem>
 <TabItem value="nRF52840Sense" label="XIAO nRF52840 Sense">
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840sense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO nRF52840 Sense Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -157,6 +169,10 @@ Seeed Studio XIAO nRF52840 (Sense) has rich interfaces. There are **11 digital I
 
 </TabItem>
 <TabItem value="nRF52840SensePlus" label="XIAO nRF52840 Sense Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf52840senseplus" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO nRF52840 Sense Plus Front
 

@@ -176,6 +176,10 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 <Tabs>
 <TabItem value="XIAO nRF54LM20A" label="XIAO nRF54LM20A" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54lm20a" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO nRF54LM20A Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/fix/XIAO_nRF54LM20A_f.png" style={{width:800, height:'auto'}}/></div>
@@ -186,6 +190,10 @@ Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless develo
 
 </TabItem>
 <TabItem value="XIAO nRF54LM20A Sense" label="XIAO nRF54LM20A Sense">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54lm20asense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO nRF54LM20A Sense Front
 
