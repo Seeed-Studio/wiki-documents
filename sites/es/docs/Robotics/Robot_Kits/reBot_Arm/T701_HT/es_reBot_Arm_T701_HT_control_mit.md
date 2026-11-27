@@ -1,7 +1,7 @@
 ---
-title: SDK de control MIT para reBot Arm T701 HT
+title: reBot Arm T701 HT MIT Control SDK
 sidebar_label: MIT Control SDK
-description: Ejecuta control MIT de cinco parámetros para un solo motor con el SDK T701-HT y comprende la selección de CAN, trayectorias objetivo, realimentación y apagado con retorno a cero.
+description: Ejecuta el control MIT de cinco parámetros para un solo motor con el SDK T701-HT y comprende la selección de CAN, trayectorias objetivo, retroalimentación y apagado con retorno a cero.
 keywords:
   - reBot
   - T701 HT
@@ -9,22 +9,32 @@ keywords:
   - MIT Control
   - Motor Control
 slug: /rebot_t701_ht_control_mit
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-18'
+url: https://wiki.seeedstudio.com/es/rebot_t701_ht_control_mit/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# SDK de control MIT para reBot Arm T701 HT
+# reBot Arm T701 HT MIT Control SDK
 
 <div className="rebot-page">
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT bimanual robot"
+  />
 </div>
 
 <GitHubStarButton
@@ -34,16 +44,16 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="Star T701-HT SDK on GitHub"
 />
 
-La interfaz MIT del SDK T701-HT establece conjuntamente la posición objetivo, la velocidad objetivo, el par de avance, la ganancia de posición `Kp` y la ganancia de velocidad `Kd`. Esta página presenta el ejemplo de seguimiento sinusoidal de un solo motor, sus parámetros, la realimentación y la secuencia de apagado. Para compensación de gravedad de todo el brazo y control cartesiano, consulta [T701 HT with Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
+La interfaz MIT del SDK T701-HT establece conjuntamente la posición objetivo, la velocidad objetivo, el par de avance, la ganancia de posición `Kp` y la ganancia de velocidad `Kd`. Esta página presenta el ejemplo de seguimiento sinusoidal de un solo motor, sus parámetros, la retroalimentación y la secuencia de apagado. Para compensación de gravedad de todo el brazo y control cartesiano, consulta [T701 HT with Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
 
 <section className="section-card">
 
 ## Preparar el robot
 
-Obtén el SDK e instala sus dependencias usando las [instrucciones de instalación de inicio rápido de T701 HT](https://wiki.seeedstudio.com/es/rebot_t701_ht_getting_started/#instalar-el-sdk). Completa el mapeo serie y las comprobaciones de realimentación de articulaciones y pinza, y luego verifica la posición cero del motor seleccionado.
+Obtén el SDK e instala sus dependencias usando las [instrucciones de instalación de T701 HT Quick Start](https://wiki.seeedstudio.com/es/rebot_t701_ht_getting_started/#install-the-sdk). Completa el mapeo serie y las comprobaciones de retroalimentación de articulaciones y pinza, y luego verifica la posición cero del motor seleccionado.
 
 - **Conexiones.** El brazo izquierdo usa CAN1; el brazo derecho usa CAN2. Establece `board_serial` en `T701-HT_robot_param/serial_binding.yaml` con el número de serie USB de la placa de comunicación.
-- **ID de motor.** En cada brazo, ID1–ID7 son las siete articulaciones, e ID8 es la pinza.
+- **ID de motores.** En cada brazo, ID1–ID7 son las siete articulaciones, e ID8 es la pinza.
 - **Directorio de trabajo.** Ejecuta todos los comandos de esta página desde la raíz del SDK. En cada nueva terminal o sesión SSH, vuelve a ese directorio y activa el entorno.
 
 ```bash
@@ -84,7 +94,7 @@ python scripts/motor_example/t701_ht_pos_vel_torque_kp_kd_control.py --can-port 
 | `--motor-id` | 1–8 | Selecciona solo un motor con este ID en el canal especificado. |
 | `--arm` | `left` / `right` | Selecciona los tipos de motor y la configuración de homing de ese lado. |
 
-Los tres argumentos son obligatorios; no hay selección predeterminada de brazo o motor. `--arm` no selecciona el canal CAN ni refleja la trayectoria del brazo derecho. El ejemplo genera una configuración temporal de un solo motor a partir del YAML correspondiente, por lo que no necesitas editar la lista de motores de todo el brazo.
+Los tres argumentos son obligatorios; no hay una selección predeterminada de brazo o motor. `--arm` no selecciona el canal CAN ni refleja la trayectoria del brazo derecho. El ejemplo genera una configuración temporal de un solo motor a partir del YAML correspondiente, por lo que no necesitas editar la lista de motores de todo el brazo.
 
 </section>
 
@@ -99,7 +109,7 @@ motor.pos_vel_tqe_kp_kd(pos, vel, 0.0, 2, 0.5)
 robot.motor_send_cmd()
 ```
 
-| Parámetro (en orden de llamada) | Significado | Ajuste original |
+| Parámetro (en orden de llamada) | Significado | Configuración original |
 | --- | --- | --- |
 | `pos` | Posición objetivo, rad | `π × sin(2π × 0.1 × t)`, con amplitud de π rad. |
 | `vel` | Velocidad objetivo, rad/s | `0.2 × π² × cos(2π × 0.1 × t)`, la derivada temporal de la posición objetivo. |
@@ -117,7 +127,7 @@ El bucle duerme `0.001` segundos después de cada envío. La comunicación, el c
 
 <section className="section-card">
 
-## Leer la realimentación de estado
+## Leer la retroalimentación de estado
 
 Al inicio, la terminal muestra el número de motores controlados. Luego imprime el estado del motor seleccionado cada 100 iteraciones del bucle.
 
@@ -139,25 +149,25 @@ El ejemplo lee estos campos mediante `motor.get_current_motor_state()`. El inter
 
 1. El primer `Ctrl+C` sale del seguimiento sinusoidal y comienza un retorno suave del motor seleccionado a su posición cero guardada.
 2. El homing usa la interfaz de posición, velocidad y par máximo `pos_vel_MAXtqe()`, con la configuración de homing para el lado seleccionado por `--arm`.
-3. Después del homing, la lógica de apagado envía comandos de freno amortiguado. Pulsa `Ctrl+C` de nuevo durante el homing para interrumpir el retorno e intentar el frenado. Una realimentación no válida o un fallo de homing también hace que la lógica de apagado intente el frenado.
+3. Después del homing, la lógica de apagado envía comandos de freno de amortiguamiento. Pulsa `Ctrl+C` de nuevo durante el homing para interrumpir el retorno e intentar el frenado. Una retroalimentación no válida o un fallo de homing también hace que la lógica de apagado intente el frenado.
 
-El primer `Ctrl+C` activa el movimiento de retorno. El frenado amortiguado no es una sujeción de posición; sostiene el mecanismo durante el arranque y el apagado.
+El primer `Ctrl+C` activa el movimiento de retorno. El frenado por amortiguamiento no es una sujeción de posición; sostiene el mecanismo durante el arranque y el apagado.
 
 </section>
 
 <section className="section-card">
 
-## Usar control MIT para todo el brazo
+## Usar el control MIT para todo el brazo
 
 El ejemplo de un solo motor usa un objeto `motor` de bajo nivel. El control de todo el brazo usa `Lib.t701_ht.T701HT`, con interfaces separadas para las articulaciones y la pinza.
 
 | Interfaz | Parámetros y comportamiento de envío |
 | --- | --- |
 | `motor.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco parámetros escalares para un motor. Llama a `robot.motor_send_cmd()` después para enviar. |
-| `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco vectores articulares de longitud 7, excluyendo la pinza. Comprueba el rango configurado de posición objetivo de articulaciones antes de enviar; devuelve `False` para un objetivo fuera de rango. |
+| `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco vectores articulares de longitud 7, excluyendo la pinza. Comprueba el rango de posición objetivo de articulación configurado antes de enviar; devuelve `False` para un objetivo fuera de rango. |
 | `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | Cinco parámetros escalares de la pinza. Comprueba el rango de posición objetivo de la pinza y envía por defecto. Con `send=False`, solo pone en cola el comando para enviarlo junto con el comando de articulaciones en el mismo ciclo. Devuelve `False` para un objetivo fuera de rango. |
 
-Las comprobaciones de posición objetivo de la interfaz MIT de todo el brazo no sustituyen el diseño de la trayectoria ni la limitación de par. Para avance de gravedad o gestión automática del apagado, usa los ejemplos completos enlazados desde la [página de Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
+Las comprobaciones de posición objetivo de la interfaz MIT de todo el brazo no sustituyen el diseño de la trayectoria ni la limitación de par. Para el avance de gravedad o la gestión automática del apagado, usa los ejemplos completos enlazados desde la [página de Pinocchio](https://wiki.seeedstudio.com/es/rebot_t701_ht_pinocchio/).
 
 </section>
 

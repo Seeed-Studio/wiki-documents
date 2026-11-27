@@ -6,14 +6,18 @@ keywords:
   - reBot
   - T701 HT
   - Pinocchio
-  - Kinematics
-  - Gravity Compensation
+  - 運動学
+  - 重力補償
 slug: /rebot_t701_ht_pinocchio
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-17'
+url: https://wiki.seeedstudio.com/ja/rebot_t701_ht_pinocchio/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';
@@ -24,7 +28,13 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 <div className="rebot-page">
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT bimanual robot"
+  />
 </div>
 
 <GitHubStarButton
@@ -34,18 +44,18 @@ import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
   ariaLabel="Star T701-HT SDK on GitHub"
 />
 
-T701-HT SDK は Pinocchio を使用して URDF モデルを読み込み、エンドエフェクタの姿勢と重力による関節トルクを計算します。重力補償、デカルト軌道、およびキーボード制御のサンプルを実行する前に、順運動学（FK）と逆運動学（IK）のサンプルを使用してロボットからの関節フィードバックを確認してください。
+T701-HT SDK は Pinocchio を使用して URDF モデルを読み込み、エンドエフェクタの姿勢と重力による関節トルクを計算します。重力補償、デカルト軌道、およびキーボード制御のサンプルを実行する前に、順運動学（FK）と逆運動学（IK）のサンプルを使用して、ロボットからの関節フィードバックを確認してください。
 
 <section className="section-card">
 
 ## ロボットの準備
 
-[T701 HT クイックスタートのインストール手順](https://wiki.seeedstudio.com/ja/rebot_t701_ht_getting_started/#install-the-sdk)に従って、SDK とその依存関係をインストールします。その後、残りのクイックスタートの手順に従い、シリアルポートのマッピングを確認し、関節およびグリッパのフィードバックを読み取り、ゼロ位置を検証します。
+[T701 HT クイックスタートのインストール手順](https://wiki.seeedstudio.com/ja/rebot_t701_ht_getting_started/#install-the-sdk)に従って、SDK とその依存関係をインストールします。その後、残りのクイックスタート手順に従い、シリアルポートのマッピングを確認し、関節およびグリッパのフィードバックを読み取り、ゼロ位置を検証します。
 
 :::warning[ロボット上でサンプルを実行する前に]
 
-- アームがしっかりと固定されていることを確認し、ペイロードを取り外してください。最初の実行では片腕のみを使用してください。
-- モーションのサンプルでアームを選択するとすぐに、アームが動き始める場合があります。可動範囲全体を確保し、頭上空間およびゼロ位置へ戻る経路も含めて障害物を取り除いてください。実行中は常にロボットのそばにいて、関節およびグリッパ部の挟み込み箇所に近づかないようにしてください。
+- アームがしっかりと固定されていることを確認し、ペイロードをすべて取り外してください。最初の実行では片腕のみを使用してください。
+- モーションのサンプルでアームを選択するとすぐに、アームが動き始める場合があります。可動範囲全体（頭上空間およびゼロ位置へ戻る経路を含む）を空けてください。実行中はロボットのそばに付き添い、関節およびグリッパ部の挟み込み箇所に近づかないでください。
 
 :::
 
@@ -56,7 +66,7 @@ conda activate t701-ht
 cd scripts
 ```
 
-サンプル起動後のプロンプトでは、左腕には `1`、右腕には `2`、両腕には `3` を入力します。
+サンプルを起動した後のプロンプトでは、左腕には `1`、右腕には `2`、両腕には `3` を入力します。
 
 </section>
 
@@ -92,12 +102,12 @@ cd scripts
 
 ## デカルト制御
 
-### IK を用いたターゲットへの移動
+### IK を用いた目標位置への移動
 
 <div className="row row--align-top">
 <div className="col col--8" style={{minWidth: 0}}>
 
-最初に関節をゼロに戻します。ターゲット姿勢に対する IK 解が誤差チェックを通過すると、アームは `moveJ` を使用してターゲットへ移動します。
+最初に関節をゼロに戻します。目標姿勢に対する IK 解が誤差チェックを通過した場合、アームは `moveJ` を使用して目標位置へ移動します。
 
 ```bash
 python t701_ht_inv_posvel_control.py
@@ -107,7 +117,7 @@ python t701_ht_inv_posvel_control.py
 <div className="col col--4">
 <div className="image-frame" style={{marginTop: 0}}>
 
-![IK（MOVEJ）を用いたターゲットへの移動デモ](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-ik-movej.gif)
+![IK（MOVEJ）を用いた目標位置への移動デモ](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/T701_HT/pinocchio/rebot-t701-ht-ik-movej.gif)
 
 </div>
 </div>
@@ -139,7 +149,7 @@ python t701_ht_qp_ik.py
 <div className="row row--align-top">
 <div className="col col--8" style={{minWidth: 0}}>
 
-直線、斜め、四角形の経路を順にたどる間、ターゲットのエンドエフェクタ姿勢（姿勢方向）を保持します。
+エンドエフェクタの目標姿勢（姿勢）を保持したまま、直線、斜め、正方形の経路を順にたどります。
 
 ```bash
 python t701_ht_moveL_pos_control.py
@@ -157,13 +167,13 @@ python t701_ht_moveL_pos_control.py
 
 ### MoveL 回転
 
-エンドエフェクタの位置を保持したまま、エンドエフェクタのローカル軸まわりに回転し、円すい運動を行います。
+エンドエフェクタの目標位置を保持したまま、エンドエフェクタのローカル軸まわりに回転し、円すい運動を行います。
 
 ```bash
 python t701_ht_moveL_rotate_control.py
 ```
 
-どちらの MoveL サンプルも、最初に初期 VR 姿勢へ移動することから開始します。各軌道は、初期位置決めとゼロへの復帰を除いて 5 秒間実行されます。このセクションの 4 つのサンプルはいずれも、最後にゼロへ戻って停止します。
+どちらの MoveL サンプルも、最初に初期 VR 姿勢へ移動することから始まります。各軌道は、初期位置決めとゼロへの復帰を除いて 5 秒間実行されます。このセクションの 4 つのサンプルはすべて、最後にゼロへ戻って停止します。
 
 </section>
 
@@ -173,7 +183,7 @@ python t701_ht_moveL_rotate_control.py
 
 - **並進。** `W` / `S`、`A` / `D`、`Q` / `E` を使用して、それぞれ X、Y、Z 軸方向に移動します。
 - **回転。** `1` / `2`、`3` / `4`、`5` / `6` を使用して、それぞれ X、Y、Z 軸まわりに回転します。
-- **基準姿勢のリセット。** Null 空間姿勢ロックのサンプルでは、`R` を押すと現在の関節姿勢を基準姿勢として設定します。
+- **基準姿勢のリセット。** Null-space 姿勢ロックのサンプルでは、`R` を押すと現在の関節姿勢を基準姿勢として設定します。
 - **終了。** `Esc` または `Ctrl+C` を押すと、ゼロへ戻って停止します。
 
 <div className="row row--align-top">
@@ -183,7 +193,7 @@ python t701_ht_moveL_rotate_control.py
 
 **エンドエフェクタ姿勢**
 
-キーを 1 回押すごとに、ターゲットのエンドエフェクタ姿勢が 1 ステップ分変化します。IK が失敗した場合、そのサンプルは直前の関節ターゲットを保持します。
+キーを 1 回押すごとに、目標エンドエフェクタ姿勢が 1 ステップ分変化します。IK が失敗した場合、そのサンプルは直前の関節目標を保持します。
 
 ```bash
 python t701_ht_keyboard_cartesian_pos_control.py
@@ -191,7 +201,7 @@ python t701_ht_keyboard_cartesian_pos_control.py
 
 **エンドエフェクタ速度**
 
-キーを押し続けると、エンドエフェクタが連続的に並進または回転します。キーを離すと、指令速度がゼロまで徐々に減速します。
+キーを押し続けると、エンドエフェクタが連続的に並進または回転します。キーを離すと、指令速度がゼロまで減速します。
 
 ```bash
 python t701_ht_keyboard_cartesian_vel_control.py
@@ -199,15 +209,15 @@ python t701_ht_keyboard_cartesian_vel_control.py
 
 **衝突予測付きエンドエフェクタ速度**
 
-キーを使用してエンドエフェクタ速度を制御します。衝突または関節リミット違反が予測されると、そのサンプルはゼロ速度を指令し、メッセージを表示します。
+キーを使ってエンドエフェクタ速度を制御します。サンプルが衝突または関節リミット違反を予測した場合、ゼロ速度を指令し、メッセージを表示します。
 
 ```bash
 python t701_ht_keyboard_cartesian_vel_collision_control.py
 ```
 
-**Null 空間姿勢ロック**
+**Null-space 姿勢ロック**
 
-ターゲットのエンドエフェクタ姿勢を追従しつつ、関節姿勢が基準姿勢からできるだけ離れないように保ちます。
+エンドエフェクタの目標姿勢を追従しつつ、関節姿勢が基準姿勢からできるだけ離れないように保ちます。
 
 ```bash
 python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py
@@ -225,7 +235,7 @@ python t701_ht_keyboard_cartesian_pd_nullspace_lock_control.py
 
 :::warning[衝突予測の適用範囲]
 
-アームが初期 VR 姿勢に到達すると、衝突予測付きエンドエフェクタ速度サンプルは、次の 0.20 秒間について衝突および関節リミット違反をチェックします。衝突チェックには `T701-HT_URDF/meshes/` 内の STL メッシュを使用し、両腕モードではアーム同士の衝突も含まれます。起動時およびゼロへの復帰時には十分なクリアランスを確保し、グリッパと実際の停止距離のための余裕も設けてください。
+アームが初期 VR 姿勢に到達すると、衝突予測付きエンドエフェクタ速度サンプルは、次の 0.20 秒間について衝突および関節リミット違反をチェックします。衝突チェックには `T701-HT_URDF/meshes/` 内の STL メッシュを使用し、デュアルアームモードでのアーム同士の衝突も含みます。起動時およびゼロへの復帰時にはクリアランスを確保し、グリッパと実際の停止距離のために余裕を持たせてください。
 
 :::
 

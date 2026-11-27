@@ -1,7 +1,7 @@
 ---
-title: reBot Arm T701 HT MIT Control SDK
+title: SDK de Controle MIT do reBot Arm T701 HT
 sidebar_label: MIT Control SDK
-description: Execute o controle MIT de cinco parâmetros de um único motor com o SDK T701-HT e entenda a seleção de CAN, trajetórias alvo, feedback e retorno ao zero no desligamento.
+description: Execute o controle MIT de cinco parâmetros de um único motor com o SDK T701-HT e entenda a seleção de CAN, trajetórias alvo, feedback e desligamento com retorno ao zero.
 keywords:
   - reBot
   - T701 HT
@@ -9,22 +9,32 @@ keywords:
   - MIT Control
   - Motor Control
 slug: /rebot_t701_ht_control_mit
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp
 translation:
   skip: [zh-CN]
 last_update:
   date: 11/19/2026
   author: liujunjie
+createdAt: '2026-11-18'
+url: https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_control_mit/
+updatedAt: '2026-11-23'
 ---
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
 
-# reBot Arm T701 HT MIT Control SDK
+# SDK de Controle MIT do reBot Arm T701 HT
 
 <div className="rebot-page">
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT bimanual robot"
+  />
 </div>
 
 <GitHubStarButton
@@ -38,11 +48,11 @@ A interface MIT do SDK T701-HT define posição alvo, velocidade alvo, torque de
 
 <section className="section-card">
 
-## Preparar o robô
+## Preparar o Robô
 
-Obtenha o SDK e instale suas dependências usando as [instruções de instalação do T701 HT Quick Start](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_getting_started/#instalar-o-sdk). Conclua o mapeamento serial e as verificações de feedback das juntas e do gripper e, em seguida, verifique a posição zero do motor selecionado.
+Obtenha o SDK e instale suas dependências usando as [instruções de instalação do T701 HT Quick Start](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_getting_started/#instalar-o-sdk). Conclua o mapeamento serial e as verificações de feedback das juntas e do gripper, depois verifique a posição zero do motor selecionado.
 
-- **Conexões.** O braço esquerdo usa CAN1; o braço direito usa CAN2. Defina `board_serial` em `T701-HT_robot_param/serial_binding.yaml` como o número de série USB da placa de comunicação.
+- **Conexões.** O braço esquerdo usa CAN1; o braço direito usa CAN2. Defina `board_serial` em `T701-HT_robot_param/serial_binding.yaml` para o número de série USB da placa de comunicação.
 - **IDs dos motores.** Em cada braço, ID1–ID7 são as sete juntas, e ID8 é o gripper.
 - **Diretório de trabalho.** Execute todos os comandos desta página a partir da raiz do SDK. Em cada novo terminal ou sessão SSH, volte para esse diretório e ative o ambiente.
 
@@ -54,7 +64,7 @@ conda activate t701-ht
 
 O motor selecionado começa a se mover imediatamente quando você executa um comando de movimento, sem outra seleção de braço ou confirmação. Fixe o hardware, remova cargas e libere a faixa de movimento e o caminho de retorno. Permaneça junto ao hardware e mantenha-se afastado dos pontos de beliscão das juntas e do gripper.
 
-O alvo original é **±π rad (±180°)**. O loop de movimento chama diretamente a interface de baixo nível do motor, sem aplicar os limites de junta de alto nível ou compensação de gravidade. Essa trajetória pode exceder a faixa permitida de uma junta ou gripper montados. Em particular, a faixa de alto nível para o gripper ID8 é **−0.2 a 2.2 rad**, portanto ele não pode executar a trajetória original. Antes de executar, ajuste a posição alvo e a velocidade correspondente para se adequar ao mecanismo selecionado e verifique toda a trajetória e o caminho de retorno.
+O alvo original é **±π rad (±180°)**. O loop de movimento chama diretamente a interface de motor de baixo nível, sem aplicar os limites de junta de alto nível ou compensação de gravidade. Essa trajetória pode exceder a faixa permitida de uma junta ou gripper montados. Em particular, a faixa de alto nível para o gripper ID8 é **−0.2 a 2.2 rad**, portanto ele não pode executar a trajetória original. Antes de executar, ajuste a posição alvo e a velocidade correspondente para se adequar ao mecanismo selecionado e verifique toda a trajetória e o caminho de retorno.
 
 :::
 
@@ -62,7 +72,7 @@ O alvo original é **±π rad (±180°)**. O loop de movimento chama diretamente
 
 <section className="section-card">
 
-## Selecionar e executar um motor
+## Selecionar e Executar um Motor
 
 O exemplo é `scripts/motor_example/t701_ht_pos_vel_torque_kp_kd_control.py`. Depois de verificar e ajustar a trajetória acima, escolha um comando que corresponda à sua fiação.
 
@@ -90,7 +100,7 @@ Todos os três argumentos são obrigatórios; não há seleção padrão de bra�
 
 <section className="section-card">
 
-## Parâmetros MIT e trajetória alvo
+## Parâmetros MIT e Trajetória Alvo
 
 Este trecho vem do loop de movimento; o exemplo cria `motor` e `robot`. Defina o comando do motor selecionado e, em seguida, envie-o.
 
@@ -109,7 +119,7 @@ robot.motor_send_cmd()
 
 A frequência original é **0.1 Hz**, o período é de **10 segundos**, e a velocidade alvo de pico é de cerca de **1.974 rad/s**. Se você alterar a posição para `offset + A × sin(2π × f × t)`, use a velocidade correspondente `A × 2π × f × cos(2π × f × t)` e verifique se toda a faixa de `offset − A` a `offset + A` é permitida.
 
-`t` usa `time.time()`, portanto a fase inicial depende do momento de início; o alvo não começa necessariamente em zero. O comentário no código-fonte diz “1.0 rad amplitude”, mas a fórmula usa **π rad**.
+`t` usa `time.time()`, portanto a fase inicial depende do momento de início; o alvo não necessariamente começa em zero. O comentário no código-fonte diz “1.0 rad amplitude”, mas a fórmula usa **π rad**.
 
 O loop dorme por `0.001` segundos após cada envio. Comunicação, computação e impressão aumentam o tempo de ciclo, portanto este não é um loop em tempo real fixo de 1 kHz.
 
@@ -117,7 +127,7 @@ O loop dorme por `0.001` segundos após cada envio. Comunicação, computação 
 
 <section className="section-card">
 
-## Ler o feedback de estado
+## Ler o Feedback de Estado
 
 Na inicialização, o terminal exibe o número de motores controlados. Em seguida, ele imprime o estado do motor selecionado a cada 100 iterações do loop.
 
@@ -135,11 +145,11 @@ O exemplo lê esses campos por meio de `motor.get_current_motor_state()`. O inte
 
 <section className="section-card">
 
-## Retornar ao zero e sair
+## Retornar ao Zero e Sair
 
-1. O primeiro `Ctrl+C` encerra o rastreamento senoidal e inicia um retorno suave do motor selecionado à sua posição zero salva.
+1. O primeiro `Ctrl+C` encerra o rastreamento senoidal e inicia um retorno suave do motor selecionado para sua posição zero salva.
 2. O homing usa a interface de posição, velocidade e torque máximo `pos_vel_MAXtqe()`, com a configuração de homing para o lado selecionado por `--arm`.
-3. Após o homing, a lógica de desligamento envia comandos de freio por amortecimento. Pressione `Ctrl+C` novamente durante o homing para interromper o retorno e tentar a frenagem. Feedback inválido ou uma falha de homing também fazem com que a lógica de desligamento tente a frenagem.
+3. Após o homing, a lógica de desligamento envia comandos de freio de amortecimento. Pressione `Ctrl+C` novamente durante o homing para interromper o retorno e tentar a frenagem. Feedback inválido ou uma falha de homing também fazem com que a lógica de desligamento tente a frenagem.
 
 O primeiro `Ctrl+C` aciona o movimento de retorno. A frenagem por amortecimento não é uma manutenção de posição; dê suporte ao mecanismo durante a inicialização e o desligamento.
 
@@ -147,15 +157,15 @@ O primeiro `Ctrl+C` aciona o movimento de retorno. A frenagem por amortecimento 
 
 <section className="section-card">
 
-## Usar controle MIT para todo o braço
+## Usar Controle MIT para Todo o Braço
 
 O exemplo de motor único usa um objeto `motor` de baixo nível. O controle de todo o braço usa `Lib.t701_ht.T701HT`, com interfaces separadas para as juntas e para o gripper.
 
 | Interface | Parâmetros e comportamento de envio |
 | --- | --- |
-| `motor.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco parâmetros escalares para um motor. Chame `robot.motor_send_cmd()` depois para enviar. |
+| `motor.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco parâmetros escalares para um motor. Chame `robot.motor_send_cmd()` em seguida para enviar. |
 | `arm.pos_vel_tqe_kp_kd(pos, vel, tqe, kp, kd)` | Cinco vetores de juntas de comprimento 7, excluindo o gripper. Verifica a faixa de posição alvo de junta configurada antes de enviar; retorna `False` para um alvo fora da faixa. |
-| `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | Cinco parâmetros escalares do gripper. Verifica a faixa de posição alvo do gripper e envia por padrão. Com `send=False`, apenas coloca o comando em fila para envio com o comando das juntas no mesmo ciclo. Retorna `False` para um alvo fora da faixa. |
+| `arm.gripper_control_MIT(pos, vel, tqe, kp, kd, send=True)` | Cinco parâmetros escalares do gripper. Verifica a faixa de posição alvo do gripper e envia por padrão. Com `send=False`, apenas coloca o comando na fila para envio junto com o comando das juntas no mesmo ciclo. Retorna `False` para um alvo fora da faixa. |
 
 As verificações de posição alvo da interface MIT de todo o braço não substituem o projeto de trajetória ou a limitação de torque. Para feedforward de gravidade ou tratamento automático de desligamento, use os exemplos completos vinculados na [página do Pinocchio](https://wiki.seeedstudio.com/pt-br/rebot_t701_ht_pinocchio/).
 
