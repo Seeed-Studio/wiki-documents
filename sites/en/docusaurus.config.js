@@ -261,6 +261,29 @@ module.exports = (async () => {
             routeBasePath: '/',
             sidebarPath: require.resolve('./sidebars.js'),
 
+            async sidebarItemsGenerator(args) {
+              const items = await args.defaultSidebarItemsGenerator(args);
+              if (args.item.dirName !== 'Network/Mesh_Network') return items;
+
+              const l2 = 'Network/Mesh_Network/Wio_Tracker_L2';
+              const mui = l2 + '/Meshtastic_Network/Application/l2_mui_intro';
+              const games = l2 + '/MeshCore_Network/Application/l2_pro_games';
+
+              // Also list the shared game guide next to MUI in the Meshtastic sidebar.
+              function addGameReference(siblings) {
+                for (const [index, item] of siblings.entries()) {
+                  if (item.type === 'doc' && item.id === mui) {
+                    siblings.splice(index + 1, 0, { type: 'ref', id: games });
+                    return;
+                  }
+                  if (item.type === 'category') addGameReference(item.items);
+                }
+              }
+
+              addGameReference(items);
+              return items;
+            },
+
 
             // 先保留 last update（你需要）
             showLastUpdateAuthor: true,
