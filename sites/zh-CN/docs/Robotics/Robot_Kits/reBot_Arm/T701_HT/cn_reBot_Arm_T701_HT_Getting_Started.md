@@ -16,11 +16,19 @@ last_update:
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm T701 HT 快速开始
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT 双臂机器人" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT 双臂机器人"
+  />
 </div>
 
 <GitHubStarButton
@@ -56,6 +64,40 @@ reBot Arm T701 是 Seeed Studio 推出的开源双臂机器人平台，面向物
 */}
 
 ## 开箱与组装机械臂
+
+选择你的 T701 型号，观看对应的开箱与组装视频。
+
+<Tabs>
+<TabItem value="basic" label="Basic">
+
+<div className="video-container">
+  <iframe
+    src="https://player.bilibili.com/player.html?bvid=BV18q1pzLEJM&autoplay=0"
+    title="reBot Arm T701 Basic 版开箱与组装"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+
+<TabItem value="pro" label="Pro">
+
+<div className="video-container">
+  <iframe
+    src="https://player.bilibili.com/player.html?bvid=BV1Sq1pzLEJz&autoplay=0"
+    title="reBot Arm T701 Pro 版开箱与组装"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+</Tabs>
 
 <div className="rebot-step-flow" role="list">
 
@@ -342,6 +384,8 @@ python t701_ht_gravity_compensation.py
 单电机五参数控制、状态反馈和回零退出说明见 [MIT 控制 SDK](https://wiki.seeedstudio.com/cn/rebot_t701_ht_control_mit/)。
 
 正逆运动学验证、笛卡尔轨迹和键盘控制示例见 [T701 HT 与 Pinocchio](https://wiki.seeedstudio.com/cn/rebot_t701_ht_pinocchio/)。
+
+通过 ROS 2 话题、服务和轨迹 action 控制机械臂，以及使用 RViz2 和运动学仿真，见 [ROS 2 SDK](./cn_reBot_Arm_T701_HT_ros2.md)。该 SDK 按对应页面单独安装。
 
   </div>
 </div>

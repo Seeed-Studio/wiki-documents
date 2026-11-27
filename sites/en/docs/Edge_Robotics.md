@@ -155,6 +155,7 @@ import RoboticsQuote from '@site/src/components/robotics/RoboticsQuote';
         <a className="step-card" href="/rebot_t701_ht_getting_started/"><span className="step-index" aria-hidden="true">→</span><b>Quick Start</b></a>
         <a className="step-card" href="/rebot_t701_ht_control_mit/"><span className="step-index" aria-hidden="true">→</span><b>MIT Control SDK</b></a>
         <a className="step-card" href="/rebot_t701_ht_pinocchio/"><span className="step-index" aria-hidden="true">→</span><b>Pinocchio</b></a>
+        <a className="step-card" href="/rebot_t701_ht_ros2/"><span className="step-index" aria-hidden="true">→</span><b>ROS 2 SDK</b></a>
         <a className="step-card" href="/rebot_t701_ht_vr/"><span className="step-index" aria-hidden="true">→</span><b>VR Teleoperation</b></a>
       </div>
     </div>
