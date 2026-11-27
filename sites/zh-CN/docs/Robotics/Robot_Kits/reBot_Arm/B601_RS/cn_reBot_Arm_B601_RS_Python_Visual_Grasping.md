@@ -23,6 +23,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_python_visual_grasping/
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GraspingTabs from '@site/src/components/robotics/RebotGraspingTabs';
 import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -60,7 +61,7 @@ import TabItem from '@theme/TabItem';
 - **机械臂**：reBot Arm B601-RS、夹爪、适用电源和已配置的 USB 转 CAN 适配器。先完成装配、设零和基本通信检查。[B601-RS 快速入门](https://wiki.seeedstudio.com/cn/rebot_b601_rs_getting_started/)
 - **相机**：Orbbec Gemini 336、USB 3.0 数据线和固定在末端的相机支架。项目也提供 Orbbec Gemini 2、RealSense D405 和 D435i 驱动。换相机或支架后应重新检查视野并做手眼标定。[相机 SDK 说明](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/docs/sdk_setup_zh.md#相机)
 - **主机**：Ubuntu x86-64，带图形桌面，已安装 Git 和 curl。脚本创建 Python 3.10 的 Conda 环境 `rebot`。使用 AnyGrasp 或 GraspNet-Baseline 时需要兼容的 NVIDIA GPU 和驱动。
-- **测试物体和标定板**：准备一根香蕉或词表中的其他物体，以及固定在桌面的 ArUco 标定板。[GitHub 标定板目录](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/tree/main/examples/hand_eye/boards)
+- **测试物体和标定板**：准备一根香蕉或词表中的其他物体。做手眼标定时，将 ArUco 标定板固定在桌面上。[下载 100 mm ArUco 标定板（PDF）](https://raw.githubusercontent.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/main/examples/hand_eye/boards/aruco_100mm.pdf)
 
 ## 1. 配置环境和 SDK
 
@@ -73,10 +74,10 @@ cd Rebot-Arm-B601-Visual-Grasping
 
 打开 `config/default.yaml`，确认 `camera.type` 与实际设备一致。Gemini 336 的默认配置为 `orbbec_gemini336`、640 × 480、30 FPS。连接多台同型号相机时，可设置 `camera.serial`。在运行安装脚本前选好型号，脚本会按配置安装驱动。
 
-**自动安装与手动配置二选一。** 全部抓取后端和 B601 机械臂一般直接使用方式 A。需要逐项配置依赖时，选择方式 B。
+**自动安装与手动配置二选一。** 自动安装可以按用途配置依赖，从仅用 CPU 做 OBB 相机预览到安装全部后端。需要逐项配置依赖时，选择手动配置。
 
-<div className={styles.tutorials}>
-<Tabs defaultValue="automatic" queryString="grasping-setup">
+<div className={styles.page}>
+<GraspingTabs defaultValue="automatic" queryString="grasping-setup">
 
 <TabItem value="automatic" label="自动安装">
 
@@ -89,7 +90,25 @@ cd Rebot-Arm-B601-Visual-Grasping
   <div className="rebot-step-content">
     <h4>检查并安装依赖</h4>
 
-完整安装需要兼容的 NVIDIA GPU 和驱动。先运行 `nvidia-smi -L` 确认主机能识别显卡，再依次执行检查、安装和复检。首次检查可能报告缺项，可继续运行下一条安装命令。安装期间可以断开相机和机械臂。
+根据用途选择下面一组命令，依次执行检查、安装和复检。首次检查报告缺项时，可继续运行安装命令。安装期间可以断开相机和机械臂。
+
+**只做 OBB 相机预览**时，可以用 CPU。安装完成并激活环境后，继续第 2 节。
+
+```bash
+bash scripts/check_env.sh --backend obb
+bash scripts/setup_env.sh --backend obb
+bash scripts/check_env.sh --backend obb
+```
+
+**用 OBB 做真机抓取**时，加上 `--robot` 安装和检查 B601 控制 SDK。OBB 可以在 CPU 上运行。
+
+```bash
+bash scripts/check_env.sh --backend obb --robot
+bash scripts/setup_env.sh --backend obb --robot
+bash scripts/check_env.sh --backend obb --robot
+```
+
+**安装全部后端和 B601 控制 SDK**需要兼容的 NVIDIA GPU 和驱动。先用 `nvidia-smi -L` 确认主机能识别显卡，再执行下列命令。安装脚本会编译所需的 CUDA 算子。
 
 ```bash
 bash scripts/check_env.sh
@@ -97,9 +116,9 @@ bash scripts/setup_env.sh
 bash scripts/check_env.sh
 ```
 
-- **安装范围。** 默认配置 B601 控制 SDK、相机驱动、YOLOE 和全部抓取后端，并编译所需 CUDA 算子。只配置一个后端时，两个脚本都加 `--backend obb`、`--backend anygrasp` 或 `--backend graspnet`。需要控制 B601 时再加 `--robot`，例如 `--backend obb --robot`。GraspNet 权重下载受限时，用 `bash scripts/setup_env.sh --checkpoint-file /path/to/checkpoint-rs.tar` 指定本地文件。
+- **单独安装点云后端。** 在安装和检查命令中使用 `--backend anygrasp` 或 `--backend graspnet`，做真机抓取时再加 `--robot`。GraspNet 权重下载受限时，在对应的安装命令中加 `--checkpoint-file /path/to/checkpoint-rs.tar`，并替换为本地文件路径。
 - **变更确认。** 脚本自动补齐缺项并复用已有 Git SDK。更改依赖版本、Conda 构建或 SDK 分支前，脚本会列出变更并询问。输入 `y` 确认，回车、输入 `n` 或非交互运行时跳过。实际变更见 `----` 下方。
-- **复检结果。** 查看 `----` 下方的汇总。退出码 `3` 表示只剩 `[MANUAL]` 项。配置 AnyGrasp 授权和权重，在第 3 节生成手眼矩阵，再用相同参数复检。
+- **复检结果。** 查看 `----` 下方的汇总。退出码 `3` 表示只剩 `[MANUAL]` 项。使用 AnyGrasp 时按下文配置授权和权重。做真机抓取时，在第 3 节生成手眼矩阵。补齐所选用途对应的文件后，用相同参数复检。
 
 </div>
 </div>
@@ -252,7 +271,7 @@ mkdir -p "$baseline/checkpoints"
 
 </TabItem>
 
-</Tabs>
+</GraspingTabs>
 </div>
 
 ### AnyGrasp 授权与权重
@@ -286,12 +305,13 @@ bash scripts/anygrasp_license.sh 1
 bash scripts/anygrasp_license.sh 2 "/path/to/delivery"
 ```
 
-脚本通过官方 SDK 校验授权，检查权重能否读取，并按 `config/backends/anygrasp.yaml` 安装。过滤版使用独立 SDK 或权重路径时，运行 `bash scripts/anygrasp_license.sh --backend anygrasp_filtered 2 "/path/to/delivery"`，对应配置为 `config/backends/anygrasp_filtered.yaml`。环境安装脚本和选项 `2` 会在需要时将匹配 Python ABI 的 `gsnet.so` 放到 `grasp_detection/`，与 `license/` 同级。
+脚本会用官方 SDK 验证授权，确认权重可以读取，再按 `config/backends/anygrasp.yaml` 安装文件。
 
-默认授权目录为 `sdk/anygrasp_sdk/grasp_detection/license/`，检测权重保存在 `sdk/anygrasp_sdk/grasp_detection/log/checkpoint_detection.tar`。
+**默认安装位置。** 在 `license/` 中查看授权文件，在 `log/` 中查看检测权重 `checkpoint_detection.tar`。
 
 ```text
 sdk/anygrasp_sdk/grasp_detection/
+├── gsnet.so
 ├── license/
 │   ├── licenseCfg.json
 │   ├── *.lic
@@ -299,6 +319,14 @@ sdk/anygrasp_sdk/grasp_detection/
 │   └── *.signature
 └── log/
     └── checkpoint_detection.tar
+```
+
+环境安装脚本和选项 `2` 会在需要时将与当前 Python 环境兼容的 `gsnet.so` 放在 `license/` 同级。
+
+**过滤版使用独立的 SDK 或权重路径时**，改用下面的命令。脚本会按 `config/backends/anygrasp_filtered.yaml` 安装文件。
+
+```bash
+bash scripts/anygrasp_license.sh --backend anygrasp_filtered 2 "/path/to/delivery"
 ```
 
 </div>
@@ -377,7 +405,7 @@ bash examples/obb_filtered/run.sh
   <div className="rebot-step-content">
     <h4>准备标定板</h4>
 
-在 GitHub 打开标定板目录，下载 `aruco_100mm.pdf` 并按 100% 比例打印。实测黑色方形标记的边长，将米制值写入 `config/default.yaml` 的 `calibration.aruco.marker_length_m`。默认边长是 `0.100` m，标记 ID 为 `0`。把板固定在桌面上，确保相机在多个姿态都能看见它。[ArUco 标定板下载](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/tree/main/examples/hand_eye/boards)
+下载 `aruco_100mm.pdf` 并按 100% 比例打印。实测黑色方形标记的边长，将米制值写入 `config/default.yaml` 的 `calibration.aruco.marker_length_m`。默认边长是 `0.100` m，标记 ID 为 `0`。把板固定在桌面上，确保相机在多个姿态都能看见它。[下载 100 mm ArUco 标定板（PDF）](https://raw.githubusercontent.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/main/examples/hand_eye/boards/aruco_100mm.pdf)
 
 </div>
 </div>
@@ -435,9 +463,11 @@ bash examples/hand_eye/run.sh
 <div className="rebot-step-item" role="listitem">
   <span className="rebot-step-number" aria-hidden="true">5</span>
   <div className="rebot-step-content">
-    <h4>复核标定文件</h4>
+    <h4>复核标定结果</h4>
 
-在终端确认出现 `[OK] Saved to .../hand_eye.npz`。Gemini 336 的产物是 `config/calibration/orbbec_gemini336/hand_eye.npz`。其他相机的结果写入 `config/calibration/` 下对应型号的子目录。在 `config/default.yaml` 中核对 `calibration.hand_eye_path`，其相对路径以 `config/` 为起点。再检查机械臂依赖和标定文件。
+在终端确认本次标定出现 `[OK] Saved to .../hand_eye.npz`。如果脚本提示有效样本少于 15 组，建议先调整标定板位置或光照，确保标记在更多姿态下可见，然后重新标定。
+
+Gemini 336 的标定文件是 `config/calibration/orbbec_gemini336/hand_eye.npz`。其他相机的结果写入 `config/calibration/` 下对应型号的子目录。在 `config/default.yaml` 中核对 `calibration.hand_eye_path`，其相对路径以 `config/` 为起点。再检查机械臂依赖和标定文件。
 
 ```bash
 bash scripts/check_env.sh --backend obb --robot
@@ -498,8 +528,8 @@ bash examples/obb_filtered/run.sh --execute --target-class "yellow banana"
 
 ## 5. 试用点云抓取后端
 
-<div className={styles.tutorials}>
-<Tabs defaultValue="anygrasp" queryString="grasping-backend">
+<div className={styles.page}>
+<GraspingTabs defaultValue="anygrasp" queryString="grasping-backend">
 
 <TabItem value="anygrasp" label="AnyGrasp">
 
@@ -511,7 +541,25 @@ bash examples/obb_filtered/run.sh --execute --target-class "yellow banana"
 bash examples/anygrasp_filtered/run.sh --target-class "yellow banana"
 ```
 
-在图像窗口按 **G** 保存快照。左侧是原始点云参考结果，右侧是过滤后的结果。默认词表顺序是 `pen`、`orange`、`yellow banana`，可在图像窗口用 **1**、**2**、**3** 切换。确认预览结果和手眼标定后，可给预览命令加 `--execute`，并用 `bash scripts/check_env.sh --backend anygrasp --robot` 检查真机依赖。执行时，机械臂会先进入准备位，再等待 **G** 触发右侧通过工作范围和 IK 检查的候选。[过滤版 AnyGrasp 说明](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/anygrasp_filtered/README_zh.md)
+在图像窗口按 **G** 保存快照。左侧是原始点云参考结果，右侧是过滤后的结果。默认词表顺序是 `pen`、`orange`、`yellow banana`，可在图像窗口用 **1**、**2**、**3** 切换。确认候选后，按 **Q** 或 **Esc** 退出预览。
+
+确认预览结果和手眼标定后，先检查真机依赖。
+
+```bash
+bash scripts/check_env.sh --backend anygrasp --robot
+```
+
+:::warning
+真机抓取命令会在启动时使能机械臂并移动到准备位。运行前确认运动区域内没有人员、线缆或障碍物。
+:::
+
+检查通过后，运行下面的命令启动真机抓取。
+
+```bash
+bash examples/anygrasp_filtered/run.sh --target-class "yellow banana" --execute
+```
+
+等待机械臂停在准备位。在图像窗口按 **G** 重新采集一帧，并从右侧通过工作范围和 IK 检查的候选中选取抓取。按 **Q** 或 **Esc** 结束会话。[过滤版 AnyGrasp 说明](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/anygrasp_filtered/README_zh.md)
 
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
@@ -535,17 +583,37 @@ bash scripts/check_env.sh --backend graspnet
 bash examples/graspnet_camera/run.sh
 ```
 
-在相机窗口按 **G** 或 **空格** 生成候选，按 **R** 恢复实时画面，按 **Q** 或 **Esc** 退出。真机入口为 `bash examples/graspnet_grasp/run.sh --target-class "yellow banana"`，需先完成相机预览、手眼标定和机械臂检查。该入口启动时会移动到准备位，包括传入 `--dry-run` 的情况。[GraspNet 真机示例](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/graspnet_grasp/README_zh.md)
+在相机窗口按 **G** 或 **空格** 生成候选，在点云窗口查看结果。按 **R** 恢复实时画面。确认候选后，按 **Q** 或 **Esc** 退出预览。
+
+完成手眼标定和第 3 节的机械臂连接检查后，复检 GraspNet 真机依赖。
+
+```bash
+bash scripts/check_env.sh --backend graspnet --robot
+```
+
+:::warning
+真机抓取命令会在启动时使能机械臂并移动到准备位，即使传入 `--dry-run` 也会移动。运行前确认运动区域内没有人员、线缆或障碍物。
+:::
+
+检查通过后，运行下面的命令启动真机抓取。
+
+```bash
+bash examples/graspnet_grasp/run.sh --target-class "yellow banana"
+```
+
+等待机械臂停在准备位。在图像窗口按 **G** 或 **空格** 推理并执行可达的抓取候选。按 **Q** 或 **Esc** 结束会话，机械臂会回零。[GraspNet 真机示例](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/graspnet_grasp/README_zh.md)
 
 </TabItem>
 
-</Tabs>
+</GraspingTabs>
 </div>
 
 ## 排查常见问题
 
 - **相机无法录制**：核对 `camera.type`、序列号和 USB 权限。确认换用的分辨率和帧率受相机支持，再重跑第 2 节的采集命令。
-- **按 G 后没有动作**：先确认使用了 `--execute`。查看本次 `result.json` 与终端日志，区分未检出目标、点云质量拒绝、候选超出工作范围和 IK 不可达。
+- **按 G 后机械臂没有动作。**
+  - **过滤版 OBB 或 AnyGrasp。** 确认启动命令带有 `--execute`。查看本次 `result.json` 和终端日志，判断是未检出目标、点云未通过质量检查、候选超出工作范围，还是 IK 无解。
+  - **GraspNet-Baseline。** 确认运行的是 `examples/graspnet_grasp/run.sh`。若使用了 `--dry-run`，程序会跳过抓取动作。查看终端是否提示缺少有效的手眼标定或没有可达候选。
 - **画面中的候选正确，但实际抓取偏移**：先检查相机支架是否移动、手眼矩阵是否来自当前相机，以及 `planning.T_grasp_tcp` 是否匹配当前夹爪。沿接近方向的偏差确认后，过滤版可用 `--insertion-depth-mm` 覆盖本轮额外下探量，单位为毫米。过滤版 OBB 默认 0 mm，过滤版 AnyGrasp 默认 5 mm。每次调整后先复核候选和夹爪与桌面的间距。
 - **环境检查报告 `[MANUAL]`**：退出码 `3` 表示剩余项目需要手动提供，例如 AnyGrasp 授权、检测权重或手眼矩阵。补齐后用相同参数重复检查。[环境和 SDK 排查](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/docs/sdk_setup_zh.md)
 - **找不到旧版脚本**：示例现在从各自目录的 `run.sh` 启动。旧入口位于 `scripts/legacy/`，例如 `bash scripts/legacy/anygrasp.sh`。用 `bash scripts/run_python.sh -m rebot_grasp --help` 可查看工程 CLI 的参数。
