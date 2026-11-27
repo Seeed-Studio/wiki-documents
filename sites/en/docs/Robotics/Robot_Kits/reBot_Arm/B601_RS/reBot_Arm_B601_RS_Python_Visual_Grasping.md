@@ -23,6 +23,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_rs_python_visual_grasping/
 ---
 
 import '/src/css/rebot-wiki-style.css';
+import GraspingTabs from '@site/src/components/robotics/RebotGraspingTabs';
 import styles from '@site/src/components/robotics/rebot-grasping-demo.module.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -60,7 +61,7 @@ Start by previewing grasp candidates from the filtered oriented bounding box (OB
 - **Robot arm.** Gather a reBot Arm B601-RS, gripper, suitable power supply, and configured USB-to-CAN adapter. Complete assembly, zero-position setup, and basic communication checks first. [B601-RS Quick Start](https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/)
 - **Camera.** Use an Orbbec Gemini 336, a USB 3.0 data cable, and an end-effector camera mount. The project also provides drivers for the Orbbec Gemini 2, RealSense D405, and RealSense D435i. Recheck the camera view and repeat hand-eye calibration after replacing the camera or mount. [Camera SDK setup](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/docs/sdk_setup.md#cameras)
 - **Host.** Use an Ubuntu x86-64 machine with a graphical desktop, Git, and curl. The scripts create a Conda environment named `rebot` with Python 3.10. AnyGrasp and GraspNet-Baseline require a compatible NVIDIA GPU and driver.
-- **Test object and calibration board.** Prepare a banana or another object from the configured class list. Secure an ArUco calibration board to the work surface. [Calibration boards on GitHub](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/tree/main/examples/hand_eye/boards)
+- **Test object and calibration board.** Prepare a banana or another object from the configured class list. For hand-eye calibration, secure an ArUco calibration board to the work surface. [Download the 100 mm ArUco board (PDF)](https://raw.githubusercontent.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/main/examples/hand_eye/boards/aruco_100mm.pdf)
 
 ## 1. Set up the environment and SDKs
 
@@ -73,10 +74,10 @@ cd Rebot-Arm-B601-Visual-Grasping
 
 Open `config/default.yaml` and set `camera.type` to match your device. The Gemini 336 defaults are `orbbec_gemini336`, 640 × 480, and 30 FPS. Set `camera.serial` if you have multiple cameras of the same model. Select the model before running the setup script so it installs the matching driver.
 
-**Choose either automatic or manual setup.** Option A is the usual choice for installing all grasp backends and B601 arm support. Use Option B to install the dependencies component by component.
+**Choose either automatic or manual setup.** Automatic setup lets you install what you need, from an OBB camera preview on the CPU to all grasping backends. Choose manual setup to install the dependencies component by component.
 
-<div className={styles.tutorials}>
-<Tabs defaultValue="automatic" queryString="grasping-setup">
+<div className={styles.page}>
+<GraspingTabs defaultValue="automatic" queryString="grasping-setup">
 
 <TabItem value="automatic" label="Automatic setup">
 
@@ -89,7 +90,25 @@ Open `config/default.yaml` and set `camera.type` to match your device. The Gemin
   <div className="rebot-step-content">
     <h4>Check and install dependencies</h4>
 
-The full setup requires a compatible NVIDIA GPU and driver. Run `nvidia-smi -L` to confirm the host detects the GPU. Then run the initial check, the setup script, and the post-install check. The initial check may report missing dependencies. Continue with the setup command to install them. You can disconnect the camera and arm during setup.
+Choose one set of commands below. Run the initial check, the setup script, and the post-install check in order. If the initial check reports missing dependencies, continue with the setup command. You can disconnect the camera and arm during setup.
+
+**For OBB camera preview only**, you can use the CPU. After installing and activating the environment, continue to Section 2.
+
+```bash
+bash scripts/check_env.sh --backend obb
+bash scripts/setup_env.sh --backend obb
+bash scripts/check_env.sh --backend obb
+```
+
+**For OBB grasping with the arm**, add `--robot` to install and check the B601 control SDK. OBB can run on the CPU.
+
+```bash
+bash scripts/check_env.sh --backend obb --robot
+bash scripts/setup_env.sh --backend obb --robot
+bash scripts/check_env.sh --backend obb --robot
+```
+
+**To install all backends and the B601 control SDK**, use a compatible NVIDIA GPU and driver. Run `nvidia-smi -L` to confirm the host detects the GPU before running these commands. The setup script builds the required CUDA operators.
 
 ```bash
 bash scripts/check_env.sh
@@ -97,9 +116,9 @@ bash scripts/setup_env.sh
 bash scripts/check_env.sh
 ```
 
-- **Install scope.** The default setup configures the B601 control SDK, camera driver, YOLOE, and all grasp backends. It also builds the required CUDA operators. For a single backend, pass `--backend obb`, `--backend anygrasp`, or `--backend graspnet` to both scripts. Add `--robot` for B601 control, for example `--backend obb --robot`. If the GraspNet weights fail to download, point `bash scripts/setup_env.sh --checkpoint-file /path/to/checkpoint-rs.tar` to your local copy.
+- **Install a single point cloud backend.** Use `--backend anygrasp` or `--backend graspnet` in the setup and check commands. Add `--robot` if you plan to grasp with the arm. If the GraspNet weights fail to download, add `--checkpoint-file /path/to/checkpoint-rs.tar` to the setup command and replace the path with your local copy.
 - **Review changes.** The script installs missing components and reuses existing Git SDKs. It shows the changes and asks before switching dependency versions, Conda builds, or SDK branches. Enter `y` to confirm. Pressing Enter, entering `n`, or running noninteractively skips these changes. See the changes applied below `----`.
-- **Check the result.** Review the summary below `----`. Exit code `3` means only `[MANUAL]` items remain. Configure the AnyGrasp license and weights, generate the hand-eye matrix in Section 3, and rerun the check with the same options.
+- **Check the result.** Review the summary below `----`. Exit code `3` means only `[MANUAL]` items remain. For AnyGrasp, configure the license and weights as described below. For grasping with the arm, generate the hand-eye matrix in Section 3. After supplying the files for your setup, rerun the check with the same options.
 
 </div>
 </div>
@@ -252,7 +271,7 @@ After completing the full manual setup, run `bash scripts/check_env.sh`. If you 
 
 </TabItem>
 
-</Tabs>
+</GraspingTabs>
 </div>
 
 ### AnyGrasp license and weights
@@ -286,12 +305,13 @@ Put the official license ZIP or extracted license directory alongside `checkpoin
 bash scripts/anygrasp_license.sh 2 "/path/to/delivery"
 ```
 
-The script validates the license with the official SDK, checks that the weights are readable, and installs them according to `config/backends/anygrasp.yaml`. If the filtered backend uses a separate SDK or weights path, run `bash scripts/anygrasp_license.sh --backend anygrasp_filtered 2 "/path/to/delivery"` to use `config/backends/anygrasp_filtered.yaml`. When needed, environment setup and option `2` place the `gsnet.so` extension for the active Python ABI in `grasp_detection/`, next to `license/`.
+The script uses the official SDK to validate the license and checks that it can read the weights. It then installs the files according to `config/backends/anygrasp.yaml`.
 
-By default, the license goes into `sdk/anygrasp_sdk/grasp_detection/license/` and the detection weights go to `sdk/anygrasp_sdk/grasp_detection/log/checkpoint_detection.tar`.
+**Default file locations.** Look in `license/` for the license files and in `log/` for the detection weights, `checkpoint_detection.tar`.
 
 ```text
 sdk/anygrasp_sdk/grasp_detection/
+├── gsnet.so
 ├── license/
 │   ├── licenseCfg.json
 │   ├── *.lic
@@ -299,6 +319,14 @@ sdk/anygrasp_sdk/grasp_detection/
 │   └── *.signature
 └── log/
     └── checkpoint_detection.tar
+```
+
+When needed, the environment setup script and option `2` place a version of `gsnet.so` compatible with the active Python environment next to `license/`.
+
+**If the filtered backend uses a separate SDK or weights path**, use the command below. The script installs the files according to `config/backends/anygrasp_filtered.yaml`.
+
+```bash
+bash scripts/anygrasp_license.sh --backend anygrasp_filtered 2 "/path/to/delivery"
 ```
 
 </div>
@@ -377,7 +405,7 @@ Press **G** in the image window to save a snapshot and compare the raw and filte
   <div className="rebot-step-content">
     <h4>Prepare the calibration board</h4>
 
-Open the calibration board directory on GitHub, download `aruco_100mm.pdf`, and print it at 100% scale. Measure the side length of the black square. In `config/default.yaml`, set `calibration.aruco.marker_length_m` to that length in meters. The default length is `0.100` m and the marker ID is `0`. Secure the board to the work surface where the camera can see it from several poses. [ArUco calibration board downloads](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/tree/main/examples/hand_eye/boards)
+Download `aruco_100mm.pdf` and print it at 100% scale. Measure the side length of the black square. In `config/default.yaml`, set `calibration.aruco.marker_length_m` to that length in meters. The default length is `0.100` m and the marker ID is `0`. Secure the board to the work surface where the camera can see it from several poses. [Download the 100 mm ArUco board (PDF)](https://raw.githubusercontent.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/main/examples/hand_eye/boards/aruco_100mm.pdf)
 
 </div>
 </div>
@@ -435,9 +463,11 @@ bash examples/hand_eye/run.sh
 <div className="rebot-step-item" role="listitem">
   <span className="rebot-step-number" aria-hidden="true">5</span>
   <div className="rebot-step-content">
-    <h4>Verify the calibration file</h4>
+    <h4>Verify the calibration result</h4>
 
-Confirm that the terminal reports `[OK] Saved to .../hand_eye.npz`. The Gemini 336 output is `config/calibration/orbbec_gemini336/hand_eye.npz`. For other cameras, the output goes into the matching model directory under `config/calibration/`. In `config/default.yaml`, check `calibration.hand_eye_path`. Relative paths are resolved from `config/`. Then check the arm dependencies and the calibration file.
+Confirm that the terminal reports `[OK] Saved to .../hand_eye.npz` for the current run. If the script reports fewer than 15 valid samples, adjust the board position or lighting so the marker is visible from more poses, then run calibration again.
+
+The Gemini 336 calibration file is `config/calibration/orbbec_gemini336/hand_eye.npz`. For other cameras, the output goes into the matching model directory under `config/calibration/`. In `config/default.yaml`, check `calibration.hand_eye_path`. Relative paths are resolved from `config/`. Then check the arm dependencies and the calibration file.
 
 ```bash
 bash scripts/check_env.sh --backend obb --robot
@@ -498,8 +528,8 @@ Open the run directory printed in the terminal. The `result/snapshot-NNN/` direc
 
 ## 5. Try point cloud grasping backends
 
-<div className={styles.tutorials}>
-<Tabs defaultValue="anygrasp" queryString="grasping-backend">
+<div className={styles.page}>
+<GraspingTabs defaultValue="anygrasp" queryString="grasping-backend">
 
 <TabItem value="anygrasp" label="AnyGrasp">
 
@@ -511,7 +541,25 @@ After completing the environment setup in Section 1 and placing the files from [
 bash examples/anygrasp_filtered/run.sh --target-class "yellow banana"
 ```
 
-Press **G** in the image window to save a snapshot. The left panel shows the raw point cloud reference and the right panel shows the filtered result. The default class order is `pen`, `orange`, and `yellow banana`. Press **1**, **2**, or **3** in the image window to switch classes. After verifying the preview and hand-eye calibration, you can add `--execute` to the preview command. Check the arm dependencies with `bash scripts/check_env.sh --backend anygrasp --robot`. In execution mode, the arm moves to the ready pose at startup. Press **G** to execute a candidate from the right panel that passes the workspace and IK checks. [Filtered AnyGrasp details](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/anygrasp_filtered/README.md)
+Press **G** in the image window to save a snapshot. The left panel shows the raw point cloud reference and the right panel shows the filtered result. The default class order is `pen`, `orange`, and `yellow banana`. Press **1**, **2**, or **3** in the image window to switch classes. After checking the candidates, press **Q** or **Esc** to exit the preview.
+
+After verifying the preview and hand-eye calibration, check the arm dependencies.
+
+```bash
+bash scripts/check_env.sh --backend anygrasp --robot
+```
+
+:::warning
+The grasping command enables the arm and moves it to the ready pose at startup. Before running it, clear people, cables, and obstacles from the motion area.
+:::
+
+Once the checks pass, run the following command to start grasping with the arm.
+
+```bash
+bash examples/anygrasp_filtered/run.sh --target-class "yellow banana" --execute
+```
+
+Wait for the arm to stop at the ready pose. Press **G** in the image window to capture a fresh frame and execute a candidate from the right panel that passes the workspace and IK checks. Press **Q** or **Esc** to end the session. [Filtered AnyGrasp details](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/anygrasp_filtered/README.md)
 
 <div className="rebot-power-gallery">
   <figure className="rebot-power-gallery-item">
@@ -535,17 +583,37 @@ bash scripts/check_env.sh --backend graspnet
 bash examples/graspnet_camera/run.sh
 ```
 
-In the camera window, press **G** or **Space** to generate candidates. Press **R** to resume the live feed or **Q** or **Esc** to exit. For the arm, the entry point is `bash examples/graspnet_grasp/run.sh --target-class "yellow banana"`. Complete the camera preview, hand-eye calibration, and arm checks first. This command moves the arm to the ready pose at startup, including when you pass `--dry-run`. [GraspNet arm example](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/graspnet_grasp/README.md)
+Press **G** or **Space** in the camera window to generate candidates, then inspect them in the point cloud window. Press **R** to resume the live feed. After checking the candidates, press **Q** or **Esc** to exit the preview.
+
+Complete hand-eye calibration and the arm connection check in Section 3, then check the dependencies for grasping with GraspNet.
+
+```bash
+bash scripts/check_env.sh --backend graspnet --robot
+```
+
+:::warning
+The grasping command enables the arm and moves it to the ready pose at startup, even with `--dry-run`. Before running it, clear people, cables, and obstacles from the motion area.
+:::
+
+Once the checks pass, run the following command to start grasping with the arm.
+
+```bash
+bash examples/graspnet_grasp/run.sh --target-class "yellow banana"
+```
+
+Wait for the arm to stop at the ready pose. Press **G** or **Space** in the image window to run inference and execute a reachable grasp. Press **Q** or **Esc** to end the session and return the arm to its home position. [GraspNet arm example](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/examples/graspnet_grasp/README.md)
 
 </TabItem>
 
-</Tabs>
+</GraspingTabs>
 </div>
 
 ## Troubleshooting
 
 - **The camera cannot record.** Check `camera.type`, the serial number, and USB permissions. Confirm the camera supports the selected resolution and frame rate, then rerun the capture command in Section 2.
-- **The arm stays still after pressing G.** Confirm that you passed `--execute`. Check `result.json` and the terminal logs to see whether the detector missed the target, the point cloud failed quality checks, the candidate was outside the workspace, or IK reported the pose as unreachable.
+- **The arm stays still after pressing G.**
+  - **Filtered OBB or AnyGrasp.** Confirm that the command includes `--execute`. Check `result.json` and the terminal logs to see whether the detector missed the target, the point cloud failed quality checks, the candidate was outside the workspace, or IK found no solution.
+  - **GraspNet-Baseline.** Confirm that you are running `examples/graspnet_grasp/run.sh`. With `--dry-run`, the program skips the grasp motion. Check the terminal for a missing or invalid hand-eye calibration or an indication that no candidate is reachable.
 - **The candidate looks correct in the image, but the grasp is offset.** Check whether the camera mount moved, whether the hand-eye matrix belongs to the current camera, and whether `planning.T_grasp_tcp` matches the current gripper. After confirming an offset along the approach direction, use `--insertion-depth-mm` with the filtered backends to override the additional insertion distance for the run, in millimeters. Filtered OBB defaults to 0 mm and filtered AnyGrasp defaults to 5 mm. Check the candidate and the clearance between the gripper and the table after each adjustment.
 - **The environment check reports `[MANUAL]`.** Exit code `3` means you need to supply the remaining items manually, such as the AnyGrasp license, detection weights, or hand-eye matrix. Add the files and rerun the check with the same arguments. [Environment and SDK troubleshooting](https://github.com/LAN-GER/Rebot-Arm-B601-Visual-Grasping/blob/main/docs/sdk_setup.md)
 - **An older script is missing.** Start each example with the `run.sh` file in its directory. Compatibility launchers are under `scripts/legacy/`, for example `bash scripts/legacy/anygrasp.sh`. Run `bash scripts/run_python.sh -m rebot_grasp --help` to see the project CLI options.

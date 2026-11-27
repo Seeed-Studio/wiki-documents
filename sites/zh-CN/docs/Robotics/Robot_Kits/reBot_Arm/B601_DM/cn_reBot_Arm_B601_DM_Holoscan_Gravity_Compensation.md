@@ -36,11 +36,20 @@ import TabItem from '@theme/TabItem';
   </a>
 </div>
 
+<p className="text--center">
+  <img src="https://img.shields.io/badge/Holoscan-5.0.0-4C771B.svg?logo=nvidia&amp;logoColor=white" alt="NVIDIA Holoscan 5.0.0" width={115} height={20} />{' '}
+  <img src="https://img.shields.io/badge/Target%20Rate-400%20Hz-0076A8.svg" alt="控制循环目标频率 400 Hz" width={124} height={20} />{' '}
+  <img src="https://img.shields.io/badge/Dynamics-Pinocchio-8857A8.svg" alt="Pinocchio 动力学计算" width={124} height={20} />{' '}
+  <img src="https://img.shields.io/badge/Profiling-Nsight%20Systems-38556F.svg" alt="Nsight Systems 延迟分析" width={152} height={20} />
+</p>
+
 <p align="center">
   <strong>目标频率 400 Hz · Pinocchio 动力学计算 · Nsight Systems 延迟分析</strong>
 </p>
 
-本教程使用 NVIDIA Holoscan 5 在同一个控制循环中读取关节反馈、计算重力补偿力矩并向电机发送指令。补偿开启后，**reBot Arm B601-DM** 能支撑自重，你可以用手调整机械臂的姿态。[NVIDIA 技术博客](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
+本教程用 NVIDIA Holoscan 5 把机械臂的控制流程串成三步。先读取各关节的当前角度，再用 Pinocchio 根据机械臂模型计算抵消重力所需的力矩，最后向电机发送指令。Holoscan 以 400 Hz 为目标频率触发每轮控制，并在同一线程上依次运行这三步，减少线程间交接带来的延迟和抖动。
+
+开启重力补偿后，电机随姿态变化调整输出力矩，支撑 **reBot Arm B601-DM** 的自重。用手引导机械臂改变姿态时会更省力。[NVIDIA 技术博客](https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/)
 
 ## 准备工作
 
