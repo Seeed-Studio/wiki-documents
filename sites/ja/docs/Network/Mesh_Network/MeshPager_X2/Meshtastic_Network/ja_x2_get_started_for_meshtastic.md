@@ -1017,7 +1017,7 @@ sudo usermod -aG dialout "$USER"
 以下のフラッシュコマンドは、設定、チャンネル、保存データを含むすべての内部フラッシュを消去します。続行する前に、必要なものは必ずバックアップしてください。
 :::
 
-1. [X2 factory firmware 2.8.1.0046b50](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.0046b50.factory%20copy.bin) をダウンロードします。ダウンロードしたファイル名 **`firmware-seeed_meshpager_x2-2.8.1.0046b50.factory copy.bin`** を **`x2.factory.bin`** に変更し、PC 上の任意のフォルダに配置します。
+1. [X2 factory firmware 2.8.1.05731bd](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.05731bd.factory.bin) をダウンロードします。ダウンロードしたファイル名 **`firmware-seeed_meshpager_x2-2.8.1.05731bd.factory.bin`** を **`x2.factory.bin`** に変更し、PC 上の任意のフォルダに配置します。
 2. [Python 3.10 以降](https://www.python.org/downloads/) をインストールします。
 3. USB データケーブルで X2 をコンピュータに接続します。Web Flasher、Web Client、およびポートを占有している可能性のあるシリアルモニタは閉じてください。
 4. `x2.factory.bin` を含むフォルダでターミナルを開き、使用しているシステムに応じて以下のコマンドを実行します。まず **1200 bps リセット** を送信し、その後 **`--before usb-reset`** を付けて esptool を使用します。

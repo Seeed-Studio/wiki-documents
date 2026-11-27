@@ -1017,7 +1017,7 @@ Usa [esptool](https://docs.espressif.com/projects/esptool/en/latest/esp32s3/) pa
 El comando de flasheo de abajo borra toda la memoria flash interna, incluyendo ajustes, canales y datos guardados. Haz una copia de seguridad de todo lo que necesites antes de continuar.
 :::
 
-1. Descarga el [firmware de fábrica X2 2.8.1.0046b50](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.0046b50.factory%20copy.bin). Cambia el nombre del archivo descargado de **`firmware-seeed_meshpager_x2-2.8.1.0046b50.factory copy.bin`** a **`x2.factory.bin`** y colócalo en una carpeta de tu ordenador.
+1. Descarga el [firmware de fábrica X2 2.8.1.05731bd](https://files.seeedstudio.com/wiki/MeshPagerX2/firmware-seeed_meshpager_x2-2.8.1.05731bd.factory.bin). Cambia el nombre del archivo descargado de **`firmware-seeed_meshpager_x2-2.8.1.05731bd.factory.bin`** a **`x2.factory.bin`** y colócalo en una carpeta de tu ordenador.
 2. Instala [Python 3.10 o posterior](https://www.python.org/downloads/).
 3. Conecta el X2 al ordenador usando un cable de datos USB. Cierra el Web Flasher, el Web Client y cualquier monitor serie que pueda estar usando el puerto.
 4. Abre una terminal en la carpeta que contiene `x2.factory.bin` y sigue los comandos para tu sistema. Envía primero el **reset a 1200 bps** y luego usa esptool con **`--before usb-reset`**.
