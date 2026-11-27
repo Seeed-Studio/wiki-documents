@@ -22,11 +22,19 @@ updatedAt: '2026-11-23'
 
 import '/src/css/rebot-wiki-style.css';
 import GitHubStarButton from '@site/src/components/robotics/GitHubStarButton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # reBot Arm T701 HT Quick Start
 
 <div align="center">
-  <img width={600} src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp" alt="reBot Arm T701 HT bimanual robot" />
+  <img
+    width={800}
+    height={586}
+    style={{ height: 'auto', aspectRatio: '800 / 586', objectFit: 'contain', backgroundColor: '#000' }}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/Getting_start/T701_HT/rebot-t701-ht-cover.webp"
+    alt="reBot Arm T701 HT bimanual robot"
+  />
 </div>
 
 <GitHubStarButton
@@ -62,6 +70,40 @@ The reBot Arm T701 is an open-source bimanual robotic platform from Seeed Studio
 */}
 
 ## Unbox and Assemble the Robot
+
+Select your T701 model to watch the unboxing and assembly video.
+
+<Tabs>
+<TabItem value="basic" label="Basic">
+
+<div className="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/x3CkpDcxyFI"
+    title="reBot Arm T701 Basic unboxing and assembly"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+
+<TabItem value="pro" label="Pro">
+
+<div className="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/D7Cj482WSlQ"
+    title="reBot Arm T701 Pro unboxing and assembly"
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+</TabItem>
+</Tabs>
 
 <div className="rebot-step-flow" role="list">
 
@@ -348,6 +390,8 @@ The demo applies the configured joint torque limits. Press `Ctrl+C` to stop the 
 For single-motor five-parameter control, state feedback, and return-to-zero shutdown, see [MIT Control SDK](https://wiki.seeedstudio.com/rebot_t701_ht_control_mit/).
 
 See [T701 HT with Pinocchio](https://wiki.seeedstudio.com/rebot_t701_ht_pinocchio/) for forward and inverse kinematics checks, Cartesian trajectories, and keyboard control examples.
+
+For ROS 2 topics, services, trajectory actions, RViz2, and kinematic simulation, see [ROS 2 SDK](./reBot_Arm_T701_HT_ros2.md). Install that SDK separately using its own instructions.
 
   </div>
 </div>
