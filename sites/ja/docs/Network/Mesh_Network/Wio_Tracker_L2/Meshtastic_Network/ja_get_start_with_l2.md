@@ -1,11 +1,11 @@
 ---
-description: Wio Tracker L2 シリーズの使用を開始します。デバイスの取り付け、ファームウェアの書き込み、デバイス接続について案内します。
-title: Meshtastic を使い始める
+description: Wio Tracker L2 シリーズの使用を開始しましょう。デバイスの設置、ファームウェア書き込み、デバイス接続について案内します。
+title: Meshtastic 入門
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png
 slug: /get_started_with_meshtastic_wio_tracker_l2
-sku: 114993648,114993649,114993653,114993654
+sku: 100029766
 sidebar_position: 1
 last_update:
   date: 11/26/2026

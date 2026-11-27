@@ -1,11 +1,11 @@
 ---
-description: Comienza con Wio Tracker L2 Serie. Guía para la instalación del dispositivo, flasheo de firmware y conexión del dispositivo.
+description: Comienza con la Serie Wio Tracker L2. Guía para la instalación del dispositivo, el flasheo de firmware y la conexión del dispositivo.
 title: Comienza con Meshtastic
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Wio_Tracker_L2/L2First.png
 slug: /get_started_with_meshtastic_wio_tracker_l2
-sku: 114993648,114993649,114993653,114993654
+sku: 100029766
 sidebar_position: 1
 last_update:
   date: 11/26/2026
