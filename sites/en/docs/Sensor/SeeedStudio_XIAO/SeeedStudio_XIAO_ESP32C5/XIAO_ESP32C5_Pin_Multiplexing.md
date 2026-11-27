@@ -48,6 +48,10 @@ If you have not used **PlatfromIO** before, please refer to [Platform IO with Se
 
 ### Pinout Overview
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c5" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 Before we begin, let's review all the pins that the XIAO ESP32-C5 has and its functions with the following schematic.
 
 ### Front

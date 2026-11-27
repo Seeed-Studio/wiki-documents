@@ -93,6 +93,10 @@ Meet the first STM32-powered XIAO. Built around the STM32C5A3CG with a 144MHz Ar
 <Tabs>
 <TabItem value="XIAO STM32C5" label="XIAO STM32C5" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO STM32C5 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_STM32C5/img/XIAO STM32C5_Front_1.png" style={{width:1000, height:'auto'}}/></div>

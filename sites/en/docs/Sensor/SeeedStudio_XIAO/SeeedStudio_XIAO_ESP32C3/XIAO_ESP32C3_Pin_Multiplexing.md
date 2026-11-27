@@ -19,6 +19,10 @@ Seeed Studio XIAO ESP32C3 has rich interfaces. There are **11 digital I/O** that
 
 ## Hardware overview
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c3" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 > *A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For reliable analog reads, use ADC1(A0/A1/A2) instead. Refer to the ESP32-C3 datasheet.
 
 ### Front

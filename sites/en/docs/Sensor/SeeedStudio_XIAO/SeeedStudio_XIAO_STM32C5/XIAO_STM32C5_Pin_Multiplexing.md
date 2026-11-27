@@ -46,6 +46,10 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Overview
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=stm32c5" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 The XIAO STM32C5 features abundant pin resources and natively supports development with various standard peripheral interfaces including Digital, Analog, SPI and IIC. This article demonstrates relevant implementations with practical application cases.
 
 :::tip

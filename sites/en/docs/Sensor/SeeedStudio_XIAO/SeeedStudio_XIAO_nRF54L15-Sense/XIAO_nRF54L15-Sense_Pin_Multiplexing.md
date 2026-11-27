@@ -27,6 +27,10 @@ Based on VS Code, if you want to use the following case on the nRF Connect SDK, 
 
 :::
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54l15sense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ## Digital
 
 ### Hardware Preparation

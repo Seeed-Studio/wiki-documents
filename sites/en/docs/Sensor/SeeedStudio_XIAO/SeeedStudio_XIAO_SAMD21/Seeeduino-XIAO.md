@@ -199,6 +199,10 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 <Tabs>
 <TabItem value="XIAO SAMD21" label="XIAO SAMD21" default>
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ### XIAO SAMD21 Front
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_SAMD21_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
@@ -210,6 +214,10 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 </TabItem>
 
 <TabItem value="XIAO SAMD21 Plus" label="XIAO SAMD21 Plus">
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
 
 ### XIAO SAMD21 Plus Front
 
@@ -536,6 +544,11 @@ The maximum flash size is 8 KB. For more information, refer to the ATSAMD21G18A-
 :::
 
 ## Pin Multiplexing
+
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21" target="_blank" rel="noopener noreferrer">Explore XIAO SAMD21 Interactive Pinout</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=samd21plus" target="_blank" rel="noopener noreferrer">Explore XIAO SAMD21 Plus Interactive Pinout</a>
+</div>
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
 

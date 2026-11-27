@@ -97,6 +97,10 @@ If uploading the Arduino program fails, try holding down the "BOOT" button and t
 
 ## Pin Multiplexing on the Seeed Studio XIAO RP2040
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 The Seeed Studio XIAO RP2040 contains 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface. We are going to provide the tutorials about these interfaces to make it helpful for your projects.
 
 ### Digital

@@ -170,6 +170,10 @@ The editor allows you to edit files using web Bluetooth, USB, and Web Workflow o
 
 ## Pinout/Port Information
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=c6" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_circuitpython/5.png" /></div>
 
 - More information please refer to [hardware overview](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#hardware-overview)

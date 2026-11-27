@@ -51,6 +51,10 @@ If you are not familiar with creating a project for the XIAO nRF54LM20A under Pl
 
 :::
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=nrf54lm20asense" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ## Digital
 
 Digital pins mainly realize on-off control of external sensors and actuators by outputting high and low logic levels. Combined with the Grove Base for XIAO expansion board and standard Grove peripheral modules, this section elaborates on the underlying driver logic and practical invocation methods of digital pins on XIAO nRF54LM20A in detail.

@@ -95,6 +95,11 @@ tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 
 ## XIAO RP2040 Series Pins
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040" target="_blank" rel="noopener noreferrer">Explore XIAO RP2040 Interactive Pinout</a>
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=rp2040plus" target="_blank" rel="noopener noreferrer">Explore XIAO RP2040 Plus Interactive Pinout</a>
+</div>
+
 | MicroPython Pin Name | XIAO RP2040 GPIO | XIAO RP2040 Plus GPIO | ADC | Function |
 | :--- | :---: | :---: | :---: | :--- |
 | D0 / A0 | GPIO26 | GPIO26 | 0 | GPIO, ADC0 |

@@ -273,6 +273,10 @@ void app_main(void) {
 
 #### Pin Mapping Reference
 
+<div className="interactive_pinout_container">
+  <a className="interactive_pinout_btn" href="https://www.seeedstudio.com/xiao-series-page/playground/pinout/?board=s3" target="_blank" rel="noopener noreferrer">Explore the Interactive Pinout</a>
+</div>
+
 ![Xiao ESP32S3 Pinout reference picture](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg)
 
 | Label | GPIO | Alt Function |
