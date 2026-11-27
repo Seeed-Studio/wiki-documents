@@ -192,8 +192,7 @@ The board definitions for the XIAO nRF54LM20A series have not yet been merged in
 git clone https://github.com/Seeed-Studio/platform-seeedboards.git
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_9.png" style={{width:800, height:'auto'}}/></div>
-<br/>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20B/wiki/ncs/13.png" style={{width:800, height:'auto'}}/></div>
 2. Open **Settings** at the bottom left corner of VS Code.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/ncs_new_10.png" style={{width:800, height:'auto'}}/></div>
